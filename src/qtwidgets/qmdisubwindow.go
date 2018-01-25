@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 44
+// extern C begin: 45
 */
 // import "C"
 import "unsafe"
@@ -63,9 +63,15 @@ func (this *QMdiSubWindow) GetCthis() unsafe.Pointer {
 		return this.QWidget.GetCthis()
 	}
 }
+func (this *QMdiSubWindow) SetCthis(cthis unsafe.Pointer) {
+	this.QWidget = NewQWidgetFromPointer(cthis)
+}
 func NewQMdiSubWindowFromPointer(cthis unsafe.Pointer) *QMdiSubWindow {
 	bcthis0 := NewQWidgetFromPointer(cthis)
 	return &QMdiSubWindow{bcthis0}
+}
+func (*QMdiSubWindow) NewFromPointer(cthis unsafe.Pointer) *QMdiSubWindow {
+	return NewQMdiSubWindowFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:57
@@ -78,6 +84,19 @@ func (this *QMdiSubWindow) MetaObject() *qtcore.QMetaObject /*444 const QMetaObj
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:69
+// index:0
+// Public
+// void QMdiSubWindow(class QWidget *, Qt::WindowFlags)
+func NewQMdiSubWindow(parent *QWidget /*444 QWidget **/, flags int) *QMdiSubWindow {
+	cthis := qtrt.Calloc(1, 256) // 48
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, flags)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQMdiSubWindowFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:70
@@ -94,9 +113,11 @@ func DeleteQMdiSubWindow(*QMdiSubWindow) {
 // Public virtual
 // QSize sizeHint()
 func (this *QMdiSubWindow) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMdiSubWindow8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMdiSubWindow8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -106,9 +127,11 @@ func (this *QMdiSubWindow) SizeHint() *qtcore.QSize /*123*/ {
 // Public virtual
 // QSize minimumSizeHint()
 func (this *QMdiSubWindow) MinimumSizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMdiSubWindow15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMdiSubWindow15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -175,7 +198,7 @@ func (this *QMdiSubWindow) IsShaded() bool {
 // Public
 // void setOption(enum QMdiSubWindow::SubWindowOption, _Bool)
 func (this *QMdiSubWindow) SetOption(option int, on bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow9setOptionENS_15SubWindowOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &option, &on)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow9setOptionENS_15SubWindowOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -184,7 +207,7 @@ func (this *QMdiSubWindow) SetOption(option int, on bool) {
 // Public
 // bool testOption(enum QMdiSubWindow::SubWindowOption)
 func (this *QMdiSubWindow) TestOption(arg0 int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMdiSubWindow10testOptionENS_15SubWindowOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMdiSubWindow10testOptionENS_15SubWindowOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -195,7 +218,7 @@ func (this *QMdiSubWindow) TestOption(arg0 int) bool {
 // Public
 // void setKeyboardSingleStep(int)
 func (this *QMdiSubWindow) SetKeyboardSingleStep(step int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow21setKeyboardSingleStepEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow21setKeyboardSingleStepEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -215,7 +238,7 @@ func (this *QMdiSubWindow) KeyboardSingleStep() int {
 // Public
 // void setKeyboardPageStep(int)
 func (this *QMdiSubWindow) SetKeyboardPageStep(step int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow19setKeyboardPageStepEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow19setKeyboardPageStepEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -495,5 +518,12 @@ func (this *QMdiSubWindow) ChildEvent(childEvent *qtcore.QChildEvent /*444 QChil
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow10childEventEP11QChildEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
+
+type QMdiSubWindow__SubWindowOption = int
+
+const QMdiSubWindow__AllowOutsideAreaHorizontally QMdiSubWindow__SubWindowOption = 1
+const QMdiSubWindow__AllowOutsideAreaVertically QMdiSubWindow__SubWindowOption = 2
+const QMdiSubWindow__RubberBandResize QMdiSubWindow__SubWindowOption = 4
+const QMdiSubWindow__RubberBandMove QMdiSubWindow__SubWindowOption = 8
 
 //  body block end

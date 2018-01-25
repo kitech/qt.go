@@ -63,9 +63,15 @@ func (this *QGraphicsItemGroup) GetCthis() unsafe.Pointer {
 		return this.QGraphicsItem.GetCthis()
 	}
 }
+func (this *QGraphicsItemGroup) SetCthis(cthis unsafe.Pointer) {
+	this.QGraphicsItem = NewQGraphicsItemFromPointer(cthis)
+}
 func NewQGraphicsItemGroupFromPointer(cthis unsafe.Pointer) *QGraphicsItemGroup {
 	bcthis0 := NewQGraphicsItemFromPointer(cthis)
 	return &QGraphicsItemGroup{bcthis0}
+}
+func (*QGraphicsItemGroup) NewFromPointer(cthis unsafe.Pointer) *QGraphicsItemGroup {
+	return NewQGraphicsItemGroupFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:1004
@@ -115,9 +121,11 @@ func (this *QGraphicsItemGroup) RemoveFromGroup(item *QGraphicsItem /*444 QGraph
 // Public virtual
 // QRectF boundingRect()
 func (this *QGraphicsItemGroup) BoundingRect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup12boundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup12boundingRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -151,9 +159,11 @@ func (this *QGraphicsItemGroup) IsObscuredBy(item *QGraphicsItem /*444 const QGr
 // Public virtual
 // QPainterPath opaqueArea()
 func (this *QGraphicsItemGroup) OpaqueArea() *qtgui.QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -168,5 +178,9 @@ func (this *QGraphicsItemGroup) Type() int {
 	//  return rv
 	return int(rv) // 111
 }
+
+type QGraphicsItemGroup__ = int
+
+const QGraphicsItemGroup__Type QGraphicsItemGroup__ = 10
 
 //  body block end

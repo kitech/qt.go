@@ -63,9 +63,15 @@ func (this *QGridLayout) GetCthis() unsafe.Pointer {
 		return this.QLayout.GetCthis()
 	}
 }
+func (this *QGridLayout) SetCthis(cthis unsafe.Pointer) {
+	this.QLayout = NewQLayoutFromPointer(cthis)
+}
 func NewQGridLayoutFromPointer(cthis unsafe.Pointer) *QGridLayout {
 	bcthis0 := NewQLayoutFromPointer(cthis)
 	return &QGridLayout{bcthis0}
+}
+func (*QGridLayout) NewFromPointer(cthis unsafe.Pointer) *QGridLayout {
+	return NewQGridLayoutFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgridlayout.h:58
@@ -119,9 +125,11 @@ func DeleteQGridLayout(*QGridLayout) {
 // Public virtual
 // QSize sizeHint()
 func (this *QGridLayout) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -131,9 +139,11 @@ func (this *QGridLayout) SizeHint() *qtcore.QSize /*123*/ {
 // Public virtual
 // QSize minimumSize()
 func (this *QGridLayout) MinimumSize() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -143,9 +153,11 @@ func (this *QGridLayout) MinimumSize() *qtcore.QSize /*123*/ {
 // Public virtual
 // QSize maximumSize()
 func (this *QGridLayout) MaximumSize() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout11maximumSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout11maximumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -155,7 +167,7 @@ func (this *QGridLayout) MaximumSize() *qtcore.QSize /*123*/ {
 // Public
 // void setHorizontalSpacing(int)
 func (this *QGridLayout) SetHorizontalSpacing(spacing int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout20setHorizontalSpacingEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout20setHorizontalSpacingEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), spacing)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -175,7 +187,7 @@ func (this *QGridLayout) HorizontalSpacing() int {
 // Public
 // void setVerticalSpacing(int)
 func (this *QGridLayout) SetVerticalSpacing(spacing int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout18setVerticalSpacingEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout18setVerticalSpacingEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), spacing)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -195,7 +207,7 @@ func (this *QGridLayout) VerticalSpacing() int {
 // Public
 // void setSpacing(int)
 func (this *QGridLayout) SetSpacing(spacing int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout10setSpacingEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout10setSpacingEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), spacing)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -215,7 +227,7 @@ func (this *QGridLayout) Spacing() int {
 // Public
 // void setRowStretch(int, int)
 func (this *QGridLayout) SetRowStretch(row int, stretch int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout13setRowStretchEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &stretch)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout13setRowStretchEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, stretch)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -224,7 +236,7 @@ func (this *QGridLayout) SetRowStretch(row int, stretch int) {
 // Public
 // void setColumnStretch(int, int)
 func (this *QGridLayout) SetColumnStretch(column int, stretch int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout16setColumnStretchEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, &stretch)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout16setColumnStretchEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, stretch)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -233,7 +245,7 @@ func (this *QGridLayout) SetColumnStretch(column int, stretch int) {
 // Public
 // int rowStretch(int)
 func (this *QGridLayout) RowStretch(row int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout10rowStretchEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout10rowStretchEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -244,7 +256,7 @@ func (this *QGridLayout) RowStretch(row int) int {
 // Public
 // int columnStretch(int)
 func (this *QGridLayout) ColumnStretch(column int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout13columnStretchEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout13columnStretchEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -255,7 +267,7 @@ func (this *QGridLayout) ColumnStretch(column int) int {
 // Public
 // void setRowMinimumHeight(int, int)
 func (this *QGridLayout) SetRowMinimumHeight(row int, minSize int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout19setRowMinimumHeightEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &minSize)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout19setRowMinimumHeightEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, minSize)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -264,7 +276,7 @@ func (this *QGridLayout) SetRowMinimumHeight(row int, minSize int) {
 // Public
 // void setColumnMinimumWidth(int, int)
 func (this *QGridLayout) SetColumnMinimumWidth(column int, minSize int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout21setColumnMinimumWidthEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, &minSize)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout21setColumnMinimumWidthEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, minSize)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -273,7 +285,7 @@ func (this *QGridLayout) SetColumnMinimumWidth(column int, minSize int) {
 // Public
 // int rowMinimumHeight(int)
 func (this *QGridLayout) RowMinimumHeight(row int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout16rowMinimumHeightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout16rowMinimumHeightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -284,7 +296,7 @@ func (this *QGridLayout) RowMinimumHeight(row int) int {
 // Public
 // int columnMinimumWidth(int)
 func (this *QGridLayout) ColumnMinimumWidth(column int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout18columnMinimumWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout18columnMinimumWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -317,9 +329,11 @@ func (this *QGridLayout) RowCount() int {
 // Public
 // QRect cellRect(int, int)
 func (this *QGridLayout) CellRect(row int, column int) *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout8cellRectEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout8cellRectEii", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -340,7 +354,7 @@ func (this *QGridLayout) HasHeightForWidth() bool {
 // Public virtual
 // int heightForWidth(int)
 func (this *QGridLayout) HeightForWidth(arg0 int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout14heightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout14heightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -351,7 +365,7 @@ func (this *QGridLayout) HeightForWidth(arg0 int) int {
 // Public virtual
 // int minimumHeightForWidth(int)
 func (this *QGridLayout) MinimumHeightForWidth(arg0 int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout21minimumHeightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout21minimumHeightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -392,7 +406,7 @@ func (this *QGridLayout) AddWidget(w *QWidget /*444 QWidget **/) {
 // Public
 // void setOriginCorner(Qt::Corner)
 func (this *QGridLayout) SetOriginCorner(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout15setOriginCornerEN2Qt6CornerE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout15setOriginCornerEN2Qt6CornerE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -412,7 +426,7 @@ func (this *QGridLayout) OriginCorner() int {
 // Public virtual
 // QLayoutItem * itemAt(int)
 func (this *QGridLayout) ItemAt(index int) *QLayoutItem /*444 QLayoutItem **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout6itemAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout6itemAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -424,7 +438,7 @@ func (this *QGridLayout) ItemAt(index int) *QLayoutItem /*444 QLayoutItem **/ {
 // Public
 // QLayoutItem * itemAtPosition(int, int)
 func (this *QGridLayout) ItemAtPosition(row int, column int) *QLayoutItem /*444 QLayoutItem **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout14itemAtPositionEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout14itemAtPositionEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -436,7 +450,7 @@ func (this *QGridLayout) ItemAtPosition(row int, column int) *QLayoutItem /*444 
 // Public virtual
 // QLayoutItem * takeAt(int)
 func (this *QGridLayout) TakeAt(index int) *QLayoutItem /*444 QLayoutItem **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout6takeAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout6takeAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -469,7 +483,7 @@ func (this *QGridLayout) SetGeometry(arg0 *qtcore.QRect) {
 // Public
 // void setDefaultPositioning(int, Qt::Orientation)
 func (this *QGridLayout) SetDefaultPositioning(n int, orient int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout21setDefaultPositioningEiN2Qt11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &n, &orient)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout21setDefaultPositioningEiN2Qt11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n, orient)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -478,7 +492,7 @@ func (this *QGridLayout) SetDefaultPositioning(n int, orient int) {
 // Public
 // void getItemPosition(int, int *, int *, int *, int *)
 func (this *QGridLayout) GetItemPosition(idx int, row unsafe.Pointer /*666*/, column unsafe.Pointer /*666*/, rowSpan unsafe.Pointer /*666*/, columnSpan unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout15getItemPositionEiPiS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &idx, row, column, rowSpan, columnSpan)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout15getItemPositionEiPiS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), idx, &row, &column, &rowSpan, &columnSpan)
 	gopp.ErrPrint(err, rv)
 }
 

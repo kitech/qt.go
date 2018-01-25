@@ -63,8 +63,14 @@ func (this *QItemEditorFactory) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QItemEditorFactory) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQItemEditorFactoryFromPointer(cthis unsafe.Pointer) *QItemEditorFactory {
 	return &QItemEditorFactory{&qtrt.CObject{cthis}}
+}
+func (*QItemEditorFactory) NewFromPointer(cthis unsafe.Pointer) *QItemEditorFactory {
+	return NewQItemEditorFactoryFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:98
@@ -94,7 +100,7 @@ func DeleteQItemEditorFactory(*QItemEditorFactory) {
 // QWidget * createEditor(int, class QWidget *)
 func (this *QItemEditorFactory) CreateEditor(userType int, parent *QWidget /*444 QWidget **/) *QWidget /*444 QWidget **/ {
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QItemEditorFactory12createEditorEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &userType, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QItemEditorFactory12createEditorEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), userType, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -106,9 +112,11 @@ func (this *QItemEditorFactory) CreateEditor(userType int, parent *QWidget /*444
 // Public virtual
 // QByteArray valuePropertyName(int)
 func (this *QItemEditorFactory) ValuePropertyName(userType int) *qtcore.QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QItemEditorFactory17valuePropertyNameEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &userType)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QItemEditorFactory17valuePropertyNameEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), userType)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -119,7 +127,7 @@ func (this *QItemEditorFactory) ValuePropertyName(userType int) *qtcore.QByteArr
 // void registerEditor(int, class QItemEditorCreatorBase *)
 func (this *QItemEditorFactory) RegisterEditor(userType int, creator *QItemEditorCreatorBase /*444 QItemEditorCreatorBase **/) {
 	var convArg1 = creator.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &userType, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), userType, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 

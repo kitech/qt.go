@@ -55,8 +55,14 @@ func (this *QSignalBlocker) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QSignalBlocker) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQSignalBlockerFromPointer(cthis unsafe.Pointer) *QSignalBlocker {
 	return &QSignalBlocker{&qtrt.CObject{cthis}}
+}
+func (*QSignalBlocker) NewFromPointer(cthis unsafe.Pointer) *QSignalBlocker {
+	return NewQSignalBlockerFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qobject.h:547

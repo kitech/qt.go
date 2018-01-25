@@ -59,9 +59,15 @@ func (this *QAccessibleTextCursorEvent) GetCthis() unsafe.Pointer {
 		return this.QAccessibleEvent.GetCthis()
 	}
 }
+func (this *QAccessibleTextCursorEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QAccessibleEvent = NewQAccessibleEventFromPointer(cthis)
+}
 func NewQAccessibleTextCursorEventFromPointer(cthis unsafe.Pointer) *QAccessibleTextCursorEvent {
 	bcthis0 := NewQAccessibleEventFromPointer(cthis)
 	return &QAccessibleTextCursorEvent{bcthis0}
+}
+func (*QAccessibleTextCursorEvent) NewFromPointer(cthis unsafe.Pointer) *QAccessibleTextCursorEvent {
+	return NewQAccessibleTextCursorEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:747
@@ -71,7 +77,7 @@ func NewQAccessibleTextCursorEventFromPointer(cthis unsafe.Pointer) *QAccessible
 func NewQAccessibleTextCursorEvent(obj *qtcore.QObject /*444 QObject **/, cursorPos int) *QAccessibleTextCursorEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = obj.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEventC2EP7QObjecti", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &cursorPos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEventC2EP7QObjecti", ffiqt.FFI_TYPE_VOID, cthis, convArg0, cursorPos)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextCursorEventFromPointer(cthis)
 	return gothis
@@ -84,7 +90,7 @@ func NewQAccessibleTextCursorEvent(obj *qtcore.QObject /*444 QObject **/, cursor
 func NewQAccessibleTextCursorEvent_1(iface *QAccessibleInterface /*444 QAccessibleInterface **/, cursorPos int) *QAccessibleTextCursorEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = iface.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEventC2EP20QAccessibleInterfacei", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &cursorPos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEventC2EP20QAccessibleInterfacei", ffiqt.FFI_TYPE_VOID, cthis, convArg0, cursorPos)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextCursorEventFromPointer(cthis)
 	return gothis
@@ -104,7 +110,7 @@ func DeleteQAccessibleTextCursorEvent(*QAccessibleTextCursorEvent) {
 // Public inline
 // void setCursorPosition(int)
 func (this *QAccessibleTextCursorEvent) SetCursorPosition(position int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEvent17setCursorPositionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &position)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEvent17setCursorPositionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), position)
 	gopp.ErrPrint(err, rv)
 }
 

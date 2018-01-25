@@ -59,9 +59,15 @@ func (this *QSessionManager) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QSessionManager) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQSessionManagerFromPointer(cthis unsafe.Pointer) *QSessionManager {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QSessionManager{bcthis0}
+}
+func (*QSessionManager) NewFromPointer(cthis unsafe.Pointer) *QSessionManager {
+	return NewQSessionManagerFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qsessionmanager.h:60
@@ -81,9 +87,11 @@ func (this *QSessionManager) MetaObject() *qtcore.QMetaObject /*444 const QMetaO
 // Public
 // QString sessionId()
 func (this *QSessionManager) SessionId() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSessionManager9sessionIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSessionManager9sessionIdEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -93,9 +101,11 @@ func (this *QSessionManager) SessionId() *qtcore.QString /*123*/ {
 // Public
 // QString sessionKey()
 func (this *QSessionManager) SessionKey() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSessionManager10sessionKeyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSessionManager10sessionKeyEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -145,7 +155,7 @@ func (this *QSessionManager) Cancel() {
 // Public
 // void setRestartHint(enum QSessionManager::RestartHint)
 func (this *QSessionManager) SetRestartHint(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager14setRestartHintENS_11RestartHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager14setRestartHintENS_11RestartHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -221,5 +231,12 @@ func (this *QSessionManager) RequestPhase2() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager13requestPhase2Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
+
+type QSessionManager__RestartHint = int
+
+const QSessionManager__RestartIfRunning QSessionManager__RestartHint = 0
+const QSessionManager__RestartAnyway QSessionManager__RestartHint = 1
+const QSessionManager__RestartImmediately QSessionManager__RestartHint = 2
+const QSessionManager__RestartNever QSessionManager__RestartHint = 3
 
 //  body block end

@@ -55,8 +55,14 @@ func (this *QLinkedListData) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QLinkedListData) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQLinkedListDataFromPointer(cthis unsafe.Pointer) *QLinkedListData {
 	return &QLinkedListData{&qtrt.CObject{cthis}}
+}
+func (*QLinkedListData) NewFromPointer(cthis unsafe.Pointer) *QLinkedListData {
+	return NewQLinkedListDataFromPointer(cthis)
 }
 
 //  body block end

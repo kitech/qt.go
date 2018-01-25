@@ -55,8 +55,14 @@ func (this *QVariant) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QVariant) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQVariantFromPointer(cthis unsafe.Pointer) *QVariant {
 	return &QVariant{&qtrt.CObject{cthis}}
+}
+func (*QVariant) NewFromPointer(cthis unsafe.Pointer) *QVariant {
+	return NewQVariantFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qvariant.h:199
@@ -77,7 +83,7 @@ func NewQVariant() *QVariant {
 // void QVariant(enum QVariant::Type)
 func NewQVariant_1(type_ int) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ENS_4TypeE", ffiqt.FFI_TYPE_VOID, cthis, &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ENS_4TypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(cthis)
 	return gothis
@@ -89,7 +95,7 @@ func NewQVariant_1(type_ int) *QVariant {
 // void QVariant(int, const void *)
 func NewQVariant_2(typeId int, copy unsafe.Pointer /*666*/) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2EiPKv", ffiqt.FFI_TYPE_VOID, cthis, &typeId, copy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2EiPKv", ffiqt.FFI_TYPE_VOID, cthis, typeId, copy)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(cthis)
 	return gothis
@@ -101,7 +107,7 @@ func NewQVariant_2(typeId int, copy unsafe.Pointer /*666*/) *QVariant {
 // void QVariant(int, const void *, uint)
 func NewQVariant_3(typeId int, copy unsafe.Pointer /*666*/, flags uint) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2EiPKvj", ffiqt.FFI_TYPE_VOID, cthis, &typeId, copy, &flags)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2EiPKvj", ffiqt.FFI_TYPE_VOID, cthis, typeId, copy, flags)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(cthis)
 	return gothis
@@ -126,7 +132,7 @@ func NewQVariant_4(s *QDataStream) *QVariant {
 // void QVariant(int)
 func NewQVariant_5(i int) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ei", ffiqt.FFI_TYPE_VOID, cthis, i)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(cthis)
 	return gothis
@@ -138,7 +144,7 @@ func NewQVariant_5(i int) *QVariant {
 // void QVariant(uint)
 func NewQVariant_6(ui uint) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ej", ffiqt.FFI_TYPE_VOID, cthis, &ui)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ej", ffiqt.FFI_TYPE_VOID, cthis, ui)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(cthis)
 	return gothis
@@ -150,7 +156,7 @@ func NewQVariant_6(ui uint) *QVariant {
 // void QVariant(qlonglong)
 func NewQVariant_7(ll int64) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ex", ffiqt.FFI_TYPE_VOID, cthis, &ll)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ex", ffiqt.FFI_TYPE_VOID, cthis, ll)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(cthis)
 	return gothis
@@ -162,7 +168,7 @@ func NewQVariant_7(ll int64) *QVariant {
 // void QVariant(qulonglong)
 func NewQVariant_8(ull uint64) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ey", ffiqt.FFI_TYPE_VOID, cthis, &ull)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ey", ffiqt.FFI_TYPE_VOID, cthis, ull)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(cthis)
 	return gothis
@@ -174,7 +180,7 @@ func NewQVariant_8(ull uint64) *QVariant {
 // void QVariant(_Bool)
 func NewQVariant_9(b bool) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Eb", ffiqt.FFI_TYPE_VOID, cthis, &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Eb", ffiqt.FFI_TYPE_VOID, cthis, b)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(cthis)
 	return gothis
@@ -186,7 +192,7 @@ func NewQVariant_9(b bool) *QVariant {
 // void QVariant(double)
 func NewQVariant_10(d float64) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ed", ffiqt.FFI_TYPE_VOID, cthis, &d)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ed", ffiqt.FFI_TYPE_VOID, cthis, d)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(cthis)
 	return gothis
@@ -198,7 +204,7 @@ func NewQVariant_10(d float64) *QVariant {
 // void QVariant(float)
 func NewQVariant_11(f float32) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ef", ffiqt.FFI_TYPE_VOID, cthis, &f)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ef", ffiqt.FFI_TYPE_VOID, cthis, f)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVariantFromPointer(cthis)
 	return gothis
@@ -652,7 +658,7 @@ func (this *QVariant) TypeName() string {
 // Public
 // bool canConvert(int)
 func (this *QVariant) CanConvert(targetTypeId int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant10canConvertEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &targetTypeId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant10canConvertEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), targetTypeId)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -663,7 +669,7 @@ func (this *QVariant) CanConvert(targetTypeId int) bool {
 // Public
 // bool convert(int)
 func (this *QVariant) Convert(targetTypeId int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariant7convertEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &targetTypeId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariant7convertEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), targetTypeId)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -674,7 +680,7 @@ func (this *QVariant) Convert(targetTypeId int) bool {
 // Protected
 // bool convert(const int, void *)
 func (this *QVariant) Convert_1(t int, ptr unsafe.Pointer /*666*/) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7convertEiPv", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &t, ptr)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7convertEiPv", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), t, ptr)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -736,7 +742,7 @@ func (this *QVariant) IsDetached() bool {
 // Public
 // int toInt(_Bool *)
 func (this *QVariant) ToInt(ok unsafe.Pointer /*666*/) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant5toIntEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant5toIntEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -747,7 +753,7 @@ func (this *QVariant) ToInt(ok unsafe.Pointer /*666*/) int {
 // Public
 // uint toUInt(_Bool *)
 func (this *QVariant) ToUInt(ok unsafe.Pointer /*666*/) uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toUIntEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toUIntEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
@@ -758,7 +764,7 @@ func (this *QVariant) ToUInt(ok unsafe.Pointer /*666*/) uint {
 // Public
 // qlonglong toLongLong(_Bool *)
 func (this *QVariant) ToLongLong(ok unsafe.Pointer /*666*/) int64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant10toLongLongEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant10toLongLongEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -769,7 +775,7 @@ func (this *QVariant) ToLongLong(ok unsafe.Pointer /*666*/) int64 {
 // Public
 // qulonglong toULongLong(_Bool *)
 func (this *QVariant) ToULongLong(ok unsafe.Pointer /*666*/) uint64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant11toULongLongEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant11toULongLongEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint64(rv) // 222
@@ -791,7 +797,7 @@ func (this *QVariant) ToBool() bool {
 // Public
 // double toDouble(_Bool *)
 func (this *QVariant) ToDouble(ok unsafe.Pointer /*666*/) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toDoubleEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toDoubleEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float64(rv) // 111
@@ -802,7 +808,7 @@ func (this *QVariant) ToDouble(ok unsafe.Pointer /*666*/) float64 {
 // Public
 // float toFloat(_Bool *)
 func (this *QVariant) ToFloat(ok unsafe.Pointer /*666*/) float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toFloatEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toFloatEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float32(rv) // 111
@@ -813,7 +819,7 @@ func (this *QVariant) ToFloat(ok unsafe.Pointer /*666*/) float32 {
 // Public
 // qreal toReal(_Bool *)
 func (this *QVariant) ToReal(ok unsafe.Pointer /*666*/) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toRealEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toRealEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float64(rv) // 222
@@ -824,9 +830,11 @@ func (this *QVariant) ToReal(ok unsafe.Pointer /*666*/) float64 {
 // Public
 // QByteArray toByteArray()
 func (this *QVariant) ToByteArray() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant11toByteArrayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant11toByteArrayEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -836,9 +844,11 @@ func (this *QVariant) ToByteArray() *QByteArray /*123*/ {
 // Public
 // QBitArray toBitArray()
 func (this *QVariant) ToBitArray() *QBitArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant10toBitArrayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant10toBitArrayEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQBitArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -848,9 +858,11 @@ func (this *QVariant) ToBitArray() *QBitArray /*123*/ {
 // Public
 // QString toString()
 func (this *QVariant) ToString() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toStringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -860,9 +872,11 @@ func (this *QVariant) ToString() *QString /*123*/ {
 // Public
 // QChar toChar()
 func (this *QVariant) ToChar() *QChar /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toCharEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toCharEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -872,9 +886,11 @@ func (this *QVariant) ToChar() *QChar /*123*/ {
 // Public
 // QDate toDate()
 func (this *QVariant) ToDate() *QDate /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toDateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toDateEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -884,9 +900,11 @@ func (this *QVariant) ToDate() *QDate /*123*/ {
 // Public
 // QTime toTime()
 func (this *QVariant) ToTime() *QTime /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toTimeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -896,9 +914,11 @@ func (this *QVariant) ToTime() *QTime /*123*/ {
 // Public
 // QDateTime toDateTime()
 func (this *QVariant) ToDateTime() *QDateTime /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant10toDateTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant10toDateTimeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -908,9 +928,11 @@ func (this *QVariant) ToDateTime() *QDateTime /*123*/ {
 // Public
 // QPoint toPoint()
 func (this *QVariant) ToPoint() *QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toPointEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toPointEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -920,9 +942,11 @@ func (this *QVariant) ToPoint() *QPoint /*123*/ {
 // Public
 // QPointF toPointF()
 func (this *QVariant) ToPointF() *QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toPointFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toPointFEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -932,9 +956,11 @@ func (this *QVariant) ToPointF() *QPointF /*123*/ {
 // Public
 // QRect toRect()
 func (this *QVariant) ToRect() *QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -944,9 +970,11 @@ func (this *QVariant) ToRect() *QRect /*123*/ {
 // Public
 // QSize toSize()
 func (this *QVariant) ToSize() *QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -956,9 +984,11 @@ func (this *QVariant) ToSize() *QSize /*123*/ {
 // Public
 // QSizeF toSizeF()
 func (this *QVariant) ToSizeF() *QSizeF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toSizeFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toSizeFEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -968,9 +998,11 @@ func (this *QVariant) ToSizeF() *QSizeF /*123*/ {
 // Public
 // QLine toLine()
 func (this *QVariant) ToLine() *QLine /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toLineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toLineEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -980,9 +1012,11 @@ func (this *QVariant) ToLine() *QLine /*123*/ {
 // Public
 // QLineF toLineF()
 func (this *QVariant) ToLineF() *QLineF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toLineFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toLineFEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLineFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -992,9 +1026,11 @@ func (this *QVariant) ToLineF() *QLineF /*123*/ {
 // Public
 // QRectF toRectF()
 func (this *QVariant) ToRectF() *QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toRectFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toRectFEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1004,9 +1040,11 @@ func (this *QVariant) ToRectF() *QRectF /*123*/ {
 // Public
 // QLocale toLocale()
 func (this *QVariant) ToLocale() *QLocale /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toLocaleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toLocaleEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1016,9 +1054,11 @@ func (this *QVariant) ToLocale() *QLocale /*123*/ {
 // Public
 // QRegExp toRegExp()
 func (this *QVariant) ToRegExp() *QRegExp /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toRegExpEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toRegExpEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegExpFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1028,9 +1068,11 @@ func (this *QVariant) ToRegExp() *QRegExp /*123*/ {
 // Public
 // QRegularExpression toRegularExpression()
 func (this *QVariant) ToRegularExpression() *QRegularExpression /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant19toRegularExpressionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant19toRegularExpressionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegularExpressionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1040,9 +1082,11 @@ func (this *QVariant) ToRegularExpression() *QRegularExpression /*123*/ {
 // Public
 // QUrl toUrl()
 func (this *QVariant) ToUrl() *QUrl /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant5toUrlEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant5toUrlEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1052,9 +1096,11 @@ func (this *QVariant) ToUrl() *QUrl /*123*/ {
 // Public
 // QEasingCurve toEasingCurve()
 func (this *QVariant) ToEasingCurve() *QEasingCurve /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant13toEasingCurveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant13toEasingCurveEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQEasingCurveFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1064,9 +1110,11 @@ func (this *QVariant) ToEasingCurve() *QEasingCurve /*123*/ {
 // Public
 // QUuid toUuid()
 func (this *QVariant) ToUuid() *QUuid /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toUuidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toUuidEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1076,9 +1124,11 @@ func (this *QVariant) ToUuid() *QUuid /*123*/ {
 // Public
 // QModelIndex toModelIndex()
 func (this *QVariant) ToModelIndex() *QModelIndex /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant12toModelIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant12toModelIndexEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1088,9 +1138,11 @@ func (this *QVariant) ToModelIndex() *QModelIndex /*123*/ {
 // Public
 // QPersistentModelIndex toPersistentModelIndex()
 func (this *QVariant) ToPersistentModelIndex() *QPersistentModelIndex /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant22toPersistentModelIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant22toPersistentModelIndexEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPersistentModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1100,9 +1152,11 @@ func (this *QVariant) ToPersistentModelIndex() *QPersistentModelIndex /*123*/ {
 // Public
 // QJsonValue toJsonValue()
 func (this *QVariant) ToJsonValue() *QJsonValue /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant11toJsonValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant11toJsonValueEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1112,9 +1166,11 @@ func (this *QVariant) ToJsonValue() *QJsonValue /*123*/ {
 // Public
 // QJsonObject toJsonObject()
 func (this *QVariant) ToJsonObject() *QJsonObject /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant12toJsonObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant12toJsonObjectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQJsonObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1124,9 +1180,11 @@ func (this *QVariant) ToJsonObject() *QJsonObject /*123*/ {
 // Public
 // QJsonArray toJsonArray()
 func (this *QVariant) ToJsonArray() *QJsonArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant11toJsonArrayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant11toJsonArrayEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQJsonArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1136,9 +1194,11 @@ func (this *QVariant) ToJsonArray() *QJsonArray /*123*/ {
 // Public
 // QJsonDocument toJsonDocument()
 func (this *QVariant) ToJsonDocument() *QJsonDocument /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant14toJsonDocumentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant14toJsonDocumentEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQJsonDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1233,7 +1293,7 @@ func (this *QVariant) ConstData() unsafe.Pointer /*666*/ {
 // Protected
 // void create(int, const void *)
 func (this *QVariant) Create(type_ int, copy unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariant6createEiPKv", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &type_, copy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariant6createEiPKv", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_, copy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1260,5 +1320,70 @@ func (this *QVariant) Compare(other *QVariant) int {
 	//  return rv
 	return int(rv) // 111
 }
+
+type QVariant__Type = int
+
+const QVariant__Invalid QVariant__Type = 0
+const QVariant__Bool QVariant__Type = 1
+const QVariant__Int QVariant__Type = 2
+const QVariant__UInt QVariant__Type = 3
+const QVariant__LongLong QVariant__Type = 4
+const QVariant__ULongLong QVariant__Type = 5
+const QVariant__Double QVariant__Type = 6
+const QVariant__Char QVariant__Type = 7
+const QVariant__Map QVariant__Type = 8
+const QVariant__List QVariant__Type = 9
+const QVariant__String QVariant__Type = 10
+const QVariant__StringList QVariant__Type = 11
+const QVariant__ByteArray QVariant__Type = 12
+const QVariant__BitArray QVariant__Type = 13
+const QVariant__Date QVariant__Type = 14
+const QVariant__Time QVariant__Type = 15
+const QVariant__DateTime QVariant__Type = 16
+const QVariant__Url QVariant__Type = 17
+const QVariant__Locale QVariant__Type = 18
+const QVariant__Rect QVariant__Type = 19
+const QVariant__RectF QVariant__Type = 20
+const QVariant__Size QVariant__Type = 21
+const QVariant__SizeF QVariant__Type = 22
+const QVariant__Line QVariant__Type = 23
+const QVariant__LineF QVariant__Type = 24
+const QVariant__Point QVariant__Type = 25
+const QVariant__PointF QVariant__Type = 26
+const QVariant__RegExp QVariant__Type = 27
+const QVariant__RegularExpression QVariant__Type = 44
+const QVariant__Hash QVariant__Type = 28
+const QVariant__EasingCurve QVariant__Type = 29
+const QVariant__Uuid QVariant__Type = 30
+const QVariant__ModelIndex QVariant__Type = 42
+const QVariant__PersistentModelIndex QVariant__Type = 50
+const QVariant__LastCoreType QVariant__Type = 51
+const QVariant__Font QVariant__Type = 64
+const QVariant__Pixmap QVariant__Type = 65
+const QVariant__Brush QVariant__Type = 66
+const QVariant__Color QVariant__Type = 67
+const QVariant__Palette QVariant__Type = 68
+const QVariant__Image QVariant__Type = 70
+const QVariant__Polygon QVariant__Type = 71
+const QVariant__Region QVariant__Type = 72
+const QVariant__Bitmap QVariant__Type = 73
+const QVariant__Cursor QVariant__Type = 74
+const QVariant__KeySequence QVariant__Type = 75
+const QVariant__Pen QVariant__Type = 76
+const QVariant__TextLength QVariant__Type = 77
+const QVariant__TextFormat QVariant__Type = 78
+const QVariant__Matrix QVariant__Type = 79
+const QVariant__Transform QVariant__Type = 80
+const QVariant__Matrix4x4 QVariant__Type = 81
+const QVariant__Vector2D QVariant__Type = 82
+const QVariant__Vector3D QVariant__Type = 83
+const QVariant__Vector4D QVariant__Type = 84
+const QVariant__Quaternion QVariant__Type = 85
+const QVariant__PolygonF QVariant__Type = 86
+const QVariant__Icon QVariant__Type = 69
+const QVariant__LastGuiType QVariant__Type = 86
+const QVariant__SizePolicy QVariant__Type = 121
+const QVariant__UserType QVariant__Type = 1024
+const QVariant__LastType QVariant__Type = 4294967295
 
 //  body block end

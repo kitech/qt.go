@@ -63,9 +63,15 @@ func (this *QPanGesture) GetCthis() unsafe.Pointer {
 		return this.QGesture.GetCthis()
 	}
 }
+func (this *QPanGesture) SetCthis(cthis unsafe.Pointer) {
+	this.QGesture = NewQGestureFromPointer(cthis)
+}
 func NewQPanGestureFromPointer(cthis unsafe.Pointer) *QPanGesture {
 	bcthis0 := NewQGestureFromPointer(cthis)
 	return &QPanGesture{bcthis0}
+}
+func (*QPanGesture) NewFromPointer(cthis unsafe.Pointer) *QPanGesture {
+	return NewQPanGestureFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:106
@@ -107,9 +113,11 @@ func DeleteQPanGesture(*QPanGesture) {
 // Public
 // QPointF lastOffset()
 func (this *QPanGesture) LastOffset() *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPanGesture10lastOffsetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPanGesture10lastOffsetEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -119,9 +127,11 @@ func (this *QPanGesture) LastOffset() *qtcore.QPointF /*123*/ {
 // Public
 // QPointF offset()
 func (this *QPanGesture) Offset() *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPanGesture6offsetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPanGesture6offsetEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -131,9 +141,11 @@ func (this *QPanGesture) Offset() *qtcore.QPointF /*123*/ {
 // Public
 // QPointF delta()
 func (this *QPanGesture) Delta() *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPanGesture5deltaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPanGesture5deltaEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -174,7 +186,7 @@ func (this *QPanGesture) SetOffset(value *qtcore.QPointF) {
 // Public
 // void setAcceleration(qreal)
 func (this *QPanGesture) SetAcceleration(value float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPanGesture15setAccelerationEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPanGesture15setAccelerationEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	gopp.ErrPrint(err, rv)
 }
 

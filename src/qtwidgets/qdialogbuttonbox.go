@@ -63,9 +63,15 @@ func (this *QDialogButtonBox) GetCthis() unsafe.Pointer {
 		return this.QWidget.GetCthis()
 	}
 }
+func (this *QDialogButtonBox) SetCthis(cthis unsafe.Pointer) {
+	this.QWidget = NewQWidgetFromPointer(cthis)
+}
 func NewQDialogButtonBoxFromPointer(cthis unsafe.Pointer) *QDialogButtonBox {
 	bcthis0 := NewQWidgetFromPointer(cthis)
 	return &QDialogButtonBox{bcthis0}
+}
+func (*QDialogButtonBox) NewFromPointer(cthis unsafe.Pointer) *QDialogButtonBox {
+	return NewQDialogButtonBoxFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qdialogbuttonbox.h:57
@@ -100,7 +106,7 @@ func NewQDialogButtonBox(parent *QWidget /*444 QWidget **/) *QDialogButtonBox {
 func NewQDialogButtonBox_1(orientation int, parent *QWidget /*444 QWidget **/) *QDialogButtonBox {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBoxC2EN2Qt11OrientationEP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, &orientation, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBoxC2EN2Qt11OrientationEP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, orientation, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDialogButtonBoxFromPointer(cthis)
 	return gothis
@@ -120,7 +126,7 @@ func DeleteQDialogButtonBox(*QDialogButtonBox) {
 // Public
 // void setOrientation(Qt::Orientation)
 func (this *QDialogButtonBox) SetOrientation(orientation int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox14setOrientationEN2Qt11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &orientation)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox14setOrientationEN2Qt11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), orientation)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -141,7 +147,7 @@ func (this *QDialogButtonBox) Orientation() int {
 // void addButton(class QAbstractButton *, enum QDialogButtonBox::ButtonRole)
 func (this *QDialogButtonBox) AddButton(button *QAbstractButton /*444 QAbstractButton **/, role int) {
 	var convArg0 = button.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox9addButtonEP15QAbstractButtonNS_10ButtonRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox9addButtonEP15QAbstractButtonNS_10ButtonRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -151,7 +157,7 @@ func (this *QDialogButtonBox) AddButton(button *QAbstractButton /*444 QAbstractB
 // QPushButton * addButton(const class QString &, enum QDialogButtonBox::ButtonRole)
 func (this *QDialogButtonBox) AddButton_1(text *qtcore.QString, role int) *QPushButton /*444 QPushButton **/ {
 	var convArg0 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox9addButtonERK7QStringNS_10ButtonRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox9addButtonERK7QStringNS_10ButtonRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -163,7 +169,7 @@ func (this *QDialogButtonBox) AddButton_1(text *qtcore.QString, role int) *QPush
 // Public
 // QPushButton * addButton(enum QDialogButtonBox::StandardButton)
 func (this *QDialogButtonBox) AddButton_2(button int) *QPushButton /*444 QPushButton **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox9addButtonENS_14StandardButtonE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &button)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox9addButtonENS_14StandardButtonE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), button)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -229,7 +235,7 @@ func (this *QDialogButtonBox) StandardButton(button *QAbstractButton /*444 QAbst
 // Public
 // QPushButton * button(enum QDialogButtonBox::StandardButton)
 func (this *QDialogButtonBox) Button(which int) *QPushButton /*444 QPushButton **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDialogButtonBox6buttonENS_14StandardButtonE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &which)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDialogButtonBox6buttonENS_14StandardButtonE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), which)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -241,7 +247,7 @@ func (this *QDialogButtonBox) Button(which int) *QPushButton /*444 QPushButton *
 // Public
 // void setCenterButtons(_Bool)
 func (this *QDialogButtonBox) SetCenterButtons(center bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox16setCenterButtonsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &center)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox16setCenterButtonsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), center)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -314,5 +320,51 @@ func (this *QDialogButtonBox) Event(event *qtcore.QEvent /*444 QEvent **/) bool 
 	//  return rv
 	return rv != 0
 }
+
+type QDialogButtonBox__ButtonRole = int
+
+const QDialogButtonBox__InvalidRole QDialogButtonBox__ButtonRole = 4294967295
+const QDialogButtonBox__AcceptRole QDialogButtonBox__ButtonRole = 0
+const QDialogButtonBox__RejectRole QDialogButtonBox__ButtonRole = 1
+const QDialogButtonBox__DestructiveRole QDialogButtonBox__ButtonRole = 2
+const QDialogButtonBox__ActionRole QDialogButtonBox__ButtonRole = 3
+const QDialogButtonBox__HelpRole QDialogButtonBox__ButtonRole = 4
+const QDialogButtonBox__YesRole QDialogButtonBox__ButtonRole = 5
+const QDialogButtonBox__NoRole QDialogButtonBox__ButtonRole = 6
+const QDialogButtonBox__ResetRole QDialogButtonBox__ButtonRole = 7
+const QDialogButtonBox__ApplyRole QDialogButtonBox__ButtonRole = 8
+const QDialogButtonBox__NRoles QDialogButtonBox__ButtonRole = 9
+
+type QDialogButtonBox__StandardButton = int
+
+const QDialogButtonBox__NoButton QDialogButtonBox__StandardButton = 0
+const QDialogButtonBox__Ok QDialogButtonBox__StandardButton = 1024
+const QDialogButtonBox__Save QDialogButtonBox__StandardButton = 2048
+const QDialogButtonBox__SaveAll QDialogButtonBox__StandardButton = 4096
+const QDialogButtonBox__Open QDialogButtonBox__StandardButton = 8192
+const QDialogButtonBox__Yes QDialogButtonBox__StandardButton = 16384
+const QDialogButtonBox__YesToAll QDialogButtonBox__StandardButton = 32768
+const QDialogButtonBox__No QDialogButtonBox__StandardButton = 65536
+const QDialogButtonBox__NoToAll QDialogButtonBox__StandardButton = 131072
+const QDialogButtonBox__Abort QDialogButtonBox__StandardButton = 262144
+const QDialogButtonBox__Retry QDialogButtonBox__StandardButton = 524288
+const QDialogButtonBox__Ignore QDialogButtonBox__StandardButton = 1048576
+const QDialogButtonBox__Close QDialogButtonBox__StandardButton = 2097152
+const QDialogButtonBox__Cancel QDialogButtonBox__StandardButton = 4194304
+const QDialogButtonBox__Discard QDialogButtonBox__StandardButton = 8388608
+const QDialogButtonBox__Help QDialogButtonBox__StandardButton = 16777216
+const QDialogButtonBox__Apply QDialogButtonBox__StandardButton = 33554432
+const QDialogButtonBox__Reset QDialogButtonBox__StandardButton = 67108864
+const QDialogButtonBox__RestoreDefaults QDialogButtonBox__StandardButton = 134217728
+const QDialogButtonBox__FirstButton QDialogButtonBox__StandardButton = 1024
+const QDialogButtonBox__LastButton QDialogButtonBox__StandardButton = 134217728
+
+type QDialogButtonBox__ButtonLayout = int
+
+const QDialogButtonBox__WinLayout QDialogButtonBox__ButtonLayout = 0
+const QDialogButtonBox__MacLayout QDialogButtonBox__ButtonLayout = 1
+const QDialogButtonBox__KdeLayout QDialogButtonBox__ButtonLayout = 2
+const QDialogButtonBox__GnomeLayout QDialogButtonBox__ButtonLayout = 3
+const QDialogButtonBox__AndroidLayout QDialogButtonBox__ButtonLayout = 5
 
 //  body block end

@@ -55,8 +55,14 @@ func (this *QResource) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QResource) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQResourceFromPointer(cthis unsafe.Pointer) *QResource {
 	return &QResource{&qtrt.CObject{cthis}}
+}
+func (*QResource) NewFromPointer(cthis unsafe.Pointer) *QResource {
+	return NewQResourceFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qresource.h:57
@@ -97,9 +103,11 @@ func (this *QResource) SetFileName(file *QString) {
 // Public
 // QString fileName()
 func (this *QResource) FileName() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QResource8fileNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QResource8fileNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -109,9 +117,11 @@ func (this *QResource) FileName() *QString /*123*/ {
 // Public
 // QString absoluteFilePath()
 func (this *QResource) AbsoluteFilePath() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QResource16absoluteFilePathEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QResource16absoluteFilePathEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -131,9 +141,11 @@ func (this *QResource) SetLocale(locale *QLocale) {
 // Public
 // QLocale locale()
 func (this *QResource) Locale() *QLocale /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QResource6localeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QResource6localeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -187,9 +199,11 @@ func (this *QResource) Data() unsafe.Pointer /*666*/ {
 // Public
 // QDateTime lastModified()
 func (this *QResource) LastModified() *QDateTime /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QResource12lastModifiedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QResource12lastModifiedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

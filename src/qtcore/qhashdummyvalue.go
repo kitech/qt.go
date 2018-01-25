@@ -55,8 +55,14 @@ func (this *QHashDummyValue) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QHashDummyValue) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQHashDummyValueFromPointer(cthis unsafe.Pointer) *QHashDummyValue {
 	return &QHashDummyValue{&qtrt.CObject{cthis}}
+}
+func (*QHashDummyValue) NewFromPointer(cthis unsafe.Pointer) *QHashDummyValue {
+	return NewQHashDummyValueFromPointer(cthis)
 }
 
 //  body block end

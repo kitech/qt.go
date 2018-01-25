@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 20
+// extern C begin: 22
 */
 // import "C"
 import "unsafe"
@@ -63,8 +63,14 @@ func (this *QTileRules) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTileRules) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTileRulesFromPointer(cthis unsafe.Pointer) *QTileRules {
 	return &QTileRules{&qtrt.CObject{cthis}}
+}
+func (*QTileRules) NewFromPointer(cthis unsafe.Pointer) *QTileRules {
+	return NewQTileRulesFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qdrawutil.h:114
@@ -73,7 +79,7 @@ func NewQTileRulesFromPointer(cthis unsafe.Pointer) *QTileRules {
 // void QTileRules(Qt::TileRule, Qt::TileRule)
 func NewQTileRules(horizontalRule int, verticalRule int) *QTileRules {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTileRulesC2EN2Qt8TileRuleES1_", ffiqt.FFI_TYPE_VOID, cthis, &horizontalRule, &verticalRule)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTileRulesC2EN2Qt8TileRuleES1_", ffiqt.FFI_TYPE_VOID, cthis, horizontalRule, verticalRule)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTileRulesFromPointer(cthis)
 	return gothis
@@ -85,7 +91,7 @@ func NewQTileRules(horizontalRule int, verticalRule int) *QTileRules {
 // void QTileRules(Qt::TileRule)
 func NewQTileRules_1(rule int) *QTileRules {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTileRulesC2EN2Qt8TileRuleE", ffiqt.FFI_TYPE_VOID, cthis, &rule)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTileRulesC2EN2Qt8TileRuleE", ffiqt.FFI_TYPE_VOID, cthis, rule)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTileRulesFromPointer(cthis)
 	return gothis

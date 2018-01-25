@@ -55,8 +55,14 @@ func (this *QElapsedTimer) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QElapsedTimer) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQElapsedTimerFromPointer(cthis unsafe.Pointer) *QElapsedTimer {
 	return &QElapsedTimer{&qtrt.CObject{cthis}}
+}
+func (*QElapsedTimer) NewFromPointer(cthis unsafe.Pointer) *QElapsedTimer {
+	return NewQElapsedTimerFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qelapsedtimer.h:59
@@ -170,7 +176,7 @@ func (this *QElapsedTimer) Elapsed() int64 {
 // Public
 // bool hasExpired(qint64)
 func (this *QElapsedTimer) HasExpired(timeout int64) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QElapsedTimer10hasExpiredEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &timeout)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QElapsedTimer10hasExpiredEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -210,5 +216,13 @@ func (this *QElapsedTimer) SecsTo(other *QElapsedTimer) int64 {
 	//  return rv
 	return int64(rv) // 222
 }
+
+type QElapsedTimer__ClockType = int
+
+const QElapsedTimer__SystemTime QElapsedTimer__ClockType = 0
+const QElapsedTimer__MonotonicClock QElapsedTimer__ClockType = 1
+const QElapsedTimer__TickCounter QElapsedTimer__ClockType = 2
+const QElapsedTimer__MachAbsoluteTime QElapsedTimer__ClockType = 3
+const QElapsedTimer__PerformanceCounter QElapsedTimer__ClockType = 4
 
 //  body block end

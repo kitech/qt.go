@@ -63,9 +63,15 @@ func (this *QGesture) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QGesture) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQGestureFromPointer(cthis unsafe.Pointer) *QGesture {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QGesture{bcthis0}
+}
+func (*QGesture) NewFromPointer(cthis unsafe.Pointer) *QGesture {
+	return NewQGestureFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:63
@@ -129,9 +135,11 @@ func (this *QGesture) State() int {
 // Public
 // QPointF hotSpot()
 func (this *QGesture) HotSpot() *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture7hotSpotEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QGesture7hotSpotEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -171,7 +179,7 @@ func (this *QGesture) UnsetHotSpot() {
 // Public
 // void setGestureCancelPolicy(enum QGesture::GestureCancelPolicy)
 func (this *QGesture) SetGestureCancelPolicy(policy int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGesture22setGestureCancelPolicyENS_19GestureCancelPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &policy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGesture22setGestureCancelPolicyENS_19GestureCancelPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -185,5 +193,10 @@ func (this *QGesture) GestureCancelPolicy() int {
 	//  return rv
 	return int(rv)
 }
+
+type QGesture__GestureCancelPolicy = int
+
+const QGesture__CancelNone QGesture__GestureCancelPolicy = 0
+const QGesture__CancelAllInContext QGesture__GestureCancelPolicy = 1
 
 //  body block end

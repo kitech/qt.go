@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 22
+// extern C begin: 23
 */
 // import "C"
 import "unsafe"
@@ -55,8 +55,14 @@ func (this *QMapNodeBase) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QMapNodeBase) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQMapNodeBaseFromPointer(cthis unsafe.Pointer) *QMapNodeBase {
 	return &QMapNodeBase{&qtrt.CObject{cthis}}
+}
+func (*QMapNodeBase) NewFromPointer(cthis unsafe.Pointer) *QMapNodeBase {
+	return NewQMapNodeBaseFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qmap.h:91
@@ -123,7 +129,7 @@ func (this *QMapNodeBase) Color() int {
 // Public inline
 // void setColor(enum QMapNodeBase::Color)
 func (this *QMapNodeBase) SetColor(c int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapNodeBase8setColorENS_5ColorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &c)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapNodeBase8setColorENS_5ColorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -138,5 +144,14 @@ func (this *QMapNodeBase) Parent() *QMapNodeBase /*444 QMapNodeBase **/ {
 	rv2 := /*==*/ NewQMapNodeBaseFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
+
+type QMapNodeBase__Color = int
+
+const QMapNodeBase__Red QMapNodeBase__Color = 0
+const QMapNodeBase__Black QMapNodeBase__Color = 1
+
+type QMapNodeBase__ = int
+
+const QMapNodeBase__Mask QMapNodeBase__ = 3
 
 //  body block end

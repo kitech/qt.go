@@ -59,9 +59,15 @@ func (this *QTabletEvent) GetCthis() unsafe.Pointer {
 		return this.QInputEvent.GetCthis()
 	}
 }
+func (this *QTabletEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QInputEvent = NewQInputEventFromPointer(cthis)
+}
 func NewQTabletEventFromPointer(cthis unsafe.Pointer) *QTabletEvent {
 	bcthis0 := NewQInputEventFromPointer(cthis)
 	return &QTabletEvent{bcthis0}
+}
+func (*QTabletEvent) NewFromPointer(cthis unsafe.Pointer) *QTabletEvent {
+	return NewQTabletEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:259
@@ -78,9 +84,11 @@ func DeleteQTabletEvent(*QTabletEvent) {
 // Public inline
 // QPoint pos()
 func (this *QTabletEvent) Pos() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent3posEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -90,9 +98,11 @@ func (this *QTabletEvent) Pos() *qtcore.QPoint /*123*/ {
 // Public inline
 // QPoint globalPos()
 func (this *QTabletEvent) GlobalPos() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -307,5 +317,22 @@ func (this *QTabletEvent) Buttons() int {
 	//  return rv
 	return int(rv)
 }
+
+type QTabletEvent__TabletDevice = int
+
+const QTabletEvent__NoDevice QTabletEvent__TabletDevice = 0
+const QTabletEvent__Puck QTabletEvent__TabletDevice = 1
+const QTabletEvent__Stylus QTabletEvent__TabletDevice = 2
+const QTabletEvent__Airbrush QTabletEvent__TabletDevice = 3
+const QTabletEvent__FourDMouse QTabletEvent__TabletDevice = 4
+const QTabletEvent__XFreeEraser QTabletEvent__TabletDevice = 5
+const QTabletEvent__RotationStylus QTabletEvent__TabletDevice = 6
+
+type QTabletEvent__PointerType = int
+
+const QTabletEvent__UnknownPointer QTabletEvent__PointerType = 0
+const QTabletEvent__Pen QTabletEvent__PointerType = 1
+const QTabletEvent__Cursor QTabletEvent__PointerType = 2
+const QTabletEvent__Eraser QTabletEvent__PointerType = 3
 
 //  body block end

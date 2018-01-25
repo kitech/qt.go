@@ -63,8 +63,14 @@ func (this *QWhatsThis) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QWhatsThis) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQWhatsThisFromPointer(cthis unsafe.Pointer) *QWhatsThis {
 	return &QWhatsThis{&qtrt.CObject{cthis}}
+}
+func (*QWhatsThis) NewFromPointer(cthis unsafe.Pointer) *QWhatsThis {
+	return NewQWhatsThisFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qwhatsthis.h:58

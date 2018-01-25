@@ -55,8 +55,14 @@ func (this *QBitRef) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QBitRef) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQBitRefFromPointer(cthis unsafe.Pointer) *QBitRef {
 	return &QBitRef{&qtrt.CObject{cthis}}
+}
+func (*QBitRef) NewFromPointer(cthis unsafe.Pointer) *QBitRef {
+	return NewQBitRefFromPointer(cthis)
 }
 
 //  body block end

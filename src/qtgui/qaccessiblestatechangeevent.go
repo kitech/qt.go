@@ -59,9 +59,15 @@ func (this *QAccessibleStateChangeEvent) GetCthis() unsafe.Pointer {
 		return this.QAccessibleEvent.GetCthis()
 	}
 }
+func (this *QAccessibleStateChangeEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QAccessibleEvent = NewQAccessibleEventFromPointer(cthis)
+}
 func NewQAccessibleStateChangeEventFromPointer(cthis unsafe.Pointer) *QAccessibleStateChangeEvent {
 	bcthis0 := NewQAccessibleEventFromPointer(cthis)
 	return &QAccessibleStateChangeEvent{bcthis0}
+}
+func (*QAccessibleStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QAccessibleStateChangeEvent {
+	return NewQAccessibleStateChangeEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:733

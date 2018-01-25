@@ -55,9 +55,15 @@ func (this *QRandomGenerator64) GetCthis() unsafe.Pointer {
 		return this.QRandomGenerator.GetCthis()
 	}
 }
+func (this *QRandomGenerator64) SetCthis(cthis unsafe.Pointer) {
+	this.QRandomGenerator = NewQRandomGeneratorFromPointer(cthis)
+}
 func NewQRandomGenerator64FromPointer(cthis unsafe.Pointer) *QRandomGenerator64 {
 	bcthis0 := NewQRandomGeneratorFromPointer(cthis)
 	return &QRandomGenerator64{bcthis0}
+}
+func (*QRandomGenerator64) NewFromPointer(cthis unsafe.Pointer) *QRandomGenerator64 {
+	return NewQRandomGenerator64FromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qrandom.h:209
@@ -77,7 +83,7 @@ func (this *QRandomGenerator64) Generate() uint64 {
 // void QRandomGenerator64(quint32)
 func NewQRandomGenerator64(seedValue uint) *QRandomGenerator64 {
 	cthis := qtrt.Calloc(1, 256) // 2512
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRandomGenerator64C2Ej", ffiqt.FFI_TYPE_VOID, cthis, &seedValue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRandomGenerator64C2Ej", ffiqt.FFI_TYPE_VOID, cthis, seedValue)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRandomGenerator64FromPointer(cthis)
 	return gothis
@@ -89,7 +95,7 @@ func NewQRandomGenerator64(seedValue uint) *QRandomGenerator64 {
 // void QRandomGenerator64(const quint32 *, qsizetype)
 func NewQRandomGenerator64_1(seedBuffer unsafe.Pointer /*666*/, len int64) *QRandomGenerator64 {
 	cthis := qtrt.Calloc(1, 256) // 2512
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjx", ffiqt.FFI_TYPE_VOID, cthis, seedBuffer, &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjx", ffiqt.FFI_TYPE_VOID, cthis, &seedBuffer, len)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRandomGenerator64FromPointer(cthis)
 	return gothis
@@ -101,7 +107,7 @@ func NewQRandomGenerator64_1(seedBuffer unsafe.Pointer /*666*/, len int64) *QRan
 // void QRandomGenerator64(const quint32 *, const quint32 *)
 func NewQRandomGenerator64_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*666*/) *QRandomGenerator64 {
 	cthis := qtrt.Calloc(1, 256) // 2512
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjS1_", ffiqt.FFI_TYPE_VOID, cthis, begin, end)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjS1_", ffiqt.FFI_TYPE_VOID, cthis, &begin, &end)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRandomGenerator64FromPointer(cthis)
 	return gothis
@@ -125,7 +131,7 @@ func NewQRandomGenerator64_3(other *QRandomGenerator) *QRandomGenerator64 {
 // Public inline
 // void discard(unsigned long long)
 func (this *QRandomGenerator64) Discard(z uint64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRandomGenerator647discardEy", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &z)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRandomGenerator647discardEy", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), z)
 	gopp.ErrPrint(err, rv)
 }
 

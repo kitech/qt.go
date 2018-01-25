@@ -59,8 +59,14 @@ func (this *QBrushData) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QBrushData) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQBrushDataFromPointer(cthis unsafe.Pointer) *QBrushData {
 	return &QBrushData{&qtrt.CObject{cthis}}
+}
+func (*QBrushData) NewFromPointer(cthis unsafe.Pointer) *QBrushData {
+	return NewQBrushDataFromPointer(cthis)
 }
 
 //  body block end

@@ -59,9 +59,15 @@ func (this *QFileOpenEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QFileOpenEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQFileOpenEventFromPointer(cthis unsafe.Pointer) *QFileOpenEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QFileOpenEvent{bcthis0}
+}
+func (*QFileOpenEvent) NewFromPointer(cthis unsafe.Pointer) *QFileOpenEvent {
+	return NewQFileOpenEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:738
@@ -104,9 +110,11 @@ func DeleteQFileOpenEvent(*QFileOpenEvent) {
 // Public inline
 // QString file()
 func (this *QFileOpenEvent) File() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QFileOpenEvent4fileEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QFileOpenEvent4fileEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -116,9 +124,11 @@ func (this *QFileOpenEvent) File() *qtcore.QString /*123*/ {
 // Public inline
 // QUrl url()
 func (this *QFileOpenEvent) Url() *qtcore.QUrl /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QFileOpenEvent3urlEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QFileOpenEvent3urlEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

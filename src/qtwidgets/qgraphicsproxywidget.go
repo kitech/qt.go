@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 80
+// extern C begin: 82
 */
 // import "C"
 import "unsafe"
@@ -63,9 +63,15 @@ func (this *QGraphicsProxyWidget) GetCthis() unsafe.Pointer {
 		return this.QGraphicsWidget.GetCthis()
 	}
 }
+func (this *QGraphicsProxyWidget) SetCthis(cthis unsafe.Pointer) {
+	this.QGraphicsWidget = NewQGraphicsWidgetFromPointer(cthis)
+}
 func NewQGraphicsProxyWidgetFromPointer(cthis unsafe.Pointer) *QGraphicsProxyWidget {
 	bcthis0 := NewQGraphicsWidgetFromPointer(cthis)
 	return &QGraphicsProxyWidget{bcthis0}
+}
+func (*QGraphicsProxyWidget) NewFromPointer(cthis unsafe.Pointer) *QGraphicsProxyWidget {
+	return NewQGraphicsProxyWidgetFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:54
@@ -78,6 +84,19 @@ func (this *QGraphicsProxyWidget) MetaObject() *qtcore.QMetaObject /*444 const Q
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:56
+// index:0
+// Public
+// void QGraphicsProxyWidget(class QGraphicsItem *, Qt::WindowFlags)
+func NewQGraphicsProxyWidget(parent *QGraphicsItem /*444 QGraphicsItem **/, wFlags int) *QGraphicsProxyWidget {
+	cthis := qtrt.Calloc(1, 256) // 48
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidgetC2EP13QGraphicsItem6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, wFlags)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQGraphicsProxyWidgetFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:57
@@ -116,10 +135,12 @@ func (this *QGraphicsProxyWidget) Widget() *QWidget /*444 QWidget **/ {
 // Public
 // QRectF subWidgetRect(const class QWidget *)
 func (this *QGraphicsProxyWidget) SubWidgetRect(widget *QWidget /*444 const QWidget **/) *qtcore.QRectF /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = widget.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -175,10 +196,12 @@ func (this *QGraphicsProxyWidget) CreateProxyForChildWidget(child *QWidget /*444
 // Protected virtual
 // QVariant itemChange(enum QGraphicsItem::GraphicsItemChange, const class QVariant &)
 func (this *QGraphicsProxyWidget) ItemChange(change int, value *qtcore.QVariant) *qtcore.QVariant /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg1 = value.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget10itemChangeEN13QGraphicsItem18GraphicsItemChangeERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &change, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget10itemChangeEN13QGraphicsItem18GraphicsItemChangeERK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), change, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -423,7 +446,7 @@ func (this *QGraphicsProxyWidget) FocusOutEvent(event *qtgui.QFocusEvent /*444 Q
 // Protected virtual
 // bool focusNextPrevChild(_Bool)
 func (this *QGraphicsProxyWidget) FocusNextPrevChild(next bool) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &next)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), next)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -434,9 +457,11 @@ func (this *QGraphicsProxyWidget) FocusNextPrevChild(next bool) bool {
 // Protected virtual
 // QVariant inputMethodQuery(Qt::InputMethodQuery)
 func (this *QGraphicsProxyWidget) InputMethodQuery(query int) *qtcore.QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsProxyWidget16inputMethodQueryEN2Qt16InputMethodQueryE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &query)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsProxyWidget16inputMethodQueryEN2Qt16InputMethodQueryE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), query)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -456,10 +481,12 @@ func (this *QGraphicsProxyWidget) InputMethodEvent(event *qtgui.QInputMethodEven
 // Protected virtual
 // QSizeF sizeHint(Qt::SizeHint, const class QSizeF &)
 func (this *QGraphicsProxyWidget) SizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg1 = constraint.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsProxyWidget8sizeHintEN2Qt8SizeHintERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &which, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsProxyWidget8sizeHintEN2Qt8SizeHintERK6QSizeF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), which, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -486,5 +513,9 @@ func (this *QGraphicsProxyWidget) NewProxyWidget(arg0 *QWidget /*444 const QWidg
 	rv2 := /*==*/ NewQGraphicsProxyWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
+
+type QGraphicsProxyWidget__ = int
+
+const QGraphicsProxyWidget__Type QGraphicsProxyWidget__ = 12
 
 //  body block end

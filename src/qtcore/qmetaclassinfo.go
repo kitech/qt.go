@@ -55,8 +55,14 @@ func (this *QMetaClassInfo) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QMetaClassInfo) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQMetaClassInfoFromPointer(cthis unsafe.Pointer) *QMetaClassInfo {
 	return &QMetaClassInfo{&qtrt.CObject{cthis}}
+}
+func (*QMetaClassInfo) NewFromPointer(cthis unsafe.Pointer) *QMetaClassInfo {
+	return NewQMetaClassInfoFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:303

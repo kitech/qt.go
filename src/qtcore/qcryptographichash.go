@@ -55,8 +55,14 @@ func (this *QCryptographicHash) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QCryptographicHash) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQCryptographicHashFromPointer(cthis unsafe.Pointer) *QCryptographicHash {
 	return &QCryptographicHash{&qtrt.CObject{cthis}}
+}
+func (*QCryptographicHash) NewFromPointer(cthis unsafe.Pointer) *QCryptographicHash {
+	return NewQCryptographicHashFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qcryptographichash.h:92
@@ -65,7 +71,7 @@ func NewQCryptographicHashFromPointer(cthis unsafe.Pointer) *QCryptographicHash 
 // void QCryptographicHash(enum QCryptographicHash::Algorithm)
 func NewQCryptographicHash(method int) *QCryptographicHash {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHashC2ENS_9AlgorithmE", ffiqt.FFI_TYPE_VOID, cthis, &method)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHashC2ENS_9AlgorithmE", ffiqt.FFI_TYPE_VOID, cthis, method)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCryptographicHashFromPointer(cthis)
 	return gothis
@@ -96,7 +102,7 @@ func (this *QCryptographicHash) Reset() {
 func (this *QCryptographicHash) AddData(data string, length int) {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash7addDataEPKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &length)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash7addDataEPKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, length)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -127,9 +133,11 @@ func (this *QCryptographicHash) AddData_2(device *QIODevice /*444 QIODevice **/)
 // Public
 // QByteArray result()
 func (this *QCryptographicHash) Result() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCryptographicHash6resultEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCryptographicHash6resultEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -150,5 +158,27 @@ func QCryptographicHash_Hash(data *QByteArray, method int) *QByteArray /*123*/ {
 	rv := nilthis.Hash(data, method)
 	return rv
 }
+
+type QCryptographicHash__Algorithm = int
+
+const QCryptographicHash__Md4 QCryptographicHash__Algorithm = 0
+const QCryptographicHash__Md5 QCryptographicHash__Algorithm = 1
+const QCryptographicHash__Sha1 QCryptographicHash__Algorithm = 2
+const QCryptographicHash__Sha224 QCryptographicHash__Algorithm = 3
+const QCryptographicHash__Sha256 QCryptographicHash__Algorithm = 4
+const QCryptographicHash__Sha384 QCryptographicHash__Algorithm = 5
+const QCryptographicHash__Sha512 QCryptographicHash__Algorithm = 6
+const QCryptographicHash__Keccak_224 QCryptographicHash__Algorithm = 7
+const QCryptographicHash__Keccak_256 QCryptographicHash__Algorithm = 8
+const QCryptographicHash__Keccak_384 QCryptographicHash__Algorithm = 9
+const QCryptographicHash__Keccak_512 QCryptographicHash__Algorithm = 10
+const QCryptographicHash__RealSha3_224 QCryptographicHash__Algorithm = 11
+const QCryptographicHash__RealSha3_256 QCryptographicHash__Algorithm = 12
+const QCryptographicHash__RealSha3_384 QCryptographicHash__Algorithm = 13
+const QCryptographicHash__RealSha3_512 QCryptographicHash__Algorithm = 14
+const QCryptographicHash__Sha3_224 QCryptographicHash__Algorithm = 11
+const QCryptographicHash__Sha3_256 QCryptographicHash__Algorithm = 12
+const QCryptographicHash__Sha3_384 QCryptographicHash__Algorithm = 13
+const QCryptographicHash__Sha3_512 QCryptographicHash__Algorithm = 14
 
 //  body block end

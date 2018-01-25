@@ -63,9 +63,15 @@ func (this *QSplitterHandle) GetCthis() unsafe.Pointer {
 		return this.QWidget.GetCthis()
 	}
 }
+func (this *QSplitterHandle) SetCthis(cthis unsafe.Pointer) {
+	this.QWidget = NewQWidgetFromPointer(cthis)
+}
 func NewQSplitterHandleFromPointer(cthis unsafe.Pointer) *QSplitterHandle {
 	bcthis0 := NewQWidgetFromPointer(cthis)
 	return &QSplitterHandle{bcthis0}
+}
+func (*QSplitterHandle) NewFromPointer(cthis unsafe.Pointer) *QSplitterHandle {
+	return NewQSplitterHandleFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qsplitter.h:138
@@ -87,7 +93,7 @@ func (this *QSplitterHandle) MetaObject() *qtcore.QMetaObject /*444 const QMetaO
 func NewQSplitterHandle(o int, parent *QSplitter /*444 QSplitter **/) *QSplitterHandle {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSplitterHandleC2EN2Qt11OrientationEP9QSplitter", ffiqt.FFI_TYPE_VOID, cthis, &o, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSplitterHandleC2EN2Qt11OrientationEP9QSplitter", ffiqt.FFI_TYPE_VOID, cthis, o, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSplitterHandleFromPointer(cthis)
 	return gothis
@@ -107,7 +113,7 @@ func DeleteQSplitterHandle(*QSplitterHandle) {
 // Public
 // void setOrientation(Qt::Orientation)
 func (this *QSplitterHandle) SetOrientation(o int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSplitterHandle14setOrientationEN2Qt11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &o)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSplitterHandle14setOrientationEN2Qt11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), o)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -150,9 +156,11 @@ func (this *QSplitterHandle) Splitter() *QSplitter /*444 QSplitter **/ {
 // Public virtual
 // QSize sizeHint()
 func (this *QSplitterHandle) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSplitterHandle8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSplitterHandle8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -224,7 +232,7 @@ func (this *QSplitterHandle) Event(arg0 *qtcore.QEvent /*444 QEvent **/) bool {
 // Protected
 // void moveSplitter(int)
 func (this *QSplitterHandle) MoveSplitter(p int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSplitterHandle12moveSplitterEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSplitterHandle12moveSplitterEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), p)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -233,7 +241,7 @@ func (this *QSplitterHandle) MoveSplitter(p int) {
 // Protected
 // int closestLegalPosition(int)
 func (this *QSplitterHandle) ClosestLegalPosition(p int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSplitterHandle20closestLegalPositionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &p)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSplitterHandle20closestLegalPositionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), p)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111

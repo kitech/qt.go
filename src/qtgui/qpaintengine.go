@@ -59,8 +59,14 @@ func (this *QPaintEngine) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QPaintEngine) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQPaintEngineFromPointer(cthis unsafe.Pointer) *QPaintEngine {
 	return &QPaintEngine{&qtrt.CObject{cthis}}
+}
+func (*QPaintEngine) NewFromPointer(cthis unsafe.Pointer) *QPaintEngine {
+	return NewQPaintEngineFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qpaintengine.h:148
@@ -88,7 +94,7 @@ func (this *QPaintEngine) IsActive() bool {
 // Public inline
 // void setActive(_Bool)
 func (this *QPaintEngine) SetActive(newState bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine9setActiveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &newState)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine9setActiveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), newState)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -131,7 +137,7 @@ func (this *QPaintEngine) UpdateState(state *QPaintEngineState) {
 // void drawRects(const class QRect *, int)
 func (this *QPaintEngine) DrawRects(rects *qtcore.QRect /*444 const QRect **/, rectCount int) {
 	var convArg0 = rects.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine9drawRectsEPK5QRecti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &rectCount)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine9drawRectsEPK5QRecti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, rectCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -141,7 +147,7 @@ func (this *QPaintEngine) DrawRects(rects *qtcore.QRect /*444 const QRect **/, r
 // void drawRects(const class QRectF *, int)
 func (this *QPaintEngine) DrawRects_1(rects *qtcore.QRectF /*444 const QRectF **/, rectCount int) {
 	var convArg0 = rects.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine9drawRectsEPK6QRectFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &rectCount)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine9drawRectsEPK6QRectFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, rectCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -151,7 +157,7 @@ func (this *QPaintEngine) DrawRects_1(rects *qtcore.QRectF /*444 const QRectF **
 // void drawLines(const class QLine *, int)
 func (this *QPaintEngine) DrawLines(lines *qtcore.QLine /*444 const QLine **/, lineCount int) {
 	var convArg0 = lines.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine9drawLinesEPK5QLinei", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &lineCount)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine9drawLinesEPK5QLinei", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, lineCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -161,7 +167,7 @@ func (this *QPaintEngine) DrawLines(lines *qtcore.QLine /*444 const QLine **/, l
 // void drawLines(const class QLineF *, int)
 func (this *QPaintEngine) DrawLines_1(lines *qtcore.QLineF /*444 const QLineF **/, lineCount int) {
 	var convArg0 = lines.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine9drawLinesEPK6QLineFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &lineCount)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine9drawLinesEPK6QLineFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, lineCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -201,7 +207,7 @@ func (this *QPaintEngine) DrawPath(path *QPainterPath) {
 // void drawPoints(const class QPointF *, int)
 func (this *QPaintEngine) DrawPoints(points *qtcore.QPointF /*444 const QPointF **/, pointCount int) {
 	var convArg0 = points.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine10drawPointsEPK7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pointCount)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine10drawPointsEPK7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pointCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -211,7 +217,7 @@ func (this *QPaintEngine) DrawPoints(points *qtcore.QPointF /*444 const QPointF 
 // void drawPoints(const class QPoint *, int)
 func (this *QPaintEngine) DrawPoints_1(points *qtcore.QPoint /*444 const QPoint **/, pointCount int) {
 	var convArg0 = points.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine10drawPointsEPK6QPointi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pointCount)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine10drawPointsEPK6QPointi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pointCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -221,7 +227,7 @@ func (this *QPaintEngine) DrawPoints_1(points *qtcore.QPoint /*444 const QPoint 
 // void drawPolygon(const class QPointF *, int, enum QPaintEngine::PolygonDrawMode)
 func (this *QPaintEngine) DrawPolygon(points *qtcore.QPointF /*444 const QPointF **/, pointCount int, mode int) {
 	var convArg0 = points.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine11drawPolygonEPK7QPointFiNS_15PolygonDrawModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pointCount, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine11drawPolygonEPK7QPointFiNS_15PolygonDrawModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pointCount, mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -231,7 +237,7 @@ func (this *QPaintEngine) DrawPolygon(points *qtcore.QPointF /*444 const QPointF
 // void drawPolygon(const class QPoint *, int, enum QPaintEngine::PolygonDrawMode)
 func (this *QPaintEngine) DrawPolygon_1(points *qtcore.QPoint /*444 const QPoint **/, pointCount int, mode int) {
 	var convArg0 = points.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine11drawPolygonEPK6QPointiNS_15PolygonDrawModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pointCount, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine11drawPolygonEPK6QPointiNS_15PolygonDrawModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pointCount, mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -267,6 +273,18 @@ func (this *QPaintEngine) DrawTiledPixmap(r *qtcore.QRectF, pixmap *QPixmap, s *
 	var convArg1 = pixmap.GetCthis()
 	var convArg2 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpaintengine.h:178
+// index:0
+// Public virtual
+// void drawImage(const class QRectF &, const class QImage &, const class QRectF &, Qt::ImageConversionFlags)
+func (this *QPaintEngine) DrawImage(r *qtcore.QRectF, pm *QImage, sr *qtcore.QRectF, flags int) {
+	var convArg0 = r.GetCthis()
+	var convArg1 = pm.GetCthis()
+	var convArg2 = sr.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine9drawImageERK6QRectFRK6QImageS2_6QFlagsIN2Qt19ImageConversionFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, flags)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -307,9 +325,11 @@ func (this *QPaintEngine) SetSystemClip(baseClip *QRegion) {
 // Public
 // QRegion systemClip()
 func (this *QPaintEngine) SystemClip() *QRegion /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintEngine10systemClipEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintEngine10systemClipEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -329,9 +349,11 @@ func (this *QPaintEngine) SetSystemRect(rect *qtcore.QRect) {
 // Public
 // QRect systemRect()
 func (this *QPaintEngine) SystemRect() *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintEngine10systemRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintEngine10systemRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -341,9 +363,11 @@ func (this *QPaintEngine) SystemRect() *qtcore.QRect /*123*/ {
 // Public virtual
 // QPoint coordinateOffset()
 func (this *QPaintEngine) CoordinateOffset() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintEngine16coordinateOffsetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintEngine16coordinateOffsetEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -364,7 +388,36 @@ func (this *QPaintEngine) Type() int {
 // Public inline
 // void fix_neg_rect(int *, int *, int *, int *)
 func (this *QPaintEngine) Fix_neg_rect(x unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/, w unsafe.Pointer /*666*/, h unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &w, &h)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpaintengine.h:218
+// index:0
+// Public inline
+// bool testDirty(QPaintEngine::DirtyFlags)
+func (this *QPaintEngine) TestDirty(df int) bool {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine9testDirtyE6QFlagsINS_9DirtyFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), df)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qpaintengine.h:219
+// index:0
+// Public inline
+// void setDirty(QPaintEngine::DirtyFlags)
+func (this *QPaintEngine) SetDirty(df int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine8setDirtyE6QFlagsINS_9DirtyFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), df)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpaintengine.h:220
+// index:0
+// Public inline
+// void clearDirty(QPaintEngine::DirtyFlags)
+func (this *QPaintEngine) ClearDirty(df int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine10clearDirtyE6QFlagsINS_9DirtyFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), df)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -399,5 +452,75 @@ func (this *QPaintEngine) IsExtended() bool {
 	//  return rv
 	return rv != 0
 }
+
+type QPaintEngine__PaintEngineFeature = int
+
+const QPaintEngine__PrimitiveTransform QPaintEngine__PaintEngineFeature = 1
+const QPaintEngine__PatternTransform QPaintEngine__PaintEngineFeature = 2
+const QPaintEngine__PixmapTransform QPaintEngine__PaintEngineFeature = 4
+const QPaintEngine__PatternBrush QPaintEngine__PaintEngineFeature = 8
+const QPaintEngine__LinearGradientFill QPaintEngine__PaintEngineFeature = 16
+const QPaintEngine__RadialGradientFill QPaintEngine__PaintEngineFeature = 32
+const QPaintEngine__ConicalGradientFill QPaintEngine__PaintEngineFeature = 64
+const QPaintEngine__AlphaBlend QPaintEngine__PaintEngineFeature = 128
+const QPaintEngine__PorterDuff QPaintEngine__PaintEngineFeature = 256
+const QPaintEngine__PainterPaths QPaintEngine__PaintEngineFeature = 512
+const QPaintEngine__Antialiasing QPaintEngine__PaintEngineFeature = 1024
+const QPaintEngine__BrushStroke QPaintEngine__PaintEngineFeature = 2048
+const QPaintEngine__ConstantOpacity QPaintEngine__PaintEngineFeature = 4096
+const QPaintEngine__MaskedBrush QPaintEngine__PaintEngineFeature = 8192
+const QPaintEngine__PerspectiveTransform QPaintEngine__PaintEngineFeature = 16384
+const QPaintEngine__BlendModes QPaintEngine__PaintEngineFeature = 32768
+const QPaintEngine__ObjectBoundingModeGradients QPaintEngine__PaintEngineFeature = 65536
+const QPaintEngine__RasterOpModes QPaintEngine__PaintEngineFeature = 131072
+const QPaintEngine__PaintOutsidePaintEvent QPaintEngine__PaintEngineFeature = 536870912
+const QPaintEngine__AllFeatures QPaintEngine__PaintEngineFeature = 4294967295
+
+type QPaintEngine__DirtyFlag = int
+
+const QPaintEngine__DirtyPen QPaintEngine__DirtyFlag = 1
+const QPaintEngine__DirtyBrush QPaintEngine__DirtyFlag = 2
+const QPaintEngine__DirtyBrushOrigin QPaintEngine__DirtyFlag = 4
+const QPaintEngine__DirtyFont QPaintEngine__DirtyFlag = 8
+const QPaintEngine__DirtyBackground QPaintEngine__DirtyFlag = 16
+const QPaintEngine__DirtyBackgroundMode QPaintEngine__DirtyFlag = 32
+const QPaintEngine__DirtyTransform QPaintEngine__DirtyFlag = 64
+const QPaintEngine__DirtyClipRegion QPaintEngine__DirtyFlag = 128
+const QPaintEngine__DirtyClipPath QPaintEngine__DirtyFlag = 256
+const QPaintEngine__DirtyHints QPaintEngine__DirtyFlag = 512
+const QPaintEngine__DirtyCompositionMode QPaintEngine__DirtyFlag = 1024
+const QPaintEngine__DirtyClipEnabled QPaintEngine__DirtyFlag = 2048
+const QPaintEngine__DirtyOpacity QPaintEngine__DirtyFlag = 4096
+const QPaintEngine__AllDirty QPaintEngine__DirtyFlag = 65535
+
+type QPaintEngine__PolygonDrawMode = int
+
+const QPaintEngine__OddEvenMode QPaintEngine__PolygonDrawMode = 0
+const QPaintEngine__WindingMode QPaintEngine__PolygonDrawMode = 1
+const QPaintEngine__ConvexMode QPaintEngine__PolygonDrawMode = 2
+const QPaintEngine__PolylineMode QPaintEngine__PolygonDrawMode = 3
+
+type QPaintEngine__Type = int
+
+const QPaintEngine__X11 QPaintEngine__Type = 0
+const QPaintEngine__Windows QPaintEngine__Type = 1
+const QPaintEngine__QuickDraw QPaintEngine__Type = 2
+const QPaintEngine__CoreGraphics QPaintEngine__Type = 3
+const QPaintEngine__MacPrinter QPaintEngine__Type = 4
+const QPaintEngine__QWindowSystem QPaintEngine__Type = 5
+const QPaintEngine__PostScript QPaintEngine__Type = 6
+const QPaintEngine__OpenGL QPaintEngine__Type = 7
+const QPaintEngine__Picture QPaintEngine__Type = 8
+const QPaintEngine__SVG QPaintEngine__Type = 9
+const QPaintEngine__Raster QPaintEngine__Type = 10
+const QPaintEngine__Direct3D QPaintEngine__Type = 11
+const QPaintEngine__Pdf QPaintEngine__Type = 12
+const QPaintEngine__OpenVG QPaintEngine__Type = 13
+const QPaintEngine__OpenGL2 QPaintEngine__Type = 14
+const QPaintEngine__PaintBuffer QPaintEngine__Type = 15
+const QPaintEngine__Blitter QPaintEngine__Type = 16
+const QPaintEngine__Direct2D QPaintEngine__Type = 17
+const QPaintEngine__User QPaintEngine__Type = 50
+const QPaintEngine__MaxUser QPaintEngine__Type = 100
 
 //  body block end

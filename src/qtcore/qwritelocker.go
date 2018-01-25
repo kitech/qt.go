@@ -55,8 +55,14 @@ func (this *QWriteLocker) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QWriteLocker) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQWriteLockerFromPointer(cthis unsafe.Pointer) *QWriteLocker {
 	return &QWriteLocker{&qtrt.CObject{cthis}}
+}
+func (*QWriteLocker) NewFromPointer(cthis unsafe.Pointer) *QWriteLocker {
+	return NewQWriteLockerFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qreadwritelock.h:131

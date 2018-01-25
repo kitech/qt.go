@@ -63,9 +63,15 @@ func (this *QGraphicsTransform) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QGraphicsTransform) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQGraphicsTransformFromPointer(cthis unsafe.Pointer) *QGraphicsTransform {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QGraphicsTransform{bcthis0}
+}
+func (*QGraphicsTransform) NewFromPointer(cthis unsafe.Pointer) *QGraphicsTransform {
+	return NewQGraphicsTransformFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:58

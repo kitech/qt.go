@@ -59,8 +59,14 @@ func (this *QPainterPath) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QPainterPath) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQPainterPathFromPointer(cthis unsafe.Pointer) *QPainterPath {
 	return &QPainterPath{&qtrt.CObject{cthis}}
+}
+func (*QPainterPath) NewFromPointer(cthis unsafe.Pointer) *QPainterPath {
+	return NewQPainterPathFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:91
@@ -131,7 +137,7 @@ func (this *QPainterPath) MoveTo(p *qtcore.QPointF) {
 // Public inline
 // void moveTo(qreal, qreal)
 func (this *QPainterPath) MoveTo_1(x float64, y float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath6moveToEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath6moveToEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -150,7 +156,7 @@ func (this *QPainterPath) LineTo(p *qtcore.QPointF) {
 // Public inline
 // void lineTo(qreal, qreal)
 func (this *QPainterPath) LineTo_1(x float64, y float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath6lineToEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath6lineToEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -160,7 +166,7 @@ func (this *QPainterPath) LineTo_1(x float64, y float64) {
 // void arcMoveTo(const class QRectF &, qreal)
 func (this *QPainterPath) ArcMoveTo(rect *qtcore.QRectF, angle float64) {
 	var convArg0 = rect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath9arcMoveToERK6QRectFd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &angle)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath9arcMoveToERK6QRectFd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, angle)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -169,7 +175,7 @@ func (this *QPainterPath) ArcMoveTo(rect *qtcore.QRectF, angle float64) {
 // Public inline
 // void arcMoveTo(qreal, qreal, qreal, qreal, qreal)
 func (this *QPainterPath) ArcMoveTo_1(x float64, y float64, w float64, h float64, angle float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath9arcMoveToEddddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &w, &h, &angle)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath9arcMoveToEddddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, angle)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -179,7 +185,7 @@ func (this *QPainterPath) ArcMoveTo_1(x float64, y float64, w float64, h float64
 // void arcTo(const class QRectF &, qreal, qreal)
 func (this *QPainterPath) ArcTo(rect *qtcore.QRectF, startAngle float64, arcLength float64) {
 	var convArg0 = rect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath5arcToERK6QRectFdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &startAngle, &arcLength)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath5arcToERK6QRectFdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, startAngle, arcLength)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -188,7 +194,7 @@ func (this *QPainterPath) ArcTo(rect *qtcore.QRectF, startAngle float64, arcLeng
 // Public inline
 // void arcTo(qreal, qreal, qreal, qreal, qreal, qreal)
 func (this *QPainterPath) ArcTo_1(x float64, y float64, w float64, h float64, startAngle float64, arcLength float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath5arcToEdddddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &w, &h, &startAngle, &arcLength)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath5arcToEdddddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, startAngle, arcLength)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -209,7 +215,7 @@ func (this *QPainterPath) CubicTo(ctrlPt1 *qtcore.QPointF, ctrlPt2 *qtcore.QPoin
 // Public inline
 // void cubicTo(qreal, qreal, qreal, qreal, qreal, qreal)
 func (this *QPainterPath) CubicTo_1(ctrlPt1x float64, ctrlPt1y float64, ctrlPt2x float64, ctrlPt2y float64, endPtx float64, endPty float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath7cubicToEdddddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ctrlPt1x, &ctrlPt1y, &ctrlPt2x, &ctrlPt2y, &endPtx, &endPty)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath7cubicToEdddddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ctrlPt1x, ctrlPt1y, ctrlPt2x, ctrlPt2y, endPtx, endPty)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -229,7 +235,7 @@ func (this *QPainterPath) QuadTo(ctrlPt *qtcore.QPointF, endPt *qtcore.QPointF) 
 // Public inline
 // void quadTo(qreal, qreal, qreal, qreal)
 func (this *QPainterPath) QuadTo_1(ctrlPtx float64, ctrlPty float64, endPtx float64, endPty float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath6quadToEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ctrlPtx, &ctrlPty, &endPtx, &endPty)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath6quadToEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ctrlPtx, ctrlPty, endPtx, endPty)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -238,9 +244,11 @@ func (this *QPainterPath) QuadTo_1(ctrlPtx float64, ctrlPty float64, endPtx floa
 // Public
 // QPointF currentPosition()
 func (this *QPainterPath) CurrentPosition() *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath15currentPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath15currentPositionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -260,7 +268,7 @@ func (this *QPainterPath) AddRect(rect *qtcore.QRectF) {
 // Public inline
 // void addRect(qreal, qreal, qreal, qreal)
 func (this *QPainterPath) AddRect_1(x float64, y float64, w float64, h float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath7addRectEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &w, &h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath7addRectEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -279,7 +287,7 @@ func (this *QPainterPath) AddEllipse(rect *qtcore.QRectF) {
 // Public inline
 // void addEllipse(qreal, qreal, qreal, qreal)
 func (this *QPainterPath) AddEllipse_1(x float64, y float64, w float64, h float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath10addEllipseEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &w, &h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath10addEllipseEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -289,7 +297,7 @@ func (this *QPainterPath) AddEllipse_1(x float64, y float64, w float64, h float6
 // void addEllipse(const class QPointF &, qreal, qreal)
 func (this *QPainterPath) AddEllipse_2(center *qtcore.QPointF, rx float64, ry float64) {
 	var convArg0 = center.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath10addEllipseERK7QPointFdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &rx, &ry)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath10addEllipseERK7QPointFdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, rx, ry)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -322,7 +330,7 @@ func (this *QPainterPath) AddText(point *qtcore.QPointF, f *QFont, text *qtcore.
 func (this *QPainterPath) AddText_1(x float64, y float64, f *QFont, text *qtcore.QString) {
 	var convArg2 = f.GetCthis()
 	var convArg3 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath7addTextEddRK5QFontRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, convArg2, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath7addTextEddRK5QFontRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -352,7 +360,7 @@ func (this *QPainterPath) AddRegion(region *QRegion) {
 // void addRoundedRect(const class QRectF &, qreal, qreal, Qt::SizeMode)
 func (this *QPainterPath) AddRoundedRect(rect *qtcore.QRectF, xRadius float64, yRadius float64, mode int) {
 	var convArg0 = rect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath14addRoundedRectERK6QRectFddN2Qt8SizeModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &xRadius, &yRadius, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath14addRoundedRectERK6QRectFddN2Qt8SizeModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xRadius, yRadius, mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -361,7 +369,7 @@ func (this *QPainterPath) AddRoundedRect(rect *qtcore.QRectF, xRadius float64, y
 // Public inline
 // void addRoundedRect(qreal, qreal, qreal, qreal, qreal, qreal, Qt::SizeMode)
 func (this *QPainterPath) AddRoundedRect_1(x float64, y float64, w float64, h float64, xRadius float64, yRadius float64, mode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath14addRoundedRectEddddddN2Qt8SizeModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &w, &h, &xRadius, &yRadius, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath14addRoundedRectEddddddN2Qt8SizeModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xRadius, yRadius, mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -371,7 +379,7 @@ func (this *QPainterPath) AddRoundedRect_1(x float64, y float64, w float64, h fl
 // void addRoundRect(const class QRectF &, int, int)
 func (this *QPainterPath) AddRoundRect(rect *qtcore.QRectF, xRnd int, yRnd int) {
 	var convArg0 = rect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath12addRoundRectERK6QRectFii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &xRnd, &yRnd)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath12addRoundRectERK6QRectFii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xRnd, yRnd)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -380,7 +388,7 @@ func (this *QPainterPath) AddRoundRect(rect *qtcore.QRectF, xRnd int, yRnd int) 
 // Public inline
 // void addRoundRect(qreal, qreal, qreal, qreal, int, int)
 func (this *QPainterPath) AddRoundRect_1(x float64, y float64, w float64, h float64, xRnd int, yRnd int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath12addRoundRectEddddii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &w, &h, &xRnd, &yRnd)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath12addRoundRectEddddii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, xRnd, yRnd)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -390,7 +398,7 @@ func (this *QPainterPath) AddRoundRect_1(x float64, y float64, w float64, h floa
 // void addRoundRect(const class QRectF &, int)
 func (this *QPainterPath) AddRoundRect_2(rect *qtcore.QRectF, roundness int) {
 	var convArg0 = rect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath12addRoundRectERK6QRectFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &roundness)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath12addRoundRectERK6QRectFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, roundness)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -399,7 +407,7 @@ func (this *QPainterPath) AddRoundRect_2(rect *qtcore.QRectF, roundness int) {
 // Public inline
 // void addRoundRect(qreal, qreal, qreal, qreal, int)
 func (this *QPainterPath) AddRoundRect_3(x float64, y float64, w float64, h float64, roundness int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath12addRoundRectEddddi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &w, &h, &roundness)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath12addRoundRectEddddi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, roundness)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -478,7 +486,7 @@ func (this *QPainterPath) Intersects_1(p *QPainterPath) bool {
 // Public
 // void translate(qreal, qreal)
 func (this *QPainterPath) Translate(dx float64, dy float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath9translateEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath9translateEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -497,9 +505,11 @@ func (this *QPainterPath) Translate_1(offset *qtcore.QPointF) {
 // Public
 // QPainterPath translated(qreal, qreal)
 func (this *QPainterPath) Translated(dx float64, dy float64) *QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath10translatedEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &dx, &dy)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath10translatedEdd", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -509,10 +519,12 @@ func (this *QPainterPath) Translated(dx float64, dy float64) *QPainterPath /*123
 // Public inline
 // QPainterPath translated(const class QPointF &)
 func (this *QPainterPath) Translated_1(offset *qtcore.QPointF) *QPainterPath /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = offset.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath10translatedERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath10translatedERK7QPointF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -522,9 +534,11 @@ func (this *QPainterPath) Translated_1(offset *qtcore.QPointF) *QPainterPath /*1
 // Public
 // QRectF boundingRect()
 func (this *QPainterPath) BoundingRect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath12boundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath12boundingRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -534,9 +548,11 @@ func (this *QPainterPath) BoundingRect() *qtcore.QRectF /*123*/ {
 // Public
 // QRectF controlPointRect()
 func (this *QPainterPath) ControlPointRect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath16controlPointRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath16controlPointRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -557,7 +573,7 @@ func (this *QPainterPath) FillRule() int {
 // Public
 // void setFillRule(Qt::FillRule)
 func (this *QPainterPath) SetFillRule(fillRule int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath11setFillRuleEN2Qt8FillRuleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &fillRule)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath11setFillRuleEN2Qt8FillRuleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), fillRule)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -577,9 +593,11 @@ func (this *QPainterPath) IsEmpty() bool {
 // Public
 // QPainterPath toReversed()
 func (this *QPainterPath) ToReversed() *QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath10toReversedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath10toReversedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -589,10 +607,12 @@ func (this *QPainterPath) ToReversed() *QPainterPath /*123*/ {
 // Public
 // QPolygonF toFillPolygon(const class QMatrix &)
 func (this *QPainterPath) ToFillPolygon(matrix *QMatrix) *QPolygonF /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = matrix.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath13toFillPolygonERK7QMatrix", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath13toFillPolygonERK7QMatrix", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -602,10 +622,12 @@ func (this *QPainterPath) ToFillPolygon(matrix *QMatrix) *QPolygonF /*123*/ {
 // Public
 // QPolygonF toFillPolygon(const class QTransform &)
 func (this *QPainterPath) ToFillPolygon_1(matrix *QTransform) *QPolygonF /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = matrix.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath13toFillPolygonERK10QTransform", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath13toFillPolygonERK10QTransform", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -626,7 +648,7 @@ func (this *QPainterPath) ElementCount() int {
 // Public
 // QPainterPath::Element elementAt(int)
 func (this *QPainterPath) ElementAt(i int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath9elementAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath9elementAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -637,7 +659,7 @@ func (this *QPainterPath) ElementAt(i int) int {
 // Public
 // void setElementPositionAt(int, qreal, qreal)
 func (this *QPainterPath) SetElementPositionAt(i int, x float64, y float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath20setElementPositionAtEidd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i, &x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPath20setElementPositionAtEidd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i, x, y)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -657,7 +679,7 @@ func (this *QPainterPath) Length() float64 {
 // Public
 // qreal percentAtLength(qreal)
 func (this *QPainterPath) PercentAtLength(t float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath15percentAtLengthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath15percentAtLengthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float64(rv) // 222
@@ -668,9 +690,11 @@ func (this *QPainterPath) PercentAtLength(t float64) float64 {
 // Public
 // QPointF pointAtPercent(qreal)
 func (this *QPainterPath) PointAtPercent(t float64) *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath14pointAtPercentEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &t)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath14pointAtPercentEd", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), t)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -680,7 +704,7 @@ func (this *QPainterPath) PointAtPercent(t float64) *qtcore.QPointF /*123*/ {
 // Public
 // qreal angleAtPercent(qreal)
 func (this *QPainterPath) AngleAtPercent(t float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath14angleAtPercentEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath14angleAtPercentEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float64(rv) // 222
@@ -691,7 +715,7 @@ func (this *QPainterPath) AngleAtPercent(t float64) float64 {
 // Public
 // qreal slopeAtPercent(qreal)
 func (this *QPainterPath) SlopeAtPercent(t float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath14slopeAtPercentEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath14slopeAtPercentEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float64(rv) // 222
@@ -702,10 +726,12 @@ func (this *QPainterPath) SlopeAtPercent(t float64) float64 {
 // Public
 // QPainterPath united(const class QPainterPath &)
 func (this *QPainterPath) United(r *QPainterPath) *QPainterPath /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath6unitedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath6unitedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -715,10 +741,12 @@ func (this *QPainterPath) United(r *QPainterPath) *QPainterPath /*123*/ {
 // Public
 // QPainterPath intersected(const class QPainterPath &)
 func (this *QPainterPath) Intersected(r *QPainterPath) *QPainterPath /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -728,10 +756,12 @@ func (this *QPainterPath) Intersected(r *QPainterPath) *QPainterPath /*123*/ {
 // Public
 // QPainterPath subtracted(const class QPainterPath &)
 func (this *QPainterPath) Subtracted(r *QPainterPath) *QPainterPath /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath10subtractedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath10subtractedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -741,10 +771,12 @@ func (this *QPainterPath) Subtracted(r *QPainterPath) *QPainterPath /*123*/ {
 // Public
 // QPainterPath subtractedInverted(const class QPainterPath &)
 func (this *QPainterPath) SubtractedInverted(r *QPainterPath) *QPainterPath /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath18subtractedInvertedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath18subtractedInvertedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -754,11 +786,20 @@ func (this *QPainterPath) SubtractedInverted(r *QPainterPath) *QPainterPath /*12
 // Public
 // QPainterPath simplified()
 func (this *QPainterPath) Simplified() *QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath10simplifiedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath10simplifiedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
+
+type QPainterPath__ElementType = int
+
+const QPainterPath__MoveToElement QPainterPath__ElementType = 0
+const QPainterPath__LineToElement QPainterPath__ElementType = 1
+const QPainterPath__CurveToElement QPainterPath__ElementType = 2
+const QPainterPath__CurveToDataElement QPainterPath__ElementType = 3
 
 //  body block end

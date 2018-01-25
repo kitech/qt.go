@@ -55,8 +55,14 @@ func (this *QRegExp) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QRegExp) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQRegExpFromPointer(cthis unsafe.Pointer) *QRegExp {
 	return &QRegExp{&qtrt.CObject{cthis}}
+}
+func (*QRegExp) NewFromPointer(cthis unsafe.Pointer) *QRegExp {
+	return NewQRegExpFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qregexp.h:70
@@ -78,7 +84,7 @@ func NewQRegExp() *QRegExp {
 func NewQRegExp_1(pattern *QString, cs int, syntax int) *QRegExp {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = pattern.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExpC2ERK7QStringN2Qt15CaseSensitivityENS_13PatternSyntaxE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &cs, &syntax)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExpC2ERK7QStringN2Qt15CaseSensitivityENS_13PatternSyntaxE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, cs, syntax)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRegExpFromPointer(cthis)
 	return gothis
@@ -130,9 +136,11 @@ func (this *QRegExp) IsValid() bool {
 // Public
 // QString pattern()
 func (this *QRegExp) Pattern() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp7patternEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp7patternEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -163,7 +171,7 @@ func (this *QRegExp) CaseSensitivity() int {
 // Public
 // void setCaseSensitivity(Qt::CaseSensitivity)
 func (this *QRegExp) SetCaseSensitivity(cs int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp18setCaseSensitivityEN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp18setCaseSensitivityEN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -183,7 +191,7 @@ func (this *QRegExp) PatternSyntax() int {
 // Public
 // void setPatternSyntax(enum QRegExp::PatternSyntax)
 func (this *QRegExp) SetPatternSyntax(syntax int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp16setPatternSyntaxENS_13PatternSyntaxE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &syntax)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp16setPatternSyntaxENS_13PatternSyntaxE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), syntax)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -203,7 +211,7 @@ func (this *QRegExp) IsMinimal() bool {
 // Public
 // void setMinimal(_Bool)
 func (this *QRegExp) SetMinimal(minimal bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp10setMinimalEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &minimal)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp10setMinimalEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), minimal)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -225,7 +233,7 @@ func (this *QRegExp) ExactMatch(str *QString) bool {
 // int indexIn(const class QString &, int, enum QRegExp::CaretMode)
 func (this *QRegExp) IndexIn(str *QString, offset int, caretMode int) int {
 	var convArg0 = str.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp7indexInERK7QStringiNS_9CaretModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &offset, &caretMode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp7indexInERK7QStringiNS_9CaretModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, caretMode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -237,7 +245,7 @@ func (this *QRegExp) IndexIn(str *QString, offset int, caretMode int) int {
 // int lastIndexIn(const class QString &, int, enum QRegExp::CaretMode)
 func (this *QRegExp) LastIndexIn(str *QString, offset int, caretMode int) int {
 	var convArg0 = str.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp11lastIndexInERK7QStringiNS_9CaretModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &offset, &caretMode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp11lastIndexInERK7QStringiNS_9CaretModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, caretMode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -270,9 +278,11 @@ func (this *QRegExp) CaptureCount() int {
 // Public
 // QString cap(int)
 func (this *QRegExp) Cap(nth int) *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp3capEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &nth)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp3capEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), nth)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -282,9 +292,11 @@ func (this *QRegExp) Cap(nth int) *QString /*123*/ {
 // Public
 // QString cap(int)
 func (this *QRegExp) Cap_1(nth int) *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp3capEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &nth)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp3capEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), nth)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -294,7 +306,7 @@ func (this *QRegExp) Cap_1(nth int) *QString /*123*/ {
 // Public
 // int pos(int)
 func (this *QRegExp) Pos(nth int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp3posEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &nth)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp3posEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -305,7 +317,7 @@ func (this *QRegExp) Pos(nth int) int {
 // Public
 // int pos(int)
 func (this *QRegExp) Pos_1(nth int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp3posEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &nth)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp3posEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -316,9 +328,11 @@ func (this *QRegExp) Pos_1(nth int) int {
 // Public
 // QString errorString()
 func (this *QRegExp) ErrorString() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp11errorStringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -328,9 +342,11 @@ func (this *QRegExp) ErrorString() *QString /*123*/ {
 // Public
 // QString errorString()
 func (this *QRegExp) ErrorString_1() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp11errorStringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -351,5 +367,20 @@ func QRegExp_Escape(str *QString) *QString /*123*/ {
 	rv := nilthis.Escape(str)
 	return rv
 }
+
+type QRegExp__PatternSyntax = int
+
+const QRegExp__RegExp QRegExp__PatternSyntax = 0
+const QRegExp__Wildcard QRegExp__PatternSyntax = 1
+const QRegExp__FixedString QRegExp__PatternSyntax = 2
+const QRegExp__RegExp2 QRegExp__PatternSyntax = 3
+const QRegExp__WildcardUnix QRegExp__PatternSyntax = 4
+const QRegExp__W3CXmlSchema11 QRegExp__PatternSyntax = 5
+
+type QRegExp__CaretMode = int
+
+const QRegExp__CaretAtZero QRegExp__CaretMode = 0
+const QRegExp__CaretAtOffset QRegExp__CaretMode = 1
+const QRegExp__CaretWontMatch QRegExp__CaretMode = 2
 
 //  body block end

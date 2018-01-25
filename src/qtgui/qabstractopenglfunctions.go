@@ -59,8 +59,14 @@ func (this *QAbstractOpenGLFunctions) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QAbstractOpenGLFunctions) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQAbstractOpenGLFunctionsFromPointer(cthis unsafe.Pointer) *QAbstractOpenGLFunctions {
 	return &QAbstractOpenGLFunctions{&qtrt.CObject{cthis}}
+}
+func (*QAbstractOpenGLFunctions) NewFromPointer(cthis unsafe.Pointer) *QAbstractOpenGLFunctions {
+	return NewQAbstractOpenGLFunctionsFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qopenglversionfunctions.h:213

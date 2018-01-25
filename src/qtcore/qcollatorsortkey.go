@@ -55,8 +55,14 @@ func (this *QCollatorSortKey) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QCollatorSortKey) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQCollatorSortKeyFromPointer(cthis unsafe.Pointer) *QCollatorSortKey {
 	return &QCollatorSortKey{&qtrt.CObject{cthis}}
+}
+func (*QCollatorSortKey) NewFromPointer(cthis unsafe.Pointer) *QCollatorSortKey {
+	return NewQCollatorSortKeyFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qcollator.h:58

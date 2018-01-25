@@ -55,8 +55,14 @@ func (this *QScopedPointerPodDeleter) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QScopedPointerPodDeleter) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQScopedPointerPodDeleterFromPointer(cthis unsafe.Pointer) *QScopedPointerPodDeleter {
 	return &QScopedPointerPodDeleter{&qtrt.CObject{cthis}}
+}
+func (*QScopedPointerPodDeleter) NewFromPointer(cthis unsafe.Pointer) *QScopedPointerPodDeleter {
+	return NewQScopedPointerPodDeleterFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qscopedpointer.h:81

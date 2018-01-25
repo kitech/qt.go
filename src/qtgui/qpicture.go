@@ -59,9 +59,15 @@ func (this *QPicture) GetCthis() unsafe.Pointer {
 		return this.QPaintDevice.GetCthis()
 	}
 }
+func (this *QPicture) SetCthis(cthis unsafe.Pointer) {
+	this.QPaintDevice = NewQPaintDeviceFromPointer(cthis)
+}
 func NewQPictureFromPointer(cthis unsafe.Pointer) *QPicture {
 	bcthis0 := NewQPaintDeviceFromPointer(cthis)
 	return &QPicture{bcthis0}
+}
+func (*QPicture) NewFromPointer(cthis unsafe.Pointer) *QPicture {
+	return NewQPictureFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qpicture.h:59
@@ -70,7 +76,7 @@ func NewQPictureFromPointer(cthis unsafe.Pointer) *QPicture {
 // void QPicture(int)
 func NewQPicture(formatVersion int) *QPicture {
 	cthis := qtrt.Calloc(1, 256) // 32
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPictureC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &formatVersion)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPictureC2Ei", ffiqt.FFI_TYPE_VOID, cthis, formatVersion)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPictureFromPointer(cthis)
 	return gothis
@@ -136,7 +142,7 @@ func (this *QPicture) Data() string {
 func (this *QPicture) SetData(data string, size uint) {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture7setDataEPKcj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture7setDataEPKcj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -213,9 +219,11 @@ func (this *QPicture) Save_1(fileName *qtcore.QString, format string) bool {
 // Public
 // QRect boundingRect()
 func (this *QPicture) BoundingRect() *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture12boundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture12boundingRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -293,7 +301,7 @@ func (this *QPicture) PaintEngine() *QPaintEngine /*444 QPaintEngine **/ {
 // Protected virtual
 // int metric(enum QPaintDevice::PaintDeviceMetric)
 func (this *QPicture) Metric(m int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &m)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), m)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111

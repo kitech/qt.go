@@ -59,9 +59,15 @@ func (this *QSyntaxHighlighter) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QSyntaxHighlighter) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQSyntaxHighlighterFromPointer(cthis unsafe.Pointer) *QSyntaxHighlighter {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QSyntaxHighlighter{bcthis0}
+}
+func (*QSyntaxHighlighter) NewFromPointer(cthis unsafe.Pointer) *QSyntaxHighlighter {
+	return NewQSyntaxHighlighterFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:62
@@ -168,7 +174,7 @@ func (this *QSyntaxHighlighter) HighlightBlock(text *qtcore.QString) {
 // void setFormat(int, int, const class QTextCharFormat &)
 func (this *QSyntaxHighlighter) SetFormat(start int, count int, format *QTextCharFormat) {
 	var convArg2 = format.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSyntaxHighlighter9setFormatEiiRK15QTextCharFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &start, &count, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSyntaxHighlighter9setFormatEiiRK15QTextCharFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), start, count, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -178,7 +184,7 @@ func (this *QSyntaxHighlighter) SetFormat(start int, count int, format *QTextCha
 // void setFormat(int, int, const class QColor &)
 func (this *QSyntaxHighlighter) SetFormat_1(start int, count int, color *QColor) {
 	var convArg2 = color.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSyntaxHighlighter9setFormatEiiRK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &start, &count, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSyntaxHighlighter9setFormatEiiRK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), start, count, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -188,7 +194,7 @@ func (this *QSyntaxHighlighter) SetFormat_1(start int, count int, color *QColor)
 // void setFormat(int, int, const class QFont &)
 func (this *QSyntaxHighlighter) SetFormat_2(start int, count int, font *QFont) {
 	var convArg2 = font.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSyntaxHighlighter9setFormatEiiRK5QFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &start, &count, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSyntaxHighlighter9setFormatEiiRK5QFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), start, count, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -197,9 +203,11 @@ func (this *QSyntaxHighlighter) SetFormat_2(start int, count int, font *QFont) {
 // Protected
 // QTextCharFormat format(int)
 func (this *QSyntaxHighlighter) Format(pos int) *QTextCharFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter6formatEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &pos)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter6formatEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), pos)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -231,7 +239,7 @@ func (this *QSyntaxHighlighter) CurrentBlockState() int {
 // Protected
 // void setCurrentBlockState(int)
 func (this *QSyntaxHighlighter) SetCurrentBlockState(newState int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSyntaxHighlighter20setCurrentBlockStateEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &newState)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSyntaxHighlighter20setCurrentBlockStateEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), newState)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -262,9 +270,11 @@ func (this *QSyntaxHighlighter) CurrentBlockUserData() *QTextBlockUserData /*444
 // Protected
 // QTextBlock currentBlock()
 func (this *QSyntaxHighlighter) CurrentBlock() *QTextBlock /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter12currentBlockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter12currentBlockEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

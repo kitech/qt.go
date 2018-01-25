@@ -63,9 +63,15 @@ func (this *QStyleOptionTab) GetCthis() unsafe.Pointer {
 		return this.QStyleOption.GetCthis()
 	}
 }
+func (this *QStyleOptionTab) SetCthis(cthis unsafe.Pointer) {
+	this.QStyleOption = NewQStyleOptionFromPointer(cthis)
+}
 func NewQStyleOptionTabFromPointer(cthis unsafe.Pointer) *QStyleOptionTab {
 	bcthis0 := NewQStyleOptionFromPointer(cthis)
 	return &QStyleOptionTab{bcthis0}
+}
+func (*QStyleOptionTab) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionTab {
+	return NewQStyleOptionTabFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:285
@@ -86,10 +92,42 @@ func NewQStyleOptionTab() *QStyleOptionTab {
 // void QStyleOptionTab(int)
 func NewQStyleOptionTab_1(version int) *QStyleOptionTab {
 	cthis := qtrt.Calloc(1, 256) // 136
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStyleOptionTabC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStyleOptionTabC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTabFromPointer(cthis)
 	return gothis
 }
+
+type QStyleOptionTab__StyleOptionType = int
+
+const QStyleOptionTab__Type QStyleOptionTab__StyleOptionType = 3
+
+type QStyleOptionTab__StyleOptionVersion = int
+
+const QStyleOptionTab__Version QStyleOptionTab__StyleOptionVersion = 3
+
+type QStyleOptionTab__TabPosition = int
+
+const QStyleOptionTab__Beginning QStyleOptionTab__TabPosition = 0
+const QStyleOptionTab__Middle QStyleOptionTab__TabPosition = 1
+const QStyleOptionTab__End QStyleOptionTab__TabPosition = 2
+const QStyleOptionTab__OnlyOneTab QStyleOptionTab__TabPosition = 3
+
+type QStyleOptionTab__SelectedPosition = int
+
+const QStyleOptionTab__NotAdjacent QStyleOptionTab__SelectedPosition = 0
+const QStyleOptionTab__NextIsSelected QStyleOptionTab__SelectedPosition = 1
+const QStyleOptionTab__PreviousIsSelected QStyleOptionTab__SelectedPosition = 2
+
+type QStyleOptionTab__CornerWidget = int
+
+const QStyleOptionTab__NoCornerWidgets QStyleOptionTab__CornerWidget = 0
+const QStyleOptionTab__LeftCornerWidget QStyleOptionTab__CornerWidget = 1
+const QStyleOptionTab__RightCornerWidget QStyleOptionTab__CornerWidget = 2
+
+type QStyleOptionTab__TabFeature = int
+
+const QStyleOptionTab__None QStyleOptionTab__TabFeature = 0
+const QStyleOptionTab__HasFrame QStyleOptionTab__TabFeature = 1
 
 //  body block end

@@ -63,8 +63,14 @@ func (this *QToolTip) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QToolTip) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQToolTipFromPointer(cthis unsafe.Pointer) *QToolTip {
 	return &QToolTip{&qtrt.CObject{cthis}}
+}
+func (*QToolTip) NewFromPointer(cthis unsafe.Pointer) *QToolTip {
+	return NewQToolTipFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qtooltip.h:56

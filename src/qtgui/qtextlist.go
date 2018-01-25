@@ -59,9 +59,15 @@ func (this *QTextList) GetCthis() unsafe.Pointer {
 		return this.QTextBlockGroup.GetCthis()
 	}
 }
+func (this *QTextList) SetCthis(cthis unsafe.Pointer) {
+	this.QTextBlockGroup = NewQTextBlockGroupFromPointer(cthis)
+}
 func NewQTextListFromPointer(cthis unsafe.Pointer) *QTextList {
 	bcthis0 := NewQTextBlockGroupFromPointer(cthis)
 	return &QTextList{bcthis0}
+}
+func (*QTextList) NewFromPointer(cthis unsafe.Pointer) *QTextList {
+	return NewQTextListFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtextlist.h:55
@@ -125,9 +131,11 @@ func (this *QTextList) IsEmpty() bool {
 // Public
 // QTextBlock item(int)
 func (this *QTextList) Item(i int) *QTextBlock /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList4itemEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList4itemEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -149,10 +157,12 @@ func (this *QTextList) ItemNumber(arg0 *QTextBlock) int {
 // Public
 // QString itemText(const class QTextBlock &)
 func (this *QTextList) ItemText(arg0 *QTextBlock) *qtcore.QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList8itemTextERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList8itemTextERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -162,7 +172,7 @@ func (this *QTextList) ItemText(arg0 *QTextBlock) *qtcore.QString /*123*/ {
 // Public
 // void removeItem(int)
 func (this *QTextList) RemoveItem(i int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextList10removeItemEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextList10removeItemEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -201,9 +211,11 @@ func (this *QTextList) SetFormat(format *QTextListFormat) {
 // Public inline
 // QTextListFormat format()
 func (this *QTextList) Format() *QTextListFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList6formatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextListFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

@@ -55,8 +55,14 @@ func (this *QCommandLineOption) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QCommandLineOption) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQCommandLineOptionFromPointer(cthis unsafe.Pointer) *QCommandLineOption {
 	return &QCommandLineOption{&qtrt.CObject{cthis}}
+}
+func (*QCommandLineOption) NewFromPointer(cthis unsafe.Pointer) *QCommandLineOption {
+	return NewQCommandLineOptionFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:61
@@ -151,9 +157,11 @@ func (this *QCommandLineOption) SetValueName(name *QString) {
 // Public
 // QString valueName()
 func (this *QCommandLineOption) ValueName() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineOption9valueNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineOption9valueNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -173,9 +181,11 @@ func (this *QCommandLineOption) SetDescription(description *QString) {
 // Public
 // QString description()
 func (this *QCommandLineOption) Description() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineOption11descriptionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineOption11descriptionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -211,12 +221,21 @@ func (this *QCommandLineOption) Flags() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtCore/qcommandlineoption.h:94
+// index:0
+// Public
+// void setFlags(QCommandLineOption::Flags)
+func (this *QCommandLineOption) SetFlags(aflags int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption8setFlagsE6QFlagsINS_4FlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), aflags)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtCore/qcommandlineoption.h:98
 // index:0
 // Public
 // void setHidden(_Bool)
 func (this *QCommandLineOption) SetHidden(hidden bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption9setHiddenEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &hidden)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption9setHiddenEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hidden)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -230,5 +249,10 @@ func (this *QCommandLineOption) IsHidden() bool {
 	//  return rv
 	return rv != 0
 }
+
+type QCommandLineOption__Flag = int
+
+const QCommandLineOption__HiddenFromHelp QCommandLineOption__Flag = 1
+const QCommandLineOption__ShortOptionStyle QCommandLineOption__Flag = 2
 
 //  body block end

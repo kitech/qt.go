@@ -63,9 +63,15 @@ func (this *QDoubleSpinBox) GetCthis() unsafe.Pointer {
 		return this.QAbstractSpinBox.GetCthis()
 	}
 }
+func (this *QDoubleSpinBox) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractSpinBox = NewQAbstractSpinBoxFromPointer(cthis)
+}
 func NewQDoubleSpinBoxFromPointer(cthis unsafe.Pointer) *QDoubleSpinBox {
 	bcthis0 := NewQAbstractSpinBoxFromPointer(cthis)
 	return &QDoubleSpinBox{bcthis0}
+}
+func (*QDoubleSpinBox) NewFromPointer(cthis unsafe.Pointer) *QDoubleSpinBox {
+	return NewQDoubleSpinBoxFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:115
@@ -118,9 +124,11 @@ func (this *QDoubleSpinBox) Value() float64 {
 // Public
 // QString prefix()
 func (this *QDoubleSpinBox) Prefix() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox6prefixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox6prefixEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -140,9 +148,11 @@ func (this *QDoubleSpinBox) SetPrefix(prefix *qtcore.QString) {
 // Public
 // QString suffix()
 func (this *QDoubleSpinBox) Suffix() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox6suffixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox6suffixEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -162,9 +172,11 @@ func (this *QDoubleSpinBox) SetSuffix(suffix *qtcore.QString) {
 // Public
 // QString cleanText()
 func (this *QDoubleSpinBox) CleanText() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox9cleanTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox9cleanTextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -185,7 +197,7 @@ func (this *QDoubleSpinBox) SingleStep() float64 {
 // Public
 // void setSingleStep(double)
 func (this *QDoubleSpinBox) SetSingleStep(val float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBox13setSingleStepEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &val)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBox13setSingleStepEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), val)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -205,7 +217,7 @@ func (this *QDoubleSpinBox) Minimum() float64 {
 // Public
 // void setMinimum(double)
 func (this *QDoubleSpinBox) SetMinimum(min float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBox10setMinimumEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &min)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBox10setMinimumEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), min)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -225,7 +237,7 @@ func (this *QDoubleSpinBox) Maximum() float64 {
 // Public
 // void setMaximum(double)
 func (this *QDoubleSpinBox) SetMaximum(max float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBox10setMaximumEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &max)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBox10setMaximumEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), max)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -234,7 +246,7 @@ func (this *QDoubleSpinBox) SetMaximum(max float64) {
 // Public
 // void setRange(double, double)
 func (this *QDoubleSpinBox) SetRange(min float64, max float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBox8setRangeEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &min, &max)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBox8setRangeEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), min, max)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -254,7 +266,7 @@ func (this *QDoubleSpinBox) Decimals() int {
 // Public
 // void setDecimals(int)
 func (this *QDoubleSpinBox) SetDecimals(prec int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBox11setDecimalsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &prec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBox11setDecimalsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), prec)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -287,9 +299,11 @@ func (this *QDoubleSpinBox) ValueFromText(text *qtcore.QString) float64 {
 // Public virtual
 // QString textFromValue(double)
 func (this *QDoubleSpinBox) TextFromValue(val float64) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox13textFromValueEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &val)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox13textFromValueEd", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), val)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -309,7 +323,7 @@ func (this *QDoubleSpinBox) Fixup(str *qtcore.QString) {
 // Public
 // void setValue(double)
 func (this *QDoubleSpinBox) SetValue(val float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBox8setValueEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &val)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBox8setValueEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), val)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -318,7 +332,7 @@ func (this *QDoubleSpinBox) SetValue(val float64) {
 // Public
 // void valueChanged(double)
 func (this *QDoubleSpinBox) ValueChanged(arg0 float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBox12valueChangedEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBox12valueChangedEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -55,9 +55,15 @@ func (this *QSharedMemory) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QSharedMemory) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQSharedMemoryFromPointer(cthis unsafe.Pointer) *QSharedMemory {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QSharedMemory{bcthis0}
+}
+func (*QSharedMemory) NewFromPointer(cthis unsafe.Pointer) *QSharedMemory {
+	return NewQSharedMemoryFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:54
@@ -123,9 +129,11 @@ func (this *QSharedMemory) SetKey(key *QString) {
 // Public
 // QString key()
 func (this *QSharedMemory) Key() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory3keyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory3keyEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -145,9 +153,11 @@ func (this *QSharedMemory) SetNativeKey(key *QString) {
 // Public
 // QString nativeKey()
 func (this *QSharedMemory) NativeKey() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory9nativeKeyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory9nativeKeyEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -157,7 +167,7 @@ func (this *QSharedMemory) NativeKey() *QString /*123*/ {
 // Public
 // bool create(int, enum QSharedMemory::AccessMode)
 func (this *QSharedMemory) Create(size int, mode int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6createEiNS_10AccessModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &size, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6createEiNS_10AccessModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -179,7 +189,7 @@ func (this *QSharedMemory) Size() int {
 // Public
 // bool attach(enum QSharedMemory::AccessMode)
 func (this *QSharedMemory) Attach(mode int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6attachENS_10AccessModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6attachENS_10AccessModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -278,11 +288,30 @@ func (this *QSharedMemory) Error() int {
 // Public
 // QString errorString()
 func (this *QSharedMemory) ErrorString() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory11errorStringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
+
+type QSharedMemory__AccessMode = int
+
+const QSharedMemory__ReadOnly QSharedMemory__AccessMode = 0
+const QSharedMemory__ReadWrite QSharedMemory__AccessMode = 1
+
+type QSharedMemory__SharedMemoryError = int
+
+const QSharedMemory__NoError QSharedMemory__SharedMemoryError = 0
+const QSharedMemory__PermissionDenied QSharedMemory__SharedMemoryError = 1
+const QSharedMemory__InvalidSize QSharedMemory__SharedMemoryError = 2
+const QSharedMemory__KeyError QSharedMemory__SharedMemoryError = 3
+const QSharedMemory__AlreadyExists QSharedMemory__SharedMemoryError = 4
+const QSharedMemory__NotFound QSharedMemory__SharedMemoryError = 5
+const QSharedMemory__LockError QSharedMemory__SharedMemoryError = 6
+const QSharedMemory__OutOfResources QSharedMemory__SharedMemoryError = 7
+const QSharedMemory__UnknownError QSharedMemory__SharedMemoryError = 8
 
 //  body block end

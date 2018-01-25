@@ -63,9 +63,15 @@ func (this *QTapAndHoldGesture) GetCthis() unsafe.Pointer {
 		return this.QGesture.GetCthis()
 	}
 }
+func (this *QTapAndHoldGesture) SetCthis(cthis unsafe.Pointer) {
+	this.QGesture = NewQGestureFromPointer(cthis)
+}
 func NewQTapAndHoldGestureFromPointer(cthis unsafe.Pointer) *QTapAndHoldGesture {
 	bcthis0 := NewQGestureFromPointer(cthis)
 	return &QTapAndHoldGesture{bcthis0}
+}
+func (*QTapAndHoldGesture) NewFromPointer(cthis unsafe.Pointer) *QTapAndHoldGesture {
+	return NewQTapAndHoldGestureFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:254
@@ -107,9 +113,11 @@ func DeleteQTapAndHoldGesture(*QTapAndHoldGesture) {
 // Public
 // QPointF position()
 func (this *QTapAndHoldGesture) Position() *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QTapAndHoldGesture8positionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QTapAndHoldGesture8positionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

@@ -63,9 +63,15 @@ func (this *QTabWidget) GetCthis() unsafe.Pointer {
 		return this.QWidget.GetCthis()
 	}
 }
+func (this *QTabWidget) SetCthis(cthis unsafe.Pointer) {
+	this.QWidget = NewQWidgetFromPointer(cthis)
+}
 func NewQTabWidgetFromPointer(cthis unsafe.Pointer) *QTabWidget {
 	bcthis0 := NewQWidgetFromPointer(cthis)
 	return &QTabWidget{bcthis0}
+}
+func (*QTabWidget) NewFromPointer(cthis unsafe.Pointer) *QTabWidget {
+	return NewQTabWidgetFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qtabwidget.h:57
@@ -136,7 +142,7 @@ func (this *QTabWidget) AddTab_1(widget *QWidget /*444 QWidget **/, icon *qtgui.
 func (this *QTabWidget) InsertTab(index int, widget *QWidget /*444 QWidget **/, arg2 *qtcore.QString) int {
 	var convArg1 = widget.GetCthis()
 	var convArg2 = arg2.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget9insertTabEiP7QWidgetRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, convArg1, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget9insertTabEiP7QWidgetRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -150,7 +156,7 @@ func (this *QTabWidget) InsertTab_1(index int, widget *QWidget /*444 QWidget **/
 	var convArg1 = widget.GetCthis()
 	var convArg2 = icon.GetCthis()
 	var convArg3 = label.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget9insertTabEiP7QWidgetRK5QIconRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, convArg1, convArg2, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget9insertTabEiP7QWidgetRK5QIconRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -161,7 +167,7 @@ func (this *QTabWidget) InsertTab_1(index int, widget *QWidget /*444 QWidget **/
 // Public
 // void removeTab(int)
 func (this *QTabWidget) RemoveTab(index int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget9removeTabEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget9removeTabEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -170,7 +176,7 @@ func (this *QTabWidget) RemoveTab(index int) {
 // Public
 // bool isTabEnabled(int)
 func (this *QTabWidget) IsTabEnabled(index int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget12isTabEnabledEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget12isTabEnabledEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -181,7 +187,7 @@ func (this *QTabWidget) IsTabEnabled(index int) bool {
 // Public
 // void setTabEnabled(int, _Bool)
 func (this *QTabWidget) SetTabEnabled(index int, arg1 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget13setTabEnabledEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, &arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget13setTabEnabledEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, arg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -190,9 +196,11 @@ func (this *QTabWidget) SetTabEnabled(index int, arg1 bool) {
 // Public
 // QString tabText(int)
 func (this *QTabWidget) TabText(index int) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget7tabTextEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget7tabTextEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -203,7 +211,7 @@ func (this *QTabWidget) TabText(index int) *qtcore.QString /*123*/ {
 // void setTabText(int, const class QString &)
 func (this *QTabWidget) SetTabText(index int, arg1 *qtcore.QString) {
 	var convArg1 = arg1.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget10setTabTextEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget10setTabTextEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -212,9 +220,11 @@ func (this *QTabWidget) SetTabText(index int, arg1 *qtcore.QString) {
 // Public
 // QIcon tabIcon(int)
 func (this *QTabWidget) TabIcon(index int) *qtgui.QIcon /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget7tabIconEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget7tabIconEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -225,7 +235,7 @@ func (this *QTabWidget) TabIcon(index int) *qtgui.QIcon /*123*/ {
 // void setTabIcon(int, const class QIcon &)
 func (this *QTabWidget) SetTabIcon(index int, icon *qtgui.QIcon) {
 	var convArg1 = icon.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget10setTabIconEiRK5QIcon", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget10setTabIconEiRK5QIcon", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -235,7 +245,7 @@ func (this *QTabWidget) SetTabIcon(index int, icon *qtgui.QIcon) {
 // void setTabToolTip(int, const class QString &)
 func (this *QTabWidget) SetTabToolTip(index int, tip *qtcore.QString) {
 	var convArg1 = tip.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget13setTabToolTipEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget13setTabToolTipEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -244,9 +254,11 @@ func (this *QTabWidget) SetTabToolTip(index int, tip *qtcore.QString) {
 // Public
 // QString tabToolTip(int)
 func (this *QTabWidget) TabToolTip(index int) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget10tabToolTipEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget10tabToolTipEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -257,7 +269,7 @@ func (this *QTabWidget) TabToolTip(index int) *qtcore.QString /*123*/ {
 // void setTabWhatsThis(int, const class QString &)
 func (this *QTabWidget) SetTabWhatsThis(index int, text *qtcore.QString) {
 	var convArg1 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget15setTabWhatsThisEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget15setTabWhatsThisEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -266,9 +278,11 @@ func (this *QTabWidget) SetTabWhatsThis(index int, text *qtcore.QString) {
 // Public
 // QString tabWhatsThis(int)
 func (this *QTabWidget) TabWhatsThis(index int) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget12tabWhatsThisEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget12tabWhatsThisEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -301,7 +315,7 @@ func (this *QTabWidget) CurrentWidget() *QWidget /*444 QWidget **/ {
 // Public
 // QWidget * widget(int)
 func (this *QTabWidget) Widget(index int) *QWidget /*444 QWidget **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget6widgetEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget6widgetEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -347,7 +361,7 @@ func (this *QTabWidget) TabPosition() int {
 // Public
 // void setTabPosition(enum QTabWidget::TabPosition)
 func (this *QTabWidget) SetTabPosition(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget14setTabPositionENS_11TabPositionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget14setTabPositionENS_11TabPositionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -367,7 +381,7 @@ func (this *QTabWidget) TabsClosable() bool {
 // Public
 // void setTabsClosable(_Bool)
 func (this *QTabWidget) SetTabsClosable(closeable bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget15setTabsClosableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &closeable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget15setTabsClosableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), closeable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -387,7 +401,7 @@ func (this *QTabWidget) IsMovable() bool {
 // Public
 // void setMovable(_Bool)
 func (this *QTabWidget) SetMovable(movable bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget10setMovableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &movable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget10setMovableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), movable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -407,7 +421,7 @@ func (this *QTabWidget) TabShape() int {
 // Public
 // void setTabShape(enum QTabWidget::TabShape)
 func (this *QTabWidget) SetTabShape(s int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget11setTabShapeENS_8TabShapeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &s)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget11setTabShapeENS_8TabShapeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), s)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -416,9 +430,11 @@ func (this *QTabWidget) SetTabShape(s int) {
 // Public virtual
 // QSize sizeHint()
 func (this *QTabWidget) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -428,9 +444,11 @@ func (this *QTabWidget) SizeHint() *qtcore.QSize /*123*/ {
 // Public virtual
 // QSize minimumSizeHint()
 func (this *QTabWidget) MinimumSizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -440,7 +458,7 @@ func (this *QTabWidget) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // Public virtual
 // int heightForWidth(int)
 func (this *QTabWidget) HeightForWidth(width int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget14heightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &width)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget14heightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -463,7 +481,7 @@ func (this *QTabWidget) HasHeightForWidth() bool {
 // void setCornerWidget(class QWidget *, Qt::Corner)
 func (this *QTabWidget) SetCornerWidget(w *QWidget /*444 QWidget **/, corner int) {
 	var convArg0 = w.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget15setCornerWidgetEP7QWidgetN2Qt6CornerE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &corner)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget15setCornerWidgetEP7QWidgetN2Qt6CornerE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, corner)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -472,7 +490,7 @@ func (this *QTabWidget) SetCornerWidget(w *QWidget /*444 QWidget **/, corner int
 // Public
 // QWidget * cornerWidget(Qt::Corner)
 func (this *QTabWidget) CornerWidget(corner int) *QWidget /*444 QWidget **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget12cornerWidgetEN2Qt6CornerE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &corner)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget12cornerWidgetEN2Qt6CornerE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), corner)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -495,7 +513,7 @@ func (this *QTabWidget) ElideMode() int {
 // Public
 // void setElideMode(Qt::TextElideMode)
 func (this *QTabWidget) SetElideMode(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget12setElideModeEN2Qt13TextElideModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget12setElideModeEN2Qt13TextElideModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -504,9 +522,11 @@ func (this *QTabWidget) SetElideMode(arg0 int) {
 // Public
 // QSize iconSize()
 func (this *QTabWidget) IconSize() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget8iconSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget8iconSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -537,7 +557,7 @@ func (this *QTabWidget) UsesScrollButtons() bool {
 // Public
 // void setUsesScrollButtons(_Bool)
 func (this *QTabWidget) SetUsesScrollButtons(useButtons bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget20setUsesScrollButtonsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &useButtons)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget20setUsesScrollButtonsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), useButtons)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -557,7 +577,7 @@ func (this *QTabWidget) DocumentMode() bool {
 // Public
 // void setDocumentMode(_Bool)
 func (this *QTabWidget) SetDocumentMode(set bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget15setDocumentModeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &set)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget15setDocumentModeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), set)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -577,7 +597,7 @@ func (this *QTabWidget) TabBarAutoHide() bool {
 // Public
 // void setTabBarAutoHide(_Bool)
 func (this *QTabWidget) SetTabBarAutoHide(enabled bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget17setTabBarAutoHideEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &enabled)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget17setTabBarAutoHideEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -607,7 +627,7 @@ func (this *QTabWidget) TabBar() *QTabBar /*444 QTabBar **/ {
 // Public
 // void setCurrentIndex(int)
 func (this *QTabWidget) SetCurrentIndex(index int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget15setCurrentIndexEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget15setCurrentIndexEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -626,7 +646,7 @@ func (this *QTabWidget) SetCurrentWidget(widget *QWidget /*444 QWidget **/) {
 // Public
 // void currentChanged(int)
 func (this *QTabWidget) CurrentChanged(index int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget14currentChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget14currentChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -635,7 +655,7 @@ func (this *QTabWidget) CurrentChanged(index int) {
 // Public
 // void tabCloseRequested(int)
 func (this *QTabWidget) TabCloseRequested(index int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget17tabCloseRequestedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget17tabCloseRequestedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -644,7 +664,7 @@ func (this *QTabWidget) TabCloseRequested(index int) {
 // Public
 // void tabBarClicked(int)
 func (this *QTabWidget) TabBarClicked(index int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget13tabBarClickedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget13tabBarClickedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -653,7 +673,7 @@ func (this *QTabWidget) TabBarClicked(index int) {
 // Public
 // void tabBarDoubleClicked(int)
 func (this *QTabWidget) TabBarDoubleClicked(index int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget19tabBarDoubleClickedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget19tabBarDoubleClickedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -662,7 +682,7 @@ func (this *QTabWidget) TabBarDoubleClicked(index int) {
 // Protected virtual
 // void tabInserted(int)
 func (this *QTabWidget) TabInserted(index int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget11tabInsertedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget11tabInsertedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -671,7 +691,7 @@ func (this *QTabWidget) TabInserted(index int) {
 // Protected virtual
 // void tabRemoved(int)
 func (this *QTabWidget) TabRemoved(index int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget10tabRemovedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidget10tabRemovedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -756,5 +776,17 @@ func (this *QTabWidget) InitStyleOption(option *QStyleOptionTabWidgetFrame /*444
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTabWidget15initStyleOptionEP26QStyleOptionTabWidgetFrame", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
+
+type QTabWidget__TabPosition = int
+
+const QTabWidget__North QTabWidget__TabPosition = 0
+const QTabWidget__South QTabWidget__TabPosition = 1
+const QTabWidget__West QTabWidget__TabPosition = 2
+const QTabWidget__East QTabWidget__TabPosition = 3
+
+type QTabWidget__TabShape = int
+
+const QTabWidget__Rounded QTabWidget__TabShape = 0
+const QTabWidget__Triangular QTabWidget__TabShape = 1
 
 //  body block end

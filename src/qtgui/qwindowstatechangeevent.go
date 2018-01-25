@@ -59,9 +59,15 @@ func (this *QWindowStateChangeEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QWindowStateChangeEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQWindowStateChangeEventFromPointer(cthis unsafe.Pointer) *QWindowStateChangeEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QWindowStateChangeEvent{bcthis0}
+}
+func (*QWindowStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QWindowStateChangeEvent {
+	return NewQWindowStateChangeEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:784

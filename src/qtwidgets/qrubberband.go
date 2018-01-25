@@ -63,9 +63,15 @@ func (this *QRubberBand) GetCthis() unsafe.Pointer {
 		return this.QWidget.GetCthis()
 	}
 }
+func (this *QRubberBand) SetCthis(cthis unsafe.Pointer) {
+	this.QWidget = NewQWidgetFromPointer(cthis)
+}
 func NewQRubberBandFromPointer(cthis unsafe.Pointer) *QRubberBand {
 	bcthis0 := NewQWidgetFromPointer(cthis)
 	return &QRubberBand{bcthis0}
+}
+func (*QRubberBand) NewFromPointer(cthis unsafe.Pointer) *QRubberBand {
+	return NewQRubberBandFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qrubberband.h:55
@@ -87,7 +93,7 @@ func (this *QRubberBand) MetaObject() *qtcore.QMetaObject /*444 const QMetaObjec
 func NewQRubberBand(arg0 int, arg1 *QWidget /*444 QWidget **/) *QRubberBand {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = arg1.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBandC2ENS_5ShapeEP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, &arg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBandC2ENS_5ShapeEP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, arg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRubberBandFromPointer(cthis)
 	return gothis
@@ -128,7 +134,7 @@ func (this *QRubberBand) SetGeometry(r *qtcore.QRect) {
 // Public inline
 // void setGeometry(int, int, int, int)
 func (this *QRubberBand) SetGeometry_1(x int, y int, w int, h int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBand11setGeometryEiiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &w, &h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBand11setGeometryEiiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -137,7 +143,7 @@ func (this *QRubberBand) SetGeometry_1(x int, y int, w int, h int) {
 // Public inline
 // void move(int, int)
 func (this *QRubberBand) Move(x int, y int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBand4moveEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBand4moveEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -156,7 +162,7 @@ func (this *QRubberBand) Move_1(p *qtcore.QPoint) {
 // Public inline
 // void resize(int, int)
 func (this *QRubberBand) Resize(w int, h int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBand6resizeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &w, &h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBand6resizeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w, h)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -241,5 +247,10 @@ func (this *QRubberBand) InitStyleOption(option *QStyleOptionRubberBand /*444 QS
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QRubberBand15initStyleOptionEP22QStyleOptionRubberBand", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
+
+type QRubberBand__Shape = int
+
+const QRubberBand__Line QRubberBand__Shape = 0
+const QRubberBand__Rectangle QRubberBand__Shape = 1
 
 //  body block end

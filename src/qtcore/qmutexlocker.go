@@ -55,8 +55,14 @@ func (this *QMutexLocker) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QMutexLocker) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQMutexLockerFromPointer(cthis unsafe.Pointer) *QMutexLocker {
 	return &QMutexLocker{&qtrt.CObject{cthis}}
+}
+func (*QMutexLocker) NewFromPointer(cthis unsafe.Pointer) *QMutexLocker {
+	return NewQMutexLockerFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qmutex.h:199

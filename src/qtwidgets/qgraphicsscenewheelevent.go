@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 27
+// extern C begin: 28
 */
 // import "C"
 import "unsafe"
@@ -63,9 +63,15 @@ func (this *QGraphicsSceneWheelEvent) GetCthis() unsafe.Pointer {
 		return this.QGraphicsSceneEvent.GetCthis()
 	}
 }
+func (this *QGraphicsSceneWheelEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QGraphicsSceneEvent = NewQGraphicsSceneEventFromPointer(cthis)
+}
 func NewQGraphicsSceneWheelEventFromPointer(cthis unsafe.Pointer) *QGraphicsSceneWheelEvent {
 	bcthis0 := NewQGraphicsSceneEventFromPointer(cthis)
 	return &QGraphicsSceneWheelEvent{bcthis0}
+}
+func (*QGraphicsSceneWheelEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphicsSceneWheelEvent {
+	return NewQGraphicsSceneWheelEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:139
@@ -74,7 +80,7 @@ func NewQGraphicsSceneWheelEventFromPointer(cthis unsafe.Pointer) *QGraphicsScen
 // void QGraphicsSceneWheelEvent(enum QEvent::Type)
 func NewQGraphicsSceneWheelEvent(type_ int) *QGraphicsSceneWheelEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneWheelEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneWheelEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsSceneWheelEventFromPointer(cthis)
 	return gothis
@@ -94,9 +100,11 @@ func DeleteQGraphicsSceneWheelEvent(*QGraphicsSceneWheelEvent) {
 // Public
 // QPointF pos()
 func (this *QGraphicsSceneWheelEvent) Pos() *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent3posEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -116,9 +124,11 @@ func (this *QGraphicsSceneWheelEvent) SetPos(pos *qtcore.QPointF) {
 // Public
 // QPointF scenePos()
 func (this *QGraphicsSceneWheelEvent) ScenePos() *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent8scenePosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent8scenePosEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -138,9 +148,11 @@ func (this *QGraphicsSceneWheelEvent) SetScenePos(pos *qtcore.QPointF) {
 // Public
 // QPoint screenPos()
 func (this *QGraphicsSceneWheelEvent) ScreenPos() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent9screenPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent9screenPosEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -193,7 +205,7 @@ func (this *QGraphicsSceneWheelEvent) Delta() int {
 // Public
 // void setDelta(int)
 func (this *QGraphicsSceneWheelEvent) SetDelta(delta int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneWheelEvent8setDeltaEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &delta)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneWheelEvent8setDeltaEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), delta)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -213,7 +225,7 @@ func (this *QGraphicsSceneWheelEvent) Orientation() int {
 // Public
 // void setOrientation(Qt::Orientation)
 func (this *QGraphicsSceneWheelEvent) SetOrientation(orientation int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneWheelEvent14setOrientationEN2Qt11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &orientation)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneWheelEvent14setOrientationEN2Qt11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), orientation)
 	gopp.ErrPrint(err, rv)
 }
 

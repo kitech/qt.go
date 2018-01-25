@@ -59,9 +59,15 @@ func (this *QDragLeaveEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QDragLeaveEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQDragLeaveEventFromPointer(cthis unsafe.Pointer) *QDragLeaveEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QDragLeaveEvent{bcthis0}
+}
+func (*QDragLeaveEvent) NewFromPointer(cthis unsafe.Pointer) *QDragLeaveEvent {
+	return NewQDragLeaveEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:671

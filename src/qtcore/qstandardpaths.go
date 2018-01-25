@@ -55,8 +55,14 @@ func (this *QStandardPaths) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QStandardPaths) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQStandardPathsFromPointer(cthis unsafe.Pointer) *QStandardPaths {
 	return &QStandardPaths{&qtrt.CObject{cthis}}
+}
+func (*QStandardPaths) NewFromPointer(cthis unsafe.Pointer) *QStandardPaths {
+	return NewQStandardPathsFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qstandardpaths.h:81
@@ -151,5 +157,33 @@ func QStandardPaths_IsTestModeEnabled() bool {
 	rv := nilthis.IsTestModeEnabled()
 	return rv
 }
+
+type QStandardPaths__StandardLocation = int
+
+const QStandardPaths__DesktopLocation QStandardPaths__StandardLocation = 0
+const QStandardPaths__DocumentsLocation QStandardPaths__StandardLocation = 1
+const QStandardPaths__FontsLocation QStandardPaths__StandardLocation = 2
+const QStandardPaths__ApplicationsLocation QStandardPaths__StandardLocation = 3
+const QStandardPaths__MusicLocation QStandardPaths__StandardLocation = 4
+const QStandardPaths__MoviesLocation QStandardPaths__StandardLocation = 5
+const QStandardPaths__PicturesLocation QStandardPaths__StandardLocation = 6
+const QStandardPaths__TempLocation QStandardPaths__StandardLocation = 7
+const QStandardPaths__HomeLocation QStandardPaths__StandardLocation = 8
+const QStandardPaths__DataLocation QStandardPaths__StandardLocation = 9
+const QStandardPaths__CacheLocation QStandardPaths__StandardLocation = 10
+const QStandardPaths__GenericDataLocation QStandardPaths__StandardLocation = 11
+const QStandardPaths__RuntimeLocation QStandardPaths__StandardLocation = 12
+const QStandardPaths__ConfigLocation QStandardPaths__StandardLocation = 13
+const QStandardPaths__DownloadLocation QStandardPaths__StandardLocation = 14
+const QStandardPaths__GenericCacheLocation QStandardPaths__StandardLocation = 15
+const QStandardPaths__GenericConfigLocation QStandardPaths__StandardLocation = 16
+const QStandardPaths__AppDataLocation QStandardPaths__StandardLocation = 17
+const QStandardPaths__AppConfigLocation QStandardPaths__StandardLocation = 18
+const QStandardPaths__AppLocalDataLocation QStandardPaths__StandardLocation = 9
+
+type QStandardPaths__LocateOption = int
+
+const QStandardPaths__LocateFile QStandardPaths__LocateOption = 0
+const QStandardPaths__LocateDirectory QStandardPaths__LocateOption = 1
 
 //  body block end

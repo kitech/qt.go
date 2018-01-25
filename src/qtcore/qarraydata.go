@@ -55,8 +55,14 @@ func (this *QArrayData) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QArrayData) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQArrayDataFromPointer(cthis unsafe.Pointer) *QArrayData {
 	return &QArrayData{&qtrt.CObject{cthis}}
+}
+func (*QArrayData) NewFromPointer(cthis unsafe.Pointer) *QArrayData {
+	return NewQArrayDataFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qarraydata.h:57
@@ -97,7 +103,7 @@ func (this *QArrayData) IsMutable() bool {
 // Public inline
 // size_t detachCapacity(size_t)
 func (this *QArrayData) DetachCapacity(newSize uint) uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QArrayData14detachCapacityEm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &newSize)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QArrayData14detachCapacityEm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), newSize)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
@@ -141,5 +147,13 @@ func QArrayData_SharedNull() *QArrayData /*444 QArrayData **/ {
 	rv := nilthis.SharedNull()
 	return rv
 }
+
+type QArrayData__AllocationOption = int
+
+const QArrayData__CapacityReserved QArrayData__AllocationOption = 1
+const QArrayData__Unsharable QArrayData__AllocationOption = 2
+const QArrayData__RawData QArrayData__AllocationOption = 4
+const QArrayData__Grow QArrayData__AllocationOption = 8
+const QArrayData__Default QArrayData__AllocationOption = 0
 
 //  body block end

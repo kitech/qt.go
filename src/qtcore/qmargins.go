@@ -55,8 +55,14 @@ func (this *QMargins) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QMargins) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQMarginsFromPointer(cthis unsafe.Pointer) *QMargins {
 	return &QMargins{&qtrt.CObject{cthis}}
+}
+func (*QMargins) NewFromPointer(cthis unsafe.Pointer) *QMargins {
+	return NewQMarginsFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qmargins.h:54
@@ -77,7 +83,7 @@ func NewQMargins() *QMargins {
 // void QMargins(int, int, int, int)
 func NewQMargins_1(left int, top int, right int, bottom int) *QMargins {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMarginsC2Eiiii", ffiqt.FFI_TYPE_VOID, cthis, &left, &top, &right, &bottom)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMarginsC2Eiiii", ffiqt.FFI_TYPE_VOID, cthis, left, top, right, bottom)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMarginsFromPointer(cthis)
 	return gothis
@@ -143,7 +149,7 @@ func (this *QMargins) Bottom() int {
 // Public
 // void setLeft(int)
 func (this *QMargins) SetLeft(left int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins7setLeftEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &left)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins7setLeftEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), left)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -152,7 +158,7 @@ func (this *QMargins) SetLeft(left int) {
 // Public
 // void setTop(int)
 func (this *QMargins) SetTop(top int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins6setTopEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &top)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins6setTopEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), top)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -161,7 +167,7 @@ func (this *QMargins) SetTop(top int) {
 // Public
 // void setRight(int)
 func (this *QMargins) SetRight(right int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins8setRightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &right)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins8setRightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), right)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -170,7 +176,7 @@ func (this *QMargins) SetRight(right int) {
 // Public
 // void setBottom(int)
 func (this *QMargins) SetBottom(bottom int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins9setBottomEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &bottom)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins9setBottomEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), bottom)
 	gopp.ErrPrint(err, rv)
 }
 

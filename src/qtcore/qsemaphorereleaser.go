@@ -55,8 +55,14 @@ func (this *QSemaphoreReleaser) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QSemaphoreReleaser) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQSemaphoreReleaserFromPointer(cthis unsafe.Pointer) *QSemaphoreReleaser {
 	return &QSemaphoreReleaser{&qtrt.CObject{cthis}}
+}
+func (*QSemaphoreReleaser) NewFromPointer(cthis unsafe.Pointer) *QSemaphoreReleaser {
+	return NewQSemaphoreReleaserFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qsemaphore.h:75
@@ -78,7 +84,7 @@ func NewQSemaphoreReleaser() *QSemaphoreReleaser {
 func NewQSemaphoreReleaser_1(sem *QSemaphore, n int) *QSemaphoreReleaser {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = sem.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2ER10QSemaphorei", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2ER10QSemaphorei", ffiqt.FFI_TYPE_VOID, cthis, convArg0, n)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSemaphoreReleaserFromPointer(cthis)
 	return gothis
@@ -91,7 +97,7 @@ func NewQSemaphoreReleaser_1(sem *QSemaphore, n int) *QSemaphoreReleaser {
 func NewQSemaphoreReleaser_2(sem *QSemaphore /*444 QSemaphore **/, n int) *QSemaphoreReleaser {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = sem.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2EP10QSemaphorei", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2EP10QSemaphorei", ffiqt.FFI_TYPE_VOID, cthis, convArg0, n)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSemaphoreReleaserFromPointer(cthis)
 	return gothis

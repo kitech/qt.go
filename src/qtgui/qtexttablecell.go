@@ -59,8 +59,14 @@ func (this *QTextTableCell) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTextTableCell) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTextTableCellFromPointer(cthis unsafe.Pointer) *QTextTableCell {
 	return &QTextTableCell{&qtrt.CObject{cthis}}
+}
+func (*QTextTableCell) NewFromPointer(cthis unsafe.Pointer) *QTextTableCell {
+	return NewQTextTableCellFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:57
@@ -99,9 +105,11 @@ func (this *QTextTableCell) SetFormat(format *QTextCharFormat) {
 // Public
 // QTextCharFormat format()
 func (this *QTextTableCell) Format() *QTextCharFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell6formatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -166,9 +174,11 @@ func (this *QTextTableCell) IsValid() bool {
 // Public
 // QTextCursor firstCursorPosition()
 func (this *QTextTableCell) FirstCursorPosition() *QTextCursor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell19firstCursorPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell19firstCursorPositionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -178,9 +188,11 @@ func (this *QTextTableCell) FirstCursorPosition() *QTextCursor /*123*/ {
 // Public
 // QTextCursor lastCursorPosition()
 func (this *QTextTableCell) LastCursorPosition() *QTextCursor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell18lastCursorPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell18lastCursorPositionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

@@ -22,7 +22,9 @@ widgets:
 
 eg:
 	# CC=clang CXX=clang++ go build -v -x src/eg/coreapp.go
-	CC=clang CXX=clang++ go build -v -x src/eg/guiapp.go
+	# CC=clang CXX=clang++ go build -v -x src/eg/guiapp.go
+	# CC=clang CXX=clang++ go build -v -x src/eg/signal.go
+	CC=clang CXX=clang++ go build -v -x src/eg/uicgen.go src/eg/ui_xxx.go
 	# CC=clang CXX=clang++ go build -v -x src/eg/button.go
 	# CC=clang CXX=clang++ go build -v -x src/eg/eg00.go
 	# CC=clang CXX=clang++ go build -v -x src/eg/eg10.go

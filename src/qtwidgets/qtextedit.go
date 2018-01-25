@@ -63,9 +63,15 @@ func (this *QTextEdit) GetCthis() unsafe.Pointer {
 		return this.QAbstractScrollArea.GetCthis()
 	}
 }
+func (this *QTextEdit) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractScrollArea = NewQAbstractScrollAreaFromPointer(cthis)
+}
 func NewQTextEditFromPointer(cthis unsafe.Pointer) *QTextEdit {
 	bcthis0 := NewQAbstractScrollAreaFromPointer(cthis)
 	return &QTextEdit{bcthis0}
+}
+func (*QTextEdit) NewFromPointer(cthis unsafe.Pointer) *QTextEdit {
+	return NewQTextEditFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qtextedit.h:63
@@ -153,9 +159,11 @@ func (this *QTextEdit) SetPlaceholderText(placeholderText *qtcore.QString) {
 // Public
 // QString placeholderText()
 func (this *QTextEdit) PlaceholderText() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit15placeholderTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit15placeholderTextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -175,9 +183,11 @@ func (this *QTextEdit) SetTextCursor(cursor *qtgui.QTextCursor) {
 // Public
 // QTextCursor textCursor()
 func (this *QTextEdit) TextCursor() *qtgui.QTextCursor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit10textCursorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit10textCursorEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -198,7 +208,16 @@ func (this *QTextEdit) IsReadOnly() bool {
 // Public
 // void setReadOnly(_Bool)
 func (this *QTextEdit) SetReadOnly(ro bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit11setReadOnlyEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ro)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit11setReadOnlyEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ro)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtextedit.h:121
+// index:0
+// Public
+// void setTextInteractionFlags(Qt::TextInteractionFlags)
+func (this *QTextEdit) SetTextInteractionFlags(flags int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit23setTextInteractionFlagsE6QFlagsIN2Qt19TextInteractionFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -229,9 +248,11 @@ func (this *QTextEdit) FontPointSize() float64 {
 // Public
 // QString fontFamily()
 func (this *QTextEdit) FontFamily() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit10fontFamilyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit10fontFamilyEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -274,9 +295,11 @@ func (this *QTextEdit) FontItalic() bool {
 // Public
 // QColor textColor()
 func (this *QTextEdit) TextColor() *qtgui.QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit9textColorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit9textColorEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -286,9 +309,11 @@ func (this *QTextEdit) TextColor() *qtgui.QColor /*123*/ {
 // Public
 // QColor textBackgroundColor()
 func (this *QTextEdit) TextBackgroundColor() *qtgui.QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit19textBackgroundColorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit19textBackgroundColorEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -298,9 +323,11 @@ func (this *QTextEdit) TextBackgroundColor() *qtgui.QColor /*123*/ {
 // Public
 // QFont currentFont()
 func (this *QTextEdit) CurrentFont() *qtgui.QFont /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit11currentFontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit11currentFontEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -341,9 +368,11 @@ func (this *QTextEdit) SetCurrentCharFormat(format *qtgui.QTextCharFormat) {
 // Public
 // QTextCharFormat currentCharFormat()
 func (this *QTextEdit) CurrentCharFormat() *qtgui.QTextCharFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit17currentCharFormatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit17currentCharFormatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -375,7 +404,7 @@ func (this *QTextEdit) TabChangesFocus() bool {
 // Public
 // void setTabChangesFocus(_Bool)
 func (this *QTextEdit) SetTabChangesFocus(b bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit18setTabChangesFocusEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit18setTabChangesFocusEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -394,9 +423,11 @@ func (this *QTextEdit) SetDocumentTitle(title *qtcore.QString) {
 // Public inline
 // QString documentTitle()
 func (this *QTextEdit) DocumentTitle() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit13documentTitleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit13documentTitleEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -417,7 +448,7 @@ func (this *QTextEdit) IsUndoRedoEnabled() bool {
 // Public inline
 // void setUndoRedoEnabled(_Bool)
 func (this *QTextEdit) SetUndoRedoEnabled(enable bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit18setUndoRedoEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit18setUndoRedoEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -437,7 +468,7 @@ func (this *QTextEdit) LineWrapMode() int {
 // Public
 // void setLineWrapMode(enum QTextEdit::LineWrapMode)
 func (this *QTextEdit) SetLineWrapMode(mode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit15setLineWrapModeENS_12LineWrapModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit15setLineWrapModeENS_12LineWrapModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -457,7 +488,7 @@ func (this *QTextEdit) LineWrapColumnOrWidth() int {
 // Public
 // void setLineWrapColumnOrWidth(int)
 func (this *QTextEdit) SetLineWrapColumnOrWidth(w int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit24setLineWrapColumnOrWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &w)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit24setLineWrapColumnOrWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -477,8 +508,32 @@ func (this *QTextEdit) WordWrapMode() int {
 // Public
 // void setWordWrapMode(class QTextOption::WrapMode)
 func (this *QTextEdit) SetWordWrapMode(policy int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit15setWordWrapModeEN11QTextOption8WrapModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &policy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit15setWordWrapModeEN11QTextOption8WrapModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtextedit.h:164
+// index:0
+// Public
+// bool find(const class QString &, class QTextDocument::FindFlags)
+func (this *QTextEdit) Find(exp *qtcore.QString, options int) bool {
+	var convArg0 = exp.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit4findERK7QString6QFlagsIN13QTextDocument8FindFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, options)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qtextedit.h:166
+// index:1
+// Public
+// bool find(const class QRegExp &, class QTextDocument::FindFlags)
+func (this *QTextEdit) Find_1(exp *qtcore.QRegExp, options int) bool {
+	var convArg0 = exp.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit4findERK7QRegExp6QFlagsIN13QTextDocument8FindFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, options)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qtextedit.h:169
@@ -486,9 +541,11 @@ func (this *QTextEdit) SetWordWrapMode(policy int) {
 // Public
 // QString toPlainText()
 func (this *QTextEdit) ToPlainText() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit11toPlainTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit11toPlainTextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -498,9 +555,11 @@ func (this *QTextEdit) ToPlainText() *qtcore.QString /*123*/ {
 // Public
 // QString toHtml()
 func (this *QTextEdit) ToHtml() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit6toHtmlEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit6toHtmlEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -519,10 +578,12 @@ func (this *QTextEdit) EnsureCursorVisible() {
 // Public virtual
 // QVariant loadResource(int, const class QUrl &)
 func (this *QTextEdit) LoadResource(type_ int, name *qtcore.QUrl) *qtcore.QVariant /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg1 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit12loadResourceEiRK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &type_, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit12loadResourceEiRK4QUrl", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), type_, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -557,10 +618,12 @@ func (this *QTextEdit) CreateStandardContextMenu_1(position *qtcore.QPoint) *QMe
 // Public
 // QTextCursor cursorForPosition(const class QPoint &)
 func (this *QTextEdit) CursorForPosition(pos *qtcore.QPoint) *qtgui.QTextCursor /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = pos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit17cursorForPositionERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit17cursorForPositionERK6QPoint", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -570,10 +633,12 @@ func (this *QTextEdit) CursorForPosition(pos *qtcore.QPoint) *qtgui.QTextCursor 
 // Public
 // QRect cursorRect(const class QTextCursor &)
 func (this *QTextEdit) CursorRect(cursor *qtgui.QTextCursor) *qtcore.QRect /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = cursor.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit10cursorRectERK11QTextCursor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit10cursorRectERK11QTextCursor", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -583,9 +648,11 @@ func (this *QTextEdit) CursorRect(cursor *qtgui.QTextCursor) *qtcore.QRect /*123
 // Public
 // QRect cursorRect()
 func (this *QTextEdit) CursorRect_1() *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit10cursorRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit10cursorRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -595,10 +662,12 @@ func (this *QTextEdit) CursorRect_1() *qtcore.QRect /*123*/ {
 // Public
 // QString anchorAt(const class QPoint &)
 func (this *QTextEdit) AnchorAt(pos *qtcore.QPoint) *qtcore.QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = pos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit8anchorAtERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit8anchorAtERK6QPoint", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -619,7 +688,7 @@ func (this *QTextEdit) OverwriteMode() bool {
 // Public
 // void setOverwriteMode(_Bool)
 func (this *QTextEdit) SetOverwriteMode(overwrite bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit16setOverwriteModeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &overwrite)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit16setOverwriteModeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), overwrite)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -639,7 +708,7 @@ func (this *QTextEdit) TabStopWidth() int {
 // Public
 // void setTabStopWidth(int)
 func (this *QTextEdit) SetTabStopWidth(width int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit15setTabStopWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &width)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit15setTabStopWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -659,7 +728,7 @@ func (this *QTextEdit) TabStopDistance() float64 {
 // Public
 // void setTabStopDistance(qreal)
 func (this *QTextEdit) SetTabStopDistance(distance float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit18setTabStopDistanceEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &distance)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit18setTabStopDistanceEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), distance)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -679,7 +748,7 @@ func (this *QTextEdit) CursorWidth() int {
 // Public
 // void setCursorWidth(int)
 func (this *QTextEdit) SetCursorWidth(width int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit14setCursorWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &width)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit14setCursorWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -699,7 +768,7 @@ func (this *QTextEdit) AcceptRichText() bool {
 // Public
 // void setAcceptRichText(_Bool)
 func (this *QTextEdit) SetAcceptRichText(accept bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit17setAcceptRichTextEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &accept)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit17setAcceptRichTextEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), accept)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -708,7 +777,7 @@ func (this *QTextEdit) SetAcceptRichText(accept bool) {
 // Public
 // void moveCursor(class QTextCursor::MoveOperation, class QTextCursor::MoveMode)
 func (this *QTextEdit) MoveCursor(operation int, mode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit10moveCursorEN11QTextCursor13MoveOperationENS0_8MoveModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &operation, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit10moveCursorEN11QTextCursor13MoveOperationENS0_8MoveModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), operation, mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -738,9 +807,11 @@ func (this *QTextEdit) Print(printer *qtgui.QPagedPaintDevice /*444 QPagedPaintD
 // Public virtual
 // QVariant inputMethodQuery(Qt::InputMethodQuery)
 func (this *QTextEdit) InputMethodQuery(property int) *qtcore.QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit16inputMethodQueryEN2Qt16InputMethodQueryE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &property)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit16inputMethodQueryEN2Qt16InputMethodQueryE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), property)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -750,10 +821,12 @@ func (this *QTextEdit) InputMethodQuery(property int) *qtcore.QVariant /*123*/ {
 // Public
 // QVariant inputMethodQuery(Qt::InputMethodQuery, class QVariant)
 func (this *QTextEdit) InputMethodQuery_1(query int, argument *qtcore.QVariant /*123*/) *qtcore.QVariant /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg1 = argument.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit16inputMethodQueryEN2Qt16InputMethodQueryE8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &query, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit16inputMethodQueryEN2Qt16InputMethodQueryE8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), query, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -763,7 +836,7 @@ func (this *QTextEdit) InputMethodQuery_1(query int, argument *qtcore.QVariant /
 // Public
 // void setFontPointSize(qreal)
 func (this *QTextEdit) SetFontPointSize(s float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit16setFontPointSizeEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &s)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit16setFontPointSizeEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), s)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -782,7 +855,7 @@ func (this *QTextEdit) SetFontFamily(fontFamily *qtcore.QString) {
 // Public
 // void setFontWeight(int)
 func (this *QTextEdit) SetFontWeight(w int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit13setFontWeightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &w)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit13setFontWeightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -791,7 +864,7 @@ func (this *QTextEdit) SetFontWeight(w int) {
 // Public
 // void setFontUnderline(_Bool)
 func (this *QTextEdit) SetFontUnderline(b bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit16setFontUnderlineEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit16setFontUnderlineEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -800,7 +873,7 @@ func (this *QTextEdit) SetFontUnderline(b bool) {
 // Public
 // void setFontItalic(_Bool)
 func (this *QTextEdit) SetFontItalic(b bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit13setFontItalicEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit13setFontItalicEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -962,7 +1035,7 @@ func (this *QTextEdit) ScrollToAnchor(name *qtcore.QString) {
 // Public
 // void zoomIn(int)
 func (this *QTextEdit) ZoomIn(range_ int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit6zoomInEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &range_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit6zoomInEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), range_)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -971,7 +1044,7 @@ func (this *QTextEdit) ZoomIn(range_ int) {
 // Public
 // void zoomOut(int)
 func (this *QTextEdit) ZoomOut(range_ int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit7zoomOutEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &range_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit7zoomOutEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), range_)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -989,7 +1062,7 @@ func (this *QTextEdit) TextChanged() {
 // Public
 // void undoAvailable(_Bool)
 func (this *QTextEdit) UndoAvailable(b bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit13undoAvailableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit13undoAvailableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -998,7 +1071,7 @@ func (this *QTextEdit) UndoAvailable(b bool) {
 // Public
 // void redoAvailable(_Bool)
 func (this *QTextEdit) RedoAvailable(b bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit13redoAvailableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit13redoAvailableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1017,7 +1090,7 @@ func (this *QTextEdit) CurrentCharFormatChanged(format *qtgui.QTextCharFormat) {
 // Public
 // void copyAvailable(_Bool)
 func (this *QTextEdit) CopyAvailable(b bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit13copyAvailableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit13copyAvailableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1146,7 +1219,7 @@ func (this *QTextEdit) MouseDoubleClickEvent(e *qtgui.QMouseEvent /*444 QMouseEv
 // Protected virtual
 // bool focusNextPrevChild(_Bool)
 func (this *QTextEdit) FocusNextPrevChild(next bool) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &next)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), next)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1301,7 +1374,7 @@ func (this *QTextEdit) InputMethodEvent(arg0 *qtgui.QInputMethodEvent /*444 QInp
 // Protected virtual
 // void scrollContentsBy(int, int)
 func (this *QTextEdit) ScrollContentsBy(dx int, dy int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit16scrollContentsByEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit16scrollContentsByEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1320,8 +1393,21 @@ func (this *QTextEdit) DoSetTextCursor(cursor *qtgui.QTextCursor) {
 // Protected
 // void zoomInF(float)
 func (this *QTextEdit) ZoomInF(range_ float32) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit7zoomInFEf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &range_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit7zoomInFEf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), range_)
 	gopp.ErrPrint(err, rv)
 }
+
+type QTextEdit__LineWrapMode = int
+
+const QTextEdit__NoWrap QTextEdit__LineWrapMode = 0
+const QTextEdit__WidgetWidth QTextEdit__LineWrapMode = 1
+const QTextEdit__FixedPixelWidth QTextEdit__LineWrapMode = 2
+const QTextEdit__FixedColumnWidth QTextEdit__LineWrapMode = 3
+
+type QTextEdit__AutoFormattingFlag = int
+
+const QTextEdit__AutoNone QTextEdit__AutoFormattingFlag = 0
+const QTextEdit__AutoBulletList QTextEdit__AutoFormattingFlag = 1
+const QTextEdit__AutoAll QTextEdit__AutoFormattingFlag = 4294967295
 
 //  body block end

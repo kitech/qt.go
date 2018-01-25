@@ -55,9 +55,15 @@ func (this *QFutureWatcherBase) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QFutureWatcherBase) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQFutureWatcherBaseFromPointer(cthis unsafe.Pointer) *QFutureWatcherBase {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QFutureWatcherBase{bcthis0}
+}
+func (*QFutureWatcherBase) NewFromPointer(cthis unsafe.Pointer) *QFutureWatcherBase {
+	return NewQFutureWatcherBaseFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qfuturewatcher.h:57
@@ -123,9 +129,11 @@ func (this *QFutureWatcherBase) ProgressMaximum() int {
 // Public
 // QString progressText()
 func (this *QFutureWatcherBase) ProgressText() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QFutureWatcherBase12progressTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QFutureWatcherBase12progressTextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -199,7 +207,7 @@ func (this *QFutureWatcherBase) WaitForFinished() {
 // Public
 // void setPendingResultsLimit(int)
 func (this *QFutureWatcherBase) SetPendingResultsLimit(limit int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase22setPendingResultsLimitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &limit)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase22setPendingResultsLimitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), limit)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -265,7 +273,7 @@ func (this *QFutureWatcherBase) Resumed() {
 // Public
 // void resultReadyAt(int)
 func (this *QFutureWatcherBase) ResultReadyAt(resultIndex int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase13resultReadyAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &resultIndex)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase13resultReadyAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), resultIndex)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -274,7 +282,7 @@ func (this *QFutureWatcherBase) ResultReadyAt(resultIndex int) {
 // Public
 // void resultsReadyAt(int, int)
 func (this *QFutureWatcherBase) ResultsReadyAt(beginIndex int, endIndex int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase14resultsReadyAtEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &beginIndex, &endIndex)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase14resultsReadyAtEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), beginIndex, endIndex)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -283,7 +291,7 @@ func (this *QFutureWatcherBase) ResultsReadyAt(beginIndex int, endIndex int) {
 // Public
 // void progressRangeChanged(int, int)
 func (this *QFutureWatcherBase) ProgressRangeChanged(minimum int, maximum int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase20progressRangeChangedEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &minimum, &maximum)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase20progressRangeChangedEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), minimum, maximum)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -292,7 +300,7 @@ func (this *QFutureWatcherBase) ProgressRangeChanged(minimum int, maximum int) {
 // Public
 // void progressValueChanged(int)
 func (this *QFutureWatcherBase) ProgressValueChanged(progressValue int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase20progressValueChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &progressValue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase20progressValueChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), progressValue)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -320,7 +328,7 @@ func (this *QFutureWatcherBase) Cancel() {
 // Public
 // void setPaused(_Bool)
 func (this *QFutureWatcherBase) SetPaused(paused bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase9setPausedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &paused)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase9setPausedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), paused)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -385,7 +393,7 @@ func (this *QFutureWatcherBase) ConnectOutputInterface() {
 // Protected
 // void disconnectOutputInterface(_Bool)
 func (this *QFutureWatcherBase) DisconnectOutputInterface(pendingAssignment bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase25disconnectOutputInterfaceEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &pendingAssignment)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase25disconnectOutputInterfaceEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pendingAssignment)
 	gopp.ErrPrint(err, rv)
 }
 

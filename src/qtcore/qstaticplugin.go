@@ -55,8 +55,14 @@ func (this *QStaticPlugin) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QStaticPlugin) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQStaticPluginFromPointer(cthis unsafe.Pointer) *QStaticPlugin {
 	return &QStaticPlugin{&qtrt.CObject{cthis}}
+}
+func (*QStaticPlugin) NewFromPointer(cthis unsafe.Pointer) *QStaticPlugin {
+	return NewQStaticPluginFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qplugin.h:74
@@ -64,9 +70,11 @@ func NewQStaticPluginFromPointer(cthis unsafe.Pointer) *QStaticPlugin {
 // Public
 // QJsonObject metaData()
 func (this *QStaticPlugin) MetaData() *QJsonObject /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStaticPlugin8metaDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStaticPlugin8metaDataEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQJsonObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

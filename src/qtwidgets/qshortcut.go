@@ -63,9 +63,15 @@ func (this *QShortcut) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QShortcut) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQShortcutFromPointer(cthis unsafe.Pointer) *QShortcut {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QShortcut{bcthis0}
+}
+func (*QShortcut) NewFromPointer(cthis unsafe.Pointer) *QShortcut {
+	return NewQShortcutFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qshortcut.h:55
@@ -105,7 +111,7 @@ func NewQShortcut_1(key *qtgui.QKeySequence, parent *QWidget /*444 QWidget **/, 
 	defer qtrt.FreeMem(convArg2)
 	var convArg3 = qtrt.CString(ambiguousMember)
 	defer qtrt.FreeMem(convArg3)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcutC2ERK12QKeySequenceP7QWidgetPKcS6_N2Qt15ShortcutContextE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, convArg2, convArg3, &context)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcutC2ERK12QKeySequenceP7QWidgetPKcS6_N2Qt15ShortcutContextE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, convArg2, convArg3, context)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQShortcutFromPointer(cthis)
 	return gothis
@@ -135,9 +141,11 @@ func (this *QShortcut) SetKey(key *qtgui.QKeySequence) {
 // Public
 // QKeySequence key()
 func (this *QShortcut) Key() *qtgui.QKeySequence /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QShortcut3keyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QShortcut3keyEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -147,7 +155,7 @@ func (this *QShortcut) Key() *qtgui.QKeySequence /*123*/ {
 // Public
 // void setEnabled(_Bool)
 func (this *QShortcut) SetEnabled(enable bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -167,7 +175,7 @@ func (this *QShortcut) IsEnabled() bool {
 // Public
 // void setContext(Qt::ShortcutContext)
 func (this *QShortcut) SetContext(context int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut10setContextEN2Qt15ShortcutContextE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &context)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut10setContextEN2Qt15ShortcutContextE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), context)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -197,9 +205,11 @@ func (this *QShortcut) SetWhatsThis(text *qtcore.QString) {
 // Public
 // QString whatsThis()
 func (this *QShortcut) WhatsThis() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QShortcut9whatsThisEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QShortcut9whatsThisEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -209,7 +219,7 @@ func (this *QShortcut) WhatsThis() *qtcore.QString /*123*/ {
 // Public
 // void setAutoRepeat(_Bool)
 func (this *QShortcut) SetAutoRepeat(on bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut13setAutoRepeatEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &on)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut13setAutoRepeatEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -59,9 +59,15 @@ func (this *QAccessibleBridgePlugin) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QAccessibleBridgePlugin) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQAccessibleBridgePluginFromPointer(cthis unsafe.Pointer) *QAccessibleBridgePlugin {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QAccessibleBridgePlugin{bcthis0}
+}
+func (*QAccessibleBridgePlugin) NewFromPointer(cthis unsafe.Pointer) *QAccessibleBridgePlugin {
+	return NewQAccessibleBridgePluginFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qaccessiblebridge.h:67

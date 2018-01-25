@@ -63,9 +63,15 @@ func (this *QCommandLinkButton) GetCthis() unsafe.Pointer {
 		return this.QPushButton.GetCthis()
 	}
 }
+func (this *QCommandLinkButton) SetCthis(cthis unsafe.Pointer) {
+	this.QPushButton = NewQPushButtonFromPointer(cthis)
+}
 func NewQCommandLinkButtonFromPointer(cthis unsafe.Pointer) *QCommandLinkButton {
 	bcthis0 := NewQPushButtonFromPointer(cthis)
 	return &QCommandLinkButton{bcthis0}
+}
+func (*QCommandLinkButton) NewFromPointer(cthis unsafe.Pointer) *QCommandLinkButton {
+	return NewQCommandLinkButtonFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qcommandlinkbutton.h:55
@@ -136,9 +142,11 @@ func DeleteQCommandLinkButton(*QCommandLinkButton) {
 // Public
 // QString description()
 func (this *QCommandLinkButton) Description() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLinkButton11descriptionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLinkButton11descriptionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -158,9 +166,11 @@ func (this *QCommandLinkButton) SetDescription(description *qtcore.QString) {
 // Protected virtual
 // QSize sizeHint()
 func (this *QCommandLinkButton) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLinkButton8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLinkButton8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -170,7 +180,7 @@ func (this *QCommandLinkButton) SizeHint() *qtcore.QSize /*123*/ {
 // Protected virtual
 // int heightForWidth(int)
 func (this *QCommandLinkButton) HeightForWidth(arg0 int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLinkButton14heightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLinkButton14heightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -181,9 +191,11 @@ func (this *QCommandLinkButton) HeightForWidth(arg0 int) int {
 // Protected virtual
 // QSize minimumSizeHint()
 func (this *QCommandLinkButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLinkButton15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLinkButton15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

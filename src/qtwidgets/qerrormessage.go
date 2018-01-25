@@ -63,9 +63,15 @@ func (this *QErrorMessage) GetCthis() unsafe.Pointer {
 		return this.QDialog.GetCthis()
 	}
 }
+func (this *QErrorMessage) SetCthis(cthis unsafe.Pointer) {
+	this.QDialog = NewQDialogFromPointer(cthis)
+}
 func NewQErrorMessageFromPointer(cthis unsafe.Pointer) *QErrorMessage {
 	bcthis0 := NewQDialogFromPointer(cthis)
 	return &QErrorMessage{bcthis0}
+}
+func (*QErrorMessage) NewFromPointer(cthis unsafe.Pointer) *QErrorMessage {
+	return NewQErrorMessageFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qerrormessage.h:55
@@ -145,7 +151,7 @@ func (this *QErrorMessage) ShowMessage_1(message *qtcore.QString, type_ *qtcore.
 // Protected virtual
 // void done(int)
 func (this *QErrorMessage) Done(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage4doneEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage4doneEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 

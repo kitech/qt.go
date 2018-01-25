@@ -63,8 +63,14 @@ func (this *QGestureRecognizer) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QGestureRecognizer) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQGestureRecognizerFromPointer(cthis unsafe.Pointer) *QGestureRecognizer {
 	return &QGestureRecognizer{&qtrt.CObject{cthis}}
+}
+func (*QGestureRecognizer) NewFromPointer(cthis unsafe.Pointer) *QGestureRecognizer {
+	return NewQGestureRecognizerFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgesturerecognizer.h:77
@@ -153,5 +159,16 @@ func QGestureRecognizer_UnregisterRecognizer(type_ int) {
 	var nilthis *QGestureRecognizer
 	nilthis.UnregisterRecognizer(type_)
 }
+
+type QGestureRecognizer__ResultFlag = int
+
+const QGestureRecognizer__Ignore QGestureRecognizer__ResultFlag = 1
+const QGestureRecognizer__MayBeGesture QGestureRecognizer__ResultFlag = 2
+const QGestureRecognizer__TriggerGesture QGestureRecognizer__ResultFlag = 4
+const QGestureRecognizer__FinishGesture QGestureRecognizer__ResultFlag = 8
+const QGestureRecognizer__CancelGesture QGestureRecognizer__ResultFlag = 16
+const QGestureRecognizer__ResultState_Mask QGestureRecognizer__ResultFlag = 255
+const QGestureRecognizer__ConsumeEventHint QGestureRecognizer__ResultFlag = 256
+const QGestureRecognizer__ResultHint_Mask QGestureRecognizer__ResultFlag = 65280
 
 //  body block end

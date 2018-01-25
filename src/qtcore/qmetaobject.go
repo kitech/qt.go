@@ -55,8 +55,14 @@ func (this *QMetaObject) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QMetaObject) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQMetaObjectFromPointer(cthis unsafe.Pointer) *QMetaObject {
 	return &QMetaObject{&qtrt.CObject{cthis}}
+}
+func (*QMetaObject) NewFromPointer(cthis unsafe.Pointer) *QMetaObject {
+	return NewQMetaObjectFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qobjectdefs.h:345
@@ -303,9 +309,11 @@ func (this *QMetaObject) IndexOfClassInfo(name string) int {
 // Public
 // QMetaMethod constructor(int)
 func (this *QMetaObject) Constructor(index int) *QMetaMethod /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaObject11constructorEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaObject11constructorEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQMetaMethodFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -315,9 +323,11 @@ func (this *QMetaObject) Constructor(index int) *QMetaMethod /*123*/ {
 // Public
 // QMetaMethod method(int)
 func (this *QMetaObject) Method(index int) *QMetaMethod /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaObject6methodEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaObject6methodEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQMetaMethodFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -327,9 +337,11 @@ func (this *QMetaObject) Method(index int) *QMetaMethod /*123*/ {
 // Public
 // QMetaEnum enumerator(int)
 func (this *QMetaObject) Enumerator(index int) *QMetaEnum /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaObject10enumeratorEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaObject10enumeratorEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQMetaEnumFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -339,9 +351,11 @@ func (this *QMetaObject) Enumerator(index int) *QMetaEnum /*123*/ {
 // Public
 // QMetaProperty property(int)
 func (this *QMetaObject) Property(index int) *QMetaProperty /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaObject8propertyEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaObject8propertyEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQMetaPropertyFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -351,9 +365,11 @@ func (this *QMetaObject) Property(index int) *QMetaProperty /*123*/ {
 // Public
 // QMetaClassInfo classInfo(int)
 func (this *QMetaObject) ClassInfo(index int) *QMetaClassInfo /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaObject9classInfoEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaObject9classInfoEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQMetaClassInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -363,9 +379,11 @@ func (this *QMetaObject) ClassInfo(index int) *QMetaClassInfo /*123*/ {
 // Public
 // QMetaProperty userProperty()
 func (this *QMetaObject) UserProperty() *QMetaProperty /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaObject12userPropertyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaObject12userPropertyEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQMetaPropertyFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -614,7 +632,7 @@ func (this *QMetaObject) NewInstance(val0 *QGenericArgument /*123*/, val1 *QGene
 // Public
 // int static_metacall(enum QMetaObject::Call, int, void **)
 func (this *QMetaObject) Static_metacall(arg0 int, arg1 int, arg2 unsafe.Pointer /*666*/) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaObject15static_metacallENS_4CallEiPPv", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0, &arg1, arg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaObject15static_metacallENS_4CallEiPPv", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1, arg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -635,5 +653,21 @@ func QMetaObject_Metacall(arg0 *QObject /*444 QObject **/, arg1 int, arg2 int, a
 	rv := nilthis.Metacall(arg0, arg1, arg2, arg3)
 	return rv
 }
+
+type QMetaObject__Call = int
+
+const QMetaObject__InvokeMetaMethod QMetaObject__Call = 0
+const QMetaObject__ReadProperty QMetaObject__Call = 1
+const QMetaObject__WriteProperty QMetaObject__Call = 2
+const QMetaObject__ResetProperty QMetaObject__Call = 3
+const QMetaObject__QueryPropertyDesignable QMetaObject__Call = 4
+const QMetaObject__QueryPropertyScriptable QMetaObject__Call = 5
+const QMetaObject__QueryPropertyStored QMetaObject__Call = 6
+const QMetaObject__QueryPropertyEditable QMetaObject__Call = 7
+const QMetaObject__QueryPropertyUser QMetaObject__Call = 8
+const QMetaObject__CreateInstance QMetaObject__Call = 9
+const QMetaObject__IndexOfMethod QMetaObject__Call = 10
+const QMetaObject__RegisterPropertyMetaType QMetaObject__Call = 11
+const QMetaObject__RegisterMethodArgumentMetaType QMetaObject__Call = 12
 
 //  body block end

@@ -63,9 +63,15 @@ func (this *QFontDialog) GetCthis() unsafe.Pointer {
 		return this.QDialog.GetCthis()
 	}
 }
+func (this *QFontDialog) SetCthis(cthis unsafe.Pointer) {
+	this.QDialog = NewQDialogFromPointer(cthis)
+}
 func NewQFontDialogFromPointer(cthis unsafe.Pointer) *QFontDialog {
 	bcthis0 := NewQDialogFromPointer(cthis)
 	return &QFontDialog{bcthis0}
+}
+func (*QFontDialog) NewFromPointer(cthis unsafe.Pointer) *QFontDialog {
+	return NewQFontDialogFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qfontdialog.h:57
@@ -131,9 +137,11 @@ func (this *QFontDialog) SetCurrentFont(font *qtgui.QFont) {
 // Public
 // QFont currentFont()
 func (this *QFontDialog) CurrentFont() *qtgui.QFont /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFontDialog11currentFontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFontDialog11currentFontEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -143,9 +151,11 @@ func (this *QFontDialog) CurrentFont() *qtgui.QFont /*123*/ {
 // Public
 // QFont selectedFont()
 func (this *QFontDialog) SelectedFont() *qtgui.QFont /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFontDialog12selectedFontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFontDialog12selectedFontEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -155,7 +165,7 @@ func (this *QFontDialog) SelectedFont() *qtgui.QFont /*123*/ {
 // Public
 // void setOption(enum QFontDialog::FontDialogOption, _Bool)
 func (this *QFontDialog) SetOption(option int, on bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog9setOptionENS_16FontDialogOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &option, &on)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog9setOptionENS_16FontDialogOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -164,7 +174,7 @@ func (this *QFontDialog) SetOption(option int, on bool) {
 // Public
 // bool testOption(enum QFontDialog::FontDialogOption)
 func (this *QFontDialog) TestOption(option int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFontDialog10testOptionENS_16FontDialogOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &option)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFontDialog10testOptionENS_16FontDialogOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -198,7 +208,7 @@ func (this *QFontDialog) Open(receiver *qtcore.QObject /*444 QObject **/, member
 // Public virtual
 // void setVisible(_Bool)
 func (this *QFontDialog) SetVisible(visible bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -254,7 +264,7 @@ func (this *QFontDialog) ChangeEvent(event *qtcore.QEvent /*444 QEvent **/) {
 // Protected virtual
 // void done(int)
 func (this *QFontDialog) Done(result int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog4doneEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &result)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog4doneEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), result)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -270,5 +280,14 @@ func (this *QFontDialog) EventFilter(object *qtcore.QObject /*444 QObject **/, e
 	//  return rv
 	return rv != 0
 }
+
+type QFontDialog__FontDialogOption = int
+
+const QFontDialog__NoButtons QFontDialog__FontDialogOption = 1
+const QFontDialog__DontUseNativeDialog QFontDialog__FontDialogOption = 2
+const QFontDialog__ScalableFonts QFontDialog__FontDialogOption = 4
+const QFontDialog__NonScalableFonts QFontDialog__FontDialogOption = 8
+const QFontDialog__MonospacedFonts QFontDialog__FontDialogOption = 16
+const QFontDialog__ProportionalFonts QFontDialog__FontDialogOption = 32
 
 //  body block end

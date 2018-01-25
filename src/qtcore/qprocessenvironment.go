@@ -55,8 +55,14 @@ func (this *QProcessEnvironment) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QProcessEnvironment) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQProcessEnvironmentFromPointer(cthis unsafe.Pointer) *QProcessEnvironment {
 	return &QProcessEnvironment{&qtrt.CObject{cthis}}
+}
+func (*QProcessEnvironment) NewFromPointer(cthis unsafe.Pointer) *QProcessEnvironment {
+	return NewQProcessEnvironmentFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qprocess.h:70
@@ -137,11 +143,13 @@ func (this *QProcessEnvironment) Remove(name *QString) {
 // Public
 // QString value(const class QString &, const class QString &)
 func (this *QProcessEnvironment) Value(name *QString, defaultValue *QString) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = name.GetCthis()
 	var convArg1 = defaultValue.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QProcessEnvironment5valueERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QProcessEnvironment5valueERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

@@ -63,8 +63,14 @@ func (this *QItemEditorCreatorBase) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QItemEditorCreatorBase) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQItemEditorCreatorBaseFromPointer(cthis unsafe.Pointer) *QItemEditorCreatorBase {
 	return &QItemEditorCreatorBase{&qtrt.CObject{cthis}}
+}
+func (*QItemEditorCreatorBase) NewFromPointer(cthis unsafe.Pointer) *QItemEditorCreatorBase {
+	return NewQItemEditorCreatorBaseFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:58
@@ -94,9 +100,11 @@ func (this *QItemEditorCreatorBase) CreateWidget(parent *QWidget /*444 QWidget *
 // Public pure virtual
 // QByteArray valuePropertyName()
 func (this *QItemEditorCreatorBase) ValuePropertyName() *qtcore.QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QItemEditorCreatorBase17valuePropertyNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QItemEditorCreatorBase17valuePropertyNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

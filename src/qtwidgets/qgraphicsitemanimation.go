@@ -63,9 +63,15 @@ func (this *QGraphicsItemAnimation) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QGraphicsItemAnimation) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQGraphicsItemAnimationFromPointer(cthis unsafe.Pointer) *QGraphicsItemAnimation {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QGraphicsItemAnimation{bcthis0}
+}
+func (*QGraphicsItemAnimation) NewFromPointer(cthis unsafe.Pointer) *QGraphicsItemAnimation {
+	return NewQGraphicsItemAnimationFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:59
@@ -151,9 +157,11 @@ func (this *QGraphicsItemAnimation) SetTimeLine(timeLine *qtcore.QTimeLine /*444
 // Public
 // QPointF posAt(qreal)
 func (this *QGraphicsItemAnimation) PosAt(step float64) *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation5posAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation5posAtEd", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -164,7 +172,7 @@ func (this *QGraphicsItemAnimation) PosAt(step float64) *qtcore.QPointF /*123*/ 
 // void setPosAt(qreal, const class QPointF &)
 func (this *QGraphicsItemAnimation) SetPosAt(step float64, pos *qtcore.QPointF) {
 	var convArg1 = pos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation8setPosAtEdRK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation8setPosAtEdRK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -173,9 +181,11 @@ func (this *QGraphicsItemAnimation) SetPosAt(step float64, pos *qtcore.QPointF) 
 // Public
 // QMatrix matrixAt(qreal)
 func (this *QGraphicsItemAnimation) MatrixAt(step float64) *qtgui.QMatrix /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation8matrixAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation8matrixAtEd", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -185,7 +195,7 @@ func (this *QGraphicsItemAnimation) MatrixAt(step float64) *qtgui.QMatrix /*123*
 // Public
 // qreal rotationAt(qreal)
 func (this *QGraphicsItemAnimation) RotationAt(step float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation10rotationAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation10rotationAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float64(rv) // 222
@@ -196,7 +206,7 @@ func (this *QGraphicsItemAnimation) RotationAt(step float64) float64 {
 // Public
 // void setRotationAt(qreal, qreal)
 func (this *QGraphicsItemAnimation) SetRotationAt(step float64, angle float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation13setRotationAtEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step, &angle)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation13setRotationAtEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step, angle)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -205,7 +215,7 @@ func (this *QGraphicsItemAnimation) SetRotationAt(step float64, angle float64) {
 // Public
 // qreal xTranslationAt(qreal)
 func (this *QGraphicsItemAnimation) XTranslationAt(step float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation14xTranslationAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation14xTranslationAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float64(rv) // 222
@@ -216,7 +226,7 @@ func (this *QGraphicsItemAnimation) XTranslationAt(step float64) float64 {
 // Public
 // qreal yTranslationAt(qreal)
 func (this *QGraphicsItemAnimation) YTranslationAt(step float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation14yTranslationAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation14yTranslationAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float64(rv) // 222
@@ -227,7 +237,7 @@ func (this *QGraphicsItemAnimation) YTranslationAt(step float64) float64 {
 // Public
 // void setTranslationAt(qreal, qreal, qreal)
 func (this *QGraphicsItemAnimation) SetTranslationAt(step float64, dx float64, dy float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation16setTranslationAtEddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step, &dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation16setTranslationAtEddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step, dx, dy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -236,7 +246,7 @@ func (this *QGraphicsItemAnimation) SetTranslationAt(step float64, dx float64, d
 // Public
 // qreal verticalScaleAt(qreal)
 func (this *QGraphicsItemAnimation) VerticalScaleAt(step float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation15verticalScaleAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation15verticalScaleAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float64(rv) // 222
@@ -247,7 +257,7 @@ func (this *QGraphicsItemAnimation) VerticalScaleAt(step float64) float64 {
 // Public
 // qreal horizontalScaleAt(qreal)
 func (this *QGraphicsItemAnimation) HorizontalScaleAt(step float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation17horizontalScaleAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation17horizontalScaleAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float64(rv) // 222
@@ -258,7 +268,7 @@ func (this *QGraphicsItemAnimation) HorizontalScaleAt(step float64) float64 {
 // Public
 // void setScaleAt(qreal, qreal, qreal)
 func (this *QGraphicsItemAnimation) SetScaleAt(step float64, sx float64, sy float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation10setScaleAtEddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step, &sx, &sy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation10setScaleAtEddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step, sx, sy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -267,7 +277,7 @@ func (this *QGraphicsItemAnimation) SetScaleAt(step float64, sx float64, sy floa
 // Public
 // qreal verticalShearAt(qreal)
 func (this *QGraphicsItemAnimation) VerticalShearAt(step float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation15verticalShearAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation15verticalShearAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float64(rv) // 222
@@ -278,7 +288,7 @@ func (this *QGraphicsItemAnimation) VerticalShearAt(step float64) float64 {
 // Public
 // qreal horizontalShearAt(qreal)
 func (this *QGraphicsItemAnimation) HorizontalShearAt(step float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation17horizontalShearAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation17horizontalShearAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float64(rv) // 222
@@ -289,7 +299,7 @@ func (this *QGraphicsItemAnimation) HorizontalShearAt(step float64) float64 {
 // Public
 // void setShearAt(qreal, qreal, qreal)
 func (this *QGraphicsItemAnimation) SetShearAt(step float64, sh float64, sv float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation10setShearAtEddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step, &sh, &sv)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation10setShearAtEddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step, sh, sv)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -307,7 +317,7 @@ func (this *QGraphicsItemAnimation) Clear() {
 // Public
 // void setStep(qreal)
 func (this *QGraphicsItemAnimation) SetStep(x float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation7setStepEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation7setStepEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -325,7 +335,7 @@ func (this *QGraphicsItemAnimation) Reset() {
 // Protected virtual
 // void beforeAnimationStep(qreal)
 func (this *QGraphicsItemAnimation) BeforeAnimationStep(step float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation19beforeAnimationStepEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation19beforeAnimationStepEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -334,7 +344,7 @@ func (this *QGraphicsItemAnimation) BeforeAnimationStep(step float64) {
 // Protected virtual
 // void afterAnimationStep(qreal)
 func (this *QGraphicsItemAnimation) AfterAnimationStep(step float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation18afterAnimationStepEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation18afterAnimationStepEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 }
 

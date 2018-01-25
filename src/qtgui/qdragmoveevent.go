@@ -59,9 +59,15 @@ func (this *QDragMoveEvent) GetCthis() unsafe.Pointer {
 		return this.QDropEvent.GetCthis()
 	}
 }
+func (this *QDragMoveEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QDropEvent = NewQDropEventFromPointer(cthis)
+}
 func NewQDragMoveEventFromPointer(cthis unsafe.Pointer) *QDragMoveEvent {
 	bcthis0 := NewQDropEventFromPointer(cthis)
 	return &QDragMoveEvent{bcthis0}
+}
+func (*QDragMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QDragMoveEvent {
+	return NewQDragMoveEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:644
@@ -78,9 +84,11 @@ func DeleteQDragMoveEvent(*QDragMoveEvent) {
 // Public inline
 // QRect answerRect()
 func (this *QDragMoveEvent) AnswerRect() *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDragMoveEvent10answerRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDragMoveEvent10answerRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

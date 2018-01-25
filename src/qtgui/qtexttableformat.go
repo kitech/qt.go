@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 30
+// extern C begin: 31
 */
 // import "C"
 import "unsafe"
@@ -59,9 +59,15 @@ func (this *QTextTableFormat) GetCthis() unsafe.Pointer {
 		return this.QTextFrameFormat.GetCthis()
 	}
 }
+func (this *QTextTableFormat) SetCthis(cthis unsafe.Pointer) {
+	this.QTextFrameFormat = NewQTextFrameFormatFromPointer(cthis)
+}
 func NewQTextTableFormatFromPointer(cthis unsafe.Pointer) *QTextTableFormat {
 	bcthis0 := NewQTextFrameFormatFromPointer(cthis)
 	return &QTextTableFormat{bcthis0}
+}
+func (*QTextTableFormat) NewFromPointer(cthis unsafe.Pointer) *QTextTableFormat {
+	return NewQTextTableFormatFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:887
@@ -116,7 +122,7 @@ func (this *QTextTableFormat) Columns() int {
 // Public inline
 // void setColumns(int)
 func (this *QTextTableFormat) SetColumns(columns int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat10setColumnsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &columns)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat10setColumnsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), columns)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -145,7 +151,7 @@ func (this *QTextTableFormat) CellSpacing() float64 {
 // Public inline
 // void setCellSpacing(qreal)
 func (this *QTextTableFormat) SetCellSpacing(spacing float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat14setCellSpacingEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat14setCellSpacingEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), spacing)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -165,7 +171,7 @@ func (this *QTextTableFormat) CellPadding() float64 {
 // Public inline
 // void setCellPadding(qreal)
 func (this *QTextTableFormat) SetCellPadding(padding float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat14setCellPaddingEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &padding)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat14setCellPaddingEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), padding)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -185,7 +191,7 @@ func (this *QTextTableFormat) Alignment() int {
 // Public inline
 // void setHeaderRowCount(int)
 func (this *QTextTableFormat) SetHeaderRowCount(count int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat17setHeaderRowCountEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &count)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat17setHeaderRowCountEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), count)
 	gopp.ErrPrint(err, rv)
 }
 

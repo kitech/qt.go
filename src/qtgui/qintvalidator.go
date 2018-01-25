@@ -59,9 +59,15 @@ func (this *QIntValidator) GetCthis() unsafe.Pointer {
 		return this.QValidator.GetCthis()
 	}
 }
+func (this *QIntValidator) SetCthis(cthis unsafe.Pointer) {
+	this.QValidator = NewQValidatorFromPointer(cthis)
+}
 func NewQIntValidatorFromPointer(cthis unsafe.Pointer) *QIntValidator {
 	bcthis0 := NewQValidatorFromPointer(cthis)
 	return &QIntValidator{bcthis0}
+}
+func (*QIntValidator) NewFromPointer(cthis unsafe.Pointer) *QIntValidator {
+	return NewQIntValidatorFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:91
@@ -96,7 +102,7 @@ func NewQIntValidator(parent *qtcore.QObject /*444 QObject **/) *QIntValidator {
 func NewQIntValidator_1(bottom int, top int, parent *qtcore.QObject /*444 QObject **/) *QIntValidator {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg2 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidatorC2EiiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &bottom, &top, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidatorC2EiiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, bottom, top, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQIntValidatorFromPointer(cthis)
 	return gothis
@@ -138,7 +144,7 @@ func (this *QIntValidator) Fixup(input *qtcore.QString) {
 // Public
 // void setBottom(int)
 func (this *QIntValidator) SetBottom(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidator9setBottomEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidator9setBottomEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -147,7 +153,7 @@ func (this *QIntValidator) SetBottom(arg0 int) {
 // Public
 // void setTop(int)
 func (this *QIntValidator) SetTop(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidator6setTopEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidator6setTopEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -156,7 +162,7 @@ func (this *QIntValidator) SetTop(arg0 int) {
 // Public virtual
 // void setRange(int, int)
 func (this *QIntValidator) SetRange(bottom int, top int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidator8setRangeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &bottom, &top)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidator8setRangeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), bottom, top)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -187,7 +193,7 @@ func (this *QIntValidator) Top() int {
 // Public
 // void bottomChanged(int)
 func (this *QIntValidator) BottomChanged(bottom int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidator13bottomChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &bottom)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidator13bottomChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), bottom)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -196,7 +202,7 @@ func (this *QIntValidator) BottomChanged(bottom int) {
 // Public
 // void topChanged(int)
 func (this *QIntValidator) TopChanged(top int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidator10topChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &top)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidator10topChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), top)
 	gopp.ErrPrint(err, rv)
 }
 

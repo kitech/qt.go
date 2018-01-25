@@ -63,8 +63,14 @@ func (this *QWidgetData) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QWidgetData) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQWidgetDataFromPointer(cthis unsafe.Pointer) *QWidgetData {
 	return &QWidgetData{&qtrt.CObject{cthis}}
+}
+func (*QWidgetData) NewFromPointer(cthis unsafe.Pointer) *QWidgetData {
+	return NewQWidgetDataFromPointer(cthis)
 }
 
 //  body block end

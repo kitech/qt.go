@@ -55,9 +55,15 @@ func (this *QAbstractTransition) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QAbstractTransition) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQAbstractTransitionFromPointer(cthis unsafe.Pointer) *QAbstractTransition {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QAbstractTransition{bcthis0}
+}
+func (*QAbstractTransition) NewFromPointer(cthis unsafe.Pointer) *QAbstractTransition {
+	return NewQAbstractTransitionFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qabstracttransition.h:63
@@ -144,7 +150,7 @@ func (this *QAbstractTransition) TransitionType() int {
 // Public
 // void setTransitionType(enum QAbstractTransition::TransitionType)
 func (this *QAbstractTransition) SetTransitionType(type_ int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransition17setTransitionTypeENS_14TransitionTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransition17setTransitionTypeENS_14TransitionTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -213,5 +219,10 @@ func (this *QAbstractTransition) Event(e *QEvent /*444 QEvent **/) bool {
 	//  return rv
 	return rv != 0
 }
+
+type QAbstractTransition__TransitionType = int
+
+const QAbstractTransition__ExternalTransition QAbstractTransition__TransitionType = 0
+const QAbstractTransition__InternalTransition QAbstractTransition__TransitionType = 1
 
 //  body block end

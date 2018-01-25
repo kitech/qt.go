@@ -55,8 +55,14 @@ func (this *QStaticByteArrayMatcherBase) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QStaticByteArrayMatcherBase) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQStaticByteArrayMatcherBaseFromPointer(cthis unsafe.Pointer) *QStaticByteArrayMatcherBase {
 	return &QStaticByteArrayMatcherBase{&qtrt.CObject{cthis}}
+}
+func (*QStaticByteArrayMatcherBase) NewFromPointer(cthis unsafe.Pointer) *QStaticByteArrayMatcherBase {
+	return NewQStaticByteArrayMatcherBaseFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qbytearraymatcher.h:93
@@ -67,7 +73,7 @@ func NewQStaticByteArrayMatcherBase(pattern string, n uint) *QStaticByteArrayMat
 	cthis := qtrt.Calloc(1, 256) // 256
 	var convArg0 = qtrt.CString(pattern)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QStaticByteArrayMatcherBaseC2EPKcj", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QStaticByteArrayMatcherBaseC2EPKcj", ffiqt.FFI_TYPE_VOID, cthis, convArg0, n)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStaticByteArrayMatcherBaseFromPointer(cthis)
 	return gothis
@@ -82,7 +88,7 @@ func (this *QStaticByteArrayMatcherBase) IndexOfIn(needle string, nlen uint, hay
 	defer qtrt.FreeMem(convArg0)
 	var convArg2 = qtrt.CString(haystack)
 	defer qtrt.FreeMem(convArg2)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QStaticByteArrayMatcherBase9indexOfInEPKcjS1_ii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &nlen, convArg2, &hlen, &from)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QStaticByteArrayMatcherBase9indexOfInEPKcjS1_ii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, nlen, convArg2, hlen, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111

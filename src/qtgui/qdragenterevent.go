@@ -59,9 +59,15 @@ func (this *QDragEnterEvent) GetCthis() unsafe.Pointer {
 		return this.QDragMoveEvent.GetCthis()
 	}
 }
+func (this *QDragEnterEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QDragMoveEvent = NewQDragMoveEventFromPointer(cthis)
+}
 func NewQDragEnterEventFromPointer(cthis unsafe.Pointer) *QDragEnterEvent {
 	bcthis0 := NewQDragMoveEventFromPointer(cthis)
 	return &QDragEnterEvent{bcthis0}
+}
+func (*QDragEnterEvent) NewFromPointer(cthis unsafe.Pointer) *QDragEnterEvent {
+	return NewQDragEnterEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:664

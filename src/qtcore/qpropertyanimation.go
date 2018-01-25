@@ -55,9 +55,15 @@ func (this *QPropertyAnimation) GetCthis() unsafe.Pointer {
 		return this.QVariantAnimation.GetCthis()
 	}
 }
+func (this *QPropertyAnimation) SetCthis(cthis unsafe.Pointer) {
+	this.QVariantAnimation = NewQVariantAnimationFromPointer(cthis)
+}
 func NewQPropertyAnimationFromPointer(cthis unsafe.Pointer) *QPropertyAnimation {
 	bcthis0 := NewQVariantAnimationFromPointer(cthis)
 	return &QPropertyAnimation{bcthis0}
+}
+func (*QPropertyAnimation) NewFromPointer(cthis unsafe.Pointer) *QPropertyAnimation {
+	return NewQPropertyAnimationFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qpropertyanimation.h:53
@@ -136,9 +142,11 @@ func (this *QPropertyAnimation) SetTargetObject(target *QObject /*444 QObject **
 // Public
 // QByteArray propertyName()
 func (this *QPropertyAnimation) PropertyName() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QPropertyAnimation12propertyNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QPropertyAnimation12propertyNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -180,7 +188,7 @@ func (this *QPropertyAnimation) UpdateCurrentValue(value *QVariant) {
 // Protected virtual
 // void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
 func (this *QPropertyAnimation) UpdateState(newState int, oldState int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPropertyAnimation11updateStateEN18QAbstractAnimation5StateES1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &newState, &oldState)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPropertyAnimation11updateStateEN18QAbstractAnimation5StateES1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
 	gopp.ErrPrint(err, rv)
 }
 

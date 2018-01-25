@@ -55,8 +55,14 @@ func (this *QThreadStorageData) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QThreadStorageData) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQThreadStorageDataFromPointer(cthis unsafe.Pointer) *QThreadStorageData {
 	return &QThreadStorageData{&qtrt.CObject{cthis}}
+}
+func (*QThreadStorageData) NewFromPointer(cthis unsafe.Pointer) *QThreadStorageData {
+	return NewQThreadStorageDataFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qthreadstorage.h:54

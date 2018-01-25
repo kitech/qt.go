@@ -55,8 +55,14 @@ func (this *QLineF) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QLineF) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQLineFFromPointer(cthis unsafe.Pointer) *QLineF {
 	return &QLineF{&qtrt.CObject{cthis}}
+}
+func (*QLineF) NewFromPointer(cthis unsafe.Pointer) *QLineF {
+	return NewQLineFFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qline.h:219
@@ -91,7 +97,7 @@ func NewQLineF_1(pt1 *QPointF, pt2 *QPointF) *QLineF {
 // void QLineF(qreal, qreal, qreal, qreal)
 func NewQLineF_2(x1 float64, y1 float64, x2 float64, y2 float64) *QLineF {
 	cthis := qtrt.Calloc(1, 256) // 32
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineFC2Edddd", ffiqt.FFI_TYPE_VOID, cthis, &x1, &y1, &x2, &y2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineFC2Edddd", ffiqt.FFI_TYPE_VOID, cthis, x1, y1, x2, y2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLineFFromPointer(cthis)
 	return gothis
@@ -143,9 +149,11 @@ func (this *QLineF) IsNull() bool {
 // Public inline
 // QPointF p1()
 func (this *QLineF) P1() *QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2p1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2p1Ev", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -155,9 +163,11 @@ func (this *QLineF) P1() *QPointF /*123*/ {
 // Public inline
 // QPointF p2()
 func (this *QLineF) P2() *QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2p2Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2p2Ev", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -244,7 +254,7 @@ func (this *QLineF) Length() float64 {
 // Public
 // void setLength(qreal)
 func (this *QLineF) SetLength(len float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF9setLengthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF9setLengthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), len)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -276,7 +286,7 @@ func (this *QLineF) Angle_1(l *QLineF) float64 {
 // Public
 // void setAngle(qreal)
 func (this *QLineF) SetAngle(angle float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF8setAngleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &angle)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF8setAngleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), angle)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -297,9 +307,11 @@ func (this *QLineF) AngleTo(l *QLineF) float64 {
 // Public
 // QLineF unitVector()
 func (this *QLineF) UnitVector() *QLineF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF10unitVectorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF10unitVectorEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLineFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -309,9 +321,11 @@ func (this *QLineF) UnitVector() *QLineF /*123*/ {
 // Public inline
 // QLineF normalVector()
 func (this *QLineF) NormalVector() *QLineF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF12normalVectorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF12normalVectorEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLineFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -334,9 +348,11 @@ func (this *QLineF) Intersect(l *QLineF, intersectionPoint *QPointF /*444 QPoint
 // Public inline
 // QPointF pointAt(qreal)
 func (this *QLineF) PointAt(t float64) *QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF7pointAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &t)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF7pointAtEd", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), t)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -356,7 +372,7 @@ func (this *QLineF) Translate(p *QPointF) {
 // Public inline
 // void translate(qreal, qreal)
 func (this *QLineF) Translate_1(dx float64, dy float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF9translateEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF9translateEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -365,10 +381,12 @@ func (this *QLineF) Translate_1(dx float64, dy float64) {
 // Public inline
 // QLineF translated(const class QPointF &)
 func (this *QLineF) Translated(p *QPointF) *QLineF /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = p.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF10translatedERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF10translatedERK7QPointF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLineFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -378,9 +396,11 @@ func (this *QLineF) Translated(p *QPointF) *QLineF /*123*/ {
 // Public inline
 // QLineF translated(qreal, qreal)
 func (this *QLineF) Translated_1(dx float64, dy float64) *QLineF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF10translatedEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &dx, &dy)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF10translatedEdd", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLineFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -390,9 +410,11 @@ func (this *QLineF) Translated_1(dx float64, dy float64) *QLineF /*123*/ {
 // Public inline
 // QPointF center()
 func (this *QLineF) Center() *QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF6centerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF6centerEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -433,7 +455,7 @@ func (this *QLineF) SetPoints(p1 *QPointF, p2 *QPointF) {
 // Public inline
 // void setLine(qreal, qreal, qreal, qreal)
 func (this *QLineF) SetLine(x1 float64, y1 float64, x2 float64, y2 float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF7setLineEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x1, &y1, &x2, &y2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF7setLineEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, x2, y2)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -442,11 +464,19 @@ func (this *QLineF) SetLine(x1 float64, y1 float64, x2 float64, y2 float64) {
 // Public inline
 // QLine toLine()
 func (this *QLineF) ToLine() *QLine /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF6toLineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF6toLineEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
+
+type QLineF__IntersectType = int
+
+const QLineF__NoIntersection QLineF__IntersectType = 0
+const QLineF__BoundedIntersection QLineF__IntersectType = 1
+const QLineF__UnboundedIntersection QLineF__IntersectType = 2
 
 //  body block end

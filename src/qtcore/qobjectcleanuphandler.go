@@ -55,9 +55,15 @@ func (this *QObjectCleanupHandler) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QObjectCleanupHandler) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQObjectCleanupHandlerFromPointer(cthis unsafe.Pointer) *QObjectCleanupHandler {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QObjectCleanupHandler{bcthis0}
+}
+func (*QObjectCleanupHandler) NewFromPointer(cthis unsafe.Pointer) *QObjectCleanupHandler {
+	return NewQObjectCleanupHandlerFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:50

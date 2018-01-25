@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 99
+// extern C begin: 100
 */
 // import "C"
 import "unsafe"
@@ -63,9 +63,15 @@ func (this *QGroupBox) GetCthis() unsafe.Pointer {
 		return this.QWidget.GetCthis()
 	}
 }
+func (this *QGroupBox) SetCthis(cthis unsafe.Pointer) {
+	this.QWidget = NewQWidgetFromPointer(cthis)
+}
 func NewQGroupBoxFromPointer(cthis unsafe.Pointer) *QGroupBox {
 	bcthis0 := NewQWidgetFromPointer(cthis)
 	return &QGroupBox{bcthis0}
+}
+func (*QGroupBox) NewFromPointer(cthis unsafe.Pointer) *QGroupBox {
+	return NewQGroupBoxFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:54
@@ -121,9 +127,11 @@ func DeleteQGroupBox(*QGroupBox) {
 // Public
 // QString title()
 func (this *QGroupBox) Title() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGroupBox5titleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGroupBox5titleEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -154,7 +162,7 @@ func (this *QGroupBox) Alignment() int {
 // Public
 // void setAlignment(int)
 func (this *QGroupBox) SetAlignment(alignment int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox12setAlignmentEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &alignment)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox12setAlignmentEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -163,9 +171,11 @@ func (this *QGroupBox) SetAlignment(alignment int) {
 // Public virtual
 // QSize minimumSizeHint()
 func (this *QGroupBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGroupBox15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGroupBox15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -186,7 +196,7 @@ func (this *QGroupBox) IsFlat() bool {
 // Public
 // void setFlat(_Bool)
 func (this *QGroupBox) SetFlat(flat bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox7setFlatEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &flat)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox7setFlatEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flat)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -206,7 +216,7 @@ func (this *QGroupBox) IsCheckable() bool {
 // Public
 // void setCheckable(_Bool)
 func (this *QGroupBox) SetCheckable(checkable bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox12setCheckableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &checkable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox12setCheckableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), checkable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -226,7 +236,7 @@ func (this *QGroupBox) IsChecked() bool {
 // Public
 // void setChecked(_Bool)
 func (this *QGroupBox) SetChecked(checked bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox10setCheckedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &checked)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox10setCheckedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), checked)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -235,7 +245,7 @@ func (this *QGroupBox) SetChecked(checked bool) {
 // Public
 // void clicked(_Bool)
 func (this *QGroupBox) Clicked(checked bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox7clickedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &checked)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox7clickedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), checked)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -244,7 +254,7 @@ func (this *QGroupBox) Clicked(checked bool) {
 // Public
 // void toggled(_Bool)
 func (this *QGroupBox) Toggled(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox7toggledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox7toggledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 

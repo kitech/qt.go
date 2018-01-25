@@ -63,9 +63,15 @@ func (this *QStyleOptionMenuItem) GetCthis() unsafe.Pointer {
 		return this.QStyleOption.GetCthis()
 	}
 }
+func (this *QStyleOptionMenuItem) SetCthis(cthis unsafe.Pointer) {
+	this.QStyleOption = NewQStyleOptionFromPointer(cthis)
+}
 func NewQStyleOptionMenuItemFromPointer(cthis unsafe.Pointer) *QStyleOptionMenuItem {
 	bcthis0 := NewQStyleOptionFromPointer(cthis)
 	return &QStyleOptionMenuItem{bcthis0}
+}
+func (*QStyleOptionMenuItem) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionMenuItem {
+	return NewQStyleOptionMenuItemFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:372
@@ -86,10 +92,35 @@ func NewQStyleOptionMenuItem() *QStyleOptionMenuItem {
 // void QStyleOptionMenuItem(int)
 func NewQStyleOptionMenuItem_1(version int) *QStyleOptionMenuItem {
 	cthis := qtrt.Calloc(1, 256) // 136
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionMenuItemC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionMenuItemC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionMenuItemFromPointer(cthis)
 	return gothis
 }
+
+type QStyleOptionMenuItem__StyleOptionType = int
+
+const QStyleOptionMenuItem__Type QStyleOptionMenuItem__StyleOptionType = 4
+
+type QStyleOptionMenuItem__StyleOptionVersion = int
+
+const QStyleOptionMenuItem__Version QStyleOptionMenuItem__StyleOptionVersion = 1
+
+type QStyleOptionMenuItem__MenuItemType = int
+
+const QStyleOptionMenuItem__Normal QStyleOptionMenuItem__MenuItemType = 0
+const QStyleOptionMenuItem__DefaultItem QStyleOptionMenuItem__MenuItemType = 1
+const QStyleOptionMenuItem__Separator QStyleOptionMenuItem__MenuItemType = 2
+const QStyleOptionMenuItem__SubMenu QStyleOptionMenuItem__MenuItemType = 3
+const QStyleOptionMenuItem__Scroller QStyleOptionMenuItem__MenuItemType = 4
+const QStyleOptionMenuItem__TearOff QStyleOptionMenuItem__MenuItemType = 5
+const QStyleOptionMenuItem__Margin QStyleOptionMenuItem__MenuItemType = 6
+const QStyleOptionMenuItem__EmptyArea QStyleOptionMenuItem__MenuItemType = 7
+
+type QStyleOptionMenuItem__CheckType = int
+
+const QStyleOptionMenuItem__NotCheckable QStyleOptionMenuItem__CheckType = 0
+const QStyleOptionMenuItem__Exclusive QStyleOptionMenuItem__CheckType = 1
+const QStyleOptionMenuItem__NonExclusive QStyleOptionMenuItem__CheckType = 2
 
 //  body block end

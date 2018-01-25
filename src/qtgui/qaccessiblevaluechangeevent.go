@@ -59,9 +59,15 @@ func (this *QAccessibleValueChangeEvent) GetCthis() unsafe.Pointer {
 		return this.QAccessibleEvent.GetCthis()
 	}
 }
+func (this *QAccessibleValueChangeEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QAccessibleEvent = NewQAccessibleEventFromPointer(cthis)
+}
 func NewQAccessibleValueChangeEventFromPointer(cthis unsafe.Pointer) *QAccessibleValueChangeEvent {
 	bcthis0 := NewQAccessibleEventFromPointer(cthis)
 	return &QAccessibleValueChangeEvent{bcthis0}
+}
+func (*QAccessibleValueChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QAccessibleValueChangeEvent {
+	return NewQAccessibleValueChangeEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:898
@@ -116,9 +122,11 @@ func (this *QAccessibleValueChangeEvent) SetValue(val *qtcore.QVariant) {
 // Public inline
 // QVariant value()
 func (this *QAccessibleValueChangeEvent) Value() *qtcore.QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAccessibleValueChangeEvent5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAccessibleValueChangeEvent5valueEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

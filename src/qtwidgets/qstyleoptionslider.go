@@ -63,9 +63,15 @@ func (this *QStyleOptionSlider) GetCthis() unsafe.Pointer {
 		return this.QStyleOptionComplex.GetCthis()
 	}
 }
+func (this *QStyleOptionSlider) SetCthis(cthis unsafe.Pointer) {
+	this.QStyleOptionComplex = NewQStyleOptionComplexFromPointer(cthis)
+}
 func NewQStyleOptionSliderFromPointer(cthis unsafe.Pointer) *QStyleOptionSlider {
 	bcthis0 := NewQStyleOptionComplexFromPointer(cthis)
 	return &QStyleOptionSlider{bcthis0}
+}
+func (*QStyleOptionSlider) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionSlider {
+	return NewQStyleOptionSliderFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:533
@@ -86,10 +92,18 @@ func NewQStyleOptionSlider() *QStyleOptionSlider {
 // void QStyleOptionSlider(int)
 func NewQStyleOptionSlider_1(version int) *QStyleOptionSlider {
 	cthis := qtrt.Calloc(1, 256) // 128
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionSliderC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionSliderC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionSliderFromPointer(cthis)
 	return gothis
 }
+
+type QStyleOptionSlider__StyleOptionType = int
+
+const QStyleOptionSlider__Type QStyleOptionSlider__StyleOptionType = 983041
+
+type QStyleOptionSlider__StyleOptionVersion = int
+
+const QStyleOptionSlider__Version QStyleOptionSlider__StyleOptionVersion = 1
 
 //  body block end

@@ -63,9 +63,15 @@ func (this *QStyleOptionComplex) GetCthis() unsafe.Pointer {
 		return this.QStyleOption.GetCthis()
 	}
 }
+func (this *QStyleOptionComplex) SetCthis(cthis unsafe.Pointer) {
+	this.QStyleOption = NewQStyleOptionFromPointer(cthis)
+}
 func NewQStyleOptionComplexFromPointer(cthis unsafe.Pointer) *QStyleOptionComplex {
 	bcthis0 := NewQStyleOptionFromPointer(cthis)
 	return &QStyleOptionComplex{bcthis0}
+}
+func (*QStyleOptionComplex) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionComplex {
+	return NewQStyleOptionComplexFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:509
@@ -74,10 +80,18 @@ func NewQStyleOptionComplexFromPointer(cthis unsafe.Pointer) *QStyleOptionComple
 // void QStyleOptionComplex(int, int)
 func NewQStyleOptionComplex(version int, type_ int) *QStyleOptionComplex {
 	cthis := qtrt.Calloc(1, 256) // 72
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionComplexC2Eii", ffiqt.FFI_TYPE_VOID, cthis, &version, &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionComplexC2Eii", ffiqt.FFI_TYPE_VOID, cthis, version, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionComplexFromPointer(cthis)
 	return gothis
 }
+
+type QStyleOptionComplex__StyleOptionType = int
+
+const QStyleOptionComplex__Type QStyleOptionComplex__StyleOptionType = 983040
+
+type QStyleOptionComplex__StyleOptionVersion = int
+
+const QStyleOptionComplex__Version QStyleOptionComplex__StyleOptionVersion = 1
 
 //  body block end

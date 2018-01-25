@@ -55,8 +55,14 @@ func (this *QOperatingSystemVersion) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QOperatingSystemVersion) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQOperatingSystemVersionFromPointer(cthis unsafe.Pointer) *QOperatingSystemVersion {
 	return &QOperatingSystemVersion{&qtrt.CObject{cthis}}
+}
+func (*QOperatingSystemVersion) NewFromPointer(cthis unsafe.Pointer) *QOperatingSystemVersion {
+	return NewQOperatingSystemVersionFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:85
@@ -65,7 +71,7 @@ func NewQOperatingSystemVersionFromPointer(cthis unsafe.Pointer) *QOperatingSyst
 // void QOperatingSystemVersion(enum QOperatingSystemVersion::OSType, int, int, int)
 func NewQOperatingSystemVersion(osType int, vmajor int, vminor int, vmicro int) *QOperatingSystemVersion {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QOperatingSystemVersionC2ENS_6OSTypeEiii", ffiqt.FFI_TYPE_VOID, cthis, &osType, &vmajor, &vminor, &vmicro)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QOperatingSystemVersionC2ENS_6OSTypeEiii", ffiqt.FFI_TYPE_VOID, cthis, osType, vmajor, vminor, vmicro)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQOperatingSystemVersionFromPointer(cthis)
 	return gothis
@@ -164,11 +170,23 @@ func (this *QOperatingSystemVersion) Type() int {
 // Public
 // QString name()
 func (this *QOperatingSystemVersion) Name() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
+
+type QOperatingSystemVersion__OSType = int
+
+const QOperatingSystemVersion__Unknown QOperatingSystemVersion__OSType = 0
+const QOperatingSystemVersion__Windows QOperatingSystemVersion__OSType = 1
+const QOperatingSystemVersion__MacOS QOperatingSystemVersion__OSType = 2
+const QOperatingSystemVersion__IOS QOperatingSystemVersion__OSType = 3
+const QOperatingSystemVersion__TvOS QOperatingSystemVersion__OSType = 4
+const QOperatingSystemVersion__WatchOS QOperatingSystemVersion__OSType = 5
+const QOperatingSystemVersion__Android QOperatingSystemVersion__OSType = 6
 
 //  body block end

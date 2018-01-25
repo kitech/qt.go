@@ -55,8 +55,14 @@ func (this *QSystemSemaphore) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QSystemSemaphore) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQSystemSemaphoreFromPointer(cthis unsafe.Pointer) *QSystemSemaphore {
 	return &QSystemSemaphore{&qtrt.CObject{cthis}}
+}
+func (*QSystemSemaphore) NewFromPointer(cthis unsafe.Pointer) *QSystemSemaphore {
+	return NewQSystemSemaphoreFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qsystemsemaphore.h:74
@@ -66,7 +72,7 @@ func NewQSystemSemaphoreFromPointer(cthis unsafe.Pointer) *QSystemSemaphore {
 func NewQSystemSemaphore(key *QString, initialValue int, mode int) *QSystemSemaphore {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = key.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphoreC2ERK7QStringiNS_10AccessModeE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &initialValue, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphoreC2ERK7QStringiNS_10AccessModeE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, initialValue, mode)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSystemSemaphoreFromPointer(cthis)
 	return gothis
@@ -87,7 +93,7 @@ func DeleteQSystemSemaphore(*QSystemSemaphore) {
 // void setKey(const class QString &, int, enum QSystemSemaphore::AccessMode)
 func (this *QSystemSemaphore) SetKey(key *QString, initialValue int, mode int) {
 	var convArg0 = key.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphore6setKeyERK7QStringiNS_10AccessModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &initialValue, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphore6setKeyERK7QStringiNS_10AccessModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, initialValue, mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -96,9 +102,11 @@ func (this *QSystemSemaphore) SetKey(key *QString, initialValue int, mode int) {
 // Public
 // QString key()
 func (this *QSystemSemaphore) Key() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QSystemSemaphore3keyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QSystemSemaphore3keyEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -119,7 +127,7 @@ func (this *QSystemSemaphore) Acquire() bool {
 // Public
 // bool release(int)
 func (this *QSystemSemaphore) Release(n int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphore7releaseEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphore7releaseEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -141,11 +149,28 @@ func (this *QSystemSemaphore) Error() int {
 // Public
 // QString errorString()
 func (this *QSystemSemaphore) ErrorString() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QSystemSemaphore11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QSystemSemaphore11errorStringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
+
+type QSystemSemaphore__AccessMode = int
+
+const QSystemSemaphore__Open QSystemSemaphore__AccessMode = 0
+const QSystemSemaphore__Create QSystemSemaphore__AccessMode = 1
+
+type QSystemSemaphore__SystemSemaphoreError = int
+
+const QSystemSemaphore__NoError QSystemSemaphore__SystemSemaphoreError = 0
+const QSystemSemaphore__PermissionDenied QSystemSemaphore__SystemSemaphoreError = 1
+const QSystemSemaphore__KeyError QSystemSemaphore__SystemSemaphoreError = 2
+const QSystemSemaphore__AlreadyExists QSystemSemaphore__SystemSemaphoreError = 3
+const QSystemSemaphore__NotFound QSystemSemaphore__SystemSemaphoreError = 4
+const QSystemSemaphore__OutOfResources QSystemSemaphore__SystemSemaphoreError = 5
+const QSystemSemaphore__UnknownError QSystemSemaphore__SystemSemaphoreError = 6
 
 //  body block end

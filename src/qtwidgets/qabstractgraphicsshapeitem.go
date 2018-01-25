@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 204
+// extern C begin: 205
 */
 // import "C"
 import "unsafe"
@@ -63,9 +63,15 @@ func (this *QAbstractGraphicsShapeItem) GetCthis() unsafe.Pointer {
 		return this.QGraphicsItem.GetCthis()
 	}
 }
+func (this *QAbstractGraphicsShapeItem) SetCthis(cthis unsafe.Pointer) {
+	this.QGraphicsItem = NewQGraphicsItemFromPointer(cthis)
+}
 func NewQAbstractGraphicsShapeItemFromPointer(cthis unsafe.Pointer) *QAbstractGraphicsShapeItem {
 	bcthis0 := NewQGraphicsItemFromPointer(cthis)
 	return &QAbstractGraphicsShapeItem{bcthis0}
+}
+func (*QAbstractGraphicsShapeItem) NewFromPointer(cthis unsafe.Pointer) *QAbstractGraphicsShapeItem {
+	return NewQAbstractGraphicsShapeItemFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:603
@@ -95,9 +101,11 @@ func DeleteQAbstractGraphicsShapeItem(*QAbstractGraphicsShapeItem) {
 // Public
 // QPen pen()
 func (this *QAbstractGraphicsShapeItem) Pen() *qtgui.QPen /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAbstractGraphicsShapeItem3penEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAbstractGraphicsShapeItem3penEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPenFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -117,9 +125,11 @@ func (this *QAbstractGraphicsShapeItem) SetPen(pen *qtgui.QPen) {
 // Public
 // QBrush brush()
 func (this *QAbstractGraphicsShapeItem) Brush() *qtgui.QBrush /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAbstractGraphicsShapeItem5brushEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAbstractGraphicsShapeItem5brushEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -151,9 +161,11 @@ func (this *QAbstractGraphicsShapeItem) IsObscuredBy(item *QGraphicsItem /*444 c
 // Public virtual
 // QPainterPath opaqueArea()
 func (this *QAbstractGraphicsShapeItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAbstractGraphicsShapeItem10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAbstractGraphicsShapeItem10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

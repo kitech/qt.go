@@ -55,9 +55,15 @@ func (this *QSortFilterProxyModel) GetCthis() unsafe.Pointer {
 		return this.QAbstractProxyModel.GetCthis()
 	}
 }
+func (this *QSortFilterProxyModel) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractProxyModel = NewQAbstractProxyModelFromPointer(cthis)
+}
 func NewQSortFilterProxyModelFromPointer(cthis unsafe.Pointer) *QSortFilterProxyModel {
 	bcthis0 := NewQAbstractProxyModelFromPointer(cthis)
 	return &QSortFilterProxyModel{bcthis0}
+}
+func (*QSortFilterProxyModel) NewFromPointer(cthis unsafe.Pointer) *QSortFilterProxyModel {
+	return NewQSortFilterProxyModelFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qsortfilterproxymodel.h:61
@@ -109,10 +115,12 @@ func (this *QSortFilterProxyModel) SetSourceModel(sourceModel *QAbstractItemMode
 // Public virtual
 // QModelIndex mapToSource(const class QModelIndex &)
 func (this *QSortFilterProxyModel) MapToSource(proxyIndex *QModelIndex) *QModelIndex /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = proxyIndex.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel11mapToSourceERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel11mapToSourceERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -122,10 +130,12 @@ func (this *QSortFilterProxyModel) MapToSource(proxyIndex *QModelIndex) *QModelI
 // Public virtual
 // QModelIndex mapFromSource(const class QModelIndex &)
 func (this *QSortFilterProxyModel) MapFromSource(sourceIndex *QModelIndex) *QModelIndex /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = sourceIndex.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel13mapFromSourceERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel13mapFromSourceERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -135,10 +145,12 @@ func (this *QSortFilterProxyModel) MapFromSource(sourceIndex *QModelIndex) *QMod
 // Public virtual
 // QItemSelection mapSelectionToSource(const class QItemSelection &)
 func (this *QSortFilterProxyModel) MapSelectionToSource(proxySelection *QItemSelection) *QItemSelection /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = proxySelection.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel20mapSelectionToSourceERK14QItemSelection", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel20mapSelectionToSourceERK14QItemSelection", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -148,10 +160,12 @@ func (this *QSortFilterProxyModel) MapSelectionToSource(proxySelection *QItemSel
 // Public virtual
 // QItemSelection mapSelectionFromSource(const class QItemSelection &)
 func (this *QSortFilterProxyModel) MapSelectionFromSource(sourceSelection *QItemSelection) *QItemSelection /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = sourceSelection.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel22mapSelectionFromSourceERK14QItemSelection", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel22mapSelectionFromSourceERK14QItemSelection", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -161,9 +175,11 @@ func (this *QSortFilterProxyModel) MapSelectionFromSource(sourceSelection *QItem
 // Public
 // QRegExp filterRegExp()
 func (this *QSortFilterProxyModel) FilterRegExp() *QRegExp /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel12filterRegExpEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel12filterRegExpEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegExpFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -204,7 +220,7 @@ func (this *QSortFilterProxyModel) FilterKeyColumn() int {
 // Public
 // void setFilterKeyColumn(int)
 func (this *QSortFilterProxyModel) SetFilterKeyColumn(column int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel18setFilterKeyColumnEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel18setFilterKeyColumnEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -224,7 +240,7 @@ func (this *QSortFilterProxyModel) FilterCaseSensitivity() int {
 // Public
 // void setFilterCaseSensitivity(Qt::CaseSensitivity)
 func (this *QSortFilterProxyModel) SetFilterCaseSensitivity(cs int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel24setFilterCaseSensitivityEN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel24setFilterCaseSensitivityEN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -244,7 +260,7 @@ func (this *QSortFilterProxyModel) SortCaseSensitivity() int {
 // Public
 // void setSortCaseSensitivity(Qt::CaseSensitivity)
 func (this *QSortFilterProxyModel) SetSortCaseSensitivity(cs int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel22setSortCaseSensitivityEN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel22setSortCaseSensitivityEN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -264,7 +280,7 @@ func (this *QSortFilterProxyModel) IsSortLocaleAware() bool {
 // Public
 // void setSortLocaleAware(_Bool)
 func (this *QSortFilterProxyModel) SetSortLocaleAware(on bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel18setSortLocaleAwareEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &on)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel18setSortLocaleAwareEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -306,7 +322,7 @@ func (this *QSortFilterProxyModel) DynamicSortFilter() bool {
 // Public
 // void setDynamicSortFilter(_Bool)
 func (this *QSortFilterProxyModel) SetDynamicSortFilter(enable bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel20setDynamicSortFilterEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel20setDynamicSortFilterEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -326,7 +342,7 @@ func (this *QSortFilterProxyModel) SortRole() int {
 // Public
 // void setSortRole(int)
 func (this *QSortFilterProxyModel) SetSortRole(role int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel11setSortRoleEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel11setSortRoleEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), role)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -346,7 +362,7 @@ func (this *QSortFilterProxyModel) FilterRole() int {
 // Public
 // void setFilterRole(int)
 func (this *QSortFilterProxyModel) SetFilterRole(role int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel13setFilterRoleEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel13setFilterRoleEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), role)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -366,7 +382,7 @@ func (this *QSortFilterProxyModel) IsRecursiveFilteringEnabled() bool {
 // Public
 // void setRecursiveFilteringEnabled(_Bool)
 func (this *QSortFilterProxyModel) SetRecursiveFilteringEnabled(recursive bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel28setRecursiveFilteringEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &recursive)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel28setRecursiveFilteringEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), recursive)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -414,7 +430,7 @@ func (this *QSortFilterProxyModel) Invalidate() {
 // bool filterAcceptsRow(int, const class QModelIndex &)
 func (this *QSortFilterProxyModel) FilterAcceptsRow(source_row int, source_parent *QModelIndex) bool {
 	var convArg1 = source_parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel16filterAcceptsRowEiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &source_row, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel16filterAcceptsRowEiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), source_row, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -426,7 +442,7 @@ func (this *QSortFilterProxyModel) FilterAcceptsRow(source_row int, source_paren
 // bool filterAcceptsColumn(int, const class QModelIndex &)
 func (this *QSortFilterProxyModel) FilterAcceptsColumn(source_column int, source_parent *QModelIndex) bool {
 	var convArg1 = source_parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel19filterAcceptsColumnEiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &source_column, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel19filterAcceptsColumnEiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), source_column, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -468,10 +484,12 @@ func (this *QSortFilterProxyModel) InvalidateFilter() {
 // Public virtual
 // QModelIndex index(int, int, const class QModelIndex &)
 func (this *QSortFilterProxyModel) Index(row int, column int, parent *QModelIndex) *QModelIndex /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg2 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel5indexEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel5indexEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), row, column, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -481,10 +499,12 @@ func (this *QSortFilterProxyModel) Index(row int, column int, parent *QModelInde
 // Public virtual
 // QModelIndex parent(const class QModelIndex &)
 func (this *QSortFilterProxyModel) Parent(child *QModelIndex) *QModelIndex /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = child.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel6parentERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel6parentERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -494,10 +514,12 @@ func (this *QSortFilterProxyModel) Parent(child *QModelIndex) *QModelIndex /*123
 // Public virtual
 // QModelIndex sibling(int, int, const class QModelIndex &)
 func (this *QSortFilterProxyModel) Sibling(row int, column int, idx *QModelIndex) *QModelIndex /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg2 = idx.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel7siblingEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel7siblingEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), row, column, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -543,10 +565,12 @@ func (this *QSortFilterProxyModel) HasChildren(parent *QModelIndex) bool {
 // Public virtual
 // QVariant data(const class QModelIndex &, int)
 func (this *QSortFilterProxyModel) Data(index *QModelIndex, role int) *QVariant /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel4dataERK11QModelIndexi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel4dataERK11QModelIndexi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, role)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -558,7 +582,7 @@ func (this *QSortFilterProxyModel) Data(index *QModelIndex, role int) *QVariant 
 func (this *QSortFilterProxyModel) SetData(index *QModelIndex, value *QVariant, role int) bool {
 	var convArg0 = index.GetCthis()
 	var convArg1 = value.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel7setDataERK11QModelIndexRK8QVarianti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel7setDataERK11QModelIndexRK8QVarianti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, role)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -569,9 +593,11 @@ func (this *QSortFilterProxyModel) SetData(index *QModelIndex, value *QVariant, 
 // Public virtual
 // QVariant headerData(int, Qt::Orientation, int)
 func (this *QSortFilterProxyModel) HeaderData(section int, orientation int, role int) *QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel10headerDataEiN2Qt11OrientationEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &section, &orientation, &role)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel10headerDataEiN2Qt11OrientationEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), section, orientation, role)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -582,7 +608,7 @@ func (this *QSortFilterProxyModel) HeaderData(section int, orientation int, role
 // bool setHeaderData(int, Qt::Orientation, const class QVariant &, int)
 func (this *QSortFilterProxyModel) SetHeaderData(section int, orientation int, value *QVariant, role int) bool {
 	var convArg2 = value.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel13setHeaderDataEiN2Qt11OrientationERK8QVarianti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &section, &orientation, convArg2, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel13setHeaderDataEiN2Qt11OrientationERK8QVarianti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, convArg2, role)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -595,7 +621,7 @@ func (this *QSortFilterProxyModel) SetHeaderData(section int, orientation int, v
 func (this *QSortFilterProxyModel) DropMimeData(data *QMimeData /*444 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &action, &row, &column, convArg4)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action, row, column, convArg4)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -607,7 +633,7 @@ func (this *QSortFilterProxyModel) DropMimeData(data *QMimeData /*444 const QMim
 // bool insertRows(int, int, const class QModelIndex &)
 func (this *QSortFilterProxyModel) InsertRows(row int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel10insertRowsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &count, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel10insertRowsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -619,7 +645,7 @@ func (this *QSortFilterProxyModel) InsertRows(row int, count int, parent *QModel
 // bool insertColumns(int, int, const class QModelIndex &)
 func (this *QSortFilterProxyModel) InsertColumns(column int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel13insertColumnsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, &count, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel13insertColumnsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, count, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -631,7 +657,7 @@ func (this *QSortFilterProxyModel) InsertColumns(column int, count int, parent *
 // bool removeRows(int, int, const class QModelIndex &)
 func (this *QSortFilterProxyModel) RemoveRows(row int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel10removeRowsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &count, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel10removeRowsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -643,7 +669,7 @@ func (this *QSortFilterProxyModel) RemoveRows(row int, count int, parent *QModel
 // bool removeColumns(int, int, const class QModelIndex &)
 func (this *QSortFilterProxyModel) RemoveColumns(column int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel13removeColumnsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, &count, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel13removeColumnsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, count, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -688,10 +714,12 @@ func (this *QSortFilterProxyModel) Flags(index *QModelIndex) int {
 // Public virtual
 // QModelIndex buddy(const class QModelIndex &)
 func (this *QSortFilterProxyModel) Buddy(index *QModelIndex) *QModelIndex /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel5buddyERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel5buddyERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -701,10 +729,12 @@ func (this *QSortFilterProxyModel) Buddy(index *QModelIndex) *QModelIndex /*123*
 // Public virtual
 // QSize span(const class QModelIndex &)
 func (this *QSortFilterProxyModel) Span(index *QModelIndex) *QSize /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel4spanERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel4spanERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -714,7 +744,7 @@ func (this *QSortFilterProxyModel) Span(index *QModelIndex) *QSize /*123*/ {
 // Public virtual
 // void sort(int, Qt::SortOrder)
 func (this *QSortFilterProxyModel) Sort(column int, order int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel4sortEiN2Qt9SortOrderE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, &order)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel4sortEiN2Qt9SortOrderE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
 	gopp.ErrPrint(err, rv)
 }
 

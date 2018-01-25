@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 49
+// extern C begin: 50
 */
 // import "C"
 import "unsafe"
@@ -63,9 +63,15 @@ func (this *QWizardPage) GetCthis() unsafe.Pointer {
 		return this.QWidget.GetCthis()
 	}
 }
+func (this *QWizardPage) SetCthis(cthis unsafe.Pointer) {
+	this.QWidget = NewQWidgetFromPointer(cthis)
+}
 func NewQWizardPageFromPointer(cthis unsafe.Pointer) *QWizardPage {
 	bcthis0 := NewQWidgetFromPointer(cthis)
 	return &QWizardPage{bcthis0}
+}
+func (*QWizardPage) NewFromPointer(cthis unsafe.Pointer) *QWizardPage {
+	return NewQWizardPageFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:213
@@ -117,9 +123,11 @@ func (this *QWizardPage) SetTitle(title *qtcore.QString) {
 // Public
 // QString title()
 func (this *QWizardPage) Title() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWizardPage5titleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWizardPage5titleEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -139,9 +147,11 @@ func (this *QWizardPage) SetSubTitle(subTitle *qtcore.QString) {
 // Public
 // QString subTitle()
 func (this *QWizardPage) SubTitle() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWizardPage8subTitleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWizardPage8subTitleEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -152,7 +162,7 @@ func (this *QWizardPage) SubTitle() *qtcore.QString /*123*/ {
 // void setPixmap(class QWizard::WizardPixmap, const class QPixmap &)
 func (this *QWizardPage) SetPixmap(which int, pixmap *qtgui.QPixmap) {
 	var convArg1 = pixmap.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPage9setPixmapEN7QWizard12WizardPixmapERK7QPixmap", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &which, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPage9setPixmapEN7QWizard12WizardPixmapERK7QPixmap", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -161,9 +171,11 @@ func (this *QWizardPage) SetPixmap(which int, pixmap *qtgui.QPixmap) {
 // Public
 // QPixmap pixmap(class QWizard::WizardPixmap)
 func (this *QWizardPage) Pixmap(which int) *qtgui.QPixmap /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWizardPage6pixmapEN7QWizard12WizardPixmapE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &which)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWizardPage6pixmapEN7QWizard12WizardPixmapE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), which)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -173,7 +185,7 @@ func (this *QWizardPage) Pixmap(which int) *qtgui.QPixmap /*123*/ {
 // Public
 // void setFinalPage(_Bool)
 func (this *QWizardPage) SetFinalPage(finalPage bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPage12setFinalPageEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &finalPage)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPage12setFinalPageEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), finalPage)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -193,7 +205,7 @@ func (this *QWizardPage) IsFinalPage() bool {
 // Public
 // void setCommitPage(_Bool)
 func (this *QWizardPage) SetCommitPage(commitPage bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPage13setCommitPageEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &commitPage)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPage13setCommitPageEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), commitPage)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -214,7 +226,7 @@ func (this *QWizardPage) IsCommitPage() bool {
 // void setButtonText(class QWizard::WizardButton, const class QString &)
 func (this *QWizardPage) SetButtonText(which int, text *qtcore.QString) {
 	var convArg1 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPage13setButtonTextEN7QWizard12WizardButtonERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &which, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPage13setButtonTextEN7QWizard12WizardButtonERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -223,9 +235,11 @@ func (this *QWizardPage) SetButtonText(which int, text *qtcore.QString) {
 // Public
 // QString buttonText(class QWizard::WizardButton)
 func (this *QWizardPage) ButtonText(which int) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWizardPage10buttonTextEN7QWizard12WizardButtonE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &which)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWizardPage10buttonTextEN7QWizard12WizardButtonE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), which)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -306,10 +320,12 @@ func (this *QWizardPage) SetField(name *qtcore.QString, value *qtcore.QVariant) 
 // Protected
 // QVariant field(const class QString &)
 func (this *QWizardPage) Field(name *qtcore.QString) *qtcore.QVariant /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWizardPage5fieldERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWizardPage5fieldERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

@@ -59,8 +59,14 @@ func (this *QTextBlockUserData) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTextBlockUserData) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTextBlockUserDataFromPointer(cthis unsafe.Pointer) *QTextBlockUserData {
 	return &QTextBlockUserData{&qtrt.CObject{cthis}}
+}
+func (*QTextBlockUserData) NewFromPointer(cthis unsafe.Pointer) *QTextBlockUserData {
+	return NewQTextBlockUserDataFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:198

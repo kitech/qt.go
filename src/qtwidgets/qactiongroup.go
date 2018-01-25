@@ -63,9 +63,15 @@ func (this *QActionGroup) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QActionGroup) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQActionGroupFromPointer(cthis unsafe.Pointer) *QActionGroup {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QActionGroup{bcthis0}
+}
+func (*QActionGroup) NewFromPointer(cthis unsafe.Pointer) *QActionGroup {
+	return NewQActionGroupFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qactiongroup.h:55
@@ -202,7 +208,7 @@ func (this *QActionGroup) IsVisible() bool {
 // Public
 // void setEnabled(_Bool)
 func (this *QActionGroup) SetEnabled(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -211,7 +217,7 @@ func (this *QActionGroup) SetEnabled(arg0 bool) {
 // Public inline
 // void setDisabled(_Bool)
 func (this *QActionGroup) SetDisabled(b bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup11setDisabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup11setDisabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -220,7 +226,7 @@ func (this *QActionGroup) SetDisabled(b bool) {
 // Public
 // void setVisible(_Bool)
 func (this *QActionGroup) SetVisible(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -229,7 +235,7 @@ func (this *QActionGroup) SetVisible(arg0 bool) {
 // Public
 // void setExclusive(_Bool)
 func (this *QActionGroup) SetExclusive(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup12setExclusiveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup12setExclusiveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 

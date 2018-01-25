@@ -63,9 +63,15 @@ func (this *QWidgetAction) GetCthis() unsafe.Pointer {
 		return this.QAction.GetCthis()
 	}
 }
+func (this *QWidgetAction) SetCthis(cthis unsafe.Pointer) {
+	this.QAction = NewQActionFromPointer(cthis)
+}
 func NewQWidgetActionFromPointer(cthis unsafe.Pointer) *QWidgetAction {
 	bcthis0 := NewQActionFromPointer(cthis)
 	return &QWidgetAction{bcthis0}
+}
+func (*QWidgetAction) NewFromPointer(cthis unsafe.Pointer) *QWidgetAction {
+	return NewQWidgetActionFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qwidgetaction.h:55

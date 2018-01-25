@@ -55,8 +55,14 @@ func (this *QMessageLogContext) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QMessageLogContext) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQMessageLogContextFromPointer(cthis unsafe.Pointer) *QMessageLogContext {
 	return &QMessageLogContext{&qtrt.CObject{cthis}}
+}
+func (*QMessageLogContext) NewFromPointer(cthis unsafe.Pointer) *QMessageLogContext {
+	return NewQMessageLogContextFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qlogging.h:66
@@ -83,7 +89,7 @@ func NewQMessageLogContext_1(fileName string, lineNumber int, functionName strin
 	defer qtrt.FreeMem(convArg2)
 	var convArg3 = qtrt.CString(categoryName)
 	defer qtrt.FreeMem(convArg3)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QMessageLogContextC2EPKciS1_S1_", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &lineNumber, convArg2, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QMessageLogContextC2EPKciS1_S1_", ffiqt.FFI_TYPE_VOID, cthis, convArg0, lineNumber, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMessageLogContextFromPointer(cthis)
 	return gothis

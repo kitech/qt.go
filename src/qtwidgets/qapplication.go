@@ -63,9 +63,15 @@ func (this *QApplication) GetCthis() unsafe.Pointer {
 		return this.QGuiApplication.GetCthis()
 	}
 }
+func (this *QApplication) SetCthis(cthis unsafe.Pointer) {
+	this.QGuiApplication = qtgui.NewQGuiApplicationFromPointer(cthis)
+}
 func NewQApplicationFromPointer(cthis unsafe.Pointer) *QApplication {
 	bcthis0 := qtgui.NewQGuiApplicationFromPointer(cthis)
 	return &QApplication{bcthis0}
+}
+func (*QApplication) NewFromPointer(cthis unsafe.Pointer) *QApplication {
+	return NewQApplicationFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:74
@@ -87,7 +93,7 @@ func (this *QApplication) MetaObject() *qtcore.QMetaObject /*444 const QMetaObje
 func NewQApplication(argc int, argv []string, arg2 int) *QApplication {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplicationC2ERiPPci", ffiqt.FFI_TYPE_VOID, cthis, &argc, convArg1, &arg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplicationC2ERiPPci", ffiqt.FFI_TYPE_VOID, cthis, &argc, convArg1, arg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQApplicationFromPointer(cthis)
 	return gothis
@@ -806,9 +812,11 @@ func (this *QApplication) FocusChanged(old *QWidget /*444 QWidget **/, now *QWid
 // Public
 // QString styleSheet()
 func (this *QApplication) StyleSheet() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QApplication10styleSheetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QApplication10styleSheetEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -828,7 +836,7 @@ func (this *QApplication) SetStyleSheet(sheet *qtcore.QString) {
 // Public
 // void setAutoSipEnabled(const _Bool)
 func (this *QApplication) SetAutoSipEnabled(enabled bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication17setAutoSipEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &enabled)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplication17setAutoSipEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -880,5 +888,11 @@ func (this *QApplication) Event(arg0 *qtcore.QEvent /*444 QEvent **/) bool {
 	//  return rv
 	return rv != 0
 }
+
+type QApplication__ColorSpec = int
+
+const QApplication__NormalColor QApplication__ColorSpec = 0
+const QApplication__CustomColor QApplication__ColorSpec = 1
+const QApplication__ManyColor QApplication__ColorSpec = 2
 
 //  body block end

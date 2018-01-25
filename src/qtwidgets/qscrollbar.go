@@ -63,9 +63,15 @@ func (this *QScrollBar) GetCthis() unsafe.Pointer {
 		return this.QAbstractSlider.GetCthis()
 	}
 }
+func (this *QScrollBar) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractSlider = NewQAbstractSliderFromPointer(cthis)
+}
 func NewQScrollBarFromPointer(cthis unsafe.Pointer) *QScrollBar {
 	bcthis0 := NewQAbstractSliderFromPointer(cthis)
 	return &QScrollBar{bcthis0}
+}
+func (*QScrollBar) NewFromPointer(cthis unsafe.Pointer) *QScrollBar {
+	return NewQScrollBarFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qscrollbar.h:57
@@ -100,7 +106,7 @@ func NewQScrollBar(parent *QWidget /*444 QWidget **/) *QScrollBar {
 func NewQScrollBar_1(arg0 int, parent *QWidget /*444 QWidget **/) *QScrollBar {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QScrollBarC2EN2Qt11OrientationEP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, &arg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QScrollBarC2EN2Qt11OrientationEP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, arg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQScrollBarFromPointer(cthis)
 	return gothis
@@ -120,9 +126,11 @@ func DeleteQScrollBar(*QScrollBar) {
 // Public virtual
 // QSize sizeHint()
 func (this *QScrollBar) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QScrollBar8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QScrollBar8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -204,7 +212,7 @@ func (this *QScrollBar) HideEvent(arg0 *qtgui.QHideEvent /*444 QHideEvent **/) {
 // Protected virtual
 // void sliderChange(enum QAbstractSlider::SliderChange)
 func (this *QScrollBar) SliderChange(change int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QScrollBar12sliderChangeEN15QAbstractSlider12SliderChangeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &change)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QScrollBar12sliderChangeEN15QAbstractSlider12SliderChangeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), change)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -55,8 +55,14 @@ func (this *QMapDataBase) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QMapDataBase) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQMapDataBaseFromPointer(cthis unsafe.Pointer) *QMapDataBase {
 	return &QMapDataBase{&qtrt.CObject{cthis}}
+}
+func (*QMapDataBase) NewFromPointer(cthis unsafe.Pointer) *QMapDataBase {
+	return NewQMapDataBaseFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qmap.h:194

@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 277
+// extern C begin: 285
 */
 // import "C"
 import "unsafe"
@@ -63,9 +63,15 @@ func (this *QAbstractButton) GetCthis() unsafe.Pointer {
 		return this.QWidget.GetCthis()
 	}
 }
+func (this *QAbstractButton) SetCthis(cthis unsafe.Pointer) {
+	this.QWidget = NewQWidgetFromPointer(cthis)
+}
 func NewQAbstractButtonFromPointer(cthis unsafe.Pointer) *QAbstractButton {
 	bcthis0 := NewQWidgetFromPointer(cthis)
 	return &QAbstractButton{bcthis0}
+}
+func (*QAbstractButton) NewFromPointer(cthis unsafe.Pointer) *QAbstractButton {
+	return NewQAbstractButtonFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:58
@@ -117,9 +123,11 @@ func (this *QAbstractButton) SetText(text *qtcore.QString) {
 // Public
 // QString text()
 func (this *QAbstractButton) Text() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAbstractButton4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAbstractButton4textEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -139,9 +147,11 @@ func (this *QAbstractButton) SetIcon(icon *qtgui.QIcon) {
 // Public
 // QIcon icon()
 func (this *QAbstractButton) Icon() *qtgui.QIcon /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAbstractButton4iconEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAbstractButton4iconEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -151,9 +161,11 @@ func (this *QAbstractButton) Icon() *qtgui.QIcon /*123*/ {
 // Public
 // QSize iconSize()
 func (this *QAbstractButton) IconSize() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAbstractButton8iconSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAbstractButton8iconSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -173,9 +185,11 @@ func (this *QAbstractButton) SetShortcut(key *qtgui.QKeySequence) {
 // Public
 // QKeySequence shortcut()
 func (this *QAbstractButton) Shortcut() *qtgui.QKeySequence /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAbstractButton8shortcutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAbstractButton8shortcutEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -185,7 +199,7 @@ func (this *QAbstractButton) Shortcut() *qtgui.QKeySequence /*123*/ {
 // Public
 // void setCheckable(_Bool)
 func (this *QAbstractButton) SetCheckable(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton12setCheckableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton12setCheckableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -216,7 +230,7 @@ func (this *QAbstractButton) IsChecked() bool {
 // Public
 // void setDown(_Bool)
 func (this *QAbstractButton) SetDown(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton7setDownEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton7setDownEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -236,7 +250,7 @@ func (this *QAbstractButton) IsDown() bool {
 // Public
 // void setAutoRepeat(_Bool)
 func (this *QAbstractButton) SetAutoRepeat(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton13setAutoRepeatEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton13setAutoRepeatEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -256,7 +270,7 @@ func (this *QAbstractButton) AutoRepeat() bool {
 // Public
 // void setAutoRepeatDelay(int)
 func (this *QAbstractButton) SetAutoRepeatDelay(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton18setAutoRepeatDelayEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton18setAutoRepeatDelayEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -276,7 +290,7 @@ func (this *QAbstractButton) AutoRepeatDelay() int {
 // Public
 // void setAutoRepeatInterval(int)
 func (this *QAbstractButton) SetAutoRepeatInterval(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton21setAutoRepeatIntervalEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton21setAutoRepeatIntervalEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -296,7 +310,7 @@ func (this *QAbstractButton) AutoRepeatInterval() int {
 // Public
 // void setAutoExclusive(_Bool)
 func (this *QAbstractButton) SetAutoExclusive(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton16setAutoExclusiveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton16setAutoExclusiveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -338,7 +352,7 @@ func (this *QAbstractButton) SetIconSize(size *qtcore.QSize) {
 // Public
 // void animateClick(int)
 func (this *QAbstractButton) AnimateClick(msec int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton12animateClickEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton12animateClickEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -365,7 +379,7 @@ func (this *QAbstractButton) Toggle() {
 // Public
 // void setChecked(_Bool)
 func (this *QAbstractButton) SetChecked(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton10setCheckedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton10setCheckedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -392,7 +406,7 @@ func (this *QAbstractButton) Released() {
 // Public
 // void clicked(_Bool)
 func (this *QAbstractButton) Clicked(checked bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton7clickedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &checked)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton7clickedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), checked)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -401,7 +415,7 @@ func (this *QAbstractButton) Clicked(checked bool) {
 // Public
 // void toggled(_Bool)
 func (this *QAbstractButton) Toggled(checked bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton7toggledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &checked)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton7toggledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), checked)
 	gopp.ErrPrint(err, rv)
 }
 

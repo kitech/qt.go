@@ -63,9 +63,15 @@ func (this *QFrame) GetCthis() unsafe.Pointer {
 		return this.QWidget.GetCthis()
 	}
 }
+func (this *QFrame) SetCthis(cthis unsafe.Pointer) {
+	this.QWidget = NewQWidgetFromPointer(cthis)
+}
 func NewQFrameFromPointer(cthis unsafe.Pointer) *QFrame {
 	bcthis0 := NewQWidgetFromPointer(cthis)
 	return &QFrame{bcthis0}
+}
+func (*QFrame) NewFromPointer(cthis unsafe.Pointer) *QFrame {
+	return NewQFrameFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:54
@@ -78,6 +84,19 @@ func (this *QFrame) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qframe.h:64
+// index:0
+// Public
+// void QFrame(class QWidget *, Qt::WindowFlags)
+func NewQFrame(parent *QWidget /*444 QWidget **/, f int) *QFrame {
+	cthis := qtrt.Calloc(1, 256) // 48
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrameC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, f)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQFrameFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:65
@@ -105,7 +124,7 @@ func (this *QFrame) FrameStyle() int {
 // Public
 // void setFrameStyle(int)
 func (this *QFrame) SetFrameStyle(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame13setFrameStyleEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame13setFrameStyleEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -125,9 +144,11 @@ func (this *QFrame) FrameWidth() int {
 // Public virtual
 // QSize sizeHint()
 func (this *QFrame) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -148,7 +169,7 @@ func (this *QFrame) FrameShape() int {
 // Public
 // void setFrameShape(enum QFrame::Shape)
 func (this *QFrame) SetFrameShape(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame13setFrameShapeENS_5ShapeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame13setFrameShapeENS_5ShapeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -168,7 +189,7 @@ func (this *QFrame) FrameShadow() int {
 // Public
 // void setFrameShadow(enum QFrame::Shadow)
 func (this *QFrame) SetFrameShadow(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame14setFrameShadowENS_6ShadowE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame14setFrameShadowENS_6ShadowE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -188,7 +209,7 @@ func (this *QFrame) LineWidth() int {
 // Public
 // void setLineWidth(int)
 func (this *QFrame) SetLineWidth(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame12setLineWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame12setLineWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -208,7 +229,7 @@ func (this *QFrame) MidLineWidth() int {
 // Public
 // void setMidLineWidth(int)
 func (this *QFrame) SetMidLineWidth(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame15setMidLineWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame15setMidLineWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -217,9 +238,11 @@ func (this *QFrame) SetMidLineWidth(arg0 int) {
 // Public
 // QRect frameRect()
 func (this *QFrame) FrameRect() *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame9frameRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame9frameRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -285,5 +308,26 @@ func (this *QFrame) InitStyleOption(option *QStyleOptionFrame /*444 QStyleOption
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame15initStyleOptionEP17QStyleOptionFrame", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
+
+type QFrame__Shape = int
+
+const QFrame__NoFrame QFrame__Shape = 0
+const QFrame__Box QFrame__Shape = 1
+const QFrame__Panel QFrame__Shape = 2
+const QFrame__WinPanel QFrame__Shape = 3
+const QFrame__HLine QFrame__Shape = 4
+const QFrame__VLine QFrame__Shape = 5
+const QFrame__StyledPanel QFrame__Shape = 6
+
+type QFrame__Shadow = int
+
+const QFrame__Plain QFrame__Shadow = 16
+const QFrame__Raised QFrame__Shadow = 32
+const QFrame__Sunken QFrame__Shadow = 48
+
+type QFrame__StyleMask = int
+
+const QFrame__Shadow_Mask QFrame__StyleMask = 240
+const QFrame__Shape_Mask QFrame__StyleMask = 15
 
 //  body block end

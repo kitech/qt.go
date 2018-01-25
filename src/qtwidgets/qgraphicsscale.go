@@ -63,9 +63,15 @@ func (this *QGraphicsScale) GetCthis() unsafe.Pointer {
 		return this.QGraphicsTransform.GetCthis()
 	}
 }
+func (this *QGraphicsScale) SetCthis(cthis unsafe.Pointer) {
+	this.QGraphicsTransform = NewQGraphicsTransformFromPointer(cthis)
+}
 func NewQGraphicsScaleFromPointer(cthis unsafe.Pointer) *QGraphicsScale {
 	bcthis0 := NewQGraphicsTransformFromPointer(cthis)
 	return &QGraphicsScale{bcthis0}
+}
+func (*QGraphicsScale) NewFromPointer(cthis unsafe.Pointer) *QGraphicsScale {
+	return NewQGraphicsScaleFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:81
@@ -107,9 +113,11 @@ func DeleteQGraphicsScale(*QGraphicsScale) {
 // Public
 // QVector3D origin()
 func (this *QGraphicsScale) Origin() *qtgui.QVector3D /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale6originEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale6originEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -140,7 +148,7 @@ func (this *QGraphicsScale) XScale() float64 {
 // Public
 // void setXScale(qreal)
 func (this *QGraphicsScale) SetXScale(arg0 float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScale9setXScaleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScale9setXScaleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -160,7 +168,7 @@ func (this *QGraphicsScale) YScale() float64 {
 // Public
 // void setYScale(qreal)
 func (this *QGraphicsScale) SetYScale(arg0 float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScale9setYScaleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScale9setYScaleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -180,7 +188,7 @@ func (this *QGraphicsScale) ZScale() float64 {
 // Public
 // void setZScale(qreal)
 func (this *QGraphicsScale) SetZScale(arg0 float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScale9setZScaleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScale9setZScaleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 

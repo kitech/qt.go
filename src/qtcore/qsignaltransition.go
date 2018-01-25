@@ -55,9 +55,15 @@ func (this *QSignalTransition) GetCthis() unsafe.Pointer {
 		return this.QAbstractTransition.GetCthis()
 	}
 }
+func (this *QSignalTransition) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractTransition = NewQAbstractTransitionFromPointer(cthis)
+}
 func NewQSignalTransitionFromPointer(cthis unsafe.Pointer) *QSignalTransition {
 	bcthis0 := NewQAbstractTransitionFromPointer(cthis)
 	return &QSignalTransition{bcthis0}
+}
+func (*QSignalTransition) NewFromPointer(cthis unsafe.Pointer) *QSignalTransition {
+	return NewQSignalTransitionFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qsignaltransition.h:53
@@ -137,9 +143,11 @@ func (this *QSignalTransition) SetSenderObject(sender *QObject /*444 const QObje
 // Public
 // QByteArray signal()
 func (this *QSignalTransition) Signal() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSignalTransition6signalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSignalTransition6signalEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

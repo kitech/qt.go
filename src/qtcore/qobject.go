@@ -55,8 +55,14 @@ func (this *QObject) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QObject) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQObjectFromPointer(cthis unsafe.Pointer) *QObject {
 	return &QObject{&qtrt.CObject{cthis}}
+}
+func (*QObject) NewFromPointer(cthis unsafe.Pointer) *QObject {
+	return NewQObjectFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qobject.h:118
@@ -123,9 +129,11 @@ func (this *QObject) EventFilter(watched *QObject /*444 QObject **/, event *QEve
 // Public
 // QString objectName()
 func (this *QObject) ObjectName() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QObject10objectNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QObject10objectNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -178,7 +186,7 @@ func (this *QObject) SignalsBlocked() bool {
 // Public
 // bool blockSignals(_Bool)
 func (this *QObject) BlockSignals(b bool) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject12blockSignalsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject12blockSignalsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -211,7 +219,7 @@ func (this *QObject) MoveToThread(thread *QThread /*444 QThread **/) {
 // Public
 // int startTimer(int, Qt::TimerType)
 func (this *QObject) StartTimer(interval int, timerType int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject10startTimerEiN2Qt9TimerTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &interval, &timerType)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject10startTimerEiN2Qt9TimerTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), interval, timerType)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -222,7 +230,7 @@ func (this *QObject) StartTimer(interval int, timerType int) int {
 // Public
 // void killTimer(int)
 func (this *QObject) KillTimer(id int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject9killTimerEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &id)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject9killTimerEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -298,7 +306,7 @@ func (this *QObject) Connect_2(sender *QObject /*444 const QObject **/, signal s
 	defer qtrt.FreeMem(convArg1)
 	var convArg2 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg2)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QObject7connectEPKS_PKcS3_N2Qt14ConnectionTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QObject7connectEPKS_PKcS3_N2Qt14ConnectionTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, type_)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -421,11 +429,13 @@ func (this *QObject) SetProperty(name string, value *QVariant) bool {
 // Public
 // QVariant property(const char *)
 func (this *QObject) Property(name string) *QVariant /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = qtrt.CString(name)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QObject8propertyEPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QObject8propertyEPKc", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -452,7 +462,7 @@ func QObject_RegisterUserData() uint {
 // void setUserData(uint, class QObjectUserData *)
 func (this *QObject) SetUserData(id uint, data *QObjectUserData /*444 QObjectUserData **/) {
 	var convArg1 = data.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject11setUserDataEjP15QObjectUserData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &id, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject11setUserDataEjP15QObjectUserData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -461,7 +471,7 @@ func (this *QObject) SetUserData(id uint, data *QObjectUserData /*444 QObjectUse
 // Public
 // QObjectUserData * userData(uint)
 func (this *QObject) UserData(id uint) *QObjectUserData /*444 QObjectUserData **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QObject8userDataEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &id)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QObject8userDataEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQObjectUserDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444

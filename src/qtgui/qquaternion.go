@@ -59,8 +59,14 @@ func (this *QQuaternion) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QQuaternion) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQQuaternionFromPointer(cthis unsafe.Pointer) *QQuaternion {
 	return &QQuaternion{&qtrt.CObject{cthis}}
+}
+func (*QQuaternion) NewFromPointer(cthis unsafe.Pointer) *QQuaternion {
+	return NewQQuaternionFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qquaternion.h:59
@@ -81,7 +87,7 @@ func NewQQuaternion() *QQuaternion {
 // void QQuaternion(Qt::Initialization)
 func NewQQuaternion_1(arg0 int) *QQuaternion {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternionC2EN2Qt14InitializationE", ffiqt.FFI_TYPE_VOID, cthis, &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternionC2EN2Qt14InitializationE", ffiqt.FFI_TYPE_VOID, cthis, arg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQuaternionFromPointer(cthis)
 	return gothis
@@ -93,7 +99,7 @@ func NewQQuaternion_1(arg0 int) *QQuaternion {
 // void QQuaternion(float, float, float, float)
 func NewQQuaternion_2(scalar float32, xpos float32, ypos float32, zpos float32) *QQuaternion {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternionC2Effff", ffiqt.FFI_TYPE_VOID, cthis, &scalar, &xpos, &ypos, &zpos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternionC2Effff", ffiqt.FFI_TYPE_VOID, cthis, scalar, xpos, ypos, zpos)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQuaternionFromPointer(cthis)
 	return gothis
@@ -106,7 +112,7 @@ func NewQQuaternion_2(scalar float32, xpos float32, ypos float32, zpos float32) 
 func NewQQuaternion_3(scalar float32, vector *QVector3D) *QQuaternion {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = vector.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternionC2EfRK9QVector3D", ffiqt.FFI_TYPE_VOID, cthis, &scalar, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternionC2EfRK9QVector3D", ffiqt.FFI_TYPE_VOID, cthis, scalar, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQuaternionFromPointer(cthis)
 	return gothis
@@ -152,9 +158,11 @@ func (this *QQuaternion) IsIdentity() bool {
 // Public
 // QVector3D vector()
 func (this *QQuaternion) Vector() *QVector3D /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion6vectorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion6vectorEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -174,7 +182,7 @@ func (this *QQuaternion) SetVector(vector *QVector3D) {
 // Public
 // void setVector(float, float, float)
 func (this *QQuaternion) SetVector_1(x float32, y float32, z float32) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion9setVectorEfff", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &z)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion9setVectorEfff", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, z)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -227,7 +235,7 @@ func (this *QQuaternion) Scalar() float32 {
 // Public
 // void setX(float)
 func (this *QQuaternion) SetX(x float32) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion4setXEf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion4setXEf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -236,7 +244,7 @@ func (this *QQuaternion) SetX(x float32) {
 // Public
 // void setY(float)
 func (this *QQuaternion) SetY(y float32) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion4setYEf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion4setYEf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), y)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -245,7 +253,7 @@ func (this *QQuaternion) SetY(y float32) {
 // Public
 // void setZ(float)
 func (this *QQuaternion) SetZ(z float32) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion4setZEf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &z)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion4setZEf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), z)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -254,7 +262,7 @@ func (this *QQuaternion) SetZ(z float32) {
 // Public
 // void setScalar(float)
 func (this *QQuaternion) SetScalar(scalar float32) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion9setScalarEf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &scalar)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion9setScalarEf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), scalar)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -301,9 +309,11 @@ func (this *QQuaternion) LengthSquared() float32 {
 // Public
 // QQuaternion normalized()
 func (this *QQuaternion) Normalized() *QQuaternion /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion10normalizedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion10normalizedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -322,9 +332,11 @@ func (this *QQuaternion) Normalize() {
 // Public inline
 // QQuaternion inverted()
 func (this *QQuaternion) Inverted() *QQuaternion /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion8invertedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion8invertedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -334,9 +346,11 @@ func (this *QQuaternion) Inverted() *QQuaternion /*123*/ {
 // Public
 // QQuaternion conjugated()
 func (this *QQuaternion) Conjugated() *QQuaternion /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion10conjugatedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion10conjugatedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -346,9 +360,11 @@ func (this *QQuaternion) Conjugated() *QQuaternion /*123*/ {
 // Public
 // QQuaternion conjugate()
 func (this *QQuaternion) Conjugate() *QQuaternion /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion9conjugateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion9conjugateEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -358,10 +374,12 @@ func (this *QQuaternion) Conjugate() *QQuaternion /*123*/ {
 // Public
 // QVector3D rotatedVector(const class QVector3D &)
 func (this *QQuaternion) RotatedVector(vector *QVector3D) *QVector3D /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = vector.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion13rotatedVectorERK9QVector3D", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion13rotatedVectorERK9QVector3D", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -371,9 +389,11 @@ func (this *QQuaternion) RotatedVector(vector *QVector3D) *QVector3D /*123*/ {
 // Public
 // QVector4D toVector4D()
 func (this *QQuaternion) ToVector4D() *QVector4D /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion10toVector4DEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion10toVector4DEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVector4DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -384,7 +404,7 @@ func (this *QQuaternion) ToVector4D() *QVector4D /*123*/ {
 // void getAxisAndAngle(class QVector3D *, float *)
 func (this *QQuaternion) GetAxisAndAngle(axis *QVector3D /*444 QVector3D **/, angle unsafe.Pointer /*666*/) {
 	var convArg0 = axis.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion15getAxisAndAngleEP9QVector3DPf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, angle)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion15getAxisAndAngleEP9QVector3DPf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &angle)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -393,7 +413,7 @@ func (this *QQuaternion) GetAxisAndAngle(axis *QVector3D /*444 QVector3D **/, an
 // Public
 // void getAxisAndAngle(float *, float *, float *, float *)
 func (this *QQuaternion) GetAxisAndAngle_1(x unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/, z unsafe.Pointer /*666*/, angle unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion15getAxisAndAngleEPfS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, z, angle)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion15getAxisAndAngleEPfS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &z, &angle)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -436,9 +456,11 @@ func QQuaternion_FromAxisAndAngle_1(x float32, y float32, z float32, angle float
 // Public inline
 // QVector3D toEulerAngles()
 func (this *QQuaternion) ToEulerAngles() *QVector3D /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion13toEulerAnglesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion13toEulerAnglesEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -482,7 +504,7 @@ func QQuaternion_FromEulerAngles_1(pitch float32, yaw float32, roll float32) *QQ
 // Public
 // void getEulerAngles(float *, float *, float *)
 func (this *QQuaternion) GetEulerAngles(pitch unsafe.Pointer /*666*/, yaw unsafe.Pointer /*666*/, roll unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion14getEulerAnglesEPfS0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pitch, yaw, roll)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion14getEulerAnglesEPfS0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &pitch, &yaw, &roll)
 	gopp.ErrPrint(err, rv)
 }
 

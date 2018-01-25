@@ -59,9 +59,15 @@ func (this *QTextFrame) GetCthis() unsafe.Pointer {
 		return this.QTextObject.GetCthis()
 	}
 }
+func (this *QTextFrame) SetCthis(cthis unsafe.Pointer) {
+	this.QTextObject = NewQTextObjectFromPointer(cthis)
+}
 func NewQTextFrameFromPointer(cthis unsafe.Pointer) *QTextFrame {
 	bcthis0 := NewQTextObjectFromPointer(cthis)
 	return &QTextFrame{bcthis0}
+}
+func (*QTextFrame) NewFromPointer(cthis unsafe.Pointer) *QTextFrame {
+	return NewQTextFrameFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:120
@@ -113,9 +119,11 @@ func (this *QTextFrame) SetFrameFormat(format *QTextFrameFormat) {
 // Public inline
 // QTextFrameFormat frameFormat()
 func (this *QTextFrame) FrameFormat() *QTextFrameFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame11frameFormatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame11frameFormatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextFrameFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -125,9 +133,11 @@ func (this *QTextFrame) FrameFormat() *QTextFrameFormat /*123*/ {
 // Public
 // QTextCursor firstCursorPosition()
 func (this *QTextFrame) FirstCursorPosition() *QTextCursor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame19firstCursorPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame19firstCursorPositionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -137,9 +147,11 @@ func (this *QTextFrame) FirstCursorPosition() *QTextCursor /*123*/ {
 // Public
 // QTextCursor lastCursorPosition()
 func (this *QTextFrame) LastCursorPosition() *QTextCursor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame18lastCursorPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame18lastCursorPositionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -205,9 +217,11 @@ func (this *QTextFrame) ParentFrame() *QTextFrame /*444 QTextFrame **/ {
 // Public
 // QTextFrame::iterator begin()
 func (this *QTextFrame) Begin() unsafe.Pointer /*444*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame5beginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame5beginEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -216,9 +230,11 @@ func (this *QTextFrame) Begin() unsafe.Pointer /*444*/ {
 // Public
 // QTextFrame::iterator end()
 func (this *QTextFrame) End() unsafe.Pointer /*444*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame3endEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	return unsafe.Pointer(uintptr(rv))
 }
 

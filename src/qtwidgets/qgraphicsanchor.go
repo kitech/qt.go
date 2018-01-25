@@ -63,9 +63,15 @@ func (this *QGraphicsAnchor) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QGraphicsAnchor) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQGraphicsAnchorFromPointer(cthis unsafe.Pointer) *QGraphicsAnchor {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QGraphicsAnchor{bcthis0}
+}
+func (*QGraphicsAnchor) NewFromPointer(cthis unsafe.Pointer) *QGraphicsAnchor {
+	return NewQGraphicsAnchorFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:57
@@ -85,7 +91,7 @@ func (this *QGraphicsAnchor) MetaObject() *qtcore.QMetaObject /*444 const QMetaO
 // Public
 // void setSpacing(qreal)
 func (this *QGraphicsAnchor) SetSpacing(spacing float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsAnchor10setSpacingEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsAnchor10setSpacingEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), spacing)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -114,7 +120,7 @@ func (this *QGraphicsAnchor) Spacing() float64 {
 // Public
 // void setSizePolicy(class QSizePolicy::Policy)
 func (this *QGraphicsAnchor) SetSizePolicy(policy int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsAnchor13setSizePolicyEN11QSizePolicy6PolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &policy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsAnchor13setSizePolicyEN11QSizePolicy6PolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -63,9 +63,15 @@ func (this *QStyleOptionDockWidget) GetCthis() unsafe.Pointer {
 		return this.QStyleOption.GetCthis()
 	}
 }
+func (this *QStyleOptionDockWidget) SetCthis(cthis unsafe.Pointer) {
+	this.QStyleOption = NewQStyleOptionFromPointer(cthis)
+}
 func NewQStyleOptionDockWidgetFromPointer(cthis unsafe.Pointer) *QStyleOptionDockWidget {
 	bcthis0 := NewQStyleOptionFromPointer(cthis)
 	return &QStyleOptionDockWidget{bcthis0}
+}
+func (*QStyleOptionDockWidget) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionDockWidget {
+	return NewQStyleOptionDockWidgetFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:391
@@ -86,10 +92,18 @@ func NewQStyleOptionDockWidget() *QStyleOptionDockWidget {
 // void QStyleOptionDockWidget(int)
 func NewQStyleOptionDockWidget_1(version int) *QStyleOptionDockWidget {
 	cthis := qtrt.Calloc(1, 256) // 80
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionDockWidgetFromPointer(cthis)
 	return gothis
 }
+
+type QStyleOptionDockWidget__StyleOptionType = int
+
+const QStyleOptionDockWidget__Type QStyleOptionDockWidget__StyleOptionType = 9
+
+type QStyleOptionDockWidget__StyleOptionVersion = int
+
+const QStyleOptionDockWidget__Version QStyleOptionDockWidget__StyleOptionVersion = 2
 
 //  body block end

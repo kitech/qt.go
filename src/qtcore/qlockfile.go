@@ -55,8 +55,14 @@ func (this *QLockFile) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QLockFile) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQLockFileFromPointer(cthis unsafe.Pointer) *QLockFile {
 	return &QLockFile{&qtrt.CObject{cthis}}
+}
+func (*QLockFile) NewFromPointer(cthis unsafe.Pointer) *QLockFile {
+	return NewQLockFileFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qlockfile.h:53
@@ -97,7 +103,7 @@ func (this *QLockFile) Lock() bool {
 // Public
 // bool tryLock(int)
 func (this *QLockFile) TryLock(timeout int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFile7tryLockEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &timeout)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFile7tryLockEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -117,7 +123,7 @@ func (this *QLockFile) Unlock() {
 // Public
 // void setStaleLockTime(int)
 func (this *QLockFile) SetStaleLockTime(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFile16setStaleLockTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFile16setStaleLockTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -150,7 +156,7 @@ func (this *QLockFile) IsLocked() bool {
 func (this *QLockFile) GetLockInfo(pid unsafe.Pointer /*666*/, hostname *QString /*444 QString **/, appname *QString /*444 QString **/) bool {
 	var convArg1 = hostname.GetCthis()
 	var convArg2 = appname.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLockFile11getLockInfoEPxP7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pid, convArg1, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLockFile11getLockInfoEPxP7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &pid, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -177,5 +183,12 @@ func (this *QLockFile) Error() int {
 	//  return rv
 	return int(rv)
 }
+
+type QLockFile__LockError = int
+
+const QLockFile__NoError QLockFile__LockError = 0
+const QLockFile__LockFailedError QLockFile__LockError = 1
+const QLockFile__PermissionError QLockFile__LockError = 2
+const QLockFile__UnknownError QLockFile__LockError = 3
 
 //  body block end

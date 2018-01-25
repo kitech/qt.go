@@ -59,9 +59,15 @@ func (this *QTextBlockGroup) GetCthis() unsafe.Pointer {
 		return this.QTextObject.GetCthis()
 	}
 }
+func (this *QTextBlockGroup) SetCthis(cthis unsafe.Pointer) {
+	this.QTextObject = NewQTextObjectFromPointer(cthis)
+}
 func NewQTextBlockGroupFromPointer(cthis unsafe.Pointer) *QTextBlockGroup {
 	bcthis0 := NewQTextObjectFromPointer(cthis)
 	return &QTextBlockGroup{bcthis0}
+}
+func (*QTextBlockGroup) NewFromPointer(cthis unsafe.Pointer) *QTextBlockGroup {
+	return NewQTextBlockGroupFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:92

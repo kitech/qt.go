@@ -63,9 +63,15 @@ func (this *QTableView) GetCthis() unsafe.Pointer {
 		return this.QAbstractItemView.GetCthis()
 	}
 }
+func (this *QTableView) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractItemView = NewQAbstractItemViewFromPointer(cthis)
+}
 func NewQTableViewFromPointer(cthis unsafe.Pointer) *QTableView {
 	bcthis0 := NewQAbstractItemViewFromPointer(cthis)
 	return &QTableView{bcthis0}
+}
+func (*QTableView) NewFromPointer(cthis unsafe.Pointer) *QTableView {
+	return NewQTableViewFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qtableview.h:55
@@ -190,7 +196,7 @@ func (this *QTableView) SetVerticalHeader(header *QHeaderView /*444 QHeaderView 
 // Public
 // int rowViewportPosition(int)
 func (this *QTableView) RowViewportPosition(row int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView19rowViewportPositionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView19rowViewportPositionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -201,7 +207,7 @@ func (this *QTableView) RowViewportPosition(row int) int {
 // Public
 // int rowAt(int)
 func (this *QTableView) RowAt(y int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView5rowAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView5rowAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), y)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -212,7 +218,7 @@ func (this *QTableView) RowAt(y int) int {
 // Public
 // void setRowHeight(int, int)
 func (this *QTableView) SetRowHeight(row int, height int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView12setRowHeightEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &height)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView12setRowHeightEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, height)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -221,7 +227,7 @@ func (this *QTableView) SetRowHeight(row int, height int) {
 // Public
 // int rowHeight(int)
 func (this *QTableView) RowHeight(row int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView9rowHeightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView9rowHeightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -232,7 +238,7 @@ func (this *QTableView) RowHeight(row int) int {
 // Public
 // int columnViewportPosition(int)
 func (this *QTableView) ColumnViewportPosition(column int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView22columnViewportPositionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView22columnViewportPositionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -243,7 +249,7 @@ func (this *QTableView) ColumnViewportPosition(column int) int {
 // Public
 // int columnAt(int)
 func (this *QTableView) ColumnAt(x int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView8columnAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView8columnAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -254,7 +260,7 @@ func (this *QTableView) ColumnAt(x int) int {
 // Public
 // void setColumnWidth(int, int)
 func (this *QTableView) SetColumnWidth(column int, width int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView14setColumnWidthEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, &width)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView14setColumnWidthEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, width)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -263,7 +269,7 @@ func (this *QTableView) SetColumnWidth(column int, width int) {
 // Public
 // int columnWidth(int)
 func (this *QTableView) ColumnWidth(column int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView11columnWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView11columnWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -274,7 +280,7 @@ func (this *QTableView) ColumnWidth(column int) int {
 // Public
 // bool isRowHidden(int)
 func (this *QTableView) IsRowHidden(row int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView11isRowHiddenEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView11isRowHiddenEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -285,7 +291,7 @@ func (this *QTableView) IsRowHidden(row int) bool {
 // Public
 // void setRowHidden(int, _Bool)
 func (this *QTableView) SetRowHidden(row int, hide bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView12setRowHiddenEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &hide)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView12setRowHiddenEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, hide)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -294,7 +300,7 @@ func (this *QTableView) SetRowHidden(row int, hide bool) {
 // Public
 // bool isColumnHidden(int)
 func (this *QTableView) IsColumnHidden(column int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView14isColumnHiddenEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView14isColumnHiddenEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -305,7 +311,7 @@ func (this *QTableView) IsColumnHidden(column int) bool {
 // Public
 // void setColumnHidden(int, _Bool)
 func (this *QTableView) SetColumnHidden(column int, hide bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView15setColumnHiddenEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, &hide)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView15setColumnHiddenEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, hide)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -314,7 +320,7 @@ func (this *QTableView) SetColumnHidden(column int, hide bool) {
 // Public
 // void setSortingEnabled(_Bool)
 func (this *QTableView) SetSortingEnabled(enable bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView17setSortingEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView17setSortingEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -356,7 +362,7 @@ func (this *QTableView) GridStyle() int {
 // Public
 // void setGridStyle(Qt::PenStyle)
 func (this *QTableView) SetGridStyle(style int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView12setGridStyleEN2Qt8PenStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView12setGridStyleEN2Qt8PenStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -365,7 +371,7 @@ func (this *QTableView) SetGridStyle(style int) {
 // Public
 // void setWordWrap(_Bool)
 func (this *QTableView) SetWordWrap(on bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView11setWordWrapEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &on)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView11setWordWrapEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -385,7 +391,7 @@ func (this *QTableView) WordWrap() bool {
 // Public
 // void setCornerButtonEnabled(_Bool)
 func (this *QTableView) SetCornerButtonEnabled(enable bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView22setCornerButtonEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView22setCornerButtonEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -405,10 +411,12 @@ func (this *QTableView) IsCornerButtonEnabled() bool {
 // Public virtual
 // QRect visualRect(const class QModelIndex &)
 func (this *QTableView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView10visualRectERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView10visualRectERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -419,7 +427,7 @@ func (this *QTableView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*12
 // void scrollTo(const class QModelIndex &, enum QAbstractItemView::ScrollHint)
 func (this *QTableView) ScrollTo(index *qtcore.QModelIndex, hint int) {
 	var convArg0 = index.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView8scrollToERK11QModelIndexN17QAbstractItemView10ScrollHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &hint)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView8scrollToERK11QModelIndexN17QAbstractItemView10ScrollHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -428,10 +436,12 @@ func (this *QTableView) ScrollTo(index *qtcore.QModelIndex, hint int) {
 // Public virtual
 // QModelIndex indexAt(const class QPoint &)
 func (this *QTableView) IndexAt(p *qtcore.QPoint) *qtcore.QModelIndex /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = p.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView7indexAtERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView7indexAtERK6QPoint", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -441,7 +451,7 @@ func (this *QTableView) IndexAt(p *qtcore.QPoint) *qtcore.QModelIndex /*123*/ {
 // Public
 // void setSpan(int, int, int, int)
 func (this *QTableView) SetSpan(row int, column int, rowSpan int, columnSpan int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView7setSpanEiiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column, &rowSpan, &columnSpan)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView7setSpanEiiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column, rowSpan, columnSpan)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -450,7 +460,7 @@ func (this *QTableView) SetSpan(row int, column int, rowSpan int, columnSpan int
 // Public
 // int rowSpan(int, int)
 func (this *QTableView) RowSpan(row int, column int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView7rowSpanEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView7rowSpanEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -461,7 +471,7 @@ func (this *QTableView) RowSpan(row int, column int) int {
 // Public
 // int columnSpan(int, int)
 func (this *QTableView) ColumnSpan(row int, column int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView10columnSpanEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView10columnSpanEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -481,7 +491,7 @@ func (this *QTableView) ClearSpans() {
 // Public
 // void sortByColumn(int, Qt::SortOrder)
 func (this *QTableView) SortByColumn(column int, order int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView12sortByColumnEiN2Qt9SortOrderE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, &order)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView12sortByColumnEiN2Qt9SortOrderE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -490,7 +500,7 @@ func (this *QTableView) SortByColumn(column int, order int) {
 // Public
 // void sortByColumn(int)
 func (this *QTableView) SortByColumn_1(column int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView12sortByColumnEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView12sortByColumnEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -499,7 +509,7 @@ func (this *QTableView) SortByColumn_1(column int) {
 // Public
 // void selectRow(int)
 func (this *QTableView) SelectRow(row int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView9selectRowEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView9selectRowEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -508,7 +518,7 @@ func (this *QTableView) SelectRow(row int) {
 // Public
 // void selectColumn(int)
 func (this *QTableView) SelectColumn(column int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView12selectColumnEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView12selectColumnEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -517,7 +527,7 @@ func (this *QTableView) SelectColumn(column int) {
 // Public
 // void hideRow(int)
 func (this *QTableView) HideRow(row int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView7hideRowEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView7hideRowEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -526,7 +536,7 @@ func (this *QTableView) HideRow(row int) {
 // Public
 // void hideColumn(int)
 func (this *QTableView) HideColumn(column int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView10hideColumnEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView10hideColumnEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -535,7 +545,7 @@ func (this *QTableView) HideColumn(column int) {
 // Public
 // void showRow(int)
 func (this *QTableView) ShowRow(row int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView7showRowEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView7showRowEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -544,7 +554,7 @@ func (this *QTableView) ShowRow(row int) {
 // Public
 // void showColumn(int)
 func (this *QTableView) ShowColumn(column int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView10showColumnEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView10showColumnEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -553,7 +563,7 @@ func (this *QTableView) ShowColumn(column int) {
 // Public
 // void resizeRowToContents(int)
 func (this *QTableView) ResizeRowToContents(row int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView19resizeRowToContentsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView19resizeRowToContentsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -571,7 +581,7 @@ func (this *QTableView) ResizeRowsToContents() {
 // Public
 // void resizeColumnToContents(int)
 func (this *QTableView) ResizeColumnToContents(column int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView22resizeColumnToContentsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView22resizeColumnToContentsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -589,7 +599,7 @@ func (this *QTableView) ResizeColumnsToContents() {
 // Public
 // void setShowGrid(_Bool)
 func (this *QTableView) SetShowGrid(show bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView11setShowGridEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &show)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView11setShowGridEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), show)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -598,7 +608,7 @@ func (this *QTableView) SetShowGrid(show bool) {
 // Protected
 // void rowMoved(int, int, int)
 func (this *QTableView) RowMoved(row int, oldIndex int, newIndex int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView8rowMovedEiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &oldIndex, &newIndex)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView8rowMovedEiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, oldIndex, newIndex)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -607,7 +617,7 @@ func (this *QTableView) RowMoved(row int, oldIndex int, newIndex int) {
 // Protected
 // void columnMoved(int, int, int)
 func (this *QTableView) ColumnMoved(column int, oldIndex int, newIndex int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView11columnMovedEiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, &oldIndex, &newIndex)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView11columnMovedEiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, oldIndex, newIndex)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -616,7 +626,7 @@ func (this *QTableView) ColumnMoved(column int, oldIndex int, newIndex int) {
 // Protected
 // void rowResized(int, int, int)
 func (this *QTableView) RowResized(row int, oldHeight int, newHeight int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView10rowResizedEiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &oldHeight, &newHeight)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView10rowResizedEiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, oldHeight, newHeight)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -625,7 +635,7 @@ func (this *QTableView) RowResized(row int, oldHeight int, newHeight int) {
 // Protected
 // void columnResized(int, int, int)
 func (this *QTableView) ColumnResized(column int, oldWidth int, newWidth int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView13columnResizedEiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, &oldWidth, &newWidth)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView13columnResizedEiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, oldWidth, newWidth)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -634,7 +644,7 @@ func (this *QTableView) ColumnResized(column int, oldWidth int, newWidth int) {
 // Protected
 // void rowCountChanged(int, int)
 func (this *QTableView) RowCountChanged(oldCount int, newCount int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView15rowCountChangedEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &oldCount, &newCount)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView15rowCountChangedEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), oldCount, newCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -643,7 +653,7 @@ func (this *QTableView) RowCountChanged(oldCount int, newCount int) {
 // Protected
 // void columnCountChanged(int, int)
 func (this *QTableView) ColumnCountChanged(oldCount int, newCount int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView18columnCountChangedEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &oldCount, &newCount)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView18columnCountChangedEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), oldCount, newCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -652,7 +662,7 @@ func (this *QTableView) ColumnCountChanged(oldCount int, newCount int) {
 // Protected virtual
 // void scrollContentsBy(int, int)
 func (this *QTableView) ScrollContentsBy(dx int, dy int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView16scrollContentsByEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView16scrollContentsByEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -661,9 +671,11 @@ func (this *QTableView) ScrollContentsBy(dx int, dy int) {
 // Protected virtual
 // QStyleOptionViewItem viewOptions()
 func (this *QTableView) ViewOptions() *QStyleOptionViewItem /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView11viewOptionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView11viewOptionsEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStyleOptionViewItemFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -710,15 +722,27 @@ func (this *QTableView) VerticalOffset() int {
 	return int(rv) // 111
 }
 
+// /usr/include/qt/QtWidgets/qtableview.h:158
+// index:0
+// Protected virtual
+// void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
+func (this *QTableView) SetSelection(rect *qtcore.QRect, command int) {
+	var convArg0 = rect.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView12setSelectionERK5QRect6QFlagsIN19QItemSelectionModel13SelectionFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qtableview.h:159
 // index:0
 // Protected virtual
 // QRegion visualRegionForSelection(const class QItemSelection &)
 func (this *QTableView) VisualRegionForSelection(selection *qtcore.QItemSelection) *qtgui.QRegion /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = selection.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView24visualRegionForSelectionERK14QItemSelection", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView24visualRegionForSelectionERK14QItemSelection", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -737,9 +761,11 @@ func (this *QTableView) UpdateGeometries() {
 // Protected virtual
 // QSize viewportSizeHint()
 func (this *QTableView) ViewportSizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView16viewportSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView16viewportSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -749,7 +775,7 @@ func (this *QTableView) ViewportSizeHint() *qtcore.QSize /*123*/ {
 // Protected virtual
 // int sizeHintForRow(int)
 func (this *QTableView) SizeHintForRow(row int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView14sizeHintForRowEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView14sizeHintForRowEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -760,7 +786,7 @@ func (this *QTableView) SizeHintForRow(row int) int {
 // Protected virtual
 // int sizeHintForColumn(int)
 func (this *QTableView) SizeHintForColumn(column int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView17sizeHintForColumnEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView17sizeHintForColumnEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -771,7 +797,7 @@ func (this *QTableView) SizeHintForColumn(column int) int {
 // Protected virtual
 // void verticalScrollbarAction(int)
 func (this *QTableView) VerticalScrollbarAction(action int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView23verticalScrollbarActionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &action)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView23verticalScrollbarActionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), action)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -780,7 +806,7 @@ func (this *QTableView) VerticalScrollbarAction(action int) {
 // Protected virtual
 // void horizontalScrollbarAction(int)
 func (this *QTableView) HorizontalScrollbarAction(action int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView25horizontalScrollbarActionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &action)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView25horizontalScrollbarActionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), action)
 	gopp.ErrPrint(err, rv)
 }
 

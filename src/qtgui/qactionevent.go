@@ -59,9 +59,15 @@ func (this *QActionEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QActionEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQActionEventFromPointer(cthis unsafe.Pointer) *QActionEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QActionEvent{bcthis0}
+}
+func (*QActionEvent) NewFromPointer(cthis unsafe.Pointer) *QActionEvent {
+	return NewQActionEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:727
@@ -70,7 +76,7 @@ func NewQActionEventFromPointer(cthis unsafe.Pointer) *QActionEvent {
 // void QActionEvent(int, class QAction *, class QAction *)
 func NewQActionEvent(type_ int, action unsafe.Pointer /*666*/, before unsafe.Pointer /*666*/) *QActionEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionEventC2EiP7QActionS1_", ffiqt.FFI_TYPE_VOID, cthis, &type_, action, before)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionEventC2EiP7QActionS1_", ffiqt.FFI_TYPE_VOID, cthis, type_, action, before)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQActionEventFromPointer(cthis)
 	return gothis

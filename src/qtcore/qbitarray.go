@@ -55,8 +55,14 @@ func (this *QBitArray) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QBitArray) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQBitArrayFromPointer(cthis unsafe.Pointer) *QBitArray {
 	return &QBitArray{&qtrt.CObject{cthis}}
+}
+func (*QBitArray) NewFromPointer(cthis unsafe.Pointer) *QBitArray {
+	return NewQBitArrayFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qbitarray.h:57
@@ -77,7 +83,7 @@ func NewQBitArray() *QBitArray {
 // void QBitArray(int, _Bool)
 func NewQBitArray_1(size int, val bool) *QBitArray {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArrayC2Eib", ffiqt.FFI_TYPE_VOID, cthis, &size, &val)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArrayC2Eib", ffiqt.FFI_TYPE_VOID, cthis, size, val)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBitArrayFromPointer(cthis)
 	return gothis
@@ -120,7 +126,7 @@ func (this *QBitArray) Count() int {
 // Public
 // int count(_Bool)
 func (this *QBitArray) Count_1(on bool) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QBitArray5countEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &on)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QBitArray5countEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -153,7 +159,7 @@ func (this *QBitArray) IsNull() bool {
 // Public
 // void resize(int)
 func (this *QBitArray) Resize(size int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray6resizeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray6resizeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -191,7 +197,7 @@ func (this *QBitArray) Clear() {
 // Public
 // bool testBit(int)
 func (this *QBitArray) TestBit(i int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QBitArray7testBitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QBitArray7testBitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -202,7 +208,7 @@ func (this *QBitArray) TestBit(i int) bool {
 // Public
 // void setBit(int)
 func (this *QBitArray) SetBit(i int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray6setBitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray6setBitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -211,7 +217,7 @@ func (this *QBitArray) SetBit(i int) {
 // Public
 // void setBit(int, _Bool)
 func (this *QBitArray) SetBit_1(i int, val bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray6setBitEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i, &val)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray6setBitEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i, val)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -220,7 +226,7 @@ func (this *QBitArray) SetBit_1(i int, val bool) {
 // Public
 // void clearBit(int)
 func (this *QBitArray) ClearBit(i int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray8clearBitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray8clearBitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -229,7 +235,7 @@ func (this *QBitArray) ClearBit(i int) {
 // Public
 // bool toggleBit(int)
 func (this *QBitArray) ToggleBit(i int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray9toggleBitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray9toggleBitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -240,7 +246,7 @@ func (this *QBitArray) ToggleBit(i int) bool {
 // Public
 // bool at(int)
 func (this *QBitArray) At(i int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QBitArray2atEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QBitArray2atEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -251,7 +257,7 @@ func (this *QBitArray) At(i int) bool {
 // Public inline
 // bool fill(_Bool, int)
 func (this *QBitArray) Fill(val bool, size int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray4fillEbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &val, &size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray4fillEbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), val, size)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -262,7 +268,7 @@ func (this *QBitArray) Fill(val bool, size int) bool {
 // Public
 // void fill(_Bool, int, int)
 func (this *QBitArray) Fill_1(val bool, first int, last int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray4fillEbii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &val, &first, &last)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray4fillEbii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), val, first, last)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -271,7 +277,7 @@ func (this *QBitArray) Fill_1(val bool, first int, last int) {
 // Public inline
 // void truncate(int)
 func (this *QBitArray) Truncate(pos int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray8truncateEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray8truncateEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	gopp.ErrPrint(err, rv)
 }
 

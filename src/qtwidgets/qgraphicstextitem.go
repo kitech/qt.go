@@ -63,8 +63,14 @@ func (this *QGraphicsTextItem) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QGraphicsTextItem) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQGraphicsTextItemFromPointer(cthis unsafe.Pointer) *QGraphicsTextItem {
 	return &QGraphicsTextItem{&qtrt.CObject{cthis}}
+}
+func (*QGraphicsTextItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsTextItem {
+	return NewQGraphicsTextItemFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:872
@@ -120,9 +126,11 @@ func DeleteQGraphicsTextItem(*QGraphicsTextItem) {
 // Public
 // QString toHtml()
 func (this *QGraphicsTextItem) ToHtml() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem6toHtmlEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem6toHtmlEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -142,9 +150,11 @@ func (this *QGraphicsTextItem) SetHtml(html *qtcore.QString) {
 // Public
 // QString toPlainText()
 func (this *QGraphicsTextItem) ToPlainText() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem11toPlainTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem11toPlainTextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -164,9 +174,11 @@ func (this *QGraphicsTextItem) SetPlainText(text *qtcore.QString) {
 // Public
 // QFont font()
 func (this *QGraphicsTextItem) Font() *qtgui.QFont /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem4fontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem4fontEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -196,9 +208,11 @@ func (this *QGraphicsTextItem) SetDefaultTextColor(c *qtgui.QColor) {
 // Public
 // QColor defaultTextColor()
 func (this *QGraphicsTextItem) DefaultTextColor() *qtgui.QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem16defaultTextColorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem16defaultTextColorEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -208,9 +222,11 @@ func (this *QGraphicsTextItem) DefaultTextColor() *qtgui.QColor /*123*/ {
 // Public virtual
 // QRectF boundingRect()
 func (this *QGraphicsTextItem) BoundingRect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem12boundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem12boundingRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -220,9 +236,11 @@ func (this *QGraphicsTextItem) BoundingRect() *qtcore.QRectF /*123*/ {
 // Public virtual
 // QPainterPath shape()
 func (this *QGraphicsTextItem) Shape() *qtgui.QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem5shapeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem5shapeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -268,9 +286,11 @@ func (this *QGraphicsTextItem) IsObscuredBy(item *QGraphicsItem /*444 const QGra
 // Public virtual
 // QPainterPath opaqueArea()
 func (this *QGraphicsTextItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -291,7 +311,7 @@ func (this *QGraphicsTextItem) Type() int {
 // Public
 // void setTextWidth(qreal)
 func (this *QGraphicsTextItem) SetTextWidth(width float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem12setTextWidthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &width)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem12setTextWidthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -337,6 +357,15 @@ func (this *QGraphicsTextItem) Document() *qtgui.QTextDocument /*444 QTextDocume
 	return rv2
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:913
+// index:0
+// Public
+// void setTextInteractionFlags(Qt::TextInteractionFlags)
+func (this *QGraphicsTextItem) SetTextInteractionFlags(flags int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem23setTextInteractionFlagsE6QFlagsIN2Qt19TextInteractionFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:914
 // index:0
 // Public
@@ -353,7 +382,7 @@ func (this *QGraphicsTextItem) TextInteractionFlags() int {
 // Public
 // void setTabChangesFocus(_Bool)
 func (this *QGraphicsTextItem) SetTabChangesFocus(b bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem18setTabChangesFocusEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem18setTabChangesFocusEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -373,7 +402,7 @@ func (this *QGraphicsTextItem) TabChangesFocus() bool {
 // Public
 // void setOpenExternalLinks(_Bool)
 func (this *QGraphicsTextItem) SetOpenExternalLinks(open bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem20setOpenExternalLinksEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &open)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem20setOpenExternalLinksEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), open)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -403,9 +432,11 @@ func (this *QGraphicsTextItem) SetTextCursor(cursor *qtgui.QTextCursor) {
 // Public
 // QTextCursor textCursor()
 func (this *QGraphicsTextItem) TextCursor() *qtgui.QTextCursor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem10textCursorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem10textCursorEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -617,9 +648,11 @@ func (this *QGraphicsTextItem) HoverLeaveEvent(event *QGraphicsSceneHoverEvent /
 // Protected virtual
 // QVariant inputMethodQuery(Qt::InputMethodQuery)
 func (this *QGraphicsTextItem) InputMethodQuery(query int) *qtcore.QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem16inputMethodQueryEN2Qt16InputMethodQueryE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &query)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem16inputMethodQueryEN2Qt16InputMethodQueryE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), query)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -629,7 +662,7 @@ func (this *QGraphicsTextItem) InputMethodQuery(query int) *qtcore.QVariant /*12
 // Protected virtual
 // bool supportsExtension(enum QGraphicsItem::Extension)
 func (this *QGraphicsTextItem) SupportsExtension(extension int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &extension)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -641,7 +674,7 @@ func (this *QGraphicsTextItem) SupportsExtension(extension int) bool {
 // void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
 func (this *QGraphicsTextItem) SetExtension(extension int, variant *qtcore.QVariant) {
 	var convArg1 = variant.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &extension, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -650,12 +683,18 @@ func (this *QGraphicsTextItem) SetExtension(extension int, variant *qtcore.QVari
 // Protected virtual
 // QVariant extension(const class QVariant &)
 func (this *QGraphicsTextItem) Extension(variant *qtcore.QVariant) *qtcore.QVariant /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = variant.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem9extensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem9extensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
+
+type QGraphicsTextItem__ = int
+
+const QGraphicsTextItem__Type QGraphicsTextItem__ = 8
 
 //  body block end

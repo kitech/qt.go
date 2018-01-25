@@ -55,8 +55,14 @@ func (this *QXmlStreamStringRef) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QXmlStreamStringRef) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQXmlStreamStringRefFromPointer(cthis unsafe.Pointer) *QXmlStreamStringRef {
 	return &QXmlStreamStringRef{&qtrt.CObject{cthis}}
+}
+func (*QXmlStreamStringRef) NewFromPointer(cthis unsafe.Pointer) *QXmlStreamStringRef {
+	return NewQXmlStreamStringRefFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:58

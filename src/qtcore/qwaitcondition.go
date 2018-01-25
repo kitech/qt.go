@@ -55,8 +55,14 @@ func (this *QWaitCondition) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QWaitCondition) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQWaitConditionFromPointer(cthis unsafe.Pointer) *QWaitCondition {
 	return &QWaitCondition{&qtrt.CObject{cthis}}
+}
+func (*QWaitCondition) NewFromPointer(cthis unsafe.Pointer) *QWaitCondition {
+	return NewQWaitConditionFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qwaitcondition.h:59
@@ -86,7 +92,7 @@ func DeleteQWaitCondition(*QWaitCondition) {
 // bool wait(class QMutex *, unsigned long)
 func (this *QWaitCondition) Wait(lockedMutex *QMutex /*444 QMutex **/, time uint) bool {
 	var convArg0 = lockedMutex.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP6QMutexm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &time)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP6QMutexm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -98,7 +104,7 @@ func (this *QWaitCondition) Wait(lockedMutex *QMutex /*444 QMutex **/, time uint
 // bool wait(class QReadWriteLock *, unsigned long)
 func (this *QWaitCondition) Wait_1(lockedReadWriteLock *QReadWriteLock /*444 QReadWriteLock **/, time uint) bool {
 	var convArg0 = lockedReadWriteLock.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP14QReadWriteLockm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &time)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP14QReadWriteLockm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

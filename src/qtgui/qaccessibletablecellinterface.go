@@ -59,8 +59,14 @@ func (this *QAccessibleTableCellInterface) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QAccessibleTableCellInterface) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQAccessibleTableCellInterfaceFromPointer(cthis unsafe.Pointer) *QAccessibleTableCellInterface {
 	return &QAccessibleTableCellInterface{&qtrt.CObject{cthis}}
+}
+func (*QAccessibleTableCellInterface) NewFromPointer(cthis unsafe.Pointer) *QAccessibleTableCellInterface {
+	return NewQAccessibleTableCellInterfaceFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:578

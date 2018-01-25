@@ -55,9 +55,15 @@ func (this *QTimer) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QTimer) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQTimerFromPointer(cthis unsafe.Pointer) *QTimer {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QTimer{bcthis0}
+}
+func (*QTimer) NewFromPointer(cthis unsafe.Pointer) *QTimer {
+	return NewQTimerFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qtimer.h:59
@@ -121,7 +127,7 @@ func (this *QTimer) TimerId() int {
 // Public
 // void setInterval(int)
 func (this *QTimer) SetInterval(msec int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer11setIntervalEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer11setIntervalEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -152,7 +158,7 @@ func (this *QTimer) RemainingTime() int {
 // Public inline
 // void setTimerType(Qt::TimerType)
 func (this *QTimer) SetTimerType(atype int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer12setTimerTypeEN2Qt9TimerTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &atype)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer12setTimerTypeEN2Qt9TimerTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), atype)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -172,7 +178,7 @@ func (this *QTimer) TimerType() int {
 // Public inline
 // void setSingleShot(_Bool)
 func (this *QTimer) SetSingleShot(singleShot bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer13setSingleShotEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &singleShot)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer13setSingleShotEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), singleShot)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -218,7 +224,7 @@ func QTimer_SingleShot_1(msec int, timerType int, receiver *QObject /*444 const 
 // Public
 // void start(int)
 func (this *QTimer) Start(msec int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer5startEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer5startEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -63,9 +63,15 @@ func (this *QStyleHintReturnMask) GetCthis() unsafe.Pointer {
 		return this.QStyleHintReturn.GetCthis()
 	}
 }
+func (this *QStyleHintReturnMask) SetCthis(cthis unsafe.Pointer) {
+	this.QStyleHintReturn = NewQStyleHintReturnFromPointer(cthis)
+}
 func NewQStyleHintReturnMaskFromPointer(cthis unsafe.Pointer) *QStyleHintReturnMask {
 	bcthis0 := NewQStyleHintReturnFromPointer(cthis)
 	return &QStyleHintReturnMask{bcthis0}
+}
+func (*QStyleHintReturnMask) NewFromPointer(cthis unsafe.Pointer) *QStyleHintReturnMask {
+	return NewQStyleHintReturnMaskFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:722
@@ -88,5 +94,13 @@ func DeleteQStyleHintReturnMask(*QStyleHintReturnMask) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleHintReturnMaskD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
 }
+
+type QStyleHintReturnMask__StyleOptionType = int
+
+const QStyleHintReturnMask__Type QStyleHintReturnMask__StyleOptionType = 61441
+
+type QStyleHintReturnMask__StyleOptionVersion = int
+
+const QStyleHintReturnMask__Version QStyleHintReturnMask__StyleOptionVersion = 1
 
 //  body block end

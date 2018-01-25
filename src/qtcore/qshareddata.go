@@ -55,8 +55,14 @@ func (this *QSharedData) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QSharedData) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQSharedDataFromPointer(cthis unsafe.Pointer) *QSharedData {
 	return &QSharedData{&qtrt.CObject{cthis}}
+}
+func (*QSharedData) NewFromPointer(cthis unsafe.Pointer) *QSharedData {
+	return NewQSharedDataFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qshareddata.h:60

@@ -55,9 +55,15 @@ func (this *QSignalMapper) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QSignalMapper) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQSignalMapperFromPointer(cthis unsafe.Pointer) *QSignalMapper {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QSignalMapper{bcthis0}
+}
+func (*QSignalMapper) NewFromPointer(cthis unsafe.Pointer) *QSignalMapper {
+	return NewQSignalMapperFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qsignalmapper.h:53
@@ -100,7 +106,7 @@ func DeleteQSignalMapper(*QSignalMapper) {
 // void setMapping(class QObject *, int)
 func (this *QSignalMapper) SetMapping(sender *QObject /*444 QObject **/, id int) {
 	var convArg0 = sender.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSignalMapper10setMappingEP7QObjecti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &id)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSignalMapper10setMappingEP7QObjecti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, id)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -151,7 +157,7 @@ func (this *QSignalMapper) RemoveMappings(sender *QObject /*444 QObject **/) {
 // Public
 // QObject * mapping(int)
 func (this *QSignalMapper) Mapping(id int) *QObject /*444 QObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSignalMapper7mappingEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &id)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSignalMapper7mappingEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -201,7 +207,7 @@ func (this *QSignalMapper) Mapping_3(object *QObject /*444 QObject **/) *QObject
 // Public
 // void mapped(int)
 func (this *QSignalMapper) Mapped(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSignalMapper6mappedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSignalMapper6mappedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 

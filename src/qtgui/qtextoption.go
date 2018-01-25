@@ -59,8 +59,14 @@ func (this *QTextOption) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTextOption) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTextOptionFromPointer(cthis unsafe.Pointer) *QTextOption {
 	return &QTextOption{&qtrt.CObject{cthis}}
+}
+func (*QTextOption) NewFromPointer(cthis unsafe.Pointer) *QTextOption {
+	return NewQTextOptionFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtextoption.h:85
@@ -100,7 +106,7 @@ func (this *QTextOption) Alignment() int {
 // Public inline
 // void setTextDirection(Qt::LayoutDirection)
 func (this *QTextOption) SetTextDirection(aDirection int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption16setTextDirectionEN2Qt15LayoutDirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &aDirection)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption16setTextDirectionEN2Qt15LayoutDirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), aDirection)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -120,7 +126,7 @@ func (this *QTextOption) TextDirection() int {
 // Public inline
 // void setWrapMode(enum QTextOption::WrapMode)
 func (this *QTextOption) SetWrapMode(wrap int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption11setWrapModeENS_8WrapModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &wrap)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption11setWrapModeENS_8WrapModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), wrap)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -133,6 +139,15 @@ func (this *QTextOption) WrapMode() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtGui/qtextoption.h:117
+// index:0
+// Public inline
+// void setFlags(QTextOption::Flags)
+func (this *QTextOption) SetFlags(flags int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption8setFlagsE6QFlagsINS_4FlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextoption.h:118
@@ -151,7 +166,7 @@ func (this *QTextOption) Flags() int {
 // Public inline
 // void setTabStop(qreal)
 func (this *QTextOption) SetTabStop(tabStop float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption10setTabStopEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &tabStop)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption10setTabStopEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), tabStop)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -171,7 +186,7 @@ func (this *QTextOption) TabStop() float64 {
 // Public inline
 // void setTabStopDistance(qreal)
 func (this *QTextOption) SetTabStopDistance(tabStopDistance float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption18setTabStopDistanceEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &tabStopDistance)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption18setTabStopDistanceEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), tabStopDistance)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -191,7 +206,7 @@ func (this *QTextOption) TabStopDistance() float64 {
 // Public inline
 // void setUseDesignMetrics(_Bool)
 func (this *QTextOption) SetUseDesignMetrics(b bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption19setUseDesignMetricsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption19setUseDesignMetricsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -205,5 +220,29 @@ func (this *QTextOption) UseDesignMetrics() bool {
 	//  return rv
 	return rv != 0
 }
+
+type QTextOption__TabType = int
+
+const QTextOption__LeftTab QTextOption__TabType = 0
+const QTextOption__RightTab QTextOption__TabType = 1
+const QTextOption__CenterTab QTextOption__TabType = 2
+const QTextOption__DelimiterTab QTextOption__TabType = 3
+
+type QTextOption__WrapMode = int
+
+const QTextOption__NoWrap QTextOption__WrapMode = 0
+const QTextOption__WordWrap QTextOption__WrapMode = 1
+const QTextOption__ManualWrap QTextOption__WrapMode = 2
+const QTextOption__WrapAnywhere QTextOption__WrapMode = 3
+const QTextOption__WrapAtWordBoundaryOrAnywhere QTextOption__WrapMode = 4
+
+type QTextOption__Flag = int
+
+const QTextOption__ShowTabsAndSpaces QTextOption__Flag = 1
+const QTextOption__ShowLineAndParagraphSeparators QTextOption__Flag = 2
+const QTextOption__AddSpaceForLineAndParagraphSeparators QTextOption__Flag = 4
+const QTextOption__SuppressColors QTextOption__Flag = 8
+const QTextOption__ShowDocumentTerminator QTextOption__Flag = 16
+const QTextOption__IncludeTrailingSpaces QTextOption__Flag = 2147483648
 
 //  body block end

@@ -59,9 +59,15 @@ func (this *QTextObject) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QTextObject) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQTextObjectFromPointer(cthis unsafe.Pointer) *QTextObject {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QTextObject{bcthis0}
+}
+func (*QTextObject) NewFromPointer(cthis unsafe.Pointer) *QTextObject {
+	return NewQTextObjectFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:62
@@ -113,9 +119,11 @@ func (this *QTextObject) SetFormat(format *QTextFormat) {
 // Public
 // QTextFormat format()
 func (this *QTextObject) Format() *QTextFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject6formatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

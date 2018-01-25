@@ -63,9 +63,15 @@ func (this *QAbstractItemDelegate) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QAbstractItemDelegate) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQAbstractItemDelegateFromPointer(cthis unsafe.Pointer) *QAbstractItemDelegate {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QAbstractItemDelegate{bcthis0}
+}
+func (*QAbstractItemDelegate) NewFromPointer(cthis unsafe.Pointer) *QAbstractItemDelegate {
+	return NewQAbstractItemDelegateFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:60
@@ -119,11 +125,13 @@ func (this *QAbstractItemDelegate) Paint(painter *qtgui.QPainter /*444 QPainter 
 // Public pure virtual
 // QSize sizeHint(const class QStyleOptionViewItem &, const class QModelIndex &)
 func (this *QAbstractItemDelegate) SizeHint(option *QStyleOptionViewItem, index *qtcore.QModelIndex) *qtcore.QSize /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = option.GetCthis()
 	var convArg1 = index.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QAbstractItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QAbstractItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -252,7 +260,7 @@ func (this *QAbstractItemDelegate) CommitData(editor *QWidget /*444 QWidget **/)
 // void closeEditor(class QWidget *, class QAbstractItemDelegate::EndEditHint)
 func (this *QAbstractItemDelegate) CloseEditor(editor *QWidget /*444 QWidget **/, hint int) {
 	var convArg0 = editor.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractItemDelegate11closeEditorEP7QWidgetNS_11EndEditHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &hint)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractItemDelegate11closeEditorEP7QWidgetNS_11EndEditHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -265,5 +273,13 @@ func (this *QAbstractItemDelegate) SizeHintChanged(arg0 *qtcore.QModelIndex) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractItemDelegate15sizeHintChangedERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
+
+type QAbstractItemDelegate__EndEditHint = int
+
+const QAbstractItemDelegate__NoHint QAbstractItemDelegate__EndEditHint = 0
+const QAbstractItemDelegate__EditNextItem QAbstractItemDelegate__EndEditHint = 1
+const QAbstractItemDelegate__EditPreviousItem QAbstractItemDelegate__EndEditHint = 2
+const QAbstractItemDelegate__SubmitModelCache QAbstractItemDelegate__EndEditHint = 3
+const QAbstractItemDelegate__RevertModelCache QAbstractItemDelegate__EndEditHint = 4
 
 //  body block end

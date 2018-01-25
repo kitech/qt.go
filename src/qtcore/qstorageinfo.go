@@ -55,8 +55,14 @@ func (this *QStorageInfo) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QStorageInfo) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQStorageInfoFromPointer(cthis unsafe.Pointer) *QStorageInfo {
 	return &QStorageInfo{&qtrt.CObject{cthis}}
+}
+func (*QStorageInfo) NewFromPointer(cthis unsafe.Pointer) *QStorageInfo {
+	return NewQStorageInfoFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qstorageinfo.h:58
@@ -131,9 +137,11 @@ func (this *QStorageInfo) SetPath(path *QString) {
 // Public
 // QString rootPath()
 func (this *QStorageInfo) RootPath() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QStorageInfo8rootPathEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QStorageInfo8rootPathEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -143,9 +151,11 @@ func (this *QStorageInfo) RootPath() *QString /*123*/ {
 // Public
 // QByteArray device()
 func (this *QStorageInfo) Device() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QStorageInfo6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QStorageInfo6deviceEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -155,9 +165,11 @@ func (this *QStorageInfo) Device() *QByteArray /*123*/ {
 // Public
 // QByteArray subvolume()
 func (this *QStorageInfo) Subvolume() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QStorageInfo9subvolumeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QStorageInfo9subvolumeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -167,9 +179,11 @@ func (this *QStorageInfo) Subvolume() *QByteArray /*123*/ {
 // Public
 // QByteArray fileSystemType()
 func (this *QStorageInfo) FileSystemType() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QStorageInfo14fileSystemTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QStorageInfo14fileSystemTypeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -179,9 +193,11 @@ func (this *QStorageInfo) FileSystemType() *QByteArray /*123*/ {
 // Public
 // QString name()
 func (this *QStorageInfo) Name() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QStorageInfo4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QStorageInfo4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -191,9 +207,11 @@ func (this *QStorageInfo) Name() *QString /*123*/ {
 // Public
 // QString displayName()
 func (this *QStorageInfo) DisplayName() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QStorageInfo11displayNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QStorageInfo11displayNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

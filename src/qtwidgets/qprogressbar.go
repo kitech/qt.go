@@ -63,9 +63,15 @@ func (this *QProgressBar) GetCthis() unsafe.Pointer {
 		return this.QWidget.GetCthis()
 	}
 }
+func (this *QProgressBar) SetCthis(cthis unsafe.Pointer) {
+	this.QWidget = NewQWidgetFromPointer(cthis)
+}
 func NewQProgressBarFromPointer(cthis unsafe.Pointer) *QProgressBar {
 	bcthis0 := NewQWidgetFromPointer(cthis)
 	return &QProgressBar{bcthis0}
+}
+func (*QProgressBar) NewFromPointer(cthis unsafe.Pointer) *QProgressBar {
+	return NewQProgressBarFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:55
@@ -140,9 +146,11 @@ func (this *QProgressBar) Value() int {
 // Public virtual
 // QString text()
 func (this *QProgressBar) Text() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar4textEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -152,7 +160,7 @@ func (this *QProgressBar) Text() *qtcore.QString /*123*/ {
 // Public
 // void setTextVisible(_Bool)
 func (this *QProgressBar) SetTextVisible(visible bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar14setTextVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar14setTextVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -183,9 +191,11 @@ func (this *QProgressBar) Alignment() int {
 // Public virtual
 // QSize sizeHint()
 func (this *QProgressBar) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -195,9 +205,11 @@ func (this *QProgressBar) SizeHint() *qtcore.QSize /*123*/ {
 // Public virtual
 // QSize minimumSizeHint()
 func (this *QProgressBar) MinimumSizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -218,7 +230,7 @@ func (this *QProgressBar) Orientation() int {
 // Public
 // void setInvertedAppearance(_Bool)
 func (this *QProgressBar) SetInvertedAppearance(invert bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar21setInvertedAppearanceEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &invert)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar21setInvertedAppearanceEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), invert)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -238,7 +250,7 @@ func (this *QProgressBar) InvertedAppearance() bool {
 // Public
 // void setTextDirection(class QProgressBar::Direction)
 func (this *QProgressBar) SetTextDirection(textDirection int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar16setTextDirectionENS_9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &textDirection)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar16setTextDirectionENS_9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), textDirection)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -277,9 +289,11 @@ func (this *QProgressBar) ResetFormat() {
 // Public
 // QString format()
 func (this *QProgressBar) Format() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar6formatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -298,7 +312,7 @@ func (this *QProgressBar) Reset() {
 // Public
 // void setRange(int, int)
 func (this *QProgressBar) SetRange(minimum int, maximum int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar8setRangeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &minimum, &maximum)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar8setRangeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), minimum, maximum)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -307,7 +321,7 @@ func (this *QProgressBar) SetRange(minimum int, maximum int) {
 // Public
 // void setMinimum(int)
 func (this *QProgressBar) SetMinimum(minimum int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar10setMinimumEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &minimum)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar10setMinimumEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), minimum)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -316,7 +330,7 @@ func (this *QProgressBar) SetMinimum(minimum int) {
 // Public
 // void setMaximum(int)
 func (this *QProgressBar) SetMaximum(maximum int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar10setMaximumEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &maximum)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar10setMaximumEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), maximum)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -325,7 +339,7 @@ func (this *QProgressBar) SetMaximum(maximum int) {
 // Public
 // void setValue(int)
 func (this *QProgressBar) SetValue(value int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar8setValueEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar8setValueEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -334,7 +348,7 @@ func (this *QProgressBar) SetValue(value int) {
 // Public
 // void setOrientation(Qt::Orientation)
 func (this *QProgressBar) SetOrientation(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar14setOrientationEN2Qt11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar14setOrientationEN2Qt11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -343,7 +357,7 @@ func (this *QProgressBar) SetOrientation(arg0 int) {
 // Public
 // void valueChanged(int)
 func (this *QProgressBar) ValueChanged(value int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar12valueChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar12valueChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -378,5 +392,10 @@ func (this *QProgressBar) InitStyleOption(option *QStyleOptionProgressBar /*444 
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar15initStyleOptionEP23QStyleOptionProgressBar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
+
+type QProgressBar__Direction = int
+
+const QProgressBar__TopToBottom QProgressBar__Direction = 0
+const QProgressBar__BottomToTop QProgressBar__Direction = 1
 
 //  body block end

@@ -63,9 +63,15 @@ func (this *QHBoxLayout) GetCthis() unsafe.Pointer {
 		return this.QBoxLayout.GetCthis()
 	}
 }
+func (this *QHBoxLayout) SetCthis(cthis unsafe.Pointer) {
+	this.QBoxLayout = NewQBoxLayoutFromPointer(cthis)
+}
 func NewQHBoxLayoutFromPointer(cthis unsafe.Pointer) *QHBoxLayout {
 	bcthis0 := NewQBoxLayoutFromPointer(cthis)
 	return &QHBoxLayout{bcthis0}
+}
+func (*QHBoxLayout) NewFromPointer(cthis unsafe.Pointer) *QHBoxLayout {
+	return NewQHBoxLayoutFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:115

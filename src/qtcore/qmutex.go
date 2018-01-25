@@ -55,9 +55,15 @@ func (this *QMutex) GetCthis() unsafe.Pointer {
 		return this.QBasicMutex.GetCthis()
 	}
 }
+func (this *QMutex) SetCthis(cthis unsafe.Pointer) {
+	this.QBasicMutex = NewQBasicMutexFromPointer(cthis)
+}
 func NewQMutexFromPointer(cthis unsafe.Pointer) *QMutex {
 	bcthis0 := NewQBasicMutexFromPointer(cthis)
 	return &QMutex{bcthis0}
+}
+func (*QMutex) NewFromPointer(cthis unsafe.Pointer) *QMutex {
+	return NewQMutexFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qmutex.h:130
@@ -66,7 +72,7 @@ func NewQMutexFromPointer(cthis unsafe.Pointer) *QMutex {
 // void QMutex(enum QMutex::RecursionMode)
 func NewQMutex(mode int) *QMutex {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutexC2ENS_13RecursionModeE", ffiqt.FFI_TYPE_VOID, cthis, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutexC2ENS_13RecursionModeE", ffiqt.FFI_TYPE_VOID, cthis, mode)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMutexFromPointer(cthis)
 	return gothis
@@ -95,7 +101,7 @@ func (this *QMutex) Lock() {
 // Public
 // bool tryLock(int)
 func (this *QMutex) TryLock(timeout int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutex7tryLockEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &timeout)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutex7tryLockEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -131,5 +137,10 @@ func (this *QMutex) IsRecursive() bool {
 	//  return rv
 	return rv != 0
 }
+
+type QMutex__RecursionMode = int
+
+const QMutex__NonRecursive QMutex__RecursionMode = 0
+const QMutex__Recursive QMutex__RecursionMode = 1
 
 //  body block end

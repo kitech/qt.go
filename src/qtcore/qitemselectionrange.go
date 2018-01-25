@@ -55,8 +55,14 @@ func (this *QItemSelectionRange) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QItemSelectionRange) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQItemSelectionRangeFromPointer(cthis unsafe.Pointer) *QItemSelectionRange {
 	return &QItemSelectionRange{&qtrt.CObject{cthis}}
+}
+func (*QItemSelectionRange) NewFromPointer(cthis unsafe.Pointer) *QItemSelectionRange {
+	return NewQItemSelectionRangeFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:56
@@ -203,9 +209,11 @@ func (this *QItemSelectionRange) BottomRight() *QPersistentModelIndex {
 // Public inline
 // QModelIndex parent()
 func (this *QItemSelectionRange) Parent() *QModelIndex /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange6parentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange6parentEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -240,7 +248,7 @@ func (this *QItemSelectionRange) Contains(index *QModelIndex) bool {
 // bool contains(int, int, const class QModelIndex &)
 func (this *QItemSelectionRange) Contains_1(row int, column int, parentIndex *QModelIndex) bool {
 	var convArg2 = parentIndex.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange8containsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange8containsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -263,10 +271,12 @@ func (this *QItemSelectionRange) Intersects(other *QItemSelectionRange) bool {
 // Public
 // QItemSelectionRange intersected(const class QItemSelectionRange &)
 func (this *QItemSelectionRange) Intersected(other *QItemSelectionRange) *QItemSelectionRange /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQItemSelectionRangeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

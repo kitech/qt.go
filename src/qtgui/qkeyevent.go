@@ -59,9 +59,15 @@ func (this *QKeyEvent) GetCthis() unsafe.Pointer {
 		return this.QInputEvent.GetCthis()
 	}
 }
+func (this *QKeyEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QInputEvent = NewQInputEventFromPointer(cthis)
+}
 func NewQKeyEventFromPointer(cthis unsafe.Pointer) *QKeyEvent {
 	bcthis0 := NewQInputEventFromPointer(cthis)
 	return &QKeyEvent{bcthis0}
+}
+func (*QKeyEvent) NewFromPointer(cthis unsafe.Pointer) *QKeyEvent {
+	return NewQKeyEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:343
@@ -89,7 +95,7 @@ func (this *QKeyEvent) Key() int {
 // Public
 // bool matches(class QKeySequence::StandardKey)
 func (this *QKeyEvent) Matches(key int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent7matchesEN12QKeySequence11StandardKeyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent7matchesEN12QKeySequence11StandardKeyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), key)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -111,9 +117,11 @@ func (this *QKeyEvent) Modifiers() int {
 // Public inline
 // QString text()
 func (this *QKeyEvent) Text() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent4textEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

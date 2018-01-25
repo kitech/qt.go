@@ -55,9 +55,15 @@ func (this *QTranslator) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QTranslator) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQTranslatorFromPointer(cthis unsafe.Pointer) *QTranslator {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QTranslator{bcthis0}
+}
+func (*QTranslator) NewFromPointer(cthis unsafe.Pointer) *QTranslator {
+	return NewQTranslatorFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qtranslator.h:56
@@ -99,15 +105,17 @@ func DeleteQTranslator(*QTranslator) {
 // Public virtual
 // QString translate(const char *, const char *, const char *, int)
 func (this *QTranslator) Translate(context string, sourceText string, disambiguation string, n int) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = qtrt.CString(context)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(sourceText)
 	defer qtrt.FreeMem(convArg1)
 	var convArg2 = qtrt.CString(disambiguation)
 	defer qtrt.FreeMem(convArg2)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTranslator9translateEPKcS1_S1_i", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, &n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTranslator9translateEPKcS1_S1_i", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, convArg2, n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -160,7 +168,7 @@ func (this *QTranslator) Load_1(locale *QLocale, filename *QString, prefix *QStr
 // bool load(const uchar *, int, const class QString &)
 func (this *QTranslator) Load_2(data unsafe.Pointer /*666*/, len int, directory *QString) bool {
 	var convArg2 = directory.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTranslator4loadEPKhiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), data, &len, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTranslator4loadEPKhiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &data, len, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

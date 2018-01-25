@@ -59,8 +59,14 @@ func (this *QPixmapCache) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QPixmapCache) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQPixmapCacheFromPointer(cthis unsafe.Pointer) *QPixmapCache {
 	return &QPixmapCache{&qtrt.CObject{cthis}}
+}
+func (*QPixmapCache) NewFromPointer(cthis unsafe.Pointer) *QPixmapCache {
+	return NewQPixmapCacheFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qpixmapcache.h:77

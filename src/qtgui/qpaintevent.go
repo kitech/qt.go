@@ -59,9 +59,15 @@ func (this *QPaintEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QPaintEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQPaintEventFromPointer(cthis unsafe.Pointer) *QPaintEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QPaintEvent{bcthis0}
+}
+func (*QPaintEvent) NewFromPointer(cthis unsafe.Pointer) *QPaintEvent {
+	return NewQPaintEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:405

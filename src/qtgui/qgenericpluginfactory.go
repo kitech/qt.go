@@ -59,8 +59,14 @@ func (this *QGenericPluginFactory) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QGenericPluginFactory) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQGenericPluginFactoryFromPointer(cthis unsafe.Pointer) *QGenericPluginFactory {
 	return &QGenericPluginFactory{&qtrt.CObject{cthis}}
+}
+func (*QGenericPluginFactory) NewFromPointer(cthis unsafe.Pointer) *QGenericPluginFactory {
+	return NewQGenericPluginFactoryFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qgenericpluginfactory.h:56

@@ -63,9 +63,15 @@ func (this *QGraphicsPathItem) GetCthis() unsafe.Pointer {
 		return this.QAbstractGraphicsShapeItem.GetCthis()
 	}
 }
+func (this *QGraphicsPathItem) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractGraphicsShapeItem = NewQAbstractGraphicsShapeItemFromPointer(cthis)
+}
 func NewQGraphicsPathItemFromPointer(cthis unsafe.Pointer) *QGraphicsPathItem {
 	bcthis0 := NewQAbstractGraphicsShapeItemFromPointer(cthis)
 	return &QGraphicsPathItem{bcthis0}
+}
+func (*QGraphicsPathItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsPathItem {
+	return NewQGraphicsPathItemFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:628
@@ -109,9 +115,11 @@ func DeleteQGraphicsPathItem(*QGraphicsPathItem) {
 // Public
 // QPainterPath path()
 func (this *QGraphicsPathItem) Path() *qtgui.QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsPathItem4pathEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsPathItem4pathEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -131,9 +139,11 @@ func (this *QGraphicsPathItem) SetPath(path *qtgui.QPainterPath) {
 // Public virtual
 // QRectF boundingRect()
 func (this *QGraphicsPathItem) BoundingRect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsPathItem12boundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsPathItem12boundingRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -143,9 +153,11 @@ func (this *QGraphicsPathItem) BoundingRect() *qtcore.QRectF /*123*/ {
 // Public virtual
 // QPainterPath shape()
 func (this *QGraphicsPathItem) Shape() *qtgui.QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsPathItem5shapeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsPathItem5shapeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -191,9 +203,11 @@ func (this *QGraphicsPathItem) IsObscuredBy(item *QGraphicsItem /*444 const QGra
 // Public virtual
 // QPainterPath opaqueArea()
 func (this *QGraphicsPathItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsPathItem10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsPathItem10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -214,7 +228,7 @@ func (this *QGraphicsPathItem) Type() int {
 // Protected virtual
 // bool supportsExtension(enum QGraphicsItem::Extension)
 func (this *QGraphicsPathItem) SupportsExtension(extension int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsPathItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &extension)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsPathItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -226,7 +240,7 @@ func (this *QGraphicsPathItem) SupportsExtension(extension int) bool {
 // void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
 func (this *QGraphicsPathItem) SetExtension(extension int, variant *qtcore.QVariant) {
 	var convArg1 = variant.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsPathItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &extension, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsPathItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -235,12 +249,18 @@ func (this *QGraphicsPathItem) SetExtension(extension int, variant *qtcore.QVari
 // Protected virtual
 // QVariant extension(const class QVariant &)
 func (this *QGraphicsPathItem) Extension(variant *qtcore.QVariant) *qtcore.QVariant /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = variant.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsPathItem9extensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsPathItem9extensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
+
+type QGraphicsPathItem__ = int
+
+const QGraphicsPathItem__Type QGraphicsPathItem__ = 2
 
 //  body block end

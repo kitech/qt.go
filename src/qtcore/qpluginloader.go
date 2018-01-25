@@ -55,9 +55,15 @@ func (this *QPluginLoader) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QPluginLoader) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQPluginLoaderFromPointer(cthis unsafe.Pointer) *QPluginLoader {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QPluginLoader{bcthis0}
+}
+func (*QPluginLoader) NewFromPointer(cthis unsafe.Pointer) *QPluginLoader {
+	return NewQPluginLoaderFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qpluginloader.h:58
@@ -125,9 +131,11 @@ func (this *QPluginLoader) Instance() *QObject /*444 QObject **/ {
 // Public
 // QJsonObject metaData()
 func (this *QPluginLoader) MetaData() *QJsonObject /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader8metaDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader8metaDataEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQJsonObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -180,9 +188,11 @@ func (this *QPluginLoader) SetFileName(fileName *QString) {
 // Public
 // QString fileName()
 func (this *QPluginLoader) FileName() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader8fileNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader8fileNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -192,9 +202,11 @@ func (this *QPluginLoader) FileName() *QString /*123*/ {
 // Public
 // QString errorString()
 func (this *QPluginLoader) ErrorString() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader11errorStringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

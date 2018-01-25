@@ -55,8 +55,14 @@ func (this *QJsonValueRef) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QJsonValueRef) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQJsonValueRefFromPointer(cthis unsafe.Pointer) *QJsonValueRef {
 	return &QJsonValueRef{&qtrt.CObject{cthis}}
+}
+func (*QJsonValueRef) NewFromPointer(cthis unsafe.Pointer) *QJsonValueRef {
+	return NewQJsonValueRefFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:174
@@ -66,7 +72,7 @@ func NewQJsonValueRefFromPointer(cthis unsafe.Pointer) *QJsonValueRef {
 func NewQJsonValueRef(array *QJsonArray /*444 QJsonArray **/, idx int) *QJsonValueRef {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = array.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonValueRefC2EP10QJsonArrayi", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &idx)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonValueRefC2EP10QJsonArrayi", ffiqt.FFI_TYPE_VOID, cthis, convArg0, idx)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJsonValueRefFromPointer(cthis)
 	return gothis
@@ -79,7 +85,7 @@ func NewQJsonValueRef(array *QJsonArray /*444 QJsonArray **/, idx int) *QJsonVal
 func NewQJsonValueRef_1(object *QJsonObject /*444 QJsonObject **/, idx int) *QJsonValueRef {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = object.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonValueRefC2EP11QJsonObjecti", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &idx)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonValueRefC2EP11QJsonObjecti", ffiqt.FFI_TYPE_VOID, cthis, convArg0, idx)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJsonValueRefFromPointer(cthis)
 	return gothis
@@ -90,9 +96,11 @@ func NewQJsonValueRef_1(object *QJsonObject /*444 QJsonObject **/, idx int) *QJs
 // Public
 // QVariant toVariant()
 func (this *QJsonValueRef) ToVariant() *QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef9toVariantEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef9toVariantEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -201,7 +209,7 @@ func (this *QJsonValueRef) ToBool() bool {
 // Public inline
 // bool toBool(_Bool)
 func (this *QJsonValueRef) ToBool_1(defaultValue bool) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6toBoolEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &defaultValue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6toBoolEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -223,7 +231,7 @@ func (this *QJsonValueRef) ToInt() int {
 // Public inline
 // int toInt(int)
 func (this *QJsonValueRef) ToInt_1(defaultValue int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &defaultValue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -245,7 +253,7 @@ func (this *QJsonValueRef) ToDouble() float64 {
 // Public inline
 // double toDouble(double)
 func (this *QJsonValueRef) ToDouble_1(defaultValue float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &defaultValue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float64(rv) // 111
@@ -256,9 +264,11 @@ func (this *QJsonValueRef) ToDouble_1(defaultValue float64) float64 {
 // Public inline
 // QString toString()
 func (this *QJsonValueRef) ToString() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toStringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -268,10 +278,12 @@ func (this *QJsonValueRef) ToString() *QString /*123*/ {
 // Public inline
 // QString toString(const class QString &)
 func (this *QJsonValueRef) ToString_1(defaultValue *QString) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = defaultValue.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toStringERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toStringERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -281,9 +293,11 @@ func (this *QJsonValueRef) ToString_1(defaultValue *QString) *QString /*123*/ {
 // Public
 // QJsonArray toArray()
 func (this *QJsonValueRef) ToArray() *QJsonArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef7toArrayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef7toArrayEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQJsonArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -293,9 +307,11 @@ func (this *QJsonValueRef) ToArray() *QJsonArray /*123*/ {
 // Public
 // QJsonObject toObject()
 func (this *QJsonValueRef) ToObject() *QJsonObject /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toObjectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQJsonObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

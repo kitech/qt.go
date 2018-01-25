@@ -63,9 +63,15 @@ func (this *QStyleOptionButton) GetCthis() unsafe.Pointer {
 		return this.QStyleOption.GetCthis()
 	}
 }
+func (this *QStyleOptionButton) SetCthis(cthis unsafe.Pointer) {
+	this.QStyleOption = NewQStyleOptionFromPointer(cthis)
+}
 func NewQStyleOptionButtonFromPointer(cthis unsafe.Pointer) *QStyleOptionButton {
 	bcthis0 := NewQStyleOptionFromPointer(cthis)
 	return &QStyleOptionButton{bcthis0}
+}
+func (*QStyleOptionButton) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionButton {
+	return NewQStyleOptionButtonFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:248
@@ -86,10 +92,27 @@ func NewQStyleOptionButton() *QStyleOptionButton {
 // void QStyleOptionButton(int)
 func NewQStyleOptionButton_1(version int) *QStyleOptionButton {
 	cthis := qtrt.Calloc(1, 256) // 96
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionButtonC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionButtonC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionButtonFromPointer(cthis)
 	return gothis
 }
+
+type QStyleOptionButton__StyleOptionType = int
+
+const QStyleOptionButton__Type QStyleOptionButton__StyleOptionType = 2
+
+type QStyleOptionButton__StyleOptionVersion = int
+
+const QStyleOptionButton__Version QStyleOptionButton__StyleOptionVersion = 1
+
+type QStyleOptionButton__ButtonFeature = int
+
+const QStyleOptionButton__None QStyleOptionButton__ButtonFeature = 0
+const QStyleOptionButton__Flat QStyleOptionButton__ButtonFeature = 1
+const QStyleOptionButton__HasMenu QStyleOptionButton__ButtonFeature = 2
+const QStyleOptionButton__DefaultButton QStyleOptionButton__ButtonFeature = 4
+const QStyleOptionButton__AutoDefaultButton QStyleOptionButton__ButtonFeature = 8
+const QStyleOptionButton__CommandLinkButton QStyleOptionButton__ButtonFeature = 16
 
 //  body block end

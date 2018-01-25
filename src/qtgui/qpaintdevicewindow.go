@@ -60,10 +60,17 @@ func (this *QPaintDeviceWindow) GetCthis() unsafe.Pointer {
 		return this.QWindow.GetCthis()
 	}
 }
+func (this *QPaintDeviceWindow) SetCthis(cthis unsafe.Pointer) {
+	this.QWindow = NewQWindowFromPointer(cthis)
+	this.QPaintDevice = NewQPaintDeviceFromPointer(cthis)
+}
 func NewQPaintDeviceWindowFromPointer(cthis unsafe.Pointer) *QPaintDeviceWindow {
 	bcthis0 := NewQWindowFromPointer(cthis)
 	bcthis1 := NewQPaintDeviceFromPointer(cthis)
 	return &QPaintDeviceWindow{bcthis0, bcthis1}
+}
+func (*QPaintDeviceWindow) NewFromPointer(cthis unsafe.Pointer) *QPaintDeviceWindow {
+	return NewQPaintDeviceWindowFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:54
@@ -122,7 +129,7 @@ func (this *QPaintDeviceWindow) PaintEvent(event *QPaintEvent /*444 QPaintEvent 
 // Protected virtual
 // int metric(enum QPaintDevice::PaintDeviceMetric)
 func (this *QPaintDeviceWindow) Metric(metric int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QPaintDeviceWindow6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &metric)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QPaintDeviceWindow6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), metric)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111

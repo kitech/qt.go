@@ -59,9 +59,15 @@ func (this *QImageIOPlugin) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QImageIOPlugin) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQImageIOPluginFromPointer(cthis unsafe.Pointer) *QImageIOPlugin {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QImageIOPlugin{bcthis0}
+}
+func (*QImageIOPlugin) NewFromPointer(cthis unsafe.Pointer) *QImageIOPlugin {
+	return NewQImageIOPluginFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:141
@@ -124,5 +130,11 @@ func (this *QImageIOPlugin) Create(device *qtcore.QIODevice /*444 QIODevice **/,
 	rv2 := /*==*/ NewQImageIOHandlerFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
+
+type QImageIOPlugin__Capability = int
+
+const QImageIOPlugin__CanRead QImageIOPlugin__Capability = 1
+const QImageIOPlugin__CanWrite QImageIOPlugin__Capability = 2
+const QImageIOPlugin__CanReadIncremental QImageIOPlugin__Capability = 4
 
 //  body block end

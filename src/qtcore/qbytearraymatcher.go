@@ -55,8 +55,14 @@ func (this *QByteArrayMatcher) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QByteArrayMatcher) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQByteArrayMatcherFromPointer(cthis unsafe.Pointer) *QByteArrayMatcher {
 	return &QByteArrayMatcher{&qtrt.CObject{cthis}}
+}
+func (*QByteArrayMatcher) NewFromPointer(cthis unsafe.Pointer) *QByteArrayMatcher {
+	return NewQByteArrayMatcherFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qbytearraymatcher.h:53
@@ -92,7 +98,7 @@ func NewQByteArrayMatcher_2(pattern string, length int) *QByteArrayMatcher {
 	cthis := qtrt.Calloc(1, 256) // 1040
 	var convArg0 = qtrt.CString(pattern)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherC2EPKci", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &length)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherC2EPKci", ffiqt.FFI_TYPE_VOID, cthis, convArg0, length)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQByteArrayMatcherFromPointer(cthis)
 	return gothis
@@ -123,7 +129,7 @@ func (this *QByteArrayMatcher) SetPattern(pattern *QByteArray) {
 // int indexIn(const class QByteArray &, int)
 func (this *QByteArrayMatcher) IndexIn(ba *QByteArray, from int) int {
 	var convArg0 = ba.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInERK10QByteArrayi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInERK10QByteArrayi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -136,7 +142,7 @@ func (this *QByteArrayMatcher) IndexIn(ba *QByteArray, from int) int {
 func (this *QByteArrayMatcher) IndexIn_1(str string, len int, from int) int {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInEPKcii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &len, &from)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInEPKcii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -147,9 +153,11 @@ func (this *QByteArrayMatcher) IndexIn_1(str string, len int, from int) int {
 // Public inline
 // QByteArray pattern()
 func (this *QByteArrayMatcher) Pattern() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7patternEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7patternEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

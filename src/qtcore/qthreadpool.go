@@ -55,9 +55,15 @@ func (this *QThreadPool) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QThreadPool) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQThreadPoolFromPointer(cthis unsafe.Pointer) *QThreadPool {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QThreadPool{bcthis0}
+}
+func (*QThreadPool) NewFromPointer(cthis unsafe.Pointer) *QThreadPool {
+	return NewQThreadPoolFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qthreadpool.h:56
@@ -117,7 +123,7 @@ func QThreadPool_GlobalInstance() *QThreadPool /*444 QThreadPool **/ {
 // void start(class QRunnable *, int)
 func (this *QThreadPool) Start(runnable *QRunnable /*444 QRunnable **/, priority int) {
 	var convArg0 = runnable.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool5startEP9QRunnablei", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &priority)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool5startEP9QRunnablei", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, priority)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -149,7 +155,7 @@ func (this *QThreadPool) ExpiryTimeout() int {
 // Public
 // void setExpiryTimeout(int)
 func (this *QThreadPool) SetExpiryTimeout(expiryTimeout int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool16setExpiryTimeoutEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &expiryTimeout)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool16setExpiryTimeoutEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), expiryTimeout)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -169,7 +175,7 @@ func (this *QThreadPool) MaxThreadCount() int {
 // Public
 // void setMaxThreadCount(int)
 func (this *QThreadPool) SetMaxThreadCount(maxThreadCount int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool17setMaxThreadCountEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &maxThreadCount)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool17setMaxThreadCountEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), maxThreadCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -189,7 +195,7 @@ func (this *QThreadPool) ActiveThreadCount() int {
 // Public
 // void setStackSize(uint)
 func (this *QThreadPool) SetStackSize(stackSize uint) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool12setStackSizeEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &stackSize)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool12setStackSizeEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), stackSize)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -227,7 +233,7 @@ func (this *QThreadPool) ReleaseThread() {
 // Public
 // bool waitForDone(int)
 func (this *QThreadPool) WaitForDone(msecs int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool11waitForDoneEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msecs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool11waitForDoneEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

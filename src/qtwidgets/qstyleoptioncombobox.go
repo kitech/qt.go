@@ -63,9 +63,15 @@ func (this *QStyleOptionComboBox) GetCthis() unsafe.Pointer {
 		return this.QStyleOptionComplex.GetCthis()
 	}
 }
+func (this *QStyleOptionComboBox) SetCthis(cthis unsafe.Pointer) {
+	this.QStyleOptionComplex = NewQStyleOptionComplexFromPointer(cthis)
+}
 func NewQStyleOptionComboBoxFromPointer(cthis unsafe.Pointer) *QStyleOptionComboBox {
 	bcthis0 := NewQStyleOptionComplexFromPointer(cthis)
 	return &QStyleOptionComboBox{bcthis0}
+}
+func (*QStyleOptionComboBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionComboBox {
+	return NewQStyleOptionComboBoxFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:601
@@ -86,10 +92,18 @@ func NewQStyleOptionComboBox() *QStyleOptionComboBox {
 // void QStyleOptionComboBox(int)
 func NewQStyleOptionComboBox_1(version int) *QStyleOptionComboBox {
 	cthis := qtrt.Calloc(1, 256) // 120
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionComboBoxC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionComboBoxC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionComboBoxFromPointer(cthis)
 	return gothis
 }
+
+type QStyleOptionComboBox__StyleOptionType = int
+
+const QStyleOptionComboBox__Type QStyleOptionComboBox__StyleOptionType = 983044
+
+type QStyleOptionComboBox__StyleOptionVersion = int
+
+const QStyleOptionComboBox__Version QStyleOptionComboBox__StyleOptionVersion = 1
 
 //  body block end

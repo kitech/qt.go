@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 217
+// extern C begin: 221
 */
 // import "C"
 import "unsafe"
@@ -55,8 +55,14 @@ func (this *QCharRef) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QCharRef) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQCharRefFromPointer(cthis unsafe.Pointer) *QCharRef {
 	return &QCharRef{&qtrt.CObject{cthis}}
+}
+func (*QCharRef) NewFromPointer(cthis unsafe.Pointer) *QCharRef {
+	return NewQCharRefFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qstring.h:1054
@@ -207,9 +213,11 @@ func (this *QCharRef) DigitValue() int {
 // Public inline
 // QChar toLower()
 func (this *QCharRef) ToLower() *QChar /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QCharRef7toLowerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QCharRef7toLowerEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -219,9 +227,11 @@ func (this *QCharRef) ToLower() *QChar /*123*/ {
 // Public inline
 // QChar toUpper()
 func (this *QCharRef) ToUpper() *QChar /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QCharRef7toUpperEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QCharRef7toUpperEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -231,9 +241,11 @@ func (this *QCharRef) ToUpper() *QChar /*123*/ {
 // Public inline
 // QChar toTitleCase()
 func (this *QCharRef) ToTitleCase() *QChar /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QCharRef11toTitleCaseEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QCharRef11toTitleCaseEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -298,9 +310,11 @@ func (this *QCharRef) HasMirrored() bool {
 // Public inline
 // QChar mirroredChar()
 func (this *QCharRef) MirroredChar() *QChar /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QCharRef12mirroredCharEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QCharRef12mirroredCharEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -310,9 +324,11 @@ func (this *QCharRef) MirroredChar() *QChar /*123*/ {
 // Public inline
 // QString decomposition()
 func (this *QCharRef) Decomposition() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QCharRef13decompositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QCharRef13decompositionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -388,7 +404,7 @@ func (this *QCharRef) Row() byte {
 // Public inline
 // void setCell(uchar)
 func (this *QCharRef) SetCell(cell byte) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QCharRef7setCellEh", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &cell)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QCharRef7setCellEh", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cell)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -397,7 +413,7 @@ func (this *QCharRef) SetCell(cell byte) {
 // Public inline
 // void setRow(uchar)
 func (this *QCharRef) SetRow(row byte) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QCharRef6setRowEh", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QCharRef6setRowEh", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
 }
 

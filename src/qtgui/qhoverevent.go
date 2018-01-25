@@ -59,9 +59,15 @@ func (this *QHoverEvent) GetCthis() unsafe.Pointer {
 		return this.QInputEvent.GetCthis()
 	}
 }
+func (this *QHoverEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QInputEvent = NewQInputEventFromPointer(cthis)
+}
 func NewQHoverEventFromPointer(cthis unsafe.Pointer) *QHoverEvent {
 	bcthis0 := NewQInputEventFromPointer(cthis)
 	return &QHoverEvent{bcthis0}
+}
+func (*QHoverEvent) NewFromPointer(cthis unsafe.Pointer) *QHoverEvent {
+	return NewQHoverEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:158
@@ -78,9 +84,11 @@ func DeleteQHoverEvent(*QHoverEvent) {
 // Public inline
 // QPoint pos()
 func (this *QHoverEvent) Pos() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHoverEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHoverEvent3posEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -90,9 +98,11 @@ func (this *QHoverEvent) Pos() *qtcore.QPoint /*123*/ {
 // Public inline
 // QPoint oldPos()
 func (this *QHoverEvent) OldPos() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHoverEvent6oldPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHoverEvent6oldPosEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

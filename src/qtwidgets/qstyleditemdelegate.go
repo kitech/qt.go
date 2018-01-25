@@ -63,9 +63,15 @@ func (this *QStyledItemDelegate) GetCthis() unsafe.Pointer {
 		return this.QAbstractItemDelegate.GetCthis()
 	}
 }
+func (this *QStyledItemDelegate) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractItemDelegate = NewQAbstractItemDelegateFromPointer(cthis)
+}
 func NewQStyledItemDelegateFromPointer(cthis unsafe.Pointer) *QStyledItemDelegate {
 	bcthis0 := NewQAbstractItemDelegateFromPointer(cthis)
 	return &QStyledItemDelegate{bcthis0}
+}
+func (*QStyledItemDelegate) NewFromPointer(cthis unsafe.Pointer) *QStyledItemDelegate {
+	return NewQStyledItemDelegateFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:58
@@ -119,11 +125,13 @@ func (this *QStyledItemDelegate) Paint(painter *qtgui.QPainter /*444 QPainter **
 // Public virtual
 // QSize sizeHint(const class QStyleOptionViewItem &, const class QModelIndex &)
 func (this *QStyledItemDelegate) SizeHint(option *QStyleOptionViewItem, index *qtcore.QModelIndex) *qtcore.QSize /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = option.GetCthis()
 	var convArg1 = index.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -205,11 +213,13 @@ func (this *QStyledItemDelegate) SetItemEditorFactory(factory *QItemEditorFactor
 // Public virtual
 // QString displayText(const class QVariant &, const class QLocale &)
 func (this *QStyledItemDelegate) DisplayText(value *qtcore.QVariant, locale *qtcore.QLocale) *qtcore.QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = value.GetCthis()
 	var convArg1 = locale.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

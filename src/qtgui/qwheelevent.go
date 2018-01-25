@@ -59,9 +59,15 @@ func (this *QWheelEvent) GetCthis() unsafe.Pointer {
 		return this.QInputEvent.GetCthis()
 	}
 }
+func (this *QWheelEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QInputEvent = NewQInputEventFromPointer(cthis)
+}
 func NewQWheelEventFromPointer(cthis unsafe.Pointer) *QWheelEvent {
 	bcthis0 := NewQInputEventFromPointer(cthis)
 	return &QWheelEvent{bcthis0}
+}
+func (*QWheelEvent) NewFromPointer(cthis unsafe.Pointer) *QWheelEvent {
+	return NewQWheelEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:196
@@ -78,9 +84,11 @@ func DeleteQWheelEvent(*QWheelEvent) {
 // Public inline
 // QPoint pixelDelta()
 func (this *QWheelEvent) PixelDelta() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWheelEvent10pixelDeltaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWheelEvent10pixelDeltaEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -90,9 +98,11 @@ func (this *QWheelEvent) PixelDelta() *qtcore.QPoint /*123*/ {
 // Public inline
 // QPoint angleDelta()
 func (this *QWheelEvent) AngleDelta() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWheelEvent10angleDeltaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWheelEvent10angleDeltaEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -124,9 +134,11 @@ func (this *QWheelEvent) Orientation() int {
 // Public inline
 // QPoint pos()
 func (this *QWheelEvent) Pos() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWheelEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWheelEvent3posEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -136,9 +148,11 @@ func (this *QWheelEvent) Pos() *qtcore.QPoint /*123*/ {
 // Public inline
 // QPoint globalPos()
 func (this *QWheelEvent) GlobalPos() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWheelEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWheelEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -254,5 +268,9 @@ func (this *QWheelEvent) Source() int {
 	//  return rv
 	return int(rv)
 }
+
+type QWheelEvent__ = int
+
+const QWheelEvent__DefaultDeltasPerStep QWheelEvent__ = 120
 
 //  body block end

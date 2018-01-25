@@ -59,8 +59,14 @@ func (this *QPointingDeviceUniqueId) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QPointingDeviceUniqueId) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQPointingDeviceUniqueIdFromPointer(cthis unsafe.Pointer) *QPointingDeviceUniqueId {
 	return &QPointingDeviceUniqueId{&qtrt.CObject{cthis}}
+}
+func (*QPointingDeviceUniqueId) NewFromPointer(cthis unsafe.Pointer) *QPointingDeviceUniqueId {
+	return NewQPointingDeviceUniqueIdFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:809

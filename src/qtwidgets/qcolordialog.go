@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 30
+// extern C begin: 31
 */
 // import "C"
 import "unsafe"
@@ -63,9 +63,15 @@ func (this *QColorDialog) GetCthis() unsafe.Pointer {
 		return this.QDialog.GetCthis()
 	}
 }
+func (this *QColorDialog) SetCthis(cthis unsafe.Pointer) {
+	this.QDialog = NewQDialogFromPointer(cthis)
+}
 func NewQColorDialogFromPointer(cthis unsafe.Pointer) *QColorDialog {
 	bcthis0 := NewQDialogFromPointer(cthis)
 	return &QColorDialog{bcthis0}
+}
+func (*QColorDialog) NewFromPointer(cthis unsafe.Pointer) *QColorDialog {
+	return NewQColorDialogFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qcolordialog.h:55
@@ -131,9 +137,11 @@ func (this *QColorDialog) SetCurrentColor(color *qtgui.QColor) {
 // Public
 // QColor currentColor()
 func (this *QColorDialog) CurrentColor() *qtgui.QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QColorDialog12currentColorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QColorDialog12currentColorEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -143,9 +151,11 @@ func (this *QColorDialog) CurrentColor() *qtgui.QColor /*123*/ {
 // Public
 // QColor selectedColor()
 func (this *QColorDialog) SelectedColor() *qtgui.QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QColorDialog13selectedColorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QColorDialog13selectedColorEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -155,7 +165,7 @@ func (this *QColorDialog) SelectedColor() *qtgui.QColor /*123*/ {
 // Public
 // void setOption(enum QColorDialog::ColorDialogOption, _Bool)
 func (this *QColorDialog) SetOption(option int, on bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QColorDialog9setOptionENS_17ColorDialogOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &option, &on)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QColorDialog9setOptionENS_17ColorDialogOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -164,7 +174,7 @@ func (this *QColorDialog) SetOption(option int, on bool) {
 // Public
 // bool testOption(enum QColorDialog::ColorDialogOption)
 func (this *QColorDialog) TestOption(option int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QColorDialog10testOptionENS_17ColorDialogOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &option)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QColorDialog10testOptionENS_17ColorDialogOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -198,7 +208,7 @@ func (this *QColorDialog) Open(receiver *qtcore.QObject /*444 QObject **/, membe
 // Public virtual
 // void setVisible(_Bool)
 func (this *QColorDialog) SetVisible(visible bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QColorDialog10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QColorDialog10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -329,8 +339,14 @@ func (this *QColorDialog) ChangeEvent(event *qtcore.QEvent /*444 QEvent **/) {
 // Protected virtual
 // void done(int)
 func (this *QColorDialog) Done(result int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QColorDialog4doneEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &result)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QColorDialog4doneEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), result)
 	gopp.ErrPrint(err, rv)
 }
+
+type QColorDialog__ColorDialogOption = int
+
+const QColorDialog__ShowAlphaChannel QColorDialog__ColorDialogOption = 1
+const QColorDialog__NoButtons QColorDialog__ColorDialogOption = 2
+const QColorDialog__DontUseNativeDialog QColorDialog__ColorDialogOption = 4
 
 //  body block end

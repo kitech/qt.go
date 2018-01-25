@@ -59,8 +59,14 @@ func (this *QTextFrameLayoutData) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTextFrameLayoutData) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTextFrameLayoutDataFromPointer(cthis unsafe.Pointer) *QTextFrameLayoutData {
 	return &QTextFrameLayoutData{&qtrt.CObject{cthis}}
+}
+func (*QTextFrameLayoutData) NewFromPointer(cthis unsafe.Pointer) *QTextFrameLayoutData {
+	return NewQTextFrameLayoutDataFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:114

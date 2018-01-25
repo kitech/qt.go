@@ -59,9 +59,15 @@ func (this *QTextImageFormat) GetCthis() unsafe.Pointer {
 		return this.QTextCharFormat.GetCthis()
 	}
 }
+func (this *QTextImageFormat) SetCthis(cthis unsafe.Pointer) {
+	this.QTextCharFormat = NewQTextCharFormatFromPointer(cthis)
+}
 func NewQTextImageFormatFromPointer(cthis unsafe.Pointer) *QTextImageFormat {
 	bcthis0 := NewQTextCharFormatFromPointer(cthis)
 	return &QTextImageFormat{bcthis0}
+}
+func (*QTextImageFormat) NewFromPointer(cthis unsafe.Pointer) *QTextImageFormat {
+	return NewQTextImageFormatFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:735
@@ -115,9 +121,11 @@ func (this *QTextImageFormat) SetName(name *qtcore.QString) {
 // Public inline
 // QString name()
 func (this *QTextImageFormat) Name() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextImageFormat4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextImageFormat4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -127,7 +135,7 @@ func (this *QTextImageFormat) Name() *qtcore.QString /*123*/ {
 // Public inline
 // void setWidth(qreal)
 func (this *QTextImageFormat) SetWidth(width float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextImageFormat8setWidthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &width)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextImageFormat8setWidthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -147,7 +155,7 @@ func (this *QTextImageFormat) Width() float64 {
 // Public inline
 // void setHeight(qreal)
 func (this *QTextImageFormat) SetHeight(height float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextImageFormat9setHeightEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &height)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextImageFormat9setHeightEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), height)
 	gopp.ErrPrint(err, rv)
 }
 

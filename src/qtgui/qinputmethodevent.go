@@ -59,9 +59,15 @@ func (this *QInputMethodEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QInputMethodEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQInputMethodEventFromPointer(cthis unsafe.Pointer) *QInputMethodEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QInputMethodEvent{bcthis0}
+}
+func (*QInputMethodEvent) NewFromPointer(cthis unsafe.Pointer) *QInputMethodEvent {
+	return NewQInputMethodEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:555
@@ -91,7 +97,7 @@ func DeleteQInputMethodEvent(*QInputMethodEvent) {
 // void setCommitString(const class QString &, int, int)
 func (this *QInputMethodEvent) SetCommitString(commitString *qtcore.QString, replaceFrom int, replaceLength int) {
 	var convArg0 = commitString.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QInputMethodEvent15setCommitStringERK7QStringii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &replaceFrom, &replaceLength)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QInputMethodEvent15setCommitStringERK7QStringii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, replaceFrom, replaceLength)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -151,5 +157,13 @@ func (this *QInputMethodEvent) ReplacementLength() int {
 	//  return rv
 	return int(rv) // 111
 }
+
+type QInputMethodEvent__AttributeType = int
+
+const QInputMethodEvent__TextFormat QInputMethodEvent__AttributeType = 0
+const QInputMethodEvent__Cursor QInputMethodEvent__AttributeType = 1
+const QInputMethodEvent__Language QInputMethodEvent__AttributeType = 2
+const QInputMethodEvent__Ruby QInputMethodEvent__AttributeType = 3
+const QInputMethodEvent__Selection QInputMethodEvent__AttributeType = 4
 
 //  body block end

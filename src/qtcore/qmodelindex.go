@@ -55,8 +55,14 @@ func (this *QModelIndex) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QModelIndex) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQModelIndexFromPointer(cthis unsafe.Pointer) *QModelIndex {
 	return &QModelIndex{&qtrt.CObject{cthis}}
+}
+func (*QModelIndex) NewFromPointer(cthis unsafe.Pointer) *QModelIndex {
+	return NewQModelIndexFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:58
@@ -120,9 +126,11 @@ func (this *QModelIndex) InternalPointer() unsafe.Pointer /*666*/ {
 // Public inline
 // QModelIndex parent()
 func (this *QModelIndex) Parent() *QModelIndex /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex6parentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex6parentEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -132,9 +140,11 @@ func (this *QModelIndex) Parent() *QModelIndex /*123*/ {
 // Public inline
 // QModelIndex sibling(int, int)
 func (this *QModelIndex) Sibling(row int, column int) *QModelIndex /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex7siblingEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex7siblingEii", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -144,9 +154,11 @@ func (this *QModelIndex) Sibling(row int, column int) *QModelIndex /*123*/ {
 // Public inline
 // QModelIndex child(int, int)
 func (this *QModelIndex) Child(row int, column int) *QModelIndex /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex5childEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex5childEii", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -156,9 +168,11 @@ func (this *QModelIndex) Child(row int, column int) *QModelIndex /*123*/ {
 // Public inline
 // QVariant data(int)
 func (this *QModelIndex) Data(role int) *QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex4dataEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &role)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex4dataEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), role)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

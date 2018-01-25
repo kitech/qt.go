@@ -59,8 +59,14 @@ func (this *QAccessibleInterface) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QAccessibleInterface) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQAccessibleInterfaceFromPointer(cthis unsafe.Pointer) *QAccessibleInterface {
 	return &QAccessibleInterface{&qtrt.CObject{cthis}}
+}
+func (*QAccessibleInterface) NewFromPointer(cthis unsafe.Pointer) *QAccessibleInterface {
+	return NewQAccessibleInterfaceFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:460
@@ -124,7 +130,7 @@ func (this *QAccessibleInterface) FocusChild() *QAccessibleInterface /*444 QAcce
 // Public pure virtual
 // QAccessibleInterface * childAt(int, int)
 func (this *QAccessibleInterface) ChildAt(x int, y int) *QAccessibleInterface /*444 QAccessibleInterface **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface7childAtEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface7childAtEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -148,7 +154,7 @@ func (this *QAccessibleInterface) Parent() *QAccessibleInterface /*444 QAccessib
 // Public pure virtual
 // QAccessibleInterface * child(int)
 func (this *QAccessibleInterface) Child(index int) *QAccessibleInterface /*444 QAccessibleInterface **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface5childEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface5childEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -183,9 +189,11 @@ func (this *QAccessibleInterface) IndexOfChild(arg0 *QAccessibleInterface /*444 
 // Public pure virtual
 // QString text(class QAccessible::Text)
 func (this *QAccessibleInterface) Text(t int) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface4textEN11QAccessible4TextE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &t)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface4textEN11QAccessible4TextE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), t)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -196,7 +204,7 @@ func (this *QAccessibleInterface) Text(t int) *qtcore.QString /*123*/ {
 // void setText(class QAccessible::Text, const class QString &)
 func (this *QAccessibleInterface) SetText(t int, text *qtcore.QString) {
 	var convArg1 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QAccessibleInterface7setTextEN11QAccessible4TextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &t, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QAccessibleInterface7setTextEN11QAccessible4TextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), t, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -205,9 +213,11 @@ func (this *QAccessibleInterface) SetText(t int, text *qtcore.QString) {
 // Public pure virtual
 // QRect rect()
 func (this *QAccessibleInterface) Rect() *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface4rectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface4rectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -239,9 +249,11 @@ func (this *QAccessibleInterface) State() int {
 // Public virtual
 // QColor foregroundColor()
 func (this *QAccessibleInterface) ForegroundColor() *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface15foregroundColorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface15foregroundColorEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -251,9 +263,11 @@ func (this *QAccessibleInterface) ForegroundColor() *QColor /*123*/ {
 // Public virtual
 // QColor backgroundColor()
 func (this *QAccessibleInterface) BackgroundColor() *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface15backgroundColorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface15backgroundColorEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -335,7 +349,7 @@ func (this *QAccessibleInterface) TableCellInterface() *QAccessibleTableCellInte
 // Public virtual
 // void virtual_hook(int, void *)
 func (this *QAccessibleInterface) Virtual_hook(id int, data unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QAccessibleInterface12virtual_hookEiPv", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &id, data)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QAccessibleInterface12virtual_hookEiPv", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id, data)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -344,7 +358,7 @@ func (this *QAccessibleInterface) Virtual_hook(id int, data unsafe.Pointer /*666
 // Public inline virtual
 // void * interface_cast(class QAccessible::InterfaceType)
 func (this *QAccessibleInterface) Interface_cast(arg0 int) unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QAccessibleInterface14interface_castEN11QAccessible13InterfaceTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QAccessibleInterface14interface_castEN11QAccessible13InterfaceTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))

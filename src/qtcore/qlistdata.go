@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 83
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -55,8 +55,14 @@ func (this *QListData) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QListData) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQListDataFromPointer(cthis unsafe.Pointer) *QListData {
 	return &QListData{&qtrt.CObject{cthis}}
+}
+func (*QListData) NewFromPointer(cthis unsafe.Pointer) *QListData {
+	return NewQListDataFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qlist.h:96
@@ -64,7 +70,7 @@ func NewQListDataFromPointer(cthis unsafe.Pointer) *QListData {
 // Public
 // QListData::Data * detach(int)
 func (this *QListData) Detach(alloc int) unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData6detachEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &alloc)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData6detachEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), alloc)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -75,7 +81,7 @@ func (this *QListData) Detach(alloc int) unsafe.Pointer /*666*/ {
 // Public
 // QListData::Data * detach_grow(int *, int)
 func (this *QListData) Detach_grow(i unsafe.Pointer /*666*/, n int) unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData11detach_growEPii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i, &n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData11detach_growEPii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i, n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -86,7 +92,7 @@ func (this *QListData) Detach_grow(i unsafe.Pointer /*666*/, n int) unsafe.Point
 // Public
 // void realloc(int)
 func (this *QListData) Realloc(alloc int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData7reallocEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &alloc)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData7reallocEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), alloc)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -95,7 +101,7 @@ func (this *QListData) Realloc(alloc int) {
 // Public
 // void realloc_grow(int)
 func (this *QListData) Realloc_grow(growth int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData12realloc_growEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &growth)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData12realloc_growEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), growth)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -124,7 +130,7 @@ func (this *QListData) Erase(xi unsafe.Pointer /*666*/) unsafe.Pointer /*666*/ {
 // Public
 // void remove(int)
 func (this *QListData) Remove(i int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData6removeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData6removeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -133,7 +139,7 @@ func (this *QListData) Remove(i int) {
 // Public
 // void remove(int, int)
 func (this *QListData) Remove_1(i int, n int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData6removeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i, &n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData6removeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i, n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -142,7 +148,7 @@ func (this *QListData) Remove_1(i int, n int) {
 // Public
 // void move(int, int)
 func (this *QListData) Move(from int, to int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData4moveEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &from, &to)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData4moveEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), from, to)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -173,7 +179,7 @@ func (this *QListData) IsEmpty() bool {
 // Public inline
 // void ** at(int)
 func (this *QListData) At(i int) unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QListData2atEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QListData2atEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -200,5 +206,9 @@ func (this *QListData) End() unsafe.Pointer /*666*/ {
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
+
+type QListData__ = int
+
+const QListData__DataHeaderSize QListData__ = 16
 
 //  body block end

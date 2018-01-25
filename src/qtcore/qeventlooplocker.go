@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 8
+// extern C begin: 11
 */
 // import "C"
 import "unsafe"
@@ -55,8 +55,14 @@ func (this *QEventLoopLocker) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QEventLoopLocker) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQEventLoopLockerFromPointer(cthis unsafe.Pointer) *QEventLoopLocker {
 	return &QEventLoopLocker{&qtrt.CObject{cthis}}
+}
+func (*QEventLoopLocker) NewFromPointer(cthis unsafe.Pointer) *QEventLoopLocker {
+	return NewQEventLoopLockerFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qeventloop.h:93

@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 42
+// extern C begin: 43
 */
 // import "C"
 import "unsafe"
@@ -63,9 +63,15 @@ func (this *QDataWidgetMapper) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QDataWidgetMapper) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQDataWidgetMapperFromPointer(cthis unsafe.Pointer) *QDataWidgetMapper {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QDataWidgetMapper{bcthis0}
+}
+func (*QDataWidgetMapper) NewFromPointer(cthis unsafe.Pointer) *QDataWidgetMapper {
+	return NewQDataWidgetMapperFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:57
@@ -161,9 +167,11 @@ func (this *QDataWidgetMapper) SetRootIndex(index *qtcore.QModelIndex) {
 // Public
 // QModelIndex rootIndex()
 func (this *QDataWidgetMapper) RootIndex() *qtcore.QModelIndex /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper9rootIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper9rootIndexEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -173,7 +181,7 @@ func (this *QDataWidgetMapper) RootIndex() *qtcore.QModelIndex /*123*/ {
 // Public
 // void setOrientation(Qt::Orientation)
 func (this *QDataWidgetMapper) SetOrientation(aOrientation int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper14setOrientationEN2Qt11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &aOrientation)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper14setOrientationEN2Qt11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), aOrientation)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -193,7 +201,7 @@ func (this *QDataWidgetMapper) Orientation() int {
 // Public
 // void setSubmitPolicy(enum QDataWidgetMapper::SubmitPolicy)
 func (this *QDataWidgetMapper) SetSubmitPolicy(policy int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper15setSubmitPolicyENS_12SubmitPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &policy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper15setSubmitPolicyENS_12SubmitPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -214,7 +222,7 @@ func (this *QDataWidgetMapper) SubmitPolicy() int {
 // void addMapping(class QWidget *, int)
 func (this *QDataWidgetMapper) AddMapping(widget *QWidget /*444 QWidget **/, section int) {
 	var convArg0 = widget.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper10addMappingEP7QWidgeti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &section)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper10addMappingEP7QWidgeti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, section)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -225,7 +233,7 @@ func (this *QDataWidgetMapper) AddMapping(widget *QWidget /*444 QWidget **/, sec
 func (this *QDataWidgetMapper) AddMapping_1(widget *QWidget /*444 QWidget **/, section int, propertyName *qtcore.QByteArray) {
 	var convArg0 = widget.GetCthis()
 	var convArg2 = propertyName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper10addMappingEP7QWidgetiRK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &section, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper10addMappingEP7QWidgetiRK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, section, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -256,10 +264,12 @@ func (this *QDataWidgetMapper) MappedSection(widget *QWidget /*444 QWidget **/) 
 // Public
 // QByteArray mappedPropertyName(class QWidget *)
 func (this *QDataWidgetMapper) MappedPropertyName(widget *QWidget /*444 QWidget **/) *qtcore.QByteArray /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = widget.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -269,7 +279,7 @@ func (this *QDataWidgetMapper) MappedPropertyName(widget *QWidget /*444 QWidget 
 // Public
 // QWidget * mappedWidgetAt(int)
 func (this *QDataWidgetMapper) MappedWidgetAt(section int) *QWidget /*444 QWidget **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper14mappedWidgetAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &section)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper14mappedWidgetAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), section)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -357,7 +367,7 @@ func (this *QDataWidgetMapper) ToPrevious() {
 // Public virtual
 // void setCurrentIndex(int)
 func (this *QDataWidgetMapper) SetCurrentIndex(index int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper15setCurrentIndexEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper15setCurrentIndexEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -376,8 +386,13 @@ func (this *QDataWidgetMapper) SetCurrentModelIndex(index *qtcore.QModelIndex) {
 // Public
 // void currentIndexChanged(int)
 func (this *QDataWidgetMapper) CurrentIndexChanged(index int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper19currentIndexChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper19currentIndexChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
+
+type QDataWidgetMapper__SubmitPolicy = int
+
+const QDataWidgetMapper__AutoSubmit QDataWidgetMapper__SubmitPolicy = 0
+const QDataWidgetMapper__ManualSubmit QDataWidgetMapper__SubmitPolicy = 1
 
 //  body block end

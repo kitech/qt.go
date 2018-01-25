@@ -59,8 +59,14 @@ func (this *QAbstractUndoItem) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QAbstractUndoItem) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQAbstractUndoItemFromPointer(cthis unsafe.Pointer) *QAbstractUndoItem {
 	return &QAbstractUndoItem{&qtrt.CObject{cthis}}
+}
+func (*QAbstractUndoItem) NewFromPointer(cthis unsafe.Pointer) *QAbstractUndoItem {
+	return NewQAbstractUndoItemFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:86

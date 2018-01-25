@@ -59,9 +59,15 @@ func (this *QTouchEvent) GetCthis() unsafe.Pointer {
 		return this.QInputEvent.GetCthis()
 	}
 }
+func (this *QTouchEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QInputEvent = NewQInputEventFromPointer(cthis)
+}
 func NewQTouchEventFromPointer(cthis unsafe.Pointer) *QTouchEvent {
 	bcthis0 := NewQInputEventFromPointer(cthis)
 	return &QTouchEvent{bcthis0}
+}
+func (*QTouchEvent) NewFromPointer(cthis unsafe.Pointer) *QTouchEvent {
+	return NewQTouchEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:947

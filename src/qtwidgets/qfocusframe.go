@@ -63,9 +63,15 @@ func (this *QFocusFrame) GetCthis() unsafe.Pointer {
 		return this.QWidget.GetCthis()
 	}
 }
+func (this *QFocusFrame) SetCthis(cthis unsafe.Pointer) {
+	this.QWidget = NewQWidgetFromPointer(cthis)
+}
 func NewQFocusFrameFromPointer(cthis unsafe.Pointer) *QFocusFrame {
 	bcthis0 := NewQWidgetFromPointer(cthis)
 	return &QFocusFrame{bcthis0}
+}
+func (*QFocusFrame) NewFromPointer(cthis unsafe.Pointer) *QFocusFrame {
+	return NewQFocusFrameFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qfocusframe.h:54

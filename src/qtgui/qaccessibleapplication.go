@@ -59,8 +59,14 @@ func (this *QAccessibleApplication) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QAccessibleApplication) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQAccessibleApplicationFromPointer(cthis unsafe.Pointer) *QAccessibleApplication {
 	return &QAccessibleApplication{&qtrt.CObject{cthis}}
+}
+func (*QAccessibleApplication) NewFromPointer(cthis unsafe.Pointer) *QAccessibleApplication {
+	return NewQAccessibleApplicationFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qaccessibleobject.h:78
@@ -139,7 +145,7 @@ func (this *QAccessibleApplication) Parent() *QAccessibleInterface /*444 QAccess
 // Public virtual
 // QAccessibleInterface * child(int)
 func (this *QAccessibleApplication) Child(index int) *QAccessibleInterface /*444 QAccessibleInterface **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication5childEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication5childEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -151,9 +157,11 @@ func (this *QAccessibleApplication) Child(index int) *QAccessibleInterface /*444
 // Public virtual
 // QString text(class QAccessible::Text)
 func (this *QAccessibleApplication) Text(t int) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication4textEN11QAccessible4TextE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &t)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication4textEN11QAccessible4TextE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), t)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

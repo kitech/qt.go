@@ -63,9 +63,15 @@ func (this *QStyleOptionTabBarBase) GetCthis() unsafe.Pointer {
 		return this.QStyleOption.GetCthis()
 	}
 }
+func (this *QStyleOptionTabBarBase) SetCthis(cthis unsafe.Pointer) {
+	this.QStyleOption = NewQStyleOptionFromPointer(cthis)
+}
 func NewQStyleOptionTabBarBaseFromPointer(cthis unsafe.Pointer) *QStyleOptionTabBarBase {
 	bcthis0 := NewQStyleOptionFromPointer(cthis)
 	return &QStyleOptionTabBarBase{bcthis0}
+}
+func (*QStyleOptionTabBarBase) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionTabBarBase {
+	return NewQStyleOptionTabBarBaseFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:195
@@ -86,10 +92,18 @@ func NewQStyleOptionTabBarBase() *QStyleOptionTabBarBase {
 // void QStyleOptionTabBarBase(int)
 func NewQStyleOptionTabBarBase_1(version int) *QStyleOptionTabBarBase {
 	cthis := qtrt.Calloc(1, 256) // 104
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionTabBarBaseC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionTabBarBaseC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTabBarBaseFromPointer(cthis)
 	return gothis
 }
+
+type QStyleOptionTabBarBase__StyleOptionType = int
+
+const QStyleOptionTabBarBase__Type QStyleOptionTabBarBase__StyleOptionType = 12
+
+type QStyleOptionTabBarBase__StyleOptionVersion = int
+
+const QStyleOptionTabBarBase__Version QStyleOptionTabBarBase__StyleOptionVersion = 2
 
 //  body block end

@@ -59,8 +59,14 @@ func (this *QTouchDevice) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTouchDevice) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTouchDeviceFromPointer(cthis unsafe.Pointer) *QTouchDevice {
 	return &QTouchDevice{&qtrt.CObject{cthis}}
+}
+func (*QTouchDevice) NewFromPointer(cthis unsafe.Pointer) *QTouchDevice {
+	return NewQTouchDeviceFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtouchdevice.h:73
@@ -89,9 +95,11 @@ func DeleteQTouchDevice(*QTouchDevice) {
 // Public
 // QString name()
 func (this *QTouchDevice) Name() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -144,7 +152,7 @@ func (this *QTouchDevice) SetName(name *qtcore.QString) {
 // Public
 // void setType(enum QTouchDevice::DeviceType)
 func (this *QTouchDevice) SetType(devType int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice7setTypeENS_10DeviceTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &devType)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice7setTypeENS_10DeviceTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), devType)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -153,8 +161,23 @@ func (this *QTouchDevice) SetType(devType int) {
 // Public
 // void setMaximumTouchPoints(int)
 func (this *QTouchDevice) SetMaximumTouchPoints(max int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice21setMaximumTouchPointsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &max)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice21setMaximumTouchPointsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), max)
 	gopp.ErrPrint(err, rv)
 }
+
+type QTouchDevice__DeviceType = int
+
+const QTouchDevice__TouchScreen QTouchDevice__DeviceType = 0
+const QTouchDevice__TouchPad QTouchDevice__DeviceType = 1
+
+type QTouchDevice__CapabilityFlag = int
+
+const QTouchDevice__Position QTouchDevice__CapabilityFlag = 1
+const QTouchDevice__Area QTouchDevice__CapabilityFlag = 2
+const QTouchDevice__Pressure QTouchDevice__CapabilityFlag = 4
+const QTouchDevice__Velocity QTouchDevice__CapabilityFlag = 8
+const QTouchDevice__RawPositions QTouchDevice__CapabilityFlag = 16
+const QTouchDevice__NormalizedPosition QTouchDevice__CapabilityFlag = 32
+const QTouchDevice__MouseEmulation QTouchDevice__CapabilityFlag = 64
 
 //  body block end

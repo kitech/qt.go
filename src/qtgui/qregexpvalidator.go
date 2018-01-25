@@ -59,9 +59,15 @@ func (this *QRegExpValidator) GetCthis() unsafe.Pointer {
 		return this.QValidator.GetCthis()
 	}
 }
+func (this *QRegExpValidator) SetCthis(cthis unsafe.Pointer) {
+	this.QValidator = NewQValidatorFromPointer(cthis)
+}
 func NewQRegExpValidatorFromPointer(cthis unsafe.Pointer) *QRegExpValidator {
 	bcthis0 := NewQValidatorFromPointer(cthis)
 	return &QRegExpValidator{bcthis0}
+}
+func (*QRegExpValidator) NewFromPointer(cthis unsafe.Pointer) *QRegExpValidator {
+	return NewQRegExpValidatorFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:173

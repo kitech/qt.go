@@ -63,9 +63,15 @@ func (this *QGraphicsOpacityEffect) GetCthis() unsafe.Pointer {
 		return this.QGraphicsEffect.GetCthis()
 	}
 }
+func (this *QGraphicsOpacityEffect) SetCthis(cthis unsafe.Pointer) {
+	this.QGraphicsEffect = NewQGraphicsEffectFromPointer(cthis)
+}
 func NewQGraphicsOpacityEffectFromPointer(cthis unsafe.Pointer) *QGraphicsOpacityEffect {
 	bcthis0 := NewQGraphicsEffectFromPointer(cthis)
 	return &QGraphicsOpacityEffect{bcthis0}
+}
+func (*QGraphicsOpacityEffect) NewFromPointer(cthis unsafe.Pointer) *QGraphicsOpacityEffect {
+	return NewQGraphicsOpacityEffectFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:254
@@ -118,9 +124,11 @@ func (this *QGraphicsOpacityEffect) Opacity() float64 {
 // Public
 // QBrush opacityMask()
 func (this *QGraphicsOpacityEffect) OpacityMask() *qtgui.QBrush /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsOpacityEffect11opacityMaskEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsOpacityEffect11opacityMaskEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -130,7 +138,7 @@ func (this *QGraphicsOpacityEffect) OpacityMask() *qtgui.QBrush /*123*/ {
 // Public
 // void setOpacity(qreal)
 func (this *QGraphicsOpacityEffect) SetOpacity(opacity float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffect10setOpacityEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &opacity)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffect10setOpacityEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), opacity)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -149,7 +157,7 @@ func (this *QGraphicsOpacityEffect) SetOpacityMask(mask *qtgui.QBrush) {
 // Public
 // void opacityChanged(qreal)
 func (this *QGraphicsOpacityEffect) OpacityChanged(opacity float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffect14opacityChangedEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &opacity)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffect14opacityChangedEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), opacity)
 	gopp.ErrPrint(err, rv)
 }
 

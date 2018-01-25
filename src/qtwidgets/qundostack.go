@@ -63,9 +63,15 @@ func (this *QUndoStack) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QUndoStack) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQUndoStackFromPointer(cthis unsafe.Pointer) *QUndoStack {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QUndoStack{bcthis0}
+}
+func (*QUndoStack) NewFromPointer(cthis unsafe.Pointer) *QUndoStack {
+	return NewQUndoStackFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qundostack.h:89
@@ -148,9 +154,11 @@ func (this *QUndoStack) CanRedo() bool {
 // Public
 // QString undoText()
 func (this *QUndoStack) UndoText() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoStack8undoTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoStack8undoTextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -160,9 +168,11 @@ func (this *QUndoStack) UndoText() *qtcore.QString /*123*/ {
 // Public
 // QString redoText()
 func (this *QUndoStack) RedoText() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoStack8redoTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoStack8redoTextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -194,9 +204,11 @@ func (this *QUndoStack) Index() int {
 // Public
 // QString text(int)
 func (this *QUndoStack) Text(idx int) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoStack4textEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &idx)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoStack4textEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), idx)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -286,7 +298,7 @@ func (this *QUndoStack) EndMacro() {
 // Public
 // void setUndoLimit(int)
 func (this *QUndoStack) SetUndoLimit(limit int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack12setUndoLimitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &limit)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack12setUndoLimitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), limit)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -306,7 +318,7 @@ func (this *QUndoStack) UndoLimit() int {
 // Public
 // const QUndoCommand * command(int)
 func (this *QUndoStack) Command(index int) *QUndoCommand /*444 const QUndoCommand **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoStack7commandEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoStack7commandEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQUndoCommandFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -336,7 +348,7 @@ func (this *QUndoStack) ResetClean() {
 // Public
 // void setIndex(int)
 func (this *QUndoStack) SetIndex(idx int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack8setIndexEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &idx)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack8setIndexEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), idx)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -363,7 +375,7 @@ func (this *QUndoStack) Redo() {
 // Public
 // void setActive(_Bool)
 func (this *QUndoStack) SetActive(active bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack9setActiveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &active)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack9setActiveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), active)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -372,7 +384,7 @@ func (this *QUndoStack) SetActive(active bool) {
 // Public
 // void indexChanged(int)
 func (this *QUndoStack) IndexChanged(idx int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack12indexChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &idx)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack12indexChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), idx)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -381,7 +393,7 @@ func (this *QUndoStack) IndexChanged(idx int) {
 // Public
 // void cleanChanged(_Bool)
 func (this *QUndoStack) CleanChanged(clean bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack12cleanChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &clean)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack12cleanChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), clean)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -390,7 +402,7 @@ func (this *QUndoStack) CleanChanged(clean bool) {
 // Public
 // void canUndoChanged(_Bool)
 func (this *QUndoStack) CanUndoChanged(canUndo bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack14canUndoChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &canUndo)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack14canUndoChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), canUndo)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -399,7 +411,7 @@ func (this *QUndoStack) CanUndoChanged(canUndo bool) {
 // Public
 // void canRedoChanged(_Bool)
 func (this *QUndoStack) CanRedoChanged(canRedo bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack14canRedoChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &canRedo)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack14canRedoChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), canRedo)
 	gopp.ErrPrint(err, rv)
 }
 

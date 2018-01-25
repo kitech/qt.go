@@ -59,8 +59,14 @@ func (this *QSurface) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QSurface) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQSurfaceFromPointer(cthis unsafe.Pointer) *QSurface {
 	return &QSurface{&qtrt.CObject{cthis}}
+}
+func (*QSurface) NewFromPointer(cthis unsafe.Pointer) *QSurface {
+	return NewQSurfaceFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qsurface.h:72
@@ -88,9 +94,11 @@ func (this *QSurface) SurfaceClass() int {
 // Public pure virtual
 // QSurfaceFormat format()
 func (this *QSurface) Format() *QSurfaceFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSurface6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSurface6formatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -122,9 +130,11 @@ func (this *QSurface) SupportsOpenGL() bool {
 // Public pure virtual
 // QSize size()
 func (this *QSurface) Size() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSurface4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSurface4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -135,10 +145,23 @@ func (this *QSurface) Size() *qtcore.QSize /*123*/ {
 // void QSurface(enum QSurface::SurfaceClass)
 func NewQSurface(type_ int) *QSurface {
 	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSurfaceC1ENS_12SurfaceClassE", ffiqt.FFI_TYPE_VOID, cthis, &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSurfaceC1ENS_12SurfaceClassE", ffiqt.FFI_TYPE_VOID, cthis, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSurfaceFromPointer(cthis)
 	return gothis
 }
+
+type QSurface__SurfaceClass = int
+
+const QSurface__Window QSurface__SurfaceClass = 0
+const QSurface__Offscreen QSurface__SurfaceClass = 1
+
+type QSurface__SurfaceType = int
+
+const QSurface__RasterSurface QSurface__SurfaceType = 0
+const QSurface__OpenGLSurface QSurface__SurfaceType = 1
+const QSurface__RasterGLSurface QSurface__SurfaceType = 2
+const QSurface__OpenVGSurface QSurface__SurfaceType = 3
+const QSurface__VulkanSurface QSurface__SurfaceType = 4
 
 //  body block end

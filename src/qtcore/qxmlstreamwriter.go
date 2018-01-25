@@ -55,8 +55,14 @@ func (this *QXmlStreamWriter) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QXmlStreamWriter) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQXmlStreamWriterFromPointer(cthis unsafe.Pointer) *QXmlStreamWriter {
 	return &QXmlStreamWriter{&qtrt.CObject{cthis}}
+}
+func (*QXmlStreamWriter) NewFromPointer(cthis unsafe.Pointer) *QXmlStreamWriter {
+	return NewQXmlStreamWriterFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:472
@@ -179,7 +185,7 @@ func (this *QXmlStreamWriter) Codec() *QTextCodec /*444 QTextCodec **/ {
 // Public
 // void setAutoFormatting(_Bool)
 func (this *QXmlStreamWriter) SetAutoFormatting(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriter17setAutoFormattingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriter17setAutoFormattingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -199,7 +205,7 @@ func (this *QXmlStreamWriter) AutoFormatting() bool {
 // Public
 // void setAutoFormattingIndent(int)
 func (this *QXmlStreamWriter) SetAutoFormattingIndent(spacesOrTabs int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriter23setAutoFormattingIndentEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &spacesOrTabs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriter23setAutoFormattingIndentEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), spacesOrTabs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -426,7 +432,7 @@ func (this *QXmlStreamWriter) WriteStartDocument_1(version *QString) {
 // void writeStartDocument(const class QString &, _Bool)
 func (this *QXmlStreamWriter) WriteStartDocument_2(version *QString, standalone bool) {
 	var convArg0 = version.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriter18writeStartDocumentERK7QStringb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &standalone)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriter18writeStartDocumentERK7QStringb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, standalone)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -55,8 +55,14 @@ func (this *QXmlStreamNotationDeclaration) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QXmlStreamNotationDeclaration) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQXmlStreamNotationDeclarationFromPointer(cthis unsafe.Pointer) *QXmlStreamNotationDeclaration {
 	return &QXmlStreamNotationDeclaration{&qtrt.CObject{cthis}}
+}
+func (*QXmlStreamNotationDeclaration) NewFromPointer(cthis unsafe.Pointer) *QXmlStreamNotationDeclaration {
+	return NewQXmlStreamNotationDeclarationFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:241
@@ -85,9 +91,11 @@ func DeleteQXmlStreamNotationDeclaration(*QXmlStreamNotationDeclaration) {
 // Public inline
 // QStringRef name()
 func (this *QXmlStreamNotationDeclaration) Name() *QStringRef /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -97,9 +105,11 @@ func (this *QXmlStreamNotationDeclaration) Name() *QStringRef /*123*/ {
 // Public inline
 // QStringRef systemId()
 func (this *QXmlStreamNotationDeclaration) SystemId() *QStringRef /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8systemIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8systemIdEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -109,9 +119,11 @@ func (this *QXmlStreamNotationDeclaration) SystemId() *QStringRef /*123*/ {
 // Public inline
 // QStringRef publicId()
 func (this *QXmlStreamNotationDeclaration) PublicId() *QStringRef /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8publicIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8publicIdEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

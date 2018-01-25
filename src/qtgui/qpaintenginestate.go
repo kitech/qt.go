@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 32
+// extern C begin: 36
 */
 // import "C"
 import "unsafe"
@@ -59,8 +59,14 @@ func (this *QPaintEngineState) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QPaintEngineState) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQPaintEngineStateFromPointer(cthis unsafe.Pointer) *QPaintEngineState {
 	return &QPaintEngineState{&qtrt.CObject{cthis}}
+}
+func (*QPaintEngineState) NewFromPointer(cthis unsafe.Pointer) *QPaintEngineState {
+	return NewQPaintEngineStateFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qpaintengine.h:268
@@ -79,9 +85,11 @@ func (this *QPaintEngineState) State() int {
 // Public
 // QPen pen()
 func (this *QPaintEngineState) Pen() *QPen /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState3penEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState3penEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPenFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -91,9 +99,11 @@ func (this *QPaintEngineState) Pen() *QPen /*123*/ {
 // Public
 // QBrush brush()
 func (this *QPaintEngineState) Brush() *QBrush /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState5brushEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState5brushEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -103,9 +113,11 @@ func (this *QPaintEngineState) Brush() *QBrush /*123*/ {
 // Public
 // QPointF brushOrigin()
 func (this *QPaintEngineState) BrushOrigin() *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState11brushOriginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState11brushOriginEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -115,9 +127,11 @@ func (this *QPaintEngineState) BrushOrigin() *qtcore.QPointF /*123*/ {
 // Public
 // QBrush backgroundBrush()
 func (this *QPaintEngineState) BackgroundBrush() *QBrush /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState15backgroundBrushEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState15backgroundBrushEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -138,9 +152,11 @@ func (this *QPaintEngineState) BackgroundMode() int {
 // Public
 // QFont font()
 func (this *QPaintEngineState) Font() *QFont /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState4fontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState4fontEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -150,9 +166,11 @@ func (this *QPaintEngineState) Font() *QFont /*123*/ {
 // Public
 // QMatrix matrix()
 func (this *QPaintEngineState) Matrix() *QMatrix /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState6matrixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState6matrixEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -162,9 +180,11 @@ func (this *QPaintEngineState) Matrix() *QMatrix /*123*/ {
 // Public
 // QTransform transform()
 func (this *QPaintEngineState) Transform() *QTransform /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState9transformEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState9transformEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -185,9 +205,11 @@ func (this *QPaintEngineState) ClipOperation() int {
 // Public
 // QRegion clipRegion()
 func (this *QPaintEngineState) ClipRegion() *QRegion /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState10clipRegionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState10clipRegionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -197,9 +219,11 @@ func (this *QPaintEngineState) ClipRegion() *QRegion /*123*/ {
 // Public
 // QPainterPath clipPath()
 func (this *QPaintEngineState) ClipPath() *QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState8clipPathEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState8clipPathEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

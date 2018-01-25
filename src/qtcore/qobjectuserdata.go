@@ -55,8 +55,14 @@ func (this *QObjectUserData) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QObjectUserData) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQObjectUserDataFromPointer(cthis unsafe.Pointer) *QObjectUserData {
 	return &QObjectUserData{&qtrt.CObject{cthis}}
+}
+func (*QObjectUserData) NewFromPointer(cthis unsafe.Pointer) *QObjectUserData {
+	return NewQObjectUserDataFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qobject.h:478

@@ -55,9 +55,15 @@ func (this *QGenericReturnArgument) GetCthis() unsafe.Pointer {
 		return this.QGenericArgument.GetCthis()
 	}
 }
+func (this *QGenericReturnArgument) SetCthis(cthis unsafe.Pointer) {
+	this.QGenericArgument = NewQGenericArgumentFromPointer(cthis)
+}
 func NewQGenericReturnArgumentFromPointer(cthis unsafe.Pointer) *QGenericReturnArgument {
 	bcthis0 := NewQGenericArgumentFromPointer(cthis)
 	return &QGenericReturnArgument{bcthis0}
+}
+func (*QGenericReturnArgument) NewFromPointer(cthis unsafe.Pointer) *QGenericReturnArgument {
+	return NewQGenericReturnArgumentFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qobjectdefs.h:310

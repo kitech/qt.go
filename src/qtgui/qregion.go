@@ -59,8 +59,14 @@ func (this *QRegion) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QRegion) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQRegionFromPointer(cthis unsafe.Pointer) *QRegion {
 	return &QRegion{&qtrt.CObject{cthis}}
+}
+func (*QRegion) NewFromPointer(cthis unsafe.Pointer) *QRegion {
+	return NewQRegionFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qregion.h:67
@@ -81,7 +87,7 @@ func NewQRegion() *QRegion {
 // void QRegion(int, int, int, int, enum QRegion::RegionType)
 func NewQRegion_1(x int, y int, w int, h int, t int) *QRegion {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2EiiiiNS_10RegionTypeE", ffiqt.FFI_TYPE_VOID, cthis, &x, &y, &w, &h, &t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2EiiiiNS_10RegionTypeE", ffiqt.FFI_TYPE_VOID, cthis, x, y, w, h, t)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRegionFromPointer(cthis)
 	return gothis
@@ -94,7 +100,7 @@ func NewQRegion_1(x int, y int, w int, h int, t int) *QRegion {
 func NewQRegion_2(r *qtcore.QRect, t int) *QRegion {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2ERK5QRectNS_10RegionTypeE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2ERK5QRectNS_10RegionTypeE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, t)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRegionFromPointer(cthis)
 	return gothis
@@ -107,7 +113,7 @@ func NewQRegion_2(r *qtcore.QRect, t int) *QRegion {
 func NewQRegion_3(pa *QPolygon, fillRule int) *QRegion {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = pa.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2ERK8QPolygonN2Qt8FillRuleE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &fillRule)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2ERK8QPolygonN2Qt8FillRuleE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, fillRule)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRegionFromPointer(cthis)
 	return gothis
@@ -244,7 +250,7 @@ func (this *QRegion) Contains_1(r *qtcore.QRect) bool {
 // Public
 // void translate(int, int)
 func (this *QRegion) Translate(dx int, dy int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegion9translateEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegion9translateEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -263,9 +269,11 @@ func (this *QRegion) Translate_1(p *qtcore.QPoint) {
 // Public
 // QRegion translated(int, int)
 func (this *QRegion) Translated(dx int, dy int) *QRegion /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10translatedEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &dx, &dy)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10translatedEii", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -275,10 +283,12 @@ func (this *QRegion) Translated(dx int, dy int) *QRegion /*123*/ {
 // Public inline
 // QRegion translated(const class QPoint &)
 func (this *QRegion) Translated_1(p *qtcore.QPoint) *QRegion /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = p.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10translatedERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10translatedERK6QPoint", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -288,10 +298,12 @@ func (this *QRegion) Translated_1(p *qtcore.QPoint) *QRegion /*123*/ {
 // Public
 // QRegion united(const class QRegion &)
 func (this *QRegion) United(r *QRegion) *QRegion /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion6unitedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion6unitedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -301,10 +313,12 @@ func (this *QRegion) United(r *QRegion) *QRegion /*123*/ {
 // Public
 // QRegion united(const class QRect &)
 func (this *QRegion) United_1(r *qtcore.QRect) *QRegion /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion6unitedERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion6unitedERK5QRect", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -314,10 +328,12 @@ func (this *QRegion) United_1(r *qtcore.QRect) *QRegion /*123*/ {
 // Public
 // QRegion intersected(const class QRegion &)
 func (this *QRegion) Intersected(r *QRegion) *QRegion /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -327,10 +343,12 @@ func (this *QRegion) Intersected(r *QRegion) *QRegion /*123*/ {
 // Public
 // QRegion intersected(const class QRect &)
 func (this *QRegion) Intersected_1(r *qtcore.QRect) *QRegion /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion11intersectedERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion11intersectedERK5QRect", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -340,10 +358,12 @@ func (this *QRegion) Intersected_1(r *qtcore.QRect) *QRegion /*123*/ {
 // Public
 // QRegion subtracted(const class QRegion &)
 func (this *QRegion) Subtracted(r *QRegion) *QRegion /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10subtractedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10subtractedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -353,10 +373,12 @@ func (this *QRegion) Subtracted(r *QRegion) *QRegion /*123*/ {
 // Public
 // QRegion xored(const class QRegion &)
 func (this *QRegion) Xored(r *QRegion) *QRegion /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion5xoredERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion5xoredERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -390,9 +412,11 @@ func (this *QRegion) Intersects_1(r *qtcore.QRect) bool {
 // Public
 // QRect boundingRect()
 func (this *QRegion) BoundingRect() *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion12boundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion12boundingRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -403,7 +427,7 @@ func (this *QRegion) BoundingRect() *qtcore.QRect /*123*/ {
 // void setRects(const class QRect *, int)
 func (this *QRegion) SetRects(rect *qtcore.QRect /*444 const QRect **/, num int) {
 	var convArg0 = rect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegion8setRectsEPK5QRecti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &num)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegion8setRectsEPK5QRecti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, num)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -417,5 +441,10 @@ func (this *QRegion) RectCount() int {
 	//  return rv
 	return int(rv) // 111
 }
+
+type QRegion__RegionType = int
+
+const QRegion__Rectangle QRegion__RegionType = 0
+const QRegion__Ellipse QRegion__RegionType = 1
 
 //  body block end

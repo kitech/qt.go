@@ -55,9 +55,15 @@ func (this *QFileSystemWatcher) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QFileSystemWatcher) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQFileSystemWatcherFromPointer(cthis unsafe.Pointer) *QFileSystemWatcher {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QFileSystemWatcher{bcthis0}
+}
+func (*QFileSystemWatcher) NewFromPointer(cthis unsafe.Pointer) *QFileSystemWatcher {
+	return NewQFileSystemWatcherFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qfilesystemwatcher.h:54

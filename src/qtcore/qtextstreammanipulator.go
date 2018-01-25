@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 41
+// extern C begin: 42
 */
 // import "C"
 import "unsafe"
@@ -55,8 +55,14 @@ func (this *QTextStreamManipulator) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTextStreamManipulator) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTextStreamManipulatorFromPointer(cthis unsafe.Pointer) *QTextStreamManipulator {
 	return &QTextStreamManipulator{&qtrt.CObject{cthis}}
+}
+func (*QTextStreamManipulator) NewFromPointer(cthis unsafe.Pointer) *QTextStreamManipulator {
+	return NewQTextStreamManipulatorFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qtextstream.h:217

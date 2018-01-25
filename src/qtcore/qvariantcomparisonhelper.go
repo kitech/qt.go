@@ -55,8 +55,14 @@ func (this *QVariantComparisonHelper) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QVariantComparisonHelper) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQVariantComparisonHelperFromPointer(cthis unsafe.Pointer) *QVariantComparisonHelper {
 	return &QVariantComparisonHelper{&qtrt.CObject{cthis}}
+}
+func (*QVariantComparisonHelper) NewFromPointer(cthis unsafe.Pointer) *QVariantComparisonHelper {
+	return NewQVariantComparisonHelperFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qvariant.h:560

@@ -55,9 +55,15 @@ func (this *QEventTransition) GetCthis() unsafe.Pointer {
 		return this.QAbstractTransition.GetCthis()
 	}
 }
+func (this *QEventTransition) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractTransition = NewQAbstractTransitionFromPointer(cthis)
+}
 func NewQEventTransitionFromPointer(cthis unsafe.Pointer) *QEventTransition {
 	bcthis0 := NewQAbstractTransitionFromPointer(cthis)
 	return &QEventTransition{bcthis0}
+}
+func (*QEventTransition) NewFromPointer(cthis unsafe.Pointer) *QEventTransition {
+	return NewQEventTransitionFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qeventtransition.h:53
@@ -93,7 +99,7 @@ func NewQEventTransition_1(object *QObject /*444 QObject **/, type_ int, sourceS
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = object.GetCthis()
 	var convArg2 = sourceState.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventTransitionC2EP7QObjectN6QEvent4TypeEP6QState", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &type_, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventTransitionC2EP7QObjectN6QEvent4TypeEP6QState", ffiqt.FFI_TYPE_VOID, cthis, convArg0, type_, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQEventTransitionFromPointer(cthis)
 	return gothis
@@ -146,7 +152,7 @@ func (this *QEventTransition) EventType() int {
 // Public
 // void setEventType(class QEvent::Type)
 func (this *QEventTransition) SetEventType(type_ int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventTransition12setEventTypeEN6QEvent4TypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventTransition12setEventTypeEN6QEvent4TypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
 }
 

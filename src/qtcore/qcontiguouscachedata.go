@@ -55,8 +55,14 @@ func (this *QContiguousCacheData) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QContiguousCacheData) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQContiguousCacheDataFromPointer(cthis unsafe.Pointer) *QContiguousCacheData {
 	return &QContiguousCacheData{&qtrt.CObject{cthis}}
+}
+func (*QContiguousCacheData) NewFromPointer(cthis unsafe.Pointer) *QContiguousCacheData {
+	return NewQContiguousCacheDataFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qcontiguouscache.h:67

@@ -63,9 +63,15 @@ func (this *QFontComboBox) GetCthis() unsafe.Pointer {
 		return this.QComboBox.GetCthis()
 	}
 }
+func (this *QFontComboBox) SetCthis(cthis unsafe.Pointer) {
+	this.QComboBox = NewQComboBoxFromPointer(cthis)
+}
 func NewQFontComboBoxFromPointer(cthis unsafe.Pointer) *QFontComboBox {
 	bcthis0 := NewQComboBoxFromPointer(cthis)
 	return &QFontComboBox{bcthis0}
+}
+func (*QFontComboBox) NewFromPointer(cthis unsafe.Pointer) *QFontComboBox {
+	return NewQFontComboBoxFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qfontcombobox.h:55
@@ -107,7 +113,7 @@ func DeleteQFontComboBox(*QFontComboBox) {
 // Public
 // void setWritingSystem(class QFontDatabase::WritingSystem)
 func (this *QFontComboBox) SetWritingSystem(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontComboBox16setWritingSystemEN13QFontDatabase13WritingSystemE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontComboBox16setWritingSystemEN13QFontDatabase13WritingSystemE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -138,9 +144,11 @@ func (this *QFontComboBox) FontFilters() int {
 // Public
 // QFont currentFont()
 func (this *QFontComboBox) CurrentFont() *qtgui.QFont /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontComboBox11currentFontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontComboBox11currentFontEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -150,9 +158,11 @@ func (this *QFontComboBox) CurrentFont() *qtgui.QFont /*123*/ {
 // Public virtual
 // QSize sizeHint()
 func (this *QFontComboBox) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontComboBox8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontComboBox8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -188,5 +198,13 @@ func (this *QFontComboBox) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
 	//  return rv
 	return rv != 0
 }
+
+type QFontComboBox__FontFilter = int
+
+const QFontComboBox__AllFonts QFontComboBox__FontFilter = 0
+const QFontComboBox__ScalableFonts QFontComboBox__FontFilter = 1
+const QFontComboBox__NonScalableFonts QFontComboBox__FontFilter = 2
+const QFontComboBox__MonospacedFonts QFontComboBox__FontFilter = 4
+const QFontComboBox__ProportionalFonts QFontComboBox__FontFilter = 8
 
 //  body block end

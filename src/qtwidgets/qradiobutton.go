@@ -63,9 +63,15 @@ func (this *QRadioButton) GetCthis() unsafe.Pointer {
 		return this.QAbstractButton.GetCthis()
 	}
 }
+func (this *QRadioButton) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractButton = NewQAbstractButtonFromPointer(cthis)
+}
 func NewQRadioButtonFromPointer(cthis unsafe.Pointer) *QRadioButton {
 	bcthis0 := NewQAbstractButtonFromPointer(cthis)
 	return &QRadioButton{bcthis0}
+}
+func (*QRadioButton) NewFromPointer(cthis unsafe.Pointer) *QRadioButton {
+	return NewQRadioButtonFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qradiobutton.h:56
@@ -121,9 +127,11 @@ func DeleteQRadioButton(*QRadioButton) {
 // Public virtual
 // QSize sizeHint()
 func (this *QRadioButton) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QRadioButton8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QRadioButton8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -133,9 +141,11 @@ func (this *QRadioButton) SizeHint() *qtcore.QSize /*123*/ {
 // Public virtual
 // QSize minimumSizeHint()
 func (this *QRadioButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QRadioButton15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QRadioButton15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

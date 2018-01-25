@@ -55,9 +55,15 @@ func (this *QDynamicPropertyChangeEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QDynamicPropertyChangeEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = NewQEventFromPointer(cthis)
+}
 func NewQDynamicPropertyChangeEventFromPointer(cthis unsafe.Pointer) *QDynamicPropertyChangeEvent {
 	bcthis0 := NewQEventFromPointer(cthis)
 	return &QDynamicPropertyChangeEvent{bcthis0}
+}
+func (*QDynamicPropertyChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QDynamicPropertyChangeEvent {
+	return NewQDynamicPropertyChangeEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:365
@@ -87,9 +93,11 @@ func DeleteQDynamicPropertyChangeEvent(*QDynamicPropertyChangeEvent) {
 // Public inline
 // QByteArray propertyName()
 func (this *QDynamicPropertyChangeEvent) PropertyName() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QDynamicPropertyChangeEvent12propertyNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QDynamicPropertyChangeEvent12propertyNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

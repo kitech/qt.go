@@ -55,9 +55,15 @@ func (this *QAbstractEventDispatcher) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QAbstractEventDispatcher) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQAbstractEventDispatcherFromPointer(cthis unsafe.Pointer) *QAbstractEventDispatcher {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QAbstractEventDispatcher{bcthis0}
+}
+func (*QAbstractEventDispatcher) NewFromPointer(cthis unsafe.Pointer) *QAbstractEventDispatcher {
+	return NewQAbstractEventDispatcherFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qabstracteventdispatcher.h:58
@@ -111,6 +117,17 @@ func QAbstractEventDispatcher_Instance(thread *QThread /*444 QThread **/) *QAbst
 	return rv
 }
 
+// /usr/include/qt/QtCore/qabstracteventdispatcher.h:78
+// index:0
+// Public pure virtual
+// bool processEvents(class QEventLoop::ProcessEventsFlags)
+func (this *QAbstractEventDispatcher) ProcessEvents(flags int) bool {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
+}
+
 // /usr/include/qt/QtCore/qabstracteventdispatcher.h:79
 // index:0
 // Public pure virtual
@@ -148,7 +165,7 @@ func (this *QAbstractEventDispatcher) UnregisterSocketNotifier(notifier *QSocket
 // int registerTimer(int, Qt::TimerType, class QObject *)
 func (this *QAbstractEventDispatcher) RegisterTimer(interval int, timerType int, object *QObject /*444 QObject **/) int {
 	var convArg2 = object.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher13registerTimerEiN2Qt9TimerTypeEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &interval, &timerType, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher13registerTimerEiN2Qt9TimerTypeEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), interval, timerType, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -160,7 +177,7 @@ func (this *QAbstractEventDispatcher) RegisterTimer(interval int, timerType int,
 // void registerTimer(int, int, Qt::TimerType, class QObject *)
 func (this *QAbstractEventDispatcher) RegisterTimer_1(timerId int, interval int, timerType int, object *QObject /*444 QObject **/) {
 	var convArg3 = object.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher13registerTimerEiiN2Qt9TimerTypeEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &timerId, &interval, &timerType, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher13registerTimerEiiN2Qt9TimerTypeEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), timerId, interval, timerType, convArg3)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -169,7 +186,7 @@ func (this *QAbstractEventDispatcher) RegisterTimer_1(timerId int, interval int,
 // Public pure virtual
 // bool unregisterTimer(int)
 func (this *QAbstractEventDispatcher) UnregisterTimer(timerId int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher15unregisterTimerEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &timerId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher15unregisterTimerEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), timerId)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -192,7 +209,7 @@ func (this *QAbstractEventDispatcher) UnregisterTimers(object *QObject /*444 QOb
 // Public pure virtual
 // int remainingTime(int)
 func (this *QAbstractEventDispatcher) RemainingTime(timerId int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher13remainingTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &timerId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher13remainingTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), timerId)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -269,7 +286,7 @@ func (this *QAbstractEventDispatcher) RemoveNativeEventFilter(filterObj *QAbstra
 // bool filterNativeEvent(const class QByteArray &, void *, long *)
 func (this *QAbstractEventDispatcher) FilterNativeEvent(eventType *QByteArray, message unsafe.Pointer /*666*/, result unsafe.Pointer /*666*/) bool {
 	var convArg0 = eventType.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, message, result)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, message, &result)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

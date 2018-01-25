@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 197
+// extern C begin: 202
 */
 // import "C"
 import "unsafe"
@@ -59,8 +59,14 @@ func (this *QTextItem) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTextItem) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTextItemFromPointer(cthis unsafe.Pointer) *QTextItem {
 	return &QTextItem{&qtrt.CObject{cthis}}
+}
+func (*QTextItem) NewFromPointer(cthis unsafe.Pointer) *QTextItem {
+	return NewQTextItemFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qpaintengine.h:75
@@ -112,9 +118,11 @@ func (this *QTextItem) RenderFlags() int {
 // Public
 // QString text()
 func (this *QTextItem) Text() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem4textEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -124,11 +132,21 @@ func (this *QTextItem) Text() *qtcore.QString /*123*/ {
 // Public
 // QFont font()
 func (this *QTextItem) Font() *QFont /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem4fontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem4fontEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
+
+type QTextItem__RenderFlag = int
+
+const QTextItem__RightToLeft QTextItem__RenderFlag = 1
+const QTextItem__Overline QTextItem__RenderFlag = 16
+const QTextItem__Underline QTextItem__RenderFlag = 32
+const QTextItem__StrikeOut QTextItem__RenderFlag = 64
+const QTextItem__Dummy QTextItem__RenderFlag = 4294967295
 
 //  body block end

@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 95
+// extern C begin: 96
 */
 // import "C"
 import "unsafe"
@@ -63,9 +63,15 @@ func (this *QGraphicsSceneEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QGraphicsSceneEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQGraphicsSceneEventFromPointer(cthis unsafe.Pointer) *QGraphicsSceneEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QGraphicsSceneEvent{bcthis0}
+}
+func (*QGraphicsSceneEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphicsSceneEvent {
+	return NewQGraphicsSceneEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:67
@@ -74,7 +80,7 @@ func NewQGraphicsSceneEventFromPointer(cthis unsafe.Pointer) *QGraphicsSceneEven
 // void QGraphicsSceneEvent(enum QEvent::Type)
 func NewQGraphicsSceneEvent(type_ int) *QGraphicsSceneEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsSceneEventFromPointer(cthis)
 	return gothis

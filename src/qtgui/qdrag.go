@@ -59,9 +59,15 @@ func (this *QDrag) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QDrag) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQDragFromPointer(cthis unsafe.Pointer) *QDrag {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QDrag{bcthis0}
+}
+func (*QDrag) NewFromPointer(cthis unsafe.Pointer) *QDrag {
+	return NewQDragFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qdrag.h:59
@@ -135,9 +141,11 @@ func (this *QDrag) SetPixmap(arg0 *QPixmap) {
 // Public
 // QPixmap pixmap()
 func (this *QDrag) Pixmap() *QPixmap /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag6pixmapEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag6pixmapEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -157,9 +165,11 @@ func (this *QDrag) SetHotSpot(hotspot *qtcore.QPoint) {
 // Public
 // QPoint hotSpot()
 func (this *QDrag) HotSpot() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag7hotSpotEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag7hotSpotEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -194,7 +204,7 @@ func (this *QDrag) Target() *qtcore.QObject /*444 QObject **/ {
 // void setDragCursor(const class QPixmap &, Qt::DropAction)
 func (this *QDrag) SetDragCursor(cursor *QPixmap, action int) {
 	var convArg0 = cursor.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag13setDragCursorERK7QPixmapN2Qt10DropActionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &action)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag13setDragCursorERK7QPixmapN2Qt10DropActionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -203,9 +213,11 @@ func (this *QDrag) SetDragCursor(cursor *QPixmap, action int) {
 // Public
 // QPixmap dragCursor(Qt::DropAction)
 func (this *QDrag) DragCursor(action int) *QPixmap /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag10dragCursorEN2Qt10DropActionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &action)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag10dragCursorEN2Qt10DropActionE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), action)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -250,7 +262,7 @@ func QDrag_Cancel() {
 // Public
 // void actionChanged(Qt::DropAction)
 func (this *QDrag) ActionChanged(action int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag13actionChangedEN2Qt10DropActionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &action)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag13actionChangedEN2Qt10DropActionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), action)
 	gopp.ErrPrint(err, rv)
 }
 

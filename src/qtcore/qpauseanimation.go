@@ -55,9 +55,15 @@ func (this *QPauseAnimation) GetCthis() unsafe.Pointer {
 		return this.QAbstractAnimation.GetCthis()
 	}
 }
+func (this *QPauseAnimation) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractAnimation = NewQAbstractAnimationFromPointer(cthis)
+}
 func NewQPauseAnimationFromPointer(cthis unsafe.Pointer) *QPauseAnimation {
 	bcthis0 := NewQAbstractAnimationFromPointer(cthis)
 	return &QPauseAnimation{bcthis0}
+}
+func (*QPauseAnimation) NewFromPointer(cthis unsafe.Pointer) *QPauseAnimation {
+	return NewQPauseAnimationFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qpauseanimation.h:54
@@ -92,7 +98,7 @@ func NewQPauseAnimation(parent *QObject /*444 QObject **/) *QPauseAnimation {
 func NewQPauseAnimation_1(msecs int, parent *QObject /*444 QObject **/) *QPauseAnimation {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimationC2EiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &msecs, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimationC2EiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, msecs, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPauseAnimationFromPointer(cthis)
 	return gothis
@@ -123,7 +129,7 @@ func (this *QPauseAnimation) Duration() int {
 // Public
 // void setDuration(int)
 func (this *QPauseAnimation) SetDuration(msecs int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimation11setDurationEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msecs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimation11setDurationEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -144,7 +150,7 @@ func (this *QPauseAnimation) Event(e *QEvent /*444 QEvent **/) bool {
 // Protected virtual
 // void updateCurrentTime(int)
 func (this *QPauseAnimation) UpdateCurrentTime(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimation17updateCurrentTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimation17updateCurrentTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 

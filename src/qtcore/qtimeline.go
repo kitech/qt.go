@@ -55,9 +55,15 @@ func (this *QTimeLine) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QTimeLine) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQTimeLineFromPointer(cthis unsafe.Pointer) *QTimeLine {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QTimeLine{bcthis0}
+}
+func (*QTimeLine) NewFromPointer(cthis unsafe.Pointer) *QTimeLine {
+	return NewQTimeLineFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qtimeline.h:52
@@ -79,7 +85,7 @@ func (this *QTimeLine) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 func NewQTimeLine(duration int, parent *QObject /*444 QObject **/) *QTimeLine {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLineC2EiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &duration, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLineC2EiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, duration, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTimeLineFromPointer(cthis)
 	return gothis
@@ -121,7 +127,7 @@ func (this *QTimeLine) LoopCount() int {
 // Public
 // void setLoopCount(int)
 func (this *QTimeLine) SetLoopCount(count int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine12setLoopCountEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &count)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine12setLoopCountEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), count)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -141,7 +147,7 @@ func (this *QTimeLine) Direction() int {
 // Public
 // void setDirection(enum QTimeLine::Direction)
 func (this *QTimeLine) SetDirection(direction int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine12setDirectionENS_9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &direction)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine12setDirectionENS_9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), direction)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -161,7 +167,7 @@ func (this *QTimeLine) Duration() int {
 // Public
 // void setDuration(int)
 func (this *QTimeLine) SetDuration(duration int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine11setDurationEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &duration)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine11setDurationEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), duration)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -181,7 +187,7 @@ func (this *QTimeLine) StartFrame() int {
 // Public
 // void setStartFrame(int)
 func (this *QTimeLine) SetStartFrame(frame int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine13setStartFrameEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &frame)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine13setStartFrameEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), frame)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -201,7 +207,7 @@ func (this *QTimeLine) EndFrame() int {
 // Public
 // void setEndFrame(int)
 func (this *QTimeLine) SetEndFrame(frame int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine11setEndFrameEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &frame)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine11setEndFrameEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), frame)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -210,7 +216,7 @@ func (this *QTimeLine) SetEndFrame(frame int) {
 // Public
 // void setFrameRange(int, int)
 func (this *QTimeLine) SetFrameRange(startFrame int, endFrame int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine13setFrameRangeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &startFrame, &endFrame)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine13setFrameRangeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), startFrame, endFrame)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -230,7 +236,7 @@ func (this *QTimeLine) UpdateInterval() int {
 // Public
 // void setUpdateInterval(int)
 func (this *QTimeLine) SetUpdateInterval(interval int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine17setUpdateIntervalEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &interval)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine17setUpdateIntervalEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), interval)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -250,7 +256,7 @@ func (this *QTimeLine) CurveShape() int {
 // Public
 // void setCurveShape(enum QTimeLine::CurveShape)
 func (this *QTimeLine) SetCurveShape(shape int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine13setCurveShapeENS_10CurveShapeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &shape)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine13setCurveShapeENS_10CurveShapeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), shape)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -259,9 +265,11 @@ func (this *QTimeLine) SetCurveShape(shape int) {
 // Public
 // QEasingCurve easingCurve()
 func (this *QTimeLine) EasingCurve() *QEasingCurve /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine11easingCurveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine11easingCurveEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQEasingCurveFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -314,7 +322,7 @@ func (this *QTimeLine) CurrentValue() float64 {
 // Public
 // int frameForTime(int)
 func (this *QTimeLine) FrameForTime(msec int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine12frameForTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine12frameForTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -325,7 +333,7 @@ func (this *QTimeLine) FrameForTime(msec int) int {
 // Public virtual
 // qreal valueForTime(int)
 func (this *QTimeLine) ValueForTime(msec int) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine12valueForTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine12valueForTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float64(rv) // 222
@@ -363,7 +371,7 @@ func (this *QTimeLine) Stop() {
 // Public
 // void setPaused(_Bool)
 func (this *QTimeLine) SetPaused(paused bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine9setPausedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &paused)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine9setPausedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), paused)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -372,7 +380,7 @@ func (this *QTimeLine) SetPaused(paused bool) {
 // Public
 // void setCurrentTime(int)
 func (this *QTimeLine) SetCurrentTime(msec int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine14setCurrentTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine14setCurrentTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -394,5 +402,25 @@ func (this *QTimeLine) TimerEvent(event *QTimerEvent /*444 QTimerEvent **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
+
+type QTimeLine__State = int
+
+const QTimeLine__NotRunning QTimeLine__State = 0
+const QTimeLine__Paused QTimeLine__State = 1
+const QTimeLine__Running QTimeLine__State = 2
+
+type QTimeLine__Direction = int
+
+const QTimeLine__Forward QTimeLine__Direction = 0
+const QTimeLine__Backward QTimeLine__Direction = 1
+
+type QTimeLine__CurveShape = int
+
+const QTimeLine__EaseInCurve QTimeLine__CurveShape = 0
+const QTimeLine__EaseOutCurve QTimeLine__CurveShape = 1
+const QTimeLine__EaseInOutCurve QTimeLine__CurveShape = 2
+const QTimeLine__LinearCurve QTimeLine__CurveShape = 3
+const QTimeLine__SineCurve QTimeLine__CurveShape = 4
+const QTimeLine__CosineCurve QTimeLine__CurveShape = 5
 
 //  body block end

@@ -63,9 +63,15 @@ func (this *QGraphicsRectItem) GetCthis() unsafe.Pointer {
 		return this.QAbstractGraphicsShapeItem.GetCthis()
 	}
 }
+func (this *QGraphicsRectItem) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractGraphicsShapeItem = NewQAbstractGraphicsShapeItemFromPointer(cthis)
+}
 func NewQGraphicsRectItemFromPointer(cthis unsafe.Pointer) *QGraphicsRectItem {
 	bcthis0 := NewQAbstractGraphicsShapeItemFromPointer(cthis)
 	return &QGraphicsRectItem{bcthis0}
+}
+func (*QGraphicsRectItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsRectItem {
+	return NewQGraphicsRectItemFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:661
@@ -102,7 +108,7 @@ func NewQGraphicsRectItem_1(rect *qtcore.QRectF, parent *QGraphicsItem /*444 QGr
 func NewQGraphicsRectItem_2(x float64, y float64, w float64, h float64, parent *QGraphicsItem /*444 QGraphicsItem **/) *QGraphicsRectItem {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg4 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRectItemC2EddddP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, cthis, &x, &y, &w, &h, convArg4)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRectItemC2EddddP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, cthis, x, y, w, h, convArg4)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsRectItemFromPointer(cthis)
 	return gothis
@@ -122,9 +128,11 @@ func DeleteQGraphicsRectItem(*QGraphicsRectItem) {
 // Public
 // QRectF rect()
 func (this *QGraphicsRectItem) Rect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRectItem4rectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRectItem4rectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -144,7 +152,7 @@ func (this *QGraphicsRectItem) SetRect(rect *qtcore.QRectF) {
 // Public inline
 // void setRect(qreal, qreal, qreal, qreal)
 func (this *QGraphicsRectItem) SetRect_1(x float64, y float64, w float64, h float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRectItem7setRectEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &w, &h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRectItem7setRectEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -153,9 +161,11 @@ func (this *QGraphicsRectItem) SetRect_1(x float64, y float64, w float64, h floa
 // Public virtual
 // QRectF boundingRect()
 func (this *QGraphicsRectItem) BoundingRect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRectItem12boundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRectItem12boundingRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -165,9 +175,11 @@ func (this *QGraphicsRectItem) BoundingRect() *qtcore.QRectF /*123*/ {
 // Public virtual
 // QPainterPath shape()
 func (this *QGraphicsRectItem) Shape() *qtgui.QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRectItem5shapeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRectItem5shapeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -213,9 +225,11 @@ func (this *QGraphicsRectItem) IsObscuredBy(item *QGraphicsItem /*444 const QGra
 // Public virtual
 // QPainterPath opaqueArea()
 func (this *QGraphicsRectItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRectItem10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRectItem10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -236,7 +250,7 @@ func (this *QGraphicsRectItem) Type() int {
 // Protected virtual
 // bool supportsExtension(enum QGraphicsItem::Extension)
 func (this *QGraphicsRectItem) SupportsExtension(extension int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRectItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &extension)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRectItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -248,7 +262,7 @@ func (this *QGraphicsRectItem) SupportsExtension(extension int) bool {
 // void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
 func (this *QGraphicsRectItem) SetExtension(extension int, variant *qtcore.QVariant) {
 	var convArg1 = variant.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRectItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &extension, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRectItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -257,12 +271,18 @@ func (this *QGraphicsRectItem) SetExtension(extension int, variant *qtcore.QVari
 // Protected virtual
 // QVariant extension(const class QVariant &)
 func (this *QGraphicsRectItem) Extension(variant *qtcore.QVariant) *qtcore.QVariant /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = variant.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRectItem9extensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRectItem9extensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
+
+type QGraphicsRectItem__ = int
+
+const QGraphicsRectItem__Type QGraphicsRectItem__ = 3
 
 //  body block end

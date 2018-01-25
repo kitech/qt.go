@@ -63,9 +63,15 @@ func (this *QStyleOptionSizeGrip) GetCthis() unsafe.Pointer {
 		return this.QStyleOptionComplex.GetCthis()
 	}
 }
+func (this *QStyleOptionSizeGrip) SetCthis(cthis unsafe.Pointer) {
+	this.QStyleOptionComplex = NewQStyleOptionComplexFromPointer(cthis)
+}
 func NewQStyleOptionSizeGripFromPointer(cthis unsafe.Pointer) *QStyleOptionSizeGrip {
 	bcthis0 := NewQStyleOptionComplexFromPointer(cthis)
 	return &QStyleOptionSizeGrip{bcthis0}
+}
+func (*QStyleOptionSizeGrip) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionSizeGrip {
+	return NewQStyleOptionSizeGripFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:653
@@ -86,10 +92,18 @@ func NewQStyleOptionSizeGrip() *QStyleOptionSizeGrip {
 // void QStyleOptionSizeGrip(int)
 func NewQStyleOptionSizeGrip_1(version int) *QStyleOptionSizeGrip {
 	cthis := qtrt.Calloc(1, 256) // 80
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionSizeGripFromPointer(cthis)
 	return gothis
 }
+
+type QStyleOptionSizeGrip__StyleOptionType = int
+
+const QStyleOptionSizeGrip__Type QStyleOptionSizeGrip__StyleOptionType = 983047
+
+type QStyleOptionSizeGrip__StyleOptionVersion = int
+
+const QStyleOptionSizeGrip__Version QStyleOptionSizeGrip__StyleOptionVersion = 1
 
 //  body block end

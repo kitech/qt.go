@@ -55,9 +55,15 @@ func (this *QChildEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QChildEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = NewQEventFromPointer(cthis)
+}
 func NewQChildEventFromPointer(cthis unsafe.Pointer) *QChildEvent {
 	bcthis0 := NewQEventFromPointer(cthis)
 	return &QChildEvent{bcthis0}
+}
+func (*QChildEvent) NewFromPointer(cthis unsafe.Pointer) *QChildEvent {
+	return NewQChildEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:352
@@ -67,7 +73,7 @@ func NewQChildEventFromPointer(cthis unsafe.Pointer) *QChildEvent {
 func NewQChildEvent(type_ int, child *QObject /*444 QObject **/) *QChildEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg1 = child.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QChildEventC2EN6QEvent4TypeEP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &type_, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QChildEventC2EN6QEvent4TypeEP7QObject", ffiqt.FFI_TYPE_VOID, cthis, type_, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQChildEventFromPointer(cthis)
 	return gothis

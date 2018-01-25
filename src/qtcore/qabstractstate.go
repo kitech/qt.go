@@ -55,9 +55,15 @@ func (this *QAbstractState) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QAbstractState) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQAbstractStateFromPointer(cthis unsafe.Pointer) *QAbstractState {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QAbstractState{bcthis0}
+}
+func (*QAbstractState) NewFromPointer(cthis unsafe.Pointer) *QAbstractState {
+	return NewQAbstractStateFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qabstractstate.h:55
@@ -121,7 +127,7 @@ func (this *QAbstractState) Active() bool {
 // Public
 // void activeChanged(_Bool)
 func (this *QAbstractState) ActiveChanged(active bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QAbstractState13activeChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &active)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QAbstractState13activeChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), active)
 	gopp.ErrPrint(err, rv)
 }
 

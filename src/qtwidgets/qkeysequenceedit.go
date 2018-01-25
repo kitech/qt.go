@@ -63,9 +63,15 @@ func (this *QKeySequenceEdit) GetCthis() unsafe.Pointer {
 		return this.QWidget.GetCthis()
 	}
 }
+func (this *QKeySequenceEdit) SetCthis(cthis unsafe.Pointer) {
+	this.QWidget = NewQWidgetFromPointer(cthis)
+}
 func NewQKeySequenceEditFromPointer(cthis unsafe.Pointer) *QKeySequenceEdit {
 	bcthis0 := NewQWidgetFromPointer(cthis)
 	return &QKeySequenceEdit{bcthis0}
+}
+func (*QKeySequenceEdit) NewFromPointer(cthis unsafe.Pointer) *QKeySequenceEdit {
+	return NewQKeySequenceEditFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qkeysequenceedit.h:54
@@ -121,9 +127,11 @@ func DeleteQKeySequenceEdit(*QKeySequenceEdit) {
 // Public
 // QKeySequence keySequence()
 func (this *QKeySequenceEdit) KeySequence() *qtgui.QKeySequence /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QKeySequenceEdit11keySequenceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QKeySequenceEdit11keySequenceEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

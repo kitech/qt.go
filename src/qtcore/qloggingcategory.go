@@ -55,8 +55,14 @@ func (this *QLoggingCategory) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QLoggingCategory) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQLoggingCategoryFromPointer(cthis unsafe.Pointer) *QLoggingCategory {
 	return &QLoggingCategory{&qtrt.CObject{cthis}}
+}
+func (*QLoggingCategory) NewFromPointer(cthis unsafe.Pointer) *QLoggingCategory {
+	return NewQLoggingCategoryFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qloggingcategory.h:53
@@ -81,7 +87,7 @@ func NewQLoggingCategory_1(category string, severityLevel int) *QLoggingCategory
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = qtrt.CString(category)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc9QtMsgType", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &severityLevel)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc9QtMsgType", ffiqt.FFI_TYPE_VOID, cthis, convArg0, severityLevel)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLoggingCategoryFromPointer(cthis)
 	return gothis
@@ -101,7 +107,7 @@ func DeleteQLoggingCategory(*QLoggingCategory) {
 // Public
 // bool isEnabled(enum QtMsgType)
 func (this *QLoggingCategory) IsEnabled(type_ int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory9isEnabledE9QtMsgType", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory9isEnabledE9QtMsgType", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -112,7 +118,7 @@ func (this *QLoggingCategory) IsEnabled(type_ int) bool {
 // Public
 // void setEnabled(enum QtMsgType, _Bool)
 func (this *QLoggingCategory) SetEnabled(type_ int, enable bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategory10setEnabledE9QtMsgTypeb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &type_, &enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategory10setEnabledE9QtMsgTypeb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_, enable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -200,5 +206,12 @@ func QLoggingCategory_SetFilterRules(rules *QString) {
 	var nilthis *QLoggingCategory
 	nilthis.SetFilterRules(rules)
 }
+
+type QLoggingCategory__ = int
+
+const QLoggingCategory__DebugShift QLoggingCategory__ = 0
+const QLoggingCategory__WarningShift QLoggingCategory__ = 8
+const QLoggingCategory__CriticalShift QLoggingCategory__ = 16
+const QLoggingCategory__InfoShift QLoggingCategory__ = 24
 
 //  body block end

@@ -59,9 +59,15 @@ func (this *QContextMenuEvent) GetCthis() unsafe.Pointer {
 		return this.QInputEvent.GetCthis()
 	}
 }
+func (this *QContextMenuEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QInputEvent = NewQInputEventFromPointer(cthis)
+}
 func NewQContextMenuEventFromPointer(cthis unsafe.Pointer) *QContextMenuEvent {
 	bcthis0 := NewQInputEventFromPointer(cthis)
 	return &QContextMenuEvent{bcthis0}
+}
+func (*QContextMenuEvent) NewFromPointer(cthis unsafe.Pointer) *QContextMenuEvent {
+	return NewQContextMenuEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:513
@@ -72,7 +78,7 @@ func NewQContextMenuEvent(reason int, pos *qtcore.QPoint, globalPos *qtcore.QPoi
 	cthis := qtrt.Calloc(1, 256) // 56
 	var convArg1 = pos.GetCthis()
 	var convArg2 = globalPos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPointS3_", ffiqt.FFI_TYPE_VOID, cthis, &reason, convArg1, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPointS3_", ffiqt.FFI_TYPE_VOID, cthis, reason, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQContextMenuEventFromPointer(cthis)
 	return gothis
@@ -85,7 +91,7 @@ func NewQContextMenuEvent(reason int, pos *qtcore.QPoint, globalPos *qtcore.QPoi
 func NewQContextMenuEvent_1(reason int, pos *qtcore.QPoint) *QContextMenuEvent {
 	cthis := qtrt.Calloc(1, 256) // 56
 	var convArg1 = pos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPoint", ffiqt.FFI_TYPE_VOID, cthis, &reason, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPoint", ffiqt.FFI_TYPE_VOID, cthis, reason, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQContextMenuEventFromPointer(cthis)
 	return gothis
@@ -178,5 +184,11 @@ func (this *QContextMenuEvent) Reason() int {
 	//  return rv
 	return int(rv)
 }
+
+type QContextMenuEvent__Reason = int
+
+const QContextMenuEvent__Mouse QContextMenuEvent__Reason = 0
+const QContextMenuEvent__Keyboard QContextMenuEvent__Reason = 1
+const QContextMenuEvent__Other QContextMenuEvent__Reason = 2
 
 //  body block end

@@ -59,9 +59,15 @@ func (this *QGenericPlugin) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QGenericPlugin) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQGenericPluginFromPointer(cthis unsafe.Pointer) *QGenericPlugin {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QGenericPlugin{bcthis0}
+}
+func (*QGenericPlugin) NewFromPointer(cthis unsafe.Pointer) *QGenericPlugin {
+	return NewQGenericPluginFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qgenericplugin.h:53

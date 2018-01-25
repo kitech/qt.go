@@ -55,9 +55,15 @@ func (this *QBuffer) GetCthis() unsafe.Pointer {
 		return this.QIODevice.GetCthis()
 	}
 }
+func (this *QBuffer) SetCthis(cthis unsafe.Pointer) {
+	this.QIODevice = NewQIODeviceFromPointer(cthis)
+}
 func NewQBufferFromPointer(cthis unsafe.Pointer) *QBuffer {
 	bcthis0 := NewQIODeviceFromPointer(cthis)
 	return &QBuffer{bcthis0}
+}
+func (*QBuffer) NewFromPointer(cthis unsafe.Pointer) *QBuffer {
+	return NewQBufferFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qbuffer.h:55
@@ -159,7 +165,7 @@ func (this *QBuffer) SetData(data *QByteArray) {
 func (this *QBuffer) SetData_1(data string, len int) {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer7setDataEPKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer7setDataEPKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -211,7 +217,7 @@ func (this *QBuffer) Pos() int64 {
 // Public virtual
 // bool seek(qint64)
 func (this *QBuffer) Seek(off int64) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer4seekEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &off)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer4seekEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), off)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -266,7 +272,7 @@ func (this *QBuffer) DisconnectNotify(arg0 *QMetaMethod) {
 func (this *QBuffer) ReadData(data string, maxlen int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer8readDataEPcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &maxlen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer8readDataEPcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -279,7 +285,7 @@ func (this *QBuffer) ReadData(data string, maxlen int64) int64 {
 func (this *QBuffer) WriteData(data string, len int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer9writeDataEPKcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer9writeDataEPKcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222

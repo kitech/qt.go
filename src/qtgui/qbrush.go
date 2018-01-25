@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 49
+// extern C begin: 58
 */
 // import "C"
 import "unsafe"
@@ -59,8 +59,14 @@ func (this *QBrush) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QBrush) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQBrushFromPointer(cthis unsafe.Pointer) *QBrush {
 	return &QBrush{&qtrt.CObject{cthis}}
+}
+func (*QBrush) NewFromPointer(cthis unsafe.Pointer) *QBrush {
+	return NewQBrushFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qbrush.h:66
@@ -81,7 +87,7 @@ func NewQBrush() *QBrush {
 // void QBrush(Qt::BrushStyle)
 func NewQBrush_1(bs int) *QBrush {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushC2EN2Qt10BrushStyleE", ffiqt.FFI_TYPE_VOID, cthis, &bs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushC2EN2Qt10BrushStyleE", ffiqt.FFI_TYPE_VOID, cthis, bs)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(cthis)
 	return gothis
@@ -94,7 +100,7 @@ func NewQBrush_1(bs int) *QBrush {
 func NewQBrush_2(color *QColor, bs int) *QBrush {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = color.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushC2ERK6QColorN2Qt10BrushStyleE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &bs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushC2ERK6QColorN2Qt10BrushStyleE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, bs)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(cthis)
 	return gothis
@@ -106,7 +112,7 @@ func NewQBrush_2(color *QColor, bs int) *QBrush {
 // void QBrush(Qt::GlobalColor, Qt::BrushStyle)
 func NewQBrush_3(color int, bs int) *QBrush {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushC2EN2Qt11GlobalColorENS0_10BrushStyleE", ffiqt.FFI_TYPE_VOID, cthis, &color, &bs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushC2EN2Qt11GlobalColorENS0_10BrushStyleE", ffiqt.FFI_TYPE_VOID, cthis, color, bs)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(cthis)
 	return gothis
@@ -133,7 +139,7 @@ func NewQBrush_4(color *QColor, pixmap *QPixmap) *QBrush {
 func NewQBrush_5(color int, pixmap *QPixmap) *QBrush {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg1 = pixmap.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushC2EN2Qt11GlobalColorERK7QPixmap", ffiqt.FFI_TYPE_VOID, cthis, &color, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushC2EN2Qt11GlobalColorERK7QPixmap", ffiqt.FFI_TYPE_VOID, cthis, color, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(cthis)
 	return gothis
@@ -213,7 +219,7 @@ func (this *QBrush) Style() int {
 // Public
 // void setStyle(Qt::BrushStyle)
 func (this *QBrush) SetStyle(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrush8setStyleEN2Qt10BrushStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrush8setStyleEN2Qt10BrushStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -244,9 +250,11 @@ func (this *QBrush) SetMatrix(mat *QMatrix) {
 // Public inline
 // QTransform transform()
 func (this *QBrush) Transform() *QTransform /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush9transformEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush9transformEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -266,9 +274,11 @@ func (this *QBrush) SetTransform(arg0 *QTransform) {
 // Public
 // QPixmap texture()
 func (this *QBrush) Texture() *QPixmap /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush7textureEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush7textureEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -288,9 +298,11 @@ func (this *QBrush) SetTexture(pixmap *QPixmap) {
 // Public
 // QImage textureImage()
 func (this *QBrush) TextureImage() *QImage /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush12textureImageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush12textureImageEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -332,7 +344,7 @@ func (this *QBrush) SetColor(color *QColor) {
 // Public inline
 // void setColor(Qt::GlobalColor)
 func (this *QBrush) SetColor_1(color int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrush8setColorEN2Qt11GlobalColorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &color)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrush8setColorEN2Qt11GlobalColorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), color)
 	gopp.ErrPrint(err, rv)
 }
 

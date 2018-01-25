@@ -55,8 +55,14 @@ func (this *QDataStream) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QDataStream) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQDataStreamFromPointer(cthis unsafe.Pointer) *QDataStream {
 	return &QDataStream{&qtrt.CObject{cthis}}
+}
+func (*QDataStream) NewFromPointer(cthis unsafe.Pointer) *QDataStream {
+	return NewQDataStreamFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:123
@@ -164,7 +170,7 @@ func (this *QDataStream) Status() int {
 // Public
 // void setStatus(enum QDataStream::Status)
 func (this *QDataStream) SetStatus(status int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream9setStatusENS_6StatusE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &status)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream9setStatusENS_6StatusE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), status)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -193,7 +199,7 @@ func (this *QDataStream) FloatingPointPrecision() int {
 // Public
 // void setFloatingPointPrecision(enum QDataStream::FloatingPointPrecision)
 func (this *QDataStream) SetFloatingPointPrecision(precision int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream25setFloatingPointPrecisionENS_22FloatingPointPrecisionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &precision)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream25setFloatingPointPrecisionENS_22FloatingPointPrecisionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), precision)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -213,7 +219,7 @@ func (this *QDataStream) ByteOrder() int {
 // Public
 // void setByteOrder(enum QDataStream::ByteOrder)
 func (this *QDataStream) SetByteOrder(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream12setByteOrderENS_9ByteOrderE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream12setByteOrderENS_9ByteOrderE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -233,7 +239,7 @@ func (this *QDataStream) Version() int {
 // Public
 // void setVersion(int)
 func (this *QDataStream) SetVersion(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream10setVersionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream10setVersionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -256,7 +262,7 @@ func (this *QDataStream) ReadBytes(arg0 unsafe.Pointer /*555*/, len uint) *QData
 func (this *QDataStream) ReadRawData(arg0 string, len int) int {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream11readRawDataEPci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream11readRawDataEPci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -269,7 +275,7 @@ func (this *QDataStream) ReadRawData(arg0 string, len int) int {
 func (this *QDataStream) WriteBytes(arg0 string, len uint) *QDataStream {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream10writeBytesEPKcj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream10writeBytesEPKcj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -283,7 +289,7 @@ func (this *QDataStream) WriteBytes(arg0 string, len uint) *QDataStream {
 func (this *QDataStream) WriteRawData(arg0 string, len int) int {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream12writeRawDataEPKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream12writeRawDataEPKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -294,7 +300,7 @@ func (this *QDataStream) WriteRawData(arg0 string, len int) int {
 // Public
 // int skipRawData(int)
 func (this *QDataStream) SkipRawData(len int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream11skipRawDataEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream11skipRawDataEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), len)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -337,5 +343,53 @@ func (this *QDataStream) AbortTransaction() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream16abortTransactionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
+
+type QDataStream__Version = int
+
+const QDataStream__Qt_1_0 QDataStream__Version = 1
+const QDataStream__Qt_2_0 QDataStream__Version = 2
+const QDataStream__Qt_2_1 QDataStream__Version = 3
+const QDataStream__Qt_3_0 QDataStream__Version = 4
+const QDataStream__Qt_3_1 QDataStream__Version = 5
+const QDataStream__Qt_3_3 QDataStream__Version = 6
+const QDataStream__Qt_4_0 QDataStream__Version = 7
+const QDataStream__Qt_4_1 QDataStream__Version = 7
+const QDataStream__Qt_4_2 QDataStream__Version = 8
+const QDataStream__Qt_4_3 QDataStream__Version = 9
+const QDataStream__Qt_4_4 QDataStream__Version = 10
+const QDataStream__Qt_4_5 QDataStream__Version = 11
+const QDataStream__Qt_4_6 QDataStream__Version = 12
+const QDataStream__Qt_4_7 QDataStream__Version = 12
+const QDataStream__Qt_4_8 QDataStream__Version = 12
+const QDataStream__Qt_4_9 QDataStream__Version = 12
+const QDataStream__Qt_5_0 QDataStream__Version = 13
+const QDataStream__Qt_5_1 QDataStream__Version = 14
+const QDataStream__Qt_5_2 QDataStream__Version = 15
+const QDataStream__Qt_5_3 QDataStream__Version = 15
+const QDataStream__Qt_5_4 QDataStream__Version = 16
+const QDataStream__Qt_5_5 QDataStream__Version = 16
+const QDataStream__Qt_5_6 QDataStream__Version = 17
+const QDataStream__Qt_5_7 QDataStream__Version = 17
+const QDataStream__Qt_5_8 QDataStream__Version = 17
+const QDataStream__Qt_5_9 QDataStream__Version = 17
+const QDataStream__Qt_5_10 QDataStream__Version = 17
+const QDataStream__Qt_DefaultCompiledVersion QDataStream__Version = 17
+
+type QDataStream__ByteOrder = int
+
+const QDataStream__BigEndian QDataStream__ByteOrder = 0
+const QDataStream__LittleEndian QDataStream__ByteOrder = 1
+
+type QDataStream__Status = int
+
+const QDataStream__Ok QDataStream__Status = 0
+const QDataStream__ReadPastEnd QDataStream__Status = 1
+const QDataStream__ReadCorruptData QDataStream__Status = 2
+const QDataStream__WriteFailed QDataStream__Status = 3
+
+type QDataStream__FloatingPointPrecision = int
+
+const QDataStream__SinglePrecision QDataStream__FloatingPointPrecision = 0
+const QDataStream__DoublePrecision QDataStream__FloatingPointPrecision = 1
 
 //  body block end

@@ -59,9 +59,15 @@ func (this *QDropEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QDropEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQDropEventFromPointer(cthis unsafe.Pointer) *QDropEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QDropEvent{bcthis0}
+}
+func (*QDropEvent) NewFromPointer(cthis unsafe.Pointer) *QDropEvent {
+	return NewQDropEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:610
@@ -78,9 +84,11 @@ func DeleteQDropEvent(*QDropEvent) {
 // Public inline
 // QPoint pos()
 func (this *QDropEvent) Pos() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent3posEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -166,7 +174,7 @@ func (this *QDropEvent) DropAction() int {
 // Public
 // void setDropAction(Qt::DropAction)
 func (this *QDropEvent) SetDropAction(action int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDropEvent13setDropActionEN2Qt10DropActionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &action)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDropEvent13setDropActionEN2Qt10DropActionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), action)
 	gopp.ErrPrint(err, rv)
 }
 

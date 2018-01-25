@@ -55,9 +55,15 @@ func (this *QSequentialAnimationGroup) GetCthis() unsafe.Pointer {
 		return this.QAnimationGroup.GetCthis()
 	}
 }
+func (this *QSequentialAnimationGroup) SetCthis(cthis unsafe.Pointer) {
+	this.QAnimationGroup = NewQAnimationGroupFromPointer(cthis)
+}
 func NewQSequentialAnimationGroupFromPointer(cthis unsafe.Pointer) *QSequentialAnimationGroup {
 	bcthis0 := NewQAnimationGroupFromPointer(cthis)
 	return &QSequentialAnimationGroup{bcthis0}
+}
+func (*QSequentialAnimationGroup) NewFromPointer(cthis unsafe.Pointer) *QSequentialAnimationGroup {
+	return NewQSequentialAnimationGroupFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qsequentialanimationgroup.h:55
@@ -99,7 +105,7 @@ func DeleteQSequentialAnimationGroup(*QSequentialAnimationGroup) {
 // Public
 // QPauseAnimation * addPause(int)
 func (this *QSequentialAnimationGroup) AddPause(msecs int) *QPauseAnimation /*444 QPauseAnimation **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup8addPauseEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msecs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup8addPauseEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPauseAnimationFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -111,7 +117,7 @@ func (this *QSequentialAnimationGroup) AddPause(msecs int) *QPauseAnimation /*44
 // Public
 // QPauseAnimation * insertPause(int, int)
 func (this *QSequentialAnimationGroup) InsertPause(index int, msecs int) *QPauseAnimation /*444 QPauseAnimation **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup11insertPauseEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, &msecs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup11insertPauseEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, msecs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPauseAnimationFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -168,7 +174,7 @@ func (this *QSequentialAnimationGroup) Event(event *QEvent /*444 QEvent **/) boo
 // Protected virtual
 // void updateCurrentTime(int)
 func (this *QSequentialAnimationGroup) UpdateCurrentTime(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup17updateCurrentTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup17updateCurrentTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -177,7 +183,7 @@ func (this *QSequentialAnimationGroup) UpdateCurrentTime(arg0 int) {
 // Protected virtual
 // void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
 func (this *QSequentialAnimationGroup) UpdateState(newState int, oldState int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup11updateStateEN18QAbstractAnimation5StateES1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &newState, &oldState)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup11updateStateEN18QAbstractAnimation5StateES1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -186,7 +192,7 @@ func (this *QSequentialAnimationGroup) UpdateState(newState int, oldState int) {
 // Protected virtual
 // void updateDirection(class QAbstractAnimation::Direction)
 func (this *QSequentialAnimationGroup) UpdateDirection(direction int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup15updateDirectionEN18QAbstractAnimation9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &direction)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup15updateDirectionEN18QAbstractAnimation9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), direction)
 	gopp.ErrPrint(err, rv)
 }
 

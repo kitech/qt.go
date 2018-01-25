@@ -63,9 +63,15 @@ func (this *QGraphicsEllipseItem) GetCthis() unsafe.Pointer {
 		return this.QAbstractGraphicsShapeItem.GetCthis()
 	}
 }
+func (this *QGraphicsEllipseItem) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractGraphicsShapeItem = NewQAbstractGraphicsShapeItemFromPointer(cthis)
+}
 func NewQGraphicsEllipseItemFromPointer(cthis unsafe.Pointer) *QGraphicsEllipseItem {
 	bcthis0 := NewQAbstractGraphicsShapeItemFromPointer(cthis)
 	return &QGraphicsEllipseItem{bcthis0}
+}
+func (*QGraphicsEllipseItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsEllipseItem {
+	return NewQGraphicsEllipseItemFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:699
@@ -102,7 +108,7 @@ func NewQGraphicsEllipseItem_1(rect *qtcore.QRectF, parent *QGraphicsItem /*444 
 func NewQGraphicsEllipseItem_2(x float64, y float64, w float64, h float64, parent *QGraphicsItem /*444 QGraphicsItem **/) *QGraphicsEllipseItem {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg4 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsEllipseItemC2EddddP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, cthis, &x, &y, &w, &h, convArg4)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsEllipseItemC2EddddP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, cthis, x, y, w, h, convArg4)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsEllipseItemFromPointer(cthis)
 	return gothis
@@ -122,9 +128,11 @@ func DeleteQGraphicsEllipseItem(*QGraphicsEllipseItem) {
 // Public
 // QRectF rect()
 func (this *QGraphicsEllipseItem) Rect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem4rectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem4rectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -144,7 +152,7 @@ func (this *QGraphicsEllipseItem) SetRect(rect *qtcore.QRectF) {
 // Public inline
 // void setRect(qreal, qreal, qreal, qreal)
 func (this *QGraphicsEllipseItem) SetRect_1(x float64, y float64, w float64, h float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsEllipseItem7setRectEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &w, &h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsEllipseItem7setRectEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -164,7 +172,7 @@ func (this *QGraphicsEllipseItem) StartAngle() int {
 // Public
 // void setStartAngle(int)
 func (this *QGraphicsEllipseItem) SetStartAngle(angle int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsEllipseItem13setStartAngleEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &angle)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsEllipseItem13setStartAngleEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), angle)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -184,7 +192,7 @@ func (this *QGraphicsEllipseItem) SpanAngle() int {
 // Public
 // void setSpanAngle(int)
 func (this *QGraphicsEllipseItem) SetSpanAngle(angle int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsEllipseItem12setSpanAngleEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &angle)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsEllipseItem12setSpanAngleEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), angle)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -193,9 +201,11 @@ func (this *QGraphicsEllipseItem) SetSpanAngle(angle int) {
 // Public virtual
 // QRectF boundingRect()
 func (this *QGraphicsEllipseItem) BoundingRect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem12boundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem12boundingRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -205,9 +215,11 @@ func (this *QGraphicsEllipseItem) BoundingRect() *qtcore.QRectF /*123*/ {
 // Public virtual
 // QPainterPath shape()
 func (this *QGraphicsEllipseItem) Shape() *qtgui.QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem5shapeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem5shapeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -253,9 +265,11 @@ func (this *QGraphicsEllipseItem) IsObscuredBy(item *QGraphicsItem /*444 const Q
 // Public virtual
 // QPainterPath opaqueArea()
 func (this *QGraphicsEllipseItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -276,7 +290,7 @@ func (this *QGraphicsEllipseItem) Type() int {
 // Protected virtual
 // bool supportsExtension(enum QGraphicsItem::Extension)
 func (this *QGraphicsEllipseItem) SupportsExtension(extension int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &extension)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -288,7 +302,7 @@ func (this *QGraphicsEllipseItem) SupportsExtension(extension int) bool {
 // void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
 func (this *QGraphicsEllipseItem) SetExtension(extension int, variant *qtcore.QVariant) {
 	var convArg1 = variant.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsEllipseItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &extension, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsEllipseItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -297,12 +311,18 @@ func (this *QGraphicsEllipseItem) SetExtension(extension int, variant *qtcore.QV
 // Protected virtual
 // QVariant extension(const class QVariant &)
 func (this *QGraphicsEllipseItem) Extension(variant *qtcore.QVariant) *qtcore.QVariant /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = variant.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem9extensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem9extensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
+
+type QGraphicsEllipseItem__ = int
+
+const QGraphicsEllipseItem__Type QGraphicsEllipseItem__ = 4
 
 //  body block end

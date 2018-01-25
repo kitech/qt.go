@@ -55,9 +55,15 @@ func (this *QFinalState) GetCthis() unsafe.Pointer {
 		return this.QAbstractState.GetCthis()
 	}
 }
+func (this *QFinalState) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractState = NewQAbstractStateFromPointer(cthis)
+}
 func NewQFinalStateFromPointer(cthis unsafe.Pointer) *QFinalState {
 	bcthis0 := NewQAbstractStateFromPointer(cthis)
 	return &QFinalState{bcthis0}
+}
+func (*QFinalState) NewFromPointer(cthis unsafe.Pointer) *QFinalState {
+	return NewQFinalStateFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qfinalstate.h:52

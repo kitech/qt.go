@@ -55,8 +55,14 @@ func (this *QMetaProperty) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QMetaProperty) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQMetaPropertyFromPointer(cthis unsafe.Pointer) *QMetaProperty {
 	return &QMetaProperty{&qtrt.CObject{cthis}}
+}
+func (*QMetaProperty) NewFromPointer(cthis unsafe.Pointer) *QMetaProperty {
+	return NewQMetaPropertyFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:248
@@ -268,9 +274,11 @@ func (this *QMetaProperty) IsEnumType() bool {
 // Public
 // QMetaEnum enumerator()
 func (this *QMetaProperty) Enumerator() *QMetaEnum /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty10enumeratorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty10enumeratorEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQMetaEnumFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -291,9 +299,11 @@ func (this *QMetaProperty) HasNotifySignal() bool {
 // Public
 // QMetaMethod notifySignal()
 func (this *QMetaProperty) NotifySignal() *QMetaMethod /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12notifySignalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12notifySignalEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQMetaMethodFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -325,10 +335,12 @@ func (this *QMetaProperty) Revision() int {
 // Public
 // QVariant read(const class QObject *)
 func (this *QMetaProperty) Read(obj *QObject /*444 const QObject **/) *QVariant /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = obj.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty4readEPK7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty4readEPK7QObject", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -363,9 +375,11 @@ func (this *QMetaProperty) Reset(obj *QObject /*444 QObject **/) bool {
 // Public
 // QVariant readOnGadget(const void *)
 func (this *QMetaProperty) ReadOnGadget(gadget unsafe.Pointer /*666*/) *QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12readOnGadgetEPKv", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), gadget)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12readOnGadgetEPKv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), gadget)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

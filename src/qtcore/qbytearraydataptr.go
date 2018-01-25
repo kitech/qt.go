@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 7
+// extern C begin: 0
 */
 // import "C"
 import "unsafe"
@@ -55,8 +55,14 @@ func (this *QByteArrayDataPtr) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QByteArrayDataPtr) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQByteArrayDataPtrFromPointer(cthis unsafe.Pointer) *QByteArrayDataPtr {
 	return &QByteArrayDataPtr{&qtrt.CObject{cthis}}
+}
+func (*QByteArrayDataPtr) NewFromPointer(cthis unsafe.Pointer) *QByteArrayDataPtr {
+	return NewQByteArrayDataPtrFromPointer(cthis)
 }
 
 //  body block end

@@ -55,9 +55,15 @@ func (this *QTimerEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QTimerEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = NewQEventFromPointer(cthis)
+}
 func NewQTimerEventFromPointer(cthis unsafe.Pointer) *QTimerEvent {
 	bcthis0 := NewQEventFromPointer(cthis)
 	return &QTimerEvent{bcthis0}
+}
+func (*QTimerEvent) NewFromPointer(cthis unsafe.Pointer) *QTimerEvent {
+	return NewQTimerEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:340
@@ -66,7 +72,7 @@ func NewQTimerEventFromPointer(cthis unsafe.Pointer) *QTimerEvent {
 // void QTimerEvent(int)
 func NewQTimerEvent(timerId int) *QTimerEvent {
 	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTimerEventC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &timerId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTimerEventC2Ei", ffiqt.FFI_TYPE_VOID, cthis, timerId)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTimerEventFromPointer(cthis)
 	return gothis

@@ -63,9 +63,15 @@ func (this *QStyleOptionProgressBar) GetCthis() unsafe.Pointer {
 		return this.QStyleOption.GetCthis()
 	}
 }
+func (this *QStyleOptionProgressBar) SetCthis(cthis unsafe.Pointer) {
+	this.QStyleOption = NewQStyleOptionFromPointer(cthis)
+}
 func NewQStyleOptionProgressBarFromPointer(cthis unsafe.Pointer) *QStyleOptionProgressBar {
 	bcthis0 := NewQStyleOptionFromPointer(cthis)
 	return &QStyleOptionProgressBar{bcthis0}
+}
+func (*QStyleOptionProgressBar) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionProgressBar {
+	return NewQStyleOptionProgressBarFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:342
@@ -86,10 +92,18 @@ func NewQStyleOptionProgressBar() *QStyleOptionProgressBar {
 // void QStyleOptionProgressBar(int)
 func NewQStyleOptionProgressBar_1(version int) *QStyleOptionProgressBar {
 	cthis := qtrt.Calloc(1, 256) // 104
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QStyleOptionProgressBarC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QStyleOptionProgressBarC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionProgressBarFromPointer(cthis)
 	return gothis
 }
+
+type QStyleOptionProgressBar__StyleOptionType = int
+
+const QStyleOptionProgressBar__Type QStyleOptionProgressBar__StyleOptionType = 6
+
+type QStyleOptionProgressBar__StyleOptionVersion = int
+
+const QStyleOptionProgressBar__Version QStyleOptionProgressBar__StyleOptionVersion = 2
 
 //  body block end

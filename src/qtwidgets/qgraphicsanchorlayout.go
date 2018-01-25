@@ -63,9 +63,15 @@ func (this *QGraphicsAnchorLayout) GetCthis() unsafe.Pointer {
 		return this.QGraphicsLayout.GetCthis()
 	}
 }
+func (this *QGraphicsAnchorLayout) SetCthis(cthis unsafe.Pointer) {
+	this.QGraphicsLayout = NewQGraphicsLayoutFromPointer(cthis)
+}
 func NewQGraphicsAnchorLayoutFromPointer(cthis unsafe.Pointer) *QGraphicsAnchorLayout {
 	bcthis0 := NewQGraphicsLayoutFromPointer(cthis)
 	return &QGraphicsAnchorLayout{bcthis0}
+}
+func (*QGraphicsAnchorLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsAnchorLayout {
+	return NewQGraphicsAnchorLayoutFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:79
@@ -97,7 +103,7 @@ func DeleteQGraphicsAnchorLayout(*QGraphicsAnchorLayout) {
 func (this *QGraphicsAnchorLayout) AddAnchor(firstItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, firstEdge int, secondItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, secondEdge int) *QGraphicsAnchor /*444 QGraphicsAnchor **/ {
 	var convArg0 = firstItem.GetCthis()
 	var convArg2 = secondItem.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout9addAnchorEP19QGraphicsLayoutItemN2Qt11AnchorPointES1_S3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &firstEdge, convArg2, &secondEdge)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout9addAnchorEP19QGraphicsLayoutItemN2Qt11AnchorPointES1_S3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, firstEdge, convArg2, secondEdge)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQGraphicsAnchorFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -111,7 +117,7 @@ func (this *QGraphicsAnchorLayout) AddAnchor(firstItem *QGraphicsLayoutItem /*44
 func (this *QGraphicsAnchorLayout) Anchor(firstItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, firstEdge int, secondItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, secondEdge int) *QGraphicsAnchor /*444 QGraphicsAnchor **/ {
 	var convArg0 = firstItem.GetCthis()
 	var convArg2 = secondItem.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout6anchorEP19QGraphicsLayoutItemN2Qt11AnchorPointES1_S3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &firstEdge, convArg2, &secondEdge)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout6anchorEP19QGraphicsLayoutItemN2Qt11AnchorPointES1_S3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, firstEdge, convArg2, secondEdge)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQGraphicsAnchorFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -125,7 +131,7 @@ func (this *QGraphicsAnchorLayout) Anchor(firstItem *QGraphicsLayoutItem /*444 Q
 func (this *QGraphicsAnchorLayout) AddCornerAnchors(firstItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, firstCorner int, secondItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, secondCorner int) {
 	var convArg0 = firstItem.GetCthis()
 	var convArg2 = secondItem.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout16addCornerAnchorsEP19QGraphicsLayoutItemN2Qt6CornerES1_S3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &firstCorner, convArg2, &secondCorner)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout16addCornerAnchorsEP19QGraphicsLayoutItemN2Qt6CornerES1_S3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, firstCorner, convArg2, secondCorner)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -134,7 +140,7 @@ func (this *QGraphicsAnchorLayout) AddCornerAnchors(firstItem *QGraphicsLayoutIt
 // Public
 // void setHorizontalSpacing(qreal)
 func (this *QGraphicsAnchorLayout) SetHorizontalSpacing(spacing float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout20setHorizontalSpacingEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout20setHorizontalSpacingEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), spacing)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -143,7 +149,7 @@ func (this *QGraphicsAnchorLayout) SetHorizontalSpacing(spacing float64) {
 // Public
 // void setVerticalSpacing(qreal)
 func (this *QGraphicsAnchorLayout) SetVerticalSpacing(spacing float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout18setVerticalSpacingEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout18setVerticalSpacingEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), spacing)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -152,7 +158,7 @@ func (this *QGraphicsAnchorLayout) SetVerticalSpacing(spacing float64) {
 // Public
 // void setSpacing(qreal)
 func (this *QGraphicsAnchorLayout) SetSpacing(spacing float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout10setSpacingEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &spacing)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout10setSpacingEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), spacing)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -183,7 +189,7 @@ func (this *QGraphicsAnchorLayout) VerticalSpacing() float64 {
 // Public virtual
 // void removeAt(int)
 func (this *QGraphicsAnchorLayout) RemoveAt(index int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout8removeAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout8removeAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -213,7 +219,7 @@ func (this *QGraphicsAnchorLayout) Count() int {
 // Public virtual
 // QGraphicsLayoutItem * itemAt(int)
 func (this *QGraphicsAnchorLayout) ItemAt(index int) *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout6itemAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout6itemAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQGraphicsLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -234,10 +240,12 @@ func (this *QGraphicsAnchorLayout) Invalidate() {
 // Protected virtual
 // QSizeF sizeHint(Qt::SizeHint, const class QSizeF &)
 func (this *QGraphicsAnchorLayout) SizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg1 = constraint.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout8sizeHintEN2Qt8SizeHintERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &which, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout8sizeHintEN2Qt8SizeHintERK6QSizeF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), which, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

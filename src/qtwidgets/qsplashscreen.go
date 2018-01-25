@@ -63,9 +63,15 @@ func (this *QSplashScreen) GetCthis() unsafe.Pointer {
 		return this.QWidget.GetCthis()
 	}
 }
+func (this *QSplashScreen) SetCthis(cthis unsafe.Pointer) {
+	this.QWidget = NewQWidgetFromPointer(cthis)
+}
 func NewQSplashScreenFromPointer(cthis unsafe.Pointer) *QSplashScreen {
 	bcthis0 := NewQWidgetFromPointer(cthis)
 	return &QSplashScreen{bcthis0}
+}
+func (*QSplashScreen) NewFromPointer(cthis unsafe.Pointer) *QSplashScreen {
+	return NewQSplashScreenFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qsplashscreen.h:55
@@ -78,6 +84,33 @@ func (this *QSplashScreen) MetaObject() *qtcore.QMetaObject /*444 const QMetaObj
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qsplashscreen.h:57
+// index:0
+// Public
+// void QSplashScreen(const class QPixmap &, Qt::WindowFlags)
+func NewQSplashScreen(pixmap *qtgui.QPixmap, f int) *QSplashScreen {
+	cthis := qtrt.Calloc(1, 256) // 48
+	var convArg0 = pixmap.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSplashScreenC2ERK7QPixmap6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, f)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQSplashScreenFromPointer(cthis)
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qsplashscreen.h:58
+// index:1
+// Public
+// void QSplashScreen(class QWidget *, const class QPixmap &, Qt::WindowFlags)
+func NewQSplashScreen_1(parent *QWidget /*444 QWidget **/, pixmap *qtgui.QPixmap, f int) *QSplashScreen {
+	cthis := qtrt.Calloc(1, 256) // 48
+	var convArg0 = parent.GetCthis()
+	var convArg1 = pixmap.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSplashScreenC2EP7QWidgetRK7QPixmap6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, f)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQSplashScreenFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qsplashscreen.h:59
@@ -104,9 +137,11 @@ func (this *QSplashScreen) SetPixmap(pixmap *qtgui.QPixmap) {
 // Public
 // const QPixmap pixmap()
 func (this *QSplashScreen) Pixmap() *qtgui.QPixmap /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSplashScreen6pixmapEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSplashScreen6pixmapEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -135,9 +170,11 @@ func (this *QSplashScreen) Repaint() {
 // Public
 // QString message()
 func (this *QSplashScreen) Message() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSplashScreen7messageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSplashScreen7messageEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -149,7 +186,7 @@ func (this *QSplashScreen) Message() *qtcore.QString /*123*/ {
 func (this *QSplashScreen) ShowMessage(message *qtcore.QString, alignment int, color *qtgui.QColor) {
 	var convArg0 = message.GetCthis()
 	var convArg2 = color.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSplashScreen11showMessageERK7QStringiRK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &alignment, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSplashScreen11showMessageERK7QStringiRK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 

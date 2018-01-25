@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 25
+// extern C begin: 28
 */
 // import "C"
 import "unsafe"
@@ -55,8 +55,14 @@ func (this *QItemSelection) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QItemSelection) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQItemSelectionFromPointer(cthis unsafe.Pointer) *QItemSelection {
 	return &QItemSelection{&qtrt.CObject{cthis}}
+}
+func (*QItemSelection) NewFromPointer(cthis unsafe.Pointer) *QItemSelection {
+	return NewQItemSelectionFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:250
@@ -106,6 +112,16 @@ func (this *QItemSelection) Contains(index *QModelIndex) bool {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qitemselectionmodel.h:258
+// index:0
+// Public
+// void merge(const class QItemSelection &, class QItemSelectionModel::SelectionFlags)
+func (this *QItemSelection) Merge(other *QItemSelection, command int) {
+	var convArg0 = other.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelection5mergeERKS_6QFlagsIN19QItemSelectionModel13SelectionFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:259

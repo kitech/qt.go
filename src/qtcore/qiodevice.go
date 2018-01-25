@@ -55,9 +55,15 @@ func (this *QIODevice) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QIODevice) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQIODeviceFromPointer(cthis unsafe.Pointer) *QIODevice {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QIODevice{bcthis0}
+}
+func (*QIODevice) NewFromPointer(cthis unsafe.Pointer) *QIODevice {
+	return NewQIODeviceFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:68
@@ -122,7 +128,7 @@ func (this *QIODevice) OpenMode() int {
 // Public
 // void setTextModeEnabled(_Bool)
 func (this *QIODevice) SetTextModeEnabled(enabled bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice18setTextModeEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &enabled)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice18setTextModeEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -219,7 +225,7 @@ func (this *QIODevice) CurrentReadChannel() int {
 // Public
 // void setCurrentReadChannel(int)
 func (this *QIODevice) SetCurrentReadChannel(channel int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice21setCurrentReadChannelEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &channel)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice21setCurrentReadChannelEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), channel)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -239,7 +245,7 @@ func (this *QIODevice) CurrentWriteChannel() int {
 // Public
 // void setCurrentWriteChannel(int)
 func (this *QIODevice) SetCurrentWriteChannel(channel int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice22setCurrentWriteChannelEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &channel)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice22setCurrentWriteChannelEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), channel)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -279,7 +285,7 @@ func (this *QIODevice) Size() int64 {
 // Public virtual
 // bool seek(qint64)
 func (this *QIODevice) Seek(pos int64) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4seekEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4seekEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -336,7 +342,7 @@ func (this *QIODevice) BytesToWrite() int64 {
 func (this *QIODevice) Read(data string, maxlen int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4readEPcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &maxlen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4readEPcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -347,9 +353,11 @@ func (this *QIODevice) Read(data string, maxlen int64) int64 {
 // Public
 // QByteArray read(qint64)
 func (this *QIODevice) Read_1(maxlen int64) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4readEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &maxlen)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4readEx", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), maxlen)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -359,9 +367,11 @@ func (this *QIODevice) Read_1(maxlen int64) *QByteArray /*123*/ {
 // Public
 // QByteArray readAll()
 func (this *QIODevice) ReadAll() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice7readAllEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice7readAllEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -373,7 +383,7 @@ func (this *QIODevice) ReadAll() *QByteArray /*123*/ {
 func (this *QIODevice) ReadLine(data string, maxlen int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice8readLineEPcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &maxlen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice8readLineEPcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -384,9 +394,11 @@ func (this *QIODevice) ReadLine(data string, maxlen int64) int64 {
 // Public
 // QByteArray readLine(qint64)
 func (this *QIODevice) ReadLine_1(maxlen int64) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice8readLineEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &maxlen)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice8readLineEx", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), maxlen)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -447,7 +459,7 @@ func (this *QIODevice) IsTransactionStarted() bool {
 func (this *QIODevice) Write(data string, len int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice5writeEPKcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice5writeEPKcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -485,7 +497,7 @@ func (this *QIODevice) Write_2(data *QByteArray) int64 {
 func (this *QIODevice) Peek(data string, maxlen int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4peekEPcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &maxlen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4peekEPcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -496,9 +508,11 @@ func (this *QIODevice) Peek(data string, maxlen int64) int64 {
 // Public
 // QByteArray peek(qint64)
 func (this *QIODevice) Peek_1(maxlen int64) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4peekEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &maxlen)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4peekEx", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), maxlen)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -508,7 +522,7 @@ func (this *QIODevice) Peek_1(maxlen int64) *QByteArray /*123*/ {
 // Public
 // qint64 skip(qint64)
 func (this *QIODevice) Skip(maxSize int64) int64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4skipEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &maxSize)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4skipEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), maxSize)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -519,7 +533,7 @@ func (this *QIODevice) Skip(maxSize int64) int64 {
 // Public virtual
 // bool waitForReadyRead(int)
 func (this *QIODevice) WaitForReadyRead(msecs int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice16waitForReadyReadEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msecs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice16waitForReadyReadEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -530,7 +544,7 @@ func (this *QIODevice) WaitForReadyRead(msecs int) bool {
 // Public virtual
 // bool waitForBytesWritten(int)
 func (this *QIODevice) WaitForBytesWritten(msecs int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice19waitForBytesWrittenEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msecs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice19waitForBytesWrittenEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -541,7 +555,7 @@ func (this *QIODevice) WaitForBytesWritten(msecs int) bool {
 // Public
 // void ungetChar(char)
 func (this *QIODevice) UngetChar(c byte) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice9ungetCharEc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &c)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice9ungetCharEc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -550,7 +564,7 @@ func (this *QIODevice) UngetChar(c byte) {
 // Public
 // bool putChar(char)
 func (this *QIODevice) PutChar(c byte) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice7putCharEc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &c)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice7putCharEc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -574,9 +588,11 @@ func (this *QIODevice) GetChar(c string) bool {
 // Public
 // QString errorString()
 func (this *QIODevice) ErrorString() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice11errorStringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -595,7 +611,7 @@ func (this *QIODevice) ReadyRead() {
 // Public
 // void channelReadyRead(int)
 func (this *QIODevice) ChannelReadyRead(channel int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice16channelReadyReadEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &channel)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice16channelReadyReadEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), channel)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -604,7 +620,7 @@ func (this *QIODevice) ChannelReadyRead(channel int) {
 // Public
 // void bytesWritten(qint64)
 func (this *QIODevice) BytesWritten(bytes int64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice12bytesWrittenEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &bytes)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice12bytesWrittenEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), bytes)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -613,7 +629,7 @@ func (this *QIODevice) BytesWritten(bytes int64) {
 // Public
 // void channelBytesWritten(int, qint64)
 func (this *QIODevice) ChannelBytesWritten(channel int, bytes int64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice19channelBytesWrittenEix", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &channel, &bytes)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice19channelBytesWrittenEix", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), channel, bytes)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -642,7 +658,7 @@ func (this *QIODevice) ReadChannelFinished() {
 func (this *QIODevice) ReadData(data string, maxlen int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice8readDataEPcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &maxlen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice8readDataEPcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -655,7 +671,7 @@ func (this *QIODevice) ReadData(data string, maxlen int64) int64 {
 func (this *QIODevice) ReadLineData(data string, maxlen int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice12readLineDataEPcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &maxlen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice12readLineDataEPcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -668,7 +684,7 @@ func (this *QIODevice) ReadLineData(data string, maxlen int64) int64 {
 func (this *QIODevice) WriteData(data string, len int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice9writeDataEPKcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice9writeDataEPKcx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -683,5 +699,16 @@ func (this *QIODevice) SetErrorString(errorString *QString) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice14setErrorStringERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
+
+type QIODevice__OpenModeFlag = int
+
+const QIODevice__NotOpen QIODevice__OpenModeFlag = 0
+const QIODevice__ReadOnly QIODevice__OpenModeFlag = 1
+const QIODevice__WriteOnly QIODevice__OpenModeFlag = 2
+const QIODevice__ReadWrite QIODevice__OpenModeFlag = 3
+const QIODevice__Append QIODevice__OpenModeFlag = 4
+const QIODevice__Truncate QIODevice__OpenModeFlag = 8
+const QIODevice__Text QIODevice__OpenModeFlag = 16
+const QIODevice__Unbuffered QIODevice__OpenModeFlag = 32
 
 //  body block end

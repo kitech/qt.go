@@ -59,9 +59,15 @@ func (this *QApplicationStateChangeEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QApplicationStateChangeEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQApplicationStateChangeEventFromPointer(cthis unsafe.Pointer) *QApplicationStateChangeEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QApplicationStateChangeEvent{bcthis0}
+}
+func (*QApplicationStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QApplicationStateChangeEvent {
+	return NewQApplicationStateChangeEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:1052
@@ -70,7 +76,7 @@ func NewQApplicationStateChangeEventFromPointer(cthis unsafe.Pointer) *QApplicat
 // void QApplicationStateChangeEvent(Qt::ApplicationState)
 func NewQApplicationStateChangeEvent(state int) *QApplicationStateChangeEvent {
 	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN28QApplicationStateChangeEventC2EN2Qt16ApplicationStateE", ffiqt.FFI_TYPE_VOID, cthis, &state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN28QApplicationStateChangeEventC2EN2Qt16ApplicationStateE", ffiqt.FFI_TYPE_VOID, cthis, state)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQApplicationStateChangeEventFromPointer(cthis)
 	return gothis

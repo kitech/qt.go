@@ -59,8 +59,14 @@ func (this *QPolygon) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QPolygon) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQPolygonFromPointer(cthis unsafe.Pointer) *QPolygon {
 	return &QPolygon{&qtrt.CObject{cthis}}
+}
+func (*QPolygon) NewFromPointer(cthis unsafe.Pointer) *QPolygon {
+	return NewQPolygonFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:59
@@ -81,7 +87,7 @@ func NewQPolygon() *QPolygon {
 // void QPolygon(int)
 func NewQPolygon_1(size int) *QPolygon {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygonC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygonC2Ei", ffiqt.FFI_TYPE_VOID, cthis, size)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPolygonFromPointer(cthis)
 	return gothis
@@ -94,7 +100,7 @@ func NewQPolygon_1(size int) *QPolygon {
 func NewQPolygon_2(r *qtcore.QRect, closed bool) *QPolygon {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygonC2ERK5QRectb", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &closed)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygonC2ERK5QRectb", ffiqt.FFI_TYPE_VOID, cthis, convArg0, closed)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPolygonFromPointer(cthis)
 	return gothis
@@ -106,7 +112,7 @@ func NewQPolygon_2(r *qtcore.QRect, closed bool) *QPolygon {
 // void QPolygon(int, const int *)
 func NewQPolygon_3(nPoints int, points unsafe.Pointer /*666*/) *QPolygon {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygonC2EiPKi", ffiqt.FFI_TYPE_VOID, cthis, &nPoints, points)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygonC2EiPKi", ffiqt.FFI_TYPE_VOID, cthis, nPoints, &points)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPolygonFromPointer(cthis)
 	return gothis
@@ -136,7 +142,7 @@ func (this *QPolygon) Swap(other *QPolygon) {
 // Public
 // void translate(int, int)
 func (this *QPolygon) Translate(dx int, dy int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygon9translateEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygon9translateEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -155,9 +161,11 @@ func (this *QPolygon) Translate_1(offset *qtcore.QPoint) {
 // Public
 // QPolygon translated(int, int)
 func (this *QPolygon) Translated(dx int, dy int) *QPolygon /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon10translatedEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &dx, &dy)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon10translatedEii", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -167,10 +175,12 @@ func (this *QPolygon) Translated(dx int, dy int) *QPolygon /*123*/ {
 // Public inline
 // QPolygon translated(const class QPoint &)
 func (this *QPolygon) Translated_1(offset *qtcore.QPoint) *QPolygon /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = offset.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon10translatedERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon10translatedERK6QPoint", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -180,9 +190,11 @@ func (this *QPolygon) Translated_1(offset *qtcore.QPoint) *QPolygon /*123*/ {
 // Public
 // QRect boundingRect()
 func (this *QPolygon) BoundingRect() *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon12boundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon12boundingRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -192,7 +204,7 @@ func (this *QPolygon) BoundingRect() *qtcore.QRect /*123*/ {
 // Public
 // void point(int, int *, int *)
 func (this *QPolygon) Point(i int, x unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon5pointEiPiS0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i, x, y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon5pointEiPiS0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i, &x, &y)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -201,9 +213,11 @@ func (this *QPolygon) Point(i int, x unsafe.Pointer /*666*/, y unsafe.Pointer /*
 // Public
 // QPoint point(int)
 func (this *QPolygon) Point_1(i int) *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon5pointEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon5pointEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -213,7 +227,7 @@ func (this *QPolygon) Point_1(i int) *qtcore.QPoint /*123*/ {
 // Public
 // void setPoint(int, int, int)
 func (this *QPolygon) SetPoint(index int, x int, y int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygon8setPointEiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, &x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygon8setPointEiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, x, y)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -223,7 +237,7 @@ func (this *QPolygon) SetPoint(index int, x int, y int) {
 // void setPoint(int, const class QPoint &)
 func (this *QPolygon) SetPoint_1(index int, p *qtcore.QPoint) {
 	var convArg1 = p.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygon8setPointEiRK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygon8setPointEiRK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -232,7 +246,7 @@ func (this *QPolygon) SetPoint_1(index int, p *qtcore.QPoint) {
 // Public
 // void setPoints(int, const int *)
 func (this *QPolygon) SetPoints(nPoints int, points unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygon9setPointsEiPKi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &nPoints, points)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygon9setPointsEiPKi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), nPoints, &points)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -241,7 +255,7 @@ func (this *QPolygon) SetPoints(nPoints int, points unsafe.Pointer /*666*/) {
 // Public
 // void putPoints(int, int, const int *)
 func (this *QPolygon) PutPoints(index int, nPoints int, points unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygon9putPointsEiiPKi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, &nPoints, points)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygon9putPointsEiiPKi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, nPoints, &points)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -251,7 +265,7 @@ func (this *QPolygon) PutPoints(index int, nPoints int, points unsafe.Pointer /*
 // void putPoints(int, int, const class QPolygon &, int)
 func (this *QPolygon) PutPoints_1(index int, nPoints int, from *QPolygon, fromIndex int) {
 	var convArg2 = from.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygon9putPointsEiiRKS_i", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, &nPoints, convArg2, &fromIndex)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygon9putPointsEiiRKS_i", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, nPoints, convArg2, fromIndex)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -261,7 +275,7 @@ func (this *QPolygon) PutPoints_1(index int, nPoints int, from *QPolygon, fromIn
 // bool containsPoint(const class QPoint &, Qt::FillRule)
 func (this *QPolygon) ContainsPoint(pt *qtcore.QPoint, fillRule int) bool {
 	var convArg0 = pt.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon13containsPointERK6QPointN2Qt8FillRuleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &fillRule)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon13containsPointERK6QPointN2Qt8FillRuleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fillRule)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -272,10 +286,12 @@ func (this *QPolygon) ContainsPoint(pt *qtcore.QPoint, fillRule int) bool {
 // Public
 // QPolygon united(const class QPolygon &)
 func (this *QPolygon) United(r *QPolygon) *QPolygon /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon6unitedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon6unitedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -285,10 +301,12 @@ func (this *QPolygon) United(r *QPolygon) *QPolygon /*123*/ {
 // Public
 // QPolygon intersected(const class QPolygon &)
 func (this *QPolygon) Intersected(r *QPolygon) *QPolygon /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -298,10 +316,12 @@ func (this *QPolygon) Intersected(r *QPolygon) *QPolygon /*123*/ {
 // Public
 // QPolygon subtracted(const class QPolygon &)
 func (this *QPolygon) Subtracted(r *QPolygon) *QPolygon /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon10subtractedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon10subtractedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

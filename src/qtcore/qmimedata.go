@@ -55,9 +55,15 @@ func (this *QMimeData) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QMimeData) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQMimeDataFromPointer(cthis unsafe.Pointer) *QMimeData {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QMimeData{bcthis0}
+}
+func (*QMimeData) NewFromPointer(cthis unsafe.Pointer) *QMimeData {
+	return NewQMimeDataFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:54
@@ -109,9 +115,11 @@ func (this *QMimeData) HasUrls() bool {
 // Public
 // QString text()
 func (this *QMimeData) Text() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4textEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -142,9 +150,11 @@ func (this *QMimeData) HasText() bool {
 // Public
 // QString html()
 func (this *QMimeData) Html() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4htmlEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4htmlEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -175,9 +185,11 @@ func (this *QMimeData) HasHtml() bool {
 // Public
 // QVariant imageData()
 func (this *QMimeData) ImageData() *QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData9imageDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData9imageDataEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -208,9 +220,11 @@ func (this *QMimeData) HasImage() bool {
 // Public
 // QVariant colorData()
 func (this *QMimeData) ColorData() *QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData9colorDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData9colorDataEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -241,10 +255,12 @@ func (this *QMimeData) HasColor() bool {
 // Public
 // QByteArray data(const class QString &)
 func (this *QMimeData) Data(mimetype *QString) *QByteArray /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = mimetype.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4dataERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4dataERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -296,10 +312,12 @@ func (this *QMimeData) Clear() {
 // Protected virtual
 // QVariant retrieveData(const class QString &, class QVariant::Type)
 func (this *QMimeData) RetrieveData(mimetype *QString, preferredType int) *QVariant /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = mimetype.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData12retrieveDataERK7QStringN8QVariant4TypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &preferredType)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData12retrieveDataERK7QStringN8QVariant4TypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, preferredType)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

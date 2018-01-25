@@ -59,8 +59,14 @@ func (this *QTextObjectInterface) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTextObjectInterface) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTextObjectInterfaceFromPointer(cthis unsafe.Pointer) *QTextObjectInterface {
 	return &QTextObjectInterface{&qtrt.CObject{cthis}}
+}
+func (*QTextObjectInterface) NewFromPointer(cthis unsafe.Pointer) *QTextObjectInterface {
+	return NewQTextObjectInterfaceFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qabstracttextdocumentlayout.h:141
@@ -77,11 +83,13 @@ func DeleteQTextObjectInterface(*QTextObjectInterface) {
 // Public pure virtual
 // QSizeF intrinsicSize(class QTextDocument *, int, const class QTextFormat &)
 func (this *QTextObjectInterface) IntrinsicSize(doc *QTextDocument /*444 QTextDocument **/, posInDocument int, format *QTextFormat) *qtcore.QSizeF /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = doc.GetCthis()
 	var convArg2 = format.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &posInDocument, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, posInDocument, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -95,7 +103,7 @@ func (this *QTextObjectInterface) DrawObject(painter *QPainter /*444 QPainter **
 	var convArg1 = rect.GetCthis()
 	var convArg2 = doc.GetCthis()
 	var convArg4 = format.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextObjectInterface10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, &posInDocument, convArg4)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextObjectInterface10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, posInDocument, convArg4)
 	gopp.ErrPrint(err, rv)
 }
 

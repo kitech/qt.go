@@ -63,9 +63,15 @@ func (this *QGraphicsRotation) GetCthis() unsafe.Pointer {
 		return this.QGraphicsTransform.GetCthis()
 	}
 }
+func (this *QGraphicsRotation) SetCthis(cthis unsafe.Pointer) {
+	this.QGraphicsTransform = NewQGraphicsTransformFromPointer(cthis)
+}
 func NewQGraphicsRotationFromPointer(cthis unsafe.Pointer) *QGraphicsRotation {
 	bcthis0 := NewQGraphicsTransformFromPointer(cthis)
 	return &QGraphicsRotation{bcthis0}
+}
+func (*QGraphicsRotation) NewFromPointer(cthis unsafe.Pointer) *QGraphicsRotation {
+	return NewQGraphicsRotationFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:120
@@ -107,9 +113,11 @@ func DeleteQGraphicsRotation(*QGraphicsRotation) {
 // Public
 // QVector3D origin()
 func (this *QGraphicsRotation) Origin() *qtgui.QVector3D /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRotation6originEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRotation6originEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -140,7 +148,7 @@ func (this *QGraphicsRotation) Angle() float64 {
 // Public
 // void setAngle(qreal)
 func (this *QGraphicsRotation) SetAngle(arg0 float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation8setAngleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation8setAngleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -149,9 +157,11 @@ func (this *QGraphicsRotation) SetAngle(arg0 float64) {
 // Public
 // QVector3D axis()
 func (this *QGraphicsRotation) Axis() *qtgui.QVector3D /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRotation4axisEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRotation4axisEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -171,7 +181,7 @@ func (this *QGraphicsRotation) SetAxis(axis *qtgui.QVector3D) {
 // Public
 // void setAxis(Qt::Axis)
 func (this *QGraphicsRotation) SetAxis_1(axis int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation7setAxisEN2Qt4AxisE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &axis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation7setAxisEN2Qt4AxisE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), axis)
 	gopp.ErrPrint(err, rv)
 }
 

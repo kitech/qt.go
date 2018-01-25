@@ -59,9 +59,15 @@ func (this *QAccessibleTextSelectionEvent) GetCthis() unsafe.Pointer {
 		return this.QAccessibleTextCursorEvent.GetCthis()
 	}
 }
+func (this *QAccessibleTextSelectionEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QAccessibleTextCursorEvent = NewQAccessibleTextCursorEventFromPointer(cthis)
+}
 func NewQAccessibleTextSelectionEventFromPointer(cthis unsafe.Pointer) *QAccessibleTextSelectionEvent {
 	bcthis0 := NewQAccessibleTextCursorEventFromPointer(cthis)
 	return &QAccessibleTextSelectionEvent{bcthis0}
+}
+func (*QAccessibleTextSelectionEvent) NewFromPointer(cthis unsafe.Pointer) *QAccessibleTextSelectionEvent {
+	return NewQAccessibleTextSelectionEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:773
@@ -71,7 +77,7 @@ func NewQAccessibleTextSelectionEventFromPointer(cthis unsafe.Pointer) *QAccessi
 func NewQAccessibleTextSelectionEvent(obj *qtcore.QObject /*444 QObject **/, start int, end int) *QAccessibleTextSelectionEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = obj.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventC2EP7QObjectii", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &start, &end)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventC2EP7QObjectii", ffiqt.FFI_TYPE_VOID, cthis, convArg0, start, end)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextSelectionEventFromPointer(cthis)
 	return gothis
@@ -84,7 +90,7 @@ func NewQAccessibleTextSelectionEvent(obj *qtcore.QObject /*444 QObject **/, sta
 func NewQAccessibleTextSelectionEvent_1(iface *QAccessibleInterface /*444 QAccessibleInterface **/, start int, end int) *QAccessibleTextSelectionEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = iface.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventC2EP20QAccessibleInterfaceii", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &start, &end)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventC2EP20QAccessibleInterfaceii", ffiqt.FFI_TYPE_VOID, cthis, convArg0, start, end)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextSelectionEventFromPointer(cthis)
 	return gothis
@@ -104,7 +110,7 @@ func DeleteQAccessibleTextSelectionEvent(*QAccessibleTextSelectionEvent) {
 // Public inline
 // void setSelection(int, int)
 func (this *QAccessibleTextSelectionEvent) SetSelection(start int, end int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEvent12setSelectionEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &start, &end)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEvent12setSelectionEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), start, end)
 	gopp.ErrPrint(err, rv)
 }
 

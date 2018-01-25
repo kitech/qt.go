@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 74
+// extern C begin: 75
 */
 // import "C"
 import "unsafe"
@@ -63,8 +63,14 @@ func (this *QTableWidgetSelectionRange) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTableWidgetSelectionRange) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTableWidgetSelectionRangeFromPointer(cthis unsafe.Pointer) *QTableWidgetSelectionRange {
 	return &QTableWidgetSelectionRange{&qtrt.CObject{cthis}}
+}
+func (*QTableWidgetSelectionRange) NewFromPointer(cthis unsafe.Pointer) *QTableWidgetSelectionRange {
+	return NewQTableWidgetSelectionRangeFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:55
@@ -85,7 +91,7 @@ func NewQTableWidgetSelectionRange() *QTableWidgetSelectionRange {
 // void QTableWidgetSelectionRange(int, int, int, int)
 func NewQTableWidgetSelectionRange_1(top int, left int, bottom int, right int) *QTableWidgetSelectionRange {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeC2Eiiii", ffiqt.FFI_TYPE_VOID, cthis, &top, &left, &bottom, &right)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeC2Eiiii", ffiqt.FFI_TYPE_VOID, cthis, top, left, bottom, right)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTableWidgetSelectionRangeFromPointer(cthis)
 	return gothis

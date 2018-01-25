@@ -55,8 +55,14 @@ func (this *QAbstractNativeEventFilter) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QAbstractNativeEventFilter) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQAbstractNativeEventFilterFromPointer(cthis unsafe.Pointer) *QAbstractNativeEventFilter {
 	return &QAbstractNativeEventFilter{&qtrt.CObject{cthis}}
+}
+func (*QAbstractNativeEventFilter) NewFromPointer(cthis unsafe.Pointer) *QAbstractNativeEventFilter {
+	return NewQAbstractNativeEventFilterFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qabstractnativeeventfilter.h:52
@@ -86,7 +92,7 @@ func DeleteQAbstractNativeEventFilter(*QAbstractNativeEventFilter) {
 // bool nativeEventFilter(const class QByteArray &, void *, long *)
 func (this *QAbstractNativeEventFilter) NativeEventFilter(eventType *QByteArray, message unsafe.Pointer /*666*/, result unsafe.Pointer /*666*/) bool {
 	var convArg0 = eventType.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAbstractNativeEventFilter17nativeEventFilterERK10QByteArrayPvPl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, message, result)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAbstractNativeEventFilter17nativeEventFilterERK10QByteArrayPvPl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, message, &result)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

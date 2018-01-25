@@ -63,9 +63,15 @@ func (this *QStylePlugin) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QStylePlugin) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQStylePluginFromPointer(cthis unsafe.Pointer) *QStylePlugin {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QStylePlugin{bcthis0}
+}
+func (*QStylePlugin) NewFromPointer(cthis unsafe.Pointer) *QStylePlugin {
+	return NewQStylePluginFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qstyleplugin.h:56

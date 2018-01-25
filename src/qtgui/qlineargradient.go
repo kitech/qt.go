@@ -59,9 +59,15 @@ func (this *QLinearGradient) GetCthis() unsafe.Pointer {
 		return this.QGradient.GetCthis()
 	}
 }
+func (this *QLinearGradient) SetCthis(cthis unsafe.Pointer) {
+	this.QGradient = NewQGradientFromPointer(cthis)
+}
 func NewQLinearGradientFromPointer(cthis unsafe.Pointer) *QLinearGradient {
 	bcthis0 := NewQGradientFromPointer(cthis)
 	return &QLinearGradient{bcthis0}
+}
+func (*QLinearGradient) NewFromPointer(cthis unsafe.Pointer) *QLinearGradient {
+	return NewQLinearGradientFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qbrush.h:257
@@ -96,7 +102,7 @@ func NewQLinearGradient_1(start *qtcore.QPointF, finalStop *qtcore.QPointF) *QLi
 // void QLinearGradient(qreal, qreal, qreal, qreal)
 func NewQLinearGradient_2(xStart float64, yStart float64, xFinalStop float64, yFinalStop float64) *QLinearGradient {
 	cthis := qtrt.Calloc(1, 256) // 64
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QLinearGradientC2Edddd", ffiqt.FFI_TYPE_VOID, cthis, &xStart, &yStart, &xFinalStop, &yFinalStop)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QLinearGradientC2Edddd", ffiqt.FFI_TYPE_VOID, cthis, xStart, yStart, xFinalStop, yFinalStop)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLinearGradientFromPointer(cthis)
 	return gothis
@@ -107,9 +113,11 @@ func NewQLinearGradient_2(xStart float64, yStart float64, xFinalStop float64, yF
 // Public
 // QPointF start()
 func (this *QLinearGradient) Start() *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QLinearGradient5startEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QLinearGradient5startEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -129,7 +137,7 @@ func (this *QLinearGradient) SetStart(start *qtcore.QPointF) {
 // Public inline
 // void setStart(qreal, qreal)
 func (this *QLinearGradient) SetStart_1(x float64, y float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QLinearGradient8setStartEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QLinearGradient8setStartEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -138,9 +146,11 @@ func (this *QLinearGradient) SetStart_1(x float64, y float64) {
 // Public
 // QPointF finalStop()
 func (this *QLinearGradient) FinalStop() *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QLinearGradient9finalStopEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QLinearGradient9finalStopEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -160,7 +170,7 @@ func (this *QLinearGradient) SetFinalStop(stop *qtcore.QPointF) {
 // Public inline
 // void setFinalStop(qreal, qreal)
 func (this *QLinearGradient) SetFinalStop_1(x float64, y float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QLinearGradient12setFinalStopEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QLinearGradient12setFinalStopEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
 }
 

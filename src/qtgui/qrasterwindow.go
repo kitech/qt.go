@@ -59,9 +59,15 @@ func (this *QRasterWindow) GetCthis() unsafe.Pointer {
 		return this.QPaintDeviceWindow.GetCthis()
 	}
 }
+func (this *QRasterWindow) SetCthis(cthis unsafe.Pointer) {
+	this.QPaintDeviceWindow = NewQPaintDeviceWindowFromPointer(cthis)
+}
 func NewQRasterWindowFromPointer(cthis unsafe.Pointer) *QRasterWindow {
 	bcthis0 := NewQPaintDeviceWindowFromPointer(cthis)
 	return &QRasterWindow{bcthis0}
+}
+func (*QRasterWindow) NewFromPointer(cthis unsafe.Pointer) *QRasterWindow {
+	return NewQRasterWindowFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qrasterwindow.h:52
@@ -103,7 +109,7 @@ func DeleteQRasterWindow(*QRasterWindow) {
 // Protected virtual
 // int metric(enum QPaintDevice::PaintDeviceMetric)
 func (this *QRasterWindow) Metric(metric int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QRasterWindow6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &metric)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QRasterWindow6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), metric)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111

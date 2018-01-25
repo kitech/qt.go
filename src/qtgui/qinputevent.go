@@ -59,9 +59,15 @@ func (this *QInputEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QInputEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQInputEventFromPointer(cthis unsafe.Pointer) *QInputEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QInputEvent{bcthis0}
+}
+func (*QInputEvent) NewFromPointer(cthis unsafe.Pointer) *QInputEvent {
+	return NewQInputEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:72
@@ -100,7 +106,7 @@ func (this *QInputEvent) Timestamp() uint {
 // Public inline
 // void setTimestamp(ulong)
 func (this *QInputEvent) SetTimestamp(atimestamp uint) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QInputEvent12setTimestampEm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &atimestamp)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QInputEvent12setTimestampEm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), atimestamp)
 	gopp.ErrPrint(err, rv)
 }
 

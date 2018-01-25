@@ -59,8 +59,14 @@ func (this *QFontDatabase) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QFontDatabase) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQFontDatabaseFromPointer(cthis unsafe.Pointer) *QFontDatabase {
 	return &QFontDatabase{&qtrt.CObject{cthis}}
+}
+func (*QFontDatabase) NewFromPointer(cthis unsafe.Pointer) *QFontDatabase {
+	return NewQFontDatabaseFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qfontdatabase.h:118
@@ -80,10 +86,12 @@ func NewQFontDatabase() *QFontDatabase {
 // Public
 // QString styleString(const class QFont &)
 func (this *QFontDatabase) StyleString(font *QFont) *qtcore.QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = font.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase11styleStringERK5QFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase11styleStringERK5QFont", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -93,10 +101,12 @@ func (this *QFontDatabase) StyleString(font *QFont) *qtcore.QString /*123*/ {
 // Public
 // QString styleString(const class QFontInfo &)
 func (this *QFontDatabase) StyleString_1(fontInfo *QFontInfo) *qtcore.QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fontInfo.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase11styleStringERK9QFontInfo", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase11styleStringERK9QFontInfo", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -106,11 +116,13 @@ func (this *QFontDatabase) StyleString_1(fontInfo *QFontInfo) *qtcore.QString /*
 // Public
 // QFont font(const class QString &, const class QString &, int)
 func (this *QFontDatabase) Font(family *qtcore.QString, style *qtcore.QString, pointSize int) *QFont /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = family.GetCthis()
 	var convArg1 = style.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontDatabase4fontERK7QStringS2_i", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, &pointSize)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontDatabase4fontERK7QStringS2_i", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, pointSize)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -360,5 +372,51 @@ func QFontDatabase_SystemFont(type_ int) *QFont /*123*/ {
 	rv := nilthis.SystemFont(type_)
 	return rv
 }
+
+type QFontDatabase__WritingSystem = int
+
+const QFontDatabase__Any QFontDatabase__WritingSystem = 0
+const QFontDatabase__Latin QFontDatabase__WritingSystem = 1
+const QFontDatabase__Greek QFontDatabase__WritingSystem = 2
+const QFontDatabase__Cyrillic QFontDatabase__WritingSystem = 3
+const QFontDatabase__Armenian QFontDatabase__WritingSystem = 4
+const QFontDatabase__Hebrew QFontDatabase__WritingSystem = 5
+const QFontDatabase__Arabic QFontDatabase__WritingSystem = 6
+const QFontDatabase__Syriac QFontDatabase__WritingSystem = 7
+const QFontDatabase__Thaana QFontDatabase__WritingSystem = 8
+const QFontDatabase__Devanagari QFontDatabase__WritingSystem = 9
+const QFontDatabase__Bengali QFontDatabase__WritingSystem = 10
+const QFontDatabase__Gurmukhi QFontDatabase__WritingSystem = 11
+const QFontDatabase__Gujarati QFontDatabase__WritingSystem = 12
+const QFontDatabase__Oriya QFontDatabase__WritingSystem = 13
+const QFontDatabase__Tamil QFontDatabase__WritingSystem = 14
+const QFontDatabase__Telugu QFontDatabase__WritingSystem = 15
+const QFontDatabase__Kannada QFontDatabase__WritingSystem = 16
+const QFontDatabase__Malayalam QFontDatabase__WritingSystem = 17
+const QFontDatabase__Sinhala QFontDatabase__WritingSystem = 18
+const QFontDatabase__Thai QFontDatabase__WritingSystem = 19
+const QFontDatabase__Lao QFontDatabase__WritingSystem = 20
+const QFontDatabase__Tibetan QFontDatabase__WritingSystem = 21
+const QFontDatabase__Myanmar QFontDatabase__WritingSystem = 22
+const QFontDatabase__Georgian QFontDatabase__WritingSystem = 23
+const QFontDatabase__Khmer QFontDatabase__WritingSystem = 24
+const QFontDatabase__SimplifiedChinese QFontDatabase__WritingSystem = 25
+const QFontDatabase__TraditionalChinese QFontDatabase__WritingSystem = 26
+const QFontDatabase__Japanese QFontDatabase__WritingSystem = 27
+const QFontDatabase__Korean QFontDatabase__WritingSystem = 28
+const QFontDatabase__Vietnamese QFontDatabase__WritingSystem = 29
+const QFontDatabase__Symbol QFontDatabase__WritingSystem = 30
+const QFontDatabase__Other QFontDatabase__WritingSystem = 30
+const QFontDatabase__Ogham QFontDatabase__WritingSystem = 31
+const QFontDatabase__Runic QFontDatabase__WritingSystem = 32
+const QFontDatabase__Nko QFontDatabase__WritingSystem = 33
+const QFontDatabase__WritingSystemsCount QFontDatabase__WritingSystem = 34
+
+type QFontDatabase__SystemFont = int
+
+const QFontDatabase__GeneralFont QFontDatabase__SystemFont = 0
+const QFontDatabase__FixedFont QFontDatabase__SystemFont = 1
+const QFontDatabase__TitleFont QFontDatabase__SystemFont = 2
+const QFontDatabase__SmallestReadableFont QFontDatabase__SystemFont = 3
 
 //  body block end

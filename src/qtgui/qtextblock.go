@@ -59,8 +59,14 @@ func (this *QTextBlock) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTextBlock) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTextBlockFromPointer(cthis unsafe.Pointer) *QTextBlock {
 	return &QTextBlock{&qtrt.CObject{cthis}}
+}
+func (*QTextBlock) NewFromPointer(cthis unsafe.Pointer) *QTextBlock {
+	return NewQTextBlockFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:206
@@ -113,7 +119,7 @@ func (this *QTextBlock) Length() int {
 // Public
 // bool contains(int)
 func (this *QTextBlock) Contains(position int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8containsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &position)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8containsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), position)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -145,9 +151,11 @@ func (this *QTextBlock) ClearLayout() {
 // Public
 // QTextBlockFormat blockFormat()
 func (this *QTextBlock) BlockFormat() *QTextBlockFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock11blockFormatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock11blockFormatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextBlockFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -168,9 +176,11 @@ func (this *QTextBlock) BlockFormatIndex() int {
 // Public
 // QTextCharFormat charFormat()
 func (this *QTextBlock) CharFormat() *QTextCharFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock10charFormatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock10charFormatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -202,9 +212,11 @@ func (this *QTextBlock) TextDirection() int {
 // Public
 // QString text()
 func (this *QTextBlock) Text() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock4textEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -271,7 +283,7 @@ func (this *QTextBlock) UserState() int {
 // Public
 // void setUserState(int)
 func (this *QTextBlock) SetUserState(state int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock12setUserStateEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock12setUserStateEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -291,7 +303,7 @@ func (this *QTextBlock) Revision() int {
 // Public
 // void setRevision(int)
 func (this *QTextBlock) SetRevision(rev int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock11setRevisionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &rev)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock11setRevisionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), rev)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -311,7 +323,7 @@ func (this *QTextBlock) IsVisible() bool {
 // Public
 // void setVisible(_Bool)
 func (this *QTextBlock) SetVisible(visible bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -342,7 +354,7 @@ func (this *QTextBlock) FirstLineNumber() int {
 // Public
 // void setLineCount(int)
 func (this *QTextBlock) SetLineCount(count int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock12setLineCountEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &count)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock12setLineCountEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), count)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -362,9 +374,11 @@ func (this *QTextBlock) LineCount() int {
 // Public
 // QTextBlock::iterator begin()
 func (this *QTextBlock) Begin() unsafe.Pointer /*444*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock5beginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock5beginEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -373,9 +387,11 @@ func (this *QTextBlock) Begin() unsafe.Pointer /*444*/ {
 // Public
 // QTextBlock::iterator end()
 func (this *QTextBlock) End() unsafe.Pointer /*444*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock3endEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -384,9 +400,11 @@ func (this *QTextBlock) End() unsafe.Pointer /*444*/ {
 // Public
 // QTextBlock next()
 func (this *QTextBlock) Next() *QTextBlock /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock4nextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock4nextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -396,9 +414,11 @@ func (this *QTextBlock) Next() *QTextBlock /*123*/ {
 // Public
 // QTextBlock previous()
 func (this *QTextBlock) Previous() *QTextBlock /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8previousEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8previousEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

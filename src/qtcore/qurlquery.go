@@ -55,8 +55,14 @@ func (this *QUrlQuery) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QUrlQuery) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQUrlQueryFromPointer(cthis unsafe.Pointer) *QUrlQuery {
 	return &QUrlQuery{&qtrt.CObject{cthis}}
+}
+func (*QUrlQuery) NewFromPointer(cthis unsafe.Pointer) *QUrlQuery {
+	return NewQUrlQueryFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:59
@@ -173,9 +179,11 @@ func (this *QUrlQuery) SetQueryDelimiters(valueDelimiter *QChar /*123*/, pairDel
 // Public
 // QChar queryValueDelimiter()
 func (this *QUrlQuery) QueryValueDelimiter() *QChar /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery19queryValueDelimiterEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery19queryValueDelimiterEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -185,9 +193,11 @@ func (this *QUrlQuery) QueryValueDelimiter() *QChar /*123*/ {
 // Public
 // QChar queryPairDelimiter()
 func (this *QUrlQuery) QueryPairDelimiter() *QChar /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery18queryPairDelimiterEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery18queryPairDelimiterEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

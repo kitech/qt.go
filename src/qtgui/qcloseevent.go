@@ -59,9 +59,15 @@ func (this *QCloseEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QCloseEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQCloseEventFromPointer(cthis unsafe.Pointer) *QCloseEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QCloseEvent{bcthis0}
+}
+func (*QCloseEvent) NewFromPointer(cthis unsafe.Pointer) *QCloseEvent {
+	return NewQCloseEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:477

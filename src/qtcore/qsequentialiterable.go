@@ -55,8 +55,14 @@ func (this *QSequentialIterable) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QSequentialIterable) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQSequentialIterableFromPointer(cthis unsafe.Pointer) *QSequentialIterable {
 	return &QSequentialIterable{&qtrt.CObject{cthis}}
+}
+func (*QSequentialIterable) NewFromPointer(cthis unsafe.Pointer) *QSequentialIterable {
+	return NewQSequentialIterableFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qvariant.h:623
@@ -64,9 +70,11 @@ func NewQSequentialIterableFromPointer(cthis unsafe.Pointer) *QSequentialIterabl
 // Public
 // QSequentialIterable::const_iterator begin()
 func (this *QSequentialIterable) Begin() unsafe.Pointer /*444*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable5beginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable5beginEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -75,9 +83,11 @@ func (this *QSequentialIterable) Begin() unsafe.Pointer /*444*/ {
 // Public
 // QSequentialIterable::const_iterator end()
 func (this *QSequentialIterable) End() unsafe.Pointer /*444*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable3endEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -86,9 +96,11 @@ func (this *QSequentialIterable) End() unsafe.Pointer /*444*/ {
 // Public
 // QVariant at(int)
 func (this *QSequentialIterable) At(idx int) *QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable2atEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &idx)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable2atEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), idx)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

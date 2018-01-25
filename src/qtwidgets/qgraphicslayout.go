@@ -63,9 +63,15 @@ func (this *QGraphicsLayout) GetCthis() unsafe.Pointer {
 		return this.QGraphicsLayoutItem.GetCthis()
 	}
 }
+func (this *QGraphicsLayout) SetCthis(cthis unsafe.Pointer) {
+	this.QGraphicsLayoutItem = NewQGraphicsLayoutItemFromPointer(cthis)
+}
 func NewQGraphicsLayoutFromPointer(cthis unsafe.Pointer) *QGraphicsLayout {
 	bcthis0 := NewQGraphicsLayoutItemFromPointer(cthis)
 	return &QGraphicsLayout{bcthis0}
+}
+func (*QGraphicsLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLayout {
+	return NewQGraphicsLayoutFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:57
@@ -95,7 +101,7 @@ func DeleteQGraphicsLayout(*QGraphicsLayout) {
 // Public
 // void setContentsMargins(qreal, qreal, qreal, qreal)
 func (this *QGraphicsLayout) SetContentsMargins(left float64, top float64, right float64, bottom float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout18setContentsMarginsEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &left, &top, &right, &bottom)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout18setContentsMarginsEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), left, top, right, bottom)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -104,7 +110,7 @@ func (this *QGraphicsLayout) SetContentsMargins(left float64, top float64, right
 // Public virtual
 // void getContentsMargins(qreal *, qreal *, qreal *, qreal *)
 func (this *QGraphicsLayout) GetContentsMargins(left unsafe.Pointer /*666*/, top unsafe.Pointer /*666*/, right unsafe.Pointer /*666*/, bottom unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), left, top, right, bottom)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &left, &top, &right, &bottom)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -172,7 +178,7 @@ func (this *QGraphicsLayout) Count() int {
 // Public pure virtual
 // QGraphicsLayoutItem * itemAt(int)
 func (this *QGraphicsLayout) ItemAt(i int) *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsLayout6itemAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsLayout6itemAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQGraphicsLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -184,7 +190,7 @@ func (this *QGraphicsLayout) ItemAt(i int) *QGraphicsLayoutItem /*444 QGraphicsL
 // Public pure virtual
 // void removeAt(int)
 func (this *QGraphicsLayout) RemoveAt(index int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout8removeAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout8removeAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 

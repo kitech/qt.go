@@ -55,8 +55,14 @@ func (this *QJsonValuePtr) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QJsonValuePtr) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQJsonValuePtrFromPointer(cthis unsafe.Pointer) *QJsonValuePtr {
 	return &QJsonValuePtr{&qtrt.CObject{cthis}}
+}
+func (*QJsonValuePtr) NewFromPointer(cthis unsafe.Pointer) *QJsonValuePtr {
+	return NewQJsonValuePtrFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:226

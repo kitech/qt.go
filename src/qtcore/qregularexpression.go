@@ -55,8 +55,14 @@ func (this *QRegularExpression) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QRegularExpression) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQRegularExpressionFromPointer(cthis unsafe.Pointer) *QRegularExpression {
 	return &QRegularExpression{&qtrt.CObject{cthis}}
+}
+func (*QRegularExpression) NewFromPointer(cthis unsafe.Pointer) *QRegularExpression {
+	return NewQRegularExpressionFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:81
@@ -106,9 +112,11 @@ func (this *QRegularExpression) Swap(other *QRegularExpression) {
 // Public
 // QString pattern()
 func (this *QRegularExpression) Pattern() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QRegularExpression7patternEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QRegularExpression7patternEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -150,9 +158,11 @@ func (this *QRegularExpression) PatternErrorOffset() int {
 // Public
 // QString errorString()
 func (this *QRegularExpression) ErrorString() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QRegularExpression11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QRegularExpression11errorStringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -193,5 +203,31 @@ func QRegularExpression_Escape(str *QString) *QString /*123*/ {
 	rv := nilthis.Escape(str)
 	return rv
 }
+
+type QRegularExpression__PatternOption = int
+
+const QRegularExpression__NoPatternOption QRegularExpression__PatternOption = 0
+const QRegularExpression__CaseInsensitiveOption QRegularExpression__PatternOption = 1
+const QRegularExpression__DotMatchesEverythingOption QRegularExpression__PatternOption = 2
+const QRegularExpression__MultilineOption QRegularExpression__PatternOption = 4
+const QRegularExpression__ExtendedPatternSyntaxOption QRegularExpression__PatternOption = 8
+const QRegularExpression__InvertedGreedinessOption QRegularExpression__PatternOption = 16
+const QRegularExpression__DontCaptureOption QRegularExpression__PatternOption = 32
+const QRegularExpression__UseUnicodePropertiesOption QRegularExpression__PatternOption = 64
+const QRegularExpression__OptimizeOnFirstUsageOption QRegularExpression__PatternOption = 128
+const QRegularExpression__DontAutomaticallyOptimizeOption QRegularExpression__PatternOption = 256
+
+type QRegularExpression__MatchType = int
+
+const QRegularExpression__NormalMatch QRegularExpression__MatchType = 0
+const QRegularExpression__PartialPreferCompleteMatch QRegularExpression__MatchType = 1
+const QRegularExpression__PartialPreferFirstMatch QRegularExpression__MatchType = 2
+const QRegularExpression__NoMatch QRegularExpression__MatchType = 3
+
+type QRegularExpression__MatchOption = int
+
+const QRegularExpression__NoMatchOption QRegularExpression__MatchOption = 0
+const QRegularExpression__AnchoredMatchOption QRegularExpression__MatchOption = 1
+const QRegularExpression__DontCheckSubjectStringMatchOption QRegularExpression__MatchOption = 2
 
 //  body block end

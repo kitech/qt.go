@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 133
+// extern C begin: 134
 */
 // import "C"
 import "unsafe"
@@ -63,8 +63,14 @@ func (this *QAccessibleWidget) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QAccessibleWidget) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQAccessibleWidgetFromPointer(cthis unsafe.Pointer) *QAccessibleWidget {
 	return &QAccessibleWidget{&qtrt.CObject{cthis}}
+}
+func (*QAccessibleWidget) NewFromPointer(cthis unsafe.Pointer) *QAccessibleWidget {
+	return NewQAccessibleWidgetFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qaccessiblewidget.h:56
@@ -75,7 +81,7 @@ func NewQAccessibleWidget(o *QWidget /*444 QWidget **/, r int, name *qtcore.QStr
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = o.GetCthis()
 	var convArg2 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleWidgetC2EP7QWidgetN11QAccessible4RoleERK7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &r, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleWidgetC2EP7QWidgetN11QAccessible4RoleERK7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0, r, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleWidgetFromPointer(cthis)
 	return gothis
@@ -144,9 +150,11 @@ func (this *QAccessibleWidget) FocusChild() *qtgui.QAccessibleInterface /*444 QA
 // Public virtual
 // QRect rect()
 func (this *QAccessibleWidget) Rect() *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget4rectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget4rectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -168,7 +176,7 @@ func (this *QAccessibleWidget) Parent() *qtgui.QAccessibleInterface /*444 QAcces
 // Public virtual
 // QAccessibleInterface * child(int)
 func (this *QAccessibleWidget) Child(index int) *qtgui.QAccessibleInterface /*444 QAccessibleInterface **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget5childEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget5childEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -180,9 +188,11 @@ func (this *QAccessibleWidget) Child(index int) *qtgui.QAccessibleInterface /*44
 // Public virtual
 // QString text(class QAccessible::Text)
 func (this *QAccessibleWidget) Text(t int) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget4textEN11QAccessible4TextE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &t)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget4textEN11QAccessible4TextE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), t)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -214,9 +224,11 @@ func (this *QAccessibleWidget) State() int {
 // Public virtual
 // QColor foregroundColor()
 func (this *QAccessibleWidget) ForegroundColor() *qtgui.QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget15foregroundColorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget15foregroundColorEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -226,9 +238,11 @@ func (this *QAccessibleWidget) ForegroundColor() *qtgui.QColor /*123*/ {
 // Public virtual
 // QColor backgroundColor()
 func (this *QAccessibleWidget) BackgroundColor() *qtgui.QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget15backgroundColorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget15backgroundColorEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -238,7 +252,7 @@ func (this *QAccessibleWidget) BackgroundColor() *qtgui.QColor /*123*/ {
 // Public virtual
 // void * interface_cast(class QAccessible::InterfaceType)
 func (this *QAccessibleWidget) Interface_cast(t int) unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleWidget14interface_castEN11QAccessible13InterfaceTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleWidget14interface_castEN11QAccessible13InterfaceTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))

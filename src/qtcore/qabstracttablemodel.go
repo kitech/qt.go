@@ -55,9 +55,15 @@ func (this *QAbstractTableModel) GetCthis() unsafe.Pointer {
 		return this.QAbstractItemModel.GetCthis()
 	}
 }
+func (this *QAbstractTableModel) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractItemModel = NewQAbstractItemModelFromPointer(cthis)
+}
 func NewQAbstractTableModelFromPointer(cthis unsafe.Pointer) *QAbstractTableModel {
 	bcthis0 := NewQAbstractItemModelFromPointer(cthis)
 	return &QAbstractTableModel{bcthis0}
+}
+func (*QAbstractTableModel) NewFromPointer(cthis unsafe.Pointer) *QAbstractTableModel {
+	return NewQAbstractTableModelFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:367
@@ -99,10 +105,12 @@ func DeleteQAbstractTableModel(*QAbstractTableModel) {
 // Public virtual
 // QModelIndex index(int, int, const class QModelIndex &)
 func (this *QAbstractTableModel) Index(row int, column int, parent *QModelIndex) *QModelIndex /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg2 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractTableModel5indexEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractTableModel5indexEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), row, column, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -112,10 +120,12 @@ func (this *QAbstractTableModel) Index(row int, column int, parent *QModelIndex)
 // Public virtual
 // QModelIndex sibling(int, int, const class QModelIndex &)
 func (this *QAbstractTableModel) Sibling(row int, column int, idx *QModelIndex) *QModelIndex /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg2 = idx.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractTableModel7siblingEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractTableModel7siblingEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), row, column, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -127,7 +137,7 @@ func (this *QAbstractTableModel) Sibling(row int, column int, idx *QModelIndex) 
 func (this *QAbstractTableModel) DropMimeData(data *QMimeData /*444 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTableModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &action, &row, &column, convArg4)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTableModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action, row, column, convArg4)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

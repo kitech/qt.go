@@ -59,9 +59,15 @@ func (this *QToolBarChangeEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QToolBarChangeEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQToolBarChangeEventFromPointer(cthis unsafe.Pointer) *QToolBarChangeEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QToolBarChangeEvent{bcthis0}
+}
+func (*QToolBarChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QToolBarChangeEvent {
+	return NewQToolBarChangeEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:754
@@ -70,7 +76,7 @@ func NewQToolBarChangeEventFromPointer(cthis unsafe.Pointer) *QToolBarChangeEven
 // void QToolBarChangeEvent(_Bool)
 func NewQToolBarChangeEvent(t bool) *QToolBarChangeEvent {
 	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QToolBarChangeEventC2Eb", ffiqt.FFI_TYPE_VOID, cthis, &t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QToolBarChangeEventC2Eb", ffiqt.FFI_TYPE_VOID, cthis, t)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQToolBarChangeEventFromPointer(cthis)
 	return gothis

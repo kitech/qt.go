@@ -55,8 +55,14 @@ func (this *QGenericArgument) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QGenericArgument) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQGenericArgumentFromPointer(cthis unsafe.Pointer) *QGenericArgument {
 	return &QGenericArgument{&qtrt.CObject{cthis}}
+}
+func (*QGenericArgument) NewFromPointer(cthis unsafe.Pointer) *QGenericArgument {
+	return NewQGenericArgumentFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qobjectdefs.h:297

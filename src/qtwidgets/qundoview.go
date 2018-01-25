@@ -63,9 +63,15 @@ func (this *QUndoView) GetCthis() unsafe.Pointer {
 		return this.QListView.GetCthis()
 	}
 }
+func (this *QUndoView) SetCthis(cthis unsafe.Pointer) {
+	this.QListView = NewQListViewFromPointer(cthis)
+}
 func NewQUndoViewFromPointer(cthis unsafe.Pointer) *QUndoView {
 	bcthis0 := NewQListViewFromPointer(cthis)
 	return &QUndoView{bcthis0}
+}
+func (*QUndoView) NewFromPointer(cthis unsafe.Pointer) *QUndoView {
+	return NewQUndoViewFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qundoview.h:59
@@ -169,9 +175,11 @@ func (this *QUndoView) SetEmptyLabel(label *qtcore.QString) {
 // Public
 // QString emptyLabel()
 func (this *QUndoView) EmptyLabel() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUndoView10emptyLabelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUndoView10emptyLabelEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -191,9 +199,11 @@ func (this *QUndoView) SetCleanIcon(icon *qtgui.QIcon) {
 // Public
 // QIcon cleanIcon()
 func (this *QUndoView) CleanIcon() *qtgui.QIcon /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUndoView9cleanIconEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUndoView9cleanIconEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

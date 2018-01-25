@@ -63,9 +63,15 @@ func (this *QStackedWidget) GetCthis() unsafe.Pointer {
 		return this.QFrame.GetCthis()
 	}
 }
+func (this *QStackedWidget) SetCthis(cthis unsafe.Pointer) {
+	this.QFrame = NewQFrameFromPointer(cthis)
+}
 func NewQStackedWidgetFromPointer(cthis unsafe.Pointer) *QStackedWidget {
 	bcthis0 := NewQFrameFromPointer(cthis)
 	return &QStackedWidget{bcthis0}
+}
+func (*QStackedWidget) NewFromPointer(cthis unsafe.Pointer) *QStackedWidget {
+	return NewQStackedWidgetFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:54
@@ -120,7 +126,7 @@ func (this *QStackedWidget) AddWidget(w *QWidget /*444 QWidget **/) int {
 // int insertWidget(int, class QWidget *)
 func (this *QStackedWidget) InsertWidget(index int, w *QWidget /*444 QWidget **/) int {
 	var convArg1 = w.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget12insertWidgetEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget12insertWidgetEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -176,7 +182,7 @@ func (this *QStackedWidget) IndexOf(arg0 *QWidget /*444 QWidget **/) int {
 // Public
 // QWidget * widget(int)
 func (this *QStackedWidget) Widget(arg0 int) *QWidget /*444 QWidget **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget6widgetEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget6widgetEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -199,7 +205,7 @@ func (this *QStackedWidget) Count() int {
 // Public
 // void setCurrentIndex(int)
 func (this *QStackedWidget) SetCurrentIndex(index int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget15setCurrentIndexEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget15setCurrentIndexEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -218,7 +224,7 @@ func (this *QStackedWidget) SetCurrentWidget(w *QWidget /*444 QWidget **/) {
 // Public
 // void currentChanged(int)
 func (this *QStackedWidget) CurrentChanged(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget14currentChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget14currentChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -227,7 +233,7 @@ func (this *QStackedWidget) CurrentChanged(arg0 int) {
 // Public
 // void widgetRemoved(int)
 func (this *QStackedWidget) WidgetRemoved(index int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget13widgetRemovedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget13widgetRemovedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 

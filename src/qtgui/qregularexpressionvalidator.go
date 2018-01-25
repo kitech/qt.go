@@ -59,9 +59,15 @@ func (this *QRegularExpressionValidator) GetCthis() unsafe.Pointer {
 		return this.QValidator.GetCthis()
 	}
 }
+func (this *QRegularExpressionValidator) SetCthis(cthis unsafe.Pointer) {
+	this.QValidator = NewQValidatorFromPointer(cthis)
+}
 func NewQRegularExpressionValidatorFromPointer(cthis unsafe.Pointer) *QRegularExpressionValidator {
 	bcthis0 := NewQValidatorFromPointer(cthis)
 	return &QRegularExpressionValidator{bcthis0}
+}
+func (*QRegularExpressionValidator) NewFromPointer(cthis unsafe.Pointer) *QRegularExpressionValidator {
+	return NewQRegularExpressionValidatorFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:203
@@ -129,9 +135,11 @@ func (this *QRegularExpressionValidator) Validate(input *qtcore.QString, pos int
 // Public
 // QRegularExpression regularExpression()
 func (this *QRegularExpressionValidator) RegularExpression() *qtcore.QRegularExpression /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator17regularExpressionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator17regularExpressionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRegularExpressionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

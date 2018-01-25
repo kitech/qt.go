@@ -63,9 +63,15 @@ func (this *QStyleOptionTabWidgetFrame) GetCthis() unsafe.Pointer {
 		return this.QStyleOption.GetCthis()
 	}
 }
+func (this *QStyleOptionTabWidgetFrame) SetCthis(cthis unsafe.Pointer) {
+	this.QStyleOption = NewQStyleOptionFromPointer(cthis)
+}
 func NewQStyleOptionTabWidgetFrameFromPointer(cthis unsafe.Pointer) *QStyleOptionTabWidgetFrame {
 	bcthis0 := NewQStyleOptionFromPointer(cthis)
 	return &QStyleOptionTabWidgetFrame{bcthis0}
+}
+func (*QStyleOptionTabWidgetFrame) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionTabWidgetFrame {
+	return NewQStyleOptionTabWidgetFrameFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:171
@@ -86,10 +92,18 @@ func NewQStyleOptionTabWidgetFrame() *QStyleOptionTabWidgetFrame {
 // void QStyleOptionTabWidgetFrame(int)
 func NewQStyleOptionTabWidgetFrame_1(version int) *QStyleOptionTabWidgetFrame {
 	cthis := qtrt.Calloc(1, 256) // 136
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QStyleOptionTabWidgetFrameC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QStyleOptionTabWidgetFrameC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTabWidgetFrameFromPointer(cthis)
 	return gothis
 }
+
+type QStyleOptionTabWidgetFrame__StyleOptionType = int
+
+const QStyleOptionTabWidgetFrame__Type QStyleOptionTabWidgetFrame__StyleOptionType = 11
+
+type QStyleOptionTabWidgetFrame__StyleOptionVersion = int
+
+const QStyleOptionTabWidgetFrame__Version QStyleOptionTabWidgetFrame__StyleOptionVersion = 2
 
 //  body block end

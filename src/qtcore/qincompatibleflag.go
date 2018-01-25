@@ -55,8 +55,14 @@ func (this *QIncompatibleFlag) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QIncompatibleFlag) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQIncompatibleFlagFromPointer(cthis unsafe.Pointer) *QIncompatibleFlag {
 	return &QIncompatibleFlag{&qtrt.CObject{cthis}}
+}
+func (*QIncompatibleFlag) NewFromPointer(cthis unsafe.Pointer) *QIncompatibleFlag {
+	return NewQIncompatibleFlagFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qflags.h:80
@@ -65,7 +71,7 @@ func NewQIncompatibleFlagFromPointer(cthis unsafe.Pointer) *QIncompatibleFlag {
 // void QIncompatibleFlag(int)
 func NewQIncompatibleFlag(i int) *QIncompatibleFlag {
 	cthis := qtrt.Calloc(1, 256) // 4
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIncompatibleFlagC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIncompatibleFlagC2Ei", ffiqt.FFI_TYPE_VOID, cthis, i)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQIncompatibleFlagFromPointer(cthis)
 	return gothis

@@ -55,8 +55,14 @@ func (this *QXmlStreamNamespaceDeclaration) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QXmlStreamNamespaceDeclaration) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQXmlStreamNamespaceDeclarationFromPointer(cthis unsafe.Pointer) *QXmlStreamNamespaceDeclaration {
 	return &QXmlStreamNamespaceDeclaration{&qtrt.CObject{cthis}}
+}
+func (*QXmlStreamNamespaceDeclaration) NewFromPointer(cthis unsafe.Pointer) *QXmlStreamNamespaceDeclaration {
+	return NewQXmlStreamNamespaceDeclarationFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:199
@@ -99,9 +105,11 @@ func DeleteQXmlStreamNamespaceDeclaration(*QXmlStreamNamespaceDeclaration) {
 // Public inline
 // QStringRef prefix()
 func (this *QXmlStreamNamespaceDeclaration) Prefix() *QStringRef /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclaration6prefixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclaration6prefixEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -111,9 +119,11 @@ func (this *QXmlStreamNamespaceDeclaration) Prefix() *QStringRef /*123*/ {
 // Public inline
 // QStringRef namespaceUri()
 func (this *QXmlStreamNamespaceDeclaration) NamespaceUri() *QStringRef /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

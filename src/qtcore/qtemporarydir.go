@@ -55,8 +55,14 @@ func (this *QTemporaryDir) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTemporaryDir) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTemporaryDirFromPointer(cthis unsafe.Pointer) *QTemporaryDir {
 	return &QTemporaryDir{&qtrt.CObject{cthis}}
+}
+func (*QTemporaryDir) NewFromPointer(cthis unsafe.Pointer) *QTemporaryDir {
+	return NewQTemporaryDirFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qtemporarydir.h:56
@@ -109,9 +115,11 @@ func (this *QTemporaryDir) IsValid() bool {
 // Public
 // QString errorString()
 func (this *QTemporaryDir) ErrorString() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTemporaryDir11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTemporaryDir11errorStringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -132,7 +140,7 @@ func (this *QTemporaryDir) AutoRemove() bool {
 // Public
 // void setAutoRemove(_Bool)
 func (this *QTemporaryDir) SetAutoRemove(b bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTemporaryDir13setAutoRemoveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTemporaryDir13setAutoRemoveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -152,9 +160,11 @@ func (this *QTemporaryDir) Remove() bool {
 // Public
 // QString path()
 func (this *QTemporaryDir) Path() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTemporaryDir4pathEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTemporaryDir4pathEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -164,10 +174,12 @@ func (this *QTemporaryDir) Path() *QString /*123*/ {
 // Public
 // QString filePath(const class QString &)
 func (this *QTemporaryDir) FilePath(fileName *QString) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fileName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTemporaryDir8filePathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTemporaryDir8filePathERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

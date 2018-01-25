@@ -63,9 +63,15 @@ func (this *QGraphicsPolygonItem) GetCthis() unsafe.Pointer {
 		return this.QAbstractGraphicsShapeItem.GetCthis()
 	}
 }
+func (this *QGraphicsPolygonItem) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractGraphicsShapeItem = NewQAbstractGraphicsShapeItemFromPointer(cthis)
+}
 func NewQGraphicsPolygonItemFromPointer(cthis unsafe.Pointer) *QGraphicsPolygonItem {
 	bcthis0 := NewQAbstractGraphicsShapeItemFromPointer(cthis)
 	return &QGraphicsPolygonItem{bcthis0}
+}
+func (*QGraphicsPolygonItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsPolygonItem {
+	return NewQGraphicsPolygonItemFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:743
@@ -109,9 +115,11 @@ func DeleteQGraphicsPolygonItem(*QGraphicsPolygonItem) {
 // Public
 // QPolygonF polygon()
 func (this *QGraphicsPolygonItem) Polygon() *qtgui.QPolygonF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem7polygonEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem7polygonEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -142,7 +150,7 @@ func (this *QGraphicsPolygonItem) FillRule() int {
 // Public
 // void setFillRule(Qt::FillRule)
 func (this *QGraphicsPolygonItem) SetFillRule(rule int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsPolygonItem11setFillRuleEN2Qt8FillRuleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &rule)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsPolygonItem11setFillRuleEN2Qt8FillRuleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), rule)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -151,9 +159,11 @@ func (this *QGraphicsPolygonItem) SetFillRule(rule int) {
 // Public virtual
 // QRectF boundingRect()
 func (this *QGraphicsPolygonItem) BoundingRect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem12boundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem12boundingRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -163,9 +173,11 @@ func (this *QGraphicsPolygonItem) BoundingRect() *qtcore.QRectF /*123*/ {
 // Public virtual
 // QPainterPath shape()
 func (this *QGraphicsPolygonItem) Shape() *qtgui.QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem5shapeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem5shapeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -211,9 +223,11 @@ func (this *QGraphicsPolygonItem) IsObscuredBy(item *QGraphicsItem /*444 const Q
 // Public virtual
 // QPainterPath opaqueArea()
 func (this *QGraphicsPolygonItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -234,7 +248,7 @@ func (this *QGraphicsPolygonItem) Type() int {
 // Protected virtual
 // bool supportsExtension(enum QGraphicsItem::Extension)
 func (this *QGraphicsPolygonItem) SupportsExtension(extension int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &extension)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -246,7 +260,7 @@ func (this *QGraphicsPolygonItem) SupportsExtension(extension int) bool {
 // void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
 func (this *QGraphicsPolygonItem) SetExtension(extension int, variant *qtcore.QVariant) {
 	var convArg1 = variant.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsPolygonItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &extension, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsPolygonItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -255,12 +269,18 @@ func (this *QGraphicsPolygonItem) SetExtension(extension int, variant *qtcore.QV
 // Protected virtual
 // QVariant extension(const class QVariant &)
 func (this *QGraphicsPolygonItem) Extension(variant *qtcore.QVariant) *qtcore.QVariant /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = variant.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem9extensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsPolygonItem9extensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
+
+type QGraphicsPolygonItem__ = int
+
+const QGraphicsPolygonItem__Type QGraphicsPolygonItem__ = 5
 
 //  body block end

@@ -55,8 +55,14 @@ func (this *QMarginsF) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QMarginsF) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQMarginsFFromPointer(cthis unsafe.Pointer) *QMarginsF {
 	return &QMarginsF{&qtrt.CObject{cthis}}
+}
+func (*QMarginsF) NewFromPointer(cthis unsafe.Pointer) *QMarginsF {
+	return NewQMarginsFFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qmargins.h:288
@@ -77,7 +83,7 @@ func NewQMarginsF() *QMarginsF {
 // void QMarginsF(qreal, qreal, qreal, qreal)
 func NewQMarginsF_1(left float64, top float64, right float64, bottom float64) *QMarginsF {
 	cthis := qtrt.Calloc(1, 256) // 32
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMarginsFC2Edddd", ffiqt.FFI_TYPE_VOID, cthis, &left, &top, &right, &bottom)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMarginsFC2Edddd", ffiqt.FFI_TYPE_VOID, cthis, left, top, right, bottom)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMarginsFFromPointer(cthis)
 	return gothis
@@ -156,7 +162,7 @@ func (this *QMarginsF) Bottom() float64 {
 // Public
 // void setLeft(qreal)
 func (this *QMarginsF) SetLeft(left float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMarginsF7setLeftEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &left)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMarginsF7setLeftEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), left)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -165,7 +171,7 @@ func (this *QMarginsF) SetLeft(left float64) {
 // Public
 // void setTop(qreal)
 func (this *QMarginsF) SetTop(top float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMarginsF6setTopEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &top)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMarginsF6setTopEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), top)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -174,7 +180,7 @@ func (this *QMarginsF) SetTop(top float64) {
 // Public
 // void setRight(qreal)
 func (this *QMarginsF) SetRight(right float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMarginsF8setRightEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &right)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMarginsF8setRightEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), right)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -183,7 +189,7 @@ func (this *QMarginsF) SetRight(right float64) {
 // Public
 // void setBottom(qreal)
 func (this *QMarginsF) SetBottom(bottom float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMarginsF9setBottomEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &bottom)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMarginsF9setBottomEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), bottom)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -192,9 +198,11 @@ func (this *QMarginsF) SetBottom(bottom float64) {
 // Public inline
 // QMargins toMargins()
 func (this *QMarginsF) ToMargins() *QMargins /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMarginsF9toMarginsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMarginsF9toMarginsEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

@@ -63,8 +63,14 @@ func (this *QColormap) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QColormap) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQColormapFromPointer(cthis unsafe.Pointer) *QColormap {
 	return &QColormap{&qtrt.CObject{cthis}}
+}
+func (*QColormap) NewFromPointer(cthis unsafe.Pointer) *QColormap {
+	return NewQColormapFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qcolormap.h:60
@@ -169,11 +175,19 @@ func (this *QColormap) Pixel(color *qtgui.QColor) uint {
 // Public
 // const QColor colorAt(uint)
 func (this *QColormap) ColorAt(pixel uint) *qtgui.QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap7colorAtEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &pixel)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap7colorAtEj", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), pixel)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
+
+type QColormap__Mode = int
+
+const QColormap__Direct QColormap__Mode = 0
+const QColormap__Indexed QColormap__Mode = 1
+const QColormap__Gray QColormap__Mode = 2
 
 //  body block end

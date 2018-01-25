@@ -55,8 +55,14 @@ func (this *QBasicMutex) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QBasicMutex) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQBasicMutexFromPointer(cthis unsafe.Pointer) *QBasicMutex {
 	return &QBasicMutex{&qtrt.CObject{cthis}}
+}
+func (*QBasicMutex) NewFromPointer(cthis unsafe.Pointer) *QBasicMutex {
+	return NewQBasicMutexFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qmutex.h:71

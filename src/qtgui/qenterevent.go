@@ -59,9 +59,15 @@ func (this *QEnterEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QEnterEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQEnterEventFromPointer(cthis unsafe.Pointer) *QEnterEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QEnterEvent{bcthis0}
+}
+func (*QEnterEvent) NewFromPointer(cthis unsafe.Pointer) *QEnterEvent {
+	return NewQEnterEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:85
@@ -93,9 +99,11 @@ func DeleteQEnterEvent(*QEnterEvent) {
 // Public inline
 // QPoint pos()
 func (this *QEnterEvent) Pos() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent3posEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -105,9 +113,11 @@ func (this *QEnterEvent) Pos() *qtcore.QPoint /*123*/ {
 // Public inline
 // QPoint globalPos()
 func (this *QEnterEvent) GlobalPos() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

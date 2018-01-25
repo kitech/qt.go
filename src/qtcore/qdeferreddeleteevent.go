@@ -55,9 +55,15 @@ func (this *QDeferredDeleteEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QDeferredDeleteEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = NewQEventFromPointer(cthis)
+}
 func NewQDeferredDeleteEventFromPointer(cthis unsafe.Pointer) *QDeferredDeleteEvent {
 	bcthis0 := NewQEventFromPointer(cthis)
 	return &QDeferredDeleteEvent{bcthis0}
+}
+func (*QDeferredDeleteEvent) NewFromPointer(cthis unsafe.Pointer) *QDeferredDeleteEvent {
+	return NewQDeferredDeleteEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:377

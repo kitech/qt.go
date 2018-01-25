@@ -59,8 +59,14 @@ func (this *QRgba64) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QRgba64) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQRgba64FromPointer(cthis unsafe.Pointer) *QRgba64 {
 	return &QRgba64{&qtrt.CObject{cthis}}
+}
+func (*QRgba64) NewFromPointer(cthis unsafe.Pointer) *QRgba64 {
+	return NewQRgba64FromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qrgba64.h:69
@@ -214,7 +220,7 @@ func (this *QRgba64) Alpha() uint16 {
 // Public inline
 // void setRed(quint16)
 func (this *QRgba64) SetRed(_red uint16) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRgba646setRedEt", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &_red)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRgba646setRedEt", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), _red)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -223,7 +229,7 @@ func (this *QRgba64) SetRed(_red uint16) {
 // Public inline
 // void setGreen(quint16)
 func (this *QRgba64) SetGreen(_green uint16) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRgba648setGreenEt", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &_green)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRgba648setGreenEt", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), _green)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -232,7 +238,7 @@ func (this *QRgba64) SetGreen(_green uint16) {
 // Public inline
 // void setBlue(quint16)
 func (this *QRgba64) SetBlue(_blue uint16) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRgba647setBlueEt", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &_blue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRgba647setBlueEt", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), _blue)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -241,7 +247,7 @@ func (this *QRgba64) SetBlue(_blue uint16) {
 // Public inline
 // void setAlpha(quint16)
 func (this *QRgba64) SetAlpha(_alpha uint16) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRgba648setAlphaEt", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &_alpha)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRgba648setAlphaEt", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), _alpha)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -316,9 +322,11 @@ func (this *QRgba64) ToRgb16() uint16 {
 // Public inline
 // QRgba64 premultiplied()
 func (this *QRgba64) Premultiplied() *QRgba64 /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRgba6413premultipliedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRgba6413premultipliedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRgba64FromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -328,11 +336,20 @@ func (this *QRgba64) Premultiplied() *QRgba64 /*123*/ {
 // Public inline
 // QRgba64 unpremultiplied()
 func (this *QRgba64) Unpremultiplied() *QRgba64 /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRgba6415unpremultipliedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRgba6415unpremultipliedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRgba64FromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
+
+type QRgba64__Shifts = int
+
+const QRgba64__RedShift QRgba64__Shifts = 0
+const QRgba64__GreenShift QRgba64__Shifts = 16
+const QRgba64__BlueShift QRgba64__Shifts = 32
+const QRgba64__AlphaShift QRgba64__Shifts = 48
 
 //  body block end

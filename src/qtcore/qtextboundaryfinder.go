@@ -55,8 +55,14 @@ func (this *QTextBoundaryFinder) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTextBoundaryFinder) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTextBoundaryFinderFromPointer(cthis unsafe.Pointer) *QTextBoundaryFinder {
 	return &QTextBoundaryFinder{&qtrt.CObject{cthis}}
+}
+func (*QTextBoundaryFinder) NewFromPointer(cthis unsafe.Pointer) *QTextBoundaryFinder {
+	return NewQTextBoundaryFinderFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:54
@@ -78,7 +84,7 @@ func NewQTextBoundaryFinder() *QTextBoundaryFinder {
 func NewQTextBoundaryFinder_1(type_ int, string *QString) *QTextBoundaryFinder {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = string.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeERK7QString", ffiqt.FFI_TYPE_VOID, cthis, &type_, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeERK7QString", ffiqt.FFI_TYPE_VOID, cthis, type_, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextBoundaryFinderFromPointer(cthis)
 	return gothis
@@ -91,7 +97,7 @@ func NewQTextBoundaryFinder_1(type_ int, string *QString) *QTextBoundaryFinder {
 func NewQTextBoundaryFinder_2(type_ int, chars *QChar /*444 const QChar **/, length int, buffer unsafe.Pointer /*666*/, bufferSize int) *QTextBoundaryFinder {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = chars.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeEPK5QChariPhi", ffiqt.FFI_TYPE_VOID, cthis, &type_, convArg1, &length, buffer, &bufferSize)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeEPK5QChariPhi", ffiqt.FFI_TYPE_VOID, cthis, type_, convArg1, length, &buffer, bufferSize)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextBoundaryFinderFromPointer(cthis)
 	return gothis
@@ -133,9 +139,11 @@ func (this *QTextBoundaryFinder) Type() int {
 // Public
 // QString string()
 func (this *QTextBoundaryFinder) String() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder6stringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder6stringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -174,7 +182,7 @@ func (this *QTextBoundaryFinder) Position() int {
 // Public
 // void setPosition(int)
 func (this *QTextBoundaryFinder) SetPosition(position int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinder11setPositionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &position)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinder11setPositionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), position)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -221,5 +229,21 @@ func (this *QTextBoundaryFinder) BoundaryReasons() int {
 	//  return rv
 	return int(rv)
 }
+
+type QTextBoundaryFinder__BoundaryType = int
+
+const QTextBoundaryFinder__Grapheme QTextBoundaryFinder__BoundaryType = 0
+const QTextBoundaryFinder__Word QTextBoundaryFinder__BoundaryType = 1
+const QTextBoundaryFinder__Sentence QTextBoundaryFinder__BoundaryType = 2
+const QTextBoundaryFinder__Line QTextBoundaryFinder__BoundaryType = 3
+
+type QTextBoundaryFinder__BoundaryReason = int
+
+const QTextBoundaryFinder__NotAtBoundary QTextBoundaryFinder__BoundaryReason = 0
+const QTextBoundaryFinder__BreakOpportunity QTextBoundaryFinder__BoundaryReason = 31
+const QTextBoundaryFinder__StartOfItem QTextBoundaryFinder__BoundaryReason = 32
+const QTextBoundaryFinder__EndOfItem QTextBoundaryFinder__BoundaryReason = 64
+const QTextBoundaryFinder__MandatoryBreak QTextBoundaryFinder__BoundaryReason = 128
+const QTextBoundaryFinder__SoftHyphen QTextBoundaryFinder__BoundaryReason = 256
 
 //  body block end

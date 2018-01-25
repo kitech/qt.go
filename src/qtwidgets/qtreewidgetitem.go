@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 3
 */
 // import "C"
 import "unsafe"
@@ -63,8 +63,14 @@ func (this *QTreeWidgetItem) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTreeWidgetItem) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTreeWidgetItemFromPointer(cthis unsafe.Pointer) *QTreeWidgetItem {
 	return &QTreeWidgetItem{&qtrt.CObject{cthis}}
+}
+func (*QTreeWidgetItem) NewFromPointer(cthis unsafe.Pointer) *QTreeWidgetItem {
+	return NewQTreeWidgetItemFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qtreewidget.h:67
@@ -73,7 +79,7 @@ func NewQTreeWidgetItemFromPointer(cthis unsafe.Pointer) *QTreeWidgetItem {
 // void QTreeWidgetItem(int)
 func NewQTreeWidgetItem(type_ int) *QTreeWidgetItem {
 	cthis := qtrt.Calloc(1, 256) // 64
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2Ei", ffiqt.FFI_TYPE_VOID, cthis, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemFromPointer(cthis)
 	return gothis
@@ -86,7 +92,7 @@ func NewQTreeWidgetItem(type_ int) *QTreeWidgetItem {
 func NewQTreeWidgetItem_1(strings *qtcore.QStringList, type_ int) *QTreeWidgetItem {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = strings.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2ERK11QStringListi", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2ERK11QStringListi", ffiqt.FFI_TYPE_VOID, cthis, convArg0, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemFromPointer(cthis)
 	return gothis
@@ -99,7 +105,7 @@ func NewQTreeWidgetItem_1(strings *qtcore.QStringList, type_ int) *QTreeWidgetIt
 func NewQTreeWidgetItem_2(view *QTreeWidget /*444 QTreeWidget **/, type_ int) *QTreeWidgetItem {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = view.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EP11QTreeWidgeti", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EP11QTreeWidgeti", ffiqt.FFI_TYPE_VOID, cthis, convArg0, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemFromPointer(cthis)
 	return gothis
@@ -113,7 +119,7 @@ func NewQTreeWidgetItem_3(view *QTreeWidget /*444 QTreeWidget **/, strings *qtco
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = view.GetCthis()
 	var convArg1 = strings.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EP11QTreeWidgetRK11QStringListi", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EP11QTreeWidgetRK11QStringListi", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemFromPointer(cthis)
 	return gothis
@@ -127,7 +133,7 @@ func NewQTreeWidgetItem_4(view *QTreeWidget /*444 QTreeWidget **/, after *QTreeW
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = view.GetCthis()
 	var convArg1 = after.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EP11QTreeWidgetPS_i", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EP11QTreeWidgetPS_i", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemFromPointer(cthis)
 	return gothis
@@ -140,7 +146,7 @@ func NewQTreeWidgetItem_4(view *QTreeWidget /*444 QTreeWidget **/, after *QTreeW
 func NewQTreeWidgetItem_5(parent *QTreeWidgetItem /*444 QTreeWidgetItem **/, type_ int) *QTreeWidgetItem {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EPS_i", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EPS_i", ffiqt.FFI_TYPE_VOID, cthis, convArg0, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemFromPointer(cthis)
 	return gothis
@@ -154,7 +160,7 @@ func NewQTreeWidgetItem_6(parent *QTreeWidgetItem /*444 QTreeWidgetItem **/, str
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = parent.GetCthis()
 	var convArg1 = strings.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EPS_RK11QStringListi", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EPS_RK11QStringListi", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemFromPointer(cthis)
 	return gothis
@@ -168,7 +174,7 @@ func NewQTreeWidgetItem_7(parent *QTreeWidgetItem /*444 QTreeWidgetItem **/, aft
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = parent.GetCthis()
 	var convArg1 = after.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EPS_S0_i", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EPS_S0_i", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemFromPointer(cthis)
 	return gothis
@@ -212,7 +218,7 @@ func (this *QTreeWidgetItem) TreeWidget() *QTreeWidget /*444 QTreeWidget **/ {
 // Public inline
 // void setSelected(_Bool)
 func (this *QTreeWidgetItem) SetSelected(select_ bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem11setSelectedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &select_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem11setSelectedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), select_)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -232,7 +238,7 @@ func (this *QTreeWidgetItem) IsSelected() bool {
 // Public inline
 // void setHidden(_Bool)
 func (this *QTreeWidgetItem) SetHidden(hide bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem9setHiddenEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &hide)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem9setHiddenEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hide)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -252,7 +258,7 @@ func (this *QTreeWidgetItem) IsHidden() bool {
 // Public inline
 // void setExpanded(_Bool)
 func (this *QTreeWidgetItem) SetExpanded(expand bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem11setExpandedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &expand)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem11setExpandedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), expand)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -272,7 +278,7 @@ func (this *QTreeWidgetItem) IsExpanded() bool {
 // Public inline
 // void setFirstColumnSpanned(_Bool)
 func (this *QTreeWidgetItem) SetFirstColumnSpanned(span bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem21setFirstColumnSpannedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &span)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem21setFirstColumnSpannedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), span)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -292,7 +298,7 @@ func (this *QTreeWidgetItem) IsFirstColumnSpanned() bool {
 // Public inline
 // void setDisabled(_Bool)
 func (this *QTreeWidgetItem) SetDisabled(disabled bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem11setDisabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &disabled)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem11setDisabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), disabled)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -312,7 +318,7 @@ func (this *QTreeWidgetItem) IsDisabled() bool {
 // Public
 // void setChildIndicatorPolicy(class QTreeWidgetItem::ChildIndicatorPolicy)
 func (this *QTreeWidgetItem) SetChildIndicatorPolicy(policy int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem23setChildIndicatorPolicyENS_20ChildIndicatorPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &policy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem23setChildIndicatorPolicyENS_20ChildIndicatorPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -338,14 +344,25 @@ func (this *QTreeWidgetItem) Flags() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtWidgets/qtreewidget.h:102
+// index:0
+// Public
+// void setFlags(Qt::ItemFlags)
+func (this *QTreeWidgetItem) SetFlags(flags int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem8setFlagsE6QFlagsIN2Qt8ItemFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qtreewidget.h:104
 // index:0
 // Public inline
 // QString text(int)
 func (this *QTreeWidgetItem) Text(column int) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem4textEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem4textEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -356,7 +373,7 @@ func (this *QTreeWidgetItem) Text(column int) *qtcore.QString /*123*/ {
 // void setText(int, const class QString &)
 func (this *QTreeWidgetItem) SetText(column int, text *qtcore.QString) {
 	var convArg1 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem7setTextEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem7setTextEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -365,9 +382,11 @@ func (this *QTreeWidgetItem) SetText(column int, text *qtcore.QString) {
 // Public inline
 // QIcon icon(int)
 func (this *QTreeWidgetItem) Icon(column int) *qtgui.QIcon /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem4iconEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem4iconEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -378,7 +397,7 @@ func (this *QTreeWidgetItem) Icon(column int) *qtgui.QIcon /*123*/ {
 // void setIcon(int, const class QIcon &)
 func (this *QTreeWidgetItem) SetIcon(column int, icon *qtgui.QIcon) {
 	var convArg1 = icon.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem7setIconEiRK5QIcon", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem7setIconEiRK5QIcon", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -387,9 +406,11 @@ func (this *QTreeWidgetItem) SetIcon(column int, icon *qtgui.QIcon) {
 // Public inline
 // QString statusTip(int)
 func (this *QTreeWidgetItem) StatusTip(column int) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem9statusTipEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem9statusTipEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -400,7 +421,7 @@ func (this *QTreeWidgetItem) StatusTip(column int) *qtcore.QString /*123*/ {
 // void setStatusTip(int, const class QString &)
 func (this *QTreeWidgetItem) SetStatusTip(column int, statusTip *qtcore.QString) {
 	var convArg1 = statusTip.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem12setStatusTipEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem12setStatusTipEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -409,9 +430,11 @@ func (this *QTreeWidgetItem) SetStatusTip(column int, statusTip *qtcore.QString)
 // Public inline
 // QString toolTip(int)
 func (this *QTreeWidgetItem) ToolTip(column int) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem7toolTipEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem7toolTipEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -422,7 +445,7 @@ func (this *QTreeWidgetItem) ToolTip(column int) *qtcore.QString /*123*/ {
 // void setToolTip(int, const class QString &)
 func (this *QTreeWidgetItem) SetToolTip(column int, toolTip *qtcore.QString) {
 	var convArg1 = toolTip.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem10setToolTipEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem10setToolTipEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -431,9 +454,11 @@ func (this *QTreeWidgetItem) SetToolTip(column int, toolTip *qtcore.QString) {
 // Public inline
 // QString whatsThis(int)
 func (this *QTreeWidgetItem) WhatsThis(column int) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem9whatsThisEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem9whatsThisEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -444,7 +469,7 @@ func (this *QTreeWidgetItem) WhatsThis(column int) *qtcore.QString /*123*/ {
 // void setWhatsThis(int, const class QString &)
 func (this *QTreeWidgetItem) SetWhatsThis(column int, whatsThis *qtcore.QString) {
 	var convArg1 = whatsThis.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem12setWhatsThisEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem12setWhatsThisEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -453,9 +478,11 @@ func (this *QTreeWidgetItem) SetWhatsThis(column int, whatsThis *qtcore.QString)
 // Public inline
 // QFont font(int)
 func (this *QTreeWidgetItem) Font(column int) *qtgui.QFont /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem4fontEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem4fontEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -466,7 +493,7 @@ func (this *QTreeWidgetItem) Font(column int) *qtgui.QFont /*123*/ {
 // void setFont(int, const class QFont &)
 func (this *QTreeWidgetItem) SetFont(column int, font *qtgui.QFont) {
 	var convArg1 = font.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem7setFontEiRK5QFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem7setFontEiRK5QFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -475,7 +502,7 @@ func (this *QTreeWidgetItem) SetFont(column int, font *qtgui.QFont) {
 // Public inline
 // int textAlignment(int)
 func (this *QTreeWidgetItem) TextAlignment(column int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem13textAlignmentEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem13textAlignmentEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -486,7 +513,7 @@ func (this *QTreeWidgetItem) TextAlignment(column int) int {
 // Public inline
 // void setTextAlignment(int, int)
 func (this *QTreeWidgetItem) SetTextAlignment(column int, alignment int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem16setTextAlignmentEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, &alignment)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem16setTextAlignmentEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, alignment)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -495,9 +522,11 @@ func (this *QTreeWidgetItem) SetTextAlignment(column int, alignment int) {
 // Public inline
 // QColor backgroundColor(int)
 func (this *QTreeWidgetItem) BackgroundColor(column int) *qtgui.QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem15backgroundColorEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem15backgroundColorEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -508,7 +537,7 @@ func (this *QTreeWidgetItem) BackgroundColor(column int) *qtgui.QColor /*123*/ {
 // void setBackgroundColor(int, const class QColor &)
 func (this *QTreeWidgetItem) SetBackgroundColor(column int, color *qtgui.QColor) {
 	var convArg1 = color.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem18setBackgroundColorEiRK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem18setBackgroundColorEiRK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -517,9 +546,11 @@ func (this *QTreeWidgetItem) SetBackgroundColor(column int, color *qtgui.QColor)
 // Public inline
 // QBrush background(int)
 func (this *QTreeWidgetItem) Background(column int) *qtgui.QBrush /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem10backgroundEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem10backgroundEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -530,7 +561,7 @@ func (this *QTreeWidgetItem) Background(column int) *qtgui.QBrush /*123*/ {
 // void setBackground(int, const class QBrush &)
 func (this *QTreeWidgetItem) SetBackground(column int, brush *qtgui.QBrush) {
 	var convArg1 = brush.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem13setBackgroundEiRK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem13setBackgroundEiRK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -539,9 +570,11 @@ func (this *QTreeWidgetItem) SetBackground(column int, brush *qtgui.QBrush) {
 // Public inline
 // QColor textColor(int)
 func (this *QTreeWidgetItem) TextColor(column int) *qtgui.QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem9textColorEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem9textColorEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -552,7 +585,7 @@ func (this *QTreeWidgetItem) TextColor(column int) *qtgui.QColor /*123*/ {
 // void setTextColor(int, const class QColor &)
 func (this *QTreeWidgetItem) SetTextColor(column int, color *qtgui.QColor) {
 	var convArg1 = color.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem12setTextColorEiRK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem12setTextColorEiRK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -561,9 +594,11 @@ func (this *QTreeWidgetItem) SetTextColor(column int, color *qtgui.QColor) {
 // Public inline
 // QBrush foreground(int)
 func (this *QTreeWidgetItem) Foreground(column int) *qtgui.QBrush /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem10foregroundEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem10foregroundEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -574,7 +609,7 @@ func (this *QTreeWidgetItem) Foreground(column int) *qtgui.QBrush /*123*/ {
 // void setForeground(int, const class QBrush &)
 func (this *QTreeWidgetItem) SetForeground(column int, brush *qtgui.QBrush) {
 	var convArg1 = brush.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem13setForegroundEiRK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem13setForegroundEiRK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -583,7 +618,7 @@ func (this *QTreeWidgetItem) SetForeground(column int, brush *qtgui.QBrush) {
 // Public inline
 // Qt::CheckState checkState(int)
 func (this *QTreeWidgetItem) CheckState(column int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem10checkStateEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem10checkStateEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -594,7 +629,7 @@ func (this *QTreeWidgetItem) CheckState(column int) int {
 // Public inline
 // void setCheckState(int, Qt::CheckState)
 func (this *QTreeWidgetItem) SetCheckState(column int, state int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem13setCheckStateEiN2Qt10CheckStateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, &state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem13setCheckStateEiN2Qt10CheckStateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, state)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -603,9 +638,11 @@ func (this *QTreeWidgetItem) SetCheckState(column int, state int) {
 // Public inline
 // QSize sizeHint(int)
 func (this *QTreeWidgetItem) SizeHint(column int) *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem8sizeHintEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem8sizeHintEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -616,7 +653,7 @@ func (this *QTreeWidgetItem) SizeHint(column int) *qtcore.QSize /*123*/ {
 // void setSizeHint(int, const class QSize &)
 func (this *QTreeWidgetItem) SetSizeHint(column int, size *qtcore.QSize) {
 	var convArg1 = size.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem11setSizeHintEiRK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem11setSizeHintEiRK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -625,9 +662,11 @@ func (this *QTreeWidgetItem) SetSizeHint(column int, size *qtcore.QSize) {
 // Public virtual
 // QVariant data(int, int)
 func (this *QTreeWidgetItem) Data(column int, role int) *qtcore.QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem4dataEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, &role)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem4dataEii", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), column, role)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -638,7 +677,7 @@ func (this *QTreeWidgetItem) Data(column int, role int) *qtcore.QVariant /*123*/
 // void setData(int, int, const class QVariant &)
 func (this *QTreeWidgetItem) SetData(column int, role int, value *qtcore.QVariant) {
 	var convArg2 = value.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem7setDataEiiRK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, &role, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem7setDataEiiRK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, role, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -679,7 +718,7 @@ func (this *QTreeWidgetItem) Parent() *QTreeWidgetItem /*444 QTreeWidgetItem **/
 // Public inline
 // QTreeWidgetItem * child(int)
 func (this *QTreeWidgetItem) Child(index int) *QTreeWidgetItem /*444 QTreeWidgetItem **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem5childEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem5childEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -736,7 +775,7 @@ func (this *QTreeWidgetItem) AddChild(child *QTreeWidgetItem /*444 QTreeWidgetIt
 // void insertChild(int, class QTreeWidgetItem *)
 func (this *QTreeWidgetItem) InsertChild(index int, child *QTreeWidgetItem /*444 QTreeWidgetItem **/) {
 	var convArg1 = child.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem11insertChildEiPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem11insertChildEiPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -755,7 +794,7 @@ func (this *QTreeWidgetItem) RemoveChild(child *QTreeWidgetItem /*444 QTreeWidge
 // Public
 // QTreeWidgetItem * takeChild(int)
 func (this *QTreeWidgetItem) TakeChild(index int) *QTreeWidgetItem /*444 QTreeWidgetItem **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem9takeChildEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem9takeChildEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -778,7 +817,7 @@ func (this *QTreeWidgetItem) Type() int {
 // Public inline
 // void sortChildren(int, Qt::SortOrder)
 func (this *QTreeWidgetItem) SortChildren(column int, order int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem12sortChildrenEiN2Qt9SortOrderE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, &order)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem12sortChildrenEiN2Qt9SortOrderE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -790,5 +829,16 @@ func (this *QTreeWidgetItem) EmitDataChanged() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem15emitDataChangedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
+
+type QTreeWidgetItem__ItemType = int
+
+const QTreeWidgetItem__Type QTreeWidgetItem__ItemType = 0
+const QTreeWidgetItem__UserType QTreeWidgetItem__ItemType = 1000
+
+type QTreeWidgetItem__ChildIndicatorPolicy = int
+
+const QTreeWidgetItem__ShowIndicator QTreeWidgetItem__ChildIndicatorPolicy = 0
+const QTreeWidgetItem__DontShowIndicator QTreeWidgetItem__ChildIndicatorPolicy = 1
+const QTreeWidgetItem__DontShowIndicatorWhenChildless QTreeWidgetItem__ChildIndicatorPolicy = 2
 
 //  body block end

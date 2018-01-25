@@ -59,8 +59,14 @@ func (this *QTextDocumentFragment) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTextDocumentFragment) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTextDocumentFragmentFromPointer(cthis unsafe.Pointer) *QTextDocumentFragment {
 	return &QTextDocumentFragment{&qtrt.CObject{cthis}}
+}
+func (*QTextDocumentFragment) NewFromPointer(cthis unsafe.Pointer) *QTextDocumentFragment {
+	return NewQTextDocumentFragmentFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:57
@@ -126,9 +132,11 @@ func (this *QTextDocumentFragment) IsEmpty() bool {
 // Public
 // QString toPlainText()
 func (this *QTextDocumentFragment) ToPlainText() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment11toPlainTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment11toPlainTextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -138,10 +146,12 @@ func (this *QTextDocumentFragment) ToPlainText() *qtcore.QString /*123*/ {
 // Public
 // QString toHtml(const class QByteArray &)
 func (this *QTextDocumentFragment) ToHtml(encoding *qtcore.QByteArray) *qtcore.QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = encoding.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

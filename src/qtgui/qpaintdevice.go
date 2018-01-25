@@ -59,8 +59,14 @@ func (this *QPaintDevice) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QPaintDevice) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQPaintDeviceFromPointer(cthis unsafe.Pointer) *QPaintDevice {
 	return &QPaintDevice{&qtrt.CObject{cthis}}
+}
+func (*QPaintDevice) NewFromPointer(cthis unsafe.Pointer) *QPaintDevice {
+	return NewQPaintDeviceFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qpaintdevice.h:72
@@ -284,7 +290,7 @@ func NewQPaintDevice_1(arg0 *QPaintDevice) *QPaintDevice {
 // Protected virtual
 // int metric(enum QPaintDevice::PaintDeviceMetric)
 func (this *QPaintDevice) Metric(metric int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice6metricENS_17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &metric)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice6metricENS_17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), metric)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -324,5 +330,20 @@ func (this *QPaintDevice) SharedPainter() *QPainter /*444 QPainter **/ {
 	rv2 := /*==*/ NewQPainterFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
+
+type QPaintDevice__PaintDeviceMetric = int
+
+const QPaintDevice__PdmWidth QPaintDevice__PaintDeviceMetric = 1
+const QPaintDevice__PdmHeight QPaintDevice__PaintDeviceMetric = 2
+const QPaintDevice__PdmWidthMM QPaintDevice__PaintDeviceMetric = 3
+const QPaintDevice__PdmHeightMM QPaintDevice__PaintDeviceMetric = 4
+const QPaintDevice__PdmNumColors QPaintDevice__PaintDeviceMetric = 5
+const QPaintDevice__PdmDepth QPaintDevice__PaintDeviceMetric = 6
+const QPaintDevice__PdmDpiX QPaintDevice__PaintDeviceMetric = 7
+const QPaintDevice__PdmDpiY QPaintDevice__PaintDeviceMetric = 8
+const QPaintDevice__PdmPhysicalDpiX QPaintDevice__PaintDeviceMetric = 9
+const QPaintDevice__PdmPhysicalDpiY QPaintDevice__PaintDeviceMetric = 10
+const QPaintDevice__PdmDevicePixelRatio QPaintDevice__PaintDeviceMetric = 11
+const QPaintDevice__PdmDevicePixelRatioScaled QPaintDevice__PaintDeviceMetric = 12
 
 //  body block end

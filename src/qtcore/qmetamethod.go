@@ -55,8 +55,14 @@ func (this *QMetaMethod) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QMetaMethod) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQMetaMethodFromPointer(cthis unsafe.Pointer) *QMetaMethod {
 	return &QMetaMethod{&qtrt.CObject{cthis}}
+}
+func (*QMetaMethod) NewFromPointer(cthis unsafe.Pointer) *QMetaMethod {
+	return NewQMetaMethodFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:57
@@ -76,9 +82,11 @@ func NewQMetaMethod() *QMetaMethod {
 // Public
 // QByteArray methodSignature()
 func (this *QMetaMethod) MethodSignature() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod15methodSignatureEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod15methodSignatureEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -88,9 +96,11 @@ func (this *QMetaMethod) MethodSignature() *QByteArray /*123*/ {
 // Public
 // QByteArray name()
 func (this *QMetaMethod) Name() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -133,7 +143,7 @@ func (this *QMetaMethod) ParameterCount() int {
 // Public
 // int parameterType(int)
 func (this *QMetaMethod) ParameterType(index int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod13parameterTypeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod13parameterTypeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -144,7 +154,7 @@ func (this *QMetaMethod) ParameterType(index int) int {
 // Public
 // void getParameterTypes(int *)
 func (this *QMetaMethod) GetParameterTypes(types unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod17getParameterTypesEPi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), types)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod17getParameterTypesEPi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &types)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -243,7 +253,7 @@ func (this *QMetaMethod) Invoke(object *QObject /*444 QObject **/, connectionTyp
 	var convArg10 = val7.GetCthis()
 	var convArg11 = val8.GetCthis()
 	var convArg12 = val9.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObjectN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &connectionType, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObjectN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, connectionType, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11, convArg12)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -288,7 +298,7 @@ func (this *QMetaMethod) Invoke_2(object *QObject /*444 QObject **/, connectionT
 	var convArg9 = val7.GetCthis()
 	var convArg10 = val8.GetCthis()
 	var convArg11 = val9.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObjectN2Qt14ConnectionTypeE16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &connectionType, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObjectN2Qt14ConnectionTypeE16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, connectionType, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9, convArg10, convArg11)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -369,5 +379,24 @@ func (this *QMetaMethod) IsValid() bool {
 	//  return rv
 	return rv != 0
 }
+
+type QMetaMethod__Access = int
+
+const QMetaMethod__Private QMetaMethod__Access = 0
+const QMetaMethod__Protected QMetaMethod__Access = 1
+const QMetaMethod__Public QMetaMethod__Access = 2
+
+type QMetaMethod__MethodType = int
+
+const QMetaMethod__Method QMetaMethod__MethodType = 0
+const QMetaMethod__Signal QMetaMethod__MethodType = 1
+const QMetaMethod__Slot QMetaMethod__MethodType = 2
+const QMetaMethod__Constructor QMetaMethod__MethodType = 3
+
+type QMetaMethod__Attributes = int
+
+const QMetaMethod__Compatibility QMetaMethod__Attributes = 1
+const QMetaMethod__Cloned QMetaMethod__Attributes = 2
+const QMetaMethod__Scriptable QMetaMethod__Attributes = 4
 
 //  body block end

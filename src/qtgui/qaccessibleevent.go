@@ -59,8 +59,14 @@ func (this *QAccessibleEvent) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QAccessibleEvent) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQAccessibleEventFromPointer(cthis unsafe.Pointer) *QAccessibleEvent {
 	return &QAccessibleEvent{&qtrt.CObject{cthis}}
+}
+func (*QAccessibleEvent) NewFromPointer(cthis unsafe.Pointer) *QAccessibleEvent {
+	return NewQAccessibleEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:668
@@ -70,7 +76,7 @@ func NewQAccessibleEventFromPointer(cthis unsafe.Pointer) *QAccessibleEvent {
 func NewQAccessibleEvent(obj *qtcore.QObject /*444 QObject **/, typ int) *QAccessibleEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = obj.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAccessibleEventC2EP7QObjectN11QAccessible5EventE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &typ)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAccessibleEventC2EP7QObjectN11QAccessible5EventE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, typ)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleEventFromPointer(cthis)
 	return gothis
@@ -83,7 +89,7 @@ func NewQAccessibleEvent(obj *qtcore.QObject /*444 QObject **/, typ int) *QAcces
 func NewQAccessibleEvent_1(iface *QAccessibleInterface /*444 QAccessibleInterface **/, typ int) *QAccessibleEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = iface.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAccessibleEventC2EP20QAccessibleInterfaceN11QAccessible5EventE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &typ)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAccessibleEventC2EP20QAccessibleInterfaceN11QAccessible5EventE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, typ)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleEventFromPointer(cthis)
 	return gothis
@@ -137,7 +143,7 @@ func (this *QAccessibleEvent) UniqueId() int {
 // Public inline
 // void setChild(int)
 func (this *QAccessibleEvent) SetChild(chld int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAccessibleEvent8setChildEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &chld)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAccessibleEvent8setChildEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), chld)
 	gopp.ErrPrint(err, rv)
 }
 

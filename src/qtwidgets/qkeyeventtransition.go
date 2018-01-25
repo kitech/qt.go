@@ -63,9 +63,15 @@ func (this *QKeyEventTransition) GetCthis() unsafe.Pointer {
 		return this.QEventTransition.GetCthis()
 	}
 }
+func (this *QKeyEventTransition) SetCthis(cthis unsafe.Pointer) {
+	this.QEventTransition = qtcore.NewQEventTransitionFromPointer(cthis)
+}
 func NewQKeyEventTransitionFromPointer(cthis unsafe.Pointer) *QKeyEventTransition {
 	bcthis0 := qtcore.NewQEventTransitionFromPointer(cthis)
 	return &QKeyEventTransition{bcthis0}
+}
+func (*QKeyEventTransition) NewFromPointer(cthis unsafe.Pointer) *QKeyEventTransition {
+	return NewQKeyEventTransitionFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:53
@@ -101,7 +107,7 @@ func NewQKeyEventTransition_1(object *qtcore.QObject /*444 QObject **/, type_ in
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = object.GetCthis()
 	var convArg3 = sourceState.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransitionC2EP7QObjectN6QEvent4TypeEiP6QState", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &type_, &key, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransitionC2EP7QObjectN6QEvent4TypeEiP6QState", ffiqt.FFI_TYPE_VOID, cthis, convArg0, type_, key, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQKeyEventTransitionFromPointer(cthis)
 	return gothis
@@ -132,7 +138,7 @@ func (this *QKeyEventTransition) Key() int {
 // Public
 // void setKey(int)
 func (this *QKeyEventTransition) SetKey(key int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransition6setKeyEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &key)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransition6setKeyEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), key)
 	gopp.ErrPrint(err, rv)
 }
 

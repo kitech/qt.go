@@ -60,10 +60,17 @@ func (this *QPdfWriter) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QPdfWriter) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+	this.QPagedPaintDevice = NewQPagedPaintDeviceFromPointer(cthis)
+}
 func NewQPdfWriterFromPointer(cthis unsafe.Pointer) *QPdfWriter {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	bcthis1 := NewQPagedPaintDeviceFromPointer(cthis)
 	return &QPdfWriter{bcthis0, bcthis1}
+}
+func (*QPdfWriter) NewFromPointer(cthis unsafe.Pointer) *QPdfWriter {
+	return NewQPdfWriterFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qpdfwriter.h:58
@@ -118,7 +125,7 @@ func DeleteQPdfWriter(*QPdfWriter) {
 // Public
 // void setPdfVersion(enum QPagedPaintDevice::PdfVersion)
 func (this *QPdfWriter) SetPdfVersion(version int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPdfWriter13setPdfVersionEN17QPagedPaintDevice10PdfVersionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPdfWriter13setPdfVersionEN17QPagedPaintDevice10PdfVersionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), version)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -138,9 +145,11 @@ func (this *QPdfWriter) PdfVersion() int {
 // Public
 // QString title()
 func (this *QPdfWriter) Title() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPdfWriter5titleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPdfWriter5titleEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -160,9 +169,11 @@ func (this *QPdfWriter) SetTitle(title *qtcore.QString) {
 // Public
 // QString creator()
 func (this *QPdfWriter) Creator() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPdfWriter7creatorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPdfWriter7creatorEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -193,7 +204,7 @@ func (this *QPdfWriter) NewPage() bool {
 // Public
 // void setResolution(int)
 func (this *QPdfWriter) SetResolution(resolution int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPdfWriter13setResolutionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &resolution)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPdfWriter13setResolutionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), resolution)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -213,7 +224,7 @@ func (this *QPdfWriter) Resolution() int {
 // Public virtual
 // void setPageSize(enum QPagedPaintDevice::PageSize)
 func (this *QPdfWriter) SetPageSize(size int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPdfWriter11setPageSizeEN17QPagedPaintDevice8PageSizeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPdfWriter11setPageSizeEN17QPagedPaintDevice8PageSizeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -244,7 +255,7 @@ func (this *QPdfWriter) PaintEngine() *QPaintEngine /*444 QPaintEngine **/ {
 // Protected virtual
 // int metric(enum QPaintDevice::PaintDeviceMetric)
 func (this *QPdfWriter) Metric(id int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPdfWriter6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &id)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPdfWriter6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111

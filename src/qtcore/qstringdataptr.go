@@ -55,8 +55,14 @@ func (this *QStringDataPtr) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QStringDataPtr) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQStringDataPtrFromPointer(cthis unsafe.Pointer) *QStringDataPtr {
 	return &QStringDataPtr{&qtrt.CObject{cthis}}
+}
+func (*QStringDataPtr) NewFromPointer(cthis unsafe.Pointer) *QStringDataPtr {
+	return NewQStringDataPtrFromPointer(cthis)
 }
 
 //  body block end

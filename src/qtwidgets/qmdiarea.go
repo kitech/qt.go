@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 55
+// extern C begin: 56
 */
 // import "C"
 import "unsafe"
@@ -63,9 +63,15 @@ func (this *QMdiArea) GetCthis() unsafe.Pointer {
 		return this.QAbstractScrollArea.GetCthis()
 	}
 }
+func (this *QMdiArea) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractScrollArea = NewQAbstractScrollAreaFromPointer(cthis)
+}
 func NewQMdiAreaFromPointer(cthis unsafe.Pointer) *QMdiArea {
 	bcthis0 := NewQAbstractScrollAreaFromPointer(cthis)
 	return &QMdiArea{bcthis0}
+}
+func (*QMdiArea) NewFromPointer(cthis unsafe.Pointer) *QMdiArea {
+	return NewQMdiAreaFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qmdiarea.h:58
@@ -107,9 +113,11 @@ func DeleteQMdiArea(*QMdiArea) {
 // Public virtual
 // QSize sizeHint()
 func (this *QMdiArea) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMdiArea8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMdiArea8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -119,9 +127,11 @@ func (this *QMdiArea) SizeHint() *qtcore.QSize /*123*/ {
 // Public virtual
 // QSize minimumSizeHint()
 func (this *QMdiArea) MinimumSizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMdiArea15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMdiArea15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -150,6 +160,19 @@ func (this *QMdiArea) ActiveSubWindow() *QMdiSubWindow /*444 QMdiSubWindow **/ {
 	return rv2
 }
 
+// /usr/include/qt/QtWidgets/qmdiarea.h:100
+// index:0
+// Public
+// QMdiSubWindow * addSubWindow(class QWidget *, Qt::WindowFlags)
+func (this *QMdiArea) AddSubWindow(widget *QWidget /*444 QWidget **/, flags int) *QMdiSubWindow /*444 QMdiSubWindow **/ {
+	var convArg0 = widget.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea12addSubWindowEP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	rv2 := /*==*/ NewQMdiSubWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qmdiarea.h:101
 // index:0
 // Public
@@ -165,9 +188,11 @@ func (this *QMdiArea) RemoveSubWindow(widget *QWidget /*444 QWidget **/) {
 // Public
 // QBrush background()
 func (this *QMdiArea) Background() *qtgui.QBrush /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMdiArea10backgroundEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMdiArea10backgroundEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -198,7 +223,7 @@ func (this *QMdiArea) ActivationOrder() int {
 // Public
 // void setActivationOrder(enum QMdiArea::WindowOrder)
 func (this *QMdiArea) SetActivationOrder(order int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea18setActivationOrderENS_11WindowOrderE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &order)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea18setActivationOrderENS_11WindowOrderE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), order)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -207,7 +232,7 @@ func (this *QMdiArea) SetActivationOrder(order int) {
 // Public
 // void setOption(enum QMdiArea::AreaOption, _Bool)
 func (this *QMdiArea) SetOption(option int, on bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea9setOptionENS_10AreaOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &option, &on)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea9setOptionENS_10AreaOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -216,7 +241,7 @@ func (this *QMdiArea) SetOption(option int, on bool) {
 // Public
 // bool testOption(enum QMdiArea::AreaOption)
 func (this *QMdiArea) TestOption(opton int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMdiArea10testOptionENS_10AreaOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &opton)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMdiArea10testOptionENS_10AreaOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), opton)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -227,7 +252,7 @@ func (this *QMdiArea) TestOption(opton int) bool {
 // Public
 // void setViewMode(enum QMdiArea::ViewMode)
 func (this *QMdiArea) SetViewMode(mode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea11setViewModeENS_8ViewModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea11setViewModeENS_8ViewModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -258,7 +283,7 @@ func (this *QMdiArea) DocumentMode() bool {
 // Public
 // void setDocumentMode(_Bool)
 func (this *QMdiArea) SetDocumentMode(enabled bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea15setDocumentModeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &enabled)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea15setDocumentModeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -267,7 +292,7 @@ func (this *QMdiArea) SetDocumentMode(enabled bool) {
 // Public
 // void setTabsClosable(_Bool)
 func (this *QMdiArea) SetTabsClosable(closable bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea15setTabsClosableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &closable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea15setTabsClosableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), closable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -287,7 +312,7 @@ func (this *QMdiArea) TabsClosable() bool {
 // Public
 // void setTabsMovable(_Bool)
 func (this *QMdiArea) SetTabsMovable(movable bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea14setTabsMovableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &movable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea14setTabsMovableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), movable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -307,7 +332,7 @@ func (this *QMdiArea) TabsMovable() bool {
 // Public
 // void setTabShape(class QTabWidget::TabShape)
 func (this *QMdiArea) SetTabShape(shape int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea11setTabShapeEN10QTabWidget8TabShapeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &shape)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea11setTabShapeEN10QTabWidget8TabShapeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), shape)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -327,7 +352,7 @@ func (this *QMdiArea) TabShape() int {
 // Public
 // void setTabPosition(class QTabWidget::TabPosition)
 func (this *QMdiArea) SetTabPosition(position int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea14setTabPositionEN10QTabWidget11TabPositionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &position)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea14setTabPositionEN10QTabWidget11TabPositionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), position)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -518,8 +543,23 @@ func (this *QMdiArea) ViewportEvent(event *qtcore.QEvent /*444 QEvent **/) bool 
 // Protected virtual
 // void scrollContentsBy(int, int)
 func (this *QMdiArea) ScrollContentsBy(dx int, dy int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea16scrollContentsByEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea16scrollContentsByEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
 }
+
+type QMdiArea__AreaOption = int
+
+const QMdiArea__DontMaximizeSubWindowOnActivation QMdiArea__AreaOption = 1
+
+type QMdiArea__WindowOrder = int
+
+const QMdiArea__CreationOrder QMdiArea__WindowOrder = 0
+const QMdiArea__StackingOrder QMdiArea__WindowOrder = 1
+const QMdiArea__ActivationHistoryOrder QMdiArea__WindowOrder = 2
+
+type QMdiArea__ViewMode = int
+
+const QMdiArea__SubWindowView QMdiArea__ViewMode = 0
+const QMdiArea__TabbedView QMdiArea__ViewMode = 1
 
 //  body block end

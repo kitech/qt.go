@@ -63,9 +63,15 @@ func (this *QMenuBar) GetCthis() unsafe.Pointer {
 		return this.QWidget.GetCthis()
 	}
 }
+func (this *QMenuBar) SetCthis(cthis unsafe.Pointer) {
+	this.QWidget = NewQWidgetFromPointer(cthis)
+}
 func NewQMenuBarFromPointer(cthis unsafe.Pointer) *QMenuBar {
 	bcthis0 := NewQWidgetFromPointer(cthis)
 	return &QMenuBar{bcthis0}
+}
+func (*QMenuBar) NewFromPointer(cthis unsafe.Pointer) *QMenuBar {
+	return NewQMenuBarFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:57
@@ -246,7 +252,7 @@ func (this *QMenuBar) SetActiveAction(action *QAction /*444 QAction **/) {
 // Public
 // void setDefaultUp(_Bool)
 func (this *QMenuBar) SetDefaultUp(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar12setDefaultUpEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar12setDefaultUpEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -266,9 +272,11 @@ func (this *QMenuBar) IsDefaultUp() bool {
 // Public virtual
 // QSize sizeHint()
 func (this *QMenuBar) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -278,9 +286,11 @@ func (this *QMenuBar) SizeHint() *qtcore.QSize /*123*/ {
 // Public virtual
 // QSize minimumSizeHint()
 func (this *QMenuBar) MinimumSizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -290,7 +300,7 @@ func (this *QMenuBar) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // Public virtual
 // int heightForWidth(int)
 func (this *QMenuBar) HeightForWidth(arg0 int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar14heightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar14heightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -301,10 +311,12 @@ func (this *QMenuBar) HeightForWidth(arg0 int) int {
 // Public
 // QRect actionGeometry(class QAction *)
 func (this *QMenuBar) ActionGeometry(arg0 *QAction /*444 QAction **/) *qtcore.QRect /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar14actionGeometryEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar14actionGeometryEP7QAction", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -328,7 +340,7 @@ func (this *QMenuBar) ActionAt(arg0 *qtcore.QPoint) *QAction /*444 QAction **/ {
 // void setCornerWidget(class QWidget *, Qt::Corner)
 func (this *QMenuBar) SetCornerWidget(w *QWidget /*444 QWidget **/, corner int) {
 	var convArg0 = w.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar15setCornerWidgetEP7QWidgetN2Qt6CornerE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &corner)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar15setCornerWidgetEP7QWidgetN2Qt6CornerE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, corner)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -337,7 +349,7 @@ func (this *QMenuBar) SetCornerWidget(w *QWidget /*444 QWidget **/, corner int) 
 // Public
 // QWidget * cornerWidget(Qt::Corner)
 func (this *QMenuBar) CornerWidget(corner int) *QWidget /*444 QWidget **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar12cornerWidgetEN2Qt6CornerE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &corner)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar12cornerWidgetEN2Qt6CornerE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), corner)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -360,7 +372,7 @@ func (this *QMenuBar) IsNativeMenuBar() bool {
 // Public
 // void setNativeMenuBar(_Bool)
 func (this *QMenuBar) SetNativeMenuBar(nativeMenuBar bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar16setNativeMenuBarEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &nativeMenuBar)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar16setNativeMenuBarEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), nativeMenuBar)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -369,7 +381,7 @@ func (this *QMenuBar) SetNativeMenuBar(nativeMenuBar bool) {
 // Public virtual
 // void setVisible(_Bool)
 func (this *QMenuBar) SetVisible(visible bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
 }
 

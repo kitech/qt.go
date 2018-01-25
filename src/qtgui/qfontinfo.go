@@ -59,8 +59,14 @@ func (this *QFontInfo) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QFontInfo) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQFontInfoFromPointer(cthis unsafe.Pointer) *QFontInfo {
 	return &QFontInfo{&qtrt.CObject{cthis}}
+}
+func (*QFontInfo) NewFromPointer(cthis unsafe.Pointer) *QFontInfo {
+	return NewQFontInfoFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qfontinfo.h:53
@@ -100,9 +106,11 @@ func (this *QFontInfo) Swap(other *QFontInfo) {
 // Public
 // QString family()
 func (this *QFontInfo) Family() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFontInfo6familyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFontInfo6familyEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -112,9 +120,11 @@ func (this *QFontInfo) Family() *qtcore.QString /*123*/ {
 // Public
 // QString styleName()
 func (this *QFontInfo) StyleName() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFontInfo9styleNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFontInfo9styleNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

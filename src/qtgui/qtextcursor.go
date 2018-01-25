@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 20
+// extern C begin: 21
 */
 // import "C"
 import "unsafe"
@@ -59,8 +59,14 @@ func (this *QTextCursor) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTextCursor) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTextCursorFromPointer(cthis unsafe.Pointer) *QTextCursor {
 	return &QTextCursor{&qtrt.CObject{cthis}}
+}
+func (*QTextCursor) NewFromPointer(cthis unsafe.Pointer) *QTextCursor {
+	return NewQTextCursorFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtextcursor.h:69
@@ -149,7 +155,7 @@ func (this *QTextCursor) IsNull() bool {
 // Public
 // void setPosition(int, enum QTextCursor::MoveMode)
 func (this *QTextCursor) SetPosition(pos int, mode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor11setPositionEiNS_8MoveModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &pos, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor11setPositionEiNS_8MoveModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pos, mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -212,7 +218,7 @@ func (this *QTextCursor) InsertText_1(text *qtcore.QString, format *QTextCharFor
 // Public
 // bool movePosition(enum QTextCursor::MoveOperation, enum QTextCursor::MoveMode, int)
 func (this *QTextCursor) MovePosition(op int, arg1 int, n int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor12movePositionENS_13MoveOperationENS_8MoveModeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &op, &arg1, &n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor12movePositionENS_13MoveOperationENS_8MoveModeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), op, arg1, n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -234,7 +240,7 @@ func (this *QTextCursor) VisualNavigation() bool {
 // Public
 // void setVisualNavigation(_Bool)
 func (this *QTextCursor) SetVisualNavigation(b bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor19setVisualNavigationEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor19setVisualNavigationEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -243,7 +249,7 @@ func (this *QTextCursor) SetVisualNavigation(b bool) {
 // Public
 // void setVerticalMovementX(int)
 func (this *QTextCursor) SetVerticalMovementX(x int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor20setVerticalMovementXEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor20setVerticalMovementXEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -263,7 +269,7 @@ func (this *QTextCursor) VerticalMovementX() int {
 // Public
 // void setKeepPositionOnInsert(_Bool)
 func (this *QTextCursor) SetKeepPositionOnInsert(b bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor23setKeepPositionOnInsertEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor23setKeepPositionOnInsertEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -301,7 +307,7 @@ func (this *QTextCursor) DeletePreviousChar() {
 // Public
 // void select(enum QTextCursor::SelectionType)
 func (this *QTextCursor) Select(selection int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor6selectENS_13SelectionTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &selection)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor6selectENS_13SelectionTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), selection)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -372,9 +378,11 @@ func (this *QTextCursor) SelectionEnd() int {
 // Public
 // QString selectedText()
 func (this *QTextCursor) SelectedText() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor12selectedTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor12selectedTextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -384,9 +392,11 @@ func (this *QTextCursor) SelectedText() *qtcore.QString /*123*/ {
 // Public
 // QTextDocumentFragment selection()
 func (this *QTextCursor) Selection() *QTextDocumentFragment /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor9selectionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor9selectionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextDocumentFragmentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -396,7 +406,7 @@ func (this *QTextCursor) Selection() *QTextDocumentFragment /*123*/ {
 // Public
 // void selectedTableCells(int *, int *, int *, int *)
 func (this *QTextCursor) SelectedTableCells(firstRow unsafe.Pointer /*666*/, numRows unsafe.Pointer /*666*/, firstColumn unsafe.Pointer /*666*/, numColumns unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor18selectedTableCellsEPiS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), firstRow, numRows, firstColumn, numColumns)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor18selectedTableCellsEPiS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &firstRow, &numRows, &firstColumn, &numColumns)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -405,9 +415,11 @@ func (this *QTextCursor) SelectedTableCells(firstRow unsafe.Pointer /*666*/, num
 // Public
 // QTextBlock block()
 func (this *QTextCursor) Block() *QTextBlock /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor5blockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor5blockEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -417,9 +429,11 @@ func (this *QTextCursor) Block() *QTextBlock /*123*/ {
 // Public
 // QTextCharFormat charFormat()
 func (this *QTextCursor) CharFormat() *QTextCharFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor10charFormatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor10charFormatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -449,9 +463,11 @@ func (this *QTextCursor) MergeCharFormat(modifier *QTextCharFormat) {
 // Public
 // QTextBlockFormat blockFormat()
 func (this *QTextCursor) BlockFormat() *QTextBlockFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor11blockFormatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor11blockFormatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextBlockFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -481,9 +497,11 @@ func (this *QTextCursor) MergeBlockFormat(modifier *QTextBlockFormat) {
 // Public
 // QTextCharFormat blockCharFormat()
 func (this *QTextCursor) BlockCharFormat() *QTextCharFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor15blockCharFormatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor15blockCharFormatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -600,7 +618,7 @@ func (this *QTextCursor) InsertList(format *QTextListFormat) *QTextList /*444 QT
 // Public
 // QTextList * insertList(class QTextListFormat::Style)
 func (this *QTextCursor) InsertList_1(style int) *QTextList /*444 QTextList **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor10insertListEN15QTextListFormat5StyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor10insertListEN15QTextListFormat5StyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextListFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -625,7 +643,7 @@ func (this *QTextCursor) CreateList(format *QTextListFormat) *QTextList /*444 QT
 // Public
 // QTextList * createList(class QTextListFormat::Style)
 func (this *QTextCursor) CreateList_1(style int) *QTextList /*444 QTextList **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor10createListEN15QTextListFormat5StyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor10createListEN15QTextListFormat5StyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextListFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -650,7 +668,7 @@ func (this *QTextCursor) CurrentList() *QTextList /*444 QTextList **/ {
 // QTextTable * insertTable(int, int, const class QTextTableFormat &)
 func (this *QTextCursor) InsertTable(rows int, cols int, format *QTextTableFormat) *QTextTable /*444 QTextTable **/ {
 	var convArg2 = format.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor11insertTableEiiRK16QTextTableFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &rows, &cols, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor11insertTableEiiRK16QTextTableFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), rows, cols, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextTableFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -662,7 +680,7 @@ func (this *QTextCursor) InsertTable(rows int, cols int, format *QTextTableForma
 // Public
 // QTextTable * insertTable(int, int)
 func (this *QTextCursor) InsertTable_1(rows int, cols int) *QTextTable /*444 QTextTable **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor11insertTableEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &rows, &cols)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor11insertTableEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), rows, cols)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextTableFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -732,7 +750,7 @@ func (this *QTextCursor) InsertHtml(html *qtcore.QString) {
 // void insertImage(const class QTextImageFormat &, class QTextFrameFormat::Position)
 func (this *QTextCursor) InsertImage(format *QTextImageFormat, alignment int) {
 	var convArg0 = format.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor11insertImageERK16QTextImageFormatN16QTextFrameFormat8PositionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &alignment)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor11insertImageERK16QTextImageFormatN16QTextFrameFormat8PositionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -839,5 +857,45 @@ func (this *QTextCursor) Document() *QTextDocument /*444 QTextDocument **/ {
 	rv2 := /*==*/ NewQTextDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
+
+type QTextCursor__MoveMode = int
+
+const QTextCursor__MoveAnchor QTextCursor__MoveMode = 0
+const QTextCursor__KeepAnchor QTextCursor__MoveMode = 1
+
+type QTextCursor__MoveOperation = int
+
+const QTextCursor__NoMove QTextCursor__MoveOperation = 0
+const QTextCursor__Start QTextCursor__MoveOperation = 1
+const QTextCursor__Up QTextCursor__MoveOperation = 2
+const QTextCursor__StartOfLine QTextCursor__MoveOperation = 3
+const QTextCursor__StartOfBlock QTextCursor__MoveOperation = 4
+const QTextCursor__StartOfWord QTextCursor__MoveOperation = 5
+const QTextCursor__PreviousBlock QTextCursor__MoveOperation = 6
+const QTextCursor__PreviousCharacter QTextCursor__MoveOperation = 7
+const QTextCursor__PreviousWord QTextCursor__MoveOperation = 8
+const QTextCursor__Left QTextCursor__MoveOperation = 9
+const QTextCursor__WordLeft QTextCursor__MoveOperation = 10
+const QTextCursor__End QTextCursor__MoveOperation = 11
+const QTextCursor__Down QTextCursor__MoveOperation = 12
+const QTextCursor__EndOfLine QTextCursor__MoveOperation = 13
+const QTextCursor__EndOfWord QTextCursor__MoveOperation = 14
+const QTextCursor__EndOfBlock QTextCursor__MoveOperation = 15
+const QTextCursor__NextBlock QTextCursor__MoveOperation = 16
+const QTextCursor__NextCharacter QTextCursor__MoveOperation = 17
+const QTextCursor__NextWord QTextCursor__MoveOperation = 18
+const QTextCursor__Right QTextCursor__MoveOperation = 19
+const QTextCursor__WordRight QTextCursor__MoveOperation = 20
+const QTextCursor__NextCell QTextCursor__MoveOperation = 21
+const QTextCursor__PreviousCell QTextCursor__MoveOperation = 22
+const QTextCursor__NextRow QTextCursor__MoveOperation = 23
+const QTextCursor__PreviousRow QTextCursor__MoveOperation = 24
+
+type QTextCursor__SelectionType = int
+
+const QTextCursor__WordUnderCursor QTextCursor__SelectionType = 0
+const QTextCursor__LineUnderCursor QTextCursor__SelectionType = 1
+const QTextCursor__BlockUnderCursor QTextCursor__SelectionType = 2
+const QTextCursor__Document QTextCursor__SelectionType = 3
 
 //  body block end

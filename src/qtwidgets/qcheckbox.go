@@ -63,9 +63,15 @@ func (this *QCheckBox) GetCthis() unsafe.Pointer {
 		return this.QAbstractButton.GetCthis()
 	}
 }
+func (this *QCheckBox) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractButton = NewQAbstractButtonFromPointer(cthis)
+}
 func NewQCheckBoxFromPointer(cthis unsafe.Pointer) *QCheckBox {
 	bcthis0 := NewQAbstractButtonFromPointer(cthis)
 	return &QCheckBox{bcthis0}
+}
+func (*QCheckBox) NewFromPointer(cthis unsafe.Pointer) *QCheckBox {
+	return NewQCheckBoxFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qcheckbox.h:56
@@ -121,9 +127,11 @@ func DeleteQCheckBox(*QCheckBox) {
 // Public virtual
 // QSize sizeHint()
 func (this *QCheckBox) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCheckBox8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCheckBox8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -133,9 +141,11 @@ func (this *QCheckBox) SizeHint() *qtcore.QSize /*123*/ {
 // Public virtual
 // QSize minimumSizeHint()
 func (this *QCheckBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCheckBox15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCheckBox15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -145,7 +155,7 @@ func (this *QCheckBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // Public
 // void setTristate(_Bool)
 func (this *QCheckBox) SetTristate(y bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCheckBox11setTristateEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCheckBox11setTristateEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), y)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -176,7 +186,7 @@ func (this *QCheckBox) CheckState() int {
 // Public
 // void setCheckState(Qt::CheckState)
 func (this *QCheckBox) SetCheckState(state int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCheckBox13setCheckStateEN2Qt10CheckStateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCheckBox13setCheckStateEN2Qt10CheckStateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -185,7 +195,7 @@ func (this *QCheckBox) SetCheckState(state int) {
 // Public
 // void stateChanged(int)
 func (this *QCheckBox) StateChanged(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCheckBox12stateChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCheckBox12stateChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 

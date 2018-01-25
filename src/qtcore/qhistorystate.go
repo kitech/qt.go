@@ -55,9 +55,15 @@ func (this *QHistoryState) GetCthis() unsafe.Pointer {
 		return this.QAbstractState.GetCthis()
 	}
 }
+func (this *QHistoryState) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractState = NewQAbstractStateFromPointer(cthis)
+}
 func NewQHistoryStateFromPointer(cthis unsafe.Pointer) *QHistoryState {
 	bcthis0 := NewQAbstractStateFromPointer(cthis)
 	return &QHistoryState{bcthis0}
+}
+func (*QHistoryState) NewFromPointer(cthis unsafe.Pointer) *QHistoryState {
+	return NewQHistoryStateFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qhistorystate.h:53
@@ -92,7 +98,7 @@ func NewQHistoryState(parent *QState /*444 QState **/) *QHistoryState {
 func NewQHistoryState_1(type_ int, parent *QState /*444 QState **/) *QHistoryState {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryStateC2ENS_11HistoryTypeEP6QState", ffiqt.FFI_TYPE_VOID, cthis, &type_, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryStateC2ENS_11HistoryTypeEP6QState", ffiqt.FFI_TYPE_VOID, cthis, type_, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQHistoryStateFromPointer(cthis)
 	return gothis
@@ -167,7 +173,7 @@ func (this *QHistoryState) HistoryType() int {
 // Public
 // void setHistoryType(enum QHistoryState::HistoryType)
 func (this *QHistoryState) SetHistoryType(type_ int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryState14setHistoryTypeENS_11HistoryTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryState14setHistoryTypeENS_11HistoryTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -202,5 +208,10 @@ func (this *QHistoryState) Event(e *QEvent /*444 QEvent **/) bool {
 	//  return rv
 	return rv != 0
 }
+
+type QHistoryState__HistoryType = int
+
+const QHistoryState__ShallowHistory QHistoryState__HistoryType = 0
+const QHistoryState__DeepHistory QHistoryState__HistoryType = 1
 
 //  body block end

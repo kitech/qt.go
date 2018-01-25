@@ -63,9 +63,15 @@ func (this *QAction) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QAction) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQActionFromPointer(cthis unsafe.Pointer) *QAction {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QAction{bcthis0}
+}
+func (*QAction) NewFromPointer(cthis unsafe.Pointer) *QAction {
+	return NewQActionFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:62
@@ -168,9 +174,11 @@ func (this *QAction) SetIcon(icon *qtgui.QIcon) {
 // Public
 // QIcon icon()
 func (this *QAction) Icon() *qtgui.QIcon /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction4iconEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction4iconEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -190,9 +198,11 @@ func (this *QAction) SetText(text *qtcore.QString) {
 // Public
 // QString text()
 func (this *QAction) Text() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction4textEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -212,9 +222,11 @@ func (this *QAction) SetIconText(text *qtcore.QString) {
 // Public
 // QString iconText()
 func (this *QAction) IconText() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction8iconTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction8iconTextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -234,9 +246,11 @@ func (this *QAction) SetToolTip(tip *qtcore.QString) {
 // Public
 // QString toolTip()
 func (this *QAction) ToolTip() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction7toolTipEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction7toolTipEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -256,9 +270,11 @@ func (this *QAction) SetStatusTip(statusTip *qtcore.QString) {
 // Public
 // QString statusTip()
 func (this *QAction) StatusTip() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction9statusTipEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction9statusTipEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -278,9 +294,11 @@ func (this *QAction) SetWhatsThis(what *qtcore.QString) {
 // Public
 // QString whatsThis()
 func (this *QAction) WhatsThis() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction9whatsThisEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction9whatsThisEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -290,7 +308,7 @@ func (this *QAction) WhatsThis() *qtcore.QString /*123*/ {
 // Public
 // void setPriority(enum QAction::Priority)
 func (this *QAction) SetPriority(priority int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction11setPriorityENS_8PriorityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &priority)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction11setPriorityENS_8PriorityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), priority)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -332,7 +350,7 @@ func (this *QAction) SetMenu(menu *QMenu /*444 QMenu **/) {
 // Public
 // void setSeparator(_Bool)
 func (this *QAction) SetSeparator(b bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction12setSeparatorEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction12setSeparatorEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -362,9 +380,11 @@ func (this *QAction) SetShortcut(shortcut *qtgui.QKeySequence) {
 // Public
 // QKeySequence shortcut()
 func (this *QAction) Shortcut() *qtgui.QKeySequence /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction8shortcutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction8shortcutEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -374,7 +394,7 @@ func (this *QAction) Shortcut() *qtgui.QKeySequence /*123*/ {
 // Public
 // void setShortcuts(class QKeySequence::StandardKey)
 func (this *QAction) SetShortcuts(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction12setShortcutsEN12QKeySequence11StandardKeyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction12setShortcutsEN12QKeySequence11StandardKeyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -383,7 +403,7 @@ func (this *QAction) SetShortcuts(arg0 int) {
 // Public
 // void setShortcutContext(Qt::ShortcutContext)
 func (this *QAction) SetShortcutContext(context int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction18setShortcutContextEN2Qt15ShortcutContextE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &context)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction18setShortcutContextEN2Qt15ShortcutContextE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), context)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -403,7 +423,7 @@ func (this *QAction) ShortcutContext() int {
 // Public
 // void setAutoRepeat(_Bool)
 func (this *QAction) SetAutoRepeat(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction13setAutoRepeatEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction13setAutoRepeatEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -433,9 +453,11 @@ func (this *QAction) SetFont(font *qtgui.QFont) {
 // Public
 // QFont font()
 func (this *QAction) Font() *qtgui.QFont /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction4fontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction4fontEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -445,7 +467,7 @@ func (this *QAction) Font() *qtgui.QFont /*123*/ {
 // Public
 // void setCheckable(_Bool)
 func (this *QAction) SetCheckable(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction12setCheckableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction12setCheckableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -465,9 +487,11 @@ func (this *QAction) IsCheckable() bool {
 // Public
 // QVariant data()
 func (this *QAction) Data() *qtcore.QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction4dataEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -520,7 +544,7 @@ func (this *QAction) IsVisible() bool {
 // Public
 // void activate(enum QAction::ActionEvent)
 func (this *QAction) Activate(event int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction8activateENS_11ActionEventE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &event)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction8activateENS_11ActionEventE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -541,7 +565,7 @@ func (this *QAction) ShowStatusText(widget *QWidget /*444 QWidget **/) bool {
 // Public
 // void setMenuRole(enum QAction::MenuRole)
 func (this *QAction) SetMenuRole(menuRole int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction11setMenuRoleENS_8MenuRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &menuRole)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction11setMenuRoleENS_8MenuRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), menuRole)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -561,7 +585,7 @@ func (this *QAction) MenuRole() int {
 // Public
 // void setIconVisibleInMenu(_Bool)
 func (this *QAction) SetIconVisibleInMenu(visible bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction20setIconVisibleInMenuEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction20setIconVisibleInMenuEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -581,7 +605,7 @@ func (this *QAction) IsIconVisibleInMenu() bool {
 // Public
 // void setShortcutVisibleInContextMenu(_Bool)
 func (this *QAction) SetShortcutVisibleInContextMenu(show bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction31setShortcutVisibleInContextMenuEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &show)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction31setShortcutVisibleInContextMenuEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), show)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -643,7 +667,7 @@ func (this *QAction) Hover() {
 // Public
 // void setChecked(_Bool)
 func (this *QAction) SetChecked(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction10setCheckedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction10setCheckedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -661,7 +685,7 @@ func (this *QAction) Toggle() {
 // Public
 // void setEnabled(_Bool)
 func (this *QAction) SetEnabled(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -670,7 +694,7 @@ func (this *QAction) SetEnabled(arg0 bool) {
 // Public inline
 // void setDisabled(_Bool)
 func (this *QAction) SetDisabled(b bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction11setDisabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction11setDisabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -679,7 +703,7 @@ func (this *QAction) SetDisabled(b bool) {
 // Public
 // void setVisible(_Bool)
 func (this *QAction) SetVisible(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -697,7 +721,7 @@ func (this *QAction) Changed() {
 // Public
 // void triggered(_Bool)
 func (this *QAction) Triggered(checked bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction9triggeredEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &checked)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction9triggeredEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), checked)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -715,8 +739,29 @@ func (this *QAction) Hovered() {
 // Public
 // void toggled(_Bool)
 func (this *QAction) Toggled(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction7toggledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction7toggledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
+
+type QAction__MenuRole = int
+
+const QAction__NoRole QAction__MenuRole = 0
+const QAction__TextHeuristicRole QAction__MenuRole = 1
+const QAction__ApplicationSpecificRole QAction__MenuRole = 2
+const QAction__AboutQtRole QAction__MenuRole = 3
+const QAction__AboutRole QAction__MenuRole = 4
+const QAction__PreferencesRole QAction__MenuRole = 5
+const QAction__QuitRole QAction__MenuRole = 6
+
+type QAction__Priority = int
+
+const QAction__LowPriority QAction__Priority = 0
+const QAction__NormalPriority QAction__Priority = 128
+const QAction__HighPriority QAction__Priority = 256
+
+type QAction__ActionEvent = int
+
+const QAction__Trigger QAction__ActionEvent = 0
+const QAction__Hover QAction__ActionEvent = 1
 
 //  body block end

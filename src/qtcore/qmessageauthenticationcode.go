@@ -55,8 +55,14 @@ func (this *QMessageAuthenticationCode) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QMessageAuthenticationCode) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQMessageAuthenticationCodeFromPointer(cthis unsafe.Pointer) *QMessageAuthenticationCode {
 	return &QMessageAuthenticationCode{&qtrt.CObject{cthis}}
+}
+func (*QMessageAuthenticationCode) NewFromPointer(cthis unsafe.Pointer) *QMessageAuthenticationCode {
+	return NewQMessageAuthenticationCodeFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qmessageauthenticationcode.h:54
@@ -66,7 +72,7 @@ func NewQMessageAuthenticationCodeFromPointer(cthis unsafe.Pointer) *QMessageAut
 func NewQMessageAuthenticationCode(method int, key *QByteArray) *QMessageAuthenticationCode {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg1 = key.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCodeC2EN18QCryptographicHash9AlgorithmERK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, &method, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCodeC2EN18QCryptographicHash9AlgorithmERK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, method, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMessageAuthenticationCodeFromPointer(cthis)
 	return gothis
@@ -107,7 +113,7 @@ func (this *QMessageAuthenticationCode) SetKey(key *QByteArray) {
 func (this *QMessageAuthenticationCode) AddData(data string, length int) {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode7addDataEPKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &length)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode7addDataEPKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, length)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -138,9 +144,11 @@ func (this *QMessageAuthenticationCode) AddData_2(device *QIODevice /*444 QIODev
 // Public
 // QByteArray result()
 func (this *QMessageAuthenticationCode) Result() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QMessageAuthenticationCode6resultEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QMessageAuthenticationCode6resultEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

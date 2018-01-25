@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 94
+// extern C begin: 96
 */
 // import "C"
 import "unsafe"
@@ -63,9 +63,15 @@ func (this *QPushButton) GetCthis() unsafe.Pointer {
 		return this.QAbstractButton.GetCthis()
 	}
 }
+func (this *QPushButton) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractButton = NewQAbstractButtonFromPointer(cthis)
+}
 func NewQPushButtonFromPointer(cthis unsafe.Pointer) *QPushButton {
 	bcthis0 := NewQAbstractButtonFromPointer(cthis)
 	return &QPushButton{bcthis0}
+}
+func (*QPushButton) NewFromPointer(cthis unsafe.Pointer) *QPushButton {
+	return NewQPushButtonFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qpushbutton.h:57
@@ -136,9 +142,11 @@ func DeleteQPushButton(*QPushButton) {
 // Public virtual
 // QSize sizeHint()
 func (this *QPushButton) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPushButton8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPushButton8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -148,9 +156,11 @@ func (this *QPushButton) SizeHint() *qtcore.QSize /*123*/ {
 // Public virtual
 // QSize minimumSizeHint()
 func (this *QPushButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPushButton15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPushButton15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -171,7 +181,7 @@ func (this *QPushButton) AutoDefault() bool {
 // Public
 // void setAutoDefault(_Bool)
 func (this *QPushButton) SetAutoDefault(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton14setAutoDefaultEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton14setAutoDefaultEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -191,7 +201,7 @@ func (this *QPushButton) IsDefault() bool {
 // Public
 // void setDefault(_Bool)
 func (this *QPushButton) SetDefault(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton10setDefaultEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton10setDefaultEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -222,7 +232,7 @@ func (this *QPushButton) Menu() *QMenu /*444 QMenu **/ {
 // Public
 // void setFlat(_Bool)
 func (this *QPushButton) SetFlat(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton7setFlatEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton7setFlatEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 

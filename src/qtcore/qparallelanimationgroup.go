@@ -55,9 +55,15 @@ func (this *QParallelAnimationGroup) GetCthis() unsafe.Pointer {
 		return this.QAnimationGroup.GetCthis()
 	}
 }
+func (this *QParallelAnimationGroup) SetCthis(cthis unsafe.Pointer) {
+	this.QAnimationGroup = NewQAnimationGroupFromPointer(cthis)
+}
 func NewQParallelAnimationGroupFromPointer(cthis unsafe.Pointer) *QParallelAnimationGroup {
 	bcthis0 := NewQAnimationGroupFromPointer(cthis)
 	return &QParallelAnimationGroup{bcthis0}
+}
+func (*QParallelAnimationGroup) NewFromPointer(cthis unsafe.Pointer) *QParallelAnimationGroup {
+	return NewQParallelAnimationGroupFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:53
@@ -122,7 +128,7 @@ func (this *QParallelAnimationGroup) Event(event *QEvent /*444 QEvent **/) bool 
 // Protected virtual
 // void updateCurrentTime(int)
 func (this *QParallelAnimationGroup) UpdateCurrentTime(currentTime int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroup17updateCurrentTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &currentTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroup17updateCurrentTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), currentTime)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -131,7 +137,7 @@ func (this *QParallelAnimationGroup) UpdateCurrentTime(currentTime int) {
 // Protected virtual
 // void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
 func (this *QParallelAnimationGroup) UpdateState(newState int, oldState int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroup11updateStateEN18QAbstractAnimation5StateES1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &newState, &oldState)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroup11updateStateEN18QAbstractAnimation5StateES1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -140,7 +146,7 @@ func (this *QParallelAnimationGroup) UpdateState(newState int, oldState int) {
 // Protected virtual
 // void updateDirection(class QAbstractAnimation::Direction)
 func (this *QParallelAnimationGroup) UpdateDirection(direction int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroup15updateDirectionEN18QAbstractAnimation9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &direction)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroup15updateDirectionEN18QAbstractAnimation9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), direction)
 	gopp.ErrPrint(err, rv)
 }
 

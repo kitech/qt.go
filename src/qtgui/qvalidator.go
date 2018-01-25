@@ -59,9 +59,15 @@ func (this *QValidator) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QValidator) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQValidatorFromPointer(cthis unsafe.Pointer) *QValidator {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QValidator{bcthis0}
+}
+func (*QValidator) NewFromPointer(cthis unsafe.Pointer) *QValidator {
+	return NewQValidatorFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:60
@@ -113,9 +119,11 @@ func (this *QValidator) SetLocale(locale *qtcore.QLocale) {
 // Public
 // QLocale locale()
 func (this *QValidator) Locale() *qtcore.QLocale /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QValidator6localeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QValidator6localeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -150,5 +158,11 @@ func (this *QValidator) Changed() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QValidator7changedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
+
+type QValidator__State = int
+
+const QValidator__Invalid QValidator__State = 0
+const QValidator__Intermediate QValidator__State = 1
+const QValidator__Acceptable QValidator__State = 2
 
 //  body block end

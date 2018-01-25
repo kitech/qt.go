@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 36
+// extern C begin: 37
 */
 // import "C"
 import "unsafe"
@@ -63,9 +63,15 @@ func (this *QDockWidget) GetCthis() unsafe.Pointer {
 		return this.QWidget.GetCthis()
 	}
 }
+func (this *QDockWidget) SetCthis(cthis unsafe.Pointer) {
+	this.QWidget = NewQWidgetFromPointer(cthis)
+}
 func NewQDockWidgetFromPointer(cthis unsafe.Pointer) *QDockWidget {
 	bcthis0 := NewQWidgetFromPointer(cthis)
 	return &QDockWidget{bcthis0}
+}
+func (*QDockWidget) NewFromPointer(cthis unsafe.Pointer) *QDockWidget {
+	return NewQDockWidgetFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:57
@@ -78,6 +84,33 @@ func (this *QDockWidget) MetaObject() *qtcore.QMetaObject /*444 const QMetaObjec
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qdockwidget.h:66
+// index:0
+// Public
+// void QDockWidget(const class QString &, class QWidget *, Qt::WindowFlags)
+func NewQDockWidget(title *qtcore.QString, parent *QWidget /*444 QWidget **/, flags int) *QDockWidget {
+	cthis := qtrt.Calloc(1, 256) // 48
+	var convArg0 = title.GetCthis()
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidgetC2ERK7QStringP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, flags)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDockWidgetFromPointer(cthis)
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qdockwidget.h:68
+// index:1
+// Public
+// void QDockWidget(class QWidget *, Qt::WindowFlags)
+func NewQDockWidget_1(parent *QWidget /*444 QWidget **/, flags int) *QDockWidget {
+	cthis := qtrt.Calloc(1, 256) // 48
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidgetC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, flags)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDockWidgetFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:69
@@ -127,7 +160,7 @@ func (this *QDockWidget) Features() int {
 // Public
 // void setFloating(_Bool)
 func (this *QDockWidget) SetFloating(floating bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget11setFloatingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &floating)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget11setFloatingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), floating)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -180,7 +213,7 @@ func (this *QDockWidget) TitleBarWidget() *QWidget /*444 QWidget **/ {
 // Public inline
 // bool isAreaAllowed(Qt::DockWidgetArea)
 func (this *QDockWidget) IsAreaAllowed(area int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget13isAreaAllowedEN2Qt14DockWidgetAreaE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &area)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget13isAreaAllowedEN2Qt14DockWidgetAreaE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), area)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -203,7 +236,7 @@ func (this *QDockWidget) ToggleViewAction() *QAction /*444 QAction **/ {
 // Public
 // void topLevelChanged(_Bool)
 func (this *QDockWidget) TopLevelChanged(topLevel bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget15topLevelChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &topLevel)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget15topLevelChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), topLevel)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -212,7 +245,7 @@ func (this *QDockWidget) TopLevelChanged(topLevel bool) {
 // Public
 // void visibilityChanged(_Bool)
 func (this *QDockWidget) VisibilityChanged(visible bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget17visibilityChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget17visibilityChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -221,7 +254,7 @@ func (this *QDockWidget) VisibilityChanged(visible bool) {
 // Public
 // void dockLocationChanged(Qt::DockWidgetArea)
 func (this *QDockWidget) DockLocationChanged(area int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget19dockLocationChangedEN2Qt14DockWidgetAreaE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &area)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget19dockLocationChangedEN2Qt14DockWidgetAreaE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), area)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -276,5 +309,16 @@ func (this *QDockWidget) InitStyleOption(option *QStyleOptionDockWidget /*444 QS
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget15initStyleOptionEP22QStyleOptionDockWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
+
+type QDockWidget__DockWidgetFeature = int
+
+const QDockWidget__DockWidgetClosable QDockWidget__DockWidgetFeature = 1
+const QDockWidget__DockWidgetMovable QDockWidget__DockWidgetFeature = 2
+const QDockWidget__DockWidgetFloatable QDockWidget__DockWidgetFeature = 4
+const QDockWidget__DockWidgetVerticalTitleBar QDockWidget__DockWidgetFeature = 8
+const QDockWidget__DockWidgetFeatureMask QDockWidget__DockWidgetFeature = 15
+const QDockWidget__AllDockWidgetFeatures QDockWidget__DockWidgetFeature = 7
+const QDockWidget__NoDockWidgetFeatures QDockWidget__DockWidgetFeature = 0
+const QDockWidget__Reserved QDockWidget__DockWidgetFeature = 255
 
 //  body block end

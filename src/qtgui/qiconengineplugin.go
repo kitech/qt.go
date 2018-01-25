@@ -59,9 +59,15 @@ func (this *QIconEnginePlugin) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QIconEnginePlugin) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQIconEnginePluginFromPointer(cthis unsafe.Pointer) *QIconEnginePlugin {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QIconEnginePlugin{bcthis0}
+}
+func (*QIconEnginePlugin) NewFromPointer(cthis unsafe.Pointer) *QIconEnginePlugin {
+	return NewQIconEnginePluginFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qiconengineplugin.h:56

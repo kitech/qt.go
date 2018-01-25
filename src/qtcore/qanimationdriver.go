@@ -55,9 +55,15 @@ func (this *QAnimationDriver) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QAnimationDriver) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQAnimationDriverFromPointer(cthis unsafe.Pointer) *QAnimationDriver {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QAnimationDriver{bcthis0}
+}
+func (*QAnimationDriver) NewFromPointer(cthis unsafe.Pointer) *QAnimationDriver {
+	return NewQAnimationDriverFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:135
@@ -148,7 +154,7 @@ func (this *QAnimationDriver) Elapsed() int64 {
 // Public
 // void setStartTime(qint64)
 func (this *QAnimationDriver) SetStartTime(startTime int64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriver12setStartTimeEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &startTime)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriver12setStartTimeEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), startTime)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -186,7 +192,7 @@ func (this *QAnimationDriver) Stopped() {
 // Protected
 // void advanceAnimation(qint64)
 func (this *QAnimationDriver) AdvanceAnimation(timeStep int64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriver16advanceAnimationEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &timeStep)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriver16advanceAnimationEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), timeStep)
 	gopp.ErrPrint(err, rv)
 }
 

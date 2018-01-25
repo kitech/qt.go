@@ -59,9 +59,15 @@ func (this *QMouseEvent) GetCthis() unsafe.Pointer {
 		return this.QInputEvent.GetCthis()
 	}
 }
+func (this *QMouseEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QInputEvent = NewQInputEventFromPointer(cthis)
+}
 func NewQMouseEventFromPointer(cthis unsafe.Pointer) *QMouseEvent {
 	bcthis0 := NewQInputEventFromPointer(cthis)
 	return &QMouseEvent{bcthis0}
+}
+func (*QMouseEvent) NewFromPointer(cthis unsafe.Pointer) *QMouseEvent {
+	return NewQMouseEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:118
@@ -78,9 +84,11 @@ func DeleteQMouseEvent(*QMouseEvent) {
 // Public inline
 // QPoint pos()
 func (this *QMouseEvent) Pos() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMouseEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMouseEvent3posEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -90,9 +98,11 @@ func (this *QMouseEvent) Pos() *qtcore.QPoint /*123*/ {
 // Public inline
 // QPoint globalPos()
 func (this *QMouseEvent) GlobalPos() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMouseEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMouseEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

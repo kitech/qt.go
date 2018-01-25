@@ -63,9 +63,15 @@ func (this *QSlider) GetCthis() unsafe.Pointer {
 		return this.QAbstractSlider.GetCthis()
 	}
 }
+func (this *QSlider) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractSlider = NewQAbstractSliderFromPointer(cthis)
+}
 func NewQSliderFromPointer(cthis unsafe.Pointer) *QSlider {
 	bcthis0 := NewQAbstractSliderFromPointer(cthis)
 	return &QSlider{bcthis0}
+}
+func (*QSlider) NewFromPointer(cthis unsafe.Pointer) *QSlider {
+	return NewQSliderFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qslider.h:55
@@ -100,7 +106,7 @@ func NewQSlider(parent *QWidget /*444 QWidget **/) *QSlider {
 func NewQSlider_1(orientation int, parent *QWidget /*444 QWidget **/) *QSlider {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSliderC2EN2Qt11OrientationEP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, &orientation, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSliderC2EN2Qt11OrientationEP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, orientation, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSliderFromPointer(cthis)
 	return gothis
@@ -120,9 +126,11 @@ func DeleteQSlider(*QSlider) {
 // Public virtual
 // QSize sizeHint()
 func (this *QSlider) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSlider8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSlider8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -132,9 +140,11 @@ func (this *QSlider) SizeHint() *qtcore.QSize /*123*/ {
 // Public virtual
 // QSize minimumSizeHint()
 func (this *QSlider) MinimumSizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSlider15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSlider15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -144,7 +154,7 @@ func (this *QSlider) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // Public
 // void setTickPosition(enum QSlider::TickPosition)
 func (this *QSlider) SetTickPosition(position int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSlider15setTickPositionENS_12TickPositionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &position)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSlider15setTickPositionENS_12TickPositionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), position)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -164,7 +174,7 @@ func (this *QSlider) TickPosition() int {
 // Public
 // void setTickInterval(int)
 func (this *QSlider) SetTickInterval(ti int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSlider15setTickIntervalEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ti)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSlider15setTickIntervalEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ti)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -240,5 +250,14 @@ func (this *QSlider) InitStyleOption(option *QStyleOptionSlider /*444 QStyleOpti
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSlider15initStyleOptionEP18QStyleOptionSlider", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
+
+type QSlider__TickPosition = int
+
+const QSlider__NoTicks QSlider__TickPosition = 0
+const QSlider__TicksAbove QSlider__TickPosition = 1
+const QSlider__TicksLeft QSlider__TickPosition = 1
+const QSlider__TicksBelow QSlider__TickPosition = 2
+const QSlider__TicksRight QSlider__TickPosition = 2
+const QSlider__TicksBothSides QSlider__TickPosition = 3
 
 //  body block end

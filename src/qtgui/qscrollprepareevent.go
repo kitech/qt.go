@@ -59,9 +59,15 @@ func (this *QScrollPrepareEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QScrollPrepareEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQScrollPrepareEventFromPointer(cthis unsafe.Pointer) *QScrollPrepareEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QScrollPrepareEvent{bcthis0}
+}
+func (*QScrollPrepareEvent) NewFromPointer(cthis unsafe.Pointer) *QScrollPrepareEvent {
+	return NewQScrollPrepareEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:990
@@ -91,9 +97,11 @@ func DeleteQScrollPrepareEvent(*QScrollPrepareEvent) {
 // Public
 // QPointF startPos()
 func (this *QScrollPrepareEvent) StartPos() *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollPrepareEvent8startPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollPrepareEvent8startPosEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -103,9 +111,11 @@ func (this *QScrollPrepareEvent) StartPos() *qtcore.QPointF /*123*/ {
 // Public
 // QSizeF viewportSize()
 func (this *QScrollPrepareEvent) ViewportSize() *qtcore.QSizeF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollPrepareEvent12viewportSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollPrepareEvent12viewportSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -115,9 +125,11 @@ func (this *QScrollPrepareEvent) ViewportSize() *qtcore.QSizeF /*123*/ {
 // Public
 // QRectF contentPosRange()
 func (this *QScrollPrepareEvent) ContentPosRange() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollPrepareEvent15contentPosRangeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollPrepareEvent15contentPosRangeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -127,9 +139,11 @@ func (this *QScrollPrepareEvent) ContentPosRange() *qtcore.QRectF /*123*/ {
 // Public
 // QPointF contentPos()
 func (this *QScrollPrepareEvent) ContentPos() *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollPrepareEvent10contentPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollPrepareEvent10contentPosEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

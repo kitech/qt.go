@@ -59,8 +59,14 @@ func (this *QDesktopServices) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QDesktopServices) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQDesktopServicesFromPointer(cthis unsafe.Pointer) *QDesktopServices {
 	return &QDesktopServices{&qtrt.CObject{cthis}}
+}
+func (*QDesktopServices) NewFromPointer(cthis unsafe.Pointer) *QDesktopServices {
+	return NewQDesktopServicesFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qdesktopservices.h:59

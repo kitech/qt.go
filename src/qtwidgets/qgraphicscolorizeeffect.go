@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 15
+// extern C begin: 16
 */
 // import "C"
 import "unsafe"
@@ -63,9 +63,15 @@ func (this *QGraphicsColorizeEffect) GetCthis() unsafe.Pointer {
 		return this.QGraphicsEffect.GetCthis()
 	}
 }
+func (this *QGraphicsColorizeEffect) SetCthis(cthis unsafe.Pointer) {
+	this.QGraphicsEffect = NewQGraphicsEffectFromPointer(cthis)
+}
 func NewQGraphicsColorizeEffectFromPointer(cthis unsafe.Pointer) *QGraphicsColorizeEffect {
 	bcthis0 := NewQGraphicsEffectFromPointer(cthis)
 	return &QGraphicsColorizeEffect{bcthis0}
+}
+func (*QGraphicsColorizeEffect) NewFromPointer(cthis unsafe.Pointer) *QGraphicsColorizeEffect {
+	return NewQGraphicsColorizeEffectFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:128
@@ -107,9 +113,11 @@ func DeleteQGraphicsColorizeEffect(*QGraphicsColorizeEffect) {
 // Public
 // QColor color()
 func (this *QGraphicsColorizeEffect) Color() *qtgui.QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsColorizeEffect5colorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsColorizeEffect5colorEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -140,7 +148,7 @@ func (this *QGraphicsColorizeEffect) SetColor(c *qtgui.QColor) {
 // Public
 // void setStrength(qreal)
 func (this *QGraphicsColorizeEffect) SetStrength(strength float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect11setStrengthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &strength)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect11setStrengthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), strength)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -159,7 +167,7 @@ func (this *QGraphicsColorizeEffect) ColorChanged(color *qtgui.QColor) {
 // Public
 // void strengthChanged(qreal)
 func (this *QGraphicsColorizeEffect) StrengthChanged(strength float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect15strengthChangedEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &strength)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect15strengthChangedEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), strength)
 	gopp.ErrPrint(err, rv)
 }
 

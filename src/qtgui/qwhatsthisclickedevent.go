@@ -59,9 +59,15 @@ func (this *QWhatsThisClickedEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QWhatsThisClickedEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQWhatsThisClickedEventFromPointer(cthis unsafe.Pointer) *QWhatsThisClickedEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QWhatsThisClickedEvent{bcthis0}
+}
+func (*QWhatsThisClickedEvent) NewFromPointer(cthis unsafe.Pointer) *QWhatsThisClickedEvent {
+	return NewQWhatsThisClickedEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:713
@@ -91,9 +97,11 @@ func DeleteQWhatsThisClickedEvent(*QWhatsThisClickedEvent) {
 // Public inline
 // QString href()
 func (this *QWhatsThisClickedEvent) Href() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QWhatsThisClickedEvent4hrefEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QWhatsThisClickedEvent4hrefEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

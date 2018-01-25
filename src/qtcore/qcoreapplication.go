@@ -55,9 +55,15 @@ func (this *QCoreApplication) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QCoreApplication) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQCoreApplicationFromPointer(cthis unsafe.Pointer) *QCoreApplication {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QCoreApplication{bcthis0}
+}
+func (*QCoreApplication) NewFromPointer(cthis unsafe.Pointer) *QCoreApplication {
+	return NewQCoreApplicationFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qcoreapplication.h:78
@@ -79,7 +85,7 @@ func (this *QCoreApplication) MetaObject() *QMetaObject /*444 const QMetaObject 
 func NewQCoreApplication(argc int, argv []string, arg2 int) *QCoreApplication {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplicationC2ERiPPci", ffiqt.FFI_TYPE_VOID, cthis, &argc, convArg1, &arg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplicationC2ERiPPci", ffiqt.FFI_TYPE_VOID, cthis, &argc, convArg1, arg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCoreApplicationFromPointer(cthis)
 	return gothis
@@ -303,6 +309,32 @@ func QCoreApplication_Exec() int {
 	var nilthis *QCoreApplication
 	rv := nilthis.Exec()
 	return rv
+}
+
+// /usr/include/qt/QtCore/qcoreapplication.h:120
+// index:0
+// Public static
+// void processEvents(class QEventLoop::ProcessEventsFlags)
+func (this *QCoreApplication) ProcessEvents(flags int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE", ffiqt.FFI_TYPE_POINTER, flags)
+	gopp.ErrPrint(err, rv)
+}
+func QCoreApplication_ProcessEvents(flags int) {
+	var nilthis *QCoreApplication
+	nilthis.ProcessEvents(flags)
+}
+
+// /usr/include/qt/QtCore/qcoreapplication.h:121
+// index:1
+// Public static
+// void processEvents(class QEventLoop::ProcessEventsFlags, int)
+func (this *QCoreApplication) ProcessEvents_1(flags int, maxtime int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEEi", ffiqt.FFI_TYPE_POINTER, flags, maxtime)
+	gopp.ErrPrint(err, rv)
+}
+func QCoreApplication_ProcessEvents_1(flags int, maxtime int) {
+	var nilthis *QCoreApplication
+	nilthis.ProcessEvents_1(flags, maxtime)
 }
 
 // /usr/include/qt/QtCore/qcoreapplication.h:122
@@ -724,5 +756,9 @@ func (this *QCoreApplication) Event(arg0 *QEvent /*444 QEvent **/) bool {
 	//  return rv
 	return rv != 0
 }
+
+type QCoreApplication__ = int
+
+const QCoreApplication__ApplicationFlags QCoreApplication__ = 330240
 
 //  body block end

@@ -55,9 +55,15 @@ func (this *QEventLoop) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QEventLoop) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQEventLoopFromPointer(cthis unsafe.Pointer) *QEventLoop {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QEventLoop{bcthis0}
+}
+func (*QEventLoop) NewFromPointer(cthis unsafe.Pointer) *QEventLoop {
+	return NewQEventLoopFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qeventloop.h:52
@@ -94,12 +100,43 @@ func DeleteQEventLoop(*QEventLoop) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtCore/qeventloop.h:70
+// index:0
+// Public
+// bool processEvents(QEventLoop::ProcessEventsFlags)
+func (this *QEventLoop) ProcessEvents(flags int) bool {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop13processEventsE6QFlagsINS_17ProcessEventsFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qeventloop.h:71
+// index:1
+// Public
+// void processEvents(QEventLoop::ProcessEventsFlags, int)
+func (this *QEventLoop) ProcessEvents_1(flags int, maximumTime int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop13processEventsE6QFlagsINS_17ProcessEventsFlagEEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags, maximumTime)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qeventloop.h:73
+// index:0
+// Public
+// int exec(QEventLoop::ProcessEventsFlags)
+func (this *QEventLoop) Exec(flags int) int {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return int(rv) // 111
+}
+
 // /usr/include/qt/QtCore/qeventloop.h:74
 // index:0
 // Public
 // void exit(int)
 func (this *QEventLoop) Exit(returnCode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop4exitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &returnCode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop4exitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), returnCode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -143,5 +180,15 @@ func (this *QEventLoop) Quit() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop4quitEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
+
+type QEventLoop__ProcessEventsFlag = int
+
+const QEventLoop__AllEvents QEventLoop__ProcessEventsFlag = 0
+const QEventLoop__ExcludeUserInputEvents QEventLoop__ProcessEventsFlag = 1
+const QEventLoop__ExcludeSocketNotifiers QEventLoop__ProcessEventsFlag = 2
+const QEventLoop__WaitForMoreEvents QEventLoop__ProcessEventsFlag = 4
+const QEventLoop__X11ExcludeTimers QEventLoop__ProcessEventsFlag = 8
+const QEventLoop__EventLoopExec QEventLoop__ProcessEventsFlag = 32
+const QEventLoop__DialogExec QEventLoop__ProcessEventsFlag = 64
 
 //  body block end

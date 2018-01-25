@@ -59,9 +59,15 @@ func (this *QImage) GetCthis() unsafe.Pointer {
 		return this.QPaintDevice.GetCthis()
 	}
 }
+func (this *QImage) SetCthis(cthis unsafe.Pointer) {
+	this.QPaintDevice = NewQPaintDeviceFromPointer(cthis)
+}
 func NewQImageFromPointer(cthis unsafe.Pointer) *QImage {
 	bcthis0 := NewQPaintDeviceFromPointer(cthis)
 	return &QImage{bcthis0}
+}
+func (*QImage) NewFromPointer(cthis unsafe.Pointer) *QImage {
+	return NewQImageFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qimage.h:136
@@ -83,7 +89,7 @@ func NewQImage() *QImage {
 func NewQImage_1(size *qtcore.QSize, format int) *QImage {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = size.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImageC2ERK5QSizeNS_6FormatE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImageC2ERK5QSizeNS_6FormatE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, format)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQImageFromPointer(cthis)
 	return gothis
@@ -95,7 +101,7 @@ func NewQImage_1(size *qtcore.QSize, format int) *QImage {
 // void QImage(int, int, enum QImage::Format)
 func NewQImage_2(width int, height int, format int) *QImage {
 	cthis := qtrt.Calloc(1, 256) // 32
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImageC2EiiNS_6FormatE", ffiqt.FFI_TYPE_VOID, cthis, &width, &height, &format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImageC2EiiNS_6FormatE", ffiqt.FFI_TYPE_VOID, cthis, width, height, format)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQImageFromPointer(cthis)
 	return gothis
@@ -194,10 +200,12 @@ func (this *QImage) IsDetached() bool {
 // Public
 // QImage copy(const class QRect &)
 func (this *QImage) Copy(rect *qtcore.QRect) *QImage /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = rect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4copyERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4copyERK5QRect", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -207,9 +215,11 @@ func (this *QImage) Copy(rect *qtcore.QRect) *QImage /*123*/ {
 // Public inline
 // QImage copy(int, int, int, int)
 func (this *QImage) Copy_1(x int, y int, w int, h int) *QImage /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4copyEiiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &w, &h)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4copyEiiii", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), x, y, w, h)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -225,12 +235,40 @@ func (this *QImage) Format() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtGui/qimage.h:182
+// index:0
+// Public inline
+// QImage convertToFormat(enum QImage::Format, Qt::ImageConversionFlags)
+func (this *QImage) ConvertToFormat(f int, flags int) *QImage /*123*/ {
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNKR6QImage15convertToFormatENS_6FormatE6QFlagsIN2Qt19ImageConversionFlagEE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), f, flags)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	rv = uint64(uintptr(mv))
+	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qimage.h:184
+// index:1
+// Public inline
+// QImage convertToFormat(enum QImage::Format, Qt::ImageConversionFlags)
+func (this *QImage) ConvertToFormat_1(f int, flags int) *QImage /*123*/ {
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNO6QImage15convertToFormatENS_6FormatE6QFlagsIN2Qt19ImageConversionFlagEE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), f, flags)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	rv = uint64(uintptr(mv))
+	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qimage.h:195
 // index:0
 // Public
 // bool reinterpretAsFormat(enum QImage::Format)
 func (this *QImage) ReinterpretAsFormat(f int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage19reinterpretAsFormatENS_6FormatE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &f)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage19reinterpretAsFormatENS_6FormatE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -263,9 +301,11 @@ func (this *QImage) Height() int {
 // Public
 // QSize size()
 func (this *QImage) Size() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -275,9 +315,11 @@ func (this *QImage) Size() *qtcore.QSize /*123*/ {
 // Public
 // QRect rect()
 func (this *QImage) Rect() *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4rectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4rectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -320,7 +362,7 @@ func (this *QImage) BitPlaneCount() int {
 // Public
 // QRgb color(int)
 func (this *QImage) Color(i int) uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage5colorEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage5colorEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
@@ -331,7 +373,7 @@ func (this *QImage) Color(i int) uint {
 // Public
 // void setColor(int, QRgb)
 func (this *QImage) SetColor(i int, c uint) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage8setColorEij", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i, &c)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage8setColorEij", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i, c)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -340,7 +382,7 @@ func (this *QImage) SetColor(i int, c uint) {
 // Public
 // void setColorCount(int)
 func (this *QImage) SetColorCount(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage13setColorCountEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage13setColorCountEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -426,7 +468,7 @@ func (this *QImage) SizeInBytes() int64 {
 // Public
 // uchar * scanLine(int)
 func (this *QImage) ScanLine(arg0 int) unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage8scanLineEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage8scanLineEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -437,7 +479,7 @@ func (this *QImage) ScanLine(arg0 int) unsafe.Pointer /*666*/ {
 // Public
 // const uchar * scanLine(int)
 func (this *QImage) ScanLine_1(arg0 int) unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage8scanLineEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage8scanLineEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -448,7 +490,7 @@ func (this *QImage) ScanLine_1(arg0 int) unsafe.Pointer /*666*/ {
 // Public
 // const uchar * constScanLine(int)
 func (this *QImage) ConstScanLine(arg0 int) unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage13constScanLineEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage13constScanLineEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -470,7 +512,7 @@ func (this *QImage) BytesPerLine() int {
 // Public
 // bool valid(int, int)
 func (this *QImage) Valid(x int, y int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage5validEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage5validEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -493,7 +535,7 @@ func (this *QImage) Valid_1(pt *qtcore.QPoint) bool {
 // Public
 // int pixelIndex(int, int)
 func (this *QImage) PixelIndex(x int, y int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage10pixelIndexEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage10pixelIndexEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -516,7 +558,7 @@ func (this *QImage) PixelIndex_1(pt *qtcore.QPoint) int {
 // Public
 // QRgb pixel(int, int)
 func (this *QImage) Pixel(x int, y int) uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage5pixelEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage5pixelEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
@@ -539,7 +581,7 @@ func (this *QImage) Pixel_1(pt *qtcore.QPoint) uint {
 // Public
 // void setPixel(int, int, uint)
 func (this *QImage) SetPixel(x int, y int, index_or_rgb uint) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage8setPixelEiij", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, &index_or_rgb)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage8setPixelEiij", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, index_or_rgb)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -549,7 +591,7 @@ func (this *QImage) SetPixel(x int, y int, index_or_rgb uint) {
 // void setPixel(const class QPoint &, uint)
 func (this *QImage) SetPixel_1(pt *qtcore.QPoint, index_or_rgb uint) {
 	var convArg0 = pt.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage8setPixelERK6QPointj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &index_or_rgb)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage8setPixelERK6QPointj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, index_or_rgb)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -558,9 +600,11 @@ func (this *QImage) SetPixel_1(pt *qtcore.QPoint, index_or_rgb uint) {
 // Public
 // QColor pixelColor(int, int)
 func (this *QImage) PixelColor(x int, y int) *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage10pixelColorEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage10pixelColorEii", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -570,10 +614,12 @@ func (this *QImage) PixelColor(x int, y int) *QColor /*123*/ {
 // Public
 // QColor pixelColor(const class QPoint &)
 func (this *QImage) PixelColor_1(pt *qtcore.QPoint) *QColor /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = pt.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage10pixelColorERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage10pixelColorERK6QPoint", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -584,7 +630,7 @@ func (this *QImage) PixelColor_1(pt *qtcore.QPoint) *QColor /*123*/ {
 // void setPixelColor(int, int, const class QColor &)
 func (this *QImage) SetPixelColor(x int, y int, c *QColor) {
 	var convArg2 = c.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage13setPixelColorEiiRK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage13setPixelColorEiiRK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -615,7 +661,7 @@ func (this *QImage) DevicePixelRatio() float64 {
 // Public
 // void setDevicePixelRatio(qreal)
 func (this *QImage) SetDevicePixelRatio(scaleFactor float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage19setDevicePixelRatioEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &scaleFactor)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage19setDevicePixelRatioEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), scaleFactor)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -624,7 +670,7 @@ func (this *QImage) SetDevicePixelRatio(scaleFactor float64) {
 // Public
 // void fill(uint)
 func (this *QImage) Fill(pixel uint) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage4fillEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &pixel)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage4fillEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pixel)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -643,7 +689,7 @@ func (this *QImage) Fill_1(color *QColor) {
 // Public
 // void fill(Qt::GlobalColor)
 func (this *QImage) Fill_2(color int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage4fillEN2Qt11GlobalColorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &color)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage4fillEN2Qt11GlobalColorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), color)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -673,9 +719,25 @@ func (this *QImage) SetAlphaChannel(alphaChannel *QImage) {
 // Public
 // QImage alphaChannel()
 func (this *QImage) AlphaChannel() *QImage /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage12alphaChannelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage12alphaChannelEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
+	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qimage.h:263
+// index:0
+// Public
+// QImage createAlphaMask(Qt::ImageConversionFlags)
+func (this *QImage) CreateAlphaMask(flags int) *QImage /*123*/ {
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage15createAlphaMaskE6QFlagsIN2Qt19ImageConversionFlagEE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), flags)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -685,9 +747,11 @@ func (this *QImage) AlphaChannel() *QImage /*123*/ {
 // Public
 // QImage createHeuristicMask(_Bool)
 func (this *QImage) CreateHeuristicMask(clipTight bool) *QImage /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage19createHeuristicMaskEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &clipTight)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage19createHeuristicMaskEb", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), clipTight)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -697,9 +761,11 @@ func (this *QImage) CreateHeuristicMask(clipTight bool) *QImage /*123*/ {
 // Public
 // QImage createMaskFromColor(QRgb, Qt::MaskMode)
 func (this *QImage) CreateMaskFromColor(color uint, mode int) *QImage /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage19createMaskFromColorEjN2Qt8MaskModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &color, &mode)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage19createMaskFromColorEjN2Qt8MaskModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), color, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -709,9 +775,11 @@ func (this *QImage) CreateMaskFromColor(color uint, mode int) *QImage /*123*/ {
 // Public inline
 // QImage scaled(int, int, Qt::AspectRatioMode, Qt::TransformationMode)
 func (this *QImage) Scaled(w int, h int, aspectMode int, mode int) *QImage /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage6scaledEiiN2Qt15AspectRatioModeENS0_18TransformationModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &w, &h, &aspectMode, &mode)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage6scaledEiiN2Qt15AspectRatioModeENS0_18TransformationModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), w, h, aspectMode, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -721,10 +789,12 @@ func (this *QImage) Scaled(w int, h int, aspectMode int, mode int) *QImage /*123
 // Public
 // QImage scaled(const class QSize &, Qt::AspectRatioMode, Qt::TransformationMode)
 func (this *QImage) Scaled_1(s *qtcore.QSize, aspectMode int, mode int) *QImage /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage6scaledERK5QSizeN2Qt15AspectRatioModeENS3_18TransformationModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &aspectMode, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage6scaledERK5QSizeN2Qt15AspectRatioModeENS3_18TransformationModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, aspectMode, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -734,9 +804,11 @@ func (this *QImage) Scaled_1(s *qtcore.QSize, aspectMode int, mode int) *QImage 
 // Public
 // QImage scaledToWidth(int, Qt::TransformationMode)
 func (this *QImage) ScaledToWidth(w int, mode int) *QImage /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage13scaledToWidthEiN2Qt18TransformationModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &w, &mode)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage13scaledToWidthEiN2Qt18TransformationModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), w, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -746,9 +818,11 @@ func (this *QImage) ScaledToWidth(w int, mode int) *QImage /*123*/ {
 // Public
 // QImage scaledToHeight(int, Qt::TransformationMode)
 func (this *QImage) ScaledToHeight(h int, mode int) *QImage /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage14scaledToHeightEiN2Qt18TransformationModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &h, &mode)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage14scaledToHeightEiN2Qt18TransformationModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), h, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -758,10 +832,12 @@ func (this *QImage) ScaledToHeight(h int, mode int) *QImage /*123*/ {
 // Public
 // QImage transformed(const class QMatrix &, Qt::TransformationMode)
 func (this *QImage) Transformed(matrix *QMatrix, mode int) *QImage /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = matrix.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage11transformedERK7QMatrixN2Qt18TransformationModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage11transformedERK7QMatrixN2Qt18TransformationModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -771,10 +847,12 @@ func (this *QImage) Transformed(matrix *QMatrix, mode int) *QImage /*123*/ {
 // Public
 // QImage transformed(const class QTransform &, Qt::TransformationMode)
 func (this *QImage) Transformed_1(matrix *QTransform, mode int) *QImage /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = matrix.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage11transformedERK10QTransformN2Qt18TransformationModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage11transformedERK10QTransformN2Qt18TransformationModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -818,9 +896,11 @@ func QImage_TrueMatrix_1(arg0 *QTransform, w int, h int) *QTransform /*123*/ {
 // Public inline
 // QImage mirrored(_Bool, _Bool)
 func (this *QImage) Mirrored(horizontally bool, vertically bool) *QImage /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNKR6QImage8mirroredEbb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &horizontally, &vertically)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNKR6QImage8mirroredEbb", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), horizontally, vertically)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -830,7 +910,7 @@ func (this *QImage) Mirrored(horizontally bool, vertically bool) *QImage /*123*/
 // Public inline
 // QImage && mirrored(_Bool, _Bool)
 func (this *QImage) Mirrored_1(horizontally bool, vertically bool) unsafe.Pointer /*333*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNO6QImage8mirroredEbb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &horizontally, &vertically)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNO6QImage8mirroredEbb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), horizontally, vertically)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv)) //777
@@ -841,9 +921,11 @@ func (this *QImage) Mirrored_1(horizontally bool, vertically bool) unsafe.Pointe
 // Public inline
 // QImage rgbSwapped()
 func (this *QImage) RgbSwapped() *QImage /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNKR6QImage10rgbSwappedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNKR6QImage10rgbSwappedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -864,7 +946,7 @@ func (this *QImage) RgbSwapped_1() unsafe.Pointer /*333*/ {
 // Public
 // void invertPixels(enum QImage::InvertMode)
 func (this *QImage) InvertPixels(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage12invertPixelsENS_10InvertModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage12invertPixelsENS_10InvertModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -903,7 +985,7 @@ func (this *QImage) Load_1(fileName *qtcore.QString, format string) bool {
 func (this *QImage) LoadFromData(buf unsafe.Pointer /*666*/, len int, format string) bool {
 	var convArg2 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg2)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage12loadFromDataEPKhiPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), buf, &len, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage12loadFromDataEPKhiPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &buf, len, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -931,7 +1013,7 @@ func (this *QImage) Save(fileName *qtcore.QString, format string, quality int) b
 	var convArg0 = fileName.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4saveERK7QStringPKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, &quality)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4saveERK7QStringPKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, quality)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -945,7 +1027,7 @@ func (this *QImage) Save_1(device *qtcore.QIODevice /*444 QIODevice **/, format 
 	var convArg0 = device.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4saveEP9QIODevicePKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, &quality)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4saveEP9QIODevicePKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, quality)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1035,7 +1117,7 @@ func (this *QImage) DotsPerMeterY() int {
 // Public
 // void setDotsPerMeterX(int)
 func (this *QImage) SetDotsPerMeterX(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage16setDotsPerMeterXEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage16setDotsPerMeterXEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1044,7 +1126,7 @@ func (this *QImage) SetDotsPerMeterX(arg0 int) {
 // Public
 // void setDotsPerMeterY(int)
 func (this *QImage) SetDotsPerMeterY(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage16setDotsPerMeterYEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage16setDotsPerMeterYEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1053,9 +1135,11 @@ func (this *QImage) SetDotsPerMeterY(arg0 int) {
 // Public
 // QPoint offset()
 func (this *QImage) Offset() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage6offsetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage6offsetEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1075,10 +1159,12 @@ func (this *QImage) SetOffset(arg0 *qtcore.QPoint) {
 // Public
 // QString text(const class QString &)
 func (this *QImage) Text(key *qtcore.QString) *qtcore.QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4textERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage4textERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1099,9 +1185,11 @@ func (this *QImage) SetText(key *qtcore.QString, value *qtcore.QString) {
 // Public
 // QPixelFormat pixelFormat()
 func (this *QImage) PixelFormat() *QPixelFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage11pixelFormatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage11pixelFormatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPixelFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1144,7 +1232,7 @@ func QImage_ToImageFormat(format *QPixelFormat /*123*/) int {
 // Protected virtual
 // int metric(enum QPaintDevice::PaintDeviceMetric)
 func (this *QImage) Metric(metric int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &metric)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), metric)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -1155,9 +1243,11 @@ func (this *QImage) Metric(metric int) int {
 // Protected
 // QImage mirrored_helper(_Bool, _Bool)
 func (this *QImage) Mirrored_helper(horizontal bool, vertical bool) *QImage /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage15mirrored_helperEbb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &horizontal, &vertical)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage15mirrored_helperEbb", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), horizontal, vertical)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1167,9 +1257,11 @@ func (this *QImage) Mirrored_helper(horizontal bool, vertical bool) *QImage /*12
 // Protected
 // QImage rgbSwapped_helper()
 func (this *QImage) RgbSwapped_helper() *QImage /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage17rgbSwapped_helperEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage17rgbSwapped_helperEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1179,7 +1271,7 @@ func (this *QImage) RgbSwapped_helper() *QImage /*123*/ {
 // Protected
 // void mirrored_inplace(_Bool, _Bool)
 func (this *QImage) Mirrored_inplace(horizontal bool, vertical bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage16mirrored_inplaceEbb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &horizontal, &vertical)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage16mirrored_inplaceEbb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), horizontal, vertical)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1192,16 +1284,77 @@ func (this *QImage) RgbSwapped_inplace() {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qimage.h:357
+// index:0
+// Protected
+// QImage convertToFormat_helper(enum QImage::Format, Qt::ImageConversionFlags)
+func (this *QImage) ConvertToFormat_helper(format int, flags int) *QImage /*123*/ {
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage22convertToFormat_helperENS_6FormatE6QFlagsIN2Qt19ImageConversionFlagEE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), format, flags)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	rv = uint64(uintptr(mv))
+	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qimage.h:358
+// index:0
+// Protected
+// bool convertToFormat_inplace(enum QImage::Format, Qt::ImageConversionFlags)
+func (this *QImage) ConvertToFormat_inplace(format int, flags int) bool {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImage23convertToFormat_inplaceENS_6FormatE6QFlagsIN2Qt19ImageConversionFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), format, flags)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
+}
+
 // /usr/include/qt/QtGui/qimage.h:359
 // index:0
 // Protected
 // QImage smoothScaled(int, int)
 func (this *QImage) SmoothScaled(w int, h int) *QImage /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage12smoothScaledEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &w, &h)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage12smoothScaledEii", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), w, h)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
+
+type QImage__InvertMode = int
+
+const QImage__InvertRgb QImage__InvertMode = 0
+const QImage__InvertRgba QImage__InvertMode = 1
+
+type QImage__Format = int
+
+const QImage__Format_Invalid QImage__Format = 0
+const QImage__Format_Mono QImage__Format = 1
+const QImage__Format_MonoLSB QImage__Format = 2
+const QImage__Format_Indexed8 QImage__Format = 3
+const QImage__Format_RGB32 QImage__Format = 4
+const QImage__Format_ARGB32 QImage__Format = 5
+const QImage__Format_ARGB32_Premultiplied QImage__Format = 6
+const QImage__Format_RGB16 QImage__Format = 7
+const QImage__Format_ARGB8565_Premultiplied QImage__Format = 8
+const QImage__Format_RGB666 QImage__Format = 9
+const QImage__Format_ARGB6666_Premultiplied QImage__Format = 10
+const QImage__Format_RGB555 QImage__Format = 11
+const QImage__Format_ARGB8555_Premultiplied QImage__Format = 12
+const QImage__Format_RGB888 QImage__Format = 13
+const QImage__Format_RGB444 QImage__Format = 14
+const QImage__Format_ARGB4444_Premultiplied QImage__Format = 15
+const QImage__Format_RGBX8888 QImage__Format = 16
+const QImage__Format_RGBA8888 QImage__Format = 17
+const QImage__Format_RGBA8888_Premultiplied QImage__Format = 18
+const QImage__Format_BGR30 QImage__Format = 19
+const QImage__Format_A2BGR30_Premultiplied QImage__Format = 20
+const QImage__Format_RGB30 QImage__Format = 21
+const QImage__Format_A2RGB30_Premultiplied QImage__Format = 22
+const QImage__Format_Alpha8 QImage__Format = 23
+const QImage__Format_Grayscale8 QImage__Format = 24
+const QImage__NImageFormats QImage__Format = 25
 
 //  body block end

@@ -55,8 +55,14 @@ func (this *QRunnable) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QRunnable) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQRunnableFromPointer(cthis unsafe.Pointer) *QRunnable {
 	return &QRunnable{&qtrt.CObject{cthis}}
+}
+func (*QRunnable) NewFromPointer(cthis unsafe.Pointer) *QRunnable {
+	return NewQRunnableFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qrunnable.h:58
@@ -105,7 +111,7 @@ func (this *QRunnable) AutoDelete() bool {
 // Public inline
 // void setAutoDelete(_Bool)
 func (this *QRunnable) SetAutoDelete(_autoDelete bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QRunnable13setAutoDeleteEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &_autoDelete)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QRunnable13setAutoDeleteEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), _autoDelete)
 	gopp.ErrPrint(err, rv)
 }
 

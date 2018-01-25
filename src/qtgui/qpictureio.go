@@ -59,8 +59,14 @@ func (this *QPictureIO) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QPictureIO) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQPictureIOFromPointer(cthis unsafe.Pointer) *QPictureIO {
 	return &QPictureIO{&qtrt.CObject{cthis}}
+}
+func (*QPictureIO) NewFromPointer(cthis unsafe.Pointer) *QPictureIO {
+	return NewQPictureIOFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qpicture.h:134
@@ -165,9 +171,11 @@ func (this *QPictureIO) IoDevice() *qtcore.QIODevice /*444 QIODevice **/ {
 // Public
 // QString fileName()
 func (this *QPictureIO) FileName() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO8fileNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO8fileNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -188,9 +196,11 @@ func (this *QPictureIO) Quality() int {
 // Public
 // QString description()
 func (this *QPictureIO) Description() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO11descriptionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO11descriptionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -232,7 +242,7 @@ func (this *QPictureIO) SetPicture(arg0 *QPicture) {
 // Public
 // void setStatus(int)
 func (this *QPictureIO) SetStatus(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO9setStatusEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO9setStatusEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -272,7 +282,7 @@ func (this *QPictureIO) SetFileName(arg0 *qtcore.QString) {
 // Public
 // void setQuality(int)
 func (this *QPictureIO) SetQuality(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO10setQualityEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO10setQualityEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -302,7 +312,7 @@ func (this *QPictureIO) SetParameters(arg0 string) {
 // Public
 // void setGamma(float)
 func (this *QPictureIO) SetGamma(arg0 float32) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO8setGammaEf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO8setGammaEf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 

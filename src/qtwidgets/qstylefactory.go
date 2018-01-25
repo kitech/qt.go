@@ -63,8 +63,14 @@ func (this *QStyleFactory) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QStyleFactory) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQStyleFactoryFromPointer(cthis unsafe.Pointer) *QStyleFactory {
 	return &QStyleFactory{&qtrt.CObject{cthis}}
+}
+func (*QStyleFactory) NewFromPointer(cthis unsafe.Pointer) *QStyleFactory {
+	return NewQStyleFactoryFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qstylefactory.h:55

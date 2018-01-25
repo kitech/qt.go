@@ -55,8 +55,14 @@ func (this *QFactoryInterface) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QFactoryInterface) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQFactoryInterfaceFromPointer(cthis unsafe.Pointer) *QFactoryInterface {
 	return &QFactoryInterface{&qtrt.CObject{cthis}}
+}
+func (*QFactoryInterface) NewFromPointer(cthis unsafe.Pointer) *QFactoryInterface {
+	return NewQFactoryInterfaceFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qfactoryinterface.h:51

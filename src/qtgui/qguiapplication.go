@@ -59,9 +59,15 @@ func (this *QGuiApplication) GetCthis() unsafe.Pointer {
 		return this.QCoreApplication.GetCthis()
 	}
 }
+func (this *QGuiApplication) SetCthis(cthis unsafe.Pointer) {
+	this.QCoreApplication = qtcore.NewQCoreApplicationFromPointer(cthis)
+}
 func NewQGuiApplicationFromPointer(cthis unsafe.Pointer) *QGuiApplication {
 	bcthis0 := qtcore.NewQCoreApplicationFromPointer(cthis)
 	return &QGuiApplication{bcthis0}
+}
+func (*QGuiApplication) NewFromPointer(cthis unsafe.Pointer) *QGuiApplication {
+	return NewQGuiApplicationFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qguiapplication.h:74
@@ -83,7 +89,7 @@ func (this *QGuiApplication) MetaObject() *qtcore.QMetaObject /*444 const QMetaO
 func NewQGuiApplication(argc int, argv []string, arg2 int) *QGuiApplication {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplicationC2ERiPPci", ffiqt.FFI_TYPE_VOID, cthis, &argc, convArg1, &arg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplicationC2ERiPPci", ffiqt.FFI_TYPE_VOID, cthis, &argc, convArg1, arg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGuiApplicationFromPointer(cthis)
 	return gothis
@@ -729,9 +735,11 @@ func (this *QGuiApplication) IsSessionRestored() bool {
 // Public
 // QString sessionId()
 func (this *QGuiApplication) SessionId() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGuiApplication9sessionIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGuiApplication9sessionIdEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -741,9 +749,11 @@ func (this *QGuiApplication) SessionId() *qtcore.QString /*123*/ {
 // Public
 // QString sessionKey()
 func (this *QGuiApplication) SessionKey() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGuiApplication10sessionKeyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGuiApplication10sessionKeyEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -874,7 +884,7 @@ func (this *QGuiApplication) FocusWindowChanged(focusWindow *QWindow /*444 QWind
 // Public
 // void applicationStateChanged(Qt::ApplicationState)
 func (this *QGuiApplication) ApplicationStateChanged(state int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication23applicationStateChangedEN2Qt16ApplicationStateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication23applicationStateChangedEN2Qt16ApplicationStateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -883,7 +893,7 @@ func (this *QGuiApplication) ApplicationStateChanged(state int) {
 // Public
 // void layoutDirectionChanged(Qt::LayoutDirection)
 func (this *QGuiApplication) LayoutDirectionChanged(direction int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication22layoutDirectionChangedEN2Qt15LayoutDirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &direction)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication22layoutDirectionChangedEN2Qt15LayoutDirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), direction)
 	gopp.ErrPrint(err, rv)
 }
 

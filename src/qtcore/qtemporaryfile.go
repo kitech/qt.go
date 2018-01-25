@@ -55,9 +55,15 @@ func (this *QTemporaryFile) GetCthis() unsafe.Pointer {
 		return this.QFile.GetCthis()
 	}
 }
+func (this *QTemporaryFile) SetCthis(cthis unsafe.Pointer) {
+	this.QFile = NewQFileFromPointer(cthis)
+}
 func NewQTemporaryFileFromPointer(cthis unsafe.Pointer) *QTemporaryFile {
 	bcthis0 := NewQFileFromPointer(cthis)
 	return &QTemporaryFile{bcthis0}
+}
+func (*QTemporaryFile) NewFromPointer(cthis unsafe.Pointer) *QTemporaryFile {
+	return NewQTemporaryFileFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qtemporaryfile.h:61
@@ -149,7 +155,7 @@ func (this *QTemporaryFile) AutoRemove() bool {
 // Public
 // void setAutoRemove(_Bool)
 func (this *QTemporaryFile) SetAutoRemove(b bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile13setAutoRemoveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile13setAutoRemoveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -169,9 +175,11 @@ func (this *QTemporaryFile) Open() bool {
 // Public virtual
 // QString fileName()
 func (this *QTemporaryFile) FileName() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTemporaryFile8fileNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTemporaryFile8fileNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -181,9 +189,11 @@ func (this *QTemporaryFile) FileName() *QString /*123*/ {
 // Public
 // QString fileTemplate()
 func (this *QTemporaryFile) FileTemplate() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTemporaryFile12fileTemplateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTemporaryFile12fileTemplateEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

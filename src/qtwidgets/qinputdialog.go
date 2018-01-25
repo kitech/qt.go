@@ -63,9 +63,15 @@ func (this *QInputDialog) GetCthis() unsafe.Pointer {
 		return this.QDialog.GetCthis()
 	}
 }
+func (this *QInputDialog) SetCthis(cthis unsafe.Pointer) {
+	this.QDialog = NewQDialogFromPointer(cthis)
+}
 func NewQInputDialogFromPointer(cthis unsafe.Pointer) *QInputDialog {
 	bcthis0 := NewQDialogFromPointer(cthis)
 	return &QInputDialog{bcthis0}
+}
+func (*QInputDialog) NewFromPointer(cthis unsafe.Pointer) *QInputDialog {
+	return NewQInputDialogFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qinputdialog.h:57
@@ -78,6 +84,19 @@ func (this *QInputDialog) MetaObject() *qtcore.QMetaObject /*444 const QMetaObje
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qinputdialog.h:94
+// index:0
+// Public
+// void QInputDialog(class QWidget *, Qt::WindowFlags)
+func NewQInputDialog(parent *QWidget /*444 QWidget **/, flags int) *QInputDialog {
+	cthis := qtrt.Calloc(1, 256) // 48
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialogC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, flags)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQInputDialogFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qinputdialog.h:95
@@ -94,7 +113,7 @@ func DeleteQInputDialog(*QInputDialog) {
 // Public
 // void setInputMode(enum QInputDialog::InputMode)
 func (this *QInputDialog) SetInputMode(mode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog12setInputModeENS_9InputModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog12setInputModeENS_9InputModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -124,9 +143,11 @@ func (this *QInputDialog) SetLabelText(text *qtcore.QString) {
 // Public
 // QString labelText()
 func (this *QInputDialog) LabelText() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog9labelTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog9labelTextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -136,7 +157,7 @@ func (this *QInputDialog) LabelText() *qtcore.QString /*123*/ {
 // Public
 // void setOption(enum QInputDialog::InputDialogOption, _Bool)
 func (this *QInputDialog) SetOption(option int, on bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog9setOptionENS_17InputDialogOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &option, &on)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog9setOptionENS_17InputDialogOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -145,7 +166,7 @@ func (this *QInputDialog) SetOption(option int, on bool) {
 // Public
 // bool testOption(enum QInputDialog::InputDialogOption)
 func (this *QInputDialog) TestOption(option int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog10testOptionENS_17InputDialogOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &option)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog10testOptionENS_17InputDialogOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -177,9 +198,11 @@ func (this *QInputDialog) SetTextValue(text *qtcore.QString) {
 // Public
 // QString textValue()
 func (this *QInputDialog) TextValue() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog9textValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog9textValueEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -189,7 +212,7 @@ func (this *QInputDialog) TextValue() *qtcore.QString /*123*/ {
 // Public
 // void setTextEchoMode(class QLineEdit::EchoMode)
 func (this *QInputDialog) SetTextEchoMode(mode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog15setTextEchoModeEN9QLineEdit8EchoModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog15setTextEchoModeEN9QLineEdit8EchoModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -209,7 +232,7 @@ func (this *QInputDialog) TextEchoMode() int {
 // Public
 // void setComboBoxEditable(_Bool)
 func (this *QInputDialog) SetComboBoxEditable(editable bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog19setComboBoxEditableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &editable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog19setComboBoxEditableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), editable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -239,7 +262,7 @@ func (this *QInputDialog) SetComboBoxItems(items *qtcore.QStringList) {
 // Public
 // void setIntValue(int)
 func (this *QInputDialog) SetIntValue(value int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog11setIntValueEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog11setIntValueEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -259,7 +282,7 @@ func (this *QInputDialog) IntValue() int {
 // Public
 // void setIntMinimum(int)
 func (this *QInputDialog) SetIntMinimum(min int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog13setIntMinimumEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &min)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog13setIntMinimumEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), min)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -279,7 +302,7 @@ func (this *QInputDialog) IntMinimum() int {
 // Public
 // void setIntMaximum(int)
 func (this *QInputDialog) SetIntMaximum(max int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog13setIntMaximumEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &max)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog13setIntMaximumEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), max)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -299,7 +322,7 @@ func (this *QInputDialog) IntMaximum() int {
 // Public
 // void setIntRange(int, int)
 func (this *QInputDialog) SetIntRange(min int, max int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog11setIntRangeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &min, &max)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog11setIntRangeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), min, max)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -308,7 +331,7 @@ func (this *QInputDialog) SetIntRange(min int, max int) {
 // Public
 // void setIntStep(int)
 func (this *QInputDialog) SetIntStep(step int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog10setIntStepEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog10setIntStepEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -328,7 +351,7 @@ func (this *QInputDialog) IntStep() int {
 // Public
 // void setDoubleValue(double)
 func (this *QInputDialog) SetDoubleValue(value float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog14setDoubleValueEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog14setDoubleValueEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -348,7 +371,7 @@ func (this *QInputDialog) DoubleValue() float64 {
 // Public
 // void setDoubleMinimum(double)
 func (this *QInputDialog) SetDoubleMinimum(min float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog16setDoubleMinimumEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &min)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog16setDoubleMinimumEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), min)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -368,7 +391,7 @@ func (this *QInputDialog) DoubleMinimum() float64 {
 // Public
 // void setDoubleMaximum(double)
 func (this *QInputDialog) SetDoubleMaximum(max float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog16setDoubleMaximumEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &max)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog16setDoubleMaximumEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), max)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -388,7 +411,7 @@ func (this *QInputDialog) DoubleMaximum() float64 {
 // Public
 // void setDoubleRange(double, double)
 func (this *QInputDialog) SetDoubleRange(min float64, max float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog14setDoubleRangeEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &min, &max)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog14setDoubleRangeEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), min, max)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -397,7 +420,7 @@ func (this *QInputDialog) SetDoubleRange(min float64, max float64) {
 // Public
 // void setDoubleDecimals(int)
 func (this *QInputDialog) SetDoubleDecimals(decimals int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog17setDoubleDecimalsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &decimals)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog17setDoubleDecimalsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), decimals)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -427,9 +450,11 @@ func (this *QInputDialog) SetOkButtonText(text *qtcore.QString) {
 // Public
 // QString okButtonText()
 func (this *QInputDialog) OkButtonText() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog12okButtonTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog12okButtonTextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -449,9 +474,11 @@ func (this *QInputDialog) SetCancelButtonText(text *qtcore.QString) {
 // Public
 // QString cancelButtonText()
 func (this *QInputDialog) CancelButtonText() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog16cancelButtonTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog16cancelButtonTextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -473,9 +500,11 @@ func (this *QInputDialog) Open(receiver *qtcore.QObject /*444 QObject **/, membe
 // Public virtual
 // QSize minimumSizeHint()
 func (this *QInputDialog) MinimumSizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -485,9 +514,11 @@ func (this *QInputDialog) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // Public virtual
 // QSize sizeHint()
 func (this *QInputDialog) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -497,8 +528,56 @@ func (this *QInputDialog) SizeHint() *qtcore.QSize /*123*/ {
 // Public virtual
 // void setVisible(_Bool)
 func (this *QInputDialog) SetVisible(visible bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qinputdialog.h:176
+// index:0
+// Public static
+// int getInt(class QWidget *, const class QString &, const class QString &, int, int, int, int, _Bool *, Qt::WindowFlags)
+func (this *QInputDialog) GetInt(parent *QWidget /*444 QWidget **/, title *qtcore.QString, label *qtcore.QString, value int, minValue int, maxValue int, step int, ok unsafe.Pointer /*666*/, flags int) int {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog6getIntEP7QWidgetRK7QStringS4_iiiiPb6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, parent, title, label, value, minValue, maxValue, step, ok, flags)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return int(rv) // 111
+}
+func QInputDialog_GetInt(parent *QWidget /*444 QWidget **/, title *qtcore.QString, label *qtcore.QString, value int, minValue int, maxValue int, step int, ok unsafe.Pointer /*666*/, flags int) int {
+	var nilthis *QInputDialog
+	rv := nilthis.GetInt(parent, title, label, value, minValue, maxValue, step, ok, flags)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qinputdialog.h:179
+// index:0
+// Public static
+// double getDouble(class QWidget *, const class QString &, const class QString &, double, double, double, int, _Bool *, Qt::WindowFlags)
+func (this *QInputDialog) GetDouble(parent *QWidget /*444 QWidget **/, title *qtcore.QString, label *qtcore.QString, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int) float64 {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, parent, title, label, value, minValue, maxValue, decimals, ok, flags)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return float64(rv) // 111
+}
+func QInputDialog_GetDouble(parent *QWidget /*444 QWidget **/, title *qtcore.QString, label *qtcore.QString, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int) float64 {
+	var nilthis *QInputDialog
+	rv := nilthis.GetDouble(parent, title, label, value, minValue, maxValue, decimals, ok, flags)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qinputdialog.h:183
+// index:1
+// Public static
+// double getDouble(class QWidget *, const class QString &, const class QString &, double, double, double, int, _Bool *, Qt::WindowFlags, double)
+func (this *QInputDialog) GetDouble_1(parent *QWidget /*444 QWidget **/, title *qtcore.QString, label *qtcore.QString, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int, step float64) float64 {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEEd", ffiqt.FFI_TYPE_POINTER, parent, title, label, value, minValue, maxValue, decimals, ok, flags, step)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return float64(rv) // 111
+}
+func QInputDialog_GetDouble_1(parent *QWidget /*444 QWidget **/, title *qtcore.QString, label *qtcore.QString, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int, step float64) float64 {
+	var nilthis *QInputDialog
+	rv := nilthis.GetDouble_1(parent, title, label, value, minValue, maxValue, decimals, ok, flags, step)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qinputdialog.h:196
@@ -506,7 +585,7 @@ func (this *QInputDialog) SetVisible(visible bool) {
 // Public
 // void setDoubleStep(double)
 func (this *QInputDialog) SetDoubleStep(step float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog13setDoubleStepEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog13setDoubleStepEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -546,7 +625,7 @@ func (this *QInputDialog) TextValueSelected(text *qtcore.QString) {
 // Public
 // void intValueChanged(int)
 func (this *QInputDialog) IntValueChanged(value int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog15intValueChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog15intValueChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -555,7 +634,7 @@ func (this *QInputDialog) IntValueChanged(value int) {
 // Public
 // void intValueSelected(int)
 func (this *QInputDialog) IntValueSelected(value int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog16intValueSelectedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog16intValueSelectedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -564,7 +643,7 @@ func (this *QInputDialog) IntValueSelected(value int) {
 // Public
 // void doubleValueChanged(double)
 func (this *QInputDialog) DoubleValueChanged(value float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog18doubleValueChangedEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog18doubleValueChangedEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -573,7 +652,7 @@ func (this *QInputDialog) DoubleValueChanged(value float64) {
 // Public
 // void doubleValueSelected(double)
 func (this *QInputDialog) DoubleValueSelected(value float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog19doubleValueSelectedEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog19doubleValueSelectedEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -582,8 +661,20 @@ func (this *QInputDialog) DoubleValueSelected(value float64) {
 // Public virtual
 // void done(int)
 func (this *QInputDialog) Done(result int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog4doneEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &result)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog4doneEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), result)
 	gopp.ErrPrint(err, rv)
 }
+
+type QInputDialog__InputDialogOption = int
+
+const QInputDialog__NoButtons QInputDialog__InputDialogOption = 1
+const QInputDialog__UseListViewForComboBoxItems QInputDialog__InputDialogOption = 2
+const QInputDialog__UsePlainTextEditForTextInput QInputDialog__InputDialogOption = 4
+
+type QInputDialog__InputMode = int
+
+const QInputDialog__TextInput QInputDialog__InputMode = 0
+const QInputDialog__IntInput QInputDialog__InputMode = 1
+const QInputDialog__DoubleInput QInputDialog__InputMode = 2
 
 //  body block end

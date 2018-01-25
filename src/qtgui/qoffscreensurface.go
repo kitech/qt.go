@@ -60,10 +60,17 @@ func (this *QOffscreenSurface) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QOffscreenSurface) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+	this.QSurface = NewQSurfaceFromPointer(cthis)
+}
 func NewQOffscreenSurfaceFromPointer(cthis unsafe.Pointer) *QOffscreenSurface {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	bcthis1 := NewQSurfaceFromPointer(cthis)
 	return &QOffscreenSurface{bcthis0, bcthis1}
+}
+func (*QOffscreenSurface) NewFromPointer(cthis unsafe.Pointer) *QOffscreenSurface {
+	return NewQOffscreenSurfaceFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qoffscreensurface.h:56
@@ -169,9 +176,11 @@ func (this *QOffscreenSurface) SetFormat(format *QSurfaceFormat) {
 // Public virtual
 // QSurfaceFormat format()
 func (this *QOffscreenSurface) Format() *QSurfaceFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QOffscreenSurface6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QOffscreenSurface6formatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -181,9 +190,11 @@ func (this *QOffscreenSurface) Format() *QSurfaceFormat /*123*/ {
 // Public
 // QSurfaceFormat requestedFormat()
 func (this *QOffscreenSurface) RequestedFormat() *QSurfaceFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QOffscreenSurface15requestedFormatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QOffscreenSurface15requestedFormatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -193,9 +204,11 @@ func (this *QOffscreenSurface) RequestedFormat() *QSurfaceFormat /*123*/ {
 // Public virtual
 // QSize size()
 func (this *QOffscreenSurface) Size() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QOffscreenSurface4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QOffscreenSurface4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

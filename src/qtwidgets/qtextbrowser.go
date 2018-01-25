@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 74
+// extern C begin: 76
 */
 // import "C"
 import "unsafe"
@@ -63,9 +63,15 @@ func (this *QTextBrowser) GetCthis() unsafe.Pointer {
 		return this.QTextEdit.GetCthis()
 	}
 }
+func (this *QTextBrowser) SetCthis(cthis unsafe.Pointer) {
+	this.QTextEdit = NewQTextEditFromPointer(cthis)
+}
 func NewQTextBrowserFromPointer(cthis unsafe.Pointer) *QTextBrowser {
 	bcthis0 := NewQTextEditFromPointer(cthis)
 	return &QTextBrowser{bcthis0}
+}
+func (*QTextBrowser) NewFromPointer(cthis unsafe.Pointer) *QTextBrowser {
+	return NewQTextBrowserFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qtextbrowser.h:55
@@ -107,9 +113,11 @@ func DeleteQTextBrowser(*QTextBrowser) {
 // Public
 // QUrl source()
 func (this *QTextBrowser) Source() *qtcore.QUrl /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTextBrowser6sourceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTextBrowser6sourceEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -129,10 +137,12 @@ func (this *QTextBrowser) SetSearchPaths(paths *qtcore.QStringList) {
 // Public virtual
 // QVariant loadResource(int, const class QUrl &)
 func (this *QTextBrowser) LoadResource(type_ int, name *qtcore.QUrl) *qtcore.QVariant /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg1 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser12loadResourceEiRK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &type_, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser12loadResourceEiRK4QUrl", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), type_, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -173,9 +183,11 @@ func (this *QTextBrowser) ClearHistory() {
 // Public
 // QString historyTitle(int)
 func (this *QTextBrowser) HistoryTitle(arg0 int) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTextBrowser12historyTitleEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTextBrowser12historyTitleEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -185,9 +197,11 @@ func (this *QTextBrowser) HistoryTitle(arg0 int) *qtcore.QString /*123*/ {
 // Public
 // QUrl historyUrl(int)
 func (this *QTextBrowser) HistoryUrl(arg0 int) *qtcore.QUrl /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTextBrowser10historyUrlEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTextBrowser10historyUrlEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -230,7 +244,7 @@ func (this *QTextBrowser) OpenExternalLinks() bool {
 // Public
 // void setOpenExternalLinks(_Bool)
 func (this *QTextBrowser) SetOpenExternalLinks(open bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser20setOpenExternalLinksEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &open)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser20setOpenExternalLinksEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), open)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -250,7 +264,7 @@ func (this *QTextBrowser) OpenLinks() bool {
 // Public
 // void setOpenLinks(_Bool)
 func (this *QTextBrowser) SetOpenLinks(open bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser12setOpenLinksEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &open)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser12setOpenLinksEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), open)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -305,7 +319,7 @@ func (this *QTextBrowser) Reload() {
 // Public
 // void backwardAvailable(_Bool)
 func (this *QTextBrowser) BackwardAvailable(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser17backwardAvailableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser17backwardAvailableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -314,7 +328,7 @@ func (this *QTextBrowser) BackwardAvailable(arg0 bool) {
 // Public
 // void forwardAvailable(_Bool)
 func (this *QTextBrowser) ForwardAvailable(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser16forwardAvailableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser16forwardAvailableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -434,7 +448,7 @@ func (this *QTextBrowser) FocusOutEvent(ev *qtgui.QFocusEvent /*444 QFocusEvent 
 // Protected virtual
 // bool focusNextPrevChild(_Bool)
 func (this *QTextBrowser) FocusNextPrevChild(next bool) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &next)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), next)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

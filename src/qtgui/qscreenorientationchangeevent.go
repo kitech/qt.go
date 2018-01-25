@@ -59,9 +59,15 @@ func (this *QScreenOrientationChangeEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QScreenOrientationChangeEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQScreenOrientationChangeEventFromPointer(cthis unsafe.Pointer) *QScreenOrientationChangeEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QScreenOrientationChangeEvent{bcthis0}
+}
+func (*QScreenOrientationChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QScreenOrientationChangeEvent {
+	return NewQScreenOrientationChangeEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:1038
@@ -71,7 +77,7 @@ func NewQScreenOrientationChangeEventFromPointer(cthis unsafe.Pointer) *QScreenO
 func NewQScreenOrientationChangeEvent(screen *QScreen /*444 QScreen **/, orientation int) *QScreenOrientationChangeEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = screen.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventC2EP7QScreenN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &orientation)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventC2EP7QScreenN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, orientation)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQScreenOrientationChangeEventFromPointer(cthis)
 	return gothis

@@ -59,8 +59,14 @@ func (this *QTextFragment) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTextFragment) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTextFragmentFromPointer(cthis unsafe.Pointer) *QTextFragment {
 	return &QTextFragment{&qtrt.CObject{cthis}}
+}
+func (*QTextFragment) NewFromPointer(cthis unsafe.Pointer) *QTextFragment {
+	return NewQTextFragmentFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:307
@@ -113,7 +119,7 @@ func (this *QTextFragment) Length() int {
 // Public
 // bool contains(int)
 func (this *QTextFragment) Contains(position int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment8containsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &position)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment8containsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), position)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -124,9 +130,11 @@ func (this *QTextFragment) Contains(position int) bool {
 // Public
 // QTextCharFormat charFormat()
 func (this *QTextFragment) CharFormat() *QTextCharFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment10charFormatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment10charFormatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -147,9 +155,11 @@ func (this *QTextFragment) CharFormatIndex() int {
 // Public
 // QString text()
 func (this *QTextFragment) Text() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment4textEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

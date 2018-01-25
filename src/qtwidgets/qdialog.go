@@ -63,9 +63,15 @@ func (this *QDialog) GetCthis() unsafe.Pointer {
 		return this.QWidget.GetCthis()
 	}
 }
+func (this *QDialog) SetCthis(cthis unsafe.Pointer) {
+	this.QWidget = NewQWidgetFromPointer(cthis)
+}
 func NewQDialogFromPointer(cthis unsafe.Pointer) *QDialog {
 	bcthis0 := NewQWidgetFromPointer(cthis)
 	return &QDialog{bcthis0}
+}
+func (*QDialog) NewFromPointer(cthis unsafe.Pointer) *QDialog {
+	return NewQDialogFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qdialog.h:56
@@ -78,6 +84,19 @@ func (this *QDialog) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qdialog.h:63
+// index:0
+// Public
+// void QDialog(class QWidget *, Qt::WindowFlags)
+func NewQDialog(parent *QWidget /*444 QWidget **/, f int) *QDialog {
+	cthis := qtrt.Calloc(1, 256) // 48
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialogC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, f)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDialogFromPointer(cthis)
+	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qdialog.h:64
@@ -105,7 +124,7 @@ func (this *QDialog) Result() int {
 // Public virtual
 // void setVisible(_Bool)
 func (this *QDialog) SetVisible(visible bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -114,7 +133,7 @@ func (this *QDialog) SetVisible(visible bool) {
 // Public
 // void setOrientation(Qt::Orientation)
 func (this *QDialog) SetOrientation(orientation int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog14setOrientationEN2Qt11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &orientation)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog14setOrientationEN2Qt11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), orientation)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -156,9 +175,11 @@ func (this *QDialog) Extension() *QWidget /*444 QWidget **/ {
 // Public virtual
 // QSize sizeHint()
 func (this *QDialog) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QDialog8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QDialog8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -168,9 +189,11 @@ func (this *QDialog) SizeHint() *qtcore.QSize /*123*/ {
 // Public virtual
 // QSize minimumSizeHint()
 func (this *QDialog) MinimumSizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QDialog15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QDialog15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -180,7 +203,7 @@ func (this *QDialog) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // Public
 // void setSizeGripEnabled(_Bool)
 func (this *QDialog) SetSizeGripEnabled(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog18setSizeGripEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog18setSizeGripEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -200,7 +223,7 @@ func (this *QDialog) IsSizeGripEnabled() bool {
 // Public
 // void setModal(_Bool)
 func (this *QDialog) SetModal(modal bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog8setModalEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &modal)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog8setModalEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), modal)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -209,7 +232,7 @@ func (this *QDialog) SetModal(modal bool) {
 // Public
 // void setResult(int)
 func (this *QDialog) SetResult(r int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog9setResultEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &r)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog9setResultEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), r)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -218,7 +241,7 @@ func (this *QDialog) SetResult(r int) {
 // Public
 // void finished(int)
 func (this *QDialog) Finished(result int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog8finishedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &result)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog8finishedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), result)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -265,7 +288,7 @@ func (this *QDialog) Exec() int {
 // Public virtual
 // void done(int)
 func (this *QDialog) Done(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog4doneEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog4doneEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -292,7 +315,7 @@ func (this *QDialog) Reject() {
 // Public
 // void showExtension(_Bool)
 func (this *QDialog) ShowExtension(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog13showExtensionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog13showExtensionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -368,5 +391,10 @@ func (this *QDialog) AdjustPosition(arg0 *QWidget /*444 QWidget **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog14adjustPositionEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
+
+type QDialog__DialogCode = int
+
+const QDialog__Rejected QDialog__DialogCode = 0
+const QDialog__Accepted QDialog__DialogCode = 1
 
 //  body block end

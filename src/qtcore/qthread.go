@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 6
+// extern C begin: 0
 */
 // import "C"
 import "unsafe"
@@ -55,9 +55,15 @@ func (this *QThread) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QThread) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = NewQObjectFromPointer(cthis)
+}
 func NewQThreadFromPointer(cthis unsafe.Pointer) *QThread {
 	bcthis0 := NewQObjectFromPointer(cthis)
 	return &QThread{bcthis0}
+}
+func (*QThread) NewFromPointer(cthis unsafe.Pointer) *QThread {
+	return NewQThreadFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qthread.h:72
@@ -161,7 +167,7 @@ func DeleteQThread(*QThread) {
 // Public
 // void setPriority(enum QThread::Priority)
 func (this *QThread) SetPriority(priority int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread11setPriorityENS_8PriorityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &priority)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread11setPriorityENS_8PriorityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), priority)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -223,7 +229,7 @@ func (this *QThread) IsInterruptionRequested() bool {
 // Public
 // void setStackSize(uint)
 func (this *QThread) SetStackSize(stackSize uint) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread12setStackSizeEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &stackSize)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread12setStackSizeEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), stackSize)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -243,7 +249,7 @@ func (this *QThread) StackSize() uint {
 // Public
 // void exit(int)
 func (this *QThread) Exit(retcode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread4exitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &retcode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread4exitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), retcode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -297,7 +303,7 @@ func (this *QThread) LoopLevel() int {
 // Public
 // void start(enum QThread::Priority)
 func (this *QThread) Start(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread5startENS_8PriorityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread5startENS_8PriorityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -324,7 +330,7 @@ func (this *QThread) Quit() {
 // Public
 // bool wait(unsigned long)
 func (this *QThread) Wait(time uint) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread4waitEm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &time)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread4waitEm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), time)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -401,5 +407,16 @@ func QThread_SetTerminationEnabled(enabled bool) {
 	var nilthis *QThread
 	nilthis.SetTerminationEnabled(enabled)
 }
+
+type QThread__Priority = int
+
+const QThread__IdlePriority QThread__Priority = 0
+const QThread__LowestPriority QThread__Priority = 1
+const QThread__LowPriority QThread__Priority = 2
+const QThread__NormalPriority QThread__Priority = 3
+const QThread__HighPriority QThread__Priority = 4
+const QThread__HighestPriority QThread__Priority = 5
+const QThread__TimeCriticalPriority QThread__Priority = 6
+const QThread__InheritPriority QThread__Priority = 7
 
 //  body block end

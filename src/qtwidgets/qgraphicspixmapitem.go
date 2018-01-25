@@ -63,9 +63,15 @@ func (this *QGraphicsPixmapItem) GetCthis() unsafe.Pointer {
 		return this.QGraphicsItem.GetCthis()
 	}
 }
+func (this *QGraphicsPixmapItem) SetCthis(cthis unsafe.Pointer) {
+	this.QGraphicsItem = NewQGraphicsItemFromPointer(cthis)
+}
 func NewQGraphicsPixmapItemFromPointer(cthis unsafe.Pointer) *QGraphicsPixmapItem {
 	bcthis0 := NewQGraphicsItemFromPointer(cthis)
 	return &QGraphicsPixmapItem{bcthis0}
+}
+func (*QGraphicsPixmapItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsPixmapItem {
+	return NewQGraphicsPixmapItemFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:825
@@ -109,9 +115,11 @@ func DeleteQGraphicsPixmapItem(*QGraphicsPixmapItem) {
 // Public
 // QPixmap pixmap()
 func (this *QGraphicsPixmapItem) Pixmap() *qtgui.QPixmap /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem6pixmapEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem6pixmapEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -142,7 +150,7 @@ func (this *QGraphicsPixmapItem) TransformationMode() int {
 // Public
 // void setTransformationMode(Qt::TransformationMode)
 func (this *QGraphicsPixmapItem) SetTransformationMode(mode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsPixmapItem21setTransformationModeEN2Qt18TransformationModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsPixmapItem21setTransformationModeEN2Qt18TransformationModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -151,9 +159,11 @@ func (this *QGraphicsPixmapItem) SetTransformationMode(mode int) {
 // Public
 // QPointF offset()
 func (this *QGraphicsPixmapItem) Offset() *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem6offsetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem6offsetEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -173,7 +183,7 @@ func (this *QGraphicsPixmapItem) SetOffset(offset *qtcore.QPointF) {
 // Public inline
 // void setOffset(qreal, qreal)
 func (this *QGraphicsPixmapItem) SetOffset_1(x float64, y float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsPixmapItem9setOffsetEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsPixmapItem9setOffsetEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -182,9 +192,11 @@ func (this *QGraphicsPixmapItem) SetOffset_1(x float64, y float64) {
 // Public virtual
 // QRectF boundingRect()
 func (this *QGraphicsPixmapItem) BoundingRect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem12boundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem12boundingRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -194,9 +206,11 @@ func (this *QGraphicsPixmapItem) BoundingRect() *qtcore.QRectF /*123*/ {
 // Public virtual
 // QPainterPath shape()
 func (this *QGraphicsPixmapItem) Shape() *qtgui.QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem5shapeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem5shapeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -242,9 +256,11 @@ func (this *QGraphicsPixmapItem) IsObscuredBy(item *QGraphicsItem /*444 const QG
 // Public virtual
 // QPainterPath opaqueArea()
 func (this *QGraphicsPixmapItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -276,7 +292,7 @@ func (this *QGraphicsPixmapItem) ShapeMode() int {
 // Public
 // void setShapeMode(enum QGraphicsPixmapItem::ShapeMode)
 func (this *QGraphicsPixmapItem) SetShapeMode(mode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsPixmapItem12setShapeModeENS_9ShapeModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsPixmapItem12setShapeModeENS_9ShapeModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -285,7 +301,7 @@ func (this *QGraphicsPixmapItem) SetShapeMode(mode int) {
 // Protected virtual
 // bool supportsExtension(enum QGraphicsItem::Extension)
 func (this *QGraphicsPixmapItem) SupportsExtension(extension int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &extension)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -297,7 +313,7 @@ func (this *QGraphicsPixmapItem) SupportsExtension(extension int) bool {
 // void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
 func (this *QGraphicsPixmapItem) SetExtension(extension int, variant *qtcore.QVariant) {
 	var convArg1 = variant.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsPixmapItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &extension, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsPixmapItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -306,12 +322,24 @@ func (this *QGraphicsPixmapItem) SetExtension(extension int, variant *qtcore.QVa
 // Protected virtual
 // QVariant extension(const class QVariant &)
 func (this *QGraphicsPixmapItem) Extension(variant *qtcore.QVariant) *qtcore.QVariant /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = variant.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem9extensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem9extensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
+
+type QGraphicsPixmapItem__ShapeMode = int
+
+const QGraphicsPixmapItem__MaskShape QGraphicsPixmapItem__ShapeMode = 0
+const QGraphicsPixmapItem__BoundingRectShape QGraphicsPixmapItem__ShapeMode = 1
+const QGraphicsPixmapItem__HeuristicMaskShape QGraphicsPixmapItem__ShapeMode = 2
+
+type QGraphicsPixmapItem__ = int
+
+const QGraphicsPixmapItem__Type QGraphicsPixmapItem__ = 7
 
 //  body block end

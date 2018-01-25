@@ -55,9 +55,15 @@ func (this *QState) GetCthis() unsafe.Pointer {
 		return this.QAbstractState.GetCthis()
 	}
 }
+func (this *QState) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractState = NewQAbstractStateFromPointer(cthis)
+}
 func NewQStateFromPointer(cthis unsafe.Pointer) *QState {
 	bcthis0 := NewQAbstractStateFromPointer(cthis)
 	return &QState{bcthis0}
+}
+func (*QState) NewFromPointer(cthis unsafe.Pointer) *QState {
+	return NewQStateFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qstate.h:57
@@ -92,7 +98,7 @@ func NewQState(parent *QState /*444 QState **/) *QState {
 func NewQState_1(childMode int, parent *QState /*444 QState **/) *QState {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QStateC2ENS_9ChildModeEPS_", ffiqt.FFI_TYPE_VOID, cthis, &childMode, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QStateC2ENS_9ChildModeEPS_", ffiqt.FFI_TYPE_VOID, cthis, childMode, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStateFromPointer(cthis)
 	return gothis
@@ -216,7 +222,7 @@ func (this *QState) ChildMode() int {
 // Public
 // void setChildMode(enum QState::ChildMode)
 func (this *QState) SetChildMode(mode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QState12setChildModeENS_9ChildModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QState12setChildModeENS_9ChildModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -264,5 +270,15 @@ func (this *QState) Event(e *QEvent /*444 QEvent **/) bool {
 	//  return rv
 	return rv != 0
 }
+
+type QState__ChildMode = int
+
+const QState__ExclusiveStates QState__ChildMode = 0
+const QState__ParallelStates QState__ChildMode = 1
+
+type QState__RestorePolicy = int
+
+const QState__DontRestoreProperties QState__RestorePolicy = 0
+const QState__RestoreProperties QState__RestorePolicy = 1
 
 //  body block end

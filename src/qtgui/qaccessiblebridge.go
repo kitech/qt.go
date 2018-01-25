@@ -59,8 +59,14 @@ func (this *QAccessibleBridge) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QAccessibleBridge) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQAccessibleBridgeFromPointer(cthis unsafe.Pointer) *QAccessibleBridge {
 	return &QAccessibleBridge{&qtrt.CObject{cthis}}
+}
+func (*QAccessibleBridge) NewFromPointer(cthis unsafe.Pointer) *QAccessibleBridge {
+	return NewQAccessibleBridgeFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qaccessiblebridge.h:58

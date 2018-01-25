@@ -55,8 +55,14 @@ func (this *QLine) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QLine) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQLineFromPointer(cthis unsafe.Pointer) *QLine {
 	return &QLine{&qtrt.CObject{cthis}}
+}
+func (*QLine) NewFromPointer(cthis unsafe.Pointer) *QLine {
+	return NewQLineFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qline.h:55
@@ -91,7 +97,7 @@ func NewQLine_1(pt1 *QPoint, pt2 *QPoint) *QLine {
 // void QLine(int, int, int, int)
 func NewQLine_2(x1 int, y1 int, x2 int, y2 int) *QLine {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QLineC2Eiiii", ffiqt.FFI_TYPE_VOID, cthis, &x1, &y1, &x2, &y2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QLineC2Eiiii", ffiqt.FFI_TYPE_VOID, cthis, x1, y1, x2, y2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLineFromPointer(cthis)
 	return gothis
@@ -113,9 +119,11 @@ func (this *QLine) IsNull() bool {
 // Public inline
 // QPoint p1()
 func (this *QLine) P1() *QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine2p1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine2p1Ev", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -125,9 +133,11 @@ func (this *QLine) P1() *QPoint /*123*/ {
 // Public inline
 // QPoint p2()
 func (this *QLine) P2() *QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine2p2Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine2p2Ev", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -213,7 +223,7 @@ func (this *QLine) Translate(p *QPoint) {
 // Public inline
 // void translate(int, int)
 func (this *QLine) Translate_1(dx int, dy int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QLine9translateEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QLine9translateEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -222,10 +232,12 @@ func (this *QLine) Translate_1(dx int, dy int) {
 // Public inline
 // QLine translated(const class QPoint &)
 func (this *QLine) Translated(p *QPoint) *QLine /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = p.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine10translatedERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine10translatedERK6QPoint", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -235,9 +247,11 @@ func (this *QLine) Translated(p *QPoint) *QLine /*123*/ {
 // Public inline
 // QLine translated(int, int)
 func (this *QLine) Translated_1(dx int, dy int) *QLine /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine10translatedEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &dx, &dy)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine10translatedEii", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -247,9 +261,11 @@ func (this *QLine) Translated_1(dx int, dy int) *QLine /*123*/ {
 // Public inline
 // QPoint center()
 func (this *QLine) Center() *QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine6centerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine6centerEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -290,7 +306,7 @@ func (this *QLine) SetPoints(p1 *QPoint, p2 *QPoint) {
 // Public inline
 // void setLine(int, int, int, int)
 func (this *QLine) SetLine(x1 int, y1 int, x2 int, y2 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QLine7setLineEiiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x1, &y1, &x2, &y2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QLine7setLineEiiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, x2, y2)
 	gopp.ErrPrint(err, rv)
 }
 

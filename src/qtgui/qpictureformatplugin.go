@@ -59,9 +59,15 @@ func (this *QPictureFormatPlugin) GetCthis() unsafe.Pointer {
 		return this.QObject.GetCthis()
 	}
 }
+func (this *QPictureFormatPlugin) SetCthis(cthis unsafe.Pointer) {
+	this.QObject = qtcore.NewQObjectFromPointer(cthis)
+}
 func NewQPictureFormatPluginFromPointer(cthis unsafe.Pointer) *QPictureFormatPlugin {
 	bcthis0 := qtcore.NewQObjectFromPointer(cthis)
 	return &QPictureFormatPlugin{bcthis0}
+}
+func (*QPictureFormatPlugin) NewFromPointer(cthis unsafe.Pointer) *QPictureFormatPlugin {
+	return NewQPictureFormatPluginFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qpictureformatplugin.h:61

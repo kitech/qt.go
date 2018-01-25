@@ -63,9 +63,15 @@ func (this *QDateEdit) GetCthis() unsafe.Pointer {
 		return this.QDateTimeEdit.GetCthis()
 	}
 }
+func (this *QDateEdit) SetCthis(cthis unsafe.Pointer) {
+	this.QDateTimeEdit = NewQDateTimeEditFromPointer(cthis)
+}
 func NewQDateEditFromPointer(cthis unsafe.Pointer) *QDateEdit {
 	bcthis0 := NewQDateTimeEditFromPointer(cthis)
 	return &QDateEdit{bcthis0}
+}
+func (*QDateEdit) NewFromPointer(cthis unsafe.Pointer) *QDateEdit {
+	return NewQDateEditFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:217

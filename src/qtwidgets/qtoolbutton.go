@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 28
+// extern C begin: 29
 */
 // import "C"
 import "unsafe"
@@ -63,9 +63,15 @@ func (this *QToolButton) GetCthis() unsafe.Pointer {
 		return this.QAbstractButton.GetCthis()
 	}
 }
+func (this *QToolButton) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractButton = NewQAbstractButtonFromPointer(cthis)
+}
 func NewQToolButtonFromPointer(cthis unsafe.Pointer) *QToolButton {
 	bcthis0 := NewQAbstractButtonFromPointer(cthis)
 	return &QToolButton{bcthis0}
+}
+func (*QToolButton) NewFromPointer(cthis unsafe.Pointer) *QToolButton {
+	return NewQToolButtonFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qtoolbutton.h:57
@@ -107,9 +113,11 @@ func DeleteQToolButton(*QToolButton) {
 // Public virtual
 // QSize sizeHint()
 func (this *QToolButton) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QToolButton8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QToolButton8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -119,9 +127,11 @@ func (this *QToolButton) SizeHint() *qtcore.QSize /*123*/ {
 // Public virtual
 // QSize minimumSizeHint()
 func (this *QToolButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QToolButton15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QToolButton15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -153,7 +163,7 @@ func (this *QToolButton) ArrowType() int {
 // Public
 // void setArrowType(Qt::ArrowType)
 func (this *QToolButton) SetArrowType(type_ int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton12setArrowTypeEN2Qt9ArrowTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton12setArrowTypeEN2Qt9ArrowTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -184,7 +194,7 @@ func (this *QToolButton) Menu() *QMenu /*444 QMenu **/ {
 // Public
 // void setPopupMode(enum QToolButton::ToolButtonPopupMode)
 func (this *QToolButton) SetPopupMode(mode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton12setPopupModeENS_19ToolButtonPopupModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton12setPopupModeENS_19ToolButtonPopupModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -216,7 +226,7 @@ func (this *QToolButton) DefaultAction() *QAction /*444 QAction **/ {
 // Public
 // void setAutoRaise(_Bool)
 func (this *QToolButton) SetAutoRaise(enable bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton12setAutoRaiseEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &enable)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton12setAutoRaiseEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -245,7 +255,7 @@ func (this *QToolButton) ShowMenu() {
 // Public
 // void setToolButtonStyle(Qt::ToolButtonStyle)
 func (this *QToolButton) SetToolButtonStyle(style int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton18setToolButtonStyleEN2Qt15ToolButtonStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton18setToolButtonStyleEN2Qt15ToolButtonStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -391,5 +401,11 @@ func (this *QToolButton) InitStyleOption(option *QStyleOptionToolButton /*444 QS
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QToolButton15initStyleOptionEP22QStyleOptionToolButton", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
+
+type QToolButton__ToolButtonPopupMode = int
+
+const QToolButton__DelayedPopup QToolButton__ToolButtonPopupMode = 0
+const QToolButton__MenuButtonPopup QToolButton__ToolButtonPopupMode = 1
+const QToolButton__InstantPopup QToolButton__ToolButtonPopupMode = 2
 
 //  body block end

@@ -59,8 +59,14 @@ func (this *QPixelFormat) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QPixelFormat) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQPixelFormatFromPointer(cthis unsafe.Pointer) *QPixelFormat {
 	return &QPixelFormat{&qtrt.CObject{cthis}}
+}
+func (*QPixelFormat) NewFromPointer(cthis unsafe.Pointer) *QPixelFormat {
+	return NewQPixelFormatFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qpixelformat.h:163
@@ -81,7 +87,7 @@ func NewQPixelFormat() *QPixelFormat {
 // void QPixelFormat(enum QPixelFormat::ColorModel, uchar, uchar, uchar, uchar, uchar, uchar, enum QPixelFormat::AlphaUsage, enum QPixelFormat::AlphaPosition, enum QPixelFormat::AlphaPremultiplied, enum QPixelFormat::TypeInterpretation, enum QPixelFormat::ByteOrder, uchar)
 func NewQPixelFormat_1(colorModel int, firstSize byte, secondSize byte, thirdSize byte, fourthSize byte, fifthSize byte, alphaSize byte, alphaUsage int, alphaPosition int, premultiplied int, typeInterpretation int, byteOrder int, subEnum byte) *QPixelFormat {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixelFormatC2ENS_10ColorModelEhhhhhhNS_10AlphaUsageENS_13AlphaPositionENS_18AlphaPremultipliedENS_18TypeInterpretationENS_9ByteOrderEh", ffiqt.FFI_TYPE_VOID, cthis, &colorModel, &firstSize, &secondSize, &thirdSize, &fourthSize, &fifthSize, &alphaSize, &alphaUsage, &alphaPosition, &premultiplied, &typeInterpretation, &byteOrder, &subEnum)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixelFormatC2ENS_10ColorModelEhhhhhhNS_10AlphaUsageENS_13AlphaPositionENS_18AlphaPremultipliedENS_18TypeInterpretationENS_9ByteOrderEh", ffiqt.FFI_TYPE_VOID, cthis, colorModel, firstSize, secondSize, thirdSize, fourthSize, fifthSize, alphaSize, alphaUsage, alphaPosition, premultiplied, typeInterpretation, byteOrder, subEnum)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPixelFormatFromPointer(cthis)
 	return gothis
@@ -328,5 +334,100 @@ func (this *QPixelFormat) SubEnum() byte {
 	//  return rv
 	return byte(rv) // 222
 }
+
+type QPixelFormat__FieldWidth = int
+
+const QPixelFormat__ModelFieldWidth QPixelFormat__FieldWidth = 4
+const QPixelFormat__FirstFieldWidth QPixelFormat__FieldWidth = 6
+const QPixelFormat__SecondFieldWidth QPixelFormat__FieldWidth = 6
+const QPixelFormat__ThirdFieldWidth QPixelFormat__FieldWidth = 6
+const QPixelFormat__FourthFieldWidth QPixelFormat__FieldWidth = 6
+const QPixelFormat__FifthFieldWidth QPixelFormat__FieldWidth = 6
+const QPixelFormat__AlphaFieldWidth QPixelFormat__FieldWidth = 6
+const QPixelFormat__AlphaUsageFieldWidth QPixelFormat__FieldWidth = 1
+const QPixelFormat__AlphaPositionFieldWidth QPixelFormat__FieldWidth = 1
+const QPixelFormat__PremulFieldWidth QPixelFormat__FieldWidth = 1
+const QPixelFormat__TypeInterpretationFieldWidth QPixelFormat__FieldWidth = 4
+const QPixelFormat__ByteOrderFieldWidth QPixelFormat__FieldWidth = 2
+const QPixelFormat__SubEnumFieldWidth QPixelFormat__FieldWidth = 6
+const QPixelFormat__UnusedFieldWidth QPixelFormat__FieldWidth = 9
+const QPixelFormat__TotalFieldWidthByWidths QPixelFormat__FieldWidth = 64
+
+type QPixelFormat__Field = int
+
+const QPixelFormat__ModelField QPixelFormat__Field = 0
+const QPixelFormat__FirstField QPixelFormat__Field = 4
+const QPixelFormat__SecondField QPixelFormat__Field = 10
+const QPixelFormat__ThirdField QPixelFormat__Field = 16
+const QPixelFormat__FourthField QPixelFormat__Field = 22
+const QPixelFormat__FifthField QPixelFormat__Field = 28
+const QPixelFormat__AlphaField QPixelFormat__Field = 34
+const QPixelFormat__AlphaUsageField QPixelFormat__Field = 40
+const QPixelFormat__AlphaPositionField QPixelFormat__Field = 41
+const QPixelFormat__PremulField QPixelFormat__Field = 42
+const QPixelFormat__TypeInterpretationField QPixelFormat__Field = 43
+const QPixelFormat__ByteOrderField QPixelFormat__Field = 47
+const QPixelFormat__SubEnumField QPixelFormat__Field = 49
+const QPixelFormat__UnusedField QPixelFormat__Field = 55
+const QPixelFormat__TotalFieldWidthByOffsets QPixelFormat__Field = 64
+
+type QPixelFormat__ColorModel = int
+
+const QPixelFormat__RGB QPixelFormat__ColorModel = 0
+const QPixelFormat__BGR QPixelFormat__ColorModel = 1
+const QPixelFormat__Indexed QPixelFormat__ColorModel = 2
+const QPixelFormat__Grayscale QPixelFormat__ColorModel = 3
+const QPixelFormat__CMYK QPixelFormat__ColorModel = 4
+const QPixelFormat__HSL QPixelFormat__ColorModel = 5
+const QPixelFormat__HSV QPixelFormat__ColorModel = 6
+const QPixelFormat__YUV QPixelFormat__ColorModel = 7
+const QPixelFormat__Alpha QPixelFormat__ColorModel = 8
+
+type QPixelFormat__AlphaUsage = int
+
+const QPixelFormat__UsesAlpha QPixelFormat__AlphaUsage = 0
+const QPixelFormat__IgnoresAlpha QPixelFormat__AlphaUsage = 1
+
+type QPixelFormat__AlphaPosition = int
+
+const QPixelFormat__AtBeginning QPixelFormat__AlphaPosition = 0
+const QPixelFormat__AtEnd QPixelFormat__AlphaPosition = 1
+
+type QPixelFormat__AlphaPremultiplied = int
+
+const QPixelFormat__NotPremultiplied QPixelFormat__AlphaPremultiplied = 0
+const QPixelFormat__Premultiplied QPixelFormat__AlphaPremultiplied = 1
+
+type QPixelFormat__TypeInterpretation = int
+
+const QPixelFormat__UnsignedInteger QPixelFormat__TypeInterpretation = 0
+const QPixelFormat__UnsignedShort QPixelFormat__TypeInterpretation = 1
+const QPixelFormat__UnsignedByte QPixelFormat__TypeInterpretation = 2
+const QPixelFormat__FloatingPoint QPixelFormat__TypeInterpretation = 3
+
+type QPixelFormat__YUVLayout = int
+
+const QPixelFormat__YUV444 QPixelFormat__YUVLayout = 0
+const QPixelFormat__YUV422 QPixelFormat__YUVLayout = 1
+const QPixelFormat__YUV411 QPixelFormat__YUVLayout = 2
+const QPixelFormat__YUV420P QPixelFormat__YUVLayout = 3
+const QPixelFormat__YUV420SP QPixelFormat__YUVLayout = 4
+const QPixelFormat__YV12 QPixelFormat__YUVLayout = 5
+const QPixelFormat__UYVY QPixelFormat__YUVLayout = 6
+const QPixelFormat__YUYV QPixelFormat__YUVLayout = 7
+const QPixelFormat__NV12 QPixelFormat__YUVLayout = 8
+const QPixelFormat__NV21 QPixelFormat__YUVLayout = 9
+const QPixelFormat__IMC1 QPixelFormat__YUVLayout = 10
+const QPixelFormat__IMC2 QPixelFormat__YUVLayout = 11
+const QPixelFormat__IMC3 QPixelFormat__YUVLayout = 12
+const QPixelFormat__IMC4 QPixelFormat__YUVLayout = 13
+const QPixelFormat__Y8 QPixelFormat__YUVLayout = 14
+const QPixelFormat__Y16 QPixelFormat__YUVLayout = 15
+
+type QPixelFormat__ByteOrder = int
+
+const QPixelFormat__LittleEndian QPixelFormat__ByteOrder = 0
+const QPixelFormat__BigEndian QPixelFormat__ByteOrder = 1
+const QPixelFormat__CurrentSystemEndian QPixelFormat__ByteOrder = 2
 
 //  body block end

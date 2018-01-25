@@ -63,9 +63,15 @@ func (this *QStyleOptionGroupBox) GetCthis() unsafe.Pointer {
 		return this.QStyleOptionComplex.GetCthis()
 	}
 }
+func (this *QStyleOptionGroupBox) SetCthis(cthis unsafe.Pointer) {
+	this.QStyleOptionComplex = NewQStyleOptionComplexFromPointer(cthis)
+}
 func NewQStyleOptionGroupBoxFromPointer(cthis unsafe.Pointer) *QStyleOptionGroupBox {
 	bcthis0 := NewQStyleOptionComplexFromPointer(cthis)
 	return &QStyleOptionGroupBox{bcthis0}
+}
+func (*QStyleOptionGroupBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionGroupBox {
+	return NewQStyleOptionGroupBoxFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:639
@@ -86,10 +92,18 @@ func NewQStyleOptionGroupBox() *QStyleOptionGroupBox {
 // void QStyleOptionGroupBox(int)
 func NewQStyleOptionGroupBox_1(version int) *QStyleOptionGroupBox {
 	cthis := qtrt.Calloc(1, 256) // 120
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionGroupBoxC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionGroupBoxC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionGroupBoxFromPointer(cthis)
 	return gothis
 }
+
+type QStyleOptionGroupBox__StyleOptionType = int
+
+const QStyleOptionGroupBox__Type QStyleOptionGroupBox__StyleOptionType = 983046
+
+type QStyleOptionGroupBox__StyleOptionVersion = int
+
+const QStyleOptionGroupBox__Version QStyleOptionGroupBox__StyleOptionVersion = 1
 
 //  body block end

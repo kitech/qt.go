@@ -55,9 +55,15 @@ func (this *QVariantAnimation) GetCthis() unsafe.Pointer {
 		return this.QAbstractAnimation.GetCthis()
 	}
 }
+func (this *QVariantAnimation) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractAnimation = NewQAbstractAnimationFromPointer(cthis)
+}
 func NewQVariantAnimationFromPointer(cthis unsafe.Pointer) *QVariantAnimation {
 	bcthis0 := NewQAbstractAnimationFromPointer(cthis)
 	return &QVariantAnimation{bcthis0}
+}
+func (*QVariantAnimation) NewFromPointer(cthis unsafe.Pointer) *QVariantAnimation {
+	return NewQVariantAnimationFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qvariantanimation.h:57
@@ -99,9 +105,11 @@ func DeleteQVariantAnimation(*QVariantAnimation) {
 // Public
 // QVariant startValue()
 func (this *QVariantAnimation) StartValue() *QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation10startValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation10startValueEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -121,9 +129,11 @@ func (this *QVariantAnimation) SetStartValue(value *QVariant) {
 // Public
 // QVariant endValue()
 func (this *QVariantAnimation) EndValue() *QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation8endValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation8endValueEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -143,9 +153,11 @@ func (this *QVariantAnimation) SetEndValue(value *QVariant) {
 // Public
 // QVariant keyValueAt(qreal)
 func (this *QVariantAnimation) KeyValueAt(step float64) *QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation10keyValueAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation10keyValueAtEd", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -156,7 +168,7 @@ func (this *QVariantAnimation) KeyValueAt(step float64) *QVariant /*123*/ {
 // void setKeyValueAt(qreal, const class QVariant &)
 func (this *QVariantAnimation) SetKeyValueAt(step float64, value *QVariant) {
 	var convArg1 = value.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &step, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -165,9 +177,11 @@ func (this *QVariantAnimation) SetKeyValueAt(step float64, value *QVariant) {
 // Public
 // QVariant currentValue()
 func (this *QVariantAnimation) CurrentValue() *QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation12currentValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation12currentValueEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -188,7 +202,7 @@ func (this *QVariantAnimation) Duration() int {
 // Public
 // void setDuration(int)
 func (this *QVariantAnimation) SetDuration(msecs int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation11setDurationEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &msecs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation11setDurationEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -197,9 +211,11 @@ func (this *QVariantAnimation) SetDuration(msecs int) {
 // Public
 // QEasingCurve easingCurve()
 func (this *QVariantAnimation) EasingCurve() *QEasingCurve /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation11easingCurveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation11easingCurveEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQEasingCurveFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -241,7 +257,7 @@ func (this *QVariantAnimation) Event(event *QEvent /*444 QEvent **/) bool {
 // Protected virtual
 // void updateCurrentTime(int)
 func (this *QVariantAnimation) UpdateCurrentTime(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation17updateCurrentTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation17updateCurrentTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -250,7 +266,7 @@ func (this *QVariantAnimation) UpdateCurrentTime(arg0 int) {
 // Protected virtual
 // void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
 func (this *QVariantAnimation) UpdateState(newState int, oldState int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation11updateStateEN18QAbstractAnimation5StateES1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &newState, &oldState)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation11updateStateEN18QAbstractAnimation5StateES1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -269,11 +285,13 @@ func (this *QVariantAnimation) UpdateCurrentValue(value *QVariant) {
 // Protected virtual
 // QVariant interpolated(const class QVariant &, const class QVariant &, qreal)
 func (this *QVariantAnimation) Interpolated(from *QVariant, to *QVariant, progress float64) *QVariant /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = from.GetCthis()
 	var convArg1 = to.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation12interpolatedERK8QVariantS2_d", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, &progress)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation12interpolatedERK8QVariantS2_d", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, progress)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

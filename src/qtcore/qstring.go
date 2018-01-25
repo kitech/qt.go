@@ -55,8 +55,14 @@ func (this *QString) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QString) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQStringFromPointer(cthis unsafe.Pointer) *QString {
 	return &QString{&qtrt.CObject{cthis}}
+}
+func (*QString) NewFromPointer(cthis unsafe.Pointer) *QString {
+	return NewQStringFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qstring.h:217
@@ -78,7 +84,7 @@ func NewQString() *QString {
 func NewQString_1(unicode *QChar /*444 const QChar **/, size int) *QString {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = unicode.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QStringC2EPK5QChari", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QStringC2EPK5QChari", ffiqt.FFI_TYPE_VOID, cthis, convArg0, size)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStringFromPointer(cthis)
 	return gothis
@@ -104,7 +110,7 @@ func NewQString_2(c *QChar /*123*/) *QString {
 func NewQString_3(size int, c *QChar /*123*/) *QString {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg1 = c.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QStringC2Ei5QChar", ffiqt.FFI_TYPE_VOID, cthis, &size, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QStringC2Ei5QChar", ffiqt.FFI_TYPE_VOID, cthis, size, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStringFromPointer(cthis)
 	return gothis
@@ -156,7 +162,7 @@ func NewQString_6(a *QByteArray) *QString {
 // void QString(int, Qt::Initialization)
 func NewQString_7(size int, arg1 int) *QString {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QStringC2EiN2Qt14InitializationE", ffiqt.FFI_TYPE_VOID, cthis, &size, &arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QStringC2EiN2Qt14InitializationE", ffiqt.FFI_TYPE_VOID, cthis, size, arg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStringFromPointer(cthis)
 	return gothis
@@ -209,7 +215,7 @@ func (this *QString) Count() int {
 // int count(class QChar, Qt::CaseSensitivity)
 func (this *QString) Count_1(c *QChar /*123*/, cs int) int {
 	var convArg0 = c.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString5countE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString5countE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -221,7 +227,7 @@ func (this *QString) Count_1(c *QChar /*123*/, cs int) int {
 // int count(const class QString &, Qt::CaseSensitivity)
 func (this *QString) Count_2(s *QString, cs int) int {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString5countERKS_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString5countERKS_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -233,7 +239,7 @@ func (this *QString) Count_2(s *QString, cs int) int {
 // int count(const class QStringRef &, Qt::CaseSensitivity)
 func (this *QString) Count_3(s *QStringRef, cs int) int {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString5countERK10QStringRefN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString5countERK10QStringRefN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -290,7 +296,7 @@ func (this *QString) IsEmpty() bool {
 // Public
 // void resize(int)
 func (this *QString) Resize(size int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6resizeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6resizeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -300,7 +306,7 @@ func (this *QString) Resize(size int) {
 // void resize(int, class QChar)
 func (this *QString) Resize_1(size int, fillChar *QChar /*123*/) {
 	var convArg1 = fillChar.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6resizeEi5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &size, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6resizeEi5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -310,7 +316,7 @@ func (this *QString) Resize_1(size int, fillChar *QChar /*123*/) {
 // QString & fill(class QChar, int)
 func (this *QString) Fill(c *QChar /*123*/, size int) *QString {
 	var convArg0 = c.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString4fillE5QChari", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString4fillE5QChari", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, size)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -322,7 +328,7 @@ func (this *QString) Fill(c *QChar /*123*/, size int) *QString {
 // Public
 // void truncate(int)
 func (this *QString) Truncate(pos int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString8truncateEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString8truncateEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -331,7 +337,7 @@ func (this *QString) Truncate(pos int) {
 // Public
 // void chop(int)
 func (this *QString) Chop(n int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString4chopEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString4chopEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -351,7 +357,7 @@ func (this *QString) Capacity() int {
 // Public inline
 // void reserve(int)
 func (this *QString) Reserve(size int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7reserveEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7reserveEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -458,9 +464,11 @@ func (this *QString) Clear() {
 // Public inline
 // const QChar at(int)
 func (this *QString) At(i int) *QChar /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString2atEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString2atEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -470,9 +478,11 @@ func (this *QString) At(i int) *QChar /*123*/ {
 // Public inline
 // QChar front()
 func (this *QString) Front() *QChar /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString5frontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString5frontEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -482,9 +492,11 @@ func (this *QString) Front() *QChar /*123*/ {
 // Public inline
 // QCharRef front()
 func (this *QString) Front_1() *QCharRef /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString5frontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString5frontEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -494,9 +506,11 @@ func (this *QString) Front_1() *QCharRef /*123*/ {
 // Public inline
 // QChar back()
 func (this *QString) Back() *QChar /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString4backEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString4backEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -506,9 +520,11 @@ func (this *QString) Back() *QChar /*123*/ {
 // Public inline
 // QCharRef back()
 func (this *QString) Back_1() *QCharRef /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString4backEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString4backEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -518,10 +534,12 @@ func (this *QString) Back_1() *QCharRef /*123*/ {
 // Public
 // QString arg(qlonglong, int, int, class QChar)
 func (this *QString) Arg(a int64, fieldwidth int, base int, fillChar *QChar /*123*/) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg3 = fillChar.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argExii5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &a, &fieldwidth, &base, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argExii5QChar", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), a, fieldwidth, base, convArg3)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -531,10 +549,12 @@ func (this *QString) Arg(a int64, fieldwidth int, base int, fillChar *QChar /*12
 // Public
 // QString arg(qulonglong, int, int, class QChar)
 func (this *QString) Arg_1(a uint64, fieldwidth int, base int, fillChar *QChar /*123*/) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg3 = fillChar.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argEyii5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &a, &fieldwidth, &base, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argEyii5QChar", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), a, fieldwidth, base, convArg3)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -544,10 +564,12 @@ func (this *QString) Arg_1(a uint64, fieldwidth int, base int, fillChar *QChar /
 // Public
 // QString arg(long, int, int, class QChar)
 func (this *QString) Arg_2(a int, fieldwidth int, base int, fillChar *QChar /*123*/) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg3 = fillChar.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argElii5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &a, &fieldwidth, &base, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argElii5QChar", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), a, fieldwidth, base, convArg3)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -557,10 +579,12 @@ func (this *QString) Arg_2(a int, fieldwidth int, base int, fillChar *QChar /*12
 // Public
 // QString arg(ulong, int, int, class QChar)
 func (this *QString) Arg_3(a uint, fieldwidth int, base int, fillChar *QChar /*123*/) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg3 = fillChar.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argEmii5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &a, &fieldwidth, &base, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argEmii5QChar", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), a, fieldwidth, base, convArg3)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -570,10 +594,12 @@ func (this *QString) Arg_3(a uint, fieldwidth int, base int, fillChar *QChar /*1
 // Public
 // QString arg(int, int, int, class QChar)
 func (this *QString) Arg_4(a int, fieldWidth int, base int, fillChar *QChar /*123*/) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg3 = fillChar.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argEiii5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &a, &fieldWidth, &base, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argEiii5QChar", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), a, fieldWidth, base, convArg3)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -583,10 +609,12 @@ func (this *QString) Arg_4(a int, fieldWidth int, base int, fillChar *QChar /*12
 // Public
 // QString arg(uint, int, int, class QChar)
 func (this *QString) Arg_5(a uint, fieldWidth int, base int, fillChar *QChar /*123*/) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg3 = fillChar.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argEjii5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &a, &fieldWidth, &base, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argEjii5QChar", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), a, fieldWidth, base, convArg3)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -596,10 +624,12 @@ func (this *QString) Arg_5(a uint, fieldWidth int, base int, fillChar *QChar /*1
 // Public
 // QString arg(short, int, int, class QChar)
 func (this *QString) Arg_6(a int16, fieldWidth int, base int, fillChar *QChar /*123*/) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg3 = fillChar.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argEsii5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &a, &fieldWidth, &base, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argEsii5QChar", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), a, fieldWidth, base, convArg3)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -609,10 +639,12 @@ func (this *QString) Arg_6(a int16, fieldWidth int, base int, fillChar *QChar /*
 // Public
 // QString arg(ushort, int, int, class QChar)
 func (this *QString) Arg_7(a uint16, fieldWidth int, base int, fillChar *QChar /*123*/) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg3 = fillChar.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argEtii5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &a, &fieldWidth, &base, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argEtii5QChar", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), a, fieldWidth, base, convArg3)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -622,10 +654,12 @@ func (this *QString) Arg_7(a uint16, fieldWidth int, base int, fillChar *QChar /
 // Public
 // QString arg(double, int, char, int, class QChar)
 func (this *QString) Arg_8(a float64, fieldWidth int, fmt byte, prec int, fillChar *QChar /*123*/) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg4 = fillChar.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argEdici5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &a, &fieldWidth, &fmt, &prec, convArg4)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argEdici5QChar", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), a, fieldWidth, fmt, prec, convArg4)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -635,10 +669,12 @@ func (this *QString) Arg_8(a float64, fieldWidth int, fmt byte, prec int, fillCh
 // Public
 // QString arg(char, int, class QChar)
 func (this *QString) Arg_9(a byte, fieldWidth int, fillChar *QChar /*123*/) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg2 = fillChar.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argEci5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &a, &fieldWidth, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argEci5QChar", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), a, fieldWidth, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -648,11 +684,13 @@ func (this *QString) Arg_9(a byte, fieldWidth int, fillChar *QChar /*123*/) *QSt
 // Public
 // QString arg(class QChar, int, class QChar)
 func (this *QString) Arg_10(a *QChar /*123*/, fieldWidth int, fillChar *QChar /*123*/) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = a.GetCthis()
 	var convArg2 = fillChar.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argE5QChariS0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &fieldWidth, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argE5QChariS0_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, fieldWidth, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -662,11 +700,13 @@ func (this *QString) Arg_10(a *QChar /*123*/, fieldWidth int, fillChar *QChar /*
 // Public
 // QString arg(const class QString &, int, class QChar)
 func (this *QString) Arg_11(a *QString, fieldWidth int, fillChar *QChar /*123*/) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = a.GetCthis()
 	var convArg2 = fillChar.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argERKS_i5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &fieldWidth, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argERKS_i5QChar", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, fieldWidth, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -676,11 +716,13 @@ func (this *QString) Arg_11(a *QString, fieldWidth int, fillChar *QChar /*123*/)
 // Public
 // QString arg(class QStringView, int, class QChar)
 func (this *QString) Arg_12(a *QStringView /*123*/, fieldWidth int, fillChar *QChar /*123*/) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = a.GetCthis()
 	var convArg2 = fillChar.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argE11QStringViewi5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &fieldWidth, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argE11QStringViewi5QChar", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, fieldWidth, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -690,11 +732,13 @@ func (this *QString) Arg_12(a *QStringView /*123*/, fieldWidth int, fillChar *QC
 // Public
 // QString arg(class QLatin1String, int, class QChar)
 func (this *QString) Arg_13(a *QLatin1String /*123*/, fieldWidth int, fillChar *QChar /*123*/) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = a.GetCthis()
 	var convArg2 = fillChar.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argE13QLatin1Stringi5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &fieldWidth, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argE13QLatin1Stringi5QChar", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, fieldWidth, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -704,11 +748,13 @@ func (this *QString) Arg_13(a *QLatin1String /*123*/, fieldWidth int, fillChar *
 // Public
 // QString arg(const class QString &, const class QString &)
 func (this *QString) Arg_14(a1 *QString, a2 *QString) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = a1.GetCthis()
 	var convArg1 = a2.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argERKS_S1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argERKS_S1_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -718,12 +764,14 @@ func (this *QString) Arg_14(a1 *QString, a2 *QString) *QString /*123*/ {
 // Public
 // QString arg(const class QString &, const class QString &, const class QString &)
 func (this *QString) Arg_15(a1 *QString, a2 *QString, a3 *QString) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = a1.GetCthis()
 	var convArg1 = a2.GetCthis()
 	var convArg2 = a3.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -733,13 +781,15 @@ func (this *QString) Arg_15(a1 *QString, a2 *QString, a3 *QString) *QString /*12
 // Public
 // QString arg(const class QString &, const class QString &, const class QString &, const class QString &)
 func (this *QString) Arg_16(a1 *QString, a2 *QString, a3 *QString, a4 *QString) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = a1.GetCthis()
 	var convArg1 = a2.GetCthis()
 	var convArg2 = a3.GetCthis()
 	var convArg3 = a4.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_S1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_S1_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -749,14 +799,16 @@ func (this *QString) Arg_16(a1 *QString, a2 *QString, a3 *QString, a4 *QString) 
 // Public
 // QString arg(const class QString &, const class QString &, const class QString &, const class QString &, const class QString &)
 func (this *QString) Arg_17(a1 *QString, a2 *QString, a3 *QString, a4 *QString, a5 *QString) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = a1.GetCthis()
 	var convArg1 = a2.GetCthis()
 	var convArg2 = a3.GetCthis()
 	var convArg3 = a4.GetCthis()
 	var convArg4 = a5.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_S1_S1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_S1_S1_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -766,15 +818,17 @@ func (this *QString) Arg_17(a1 *QString, a2 *QString, a3 *QString, a4 *QString, 
 // Public
 // QString arg(const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &)
 func (this *QString) Arg_18(a1 *QString, a2 *QString, a3 *QString, a4 *QString, a5 *QString, a6 *QString) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = a1.GetCthis()
 	var convArg1 = a2.GetCthis()
 	var convArg2 = a3.GetCthis()
 	var convArg3 = a4.GetCthis()
 	var convArg4 = a5.GetCthis()
 	var convArg5 = a6.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_S1_S1_S1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_S1_S1_S1_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -784,6 +838,7 @@ func (this *QString) Arg_18(a1 *QString, a2 *QString, a3 *QString, a4 *QString, 
 // Public
 // QString arg(const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &)
 func (this *QString) Arg_19(a1 *QString, a2 *QString, a3 *QString, a4 *QString, a5 *QString, a6 *QString, a7 *QString) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = a1.GetCthis()
 	var convArg1 = a2.GetCthis()
 	var convArg2 = a3.GetCthis()
@@ -791,9 +846,10 @@ func (this *QString) Arg_19(a1 *QString, a2 *QString, a3 *QString, a4 *QString, 
 	var convArg4 = a5.GetCthis()
 	var convArg5 = a6.GetCthis()
 	var convArg6 = a7.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -803,6 +859,7 @@ func (this *QString) Arg_19(a1 *QString, a2 *QString, a3 *QString, a4 *QString, 
 // Public
 // QString arg(const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &)
 func (this *QString) Arg_20(a1 *QString, a2 *QString, a3 *QString, a4 *QString, a5 *QString, a6 *QString, a7 *QString, a8 *QString) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = a1.GetCthis()
 	var convArg1 = a2.GetCthis()
 	var convArg2 = a3.GetCthis()
@@ -811,9 +868,10 @@ func (this *QString) Arg_20(a1 *QString, a2 *QString, a3 *QString, a4 *QString, 
 	var convArg5 = a6.GetCthis()
 	var convArg6 = a7.GetCthis()
 	var convArg7 = a8.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_S1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_S1_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -823,6 +881,7 @@ func (this *QString) Arg_20(a1 *QString, a2 *QString, a3 *QString, a4 *QString, 
 // Public
 // QString arg(const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &)
 func (this *QString) Arg_21(a1 *QString, a2 *QString, a3 *QString, a4 *QString, a5 *QString, a6 *QString, a7 *QString, a8 *QString, a9 *QString) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = a1.GetCthis()
 	var convArg1 = a2.GetCthis()
 	var convArg2 = a3.GetCthis()
@@ -832,9 +891,10 @@ func (this *QString) Arg_21(a1 *QString, a2 *QString, a3 *QString, a4 *QString, 
 	var convArg6 = a7.GetCthis()
 	var convArg7 = a8.GetCthis()
 	var convArg8 = a9.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_S1_S1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_S1_S1_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -845,7 +905,7 @@ func (this *QString) Arg_21(a1 *QString, a2 *QString, a3 *QString, a4 *QString, 
 // int indexOf(class QChar, int, Qt::CaseSensitivity)
 func (this *QString) IndexOf(c *QChar /*123*/, from int, cs int) int {
 	var convArg0 = c.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7indexOfE5QChariN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7indexOfE5QChariN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -857,7 +917,7 @@ func (this *QString) IndexOf(c *QChar /*123*/, from int, cs int) int {
 // int indexOf(const class QString &, int, Qt::CaseSensitivity)
 func (this *QString) IndexOf_1(s *QString, from int, cs int) int {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7indexOfERKS_iN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7indexOfERKS_iN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -869,7 +929,7 @@ func (this *QString) IndexOf_1(s *QString, from int, cs int) int {
 // int indexOf(class QLatin1String, int, Qt::CaseSensitivity)
 func (this *QString) IndexOf_2(s *QLatin1String /*123*/, from int, cs int) int {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7indexOfE13QLatin1StringiN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7indexOfE13QLatin1StringiN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -881,7 +941,7 @@ func (this *QString) IndexOf_2(s *QLatin1String /*123*/, from int, cs int) int {
 // int indexOf(const class QStringRef &, int, Qt::CaseSensitivity)
 func (this *QString) IndexOf_3(s *QStringRef, from int, cs int) int {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7indexOfERK10QStringRefiN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7indexOfERK10QStringRefiN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -893,7 +953,7 @@ func (this *QString) IndexOf_3(s *QStringRef, from int, cs int) int {
 // int indexOf(const class QRegExp &, int)
 func (this *QString) IndexOf_4(arg0 *QRegExp, from int) int {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7indexOfERK7QRegExpi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7indexOfERK7QRegExpi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -905,7 +965,7 @@ func (this *QString) IndexOf_4(arg0 *QRegExp, from int) int {
 // int indexOf(class QRegExp &, int)
 func (this *QString) IndexOf_5(arg0 *QRegExp, from int) int {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7indexOfER7QRegExpi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7indexOfER7QRegExpi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -917,7 +977,7 @@ func (this *QString) IndexOf_5(arg0 *QRegExp, from int) int {
 // int indexOf(const class QRegularExpression &, int)
 func (this *QString) IndexOf_6(re *QRegularExpression, from int) int {
 	var convArg0 = re.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7indexOfERK18QRegularExpressioni", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7indexOfERK18QRegularExpressioni", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -930,7 +990,7 @@ func (this *QString) IndexOf_6(re *QRegularExpression, from int) int {
 func (this *QString) IndexOf_7(re *QRegularExpression, from int, rmatch *QRegularExpressionMatch /*444 QRegularExpressionMatch **/) int {
 	var convArg0 = re.GetCthis()
 	var convArg2 = rmatch.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7indexOfERK18QRegularExpressioniP23QRegularExpressionMatch", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7indexOfERK18QRegularExpressioniP23QRegularExpressionMatch", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -942,7 +1002,7 @@ func (this *QString) IndexOf_7(re *QRegularExpression, from int, rmatch *QRegula
 // int lastIndexOf(class QChar, int, Qt::CaseSensitivity)
 func (this *QString) LastIndexOf(c *QChar /*123*/, from int, cs int) int {
 	var convArg0 = c.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString11lastIndexOfE5QChariN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString11lastIndexOfE5QChariN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -954,7 +1014,7 @@ func (this *QString) LastIndexOf(c *QChar /*123*/, from int, cs int) int {
 // int lastIndexOf(const class QString &, int, Qt::CaseSensitivity)
 func (this *QString) LastIndexOf_1(s *QString, from int, cs int) int {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERKS_iN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERKS_iN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -966,7 +1026,7 @@ func (this *QString) LastIndexOf_1(s *QString, from int, cs int) int {
 // int lastIndexOf(class QLatin1String, int, Qt::CaseSensitivity)
 func (this *QString) LastIndexOf_2(s *QLatin1String /*123*/, from int, cs int) int {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString11lastIndexOfE13QLatin1StringiN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString11lastIndexOfE13QLatin1StringiN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -978,7 +1038,7 @@ func (this *QString) LastIndexOf_2(s *QLatin1String /*123*/, from int, cs int) i
 // int lastIndexOf(const class QStringRef &, int, Qt::CaseSensitivity)
 func (this *QString) LastIndexOf_3(s *QStringRef, from int, cs int) int {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERK10QStringRefiN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERK10QStringRefiN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -990,7 +1050,7 @@ func (this *QString) LastIndexOf_3(s *QStringRef, from int, cs int) int {
 // int lastIndexOf(const class QRegExp &, int)
 func (this *QString) LastIndexOf_4(arg0 *QRegExp, from int) int {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERK7QRegExpi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERK7QRegExpi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -1002,7 +1062,7 @@ func (this *QString) LastIndexOf_4(arg0 *QRegExp, from int) int {
 // int lastIndexOf(class QRegExp &, int)
 func (this *QString) LastIndexOf_5(arg0 *QRegExp, from int) int {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString11lastIndexOfER7QRegExpi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString11lastIndexOfER7QRegExpi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -1014,7 +1074,7 @@ func (this *QString) LastIndexOf_5(arg0 *QRegExp, from int) int {
 // int lastIndexOf(const class QRegularExpression &, int)
 func (this *QString) LastIndexOf_6(re *QRegularExpression, from int) int {
 	var convArg0 = re.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERK18QRegularExpressioni", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERK18QRegularExpressioni", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -1027,7 +1087,7 @@ func (this *QString) LastIndexOf_6(re *QRegularExpression, from int) int {
 func (this *QString) LastIndexOf_7(re *QRegularExpression, from int, rmatch *QRegularExpressionMatch /*444 QRegularExpressionMatch **/) int {
 	var convArg0 = re.GetCthis()
 	var convArg2 = rmatch.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERK18QRegularExpressioniP23QRegularExpressionMatch", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &from, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString11lastIndexOfERK18QRegularExpressioniP23QRegularExpressionMatch", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -1039,7 +1099,7 @@ func (this *QString) LastIndexOf_7(re *QRegularExpression, from int, rmatch *QRe
 // bool contains(class QChar, Qt::CaseSensitivity)
 func (this *QString) Contains(c *QChar /*123*/, cs int) bool {
 	var convArg0 = c.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8containsE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8containsE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1051,7 +1111,7 @@ func (this *QString) Contains(c *QChar /*123*/, cs int) bool {
 // bool contains(const class QString &, Qt::CaseSensitivity)
 func (this *QString) Contains_1(s *QString, cs int) bool {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8containsERKS_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8containsERKS_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1063,7 +1123,7 @@ func (this *QString) Contains_1(s *QString, cs int) bool {
 // bool contains(class QLatin1String, Qt::CaseSensitivity)
 func (this *QString) Contains_2(s *QLatin1String /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8containsE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8containsE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1075,7 +1135,7 @@ func (this *QString) Contains_2(s *QLatin1String /*123*/, cs int) bool {
 // bool contains(const class QStringRef &, Qt::CaseSensitivity)
 func (this *QString) Contains_3(s *QStringRef, cs int) bool {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8containsERK10QStringRefN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8containsERK10QStringRefN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1130,14 +1190,76 @@ func (this *QString) Contains_7(re *QRegularExpression, match_ *QRegularExpressi
 	return rv != 0
 }
 
+// /usr/include/qt/QtCore/qstring.h:369
+// index:0
+// Public
+// QString section(class QChar, int, int, QString::SectionFlags)
+func (this *QString) Section(sep *QChar /*123*/, start int, end int, flags int) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
+	var convArg0 = sep.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7sectionE5QCharii6QFlagsINS_11SectionFlagEE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, start, end, flags)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	rv = uint64(uintptr(mv))
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qstring.h:370
+// index:1
+// Public
+// QString section(const class QString &, int, int, QString::SectionFlags)
+func (this *QString) Section_1(in_sep *QString, start int, end int, flags int) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
+	var convArg0 = in_sep.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7sectionERKS_ii6QFlagsINS_11SectionFlagEE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, start, end, flags)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	rv = uint64(uintptr(mv))
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qstring.h:372
+// index:2
+// Public
+// QString section(const class QRegExp &, int, int, QString::SectionFlags)
+func (this *QString) Section_2(reg *QRegExp, start int, end int, flags int) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
+	var convArg0 = reg.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7sectionERK7QRegExpii6QFlagsINS_11SectionFlagEE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, start, end, flags)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	rv = uint64(uintptr(mv))
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qstring.h:375
+// index:3
+// Public
+// QString section(const class QRegularExpression &, int, int, QString::SectionFlags)
+func (this *QString) Section_3(re *QRegularExpression, start int, end int, flags int) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
+	var convArg0 = re.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7sectionERK18QRegularExpressionii6QFlagsINS_11SectionFlagEE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, start, end, flags)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	rv = uint64(uintptr(mv))
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qstring.h:377
 // index:0
 // Public
 // QString left(int)
 func (this *QString) Left(n int) *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString4leftEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &n)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString4leftEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1147,9 +1269,11 @@ func (this *QString) Left(n int) *QString /*123*/ {
 // Public
 // QString right(int)
 func (this *QString) Right(n int) *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString5rightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &n)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString5rightEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1159,9 +1283,11 @@ func (this *QString) Right(n int) *QString /*123*/ {
 // Public
 // QString mid(int, int)
 func (this *QString) Mid(position int, n int) *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3midEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &position, &n)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString3midEii", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), position, n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1171,9 +1297,11 @@ func (this *QString) Mid(position int, n int) *QString /*123*/ {
 // Public inline
 // QString chopped(int)
 func (this *QString) Chopped(n int) *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7choppedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &n)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7choppedEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1183,9 +1311,11 @@ func (this *QString) Chopped(n int) *QString /*123*/ {
 // Public
 // QStringRef leftRef(int)
 func (this *QString) LeftRef(n int) *QStringRef /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7leftRefEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &n)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7leftRefEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1195,9 +1325,11 @@ func (this *QString) LeftRef(n int) *QStringRef /*123*/ {
 // Public
 // QStringRef rightRef(int)
 func (this *QString) RightRef(n int) *QStringRef /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8rightRefEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &n)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8rightRefEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1207,9 +1339,11 @@ func (this *QString) RightRef(n int) *QStringRef /*123*/ {
 // Public
 // QStringRef midRef(int, int)
 func (this *QString) MidRef(position int, n int) *QStringRef /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString6midRefEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &position, &n)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString6midRefEii", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), position, n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1220,7 +1354,7 @@ func (this *QString) MidRef(position int, n int) *QStringRef /*123*/ {
 // bool startsWith(const class QString &, Qt::CaseSensitivity)
 func (this *QString) StartsWith(s *QString, cs int) bool {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString10startsWithERKS_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString10startsWithERKS_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1232,7 +1366,7 @@ func (this *QString) StartsWith(s *QString, cs int) bool {
 // bool startsWith(const class QStringRef &, Qt::CaseSensitivity)
 func (this *QString) StartsWith_1(s *QStringRef, cs int) bool {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString10startsWithERK10QStringRefN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString10startsWithERK10QStringRefN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1244,7 +1378,7 @@ func (this *QString) StartsWith_1(s *QStringRef, cs int) bool {
 // bool startsWith(class QStringView, Qt::CaseSensitivity)
 func (this *QString) StartsWith_2(s *QStringView /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString10startsWithE11QStringViewN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString10startsWithE11QStringViewN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1256,7 +1390,7 @@ func (this *QString) StartsWith_2(s *QStringView /*123*/, cs int) bool {
 // bool startsWith(class QLatin1String, Qt::CaseSensitivity)
 func (this *QString) StartsWith_3(s *QLatin1String /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString10startsWithE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString10startsWithE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1268,7 +1402,7 @@ func (this *QString) StartsWith_3(s *QLatin1String /*123*/, cs int) bool {
 // bool startsWith(class QChar, Qt::CaseSensitivity)
 func (this *QString) StartsWith_4(c *QChar /*123*/, cs int) bool {
 	var convArg0 = c.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString10startsWithE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString10startsWithE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1280,7 +1414,7 @@ func (this *QString) StartsWith_4(c *QChar /*123*/, cs int) bool {
 // bool endsWith(const class QString &, Qt::CaseSensitivity)
 func (this *QString) EndsWith(s *QString, cs int) bool {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8endsWithERKS_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8endsWithERKS_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1292,7 +1426,7 @@ func (this *QString) EndsWith(s *QString, cs int) bool {
 // bool endsWith(const class QStringRef &, Qt::CaseSensitivity)
 func (this *QString) EndsWith_1(s *QStringRef, cs int) bool {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8endsWithERK10QStringRefN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8endsWithERK10QStringRefN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1304,7 +1438,7 @@ func (this *QString) EndsWith_1(s *QStringRef, cs int) bool {
 // bool endsWith(class QStringView, Qt::CaseSensitivity)
 func (this *QString) EndsWith_2(s *QStringView /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8endsWithE11QStringViewN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8endsWithE11QStringViewN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1316,7 +1450,7 @@ func (this *QString) EndsWith_2(s *QStringView /*123*/, cs int) bool {
 // bool endsWith(class QLatin1String, Qt::CaseSensitivity)
 func (this *QString) EndsWith_3(s *QLatin1String /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8endsWithE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8endsWithE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1328,7 +1462,7 @@ func (this *QString) EndsWith_3(s *QLatin1String /*123*/, cs int) bool {
 // bool endsWith(class QChar, Qt::CaseSensitivity)
 func (this *QString) EndsWith_4(c *QChar /*123*/, cs int) bool {
 	var convArg0 = c.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8endsWithE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8endsWithE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1339,10 +1473,12 @@ func (this *QString) EndsWith_4(c *QChar /*123*/, cs int) bool {
 // Public
 // QString leftJustified(int, class QChar, _Bool)
 func (this *QString) LeftJustified(width int, fill *QChar /*123*/, trunc bool) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg1 = fill.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString13leftJustifiedEi5QCharb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &width, convArg1, &trunc)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString13leftJustifiedEi5QCharb", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), width, convArg1, trunc)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1352,10 +1488,12 @@ func (this *QString) LeftJustified(width int, fill *QChar /*123*/, trunc bool) *
 // Public
 // QString rightJustified(int, class QChar, _Bool)
 func (this *QString) RightJustified(width int, fill *QChar /*123*/, trunc bool) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg1 = fill.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString14rightJustifiedEi5QCharb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &width, convArg1, &trunc)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString14rightJustifiedEi5QCharb", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), width, convArg1, trunc)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1365,9 +1503,11 @@ func (this *QString) RightJustified(width int, fill *QChar /*123*/, trunc bool) 
 // Public inline
 // QString toLower()
 func (this *QString) ToLower() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNKR7QString7toLowerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNKR7QString7toLowerEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1377,9 +1517,11 @@ func (this *QString) ToLower() *QString /*123*/ {
 // Public inline
 // QString toLower()
 func (this *QString) ToLower_1() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNO7QString7toLowerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNO7QString7toLowerEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1389,9 +1531,11 @@ func (this *QString) ToLower_1() *QString /*123*/ {
 // Public inline
 // QString toUpper()
 func (this *QString) ToUpper() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNKR7QString7toUpperEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNKR7QString7toUpperEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1401,9 +1545,11 @@ func (this *QString) ToUpper() *QString /*123*/ {
 // Public inline
 // QString toUpper()
 func (this *QString) ToUpper_1() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNO7QString7toUpperEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNO7QString7toUpperEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1413,9 +1559,11 @@ func (this *QString) ToUpper_1() *QString /*123*/ {
 // Public inline
 // QString toCaseFolded()
 func (this *QString) ToCaseFolded() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNKR7QString12toCaseFoldedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNKR7QString12toCaseFoldedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1425,9 +1573,11 @@ func (this *QString) ToCaseFolded() *QString /*123*/ {
 // Public inline
 // QString toCaseFolded()
 func (this *QString) ToCaseFolded_1() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNO7QString12toCaseFoldedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNO7QString12toCaseFoldedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1437,9 +1587,11 @@ func (this *QString) ToCaseFolded_1() *QString /*123*/ {
 // Public inline
 // QString trimmed()
 func (this *QString) Trimmed() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNKR7QString7trimmedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNKR7QString7trimmedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1449,9 +1601,11 @@ func (this *QString) Trimmed() *QString /*123*/ {
 // Public inline
 // QString trimmed()
 func (this *QString) Trimmed_1() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNO7QString7trimmedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNO7QString7trimmedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1461,9 +1615,11 @@ func (this *QString) Trimmed_1() *QString /*123*/ {
 // Public inline
 // QString simplified()
 func (this *QString) Simplified() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNKR7QString10simplifiedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNKR7QString10simplifiedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1473,9 +1629,11 @@ func (this *QString) Simplified() *QString /*123*/ {
 // Public inline
 // QString simplified()
 func (this *QString) Simplified_1() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNO7QString10simplifiedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNO7QString10simplifiedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1485,9 +1643,11 @@ func (this *QString) Simplified_1() *QString /*123*/ {
 // Public
 // QString toHtmlEscaped()
 func (this *QString) ToHtmlEscaped() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString13toHtmlEscapedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString13toHtmlEscapedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1497,7 +1657,7 @@ func (this *QString) ToHtmlEscaped() *QString /*123*/ {
 // Public
 // QString & remove(int, int)
 func (this *QString) Remove(i int, len int) *QString {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6removeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i, &len)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6removeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i, len)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1510,7 +1670,7 @@ func (this *QString) Remove(i int, len int) *QString {
 // QString & remove(class QChar, Qt::CaseSensitivity)
 func (this *QString) Remove_1(c *QChar /*123*/, cs int) *QString {
 	var convArg0 = c.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6removeE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6removeE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1523,7 +1683,7 @@ func (this *QString) Remove_1(c *QChar /*123*/, cs int) *QString {
 // QString & remove(const class QString &, Qt::CaseSensitivity)
 func (this *QString) Remove_2(s *QString, cs int) *QString {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6removeERKS_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6removeERKS_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1562,7 +1722,7 @@ func (this *QString) Remove_4(re *QRegularExpression) *QString {
 // QString & replace(int, int, class QChar)
 func (this *QString) Replace(i int, len int, after *QChar /*123*/) *QString {
 	var convArg2 = after.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceEii5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i, &len, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceEii5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i, len, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1575,7 +1735,7 @@ func (this *QString) Replace(i int, len int, after *QChar /*123*/) *QString {
 // QString & replace(int, int, const class QChar *, int)
 func (this *QString) Replace_1(i int, len int, s *QChar /*444 const QChar **/, slen int) *QString {
 	var convArg2 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceEiiPK5QChari", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i, &len, convArg2, &slen)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceEiiPK5QChari", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i, len, convArg2, slen)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1588,7 +1748,7 @@ func (this *QString) Replace_1(i int, len int, s *QChar /*444 const QChar **/, s
 // QString & replace(int, int, const class QString &)
 func (this *QString) Replace_2(i int, len int, after *QString) *QString {
 	var convArg2 = after.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceEiiRKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i, &len, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceEiiRKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i, len, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1602,7 +1762,7 @@ func (this *QString) Replace_2(i int, len int, after *QString) *QString {
 func (this *QString) Replace_3(before *QChar /*123*/, after *QChar /*123*/, cs int) *QString {
 	var convArg0 = before.GetCthis()
 	var convArg1 = after.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceE5QCharS0_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceE5QCharS0_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1616,7 +1776,7 @@ func (this *QString) Replace_3(before *QChar /*123*/, after *QChar /*123*/, cs i
 func (this *QString) Replace_4(before *QChar /*444 const QChar **/, blen int, after *QChar /*444 const QChar **/, alen int, cs int) *QString {
 	var convArg0 = before.GetCthis()
 	var convArg2 = after.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceEPK5QChariS2_iN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &blen, convArg2, &alen, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceEPK5QChariS2_iN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, blen, convArg2, alen, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1630,7 +1790,7 @@ func (this *QString) Replace_4(before *QChar /*444 const QChar **/, blen int, af
 func (this *QString) Replace_5(before *QLatin1String /*123*/, after *QLatin1String /*123*/, cs int) *QString {
 	var convArg0 = before.GetCthis()
 	var convArg1 = after.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceE13QLatin1StringS0_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceE13QLatin1StringS0_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1644,7 +1804,7 @@ func (this *QString) Replace_5(before *QLatin1String /*123*/, after *QLatin1Stri
 func (this *QString) Replace_6(before *QLatin1String /*123*/, after *QString, cs int) *QString {
 	var convArg0 = before.GetCthis()
 	var convArg1 = after.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceE13QLatin1StringRKS_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceE13QLatin1StringRKS_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1658,7 +1818,7 @@ func (this *QString) Replace_6(before *QLatin1String /*123*/, after *QString, cs
 func (this *QString) Replace_7(before *QString, after *QLatin1String /*123*/, cs int) *QString {
 	var convArg0 = before.GetCthis()
 	var convArg1 = after.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceERKS_13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceERKS_13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1672,7 +1832,7 @@ func (this *QString) Replace_7(before *QString, after *QLatin1String /*123*/, cs
 func (this *QString) Replace_8(before *QString, after *QString, cs int) *QString {
 	var convArg0 = before.GetCthis()
 	var convArg1 = after.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceERKS_S1_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceERKS_S1_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1686,7 +1846,7 @@ func (this *QString) Replace_8(before *QString, after *QString, cs int) *QString
 func (this *QString) Replace_9(c *QChar /*123*/, after *QString, cs int) *QString {
 	var convArg0 = c.GetCthis()
 	var convArg1 = after.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceE5QCharRKS_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceE5QCharRKS_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1700,7 +1860,7 @@ func (this *QString) Replace_9(c *QChar /*123*/, after *QString, cs int) *QStrin
 func (this *QString) Replace_10(c *QChar /*123*/, after *QLatin1String /*123*/, cs int) *QString {
 	var convArg0 = c.GetCthis()
 	var convArg1 = after.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceE5QChar13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString7replaceE5QChar13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1740,9 +1900,11 @@ func (this *QString) Replace_12(re *QRegularExpression, after *QString) *QString
 // Public
 // QString normalized(enum QString::NormalizationForm, class QChar::UnicodeVersion)
 func (this *QString) Normalized(mode int, version int) *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString10normalizedENS_17NormalizationFormEN5QChar14UnicodeVersionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &mode, &version)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString10normalizedENS_17NormalizationFormEN5QChar14UnicodeVersionE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), mode, version)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1752,9 +1914,11 @@ func (this *QString) Normalized(mode int, version int) *QString /*123*/ {
 // Public
 // QString repeated(int)
 func (this *QString) Repeated(times int) *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8repeatedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &times)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8repeatedEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), times)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1775,9 +1939,11 @@ func (this *QString) Utf16() unsafe.Pointer /*666*/ {
 // Public inline
 // QByteArray toLatin1()
 func (this *QString) ToLatin1() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNKR7QString8toLatin1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNKR7QString8toLatin1Ev", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1787,9 +1953,11 @@ func (this *QString) ToLatin1() *QByteArray /*123*/ {
 // Public inline
 // QByteArray toLatin1()
 func (this *QString) ToLatin1_1() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNO7QString8toLatin1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNO7QString8toLatin1Ev", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1799,9 +1967,11 @@ func (this *QString) ToLatin1_1() *QByteArray /*123*/ {
 // Public inline
 // QByteArray toUtf8()
 func (this *QString) ToUtf8() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNKR7QString6toUtf8Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNKR7QString6toUtf8Ev", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1811,9 +1981,11 @@ func (this *QString) ToUtf8() *QByteArray /*123*/ {
 // Public inline
 // QByteArray toUtf8()
 func (this *QString) ToUtf8_1() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNO7QString6toUtf8Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNO7QString6toUtf8Ev", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1823,9 +1995,11 @@ func (this *QString) ToUtf8_1() *QByteArray /*123*/ {
 // Public inline
 // QByteArray toLocal8Bit()
 func (this *QString) ToLocal8Bit() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNKR7QString11toLocal8BitEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNKR7QString11toLocal8BitEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -1835,9 +2009,11 @@ func (this *QString) ToLocal8Bit() *QByteArray /*123*/ {
 // Public inline
 // QByteArray toLocal8Bit()
 func (this *QString) ToLocal8Bit_1() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNO7QString11toLocal8BitEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNO7QString11toLocal8BitEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -2063,7 +2239,7 @@ func QString_FromWCharArray(string unsafe.Pointer /*666*/, size int) *QString /*
 // QString & setRawData(const class QChar *, int)
 func (this *QString) SetRawData(unicode *QChar /*444 const QChar **/, size int) *QString {
 	var convArg0 = unicode.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString10setRawDataEPK5QChari", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString10setRawDataEPK5QChari", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, size)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -2076,7 +2252,7 @@ func (this *QString) SetRawData(unicode *QChar /*444 const QChar **/, size int) 
 // QString & setUnicode(const class QChar *, int)
 func (this *QString) SetUnicode(unicode *QChar /*444 const QChar **/, size int) *QString {
 	var convArg0 = unicode.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString10setUnicodeEPK5QChari", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString10setUnicodeEPK5QChari", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, size)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -2088,7 +2264,7 @@ func (this *QString) SetUnicode(unicode *QChar /*444 const QChar **/, size int) 
 // Public inline
 // QString & setUtf16(const ushort *, int)
 func (this *QString) SetUtf16(utf16 unsafe.Pointer /*666*/, size int) *QString {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString8setUtf16EPKti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), utf16, &size)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString8setUtf16EPKti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &utf16, size)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -2101,7 +2277,7 @@ func (this *QString) SetUtf16(utf16 unsafe.Pointer /*666*/, size int) *QString {
 // int compare(const class QString &, Qt::CaseSensitivity)
 func (this *QString) Compare(s *QString, cs int) int {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7compareERKS_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7compareERKS_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -2113,7 +2289,7 @@ func (this *QString) Compare(s *QString, cs int) int {
 // int compare(class QLatin1String, Qt::CaseSensitivity)
 func (this *QString) Compare_1(other *QLatin1String /*123*/, cs int) int {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7compareE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7compareE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -2173,7 +2349,7 @@ func QString_Compare_4(s1 *QLatin1String /*123*/, s2 *QString, cs int) int {
 // int compare(const class QStringRef &, Qt::CaseSensitivity)
 func (this *QString) Compare_5(s *QStringRef, cs int) int {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7compareERK10QStringRefN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &cs)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7compareERK10QStringRefN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -2256,7 +2432,7 @@ func QString_LocaleAwareCompare_3(s1 *QString, s2 *QStringRef) int {
 // Public
 // short toShort(_Bool *, int)
 func (this *QString) ToShort(ok unsafe.Pointer /*666*/, base int) int16 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7toShortEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ok, &base)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7toShortEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int16(rv) // 111
@@ -2267,7 +2443,7 @@ func (this *QString) ToShort(ok unsafe.Pointer /*666*/, base int) int16 {
 // Public
 // ushort toUShort(_Bool *, int)
 func (this *QString) ToUShort(ok unsafe.Pointer /*666*/, base int) uint16 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8toUShortEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ok, &base)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8toUShortEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint16(rv) // 222
@@ -2278,7 +2454,7 @@ func (this *QString) ToUShort(ok unsafe.Pointer /*666*/, base int) uint16 {
 // Public
 // int toInt(_Bool *, int)
 func (this *QString) ToInt(ok unsafe.Pointer /*666*/, base int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString5toIntEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ok, &base)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString5toIntEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -2289,7 +2465,7 @@ func (this *QString) ToInt(ok unsafe.Pointer /*666*/, base int) int {
 // Public
 // uint toUInt(_Bool *, int)
 func (this *QString) ToUInt(ok unsafe.Pointer /*666*/, base int) uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString6toUIntEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ok, &base)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString6toUIntEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
@@ -2300,7 +2476,7 @@ func (this *QString) ToUInt(ok unsafe.Pointer /*666*/, base int) uint {
 // Public
 // long toLong(_Bool *, int)
 func (this *QString) ToLong(ok unsafe.Pointer /*666*/, base int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString6toLongEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ok, &base)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString6toLongEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -2311,7 +2487,7 @@ func (this *QString) ToLong(ok unsafe.Pointer /*666*/, base int) int {
 // Public
 // ulong toULong(_Bool *, int)
 func (this *QString) ToULong(ok unsafe.Pointer /*666*/, base int) uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7toULongEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ok, &base)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7toULongEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
@@ -2322,7 +2498,7 @@ func (this *QString) ToULong(ok unsafe.Pointer /*666*/, base int) uint {
 // Public
 // qlonglong toLongLong(_Bool *, int)
 func (this *QString) ToLongLong(ok unsafe.Pointer /*666*/, base int) int64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString10toLongLongEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ok, &base)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString10toLongLongEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -2333,7 +2509,7 @@ func (this *QString) ToLongLong(ok unsafe.Pointer /*666*/, base int) int64 {
 // Public
 // qulonglong toULongLong(_Bool *, int)
 func (this *QString) ToULongLong(ok unsafe.Pointer /*666*/, base int) uint64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString11toULongLongEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ok, &base)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString11toULongLongEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint64(rv) // 222
@@ -2344,7 +2520,7 @@ func (this *QString) ToULongLong(ok unsafe.Pointer /*666*/, base int) uint64 {
 // Public
 // float toFloat(_Bool *)
 func (this *QString) ToFloat(ok unsafe.Pointer /*666*/) float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7toFloatEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString7toFloatEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float32(rv) // 111
@@ -2355,7 +2531,7 @@ func (this *QString) ToFloat(ok unsafe.Pointer /*666*/) float32 {
 // Public
 // double toDouble(_Bool *)
 func (this *QString) ToDouble(ok unsafe.Pointer /*666*/) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8toDoubleEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QString8toDoubleEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float64(rv) // 111
@@ -2366,7 +2542,7 @@ func (this *QString) ToDouble(ok unsafe.Pointer /*666*/) float64 {
 // Public
 // QString & setNum(short, int)
 func (this *QString) SetNum(arg0 int16, base int) *QString {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumEsi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0, &base)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumEsi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -2378,7 +2554,7 @@ func (this *QString) SetNum(arg0 int16, base int) *QString {
 // Public
 // QString & setNum(ushort, int)
 func (this *QString) SetNum_1(arg0 uint16, base int) *QString {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumEti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0, &base)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumEti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -2390,7 +2566,7 @@ func (this *QString) SetNum_1(arg0 uint16, base int) *QString {
 // Public
 // QString & setNum(int, int)
 func (this *QString) SetNum_2(arg0 int, base int) *QString {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0, &base)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -2402,7 +2578,7 @@ func (this *QString) SetNum_2(arg0 int, base int) *QString {
 // Public
 // QString & setNum(uint, int)
 func (this *QString) SetNum_3(arg0 uint, base int) *QString {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumEji", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0, &base)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumEji", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -2414,7 +2590,7 @@ func (this *QString) SetNum_3(arg0 uint, base int) *QString {
 // Public
 // QString & setNum(long, int)
 func (this *QString) SetNum_4(arg0 int, base int) *QString {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumEli", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0, &base)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumEli", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -2426,7 +2602,7 @@ func (this *QString) SetNum_4(arg0 int, base int) *QString {
 // Public
 // QString & setNum(ulong, int)
 func (this *QString) SetNum_5(arg0 uint, base int) *QString {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumEmi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0, &base)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumEmi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -2438,7 +2614,7 @@ func (this *QString) SetNum_5(arg0 uint, base int) *QString {
 // Public
 // QString & setNum(qlonglong, int)
 func (this *QString) SetNum_6(arg0 int64, base int) *QString {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumExi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0, &base)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumExi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -2450,7 +2626,7 @@ func (this *QString) SetNum_6(arg0 int64, base int) *QString {
 // Public
 // QString & setNum(qulonglong, int)
 func (this *QString) SetNum_7(arg0 uint64, base int) *QString {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumEyi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0, &base)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumEyi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -2462,7 +2638,7 @@ func (this *QString) SetNum_7(arg0 uint64, base int) *QString {
 // Public
 // QString & setNum(float, char, int)
 func (this *QString) SetNum_8(arg0 float32, f byte, prec int) *QString {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumEfci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0, &f, &prec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumEfci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -2474,7 +2650,7 @@ func (this *QString) SetNum_8(arg0 float32, f byte, prec int) *QString {
 // Public
 // QString & setNum(double, char, int)
 func (this *QString) SetNum_9(arg0 float64, f byte, prec int) *QString {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumEdci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0, &f, &prec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QString6setNumEdci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -2821,5 +2997,25 @@ func (this *QString) IsRightToLeft() bool {
 	//  return rv
 	return rv != 0
 }
+
+type QString__SectionFlag = int
+
+const QString__SectionDefault QString__SectionFlag = 0
+const QString__SectionSkipEmpty QString__SectionFlag = 1
+const QString__SectionIncludeLeadingSep QString__SectionFlag = 2
+const QString__SectionIncludeTrailingSep QString__SectionFlag = 4
+const QString__SectionCaseInsensitiveSeps QString__SectionFlag = 8
+
+type QString__SplitBehavior = int
+
+const QString__KeepEmptyParts QString__SplitBehavior = 0
+const QString__SkipEmptyParts QString__SplitBehavior = 1
+
+type QString__NormalizationForm = int
+
+const QString__NormalizationForm_D QString__NormalizationForm = 0
+const QString__NormalizationForm_C QString__NormalizationForm = 1
+const QString__NormalizationForm_KD QString__NormalizationForm = 2
+const QString__NormalizationForm_KC QString__NormalizationForm = 3
 
 //  body block end

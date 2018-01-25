@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 14
+// extern C begin: 15
 */
 // import "C"
 import "unsafe"
@@ -59,8 +59,14 @@ func (this *QTextLength) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTextLength) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTextLengthFromPointer(cthis unsafe.Pointer) *QTextLength {
 	return &QTextLength{&qtrt.CObject{cthis}}
+}
+func (*QTextLength) NewFromPointer(cthis unsafe.Pointer) *QTextLength {
+	return NewQTextLengthFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:89
@@ -81,7 +87,7 @@ func NewQTextLength() *QTextLength {
 // void QTextLength(enum QTextLength::Type, qreal)
 func NewQTextLength_1(type_ int, value float64) *QTextLength {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLengthC2ENS_4TypeEd", ffiqt.FFI_TYPE_VOID, cthis, &type_, &value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLengthC2ENS_4TypeEd", ffiqt.FFI_TYPE_VOID, cthis, type_, value)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextLengthFromPointer(cthis)
 	return gothis
@@ -103,7 +109,7 @@ func (this *QTextLength) Type() int {
 // Public inline
 // qreal value(qreal)
 func (this *QTextLength) Value(maximumLength float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLength5valueEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &maximumLength)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLength5valueEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), maximumLength)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float64(rv) // 222
@@ -119,5 +125,11 @@ func (this *QTextLength) RawValue() float64 {
 	//  return rv
 	return float64(rv) // 222
 }
+
+type QTextLength__Type = int
+
+const QTextLength__VariableLength QTextLength__Type = 0
+const QTextLength__FixedLength QTextLength__Type = 1
+const QTextLength__PercentageLength QTextLength__Type = 2
 
 //  body block end

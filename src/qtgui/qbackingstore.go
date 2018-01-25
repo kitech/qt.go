@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 144
+// extern C begin: 145
 */
 // import "C"
 import "unsafe"
@@ -59,8 +59,14 @@ func (this *QBackingStore) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QBackingStore) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQBackingStoreFromPointer(cthis unsafe.Pointer) *QBackingStore {
 	return &QBackingStore{&qtrt.CObject{cthis}}
+}
+func (*QBackingStore) NewFromPointer(cthis unsafe.Pointer) *QBackingStore {
+	return NewQBackingStoreFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qbackingstore.h:62
@@ -136,9 +142,11 @@ func (this *QBackingStore) Resize(size *qtcore.QSize) {
 // Public
 // QSize size()
 func (this *QBackingStore) Size() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QBackingStore4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QBackingStore4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -149,7 +157,7 @@ func (this *QBackingStore) Size() *qtcore.QSize /*123*/ {
 // bool scroll(const class QRegion &, int, int)
 func (this *QBackingStore) Scroll(area *QRegion, dx int, dy int) bool {
 	var convArg0 = area.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStore6scrollERK7QRegionii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStore6scrollERK7QRegionii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, dx, dy)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -189,9 +197,11 @@ func (this *QBackingStore) SetStaticContents(region *QRegion) {
 // Public
 // QRegion staticContents()
 func (this *QBackingStore) StaticContents() *QRegion /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QBackingStore14staticContentsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QBackingStore14staticContentsEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

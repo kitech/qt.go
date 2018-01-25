@@ -55,9 +55,15 @@ func (this *QAnimationGroup) GetCthis() unsafe.Pointer {
 		return this.QAbstractAnimation.GetCthis()
 	}
 }
+func (this *QAnimationGroup) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractAnimation = NewQAbstractAnimationFromPointer(cthis)
+}
 func NewQAnimationGroupFromPointer(cthis unsafe.Pointer) *QAnimationGroup {
 	bcthis0 := NewQAbstractAnimationFromPointer(cthis)
 	return &QAnimationGroup{bcthis0}
+}
+func (*QAnimationGroup) NewFromPointer(cthis unsafe.Pointer) *QAnimationGroup {
+	return NewQAnimationGroupFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qanimationgroup.h:53
@@ -99,7 +105,7 @@ func DeleteQAnimationGroup(*QAnimationGroup) {
 // Public
 // QAbstractAnimation * animationAt(int)
 func (this *QAnimationGroup) AnimationAt(index int) *QAbstractAnimation /*444 QAbstractAnimation **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAnimationGroup11animationAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAnimationGroup11animationAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQAbstractAnimationFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -145,7 +151,7 @@ func (this *QAnimationGroup) AddAnimation(animation *QAbstractAnimation /*444 QA
 // void insertAnimation(int, class QAbstractAnimation *)
 func (this *QAnimationGroup) InsertAnimation(index int, animation *QAbstractAnimation /*444 QAbstractAnimation **/) {
 	var convArg1 = animation.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -164,7 +170,7 @@ func (this *QAnimationGroup) RemoveAnimation(animation *QAbstractAnimation /*444
 // Public
 // QAbstractAnimation * takeAnimation(int)
 func (this *QAnimationGroup) TakeAnimation(index int) *QAbstractAnimation /*444 QAbstractAnimation **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAnimationGroup13takeAnimationEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAnimationGroup13takeAnimationEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQAbstractAnimationFromPointer(unsafe.Pointer(uintptr(rv))) // 444

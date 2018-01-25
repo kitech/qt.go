@@ -55,9 +55,15 @@ func (this *QStateMachine) GetCthis() unsafe.Pointer {
 		return this.QState.GetCthis()
 	}
 }
+func (this *QStateMachine) SetCthis(cthis unsafe.Pointer) {
+	this.QState = NewQStateFromPointer(cthis)
+}
 func NewQStateMachineFromPointer(cthis unsafe.Pointer) *QStateMachine {
 	bcthis0 := NewQStateFromPointer(cthis)
 	return &QStateMachine{bcthis0}
+}
+func (*QStateMachine) NewFromPointer(cthis unsafe.Pointer) *QStateMachine {
+	return NewQStateMachineFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qstatemachine.h:59
@@ -92,7 +98,7 @@ func NewQStateMachine(parent *QObject /*444 QObject **/) *QStateMachine {
 func NewQStateMachine_1(childMode int, parent *QObject /*444 QObject **/) *QStateMachine {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachineC2EN6QState9ChildModeEP7QObject", ffiqt.FFI_TYPE_VOID, cthis, &childMode, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachineC2EN6QState9ChildModeEP7QObject", ffiqt.FFI_TYPE_VOID, cthis, childMode, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStateMachineFromPointer(cthis)
 	return gothis
@@ -143,9 +149,11 @@ func (this *QStateMachine) Error() int {
 // Public
 // QString errorString()
 func (this *QStateMachine) ErrorString() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStateMachine11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStateMachine11errorStringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -186,7 +194,7 @@ func (this *QStateMachine) IsAnimated() bool {
 // Public
 // void setAnimated(_Bool)
 func (this *QStateMachine) SetAnimated(enabled bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine11setAnimatedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &enabled)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine11setAnimatedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -226,7 +234,7 @@ func (this *QStateMachine) GlobalRestorePolicy() int {
 // Public
 // void setGlobalRestorePolicy(class QState::RestorePolicy)
 func (this *QStateMachine) SetGlobalRestorePolicy(restorePolicy int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine22setGlobalRestorePolicyEN6QState13RestorePolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &restorePolicy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine22setGlobalRestorePolicyEN6QState13RestorePolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), restorePolicy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -236,7 +244,7 @@ func (this *QStateMachine) SetGlobalRestorePolicy(restorePolicy int) {
 // void postEvent(class QEvent *, enum QStateMachine::EventPriority)
 func (this *QStateMachine) PostEvent(event *QEvent /*444 QEvent **/, priority int) {
 	var convArg0 = event.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine9postEventEP6QEventNS_13EventPriorityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &priority)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine9postEventEP6QEventNS_13EventPriorityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, priority)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -246,7 +254,7 @@ func (this *QStateMachine) PostEvent(event *QEvent /*444 QEvent **/, priority in
 // int postDelayedEvent(class QEvent *, int)
 func (this *QStateMachine) PostDelayedEvent(event *QEvent /*444 QEvent **/, delay int) int {
 	var convArg0 = event.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine16postDelayedEventEP6QEventi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &delay)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine16postDelayedEventEP6QEventi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, delay)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 111
@@ -257,7 +265,7 @@ func (this *QStateMachine) PostDelayedEvent(event *QEvent /*444 QEvent **/, dela
 // Public
 // bool cancelDelayedEvent(int)
 func (this *QStateMachine) CancelDelayedEvent(id int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine18cancelDelayedEventEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &id)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine18cancelDelayedEventEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -299,7 +307,7 @@ func (this *QStateMachine) Stop() {
 // Public
 // void setRunning(_Bool)
 func (this *QStateMachine) SetRunning(running bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine10setRunningEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &running)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine10setRunningEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), running)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -308,7 +316,7 @@ func (this *QStateMachine) SetRunning(running bool) {
 // Public
 // void runningChanged(_Bool)
 func (this *QStateMachine) RunningChanged(running bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine14runningChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &running)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine14runningChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), running)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -383,5 +391,17 @@ func (this *QStateMachine) Event(e *QEvent /*444 QEvent **/) bool {
 	//  return rv
 	return rv != 0
 }
+
+type QStateMachine__EventPriority = int
+
+const QStateMachine__NormalPriority QStateMachine__EventPriority = 0
+const QStateMachine__HighPriority QStateMachine__EventPriority = 1
+
+type QStateMachine__Error = int
+
+const QStateMachine__NoError QStateMachine__Error = 0
+const QStateMachine__NoInitialStateError QStateMachine__Error = 1
+const QStateMachine__NoDefaultStateInHistoryStateError QStateMachine__Error = 2
+const QStateMachine__NoCommonAncestorForTransitionError QStateMachine__Error = 3
 
 //  body block end

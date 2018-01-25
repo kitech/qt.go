@@ -59,9 +59,15 @@ func (this *QHelpEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QHelpEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQHelpEventFromPointer(cthis unsafe.Pointer) *QHelpEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QHelpEvent{bcthis0}
+}
+func (*QHelpEvent) NewFromPointer(cthis unsafe.Pointer) *QHelpEvent {
+	return NewQHelpEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:680
@@ -72,7 +78,7 @@ func NewQHelpEvent(type_ int, pos *qtcore.QPoint, globalPos *qtcore.QPoint) *QHe
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg1 = pos.GetCthis()
 	var convArg2 = globalPos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHelpEventC2EN6QEvent4TypeERK6QPointS4_", ffiqt.FFI_TYPE_VOID, cthis, &type_, convArg1, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHelpEventC2EN6QEvent4TypeERK6QPointS4_", ffiqt.FFI_TYPE_VOID, cthis, type_, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQHelpEventFromPointer(cthis)
 	return gothis

@@ -55,8 +55,14 @@ func (this *QPoint) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QPoint) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQPointFromPointer(cthis unsafe.Pointer) *QPoint {
 	return &QPoint{&qtrt.CObject{cthis}}
+}
+func (*QPoint) NewFromPointer(cthis unsafe.Pointer) *QPoint {
+	return NewQPointFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qpoint.h:55
@@ -77,7 +83,7 @@ func NewQPoint() *QPoint {
 // void QPoint(int, int)
 func NewQPoint_1(xpos int, ypos int) *QPoint {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPointC2Eii", ffiqt.FFI_TYPE_VOID, cthis, &xpos, &ypos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPointC2Eii", ffiqt.FFI_TYPE_VOID, cthis, xpos, ypos)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPointFromPointer(cthis)
 	return gothis
@@ -121,7 +127,7 @@ func (this *QPoint) Y() int {
 // Public inline
 // void setX(int)
 func (this *QPoint) SetX(x int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPoint4setXEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPoint4setXEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -130,7 +136,7 @@ func (this *QPoint) SetX(x int) {
 // Public inline
 // void setY(int)
 func (this *QPoint) SetY(y int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPoint4setYEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPoint4setYEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), y)
 	gopp.ErrPrint(err, rv)
 }
 

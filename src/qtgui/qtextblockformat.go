@@ -59,9 +59,15 @@ func (this *QTextBlockFormat) GetCthis() unsafe.Pointer {
 		return this.QTextFormat.GetCthis()
 	}
 }
+func (this *QTextBlockFormat) SetCthis(cthis unsafe.Pointer) {
+	this.QTextFormat = NewQTextFormatFromPointer(cthis)
+}
 func NewQTextBlockFormatFromPointer(cthis unsafe.Pointer) *QTextBlockFormat {
 	bcthis0 := NewQTextFormatFromPointer(cthis)
 	return &QTextBlockFormat{bcthis0}
+}
+func (*QTextBlockFormat) NewFromPointer(cthis unsafe.Pointer) *QTextBlockFormat {
+	return NewQTextBlockFormatFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:590
@@ -116,7 +122,7 @@ func (this *QTextBlockFormat) Alignment() int {
 // Public inline
 // void setTopMargin(qreal)
 func (this *QTextBlockFormat) SetTopMargin(margin float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat12setTopMarginEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &margin)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat12setTopMarginEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), margin)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -136,7 +142,7 @@ func (this *QTextBlockFormat) TopMargin() float64 {
 // Public inline
 // void setBottomMargin(qreal)
 func (this *QTextBlockFormat) SetBottomMargin(margin float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat15setBottomMarginEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &margin)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat15setBottomMarginEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), margin)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -156,7 +162,7 @@ func (this *QTextBlockFormat) BottomMargin() float64 {
 // Public inline
 // void setLeftMargin(qreal)
 func (this *QTextBlockFormat) SetLeftMargin(margin float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat13setLeftMarginEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &margin)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat13setLeftMarginEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), margin)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -176,7 +182,7 @@ func (this *QTextBlockFormat) LeftMargin() float64 {
 // Public inline
 // void setRightMargin(qreal)
 func (this *QTextBlockFormat) SetRightMargin(margin float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat14setRightMarginEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &margin)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat14setRightMarginEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), margin)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -196,7 +202,7 @@ func (this *QTextBlockFormat) RightMargin() float64 {
 // Public inline
 // void setTextIndent(qreal)
 func (this *QTextBlockFormat) SetTextIndent(aindent float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat13setTextIndentEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &aindent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat13setTextIndentEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), aindent)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -216,7 +222,7 @@ func (this *QTextBlockFormat) TextIndent() float64 {
 // Public inline
 // void setIndent(int)
 func (this *QTextBlockFormat) SetIndent(indent int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat9setIndentEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &indent)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat9setIndentEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), indent)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -236,7 +242,7 @@ func (this *QTextBlockFormat) Indent() int {
 // Public inline
 // void setLineHeight(qreal, int)
 func (this *QTextBlockFormat) SetLineHeight(height float64, heightType int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat13setLineHeightEdi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &height, &heightType)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat13setLineHeightEdi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), height, heightType)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -245,7 +251,7 @@ func (this *QTextBlockFormat) SetLineHeight(height float64, heightType int) {
 // Public inline
 // qreal lineHeight(qreal, qreal)
 func (this *QTextBlockFormat) LineHeight(scriptLineHeight float64, scaling float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextBlockFormat10lineHeightEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &scriptLineHeight, &scaling)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextBlockFormat10lineHeightEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), scriptLineHeight, scaling)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return float64(rv) // 222
@@ -278,7 +284,7 @@ func (this *QTextBlockFormat) LineHeightType() int {
 // Public inline
 // void setNonBreakableLines(_Bool)
 func (this *QTextBlockFormat) SetNonBreakableLines(b bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat20setNonBreakableLinesEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat20setNonBreakableLinesEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -293,6 +299,15 @@ func (this *QTextBlockFormat) NonBreakableLines() bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtGui/qtextformat.h:640
+// index:0
+// Public inline
+// void setPageBreakPolicy(QTextFormat::PageBreakFlags)
+func (this *QTextBlockFormat) SetPageBreakPolicy(flags int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat18setPageBreakPolicyE6QFlagsIN11QTextFormat13PageBreakFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qtextformat.h:642
 // index:0
 // Public inline
@@ -303,5 +318,13 @@ func (this *QTextBlockFormat) PageBreakPolicy() int {
 	//  return rv
 	return int(rv)
 }
+
+type QTextBlockFormat__LineHeightTypes = int
+
+const QTextBlockFormat__SingleHeight QTextBlockFormat__LineHeightTypes = 0
+const QTextBlockFormat__ProportionalHeight QTextBlockFormat__LineHeightTypes = 1
+const QTextBlockFormat__FixedHeight QTextBlockFormat__LineHeightTypes = 2
+const QTextBlockFormat__MinimumHeight QTextBlockFormat__LineHeightTypes = 3
+const QTextBlockFormat__LineDistanceHeight QTextBlockFormat__LineHeightTypes = 4
 
 //  body block end

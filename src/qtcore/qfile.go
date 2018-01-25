@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 6
 */
 // import "C"
 import "unsafe"
@@ -55,8 +55,14 @@ func (this *QFile) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QFile) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQFileFromPointer(cthis unsafe.Pointer) *QFile {
 	return &QFile{&qtrt.CObject{cthis}}
+}
+func (*QFile) NewFromPointer(cthis unsafe.Pointer) *QFile {
+	return NewQFileFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qfile.h:60
@@ -137,9 +143,11 @@ func DeleteQFile(*QFile) {
 // Public virtual
 // QString fileName()
 func (this *QFile) FileName() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFile8fileNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFile8fileNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -237,9 +245,11 @@ func QFile_Exists_1(fileName *QString) bool {
 // Public
 // QString readLink()
 func (this *QFile) ReadLink() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFile8readLinkEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFile8readLinkEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -266,9 +276,11 @@ func QFile_ReadLink_1(fileName *QString) *QString /*123*/ {
 // Public inline
 // QString symLinkTarget()
 func (this *QFile) SymLinkTarget() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFile13symLinkTargetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QFile13symLinkTargetEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -417,7 +429,7 @@ func (this *QFile) Size() int64 {
 // Public virtual
 // bool resize(qint64)
 func (this *QFile) Resize(sz int64) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile6resizeEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &sz)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile6resizeEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), sz)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

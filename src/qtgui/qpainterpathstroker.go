@@ -59,8 +59,14 @@ func (this *QPainterPathStroker) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QPainterPathStroker) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQPainterPathStrokerFromPointer(cthis unsafe.Pointer) *QPainterPathStroker {
 	return &QPainterPathStroker{&qtrt.CObject{cthis}}
+}
+func (*QPainterPathStroker) NewFromPointer(cthis unsafe.Pointer) *QPainterPathStroker {
+	return NewQPainterPathStrokerFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:246
@@ -102,7 +108,7 @@ func DeleteQPainterPathStroker(*QPainterPathStroker) {
 // Public
 // void setWidth(qreal)
 func (this *QPainterPathStroker) SetWidth(width float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker8setWidthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &width)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker8setWidthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -122,7 +128,7 @@ func (this *QPainterPathStroker) Width() float64 {
 // Public
 // void setCapStyle(Qt::PenCapStyle)
 func (this *QPainterPathStroker) SetCapStyle(style int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker11setCapStyleEN2Qt11PenCapStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker11setCapStyleEN2Qt11PenCapStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -142,7 +148,7 @@ func (this *QPainterPathStroker) CapStyle() int {
 // Public
 // void setJoinStyle(Qt::PenJoinStyle)
 func (this *QPainterPathStroker) SetJoinStyle(style int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker12setJoinStyleEN2Qt12PenJoinStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker12setJoinStyleEN2Qt12PenJoinStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -162,7 +168,7 @@ func (this *QPainterPathStroker) JoinStyle() int {
 // Public
 // void setMiterLimit(qreal)
 func (this *QPainterPathStroker) SetMiterLimit(length float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker13setMiterLimitEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &length)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker13setMiterLimitEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), length)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -182,7 +188,7 @@ func (this *QPainterPathStroker) MiterLimit() float64 {
 // Public
 // void setCurveThreshold(qreal)
 func (this *QPainterPathStroker) SetCurveThreshold(threshold float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker17setCurveThresholdEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &threshold)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker17setCurveThresholdEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), threshold)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -202,7 +208,7 @@ func (this *QPainterPathStroker) CurveThreshold() float64 {
 // Public
 // void setDashPattern(Qt::PenStyle)
 func (this *QPainterPathStroker) SetDashPattern(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker14setDashPatternEN2Qt8PenStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker14setDashPatternEN2Qt8PenStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -211,7 +217,7 @@ func (this *QPainterPathStroker) SetDashPattern(arg0 int) {
 // Public
 // void setDashOffset(qreal)
 func (this *QPainterPathStroker) SetDashOffset(offset float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker13setDashOffsetEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &offset)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStroker13setDashOffsetEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), offset)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -231,10 +237,12 @@ func (this *QPainterPathStroker) DashOffset() float64 {
 // Public
 // QPainterPath createStroke(const class QPainterPath &)
 func (this *QPainterPathStroker) CreateStroke(path *QPainterPath) *QPainterPath /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = path.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QPainterPathStroker12createStrokeERK12QPainterPath", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QPainterPathStroker12createStrokeERK12QPainterPath", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

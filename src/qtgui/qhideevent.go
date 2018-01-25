@@ -59,9 +59,15 @@ func (this *QHideEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QHideEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQHideEventFromPointer(cthis unsafe.Pointer) *QHideEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QHideEvent{bcthis0}
+}
+func (*QHideEvent) NewFromPointer(cthis unsafe.Pointer) *QHideEvent {
+	return NewQHideEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:501

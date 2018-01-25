@@ -55,8 +55,14 @@ func (this *QSize) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QSize) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQSizeFromPointer(cthis unsafe.Pointer) *QSize {
 	return &QSize{&qtrt.CObject{cthis}}
+}
+func (*QSize) NewFromPointer(cthis unsafe.Pointer) *QSize {
+	return NewQSizeFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qsize.h:55
@@ -77,7 +83,7 @@ func NewQSize() *QSize {
 // void QSize(int, int)
 func NewQSize_1(w int, h int) *QSize {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QSizeC2Eii", ffiqt.FFI_TYPE_VOID, cthis, &w, &h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QSizeC2Eii", ffiqt.FFI_TYPE_VOID, cthis, w, h)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSizeFromPointer(cthis)
 	return gothis
@@ -143,7 +149,7 @@ func (this *QSize) Height() int {
 // Public inline
 // void setWidth(int)
 func (this *QSize) SetWidth(w int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QSize8setWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &w)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QSize8setWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -152,7 +158,7 @@ func (this *QSize) SetWidth(w int) {
 // Public inline
 // void setHeight(int)
 func (this *QSize) SetHeight(h int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QSize9setHeightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &h)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QSize9setHeightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), h)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -170,9 +176,11 @@ func (this *QSize) Transpose() {
 // Public inline
 // QSize transposed()
 func (this *QSize) Transposed() *QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QSize10transposedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QSize10transposedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -182,7 +190,7 @@ func (this *QSize) Transposed() *QSize /*123*/ {
 // Public inline
 // void scale(int, int, Qt::AspectRatioMode)
 func (this *QSize) Scale(w int, h int, mode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QSize5scaleEiiN2Qt15AspectRatioModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &w, &h, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QSize5scaleEiiN2Qt15AspectRatioModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w, h, mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -192,7 +200,7 @@ func (this *QSize) Scale(w int, h int, mode int) {
 // void scale(const class QSize &, Qt::AspectRatioMode)
 func (this *QSize) Scale_1(s *QSize, mode int) {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QSize5scaleERKS_N2Qt15AspectRatioModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QSize5scaleERKS_N2Qt15AspectRatioModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -201,9 +209,11 @@ func (this *QSize) Scale_1(s *QSize, mode int) {
 // Public
 // QSize scaled(int, int, Qt::AspectRatioMode)
 func (this *QSize) Scaled(w int, h int, mode int) *QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QSize6scaledEiiN2Qt15AspectRatioModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &w, &h, &mode)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QSize6scaledEiiN2Qt15AspectRatioModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), w, h, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -213,10 +223,12 @@ func (this *QSize) Scaled(w int, h int, mode int) *QSize /*123*/ {
 // Public
 // QSize scaled(const class QSize &, Qt::AspectRatioMode)
 func (this *QSize) Scaled_1(s *QSize, mode int) *QSize /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QSize6scaledERKS_N2Qt15AspectRatioModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &mode)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QSize6scaledERKS_N2Qt15AspectRatioModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -226,10 +238,12 @@ func (this *QSize) Scaled_1(s *QSize, mode int) *QSize /*123*/ {
 // Public inline
 // QSize expandedTo(const class QSize &)
 func (this *QSize) ExpandedTo(arg0 *QSize) *QSize /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QSize10expandedToERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QSize10expandedToERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -239,10 +253,12 @@ func (this *QSize) ExpandedTo(arg0 *QSize) *QSize /*123*/ {
 // Public inline
 // QSize boundedTo(const class QSize &)
 func (this *QSize) BoundedTo(arg0 *QSize) *QSize /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QSize9boundedToERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QSize9boundedToERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

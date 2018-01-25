@@ -59,9 +59,15 @@ func (this *QStatusTipEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QStatusTipEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQStatusTipEventFromPointer(cthis unsafe.Pointer) *QStatusTipEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QStatusTipEvent{bcthis0}
+}
+func (*QStatusTipEvent) NewFromPointer(cthis unsafe.Pointer) *QStatusTipEvent {
+	return NewQStatusTipEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:700
@@ -91,9 +97,11 @@ func DeleteQStatusTipEvent(*QStatusTipEvent) {
 // Public inline
 // QString tip()
 func (this *QStatusTipEvent) Tip() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QStatusTipEvent3tipEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QStatusTipEvent3tipEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

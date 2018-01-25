@@ -55,8 +55,14 @@ func (this *QRegularExpressionMatchIterator) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QRegularExpressionMatchIterator) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQRegularExpressionMatchIteratorFromPointer(cthis unsafe.Pointer) *QRegularExpressionMatchIterator {
 	return &QRegularExpressionMatchIterator{&qtrt.CObject{cthis}}
+}
+func (*QRegularExpressionMatchIterator) NewFromPointer(cthis unsafe.Pointer) *QRegularExpressionMatchIterator {
+	return NewQRegularExpressionMatchIteratorFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:249
@@ -117,9 +123,11 @@ func (this *QRegularExpressionMatchIterator) HasNext() bool {
 // Public
 // QRegularExpressionMatch next()
 func (this *QRegularExpressionMatchIterator) Next() *QRegularExpressionMatch /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIterator4nextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIterator4nextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegularExpressionMatchFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -129,9 +137,11 @@ func (this *QRegularExpressionMatchIterator) Next() *QRegularExpressionMatch /*1
 // Public
 // QRegularExpressionMatch peekNext()
 func (this *QRegularExpressionMatchIterator) PeekNext() *QRegularExpressionMatch /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator8peekNextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator8peekNextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegularExpressionMatchFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -141,9 +151,11 @@ func (this *QRegularExpressionMatchIterator) PeekNext() *QRegularExpressionMatch
 // Public
 // QRegularExpression regularExpression()
 func (this *QRegularExpressionMatchIterator) RegularExpression() *QRegularExpression /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator17regularExpressionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator17regularExpressionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegularExpressionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

@@ -59,8 +59,14 @@ func (this *QTextInlineObject) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QTextInlineObject) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQTextInlineObjectFromPointer(cthis unsafe.Pointer) *QTextInlineObject {
 	return &QTextInlineObject{&qtrt.CObject{cthis}}
+}
+func (*QTextInlineObject) NewFromPointer(cthis unsafe.Pointer) *QTextInlineObject {
+	return NewQTextInlineObjectFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:72
@@ -91,9 +97,11 @@ func (this *QTextInlineObject) IsValid() bool {
 // Public
 // QRectF rect()
 func (this *QTextInlineObject) Rect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject4rectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject4rectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -158,7 +166,7 @@ func (this *QTextInlineObject) TextDirection() int {
 // Public
 // void setWidth(qreal)
 func (this *QTextInlineObject) SetWidth(w float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QTextInlineObject8setWidthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &w)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QTextInlineObject8setWidthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -167,7 +175,7 @@ func (this *QTextInlineObject) SetWidth(w float64) {
 // Public
 // void setAscent(qreal)
 func (this *QTextInlineObject) SetAscent(a float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QTextInlineObject9setAscentEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &a)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QTextInlineObject9setAscentEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -176,7 +184,7 @@ func (this *QTextInlineObject) SetAscent(a float64) {
 // Public
 // void setDescent(qreal)
 func (this *QTextInlineObject) SetDescent(d float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QTextInlineObject10setDescentEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &d)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QTextInlineObject10setDescentEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), d)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -207,9 +215,11 @@ func (this *QTextInlineObject) FormatIndex() int {
 // Public
 // QTextFormat format()
 func (this *QTextInlineObject) Format() *QTextFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject6formatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

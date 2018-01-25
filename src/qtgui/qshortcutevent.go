@@ -59,9 +59,15 @@ func (this *QShortcutEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QShortcutEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQShortcutEventFromPointer(cthis unsafe.Pointer) *QShortcutEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QShortcutEvent{bcthis0}
+}
+func (*QShortcutEvent) NewFromPointer(cthis unsafe.Pointer) *QShortcutEvent {
+	return NewQShortcutEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:767
@@ -71,7 +77,7 @@ func NewQShortcutEventFromPointer(cthis unsafe.Pointer) *QShortcutEvent {
 func NewQShortcutEvent(key *QKeySequence, id int, ambiguous bool) *QShortcutEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = key.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QShortcutEventC2ERK12QKeySequenceib", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &id, &ambiguous)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QShortcutEventC2ERK12QKeySequenceib", ffiqt.FFI_TYPE_VOID, cthis, convArg0, id, ambiguous)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQShortcutEventFromPointer(cthis)
 	return gothis

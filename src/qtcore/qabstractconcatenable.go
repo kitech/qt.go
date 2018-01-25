@@ -55,8 +55,14 @@ func (this *QAbstractConcatenable) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QAbstractConcatenable) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQAbstractConcatenableFromPointer(cthis unsafe.Pointer) *QAbstractConcatenable {
 	return &QAbstractConcatenable{&qtrt.CObject{cthis}}
+}
+func (*QAbstractConcatenable) NewFromPointer(cthis unsafe.Pointer) *QAbstractConcatenable {
+	return NewQAbstractConcatenableFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qstringbuilder.h:61

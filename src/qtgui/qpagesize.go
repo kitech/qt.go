@@ -59,8 +59,14 @@ func (this *QPageSize) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QPageSize) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQPageSizeFromPointer(cthis unsafe.Pointer) *QPageSize {
 	return &QPageSize{&qtrt.CObject{cthis}}
+}
+func (*QPageSize) NewFromPointer(cthis unsafe.Pointer) *QPageSize {
+	return NewQPageSizeFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qpagesize.h:230
@@ -81,7 +87,7 @@ func NewQPageSize() *QPageSize {
 // void QPageSize(enum QPageSize::PageSizeId)
 func NewQPageSize_1(pageSizeId int) *QPageSize {
 	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeC2ENS_10PageSizeIdE", ffiqt.FFI_TYPE_VOID, cthis, &pageSizeId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeC2ENS_10PageSizeIdE", ffiqt.FFI_TYPE_VOID, cthis, pageSizeId)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPageSizeFromPointer(cthis)
 	return gothis
@@ -95,7 +101,7 @@ func NewQPageSize_2(pointSize *qtcore.QSize, name *qtcore.QString, matchPolicy i
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = pointSize.GetCthis()
 	var convArg1 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeC2ERK5QSizeRK7QStringNS_15SizeMatchPolicyE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, &matchPolicy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeC2ERK5QSizeRK7QStringNS_15SizeMatchPolicyE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, matchPolicy)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPageSizeFromPointer(cthis)
 	return gothis
@@ -109,7 +115,7 @@ func NewQPageSize_3(size *qtcore.QSizeF, units int, name *qtcore.QString, matchP
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = size.GetCthis()
 	var convArg2 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeC2ERK6QSizeFNS_4UnitERK7QStringNS_15SizeMatchPolicyE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &units, convArg2, &matchPolicy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeC2ERK6QSizeFNS_4UnitERK7QStringNS_15SizeMatchPolicyE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, units, convArg2, matchPolicy)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPageSizeFromPointer(cthis)
 	return gothis
@@ -162,9 +168,11 @@ func (this *QPageSize) IsValid() bool {
 // Public
 // QString key()
 func (this *QPageSize) Key() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize3keyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize3keyEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -191,9 +199,11 @@ func QPageSize_Key_1(pageSizeId int) *qtcore.QString /*123*/ {
 // Public
 // QString name()
 func (this *QPageSize) Name() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -306,9 +316,11 @@ func QPageSize_WindowsId_1(pageSizeId int) int {
 // Public
 // QSizeF definitionSize()
 func (this *QPageSize) DefinitionSize() *qtcore.QSizeF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize14definitionSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize14definitionSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -362,9 +374,11 @@ func QPageSize_DefinitionUnits_1(pageSizeId int) int {
 // Public
 // QSizeF size(enum QPageSize::Unit)
 func (this *QPageSize) Size(units int) *qtcore.QSizeF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize4sizeENS_4UnitE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &units)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize4sizeENS_4UnitE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), units)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -391,9 +405,11 @@ func QPageSize_Size_1(pageSizeId int, units int) *qtcore.QSizeF /*123*/ {
 // Public
 // QSize sizePoints()
 func (this *QPageSize) SizePoints() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize10sizePointsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize10sizePointsEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -420,9 +436,11 @@ func QPageSize_SizePoints_1(pageSizeId int) *qtcore.QSize /*123*/ {
 // Public
 // QSize sizePixels(int)
 func (this *QPageSize) SizePixels(resolution int) *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize10sizePixelsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &resolution)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize10sizePixelsEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), resolution)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -449,9 +467,11 @@ func QPageSize_SizePixels_1(pageSizeId int, resolution int) *qtcore.QSize /*123*
 // Public
 // QRectF rect(enum QPageSize::Unit)
 func (this *QPageSize) Rect(units int) *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize4rectENS_4UnitE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &units)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize4rectENS_4UnitE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), units)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -461,9 +481,11 @@ func (this *QPageSize) Rect(units int) *qtcore.QRectF /*123*/ {
 // Public
 // QRect rectPoints()
 func (this *QPageSize) RectPoints() *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize10rectPointsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize10rectPointsEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -473,11 +495,158 @@ func (this *QPageSize) RectPoints() *qtcore.QRect /*123*/ {
 // Public
 // QRect rectPixels(int)
 func (this *QPageSize) RectPixels(resolution int) *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize10rectPixelsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &resolution)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize10rectPixelsEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), resolution)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
+
+type QPageSize__PageSizeId = int
+
+const QPageSize__A4 QPageSize__PageSizeId = 0
+const QPageSize__B5 QPageSize__PageSizeId = 1
+const QPageSize__Letter QPageSize__PageSizeId = 2
+const QPageSize__Legal QPageSize__PageSizeId = 3
+const QPageSize__Executive QPageSize__PageSizeId = 4
+const QPageSize__A0 QPageSize__PageSizeId = 5
+const QPageSize__A1 QPageSize__PageSizeId = 6
+const QPageSize__A2 QPageSize__PageSizeId = 7
+const QPageSize__A3 QPageSize__PageSizeId = 8
+const QPageSize__A5 QPageSize__PageSizeId = 9
+const QPageSize__A6 QPageSize__PageSizeId = 10
+const QPageSize__A7 QPageSize__PageSizeId = 11
+const QPageSize__A8 QPageSize__PageSizeId = 12
+const QPageSize__A9 QPageSize__PageSizeId = 13
+const QPageSize__B0 QPageSize__PageSizeId = 14
+const QPageSize__B1 QPageSize__PageSizeId = 15
+const QPageSize__B10 QPageSize__PageSizeId = 16
+const QPageSize__B2 QPageSize__PageSizeId = 17
+const QPageSize__B3 QPageSize__PageSizeId = 18
+const QPageSize__B4 QPageSize__PageSizeId = 19
+const QPageSize__B6 QPageSize__PageSizeId = 20
+const QPageSize__B7 QPageSize__PageSizeId = 21
+const QPageSize__B8 QPageSize__PageSizeId = 22
+const QPageSize__B9 QPageSize__PageSizeId = 23
+const QPageSize__C5E QPageSize__PageSizeId = 24
+const QPageSize__Comm10E QPageSize__PageSizeId = 25
+const QPageSize__DLE QPageSize__PageSizeId = 26
+const QPageSize__Folio QPageSize__PageSizeId = 27
+const QPageSize__Ledger QPageSize__PageSizeId = 28
+const QPageSize__Tabloid QPageSize__PageSizeId = 29
+const QPageSize__Custom QPageSize__PageSizeId = 30
+const QPageSize__A10 QPageSize__PageSizeId = 31
+const QPageSize__A3Extra QPageSize__PageSizeId = 32
+const QPageSize__A4Extra QPageSize__PageSizeId = 33
+const QPageSize__A4Plus QPageSize__PageSizeId = 34
+const QPageSize__A4Small QPageSize__PageSizeId = 35
+const QPageSize__A5Extra QPageSize__PageSizeId = 36
+const QPageSize__B5Extra QPageSize__PageSizeId = 37
+const QPageSize__JisB0 QPageSize__PageSizeId = 38
+const QPageSize__JisB1 QPageSize__PageSizeId = 39
+const QPageSize__JisB2 QPageSize__PageSizeId = 40
+const QPageSize__JisB3 QPageSize__PageSizeId = 41
+const QPageSize__JisB4 QPageSize__PageSizeId = 42
+const QPageSize__JisB5 QPageSize__PageSizeId = 43
+const QPageSize__JisB6 QPageSize__PageSizeId = 44
+const QPageSize__JisB7 QPageSize__PageSizeId = 45
+const QPageSize__JisB8 QPageSize__PageSizeId = 46
+const QPageSize__JisB9 QPageSize__PageSizeId = 47
+const QPageSize__JisB10 QPageSize__PageSizeId = 48
+const QPageSize__AnsiC QPageSize__PageSizeId = 49
+const QPageSize__AnsiD QPageSize__PageSizeId = 50
+const QPageSize__AnsiE QPageSize__PageSizeId = 51
+const QPageSize__LegalExtra QPageSize__PageSizeId = 52
+const QPageSize__LetterExtra QPageSize__PageSizeId = 53
+const QPageSize__LetterPlus QPageSize__PageSizeId = 54
+const QPageSize__LetterSmall QPageSize__PageSizeId = 55
+const QPageSize__TabloidExtra QPageSize__PageSizeId = 56
+const QPageSize__ArchA QPageSize__PageSizeId = 57
+const QPageSize__ArchB QPageSize__PageSizeId = 58
+const QPageSize__ArchC QPageSize__PageSizeId = 59
+const QPageSize__ArchD QPageSize__PageSizeId = 60
+const QPageSize__ArchE QPageSize__PageSizeId = 61
+const QPageSize__Imperial7x9 QPageSize__PageSizeId = 62
+const QPageSize__Imperial8x10 QPageSize__PageSizeId = 63
+const QPageSize__Imperial9x11 QPageSize__PageSizeId = 64
+const QPageSize__Imperial9x12 QPageSize__PageSizeId = 65
+const QPageSize__Imperial10x11 QPageSize__PageSizeId = 66
+const QPageSize__Imperial10x13 QPageSize__PageSizeId = 67
+const QPageSize__Imperial10x14 QPageSize__PageSizeId = 68
+const QPageSize__Imperial12x11 QPageSize__PageSizeId = 69
+const QPageSize__Imperial15x11 QPageSize__PageSizeId = 70
+const QPageSize__ExecutiveStandard QPageSize__PageSizeId = 71
+const QPageSize__Note QPageSize__PageSizeId = 72
+const QPageSize__Quarto QPageSize__PageSizeId = 73
+const QPageSize__Statement QPageSize__PageSizeId = 74
+const QPageSize__SuperA QPageSize__PageSizeId = 75
+const QPageSize__SuperB QPageSize__PageSizeId = 76
+const QPageSize__Postcard QPageSize__PageSizeId = 77
+const QPageSize__DoublePostcard QPageSize__PageSizeId = 78
+const QPageSize__Prc16K QPageSize__PageSizeId = 79
+const QPageSize__Prc32K QPageSize__PageSizeId = 80
+const QPageSize__Prc32KBig QPageSize__PageSizeId = 81
+const QPageSize__FanFoldUS QPageSize__PageSizeId = 82
+const QPageSize__FanFoldGerman QPageSize__PageSizeId = 83
+const QPageSize__FanFoldGermanLegal QPageSize__PageSizeId = 84
+const QPageSize__EnvelopeB4 QPageSize__PageSizeId = 85
+const QPageSize__EnvelopeB5 QPageSize__PageSizeId = 86
+const QPageSize__EnvelopeB6 QPageSize__PageSizeId = 87
+const QPageSize__EnvelopeC0 QPageSize__PageSizeId = 88
+const QPageSize__EnvelopeC1 QPageSize__PageSizeId = 89
+const QPageSize__EnvelopeC2 QPageSize__PageSizeId = 90
+const QPageSize__EnvelopeC3 QPageSize__PageSizeId = 91
+const QPageSize__EnvelopeC4 QPageSize__PageSizeId = 92
+const QPageSize__EnvelopeC6 QPageSize__PageSizeId = 93
+const QPageSize__EnvelopeC65 QPageSize__PageSizeId = 94
+const QPageSize__EnvelopeC7 QPageSize__PageSizeId = 95
+const QPageSize__Envelope9 QPageSize__PageSizeId = 96
+const QPageSize__Envelope11 QPageSize__PageSizeId = 97
+const QPageSize__Envelope12 QPageSize__PageSizeId = 98
+const QPageSize__Envelope14 QPageSize__PageSizeId = 99
+const QPageSize__EnvelopeMonarch QPageSize__PageSizeId = 100
+const QPageSize__EnvelopePersonal QPageSize__PageSizeId = 101
+const QPageSize__EnvelopeChou3 QPageSize__PageSizeId = 102
+const QPageSize__EnvelopeChou4 QPageSize__PageSizeId = 103
+const QPageSize__EnvelopeInvite QPageSize__PageSizeId = 104
+const QPageSize__EnvelopeItalian QPageSize__PageSizeId = 105
+const QPageSize__EnvelopeKaku2 QPageSize__PageSizeId = 106
+const QPageSize__EnvelopeKaku3 QPageSize__PageSizeId = 107
+const QPageSize__EnvelopePrc1 QPageSize__PageSizeId = 108
+const QPageSize__EnvelopePrc2 QPageSize__PageSizeId = 109
+const QPageSize__EnvelopePrc3 QPageSize__PageSizeId = 110
+const QPageSize__EnvelopePrc4 QPageSize__PageSizeId = 111
+const QPageSize__EnvelopePrc5 QPageSize__PageSizeId = 112
+const QPageSize__EnvelopePrc6 QPageSize__PageSizeId = 113
+const QPageSize__EnvelopePrc7 QPageSize__PageSizeId = 114
+const QPageSize__EnvelopePrc8 QPageSize__PageSizeId = 115
+const QPageSize__EnvelopePrc9 QPageSize__PageSizeId = 116
+const QPageSize__EnvelopePrc10 QPageSize__PageSizeId = 117
+const QPageSize__EnvelopeYou4 QPageSize__PageSizeId = 118
+const QPageSize__LastPageSize QPageSize__PageSizeId = 118
+const QPageSize__NPageSize QPageSize__PageSizeId = 118
+const QPageSize__NPaperSize QPageSize__PageSizeId = 118
+const QPageSize__AnsiA QPageSize__PageSizeId = 2
+const QPageSize__AnsiB QPageSize__PageSizeId = 28
+const QPageSize__EnvelopeC5 QPageSize__PageSizeId = 24
+const QPageSize__EnvelopeDL QPageSize__PageSizeId = 26
+const QPageSize__Envelope10 QPageSize__PageSizeId = 25
+
+type QPageSize__Unit = int
+
+const QPageSize__Millimeter QPageSize__Unit = 0
+const QPageSize__Point QPageSize__Unit = 1
+const QPageSize__Inch QPageSize__Unit = 2
+const QPageSize__Pica QPageSize__Unit = 3
+const QPageSize__Didot QPageSize__Unit = 4
+const QPageSize__Cicero QPageSize__Unit = 5
+
+type QPageSize__SizeMatchPolicy = int
+
+const QPageSize__FuzzyMatch QPageSize__SizeMatchPolicy = 0
+const QPageSize__FuzzyOrientationMatch QPageSize__SizeMatchPolicy = 1
+const QPageSize__ExactMatch QPageSize__SizeMatchPolicy = 2
 
 //  body block end

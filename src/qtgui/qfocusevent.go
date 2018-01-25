@@ -59,9 +59,15 @@ func (this *QFocusEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QFocusEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQFocusEventFromPointer(cthis unsafe.Pointer) *QFocusEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QFocusEvent{bcthis0}
+}
+func (*QFocusEvent) NewFromPointer(cthis unsafe.Pointer) *QFocusEvent {
+	return NewQFocusEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:389
@@ -70,7 +76,7 @@ func NewQFocusEventFromPointer(cthis unsafe.Pointer) *QFocusEvent {
 // void QFocusEvent(enum QEvent::Type, Qt::FocusReason)
 func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
 	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFocusEventC2EN6QEvent4TypeEN2Qt11FocusReasonE", ffiqt.FFI_TYPE_VOID, cthis, &type_, &reason)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFocusEventC2EN6QEvent4TypeEN2Qt11FocusReasonE", ffiqt.FFI_TYPE_VOID, cthis, type_, reason)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFocusEventFromPointer(cthis)
 	return gothis

@@ -55,8 +55,14 @@ func (this *QPointF) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QPointF) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQPointFFromPointer(cthis unsafe.Pointer) *QPointF {
 	return &QPointF{&qtrt.CObject{cthis}}
+}
+func (*QPointF) NewFromPointer(cthis unsafe.Pointer) *QPointF {
+	return NewQPointFFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qpoint.h:222
@@ -90,7 +96,7 @@ func NewQPointF_1(p *QPoint) *QPointF {
 // void QPointF(qreal, qreal)
 func NewQPointF_2(xpos float64, ypos float64) *QPointF {
 	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointFC2Edd", ffiqt.FFI_TYPE_VOID, cthis, &xpos, &ypos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointFC2Edd", ffiqt.FFI_TYPE_VOID, cthis, xpos, ypos)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPointFFromPointer(cthis)
 	return gothis
@@ -145,7 +151,7 @@ func (this *QPointF) Y() float64 {
 // Public inline
 // void setX(qreal)
 func (this *QPointF) SetX(x float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointF4setXEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointF4setXEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -154,7 +160,7 @@ func (this *QPointF) SetX(x float64) {
 // Public inline
 // void setY(qreal)
 func (this *QPointF) SetY(y float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointF4setYEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointF4setYEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), y)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -201,9 +207,11 @@ func QPointF_DotProduct(p1 *QPointF, p2 *QPointF) float64 {
 // Public inline
 // QPoint toPoint()
 func (this *QPointF) ToPoint() *QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF7toPointEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF7toPointEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

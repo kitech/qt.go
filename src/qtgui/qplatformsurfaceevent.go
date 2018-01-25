@@ -59,9 +59,15 @@ func (this *QPlatformSurfaceEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QPlatformSurfaceEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQPlatformSurfaceEventFromPointer(cthis unsafe.Pointer) *QPlatformSurfaceEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QPlatformSurfaceEvent{bcthis0}
+}
+func (*QPlatformSurfaceEvent) NewFromPointer(cthis unsafe.Pointer) *QPlatformSurfaceEvent {
+	return NewQPlatformSurfaceEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:451
@@ -70,7 +76,7 @@ func NewQPlatformSurfaceEventFromPointer(cthis unsafe.Pointer) *QPlatformSurface
 // void QPlatformSurfaceEvent(enum QPlatformSurfaceEvent::SurfaceEventType)
 func NewQPlatformSurfaceEvent(surfaceEventType int) *QPlatformSurfaceEvent {
 	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventC2ENS_16SurfaceEventTypeE", ffiqt.FFI_TYPE_VOID, cthis, &surfaceEventType)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventC2ENS_16SurfaceEventTypeE", ffiqt.FFI_TYPE_VOID, cthis, surfaceEventType)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPlatformSurfaceEventFromPointer(cthis)
 	return gothis
@@ -95,5 +101,10 @@ func (this *QPlatformSurfaceEvent) SurfaceEventType() int {
 	//  return rv
 	return int(rv)
 }
+
+type QPlatformSurfaceEvent__SurfaceEventType = int
+
+const QPlatformSurfaceEvent__SurfaceCreated QPlatformSurfaceEvent__SurfaceEventType = 0
+const QPlatformSurfaceEvent__SurfaceAboutToBeDestroyed QPlatformSurfaceEvent__SurfaceEventType = 1
 
 //  body block end

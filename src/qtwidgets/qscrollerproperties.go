@@ -63,8 +63,14 @@ func (this *QScrollerProperties) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QScrollerProperties) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQScrollerPropertiesFromPointer(cthis unsafe.Pointer) *QScrollerProperties {
 	return &QScrollerProperties{&qtrt.CObject{cthis}}
+}
+func (*QScrollerProperties) NewFromPointer(cthis unsafe.Pointer) *QScrollerProperties {
+	return NewQScrollerPropertiesFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:60
@@ -119,9 +125,11 @@ func QScrollerProperties_UnsetDefaultScrollerProperties() {
 // Public
 // QVariant scrollMetric(enum QScrollerProperties::ScrollMetric)
 func (this *QScrollerProperties) ScrollMetric(metric int) *qtcore.QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollerProperties12scrollMetricENS_12ScrollMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &metric)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollerProperties12scrollMetricENS_12ScrollMetricE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), metric)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -132,8 +140,45 @@ func (this *QScrollerProperties) ScrollMetric(metric int) *qtcore.QVariant /*123
 // void setScrollMetric(enum QScrollerProperties::ScrollMetric, const class QVariant &)
 func (this *QScrollerProperties) SetScrollMetric(metric int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerProperties15setScrollMetricENS_12ScrollMetricERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &metric, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerProperties15setScrollMetricENS_12ScrollMetricERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), metric, convArg1)
 	gopp.ErrPrint(err, rv)
 }
+
+type QScrollerProperties__OvershootPolicy = int
+
+const QScrollerProperties__OvershootWhenScrollable QScrollerProperties__OvershootPolicy = 0
+const QScrollerProperties__OvershootAlwaysOff QScrollerProperties__OvershootPolicy = 1
+const QScrollerProperties__OvershootAlwaysOn QScrollerProperties__OvershootPolicy = 2
+
+type QScrollerProperties__FrameRates = int
+
+const QScrollerProperties__Standard QScrollerProperties__FrameRates = 0
+const QScrollerProperties__Fps60 QScrollerProperties__FrameRates = 1
+const QScrollerProperties__Fps30 QScrollerProperties__FrameRates = 2
+const QScrollerProperties__Fps20 QScrollerProperties__FrameRates = 3
+
+type QScrollerProperties__ScrollMetric = int
+
+const QScrollerProperties__MousePressEventDelay QScrollerProperties__ScrollMetric = 0
+const QScrollerProperties__DragStartDistance QScrollerProperties__ScrollMetric = 1
+const QScrollerProperties__DragVelocitySmoothingFactor QScrollerProperties__ScrollMetric = 2
+const QScrollerProperties__AxisLockThreshold QScrollerProperties__ScrollMetric = 3
+const QScrollerProperties__ScrollingCurve QScrollerProperties__ScrollMetric = 4
+const QScrollerProperties__DecelerationFactor QScrollerProperties__ScrollMetric = 5
+const QScrollerProperties__MinimumVelocity QScrollerProperties__ScrollMetric = 6
+const QScrollerProperties__MaximumVelocity QScrollerProperties__ScrollMetric = 7
+const QScrollerProperties__MaximumClickThroughVelocity QScrollerProperties__ScrollMetric = 8
+const QScrollerProperties__AcceleratingFlickMaximumTime QScrollerProperties__ScrollMetric = 9
+const QScrollerProperties__AcceleratingFlickSpeedupFactor QScrollerProperties__ScrollMetric = 10
+const QScrollerProperties__SnapPositionRatio QScrollerProperties__ScrollMetric = 11
+const QScrollerProperties__SnapTime QScrollerProperties__ScrollMetric = 12
+const QScrollerProperties__OvershootDragResistanceFactor QScrollerProperties__ScrollMetric = 13
+const QScrollerProperties__OvershootDragDistanceFactor QScrollerProperties__ScrollMetric = 14
+const QScrollerProperties__OvershootScrollDistanceFactor QScrollerProperties__ScrollMetric = 15
+const QScrollerProperties__OvershootScrollTime QScrollerProperties__ScrollMetric = 16
+const QScrollerProperties__HorizontalOvershootPolicy QScrollerProperties__ScrollMetric = 17
+const QScrollerProperties__VerticalOvershootPolicy QScrollerProperties__ScrollMetric = 18
+const QScrollerProperties__FrameRate QScrollerProperties__ScrollMetric = 19
+const QScrollerProperties__ScrollMetricCount QScrollerProperties__ScrollMetric = 20
 
 //  body block end

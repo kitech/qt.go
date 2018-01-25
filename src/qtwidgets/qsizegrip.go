@@ -63,9 +63,15 @@ func (this *QSizeGrip) GetCthis() unsafe.Pointer {
 		return this.QWidget.GetCthis()
 	}
 }
+func (this *QSizeGrip) SetCthis(cthis unsafe.Pointer) {
+	this.QWidget = NewQWidgetFromPointer(cthis)
+}
 func NewQSizeGripFromPointer(cthis unsafe.Pointer) *QSizeGrip {
 	bcthis0 := NewQWidgetFromPointer(cthis)
 	return &QSizeGrip{bcthis0}
+}
+func (*QSizeGrip) NewFromPointer(cthis unsafe.Pointer) *QSizeGrip {
+	return NewQSizeGripFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qsizegrip.h:53
@@ -107,9 +113,11 @@ func DeleteQSizeGrip(*QSizeGrip) {
 // Public virtual
 // QSize sizeHint()
 func (this *QSizeGrip) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSizeGrip8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSizeGrip8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -119,7 +127,7 @@ func (this *QSizeGrip) SizeHint() *qtcore.QSize /*123*/ {
 // Public virtual
 // void setVisible(_Bool)
 func (this *QSizeGrip) SetVisible(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSizeGrip10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSizeGrip10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 

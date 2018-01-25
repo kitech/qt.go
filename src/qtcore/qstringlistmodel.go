@@ -55,9 +55,15 @@ func (this *QStringListModel) GetCthis() unsafe.Pointer {
 		return this.QAbstractListModel.GetCthis()
 	}
 }
+func (this *QStringListModel) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractListModel = NewQAbstractListModelFromPointer(cthis)
+}
 func NewQStringListModelFromPointer(cthis unsafe.Pointer) *QStringListModel {
 	bcthis0 := NewQAbstractListModelFromPointer(cthis)
 	return &QStringListModel{bcthis0}
+}
+func (*QStringListModel) NewFromPointer(cthis unsafe.Pointer) *QStringListModel {
+	return NewQStringListModelFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qstringlistmodel.h:53
@@ -116,10 +122,12 @@ func (this *QStringListModel) RowCount(parent *QModelIndex) int {
 // Public virtual
 // QModelIndex sibling(int, int, const class QModelIndex &)
 func (this *QStringListModel) Sibling(row int, column int, idx *QModelIndex) *QModelIndex /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg2 = idx.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel7siblingEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &column, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel7siblingEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), row, column, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -129,10 +137,12 @@ func (this *QStringListModel) Sibling(row int, column int, idx *QModelIndex) *QM
 // Public virtual
 // QVariant data(const class QModelIndex &, int)
 func (this *QStringListModel) Data(index *QModelIndex, role int) *QVariant /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel4dataERK11QModelIndexi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel4dataERK11QModelIndexi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, role)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -144,7 +154,7 @@ func (this *QStringListModel) Data(index *QModelIndex, role int) *QVariant /*123
 func (this *QStringListModel) SetData(index *QModelIndex, value *QVariant, role int) bool {
 	var convArg0 = index.GetCthis()
 	var convArg1 = value.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel7setDataERK11QModelIndexRK8QVarianti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, &role)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel7setDataERK11QModelIndexRK8QVarianti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, role)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -168,7 +178,7 @@ func (this *QStringListModel) Flags(index *QModelIndex) int {
 // bool insertRows(int, int, const class QModelIndex &)
 func (this *QStringListModel) InsertRows(row int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel10insertRowsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &count, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel10insertRowsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -180,7 +190,7 @@ func (this *QStringListModel) InsertRows(row int, count int, parent *QModelIndex
 // bool removeRows(int, int, const class QModelIndex &)
 func (this *QStringListModel) RemoveRows(row int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel10removeRowsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &row, &count, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel10removeRowsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -191,7 +201,7 @@ func (this *QStringListModel) RemoveRows(row int, count int, parent *QModelIndex
 // Public virtual
 // void sort(int, Qt::SortOrder)
 func (this *QStringListModel) Sort(column int, order int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel4sortEiN2Qt9SortOrderE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &column, &order)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel4sortEiN2Qt9SortOrderE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
 	gopp.ErrPrint(err, rv)
 }
 

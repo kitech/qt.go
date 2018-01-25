@@ -59,9 +59,15 @@ func (this *QIconDragEvent) GetCthis() unsafe.Pointer {
 		return this.QEvent.GetCthis()
 	}
 }
+func (this *QIconDragEvent) SetCthis(cthis unsafe.Pointer) {
+	this.QEvent = qtcore.NewQEventFromPointer(cthis)
+}
 func NewQIconDragEventFromPointer(cthis unsafe.Pointer) *QIconDragEvent {
 	bcthis0 := qtcore.NewQEventFromPointer(cthis)
 	return &QIconDragEvent{bcthis0}
+}
+func (*QIconDragEvent) NewFromPointer(cthis unsafe.Pointer) *QIconDragEvent {
+	return NewQIconDragEventFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qevent.h:485

@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 23
+// extern C begin: 25
 */
 // import "C"
 import "unsafe"
@@ -63,9 +63,15 @@ func (this *QSwipeGesture) GetCthis() unsafe.Pointer {
 		return this.QGesture.GetCthis()
 	}
 }
+func (this *QSwipeGesture) SetCthis(cthis unsafe.Pointer) {
+	this.QGesture = NewQGestureFromPointer(cthis)
+}
 func NewQSwipeGestureFromPointer(cthis unsafe.Pointer) *QSwipeGesture {
 	bcthis0 := NewQGestureFromPointer(cthis)
 	return &QSwipeGesture{bcthis0}
+}
+func (*QSwipeGesture) NewFromPointer(cthis unsafe.Pointer) *QSwipeGesture {
+	return NewQSwipeGestureFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:209
@@ -140,8 +146,16 @@ func (this *QSwipeGesture) SwipeAngle() float64 {
 // Public
 // void setSwipeAngle(qreal)
 func (this *QSwipeGesture) SetSwipeAngle(value float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSwipeGesture13setSwipeAngleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSwipeGesture13setSwipeAngleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	gopp.ErrPrint(err, rv)
 }
+
+type QSwipeGesture__SwipeDirection = int
+
+const QSwipeGesture__NoDirection QSwipeGesture__SwipeDirection = 0
+const QSwipeGesture__Left QSwipeGesture__SwipeDirection = 1
+const QSwipeGesture__Right QSwipeGesture__SwipeDirection = 2
+const QSwipeGesture__Up QSwipeGesture__SwipeDirection = 3
+const QSwipeGesture__Down QSwipeGesture__SwipeDirection = 4
 
 //  body block end

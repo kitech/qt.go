@@ -63,9 +63,15 @@ func (this *QStyleOptionSpinBox) GetCthis() unsafe.Pointer {
 		return this.QStyleOptionComplex.GetCthis()
 	}
 }
+func (this *QStyleOptionSpinBox) SetCthis(cthis unsafe.Pointer) {
+	this.QStyleOptionComplex = NewQStyleOptionComplexFromPointer(cthis)
+}
 func NewQStyleOptionSpinBoxFromPointer(cthis unsafe.Pointer) *QStyleOptionSpinBox {
 	bcthis0 := NewQStyleOptionComplexFromPointer(cthis)
 	return &QStyleOptionSpinBox{bcthis0}
+}
+func (*QStyleOptionSpinBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionSpinBox {
+	return NewQStyleOptionSpinBoxFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:552
@@ -86,10 +92,18 @@ func NewQStyleOptionSpinBox() *QStyleOptionSpinBox {
 // void QStyleOptionSpinBox(int)
 func NewQStyleOptionSpinBox_1(version int) *QStyleOptionSpinBox {
 	cthis := qtrt.Calloc(1, 256) // 88
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ei", ffiqt.FFI_TYPE_VOID, cthis, &version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionSpinBoxFromPointer(cthis)
 	return gothis
 }
+
+type QStyleOptionSpinBox__StyleOptionType = int
+
+const QStyleOptionSpinBox__Type QStyleOptionSpinBox__StyleOptionType = 983042
+
+type QStyleOptionSpinBox__StyleOptionVersion = int
+
+const QStyleOptionSpinBox__Version QStyleOptionSpinBox__StyleOptionVersion = 1
 
 //  body block end

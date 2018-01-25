@@ -63,9 +63,15 @@ func (this *QColumnView) GetCthis() unsafe.Pointer {
 		return this.QAbstractItemView.GetCthis()
 	}
 }
+func (this *QColumnView) SetCthis(cthis unsafe.Pointer) {
+	this.QAbstractItemView = NewQAbstractItemViewFromPointer(cthis)
+}
 func NewQColumnViewFromPointer(cthis unsafe.Pointer) *QColumnView {
 	bcthis0 := NewQAbstractItemViewFromPointer(cthis)
 	return &QColumnView{bcthis0}
+}
+func (*QColumnView) NewFromPointer(cthis unsafe.Pointer) *QColumnView {
+	return NewQColumnViewFromPointer(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qcolumnview.h:54
@@ -117,10 +123,12 @@ func DeleteQColumnView(*QColumnView) {
 // Public virtual
 // QModelIndex indexAt(const class QPoint &)
 func (this *QColumnView) IndexAt(point *qtcore.QPoint) *qtcore.QModelIndex /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = point.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QColumnView7indexAtERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QColumnView7indexAtERK6QPoint", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -131,7 +139,7 @@ func (this *QColumnView) IndexAt(point *qtcore.QPoint) *qtcore.QModelIndex /*123
 // void scrollTo(const class QModelIndex &, enum QAbstractItemView::ScrollHint)
 func (this *QColumnView) ScrollTo(index *qtcore.QModelIndex, hint int) {
 	var convArg0 = index.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView8scrollToERK11QModelIndexN17QAbstractItemView10ScrollHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &hint)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView8scrollToERK11QModelIndexN17QAbstractItemView10ScrollHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -140,9 +148,11 @@ func (this *QColumnView) ScrollTo(index *qtcore.QModelIndex, hint int) {
 // Public virtual
 // QSize sizeHint()
 func (this *QColumnView) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QColumnView8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QColumnView8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -152,10 +162,12 @@ func (this *QColumnView) SizeHint() *qtcore.QSize /*123*/ {
 // Public virtual
 // QRect visualRect(const class QModelIndex &)
 func (this *QColumnView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QColumnView10visualRectERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QColumnView10visualRectERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -204,7 +216,7 @@ func (this *QColumnView) SelectAll() {
 // Public
 // void setResizeGripsVisible(_Bool)
 func (this *QColumnView) SetResizeGripsVisible(visible bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView21setResizeGripsVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &visible)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView21setResizeGripsVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -263,15 +275,27 @@ func (this *QColumnView) ResizeEvent(event *qtgui.QResizeEvent /*444 QResizeEven
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qcolumnview.h:91
+// index:0
+// Protected virtual
+// void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
+func (this *QColumnView) SetSelection(rect *qtcore.QRect, command int) {
+	var convArg0 = rect.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView12setSelectionERK5QRect6QFlagsIN19QItemSelectionModel13SelectionFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qcolumnview.h:92
 // index:0
 // Protected virtual
 // QRegion visualRegionForSelection(const class QItemSelection &)
 func (this *QColumnView) VisualRegionForSelection(selection *qtcore.QItemSelection) *qtgui.QRegion /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = selection.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QColumnView24visualRegionForSelectionERK14QItemSelection", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QColumnView24visualRegionForSelectionERK14QItemSelection", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -304,7 +328,7 @@ func (this *QColumnView) VerticalOffset() int {
 // void rowsInserted(const class QModelIndex &, int, int)
 func (this *QColumnView) RowsInserted(parent *qtcore.QModelIndex, start int, end int) {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView12rowsInsertedERK11QModelIndexii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &start, &end)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView12rowsInsertedERK11QModelIndexii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -324,7 +348,7 @@ func (this *QColumnView) CurrentChanged(current *qtcore.QModelIndex, previous *q
 // Protected virtual
 // void scrollContentsBy(int, int)
 func (this *QColumnView) ScrollContentsBy(dx int, dy int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView16scrollContentsByEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &dx, &dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView16scrollContentsByEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
 }
 

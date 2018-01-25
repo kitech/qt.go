@@ -55,8 +55,14 @@ func (this *QDir) GetCthis() unsafe.Pointer {
 		return this.Cthis
 	}
 }
+func (this *QDir) SetCthis(cthis unsafe.Pointer) {
+	this.CObject = &qtrt.CObject{cthis}
+}
 func NewQDirFromPointer(cthis unsafe.Pointer) *QDir {
 	return &QDir{&qtrt.CObject{cthis}}
+}
+func (*QDir) NewFromPointer(cthis unsafe.Pointer) *QDir {
+	return NewQDirFromPointer(cthis)
 }
 
 // /usr/include/qt/QtCore/qdir.h:102
@@ -106,9 +112,11 @@ func (this *QDir) SetPath(path *QString) {
 // Public
 // QString path()
 func (this *QDir) Path() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir4pathEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir4pathEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -118,9 +126,11 @@ func (this *QDir) Path() *QString /*123*/ {
 // Public
 // QString absolutePath()
 func (this *QDir) AbsolutePath() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir12absolutePathEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir12absolutePathEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -130,9 +140,11 @@ func (this *QDir) AbsolutePath() *QString /*123*/ {
 // Public
 // QString canonicalPath()
 func (this *QDir) CanonicalPath() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir13canonicalPathEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir13canonicalPathEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -181,9 +193,11 @@ func QDir_AddSearchPath(prefix *QString, path *QString) {
 // Public
 // QString dirName()
 func (this *QDir) DirName() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir7dirNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir7dirNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -193,10 +207,12 @@ func (this *QDir) DirName() *QString /*123*/ {
 // Public
 // QString filePath(const class QString &)
 func (this *QDir) FilePath(fileName *QString) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fileName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir8filePathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir8filePathERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -206,10 +222,12 @@ func (this *QDir) FilePath(fileName *QString) *QString /*123*/ {
 // Public
 // QString absoluteFilePath(const class QString &)
 func (this *QDir) AbsoluteFilePath(fileName *QString) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fileName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir16absoluteFilePathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir16absoluteFilePathERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -219,10 +237,12 @@ func (this *QDir) AbsoluteFilePath(fileName *QString) *QString /*123*/ {
 // Public
 // QString relativeFilePath(const class QString &)
 func (this *QDir) RelativeFilePath(fileName *QString) *QString /*123*/ {
+	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fileName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir16relativeFilePathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir16relativeFilePathERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -314,6 +334,15 @@ func (this *QDir) Sorting() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtCore/qdir.h:144
+// index:0
+// Public
+// void setSorting(QDir::SortFlags)
+func (this *QDir) SetSorting(sort int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir10setSortingE6QFlagsINS_8SortFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), sort)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qdir.h:146
@@ -764,5 +793,43 @@ func (this *QDir) Refresh() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir7refreshEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
+
+type QDir__Filter = int
+
+const QDir__Dirs QDir__Filter = 1
+const QDir__Files QDir__Filter = 2
+const QDir__Drives QDir__Filter = 4
+const QDir__NoSymLinks QDir__Filter = 8
+const QDir__AllEntries QDir__Filter = 7
+const QDir__TypeMask QDir__Filter = 15
+const QDir__Readable QDir__Filter = 16
+const QDir__Writable QDir__Filter = 32
+const QDir__Executable QDir__Filter = 64
+const QDir__PermissionMask QDir__Filter = 112
+const QDir__Modified QDir__Filter = 128
+const QDir__Hidden QDir__Filter = 256
+const QDir__System QDir__Filter = 512
+const QDir__AccessMask QDir__Filter = 1008
+const QDir__AllDirs QDir__Filter = 1024
+const QDir__CaseSensitive QDir__Filter = 2048
+const QDir__NoDot QDir__Filter = 8192
+const QDir__NoDotDot QDir__Filter = 16384
+const QDir__NoDotAndDotDot QDir__Filter = 24576
+const QDir__NoFilter QDir__Filter = 4294967295
+
+type QDir__SortFlag = int
+
+const QDir__Name QDir__SortFlag = 0
+const QDir__Time QDir__SortFlag = 1
+const QDir__Size QDir__SortFlag = 2
+const QDir__Unsorted QDir__SortFlag = 3
+const QDir__SortByMask QDir__SortFlag = 3
+const QDir__DirsFirst QDir__SortFlag = 4
+const QDir__Reversed QDir__SortFlag = 8
+const QDir__IgnoreCase QDir__SortFlag = 16
+const QDir__DirsLast QDir__SortFlag = 32
+const QDir__LocaleAware QDir__SortFlag = 64
+const QDir__Type QDir__SortFlag = 128
+const QDir__NoSort QDir__SortFlag = 4294967295
 
 //  body block end

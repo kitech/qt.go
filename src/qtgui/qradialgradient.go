@@ -59,9 +59,15 @@ func (this *QRadialGradient) GetCthis() unsafe.Pointer {
 		return this.QGradient.GetCthis()
 	}
 }
+func (this *QRadialGradient) SetCthis(cthis unsafe.Pointer) {
+	this.QGradient = NewQGradientFromPointer(cthis)
+}
 func NewQRadialGradientFromPointer(cthis unsafe.Pointer) *QRadialGradient {
 	bcthis0 := NewQGradientFromPointer(cthis)
 	return &QRadialGradient{bcthis0}
+}
+func (*QRadialGradient) NewFromPointer(cthis unsafe.Pointer) *QRadialGradient {
+	return NewQRadialGradientFromPointer(cthis)
 }
 
 // /usr/include/qt/QtGui/qbrush.h:274
@@ -84,7 +90,7 @@ func NewQRadialGradient_1(center *qtcore.QPointF, radius float64, focalPoint *qt
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = center.GetCthis()
 	var convArg2 = focalPoint.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradientC2ERK7QPointFdS2_", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &radius, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradientC2ERK7QPointFdS2_", ffiqt.FFI_TYPE_VOID, cthis, convArg0, radius, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRadialGradientFromPointer(cthis)
 	return gothis
@@ -96,7 +102,7 @@ func NewQRadialGradient_1(center *qtcore.QPointF, radius float64, focalPoint *qt
 // void QRadialGradient(qreal, qreal, qreal, qreal, qreal)
 func NewQRadialGradient_2(cx float64, cy float64, radius float64, fx float64, fy float64) *QRadialGradient {
 	cthis := qtrt.Calloc(1, 256) // 64
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradientC2Eddddd", ffiqt.FFI_TYPE_VOID, cthis, &cx, &cy, &radius, &fx, &fy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradientC2Eddddd", ffiqt.FFI_TYPE_VOID, cthis, cx, cy, radius, fx, fy)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRadialGradientFromPointer(cthis)
 	return gothis
@@ -109,7 +115,7 @@ func NewQRadialGradient_2(cx float64, cy float64, radius float64, fx float64, fy
 func NewQRadialGradient_3(center *qtcore.QPointF, radius float64) *QRadialGradient {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = center.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradientC2ERK7QPointFd", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &radius)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradientC2ERK7QPointFd", ffiqt.FFI_TYPE_VOID, cthis, convArg0, radius)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRadialGradientFromPointer(cthis)
 	return gothis
@@ -121,7 +127,7 @@ func NewQRadialGradient_3(center *qtcore.QPointF, radius float64) *QRadialGradie
 // void QRadialGradient(qreal, qreal, qreal)
 func NewQRadialGradient_4(cx float64, cy float64, radius float64) *QRadialGradient {
 	cthis := qtrt.Calloc(1, 256) // 64
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradientC2Eddd", ffiqt.FFI_TYPE_VOID, cthis, &cx, &cy, &radius)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradientC2Eddd", ffiqt.FFI_TYPE_VOID, cthis, cx, cy, radius)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRadialGradientFromPointer(cthis)
 	return gothis
@@ -135,7 +141,7 @@ func NewQRadialGradient_5(center *qtcore.QPointF, centerRadius float64, focalPoi
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = center.GetCthis()
 	var convArg2 = focalPoint.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradientC2ERK7QPointFdS2_d", ffiqt.FFI_TYPE_VOID, cthis, convArg0, &centerRadius, convArg2, &focalRadius)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradientC2ERK7QPointFdS2_d", ffiqt.FFI_TYPE_VOID, cthis, convArg0, centerRadius, convArg2, focalRadius)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRadialGradientFromPointer(cthis)
 	return gothis
@@ -147,7 +153,7 @@ func NewQRadialGradient_5(center *qtcore.QPointF, centerRadius float64, focalPoi
 // void QRadialGradient(qreal, qreal, qreal, qreal, qreal, qreal)
 func NewQRadialGradient_6(cx float64, cy float64, centerRadius float64, fx float64, fy float64, focalRadius float64) *QRadialGradient {
 	cthis := qtrt.Calloc(1, 256) // 64
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradientC2Edddddd", ffiqt.FFI_TYPE_VOID, cthis, &cx, &cy, &centerRadius, &fx, &fy, &focalRadius)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradientC2Edddddd", ffiqt.FFI_TYPE_VOID, cthis, cx, cy, centerRadius, fx, fy, focalRadius)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRadialGradientFromPointer(cthis)
 	return gothis
@@ -158,9 +164,11 @@ func NewQRadialGradient_6(cx float64, cy float64, centerRadius float64, fx float
 // Public
 // QPointF center()
 func (this *QRadialGradient) Center() *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QRadialGradient6centerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QRadialGradient6centerEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -180,7 +188,7 @@ func (this *QRadialGradient) SetCenter(center *qtcore.QPointF) {
 // Public inline
 // void setCenter(qreal, qreal)
 func (this *QRadialGradient) SetCenter_1(x float64, y float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradient9setCenterEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradient9setCenterEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -189,9 +197,11 @@ func (this *QRadialGradient) SetCenter_1(x float64, y float64) {
 // Public
 // QPointF focalPoint()
 func (this *QRadialGradient) FocalPoint() *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QRadialGradient10focalPointEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QRadialGradient10focalPointEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
+	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
@@ -211,7 +221,7 @@ func (this *QRadialGradient) SetFocalPoint(focalPoint *qtcore.QPointF) {
 // Public inline
 // void setFocalPoint(qreal, qreal)
 func (this *QRadialGradient) SetFocalPoint_1(x float64, y float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradient13setFocalPointEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &x, &y)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradient13setFocalPointEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -231,7 +241,7 @@ func (this *QRadialGradient) Radius() float64 {
 // Public
 // void setRadius(qreal)
 func (this *QRadialGradient) SetRadius(radius float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradient9setRadiusEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &radius)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradient9setRadiusEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), radius)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -251,7 +261,7 @@ func (this *QRadialGradient) CenterRadius() float64 {
 // Public
 // void setCenterRadius(qreal)
 func (this *QRadialGradient) SetCenterRadius(radius float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradient15setCenterRadiusEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &radius)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradient15setCenterRadiusEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), radius)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -271,7 +281,7 @@ func (this *QRadialGradient) FocalRadius() float64 {
 // Public
 // void setFocalRadius(qreal)
 func (this *QRadialGradient) SetFocalRadius(radius float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradient14setFocalRadiusEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &radius)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradient14setFocalRadiusEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), radius)
 	gopp.ErrPrint(err, rv)
 }
 
