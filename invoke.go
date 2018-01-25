@@ -8,6 +8,7 @@ package ffiqt
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <string.h>
 
 #include "ffi.h"
 
@@ -121,7 +122,7 @@ func InvokeQtFuncByName(symname string, args []uint64, types []int) uint64 {
 
 ////////
 type Type = ffi.Type
-type VRetype = interface{}
+type VRetype = uint64 // interface{}
 
 var libs = map[string]ffi.Library{}
 
@@ -158,9 +159,9 @@ func InvokeQtFunc(symname string, retype byte, types []byte, args ...interface{}
 		log.Println("FFI Call:", modname, symname, addr)
 		// C.ffi_call_0(addr)
 		C.ffi_call_1(addr)
-		return nil, nil
+		return 0, nil
 	}
-	return nil, fmt.Errorf("Symbol not found: %s", symname)
+	return 0, fmt.Errorf("Symbol not found: %s", symname)
 }
 
 func InvokeQtFunc5(symname string, retype byte, argc int, types []byte, args []uint64) (VRetype, error) {
@@ -226,6 +227,9 @@ func convArg(argx interface{}) (argty byte, argval uint64) {
 	case reflect.Int:
 		argty = FFI_TYPE_INT
 		argval = uint64(argx.(int))
+	case reflect.Bool:
+		argty = FFI_TYPE_INT
+		argval = uint64(gopp.IfElseInt(argx.(bool), 1, 0))
 	case reflect.Ptr:
 		argty = FFI_TYPE_POINTER
 		argval = uint64(av.Pointer())
