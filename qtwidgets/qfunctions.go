@@ -2,10 +2,10 @@ package qtwidgets
 
 import "unsafe"
 import "mkuse/cffiqt"
-import "qtrt"
 import "gopp"
-import "qtcore"
-import "qtgui"
+import "qt.go/qtrt"
+import "qt.go/qtcore"
+import "qt.go/qtgui"
 
 func init() {
 	if false {
@@ -13,6 +13,12 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
 	}
 	if false {
 		qtcore.KeepMe()

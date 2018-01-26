@@ -16,11 +16,11 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "qtrt"
 import "mkuse/cffiqt"
 import "gopp"
-import "qtcore"
-import "qtgui"
+import "qt.go/qtrt"
+import "qt.go/qtcore"
+import "qt.go/qtgui"
 
 func init() {
 	if false {

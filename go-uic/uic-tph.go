@@ -39,10 +39,10 @@ func main() {
 	lines := strings.Split(string(bcc), "\n")
 	log.Println("lines:", len(lines), "size:", len(bcc))
 
-	cp.APf("header", "import \"qtcore\"")
-	cp.APf("header", "import \"qtgui\"")
-	cp.APf("header", "import \"qtwidgets\"")
-	cp.APf("header", "import \"qtmock\"")
+	cp.APf("header", "import \"qt.go/qtcore\"")
+	cp.APf("header", "import \"qt.go/qtgui\"")
+	cp.APf("header", "import \"qt.go/qtwidgets\"")
+	cp.APf("header", "import \"qt.go/qtmock\"")
 
 	insection := INSEC_NONE
 	for _, line := range lines {

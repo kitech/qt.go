@@ -34,8 +34,8 @@ func main() {
 	lines := strings.Split(string(bcc), "\n")
 	log.Println("lines:", len(lines), "size:", len(bcc))
 
-	cp.APf("header", "// import \"qtcore\"")
-	cp.APf("header", "import \"qtmock\"")
+	cp.APf("header", "// import \"qt.go/qtcore\"")
+	cp.APf("header", "import \"qt.go/qtmock\"")
 	cp.APf("header", "import \"unsafe\"")
 
 	insection := INSEC_NONE

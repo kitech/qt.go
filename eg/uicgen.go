@@ -2,7 +2,8 @@ package main
 
 import (
 	"log"
-	"qtwidgets"
+
+	"qt.go/qtwidgets"
 )
 
 func logp(args ...interface{}) { log.Println(args...) }

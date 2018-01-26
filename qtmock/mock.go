@@ -2,8 +2,9 @@ package qtmock
 
 import (
 	"mkuse/cffiqt"
-	"qtcore"
 	"unsafe"
+
+	"qt.go/qtcore"
 )
 
 func KeepMe() {}

@@ -16,9 +16,9 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "qtrt"
 import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/qtrt"
 
 func init() {
 	if false {

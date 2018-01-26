@@ -2,8 +2,8 @@ package qtcore
 
 import "unsafe"
 import "mkuse/cffiqt"
-import "qtrt"
 import "gopp"
+import "qt.go/qtrt"
 
 func init() {
 	if false {
@@ -11,6 +11,12 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
+	}
+	if false {
+		ffiqt.KeepMe()
+	}
+	if false {
+		gopp.KeepMe()
 	}
 }
 
