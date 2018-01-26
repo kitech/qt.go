@@ -31,13 +31,13 @@ const (
 func main() {
 	log.SetFlags(log.Flags() | log.Lshortfile)
 	file = os.Args[1]
-	filep = file[:len(file)-2]
+	filep = file[0:strings.LastIndex(file, ".")]
 	log.Println(file, filep)
 
 	bcc, err := ioutil.ReadFile(file)
 	gopp.ErrPrint(err, file)
 	lines := strings.Split(string(bcc), "\n")
-	log.Println(len(lines))
+	log.Println("lines:", len(lines), "size:", len(bcc))
 
 	cp.APf("header", "import \"qtcore\"")
 	cp.APf("header", "import \"qtgui\"")
@@ -150,8 +150,8 @@ func onSetupUi(line string) {
 		reg1 := regexp.MustCompile(`(.*) = new (Q.*)\(([0-9A-Za-z_]*)?\);`)
 		reg2 := regexp.MustCompile(`(.*)->setObjectName\(QStringLiteral\((.+)\)\);`)
 		reg3 := regexp.MustCompile(`(.*)->(set.+Size)\(QSize\((.+)\)\);`)
-		reg4 := regexp.MustCompile(`(.*)->set(.+)\((.+)\);`)
-		reg5 := regexp.MustCompile(`(.*)->(add.+)\((.+)\);`)
+		reg4 := regexp.MustCompile(`([^->]+)[->.]+set([^(]+)\((.+)\);`)
+		reg5 := regexp.MustCompile(`([^->]+)[->.]+(add[^(]+)\((.+)\);`)
 		reg6 := regexp.MustCompile(`(Q[A-Z][iconfont]+) ([iconfont0-9]+);`)
 		reg7 := regexp.MustCompile(`QSizePolicy (.+)\((.+), (.+)\);`)
 		reg8 := regexp.MustCompile(`(.+) = new (QSpacerItem)\(([0-9]+), ([0-9]+), (.+), (.+)\);`)
@@ -206,10 +206,11 @@ func onSetupUi(line string) {
 			refmtval := strings.Title(mats[0][3])
 			refmtsuf := ""
 			switch mats[0][2] {
-			case "Spacing":
+			case "Spacing", "HorizontalStretch", "VerticalStretch":
+			case "PointSize", "Weight": // do nothing
+			case "ContentsMargins":
 			case "Orientation":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
-			case "ContentsMargins":
 			case "TextInteractionFlags":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 				refmtval = strings.Replace(refmtval, "|", "|qtcore.", -1)
@@ -217,9 +218,8 @@ func onSetupUi(line string) {
 				refmtval = strings.ToLower(refmtval[0:1]) + refmtval[1:]
 			case "ToolButtonStyle":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
-			case "Geometry(QRect":
-				refmtname = "Geometry"
-				refmtval = strings.TrimRight(refmtval, ")")
+			case "Geometry":
+				refmtval = strings.TrimRight(refmtval[6:], ")")
 			case "HorizontalScrollBarPolicy":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 			case "MaximumSize", "MinimumSize":
@@ -227,21 +227,23 @@ func onSetupUi(line string) {
 			case "Widget":
 				// refmtname = "this." + refmtname
 				refmtval = "this." + strings.Title(refmtval)
+			case "Bold":
+				refmtval = untitle(refmtval) // True => true
+			case "Pixmap":
+				refmtval = fmt.Sprintf("qtgui.NewQPixmap_3(qtcore.NewQString_5(\"%s\"), \"dummy123\", 0)", strings.Split(refmtval, "\"")[1])
+			case "HeightForWidth":
+				refmtval = "this." + strings.Replace(refmtval, "->", ".", -1)
+				refmtval = "false" // TODO label_x.SizePolicy().HasHeightForWidth() crash
 			default:
 				log.Println(line, refmtname)
-				if strings.HasPrefix(refmtname, "Pixmap") {
-					refmtname = "Pixmap"
-					refmtval = strings.TrimRight(refmtval, ")")
-					refmtval = fmt.Sprintf("qtgui.NewQPixmap_3(qtcore.NewQString_5(%s), \"dummy123\", 0)", refmtval)
-				} else {
-					refmtval = "this." + refmtval
-				}
+				refmtval = "this." + refmtval
 			}
 			cp.APf("setupUi", "this.%s.Set%s%s(%s) // 114",
 				strings.Title(mats[0][1]), refmtname, refmtsuf, refmtval)
 		} else if reg5.MatchString(line) {
 			mats := reg5.FindAllStringSubmatch(line, -1)
 			log.Println(mats)
+			refmtname := strings.Title(mats[0][2])
 			refmtval := strings.Title(mats[0][3])
 			switch mats[0][2] {
 			case "addWidget":
@@ -250,11 +252,22 @@ func onSetupUi(line string) {
 				refmtval = fmt.Sprintf("qtwidgets.NewQLayoutFromPointer(this.%s.GetCthis()), 0", refmtval)
 			case "addItem":
 				refmtval = fmt.Sprintf("qtwidgets.NewQLayoutItemFromPointer(this.%s.GetCthis())", refmtval)
+			case "addFile":
+				parts := strings.Split(refmtval, ", ")
+				alst := []string{}
+				log.Println(strings.Split(mats[0][3], "\""))
+				icores := strings.Split(mats[0][3], "\"")[1]
+				alst = append(alst, fmt.Sprintf("qtcore.NewQString_5(\"%s\")", icores))
+				alst = append(alst, "qtcore.NewQSize()")
+				alst = append(alst, "qtgui."+colon2uline(parts[2]))
+				alst = append(alst, "qtgui."+colon2uline(parts[3]))
+				refmtval = strings.Join(alst, ", ")
+				refmtname = "AddFile"
 			default:
 				refmtval = "this." + refmtval
 			}
 			cp.APf("setupUi", "this.%s.%s(%s) // 115",
-				strings.Title(mats[0][1]), strings.Title(mats[0][2]), refmtval)
+				strings.Title(mats[0][1]), refmtname, refmtval)
 		} else if reg6.MatchString(line) {
 			mats := reg6.FindAllStringSubmatch(line, -1)
 			log.Println(mats, line)
@@ -292,6 +305,7 @@ func onRetranslateUi(line string) {
 		mats := reg1.FindAllStringSubmatch(line, -1)
 		log.Println(mats)
 		cp.APf("retranslateUi",
+			// TODO qtcore.QCoreApplication_Translate crash
 			"this.%s.%s(qtmock.QCoreApplication_Translate(\"%s\", \"%s\", \"dummy123\", 0))",
 			strings.Title(mats[0][1]), strings.Title(mats[0][2]), mats[0][3], mats[0][4])
 	}
@@ -306,3 +320,6 @@ func saveCode() {
 	code += cp.ExportAll()
 	ioutil.WriteFile(fmt.Sprintf("%s.go", filep), []byte(code), mod)
 }
+
+func colon2uline(s string) string { return strings.Replace(s, ":", "_", -1) }
+func untitle(s string) string     { return strings.ToLower(s[0:1]) + s[1:] }
