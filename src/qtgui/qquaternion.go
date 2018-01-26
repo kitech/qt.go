@@ -402,7 +402,7 @@ func (this *QQuaternion) ToVector4D() *QVector4D /*123*/ {
 // index:0
 // Public inline
 // void getAxisAndAngle(class QVector3D *, float *)
-func (this *QQuaternion) GetAxisAndAngle(axis *QVector3D /*444 QVector3D **/, angle unsafe.Pointer /*666*/) {
+func (this *QQuaternion) GetAxisAndAngle(axis *QVector3D /*777 QVector3D **/, angle unsafe.Pointer /*666*/) {
 	var convArg0 = axis.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion15getAxisAndAngleEP9QVector3DPf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &angle)
 	gopp.ErrPrint(err, rv)
@@ -512,7 +512,7 @@ func (this *QQuaternion) GetEulerAngles(pitch unsafe.Pointer /*666*/, yaw unsafe
 // index:0
 // Public
 // void getAxes(class QVector3D *, class QVector3D *, class QVector3D *)
-func (this *QQuaternion) GetAxes(xAxis *QVector3D /*444 QVector3D **/, yAxis *QVector3D /*444 QVector3D **/, zAxis *QVector3D /*444 QVector3D **/) {
+func (this *QQuaternion) GetAxes(xAxis *QVector3D /*777 QVector3D **/, yAxis *QVector3D /*777 QVector3D **/, zAxis *QVector3D /*777 QVector3D **/) {
 	var convArg0 = xAxis.GetCthis()
 	var convArg1 = yAxis.GetCthis()
 	var convArg2 = zAxis.GetCthis()

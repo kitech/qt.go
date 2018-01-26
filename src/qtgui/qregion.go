@@ -177,7 +177,7 @@ func (this *QRegion) IsNull() bool {
 // index:0
 // Public
 // QRegion::const_iterator begin()
-func (this *QRegion) Begin() *qtcore.QRect /*444 const QRect **/ {
+func (this *QRegion) Begin() *qtcore.QRect /*777 const QRect **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion5beginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -189,7 +189,7 @@ func (this *QRegion) Begin() *qtcore.QRect /*444 const QRect **/ {
 // index:0
 // Public inline
 // QRegion::const_iterator cbegin()
-func (this *QRegion) Cbegin() *qtcore.QRect /*444 const QRect **/ {
+func (this *QRegion) Cbegin() *qtcore.QRect /*777 const QRect **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion6cbeginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -201,7 +201,7 @@ func (this *QRegion) Cbegin() *qtcore.QRect /*444 const QRect **/ {
 // index:0
 // Public
 // QRegion::const_iterator end()
-func (this *QRegion) End() *qtcore.QRect /*444 const QRect **/ {
+func (this *QRegion) End() *qtcore.QRect /*777 const QRect **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -213,7 +213,7 @@ func (this *QRegion) End() *qtcore.QRect /*444 const QRect **/ {
 // index:0
 // Public inline
 // QRegion::const_iterator cend()
-func (this *QRegion) Cend() *qtcore.QRect /*444 const QRect **/ {
+func (this *QRegion) Cend() *qtcore.QRect /*777 const QRect **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion4cendEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -425,7 +425,7 @@ func (this *QRegion) BoundingRect() *qtcore.QRect /*123*/ {
 // index:0
 // Public
 // void setRects(const class QRect *, int)
-func (this *QRegion) SetRects(rect *qtcore.QRect /*444 const QRect **/, num int) {
+func (this *QRegion) SetRects(rect *qtcore.QRect /*777 const QRect **/, num int) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegion8setRectsEPK5QRecti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, num)
 	gopp.ErrPrint(err, rv)

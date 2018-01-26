@@ -70,7 +70,7 @@ func (*QFileSystemWatcher) NewFromPointer(cthis unsafe.Pointer) *QFileSystemWatc
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QFileSystemWatcher) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QFileSystemWatcher) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QFileSystemWatcher10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QFileSystemWatcher) MetaObject() *QMetaObject /*444 const QMetaObjec
 // index:0
 // Public
 // void QFileSystemWatcher(class QObject *)
-func NewQFileSystemWatcher(parent *QObject /*444 QObject **/) *QFileSystemWatcher {
+func NewQFileSystemWatcher(parent *QObject /*777 QObject **/) *QFileSystemWatcher {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFileSystemWatcherC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -95,7 +95,7 @@ func NewQFileSystemWatcher(parent *QObject /*444 QObject **/) *QFileSystemWatche
 // index:1
 // Public
 // void QFileSystemWatcher(const class QStringList &, class QObject *)
-func NewQFileSystemWatcher_1(paths *QStringList, parent *QObject /*444 QObject **/) *QFileSystemWatcher {
+func NewQFileSystemWatcher_1(paths *QStringList, parent *QObject /*777 QObject **/) *QFileSystemWatcher {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = paths.GetCthis()
 	var convArg1 = parent.GetCthis()

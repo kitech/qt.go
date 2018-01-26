@@ -93,7 +93,7 @@ func (this *QAccessibleInterface) IsValid() bool {
 // index:0
 // Public pure virtual
 // QObject * object()
-func (this *QAccessibleInterface) Object() *qtcore.QObject /*444 QObject **/ {
+func (this *QAccessibleInterface) Object() *qtcore.QObject /*777 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface6objectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -105,7 +105,7 @@ func (this *QAccessibleInterface) Object() *qtcore.QObject /*444 QObject **/ {
 // index:0
 // Public virtual
 // QWindow * window()
-func (this *QAccessibleInterface) Window() *QWindow /*444 QWindow **/ {
+func (this *QAccessibleInterface) Window() *QWindow /*777 QWindow **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface6windowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -117,7 +117,7 @@ func (this *QAccessibleInterface) Window() *QWindow /*444 QWindow **/ {
 // index:0
 // Public virtual
 // QAccessibleInterface * focusChild()
-func (this *QAccessibleInterface) FocusChild() *QAccessibleInterface /*444 QAccessibleInterface **/ {
+func (this *QAccessibleInterface) FocusChild() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface10focusChildEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -129,7 +129,7 @@ func (this *QAccessibleInterface) FocusChild() *QAccessibleInterface /*444 QAcce
 // index:0
 // Public pure virtual
 // QAccessibleInterface * childAt(int, int)
-func (this *QAccessibleInterface) ChildAt(x int, y int) *QAccessibleInterface /*444 QAccessibleInterface **/ {
+func (this *QAccessibleInterface) ChildAt(x int, y int) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface7childAtEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -141,7 +141,7 @@ func (this *QAccessibleInterface) ChildAt(x int, y int) *QAccessibleInterface /*
 // index:0
 // Public pure virtual
 // QAccessibleInterface * parent()
-func (this *QAccessibleInterface) Parent() *QAccessibleInterface /*444 QAccessibleInterface **/ {
+func (this *QAccessibleInterface) Parent() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface6parentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -153,7 +153,7 @@ func (this *QAccessibleInterface) Parent() *QAccessibleInterface /*444 QAccessib
 // index:0
 // Public pure virtual
 // QAccessibleInterface * child(int)
-func (this *QAccessibleInterface) Child(index int) *QAccessibleInterface /*444 QAccessibleInterface **/ {
+func (this *QAccessibleInterface) Child(index int) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface5childEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -176,7 +176,7 @@ func (this *QAccessibleInterface) ChildCount() int {
 // index:0
 // Public pure virtual
 // int indexOfChild(const class QAccessibleInterface *)
-func (this *QAccessibleInterface) IndexOfChild(arg0 *QAccessibleInterface /*444 const QAccessibleInterface **/) int {
+func (this *QAccessibleInterface) IndexOfChild(arg0 *QAccessibleInterface /*777 const QAccessibleInterface **/) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface12indexOfChildEPKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -276,7 +276,7 @@ func (this *QAccessibleInterface) BackgroundColor() *QColor /*123*/ {
 // index:0
 // Public inline
 // QAccessibleTextInterface * textInterface()
-func (this *QAccessibleInterface) TextInterface() *QAccessibleTextInterface /*444 QAccessibleTextInterface **/ {
+func (this *QAccessibleInterface) TextInterface() *QAccessibleTextInterface /*777 QAccessibleTextInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QAccessibleInterface13textInterfaceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -288,7 +288,7 @@ func (this *QAccessibleInterface) TextInterface() *QAccessibleTextInterface /*44
 // index:0
 // Public inline
 // QAccessibleEditableTextInterface * editableTextInterface()
-func (this *QAccessibleInterface) EditableTextInterface() *QAccessibleEditableTextInterface /*444 QAccessibleEditableTextInterface **/ {
+func (this *QAccessibleInterface) EditableTextInterface() *QAccessibleEditableTextInterface /*777 QAccessibleEditableTextInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QAccessibleInterface21editableTextInterfaceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -300,7 +300,7 @@ func (this *QAccessibleInterface) EditableTextInterface() *QAccessibleEditableTe
 // index:0
 // Public inline
 // QAccessibleValueInterface * valueInterface()
-func (this *QAccessibleInterface) ValueInterface() *QAccessibleValueInterface /*444 QAccessibleValueInterface **/ {
+func (this *QAccessibleInterface) ValueInterface() *QAccessibleValueInterface /*777 QAccessibleValueInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QAccessibleInterface14valueInterfaceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -312,7 +312,7 @@ func (this *QAccessibleInterface) ValueInterface() *QAccessibleValueInterface /*
 // index:0
 // Public inline
 // QAccessibleImageInterface * imageInterface()
-func (this *QAccessibleInterface) ImageInterface() *QAccessibleImageInterface /*444 QAccessibleImageInterface **/ {
+func (this *QAccessibleInterface) ImageInterface() *QAccessibleImageInterface /*777 QAccessibleImageInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QAccessibleInterface14imageInterfaceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -324,7 +324,7 @@ func (this *QAccessibleInterface) ImageInterface() *QAccessibleImageInterface /*
 // index:0
 // Public inline
 // QAccessibleTableInterface * tableInterface()
-func (this *QAccessibleInterface) TableInterface() *QAccessibleTableInterface /*444 QAccessibleTableInterface **/ {
+func (this *QAccessibleInterface) TableInterface() *QAccessibleTableInterface /*777 QAccessibleTableInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QAccessibleInterface14tableInterfaceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -336,7 +336,7 @@ func (this *QAccessibleInterface) TableInterface() *QAccessibleTableInterface /*
 // index:0
 // Public inline
 // QAccessibleTableCellInterface * tableCellInterface()
-func (this *QAccessibleInterface) TableCellInterface() *QAccessibleTableCellInterface /*444 QAccessibleTableCellInterface **/ {
+func (this *QAccessibleInterface) TableCellInterface() *QAccessibleTableCellInterface /*777 QAccessibleTableCellInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QAccessibleInterface18tableCellInterfaceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

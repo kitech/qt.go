@@ -78,7 +78,7 @@ func (*QTextBrowser) NewFromPointer(cthis unsafe.Pointer) *QTextBrowser {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTextBrowser) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QTextBrowser) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTextBrowser10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QTextBrowser) MetaObject() *qtcore.QMetaObject /*444 const QMetaObje
 // index:0
 // Public
 // void QTextBrowser(class QWidget *)
-func NewQTextBrowser(parent *QWidget /*444 QWidget **/) *QTextBrowser {
+func NewQTextBrowser(parent *QWidget /*777 QWidget **/) *QTextBrowser {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowserC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -385,7 +385,7 @@ func (this *QTextBrowser) AnchorClicked(arg0 *qtcore.QUrl) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QTextBrowser) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QTextBrowser) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -397,7 +397,7 @@ func (this *QTextBrowser) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
 // index:0
 // Protected virtual
 // void keyPressEvent(class QKeyEvent *)
-func (this *QTextBrowser) KeyPressEvent(ev *qtgui.QKeyEvent /*444 QKeyEvent **/) {
+func (this *QTextBrowser) KeyPressEvent(ev *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -407,7 +407,7 @@ func (this *QTextBrowser) KeyPressEvent(ev *qtgui.QKeyEvent /*444 QKeyEvent **/)
 // index:0
 // Protected virtual
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QTextBrowser) MouseMoveEvent(ev *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QTextBrowser) MouseMoveEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -417,7 +417,7 @@ func (this *QTextBrowser) MouseMoveEvent(ev *qtgui.QMouseEvent /*444 QMouseEvent
 // index:0
 // Protected virtual
 // void mousePressEvent(class QMouseEvent *)
-func (this *QTextBrowser) MousePressEvent(ev *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QTextBrowser) MousePressEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -427,7 +427,7 @@ func (this *QTextBrowser) MousePressEvent(ev *qtgui.QMouseEvent /*444 QMouseEven
 // index:0
 // Protected virtual
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QTextBrowser) MouseReleaseEvent(ev *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QTextBrowser) MouseReleaseEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -437,7 +437,7 @@ func (this *QTextBrowser) MouseReleaseEvent(ev *qtgui.QMouseEvent /*444 QMouseEv
 // index:0
 // Protected virtual
 // void focusOutEvent(class QFocusEvent *)
-func (this *QTextBrowser) FocusOutEvent(ev *qtgui.QFocusEvent /*444 QFocusEvent **/) {
+func (this *QTextBrowser) FocusOutEvent(ev *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -458,7 +458,7 @@ func (this *QTextBrowser) FocusNextPrevChild(next bool) bool {
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QTextBrowser) PaintEvent(e *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+func (this *QTextBrowser) PaintEvent(e *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowser10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

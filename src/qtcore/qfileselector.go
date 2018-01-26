@@ -70,7 +70,7 @@ func (*QFileSelector) NewFromPointer(cthis unsafe.Pointer) *QFileSelector {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QFileSelector) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QFileSelector) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFileSelector10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QFileSelector) MetaObject() *QMetaObject /*444 const QMetaObject **/
 // index:0
 // Public
 // void QFileSelector(class QObject *)
-func NewQFileSelector(parent *QObject /*444 QObject **/) *QFileSelector {
+func NewQFileSelector(parent *QObject /*777 QObject **/) *QFileSelector {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFileSelectorC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)

@@ -74,7 +74,7 @@ func (*QAccessibleTableModelChangeEvent) NewFromPointer(cthis unsafe.Pointer) *Q
 // index:0
 // Public inline
 // void QAccessibleTableModelChangeEvent(class QObject *, enum QAccessibleTableModelChangeEvent::ModelChangeType)
-func NewQAccessibleTableModelChangeEvent(obj *qtcore.QObject /*444 QObject **/, changeType int) *QAccessibleTableModelChangeEvent {
+func NewQAccessibleTableModelChangeEvent(obj *qtcore.QObject /*777 QObject **/, changeType int) *QAccessibleTableModelChangeEvent {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN32QAccessibleTableModelChangeEventC2EP7QObjectNS_15ModelChangeTypeE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, changeType)
@@ -87,7 +87,7 @@ func NewQAccessibleTableModelChangeEvent(obj *qtcore.QObject /*444 QObject **/, 
 // index:1
 // Public inline
 // void QAccessibleTableModelChangeEvent(class QAccessibleInterface *, enum QAccessibleTableModelChangeEvent::ModelChangeType)
-func NewQAccessibleTableModelChangeEvent_1(iface *QAccessibleInterface /*444 QAccessibleInterface **/, changeType int) *QAccessibleTableModelChangeEvent {
+func NewQAccessibleTableModelChangeEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, changeType int) *QAccessibleTableModelChangeEvent {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = iface.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN32QAccessibleTableModelChangeEventC2EP20QAccessibleInterfaceNS_15ModelChangeTypeE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, changeType)

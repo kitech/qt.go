@@ -74,7 +74,7 @@ func (*QTextFrame) NewFromPointer(cthis unsafe.Pointer) *QTextFrame {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTextFrame) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QTextFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -86,7 +86,7 @@ func (this *QTextFrame) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject
 // index:0
 // Public
 // void QTextFrame(class QTextDocument *)
-func NewQTextFrame(doc *QTextDocument /*444 QTextDocument **/) *QTextFrame {
+func NewQTextFrame(doc *QTextDocument /*777 QTextDocument **/) *QTextFrame {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = doc.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextFrameC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -182,7 +182,7 @@ func (this *QTextFrame) LastPosition() int {
 // index:0
 // Public
 // QTextFrameLayoutData * layoutData()
-func (this *QTextFrame) LayoutData() *QTextFrameLayoutData /*444 QTextFrameLayoutData **/ {
+func (this *QTextFrame) LayoutData() *QTextFrameLayoutData /*777 QTextFrameLayoutData **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame10layoutDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -194,7 +194,7 @@ func (this *QTextFrame) LayoutData() *QTextFrameLayoutData /*444 QTextFrameLayou
 // index:0
 // Public
 // void setLayoutData(class QTextFrameLayoutData *)
-func (this *QTextFrame) SetLayoutData(data *QTextFrameLayoutData /*444 QTextFrameLayoutData **/) {
+func (this *QTextFrame) SetLayoutData(data *QTextFrameLayoutData /*777 QTextFrameLayoutData **/) {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -204,7 +204,7 @@ func (this *QTextFrame) SetLayoutData(data *QTextFrameLayoutData /*444 QTextFram
 // index:0
 // Public
 // QTextFrame * parentFrame()
-func (this *QTextFrame) ParentFrame() *QTextFrame /*444 QTextFrame **/ {
+func (this *QTextFrame) ParentFrame() *QTextFrame /*777 QTextFrame **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextFrame11parentFrameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

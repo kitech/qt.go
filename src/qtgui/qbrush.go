@@ -352,7 +352,7 @@ func (this *QBrush) SetColor_1(color int) {
 // index:0
 // Public
 // const QGradient * gradient()
-func (this *QBrush) Gradient() *QGradient /*444 const QGradient **/ {
+func (this *QBrush) Gradient() *QGradient /*777 const QGradient **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush8gradientEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

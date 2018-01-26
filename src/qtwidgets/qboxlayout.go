@@ -78,7 +78,7 @@ func (*QBoxLayout) NewFromPointer(cthis unsafe.Pointer) *QBoxLayout {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QBoxLayout) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QBoxLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QBoxLayout) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject
 // index:0
 // Public
 // void QBoxLayout(enum QBoxLayout::Direction, class QWidget *)
-func NewQBoxLayout(arg0 int, parent *QWidget /*444 QWidget **/) *QBoxLayout {
+func NewQBoxLayout(arg0 int, parent *QWidget /*777 QWidget **/) *QBoxLayout {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg1 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayoutC2ENS_9DirectionEP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, arg0, convArg1)
@@ -150,7 +150,7 @@ func (this *QBoxLayout) AddStretch(stretch int) {
 // index:0
 // Public
 // void addSpacerItem(class QSpacerItem *)
-func (this *QBoxLayout) AddSpacerItem(spacerItem *QSpacerItem /*444 QSpacerItem **/) {
+func (this *QBoxLayout) AddSpacerItem(spacerItem *QSpacerItem /*777 QSpacerItem **/) {
 	var convArg0 = spacerItem.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout13addSpacerItemEP11QSpacerItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -160,7 +160,7 @@ func (this *QBoxLayout) AddSpacerItem(spacerItem *QSpacerItem /*444 QSpacerItem 
 // index:0
 // Public
 // void addLayout(class QLayout *, int)
-func (this *QBoxLayout) AddLayout(layout *QLayout /*444 QLayout **/, stretch int) {
+func (this *QBoxLayout) AddLayout(layout *QLayout /*777 QLayout **/, stretch int) {
 	var convArg0 = layout.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout9addLayoutEP7QLayouti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
 	gopp.ErrPrint(err, rv)
@@ -179,7 +179,7 @@ func (this *QBoxLayout) AddStrut(arg0 int) {
 // index:0
 // Public virtual
 // void addItem(class QLayoutItem *)
-func (this *QBoxLayout) AddItem(arg0 *QLayoutItem /*444 QLayoutItem **/) {
+func (this *QBoxLayout) AddItem(arg0 *QLayoutItem /*777 QLayoutItem **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout7addItemEP11QLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -207,7 +207,7 @@ func (this *QBoxLayout) InsertStretch(index int, stretch int) {
 // index:0
 // Public
 // void insertSpacerItem(int, class QSpacerItem *)
-func (this *QBoxLayout) InsertSpacerItem(index int, spacerItem *QSpacerItem /*444 QSpacerItem **/) {
+func (this *QBoxLayout) InsertSpacerItem(index int, spacerItem *QSpacerItem /*777 QSpacerItem **/) {
 	var convArg1 = spacerItem.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout16insertSpacerItemEiP11QSpacerItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -217,7 +217,7 @@ func (this *QBoxLayout) InsertSpacerItem(index int, spacerItem *QSpacerItem /*44
 // index:0
 // Public
 // void insertLayout(int, class QLayout *, int)
-func (this *QBoxLayout) InsertLayout(index int, layout *QLayout /*444 QLayout **/, stretch int) {
+func (this *QBoxLayout) InsertLayout(index int, layout *QLayout /*777 QLayout **/, stretch int) {
 	var convArg1 = layout.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout12insertLayoutEiP7QLayouti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
 	gopp.ErrPrint(err, rv)
@@ -227,7 +227,7 @@ func (this *QBoxLayout) InsertLayout(index int, layout *QLayout /*444 QLayout **
 // index:0
 // Public
 // void insertItem(int, class QLayoutItem *)
-func (this *QBoxLayout) InsertItem(index int, arg1 *QLayoutItem /*444 QLayoutItem **/) {
+func (this *QBoxLayout) InsertItem(index int, arg1 *QLayoutItem /*777 QLayoutItem **/) {
 	var convArg1 = arg1.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout10insertItemEiP11QLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -257,7 +257,7 @@ func (this *QBoxLayout) SetSpacing(spacing int) {
 // index:0
 // Public
 // bool setStretchFactor(class QWidget *, int)
-func (this *QBoxLayout) SetStretchFactor(w *QWidget /*444 QWidget **/, stretch int) bool {
+func (this *QBoxLayout) SetStretchFactor(w *QWidget /*777 QWidget **/, stretch int) bool {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout16setStretchFactorEP7QWidgeti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
 	gopp.ErrPrint(err, rv)
@@ -269,7 +269,7 @@ func (this *QBoxLayout) SetStretchFactor(w *QWidget /*444 QWidget **/, stretch i
 // index:1
 // Public
 // bool setStretchFactor(class QLayout *, int)
-func (this *QBoxLayout) SetStretchFactor_1(l *QLayout /*444 QLayout **/, stretch int) bool {
+func (this *QBoxLayout) SetStretchFactor_1(l *QLayout /*777 QLayout **/, stretch int) bool {
 	var convArg0 = l.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout16setStretchFactorEP7QLayouti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
 	gopp.ErrPrint(err, rv)
@@ -396,7 +396,7 @@ func (this *QBoxLayout) Invalidate() {
 // index:0
 // Public virtual
 // QLayoutItem * itemAt(int)
-func (this *QBoxLayout) ItemAt(arg0 int) *QLayoutItem /*444 QLayoutItem **/ {
+func (this *QBoxLayout) ItemAt(arg0 int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QBoxLayout6itemAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -408,7 +408,7 @@ func (this *QBoxLayout) ItemAt(arg0 int) *QLayoutItem /*444 QLayoutItem **/ {
 // index:0
 // Public virtual
 // QLayoutItem * takeAt(int)
-func (this *QBoxLayout) TakeAt(arg0 int) *QLayoutItem /*444 QLayoutItem **/ {
+func (this *QBoxLayout) TakeAt(arg0 int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout6takeAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

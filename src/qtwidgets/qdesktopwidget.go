@@ -78,7 +78,7 @@ func (*QDesktopWidget) NewFromPointer(cthis unsafe.Pointer) *QDesktopWidget {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QDesktopWidget) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QDesktopWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDesktopWidget10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -155,7 +155,7 @@ func (this *QDesktopWidget) PrimaryScreen() int {
 // index:0
 // Public
 // int screenNumber(const class QWidget *)
-func (this *QDesktopWidget) ScreenNumber(widget *QWidget /*444 const QWidget **/) int {
+func (this *QDesktopWidget) ScreenNumber(widget *QWidget /*777 const QWidget **/) int {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDesktopWidget12screenNumberEPK7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -179,7 +179,7 @@ func (this *QDesktopWidget) ScreenNumber_1(arg0 *qtcore.QPoint) int {
 // index:0
 // Public
 // QWidget * screen(int)
-func (this *QDesktopWidget) Screen(screen int) *QWidget /*444 QWidget **/ {
+func (this *QDesktopWidget) Screen(screen int) *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDesktopWidget6screenEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), screen)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -205,7 +205,7 @@ func (this *QDesktopWidget) ScreenGeometry(screen int) *qtcore.QRect /*123*/ {
 // index:1
 // Public
 // const QRect screenGeometry(const class QWidget *)
-func (this *QDesktopWidget) ScreenGeometry_1(widget *QWidget /*444 const QWidget **/) *qtcore.QRect /*123*/ {
+func (this *QDesktopWidget) ScreenGeometry_1(widget *QWidget /*777 const QWidget **/) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDesktopWidget14screenGeometryEPK7QWidget", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
@@ -249,7 +249,7 @@ func (this *QDesktopWidget) AvailableGeometry(screen int) *qtcore.QRect /*123*/ 
 // index:1
 // Public
 // const QRect availableGeometry(const class QWidget *)
-func (this *QDesktopWidget) AvailableGeometry_1(widget *QWidget /*444 const QWidget **/) *qtcore.QRect /*123*/ {
+func (this *QDesktopWidget) AvailableGeometry_1(widget *QWidget /*777 const QWidget **/) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDesktopWidget17availableGeometryEPK7QWidget", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
@@ -315,7 +315,7 @@ func (this *QDesktopWidget) PrimaryScreenChanged() {
 // index:0
 // Protected virtual
 // void resizeEvent(class QResizeEvent *)
-func (this *QDesktopWidget) ResizeEvent(e *qtgui.QResizeEvent /*444 QResizeEvent **/) {
+func (this *QDesktopWidget) ResizeEvent(e *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDesktopWidget11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

@@ -74,7 +74,7 @@ func (*QGenericPlugin) NewFromPointer(cthis unsafe.Pointer) *QGenericPlugin {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QGenericPlugin) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QGenericPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGenericPlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -86,7 +86,7 @@ func (this *QGenericPlugin) MetaObject() *qtcore.QMetaObject /*444 const QMetaOb
 // index:0
 // Public
 // void QGenericPlugin(class QObject *)
-func NewQGenericPlugin(parent *qtcore.QObject /*444 QObject **/) *QGenericPlugin {
+func NewQGenericPlugin(parent *qtcore.QObject /*777 QObject **/) *QGenericPlugin {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGenericPluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -108,7 +108,7 @@ func DeleteQGenericPlugin(*QGenericPlugin) {
 // index:0
 // Public pure virtual
 // QObject * create(const class QString &, const class QString &)
-func (this *QGenericPlugin) Create(name *qtcore.QString, spec *qtcore.QString) *qtcore.QObject /*444 QObject **/ {
+func (this *QGenericPlugin) Create(name *qtcore.QString, spec *qtcore.QString) *qtcore.QObject /*777 QObject **/ {
 	var convArg0 = name.GetCthis()
 	var convArg1 = spec.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGenericPlugin6createERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)

@@ -78,7 +78,7 @@ func (*QTextEdit) NewFromPointer(cthis unsafe.Pointer) *QTextEdit {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTextEdit) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QTextEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QTextEdit) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject 
 // index:0
 // Public
 // void QTextEdit(class QWidget *)
-func NewQTextEdit(parent *QWidget /*444 QWidget **/) *QTextEdit {
+func NewQTextEdit(parent *QWidget /*777 QWidget **/) *QTextEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEditC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -103,7 +103,7 @@ func NewQTextEdit(parent *QWidget /*444 QWidget **/) *QTextEdit {
 // index:1
 // Public
 // void QTextEdit(const class QString &, class QWidget *)
-func NewQTextEdit_1(text *qtcore.QString, parent *QWidget /*444 QWidget **/) *QTextEdit {
+func NewQTextEdit_1(text *qtcore.QString, parent *QWidget /*777 QWidget **/) *QTextEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = text.GetCthis()
 	var convArg1 = parent.GetCthis()
@@ -126,7 +126,7 @@ func DeleteQTextEdit(*QTextEdit) {
 // index:0
 // Public
 // void setDocument(class QTextDocument *)
-func (this *QTextEdit) SetDocument(document *qtgui.QTextDocument /*444 QTextDocument **/) {
+func (this *QTextEdit) SetDocument(document *qtgui.QTextDocument /*777 QTextDocument **/) {
 	var convArg0 = document.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit11setDocumentEP13QTextDocument", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -136,7 +136,7 @@ func (this *QTextEdit) SetDocument(document *qtgui.QTextDocument /*444 QTextDocu
 // index:0
 // Public
 // QTextDocument * document()
-func (this *QTextEdit) Document() *qtgui.QTextDocument /*444 QTextDocument **/ {
+func (this *QTextEdit) Document() *qtgui.QTextDocument /*777 QTextDocument **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit8documentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -592,7 +592,7 @@ func (this *QTextEdit) LoadResource(type_ int, name *qtcore.QUrl) *qtcore.QVaria
 // index:0
 // Public
 // QMenu * createStandardContextMenu()
-func (this *QTextEdit) CreateStandardContextMenu() *QMenu /*444 QMenu **/ {
+func (this *QTextEdit) CreateStandardContextMenu() *QMenu /*777 QMenu **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit25createStandardContextMenuEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -604,7 +604,7 @@ func (this *QTextEdit) CreateStandardContextMenu() *QMenu /*444 QMenu **/ {
 // index:1
 // Public
 // QMenu * createStandardContextMenu(const class QPoint &)
-func (this *QTextEdit) CreateStandardContextMenu_1(position *qtcore.QPoint) *QMenu /*444 QMenu **/ {
+func (this *QTextEdit) CreateStandardContextMenu_1(position *qtcore.QPoint) *QMenu /*777 QMenu **/ {
 	var convArg0 = position.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit25createStandardContextMenuERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -796,7 +796,7 @@ func (this *QTextEdit) CanPaste() bool {
 // index:0
 // Public
 // void print(class QPagedPaintDevice *)
-func (this *QTextEdit) Print(printer *qtgui.QPagedPaintDevice /*444 QPagedPaintDevice **/) {
+func (this *QTextEdit) Print(printer *qtgui.QPagedPaintDevice /*777 QPagedPaintDevice **/) {
 	var convArg0 = printer.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit5printEP17QPagedPaintDevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1116,7 +1116,7 @@ func (this *QTextEdit) CursorPositionChanged() {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QTextEdit) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QTextEdit) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1128,7 +1128,7 @@ func (this *QTextEdit) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
 // index:0
 // Protected virtual
 // void timerEvent(class QTimerEvent *)
-func (this *QTextEdit) TimerEvent(e *qtcore.QTimerEvent /*444 QTimerEvent **/) {
+func (this *QTextEdit) TimerEvent(e *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1138,7 +1138,7 @@ func (this *QTextEdit) TimerEvent(e *qtcore.QTimerEvent /*444 QTimerEvent **/) {
 // index:0
 // Protected virtual
 // void keyPressEvent(class QKeyEvent *)
-func (this *QTextEdit) KeyPressEvent(e *qtgui.QKeyEvent /*444 QKeyEvent **/) {
+func (this *QTextEdit) KeyPressEvent(e *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1148,7 +1148,7 @@ func (this *QTextEdit) KeyPressEvent(e *qtgui.QKeyEvent /*444 QKeyEvent **/) {
 // index:0
 // Protected virtual
 // void keyReleaseEvent(class QKeyEvent *)
-func (this *QTextEdit) KeyReleaseEvent(e *qtgui.QKeyEvent /*444 QKeyEvent **/) {
+func (this *QTextEdit) KeyReleaseEvent(e *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit15keyReleaseEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1158,7 +1158,7 @@ func (this *QTextEdit) KeyReleaseEvent(e *qtgui.QKeyEvent /*444 QKeyEvent **/) {
 // index:0
 // Protected virtual
 // void resizeEvent(class QResizeEvent *)
-func (this *QTextEdit) ResizeEvent(e *qtgui.QResizeEvent /*444 QResizeEvent **/) {
+func (this *QTextEdit) ResizeEvent(e *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1168,7 +1168,7 @@ func (this *QTextEdit) ResizeEvent(e *qtgui.QResizeEvent /*444 QResizeEvent **/)
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QTextEdit) PaintEvent(e *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+func (this *QTextEdit) PaintEvent(e *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1178,7 +1178,7 @@ func (this *QTextEdit) PaintEvent(e *qtgui.QPaintEvent /*444 QPaintEvent **/) {
 // index:0
 // Protected virtual
 // void mousePressEvent(class QMouseEvent *)
-func (this *QTextEdit) MousePressEvent(e *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QTextEdit) MousePressEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1188,7 +1188,7 @@ func (this *QTextEdit) MousePressEvent(e *qtgui.QMouseEvent /*444 QMouseEvent **
 // index:0
 // Protected virtual
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QTextEdit) MouseMoveEvent(e *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QTextEdit) MouseMoveEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1198,7 +1198,7 @@ func (this *QTextEdit) MouseMoveEvent(e *qtgui.QMouseEvent /*444 QMouseEvent **/
 // index:0
 // Protected virtual
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QTextEdit) MouseReleaseEvent(e *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QTextEdit) MouseReleaseEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1208,7 +1208,7 @@ func (this *QTextEdit) MouseReleaseEvent(e *qtgui.QMouseEvent /*444 QMouseEvent 
 // index:0
 // Protected virtual
 // void mouseDoubleClickEvent(class QMouseEvent *)
-func (this *QTextEdit) MouseDoubleClickEvent(e *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QTextEdit) MouseDoubleClickEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit21mouseDoubleClickEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1229,7 +1229,7 @@ func (this *QTextEdit) FocusNextPrevChild(next bool) bool {
 // index:0
 // Protected virtual
 // void contextMenuEvent(class QContextMenuEvent *)
-func (this *QTextEdit) ContextMenuEvent(e *qtgui.QContextMenuEvent /*444 QContextMenuEvent **/) {
+func (this *QTextEdit) ContextMenuEvent(e *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit16contextMenuEventEP17QContextMenuEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1239,7 +1239,7 @@ func (this *QTextEdit) ContextMenuEvent(e *qtgui.QContextMenuEvent /*444 QContex
 // index:0
 // Protected virtual
 // void dragEnterEvent(class QDragEnterEvent *)
-func (this *QTextEdit) DragEnterEvent(e *qtgui.QDragEnterEvent /*444 QDragEnterEvent **/) {
+func (this *QTextEdit) DragEnterEvent(e *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit14dragEnterEventEP15QDragEnterEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1249,7 +1249,7 @@ func (this *QTextEdit) DragEnterEvent(e *qtgui.QDragEnterEvent /*444 QDragEnterE
 // index:0
 // Protected virtual
 // void dragLeaveEvent(class QDragLeaveEvent *)
-func (this *QTextEdit) DragLeaveEvent(e *qtgui.QDragLeaveEvent /*444 QDragLeaveEvent **/) {
+func (this *QTextEdit) DragLeaveEvent(e *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit14dragLeaveEventEP15QDragLeaveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1259,7 +1259,7 @@ func (this *QTextEdit) DragLeaveEvent(e *qtgui.QDragLeaveEvent /*444 QDragLeaveE
 // index:0
 // Protected virtual
 // void dragMoveEvent(class QDragMoveEvent *)
-func (this *QTextEdit) DragMoveEvent(e *qtgui.QDragMoveEvent /*444 QDragMoveEvent **/) {
+func (this *QTextEdit) DragMoveEvent(e *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit13dragMoveEventEP14QDragMoveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1269,7 +1269,7 @@ func (this *QTextEdit) DragMoveEvent(e *qtgui.QDragMoveEvent /*444 QDragMoveEven
 // index:0
 // Protected virtual
 // void dropEvent(class QDropEvent *)
-func (this *QTextEdit) DropEvent(e *qtgui.QDropEvent /*444 QDropEvent **/) {
+func (this *QTextEdit) DropEvent(e *qtgui.QDropEvent /*777 QDropEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit9dropEventEP10QDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1279,7 +1279,7 @@ func (this *QTextEdit) DropEvent(e *qtgui.QDropEvent /*444 QDropEvent **/) {
 // index:0
 // Protected virtual
 // void focusInEvent(class QFocusEvent *)
-func (this *QTextEdit) FocusInEvent(e *qtgui.QFocusEvent /*444 QFocusEvent **/) {
+func (this *QTextEdit) FocusInEvent(e *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1289,7 +1289,7 @@ func (this *QTextEdit) FocusInEvent(e *qtgui.QFocusEvent /*444 QFocusEvent **/) 
 // index:0
 // Protected virtual
 // void focusOutEvent(class QFocusEvent *)
-func (this *QTextEdit) FocusOutEvent(e *qtgui.QFocusEvent /*444 QFocusEvent **/) {
+func (this *QTextEdit) FocusOutEvent(e *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1299,7 +1299,7 @@ func (this *QTextEdit) FocusOutEvent(e *qtgui.QFocusEvent /*444 QFocusEvent **/)
 // index:0
 // Protected virtual
 // void showEvent(class QShowEvent *)
-func (this *QTextEdit) ShowEvent(arg0 *qtgui.QShowEvent /*444 QShowEvent **/) {
+func (this *QTextEdit) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit9showEventEP10QShowEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1309,7 +1309,7 @@ func (this *QTextEdit) ShowEvent(arg0 *qtgui.QShowEvent /*444 QShowEvent **/) {
 // index:0
 // Protected virtual
 // void changeEvent(class QEvent *)
-func (this *QTextEdit) ChangeEvent(e *qtcore.QEvent /*444 QEvent **/) {
+func (this *QTextEdit) ChangeEvent(e *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1319,7 +1319,7 @@ func (this *QTextEdit) ChangeEvent(e *qtcore.QEvent /*444 QEvent **/) {
 // index:0
 // Protected virtual
 // void wheelEvent(class QWheelEvent *)
-func (this *QTextEdit) WheelEvent(e *qtgui.QWheelEvent /*444 QWheelEvent **/) {
+func (this *QTextEdit) WheelEvent(e *qtgui.QWheelEvent /*777 QWheelEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit10wheelEventEP11QWheelEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1329,7 +1329,7 @@ func (this *QTextEdit) WheelEvent(e *qtgui.QWheelEvent /*444 QWheelEvent **/) {
 // index:0
 // Protected virtual
 // QMimeData * createMimeDataFromSelection()
-func (this *QTextEdit) CreateMimeDataFromSelection() *qtcore.QMimeData /*444 QMimeData **/ {
+func (this *QTextEdit) CreateMimeDataFromSelection() *qtcore.QMimeData /*777 QMimeData **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit27createMimeDataFromSelectionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -1341,7 +1341,7 @@ func (this *QTextEdit) CreateMimeDataFromSelection() *qtcore.QMimeData /*444 QMi
 // index:0
 // Protected virtual
 // bool canInsertFromMimeData(const class QMimeData *)
-func (this *QTextEdit) CanInsertFromMimeData(source *qtcore.QMimeData /*444 const QMimeData **/) bool {
+func (this *QTextEdit) CanInsertFromMimeData(source *qtcore.QMimeData /*777 const QMimeData **/) bool {
 	var convArg0 = source.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextEdit21canInsertFromMimeDataEPK9QMimeData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1353,7 +1353,7 @@ func (this *QTextEdit) CanInsertFromMimeData(source *qtcore.QMimeData /*444 cons
 // index:0
 // Protected virtual
 // void insertFromMimeData(const class QMimeData *)
-func (this *QTextEdit) InsertFromMimeData(source *qtcore.QMimeData /*444 const QMimeData **/) {
+func (this *QTextEdit) InsertFromMimeData(source *qtcore.QMimeData /*777 const QMimeData **/) {
 	var convArg0 = source.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit18insertFromMimeDataEPK9QMimeData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1363,7 +1363,7 @@ func (this *QTextEdit) InsertFromMimeData(source *qtcore.QMimeData /*444 const Q
 // index:0
 // Protected virtual
 // void inputMethodEvent(class QInputMethodEvent *)
-func (this *QTextEdit) InputMethodEvent(arg0 *qtgui.QInputMethodEvent /*444 QInputMethodEvent **/) {
+func (this *QTextEdit) InputMethodEvent(arg0 *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit16inputMethodEventEP17QInputMethodEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

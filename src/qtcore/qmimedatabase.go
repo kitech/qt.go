@@ -150,7 +150,7 @@ func (this *QMimeDatabase) MimeTypeForData(data *QByteArray) *QMimeType /*123*/ 
 // index:1
 // Public
 // QMimeType mimeTypeForData(class QIODevice *)
-func (this *QMimeDatabase) MimeTypeForData_1(device *QIODevice /*444 QIODevice **/) *QMimeType /*123*/ {
+func (this *QMimeDatabase) MimeTypeForData_1(device *QIODevice /*777 QIODevice **/) *QMimeType /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
@@ -180,7 +180,7 @@ func (this *QMimeDatabase) MimeTypeForUrl(url *QUrl) *QMimeType /*123*/ {
 // index:0
 // Public
 // QMimeType mimeTypeForFileNameAndData(const class QString &, class QIODevice *)
-func (this *QMimeDatabase) MimeTypeForFileNameAndData(fileName *QString, device *QIODevice /*444 QIODevice **/) *QMimeType /*123*/ {
+func (this *QMimeDatabase) MimeTypeForFileNameAndData(fileName *QString, device *QIODevice /*777 QIODevice **/) *QMimeType /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fileName.GetCthis()
 	var convArg1 = device.GetCthis()

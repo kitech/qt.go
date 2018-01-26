@@ -78,7 +78,7 @@ func (*QLineEdit) NewFromPointer(cthis unsafe.Pointer) *QLineEdit {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QLineEdit) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QLineEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLineEdit10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QLineEdit) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject 
 // index:0
 // Public
 // void QLineEdit(class QWidget *)
-func NewQLineEdit(parent *QWidget /*444 QWidget **/) *QLineEdit {
+func NewQLineEdit(parent *QWidget /*777 QWidget **/) *QLineEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEditC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -103,7 +103,7 @@ func NewQLineEdit(parent *QWidget /*444 QWidget **/) *QLineEdit {
 // index:1
 // Public
 // void QLineEdit(const class QString &, class QWidget *)
-func NewQLineEdit_1(arg0 *qtcore.QString, parent *QWidget /*444 QWidget **/) *QLineEdit {
+func NewQLineEdit_1(arg0 *qtcore.QString, parent *QWidget /*777 QWidget **/) *QLineEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = parent.GetCthis()
@@ -278,7 +278,7 @@ func (this *QLineEdit) SetReadOnly(arg0 bool) {
 // index:0
 // Public
 // void setValidator(const class QValidator *)
-func (this *QLineEdit) SetValidator(arg0 *qtgui.QValidator /*444 const QValidator **/) {
+func (this *QLineEdit) SetValidator(arg0 *qtgui.QValidator /*777 const QValidator **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit12setValidatorEPK10QValidator", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -288,7 +288,7 @@ func (this *QLineEdit) SetValidator(arg0 *qtgui.QValidator /*444 const QValidato
 // index:0
 // Public
 // const QValidator * validator()
-func (this *QLineEdit) Validator() *qtgui.QValidator /*444 const QValidator **/ {
+func (this *QLineEdit) Validator() *qtgui.QValidator /*777 const QValidator **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLineEdit9validatorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -300,7 +300,7 @@ func (this *QLineEdit) Validator() *qtgui.QValidator /*444 const QValidator **/ 
 // index:0
 // Public
 // void setCompleter(class QCompleter *)
-func (this *QLineEdit) SetCompleter(completer *QCompleter /*444 QCompleter **/) {
+func (this *QLineEdit) SetCompleter(completer *QCompleter /*777 QCompleter **/) {
 	var convArg0 = completer.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit12setCompleterEP10QCompleter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -310,7 +310,7 @@ func (this *QLineEdit) SetCompleter(completer *QCompleter /*444 QCompleter **/) 
 // index:0
 // Public
 // QCompleter * completer()
-func (this *QLineEdit) Completer() *QCompleter /*444 QCompleter **/ {
+func (this *QLineEdit) Completer() *QCompleter /*777 QCompleter **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLineEdit9completerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -691,7 +691,7 @@ func (this *QLineEdit) TextMargins() *qtcore.QMargins /*123*/ {
 // index:0
 // Public
 // void addAction(class QAction *, enum QLineEdit::ActionPosition)
-func (this *QLineEdit) AddAction(action *QAction /*444 QAction **/, position int) {
+func (this *QLineEdit) AddAction(action *QAction /*777 QAction **/, position int) {
 	var convArg0 = action.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit9addActionEP7QActionNS_14ActionPositionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, position)
 	gopp.ErrPrint(err, rv)
@@ -701,7 +701,7 @@ func (this *QLineEdit) AddAction(action *QAction /*444 QAction **/, position int
 // index:1
 // Public
 // QAction * addAction(const class QIcon &, enum QLineEdit::ActionPosition)
-func (this *QLineEdit) AddAction_1(icon *qtgui.QIcon, position int) *QAction /*444 QAction **/ {
+func (this *QLineEdit) AddAction_1(icon *qtgui.QIcon, position int) *QAction /*777 QAction **/ {
 	var convArg0 = icon.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit9addActionERK5QIconNS_14ActionPositionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, position)
 	gopp.ErrPrint(err, rv)
@@ -796,7 +796,7 @@ func (this *QLineEdit) Deselect() {
 // index:0
 // Public
 // QMenu * createStandardContextMenu()
-func (this *QLineEdit) CreateStandardContextMenu() *QMenu /*444 QMenu **/ {
+func (this *QLineEdit) CreateStandardContextMenu() *QMenu /*777 QMenu **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit25createStandardContextMenuEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -864,7 +864,7 @@ func (this *QLineEdit) SelectionChanged() {
 // index:0
 // Protected virtual
 // void mousePressEvent(class QMouseEvent *)
-func (this *QLineEdit) MousePressEvent(arg0 *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QLineEdit) MousePressEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -874,7 +874,7 @@ func (this *QLineEdit) MousePressEvent(arg0 *qtgui.QMouseEvent /*444 QMouseEvent
 // index:0
 // Protected virtual
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QLineEdit) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QLineEdit) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -884,7 +884,7 @@ func (this *QLineEdit) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*444 QMouseEvent 
 // index:0
 // Protected virtual
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QLineEdit) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QLineEdit) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -894,7 +894,7 @@ func (this *QLineEdit) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*444 QMouseEve
 // index:0
 // Protected virtual
 // void mouseDoubleClickEvent(class QMouseEvent *)
-func (this *QLineEdit) MouseDoubleClickEvent(arg0 *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QLineEdit) MouseDoubleClickEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit21mouseDoubleClickEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -904,7 +904,7 @@ func (this *QLineEdit) MouseDoubleClickEvent(arg0 *qtgui.QMouseEvent /*444 QMous
 // index:0
 // Protected virtual
 // void keyPressEvent(class QKeyEvent *)
-func (this *QLineEdit) KeyPressEvent(arg0 *qtgui.QKeyEvent /*444 QKeyEvent **/) {
+func (this *QLineEdit) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -914,7 +914,7 @@ func (this *QLineEdit) KeyPressEvent(arg0 *qtgui.QKeyEvent /*444 QKeyEvent **/) 
 // index:0
 // Protected virtual
 // void focusInEvent(class QFocusEvent *)
-func (this *QLineEdit) FocusInEvent(arg0 *qtgui.QFocusEvent /*444 QFocusEvent **/) {
+func (this *QLineEdit) FocusInEvent(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -924,7 +924,7 @@ func (this *QLineEdit) FocusInEvent(arg0 *qtgui.QFocusEvent /*444 QFocusEvent **
 // index:0
 // Protected virtual
 // void focusOutEvent(class QFocusEvent *)
-func (this *QLineEdit) FocusOutEvent(arg0 *qtgui.QFocusEvent /*444 QFocusEvent **/) {
+func (this *QLineEdit) FocusOutEvent(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -934,7 +934,7 @@ func (this *QLineEdit) FocusOutEvent(arg0 *qtgui.QFocusEvent /*444 QFocusEvent *
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QLineEdit) PaintEvent(arg0 *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+func (this *QLineEdit) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -944,7 +944,7 @@ func (this *QLineEdit) PaintEvent(arg0 *qtgui.QPaintEvent /*444 QPaintEvent **/)
 // index:0
 // Protected virtual
 // void dragEnterEvent(class QDragEnterEvent *)
-func (this *QLineEdit) DragEnterEvent(arg0 *qtgui.QDragEnterEvent /*444 QDragEnterEvent **/) {
+func (this *QLineEdit) DragEnterEvent(arg0 *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit14dragEnterEventEP15QDragEnterEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -954,7 +954,7 @@ func (this *QLineEdit) DragEnterEvent(arg0 *qtgui.QDragEnterEvent /*444 QDragEnt
 // index:0
 // Protected virtual
 // void dragMoveEvent(class QDragMoveEvent *)
-func (this *QLineEdit) DragMoveEvent(e *qtgui.QDragMoveEvent /*444 QDragMoveEvent **/) {
+func (this *QLineEdit) DragMoveEvent(e *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit13dragMoveEventEP14QDragMoveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -964,7 +964,7 @@ func (this *QLineEdit) DragMoveEvent(e *qtgui.QDragMoveEvent /*444 QDragMoveEven
 // index:0
 // Protected virtual
 // void dragLeaveEvent(class QDragLeaveEvent *)
-func (this *QLineEdit) DragLeaveEvent(e *qtgui.QDragLeaveEvent /*444 QDragLeaveEvent **/) {
+func (this *QLineEdit) DragLeaveEvent(e *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit14dragLeaveEventEP15QDragLeaveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -974,7 +974,7 @@ func (this *QLineEdit) DragLeaveEvent(e *qtgui.QDragLeaveEvent /*444 QDragLeaveE
 // index:0
 // Protected virtual
 // void dropEvent(class QDropEvent *)
-func (this *QLineEdit) DropEvent(arg0 *qtgui.QDropEvent /*444 QDropEvent **/) {
+func (this *QLineEdit) DropEvent(arg0 *qtgui.QDropEvent /*777 QDropEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit9dropEventEP10QDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -984,7 +984,7 @@ func (this *QLineEdit) DropEvent(arg0 *qtgui.QDropEvent /*444 QDropEvent **/) {
 // index:0
 // Protected virtual
 // void changeEvent(class QEvent *)
-func (this *QLineEdit) ChangeEvent(arg0 *qtcore.QEvent /*444 QEvent **/) {
+func (this *QLineEdit) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -994,7 +994,7 @@ func (this *QLineEdit) ChangeEvent(arg0 *qtcore.QEvent /*444 QEvent **/) {
 // index:0
 // Protected virtual
 // void contextMenuEvent(class QContextMenuEvent *)
-func (this *QLineEdit) ContextMenuEvent(arg0 *qtgui.QContextMenuEvent /*444 QContextMenuEvent **/) {
+func (this *QLineEdit) ContextMenuEvent(arg0 *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit16contextMenuEventEP17QContextMenuEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1004,7 +1004,7 @@ func (this *QLineEdit) ContextMenuEvent(arg0 *qtgui.QContextMenuEvent /*444 QCon
 // index:0
 // Protected virtual
 // void inputMethodEvent(class QInputMethodEvent *)
-func (this *QLineEdit) InputMethodEvent(arg0 *qtgui.QInputMethodEvent /*444 QInputMethodEvent **/) {
+func (this *QLineEdit) InputMethodEvent(arg0 *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit16inputMethodEventEP17QInputMethodEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1014,7 +1014,7 @@ func (this *QLineEdit) InputMethodEvent(arg0 *qtgui.QInputMethodEvent /*444 QInp
 // index:0
 // Protected
 // void initStyleOption(class QStyleOptionFrame *)
-func (this *QLineEdit) InitStyleOption(option *QStyleOptionFrame /*444 QStyleOptionFrame **/) {
+func (this *QLineEdit) InitStyleOption(option *QStyleOptionFrame /*777 QStyleOptionFrame **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLineEdit15initStyleOptionEP17QStyleOptionFrame", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1053,7 +1053,7 @@ func (this *QLineEdit) InputMethodQuery_1(property int, argument *qtcore.QVarian
 // index:0
 // Public virtual
 // bool event(class QEvent *)
-func (this *QLineEdit) Event(arg0 *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QLineEdit) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

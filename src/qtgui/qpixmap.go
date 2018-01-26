@@ -266,7 +266,7 @@ func (this *QPixmap) Fill(fillColor *QColor) {
 // index:1
 // Public
 // void fill(const class QPaintDevice *, const class QPoint &)
-func (this *QPixmap) Fill_1(device *QPaintDevice /*444 const QPaintDevice **/, ofs *qtcore.QPoint) {
+func (this *QPixmap) Fill_1(device *QPaintDevice /*777 const QPaintDevice **/, ofs *qtcore.QPoint) {
 	var convArg0 = device.GetCthis()
 	var convArg1 = ofs.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap4fillEPK12QPaintDeviceRK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -277,7 +277,7 @@ func (this *QPixmap) Fill_1(device *QPaintDevice /*444 const QPaintDevice **/, o
 // index:2
 // Public inline
 // void fill(const class QPaintDevice *, int, int)
-func (this *QPixmap) Fill_2(device *QPaintDevice /*444 const QPaintDevice **/, xofs int, yofs int) {
+func (this *QPixmap) Fill_2(device *QPaintDevice /*777 const QPaintDevice **/, xofs int, yofs int) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap4fillEPK12QPaintDeviceii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xofs, yofs)
 	gopp.ErrPrint(err, rv)
@@ -399,14 +399,14 @@ func QPixmap_GrabWindow(arg0 uint64, x int, y int, w int, h int) *QPixmap /*123*
 // index:0
 // Public static
 // QPixmap grabWidget(class QObject *, const class QRect &)
-func (this *QPixmap) GrabWidget(widget *qtcore.QObject /*444 QObject **/, rect *qtcore.QRect) *QPixmap /*123*/ {
+func (this *QPixmap) GrabWidget(widget *qtcore.QObject /*777 QObject **/, rect *qtcore.QRect) *QPixmap /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap10grabWidgetEP7QObjectRK5QRect", ffiqt.FFI_TYPE_POINTER, widget, rect)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
-func QPixmap_GrabWidget(widget *qtcore.QObject /*444 QObject **/, rect *qtcore.QRect) *QPixmap /*123*/ {
+func QPixmap_GrabWidget(widget *qtcore.QObject /*777 QObject **/, rect *qtcore.QRect) *QPixmap /*123*/ {
 	var nilthis *QPixmap
 	rv := nilthis.GrabWidget(widget, rect)
 	return rv
@@ -416,14 +416,14 @@ func QPixmap_GrabWidget(widget *qtcore.QObject /*444 QObject **/, rect *qtcore.Q
 // index:1
 // Public static inline
 // QPixmap grabWidget(class QObject *, int, int, int, int)
-func (this *QPixmap) GrabWidget_1(widget *qtcore.QObject /*444 QObject **/, x int, y int, w int, h int) *QPixmap /*123*/ {
+func (this *QPixmap) GrabWidget_1(widget *qtcore.QObject /*777 QObject **/, x int, y int, w int, h int) *QPixmap /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap10grabWidgetEP7QObjectiiii", ffiqt.FFI_TYPE_POINTER, widget, x, y, w, h)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
-func QPixmap_GrabWidget_1(widget *qtcore.QObject /*444 QObject **/, x int, y int, w int, h int) *QPixmap /*123*/ {
+func QPixmap_GrabWidget_1(widget *qtcore.QObject /*777 QObject **/, x int, y int, w int, h int) *QPixmap /*123*/ {
 	var nilthis *QPixmap
 	rv := nilthis.GrabWidget_1(widget, x, y, w, h)
 	return rv
@@ -602,14 +602,14 @@ func QPixmap_FromImage_1(image unsafe.Pointer /*333*/, flags int) *QPixmap /*123
 // index:0
 // Public static
 // QPixmap fromImageReader(class QImageReader *, Qt::ImageConversionFlags)
-func (this *QPixmap) FromImageReader(imageReader *QImageReader /*444 QImageReader **/, flags int) *QPixmap /*123*/ {
+func (this *QPixmap) FromImageReader(imageReader *QImageReader /*777 QImageReader **/, flags int) *QPixmap /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap15fromImageReaderEP12QImageReader6QFlagsIN2Qt19ImageConversionFlagEE", ffiqt.FFI_TYPE_POINTER, imageReader, flags)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
-func QPixmap_FromImageReader(imageReader *QImageReader /*444 QImageReader **/, flags int) *QPixmap /*123*/ {
+func QPixmap_FromImageReader(imageReader *QImageReader /*777 QImageReader **/, flags int) *QPixmap /*123*/ {
 	var nilthis *QPixmap
 	rv := nilthis.FromImageReader(imageReader, flags)
 	return rv
@@ -674,7 +674,7 @@ func (this *QPixmap) Save(fileName *qtcore.QString, format string, quality int) 
 // index:1
 // Public
 // bool save(class QIODevice *, const char *, int)
-func (this *QPixmap) Save_1(device *qtcore.QIODevice /*444 QIODevice **/, format string, quality int) bool {
+func (this *QPixmap) Save_1(device *qtcore.QIODevice /*777 QIODevice **/, format string, quality int) bool {
 	var convArg0 = device.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
@@ -729,7 +729,7 @@ func (this *QPixmap) Copy_1(rect *qtcore.QRect) *QPixmap /*123*/ {
 // index:0
 // Public inline
 // void scroll(int, int, int, int, int, int, class QRegion *)
-func (this *QPixmap) Scroll(dx int, dy int, x int, y int, width int, height int, exposed *QRegion /*444 QRegion **/) {
+func (this *QPixmap) Scroll(dx int, dy int, x int, y int, width int, height int, exposed *QRegion /*777 QRegion **/) {
 	var convArg6 = exposed.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap6scrollEiiiiiiP7QRegion", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy, x, y, width, height, convArg6)
 	gopp.ErrPrint(err, rv)
@@ -739,7 +739,7 @@ func (this *QPixmap) Scroll(dx int, dy int, x int, y int, width int, height int,
 // index:1
 // Public
 // void scroll(int, int, const class QRect &, class QRegion *)
-func (this *QPixmap) Scroll_1(dx int, dy int, rect *qtcore.QRect, exposed *QRegion /*444 QRegion **/) {
+func (this *QPixmap) Scroll_1(dx int, dy int, rect *qtcore.QRect, exposed *QRegion /*777 QRegion **/) {
 	var convArg2 = rect.GetCthis()
 	var convArg3 = exposed.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap6scrollEiiRK5QRectP7QRegion", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy, convArg2, convArg3)
@@ -792,7 +792,7 @@ func (this *QPixmap) IsQBitmap() bool {
 // index:0
 // Public virtual
 // QPaintEngine * paintEngine()
-func (this *QPixmap) PaintEngine() *QPaintEngine /*444 QPaintEngine **/ {
+func (this *QPixmap) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPixmap11paintEngineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

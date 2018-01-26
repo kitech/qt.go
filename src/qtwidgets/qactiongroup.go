@@ -78,7 +78,7 @@ func (*QActionGroup) NewFromPointer(cthis unsafe.Pointer) *QActionGroup {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QActionGroup) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QActionGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QActionGroup) MetaObject() *qtcore.QMetaObject /*444 const QMetaObje
 // index:0
 // Public
 // void QActionGroup(class QObject *)
-func NewQActionGroup(parent *qtcore.QObject /*444 QObject **/) *QActionGroup {
+func NewQActionGroup(parent *qtcore.QObject /*777 QObject **/) *QActionGroup {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroupC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -112,7 +112,7 @@ func DeleteQActionGroup(*QActionGroup) {
 // index:0
 // Public
 // QAction * addAction(class QAction *)
-func (this *QActionGroup) AddAction(a *QAction /*444 QAction **/) *QAction /*444 QAction **/ {
+func (this *QActionGroup) AddAction(a *QAction /*777 QAction **/) *QAction /*777 QAction **/ {
 	var convArg0 = a.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup9addActionEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -125,7 +125,7 @@ func (this *QActionGroup) AddAction(a *QAction /*444 QAction **/) *QAction /*444
 // index:1
 // Public
 // QAction * addAction(const class QString &)
-func (this *QActionGroup) AddAction_1(text *qtcore.QString) *QAction /*444 QAction **/ {
+func (this *QActionGroup) AddAction_1(text *qtcore.QString) *QAction /*777 QAction **/ {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup9addActionERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -138,7 +138,7 @@ func (this *QActionGroup) AddAction_1(text *qtcore.QString) *QAction /*444 QActi
 // index:2
 // Public
 // QAction * addAction(const class QIcon &, const class QString &)
-func (this *QActionGroup) AddAction_2(icon *qtgui.QIcon, text *qtcore.QString) *QAction /*444 QAction **/ {
+func (this *QActionGroup) AddAction_2(icon *qtgui.QIcon, text *qtcore.QString) *QAction /*777 QAction **/ {
 	var convArg0 = icon.GetCthis()
 	var convArg1 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup9addActionERK5QIconRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -152,7 +152,7 @@ func (this *QActionGroup) AddAction_2(icon *qtgui.QIcon, text *qtcore.QString) *
 // index:0
 // Public
 // void removeAction(class QAction *)
-func (this *QActionGroup) RemoveAction(a *QAction /*444 QAction **/) {
+func (this *QActionGroup) RemoveAction(a *QAction /*777 QAction **/) {
 	var convArg0 = a.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup12removeActionEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -162,7 +162,7 @@ func (this *QActionGroup) RemoveAction(a *QAction /*444 QAction **/) {
 // index:0
 // Public
 // QAction * checkedAction()
-func (this *QActionGroup) CheckedAction() *QAction /*444 QAction **/ {
+func (this *QActionGroup) CheckedAction() *QAction /*777 QAction **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionGroup13checkedActionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -243,7 +243,7 @@ func (this *QActionGroup) SetExclusive(arg0 bool) {
 // index:0
 // Public
 // void triggered(class QAction *)
-func (this *QActionGroup) Triggered(arg0 *QAction /*444 QAction **/) {
+func (this *QActionGroup) Triggered(arg0 *QAction /*777 QAction **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup9triggeredEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -253,7 +253,7 @@ func (this *QActionGroup) Triggered(arg0 *QAction /*444 QAction **/) {
 // index:0
 // Public
 // void hovered(class QAction *)
-func (this *QActionGroup) Hovered(arg0 *QAction /*444 QAction **/) {
+func (this *QActionGroup) Hovered(arg0 *QAction /*777 QAction **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup7hoveredEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

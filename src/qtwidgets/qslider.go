@@ -78,7 +78,7 @@ func (*QSlider) NewFromPointer(cthis unsafe.Pointer) *QSlider {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QSlider) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QSlider) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSlider10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QSlider) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **
 // index:0
 // Public
 // void QSlider(class QWidget *)
-func NewQSlider(parent *QWidget /*444 QWidget **/) *QSlider {
+func NewQSlider(parent *QWidget /*777 QWidget **/) *QSlider {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSliderC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -103,7 +103,7 @@ func NewQSlider(parent *QWidget /*444 QWidget **/) *QSlider {
 // index:1
 // Public
 // void QSlider(Qt::Orientation, class QWidget *)
-func NewQSlider_1(orientation int, parent *QWidget /*444 QWidget **/) *QSlider {
+func NewQSlider_1(orientation int, parent *QWidget /*777 QWidget **/) *QSlider {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSliderC2EN2Qt11OrientationEP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, orientation, convArg1)
@@ -193,7 +193,7 @@ func (this *QSlider) TickInterval() int {
 // index:0
 // Public virtual
 // bool event(class QEvent *)
-func (this *QSlider) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QSlider) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSlider5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -205,7 +205,7 @@ func (this *QSlider) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QSlider) PaintEvent(ev *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+func (this *QSlider) PaintEvent(ev *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSlider10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -215,7 +215,7 @@ func (this *QSlider) PaintEvent(ev *qtgui.QPaintEvent /*444 QPaintEvent **/) {
 // index:0
 // Protected virtual
 // void mousePressEvent(class QMouseEvent *)
-func (this *QSlider) MousePressEvent(ev *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QSlider) MousePressEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSlider15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -225,7 +225,7 @@ func (this *QSlider) MousePressEvent(ev *qtgui.QMouseEvent /*444 QMouseEvent **/
 // index:0
 // Protected virtual
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QSlider) MouseReleaseEvent(ev *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QSlider) MouseReleaseEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSlider17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -235,7 +235,7 @@ func (this *QSlider) MouseReleaseEvent(ev *qtgui.QMouseEvent /*444 QMouseEvent *
 // index:0
 // Protected virtual
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QSlider) MouseMoveEvent(ev *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QSlider) MouseMoveEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSlider14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -245,7 +245,7 @@ func (this *QSlider) MouseMoveEvent(ev *qtgui.QMouseEvent /*444 QMouseEvent **/)
 // index:0
 // Protected
 // void initStyleOption(class QStyleOptionSlider *)
-func (this *QSlider) InitStyleOption(option *QStyleOptionSlider /*444 QStyleOptionSlider **/) {
+func (this *QSlider) InitStyleOption(option *QStyleOptionSlider /*777 QStyleOptionSlider **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSlider15initStyleOptionEP18QStyleOptionSlider", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

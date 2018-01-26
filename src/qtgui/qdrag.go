@@ -74,7 +74,7 @@ func (*QDrag) NewFromPointer(cthis unsafe.Pointer) *QDrag {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QDrag) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QDrag) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -86,7 +86,7 @@ func (this *QDrag) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ 
 // index:0
 // Public
 // void QDrag(class QObject *)
-func NewQDrag(dragSource *qtcore.QObject /*444 QObject **/) *QDrag {
+func NewQDrag(dragSource *qtcore.QObject /*777 QObject **/) *QDrag {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = dragSource.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDragC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -108,7 +108,7 @@ func DeleteQDrag(*QDrag) {
 // index:0
 // Public
 // void setMimeData(class QMimeData *)
-func (this *QDrag) SetMimeData(data *qtcore.QMimeData /*444 QMimeData **/) {
+func (this *QDrag) SetMimeData(data *qtcore.QMimeData /*777 QMimeData **/) {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag11setMimeDataEP9QMimeData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -118,7 +118,7 @@ func (this *QDrag) SetMimeData(data *qtcore.QMimeData /*444 QMimeData **/) {
 // index:0
 // Public
 // QMimeData * mimeData()
-func (this *QDrag) MimeData() *qtcore.QMimeData /*444 QMimeData **/ {
+func (this *QDrag) MimeData() *qtcore.QMimeData /*777 QMimeData **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag8mimeDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -178,7 +178,7 @@ func (this *QDrag) HotSpot() *qtcore.QPoint /*123*/ {
 // index:0
 // Public
 // QObject * source()
-func (this *QDrag) Source() *qtcore.QObject /*444 QObject **/ {
+func (this *QDrag) Source() *qtcore.QObject /*777 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag6sourceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -190,7 +190,7 @@ func (this *QDrag) Source() *qtcore.QObject /*444 QObject **/ {
 // index:0
 // Public
 // QObject * target()
-func (this *QDrag) Target() *qtcore.QObject /*444 QObject **/ {
+func (this *QDrag) Target() *qtcore.QObject /*777 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag6targetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -270,7 +270,7 @@ func (this *QDrag) ActionChanged(action int) {
 // index:0
 // Public
 // void targetChanged(class QObject *)
-func (this *QDrag) TargetChanged(newTarget *qtcore.QObject /*444 QObject **/) {
+func (this *QDrag) TargetChanged(newTarget *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = newTarget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag13targetChangedEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

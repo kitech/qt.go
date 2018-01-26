@@ -70,7 +70,7 @@ func (*QSignalTransition) NewFromPointer(cthis unsafe.Pointer) *QSignalTransitio
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QSignalTransition) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QSignalTransition) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSignalTransition10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QSignalTransition) MetaObject() *QMetaObject /*444 const QMetaObject
 // index:0
 // Public
 // void QSignalTransition(class QState *)
-func NewQSignalTransition(sourceState *QState /*444 QState **/) *QSignalTransition {
+func NewQSignalTransition(sourceState *QState /*777 QState **/) *QSignalTransition {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = sourceState.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSignalTransitionC2EP6QState", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -95,7 +95,7 @@ func NewQSignalTransition(sourceState *QState /*444 QState **/) *QSignalTransiti
 // index:1
 // Public
 // void QSignalTransition(const class QObject *, const char *, class QState *)
-func NewQSignalTransition_1(sender *QObject /*444 const QObject **/, signal string, sourceState *QState /*444 QState **/) *QSignalTransition {
+func NewQSignalTransition_1(sender *QObject /*777 const QObject **/, signal string, sourceState *QState /*777 QState **/) *QSignalTransition {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = sender.GetCthis()
 	var convArg1 = qtrt.CString(signal)
@@ -120,7 +120,7 @@ func DeleteQSignalTransition(*QSignalTransition) {
 // index:0
 // Public
 // QObject * senderObject()
-func (this *QSignalTransition) SenderObject() *QObject /*444 QObject **/ {
+func (this *QSignalTransition) SenderObject() *QObject /*777 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSignalTransition12senderObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -132,7 +132,7 @@ func (this *QSignalTransition) SenderObject() *QObject /*444 QObject **/ {
 // index:0
 // Public
 // void setSenderObject(const class QObject *)
-func (this *QSignalTransition) SetSenderObject(sender *QObject /*444 const QObject **/) {
+func (this *QSignalTransition) SetSenderObject(sender *QObject /*777 const QObject **/) {
 	var convArg0 = sender.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSignalTransition15setSenderObjectEPK7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -166,7 +166,7 @@ func (this *QSignalTransition) SetSignal(signal *QByteArray) {
 // index:0
 // Protected virtual
 // bool eventTest(class QEvent *)
-func (this *QSignalTransition) EventTest(event *QEvent /*444 QEvent **/) bool {
+func (this *QSignalTransition) EventTest(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSignalTransition9eventTestEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -178,7 +178,7 @@ func (this *QSignalTransition) EventTest(event *QEvent /*444 QEvent **/) bool {
 // index:0
 // Protected virtual
 // void onTransition(class QEvent *)
-func (this *QSignalTransition) OnTransition(event *QEvent /*444 QEvent **/) {
+func (this *QSignalTransition) OnTransition(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSignalTransition12onTransitionEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -188,7 +188,7 @@ func (this *QSignalTransition) OnTransition(event *QEvent /*444 QEvent **/) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QSignalTransition) Event(e *QEvent /*444 QEvent **/) bool {
+func (this *QSignalTransition) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSignalTransition5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

@@ -89,7 +89,7 @@ func NewQNativeGestureEvent(type_ int, localPos *qtcore.QPointF, windowPos *qtco
 // index:1
 // Public
 // void QNativeGestureEvent(Qt::NativeGestureType, const class QTouchDevice *, const class QPointF &, const class QPointF &, const class QPointF &, qreal, ulong, quint64)
-func NewQNativeGestureEvent_1(type_ int, dev *QTouchDevice /*444 const QTouchDevice **/, localPos *qtcore.QPointF, windowPos *qtcore.QPointF, screenPos *qtcore.QPointF, value float64, sequenceId uint, intArgument uint64) *QNativeGestureEvent {
+func NewQNativeGestureEvent_1(type_ int, dev *QTouchDevice /*777 const QTouchDevice **/, localPos *qtcore.QPointF, windowPos *qtcore.QPointF, screenPos *qtcore.QPointF, value float64, sequenceId uint, intArgument uint64) *QNativeGestureEvent {
 	cthis := qtrt.Calloc(1, 256) // 112
 	var convArg1 = dev.GetCthis()
 	var convArg2 = localPos.GetCthis()
@@ -200,7 +200,7 @@ func (this *QNativeGestureEvent) ScreenPos() *qtcore.QPointF {
 // index:0
 // Public
 // const QTouchDevice * device()
-func (this *QNativeGestureEvent) Device() *QTouchDevice /*444 const QTouchDevice **/ {
+func (this *QNativeGestureEvent) Device() *QTouchDevice /*777 const QTouchDevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QNativeGestureEvent6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

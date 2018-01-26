@@ -70,7 +70,7 @@ func (*QTimeLine) NewFromPointer(cthis unsafe.Pointer) *QTimeLine {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTimeLine) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QTimeLine) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QTimeLine) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 // index:0
 // Public
 // void QTimeLine(int, class QObject *)
-func NewQTimeLine(duration int, parent *QObject /*444 QObject **/) *QTimeLine {
+func NewQTimeLine(duration int, parent *QObject /*777 QObject **/) *QTimeLine {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLineC2EiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, duration, convArg1)
@@ -397,7 +397,7 @@ func (this *QTimeLine) ToggleDirection() {
 // index:0
 // Protected virtual
 // void timerEvent(class QTimerEvent *)
-func (this *QTimeLine) TimerEvent(event *QTimerEvent /*444 QTimerEvent **/) {
+func (this *QTimeLine) TimerEvent(event *QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

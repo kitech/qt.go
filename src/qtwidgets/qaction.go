@@ -78,7 +78,7 @@ func (*QAction) NewFromPointer(cthis unsafe.Pointer) *QAction {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QAction) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QAction) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QAction) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **
 // index:0
 // Public
 // void QAction(class QObject *)
-func NewQAction(parent *qtcore.QObject /*444 QObject **/) *QAction {
+func NewQAction(parent *qtcore.QObject /*777 QObject **/) *QAction {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QActionC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -103,7 +103,7 @@ func NewQAction(parent *qtcore.QObject /*444 QObject **/) *QAction {
 // index:1
 // Public
 // void QAction(const class QString &, class QObject *)
-func NewQAction_1(text *qtcore.QString, parent *qtcore.QObject /*444 QObject **/) *QAction {
+func NewQAction_1(text *qtcore.QString, parent *qtcore.QObject /*777 QObject **/) *QAction {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = text.GetCthis()
 	var convArg1 = parent.GetCthis()
@@ -117,7 +117,7 @@ func NewQAction_1(text *qtcore.QString, parent *qtcore.QObject /*444 QObject **/
 // index:2
 // Public
 // void QAction(const class QIcon &, const class QString &, class QObject *)
-func NewQAction_2(icon *qtgui.QIcon, text *qtcore.QString, parent *qtcore.QObject /*444 QObject **/) *QAction {
+func NewQAction_2(icon *qtgui.QIcon, text *qtcore.QString, parent *qtcore.QObject /*777 QObject **/) *QAction {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = icon.GetCthis()
 	var convArg1 = text.GetCthis()
@@ -141,7 +141,7 @@ func DeleteQAction(*QAction) {
 // index:0
 // Public
 // void setActionGroup(class QActionGroup *)
-func (this *QAction) SetActionGroup(group *QActionGroup /*444 QActionGroup **/) {
+func (this *QAction) SetActionGroup(group *QActionGroup /*777 QActionGroup **/) {
 	var convArg0 = group.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction14setActionGroupEP12QActionGroup", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -151,7 +151,7 @@ func (this *QAction) SetActionGroup(group *QActionGroup /*444 QActionGroup **/) 
 // index:0
 // Public
 // QActionGroup * actionGroup()
-func (this *QAction) ActionGroup() *QActionGroup /*444 QActionGroup **/ {
+func (this *QAction) ActionGroup() *QActionGroup /*777 QActionGroup **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction11actionGroupEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -327,7 +327,7 @@ func (this *QAction) Priority() int {
 // index:0
 // Public
 // QMenu * menu()
-func (this *QAction) Menu() *QMenu /*444 QMenu **/ {
+func (this *QAction) Menu() *QMenu /*777 QMenu **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction4menuEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -339,7 +339,7 @@ func (this *QAction) Menu() *QMenu /*444 QMenu **/ {
 // index:0
 // Public
 // void setMenu(class QMenu *)
-func (this *QAction) SetMenu(menu *QMenu /*444 QMenu **/) {
+func (this *QAction) SetMenu(menu *QMenu /*777 QMenu **/) {
 	var convArg0 = menu.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction7setMenuEP5QMenu", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -552,7 +552,7 @@ func (this *QAction) Activate(event int) {
 // index:0
 // Public
 // bool showStatusText(class QWidget *)
-func (this *QAction) ShowStatusText(widget *QWidget /*444 QWidget **/) bool {
+func (this *QAction) ShowStatusText(widget *QWidget /*777 QWidget **/) bool {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction14showStatusTextEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -624,7 +624,7 @@ func (this *QAction) IsShortcutVisibleInContextMenu() bool {
 // index:0
 // Public
 // QWidget * parentWidget()
-func (this *QAction) ParentWidget() *QWidget /*444 QWidget **/ {
+func (this *QAction) ParentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QAction12parentWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -636,7 +636,7 @@ func (this *QAction) ParentWidget() *QWidget /*444 QWidget **/ {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QAction) Event(arg0 *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QAction) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

@@ -74,7 +74,7 @@ func (*QStyleHints) NewFromPointer(cthis unsafe.Pointer) *QStyleHints {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QStyleHints) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QStyleHints) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

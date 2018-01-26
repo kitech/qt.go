@@ -70,7 +70,7 @@ func (*QAbstractTransition) NewFromPointer(cthis unsafe.Pointer) *QAbstractTrans
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QAbstractTransition) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QAbstractTransition) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractTransition10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QAbstractTransition) MetaObject() *QMetaObject /*444 const QMetaObje
 // index:0
 // Public
 // void QAbstractTransition(class QState *)
-func NewQAbstractTransition(sourceState *QState /*444 QState **/) *QAbstractTransition {
+func NewQAbstractTransition(sourceState *QState /*777 QState **/) *QAbstractTransition {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = sourceState.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransitionC1EP6QState", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -104,7 +104,7 @@ func DeleteQAbstractTransition(*QAbstractTransition) {
 // index:0
 // Public
 // QState * sourceState()
-func (this *QAbstractTransition) SourceState() *QState /*444 QState **/ {
+func (this *QAbstractTransition) SourceState() *QState /*777 QState **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractTransition11sourceStateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -116,7 +116,7 @@ func (this *QAbstractTransition) SourceState() *QState /*444 QState **/ {
 // index:0
 // Public
 // QAbstractState * targetState()
-func (this *QAbstractTransition) TargetState() *QAbstractState /*444 QAbstractState **/ {
+func (this *QAbstractTransition) TargetState() *QAbstractState /*777 QAbstractState **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractTransition11targetStateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -128,7 +128,7 @@ func (this *QAbstractTransition) TargetState() *QAbstractState /*444 QAbstractSt
 // index:0
 // Public
 // void setTargetState(class QAbstractState *)
-func (this *QAbstractTransition) SetTargetState(target *QAbstractState /*444 QAbstractState **/) {
+func (this *QAbstractTransition) SetTargetState(target *QAbstractState /*777 QAbstractState **/) {
 	var convArg0 = target.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransition14setTargetStateEP14QAbstractState", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -158,7 +158,7 @@ func (this *QAbstractTransition) SetTransitionType(type_ int) {
 // index:0
 // Public
 // QStateMachine * machine()
-func (this *QAbstractTransition) Machine() *QStateMachine /*444 QStateMachine **/ {
+func (this *QAbstractTransition) Machine() *QStateMachine /*777 QStateMachine **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractTransition7machineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -170,7 +170,7 @@ func (this *QAbstractTransition) Machine() *QStateMachine /*444 QStateMachine **
 // index:0
 // Public
 // void addAnimation(class QAbstractAnimation *)
-func (this *QAbstractTransition) AddAnimation(animation *QAbstractAnimation /*444 QAbstractAnimation **/) {
+func (this *QAbstractTransition) AddAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
 	var convArg0 = animation.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -180,7 +180,7 @@ func (this *QAbstractTransition) AddAnimation(animation *QAbstractAnimation /*44
 // index:0
 // Public
 // void removeAnimation(class QAbstractAnimation *)
-func (this *QAbstractTransition) RemoveAnimation(animation *QAbstractAnimation /*444 QAbstractAnimation **/) {
+func (this *QAbstractTransition) RemoveAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
 	var convArg0 = animation.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -190,7 +190,7 @@ func (this *QAbstractTransition) RemoveAnimation(animation *QAbstractAnimation /
 // index:0
 // Protected pure virtual
 // bool eventTest(class QEvent *)
-func (this *QAbstractTransition) EventTest(event *QEvent /*444 QEvent **/) bool {
+func (this *QAbstractTransition) EventTest(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransition9eventTestEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -202,7 +202,7 @@ func (this *QAbstractTransition) EventTest(event *QEvent /*444 QEvent **/) bool 
 // index:0
 // Protected pure virtual
 // void onTransition(class QEvent *)
-func (this *QAbstractTransition) OnTransition(event *QEvent /*444 QEvent **/) {
+func (this *QAbstractTransition) OnTransition(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransition12onTransitionEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -212,7 +212,7 @@ func (this *QAbstractTransition) OnTransition(event *QEvent /*444 QEvent **/) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QAbstractTransition) Event(e *QEvent /*444 QEvent **/) bool {
+func (this *QAbstractTransition) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransition5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

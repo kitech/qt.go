@@ -69,7 +69,7 @@ func (*QWriteLocker) NewFromPointer(cthis unsafe.Pointer) *QWriteLocker {
 // index:0
 // Public inline
 // void QWriteLocker(class QReadWriteLock *)
-func NewQWriteLocker(readWriteLock *QReadWriteLock /*444 QReadWriteLock **/) *QWriteLocker {
+func NewQWriteLocker(readWriteLock *QReadWriteLock /*777 QReadWriteLock **/) *QWriteLocker {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = readWriteLock.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLockerC2EP14QReadWriteLock", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -109,7 +109,7 @@ func (this *QWriteLocker) Relock() {
 // index:0
 // Public inline
 // QReadWriteLock * readWriteLock()
-func (this *QWriteLocker) ReadWriteLock() *QReadWriteLock /*444 QReadWriteLock **/ {
+func (this *QWriteLocker) ReadWriteLock() *QReadWriteLock /*777 QReadWriteLock **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QWriteLocker13readWriteLockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

@@ -102,7 +102,7 @@ func NewQTreeWidgetItem_1(strings *qtcore.QStringList, type_ int) *QTreeWidgetIt
 // index:2
 // Public
 // void QTreeWidgetItem(class QTreeWidget *, int)
-func NewQTreeWidgetItem_2(view *QTreeWidget /*444 QTreeWidget **/, type_ int) *QTreeWidgetItem {
+func NewQTreeWidgetItem_2(view *QTreeWidget /*777 QTreeWidget **/, type_ int) *QTreeWidgetItem {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = view.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EP11QTreeWidgeti", ffiqt.FFI_TYPE_VOID, cthis, convArg0, type_)
@@ -115,7 +115,7 @@ func NewQTreeWidgetItem_2(view *QTreeWidget /*444 QTreeWidget **/, type_ int) *Q
 // index:3
 // Public
 // void QTreeWidgetItem(class QTreeWidget *, const class QStringList &, int)
-func NewQTreeWidgetItem_3(view *QTreeWidget /*444 QTreeWidget **/, strings *qtcore.QStringList, type_ int) *QTreeWidgetItem {
+func NewQTreeWidgetItem_3(view *QTreeWidget /*777 QTreeWidget **/, strings *qtcore.QStringList, type_ int) *QTreeWidgetItem {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = view.GetCthis()
 	var convArg1 = strings.GetCthis()
@@ -129,7 +129,7 @@ func NewQTreeWidgetItem_3(view *QTreeWidget /*444 QTreeWidget **/, strings *qtco
 // index:4
 // Public
 // void QTreeWidgetItem(class QTreeWidget *, class QTreeWidgetItem *, int)
-func NewQTreeWidgetItem_4(view *QTreeWidget /*444 QTreeWidget **/, after *QTreeWidgetItem /*444 QTreeWidgetItem **/, type_ int) *QTreeWidgetItem {
+func NewQTreeWidgetItem_4(view *QTreeWidget /*777 QTreeWidget **/, after *QTreeWidgetItem /*777 QTreeWidgetItem **/, type_ int) *QTreeWidgetItem {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = view.GetCthis()
 	var convArg1 = after.GetCthis()
@@ -143,7 +143,7 @@ func NewQTreeWidgetItem_4(view *QTreeWidget /*444 QTreeWidget **/, after *QTreeW
 // index:5
 // Public
 // void QTreeWidgetItem(class QTreeWidgetItem *, int)
-func NewQTreeWidgetItem_5(parent *QTreeWidgetItem /*444 QTreeWidgetItem **/, type_ int) *QTreeWidgetItem {
+func NewQTreeWidgetItem_5(parent *QTreeWidgetItem /*777 QTreeWidgetItem **/, type_ int) *QTreeWidgetItem {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EPS_i", ffiqt.FFI_TYPE_VOID, cthis, convArg0, type_)
@@ -156,7 +156,7 @@ func NewQTreeWidgetItem_5(parent *QTreeWidgetItem /*444 QTreeWidgetItem **/, typ
 // index:6
 // Public
 // void QTreeWidgetItem(class QTreeWidgetItem *, const class QStringList &, int)
-func NewQTreeWidgetItem_6(parent *QTreeWidgetItem /*444 QTreeWidgetItem **/, strings *qtcore.QStringList, type_ int) *QTreeWidgetItem {
+func NewQTreeWidgetItem_6(parent *QTreeWidgetItem /*777 QTreeWidgetItem **/, strings *qtcore.QStringList, type_ int) *QTreeWidgetItem {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = parent.GetCthis()
 	var convArg1 = strings.GetCthis()
@@ -170,7 +170,7 @@ func NewQTreeWidgetItem_6(parent *QTreeWidgetItem /*444 QTreeWidgetItem **/, str
 // index:7
 // Public
 // void QTreeWidgetItem(class QTreeWidgetItem *, class QTreeWidgetItem *, int)
-func NewQTreeWidgetItem_7(parent *QTreeWidgetItem /*444 QTreeWidgetItem **/, after *QTreeWidgetItem /*444 QTreeWidgetItem **/, type_ int) *QTreeWidgetItem {
+func NewQTreeWidgetItem_7(parent *QTreeWidgetItem /*777 QTreeWidgetItem **/, after *QTreeWidgetItem /*777 QTreeWidgetItem **/, type_ int) *QTreeWidgetItem {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = parent.GetCthis()
 	var convArg1 = after.GetCthis()
@@ -193,7 +193,7 @@ func DeleteQTreeWidgetItem(*QTreeWidgetItem) {
 // index:0
 // Public virtual
 // QTreeWidgetItem * clone()
-func (this *QTreeWidgetItem) Clone() *QTreeWidgetItem /*444 QTreeWidgetItem **/ {
+func (this *QTreeWidgetItem) Clone() *QTreeWidgetItem /*777 QTreeWidgetItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem5cloneEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -205,7 +205,7 @@ func (this *QTreeWidgetItem) Clone() *QTreeWidgetItem /*444 QTreeWidgetItem **/ 
 // index:0
 // Public inline
 // QTreeWidget * treeWidget()
-func (this *QTreeWidgetItem) TreeWidget() *QTreeWidget /*444 QTreeWidget **/ {
+func (this *QTreeWidgetItem) TreeWidget() *QTreeWidget /*777 QTreeWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem10treeWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -705,7 +705,7 @@ func (this *QTreeWidgetItem) Write(out *qtcore.QDataStream) {
 // index:0
 // Public inline
 // QTreeWidgetItem * parent()
-func (this *QTreeWidgetItem) Parent() *QTreeWidgetItem /*444 QTreeWidgetItem **/ {
+func (this *QTreeWidgetItem) Parent() *QTreeWidgetItem /*777 QTreeWidgetItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem6parentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -717,7 +717,7 @@ func (this *QTreeWidgetItem) Parent() *QTreeWidgetItem /*444 QTreeWidgetItem **/
 // index:0
 // Public inline
 // QTreeWidgetItem * child(int)
-func (this *QTreeWidgetItem) Child(index int) *QTreeWidgetItem /*444 QTreeWidgetItem **/ {
+func (this *QTreeWidgetItem) Child(index int) *QTreeWidgetItem /*777 QTreeWidgetItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem5childEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -751,7 +751,7 @@ func (this *QTreeWidgetItem) ColumnCount() int {
 // index:0
 // Public inline
 // int indexOfChild(class QTreeWidgetItem *)
-func (this *QTreeWidgetItem) IndexOfChild(child *QTreeWidgetItem /*444 QTreeWidgetItem **/) int {
+func (this *QTreeWidgetItem) IndexOfChild(child *QTreeWidgetItem /*777 QTreeWidgetItem **/) int {
 	var convArg0 = child.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem12indexOfChildEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -763,7 +763,7 @@ func (this *QTreeWidgetItem) IndexOfChild(child *QTreeWidgetItem /*444 QTreeWidg
 // index:0
 // Public
 // void addChild(class QTreeWidgetItem *)
-func (this *QTreeWidgetItem) AddChild(child *QTreeWidgetItem /*444 QTreeWidgetItem **/) {
+func (this *QTreeWidgetItem) AddChild(child *QTreeWidgetItem /*777 QTreeWidgetItem **/) {
 	var convArg0 = child.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem8addChildEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -773,7 +773,7 @@ func (this *QTreeWidgetItem) AddChild(child *QTreeWidgetItem /*444 QTreeWidgetIt
 // index:0
 // Public
 // void insertChild(int, class QTreeWidgetItem *)
-func (this *QTreeWidgetItem) InsertChild(index int, child *QTreeWidgetItem /*444 QTreeWidgetItem **/) {
+func (this *QTreeWidgetItem) InsertChild(index int, child *QTreeWidgetItem /*777 QTreeWidgetItem **/) {
 	var convArg1 = child.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem11insertChildEiPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -783,7 +783,7 @@ func (this *QTreeWidgetItem) InsertChild(index int, child *QTreeWidgetItem /*444
 // index:0
 // Public
 // void removeChild(class QTreeWidgetItem *)
-func (this *QTreeWidgetItem) RemoveChild(child *QTreeWidgetItem /*444 QTreeWidgetItem **/) {
+func (this *QTreeWidgetItem) RemoveChild(child *QTreeWidgetItem /*777 QTreeWidgetItem **/) {
 	var convArg0 = child.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem11removeChildEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -793,7 +793,7 @@ func (this *QTreeWidgetItem) RemoveChild(child *QTreeWidgetItem /*444 QTreeWidge
 // index:0
 // Public
 // QTreeWidgetItem * takeChild(int)
-func (this *QTreeWidgetItem) TakeChild(index int) *QTreeWidgetItem /*444 QTreeWidgetItem **/ {
+func (this *QTreeWidgetItem) TakeChild(index int) *QTreeWidgetItem /*777 QTreeWidgetItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem9takeChildEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv

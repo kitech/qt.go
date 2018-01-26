@@ -81,7 +81,7 @@ func NewQStringRef() *QStringRef {
 // index:1
 // Public inline
 // void QStringRef(const class QString *, int, int)
-func NewQStringRef_1(string *QString /*444 const QString **/, position int, size int) *QStringRef {
+func NewQStringRef_1(string *QString /*777 const QString **/, position int, size int) *QStringRef {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = string.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStringRefC2EPK7QStringii", ffiqt.FFI_TYPE_VOID, cthis, convArg0, position, size)
@@ -94,7 +94,7 @@ func NewQStringRef_1(string *QString /*444 const QString **/, position int, size
 // index:2
 // Public inline
 // void QStringRef(const class QString *)
-func NewQStringRef_2(string *QString /*444 const QString **/) *QStringRef {
+func NewQStringRef_2(string *QString /*777 const QString **/) *QStringRef {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = string.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStringRefC2EPK7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -116,7 +116,7 @@ func DeleteQStringRef(*QStringRef) {
 // index:0
 // Public inline
 // const QString * string()
-func (this *QStringRef) String() *QString /*444 const QString **/ {
+func (this *QStringRef) String() *QString /*777 const QString **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QStringRef6stringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -557,7 +557,7 @@ func (this *QStringRef) EndsWith_4(c *QStringRef, cs int) bool {
 // index:0
 // Public inline
 // const QChar * unicode()
-func (this *QStringRef) Unicode() *QChar /*444 const QChar **/ {
+func (this *QStringRef) Unicode() *QChar /*777 const QChar **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QStringRef7unicodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -569,7 +569,7 @@ func (this *QStringRef) Unicode() *QChar /*444 const QChar **/ {
 // index:0
 // Public inline
 // const QChar * data()
-func (this *QStringRef) Data() *QChar /*444 const QChar **/ {
+func (this *QStringRef) Data() *QChar /*777 const QChar **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QStringRef4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -581,7 +581,7 @@ func (this *QStringRef) Data() *QChar /*444 const QChar **/ {
 // index:0
 // Public inline
 // const QChar * constData()
-func (this *QStringRef) ConstData() *QChar /*444 const QChar **/ {
+func (this *QStringRef) ConstData() *QChar /*777 const QChar **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QStringRef9constDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -593,7 +593,7 @@ func (this *QStringRef) ConstData() *QChar /*444 const QChar **/ {
 // index:0
 // Public inline
 // QStringRef::const_iterator begin()
-func (this *QStringRef) Begin() *QChar /*444 const QChar **/ {
+func (this *QStringRef) Begin() *QChar /*777 const QChar **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QStringRef5beginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -605,7 +605,7 @@ func (this *QStringRef) Begin() *QChar /*444 const QChar **/ {
 // index:0
 // Public inline
 // QStringRef::const_iterator cbegin()
-func (this *QStringRef) Cbegin() *QChar /*444 const QChar **/ {
+func (this *QStringRef) Cbegin() *QChar /*777 const QChar **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QStringRef6cbeginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -617,7 +617,7 @@ func (this *QStringRef) Cbegin() *QChar /*444 const QChar **/ {
 // index:0
 // Public inline
 // QStringRef::const_iterator constBegin()
-func (this *QStringRef) ConstBegin() *QChar /*444 const QChar **/ {
+func (this *QStringRef) ConstBegin() *QChar /*777 const QChar **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QStringRef10constBeginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -629,7 +629,7 @@ func (this *QStringRef) ConstBegin() *QChar /*444 const QChar **/ {
 // index:0
 // Public inline
 // QStringRef::const_iterator end()
-func (this *QStringRef) End() *QChar /*444 const QChar **/ {
+func (this *QStringRef) End() *QChar /*777 const QChar **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QStringRef3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -641,7 +641,7 @@ func (this *QStringRef) End() *QChar /*444 const QChar **/ {
 // index:0
 // Public inline
 // QStringRef::const_iterator cend()
-func (this *QStringRef) Cend() *QChar /*444 const QChar **/ {
+func (this *QStringRef) Cend() *QChar /*777 const QChar **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QStringRef4cendEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -653,7 +653,7 @@ func (this *QStringRef) Cend() *QChar /*444 const QChar **/ {
 // index:0
 // Public inline
 // QStringRef::const_iterator constEnd()
-func (this *QStringRef) ConstEnd() *QChar /*444 const QChar **/ {
+func (this *QStringRef) ConstEnd() *QChar /*777 const QChar **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QStringRef8constEndEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -752,7 +752,7 @@ func (this *QStringRef) IsNull() bool {
 // index:0
 // Public
 // QStringRef appendTo(class QString *)
-func (this *QStringRef) AppendTo(string *QString /*444 QString **/) *QStringRef /*123*/ {
+func (this *QStringRef) AppendTo(string *QString /*777 QString **/) *QStringRef /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = string.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QStringRef8appendToEP7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)

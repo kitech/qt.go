@@ -135,14 +135,14 @@ func (this *QArrayData) CloneFlags() int {
 // index:0
 // Public static inline
 // QArrayData * sharedNull()
-func (this *QArrayData) SharedNull() *QArrayData /*444 QArrayData **/ {
+func (this *QArrayData) SharedNull() *QArrayData /*777 QArrayData **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QArrayData10sharedNullEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQArrayDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QArrayData_SharedNull() *QArrayData /*444 QArrayData **/ {
+func QArrayData_SharedNull() *QArrayData /*777 QArrayData **/ {
 	var nilthis *QArrayData
 	rv := nilthis.SharedNull()
 	return rv

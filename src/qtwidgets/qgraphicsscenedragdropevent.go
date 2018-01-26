@@ -253,7 +253,7 @@ func (this *QGraphicsSceneDragDropEvent) SetDropAction(action int) {
 // index:0
 // Public
 // QWidget * source()
-func (this *QGraphicsSceneDragDropEvent) Source() *QWidget /*444 QWidget **/ {
+func (this *QGraphicsSceneDragDropEvent) Source() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent6sourceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -265,7 +265,7 @@ func (this *QGraphicsSceneDragDropEvent) Source() *QWidget /*444 QWidget **/ {
 // index:0
 // Public
 // void setSource(class QWidget *)
-func (this *QGraphicsSceneDragDropEvent) SetSource(source *QWidget /*444 QWidget **/) {
+func (this *QGraphicsSceneDragDropEvent) SetSource(source *QWidget /*777 QWidget **/) {
 	var convArg0 = source.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -275,7 +275,7 @@ func (this *QGraphicsSceneDragDropEvent) SetSource(source *QWidget /*444 QWidget
 // index:0
 // Public
 // const QMimeData * mimeData()
-func (this *QGraphicsSceneDragDropEvent) MimeData() *qtcore.QMimeData /*444 const QMimeData **/ {
+func (this *QGraphicsSceneDragDropEvent) MimeData() *qtcore.QMimeData /*777 const QMimeData **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QGraphicsSceneDragDropEvent8mimeDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -287,7 +287,7 @@ func (this *QGraphicsSceneDragDropEvent) MimeData() *qtcore.QMimeData /*444 cons
 // index:0
 // Public
 // void setMimeData(const class QMimeData *)
-func (this *QGraphicsSceneDragDropEvent) SetMimeData(data *qtcore.QMimeData /*444 const QMimeData **/) {
+func (this *QGraphicsSceneDragDropEvent) SetMimeData(data *qtcore.QMimeData /*777 const QMimeData **/) {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

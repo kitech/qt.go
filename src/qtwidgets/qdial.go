@@ -78,7 +78,7 @@ func (*QDial) NewFromPointer(cthis unsafe.Pointer) *QDial {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QDial) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QDial) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDial10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QDial) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ 
 // index:0
 // Public
 // void QDial(class QWidget *)
-func NewQDial(parent *QWidget /*444 QWidget **/) *QDial {
+func NewQDial(parent *QWidget /*777 QWidget **/) *QDial {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDialC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -211,7 +211,7 @@ func (this *QDial) SetWrapping(on bool) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QDial) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QDial) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDial5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -223,7 +223,7 @@ func (this *QDial) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
 // index:0
 // Protected virtual
 // void resizeEvent(class QResizeEvent *)
-func (this *QDial) ResizeEvent(re *qtgui.QResizeEvent /*444 QResizeEvent **/) {
+func (this *QDial) ResizeEvent(re *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = re.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDial11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -233,7 +233,7 @@ func (this *QDial) ResizeEvent(re *qtgui.QResizeEvent /*444 QResizeEvent **/) {
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QDial) PaintEvent(pe *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+func (this *QDial) PaintEvent(pe *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = pe.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDial10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -243,7 +243,7 @@ func (this *QDial) PaintEvent(pe *qtgui.QPaintEvent /*444 QPaintEvent **/) {
 // index:0
 // Protected virtual
 // void mousePressEvent(class QMouseEvent *)
-func (this *QDial) MousePressEvent(me *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QDial) MousePressEvent(me *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = me.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDial15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -253,7 +253,7 @@ func (this *QDial) MousePressEvent(me *qtgui.QMouseEvent /*444 QMouseEvent **/) 
 // index:0
 // Protected virtual
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QDial) MouseReleaseEvent(me *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QDial) MouseReleaseEvent(me *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = me.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDial17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -263,7 +263,7 @@ func (this *QDial) MouseReleaseEvent(me *qtgui.QMouseEvent /*444 QMouseEvent **/
 // index:0
 // Protected virtual
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QDial) MouseMoveEvent(me *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QDial) MouseMoveEvent(me *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = me.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDial14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -282,7 +282,7 @@ func (this *QDial) SliderChange(change int) {
 // index:0
 // Protected
 // void initStyleOption(class QStyleOptionSlider *)
-func (this *QDial) InitStyleOption(option *QStyleOptionSlider /*444 QStyleOptionSlider **/) {
+func (this *QDial) InitStyleOption(option *QStyleOptionSlider /*777 QStyleOptionSlider **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDial15initStyleOptionEP18QStyleOptionSlider", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

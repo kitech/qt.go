@@ -216,7 +216,7 @@ func (this *QLayoutItem) Invalidate() {
 // index:0
 // Public virtual
 // QWidget * widget()
-func (this *QLayoutItem) Widget() *QWidget /*444 QWidget **/ {
+func (this *QLayoutItem) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QLayoutItem6widgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -228,7 +228,7 @@ func (this *QLayoutItem) Widget() *QWidget /*444 QWidget **/ {
 // index:0
 // Public virtual
 // QLayout * layout()
-func (this *QLayoutItem) Layout() *QLayout /*444 QLayout **/ {
+func (this *QLayoutItem) Layout() *QLayout /*777 QLayout **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QLayoutItem6layoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -240,7 +240,7 @@ func (this *QLayoutItem) Layout() *QLayout /*444 QLayout **/ {
 // index:0
 // Public virtual
 // QSpacerItem * spacerItem()
-func (this *QLayoutItem) SpacerItem() *QSpacerItem /*444 QSpacerItem **/ {
+func (this *QLayoutItem) SpacerItem() *QSpacerItem /*777 QSpacerItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QLayoutItem10spacerItemEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

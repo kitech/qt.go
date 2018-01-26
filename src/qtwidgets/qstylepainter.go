@@ -90,7 +90,7 @@ func NewQStylePainter() *QStylePainter {
 // index:1
 // Public inline
 // void QStylePainter(class QWidget *)
-func NewQStylePainter_1(w *QWidget /*444 QWidget **/) *QStylePainter {
+func NewQStylePainter_1(w *QWidget /*777 QWidget **/) *QStylePainter {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainterC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -103,7 +103,7 @@ func NewQStylePainter_1(w *QWidget /*444 QWidget **/) *QStylePainter {
 // index:2
 // Public inline
 // void QStylePainter(class QPaintDevice *, class QWidget *)
-func NewQStylePainter_2(pd *qtgui.QPaintDevice /*444 QPaintDevice **/, w *QWidget /*444 QWidget **/) *QStylePainter {
+func NewQStylePainter_2(pd *qtgui.QPaintDevice /*777 QPaintDevice **/, w *QWidget /*777 QWidget **/) *QStylePainter {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = pd.GetCthis()
 	var convArg1 = w.GetCthis()
@@ -117,7 +117,7 @@ func NewQStylePainter_2(pd *qtgui.QPaintDevice /*444 QPaintDevice **/, w *QWidge
 // index:0
 // Public inline
 // bool begin(class QWidget *)
-func (this *QStylePainter) Begin(w *QWidget /*444 QWidget **/) bool {
+func (this *QStylePainter) Begin(w *QWidget /*777 QWidget **/) bool {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainter5beginEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -129,7 +129,7 @@ func (this *QStylePainter) Begin(w *QWidget /*444 QWidget **/) bool {
 // index:1
 // Public inline
 // bool begin(class QPaintDevice *, class QWidget *)
-func (this *QStylePainter) Begin_1(pd *qtgui.QPaintDevice /*444 QPaintDevice **/, w *QWidget /*444 QWidget **/) bool {
+func (this *QStylePainter) Begin_1(pd *qtgui.QPaintDevice /*777 QPaintDevice **/, w *QWidget /*777 QWidget **/) bool {
 	var convArg0 = pd.GetCthis()
 	var convArg1 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -195,7 +195,7 @@ func (this *QStylePainter) DrawItemPixmap(r *qtcore.QRect, flags int, pixmap *qt
 // index:0
 // Public inline
 // QStyle * style()
-func (this *QStylePainter) Style() *QStyle /*444 QStyle **/ {
+func (this *QStylePainter) Style() *QStyle /*777 QStyle **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStylePainter5styleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

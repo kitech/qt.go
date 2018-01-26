@@ -78,7 +78,7 @@ func (*QGraphicsRotation) NewFromPointer(cthis unsafe.Pointer) *QGraphicsRotatio
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QGraphicsRotation) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QGraphicsRotation) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRotation10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QGraphicsRotation) MetaObject() *qtcore.QMetaObject /*444 const QMet
 // index:0
 // Public
 // void QGraphicsRotation(class QObject *)
-func NewQGraphicsRotation(parent *qtcore.QObject /*444 QObject **/) *QGraphicsRotation {
+func NewQGraphicsRotation(parent *qtcore.QObject /*777 QObject **/) *QGraphicsRotation {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotationC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -189,7 +189,7 @@ func (this *QGraphicsRotation) SetAxis_1(axis int) {
 // index:0
 // Public virtual
 // void applyTo(class QMatrix4x4 *)
-func (this *QGraphicsRotation) ApplyTo(matrix *qtgui.QMatrix4x4 /*444 QMatrix4x4 **/) {
+func (this *QGraphicsRotation) ApplyTo(matrix *qtgui.QMatrix4x4 /*777 QMatrix4x4 **/) {
 	var convArg0 = matrix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRotation7applyToEP10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

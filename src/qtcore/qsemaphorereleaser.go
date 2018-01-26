@@ -94,7 +94,7 @@ func NewQSemaphoreReleaser_1(sem *QSemaphore, n int) *QSemaphoreReleaser {
 // index:2
 // Public inline
 // void QSemaphoreReleaser(class QSemaphore *, int)
-func NewQSemaphoreReleaser_2(sem *QSemaphore /*444 QSemaphore **/, n int) *QSemaphoreReleaser {
+func NewQSemaphoreReleaser_2(sem *QSemaphore /*777 QSemaphore **/, n int) *QSemaphoreReleaser {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = sem.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2EP10QSemaphorei", ffiqt.FFI_TYPE_VOID, cthis, convArg0, n)
@@ -126,7 +126,7 @@ func (this *QSemaphoreReleaser) Swap(other *QSemaphoreReleaser) {
 // index:0
 // Public inline
 // QSemaphore * semaphore()
-func (this *QSemaphoreReleaser) Semaphore() *QSemaphore /*444 QSemaphore **/ {
+func (this *QSemaphoreReleaser) Semaphore() *QSemaphore /*777 QSemaphore **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSemaphoreReleaser9semaphoreEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -138,7 +138,7 @@ func (this *QSemaphoreReleaser) Semaphore() *QSemaphore /*444 QSemaphore **/ {
 // index:0
 // Public inline
 // QSemaphore * cancel()
-func (this *QSemaphoreReleaser) Cancel() *QSemaphore /*444 QSemaphore **/ {
+func (this *QSemaphoreReleaser) Cancel() *QSemaphore /*777 QSemaphore **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaser6cancelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

@@ -94,7 +94,7 @@ func DeleteQIconEngine(*QIconEngine) {
 // index:0
 // Public pure virtual
 // void paint(class QPainter *, const class QRect &, class QIcon::Mode, class QIcon::State)
-func (this *QIconEngine) Paint(painter *QPainter /*444 QPainter **/, rect *qtcore.QRect, mode int, state int) {
+func (this *QIconEngine) Paint(painter *QPainter /*777 QPainter **/, rect *qtcore.QRect, mode int, state int) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QIconEngine5paintEP8QPainterRK5QRectN5QIcon4ModeENS5_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, mode, state)
@@ -170,7 +170,7 @@ func (this *QIconEngine) Key() *qtcore.QString /*123*/ {
 // index:0
 // Public pure virtual
 // QIconEngine * clone()
-func (this *QIconEngine) Clone() *QIconEngine /*444 QIconEngine **/ {
+func (this *QIconEngine) Clone() *QIconEngine /*777 QIconEngine **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QIconEngine5cloneEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

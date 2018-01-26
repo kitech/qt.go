@@ -70,7 +70,7 @@ func (*QPluginLoader) NewFromPointer(cthis unsafe.Pointer) *QPluginLoader {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QPluginLoader) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QPluginLoader) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QPluginLoader) MetaObject() *QMetaObject /*444 const QMetaObject **/
 // index:0
 // Public
 // void QPluginLoader(class QObject *)
-func NewQPluginLoader(parent *QObject /*444 QObject **/) *QPluginLoader {
+func NewQPluginLoader(parent *QObject /*777 QObject **/) *QPluginLoader {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoaderC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -95,7 +95,7 @@ func NewQPluginLoader(parent *QObject /*444 QObject **/) *QPluginLoader {
 // index:1
 // Public
 // void QPluginLoader(const class QString &, class QObject *)
-func NewQPluginLoader_1(fileName *QString, parent *QObject /*444 QObject **/) *QPluginLoader {
+func NewQPluginLoader_1(fileName *QString, parent *QObject /*777 QObject **/) *QPluginLoader {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = fileName.GetCthis()
 	var convArg1 = parent.GetCthis()
@@ -118,7 +118,7 @@ func DeleteQPluginLoader(*QPluginLoader) {
 // index:0
 // Public
 // QObject * instance()
-func (this *QPluginLoader) Instance() *QObject /*444 QObject **/ {
+func (this *QPluginLoader) Instance() *QObject /*777 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoader8instanceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

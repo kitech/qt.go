@@ -78,7 +78,7 @@ func (*QPlainTextDocumentLayout) NewFromPointer(cthis unsafe.Pointer) *QPlainTex
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QPlainTextDocumentLayout) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QPlainTextDocumentLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QPlainTextDocumentLayout) MetaObject() *qtcore.QMetaObject /*444 con
 // index:0
 // Public
 // void QPlainTextDocumentLayout(class QTextDocument *)
-func NewQPlainTextDocumentLayout(document *qtgui.QTextDocument /*444 QTextDocument **/) *QPlainTextDocumentLayout {
+func NewQPlainTextDocumentLayout(document *qtgui.QTextDocument /*777 QTextDocument **/) *QPlainTextDocumentLayout {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = document.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayoutC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -149,7 +149,7 @@ func (this *QPlainTextDocumentLayout) DocumentSize() *qtcore.QSizeF /*123*/ {
 // index:0
 // Public virtual
 // QRectF frameBoundingRect(class QTextFrame *)
-func (this *QPlainTextDocumentLayout) FrameBoundingRect(arg0 *qtgui.QTextFrame /*444 QTextFrame **/) *qtcore.QRectF /*123*/ {
+func (this *QPlainTextDocumentLayout) FrameBoundingRect(arg0 *qtgui.QTextFrame /*777 QTextFrame **/) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17frameBoundingRectEP10QTextFrame", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)

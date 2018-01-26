@@ -78,7 +78,7 @@ func (*QTableView) NewFromPointer(cthis unsafe.Pointer) *QTableView {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTableView) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QTableView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QTableView) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject
 // index:0
 // Public
 // void QTableView(class QWidget *)
-func NewQTableView(parent *QWidget /*444 QWidget **/) *QTableView {
+func NewQTableView(parent *QWidget /*777 QWidget **/) *QTableView {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableViewC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -112,7 +112,7 @@ func DeleteQTableView(*QTableView) {
 // index:0
 // Public virtual
 // void setModel(class QAbstractItemModel *)
-func (this *QTableView) SetModel(model *qtcore.QAbstractItemModel /*444 QAbstractItemModel **/) {
+func (this *QTableView) SetModel(model *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/) {
 	var convArg0 = model.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView8setModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -132,7 +132,7 @@ func (this *QTableView) SetRootIndex(index *qtcore.QModelIndex) {
 // index:0
 // Public virtual
 // void setSelectionModel(class QItemSelectionModel *)
-func (this *QTableView) SetSelectionModel(selectionModel *qtcore.QItemSelectionModel /*444 QItemSelectionModel **/) {
+func (this *QTableView) SetSelectionModel(selectionModel *qtcore.QItemSelectionModel /*777 QItemSelectionModel **/) {
 	var convArg0 = selectionModel.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView17setSelectionModelEP19QItemSelectionModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -151,7 +151,7 @@ func (this *QTableView) DoItemsLayout() {
 // index:0
 // Public
 // QHeaderView * horizontalHeader()
-func (this *QTableView) HorizontalHeader() *QHeaderView /*444 QHeaderView **/ {
+func (this *QTableView) HorizontalHeader() *QHeaderView /*777 QHeaderView **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView16horizontalHeaderEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -163,7 +163,7 @@ func (this *QTableView) HorizontalHeader() *QHeaderView /*444 QHeaderView **/ {
 // index:0
 // Public
 // QHeaderView * verticalHeader()
-func (this *QTableView) VerticalHeader() *QHeaderView /*444 QHeaderView **/ {
+func (this *QTableView) VerticalHeader() *QHeaderView /*777 QHeaderView **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView14verticalHeaderEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -175,7 +175,7 @@ func (this *QTableView) VerticalHeader() *QHeaderView /*444 QHeaderView **/ {
 // index:0
 // Public
 // void setHorizontalHeader(class QHeaderView *)
-func (this *QTableView) SetHorizontalHeader(header *QHeaderView /*444 QHeaderView **/) {
+func (this *QTableView) SetHorizontalHeader(header *QHeaderView /*777 QHeaderView **/) {
 	var convArg0 = header.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView19setHorizontalHeaderEP11QHeaderView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -185,7 +185,7 @@ func (this *QTableView) SetHorizontalHeader(header *QHeaderView /*444 QHeaderVie
 // index:0
 // Public
 // void setVerticalHeader(class QHeaderView *)
-func (this *QTableView) SetVerticalHeader(header *QHeaderView /*444 QHeaderView **/) {
+func (this *QTableView) SetVerticalHeader(header *QHeaderView /*777 QHeaderView **/) {
 	var convArg0 = header.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView17setVerticalHeaderEP11QHeaderView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -684,7 +684,7 @@ func (this *QTableView) ViewOptions() *QStyleOptionViewItem /*123*/ {
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QTableView) PaintEvent(e *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+func (this *QTableView) PaintEvent(e *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -694,7 +694,7 @@ func (this *QTableView) PaintEvent(e *qtgui.QPaintEvent /*444 QPaintEvent **/) {
 // index:0
 // Protected virtual
 // void timerEvent(class QTimerEvent *)
-func (this *QTableView) TimerEvent(event *qtcore.QTimerEvent /*444 QTimerEvent **/) {
+func (this *QTableView) TimerEvent(event *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

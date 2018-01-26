@@ -78,7 +78,7 @@ func (*QAbstractItemView) NewFromPointer(cthis unsafe.Pointer) *QAbstractItemVie
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QAbstractItemView) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QAbstractItemView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAbstractItemView10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QAbstractItemView) MetaObject() *qtcore.QMetaObject /*444 const QMet
 // index:0
 // Public
 // void QAbstractItemView(class QWidget *)
-func NewQAbstractItemView(parent *QWidget /*444 QWidget **/) *QAbstractItemView {
+func NewQAbstractItemView(parent *QWidget /*777 QWidget **/) *QAbstractItemView {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemViewC1EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -112,7 +112,7 @@ func DeleteQAbstractItemView(*QAbstractItemView) {
 // index:0
 // Public virtual
 // void setModel(class QAbstractItemModel *)
-func (this *QAbstractItemView) SetModel(model *qtcore.QAbstractItemModel /*444 QAbstractItemModel **/) {
+func (this *QAbstractItemView) SetModel(model *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/) {
 	var convArg0 = model.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView8setModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -122,7 +122,7 @@ func (this *QAbstractItemView) SetModel(model *qtcore.QAbstractItemModel /*444 Q
 // index:0
 // Public
 // QAbstractItemModel * model()
-func (this *QAbstractItemView) Model() *qtcore.QAbstractItemModel /*444 QAbstractItemModel **/ {
+func (this *QAbstractItemView) Model() *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAbstractItemView5modelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -134,7 +134,7 @@ func (this *QAbstractItemView) Model() *qtcore.QAbstractItemModel /*444 QAbstrac
 // index:0
 // Public virtual
 // void setSelectionModel(class QItemSelectionModel *)
-func (this *QAbstractItemView) SetSelectionModel(selectionModel *qtcore.QItemSelectionModel /*444 QItemSelectionModel **/) {
+func (this *QAbstractItemView) SetSelectionModel(selectionModel *qtcore.QItemSelectionModel /*777 QItemSelectionModel **/) {
 	var convArg0 = selectionModel.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView17setSelectionModelEP19QItemSelectionModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -144,7 +144,7 @@ func (this *QAbstractItemView) SetSelectionModel(selectionModel *qtcore.QItemSel
 // index:0
 // Public
 // QItemSelectionModel * selectionModel()
-func (this *QAbstractItemView) SelectionModel() *qtcore.QItemSelectionModel /*444 QItemSelectionModel **/ {
+func (this *QAbstractItemView) SelectionModel() *qtcore.QItemSelectionModel /*777 QItemSelectionModel **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAbstractItemView14selectionModelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -156,7 +156,7 @@ func (this *QAbstractItemView) SelectionModel() *qtcore.QItemSelectionModel /*44
 // index:0
 // Public
 // void setItemDelegate(class QAbstractItemDelegate *)
-func (this *QAbstractItemView) SetItemDelegate(delegate *QAbstractItemDelegate /*444 QAbstractItemDelegate **/) {
+func (this *QAbstractItemView) SetItemDelegate(delegate *QAbstractItemDelegate /*777 QAbstractItemDelegate **/) {
 	var convArg0 = delegate.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView15setItemDelegateEP21QAbstractItemDelegate", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -166,7 +166,7 @@ func (this *QAbstractItemView) SetItemDelegate(delegate *QAbstractItemDelegate /
 // index:0
 // Public
 // QAbstractItemDelegate * itemDelegate()
-func (this *QAbstractItemView) ItemDelegate() *QAbstractItemDelegate /*444 QAbstractItemDelegate **/ {
+func (this *QAbstractItemView) ItemDelegate() *QAbstractItemDelegate /*777 QAbstractItemDelegate **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAbstractItemView12itemDelegateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -178,7 +178,7 @@ func (this *QAbstractItemView) ItemDelegate() *QAbstractItemDelegate /*444 QAbst
 // index:1
 // Public
 // QAbstractItemDelegate * itemDelegate(const class QModelIndex &)
-func (this *QAbstractItemView) ItemDelegate_1(index *qtcore.QModelIndex) *QAbstractItemDelegate /*444 QAbstractItemDelegate **/ {
+func (this *QAbstractItemView) ItemDelegate_1(index *qtcore.QModelIndex) *QAbstractItemDelegate /*777 QAbstractItemDelegate **/ {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAbstractItemView12itemDelegateERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -671,7 +671,7 @@ func (this *QAbstractItemView) IsPersistentEditorOpen(index *qtcore.QModelIndex)
 // index:0
 // Public
 // void setIndexWidget(const class QModelIndex &, class QWidget *)
-func (this *QAbstractItemView) SetIndexWidget(index *qtcore.QModelIndex, widget *QWidget /*444 QWidget **/) {
+func (this *QAbstractItemView) SetIndexWidget(index *qtcore.QModelIndex, widget *QWidget /*777 QWidget **/) {
 	var convArg0 = index.GetCthis()
 	var convArg1 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView14setIndexWidgetERK11QModelIndexP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -682,7 +682,7 @@ func (this *QAbstractItemView) SetIndexWidget(index *qtcore.QModelIndex, widget 
 // index:0
 // Public
 // QWidget * indexWidget(const class QModelIndex &)
-func (this *QAbstractItemView) IndexWidget(index *qtcore.QModelIndex) *QWidget /*444 QWidget **/ {
+func (this *QAbstractItemView) IndexWidget(index *qtcore.QModelIndex) *QWidget /*777 QWidget **/ {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAbstractItemView11indexWidgetERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -695,7 +695,7 @@ func (this *QAbstractItemView) IndexWidget(index *qtcore.QModelIndex) *QWidget /
 // index:0
 // Public
 // void setItemDelegateForRow(int, class QAbstractItemDelegate *)
-func (this *QAbstractItemView) SetItemDelegateForRow(row int, delegate *QAbstractItemDelegate /*444 QAbstractItemDelegate **/) {
+func (this *QAbstractItemView) SetItemDelegateForRow(row int, delegate *QAbstractItemDelegate /*777 QAbstractItemDelegate **/) {
 	var convArg1 = delegate.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView21setItemDelegateForRowEiP21QAbstractItemDelegate", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -705,7 +705,7 @@ func (this *QAbstractItemView) SetItemDelegateForRow(row int, delegate *QAbstrac
 // index:0
 // Public
 // QAbstractItemDelegate * itemDelegateForRow(int)
-func (this *QAbstractItemView) ItemDelegateForRow(row int) *QAbstractItemDelegate /*444 QAbstractItemDelegate **/ {
+func (this *QAbstractItemView) ItemDelegateForRow(row int) *QAbstractItemDelegate /*777 QAbstractItemDelegate **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAbstractItemView18itemDelegateForRowEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -717,7 +717,7 @@ func (this *QAbstractItemView) ItemDelegateForRow(row int) *QAbstractItemDelegat
 // index:0
 // Public
 // void setItemDelegateForColumn(int, class QAbstractItemDelegate *)
-func (this *QAbstractItemView) SetItemDelegateForColumn(column int, delegate *QAbstractItemDelegate /*444 QAbstractItemDelegate **/) {
+func (this *QAbstractItemView) SetItemDelegateForColumn(column int, delegate *QAbstractItemDelegate /*777 QAbstractItemDelegate **/) {
 	var convArg1 = delegate.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView24setItemDelegateForColumnEiP21QAbstractItemDelegate", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -727,7 +727,7 @@ func (this *QAbstractItemView) SetItemDelegateForColumn(column int, delegate *QA
 // index:0
 // Public
 // QAbstractItemDelegate * itemDelegateForColumn(int)
-func (this *QAbstractItemView) ItemDelegateForColumn(column int) *QAbstractItemDelegate /*444 QAbstractItemDelegate **/ {
+func (this *QAbstractItemView) ItemDelegateForColumn(column int) *QAbstractItemDelegate /*777 QAbstractItemDelegate **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAbstractItemView21itemDelegateForColumnEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -800,7 +800,7 @@ func (this *QAbstractItemView) Edit(index *qtcore.QModelIndex) {
 // index:1
 // Protected virtual
 // bool edit(const class QModelIndex &, enum QAbstractItemView::EditTrigger, class QEvent *)
-func (this *QAbstractItemView) Edit_1(index *qtcore.QModelIndex, trigger int, event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QAbstractItemView) Edit_1(index *qtcore.QModelIndex, trigger int, event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = index.GetCthis()
 	var convArg2 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView4editERK11QModelIndexNS_11EditTriggerEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, trigger, convArg2)
@@ -965,7 +965,7 @@ func (this *QAbstractItemView) HorizontalScrollbarValueChanged(value int) {
 // index:0
 // Protected virtual
 // void closeEditor(class QWidget *, class QAbstractItemDelegate::EndEditHint)
-func (this *QAbstractItemView) CloseEditor(editor *QWidget /*444 QWidget **/, hint int) {
+func (this *QAbstractItemView) CloseEditor(editor *QWidget /*777 QWidget **/, hint int) {
 	var convArg0 = editor.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView11closeEditorEP7QWidgetN21QAbstractItemDelegate11EndEditHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
 	gopp.ErrPrint(err, rv)
@@ -975,7 +975,7 @@ func (this *QAbstractItemView) CloseEditor(editor *QWidget /*444 QWidget **/, hi
 // index:0
 // Protected virtual
 // void commitData(class QWidget *)
-func (this *QAbstractItemView) CommitData(editor *QWidget /*444 QWidget **/) {
+func (this *QAbstractItemView) CommitData(editor *QWidget /*777 QWidget **/) {
 	var convArg0 = editor.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView10commitDataEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -985,7 +985,7 @@ func (this *QAbstractItemView) CommitData(editor *QWidget /*444 QWidget **/) {
 // index:0
 // Protected virtual
 // void editorDestroyed(class QObject *)
-func (this *QAbstractItemView) EditorDestroyed(editor *qtcore.QObject /*444 QObject **/) {
+func (this *QAbstractItemView) EditorDestroyed(editor *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = editor.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView15editorDestroyedEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1163,7 +1163,7 @@ func (this *QAbstractItemView) VisualRegionForSelection(selection *qtcore.QItemS
 // index:0
 // Protected virtual
 // QItemSelectionModel::SelectionFlags selectionCommand(const class QModelIndex &, const class QEvent *)
-func (this *QAbstractItemView) SelectionCommand(index *qtcore.QModelIndex, event *qtcore.QEvent /*444 const QEvent **/) int {
+func (this *QAbstractItemView) SelectionCommand(index *qtcore.QModelIndex, event *qtcore.QEvent /*777 const QEvent **/) int {
 	var convArg0 = index.GetCthis()
 	var convArg1 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAbstractItemView16selectionCommandERK11QModelIndexPK6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -1299,7 +1299,7 @@ func (this *QAbstractItemView) FocusNextPrevChild(next bool) bool {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QAbstractItemView) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QAbstractItemView) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1311,7 +1311,7 @@ func (this *QAbstractItemView) Event(event *qtcore.QEvent /*444 QEvent **/) bool
 // index:0
 // Protected virtual
 // bool viewportEvent(class QEvent *)
-func (this *QAbstractItemView) ViewportEvent(event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QAbstractItemView) ViewportEvent(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView13viewportEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1323,7 +1323,7 @@ func (this *QAbstractItemView) ViewportEvent(event *qtcore.QEvent /*444 QEvent *
 // index:0
 // Protected virtual
 // void mousePressEvent(class QMouseEvent *)
-func (this *QAbstractItemView) MousePressEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QAbstractItemView) MousePressEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1333,7 +1333,7 @@ func (this *QAbstractItemView) MousePressEvent(event *qtgui.QMouseEvent /*444 QM
 // index:0
 // Protected virtual
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QAbstractItemView) MouseMoveEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QAbstractItemView) MouseMoveEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1343,7 +1343,7 @@ func (this *QAbstractItemView) MouseMoveEvent(event *qtgui.QMouseEvent /*444 QMo
 // index:0
 // Protected virtual
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QAbstractItemView) MouseReleaseEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QAbstractItemView) MouseReleaseEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1353,7 +1353,7 @@ func (this *QAbstractItemView) MouseReleaseEvent(event *qtgui.QMouseEvent /*444 
 // index:0
 // Protected virtual
 // void mouseDoubleClickEvent(class QMouseEvent *)
-func (this *QAbstractItemView) MouseDoubleClickEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QAbstractItemView) MouseDoubleClickEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView21mouseDoubleClickEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1363,7 +1363,7 @@ func (this *QAbstractItemView) MouseDoubleClickEvent(event *qtgui.QMouseEvent /*
 // index:0
 // Protected virtual
 // void dragEnterEvent(class QDragEnterEvent *)
-func (this *QAbstractItemView) DragEnterEvent(event *qtgui.QDragEnterEvent /*444 QDragEnterEvent **/) {
+func (this *QAbstractItemView) DragEnterEvent(event *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView14dragEnterEventEP15QDragEnterEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1373,7 +1373,7 @@ func (this *QAbstractItemView) DragEnterEvent(event *qtgui.QDragEnterEvent /*444
 // index:0
 // Protected virtual
 // void dragMoveEvent(class QDragMoveEvent *)
-func (this *QAbstractItemView) DragMoveEvent(event *qtgui.QDragMoveEvent /*444 QDragMoveEvent **/) {
+func (this *QAbstractItemView) DragMoveEvent(event *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView13dragMoveEventEP14QDragMoveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1383,7 +1383,7 @@ func (this *QAbstractItemView) DragMoveEvent(event *qtgui.QDragMoveEvent /*444 Q
 // index:0
 // Protected virtual
 // void dragLeaveEvent(class QDragLeaveEvent *)
-func (this *QAbstractItemView) DragLeaveEvent(event *qtgui.QDragLeaveEvent /*444 QDragLeaveEvent **/) {
+func (this *QAbstractItemView) DragLeaveEvent(event *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView14dragLeaveEventEP15QDragLeaveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1393,7 +1393,7 @@ func (this *QAbstractItemView) DragLeaveEvent(event *qtgui.QDragLeaveEvent /*444
 // index:0
 // Protected virtual
 // void dropEvent(class QDropEvent *)
-func (this *QAbstractItemView) DropEvent(event *qtgui.QDropEvent /*444 QDropEvent **/) {
+func (this *QAbstractItemView) DropEvent(event *qtgui.QDropEvent /*777 QDropEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView9dropEventEP10QDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1403,7 +1403,7 @@ func (this *QAbstractItemView) DropEvent(event *qtgui.QDropEvent /*444 QDropEven
 // index:0
 // Protected virtual
 // void focusInEvent(class QFocusEvent *)
-func (this *QAbstractItemView) FocusInEvent(event *qtgui.QFocusEvent /*444 QFocusEvent **/) {
+func (this *QAbstractItemView) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1413,7 +1413,7 @@ func (this *QAbstractItemView) FocusInEvent(event *qtgui.QFocusEvent /*444 QFocu
 // index:0
 // Protected virtual
 // void focusOutEvent(class QFocusEvent *)
-func (this *QAbstractItemView) FocusOutEvent(event *qtgui.QFocusEvent /*444 QFocusEvent **/) {
+func (this *QAbstractItemView) FocusOutEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1423,7 +1423,7 @@ func (this *QAbstractItemView) FocusOutEvent(event *qtgui.QFocusEvent /*444 QFoc
 // index:0
 // Protected virtual
 // void keyPressEvent(class QKeyEvent *)
-func (this *QAbstractItemView) KeyPressEvent(event *qtgui.QKeyEvent /*444 QKeyEvent **/) {
+func (this *QAbstractItemView) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1433,7 +1433,7 @@ func (this *QAbstractItemView) KeyPressEvent(event *qtgui.QKeyEvent /*444 QKeyEv
 // index:0
 // Protected virtual
 // void resizeEvent(class QResizeEvent *)
-func (this *QAbstractItemView) ResizeEvent(event *qtgui.QResizeEvent /*444 QResizeEvent **/) {
+func (this *QAbstractItemView) ResizeEvent(event *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1443,7 +1443,7 @@ func (this *QAbstractItemView) ResizeEvent(event *qtgui.QResizeEvent /*444 QResi
 // index:0
 // Protected virtual
 // void timerEvent(class QTimerEvent *)
-func (this *QAbstractItemView) TimerEvent(event *qtcore.QTimerEvent /*444 QTimerEvent **/) {
+func (this *QAbstractItemView) TimerEvent(event *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1453,7 +1453,7 @@ func (this *QAbstractItemView) TimerEvent(event *qtcore.QTimerEvent /*444 QTimer
 // index:0
 // Protected virtual
 // void inputMethodEvent(class QInputMethodEvent *)
-func (this *QAbstractItemView) InputMethodEvent(event *qtgui.QInputMethodEvent /*444 QInputMethodEvent **/) {
+func (this *QAbstractItemView) InputMethodEvent(event *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView16inputMethodEventEP17QInputMethodEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

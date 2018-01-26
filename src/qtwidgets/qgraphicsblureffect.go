@@ -78,7 +78,7 @@ func (*QGraphicsBlurEffect) NewFromPointer(cthis unsafe.Pointer) *QGraphicsBlurE
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QGraphicsBlurEffect) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QGraphicsBlurEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsBlurEffect10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QGraphicsBlurEffect) MetaObject() *qtcore.QMetaObject /*444 const QM
 // index:0
 // Public
 // void QGraphicsBlurEffect(class QObject *)
-func NewQGraphicsBlurEffect(parent *qtcore.QObject /*444 QObject **/) *QGraphicsBlurEffect {
+func NewQGraphicsBlurEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsBlurEffect {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffectC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -167,7 +167,7 @@ func (this *QGraphicsBlurEffect) BlurRadiusChanged(blurRadius float64) {
 // index:0
 // Protected virtual
 // void draw(class QPainter *)
-func (this *QGraphicsBlurEffect) Draw(painter *qtgui.QPainter /*444 QPainter **/) {
+func (this *QGraphicsBlurEffect) Draw(painter *qtgui.QPainter /*777 QPainter **/) {
 	var convArg0 = painter.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect4drawEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

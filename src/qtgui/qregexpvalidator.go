@@ -74,7 +74,7 @@ func (*QRegExpValidator) NewFromPointer(cthis unsafe.Pointer) *QRegExpValidator 
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QRegExpValidator) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QRegExpValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QRegExpValidator10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -86,7 +86,7 @@ func (this *QRegExpValidator) MetaObject() *qtcore.QMetaObject /*444 const QMeta
 // index:0
 // Public
 // void QRegExpValidator(class QObject *)
-func NewQRegExpValidator(parent *qtcore.QObject /*444 QObject **/) *QRegExpValidator {
+func NewQRegExpValidator(parent *qtcore.QObject /*777 QObject **/) *QRegExpValidator {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRegExpValidatorC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -99,7 +99,7 @@ func NewQRegExpValidator(parent *qtcore.QObject /*444 QObject **/) *QRegExpValid
 // index:1
 // Public
 // void QRegExpValidator(const class QRegExp &, class QObject *)
-func NewQRegExpValidator_1(rx *qtcore.QRegExp, parent *qtcore.QObject /*444 QObject **/) *QRegExpValidator {
+func NewQRegExpValidator_1(rx *qtcore.QRegExp, parent *qtcore.QObject /*777 QObject **/) *QRegExpValidator {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = rx.GetCthis()
 	var convArg1 = parent.GetCthis()

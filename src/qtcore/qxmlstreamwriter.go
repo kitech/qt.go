@@ -81,7 +81,7 @@ func NewQXmlStreamWriter() *QXmlStreamWriter {
 // index:1
 // Public
 // void QXmlStreamWriter(class QIODevice *)
-func NewQXmlStreamWriter_1(device *QIODevice /*444 QIODevice **/) *QXmlStreamWriter {
+func NewQXmlStreamWriter_1(device *QIODevice /*777 QIODevice **/) *QXmlStreamWriter {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2EP9QIODevice", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -94,7 +94,7 @@ func NewQXmlStreamWriter_1(device *QIODevice /*444 QIODevice **/) *QXmlStreamWri
 // index:2
 // Public
 // void QXmlStreamWriter(class QByteArray *)
-func NewQXmlStreamWriter_2(array *QByteArray /*444 QByteArray **/) *QXmlStreamWriter {
+func NewQXmlStreamWriter_2(array *QByteArray /*777 QByteArray **/) *QXmlStreamWriter {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = array.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2EP10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -107,7 +107,7 @@ func NewQXmlStreamWriter_2(array *QByteArray /*444 QByteArray **/) *QXmlStreamWr
 // index:3
 // Public
 // void QXmlStreamWriter(class QString *)
-func NewQXmlStreamWriter_3(string *QString /*444 QString **/) *QXmlStreamWriter {
+func NewQXmlStreamWriter_3(string *QString /*777 QString **/) *QXmlStreamWriter {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = string.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2EP7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -129,7 +129,7 @@ func DeleteQXmlStreamWriter(*QXmlStreamWriter) {
 // index:0
 // Public
 // void setDevice(class QIODevice *)
-func (this *QXmlStreamWriter) SetDevice(device *QIODevice /*444 QIODevice **/) {
+func (this *QXmlStreamWriter) SetDevice(device *QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriter9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -139,7 +139,7 @@ func (this *QXmlStreamWriter) SetDevice(device *QIODevice /*444 QIODevice **/) {
 // index:0
 // Public
 // QIODevice * device()
-func (this *QXmlStreamWriter) Device() *QIODevice /*444 QIODevice **/ {
+func (this *QXmlStreamWriter) Device() *QIODevice /*777 QIODevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamWriter6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -151,7 +151,7 @@ func (this *QXmlStreamWriter) Device() *QIODevice /*444 QIODevice **/ {
 // index:0
 // Public
 // void setCodec(class QTextCodec *)
-func (this *QXmlStreamWriter) SetCodec(codec *QTextCodec /*444 QTextCodec **/) {
+func (this *QXmlStreamWriter) SetCodec(codec *QTextCodec /*777 QTextCodec **/) {
 	var convArg0 = codec.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriter8setCodecEP10QTextCodec", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -172,7 +172,7 @@ func (this *QXmlStreamWriter) SetCodec_1(codecName string) {
 // index:0
 // Public
 // QTextCodec * codec()
-func (this *QXmlStreamWriter) Codec() *QTextCodec /*444 QTextCodec **/ {
+func (this *QXmlStreamWriter) Codec() *QTextCodec /*777 QTextCodec **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamWriter5codecEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

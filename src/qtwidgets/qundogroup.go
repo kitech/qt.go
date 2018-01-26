@@ -78,7 +78,7 @@ func (*QUndoGroup) NewFromPointer(cthis unsafe.Pointer) *QUndoGroup {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QUndoGroup) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QUndoGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoGroup10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QUndoGroup) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject
 // index:0
 // Public
 // void QUndoGroup(class QObject *)
-func NewQUndoGroup(parent *qtcore.QObject /*444 QObject **/) *QUndoGroup {
+func NewQUndoGroup(parent *qtcore.QObject /*777 QObject **/) *QUndoGroup {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroupC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -112,7 +112,7 @@ func DeleteQUndoGroup(*QUndoGroup) {
 // index:0
 // Public
 // void addStack(class QUndoStack *)
-func (this *QUndoGroup) AddStack(stack *QUndoStack /*444 QUndoStack **/) {
+func (this *QUndoGroup) AddStack(stack *QUndoStack /*777 QUndoStack **/) {
 	var convArg0 = stack.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup8addStackEP10QUndoStack", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -122,7 +122,7 @@ func (this *QUndoGroup) AddStack(stack *QUndoStack /*444 QUndoStack **/) {
 // index:0
 // Public
 // void removeStack(class QUndoStack *)
-func (this *QUndoGroup) RemoveStack(stack *QUndoStack /*444 QUndoStack **/) {
+func (this *QUndoGroup) RemoveStack(stack *QUndoStack /*777 QUndoStack **/) {
 	var convArg0 = stack.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup11removeStackEP10QUndoStack", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -132,7 +132,7 @@ func (this *QUndoGroup) RemoveStack(stack *QUndoStack /*444 QUndoStack **/) {
 // index:0
 // Public
 // QUndoStack * activeStack()
-func (this *QUndoGroup) ActiveStack() *QUndoStack /*444 QUndoStack **/ {
+func (this *QUndoGroup) ActiveStack() *QUndoStack /*777 QUndoStack **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoGroup11activeStackEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -144,7 +144,7 @@ func (this *QUndoGroup) ActiveStack() *QUndoStack /*444 QUndoStack **/ {
 // index:0
 // Public
 // QAction * createUndoAction(class QObject *, const class QString &)
-func (this *QUndoGroup) CreateUndoAction(parent *qtcore.QObject /*444 QObject **/, prefix *qtcore.QString) *QAction /*444 QAction **/ {
+func (this *QUndoGroup) CreateUndoAction(parent *qtcore.QObject /*777 QObject **/, prefix *qtcore.QString) *QAction /*777 QAction **/ {
 	var convArg0 = parent.GetCthis()
 	var convArg1 = prefix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -158,7 +158,7 @@ func (this *QUndoGroup) CreateUndoAction(parent *qtcore.QObject /*444 QObject **
 // index:0
 // Public
 // QAction * createRedoAction(class QObject *, const class QString &)
-func (this *QUndoGroup) CreateRedoAction(parent *qtcore.QObject /*444 QObject **/, prefix *qtcore.QString) *QAction /*444 QAction **/ {
+func (this *QUndoGroup) CreateRedoAction(parent *qtcore.QObject /*777 QObject **/, prefix *qtcore.QString) *QAction /*777 QAction **/ {
 	var convArg0 = parent.GetCthis()
 	var convArg1 = prefix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -251,7 +251,7 @@ func (this *QUndoGroup) Redo() {
 // index:0
 // Public
 // void setActiveStack(class QUndoStack *)
-func (this *QUndoGroup) SetActiveStack(stack *QUndoStack /*444 QUndoStack **/) {
+func (this *QUndoGroup) SetActiveStack(stack *QUndoStack /*777 QUndoStack **/) {
 	var convArg0 = stack.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup14setActiveStackEP10QUndoStack", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -261,7 +261,7 @@ func (this *QUndoGroup) SetActiveStack(stack *QUndoStack /*444 QUndoStack **/) {
 // index:0
 // Public
 // void activeStackChanged(class QUndoStack *)
-func (this *QUndoGroup) ActiveStackChanged(stack *QUndoStack /*444 QUndoStack **/) {
+func (this *QUndoGroup) ActiveStackChanged(stack *QUndoStack /*777 QUndoStack **/) {
 	var convArg0 = stack.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup18activeStackChangedEP10QUndoStack", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

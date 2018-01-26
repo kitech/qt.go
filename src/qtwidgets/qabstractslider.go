@@ -78,7 +78,7 @@ func (*QAbstractSlider) NewFromPointer(cthis unsafe.Pointer) *QAbstractSlider {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QAbstractSlider) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QAbstractSlider) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAbstractSlider10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QAbstractSlider) MetaObject() *qtcore.QMetaObject /*444 const QMetaO
 // index:0
 // Public
 // void QAbstractSlider(class QWidget *)
-func NewQAbstractSlider(parent *QWidget /*444 QWidget **/) *QAbstractSlider {
+func NewQAbstractSlider(parent *QWidget /*777 QWidget **/) *QAbstractSlider {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSliderC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -404,7 +404,7 @@ func (this *QAbstractSlider) ActionTriggered(action int) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QAbstractSlider) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QAbstractSlider) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSlider5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -445,7 +445,7 @@ func (this *QAbstractSlider) SliderChange(change int) {
 // index:0
 // Protected virtual
 // void keyPressEvent(class QKeyEvent *)
-func (this *QAbstractSlider) KeyPressEvent(ev *qtgui.QKeyEvent /*444 QKeyEvent **/) {
+func (this *QAbstractSlider) KeyPressEvent(ev *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSlider13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -455,7 +455,7 @@ func (this *QAbstractSlider) KeyPressEvent(ev *qtgui.QKeyEvent /*444 QKeyEvent *
 // index:0
 // Protected virtual
 // void timerEvent(class QTimerEvent *)
-func (this *QAbstractSlider) TimerEvent(arg0 *qtcore.QTimerEvent /*444 QTimerEvent **/) {
+func (this *QAbstractSlider) TimerEvent(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSlider10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -465,7 +465,7 @@ func (this *QAbstractSlider) TimerEvent(arg0 *qtcore.QTimerEvent /*444 QTimerEve
 // index:0
 // Protected virtual
 // void wheelEvent(class QWheelEvent *)
-func (this *QAbstractSlider) WheelEvent(e *qtgui.QWheelEvent /*444 QWheelEvent **/) {
+func (this *QAbstractSlider) WheelEvent(e *qtgui.QWheelEvent /*777 QWheelEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSlider10wheelEventEP11QWheelEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -475,7 +475,7 @@ func (this *QAbstractSlider) WheelEvent(e *qtgui.QWheelEvent /*444 QWheelEvent *
 // index:0
 // Protected virtual
 // void changeEvent(class QEvent *)
-func (this *QAbstractSlider) ChangeEvent(e *qtcore.QEvent /*444 QEvent **/) {
+func (this *QAbstractSlider) ChangeEvent(e *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSlider11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

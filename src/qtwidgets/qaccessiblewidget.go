@@ -77,7 +77,7 @@ func (*QAccessibleWidget) NewFromPointer(cthis unsafe.Pointer) *QAccessibleWidge
 // index:0
 // Public
 // void QAccessibleWidget(class QWidget *, class QAccessible::Role, const class QString &)
-func NewQAccessibleWidget(o *QWidget /*444 QWidget **/, r int, name *qtcore.QString) *QAccessibleWidget {
+func NewQAccessibleWidget(o *QWidget /*777 QWidget **/, r int, name *qtcore.QString) *QAccessibleWidget {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = o.GetCthis()
 	var convArg2 = name.GetCthis()
@@ -102,7 +102,7 @@ func (this *QAccessibleWidget) IsValid() bool {
 // index:0
 // Public virtual
 // QWindow * window()
-func (this *QAccessibleWidget) Window() *qtgui.QWindow /*444 QWindow **/ {
+func (this *QAccessibleWidget) Window() *qtgui.QWindow /*777 QWindow **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget6windowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -125,7 +125,7 @@ func (this *QAccessibleWidget) ChildCount() int {
 // index:0
 // Public virtual
 // int indexOfChild(const class QAccessibleInterface *)
-func (this *QAccessibleWidget) IndexOfChild(child *qtgui.QAccessibleInterface /*444 const QAccessibleInterface **/) int {
+func (this *QAccessibleWidget) IndexOfChild(child *qtgui.QAccessibleInterface /*777 const QAccessibleInterface **/) int {
 	var convArg0 = child.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -137,7 +137,7 @@ func (this *QAccessibleWidget) IndexOfChild(child *qtgui.QAccessibleInterface /*
 // index:0
 // Public virtual
 // QAccessibleInterface * focusChild()
-func (this *QAccessibleWidget) FocusChild() *qtgui.QAccessibleInterface /*444 QAccessibleInterface **/ {
+func (this *QAccessibleWidget) FocusChild() *qtgui.QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget10focusChildEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -163,7 +163,7 @@ func (this *QAccessibleWidget) Rect() *qtcore.QRect /*123*/ {
 // index:0
 // Public virtual
 // QAccessibleInterface * parent()
-func (this *QAccessibleWidget) Parent() *qtgui.QAccessibleInterface /*444 QAccessibleInterface **/ {
+func (this *QAccessibleWidget) Parent() *qtgui.QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget6parentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -175,7 +175,7 @@ func (this *QAccessibleWidget) Parent() *qtgui.QAccessibleInterface /*444 QAcces
 // index:0
 // Public virtual
 // QAccessibleInterface * child(int)
-func (this *QAccessibleWidget) Child(index int) *qtgui.QAccessibleInterface /*444 QAccessibleInterface **/ {
+func (this *QAccessibleWidget) Child(index int) *qtgui.QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget5childEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -281,7 +281,7 @@ func DeleteQAccessibleWidget(*QAccessibleWidget) {
 // index:0
 // Protected
 // QWidget * widget()
-func (this *QAccessibleWidget) Widget() *QWidget /*444 QWidget **/ {
+func (this *QAccessibleWidget) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget6widgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -293,7 +293,7 @@ func (this *QAccessibleWidget) Widget() *QWidget /*444 QWidget **/ {
 // index:0
 // Protected
 // QObject * parentObject()
-func (this *QAccessibleWidget) ParentObject() *qtcore.QObject /*444 QObject **/ {
+func (this *QAccessibleWidget) ParentObject() *qtcore.QObject /*777 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget12parentObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

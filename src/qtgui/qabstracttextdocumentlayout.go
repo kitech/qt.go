@@ -74,7 +74,7 @@ func (*QAbstractTextDocumentLayout) NewFromPointer(cthis unsafe.Pointer) *QAbstr
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QAbstractTextDocumentLayout) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QAbstractTextDocumentLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -86,7 +86,7 @@ func (this *QAbstractTextDocumentLayout) MetaObject() *qtcore.QMetaObject /*444 
 // index:0
 // Public
 // void QAbstractTextDocumentLayout(class QTextDocument *)
-func NewQAbstractTextDocumentLayout(doc *QTextDocument /*444 QTextDocument **/) *QAbstractTextDocumentLayout {
+func NewQAbstractTextDocumentLayout(doc *QTextDocument /*777 QTextDocument **/) *QAbstractTextDocumentLayout {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = doc.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -190,7 +190,7 @@ func (this *QAbstractTextDocumentLayout) DocumentSize() *qtcore.QSizeF /*123*/ {
 // index:0
 // Public pure virtual
 // QRectF frameBoundingRect(class QTextFrame *)
-func (this *QAbstractTextDocumentLayout) FrameBoundingRect(frame *QTextFrame /*444 QTextFrame **/) *qtcore.QRectF /*123*/ {
+func (this *QAbstractTextDocumentLayout) FrameBoundingRect(frame *QTextFrame /*777 QTextFrame **/) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = frame.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout17frameBoundingRectEP10QTextFrame", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
@@ -220,7 +220,7 @@ func (this *QAbstractTextDocumentLayout) BlockBoundingRect(block *QTextBlock) *q
 // index:0
 // Public
 // void setPaintDevice(class QPaintDevice *)
-func (this *QAbstractTextDocumentLayout) SetPaintDevice(device *QPaintDevice /*444 QPaintDevice **/) {
+func (this *QAbstractTextDocumentLayout) SetPaintDevice(device *QPaintDevice /*777 QPaintDevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -230,7 +230,7 @@ func (this *QAbstractTextDocumentLayout) SetPaintDevice(device *QPaintDevice /*4
 // index:0
 // Public
 // QPaintDevice * paintDevice()
-func (this *QAbstractTextDocumentLayout) PaintDevice() *QPaintDevice /*444 QPaintDevice **/ {
+func (this *QAbstractTextDocumentLayout) PaintDevice() *QPaintDevice /*777 QPaintDevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout11paintDeviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -242,7 +242,7 @@ func (this *QAbstractTextDocumentLayout) PaintDevice() *QPaintDevice /*444 QPain
 // index:0
 // Public
 // QTextDocument * document()
-func (this *QAbstractTextDocumentLayout) Document() *QTextDocument /*444 QTextDocument **/ {
+func (this *QAbstractTextDocumentLayout) Document() *QTextDocument /*777 QTextDocument **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout8documentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -254,7 +254,7 @@ func (this *QAbstractTextDocumentLayout) Document() *QTextDocument /*444 QTextDo
 // index:0
 // Public
 // void registerHandler(int, class QObject *)
-func (this *QAbstractTextDocumentLayout) RegisterHandler(objectType int, component *qtcore.QObject /*444 QObject **/) {
+func (this *QAbstractTextDocumentLayout) RegisterHandler(objectType int, component *qtcore.QObject /*777 QObject **/) {
 	var convArg1 = component.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), objectType, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -264,7 +264,7 @@ func (this *QAbstractTextDocumentLayout) RegisterHandler(objectType int, compone
 // index:0
 // Public
 // void unregisterHandler(int, class QObject *)
-func (this *QAbstractTextDocumentLayout) UnregisterHandler(objectType int, component *qtcore.QObject /*444 QObject **/) {
+func (this *QAbstractTextDocumentLayout) UnregisterHandler(objectType int, component *qtcore.QObject /*777 QObject **/) {
 	var convArg1 = component.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), objectType, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -274,7 +274,7 @@ func (this *QAbstractTextDocumentLayout) UnregisterHandler(objectType int, compo
 // index:0
 // Public
 // QTextObjectInterface * handlerForObject(int)
-func (this *QAbstractTextDocumentLayout) HandlerForObject(objectType int) *QTextObjectInterface /*444 QTextObjectInterface **/ {
+func (this *QAbstractTextDocumentLayout) HandlerForObject(objectType int) *QTextObjectInterface /*777 QTextObjectInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout16handlerForObjectEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), objectType)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -356,7 +356,7 @@ func (this *QAbstractTextDocumentLayout) PositionInlineObject(item *QTextInlineO
 // index:0
 // Protected virtual
 // void drawInlineObject(class QPainter *, const class QRectF &, class QTextInlineObject, int, const class QTextFormat &)
-func (this *QAbstractTextDocumentLayout) DrawInlineObject(painter *QPainter /*444 QPainter **/, rect *qtcore.QRectF, object *QTextInlineObject /*123*/, posInDocument int, format *QTextFormat) {
+func (this *QAbstractTextDocumentLayout) DrawInlineObject(painter *QPainter /*777 QPainter **/, rect *qtcore.QRectF, object *QTextInlineObject /*123*/, posInDocument int, format *QTextFormat) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = rect.GetCthis()
 	var convArg2 = object.GetCthis()

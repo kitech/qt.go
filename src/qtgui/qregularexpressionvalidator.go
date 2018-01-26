@@ -74,7 +74,7 @@ func (*QRegularExpressionValidator) NewFromPointer(cthis unsafe.Pointer) *QRegul
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QRegularExpressionValidator) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QRegularExpressionValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -86,7 +86,7 @@ func (this *QRegularExpressionValidator) MetaObject() *qtcore.QMetaObject /*444 
 // index:0
 // Public
 // void QRegularExpressionValidator(class QObject *)
-func NewQRegularExpressionValidator(parent *qtcore.QObject /*444 QObject **/) *QRegularExpressionValidator {
+func NewQRegularExpressionValidator(parent *qtcore.QObject /*777 QObject **/) *QRegularExpressionValidator {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QRegularExpressionValidatorC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -99,7 +99,7 @@ func NewQRegularExpressionValidator(parent *qtcore.QObject /*444 QObject **/) *Q
 // index:1
 // Public
 // void QRegularExpressionValidator(const class QRegularExpression &, class QObject *)
-func NewQRegularExpressionValidator_1(re *qtcore.QRegularExpression, parent *qtcore.QObject /*444 QObject **/) *QRegularExpressionValidator {
+func NewQRegularExpressionValidator_1(re *qtcore.QRegularExpression, parent *qtcore.QObject /*777 QObject **/) *QRegularExpressionValidator {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = re.GetCthis()
 	var convArg1 = parent.GetCthis()

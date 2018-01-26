@@ -86,7 +86,7 @@ func DeleteQItemEditorCreatorBase(*QItemEditorCreatorBase) {
 // index:0
 // Public pure virtual
 // QWidget * createWidget(class QWidget *)
-func (this *QItemEditorCreatorBase) CreateWidget(parent *QWidget /*444 QWidget **/) *QWidget /*444 QWidget **/ {
+func (this *QItemEditorCreatorBase) CreateWidget(parent *QWidget /*777 QWidget **/) *QWidget /*777 QWidget **/ {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

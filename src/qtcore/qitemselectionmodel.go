@@ -70,7 +70,7 @@ func (*QItemSelectionModel) NewFromPointer(cthis unsafe.Pointer) *QItemSelection
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QItemSelectionModel) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QItemSelectionModel) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionModel10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QItemSelectionModel) MetaObject() *QMetaObject /*444 const QMetaObje
 // index:0
 // Public
 // void QItemSelectionModel(class QAbstractItemModel *)
-func NewQItemSelectionModel(model *QAbstractItemModel /*444 QAbstractItemModel **/) *QItemSelectionModel {
+func NewQItemSelectionModel(model *QAbstractItemModel /*777 QAbstractItemModel **/) *QItemSelectionModel {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = model.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QItemSelectionModelC2EP18QAbstractItemModel", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -95,7 +95,7 @@ func NewQItemSelectionModel(model *QAbstractItemModel /*444 QAbstractItemModel *
 // index:1
 // Public
 // void QItemSelectionModel(class QAbstractItemModel *, class QObject *)
-func NewQItemSelectionModel_1(model *QAbstractItemModel /*444 QAbstractItemModel **/, parent *QObject /*444 QObject **/) *QItemSelectionModel {
+func NewQItemSelectionModel_1(model *QAbstractItemModel /*777 QAbstractItemModel **/, parent *QObject /*777 QObject **/) *QItemSelectionModel {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = model.GetCthis()
 	var convArg1 = parent.GetCthis()
@@ -217,7 +217,7 @@ func (this *QItemSelectionModel) Selection() *QItemSelection /*123*/ {
 // index:0
 // Public
 // const QAbstractItemModel * model()
-func (this *QItemSelectionModel) Model() *QAbstractItemModel /*444 const QAbstractItemModel **/ {
+func (this *QItemSelectionModel) Model() *QAbstractItemModel /*777 const QAbstractItemModel **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionModel5modelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -229,7 +229,7 @@ func (this *QItemSelectionModel) Model() *QAbstractItemModel /*444 const QAbstra
 // index:1
 // Public
 // QAbstractItemModel * model()
-func (this *QItemSelectionModel) Model_1() *QAbstractItemModel /*444 QAbstractItemModel **/ {
+func (this *QItemSelectionModel) Model_1() *QAbstractItemModel /*777 QAbstractItemModel **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QItemSelectionModel5modelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -241,7 +241,7 @@ func (this *QItemSelectionModel) Model_1() *QAbstractItemModel /*444 QAbstractIt
 // index:0
 // Public
 // void setModel(class QAbstractItemModel *)
-func (this *QItemSelectionModel) SetModel(model *QAbstractItemModel /*444 QAbstractItemModel **/) {
+func (this *QItemSelectionModel) SetModel(model *QAbstractItemModel /*777 QAbstractItemModel **/) {
 	var convArg0 = model.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QItemSelectionModel8setModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -361,7 +361,7 @@ func (this *QItemSelectionModel) CurrentColumnChanged(current *QModelIndex, prev
 // index:0
 // Public
 // void modelChanged(class QAbstractItemModel *)
-func (this *QItemSelectionModel) ModelChanged(model *QAbstractItemModel /*444 QAbstractItemModel **/) {
+func (this *QItemSelectionModel) ModelChanged(model *QAbstractItemModel /*777 QAbstractItemModel **/) {
 	var convArg0 = model.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QItemSelectionModel12modelChangedEP18QAbstractItemModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

@@ -99,13 +99,13 @@ func (this *ExternalRefCountData) Destroy() {
 // index:0
 // Public static
 // QtSharedPointer::ExternalRefCountData * getAndRef(const class QObject *)
-func (this *ExternalRefCountData) GetAndRef(arg0 *QObject /*444 const QObject **/) unsafe.Pointer /*666*/ {
+func (this *ExternalRefCountData) GetAndRef(arg0 *QObject /*777 const QObject **/) unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountData9getAndRefEPK7QObject", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return unsafe.Pointer(uintptr(rv))
 }
-func ExternalRefCountData_GetAndRef(arg0 *QObject /*444 const QObject **/) unsafe.Pointer /*666*/ {
+func ExternalRefCountData_GetAndRef(arg0 *QObject /*777 const QObject **/) unsafe.Pointer /*666*/ {
 	var nilthis *ExternalRefCountData
 	rv := nilthis.GetAndRef(arg0)
 	return rv
@@ -115,7 +115,7 @@ func ExternalRefCountData_GetAndRef(arg0 *QObject /*444 const QObject **/) unsaf
 // index:0
 // Public
 // void setQObjectShared(const class QObject *, _Bool)
-func (this *ExternalRefCountData) SetQObjectShared(arg0 *QObject /*444 const QObject **/, enable bool) {
+func (this *ExternalRefCountData) SetQObjectShared(arg0 *QObject /*777 const QObject **/, enable bool) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountData16setQObjectSharedEPK7QObjectb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, enable)
 	gopp.ErrPrint(err, rv)
@@ -125,7 +125,7 @@ func (this *ExternalRefCountData) SetQObjectShared(arg0 *QObject /*444 const QOb
 // index:0
 // Public
 // void checkQObjectShared(const class QObject *)
-func (this *ExternalRefCountData) CheckQObjectShared(arg0 *QObject /*444 const QObject **/) {
+func (this *ExternalRefCountData) CheckQObjectShared(arg0 *QObject /*777 const QObject **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountData18checkQObjectSharedEPK7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

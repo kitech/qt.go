@@ -74,7 +74,7 @@ func (*QImageIOPlugin) NewFromPointer(cthis unsafe.Pointer) *QImageIOPlugin {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QImageIOPlugin) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QImageIOPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QImageIOPlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -86,7 +86,7 @@ func (this *QImageIOPlugin) MetaObject() *qtcore.QMetaObject /*444 const QMetaOb
 // index:0
 // Public
 // void QImageIOPlugin(class QObject *)
-func NewQImageIOPlugin(parent *qtcore.QObject /*444 QObject **/) *QImageIOPlugin {
+func NewQImageIOPlugin(parent *qtcore.QObject /*777 QObject **/) *QImageIOPlugin {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QImageIOPluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -108,7 +108,7 @@ func DeleteQImageIOPlugin(*QImageIOPlugin) {
 // index:0
 // Public pure virtual
 // QImageIOPlugin::Capabilities capabilities(class QIODevice *, const class QByteArray &)
-func (this *QImageIOPlugin) Capabilities(device *qtcore.QIODevice /*444 QIODevice **/, format *qtcore.QByteArray) int {
+func (this *QImageIOPlugin) Capabilities(device *qtcore.QIODevice /*777 QIODevice **/, format *qtcore.QByteArray) int {
 	var convArg0 = device.GetCthis()
 	var convArg1 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QImageIOPlugin12capabilitiesEP9QIODeviceRK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -121,7 +121,7 @@ func (this *QImageIOPlugin) Capabilities(device *qtcore.QIODevice /*444 QIODevic
 // index:0
 // Public pure virtual
 // QImageIOHandler * create(class QIODevice *, const class QByteArray &)
-func (this *QImageIOPlugin) Create(device *qtcore.QIODevice /*444 QIODevice **/, format *qtcore.QByteArray) *QImageIOHandler /*444 QImageIOHandler **/ {
+func (this *QImageIOPlugin) Create(device *qtcore.QIODevice /*777 QIODevice **/, format *qtcore.QByteArray) *QImageIOHandler /*777 QImageIOHandler **/ {
 	var convArg0 = device.GetCthis()
 	var convArg1 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)

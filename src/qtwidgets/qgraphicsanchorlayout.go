@@ -78,7 +78,7 @@ func (*QGraphicsAnchorLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsAnc
 // index:0
 // Public
 // void QGraphicsAnchorLayout(class QGraphicsLayoutItem *)
-func NewQGraphicsAnchorLayout(parent *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/) *QGraphicsAnchorLayout {
+func NewQGraphicsAnchorLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) *QGraphicsAnchorLayout {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayoutC2EP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -100,7 +100,7 @@ func DeleteQGraphicsAnchorLayout(*QGraphicsAnchorLayout) {
 // index:0
 // Public
 // QGraphicsAnchor * addAnchor(class QGraphicsLayoutItem *, Qt::AnchorPoint, class QGraphicsLayoutItem *, Qt::AnchorPoint)
-func (this *QGraphicsAnchorLayout) AddAnchor(firstItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, firstEdge int, secondItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, secondEdge int) *QGraphicsAnchor /*444 QGraphicsAnchor **/ {
+func (this *QGraphicsAnchorLayout) AddAnchor(firstItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, firstEdge int, secondItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, secondEdge int) *QGraphicsAnchor /*777 QGraphicsAnchor **/ {
 	var convArg0 = firstItem.GetCthis()
 	var convArg2 = secondItem.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout9addAnchorEP19QGraphicsLayoutItemN2Qt11AnchorPointES1_S3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, firstEdge, convArg2, secondEdge)
@@ -114,7 +114,7 @@ func (this *QGraphicsAnchorLayout) AddAnchor(firstItem *QGraphicsLayoutItem /*44
 // index:0
 // Public
 // QGraphicsAnchor * anchor(class QGraphicsLayoutItem *, Qt::AnchorPoint, class QGraphicsLayoutItem *, Qt::AnchorPoint)
-func (this *QGraphicsAnchorLayout) Anchor(firstItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, firstEdge int, secondItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, secondEdge int) *QGraphicsAnchor /*444 QGraphicsAnchor **/ {
+func (this *QGraphicsAnchorLayout) Anchor(firstItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, firstEdge int, secondItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, secondEdge int) *QGraphicsAnchor /*777 QGraphicsAnchor **/ {
 	var convArg0 = firstItem.GetCthis()
 	var convArg2 = secondItem.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout6anchorEP19QGraphicsLayoutItemN2Qt11AnchorPointES1_S3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, firstEdge, convArg2, secondEdge)
@@ -128,7 +128,7 @@ func (this *QGraphicsAnchorLayout) Anchor(firstItem *QGraphicsLayoutItem /*444 Q
 // index:0
 // Public
 // void addCornerAnchors(class QGraphicsLayoutItem *, Qt::Corner, class QGraphicsLayoutItem *, Qt::Corner)
-func (this *QGraphicsAnchorLayout) AddCornerAnchors(firstItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, firstCorner int, secondItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, secondCorner int) {
+func (this *QGraphicsAnchorLayout) AddCornerAnchors(firstItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, firstCorner int, secondItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, secondCorner int) {
 	var convArg0 = firstItem.GetCthis()
 	var convArg2 = secondItem.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout16addCornerAnchorsEP19QGraphicsLayoutItemN2Qt6CornerES1_S3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, firstCorner, convArg2, secondCorner)
@@ -218,7 +218,7 @@ func (this *QGraphicsAnchorLayout) Count() int {
 // index:0
 // Public virtual
 // QGraphicsLayoutItem * itemAt(int)
-func (this *QGraphicsAnchorLayout) ItemAt(index int) *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/ {
+func (this *QGraphicsAnchorLayout) ItemAt(index int) *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout6itemAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv

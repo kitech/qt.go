@@ -70,7 +70,7 @@ func (*QStringListModel) NewFromPointer(cthis unsafe.Pointer) *QStringListModel 
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QStringListModel) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QStringListModel) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QStringListModel) MetaObject() *QMetaObject /*444 const QMetaObject 
 // index:0
 // Public
 // void QStringListModel(class QObject *)
-func NewQStringListModel(parent *QObject /*444 QObject **/) *QStringListModel {
+func NewQStringListModel(parent *QObject /*777 QObject **/) *QStringListModel {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModelC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -95,7 +95,7 @@ func NewQStringListModel(parent *QObject /*444 QObject **/) *QStringListModel {
 // index:1
 // Public
 // void QStringListModel(const class QStringList &, class QObject *)
-func NewQStringListModel_1(strings *QStringList, parent *QObject /*444 QObject **/) *QStringListModel {
+func NewQStringListModel_1(strings *QStringList, parent *QObject /*777 QObject **/) *QStringListModel {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = strings.GetCthis()
 	var convArg1 = parent.GetCthis()

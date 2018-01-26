@@ -153,7 +153,7 @@ func (this *QLockFile) IsLocked() bool {
 // index:0
 // Public
 // bool getLockInfo(qint64 *, class QString *, class QString *)
-func (this *QLockFile) GetLockInfo(pid unsafe.Pointer /*666*/, hostname *QString /*444 QString **/, appname *QString /*444 QString **/) bool {
+func (this *QLockFile) GetLockInfo(pid unsafe.Pointer /*666*/, hostname *QString /*777 QString **/, appname *QString /*777 QString **/) bool {
 	var convArg1 = hostname.GetCthis()
 	var convArg2 = appname.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLockFile11getLockInfoEPxP7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &pid, convArg1, convArg2)

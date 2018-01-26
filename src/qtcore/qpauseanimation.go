@@ -70,7 +70,7 @@ func (*QPauseAnimation) NewFromPointer(cthis unsafe.Pointer) *QPauseAnimation {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QPauseAnimation) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QPauseAnimation) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QPauseAnimation10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QPauseAnimation) MetaObject() *QMetaObject /*444 const QMetaObject *
 // index:0
 // Public
 // void QPauseAnimation(class QObject *)
-func NewQPauseAnimation(parent *QObject /*444 QObject **/) *QPauseAnimation {
+func NewQPauseAnimation(parent *QObject /*777 QObject **/) *QPauseAnimation {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimationC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -95,7 +95,7 @@ func NewQPauseAnimation(parent *QObject /*444 QObject **/) *QPauseAnimation {
 // index:1
 // Public
 // void QPauseAnimation(int, class QObject *)
-func NewQPauseAnimation_1(msecs int, parent *QObject /*444 QObject **/) *QPauseAnimation {
+func NewQPauseAnimation_1(msecs int, parent *QObject /*777 QObject **/) *QPauseAnimation {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimationC2EiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, msecs, convArg1)
@@ -137,7 +137,7 @@ func (this *QPauseAnimation) SetDuration(msecs int) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QPauseAnimation) Event(e *QEvent /*444 QEvent **/) bool {
+func (this *QPauseAnimation) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimation5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

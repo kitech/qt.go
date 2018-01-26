@@ -70,7 +70,7 @@ func (*QAbstractItemModel) NewFromPointer(cthis unsafe.Pointer) *QAbstractItemMo
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QAbstractItemModel) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QAbstractItemModel) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractItemModel10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QAbstractItemModel) MetaObject() *QMetaObject /*444 const QMetaObjec
 // index:0
 // Public
 // void QAbstractItemModel(class QObject *)
-func NewQAbstractItemModel(parent *QObject /*444 QObject **/) *QAbstractItemModel {
+func NewQAbstractItemModel(parent *QObject /*777 QObject **/) *QAbstractItemModel {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractItemModelC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -251,7 +251,7 @@ func (this *QAbstractItemModel) SetHeaderData(section int, orientation int, valu
 // index:0
 // Public virtual
 // bool canDropMimeData(const class QMimeData *, Qt::DropAction, int, int, const class QModelIndex &)
-func (this *QAbstractItemModel) CanDropMimeData(data *QMimeData /*444 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
+func (this *QAbstractItemModel) CanDropMimeData(data *QMimeData /*777 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractItemModel15canDropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action, row, column, convArg4)
@@ -264,7 +264,7 @@ func (this *QAbstractItemModel) CanDropMimeData(data *QMimeData /*444 const QMim
 // index:0
 // Public virtual
 // bool dropMimeData(const class QMimeData *, Qt::DropAction, int, int, const class QModelIndex &)
-func (this *QAbstractItemModel) DropMimeData(data *QMimeData /*444 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
+func (this *QAbstractItemModel) DropMimeData(data *QMimeData /*777 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractItemModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action, row, column, convArg4)

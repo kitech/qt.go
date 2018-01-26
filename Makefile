@@ -20,11 +20,17 @@ gui:
 widgets:
 	CC=clang CXX=clang++ go install -v -x qtwidgets
 
+network:
+	CC=clang CXX=clang++ go install -v -x qtnetwork
+
+qml:
+	CC=clang CXX=clang++ go install -v -x qtqml
+
 eg:
 	# CC=clang CXX=clang++ go build -v -x src/eg/coreapp.go
 	# CC=clang CXX=clang++ go build -v -x src/eg/guiapp.go
 	# CC=clang CXX=clang++ go build -v -x src/eg/signal.go
-	CC=clang CXX=clang++ go build -v -x src/eg/uicgen.go src/eg/ui_xxx.go
+	CC=clang CXX=clang++ go build -v -x src/eg/uicgen.go src/eg/ui_xxx.go src/eg/rcc_rc.go
 	# CC=clang CXX=clang++ go build -v -x src/eg/button.go
 	# CC=clang CXX=clang++ go build -v -x src/eg/eg00.go
 	# CC=clang CXX=clang++ go build -v -x src/eg/eg10.go

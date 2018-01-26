@@ -78,7 +78,7 @@ func (*QGraphicsLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLayout {
 // index:0
 // Public
 // void QGraphicsLayout(class QGraphicsLayoutItem *)
-func NewQGraphicsLayout(parent *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/) *QGraphicsLayout {
+func NewQGraphicsLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) *QGraphicsLayout {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -156,7 +156,7 @@ func (this *QGraphicsLayout) UpdateGeometry() {
 // index:0
 // Public virtual
 // void widgetEvent(class QEvent *)
-func (this *QGraphicsLayout) WidgetEvent(e *qtcore.QEvent /*444 QEvent **/) {
+func (this *QGraphicsLayout) WidgetEvent(e *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout11widgetEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -177,7 +177,7 @@ func (this *QGraphicsLayout) Count() int {
 // index:0
 // Public pure virtual
 // QGraphicsLayoutItem * itemAt(int)
-func (this *QGraphicsLayout) ItemAt(i int) *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/ {
+func (this *QGraphicsLayout) ItemAt(i int) *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsLayout6itemAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -227,7 +227,7 @@ func QGraphicsLayout_InstantInvalidatePropagation() bool {
 // index:0
 // Protected
 // void addChildLayoutItem(class QGraphicsLayoutItem *)
-func (this *QGraphicsLayout) AddChildLayoutItem(layoutItem *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/) {
+func (this *QGraphicsLayout) AddChildLayoutItem(layoutItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) {
 	var convArg0 = layoutItem.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout18addChildLayoutItemEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

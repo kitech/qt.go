@@ -85,7 +85,7 @@ func NewQImageReader() *QImageReader {
 // index:1
 // Public
 // void QImageReader(class QIODevice *, const class QByteArray &)
-func NewQImageReader_1(device *qtcore.QIODevice /*444 QIODevice **/, format *qtcore.QByteArray) *QImageReader {
+func NewQImageReader_1(device *qtcore.QIODevice /*777 QIODevice **/, format *qtcore.QByteArray) *QImageReader {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = device.GetCthis()
 	var convArg1 = format.GetCthis()
@@ -186,7 +186,7 @@ func (this *QImageReader) DecideFormatFromContent() bool {
 // index:0
 // Public
 // void setDevice(class QIODevice *)
-func (this *QImageReader) SetDevice(device *qtcore.QIODevice /*444 QIODevice **/) {
+func (this *QImageReader) SetDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -196,7 +196,7 @@ func (this *QImageReader) SetDevice(device *qtcore.QIODevice /*444 QIODevice **/
 // index:0
 // Public
 // QIODevice * device()
-func (this *QImageReader) Device() *qtcore.QIODevice /*444 QIODevice **/ {
+func (this *QImageReader) Device() *qtcore.QIODevice /*777 QIODevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -274,14 +274,14 @@ func QImageReader_ImageFormat_1(fileName *qtcore.QString) *qtcore.QByteArray /*1
 // index:2
 // Public static
 // QByteArray imageFormat(class QIODevice *)
-func (this *QImageReader) ImageFormat_2(device *qtcore.QIODevice /*444 QIODevice **/) *qtcore.QByteArray /*123*/ {
+func (this *QImageReader) ImageFormat_2(device *qtcore.QIODevice /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader11imageFormatEP9QIODevice", ffiqt.FFI_TYPE_POINTER, device)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
-func QImageReader_ImageFormat_2(device *qtcore.QIODevice /*444 QIODevice **/) *qtcore.QByteArray /*123*/ {
+func QImageReader_ImageFormat_2(device *qtcore.QIODevice /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
 	var nilthis *QImageReader
 	rv := nilthis.ImageFormat_2(device)
 	return rv
@@ -523,7 +523,7 @@ func (this *QImageReader) Read() *QImage /*123*/ {
 // index:1
 // Public
 // bool read(class QImage *)
-func (this *QImageReader) Read_1(image *QImage /*444 QImage **/) bool {
+func (this *QImageReader) Read_1(image *QImage /*777 QImage **/) bool {
 	var convArg0 = image.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader4readEP6QImage", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

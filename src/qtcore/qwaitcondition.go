@@ -90,7 +90,7 @@ func DeleteQWaitCondition(*QWaitCondition) {
 // index:0
 // Public
 // bool wait(class QMutex *, unsigned long)
-func (this *QWaitCondition) Wait(lockedMutex *QMutex /*444 QMutex **/, time uint) bool {
+func (this *QWaitCondition) Wait(lockedMutex *QMutex /*777 QMutex **/, time uint) bool {
 	var convArg0 = lockedMutex.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP6QMutexm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)
 	gopp.ErrPrint(err, rv)
@@ -102,7 +102,7 @@ func (this *QWaitCondition) Wait(lockedMutex *QMutex /*444 QMutex **/, time uint
 // index:1
 // Public
 // bool wait(class QReadWriteLock *, unsigned long)
-func (this *QWaitCondition) Wait_1(lockedReadWriteLock *QReadWriteLock /*444 QReadWriteLock **/, time uint) bool {
+func (this *QWaitCondition) Wait_1(lockedReadWriteLock *QReadWriteLock /*777 QReadWriteLock **/, time uint) bool {
 	var convArg0 = lockedReadWriteLock.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP14QReadWriteLockm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)
 	gopp.ErrPrint(err, rv)

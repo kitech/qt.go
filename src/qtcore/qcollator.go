@@ -211,7 +211,7 @@ func (this *QCollator) Compare_1(s1 *QStringRef, s2 *QStringRef) int {
 // index:2
 // Public
 // int compare(const class QChar *, int, const class QChar *, int)
-func (this *QCollator) Compare_2(s1 *QChar /*444 const QChar **/, len1 int, s2 *QChar /*444 const QChar **/, len2 int) int {
+func (this *QCollator) Compare_2(s1 *QChar /*777 const QChar **/, len1 int, s2 *QChar /*777 const QChar **/, len2 int) int {
 	var convArg0 = s1.GetCthis()
 	var convArg2 = s2.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator7compareEPK5QChariS2_i", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len1, convArg2, len2)

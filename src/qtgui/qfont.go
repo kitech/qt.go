@@ -98,7 +98,7 @@ func NewQFont_1(family *qtcore.QString, pointSize int, weight int, italic bool) 
 // index:2
 // Public
 // void QFont(const class QFont &, class QPaintDevice *)
-func NewQFont_2(arg0 *QFont, pd *QPaintDevice /*444 QPaintDevice **/) *QFont {
+func NewQFont_2(arg0 *QFont, pd *QPaintDevice /*777 QPaintDevice **/) *QFont {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = pd.GetCthis()

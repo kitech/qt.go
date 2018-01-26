@@ -74,7 +74,7 @@ func (*QIconEnginePlugin) NewFromPointer(cthis unsafe.Pointer) *QIconEnginePlugi
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QIconEnginePlugin) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QIconEnginePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QIconEnginePlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -86,7 +86,7 @@ func (this *QIconEnginePlugin) MetaObject() *qtcore.QMetaObject /*444 const QMet
 // index:0
 // Public
 // void QIconEnginePlugin(class QObject *)
-func NewQIconEnginePlugin(parent *qtcore.QObject /*444 QObject **/) *QIconEnginePlugin {
+func NewQIconEnginePlugin(parent *qtcore.QObject /*777 QObject **/) *QIconEnginePlugin {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIconEnginePluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -108,7 +108,7 @@ func DeleteQIconEnginePlugin(*QIconEnginePlugin) {
 // index:0
 // Public pure virtual
 // QIconEngine * create(const class QString &)
-func (this *QIconEnginePlugin) Create(filename *qtcore.QString) *QIconEngine /*444 QIconEngine **/ {
+func (this *QIconEnginePlugin) Create(filename *qtcore.QString) *QIconEngine /*777 QIconEngine **/ {
 	var convArg0 = filename.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIconEnginePlugin6createERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

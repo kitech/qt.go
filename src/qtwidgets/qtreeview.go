@@ -78,7 +78,7 @@ func (*QTreeView) NewFromPointer(cthis unsafe.Pointer) *QTreeView {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTreeView) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QTreeView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QTreeView) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject 
 // index:0
 // Public
 // void QTreeView(class QWidget *)
-func NewQTreeView(parent *QWidget /*444 QWidget **/) *QTreeView {
+func NewQTreeView(parent *QWidget /*777 QWidget **/) *QTreeView {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeViewC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -112,7 +112,7 @@ func DeleteQTreeView(*QTreeView) {
 // index:0
 // Public virtual
 // void setModel(class QAbstractItemModel *)
-func (this *QTreeView) SetModel(model *qtcore.QAbstractItemModel /*444 QAbstractItemModel **/) {
+func (this *QTreeView) SetModel(model *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/) {
 	var convArg0 = model.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView8setModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -132,7 +132,7 @@ func (this *QTreeView) SetRootIndex(index *qtcore.QModelIndex) {
 // index:0
 // Public virtual
 // void setSelectionModel(class QItemSelectionModel *)
-func (this *QTreeView) SetSelectionModel(selectionModel *qtcore.QItemSelectionModel /*444 QItemSelectionModel **/) {
+func (this *QTreeView) SetSelectionModel(selectionModel *qtcore.QItemSelectionModel /*777 QItemSelectionModel **/) {
 	var convArg0 = selectionModel.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView17setSelectionModelEP19QItemSelectionModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -142,7 +142,7 @@ func (this *QTreeView) SetSelectionModel(selectionModel *qtcore.QItemSelectionMo
 // index:0
 // Public
 // QHeaderView * header()
-func (this *QTreeView) Header() *QHeaderView /*444 QHeaderView **/ {
+func (this *QTreeView) Header() *QHeaderView /*777 QHeaderView **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView6headerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -154,7 +154,7 @@ func (this *QTreeView) Header() *QHeaderView /*444 QHeaderView **/ {
 // index:0
 // Public
 // void setHeader(class QHeaderView *)
-func (this *QTreeView) SetHeader(header *QHeaderView /*444 QHeaderView **/) {
+func (this *QTreeView) SetHeader(header *QHeaderView /*777 QHeaderView **/) {
 	var convArg0 = header.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView9setHeaderEP11QHeaderView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -882,7 +882,7 @@ func (this *QTreeView) VisualRegionForSelection(selection *qtcore.QItemSelection
 // index:0
 // Protected virtual
 // void timerEvent(class QTimerEvent *)
-func (this *QTreeView) TimerEvent(event *qtcore.QTimerEvent /*444 QTimerEvent **/) {
+func (this *QTreeView) TimerEvent(event *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -892,7 +892,7 @@ func (this *QTreeView) TimerEvent(event *qtcore.QTimerEvent /*444 QTimerEvent **
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QTreeView) PaintEvent(event *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+func (this *QTreeView) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -902,7 +902,7 @@ func (this *QTreeView) PaintEvent(event *qtgui.QPaintEvent /*444 QPaintEvent **/
 // index:0
 // Protected
 // void drawTree(class QPainter *, const class QRegion &)
-func (this *QTreeView) DrawTree(painter *qtgui.QPainter /*444 QPainter **/, region *qtgui.QRegion) {
+func (this *QTreeView) DrawTree(painter *qtgui.QPainter /*777 QPainter **/, region *qtgui.QRegion) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = region.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTreeView8drawTreeEP8QPainterRK7QRegion", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -913,7 +913,7 @@ func (this *QTreeView) DrawTree(painter *qtgui.QPainter /*444 QPainter **/, regi
 // index:0
 // Protected virtual
 // void drawRow(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QTreeView) DrawRow(painter *qtgui.QPainter /*444 QPainter **/, options *QStyleOptionViewItem, index *qtcore.QModelIndex) {
+func (this *QTreeView) DrawRow(painter *qtgui.QPainter /*777 QPainter **/, options *QStyleOptionViewItem, index *qtcore.QModelIndex) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = options.GetCthis()
 	var convArg2 = index.GetCthis()
@@ -925,7 +925,7 @@ func (this *QTreeView) DrawRow(painter *qtgui.QPainter /*444 QPainter **/, optio
 // index:0
 // Protected virtual
 // void drawBranches(class QPainter *, const class QRect &, const class QModelIndex &)
-func (this *QTreeView) DrawBranches(painter *qtgui.QPainter /*444 QPainter **/, rect *qtcore.QRect, index *qtcore.QModelIndex) {
+func (this *QTreeView) DrawBranches(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, index *qtcore.QModelIndex) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = rect.GetCthis()
 	var convArg2 = index.GetCthis()
@@ -937,7 +937,7 @@ func (this *QTreeView) DrawBranches(painter *qtgui.QPainter /*444 QPainter **/, 
 // index:0
 // Protected virtual
 // void mousePressEvent(class QMouseEvent *)
-func (this *QTreeView) MousePressEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QTreeView) MousePressEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -947,7 +947,7 @@ func (this *QTreeView) MousePressEvent(event *qtgui.QMouseEvent /*444 QMouseEven
 // index:0
 // Protected virtual
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QTreeView) MouseReleaseEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QTreeView) MouseReleaseEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -957,7 +957,7 @@ func (this *QTreeView) MouseReleaseEvent(event *qtgui.QMouseEvent /*444 QMouseEv
 // index:0
 // Protected virtual
 // void mouseDoubleClickEvent(class QMouseEvent *)
-func (this *QTreeView) MouseDoubleClickEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QTreeView) MouseDoubleClickEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView21mouseDoubleClickEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -967,7 +967,7 @@ func (this *QTreeView) MouseDoubleClickEvent(event *qtgui.QMouseEvent /*444 QMou
 // index:0
 // Protected virtual
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QTreeView) MouseMoveEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QTreeView) MouseMoveEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -977,7 +977,7 @@ func (this *QTreeView) MouseMoveEvent(event *qtgui.QMouseEvent /*444 QMouseEvent
 // index:0
 // Protected virtual
 // void keyPressEvent(class QKeyEvent *)
-func (this *QTreeView) KeyPressEvent(event *qtgui.QKeyEvent /*444 QKeyEvent **/) {
+func (this *QTreeView) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -987,7 +987,7 @@ func (this *QTreeView) KeyPressEvent(event *qtgui.QKeyEvent /*444 QKeyEvent **/)
 // index:0
 // Protected virtual
 // void dragMoveEvent(class QDragMoveEvent *)
-func (this *QTreeView) DragMoveEvent(event *qtgui.QDragMoveEvent /*444 QDragMoveEvent **/) {
+func (this *QTreeView) DragMoveEvent(event *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView13dragMoveEventEP14QDragMoveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -997,7 +997,7 @@ func (this *QTreeView) DragMoveEvent(event *qtgui.QDragMoveEvent /*444 QDragMove
 // index:0
 // Protected virtual
 // bool viewportEvent(class QEvent *)
-func (this *QTreeView) ViewportEvent(event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QTreeView) ViewportEvent(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeView13viewportEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

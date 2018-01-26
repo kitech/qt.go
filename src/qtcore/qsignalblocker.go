@@ -69,7 +69,7 @@ func (*QSignalBlocker) NewFromPointer(cthis unsafe.Pointer) *QSignalBlocker {
 // index:0
 // Public inline
 // void QSignalBlocker(class QObject *)
-func NewQSignalBlocker(o *QObject /*444 QObject **/) *QSignalBlocker {
+func NewQSignalBlocker(o *QObject /*777 QObject **/) *QSignalBlocker {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = o.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlockerC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)

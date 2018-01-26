@@ -78,7 +78,7 @@ func (*QScrollArea) NewFromPointer(cthis unsafe.Pointer) *QScrollArea {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QScrollArea) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QScrollArea) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QScrollArea10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QScrollArea) MetaObject() *qtcore.QMetaObject /*444 const QMetaObjec
 // index:0
 // Public
 // void QScrollArea(class QWidget *)
-func NewQScrollArea(parent *QWidget /*444 QWidget **/) *QScrollArea {
+func NewQScrollArea(parent *QWidget /*777 QWidget **/) *QScrollArea {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QScrollAreaC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -112,7 +112,7 @@ func DeleteQScrollArea(*QScrollArea) {
 // index:0
 // Public
 // QWidget * widget()
-func (this *QScrollArea) Widget() *QWidget /*444 QWidget **/ {
+func (this *QScrollArea) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QScrollArea6widgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -124,7 +124,7 @@ func (this *QScrollArea) Widget() *QWidget /*444 QWidget **/ {
 // index:0
 // Public
 // void setWidget(class QWidget *)
-func (this *QScrollArea) SetWidget(widget *QWidget /*444 QWidget **/) {
+func (this *QScrollArea) SetWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QScrollArea9setWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -134,7 +134,7 @@ func (this *QScrollArea) SetWidget(widget *QWidget /*444 QWidget **/) {
 // index:0
 // Public
 // QWidget * takeWidget()
-func (this *QScrollArea) TakeWidget() *QWidget /*444 QWidget **/ {
+func (this *QScrollArea) TakeWidget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QScrollArea10takeWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -211,7 +211,7 @@ func (this *QScrollArea) EnsureVisible(x int, y int, xmargin int, ymargin int) {
 // index:0
 // Public
 // void ensureWidgetVisible(class QWidget *, int, int)
-func (this *QScrollArea) EnsureWidgetVisible(childWidget *QWidget /*444 QWidget **/, xmargin int, ymargin int) {
+func (this *QScrollArea) EnsureWidgetVisible(childWidget *QWidget /*777 QWidget **/, xmargin int, ymargin int) {
 	var convArg0 = childWidget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QScrollArea19ensureWidgetVisibleEP7QWidgetii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
 	gopp.ErrPrint(err, rv)
@@ -221,7 +221,7 @@ func (this *QScrollArea) EnsureWidgetVisible(childWidget *QWidget /*444 QWidget 
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QScrollArea) Event(arg0 *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QScrollArea) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QScrollArea5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -233,7 +233,7 @@ func (this *QScrollArea) Event(arg0 *qtcore.QEvent /*444 QEvent **/) bool {
 // index:0
 // Protected virtual
 // bool eventFilter(class QObject *, class QEvent *)
-func (this *QScrollArea) EventFilter(arg0 *qtcore.QObject /*444 QObject **/, arg1 *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QScrollArea) EventFilter(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QScrollArea11eventFilterEP7QObjectP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -246,7 +246,7 @@ func (this *QScrollArea) EventFilter(arg0 *qtcore.QObject /*444 QObject **/, arg
 // index:0
 // Protected virtual
 // void resizeEvent(class QResizeEvent *)
-func (this *QScrollArea) ResizeEvent(arg0 *qtgui.QResizeEvent /*444 QResizeEvent **/) {
+func (this *QScrollArea) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QScrollArea11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

@@ -111,7 +111,7 @@ func NewQIcon_2(fileName *qtcore.QString) *QIcon {
 // index:3
 // Public
 // void QIcon(class QIconEngine *)
-func NewQIcon_3(engine *QIconEngine /*444 QIconEngine **/) *QIcon {
+func NewQIcon_3(engine *QIconEngine /*777 QIconEngine **/) *QIcon {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = engine.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIconC2EP11QIconEngine", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -186,7 +186,7 @@ func (this *QIcon) Pixmap_2(extent int, mode int, state int) *QPixmap /*123*/ {
 // index:3
 // Public
 // QPixmap pixmap(class QWindow *, const class QSize &, enum QIcon::Mode, enum QIcon::State)
-func (this *QIcon) Pixmap_3(window *QWindow /*444 QWindow **/, size *qtcore.QSize, mode int, state int) *QPixmap /*123*/ {
+func (this *QIcon) Pixmap_3(window *QWindow /*777 QWindow **/, size *qtcore.QSize, mode int, state int) *QPixmap /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = window.GetCthis()
 	var convArg1 = size.GetCthis()
@@ -217,7 +217,7 @@ func (this *QIcon) ActualSize(size *qtcore.QSize, mode int, state int) *qtcore.Q
 // index:1
 // Public
 // QSize actualSize(class QWindow *, const class QSize &, enum QIcon::Mode, enum QIcon::State)
-func (this *QIcon) ActualSize_1(window *QWindow /*444 QWindow **/, size *qtcore.QSize, mode int, state int) *qtcore.QSize /*123*/ {
+func (this *QIcon) ActualSize_1(window *QWindow /*777 QWindow **/, size *qtcore.QSize, mode int, state int) *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = window.GetCthis()
 	var convArg1 = size.GetCthis()

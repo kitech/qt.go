@@ -78,7 +78,7 @@ func DeleteQObjectData(*QObjectData) {
 // index:0
 // Public
 // QMetaObject * dynamicMetaObject()
-func (this *QObjectData) DynamicMetaObject() *QMetaObject /*444 QMetaObject **/ {
+func (this *QObjectData) DynamicMetaObject() *QMetaObject /*777 QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QObjectData17dynamicMetaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

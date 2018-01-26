@@ -182,7 +182,7 @@ func (this *QDropEvent) SetDropAction(action int) {
 // index:0
 // Public
 // QObject * source()
-func (this *QDropEvent) Source() *qtcore.QObject /*444 QObject **/ {
+func (this *QDropEvent) Source() *qtcore.QObject /*777 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent6sourceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -194,7 +194,7 @@ func (this *QDropEvent) Source() *qtcore.QObject /*444 QObject **/ {
 // index:0
 // Public inline
 // const QMimeData * mimeData()
-func (this *QDropEvent) MimeData() *qtcore.QMimeData /*444 const QMimeData **/ {
+func (this *QDropEvent) MimeData() *qtcore.QMimeData /*777 const QMimeData **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QDropEvent8mimeDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

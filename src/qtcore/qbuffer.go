@@ -70,7 +70,7 @@ func (*QBuffer) NewFromPointer(cthis unsafe.Pointer) *QBuffer {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QBuffer) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QBuffer) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QBuffer10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QBuffer) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 // index:0
 // Public
 // void QBuffer(class QObject *)
-func NewQBuffer(parent *QObject /*444 QObject **/) *QBuffer {
+func NewQBuffer(parent *QObject /*777 QObject **/) *QBuffer {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBufferC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -95,7 +95,7 @@ func NewQBuffer(parent *QObject /*444 QObject **/) *QBuffer {
 // index:1
 // Public
 // void QBuffer(class QByteArray *, class QObject *)
-func NewQBuffer_1(buf *QByteArray /*444 QByteArray **/, parent *QObject /*444 QObject **/) *QBuffer {
+func NewQBuffer_1(buf *QByteArray /*777 QByteArray **/, parent *QObject /*777 QObject **/) *QBuffer {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = buf.GetCthis()
 	var convArg1 = parent.GetCthis()
@@ -142,7 +142,7 @@ func (this *QBuffer) Buffer_1() *QByteArray {
 // index:0
 // Public
 // void setBuffer(class QByteArray *)
-func (this *QBuffer) SetBuffer(a *QByteArray /*444 QByteArray **/) {
+func (this *QBuffer) SetBuffer(a *QByteArray /*777 QByteArray **/) {
 	var convArg0 = a.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer9setBufferEP10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

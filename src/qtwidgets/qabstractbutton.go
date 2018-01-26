@@ -78,7 +78,7 @@ func (*QAbstractButton) NewFromPointer(cthis unsafe.Pointer) *QAbstractButton {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QAbstractButton) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QAbstractButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAbstractButton10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QAbstractButton) MetaObject() *qtcore.QMetaObject /*444 const QMetaO
 // index:0
 // Public
 // void QAbstractButton(class QWidget *)
-func NewQAbstractButton(parent *QWidget /*444 QWidget **/) *QAbstractButton {
+func NewQAbstractButton(parent *QWidget /*777 QWidget **/) *QAbstractButton {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButtonC1EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -329,7 +329,7 @@ func (this *QAbstractButton) AutoExclusive() bool {
 // index:0
 // Public
 // QButtonGroup * group()
-func (this *QAbstractButton) Group() *QButtonGroup /*444 QButtonGroup **/ {
+func (this *QAbstractButton) Group() *QButtonGroup /*777 QButtonGroup **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAbstractButton5groupEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -423,7 +423,7 @@ func (this *QAbstractButton) Toggled(checked bool) {
 // index:0
 // Protected pure virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QAbstractButton) PaintEvent(e *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+func (this *QAbstractButton) PaintEvent(e *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -463,7 +463,7 @@ func (this *QAbstractButton) NextCheckState() {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QAbstractButton) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QAbstractButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -475,7 +475,7 @@ func (this *QAbstractButton) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
 // index:0
 // Protected virtual
 // void keyPressEvent(class QKeyEvent *)
-func (this *QAbstractButton) KeyPressEvent(e *qtgui.QKeyEvent /*444 QKeyEvent **/) {
+func (this *QAbstractButton) KeyPressEvent(e *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -485,7 +485,7 @@ func (this *QAbstractButton) KeyPressEvent(e *qtgui.QKeyEvent /*444 QKeyEvent **
 // index:0
 // Protected virtual
 // void keyReleaseEvent(class QKeyEvent *)
-func (this *QAbstractButton) KeyReleaseEvent(e *qtgui.QKeyEvent /*444 QKeyEvent **/) {
+func (this *QAbstractButton) KeyReleaseEvent(e *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton15keyReleaseEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -495,7 +495,7 @@ func (this *QAbstractButton) KeyReleaseEvent(e *qtgui.QKeyEvent /*444 QKeyEvent 
 // index:0
 // Protected virtual
 // void mousePressEvent(class QMouseEvent *)
-func (this *QAbstractButton) MousePressEvent(e *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QAbstractButton) MousePressEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -505,7 +505,7 @@ func (this *QAbstractButton) MousePressEvent(e *qtgui.QMouseEvent /*444 QMouseEv
 // index:0
 // Protected virtual
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QAbstractButton) MouseReleaseEvent(e *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QAbstractButton) MouseReleaseEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -515,7 +515,7 @@ func (this *QAbstractButton) MouseReleaseEvent(e *qtgui.QMouseEvent /*444 QMouse
 // index:0
 // Protected virtual
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QAbstractButton) MouseMoveEvent(e *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QAbstractButton) MouseMoveEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -525,7 +525,7 @@ func (this *QAbstractButton) MouseMoveEvent(e *qtgui.QMouseEvent /*444 QMouseEve
 // index:0
 // Protected virtual
 // void focusInEvent(class QFocusEvent *)
-func (this *QAbstractButton) FocusInEvent(e *qtgui.QFocusEvent /*444 QFocusEvent **/) {
+func (this *QAbstractButton) FocusInEvent(e *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -535,7 +535,7 @@ func (this *QAbstractButton) FocusInEvent(e *qtgui.QFocusEvent /*444 QFocusEvent
 // index:0
 // Protected virtual
 // void focusOutEvent(class QFocusEvent *)
-func (this *QAbstractButton) FocusOutEvent(e *qtgui.QFocusEvent /*444 QFocusEvent **/) {
+func (this *QAbstractButton) FocusOutEvent(e *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -545,7 +545,7 @@ func (this *QAbstractButton) FocusOutEvent(e *qtgui.QFocusEvent /*444 QFocusEven
 // index:0
 // Protected virtual
 // void changeEvent(class QEvent *)
-func (this *QAbstractButton) ChangeEvent(e *qtcore.QEvent /*444 QEvent **/) {
+func (this *QAbstractButton) ChangeEvent(e *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -555,7 +555,7 @@ func (this *QAbstractButton) ChangeEvent(e *qtcore.QEvent /*444 QEvent **/) {
 // index:0
 // Protected virtual
 // void timerEvent(class QTimerEvent *)
-func (this *QAbstractButton) TimerEvent(e *qtcore.QTimerEvent /*444 QTimerEvent **/) {
+func (this *QAbstractButton) TimerEvent(e *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

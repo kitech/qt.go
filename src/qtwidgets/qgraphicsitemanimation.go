@@ -78,7 +78,7 @@ func (*QGraphicsItemAnimation) NewFromPointer(cthis unsafe.Pointer) *QGraphicsIt
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QGraphicsItemAnimation) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QGraphicsItemAnimation) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QGraphicsItemAnimation) MetaObject() *qtcore.QMetaObject /*444 const
 // index:0
 // Public
 // void QGraphicsItemAnimation(class QObject *)
-func NewQGraphicsItemAnimation(parent *qtcore.QObject /*444 QObject **/) *QGraphicsItemAnimation {
+func NewQGraphicsItemAnimation(parent *qtcore.QObject /*777 QObject **/) *QGraphicsItemAnimation {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimationC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -112,7 +112,7 @@ func DeleteQGraphicsItemAnimation(*QGraphicsItemAnimation) {
 // index:0
 // Public
 // QGraphicsItem * item()
-func (this *QGraphicsItemAnimation) Item() *QGraphicsItem /*444 QGraphicsItem **/ {
+func (this *QGraphicsItemAnimation) Item() *QGraphicsItem /*777 QGraphicsItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation4itemEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -124,7 +124,7 @@ func (this *QGraphicsItemAnimation) Item() *QGraphicsItem /*444 QGraphicsItem **
 // index:0
 // Public
 // void setItem(class QGraphicsItem *)
-func (this *QGraphicsItemAnimation) SetItem(item *QGraphicsItem /*444 QGraphicsItem **/) {
+func (this *QGraphicsItemAnimation) SetItem(item *QGraphicsItem /*777 QGraphicsItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation7setItemEP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -134,7 +134,7 @@ func (this *QGraphicsItemAnimation) SetItem(item *QGraphicsItem /*444 QGraphicsI
 // index:0
 // Public
 // QTimeLine * timeLine()
-func (this *QGraphicsItemAnimation) TimeLine() *qtcore.QTimeLine /*444 QTimeLine **/ {
+func (this *QGraphicsItemAnimation) TimeLine() *qtcore.QTimeLine /*777 QTimeLine **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation8timeLineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -146,7 +146,7 @@ func (this *QGraphicsItemAnimation) TimeLine() *qtcore.QTimeLine /*444 QTimeLine
 // index:0
 // Public
 // void setTimeLine(class QTimeLine *)
-func (this *QGraphicsItemAnimation) SetTimeLine(timeLine *qtcore.QTimeLine /*444 QTimeLine **/) {
+func (this *QGraphicsItemAnimation) SetTimeLine(timeLine *qtcore.QTimeLine /*777 QTimeLine **/) {
 	var convArg0 = timeLine.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation11setTimeLineEP9QTimeLine", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

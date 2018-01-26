@@ -85,7 +85,7 @@ func NewQAccessibleApplication() *QAccessibleApplication {
 // index:0
 // Public virtual
 // QWindow * window()
-func (this *QAccessibleApplication) Window() *QWindow /*444 QWindow **/ {
+func (this *QAccessibleApplication) Window() *QWindow /*777 QWindow **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication6windowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -108,7 +108,7 @@ func (this *QAccessibleApplication) ChildCount() int {
 // index:0
 // Public virtual
 // int indexOfChild(const class QAccessibleInterface *)
-func (this *QAccessibleApplication) IndexOfChild(arg0 *QAccessibleInterface /*444 const QAccessibleInterface **/) int {
+func (this *QAccessibleApplication) IndexOfChild(arg0 *QAccessibleInterface /*777 const QAccessibleInterface **/) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -120,7 +120,7 @@ func (this *QAccessibleApplication) IndexOfChild(arg0 *QAccessibleInterface /*44
 // index:0
 // Public virtual
 // QAccessibleInterface * focusChild()
-func (this *QAccessibleApplication) FocusChild() *QAccessibleInterface /*444 QAccessibleInterface **/ {
+func (this *QAccessibleApplication) FocusChild() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication10focusChildEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -132,7 +132,7 @@ func (this *QAccessibleApplication) FocusChild() *QAccessibleInterface /*444 QAc
 // index:0
 // Public virtual
 // QAccessibleInterface * parent()
-func (this *QAccessibleApplication) Parent() *QAccessibleInterface /*444 QAccessibleInterface **/ {
+func (this *QAccessibleApplication) Parent() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication6parentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -144,7 +144,7 @@ func (this *QAccessibleApplication) Parent() *QAccessibleInterface /*444 QAccess
 // index:0
 // Public virtual
 // QAccessibleInterface * child(int)
-func (this *QAccessibleApplication) Child(index int) *QAccessibleInterface /*444 QAccessibleInterface **/ {
+func (this *QAccessibleApplication) Child(index int) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication5childEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv

@@ -77,7 +77,7 @@ func (*QListWidgetItem) NewFromPointer(cthis unsafe.Pointer) *QListWidgetItem {
 // index:0
 // Public
 // void QListWidgetItem(class QListWidget *, int)
-func NewQListWidgetItem(view *QListWidget /*444 QListWidget **/, type_ int) *QListWidgetItem {
+func NewQListWidgetItem(view *QListWidget /*777 QListWidget **/, type_ int) *QListWidgetItem {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = view.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItemC2EP11QListWidgeti", ffiqt.FFI_TYPE_VOID, cthis, convArg0, type_)
@@ -90,7 +90,7 @@ func NewQListWidgetItem(view *QListWidget /*444 QListWidget **/, type_ int) *QLi
 // index:1
 // Public
 // void QListWidgetItem(const class QString &, class QListWidget *, int)
-func NewQListWidgetItem_1(text *qtcore.QString, view *QListWidget /*444 QListWidget **/, type_ int) *QListWidgetItem {
+func NewQListWidgetItem_1(text *qtcore.QString, view *QListWidget /*777 QListWidget **/, type_ int) *QListWidgetItem {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = text.GetCthis()
 	var convArg1 = view.GetCthis()
@@ -104,7 +104,7 @@ func NewQListWidgetItem_1(text *qtcore.QString, view *QListWidget /*444 QListWid
 // index:2
 // Public
 // void QListWidgetItem(const class QIcon &, const class QString &, class QListWidget *, int)
-func NewQListWidgetItem_2(icon *qtgui.QIcon, text *qtcore.QString, view *QListWidget /*444 QListWidget **/, type_ int) *QListWidgetItem {
+func NewQListWidgetItem_2(icon *qtgui.QIcon, text *qtcore.QString, view *QListWidget /*777 QListWidget **/, type_ int) *QListWidgetItem {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = icon.GetCthis()
 	var convArg1 = text.GetCthis()
@@ -128,7 +128,7 @@ func DeleteQListWidgetItem(*QListWidgetItem) {
 // index:0
 // Public virtual
 // QListWidgetItem * clone()
-func (this *QListWidgetItem) Clone() *QListWidgetItem /*444 QListWidgetItem **/ {
+func (this *QListWidgetItem) Clone() *QListWidgetItem /*777 QListWidgetItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem5cloneEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -140,7 +140,7 @@ func (this *QListWidgetItem) Clone() *QListWidgetItem /*444 QListWidgetItem **/ 
 // index:0
 // Public inline
 // QListWidget * listWidget()
-func (this *QListWidgetItem) ListWidget() *QListWidget /*444 QListWidget **/ {
+func (this *QListWidgetItem) ListWidget() *QListWidget /*777 QListWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem10listWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

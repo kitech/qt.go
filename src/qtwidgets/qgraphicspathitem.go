@@ -78,7 +78,7 @@ func (*QGraphicsPathItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsPathIte
 // index:0
 // Public
 // void QGraphicsPathItem(class QGraphicsItem *)
-func NewQGraphicsPathItem(parent *QGraphicsItem /*444 QGraphicsItem **/) *QGraphicsPathItem {
+func NewQGraphicsPathItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsPathItem {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsPathItemC2EP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -91,7 +91,7 @@ func NewQGraphicsPathItem(parent *QGraphicsItem /*444 QGraphicsItem **/) *QGraph
 // index:1
 // Public
 // void QGraphicsPathItem(const class QPainterPath &, class QGraphicsItem *)
-func NewQGraphicsPathItem_1(path *qtgui.QPainterPath, parent *QGraphicsItem /*444 QGraphicsItem **/) *QGraphicsPathItem {
+func NewQGraphicsPathItem_1(path *qtgui.QPainterPath, parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsPathItem {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = path.GetCthis()
 	var convArg1 = parent.GetCthis()
@@ -178,7 +178,7 @@ func (this *QGraphicsPathItem) Contains(point *qtcore.QPointF) bool {
 // index:0
 // Public virtual
 // void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
-func (this *QGraphicsPathItem) Paint(painter *qtgui.QPainter /*444 QPainter **/, option *QStyleOptionGraphicsItem /*444 const QStyleOptionGraphicsItem **/, widget *QWidget /*444 QWidget **/) {
+func (this *QGraphicsPathItem) Paint(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionGraphicsItem /*777 const QStyleOptionGraphicsItem **/, widget *QWidget /*777 QWidget **/) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = option.GetCthis()
 	var convArg2 = widget.GetCthis()
@@ -190,7 +190,7 @@ func (this *QGraphicsPathItem) Paint(painter *qtgui.QPainter /*444 QPainter **/,
 // index:0
 // Public virtual
 // bool isObscuredBy(const class QGraphicsItem *)
-func (this *QGraphicsPathItem) IsObscuredBy(item *QGraphicsItem /*444 const QGraphicsItem **/) bool {
+func (this *QGraphicsPathItem) IsObscuredBy(item *QGraphicsItem /*777 const QGraphicsItem **/) bool {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsPathItem12isObscuredByEPK13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

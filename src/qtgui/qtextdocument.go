@@ -74,7 +74,7 @@ func (*QTextDocument) NewFromPointer(cthis unsafe.Pointer) *QTextDocument {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTextDocument) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QTextDocument) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -86,7 +86,7 @@ func (this *QTextDocument) MetaObject() *qtcore.QMetaObject /*444 const QMetaObj
 // index:0
 // Public
 // void QTextDocument(class QObject *)
-func NewQTextDocument(parent *qtcore.QObject /*444 QObject **/) *QTextDocument {
+func NewQTextDocument(parent *qtcore.QObject /*777 QObject **/) *QTextDocument {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocumentC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -99,7 +99,7 @@ func NewQTextDocument(parent *qtcore.QObject /*444 QObject **/) *QTextDocument {
 // index:1
 // Public
 // void QTextDocument(const class QString &, class QObject *)
-func NewQTextDocument_1(text *qtcore.QString, parent *qtcore.QObject /*444 QObject **/) *QTextDocument {
+func NewQTextDocument_1(text *qtcore.QString, parent *qtcore.QObject /*777 QObject **/) *QTextDocument {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = text.GetCthis()
 	var convArg1 = parent.GetCthis()
@@ -122,7 +122,7 @@ func DeleteQTextDocument(*QTextDocument) {
 // index:0
 // Public
 // QTextDocument * clone(class QObject *)
-func (this *QTextDocument) Clone(parent *qtcore.QObject /*444 QObject **/) *QTextDocument /*444 QTextDocument **/ {
+func (this *QTextDocument) Clone(parent *qtcore.QObject /*777 QObject **/) *QTextDocument /*777 QTextDocument **/ {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument5cloneEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -230,7 +230,7 @@ func (this *QTextDocument) Revision() int {
 // index:0
 // Public
 // void setDocumentLayout(class QAbstractTextDocumentLayout *)
-func (this *QTextDocument) SetDocumentLayout(layout *QAbstractTextDocumentLayout /*444 QAbstractTextDocumentLayout **/) {
+func (this *QTextDocument) SetDocumentLayout(layout *QAbstractTextDocumentLayout /*777 QAbstractTextDocumentLayout **/) {
 	var convArg0 = layout.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument17setDocumentLayoutEP27QAbstractTextDocumentLayout", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -240,7 +240,7 @@ func (this *QTextDocument) SetDocumentLayout(layout *QAbstractTextDocumentLayout
 // index:0
 // Public
 // QAbstractTextDocumentLayout * documentLayout()
-func (this *QTextDocument) DocumentLayout() *QAbstractTextDocumentLayout /*444 QAbstractTextDocumentLayout **/ {
+func (this *QTextDocument) DocumentLayout() *QAbstractTextDocumentLayout /*777 QAbstractTextDocumentLayout **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument14documentLayoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -446,7 +446,7 @@ func (this *QTextDocument) Find_5(expr *qtcore.QRegularExpression, cursor *QText
 // index:0
 // Public
 // QTextFrame * frameAt(int)
-func (this *QTextDocument) FrameAt(pos int) *QTextFrame /*444 QTextFrame **/ {
+func (this *QTextDocument) FrameAt(pos int) *QTextFrame /*777 QTextFrame **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument7frameAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -458,7 +458,7 @@ func (this *QTextDocument) FrameAt(pos int) *QTextFrame /*444 QTextFrame **/ {
 // index:0
 // Public
 // QTextFrame * rootFrame()
-func (this *QTextDocument) RootFrame() *QTextFrame /*444 QTextFrame **/ {
+func (this *QTextDocument) RootFrame() *QTextFrame /*777 QTextFrame **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument9rootFrameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -470,7 +470,7 @@ func (this *QTextDocument) RootFrame() *QTextFrame /*444 QTextFrame **/ {
 // index:0
 // Public
 // QTextObject * object(int)
-func (this *QTextDocument) Object(objectIndex int) *QTextObject /*444 QTextObject **/ {
+func (this *QTextDocument) Object(objectIndex int) *QTextObject /*777 QTextObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument6objectEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), objectIndex)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -482,7 +482,7 @@ func (this *QTextDocument) Object(objectIndex int) *QTextObject /*444 QTextObjec
 // index:0
 // Public
 // QTextObject * objectForFormat(const class QTextFormat &)
-func (this *QTextDocument) ObjectForFormat(arg0 *QTextFormat) *QTextObject /*444 QTextObject **/ {
+func (this *QTextDocument) ObjectForFormat(arg0 *QTextFormat) *QTextObject /*777 QTextObject **/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument15objectForFormatERK11QTextFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -663,7 +663,7 @@ func (this *QTextDocument) IsModified() bool {
 // index:0
 // Public
 // void print(class QPagedPaintDevice *)
-func (this *QTextDocument) Print(printer *QPagedPaintDevice /*444 QPagedPaintDevice **/) {
+func (this *QTextDocument) Print(printer *QPagedPaintDevice /*777 QPagedPaintDevice **/) {
 	var convArg0 = printer.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextDocument5printEP17QPagedPaintDevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -728,7 +728,7 @@ func (this *QTextDocument) UseDesignMetrics() bool {
 // index:0
 // Public
 // void drawContents(class QPainter *, const class QRectF &)
-func (this *QTextDocument) DrawContents(painter *QPainter /*444 QPainter **/, rect *qtcore.QRectF) {
+func (this *QTextDocument) DrawContents(painter *QPainter /*777 QPainter **/, rect *qtcore.QRectF) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument12drawContentsEP8QPainterRK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -890,7 +890,7 @@ func (this *QTextDocument) DefaultStyleSheet() *qtcore.QString /*123*/ {
 // index:0
 // Public
 // void undo(class QTextCursor *)
-func (this *QTextDocument) Undo(cursor *QTextCursor /*444 QTextCursor **/) {
+func (this *QTextDocument) Undo(cursor *QTextCursor /*777 QTextCursor **/) {
 	var convArg0 = cursor.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument4undoEP11QTextCursor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -909,7 +909,7 @@ func (this *QTextDocument) Undo_1() {
 // index:0
 // Public
 // void redo(class QTextCursor *)
-func (this *QTextDocument) Redo(cursor *QTextCursor /*444 QTextCursor **/) {
+func (this *QTextDocument) Redo(cursor *QTextCursor /*777 QTextCursor **/) {
 	var convArg0 = cursor.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument4redoEP11QTextCursor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1117,7 +1117,7 @@ func (this *QTextDocument) DocumentLayoutChanged() {
 // index:0
 // Public
 // void appendUndoItem(class QAbstractUndoItem *)
-func (this *QTextDocument) AppendUndoItem(arg0 *QAbstractUndoItem /*444 QAbstractUndoItem **/) {
+func (this *QTextDocument) AppendUndoItem(arg0 *QAbstractUndoItem /*777 QAbstractUndoItem **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument14appendUndoItemEP17QAbstractUndoItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1136,7 +1136,7 @@ func (this *QTextDocument) SetModified(m bool) {
 // index:0
 // Protected virtual
 // QTextObject * createObject(const class QTextFormat &)
-func (this *QTextDocument) CreateObject(f *QTextFormat) *QTextObject /*444 QTextObject **/ {
+func (this *QTextDocument) CreateObject(f *QTextFormat) *QTextObject /*777 QTextObject **/ {
 	var convArg0 = f.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocument12createObjectERK11QTextFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

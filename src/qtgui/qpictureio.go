@@ -85,7 +85,7 @@ func NewQPictureIO() *QPictureIO {
 // index:1
 // Public
 // void QPictureIO(class QIODevice *, const char *)
-func NewQPictureIO_1(ioDevice *qtcore.QIODevice /*444 QIODevice **/, format string) *QPictureIO {
+func NewQPictureIO_1(ioDevice *qtcore.QIODevice /*777 QIODevice **/, format string) *QPictureIO {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = ioDevice.GetCthis()
 	var convArg1 = qtrt.CString(format)
@@ -158,7 +158,7 @@ func (this *QPictureIO) Format() string {
 // index:0
 // Public
 // QIODevice * ioDevice()
-func (this *QPictureIO) IoDevice() *qtcore.QIODevice /*444 QIODevice **/ {
+func (this *QPictureIO) IoDevice() *qtcore.QIODevice /*777 QIODevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPictureIO8ioDeviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -261,7 +261,7 @@ func (this *QPictureIO) SetFormat(arg0 string) {
 // index:0
 // Public
 // void setIODevice(class QIODevice *)
-func (this *QPictureIO) SetIODevice(arg0 *qtcore.QIODevice /*444 QIODevice **/) {
+func (this *QPictureIO) SetIODevice(arg0 *qtcore.QIODevice /*777 QIODevice **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO11setIODeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -359,14 +359,14 @@ func QPictureIO_PictureFormat(fileName *qtcore.QString) *qtcore.QByteArray /*123
 // index:1
 // Public static
 // QByteArray pictureFormat(class QIODevice *)
-func (this *QPictureIO) PictureFormat_1(arg0 *qtcore.QIODevice /*444 QIODevice **/) *qtcore.QByteArray /*123*/ {
+func (this *QPictureIO) PictureFormat_1(arg0 *qtcore.QIODevice /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIO13pictureFormatEP9QIODevice", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
-func QPictureIO_PictureFormat_1(arg0 *qtcore.QIODevice /*444 QIODevice **/) *qtcore.QByteArray /*123*/ {
+func QPictureIO_PictureFormat_1(arg0 *qtcore.QIODevice /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
 	var nilthis *QPictureIO
 	rv := nilthis.PictureFormat_1(arg0)
 	return rv

@@ -70,7 +70,7 @@ func (*QSharedMemory) NewFromPointer(cthis unsafe.Pointer) *QSharedMemory {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QSharedMemory) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QSharedMemory) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QSharedMemory) MetaObject() *QMetaObject /*444 const QMetaObject **/
 // index:0
 // Public
 // void QSharedMemory(class QObject *)
-func NewQSharedMemory(parent *QObject /*444 QObject **/) *QSharedMemory {
+func NewQSharedMemory(parent *QObject /*777 QObject **/) *QSharedMemory {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemoryC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -95,7 +95,7 @@ func NewQSharedMemory(parent *QObject /*444 QObject **/) *QSharedMemory {
 // index:1
 // Public
 // void QSharedMemory(const class QString &, class QObject *)
-func NewQSharedMemory_1(key *QString, parent *QObject /*444 QObject **/) *QSharedMemory {
+func NewQSharedMemory_1(key *QString, parent *QObject /*777 QObject **/) *QSharedMemory {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = key.GetCthis()
 	var convArg1 = parent.GetCthis()

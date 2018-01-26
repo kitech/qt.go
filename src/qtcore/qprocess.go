@@ -70,7 +70,7 @@ func (*QProcess) NewFromPointer(cthis unsafe.Pointer) *QProcess {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QProcess) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QProcess) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QProcess10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QProcess) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 // index:0
 // Public
 // void QProcess(class QObject *)
-func NewQProcess(parent *QObject /*444 QObject **/) *QProcess {
+func NewQProcess(parent *QObject /*777 QObject **/) *QProcess {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcessC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -305,7 +305,7 @@ func (this *QProcess) SetStandardInputFile(fileName *QString) {
 // index:0
 // Public
 // void setStandardOutputProcess(class QProcess *)
-func (this *QProcess) SetStandardOutputProcess(destination *QProcess /*444 QProcess **/) {
+func (this *QProcess) SetStandardOutputProcess(destination *QProcess /*777 QProcess **/) {
 	var convArg0 = destination.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess24setStandardOutputProcessEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

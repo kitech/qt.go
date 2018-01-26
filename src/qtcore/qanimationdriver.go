@@ -70,7 +70,7 @@ func (*QAnimationDriver) NewFromPointer(cthis unsafe.Pointer) *QAnimationDriver 
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QAnimationDriver) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QAnimationDriver) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAnimationDriver10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QAnimationDriver) MetaObject() *QMetaObject /*444 const QMetaObject 
 // index:0
 // Public
 // void QAnimationDriver(class QObject *)
-func NewQAnimationDriver(parent *QObject /*444 QObject **/) *QAnimationDriver {
+func NewQAnimationDriver(parent *QObject /*777 QObject **/) *QAnimationDriver {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriverC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)

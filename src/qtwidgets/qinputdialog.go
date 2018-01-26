@@ -78,7 +78,7 @@ func (*QInputDialog) NewFromPointer(cthis unsafe.Pointer) *QInputDialog {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QInputDialog) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QInputDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QInputDialog) MetaObject() *qtcore.QMetaObject /*444 const QMetaObje
 // index:0
 // Public
 // void QInputDialog(class QWidget *, Qt::WindowFlags)
-func NewQInputDialog(parent *QWidget /*444 QWidget **/, flags int) *QInputDialog {
+func NewQInputDialog(parent *QWidget /*777 QWidget **/, flags int) *QInputDialog {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialogC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, flags)
@@ -487,7 +487,7 @@ func (this *QInputDialog) CancelButtonText() *qtcore.QString /*123*/ {
 // index:0
 // Public
 // void open(class QObject *, const char *)
-func (this *QInputDialog) Open(receiver *qtcore.QObject /*444 QObject **/, member string) {
+func (this *QInputDialog) Open(receiver *qtcore.QObject /*777 QObject **/, member string) {
 	var convArg0 = receiver.GetCthis()
 	var convArg1 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg1)
@@ -536,13 +536,13 @@ func (this *QInputDialog) SetVisible(visible bool) {
 // index:0
 // Public static
 // int getInt(class QWidget *, const class QString &, const class QString &, int, int, int, int, _Bool *, Qt::WindowFlags)
-func (this *QInputDialog) GetInt(parent *QWidget /*444 QWidget **/, title *qtcore.QString, label *qtcore.QString, value int, minValue int, maxValue int, step int, ok unsafe.Pointer /*666*/, flags int) int {
+func (this *QInputDialog) GetInt(parent *QWidget /*777 QWidget **/, title *qtcore.QString, label *qtcore.QString, value int, minValue int, maxValue int, step int, ok unsafe.Pointer /*666*/, flags int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog6getIntEP7QWidgetRK7QStringS4_iiiiPb6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, parent, title, label, value, minValue, maxValue, step, ok, flags)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv) // 111
 }
-func QInputDialog_GetInt(parent *QWidget /*444 QWidget **/, title *qtcore.QString, label *qtcore.QString, value int, minValue int, maxValue int, step int, ok unsafe.Pointer /*666*/, flags int) int {
+func QInputDialog_GetInt(parent *QWidget /*777 QWidget **/, title *qtcore.QString, label *qtcore.QString, value int, minValue int, maxValue int, step int, ok unsafe.Pointer /*666*/, flags int) int {
 	var nilthis *QInputDialog
 	rv := nilthis.GetInt(parent, title, label, value, minValue, maxValue, step, ok, flags)
 	return rv
@@ -552,13 +552,13 @@ func QInputDialog_GetInt(parent *QWidget /*444 QWidget **/, title *qtcore.QStrin
 // index:0
 // Public static
 // double getDouble(class QWidget *, const class QString &, const class QString &, double, double, double, int, _Bool *, Qt::WindowFlags)
-func (this *QInputDialog) GetDouble(parent *QWidget /*444 QWidget **/, title *qtcore.QString, label *qtcore.QString, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int) float64 {
+func (this *QInputDialog) GetDouble(parent *QWidget /*777 QWidget **/, title *qtcore.QString, label *qtcore.QString, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, parent, title, label, value, minValue, maxValue, decimals, ok, flags)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return float64(rv) // 111
 }
-func QInputDialog_GetDouble(parent *QWidget /*444 QWidget **/, title *qtcore.QString, label *qtcore.QString, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int) float64 {
+func QInputDialog_GetDouble(parent *QWidget /*777 QWidget **/, title *qtcore.QString, label *qtcore.QString, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int) float64 {
 	var nilthis *QInputDialog
 	rv := nilthis.GetDouble(parent, title, label, value, minValue, maxValue, decimals, ok, flags)
 	return rv
@@ -568,13 +568,13 @@ func QInputDialog_GetDouble(parent *QWidget /*444 QWidget **/, title *qtcore.QSt
 // index:1
 // Public static
 // double getDouble(class QWidget *, const class QString &, const class QString &, double, double, double, int, _Bool *, Qt::WindowFlags, double)
-func (this *QInputDialog) GetDouble_1(parent *QWidget /*444 QWidget **/, title *qtcore.QString, label *qtcore.QString, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int, step float64) float64 {
+func (this *QInputDialog) GetDouble_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, label *qtcore.QString, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int, step float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEEd", ffiqt.FFI_TYPE_POINTER, parent, title, label, value, minValue, maxValue, decimals, ok, flags, step)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return float64(rv) // 111
 }
-func QInputDialog_GetDouble_1(parent *QWidget /*444 QWidget **/, title *qtcore.QString, label *qtcore.QString, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int, step float64) float64 {
+func QInputDialog_GetDouble_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, label *qtcore.QString, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int, step float64) float64 {
 	var nilthis *QInputDialog
 	rv := nilthis.GetDouble_1(parent, title, label, value, minValue, maxValue, decimals, ok, flags, step)
 	return rv

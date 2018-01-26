@@ -74,7 +74,7 @@ func (*QValidator) NewFromPointer(cthis unsafe.Pointer) *QValidator {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QValidator) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QValidator10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -86,7 +86,7 @@ func (this *QValidator) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject
 // index:0
 // Public
 // void QValidator(class QObject *)
-func NewQValidator(parent *qtcore.QObject /*444 QObject **/) *QValidator {
+func NewQValidator(parent *qtcore.QObject /*777 QObject **/) *QValidator {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QValidatorC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)

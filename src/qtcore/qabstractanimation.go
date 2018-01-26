@@ -70,7 +70,7 @@ func (*QAbstractAnimation) NewFromPointer(cthis unsafe.Pointer) *QAbstractAnimat
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QAbstractAnimation) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QAbstractAnimation) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QAbstractAnimation) MetaObject() *QMetaObject /*444 const QMetaObjec
 // index:0
 // Public
 // void QAbstractAnimation(class QObject *)
-func NewQAbstractAnimation(parent *QObject /*444 QObject **/) *QAbstractAnimation {
+func NewQAbstractAnimation(parent *QObject /*777 QObject **/) *QAbstractAnimation {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimationC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -115,7 +115,7 @@ func (this *QAbstractAnimation) State() int {
 // index:0
 // Public
 // QAnimationGroup * group()
-func (this *QAbstractAnimation) Group() *QAnimationGroup /*444 QAnimationGroup **/ {
+func (this *QAbstractAnimation) Group() *QAnimationGroup /*777 QAnimationGroup **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation5groupEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -312,7 +312,7 @@ func (this *QAbstractAnimation) SetCurrentTime(msecs int) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QAbstractAnimation) Event(event *QEvent /*444 QEvent **/) bool {
+func (this *QAbstractAnimation) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

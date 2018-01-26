@@ -70,7 +70,7 @@ func (*QSortFilterProxyModel) NewFromPointer(cthis unsafe.Pointer) *QSortFilterP
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QSortFilterProxyModel) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QSortFilterProxyModel) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QSortFilterProxyModel) MetaObject() *QMetaObject /*444 const QMetaOb
 // index:0
 // Public
 // void QSortFilterProxyModel(class QObject *)
-func NewQSortFilterProxyModel(parent *QObject /*444 QObject **/) *QSortFilterProxyModel {
+func NewQSortFilterProxyModel(parent *QObject /*777 QObject **/) *QSortFilterProxyModel {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModelC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -104,7 +104,7 @@ func DeleteQSortFilterProxyModel(*QSortFilterProxyModel) {
 // index:0
 // Public virtual
 // void setSourceModel(class QAbstractItemModel *)
-func (this *QSortFilterProxyModel) SetSourceModel(sourceModel *QAbstractItemModel /*444 QAbstractItemModel **/) {
+func (this *QSortFilterProxyModel) SetSourceModel(sourceModel *QAbstractItemModel /*777 QAbstractItemModel **/) {
 	var convArg0 = sourceModel.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel14setSourceModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -618,7 +618,7 @@ func (this *QSortFilterProxyModel) SetHeaderData(section int, orientation int, v
 // index:0
 // Public virtual
 // bool dropMimeData(const class QMimeData *, Qt::DropAction, int, int, const class QModelIndex &)
-func (this *QSortFilterProxyModel) DropMimeData(data *QMimeData /*444 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
+func (this *QSortFilterProxyModel) DropMimeData(data *QMimeData /*777 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action, row, column, convArg4)

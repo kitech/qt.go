@@ -74,7 +74,7 @@ func (*QMovie) NewFromPointer(cthis unsafe.Pointer) *QMovie {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QMovie) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QMovie) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QMovie10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -86,7 +86,7 @@ func (this *QMovie) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/
 // index:0
 // Public
 // void QMovie(class QObject *)
-func NewQMovie(parent *qtcore.QObject /*444 QObject **/) *QMovie {
+func NewQMovie(parent *qtcore.QObject /*777 QObject **/) *QMovie {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMovieC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -99,7 +99,7 @@ func NewQMovie(parent *qtcore.QObject /*444 QObject **/) *QMovie {
 // index:1
 // Public
 // void QMovie(class QIODevice *, const class QByteArray &, class QObject *)
-func NewQMovie_1(device *qtcore.QIODevice /*444 QIODevice **/, format *qtcore.QByteArray, parent *qtcore.QObject /*444 QObject **/) *QMovie {
+func NewQMovie_1(device *qtcore.QIODevice /*777 QIODevice **/, format *qtcore.QByteArray, parent *qtcore.QObject /*777 QObject **/) *QMovie {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = device.GetCthis()
 	var convArg1 = format.GetCthis()
@@ -114,7 +114,7 @@ func NewQMovie_1(device *qtcore.QIODevice /*444 QIODevice **/, format *qtcore.QB
 // index:2
 // Public
 // void QMovie(const class QString &, const class QByteArray &, class QObject *)
-func NewQMovie_2(fileName *qtcore.QString, format *qtcore.QByteArray, parent *qtcore.QObject /*444 QObject **/) *QMovie {
+func NewQMovie_2(fileName *qtcore.QString, format *qtcore.QByteArray, parent *qtcore.QObject /*777 QObject **/) *QMovie {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = fileName.GetCthis()
 	var convArg1 = format.GetCthis()
@@ -138,7 +138,7 @@ func DeleteQMovie(*QMovie) {
 // index:0
 // Public
 // void setDevice(class QIODevice *)
-func (this *QMovie) SetDevice(device *qtcore.QIODevice /*444 QIODevice **/) {
+func (this *QMovie) SetDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMovie9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -148,7 +148,7 @@ func (this *QMovie) SetDevice(device *qtcore.QIODevice /*444 QIODevice **/) {
 // index:0
 // Public
 // QIODevice * device()
-func (this *QMovie) Device() *qtcore.QIODevice /*444 QIODevice **/ {
+func (this *QMovie) Device() *qtcore.QIODevice /*777 QIODevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QMovie6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

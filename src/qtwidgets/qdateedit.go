@@ -78,7 +78,7 @@ func (*QDateEdit) NewFromPointer(cthis unsafe.Pointer) *QDateEdit {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QDateEdit) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QDateEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDateEdit10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QDateEdit) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject 
 // index:0
 // Public
 // void QDateEdit(class QWidget *)
-func NewQDateEdit(parent *QWidget /*444 QWidget **/) *QDateEdit {
+func NewQDateEdit(parent *QWidget /*777 QWidget **/) *QDateEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateEditC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -103,7 +103,7 @@ func NewQDateEdit(parent *QWidget /*444 QWidget **/) *QDateEdit {
 // index:1
 // Public
 // void QDateEdit(const class QDate &, class QWidget *)
-func NewQDateEdit_1(date *qtcore.QDate, parent *QWidget /*444 QWidget **/) *QDateEdit {
+func NewQDateEdit_1(date *qtcore.QDate, parent *QWidget /*777 QWidget **/) *QDateEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = date.GetCthis()
 	var convArg1 = parent.GetCthis()

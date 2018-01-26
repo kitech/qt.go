@@ -78,7 +78,7 @@ func (*QGraphicsPixmapItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsPixma
 // index:0
 // Public
 // void QGraphicsPixmapItem(class QGraphicsItem *)
-func NewQGraphicsPixmapItem(parent *QGraphicsItem /*444 QGraphicsItem **/) *QGraphicsPixmapItem {
+func NewQGraphicsPixmapItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsPixmapItem {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsPixmapItemC2EP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -91,7 +91,7 @@ func NewQGraphicsPixmapItem(parent *QGraphicsItem /*444 QGraphicsItem **/) *QGra
 // index:1
 // Public
 // void QGraphicsPixmapItem(const class QPixmap &, class QGraphicsItem *)
-func NewQGraphicsPixmapItem_1(pixmap *qtgui.QPixmap, parent *QGraphicsItem /*444 QGraphicsItem **/) *QGraphicsPixmapItem {
+func NewQGraphicsPixmapItem_1(pixmap *qtgui.QPixmap, parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsPixmapItem {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = pixmap.GetCthis()
 	var convArg1 = parent.GetCthis()
@@ -231,7 +231,7 @@ func (this *QGraphicsPixmapItem) Contains(point *qtcore.QPointF) bool {
 // index:0
 // Public virtual
 // void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
-func (this *QGraphicsPixmapItem) Paint(painter *qtgui.QPainter /*444 QPainter **/, option *QStyleOptionGraphicsItem /*444 const QStyleOptionGraphicsItem **/, widget *QWidget /*444 QWidget **/) {
+func (this *QGraphicsPixmapItem) Paint(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionGraphicsItem /*777 const QStyleOptionGraphicsItem **/, widget *QWidget /*777 QWidget **/) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = option.GetCthis()
 	var convArg2 = widget.GetCthis()
@@ -243,7 +243,7 @@ func (this *QGraphicsPixmapItem) Paint(painter *qtgui.QPainter /*444 QPainter **
 // index:0
 // Public virtual
 // bool isObscuredBy(const class QGraphicsItem *)
-func (this *QGraphicsPixmapItem) IsObscuredBy(item *QGraphicsItem /*444 const QGraphicsItem **/) bool {
+func (this *QGraphicsPixmapItem) IsObscuredBy(item *QGraphicsItem /*777 const QGraphicsItem **/) bool {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsPixmapItem12isObscuredByEPK13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

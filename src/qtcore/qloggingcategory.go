@@ -181,14 +181,14 @@ func (this *QLoggingCategory) CategoryName() string {
 // index:0
 // Public static
 // QLoggingCategory * defaultCategory()
-func (this *QLoggingCategory) DefaultCategory() *QLoggingCategory /*444 QLoggingCategory **/ {
+func (this *QLoggingCategory) DefaultCategory() *QLoggingCategory /*777 QLoggingCategory **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategory15defaultCategoryEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQLoggingCategoryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QLoggingCategory_DefaultCategory() *QLoggingCategory /*444 QLoggingCategory **/ {
+func QLoggingCategory_DefaultCategory() *QLoggingCategory /*777 QLoggingCategory **/ {
 	var nilthis *QLoggingCategory
 	rv := nilthis.DefaultCategory()
 	return rv

@@ -78,7 +78,7 @@ func (*QGraphicsOpacityEffect) NewFromPointer(cthis unsafe.Pointer) *QGraphicsOp
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QGraphicsOpacityEffect) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QGraphicsOpacityEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsOpacityEffect10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QGraphicsOpacityEffect) MetaObject() *qtcore.QMetaObject /*444 const
 // index:0
 // Public
 // void QGraphicsOpacityEffect(class QObject *)
-func NewQGraphicsOpacityEffect(parent *qtcore.QObject /*444 QObject **/) *QGraphicsOpacityEffect {
+func NewQGraphicsOpacityEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsOpacityEffect {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffectC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -175,7 +175,7 @@ func (this *QGraphicsOpacityEffect) OpacityMaskChanged(mask *qtgui.QBrush) {
 // index:0
 // Protected virtual
 // void draw(class QPainter *)
-func (this *QGraphicsOpacityEffect) Draw(painter *qtgui.QPainter /*444 QPainter **/) {
+func (this *QGraphicsOpacityEffect) Draw(painter *qtgui.QPainter /*777 QPainter **/) {
 	var convArg0 = painter.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffect4drawEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

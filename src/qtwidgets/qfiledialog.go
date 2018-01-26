@@ -78,7 +78,7 @@ func (*QFileDialog) NewFromPointer(cthis unsafe.Pointer) *QFileDialog {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QFileDialog) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QFileDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QFileDialog) MetaObject() *qtcore.QMetaObject /*444 const QMetaObjec
 // index:0
 // Public
 // void QFileDialog(class QWidget *, Qt::WindowFlags)
-func NewQFileDialog(parent *QWidget /*444 QWidget **/, f int) *QFileDialog {
+func NewQFileDialog(parent *QWidget /*777 QWidget **/, f int) *QFileDialog {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialogC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, f)
@@ -103,7 +103,7 @@ func NewQFileDialog(parent *QWidget /*444 QWidget **/, f int) *QFileDialog {
 // index:1
 // Public
 // void QFileDialog(class QWidget *, const class QString &, const class QString &, const class QString &)
-func NewQFileDialog_1(parent *QWidget /*444 QWidget **/, caption *qtcore.QString, directory *qtcore.QString, filter *qtcore.QString) *QFileDialog {
+func NewQFileDialog_1(parent *QWidget /*777 QWidget **/, caption *qtcore.QString, directory *qtcore.QString, filter *qtcore.QString) *QFileDialog {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	var convArg1 = caption.GetCthis()
@@ -495,7 +495,7 @@ func (this *QFileDialog) SetHistory(paths *qtcore.QStringList) {
 // index:0
 // Public
 // void setItemDelegate(class QAbstractItemDelegate *)
-func (this *QFileDialog) SetItemDelegate(delegate *QAbstractItemDelegate /*444 QAbstractItemDelegate **/) {
+func (this *QFileDialog) SetItemDelegate(delegate *QAbstractItemDelegate /*777 QAbstractItemDelegate **/) {
 	var convArg0 = delegate.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog15setItemDelegateEP21QAbstractItemDelegate", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -505,7 +505,7 @@ func (this *QFileDialog) SetItemDelegate(delegate *QAbstractItemDelegate /*444 Q
 // index:0
 // Public
 // QAbstractItemDelegate * itemDelegate()
-func (this *QFileDialog) ItemDelegate() *QAbstractItemDelegate /*444 QAbstractItemDelegate **/ {
+func (this *QFileDialog) ItemDelegate() *QAbstractItemDelegate /*777 QAbstractItemDelegate **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog12itemDelegateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -517,7 +517,7 @@ func (this *QFileDialog) ItemDelegate() *QAbstractItemDelegate /*444 QAbstractIt
 // index:0
 // Public
 // void setIconProvider(class QFileIconProvider *)
-func (this *QFileDialog) SetIconProvider(provider *QFileIconProvider /*444 QFileIconProvider **/) {
+func (this *QFileDialog) SetIconProvider(provider *QFileIconProvider /*777 QFileIconProvider **/) {
 	var convArg0 = provider.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog15setIconProviderEP17QFileIconProvider", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -527,7 +527,7 @@ func (this *QFileDialog) SetIconProvider(provider *QFileIconProvider /*444 QFile
 // index:0
 // Public
 // QFileIconProvider * iconProvider()
-func (this *QFileDialog) IconProvider() *QFileIconProvider /*444 QFileIconProvider **/ {
+func (this *QFileDialog) IconProvider() *QFileIconProvider /*777 QFileIconProvider **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog12iconProviderEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -573,7 +573,7 @@ func (this *QFileDialog) SetSupportedSchemes(schemes *qtcore.QStringList) {
 // index:0
 // Public
 // void setProxyModel(class QAbstractProxyModel *)
-func (this *QFileDialog) SetProxyModel(model *qtcore.QAbstractProxyModel /*444 QAbstractProxyModel **/) {
+func (this *QFileDialog) SetProxyModel(model *qtcore.QAbstractProxyModel /*777 QAbstractProxyModel **/) {
 	var convArg0 = model.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog13setProxyModelEP19QAbstractProxyModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -583,7 +583,7 @@ func (this *QFileDialog) SetProxyModel(model *qtcore.QAbstractProxyModel /*444 Q
 // index:0
 // Public
 // QAbstractProxyModel * proxyModel()
-func (this *QFileDialog) ProxyModel() *qtcore.QAbstractProxyModel /*444 QAbstractProxyModel **/ {
+func (this *QFileDialog) ProxyModel() *qtcore.QAbstractProxyModel /*777 QAbstractProxyModel **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog10proxyModelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -626,7 +626,7 @@ func (this *QFileDialog) Options() int {
 // index:0
 // Public
 // void open(class QObject *, const char *)
-func (this *QFileDialog) Open(receiver *qtcore.QObject /*444 QObject **/, member string) {
+func (this *QFileDialog) Open(receiver *qtcore.QObject /*777 QObject **/, member string) {
 	var convArg0 = receiver.GetCthis()
 	var convArg1 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg1)
@@ -745,7 +745,7 @@ func (this *QFileDialog) Accept() {
 // index:0
 // Protected virtual
 // void changeEvent(class QEvent *)
-func (this *QFileDialog) ChangeEvent(e *qtcore.QEvent /*444 QEvent **/) {
+func (this *QFileDialog) ChangeEvent(e *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

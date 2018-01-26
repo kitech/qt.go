@@ -119,11 +119,11 @@ func QWhatsThis_LeaveWhatsThisMode() {
 // index:0
 // Public static
 // void showText(const class QPoint &, const class QString &, class QWidget *)
-func (this *QWhatsThis) ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*444 QWidget **/) {
+func (this *QWhatsThis) ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget", ffiqt.FFI_TYPE_POINTER, pos, text, w)
 	gopp.ErrPrint(err, rv)
 }
-func QWhatsThis_ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*444 QWidget **/) {
+func QWhatsThis_ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/) {
 	var nilthis *QWhatsThis
 	nilthis.ShowText(pos, text, w)
 }
@@ -145,14 +145,14 @@ func QWhatsThis_HideText() {
 // index:0
 // Public static
 // QAction * createAction(class QObject *)
-func (this *QWhatsThis) CreateAction(parent *qtcore.QObject /*444 QObject **/) *QAction /*444 QAction **/ {
+func (this *QWhatsThis) CreateAction(parent *qtcore.QObject /*777 QObject **/) *QAction /*777 QAction **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThis12createActionEP7QObject", ffiqt.FFI_TYPE_POINTER, parent)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QWhatsThis_CreateAction(parent *qtcore.QObject /*444 QObject **/) *QAction /*444 QAction **/ {
+func QWhatsThis_CreateAction(parent *qtcore.QObject /*777 QObject **/) *QAction /*777 QAction **/ {
 	var nilthis *QWhatsThis
 	rv := nilthis.CreateAction(parent)
 	return rv

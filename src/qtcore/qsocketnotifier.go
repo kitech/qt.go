@@ -70,7 +70,7 @@ func (*QSocketNotifier) NewFromPointer(cthis unsafe.Pointer) *QSocketNotifier {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QSocketNotifier) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QSocketNotifier) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSocketNotifier10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QSocketNotifier) MetaObject() *QMetaObject /*444 const QMetaObject *
 // index:0
 // Public
 // void QSocketNotifier(qintptr, enum QSocketNotifier::Type, class QObject *)
-func NewQSocketNotifier(socket int64, arg1 int, parent *QObject /*444 QObject **/) *QSocketNotifier {
+func NewQSocketNotifier(socket int64, arg1 int, parent *QObject /*777 QObject **/) *QSocketNotifier {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg2 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifierC2ExNS_4TypeEP7QObject", ffiqt.FFI_TYPE_VOID, cthis, socket, arg1, convArg2)
@@ -146,7 +146,7 @@ func (this *QSocketNotifier) SetEnabled(arg0 bool) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QSocketNotifier) Event(arg0 *QEvent /*444 QEvent **/) bool {
+func (this *QSocketNotifier) Event(arg0 *QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifier5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

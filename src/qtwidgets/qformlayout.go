@@ -78,7 +78,7 @@ func (*QFormLayout) NewFromPointer(cthis unsafe.Pointer) *QFormLayout {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QFormLayout) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QFormLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QFormLayout) MetaObject() *qtcore.QMetaObject /*444 const QMetaObjec
 // index:0
 // Public
 // void QFormLayout(class QWidget *)
-func NewQFormLayout(parent *QWidget /*444 QWidget **/) *QFormLayout {
+func NewQFormLayout(parent *QWidget /*777 QWidget **/) *QFormLayout {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayoutC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -234,7 +234,7 @@ func (this *QFormLayout) SetSpacing(arg0 int) {
 // index:0
 // Public
 // void addRow(class QWidget *, class QWidget *)
-func (this *QFormLayout) AddRow(label *QWidget /*444 QWidget **/, field *QWidget /*444 QWidget **/) {
+func (this *QFormLayout) AddRow(label *QWidget /*777 QWidget **/, field *QWidget /*777 QWidget **/) {
 	var convArg0 = label.GetCthis()
 	var convArg1 = field.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout6addRowEP7QWidgetS1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -245,7 +245,7 @@ func (this *QFormLayout) AddRow(label *QWidget /*444 QWidget **/, field *QWidget
 // index:1
 // Public
 // void addRow(class QWidget *, class QLayout *)
-func (this *QFormLayout) AddRow_1(label *QWidget /*444 QWidget **/, field *QLayout /*444 QLayout **/) {
+func (this *QFormLayout) AddRow_1(label *QWidget /*777 QWidget **/, field *QLayout /*777 QLayout **/) {
 	var convArg0 = label.GetCthis()
 	var convArg1 = field.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout6addRowEP7QWidgetP7QLayout", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -256,7 +256,7 @@ func (this *QFormLayout) AddRow_1(label *QWidget /*444 QWidget **/, field *QLayo
 // index:2
 // Public
 // void addRow(const class QString &, class QWidget *)
-func (this *QFormLayout) AddRow_2(labelText *qtcore.QString, field *QWidget /*444 QWidget **/) {
+func (this *QFormLayout) AddRow_2(labelText *qtcore.QString, field *QWidget /*777 QWidget **/) {
 	var convArg0 = labelText.GetCthis()
 	var convArg1 = field.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout6addRowERK7QStringP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -267,7 +267,7 @@ func (this *QFormLayout) AddRow_2(labelText *qtcore.QString, field *QWidget /*44
 // index:3
 // Public
 // void addRow(const class QString &, class QLayout *)
-func (this *QFormLayout) AddRow_3(labelText *qtcore.QString, field *QLayout /*444 QLayout **/) {
+func (this *QFormLayout) AddRow_3(labelText *qtcore.QString, field *QLayout /*777 QLayout **/) {
 	var convArg0 = labelText.GetCthis()
 	var convArg1 = field.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout6addRowERK7QStringP7QLayout", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -278,7 +278,7 @@ func (this *QFormLayout) AddRow_3(labelText *qtcore.QString, field *QLayout /*44
 // index:4
 // Public
 // void addRow(class QWidget *)
-func (this *QFormLayout) AddRow_4(widget *QWidget /*444 QWidget **/) {
+func (this *QFormLayout) AddRow_4(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout6addRowEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -288,7 +288,7 @@ func (this *QFormLayout) AddRow_4(widget *QWidget /*444 QWidget **/) {
 // index:5
 // Public
 // void addRow(class QLayout *)
-func (this *QFormLayout) AddRow_5(layout *QLayout /*444 QLayout **/) {
+func (this *QFormLayout) AddRow_5(layout *QLayout /*777 QLayout **/) {
 	var convArg0 = layout.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout6addRowEP7QLayout", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -298,7 +298,7 @@ func (this *QFormLayout) AddRow_5(layout *QLayout /*444 QLayout **/) {
 // index:0
 // Public
 // void insertRow(int, class QWidget *, class QWidget *)
-func (this *QFormLayout) InsertRow(row int, label *QWidget /*444 QWidget **/, field *QWidget /*444 QWidget **/) {
+func (this *QFormLayout) InsertRow(row int, label *QWidget /*777 QWidget **/, field *QWidget /*777 QWidget **/) {
 	var convArg1 = label.GetCthis()
 	var convArg2 = field.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout9insertRowEiP7QWidgetS1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1, convArg2)
@@ -309,7 +309,7 @@ func (this *QFormLayout) InsertRow(row int, label *QWidget /*444 QWidget **/, fi
 // index:1
 // Public
 // void insertRow(int, class QWidget *, class QLayout *)
-func (this *QFormLayout) InsertRow_1(row int, label *QWidget /*444 QWidget **/, field *QLayout /*444 QLayout **/) {
+func (this *QFormLayout) InsertRow_1(row int, label *QWidget /*777 QWidget **/, field *QLayout /*777 QLayout **/) {
 	var convArg1 = label.GetCthis()
 	var convArg2 = field.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout9insertRowEiP7QWidgetP7QLayout", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1, convArg2)
@@ -320,7 +320,7 @@ func (this *QFormLayout) InsertRow_1(row int, label *QWidget /*444 QWidget **/, 
 // index:2
 // Public
 // void insertRow(int, const class QString &, class QWidget *)
-func (this *QFormLayout) InsertRow_2(row int, labelText *qtcore.QString, field *QWidget /*444 QWidget **/) {
+func (this *QFormLayout) InsertRow_2(row int, labelText *qtcore.QString, field *QWidget /*777 QWidget **/) {
 	var convArg1 = labelText.GetCthis()
 	var convArg2 = field.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout9insertRowEiRK7QStringP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1, convArg2)
@@ -331,7 +331,7 @@ func (this *QFormLayout) InsertRow_2(row int, labelText *qtcore.QString, field *
 // index:3
 // Public
 // void insertRow(int, const class QString &, class QLayout *)
-func (this *QFormLayout) InsertRow_3(row int, labelText *qtcore.QString, field *QLayout /*444 QLayout **/) {
+func (this *QFormLayout) InsertRow_3(row int, labelText *qtcore.QString, field *QLayout /*777 QLayout **/) {
 	var convArg1 = labelText.GetCthis()
 	var convArg2 = field.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout9insertRowEiRK7QStringP7QLayout", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1, convArg2)
@@ -342,7 +342,7 @@ func (this *QFormLayout) InsertRow_3(row int, labelText *qtcore.QString, field *
 // index:4
 // Public
 // void insertRow(int, class QWidget *)
-func (this *QFormLayout) InsertRow_4(row int, widget *QWidget /*444 QWidget **/) {
+func (this *QFormLayout) InsertRow_4(row int, widget *QWidget /*777 QWidget **/) {
 	var convArg1 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout9insertRowEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -352,7 +352,7 @@ func (this *QFormLayout) InsertRow_4(row int, widget *QWidget /*444 QWidget **/)
 // index:5
 // Public
 // void insertRow(int, class QLayout *)
-func (this *QFormLayout) InsertRow_5(row int, layout *QLayout /*444 QLayout **/) {
+func (this *QFormLayout) InsertRow_5(row int, layout *QLayout /*777 QLayout **/) {
 	var convArg1 = layout.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout9insertRowEiP7QLayout", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -371,7 +371,7 @@ func (this *QFormLayout) RemoveRow(row int) {
 // index:1
 // Public
 // void removeRow(class QWidget *)
-func (this *QFormLayout) RemoveRow_1(widget *QWidget /*444 QWidget **/) {
+func (this *QFormLayout) RemoveRow_1(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout9removeRowEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -381,7 +381,7 @@ func (this *QFormLayout) RemoveRow_1(widget *QWidget /*444 QWidget **/) {
 // index:2
 // Public
 // void removeRow(class QLayout *)
-func (this *QFormLayout) RemoveRow_2(layout *QLayout /*444 QLayout **/) {
+func (this *QFormLayout) RemoveRow_2(layout *QLayout /*777 QLayout **/) {
 	var convArg0 = layout.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout9removeRowEP7QLayout", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -404,7 +404,7 @@ func (this *QFormLayout) TakeRow(row int) unsafe.Pointer /*444*/ {
 // index:1
 // Public
 // QFormLayout::TakeRowResult takeRow(class QWidget *)
-func (this *QFormLayout) TakeRow_1(widget *QWidget /*444 QWidget **/) unsafe.Pointer /*444*/ {
+func (this *QFormLayout) TakeRow_1(widget *QWidget /*777 QWidget **/) unsafe.Pointer /*444*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout7takeRowEP7QWidget", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
@@ -418,7 +418,7 @@ func (this *QFormLayout) TakeRow_1(widget *QWidget /*444 QWidget **/) unsafe.Poi
 // index:2
 // Public
 // QFormLayout::TakeRowResult takeRow(class QLayout *)
-func (this *QFormLayout) TakeRow_2(layout *QLayout /*444 QLayout **/) unsafe.Pointer /*444*/ {
+func (this *QFormLayout) TakeRow_2(layout *QLayout /*777 QLayout **/) unsafe.Pointer /*444*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = layout.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout7takeRowEP7QLayout", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
@@ -432,7 +432,7 @@ func (this *QFormLayout) TakeRow_2(layout *QLayout /*444 QLayout **/) unsafe.Poi
 // index:0
 // Public
 // void setItem(int, enum QFormLayout::ItemRole, class QLayoutItem *)
-func (this *QFormLayout) SetItem(row int, role int, item *QLayoutItem /*444 QLayoutItem **/) {
+func (this *QFormLayout) SetItem(row int, role int, item *QLayoutItem /*777 QLayoutItem **/) {
 	var convArg2 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout7setItemEiNS_8ItemRoleEP11QLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, role, convArg2)
 	gopp.ErrPrint(err, rv)
@@ -442,7 +442,7 @@ func (this *QFormLayout) SetItem(row int, role int, item *QLayoutItem /*444 QLay
 // index:0
 // Public
 // void setWidget(int, enum QFormLayout::ItemRole, class QWidget *)
-func (this *QFormLayout) SetWidget(row int, role int, widget *QWidget /*444 QWidget **/) {
+func (this *QFormLayout) SetWidget(row int, role int, widget *QWidget /*777 QWidget **/) {
 	var convArg2 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout9setWidgetEiNS_8ItemRoleEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, role, convArg2)
 	gopp.ErrPrint(err, rv)
@@ -452,7 +452,7 @@ func (this *QFormLayout) SetWidget(row int, role int, widget *QWidget /*444 QWid
 // index:0
 // Public
 // void setLayout(int, enum QFormLayout::ItemRole, class QLayout *)
-func (this *QFormLayout) SetLayout(row int, role int, layout *QLayout /*444 QLayout **/) {
+func (this *QFormLayout) SetLayout(row int, role int, layout *QLayout /*777 QLayout **/) {
 	var convArg2 = layout.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout9setLayoutEiNS_8ItemRoleEP7QLayout", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, role, convArg2)
 	gopp.ErrPrint(err, rv)
@@ -462,7 +462,7 @@ func (this *QFormLayout) SetLayout(row int, role int, layout *QLayout /*444 QLay
 // index:0
 // Public
 // QLayoutItem * itemAt(int, enum QFormLayout::ItemRole)
-func (this *QFormLayout) ItemAt(row int, role int) *QLayoutItem /*444 QLayoutItem **/ {
+func (this *QFormLayout) ItemAt(row int, role int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout6itemAtEiNS_8ItemRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, role)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -474,7 +474,7 @@ func (this *QFormLayout) ItemAt(row int, role int) *QLayoutItem /*444 QLayoutIte
 // index:1
 // Public virtual
 // QLayoutItem * itemAt(int)
-func (this *QFormLayout) ItemAt_1(index int) *QLayoutItem /*444 QLayoutItem **/ {
+func (this *QFormLayout) ItemAt_1(index int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout6itemAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -495,7 +495,7 @@ func (this *QFormLayout) GetItemPosition(index int, rowPtr unsafe.Pointer /*666*
 // index:0
 // Public
 // void getWidgetPosition(class QWidget *, int *, enum QFormLayout::ItemRole *)
-func (this *QFormLayout) GetWidgetPosition(widget *QWidget /*444 QWidget **/, rowPtr unsafe.Pointer /*666*/, rolePtr unsafe.Pointer /*666*/) {
+func (this *QFormLayout) GetWidgetPosition(widget *QWidget /*777 QWidget **/, rowPtr unsafe.Pointer /*666*/, rolePtr unsafe.Pointer /*666*/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout17getWidgetPositionEP7QWidgetPiPNS_8ItemRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &rowPtr, &rolePtr)
 	gopp.ErrPrint(err, rv)
@@ -505,7 +505,7 @@ func (this *QFormLayout) GetWidgetPosition(widget *QWidget /*444 QWidget **/, ro
 // index:0
 // Public
 // void getLayoutPosition(class QLayout *, int *, enum QFormLayout::ItemRole *)
-func (this *QFormLayout) GetLayoutPosition(layout *QLayout /*444 QLayout **/, rowPtr unsafe.Pointer /*666*/, rolePtr unsafe.Pointer /*666*/) {
+func (this *QFormLayout) GetLayoutPosition(layout *QLayout /*777 QLayout **/, rowPtr unsafe.Pointer /*666*/, rolePtr unsafe.Pointer /*666*/) {
 	var convArg0 = layout.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout17getLayoutPositionEP7QLayoutPiPNS_8ItemRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &rowPtr, &rolePtr)
 	gopp.ErrPrint(err, rv)
@@ -515,7 +515,7 @@ func (this *QFormLayout) GetLayoutPosition(layout *QLayout /*444 QLayout **/, ro
 // index:0
 // Public
 // QWidget * labelForField(class QWidget *)
-func (this *QFormLayout) LabelForField(field *QWidget /*444 QWidget **/) *QWidget /*444 QWidget **/ {
+func (this *QFormLayout) LabelForField(field *QWidget /*777 QWidget **/) *QWidget /*777 QWidget **/ {
 	var convArg0 = field.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout13labelForFieldEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -528,7 +528,7 @@ func (this *QFormLayout) LabelForField(field *QWidget /*444 QWidget **/) *QWidge
 // index:1
 // Public
 // QWidget * labelForField(class QLayout *)
-func (this *QFormLayout) LabelForField_1(field *QLayout /*444 QLayout **/) *QWidget /*444 QWidget **/ {
+func (this *QFormLayout) LabelForField_1(field *QLayout /*777 QLayout **/) *QWidget /*777 QWidget **/ {
 	var convArg0 = field.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout13labelForFieldEP7QLayout", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -541,7 +541,7 @@ func (this *QFormLayout) LabelForField_1(field *QLayout /*444 QLayout **/) *QWid
 // index:0
 // Public virtual
 // void addItem(class QLayoutItem *)
-func (this *QFormLayout) AddItem(item *QLayoutItem /*444 QLayoutItem **/) {
+func (this *QFormLayout) AddItem(item *QLayoutItem /*777 QLayoutItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout7addItemEP11QLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -551,7 +551,7 @@ func (this *QFormLayout) AddItem(item *QLayoutItem /*444 QLayoutItem **/) {
 // index:0
 // Public virtual
 // QLayoutItem * takeAt(int)
-func (this *QFormLayout) TakeAt(index int) *QLayoutItem /*444 QLayoutItem **/ {
+func (this *QFormLayout) TakeAt(index int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout6takeAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv

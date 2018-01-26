@@ -125,7 +125,7 @@ func DeleteQTableWidgetItem(*QTableWidgetItem) {
 // index:0
 // Public virtual
 // QTableWidgetItem * clone()
-func (this *QTableWidgetItem) Clone() *QTableWidgetItem /*444 QTableWidgetItem **/ {
+func (this *QTableWidgetItem) Clone() *QTableWidgetItem /*777 QTableWidgetItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem5cloneEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -137,7 +137,7 @@ func (this *QTableWidgetItem) Clone() *QTableWidgetItem /*444 QTableWidgetItem *
 // index:0
 // Public inline
 // QTableWidget * tableWidget()
-func (this *QTableWidgetItem) TableWidget() *QTableWidget /*444 QTableWidget **/ {
+func (this *QTableWidgetItem) TableWidget() *QTableWidget /*777 QTableWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem11tableWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

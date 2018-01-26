@@ -78,7 +78,7 @@ func (*QFileSystemModel) NewFromPointer(cthis unsafe.Pointer) *QFileSystemModel 
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QFileSystemModel) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QFileSystemModel) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -122,7 +122,7 @@ func (this *QFileSystemModel) DirectoryLoaded(path *qtcore.QString) {
 // index:0
 // Public
 // void QFileSystemModel(class QObject *)
-func NewQFileSystemModel(parent *qtcore.QObject /*444 QObject **/) *QFileSystemModel {
+func NewQFileSystemModel(parent *qtcore.QObject /*777 QObject **/) *QFileSystemModel {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModelC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -339,7 +339,7 @@ func (this *QFileSystemModel) Sort(column int, order int) {
 // index:0
 // Public virtual
 // bool dropMimeData(const class QMimeData *, Qt::DropAction, int, int, const class QModelIndex &)
-func (this *QFileSystemModel) DropMimeData(data *qtcore.QMimeData /*444 const QMimeData **/, action int, row int, column int, parent *qtcore.QModelIndex) bool {
+func (this *QFileSystemModel) DropMimeData(data *qtcore.QMimeData /*777 const QMimeData **/, action int, row int, column int, parent *qtcore.QModelIndex) bool {
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action, row, column, convArg4)
@@ -406,7 +406,7 @@ func (this *QFileSystemModel) RootDirectory() *qtcore.QDir /*123*/ {
 // index:0
 // Public
 // void setIconProvider(class QFileIconProvider *)
-func (this *QFileSystemModel) SetIconProvider(provider *QFileIconProvider /*444 QFileIconProvider **/) {
+func (this *QFileSystemModel) SetIconProvider(provider *QFileIconProvider /*777 QFileIconProvider **/) {
 	var convArg0 = provider.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -416,7 +416,7 @@ func (this *QFileSystemModel) SetIconProvider(provider *QFileIconProvider /*444 
 // index:0
 // Public
 // QFileIconProvider * iconProvider()
-func (this *QFileSystemModel) IconProvider() *QFileIconProvider /*444 QFileIconProvider **/ {
+func (this *QFileSystemModel) IconProvider() *QFileIconProvider /*777 QFileIconProvider **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QFileSystemModel12iconProviderEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -675,7 +675,7 @@ func (this *QFileSystemModel) Remove(index *qtcore.QModelIndex) bool {
 // index:0
 // Protected virtual
 // void timerEvent(class QTimerEvent *)
-func (this *QFileSystemModel) TimerEvent(event *qtcore.QTimerEvent /*444 QTimerEvent **/) {
+func (this *QFileSystemModel) TimerEvent(event *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -685,7 +685,7 @@ func (this *QFileSystemModel) TimerEvent(event *qtcore.QTimerEvent /*444 QTimerE
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QFileSystemModel) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QFileSystemModel) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

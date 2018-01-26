@@ -209,7 +209,7 @@ func (this *QMetaEnum) ValueToKeys(value int) *QByteArray /*123*/ {
 // index:0
 // Public inline
 // const QMetaObject * enclosingMetaObject()
-func (this *QMetaEnum) EnclosingMetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QMetaEnum) EnclosingMetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMetaEnum19enclosingMetaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

@@ -74,7 +74,7 @@ func (*QAccessiblePlugin) NewFromPointer(cthis unsafe.Pointer) *QAccessiblePlugi
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QAccessiblePlugin) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QAccessiblePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessiblePlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -86,7 +86,7 @@ func (this *QAccessiblePlugin) MetaObject() *qtcore.QMetaObject /*444 const QMet
 // index:0
 // Public
 // void QAccessiblePlugin(class QObject *)
-func NewQAccessiblePlugin(parent *qtcore.QObject /*444 QObject **/) *QAccessiblePlugin {
+func NewQAccessiblePlugin(parent *qtcore.QObject /*777 QObject **/) *QAccessiblePlugin {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessiblePluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -108,7 +108,7 @@ func DeleteQAccessiblePlugin(*QAccessiblePlugin) {
 // index:0
 // Public pure virtual
 // QAccessibleInterface * create(const class QString &, class QObject *)
-func (this *QAccessiblePlugin) Create(key *qtcore.QString, object *qtcore.QObject /*444 QObject **/) *QAccessibleInterface /*444 QAccessibleInterface **/ {
+func (this *QAccessiblePlugin) Create(key *qtcore.QString, object *qtcore.QObject /*777 QObject **/) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	var convArg0 = key.GetCthis()
 	var convArg1 = object.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessiblePlugin6createERK7QStringP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)

@@ -102,7 +102,7 @@ func (this *QPaintEngine) SetActive(newState bool) {
 // index:0
 // Public pure virtual
 // bool begin(class QPaintDevice *)
-func (this *QPaintEngine) Begin(pdev *QPaintDevice /*444 QPaintDevice **/) bool {
+func (this *QPaintEngine) Begin(pdev *QPaintDevice /*777 QPaintDevice **/) bool {
 	var convArg0 = pdev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine5beginEP12QPaintDevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -135,7 +135,7 @@ func (this *QPaintEngine) UpdateState(state *QPaintEngineState) {
 // index:0
 // Public virtual
 // void drawRects(const class QRect *, int)
-func (this *QPaintEngine) DrawRects(rects *qtcore.QRect /*444 const QRect **/, rectCount int) {
+func (this *QPaintEngine) DrawRects(rects *qtcore.QRect /*777 const QRect **/, rectCount int) {
 	var convArg0 = rects.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine9drawRectsEPK5QRecti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, rectCount)
 	gopp.ErrPrint(err, rv)
@@ -145,7 +145,7 @@ func (this *QPaintEngine) DrawRects(rects *qtcore.QRect /*444 const QRect **/, r
 // index:1
 // Public virtual
 // void drawRects(const class QRectF *, int)
-func (this *QPaintEngine) DrawRects_1(rects *qtcore.QRectF /*444 const QRectF **/, rectCount int) {
+func (this *QPaintEngine) DrawRects_1(rects *qtcore.QRectF /*777 const QRectF **/, rectCount int) {
 	var convArg0 = rects.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine9drawRectsEPK6QRectFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, rectCount)
 	gopp.ErrPrint(err, rv)
@@ -155,7 +155,7 @@ func (this *QPaintEngine) DrawRects_1(rects *qtcore.QRectF /*444 const QRectF **
 // index:0
 // Public virtual
 // void drawLines(const class QLine *, int)
-func (this *QPaintEngine) DrawLines(lines *qtcore.QLine /*444 const QLine **/, lineCount int) {
+func (this *QPaintEngine) DrawLines(lines *qtcore.QLine /*777 const QLine **/, lineCount int) {
 	var convArg0 = lines.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine9drawLinesEPK5QLinei", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, lineCount)
 	gopp.ErrPrint(err, rv)
@@ -165,7 +165,7 @@ func (this *QPaintEngine) DrawLines(lines *qtcore.QLine /*444 const QLine **/, l
 // index:1
 // Public virtual
 // void drawLines(const class QLineF *, int)
-func (this *QPaintEngine) DrawLines_1(lines *qtcore.QLineF /*444 const QLineF **/, lineCount int) {
+func (this *QPaintEngine) DrawLines_1(lines *qtcore.QLineF /*777 const QLineF **/, lineCount int) {
 	var convArg0 = lines.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine9drawLinesEPK6QLineFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, lineCount)
 	gopp.ErrPrint(err, rv)
@@ -205,7 +205,7 @@ func (this *QPaintEngine) DrawPath(path *QPainterPath) {
 // index:0
 // Public virtual
 // void drawPoints(const class QPointF *, int)
-func (this *QPaintEngine) DrawPoints(points *qtcore.QPointF /*444 const QPointF **/, pointCount int) {
+func (this *QPaintEngine) DrawPoints(points *qtcore.QPointF /*777 const QPointF **/, pointCount int) {
 	var convArg0 = points.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine10drawPointsEPK7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pointCount)
 	gopp.ErrPrint(err, rv)
@@ -215,7 +215,7 @@ func (this *QPaintEngine) DrawPoints(points *qtcore.QPointF /*444 const QPointF 
 // index:1
 // Public virtual
 // void drawPoints(const class QPoint *, int)
-func (this *QPaintEngine) DrawPoints_1(points *qtcore.QPoint /*444 const QPoint **/, pointCount int) {
+func (this *QPaintEngine) DrawPoints_1(points *qtcore.QPoint /*777 const QPoint **/, pointCount int) {
 	var convArg0 = points.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine10drawPointsEPK6QPointi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pointCount)
 	gopp.ErrPrint(err, rv)
@@ -225,7 +225,7 @@ func (this *QPaintEngine) DrawPoints_1(points *qtcore.QPoint /*444 const QPoint 
 // index:0
 // Public virtual
 // void drawPolygon(const class QPointF *, int, enum QPaintEngine::PolygonDrawMode)
-func (this *QPaintEngine) DrawPolygon(points *qtcore.QPointF /*444 const QPointF **/, pointCount int, mode int) {
+func (this *QPaintEngine) DrawPolygon(points *qtcore.QPointF /*777 const QPointF **/, pointCount int, mode int) {
 	var convArg0 = points.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine11drawPolygonEPK7QPointFiNS_15PolygonDrawModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pointCount, mode)
 	gopp.ErrPrint(err, rv)
@@ -235,7 +235,7 @@ func (this *QPaintEngine) DrawPolygon(points *qtcore.QPointF /*444 const QPointF
 // index:1
 // Public virtual
 // void drawPolygon(const class QPoint *, int, enum QPaintEngine::PolygonDrawMode)
-func (this *QPaintEngine) DrawPolygon_1(points *qtcore.QPoint /*444 const QPoint **/, pointCount int, mode int) {
+func (this *QPaintEngine) DrawPolygon_1(points *qtcore.QPoint /*777 const QPoint **/, pointCount int, mode int) {
 	var convArg0 = points.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine11drawPolygonEPK6QPointiNS_15PolygonDrawModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pointCount, mode)
 	gopp.ErrPrint(err, rv)
@@ -292,7 +292,7 @@ func (this *QPaintEngine) DrawImage(r *qtcore.QRectF, pm *QImage, sr *qtcore.QRe
 // index:0
 // Public
 // void setPaintDevice(class QPaintDevice *)
-func (this *QPaintEngine) SetPaintDevice(device *QPaintDevice /*444 QPaintDevice **/) {
+func (this *QPaintEngine) SetPaintDevice(device *QPaintDevice /*777 QPaintDevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine14setPaintDeviceEP12QPaintDevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -302,7 +302,7 @@ func (this *QPaintEngine) SetPaintDevice(device *QPaintDevice /*444 QPaintDevice
 // index:0
 // Public
 // QPaintDevice * paintDevice()
-func (this *QPaintEngine) PaintDevice() *QPaintDevice /*444 QPaintDevice **/ {
+func (this *QPaintEngine) PaintDevice() *QPaintDevice /*777 QPaintDevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintEngine11paintDeviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -425,7 +425,7 @@ func (this *QPaintEngine) ClearDirty(df int) {
 // index:0
 // Public
 // QPainter * painter()
-func (this *QPaintEngine) Painter() *QPainter /*444 QPainter **/ {
+func (this *QPaintEngine) Painter() *QPainter /*777 QPainter **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintEngine7painterEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

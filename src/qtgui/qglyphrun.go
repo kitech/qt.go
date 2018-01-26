@@ -128,7 +128,7 @@ func (this *QGlyphRun) SetRawFont(rawFont *QRawFont) {
 // index:0
 // Public
 // void setRawData(const quint32 *, const class QPointF *, int)
-func (this *QGlyphRun) SetRawData(glyphIndexArray unsafe.Pointer /*666*/, glyphPositionArray *qtcore.QPointF /*444 const QPointF **/, size int) {
+func (this *QGlyphRun) SetRawData(glyphIndexArray unsafe.Pointer /*666*/, glyphPositionArray *qtcore.QPointF /*777 const QPointF **/, size int) {
 	var convArg1 = glyphPositionArray.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun10setRawDataEPKjPK7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &glyphIndexArray, convArg1, size)
 	gopp.ErrPrint(err, rv)

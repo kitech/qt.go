@@ -94,10 +94,10 @@ func NewQTextBoundaryFinder_1(type_ int, string *QString) *QTextBoundaryFinder {
 // index:2
 // Public
 // void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const class QChar *, int, unsigned char *, int)
-func NewQTextBoundaryFinder_2(type_ int, chars *QChar /*444 const QChar **/, length int, buffer unsafe.Pointer /*666*/, bufferSize int) *QTextBoundaryFinder {
+func NewQTextBoundaryFinder_2(type_ int, chars *QChar /*777 const QChar **/, length int, buffer unsafe.Pointer /*666*/, bufferSize int) *QTextBoundaryFinder {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = chars.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeEPK5QChariPhi", ffiqt.FFI_TYPE_VOID, cthis, type_, convArg1, length, &buffer, bufferSize)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeEPK5QChariPhi", ffiqt.FFI_TYPE_VOID, cthis, type_, convArg1, length, buffer, bufferSize)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextBoundaryFinderFromPointer(cthis)
 	return gothis

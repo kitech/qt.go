@@ -98,7 +98,7 @@ func DeleteQGestureRecognizer(*QGestureRecognizer) {
 // index:0
 // Public virtual
 // QGesture * create(class QObject *)
-func (this *QGestureRecognizer) Create(target *qtcore.QObject /*444 QObject **/) *QGesture /*444 QGesture **/ {
+func (this *QGestureRecognizer) Create(target *qtcore.QObject /*777 QObject **/) *QGesture /*777 QGesture **/ {
 	var convArg0 = target.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGestureRecognizer6createEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -111,7 +111,7 @@ func (this *QGestureRecognizer) Create(target *qtcore.QObject /*444 QObject **/)
 // index:0
 // Public pure virtual
 // QGestureRecognizer::Result recognize(class QGesture *, class QObject *, class QEvent *)
-func (this *QGestureRecognizer) Recognize(state *QGesture /*444 QGesture **/, watched *qtcore.QObject /*444 QObject **/, event *qtcore.QEvent /*444 QEvent **/) int {
+func (this *QGestureRecognizer) Recognize(state *QGesture /*777 QGesture **/, watched *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) int {
 	var convArg0 = state.GetCthis()
 	var convArg1 = watched.GetCthis()
 	var convArg2 = event.GetCthis()
@@ -125,7 +125,7 @@ func (this *QGestureRecognizer) Recognize(state *QGesture /*444 QGesture **/, wa
 // index:0
 // Public virtual
 // void reset(class QGesture *)
-func (this *QGestureRecognizer) Reset(state *QGesture /*444 QGesture **/) {
+func (this *QGestureRecognizer) Reset(state *QGesture /*777 QGesture **/) {
 	var convArg0 = state.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGestureRecognizer5resetEP8QGesture", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -135,13 +135,13 @@ func (this *QGestureRecognizer) Reset(state *QGesture /*444 QGesture **/) {
 // index:0
 // Public static
 // Qt::GestureType registerRecognizer(class QGestureRecognizer *)
-func (this *QGestureRecognizer) RegisterRecognizer(recognizer *QGestureRecognizer /*444 QGestureRecognizer **/) int {
+func (this *QGestureRecognizer) RegisterRecognizer(recognizer *QGestureRecognizer /*777 QGestureRecognizer **/) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGestureRecognizer18registerRecognizerEPS_", ffiqt.FFI_TYPE_POINTER, recognizer)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv)
 }
-func QGestureRecognizer_RegisterRecognizer(recognizer *QGestureRecognizer /*444 QGestureRecognizer **/) int {
+func QGestureRecognizer_RegisterRecognizer(recognizer *QGestureRecognizer /*777 QGestureRecognizer **/) int {
 	var nilthis *QGestureRecognizer
 	rv := nilthis.RegisterRecognizer(recognizer)
 	return rv

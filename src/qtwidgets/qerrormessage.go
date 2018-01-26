@@ -78,7 +78,7 @@ func (*QErrorMessage) NewFromPointer(cthis unsafe.Pointer) *QErrorMessage {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QErrorMessage) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QErrorMessage) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QErrorMessage10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QErrorMessage) MetaObject() *qtcore.QMetaObject /*444 const QMetaObj
 // index:0
 // Public
 // void QErrorMessage(class QWidget *)
-func NewQErrorMessage(parent *QWidget /*444 QWidget **/) *QErrorMessage {
+func NewQErrorMessage(parent *QWidget /*777 QWidget **/) *QErrorMessage {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessageC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -112,14 +112,14 @@ func DeleteQErrorMessage(*QErrorMessage) {
 // index:0
 // Public static
 // QErrorMessage * qtHandler()
-func (this *QErrorMessage) QtHandler() *QErrorMessage /*444 QErrorMessage **/ {
+func (this *QErrorMessage) QtHandler() *QErrorMessage /*777 QErrorMessage **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage9qtHandlerEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQErrorMessageFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QErrorMessage_QtHandler() *QErrorMessage /*444 QErrorMessage **/ {
+func QErrorMessage_QtHandler() *QErrorMessage /*777 QErrorMessage **/ {
 	var nilthis *QErrorMessage
 	rv := nilthis.QtHandler()
 	return rv
@@ -159,7 +159,7 @@ func (this *QErrorMessage) Done(arg0 int) {
 // index:0
 // Protected virtual
 // void changeEvent(class QEvent *)
-func (this *QErrorMessage) ChangeEvent(e *qtcore.QEvent /*444 QEvent **/) {
+func (this *QErrorMessage) ChangeEvent(e *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

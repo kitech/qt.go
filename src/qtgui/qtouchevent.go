@@ -83,7 +83,7 @@ func DeleteQTouchEvent(*QTouchEvent) {
 // index:0
 // Public inline
 // QWindow * window()
-func (this *QTouchEvent) Window() *QWindow /*444 QWindow **/ {
+func (this *QTouchEvent) Window() *QWindow /*777 QWindow **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent6windowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -95,7 +95,7 @@ func (this *QTouchEvent) Window() *QWindow /*444 QWindow **/ {
 // index:0
 // Public inline
 // QObject * target()
-func (this *QTouchEvent) Target() *qtcore.QObject /*444 QObject **/ {
+func (this *QTouchEvent) Target() *qtcore.QObject /*777 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent6targetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -129,7 +129,7 @@ func (this *QTouchEvent) TouchPoints() unsafe.Pointer /*555*/ {
 // index:0
 // Public inline
 // QTouchDevice * device()
-func (this *QTouchEvent) Device() *QTouchDevice /*444 QTouchDevice **/ {
+func (this *QTouchEvent) Device() *QTouchDevice /*777 QTouchDevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -141,7 +141,7 @@ func (this *QTouchEvent) Device() *QTouchDevice /*444 QTouchDevice **/ {
 // index:0
 // Public inline
 // void setWindow(class QWindow *)
-func (this *QTouchEvent) SetWindow(awindow *QWindow /*444 QWindow **/) {
+func (this *QTouchEvent) SetWindow(awindow *QWindow /*777 QWindow **/) {
 	var convArg0 = awindow.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent9setWindowEP7QWindow", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -151,7 +151,7 @@ func (this *QTouchEvent) SetWindow(awindow *QWindow /*444 QWindow **/) {
 // index:0
 // Public inline
 // void setTarget(class QObject *)
-func (this *QTouchEvent) SetTarget(atarget *qtcore.QObject /*444 QObject **/) {
+func (this *QTouchEvent) SetTarget(atarget *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = atarget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent9setTargetEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -161,7 +161,7 @@ func (this *QTouchEvent) SetTarget(atarget *qtcore.QObject /*444 QObject **/) {
 // index:0
 // Public inline
 // void setDevice(class QTouchDevice *)
-func (this *QTouchEvent) SetDevice(adevice *QTouchDevice /*444 QTouchDevice **/) {
+func (this *QTouchEvent) SetDevice(adevice *QTouchDevice /*777 QTouchDevice **/) {
 	var convArg0 = adevice.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent9setDeviceEP12QTouchDevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

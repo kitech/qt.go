@@ -652,7 +652,7 @@ func (this *QStandardItem) SetDropEnabled(dropEnabled bool) {
 // index:0
 // Public
 // QStandardItem * parent()
-func (this *QStandardItem) Parent() *QStandardItem /*444 QStandardItem **/ {
+func (this *QStandardItem) Parent() *QStandardItem /*777 QStandardItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStandardItem6parentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -700,7 +700,7 @@ func (this *QStandardItem) Index() *qtcore.QModelIndex /*123*/ {
 // index:0
 // Public
 // QStandardItemModel * model()
-func (this *QStandardItem) Model() *QStandardItemModel /*444 QStandardItemModel **/ {
+func (this *QStandardItem) Model() *QStandardItemModel /*777 QStandardItemModel **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStandardItem5modelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -763,7 +763,7 @@ func (this *QStandardItem) HasChildren() bool {
 // index:0
 // Public
 // QStandardItem * child(int, int)
-func (this *QStandardItem) Child(row int, column int) *QStandardItem /*444 QStandardItem **/ {
+func (this *QStandardItem) Child(row int, column int) *QStandardItem /*777 QStandardItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStandardItem5childEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -775,7 +775,7 @@ func (this *QStandardItem) Child(row int, column int) *QStandardItem /*444 QStan
 // index:0
 // Public
 // void setChild(int, int, class QStandardItem *)
-func (this *QStandardItem) SetChild(row int, column int, item *QStandardItem /*444 QStandardItem **/) {
+func (this *QStandardItem) SetChild(row int, column int, item *QStandardItem /*777 QStandardItem **/) {
 	var convArg2 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem8setChildEiiPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
 	gopp.ErrPrint(err, rv)
@@ -785,7 +785,7 @@ func (this *QStandardItem) SetChild(row int, column int, item *QStandardItem /*4
 // index:1
 // Public inline
 // void setChild(int, class QStandardItem *)
-func (this *QStandardItem) SetChild_1(row int, item *QStandardItem /*444 QStandardItem **/) {
+func (this *QStandardItem) SetChild_1(row int, item *QStandardItem /*777 QStandardItem **/) {
 	var convArg1 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem8setChildEiPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -849,7 +849,7 @@ func (this *QStandardItem) RemoveColumns(column int, count int) {
 // index:0
 // Public inline
 // void insertRow(int, class QStandardItem *)
-func (this *QStandardItem) InsertRow(row int, item *QStandardItem /*444 QStandardItem **/) {
+func (this *QStandardItem) InsertRow(row int, item *QStandardItem /*777 QStandardItem **/) {
 	var convArg1 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem9insertRowEiPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -859,7 +859,7 @@ func (this *QStandardItem) InsertRow(row int, item *QStandardItem /*444 QStandar
 // index:0
 // Public inline
 // void appendRow(class QStandardItem *)
-func (this *QStandardItem) AppendRow(item *QStandardItem /*444 QStandardItem **/) {
+func (this *QStandardItem) AppendRow(item *QStandardItem /*777 QStandardItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem9appendRowEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -869,7 +869,7 @@ func (this *QStandardItem) AppendRow(item *QStandardItem /*444 QStandardItem **/
 // index:0
 // Public
 // QStandardItem * takeChild(int, int)
-func (this *QStandardItem) TakeChild(row int, column int) *QStandardItem /*444 QStandardItem **/ {
+func (this *QStandardItem) TakeChild(row int, column int) *QStandardItem /*777 QStandardItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem9takeChildEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -890,7 +890,7 @@ func (this *QStandardItem) SortChildren(column int, order int) {
 // index:0
 // Public virtual
 // QStandardItem * clone()
-func (this *QStandardItem) Clone() *QStandardItem /*444 QStandardItem **/ {
+func (this *QStandardItem) Clone() *QStandardItem /*777 QStandardItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStandardItem5cloneEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

@@ -70,7 +70,7 @@ func (*QObjectCleanupHandler) NewFromPointer(cthis unsafe.Pointer) *QObjectClean
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QObjectCleanupHandler) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QObjectCleanupHandler) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -103,7 +103,7 @@ func DeleteQObjectCleanupHandler(*QObjectCleanupHandler) {
 // index:0
 // Public
 // QObject * add(class QObject *)
-func (this *QObjectCleanupHandler) Add(object *QObject /*444 QObject **/) *QObject /*444 QObject **/ {
+func (this *QObjectCleanupHandler) Add(object *QObject /*777 QObject **/) *QObject /*777 QObject **/ {
 	var convArg0 = object.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler3addEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -116,7 +116,7 @@ func (this *QObjectCleanupHandler) Add(object *QObject /*444 QObject **/) *QObje
 // index:0
 // Public
 // void remove(class QObject *)
-func (this *QObjectCleanupHandler) Remove(object *QObject /*444 QObject **/) {
+func (this *QObjectCleanupHandler) Remove(object *QObject /*777 QObject **/) {
 	var convArg0 = object.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler6removeEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

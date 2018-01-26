@@ -74,7 +74,7 @@ func (*QStandardItemModel) NewFromPointer(cthis unsafe.Pointer) *QStandardItemMo
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QStandardItemModel) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QStandardItemModel) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QStandardItemModel10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -86,7 +86,7 @@ func (this *QStandardItemModel) MetaObject() *qtcore.QMetaObject /*444 const QMe
 // index:0
 // Public
 // void QStandardItemModel(class QObject *)
-func NewQStandardItemModel(parent *qtcore.QObject /*444 QObject **/) *QStandardItemModel {
+func NewQStandardItemModel(parent *qtcore.QObject /*777 QObject **/) *QStandardItemModel {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStandardItemModelC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -99,7 +99,7 @@ func NewQStandardItemModel(parent *qtcore.QObject /*444 QObject **/) *QStandardI
 // index:1
 // Public
 // void QStandardItemModel(int, int, class QObject *)
-func NewQStandardItemModel_1(rows int, columns int, parent *qtcore.QObject /*444 QObject **/) *QStandardItemModel {
+func NewQStandardItemModel_1(rows int, columns int, parent *qtcore.QObject /*777 QObject **/) *QStandardItemModel {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg2 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStandardItemModelC2EiiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, rows, columns, convArg2)
@@ -345,7 +345,7 @@ func (this *QStandardItemModel) Sort(column int, order int) {
 // index:0
 // Public
 // QStandardItem * itemFromIndex(const class QModelIndex &)
-func (this *QStandardItemModel) ItemFromIndex(index *qtcore.QModelIndex) *QStandardItem /*444 QStandardItem **/ {
+func (this *QStandardItemModel) ItemFromIndex(index *qtcore.QModelIndex) *QStandardItem /*777 QStandardItem **/ {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QStandardItemModel13itemFromIndexERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -358,7 +358,7 @@ func (this *QStandardItemModel) ItemFromIndex(index *qtcore.QModelIndex) *QStand
 // index:0
 // Public
 // QModelIndex indexFromItem(const class QStandardItem *)
-func (this *QStandardItemModel) IndexFromItem(item *QStandardItem /*444 const QStandardItem **/) *qtcore.QModelIndex /*123*/ {
+func (this *QStandardItemModel) IndexFromItem(item *QStandardItem /*777 const QStandardItem **/) *qtcore.QModelIndex /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QStandardItemModel13indexFromItemEPK13QStandardItem", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
@@ -373,7 +373,7 @@ func (this *QStandardItemModel) IndexFromItem(item *QStandardItem /*444 const QS
 // index:0
 // Public
 // QStandardItem * item(int, int)
-func (this *QStandardItemModel) Item(row int, column int) *QStandardItem /*444 QStandardItem **/ {
+func (this *QStandardItemModel) Item(row int, column int) *QStandardItem /*777 QStandardItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QStandardItemModel4itemEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -385,7 +385,7 @@ func (this *QStandardItemModel) Item(row int, column int) *QStandardItem /*444 Q
 // index:0
 // Public
 // void setItem(int, int, class QStandardItem *)
-func (this *QStandardItemModel) SetItem(row int, column int, item *QStandardItem /*444 QStandardItem **/) {
+func (this *QStandardItemModel) SetItem(row int, column int, item *QStandardItem /*777 QStandardItem **/) {
 	var convArg2 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStandardItemModel7setItemEiiP13QStandardItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
 	gopp.ErrPrint(err, rv)
@@ -395,7 +395,7 @@ func (this *QStandardItemModel) SetItem(row int, column int, item *QStandardItem
 // index:1
 // Public inline
 // void setItem(int, class QStandardItem *)
-func (this *QStandardItemModel) SetItem_1(row int, item *QStandardItem /*444 QStandardItem **/) {
+func (this *QStandardItemModel) SetItem_1(row int, item *QStandardItem /*777 QStandardItem **/) {
 	var convArg1 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStandardItemModel7setItemEiP13QStandardItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -405,7 +405,7 @@ func (this *QStandardItemModel) SetItem_1(row int, item *QStandardItem /*444 QSt
 // index:0
 // Public
 // QStandardItem * invisibleRootItem()
-func (this *QStandardItemModel) InvisibleRootItem() *QStandardItem /*444 QStandardItem **/ {
+func (this *QStandardItemModel) InvisibleRootItem() *QStandardItem /*777 QStandardItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QStandardItemModel17invisibleRootItemEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -417,7 +417,7 @@ func (this *QStandardItemModel) InvisibleRootItem() *QStandardItem /*444 QStanda
 // index:0
 // Public
 // QStandardItem * horizontalHeaderItem(int)
-func (this *QStandardItemModel) HorizontalHeaderItem(column int) *QStandardItem /*444 QStandardItem **/ {
+func (this *QStandardItemModel) HorizontalHeaderItem(column int) *QStandardItem /*777 QStandardItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QStandardItemModel20horizontalHeaderItemEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -429,7 +429,7 @@ func (this *QStandardItemModel) HorizontalHeaderItem(column int) *QStandardItem 
 // index:0
 // Public
 // void setHorizontalHeaderItem(int, class QStandardItem *)
-func (this *QStandardItemModel) SetHorizontalHeaderItem(column int, item *QStandardItem /*444 QStandardItem **/) {
+func (this *QStandardItemModel) SetHorizontalHeaderItem(column int, item *QStandardItem /*777 QStandardItem **/) {
 	var convArg1 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStandardItemModel23setHorizontalHeaderItemEiP13QStandardItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -439,7 +439,7 @@ func (this *QStandardItemModel) SetHorizontalHeaderItem(column int, item *QStand
 // index:0
 // Public
 // QStandardItem * verticalHeaderItem(int)
-func (this *QStandardItemModel) VerticalHeaderItem(row int) *QStandardItem /*444 QStandardItem **/ {
+func (this *QStandardItemModel) VerticalHeaderItem(row int) *QStandardItem /*777 QStandardItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QStandardItemModel18verticalHeaderItemEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -451,7 +451,7 @@ func (this *QStandardItemModel) VerticalHeaderItem(row int) *QStandardItem /*444
 // index:0
 // Public
 // void setVerticalHeaderItem(int, class QStandardItem *)
-func (this *QStandardItemModel) SetVerticalHeaderItem(row int, item *QStandardItem /*444 QStandardItem **/) {
+func (this *QStandardItemModel) SetVerticalHeaderItem(row int, item *QStandardItem /*777 QStandardItem **/) {
 	var convArg1 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStandardItemModel21setVerticalHeaderItemEiP13QStandardItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -499,7 +499,7 @@ func (this *QStandardItemModel) SetColumnCount(columns int) {
 // index:0
 // Public inline
 // void appendRow(class QStandardItem *)
-func (this *QStandardItemModel) AppendRow(item *QStandardItem /*444 QStandardItem **/) {
+func (this *QStandardItemModel) AppendRow(item *QStandardItem /*777 QStandardItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStandardItemModel9appendRowEP13QStandardItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -509,7 +509,7 @@ func (this *QStandardItemModel) AppendRow(item *QStandardItem /*444 QStandardIte
 // index:0
 // Public inline
 // void insertRow(int, class QStandardItem *)
-func (this *QStandardItemModel) InsertRow(row int, item *QStandardItem /*444 QStandardItem **/) {
+func (this *QStandardItemModel) InsertRow(row int, item *QStandardItem /*777 QStandardItem **/) {
 	var convArg1 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStandardItemModel9insertRowEiP13QStandardItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -543,7 +543,7 @@ func (this *QStandardItemModel) InsertColumn(column int, parent *qtcore.QModelIn
 // index:0
 // Public
 // QStandardItem * takeItem(int, int)
-func (this *QStandardItemModel) TakeItem(row int, column int) *QStandardItem /*444 QStandardItem **/ {
+func (this *QStandardItemModel) TakeItem(row int, column int) *QStandardItem /*777 QStandardItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStandardItemModel8takeItemEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -555,7 +555,7 @@ func (this *QStandardItemModel) TakeItem(row int, column int) *QStandardItem /*4
 // index:0
 // Public
 // QStandardItem * takeHorizontalHeaderItem(int)
-func (this *QStandardItemModel) TakeHorizontalHeaderItem(column int) *QStandardItem /*444 QStandardItem **/ {
+func (this *QStandardItemModel) TakeHorizontalHeaderItem(column int) *QStandardItem /*777 QStandardItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStandardItemModel24takeHorizontalHeaderItemEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -567,7 +567,7 @@ func (this *QStandardItemModel) TakeHorizontalHeaderItem(column int) *QStandardI
 // index:0
 // Public
 // QStandardItem * takeVerticalHeaderItem(int)
-func (this *QStandardItemModel) TakeVerticalHeaderItem(row int) *QStandardItem /*444 QStandardItem **/ {
+func (this *QStandardItemModel) TakeVerticalHeaderItem(row int) *QStandardItem /*777 QStandardItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStandardItemModel22takeVerticalHeaderItemEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -579,7 +579,7 @@ func (this *QStandardItemModel) TakeVerticalHeaderItem(row int) *QStandardItem /
 // index:0
 // Public
 // const QStandardItem * itemPrototype()
-func (this *QStandardItemModel) ItemPrototype() *QStandardItem /*444 const QStandardItem **/ {
+func (this *QStandardItemModel) ItemPrototype() *QStandardItem /*777 const QStandardItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QStandardItemModel13itemPrototypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -591,7 +591,7 @@ func (this *QStandardItemModel) ItemPrototype() *QStandardItem /*444 const QStan
 // index:0
 // Public
 // void setItemPrototype(const class QStandardItem *)
-func (this *QStandardItemModel) SetItemPrototype(item *QStandardItem /*444 const QStandardItem **/) {
+func (this *QStandardItemModel) SetItemPrototype(item *QStandardItem /*777 const QStandardItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStandardItemModel16setItemPrototypeEPK13QStandardItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -621,7 +621,7 @@ func (this *QStandardItemModel) SetSortRole(role int) {
 // index:0
 // Public virtual
 // bool dropMimeData(const class QMimeData *, Qt::DropAction, int, int, const class QModelIndex &)
-func (this *QStandardItemModel) DropMimeData(data *qtcore.QMimeData /*444 const QMimeData **/, action int, row int, column int, parent *qtcore.QModelIndex) bool {
+func (this *QStandardItemModel) DropMimeData(data *qtcore.QMimeData /*777 const QMimeData **/, action int, row int, column int, parent *qtcore.QModelIndex) bool {
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStandardItemModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action, row, column, convArg4)
@@ -634,7 +634,7 @@ func (this *QStandardItemModel) DropMimeData(data *qtcore.QMimeData /*444 const 
 // index:0
 // Public
 // void itemChanged(class QStandardItem *)
-func (this *QStandardItemModel) ItemChanged(item *QStandardItem /*444 QStandardItem **/) {
+func (this *QStandardItemModel) ItemChanged(item *QStandardItem /*777 QStandardItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStandardItemModel11itemChangedEP13QStandardItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

@@ -87,7 +87,7 @@ func DeleteQGestureEvent(*QGestureEvent) {
 // index:0
 // Public
 // QGesture * gesture(Qt::GestureType)
-func (this *QGestureEvent) Gesture(type_ int) *QGesture /*444 QGesture **/ {
+func (this *QGestureEvent) Gesture(type_ int) *QGesture /*777 QGesture **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent7gestureEN2Qt11GestureTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -99,7 +99,7 @@ func (this *QGestureEvent) Gesture(type_ int) *QGesture /*444 QGesture **/ {
 // index:0
 // Public
 // void setAccepted(class QGesture *, _Bool)
-func (this *QGestureEvent) SetAccepted(arg0 *QGesture /*444 QGesture **/, arg1 bool) {
+func (this *QGestureEvent) SetAccepted(arg0 *QGesture /*777 QGesture **/, arg1 bool) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent11setAcceptedEP8QGestureb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
 	gopp.ErrPrint(err, rv)
@@ -118,7 +118,7 @@ func (this *QGestureEvent) SetAccepted_1(arg0 int, arg1 bool) {
 // index:0
 // Public
 // void accept(class QGesture *)
-func (this *QGestureEvent) Accept(arg0 *QGesture /*444 QGesture **/) {
+func (this *QGestureEvent) Accept(arg0 *QGesture /*777 QGesture **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent6acceptEP8QGesture", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -137,7 +137,7 @@ func (this *QGestureEvent) Accept_1(arg0 int) {
 // index:0
 // Public
 // void ignore(class QGesture *)
-func (this *QGestureEvent) Ignore(arg0 *QGesture /*444 QGesture **/) {
+func (this *QGestureEvent) Ignore(arg0 *QGesture /*777 QGesture **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent6ignoreEP8QGesture", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -156,7 +156,7 @@ func (this *QGestureEvent) Ignore_1(arg0 int) {
 // index:0
 // Public
 // bool isAccepted(class QGesture *)
-func (this *QGestureEvent) IsAccepted(arg0 *QGesture /*444 QGesture **/) bool {
+func (this *QGestureEvent) IsAccepted(arg0 *QGesture /*777 QGesture **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent10isAcceptedEP8QGesture", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -179,7 +179,7 @@ func (this *QGestureEvent) IsAccepted_1(arg0 int) bool {
 // index:0
 // Public
 // void setWidget(class QWidget *)
-func (this *QGestureEvent) SetWidget(widget *QWidget /*444 QWidget **/) {
+func (this *QGestureEvent) SetWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent9setWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -189,7 +189,7 @@ func (this *QGestureEvent) SetWidget(widget *QWidget /*444 QWidget **/) {
 // index:0
 // Public
 // QWidget * widget()
-func (this *QGestureEvent) Widget() *QWidget /*444 QWidget **/ {
+func (this *QGestureEvent) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent6widgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

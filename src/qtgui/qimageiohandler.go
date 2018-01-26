@@ -94,7 +94,7 @@ func DeleteQImageIOHandler(*QImageIOHandler) {
 // index:0
 // Public
 // void setDevice(class QIODevice *)
-func (this *QImageIOHandler) SetDevice(device *qtcore.QIODevice /*444 QIODevice **/) {
+func (this *QImageIOHandler) SetDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -104,7 +104,7 @@ func (this *QImageIOHandler) SetDevice(device *qtcore.QIODevice /*444 QIODevice 
 // index:0
 // Public
 // QIODevice * device()
-func (this *QImageIOHandler) Device() *qtcore.QIODevice /*444 QIODevice **/ {
+func (this *QImageIOHandler) Device() *qtcore.QIODevice /*777 QIODevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -175,7 +175,7 @@ func (this *QImageIOHandler) CanRead() bool {
 // index:0
 // Public pure virtual
 // bool read(class QImage *)
-func (this *QImageIOHandler) Read(image *QImage /*444 QImage **/) bool {
+func (this *QImageIOHandler) Read(image *QImage /*777 QImage **/) bool {
 	var convArg0 = image.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler4readEP6QImage", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

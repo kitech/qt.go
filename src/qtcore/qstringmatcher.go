@@ -94,7 +94,7 @@ func NewQStringMatcher_1(pattern *QString, cs int) *QStringMatcher {
 // index:2
 // Public
 // void QStringMatcher(const class QChar *, int, Qt::CaseSensitivity)
-func NewQStringMatcher_2(uc *QChar /*444 const QChar **/, len int, cs int) *QStringMatcher {
+func NewQStringMatcher_2(uc *QChar /*777 const QChar **/, len int, cs int) *QStringMatcher {
 	cthis := qtrt.Calloc(1, 256) // 1048
 	var convArg0 = uc.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStringMatcherC2EPK5QChariN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, len, cs)
@@ -147,7 +147,7 @@ func (this *QStringMatcher) IndexIn(str *QString, from int) int {
 // index:1
 // Public
 // int indexIn(const class QChar *, int, int)
-func (this *QStringMatcher) IndexIn_1(str *QChar /*444 const QChar **/, length int, from int) int {
+func (this *QStringMatcher) IndexIn_1(str *QChar /*777 const QChar **/, length int, from int) int {
 	var convArg0 = str.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStringMatcher7indexInEPK5QCharii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, length, from)
 	gopp.ErrPrint(err, rv)

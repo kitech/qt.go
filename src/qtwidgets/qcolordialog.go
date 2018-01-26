@@ -78,7 +78,7 @@ func (*QColorDialog) NewFromPointer(cthis unsafe.Pointer) *QColorDialog {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QColorDialog) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QColorDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QColorDialog10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QColorDialog) MetaObject() *qtcore.QMetaObject /*444 const QMetaObje
 // index:0
 // Public
 // void QColorDialog(class QWidget *)
-func NewQColorDialog(parent *QWidget /*444 QWidget **/) *QColorDialog {
+func NewQColorDialog(parent *QWidget /*777 QWidget **/) *QColorDialog {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QColorDialogC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -103,7 +103,7 @@ func NewQColorDialog(parent *QWidget /*444 QWidget **/) *QColorDialog {
 // index:1
 // Public
 // void QColorDialog(const class QColor &, class QWidget *)
-func NewQColorDialog_1(initial *qtgui.QColor, parent *QWidget /*444 QWidget **/) *QColorDialog {
+func NewQColorDialog_1(initial *qtgui.QColor, parent *QWidget /*777 QWidget **/) *QColorDialog {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = initial.GetCthis()
 	var convArg1 = parent.GetCthis()
@@ -195,7 +195,7 @@ func (this *QColorDialog) Options() int {
 // index:0
 // Public
 // void open(class QObject *, const char *)
-func (this *QColorDialog) Open(receiver *qtcore.QObject /*444 QObject **/, member string) {
+func (this *QColorDialog) Open(receiver *qtcore.QObject /*777 QObject **/, member string) {
 	var convArg0 = receiver.GetCthis()
 	var convArg1 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg1)
@@ -216,13 +216,13 @@ func (this *QColorDialog) SetVisible(visible bool) {
 // index:0
 // Public static
 // QRgb getRgba(QRgb, _Bool *, class QWidget *)
-func (this *QColorDialog) GetRgba(rgba uint, ok unsafe.Pointer /*666*/, parent *QWidget /*444 QWidget **/) uint {
+func (this *QColorDialog) GetRgba(rgba uint, ok unsafe.Pointer /*666*/, parent *QWidget /*777 QWidget **/) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QColorDialog7getRgbaEjPbP7QWidget", ffiqt.FFI_TYPE_POINTER, rgba, ok, parent)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return uint(rv) // 222
 }
-func QColorDialog_GetRgba(rgba uint, ok unsafe.Pointer /*666*/, parent *QWidget /*444 QWidget **/) uint {
+func QColorDialog_GetRgba(rgba uint, ok unsafe.Pointer /*666*/, parent *QWidget /*777 QWidget **/) uint {
 	var nilthis *QColorDialog
 	rv := nilthis.GetRgba(rgba, ok, parent)
 	return rv
@@ -328,7 +328,7 @@ func (this *QColorDialog) ColorSelected(color *qtgui.QColor) {
 // index:0
 // Protected virtual
 // void changeEvent(class QEvent *)
-func (this *QColorDialog) ChangeEvent(event *qtcore.QEvent /*444 QEvent **/) {
+func (this *QColorDialog) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QColorDialog11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

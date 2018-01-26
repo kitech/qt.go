@@ -78,7 +78,7 @@ func (*QTimeEdit) NewFromPointer(cthis unsafe.Pointer) *QTimeEdit {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTimeEdit) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QTimeEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeEdit10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QTimeEdit) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject 
 // index:0
 // Public
 // void QTimeEdit(class QWidget *)
-func NewQTimeEdit(parent *QWidget /*444 QWidget **/) *QTimeEdit {
+func NewQTimeEdit(parent *QWidget /*777 QWidget **/) *QTimeEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeEditC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -103,7 +103,7 @@ func NewQTimeEdit(parent *QWidget /*444 QWidget **/) *QTimeEdit {
 // index:1
 // Public
 // void QTimeEdit(const class QTime &, class QWidget *)
-func NewQTimeEdit_1(time *qtcore.QTime, parent *QWidget /*444 QWidget **/) *QTimeEdit {
+func NewQTimeEdit_1(time *qtcore.QTime, parent *QWidget /*777 QWidget **/) *QTimeEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = time.GetCthis()
 	var convArg1 = parent.GetCthis()

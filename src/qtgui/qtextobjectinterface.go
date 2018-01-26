@@ -82,7 +82,7 @@ func DeleteQTextObjectInterface(*QTextObjectInterface) {
 // index:0
 // Public pure virtual
 // QSizeF intrinsicSize(class QTextDocument *, int, const class QTextFormat &)
-func (this *QTextObjectInterface) IntrinsicSize(doc *QTextDocument /*444 QTextDocument **/, posInDocument int, format *QTextFormat) *qtcore.QSizeF /*123*/ {
+func (this *QTextObjectInterface) IntrinsicSize(doc *QTextDocument /*777 QTextDocument **/, posInDocument int, format *QTextFormat) *qtcore.QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = doc.GetCthis()
 	var convArg2 = format.GetCthis()
@@ -98,7 +98,7 @@ func (this *QTextObjectInterface) IntrinsicSize(doc *QTextDocument /*444 QTextDo
 // index:0
 // Public pure virtual
 // void drawObject(class QPainter *, const class QRectF &, class QTextDocument *, int, const class QTextFormat &)
-func (this *QTextObjectInterface) DrawObject(painter *QPainter /*444 QPainter **/, rect *qtcore.QRectF, doc *QTextDocument /*444 QTextDocument **/, posInDocument int, format *QTextFormat) {
+func (this *QTextObjectInterface) DrawObject(painter *QPainter /*777 QPainter **/, rect *qtcore.QRectF, doc *QTextDocument /*777 QTextDocument **/, posInDocument int, format *QTextFormat) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = rect.GetCthis()
 	var convArg2 = doc.GetCthis()

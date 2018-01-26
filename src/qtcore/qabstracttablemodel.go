@@ -70,7 +70,7 @@ func (*QAbstractTableModel) NewFromPointer(cthis unsafe.Pointer) *QAbstractTable
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QAbstractTableModel) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QAbstractTableModel) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractTableModel10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QAbstractTableModel) MetaObject() *QMetaObject /*444 const QMetaObje
 // index:0
 // Public
 // void QAbstractTableModel(class QObject *)
-func NewQAbstractTableModel(parent *QObject /*444 QObject **/) *QAbstractTableModel {
+func NewQAbstractTableModel(parent *QObject /*777 QObject **/) *QAbstractTableModel {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTableModelC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -134,7 +134,7 @@ func (this *QAbstractTableModel) Sibling(row int, column int, idx *QModelIndex) 
 // index:0
 // Public virtual
 // bool dropMimeData(const class QMimeData *, Qt::DropAction, int, int, const class QModelIndex &)
-func (this *QAbstractTableModel) DropMimeData(data *QMimeData /*444 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
+func (this *QAbstractTableModel) DropMimeData(data *QMimeData /*777 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTableModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action, row, column, convArg4)

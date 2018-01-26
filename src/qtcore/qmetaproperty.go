@@ -169,7 +169,7 @@ func (this *QMetaProperty) IsResettable() bool {
 // index:0
 // Public
 // bool isDesignable(const class QObject *)
-func (this *QMetaProperty) IsDesignable(obj *QObject /*444 const QObject **/) bool {
+func (this *QMetaProperty) IsDesignable(obj *QObject /*777 const QObject **/) bool {
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12isDesignableEPK7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -181,7 +181,7 @@ func (this *QMetaProperty) IsDesignable(obj *QObject /*444 const QObject **/) bo
 // index:0
 // Public
 // bool isScriptable(const class QObject *)
-func (this *QMetaProperty) IsScriptable(obj *QObject /*444 const QObject **/) bool {
+func (this *QMetaProperty) IsScriptable(obj *QObject /*777 const QObject **/) bool {
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12isScriptableEPK7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -193,7 +193,7 @@ func (this *QMetaProperty) IsScriptable(obj *QObject /*444 const QObject **/) bo
 // index:0
 // Public
 // bool isStored(const class QObject *)
-func (this *QMetaProperty) IsStored(obj *QObject /*444 const QObject **/) bool {
+func (this *QMetaProperty) IsStored(obj *QObject /*777 const QObject **/) bool {
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty8isStoredEPK7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -205,7 +205,7 @@ func (this *QMetaProperty) IsStored(obj *QObject /*444 const QObject **/) bool {
 // index:0
 // Public
 // bool isEditable(const class QObject *)
-func (this *QMetaProperty) IsEditable(obj *QObject /*444 const QObject **/) bool {
+func (this *QMetaProperty) IsEditable(obj *QObject /*777 const QObject **/) bool {
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty10isEditableEPK7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -217,7 +217,7 @@ func (this *QMetaProperty) IsEditable(obj *QObject /*444 const QObject **/) bool
 // index:0
 // Public
 // bool isUser(const class QObject *)
-func (this *QMetaProperty) IsUser(obj *QObject /*444 const QObject **/) bool {
+func (this *QMetaProperty) IsUser(obj *QObject /*777 const QObject **/) bool {
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty6isUserEPK7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -334,7 +334,7 @@ func (this *QMetaProperty) Revision() int {
 // index:0
 // Public
 // QVariant read(const class QObject *)
-func (this *QMetaProperty) Read(obj *QObject /*444 const QObject **/) *QVariant /*123*/ {
+func (this *QMetaProperty) Read(obj *QObject /*777 const QObject **/) *QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty4readEPK7QObject", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
@@ -349,7 +349,7 @@ func (this *QMetaProperty) Read(obj *QObject /*444 const QObject **/) *QVariant 
 // index:0
 // Public
 // bool write(class QObject *, const class QVariant &)
-func (this *QMetaProperty) Write(obj *QObject /*444 QObject **/, value *QVariant) bool {
+func (this *QMetaProperty) Write(obj *QObject /*777 QObject **/, value *QVariant) bool {
 	var convArg0 = obj.GetCthis()
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty5writeEP7QObjectRK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -362,7 +362,7 @@ func (this *QMetaProperty) Write(obj *QObject /*444 QObject **/, value *QVariant
 // index:0
 // Public
 // bool reset(class QObject *)
-func (this *QMetaProperty) Reset(obj *QObject /*444 QObject **/) bool {
+func (this *QMetaProperty) Reset(obj *QObject /*777 QObject **/) bool {
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty5resetEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -433,7 +433,7 @@ func (this *QMetaProperty) IsValid() bool {
 // index:0
 // Public inline
 // const QMetaObject * enclosingMetaObject()
-func (this *QMetaProperty) EnclosingMetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QMetaProperty) EnclosingMetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty19enclosingMetaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

@@ -78,7 +78,7 @@ func (*QCheckBox) NewFromPointer(cthis unsafe.Pointer) *QCheckBox {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QCheckBox) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QCheckBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCheckBox10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QCheckBox) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject 
 // index:0
 // Public
 // void QCheckBox(class QWidget *)
-func NewQCheckBox(parent *QWidget /*444 QWidget **/) *QCheckBox {
+func NewQCheckBox(parent *QWidget /*777 QWidget **/) *QCheckBox {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCheckBoxC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -103,7 +103,7 @@ func NewQCheckBox(parent *QWidget /*444 QWidget **/) *QCheckBox {
 // index:1
 // Public
 // void QCheckBox(const class QString &, class QWidget *)
-func NewQCheckBox_1(text *qtcore.QString, parent *QWidget /*444 QWidget **/) *QCheckBox {
+func NewQCheckBox_1(text *qtcore.QString, parent *QWidget /*777 QWidget **/) *QCheckBox {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = text.GetCthis()
 	var convArg1 = parent.GetCthis()
@@ -203,7 +203,7 @@ func (this *QCheckBox) StateChanged(arg0 int) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QCheckBox) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QCheckBox) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCheckBox5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -245,7 +245,7 @@ func (this *QCheckBox) NextCheckState() {
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QCheckBox) PaintEvent(arg0 *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+func (this *QCheckBox) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCheckBox10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -255,7 +255,7 @@ func (this *QCheckBox) PaintEvent(arg0 *qtgui.QPaintEvent /*444 QPaintEvent **/)
 // index:0
 // Protected virtual
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QCheckBox) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QCheckBox) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCheckBox14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -265,7 +265,7 @@ func (this *QCheckBox) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*444 QMouseEvent 
 // index:0
 // Protected
 // void initStyleOption(class QStyleOptionButton *)
-func (this *QCheckBox) InitStyleOption(option *QStyleOptionButton /*444 QStyleOptionButton **/) {
+func (this *QCheckBox) InitStyleOption(option *QStyleOptionButton /*777 QStyleOptionButton **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCheckBox15initStyleOptionEP18QStyleOptionButton", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

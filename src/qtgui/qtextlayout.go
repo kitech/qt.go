@@ -98,7 +98,7 @@ func NewQTextLayout_1(text *qtcore.QString) *QTextLayout {
 // index:2
 // Public
 // void QTextLayout(const class QString &, const class QFont &, class QPaintDevice *)
-func NewQTextLayout_2(text *qtcore.QString, font *QFont, paintdevice *QPaintDevice /*444 QPaintDevice **/) *QTextLayout {
+func NewQTextLayout_2(text *qtcore.QString, font *QFont, paintdevice *QPaintDevice /*777 QPaintDevice **/) *QTextLayout {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = text.GetCthis()
 	var convArg1 = font.GetCthis()
@@ -443,7 +443,7 @@ func (this *QTextLayout) RightCursorPosition(oldPos int) int {
 // index:0
 // Public
 // void drawCursor(class QPainter *, const class QPointF &, int)
-func (this *QTextLayout) DrawCursor(p *QPainter /*444 QPainter **/, pos *qtcore.QPointF, cursorPosition int) {
+func (this *QTextLayout) DrawCursor(p *QPainter /*777 QPainter **/, pos *qtcore.QPointF, cursorPosition int) {
 	var convArg0 = p.GetCthis()
 	var convArg1 = pos.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cursorPosition)
@@ -454,7 +454,7 @@ func (this *QTextLayout) DrawCursor(p *QPainter /*444 QPainter **/, pos *qtcore.
 // index:1
 // Public
 // void drawCursor(class QPainter *, const class QPointF &, int, int)
-func (this *QTextLayout) DrawCursor_1(p *QPainter /*444 QPainter **/, pos *qtcore.QPointF, cursorPosition int, width int) {
+func (this *QTextLayout) DrawCursor_1(p *QPainter /*777 QPainter **/, pos *qtcore.QPointF, cursorPosition int, width int) {
 	var convArg0 = p.GetCthis()
 	var convArg1 = pos.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cursorPosition, width)

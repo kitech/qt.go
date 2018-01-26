@@ -74,7 +74,7 @@ func (*QTextTable) NewFromPointer(cthis unsafe.Pointer) *QTextTable {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTextTable) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QTextTable) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -86,7 +86,7 @@ func (this *QTextTable) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject
 // index:0
 // Public
 // void QTextTable(class QTextDocument *)
-func NewQTextTable(doc *QTextDocument /*444 QTextDocument **/) *QTextTable {
+func NewQTextTable(doc *QTextDocument /*777 QTextDocument **/) *QTextTable {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = doc.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTableC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, convArg0)

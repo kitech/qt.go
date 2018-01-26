@@ -78,7 +78,7 @@ func (*QDoubleSpinBox) NewFromPointer(cthis unsafe.Pointer) *QDoubleSpinBox {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QDoubleSpinBox) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QDoubleSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QDoubleSpinBox) MetaObject() *qtcore.QMetaObject /*444 const QMetaOb
 // index:0
 // Public
 // void QDoubleSpinBox(class QWidget *)
-func NewQDoubleSpinBox(parent *QWidget /*444 QWidget **/) *QDoubleSpinBox {
+func NewQDoubleSpinBox(parent *QWidget /*777 QWidget **/) *QDoubleSpinBox {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBoxC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)

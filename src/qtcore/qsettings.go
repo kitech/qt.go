@@ -70,7 +70,7 @@ func (*QSettings) NewFromPointer(cthis unsafe.Pointer) *QSettings {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QSettings) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QSettings) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QSettings) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 // index:0
 // Public
 // void QSettings(const class QString &, const class QString &, class QObject *)
-func NewQSettings(organization *QString, application *QString, parent *QObject /*444 QObject **/) *QSettings {
+func NewQSettings(organization *QString, application *QString, parent *QObject /*777 QObject **/) *QSettings {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = organization.GetCthis()
 	var convArg1 = application.GetCthis()
@@ -97,7 +97,7 @@ func NewQSettings(organization *QString, application *QString, parent *QObject /
 // index:1
 // Public
 // void QSettings(enum QSettings::Scope, const class QString &, const class QString &, class QObject *)
-func NewQSettings_1(scope int, organization *QString, application *QString, parent *QObject /*444 QObject **/) *QSettings {
+func NewQSettings_1(scope int, organization *QString, application *QString, parent *QObject /*777 QObject **/) *QSettings {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = organization.GetCthis()
 	var convArg2 = application.GetCthis()
@@ -112,7 +112,7 @@ func NewQSettings_1(scope int, organization *QString, application *QString, pare
 // index:2
 // Public
 // void QSettings(enum QSettings::Format, enum QSettings::Scope, const class QString &, const class QString &, class QObject *)
-func NewQSettings_2(format int, scope int, organization *QString, application *QString, parent *QObject /*444 QObject **/) *QSettings {
+func NewQSettings_2(format int, scope int, organization *QString, application *QString, parent *QObject /*777 QObject **/) *QSettings {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg2 = organization.GetCthis()
 	var convArg3 = application.GetCthis()
@@ -127,7 +127,7 @@ func NewQSettings_2(format int, scope int, organization *QString, application *Q
 // index:3
 // Public
 // void QSettings(const class QString &, enum QSettings::Format, class QObject *)
-func NewQSettings_3(fileName *QString, format int, parent *QObject /*444 QObject **/) *QSettings {
+func NewQSettings_3(fileName *QString, format int, parent *QObject /*777 QObject **/) *QSettings {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = fileName.GetCthis()
 	var convArg2 = parent.GetCthis()
@@ -141,7 +141,7 @@ func NewQSettings_3(fileName *QString, format int, parent *QObject /*444 QObject
 // index:4
 // Public
 // void QSettings(class QObject *)
-func NewQSettings_4(parent *QObject /*444 QObject **/) *QSettings {
+func NewQSettings_4(parent *QObject /*777 QObject **/) *QSettings {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettingsC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -429,7 +429,7 @@ func (this *QSettings) ApplicationName() *QString /*123*/ {
 // index:0
 // Public
 // void setIniCodec(class QTextCodec *)
-func (this *QSettings) SetIniCodec(codec *QTextCodec /*444 QTextCodec **/) {
+func (this *QSettings) SetIniCodec(codec *QTextCodec /*777 QTextCodec **/) {
 	var convArg0 = codec.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettings11setIniCodecEP10QTextCodec", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -450,7 +450,7 @@ func (this *QSettings) SetIniCodec_1(codecName string) {
 // index:0
 // Public
 // QTextCodec * iniCodec()
-func (this *QSettings) IniCodec() *QTextCodec /*444 QTextCodec **/ {
+func (this *QSettings) IniCodec() *QTextCodec /*777 QTextCodec **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings8iniCodecEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -530,7 +530,7 @@ func QSettings_SetPath(format int, scope int, path *QString) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QSettings) Event(event *QEvent /*444 QEvent **/) bool {
+func (this *QSettings) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettings5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

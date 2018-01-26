@@ -77,7 +77,7 @@ func (*QPaintDeviceWindow) NewFromPointer(cthis unsafe.Pointer) *QPaintDeviceWin
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QPaintDeviceWindow) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QPaintDeviceWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QPaintDeviceWindow10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -118,7 +118,7 @@ func (this *QPaintDeviceWindow) Update_2() {
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QPaintDeviceWindow) PaintEvent(event *QPaintEvent /*444 QPaintEvent **/) {
+func (this *QPaintDeviceWindow) PaintEvent(event *QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -139,7 +139,7 @@ func (this *QPaintDeviceWindow) Metric(metric int) int {
 // index:0
 // Protected virtual
 // void exposeEvent(class QExposeEvent *)
-func (this *QPaintDeviceWindow) ExposeEvent(arg0 *QExposeEvent /*444 QExposeEvent **/) {
+func (this *QPaintDeviceWindow) ExposeEvent(arg0 *QExposeEvent /*777 QExposeEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow11exposeEventEP12QExposeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -149,7 +149,7 @@ func (this *QPaintDeviceWindow) ExposeEvent(arg0 *QExposeEvent /*444 QExposeEven
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QPaintDeviceWindow) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QPaintDeviceWindow) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

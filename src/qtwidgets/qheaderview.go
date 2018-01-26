@@ -78,7 +78,7 @@ func (*QHeaderView) NewFromPointer(cthis unsafe.Pointer) *QHeaderView {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QHeaderView) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QHeaderView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHeaderView10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QHeaderView) MetaObject() *qtcore.QMetaObject /*444 const QMetaObjec
 // index:0
 // Public
 // void QHeaderView(Qt::Orientation, class QWidget *)
-func NewQHeaderView(orientation int, parent *QWidget /*444 QWidget **/) *QHeaderView {
+func NewQHeaderView(orientation int, parent *QWidget /*777 QWidget **/) *QHeaderView {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHeaderViewC2EN2Qt11OrientationEP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, orientation, convArg1)
@@ -112,7 +112,7 @@ func DeleteQHeaderView(*QHeaderView) {
 // index:0
 // Public virtual
 // void setModel(class QAbstractItemModel *)
-func (this *QHeaderView) SetModel(model *qtcore.QAbstractItemModel /*444 QAbstractItemModel **/) {
+func (this *QHeaderView) SetModel(model *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/) {
 	var convArg0 = model.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHeaderView8setModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -944,7 +944,7 @@ func (this *QHeaderView) CurrentChanged(current *qtcore.QModelIndex, old *qtcore
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QHeaderView) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QHeaderView) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHeaderView5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -956,7 +956,7 @@ func (this *QHeaderView) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QHeaderView) PaintEvent(e *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+func (this *QHeaderView) PaintEvent(e *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHeaderView10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -966,7 +966,7 @@ func (this *QHeaderView) PaintEvent(e *qtgui.QPaintEvent /*444 QPaintEvent **/) 
 // index:0
 // Protected virtual
 // void mousePressEvent(class QMouseEvent *)
-func (this *QHeaderView) MousePressEvent(e *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QHeaderView) MousePressEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHeaderView15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -976,7 +976,7 @@ func (this *QHeaderView) MousePressEvent(e *qtgui.QMouseEvent /*444 QMouseEvent 
 // index:0
 // Protected virtual
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QHeaderView) MouseMoveEvent(e *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QHeaderView) MouseMoveEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHeaderView14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -986,7 +986,7 @@ func (this *QHeaderView) MouseMoveEvent(e *qtgui.QMouseEvent /*444 QMouseEvent *
 // index:0
 // Protected virtual
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QHeaderView) MouseReleaseEvent(e *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QHeaderView) MouseReleaseEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHeaderView17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -996,7 +996,7 @@ func (this *QHeaderView) MouseReleaseEvent(e *qtgui.QMouseEvent /*444 QMouseEven
 // index:0
 // Protected virtual
 // void mouseDoubleClickEvent(class QMouseEvent *)
-func (this *QHeaderView) MouseDoubleClickEvent(e *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QHeaderView) MouseDoubleClickEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHeaderView21mouseDoubleClickEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1006,7 +1006,7 @@ func (this *QHeaderView) MouseDoubleClickEvent(e *qtgui.QMouseEvent /*444 QMouse
 // index:0
 // Protected virtual
 // bool viewportEvent(class QEvent *)
-func (this *QHeaderView) ViewportEvent(e *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QHeaderView) ViewportEvent(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHeaderView13viewportEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1018,7 +1018,7 @@ func (this *QHeaderView) ViewportEvent(e *qtcore.QEvent /*444 QEvent **/) bool {
 // index:0
 // Protected virtual
 // void paintSection(class QPainter *, const class QRect &, int)
-func (this *QHeaderView) PaintSection(painter *qtgui.QPainter /*444 QPainter **/, rect *qtcore.QRect, logicalIndex int) {
+func (this *QHeaderView) PaintSection(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, logicalIndex int) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHeaderView12paintSectionEP8QPainterRK5QRecti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, logicalIndex)
@@ -1170,7 +1170,7 @@ func (this *QHeaderView) VisualRegionForSelection(selection *qtcore.QItemSelecti
 // index:0
 // Protected
 // void initStyleOption(class QStyleOptionHeader *)
-func (this *QHeaderView) InitStyleOption(option *QStyleOptionHeader /*444 QStyleOptionHeader **/) {
+func (this *QHeaderView) InitStyleOption(option *QStyleOptionHeader /*777 QStyleOptionHeader **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHeaderView15initStyleOptionEP18QStyleOptionHeader", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

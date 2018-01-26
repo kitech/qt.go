@@ -78,7 +78,7 @@ func (*QWidgetItem) NewFromPointer(cthis unsafe.Pointer) *QWidgetItem {
 // index:0
 // Public inline
 // void QWidgetItem(class QWidget *)
-func NewQWidgetItem(w *QWidget /*444 QWidget **/) *QWidgetItem {
+func NewQWidgetItem(w *QWidget /*777 QWidget **/) *QWidgetItem {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWidgetItemC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -188,7 +188,7 @@ func (this *QWidgetItem) Geometry() *qtcore.QRect /*123*/ {
 // index:0
 // Public virtual
 // QWidget * widget()
-func (this *QWidgetItem) Widget() *QWidget /*444 QWidget **/ {
+func (this *QWidgetItem) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWidgetItem6widgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

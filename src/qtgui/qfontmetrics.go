@@ -86,7 +86,7 @@ func NewQFontMetrics(arg0 *QFont) *QFontMetrics {
 // index:1
 // Public
 // void QFontMetrics(const class QFont &, class QPaintDevice *)
-func NewQFontMetrics_1(arg0 *QFont, pd *QPaintDevice /*444 QPaintDevice **/) *QFontMetrics {
+func NewQFontMetrics_1(arg0 *QFont, pd *QPaintDevice /*777 QPaintDevice **/) *QFontMetrics {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = pd.GetCthis()

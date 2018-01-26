@@ -137,7 +137,7 @@ func (this *QAccessibleTableCellInterface) RowExtent() int {
 // index:0
 // Public pure virtual
 // QAccessibleInterface * table()
-func (this *QAccessibleTableCellInterface) Table() *QAccessibleInterface /*444 QAccessibleInterface **/ {
+func (this *QAccessibleTableCellInterface) Table() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface5tableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

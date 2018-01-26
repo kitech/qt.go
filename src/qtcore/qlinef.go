@@ -334,7 +334,7 @@ func (this *QLineF) NormalVector() *QLineF /*123*/ {
 // index:0
 // Public
 // QLineF::IntersectType intersect(const class QLineF &, class QPointF *)
-func (this *QLineF) Intersect(l *QLineF, intersectionPoint *QPointF /*444 QPointF **/) int {
+func (this *QLineF) Intersect(l *QLineF, intersectionPoint *QPointF /*777 QPointF **/) int {
 	var convArg0 = l.GetCthis()
 	var convArg1 = intersectionPoint.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF9intersectERKS_P7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)

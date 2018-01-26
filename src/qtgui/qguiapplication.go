@@ -74,7 +74,7 @@ func (*QGuiApplication) NewFromPointer(cthis unsafe.Pointer) *QGuiApplication {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QGuiApplication) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QGuiApplication) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGuiApplication10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -168,14 +168,14 @@ func QGuiApplication_DesktopFileName() *qtcore.QString /*123*/ {
 // index:0
 // Public static
 // QWindow * topLevelAt(const class QPoint &)
-func (this *QGuiApplication) TopLevelAt(pos *qtcore.QPoint) *QWindow /*444 QWindow **/ {
+func (this *QGuiApplication) TopLevelAt(pos *qtcore.QPoint) *QWindow /*777 QWindow **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication10topLevelAtERK6QPoint", ffiqt.FFI_TYPE_POINTER, pos)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QGuiApplication_TopLevelAt(pos *qtcore.QPoint) *QWindow /*444 QWindow **/ {
+func QGuiApplication_TopLevelAt(pos *qtcore.QPoint) *QWindow /*777 QWindow **/ {
 	var nilthis *QGuiApplication
 	rv := nilthis.TopLevelAt(pos)
 	return rv
@@ -232,14 +232,14 @@ func QGuiApplication_PlatformName() *qtcore.QString /*123*/ {
 // index:0
 // Public static
 // QWindow * modalWindow()
-func (this *QGuiApplication) ModalWindow() *QWindow /*444 QWindow **/ {
+func (this *QGuiApplication) ModalWindow() *QWindow /*777 QWindow **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication11modalWindowEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QGuiApplication_ModalWindow() *QWindow /*444 QWindow **/ {
+func QGuiApplication_ModalWindow() *QWindow /*777 QWindow **/ {
 	var nilthis *QGuiApplication
 	rv := nilthis.ModalWindow()
 	return rv
@@ -249,14 +249,14 @@ func QGuiApplication_ModalWindow() *QWindow /*444 QWindow **/ {
 // index:0
 // Public static
 // QWindow * focusWindow()
-func (this *QGuiApplication) FocusWindow() *QWindow /*444 QWindow **/ {
+func (this *QGuiApplication) FocusWindow() *QWindow /*777 QWindow **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication11focusWindowEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QGuiApplication_FocusWindow() *QWindow /*444 QWindow **/ {
+func QGuiApplication_FocusWindow() *QWindow /*777 QWindow **/ {
 	var nilthis *QGuiApplication
 	rv := nilthis.FocusWindow()
 	return rv
@@ -266,14 +266,14 @@ func QGuiApplication_FocusWindow() *QWindow /*444 QWindow **/ {
 // index:0
 // Public static
 // QObject * focusObject()
-func (this *QGuiApplication) FocusObject() *qtcore.QObject /*444 QObject **/ {
+func (this *QGuiApplication) FocusObject() *qtcore.QObject /*777 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication11focusObjectEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QGuiApplication_FocusObject() *qtcore.QObject /*444 QObject **/ {
+func QGuiApplication_FocusObject() *qtcore.QObject /*777 QObject **/ {
 	var nilthis *QGuiApplication
 	rv := nilthis.FocusObject()
 	return rv
@@ -283,14 +283,14 @@ func QGuiApplication_FocusObject() *qtcore.QObject /*444 QObject **/ {
 // index:0
 // Public static
 // QScreen * primaryScreen()
-func (this *QGuiApplication) PrimaryScreen() *QScreen /*444 QScreen **/ {
+func (this *QGuiApplication) PrimaryScreen() *QScreen /*777 QScreen **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication13primaryScreenEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQScreenFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QGuiApplication_PrimaryScreen() *QScreen /*444 QScreen **/ {
+func QGuiApplication_PrimaryScreen() *QScreen /*777 QScreen **/ {
 	var nilthis *QGuiApplication
 	rv := nilthis.PrimaryScreen()
 	return rv
@@ -300,14 +300,14 @@ func QGuiApplication_PrimaryScreen() *QScreen /*444 QScreen **/ {
 // index:0
 // Public static
 // QScreen * screenAt(const class QPoint &)
-func (this *QGuiApplication) ScreenAt(point *qtcore.QPoint) *QScreen /*444 QScreen **/ {
+func (this *QGuiApplication) ScreenAt(point *qtcore.QPoint) *QScreen /*777 QScreen **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication8screenAtERK6QPoint", ffiqt.FFI_TYPE_POINTER, point)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQScreenFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QGuiApplication_ScreenAt(point *qtcore.QPoint) *QScreen /*444 QScreen **/ {
+func QGuiApplication_ScreenAt(point *qtcore.QPoint) *QScreen /*777 QScreen **/ {
 	var nilthis *QGuiApplication
 	rv := nilthis.ScreenAt(point)
 	return rv
@@ -328,14 +328,14 @@ func (this *QGuiApplication) DevicePixelRatio() float64 {
 // index:0
 // Public static
 // QCursor * overrideCursor()
-func (this *QGuiApplication) OverrideCursor() *QCursor /*444 QCursor **/ {
+func (this *QGuiApplication) OverrideCursor() *QCursor /*777 QCursor **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication14overrideCursorEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QGuiApplication_OverrideCursor() *QCursor /*444 QCursor **/ {
+func QGuiApplication_OverrideCursor() *QCursor /*777 QCursor **/ {
 	var nilthis *QGuiApplication
 	rv := nilthis.OverrideCursor()
 	return rv
@@ -414,14 +414,14 @@ func QGuiApplication_SetFont(arg0 *QFont) {
 // index:0
 // Public static
 // QClipboard * clipboard()
-func (this *QGuiApplication) Clipboard() *QClipboard /*444 QClipboard **/ {
+func (this *QGuiApplication) Clipboard() *QClipboard /*777 QClipboard **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication9clipboardEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQClipboardFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QGuiApplication_Clipboard() *QClipboard /*444 QClipboard **/ {
+func QGuiApplication_Clipboard() *QClipboard /*777 QClipboard **/ {
 	var nilthis *QGuiApplication
 	rv := nilthis.Clipboard()
 	return rv
@@ -570,14 +570,14 @@ func QGuiApplication_IsLeftToRight() bool {
 // index:0
 // Public static
 // QStyleHints * styleHints()
-func (this *QGuiApplication) StyleHints() *QStyleHints /*444 QStyleHints **/ {
+func (this *QGuiApplication) StyleHints() *QStyleHints /*777 QStyleHints **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication10styleHintsEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStyleHintsFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QGuiApplication_StyleHints() *QStyleHints /*444 QStyleHints **/ {
+func QGuiApplication_StyleHints() *QStyleHints /*777 QStyleHints **/ {
 	var nilthis *QGuiApplication
 	rv := nilthis.StyleHints()
 	return rv
@@ -616,14 +616,14 @@ func QGuiApplication_DesktopSettingsAware() bool {
 // index:0
 // Public static
 // QInputMethod * inputMethod()
-func (this *QGuiApplication) InputMethod() *QInputMethod /*444 QInputMethod **/ {
+func (this *QGuiApplication) InputMethod() *QInputMethod /*777 QInputMethod **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication11inputMethodEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQInputMethodFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QGuiApplication_InputMethod() *QInputMethod /*444 QInputMethod **/ {
+func QGuiApplication_InputMethod() *QInputMethod /*777 QInputMethod **/ {
 	var nilthis *QGuiApplication
 	rv := nilthis.InputMethod()
 	return rv
@@ -710,7 +710,7 @@ func QGuiApplication_Exec() int {
 // index:0
 // Public virtual
 // bool notify(class QObject *, class QEvent *)
-func (this *QGuiApplication) Notify(arg0 *qtcore.QObject /*444 QObject **/, arg1 *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QGuiApplication) Notify(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication6notifyEP7QObjectP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -824,7 +824,7 @@ func (this *QGuiApplication) FontDatabaseChanged() {
 // index:0
 // Public
 // void screenAdded(class QScreen *)
-func (this *QGuiApplication) ScreenAdded(screen *QScreen /*444 QScreen **/) {
+func (this *QGuiApplication) ScreenAdded(screen *QScreen /*777 QScreen **/) {
 	var convArg0 = screen.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication11screenAddedEP7QScreen", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -834,7 +834,7 @@ func (this *QGuiApplication) ScreenAdded(screen *QScreen /*444 QScreen **/) {
 // index:0
 // Public
 // void screenRemoved(class QScreen *)
-func (this *QGuiApplication) ScreenRemoved(screen *QScreen /*444 QScreen **/) {
+func (this *QGuiApplication) ScreenRemoved(screen *QScreen /*777 QScreen **/) {
 	var convArg0 = screen.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication13screenRemovedEP7QScreen", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -844,7 +844,7 @@ func (this *QGuiApplication) ScreenRemoved(screen *QScreen /*444 QScreen **/) {
 // index:0
 // Public
 // void primaryScreenChanged(class QScreen *)
-func (this *QGuiApplication) PrimaryScreenChanged(screen *QScreen /*444 QScreen **/) {
+func (this *QGuiApplication) PrimaryScreenChanged(screen *QScreen /*777 QScreen **/) {
 	var convArg0 = screen.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication20primaryScreenChangedEP7QScreen", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -863,7 +863,7 @@ func (this *QGuiApplication) LastWindowClosed() {
 // index:0
 // Public
 // void focusObjectChanged(class QObject *)
-func (this *QGuiApplication) FocusObjectChanged(focusObject *qtcore.QObject /*444 QObject **/) {
+func (this *QGuiApplication) FocusObjectChanged(focusObject *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = focusObject.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication18focusObjectChangedEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -873,7 +873,7 @@ func (this *QGuiApplication) FocusObjectChanged(focusObject *qtcore.QObject /*44
 // index:0
 // Public
 // void focusWindowChanged(class QWindow *)
-func (this *QGuiApplication) FocusWindowChanged(focusWindow *QWindow /*444 QWindow **/) {
+func (this *QGuiApplication) FocusWindowChanged(focusWindow *QWindow /*777 QWindow **/) {
 	var convArg0 = focusWindow.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication18focusWindowChangedEP7QWindow", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -940,7 +940,7 @@ func (this *QGuiApplication) ApplicationDisplayNameChanged() {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QGuiApplication) Event(arg0 *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QGuiApplication) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

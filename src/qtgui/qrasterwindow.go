@@ -74,7 +74,7 @@ func (*QRasterWindow) NewFromPointer(cthis unsafe.Pointer) *QRasterWindow {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QRasterWindow) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QRasterWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QRasterWindow10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -86,7 +86,7 @@ func (this *QRasterWindow) MetaObject() *qtcore.QMetaObject /*444 const QMetaObj
 // index:0
 // Public
 // void QRasterWindow(class QWindow *)
-func NewQRasterWindow(parent *QWindow /*444 QWindow **/) *QRasterWindow {
+func NewQRasterWindow(parent *QWindow /*777 QWindow **/) *QRasterWindow {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QRasterWindowC2EP7QWindow", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -119,7 +119,7 @@ func (this *QRasterWindow) Metric(metric int) int {
 // index:0
 // Protected virtual
 // QPaintDevice * redirected(class QPoint *)
-func (this *QRasterWindow) Redirected(arg0 *qtcore.QPoint /*444 QPoint **/) *QPaintDevice /*444 QPaintDevice **/ {
+func (this *QRasterWindow) Redirected(arg0 *qtcore.QPoint /*777 QPoint **/) *QPaintDevice /*777 QPaintDevice **/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QRasterWindow10redirectedEP6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

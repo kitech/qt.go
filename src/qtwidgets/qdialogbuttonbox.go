@@ -78,7 +78,7 @@ func (*QDialogButtonBox) NewFromPointer(cthis unsafe.Pointer) *QDialogButtonBox 
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QDialogButtonBox) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QDialogButtonBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDialogButtonBox10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QDialogButtonBox) MetaObject() *qtcore.QMetaObject /*444 const QMeta
 // index:0
 // Public
 // void QDialogButtonBox(class QWidget *)
-func NewQDialogButtonBox(parent *QWidget /*444 QWidget **/) *QDialogButtonBox {
+func NewQDialogButtonBox(parent *QWidget /*777 QWidget **/) *QDialogButtonBox {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBoxC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -103,7 +103,7 @@ func NewQDialogButtonBox(parent *QWidget /*444 QWidget **/) *QDialogButtonBox {
 // index:1
 // Public
 // void QDialogButtonBox(Qt::Orientation, class QWidget *)
-func NewQDialogButtonBox_1(orientation int, parent *QWidget /*444 QWidget **/) *QDialogButtonBox {
+func NewQDialogButtonBox_1(orientation int, parent *QWidget /*777 QWidget **/) *QDialogButtonBox {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBoxC2EN2Qt11OrientationEP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, orientation, convArg1)
@@ -145,7 +145,7 @@ func (this *QDialogButtonBox) Orientation() int {
 // index:0
 // Public
 // void addButton(class QAbstractButton *, enum QDialogButtonBox::ButtonRole)
-func (this *QDialogButtonBox) AddButton(button *QAbstractButton /*444 QAbstractButton **/, role int) {
+func (this *QDialogButtonBox) AddButton(button *QAbstractButton /*777 QAbstractButton **/, role int) {
 	var convArg0 = button.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox9addButtonEP15QAbstractButtonNS_10ButtonRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
 	gopp.ErrPrint(err, rv)
@@ -155,7 +155,7 @@ func (this *QDialogButtonBox) AddButton(button *QAbstractButton /*444 QAbstractB
 // index:1
 // Public
 // QPushButton * addButton(const class QString &, enum QDialogButtonBox::ButtonRole)
-func (this *QDialogButtonBox) AddButton_1(text *qtcore.QString, role int) *QPushButton /*444 QPushButton **/ {
+func (this *QDialogButtonBox) AddButton_1(text *qtcore.QString, role int) *QPushButton /*777 QPushButton **/ {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox9addButtonERK7QStringNS_10ButtonRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
 	gopp.ErrPrint(err, rv)
@@ -168,7 +168,7 @@ func (this *QDialogButtonBox) AddButton_1(text *qtcore.QString, role int) *QPush
 // index:2
 // Public
 // QPushButton * addButton(enum QDialogButtonBox::StandardButton)
-func (this *QDialogButtonBox) AddButton_2(button int) *QPushButton /*444 QPushButton **/ {
+func (this *QDialogButtonBox) AddButton_2(button int) *QPushButton /*777 QPushButton **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox9addButtonENS_14StandardButtonE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), button)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -180,7 +180,7 @@ func (this *QDialogButtonBox) AddButton_2(button int) *QPushButton /*444 QPushBu
 // index:0
 // Public
 // void removeButton(class QAbstractButton *)
-func (this *QDialogButtonBox) RemoveButton(button *QAbstractButton /*444 QAbstractButton **/) {
+func (this *QDialogButtonBox) RemoveButton(button *QAbstractButton /*777 QAbstractButton **/) {
 	var convArg0 = button.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox12removeButtonEP15QAbstractButton", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -199,7 +199,7 @@ func (this *QDialogButtonBox) Clear() {
 // index:0
 // Public
 // QDialogButtonBox::ButtonRole buttonRole(class QAbstractButton *)
-func (this *QDialogButtonBox) ButtonRole(button *QAbstractButton /*444 QAbstractButton **/) int {
+func (this *QDialogButtonBox) ButtonRole(button *QAbstractButton /*777 QAbstractButton **/) int {
 	var convArg0 = button.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDialogButtonBox10buttonRoleEP15QAbstractButton", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -222,7 +222,7 @@ func (this *QDialogButtonBox) StandardButtons() int {
 // index:0
 // Public
 // QDialogButtonBox::StandardButton standardButton(class QAbstractButton *)
-func (this *QDialogButtonBox) StandardButton(button *QAbstractButton /*444 QAbstractButton **/) int {
+func (this *QDialogButtonBox) StandardButton(button *QAbstractButton /*777 QAbstractButton **/) int {
 	var convArg0 = button.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDialogButtonBox14standardButtonEP15QAbstractButton", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -234,7 +234,7 @@ func (this *QDialogButtonBox) StandardButton(button *QAbstractButton /*444 QAbst
 // index:0
 // Public
 // QPushButton * button(enum QDialogButtonBox::StandardButton)
-func (this *QDialogButtonBox) Button(which int) *QPushButton /*444 QPushButton **/ {
+func (this *QDialogButtonBox) Button(which int) *QPushButton /*777 QPushButton **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDialogButtonBox6buttonENS_14StandardButtonE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), which)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -266,7 +266,7 @@ func (this *QDialogButtonBox) CenterButtons() bool {
 // index:0
 // Public
 // void clicked(class QAbstractButton *)
-func (this *QDialogButtonBox) Clicked(button *QAbstractButton /*444 QAbstractButton **/) {
+func (this *QDialogButtonBox) Clicked(button *QAbstractButton /*777 QAbstractButton **/) {
 	var convArg0 = button.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox7clickedEP15QAbstractButton", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -303,7 +303,7 @@ func (this *QDialogButtonBox) Rejected() {
 // index:0
 // Protected virtual
 // void changeEvent(class QEvent *)
-func (this *QDialogButtonBox) ChangeEvent(event *qtcore.QEvent /*444 QEvent **/) {
+func (this *QDialogButtonBox) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -313,7 +313,7 @@ func (this *QDialogButtonBox) ChangeEvent(event *qtcore.QEvent /*444 QEvent **/)
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QDialogButtonBox) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QDialogButtonBox) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

@@ -78,7 +78,7 @@ func (*QDialog) NewFromPointer(cthis unsafe.Pointer) *QDialog {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QDialog) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QDialog10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QDialog) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **
 // index:0
 // Public
 // void QDialog(class QWidget *, Qt::WindowFlags)
-func NewQDialog(parent *QWidget /*444 QWidget **/, f int) *QDialog {
+func NewQDialog(parent *QWidget /*777 QWidget **/, f int) *QDialog {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialogC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, f)
@@ -152,7 +152,7 @@ func (this *QDialog) Orientation() int {
 // index:0
 // Public
 // void setExtension(class QWidget *)
-func (this *QDialog) SetExtension(extension *QWidget /*444 QWidget **/) {
+func (this *QDialog) SetExtension(extension *QWidget /*777 QWidget **/) {
 	var convArg0 = extension.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog12setExtensionEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -162,7 +162,7 @@ func (this *QDialog) SetExtension(extension *QWidget /*444 QWidget **/) {
 // index:0
 // Public
 // QWidget * extension()
-func (this *QDialog) Extension() *QWidget /*444 QWidget **/ {
+func (this *QDialog) Extension() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QDialog9extensionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -323,7 +323,7 @@ func (this *QDialog) ShowExtension(arg0 bool) {
 // index:0
 // Protected virtual
 // void keyPressEvent(class QKeyEvent *)
-func (this *QDialog) KeyPressEvent(arg0 *qtgui.QKeyEvent /*444 QKeyEvent **/) {
+func (this *QDialog) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -333,7 +333,7 @@ func (this *QDialog) KeyPressEvent(arg0 *qtgui.QKeyEvent /*444 QKeyEvent **/) {
 // index:0
 // Protected virtual
 // void closeEvent(class QCloseEvent *)
-func (this *QDialog) CloseEvent(arg0 *qtgui.QCloseEvent /*444 QCloseEvent **/) {
+func (this *QDialog) CloseEvent(arg0 *qtgui.QCloseEvent /*777 QCloseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog10closeEventEP11QCloseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -343,7 +343,7 @@ func (this *QDialog) CloseEvent(arg0 *qtgui.QCloseEvent /*444 QCloseEvent **/) {
 // index:0
 // Protected virtual
 // void showEvent(class QShowEvent *)
-func (this *QDialog) ShowEvent(arg0 *qtgui.QShowEvent /*444 QShowEvent **/) {
+func (this *QDialog) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog9showEventEP10QShowEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -353,7 +353,7 @@ func (this *QDialog) ShowEvent(arg0 *qtgui.QShowEvent /*444 QShowEvent **/) {
 // index:0
 // Protected virtual
 // void resizeEvent(class QResizeEvent *)
-func (this *QDialog) ResizeEvent(arg0 *qtgui.QResizeEvent /*444 QResizeEvent **/) {
+func (this *QDialog) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -363,7 +363,7 @@ func (this *QDialog) ResizeEvent(arg0 *qtgui.QResizeEvent /*444 QResizeEvent **/
 // index:0
 // Protected virtual
 // void contextMenuEvent(class QContextMenuEvent *)
-func (this *QDialog) ContextMenuEvent(arg0 *qtgui.QContextMenuEvent /*444 QContextMenuEvent **/) {
+func (this *QDialog) ContextMenuEvent(arg0 *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog16contextMenuEventEP17QContextMenuEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -373,7 +373,7 @@ func (this *QDialog) ContextMenuEvent(arg0 *qtgui.QContextMenuEvent /*444 QConte
 // index:0
 // Protected virtual
 // bool eventFilter(class QObject *, class QEvent *)
-func (this *QDialog) EventFilter(arg0 *qtcore.QObject /*444 QObject **/, arg1 *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QDialog) EventFilter(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog11eventFilterEP7QObjectP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -386,7 +386,7 @@ func (this *QDialog) EventFilter(arg0 *qtcore.QObject /*444 QObject **/, arg1 *q
 // index:0
 // Protected
 // void adjustPosition(class QWidget *)
-func (this *QDialog) AdjustPosition(arg0 *QWidget /*444 QWidget **/) {
+func (this *QDialog) AdjustPosition(arg0 *QWidget /*777 QWidget **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog14adjustPositionEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

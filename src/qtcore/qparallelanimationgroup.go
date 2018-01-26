@@ -70,7 +70,7 @@ func (*QParallelAnimationGroup) NewFromPointer(cthis unsafe.Pointer) *QParallelA
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QParallelAnimationGroup) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QParallelAnimationGroup) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QParallelAnimationGroup10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QParallelAnimationGroup) MetaObject() *QMetaObject /*444 const QMeta
 // index:0
 // Public
 // void QParallelAnimationGroup(class QObject *)
-func NewQParallelAnimationGroup(parent *QObject /*444 QObject **/) *QParallelAnimationGroup {
+func NewQParallelAnimationGroup(parent *QObject /*777 QObject **/) *QParallelAnimationGroup {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroupC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -115,7 +115,7 @@ func (this *QParallelAnimationGroup) Duration() int {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QParallelAnimationGroup) Event(event *QEvent /*444 QEvent **/) bool {
+func (this *QParallelAnimationGroup) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroup5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

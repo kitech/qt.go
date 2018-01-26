@@ -78,7 +78,7 @@ func (*QUndoStack) NewFromPointer(cthis unsafe.Pointer) *QUndoStack {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QUndoStack) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QUndoStack) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoStack10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QUndoStack) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject
 // index:0
 // Public
 // void QUndoStack(class QObject *)
-func NewQUndoStack(parent *qtcore.QObject /*444 QObject **/) *QUndoStack {
+func NewQUndoStack(parent *qtcore.QObject /*777 QObject **/) *QUndoStack {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStackC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -121,7 +121,7 @@ func (this *QUndoStack) Clear() {
 // index:0
 // Public
 // void push(class QUndoCommand *)
-func (this *QUndoStack) Push(cmd *QUndoCommand /*444 QUndoCommand **/) {
+func (this *QUndoStack) Push(cmd *QUndoCommand /*777 QUndoCommand **/) {
 	var convArg0 = cmd.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack4pushEP12QUndoCommand", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -217,7 +217,7 @@ func (this *QUndoStack) Text(idx int) *qtcore.QString /*123*/ {
 // index:0
 // Public
 // QAction * createUndoAction(class QObject *, const class QString &)
-func (this *QUndoStack) CreateUndoAction(parent *qtcore.QObject /*444 QObject **/, prefix *qtcore.QString) *QAction /*444 QAction **/ {
+func (this *QUndoStack) CreateUndoAction(parent *qtcore.QObject /*777 QObject **/, prefix *qtcore.QString) *QAction /*777 QAction **/ {
 	var convArg0 = parent.GetCthis()
 	var convArg1 = prefix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoStack16createUndoActionEP7QObjectRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -231,7 +231,7 @@ func (this *QUndoStack) CreateUndoAction(parent *qtcore.QObject /*444 QObject **
 // index:0
 // Public
 // QAction * createRedoAction(class QObject *, const class QString &)
-func (this *QUndoStack) CreateRedoAction(parent *qtcore.QObject /*444 QObject **/, prefix *qtcore.QString) *QAction /*444 QAction **/ {
+func (this *QUndoStack) CreateRedoAction(parent *qtcore.QObject /*777 QObject **/, prefix *qtcore.QString) *QAction /*777 QAction **/ {
 	var convArg0 = parent.GetCthis()
 	var convArg1 = prefix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoStack16createRedoActionEP7QObjectRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -317,7 +317,7 @@ func (this *QUndoStack) UndoLimit() int {
 // index:0
 // Public
 // const QUndoCommand * command(int)
-func (this *QUndoStack) Command(index int) *QUndoCommand /*444 const QUndoCommand **/ {
+func (this *QUndoStack) Command(index int) *QUndoCommand /*777 const QUndoCommand **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoStack7commandEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv

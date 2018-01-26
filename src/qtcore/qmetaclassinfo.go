@@ -103,7 +103,7 @@ func (this *QMetaClassInfo) Value() string {
 // index:0
 // Public inline
 // const QMetaObject * enclosingMetaObject()
-func (this *QMetaClassInfo) EnclosingMetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QMetaClassInfo) EnclosingMetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo19enclosingMetaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

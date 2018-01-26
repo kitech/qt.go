@@ -78,7 +78,7 @@ func (*QKeyEventTransition) NewFromPointer(cthis unsafe.Pointer) *QKeyEventTrans
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QKeyEventTransition) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QKeyEventTransition) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QKeyEventTransition10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QKeyEventTransition) MetaObject() *qtcore.QMetaObject /*444 const QM
 // index:0
 // Public
 // void QKeyEventTransition(class QState *)
-func NewQKeyEventTransition(sourceState *qtcore.QState /*444 QState **/) *QKeyEventTransition {
+func NewQKeyEventTransition(sourceState *qtcore.QState /*777 QState **/) *QKeyEventTransition {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = sourceState.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransitionC2EP6QState", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -103,7 +103,7 @@ func NewQKeyEventTransition(sourceState *qtcore.QState /*444 QState **/) *QKeyEv
 // index:1
 // Public
 // void QKeyEventTransition(class QObject *, class QEvent::Type, int, class QState *)
-func NewQKeyEventTransition_1(object *qtcore.QObject /*444 QObject **/, type_ int, key int, sourceState *qtcore.QState /*444 QState **/) *QKeyEventTransition {
+func NewQKeyEventTransition_1(object *qtcore.QObject /*777 QObject **/, type_ int, key int, sourceState *qtcore.QState /*777 QState **/) *QKeyEventTransition {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = object.GetCthis()
 	var convArg3 = sourceState.GetCthis()
@@ -157,7 +157,7 @@ func (this *QKeyEventTransition) ModifierMask() int {
 // index:0
 // Protected virtual
 // void onTransition(class QEvent *)
-func (this *QKeyEventTransition) OnTransition(event *qtcore.QEvent /*444 QEvent **/) {
+func (this *QKeyEventTransition) OnTransition(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransition12onTransitionEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -167,7 +167,7 @@ func (this *QKeyEventTransition) OnTransition(event *qtcore.QEvent /*444 QEvent 
 // index:0
 // Protected virtual
 // bool eventTest(class QEvent *)
-func (this *QKeyEventTransition) EventTest(event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QKeyEventTransition) EventTest(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransition9eventTestEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

@@ -126,7 +126,7 @@ func (this *QFutureInterfaceBase) ReportResultsReady(beginIndex int, endIndex in
 // index:0
 // Public
 // void setRunnable(class QRunnable *)
-func (this *QFutureInterfaceBase) SetRunnable(runnable *QRunnable /*444 QRunnable **/) {
+func (this *QFutureInterfaceBase) SetRunnable(runnable *QRunnable /*777 QRunnable **/) {
 	var convArg0 = runnable.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase11setRunnableEP9QRunnable", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -136,7 +136,7 @@ func (this *QFutureInterfaceBase) SetRunnable(runnable *QRunnable /*444 QRunnabl
 // index:0
 // Public
 // void setThreadPool(class QThreadPool *)
-func (this *QFutureInterfaceBase) SetThreadPool(pool *QThreadPool /*444 QThreadPool **/) {
+func (this *QFutureInterfaceBase) SetThreadPool(pool *QThreadPool /*777 QThreadPool **/) {
 	var convArg0 = pool.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase13setThreadPoolEP11QThreadPool", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -434,7 +434,7 @@ func (this *QFutureInterfaceBase) WaitForResume() {
 // index:0
 // Public
 // QMutex * mutex()
-func (this *QFutureInterfaceBase) Mutex() *QMutex /*444 QMutex **/ {
+func (this *QFutureInterfaceBase) Mutex() *QMutex /*777 QMutex **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase5mutexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

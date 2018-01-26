@@ -276,7 +276,7 @@ func (this *QPaintEngineState) Opacity() float64 {
 // index:0
 // Public
 // QPainter * painter()
-func (this *QPaintEngineState) Painter() *QPainter /*444 QPainter **/ {
+func (this *QPaintEngineState) Painter() *QPainter /*777 QPainter **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPaintEngineState7painterEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

@@ -70,7 +70,7 @@ func (*QTranslator) NewFromPointer(cthis unsafe.Pointer) *QTranslator {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTranslator) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QTranslator) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTranslator10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QTranslator) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 // index:0
 // Public
 // void QTranslator(class QObject *)
-func NewQTranslator(parent *QObject /*444 QObject **/) *QTranslator {
+func NewQTranslator(parent *QObject /*777 QObject **/) *QTranslator {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTranslatorC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)

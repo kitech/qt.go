@@ -74,7 +74,7 @@ func (*QInputMethod) NewFromPointer(cthis unsafe.Pointer) *QInputMethod {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QInputMethod) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QInputMethod) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputMethod10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

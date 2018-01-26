@@ -74,7 +74,7 @@ func (*QTextList) NewFromPointer(cthis unsafe.Pointer) *QTextList {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTextList) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QTextList) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -86,7 +86,7 @@ func (this *QTextList) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject 
 // index:0
 // Public
 // void QTextList(class QTextDocument *)
-func NewQTextList(doc *QTextDocument /*444 QTextDocument **/) *QTextList {
+func NewQTextList(doc *QTextDocument /*777 QTextDocument **/) *QTextList {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = doc.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextListC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, convArg0)

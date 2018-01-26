@@ -85,7 +85,7 @@ func NewQImageWriter() *QImageWriter {
 // index:1
 // Public
 // void QImageWriter(class QIODevice *, const class QByteArray &)
-func NewQImageWriter_1(device *qtcore.QIODevice /*444 QIODevice **/, format *qtcore.QByteArray) *QImageWriter {
+func NewQImageWriter_1(device *qtcore.QIODevice /*777 QIODevice **/, format *qtcore.QByteArray) *QImageWriter {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = device.GetCthis()
 	var convArg1 = format.GetCthis()
@@ -146,7 +146,7 @@ func (this *QImageWriter) Format() *qtcore.QByteArray /*123*/ {
 // index:0
 // Public
 // void setDevice(class QIODevice *)
-func (this *QImageWriter) SetDevice(device *qtcore.QIODevice /*444 QIODevice **/) {
+func (this *QImageWriter) SetDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageWriter9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -156,7 +156,7 @@ func (this *QImageWriter) SetDevice(device *qtcore.QIODevice /*444 QIODevice **/
 // index:0
 // Public
 // QIODevice * device()
-func (this *QImageWriter) Device() *qtcore.QIODevice /*444 QIODevice **/ {
+func (this *QImageWriter) Device() *qtcore.QIODevice /*777 QIODevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageWriter6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

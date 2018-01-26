@@ -77,14 +77,14 @@ func (*QStyleFactory) NewFromPointer(cthis unsafe.Pointer) *QStyleFactory {
 // index:0
 // Public static
 // QStyle * create(const class QString &)
-func (this *QStyleFactory) Create(arg0 *qtcore.QString) *QStyle /*444 QStyle **/ {
+func (this *QStyleFactory) Create(arg0 *qtcore.QString) *QStyle /*777 QStyle **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStyleFactory6createERK7QString", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStyleFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QStyleFactory_Create(arg0 *qtcore.QString) *QStyle /*444 QStyle **/ {
+func QStyleFactory_Create(arg0 *qtcore.QString) *QStyle /*777 QStyle **/ {
 	var nilthis *QStyleFactory
 	rv := nilthis.Create(arg0)
 	return rv

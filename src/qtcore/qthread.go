@@ -70,7 +70,7 @@ func (*QThread) NewFromPointer(cthis unsafe.Pointer) *QThread {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QThread) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QThread) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -98,14 +98,14 @@ func QThread_CurrentThreadId() int {
 // index:0
 // Public static
 // QThread * currentThread()
-func (this *QThread) CurrentThread() *QThread /*444 QThread **/ {
+func (this *QThread) CurrentThread() *QThread /*777 QThread **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread13currentThreadEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQThreadFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QThread_CurrentThread() *QThread /*444 QThread **/ {
+func QThread_CurrentThread() *QThread /*777 QThread **/ {
 	var nilthis *QThread
 	rv := nilthis.CurrentThread()
 	return rv
@@ -144,7 +144,7 @@ func QThread_YieldCurrentThread() {
 // index:0
 // Public
 // void QThread(class QObject *)
-func NewQThread(parent *QObject /*444 QObject **/) *QThread {
+func NewQThread(parent *QObject /*777 QObject **/) *QThread {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThreadC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -257,7 +257,7 @@ func (this *QThread) Exit(retcode int) {
 // index:0
 // Public
 // QAbstractEventDispatcher * eventDispatcher()
-func (this *QThread) EventDispatcher() *QAbstractEventDispatcher /*444 QAbstractEventDispatcher **/ {
+func (this *QThread) EventDispatcher() *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread15eventDispatcherEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -269,7 +269,7 @@ func (this *QThread) EventDispatcher() *QAbstractEventDispatcher /*444 QAbstract
 // index:0
 // Public
 // void setEventDispatcher(class QAbstractEventDispatcher *)
-func (this *QThread) SetEventDispatcher(eventDispatcher *QAbstractEventDispatcher /*444 QAbstractEventDispatcher **/) {
+func (this *QThread) SetEventDispatcher(eventDispatcher *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/) {
 	var convArg0 = eventDispatcher.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -279,7 +279,7 @@ func (this *QThread) SetEventDispatcher(eventDispatcher *QAbstractEventDispatche
 // index:0
 // Public virtual
 // bool event(class QEvent *)
-func (this *QThread) Event(event *QEvent /*444 QEvent **/) bool {
+func (this *QThread) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

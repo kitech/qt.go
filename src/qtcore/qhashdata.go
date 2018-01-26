@@ -89,7 +89,7 @@ func (this *QHashData) FreeNode(node unsafe.Pointer /*666*/) {
 // index:0
 // Public
 // QHashData * detach_helper(void (*)(struct QHashData::Node *, void *), void (*)(struct QHashData::Node *), int, int)
-func (this *QHashData) Detach_helper(node_duplicate unsafe.Pointer /*666*/, node_delete unsafe.Pointer /*666*/, nodeSize int, nodeAlign int) *QHashData /*444 QHashData **/ {
+func (this *QHashData) Detach_helper(node_duplicate unsafe.Pointer /*666*/, node_delete unsafe.Pointer /*666*/, nodeSize int, nodeAlign int) *QHashData /*777 QHashData **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHashData13detach_helperEPFvPNS_4NodeEPvEPFvS1_Eii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), node_duplicate, node_delete, nodeSize, nodeAlign)
 	gopp.ErrPrint(err, rv)
 	//  return rv

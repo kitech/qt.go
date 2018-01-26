@@ -70,7 +70,7 @@ func (*QThreadPool) NewFromPointer(cthis unsafe.Pointer) *QThreadPool {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QThreadPool) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QThreadPool) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QThreadPool10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QThreadPool) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 // index:0
 // Public
 // void QThreadPool(class QObject *)
-func NewQThreadPool(parent *QObject /*444 QObject **/) *QThreadPool {
+func NewQThreadPool(parent *QObject /*777 QObject **/) *QThreadPool {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPoolC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -104,14 +104,14 @@ func DeleteQThreadPool(*QThreadPool) {
 // index:0
 // Public static
 // QThreadPool * globalInstance()
-func (this *QThreadPool) GlobalInstance() *QThreadPool /*444 QThreadPool **/ {
+func (this *QThreadPool) GlobalInstance() *QThreadPool /*777 QThreadPool **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool14globalInstanceEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQThreadPoolFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QThreadPool_GlobalInstance() *QThreadPool /*444 QThreadPool **/ {
+func QThreadPool_GlobalInstance() *QThreadPool /*777 QThreadPool **/ {
 	var nilthis *QThreadPool
 	rv := nilthis.GlobalInstance()
 	return rv
@@ -121,7 +121,7 @@ func QThreadPool_GlobalInstance() *QThreadPool /*444 QThreadPool **/ {
 // index:0
 // Public
 // void start(class QRunnable *, int)
-func (this *QThreadPool) Start(runnable *QRunnable /*444 QRunnable **/, priority int) {
+func (this *QThreadPool) Start(runnable *QRunnable /*777 QRunnable **/, priority int) {
 	var convArg0 = runnable.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool5startEP9QRunnablei", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, priority)
 	gopp.ErrPrint(err, rv)
@@ -131,7 +131,7 @@ func (this *QThreadPool) Start(runnable *QRunnable /*444 QRunnable **/, priority
 // index:0
 // Public
 // bool tryStart(class QRunnable *)
-func (this *QThreadPool) TryStart(runnable *QRunnable /*444 QRunnable **/) bool {
+func (this *QThreadPool) TryStart(runnable *QRunnable /*777 QRunnable **/) bool {
 	var convArg0 = runnable.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool8tryStartEP9QRunnable", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -252,7 +252,7 @@ func (this *QThreadPool) Clear() {
 // index:0
 // Public
 // void cancel(class QRunnable *)
-func (this *QThreadPool) Cancel(runnable *QRunnable /*444 QRunnable **/) {
+func (this *QThreadPool) Cancel(runnable *QRunnable /*777 QRunnable **/) {
 	var convArg0 = runnable.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool6cancelEP9QRunnable", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -262,7 +262,7 @@ func (this *QThreadPool) Cancel(runnable *QRunnable /*444 QRunnable **/) {
 // index:0
 // Public
 // bool tryTake(class QRunnable *)
-func (this *QThreadPool) TryTake(runnable *QRunnable /*444 QRunnable **/) bool {
+func (this *QThreadPool) TryTake(runnable *QRunnable /*777 QRunnable **/) bool {
 	var convArg0 = runnable.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool7tryTakeEP9QRunnable", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

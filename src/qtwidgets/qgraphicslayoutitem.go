@@ -77,7 +77,7 @@ func (*QGraphicsLayoutItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLayou
 // index:0
 // Public
 // void QGraphicsLayoutItem(class QGraphicsLayoutItem *, _Bool)
-func NewQGraphicsLayoutItem(parent *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/, isLayout bool) *QGraphicsLayoutItem {
+func NewQGraphicsLayoutItem(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, isLayout bool) *QGraphicsLayoutItem {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsLayoutItemC1EPS_b", ffiqt.FFI_TYPE_VOID, cthis, convArg0, isLayout)
@@ -422,7 +422,7 @@ func (this *QGraphicsLayoutItem) UpdateGeometry() {
 // index:0
 // Public
 // QGraphicsLayoutItem * parentLayoutItem()
-func (this *QGraphicsLayoutItem) ParentLayoutItem() *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/ {
+func (this *QGraphicsLayoutItem) ParentLayoutItem() *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem16parentLayoutItemEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -434,7 +434,7 @@ func (this *QGraphicsLayoutItem) ParentLayoutItem() *QGraphicsLayoutItem /*444 Q
 // index:0
 // Public
 // void setParentLayoutItem(class QGraphicsLayoutItem *)
-func (this *QGraphicsLayoutItem) SetParentLayoutItem(parent *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/) {
+func (this *QGraphicsLayoutItem) SetParentLayoutItem(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem19setParentLayoutItemEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -455,7 +455,7 @@ func (this *QGraphicsLayoutItem) IsLayout() bool {
 // index:0
 // Public
 // QGraphicsItem * graphicsItem()
-func (this *QGraphicsLayoutItem) GraphicsItem() *QGraphicsItem /*444 QGraphicsItem **/ {
+func (this *QGraphicsLayoutItem) GraphicsItem() *QGraphicsItem /*777 QGraphicsItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsLayoutItem12graphicsItemEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -478,7 +478,7 @@ func (this *QGraphicsLayoutItem) OwnedByLayout() bool {
 // index:0
 // Protected
 // void setGraphicsItem(class QGraphicsItem *)
-func (this *QGraphicsLayoutItem) SetGraphicsItem(item *QGraphicsItem /*444 QGraphicsItem **/) {
+func (this *QGraphicsLayoutItem) SetGraphicsItem(item *QGraphicsItem /*777 QGraphicsItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem15setGraphicsItemEP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

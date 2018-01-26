@@ -80,7 +80,7 @@ func (this *QMetaObject) ClassName() string {
 // index:0
 // Public
 // const QMetaObject * superClass()
-func (this *QMetaObject) SuperClass() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QMetaObject) SuperClass() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaObject10superClassEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -92,7 +92,7 @@ func (this *QMetaObject) SuperClass() *QMetaObject /*444 const QMetaObject **/ {
 // index:0
 // Public
 // QObject * cast(class QObject *)
-func (this *QMetaObject) Cast(obj *QObject /*444 QObject **/) *QObject /*444 QObject **/ {
+func (this *QMetaObject) Cast(obj *QObject /*777 QObject **/) *QObject /*777 QObject **/ {
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaObject4castEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -105,7 +105,7 @@ func (this *QMetaObject) Cast(obj *QObject /*444 QObject **/) *QObject /*444 QOb
 // index:1
 // Public
 // const QObject * cast(const class QObject *)
-func (this *QMetaObject) Cast_1(obj *QObject /*444 const QObject **/) *QObject /*444 const QObject **/ {
+func (this *QMetaObject) Cast_1(obj *QObject /*777 const QObject **/) *QObject /*777 const QObject **/ {
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaObject4castEPK7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -458,13 +458,13 @@ func QMetaObject_NormalizedType(type_ string) *QByteArray /*123*/ {
 // index:0
 // Public static
 // QMetaObject::Connection connect(const class QObject *, int, const class QObject *, int, int, int *)
-func (this *QMetaObject) Connect(sender *QObject /*444 const QObject **/, signal_index int, receiver *QObject /*444 const QObject **/, method_index int, type_ int, types unsafe.Pointer /*666*/) unsafe.Pointer /*444*/ {
+func (this *QMetaObject) Connect(sender *QObject /*777 const QObject **/, signal_index int, receiver *QObject /*777 const QObject **/, method_index int, type_ int, types unsafe.Pointer /*666*/) unsafe.Pointer /*444*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMetaObject7connectEPK7QObjectiS2_iiPi", ffiqt.FFI_TYPE_POINTER, sender, signal_index, receiver, method_index, type_, types)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return unsafe.Pointer(uintptr(rv))
 }
-func QMetaObject_Connect(sender *QObject /*444 const QObject **/, signal_index int, receiver *QObject /*444 const QObject **/, method_index int, type_ int, types unsafe.Pointer /*666*/) unsafe.Pointer /*444*/ {
+func QMetaObject_Connect(sender *QObject /*777 const QObject **/, signal_index int, receiver *QObject /*777 const QObject **/, method_index int, type_ int, types unsafe.Pointer /*666*/) unsafe.Pointer /*444*/ {
 	var nilthis *QMetaObject
 	rv := nilthis.Connect(sender, signal_index, receiver, method_index, type_, types)
 	return rv
@@ -474,13 +474,13 @@ func QMetaObject_Connect(sender *QObject /*444 const QObject **/, signal_index i
 // index:0
 // Public static
 // bool disconnect(const class QObject *, int, const class QObject *, int)
-func (this *QMetaObject) Disconnect(sender *QObject /*444 const QObject **/, signal_index int, receiver *QObject /*444 const QObject **/, method_index int) bool {
+func (this *QMetaObject) Disconnect(sender *QObject /*777 const QObject **/, signal_index int, receiver *QObject /*777 const QObject **/, method_index int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMetaObject10disconnectEPK7QObjectiS2_i", ffiqt.FFI_TYPE_POINTER, sender, signal_index, receiver, method_index)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
 }
-func QMetaObject_Disconnect(sender *QObject /*444 const QObject **/, signal_index int, receiver *QObject /*444 const QObject **/, method_index int) bool {
+func QMetaObject_Disconnect(sender *QObject /*777 const QObject **/, signal_index int, receiver *QObject /*777 const QObject **/, method_index int) bool {
 	var nilthis *QMetaObject
 	rv := nilthis.Disconnect(sender, signal_index, receiver, method_index)
 	return rv
@@ -490,13 +490,13 @@ func QMetaObject_Disconnect(sender *QObject /*444 const QObject **/, signal_inde
 // index:0
 // Public static
 // bool disconnectOne(const class QObject *, int, const class QObject *, int)
-func (this *QMetaObject) DisconnectOne(sender *QObject /*444 const QObject **/, signal_index int, receiver *QObject /*444 const QObject **/, method_index int) bool {
+func (this *QMetaObject) DisconnectOne(sender *QObject /*777 const QObject **/, signal_index int, receiver *QObject /*777 const QObject **/, method_index int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMetaObject13disconnectOneEPK7QObjectiS2_i", ffiqt.FFI_TYPE_POINTER, sender, signal_index, receiver, method_index)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
 }
-func QMetaObject_DisconnectOne(sender *QObject /*444 const QObject **/, signal_index int, receiver *QObject /*444 const QObject **/, method_index int) bool {
+func QMetaObject_DisconnectOne(sender *QObject /*777 const QObject **/, signal_index int, receiver *QObject /*777 const QObject **/, method_index int) bool {
 	var nilthis *QMetaObject
 	rv := nilthis.DisconnectOne(sender, signal_index, receiver, method_index)
 	return rv
@@ -506,11 +506,11 @@ func QMetaObject_DisconnectOne(sender *QObject /*444 const QObject **/, signal_i
 // index:0
 // Public static
 // void connectSlotsByName(class QObject *)
-func (this *QMetaObject) ConnectSlotsByName(o *QObject /*444 QObject **/) {
+func (this *QMetaObject) ConnectSlotsByName(o *QObject /*777 QObject **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMetaObject18connectSlotsByNameEP7QObject", ffiqt.FFI_TYPE_POINTER, o)
 	gopp.ErrPrint(err, rv)
 }
-func QMetaObject_ConnectSlotsByName(o *QObject /*444 QObject **/) {
+func QMetaObject_ConnectSlotsByName(o *QObject /*777 QObject **/) {
 	var nilthis *QMetaObject
 	nilthis.ConnectSlotsByName(o)
 }
@@ -519,11 +519,11 @@ func QMetaObject_ConnectSlotsByName(o *QObject /*444 QObject **/) {
 // index:0
 // Public static
 // void activate(class QObject *, int, void **)
-func (this *QMetaObject) Activate(sender *QObject /*444 QObject **/, signal_index int, argv unsafe.Pointer /*666*/) {
+func (this *QMetaObject) Activate(sender *QObject /*777 QObject **/, signal_index int, argv unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMetaObject8activateEP7QObjectiPPv", ffiqt.FFI_TYPE_POINTER, sender, signal_index, argv)
 	gopp.ErrPrint(err, rv)
 }
-func QMetaObject_Activate(sender *QObject /*444 QObject **/, signal_index int, argv unsafe.Pointer /*666*/) {
+func QMetaObject_Activate(sender *QObject /*777 QObject **/, signal_index int, argv unsafe.Pointer /*666*/) {
 	var nilthis *QMetaObject
 	nilthis.Activate(sender, signal_index, argv)
 }
@@ -532,11 +532,11 @@ func QMetaObject_Activate(sender *QObject /*444 QObject **/, signal_index int, a
 // index:1
 // Public static
 // void activate(class QObject *, int, int, void **)
-func (this *QMetaObject) Activate_1(sender *QObject /*444 QObject **/, signal_offset int, local_signal_index int, argv unsafe.Pointer /*666*/) {
+func (this *QMetaObject) Activate_1(sender *QObject /*777 QObject **/, signal_offset int, local_signal_index int, argv unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMetaObject8activateEP7QObjectiiPPv", ffiqt.FFI_TYPE_POINTER, sender, signal_offset, local_signal_index, argv)
 	gopp.ErrPrint(err, rv)
 }
-func QMetaObject_Activate_1(sender *QObject /*444 QObject **/, signal_offset int, local_signal_index int, argv unsafe.Pointer /*666*/) {
+func QMetaObject_Activate_1(sender *QObject /*777 QObject **/, signal_offset int, local_signal_index int, argv unsafe.Pointer /*666*/) {
 	var nilthis *QMetaObject
 	nilthis.Activate_1(sender, signal_offset, local_signal_index, argv)
 }
@@ -545,13 +545,13 @@ func QMetaObject_Activate_1(sender *QObject /*444 QObject **/, signal_offset int
 // index:0
 // Public static
 // bool invokeMethod(class QObject *, const char *, Qt::ConnectionType, class QGenericReturnArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument)
-func (this *QMetaObject) InvokeMethod(obj *QObject /*444 QObject **/, member string, arg2 int, ret *QGenericReturnArgument /*123*/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
+func (this *QMetaObject) InvokeMethod(obj *QObject /*777 QObject **/, member string, arg2 int, ret *QGenericReturnArgument /*123*/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS7_S7_S7_S7_S7_S7_S7_S7_S7_", ffiqt.FFI_TYPE_POINTER, obj, member, arg2, ret, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
 }
-func QMetaObject_InvokeMethod(obj *QObject /*444 QObject **/, member string, arg2 int, ret *QGenericReturnArgument /*123*/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
+func QMetaObject_InvokeMethod(obj *QObject /*777 QObject **/, member string, arg2 int, ret *QGenericReturnArgument /*123*/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
 	var nilthis *QMetaObject
 	rv := nilthis.InvokeMethod(obj, member, arg2, ret, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
 	return rv
@@ -561,13 +561,13 @@ func QMetaObject_InvokeMethod(obj *QObject /*444 QObject **/, member string, arg
 // index:1
 // Public static inline
 // bool invokeMethod(class QObject *, const char *, class QGenericReturnArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument)
-func (this *QMetaObject) InvokeMethod_1(obj *QObject /*444 QObject **/, member string, ret *QGenericReturnArgument /*123*/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
+func (this *QMetaObject) InvokeMethod_1(obj *QObject /*777 QObject **/, member string, ret *QGenericReturnArgument /*123*/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", ffiqt.FFI_TYPE_POINTER, obj, member, ret, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
 }
-func QMetaObject_InvokeMethod_1(obj *QObject /*444 QObject **/, member string, ret *QGenericReturnArgument /*123*/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
+func QMetaObject_InvokeMethod_1(obj *QObject /*777 QObject **/, member string, ret *QGenericReturnArgument /*123*/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
 	var nilthis *QMetaObject
 	rv := nilthis.InvokeMethod_1(obj, member, ret, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
 	return rv
@@ -577,13 +577,13 @@ func QMetaObject_InvokeMethod_1(obj *QObject /*444 QObject **/, member string, r
 // index:2
 // Public static inline
 // bool invokeMethod(class QObject *, const char *, Qt::ConnectionType, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument)
-func (this *QMetaObject) InvokeMethod_2(obj *QObject /*444 QObject **/, member string, type_ int, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
+func (this *QMetaObject) InvokeMethod_2(obj *QObject /*777 QObject **/, member string, type_ int, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE16QGenericArgumentS6_S6_S6_S6_S6_S6_S6_S6_S6_", ffiqt.FFI_TYPE_POINTER, obj, member, type_, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
 }
-func QMetaObject_InvokeMethod_2(obj *QObject /*444 QObject **/, member string, type_ int, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
+func QMetaObject_InvokeMethod_2(obj *QObject /*777 QObject **/, member string, type_ int, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
 	var nilthis *QMetaObject
 	rv := nilthis.InvokeMethod_2(obj, member, type_, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
 	return rv
@@ -593,13 +593,13 @@ func QMetaObject_InvokeMethod_2(obj *QObject /*444 QObject **/, member string, t
 // index:3
 // Public static inline
 // bool invokeMethod(class QObject *, const char *, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument)
-func (this *QMetaObject) InvokeMethod_3(obj *QObject /*444 QObject **/, member string, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
+func (this *QMetaObject) InvokeMethod_3(obj *QObject /*777 QObject **/, member string, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMetaObject12invokeMethodEP7QObjectPKc16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", ffiqt.FFI_TYPE_POINTER, obj, member, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
 }
-func QMetaObject_InvokeMethod_3(obj *QObject /*444 QObject **/, member string, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
+func QMetaObject_InvokeMethod_3(obj *QObject /*777 QObject **/, member string, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
 	var nilthis *QMetaObject
 	rv := nilthis.InvokeMethod_3(obj, member, val0, val1, val2, val3, val4, val5, val6, val7, val8, val9)
 	return rv
@@ -609,7 +609,7 @@ func QMetaObject_InvokeMethod_3(obj *QObject /*444 QObject **/, member string, v
 // index:0
 // Public
 // QObject * newInstance(class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument)
-func (this *QMetaObject) NewInstance(val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) *QObject /*444 QObject **/ {
+func (this *QMetaObject) NewInstance(val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) *QObject /*777 QObject **/ {
 	var convArg0 = val0.GetCthis()
 	var convArg1 = val1.GetCthis()
 	var convArg2 = val2.GetCthis()
@@ -642,13 +642,13 @@ func (this *QMetaObject) Static_metacall(arg0 int, arg1 int, arg2 unsafe.Pointer
 // index:0
 // Public static
 // int metacall(class QObject *, enum QMetaObject::Call, int, void **)
-func (this *QMetaObject) Metacall(arg0 *QObject /*444 QObject **/, arg1 int, arg2 int, arg3 unsafe.Pointer /*666*/) int {
+func (this *QMetaObject) Metacall(arg0 *QObject /*777 QObject **/, arg1 int, arg2 int, arg3 unsafe.Pointer /*666*/) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMetaObject8metacallEP7QObjectNS_4CallEiPPv", ffiqt.FFI_TYPE_POINTER, arg0, arg1, arg2, arg3)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv) // 111
 }
-func QMetaObject_Metacall(arg0 *QObject /*444 QObject **/, arg1 int, arg2 int, arg3 unsafe.Pointer /*666*/) int {
+func QMetaObject_Metacall(arg0 *QObject /*777 QObject **/, arg1 int, arg2 int, arg3 unsafe.Pointer /*666*/) int {
 	var nilthis *QMetaObject
 	rv := nilthis.Metacall(arg0, arg1, arg2, arg3)
 	return rv

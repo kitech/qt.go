@@ -78,7 +78,7 @@ func (*QTapGesture) NewFromPointer(cthis unsafe.Pointer) *QTapGesture {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTapGesture) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QTapGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTapGesture10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QTapGesture) MetaObject() *qtcore.QMetaObject /*444 const QMetaObjec
 // index:0
 // Public
 // void QTapGesture(class QObject *)
-func NewQTapGesture(parent *qtcore.QObject /*444 QObject **/) *QTapGesture {
+func NewQTapGesture(parent *qtcore.QObject /*777 QObject **/) *QTapGesture {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTapGestureC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)

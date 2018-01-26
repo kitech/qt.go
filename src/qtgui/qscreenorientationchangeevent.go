@@ -74,7 +74,7 @@ func (*QScreenOrientationChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QScr
 // index:0
 // Public
 // void QScreenOrientationChangeEvent(class QScreen *, Qt::ScreenOrientation)
-func NewQScreenOrientationChangeEvent(screen *QScreen /*444 QScreen **/, orientation int) *QScreenOrientationChangeEvent {
+func NewQScreenOrientationChangeEvent(screen *QScreen /*777 QScreen **/, orientation int) *QScreenOrientationChangeEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = screen.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventC2EP7QScreenN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, orientation)
@@ -96,7 +96,7 @@ func DeleteQScreenOrientationChangeEvent(*QScreenOrientationChangeEvent) {
 // index:0
 // Public
 // QScreen * screen()
-func (this *QScreenOrientationChangeEvent) Screen() *QScreen /*444 QScreen **/ {
+func (this *QScreenOrientationChangeEvent) Screen() *QScreen /*777 QScreen **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QScreenOrientationChangeEvent6screenEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

@@ -70,7 +70,7 @@ func (*QLibrary) NewFromPointer(cthis unsafe.Pointer) *QLibrary {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QLibrary) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QLibrary) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QLibrary10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QLibrary) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 // index:0
 // Public
 // void QLibrary(class QObject *)
-func NewQLibrary(parent *QObject /*444 QObject **/) *QLibrary {
+func NewQLibrary(parent *QObject /*777 QObject **/) *QLibrary {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibraryC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -95,7 +95,7 @@ func NewQLibrary(parent *QObject /*444 QObject **/) *QLibrary {
 // index:1
 // Public
 // void QLibrary(const class QString &, class QObject *)
-func NewQLibrary_1(fileName *QString, parent *QObject /*444 QObject **/) *QLibrary {
+func NewQLibrary_1(fileName *QString, parent *QObject /*777 QObject **/) *QLibrary {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = fileName.GetCthis()
 	var convArg1 = parent.GetCthis()
@@ -109,7 +109,7 @@ func NewQLibrary_1(fileName *QString, parent *QObject /*444 QObject **/) *QLibra
 // index:2
 // Public
 // void QLibrary(const class QString &, int, class QObject *)
-func NewQLibrary_2(fileName *QString, verNum int, parent *QObject /*444 QObject **/) *QLibrary {
+func NewQLibrary_2(fileName *QString, verNum int, parent *QObject /*777 QObject **/) *QLibrary {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = fileName.GetCthis()
 	var convArg2 = parent.GetCthis()
@@ -123,7 +123,7 @@ func NewQLibrary_2(fileName *QString, verNum int, parent *QObject /*444 QObject 
 // index:3
 // Public
 // void QLibrary(const class QString &, const class QString &, class QObject *)
-func NewQLibrary_3(fileName *QString, version *QString, parent *QObject /*444 QObject **/) *QLibrary {
+func NewQLibrary_3(fileName *QString, version *QString, parent *QObject /*777 QObject **/) *QLibrary {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = fileName.GetCthis()
 	var convArg1 = version.GetCthis()

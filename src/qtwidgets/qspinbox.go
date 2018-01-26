@@ -78,7 +78,7 @@ func (*QSpinBox) NewFromPointer(cthis unsafe.Pointer) *QSpinBox {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QSpinBox) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QSpinBox) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject *
 // index:0
 // Public
 // void QSpinBox(class QWidget *)
-func NewQSpinBox(parent *QWidget /*444 QWidget **/) *QSpinBox {
+func NewQSpinBox(parent *QWidget /*777 QWidget **/) *QSpinBox {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBoxC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -274,7 +274,7 @@ func (this *QSpinBox) SetDisplayIntegerBase(base int) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QSpinBox) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QSpinBox) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

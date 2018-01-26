@@ -78,14 +78,14 @@ func (this *QMapDataBase) RecalcMostLeftNode() {
 // index:0
 // Public static
 // QMapDataBase * createData()
-func (this *QMapDataBase) CreateData() *QMapDataBase /*444 QMapDataBase **/ {
+func (this *QMapDataBase) CreateData() *QMapDataBase /*777 QMapDataBase **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapDataBase10createDataEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQMapDataBaseFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QMapDataBase_CreateData() *QMapDataBase /*444 QMapDataBase **/ {
+func QMapDataBase_CreateData() *QMapDataBase /*777 QMapDataBase **/ {
 	var nilthis *QMapDataBase
 	rv := nilthis.CreateData()
 	return rv

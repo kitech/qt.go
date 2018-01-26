@@ -69,7 +69,7 @@ func (*QTextDecoder) NewFromPointer(cthis unsafe.Pointer) *QTextDecoder {
 // index:0
 // Public inline
 // void QTextDecoder(const class QTextCodec *)
-func NewQTextDecoder(codec *QTextCodec /*444 const QTextCodec **/) *QTextDecoder {
+func NewQTextDecoder(codec *QTextCodec /*777 const QTextCodec **/) *QTextDecoder {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = codec.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoderC2EPK10QTextCodec", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -82,7 +82,7 @@ func NewQTextDecoder(codec *QTextCodec /*444 const QTextCodec **/) *QTextDecoder
 // index:1
 // Public
 // void QTextDecoder(const class QTextCodec *, class QTextCodec::ConversionFlags)
-func NewQTextDecoder_1(codec *QTextCodec /*444 const QTextCodec **/, flags int) *QTextDecoder {
+func NewQTextDecoder_1(codec *QTextCodec /*777 const QTextCodec **/, flags int) *QTextDecoder {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = codec.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoderC2EPK10QTextCodec6QFlagsINS0_14ConversionFlagEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, flags)
@@ -135,7 +135,7 @@ func (this *QTextDecoder) ToUnicode_1(ba *QByteArray) *QString /*123*/ {
 // index:2
 // Public
 // void toUnicode(class QString *, const char *, int)
-func (this *QTextDecoder) ToUnicode_2(target *QString /*444 QString **/, chars string, len int) {
+func (this *QTextDecoder) ToUnicode_2(target *QString /*777 QString **/, chars string, len int) {
 	var convArg0 = target.GetCthis()
 	var convArg1 = qtrt.CString(chars)
 	defer qtrt.FreeMem(convArg1)

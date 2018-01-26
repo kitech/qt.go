@@ -81,7 +81,7 @@ func (*QWidget) NewFromPointer(cthis unsafe.Pointer) *QWidget {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QWidget) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -93,7 +93,7 @@ func (this *QWidget) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **
 // index:0
 // Public
 // void QWidget(class QWidget *, Qt::WindowFlags)
-func NewQWidget(parent *QWidget /*444 QWidget **/, f int) *QWidget {
+func NewQWidget(parent *QWidget /*777 QWidget **/, f int) *QWidget {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidgetC2EPS_6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, f)
@@ -168,7 +168,7 @@ func (this *QWidget) EffectiveWinId() uint64 {
 // index:0
 // Public
 // QStyle * style()
-func (this *QWidget) Style() *QStyle /*444 QStyle **/ {
+func (this *QWidget) Style() *QStyle /*777 QStyle **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget5styleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -180,7 +180,7 @@ func (this *QWidget) Style() *QStyle /*444 QStyle **/ {
 // index:0
 // Public
 // void setStyle(class QStyle *)
-func (this *QWidget) SetStyle(arg0 *QStyle /*444 QStyle **/) {
+func (this *QWidget) SetStyle(arg0 *QStyle /*777 QStyle **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget8setStyleEP6QStyle", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -254,7 +254,7 @@ func (this *QWidget) IsEnabled() bool {
 // index:0
 // Public
 // bool isEnabledTo(const class QWidget *)
-func (this *QWidget) IsEnabledTo(arg0 *QWidget /*444 const QWidget **/) bool {
+func (this *QWidget) IsEnabledTo(arg0 *QWidget /*777 const QWidget **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget11isEnabledToEPKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -781,7 +781,7 @@ func (this *QWidget) MapFromParent(arg0 *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 // index:0
 // Public
 // QPoint mapTo(const class QWidget *, const class QPoint &)
-func (this *QWidget) MapTo(arg0 *QWidget /*444 const QWidget **/, arg1 *qtcore.QPoint) *qtcore.QPoint /*123*/ {
+func (this *QWidget) MapTo(arg0 *QWidget /*777 const QWidget **/, arg1 *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
@@ -797,7 +797,7 @@ func (this *QWidget) MapTo(arg0 *QWidget /*444 const QWidget **/, arg1 *qtcore.Q
 // index:0
 // Public
 // QPoint mapFrom(const class QWidget *, const class QPoint &)
-func (this *QWidget) MapFrom(arg0 *QWidget /*444 const QWidget **/, arg1 *qtcore.QPoint) *qtcore.QPoint /*123*/ {
+func (this *QWidget) MapFrom(arg0 *QWidget /*777 const QWidget **/, arg1 *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
@@ -813,7 +813,7 @@ func (this *QWidget) MapFrom(arg0 *QWidget /*444 const QWidget **/, arg1 *qtcore
 // index:0
 // Public
 // QWidget * window()
-func (this *QWidget) Window() *QWidget /*444 QWidget **/ {
+func (this *QWidget) Window() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget6windowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -825,7 +825,7 @@ func (this *QWidget) Window() *QWidget /*444 QWidget **/ {
 // index:0
 // Public
 // QWidget * nativeParentWidget()
-func (this *QWidget) NativeParentWidget() *QWidget /*444 QWidget **/ {
+func (this *QWidget) NativeParentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget18nativeParentWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -837,7 +837,7 @@ func (this *QWidget) NativeParentWidget() *QWidget /*444 QWidget **/ {
 // index:0
 // Public inline
 // QWidget * topLevelWidget()
-func (this *QWidget) TopLevelWidget() *QWidget /*444 QWidget **/ {
+func (this *QWidget) TopLevelWidget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget14topLevelWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -1088,7 +1088,7 @@ func (this *QWidget) ClearMask() {
 // index:0
 // Public
 // void render(class QPaintDevice *, const class QPoint &, const class QRegion &, QWidget::RenderFlags)
-func (this *QWidget) Render(target *qtgui.QPaintDevice /*444 QPaintDevice **/, targetOffset *qtcore.QPoint, sourceRegion *qtgui.QRegion, renderFlags int) {
+func (this *QWidget) Render(target *qtgui.QPaintDevice /*777 QPaintDevice **/, targetOffset *qtcore.QPoint, sourceRegion *qtgui.QRegion, renderFlags int) {
 	var convArg0 = target.GetCthis()
 	var convArg1 = targetOffset.GetCthis()
 	var convArg2 = sourceRegion.GetCthis()
@@ -1100,7 +1100,7 @@ func (this *QWidget) Render(target *qtgui.QPaintDevice /*444 QPaintDevice **/, t
 // index:1
 // Public
 // void render(class QPainter *, const class QPoint &, const class QRegion &, QWidget::RenderFlags)
-func (this *QWidget) Render_1(painter *qtgui.QPainter /*444 QPainter **/, targetOffset *qtcore.QPoint, sourceRegion *qtgui.QRegion, renderFlags int) {
+func (this *QWidget) Render_1(painter *qtgui.QPainter /*777 QPainter **/, targetOffset *qtcore.QPoint, sourceRegion *qtgui.QRegion, renderFlags int) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = targetOffset.GetCthis()
 	var convArg2 = sourceRegion.GetCthis()
@@ -1127,7 +1127,7 @@ func (this *QWidget) Grab(rectangle *qtcore.QRect) *qtgui.QPixmap /*123*/ {
 // index:0
 // Public
 // QGraphicsEffect * graphicsEffect()
-func (this *QWidget) GraphicsEffect() *QGraphicsEffect /*444 QGraphicsEffect **/ {
+func (this *QWidget) GraphicsEffect() *QGraphicsEffect /*777 QGraphicsEffect **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget14graphicsEffectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -1139,7 +1139,7 @@ func (this *QWidget) GraphicsEffect() *QGraphicsEffect /*444 QGraphicsEffect **/
 // index:0
 // Public
 // void setGraphicsEffect(class QGraphicsEffect *)
-func (this *QWidget) SetGraphicsEffect(effect *QGraphicsEffect /*444 QGraphicsEffect **/) {
+func (this *QWidget) SetGraphicsEffect(effect *QGraphicsEffect /*777 QGraphicsEffect **/) {
 	var convArg0 = effect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget17setGraphicsEffectEP15QGraphicsEffect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1644,11 +1644,11 @@ func (this *QWidget) HasFocus() bool {
 // index:0
 // Public static
 // void setTabOrder(class QWidget *, class QWidget *)
-func (this *QWidget) SetTabOrder(arg0 *QWidget /*444 QWidget **/, arg1 *QWidget /*444 QWidget **/) {
+func (this *QWidget) SetTabOrder(arg0 *QWidget /*777 QWidget **/, arg1 *QWidget /*777 QWidget **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget11setTabOrderEPS_S0_", ffiqt.FFI_TYPE_POINTER, arg0, arg1)
 	gopp.ErrPrint(err, rv)
 }
-func QWidget_SetTabOrder(arg0 *QWidget /*444 QWidget **/, arg1 *QWidget /*444 QWidget **/) {
+func QWidget_SetTabOrder(arg0 *QWidget /*777 QWidget **/, arg1 *QWidget /*777 QWidget **/) {
 	var nilthis *QWidget
 	nilthis.SetTabOrder(arg0, arg1)
 }
@@ -1657,7 +1657,7 @@ func QWidget_SetTabOrder(arg0 *QWidget /*444 QWidget **/, arg1 *QWidget /*444 QW
 // index:0
 // Public
 // void setFocusProxy(class QWidget *)
-func (this *QWidget) SetFocusProxy(arg0 *QWidget /*444 QWidget **/) {
+func (this *QWidget) SetFocusProxy(arg0 *QWidget /*777 QWidget **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget13setFocusProxyEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1667,7 +1667,7 @@ func (this *QWidget) SetFocusProxy(arg0 *QWidget /*444 QWidget **/) {
 // index:0
 // Public
 // QWidget * focusProxy()
-func (this *QWidget) FocusProxy() *QWidget /*444 QWidget **/ {
+func (this *QWidget) FocusProxy() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget10focusProxyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -1784,14 +1784,14 @@ func (this *QWidget) SetShortcutAutoRepeat(id int, enable bool) {
 // index:0
 // Public static
 // QWidget * mouseGrabber()
-func (this *QWidget) MouseGrabber() *QWidget /*444 QWidget **/ {
+func (this *QWidget) MouseGrabber() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget12mouseGrabberEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QWidget_MouseGrabber() *QWidget /*444 QWidget **/ {
+func QWidget_MouseGrabber() *QWidget /*777 QWidget **/ {
 	var nilthis *QWidget
 	rv := nilthis.MouseGrabber()
 	return rv
@@ -1801,14 +1801,14 @@ func QWidget_MouseGrabber() *QWidget /*444 QWidget **/ {
 // index:0
 // Public static
 // QWidget * keyboardGrabber()
-func (this *QWidget) KeyboardGrabber() *QWidget /*444 QWidget **/ {
+func (this *QWidget) KeyboardGrabber() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget15keyboardGrabberEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QWidget_KeyboardGrabber() *QWidget /*444 QWidget **/ {
+func QWidget_KeyboardGrabber() *QWidget /*777 QWidget **/ {
 	var nilthis *QWidget
 	rv := nilthis.KeyboardGrabber()
 	return rv
@@ -1838,7 +1838,7 @@ func (this *QWidget) SetUpdatesEnabled(enable bool) {
 // index:0
 // Public
 // QGraphicsProxyWidget * graphicsProxyWidget()
-func (this *QWidget) GraphicsProxyWidget() *QGraphicsProxyWidget /*444 QGraphicsProxyWidget **/ {
+func (this *QWidget) GraphicsProxyWidget() *QGraphicsProxyWidget /*777 QGraphicsProxyWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget19graphicsProxyWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -2027,7 +2027,7 @@ func (this *QWidget) Lower() {
 // index:0
 // Public
 // void stackUnder(class QWidget *)
-func (this *QWidget) StackUnder(arg0 *QWidget /*444 QWidget **/) {
+func (this *QWidget) StackUnder(arg0 *QWidget /*777 QWidget **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget10stackUnderEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2140,7 +2140,7 @@ func (this *QWidget) IsVisible() bool {
 // index:0
 // Public
 // bool isVisibleTo(const class QWidget *)
-func (this *QWidget) IsVisibleTo(arg0 *QWidget /*444 const QWidget **/) bool {
+func (this *QWidget) IsVisibleTo(arg0 *QWidget /*777 const QWidget **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget11isVisibleToEPKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2360,7 +2360,7 @@ func (this *QWidget) ContentsRect() *qtcore.QRect /*123*/ {
 // index:0
 // Public
 // QLayout * layout()
-func (this *QWidget) Layout() *QLayout /*444 QLayout **/ {
+func (this *QWidget) Layout() *QLayout /*777 QLayout **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget6layoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -2372,7 +2372,7 @@ func (this *QWidget) Layout() *QLayout /*444 QLayout **/ {
 // index:0
 // Public
 // void setLayout(class QLayout *)
-func (this *QWidget) SetLayout(arg0 *QLayout /*444 QLayout **/) {
+func (this *QWidget) SetLayout(arg0 *QLayout /*777 QLayout **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget9setLayoutEP7QLayout", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2391,7 +2391,7 @@ func (this *QWidget) UpdateGeometry() {
 // index:0
 // Public
 // void setParent(class QWidget *)
-func (this *QWidget) SetParent(parent *QWidget /*444 QWidget **/) {
+func (this *QWidget) SetParent(parent *QWidget /*777 QWidget **/) {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget9setParentEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2401,7 +2401,7 @@ func (this *QWidget) SetParent(parent *QWidget /*444 QWidget **/) {
 // index:1
 // Public
 // void setParent(class QWidget *, Qt::WindowFlags)
-func (this *QWidget) SetParent_1(parent *QWidget /*444 QWidget **/, f int) {
+func (this *QWidget) SetParent_1(parent *QWidget /*777 QWidget **/, f int) {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget9setParentEPS_6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, f)
 	gopp.ErrPrint(err, rv)
@@ -2430,7 +2430,7 @@ func (this *QWidget) Scroll_1(dx int, dy int, arg2 *qtcore.QRect) {
 // index:0
 // Public
 // QWidget * focusWidget()
-func (this *QWidget) FocusWidget() *QWidget /*444 QWidget **/ {
+func (this *QWidget) FocusWidget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget11focusWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -2442,7 +2442,7 @@ func (this *QWidget) FocusWidget() *QWidget /*444 QWidget **/ {
 // index:0
 // Public
 // QWidget * nextInFocusChain()
-func (this *QWidget) NextInFocusChain() *QWidget /*444 QWidget **/ {
+func (this *QWidget) NextInFocusChain() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget16nextInFocusChainEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -2454,7 +2454,7 @@ func (this *QWidget) NextInFocusChain() *QWidget /*444 QWidget **/ {
 // index:0
 // Public
 // QWidget * previousInFocusChain()
-func (this *QWidget) PreviousInFocusChain() *QWidget /*444 QWidget **/ {
+func (this *QWidget) PreviousInFocusChain() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget20previousInFocusChainEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -2486,7 +2486,7 @@ func (this *QWidget) SetAcceptDrops(on bool) {
 // index:0
 // Public
 // void addAction(class QAction *)
-func (this *QWidget) AddAction(action *QAction /*444 QAction **/) {
+func (this *QWidget) AddAction(action *QAction /*777 QAction **/) {
 	var convArg0 = action.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget9addActionEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2496,7 +2496,7 @@ func (this *QWidget) AddAction(action *QAction /*444 QAction **/) {
 // index:0
 // Public
 // void insertAction(class QAction *, class QAction *)
-func (this *QWidget) InsertAction(before *QAction /*444 QAction **/, action *QAction /*444 QAction **/) {
+func (this *QWidget) InsertAction(before *QAction /*777 QAction **/, action *QAction /*777 QAction **/) {
 	var convArg0 = before.GetCthis()
 	var convArg1 = action.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget12insertActionEP7QActionS1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -2507,7 +2507,7 @@ func (this *QWidget) InsertAction(before *QAction /*444 QAction **/, action *QAc
 // index:0
 // Public
 // void removeAction(class QAction *)
-func (this *QWidget) RemoveAction(action *QAction /*444 QAction **/) {
+func (this *QWidget) RemoveAction(action *QAction /*777 QAction **/) {
 	var convArg0 = action.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget12removeActionEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2517,7 +2517,7 @@ func (this *QWidget) RemoveAction(action *QAction /*444 QAction **/) {
 // index:0
 // Public
 // QWidget * parentWidget()
-func (this *QWidget) ParentWidget() *QWidget /*444 QWidget **/ {
+func (this *QWidget) ParentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget12parentWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -2578,14 +2578,14 @@ func (this *QWidget) WindowType() int {
 // index:0
 // Public static
 // QWidget * find(WId)
-func (this *QWidget) Find(arg0 uint64) *QWidget /*444 QWidget **/ {
+func (this *QWidget) Find(arg0 uint64) *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget4findEy", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QWidget_Find(arg0 uint64) *QWidget /*444 QWidget **/ {
+func QWidget_Find(arg0 uint64) *QWidget /*777 QWidget **/ {
 	var nilthis *QWidget
 	rv := nilthis.Find(arg0)
 	return rv
@@ -2595,7 +2595,7 @@ func QWidget_Find(arg0 uint64) *QWidget /*444 QWidget **/ {
 // index:0
 // Public inline
 // QWidget * childAt(int, int)
-func (this *QWidget) ChildAt(x int, y int) *QWidget /*444 QWidget **/ {
+func (this *QWidget) ChildAt(x int, y int) *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget7childAtEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -2607,7 +2607,7 @@ func (this *QWidget) ChildAt(x int, y int) *QWidget /*444 QWidget **/ {
 // index:1
 // Public
 // QWidget * childAt(const class QPoint &)
-func (this *QWidget) ChildAt_1(p *qtcore.QPoint) *QWidget /*444 QWidget **/ {
+func (this *QWidget) ChildAt_1(p *qtcore.QPoint) *QWidget /*777 QWidget **/ {
 	var convArg0 = p.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget7childAtERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2640,7 +2640,7 @@ func (this *QWidget) TestAttribute(arg0 int) bool {
 // index:0
 // Public virtual
 // QPaintEngine * paintEngine()
-func (this *QWidget) PaintEngine() *qtgui.QPaintEngine /*444 QPaintEngine **/ {
+func (this *QWidget) PaintEngine() *qtgui.QPaintEngine /*777 QPaintEngine **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget11paintEngineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -2661,7 +2661,7 @@ func (this *QWidget) EnsurePolished() {
 // index:0
 // Public
 // bool isAncestorOf(const class QWidget *)
-func (this *QWidget) IsAncestorOf(child *QWidget /*444 const QWidget **/) bool {
+func (this *QWidget) IsAncestorOf(child *QWidget /*777 const QWidget **/) bool {
 	var convArg0 = child.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget12isAncestorOfEPKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2693,7 +2693,7 @@ func (this *QWidget) SetAutoFillBackground(enabled bool) {
 // index:0
 // Public
 // QBackingStore * backingStore()
-func (this *QWidget) BackingStore() *qtgui.QBackingStore /*444 QBackingStore **/ {
+func (this *QWidget) BackingStore() *qtgui.QBackingStore /*777 QBackingStore **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget12backingStoreEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -2705,7 +2705,7 @@ func (this *QWidget) BackingStore() *qtgui.QBackingStore /*444 QBackingStore **/
 // index:0
 // Public
 // QWindow * windowHandle()
-func (this *QWidget) WindowHandle() *qtgui.QWindow /*444 QWindow **/ {
+func (this *QWidget) WindowHandle() *qtgui.QWindow /*777 QWindow **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget12windowHandleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -2717,14 +2717,14 @@ func (this *QWidget) WindowHandle() *qtgui.QWindow /*444 QWindow **/ {
 // index:0
 // Public static
 // QWidget * createWindowContainer(class QWindow *, class QWidget *, Qt::WindowFlags)
-func (this *QWidget) CreateWindowContainer(window *qtgui.QWindow /*444 QWindow **/, parent *QWidget /*444 QWidget **/, flags int) *QWidget /*444 QWidget **/ {
+func (this *QWidget) CreateWindowContainer(window *qtgui.QWindow /*777 QWindow **/, parent *QWidget /*777 QWidget **/, flags int) *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget21createWindowContainerEP7QWindowPS_6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, window, parent, flags)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QWidget_CreateWindowContainer(window *qtgui.QWindow /*444 QWindow **/, parent *QWidget /*444 QWidget **/, flags int) *QWidget /*444 QWidget **/ {
+func QWidget_CreateWindowContainer(window *qtgui.QWindow /*777 QWindow **/, parent *QWidget /*777 QWidget **/, flags int) *QWidget /*777 QWidget **/ {
 	var nilthis *QWidget
 	rv := nilthis.CreateWindowContainer(window, parent, flags)
 	return rv
@@ -2774,7 +2774,7 @@ func (this *QWidget) CustomContextMenuRequested(pos *qtcore.QPoint) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QWidget) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QWidget) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2786,7 +2786,7 @@ func (this *QWidget) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
 // index:0
 // Protected virtual
 // void mousePressEvent(class QMouseEvent *)
-func (this *QWidget) MousePressEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QWidget) MousePressEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2796,7 +2796,7 @@ func (this *QWidget) MousePressEvent(event *qtgui.QMouseEvent /*444 QMouseEvent 
 // index:0
 // Protected virtual
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QWidget) MouseReleaseEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QWidget) MouseReleaseEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2806,7 +2806,7 @@ func (this *QWidget) MouseReleaseEvent(event *qtgui.QMouseEvent /*444 QMouseEven
 // index:0
 // Protected virtual
 // void mouseDoubleClickEvent(class QMouseEvent *)
-func (this *QWidget) MouseDoubleClickEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QWidget) MouseDoubleClickEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget21mouseDoubleClickEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2816,7 +2816,7 @@ func (this *QWidget) MouseDoubleClickEvent(event *qtgui.QMouseEvent /*444 QMouse
 // index:0
 // Protected virtual
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QWidget) MouseMoveEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QWidget) MouseMoveEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2826,7 +2826,7 @@ func (this *QWidget) MouseMoveEvent(event *qtgui.QMouseEvent /*444 QMouseEvent *
 // index:0
 // Protected virtual
 // void wheelEvent(class QWheelEvent *)
-func (this *QWidget) WheelEvent(event *qtgui.QWheelEvent /*444 QWheelEvent **/) {
+func (this *QWidget) WheelEvent(event *qtgui.QWheelEvent /*777 QWheelEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget10wheelEventEP11QWheelEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2836,7 +2836,7 @@ func (this *QWidget) WheelEvent(event *qtgui.QWheelEvent /*444 QWheelEvent **/) 
 // index:0
 // Protected virtual
 // void keyPressEvent(class QKeyEvent *)
-func (this *QWidget) KeyPressEvent(event *qtgui.QKeyEvent /*444 QKeyEvent **/) {
+func (this *QWidget) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2846,7 +2846,7 @@ func (this *QWidget) KeyPressEvent(event *qtgui.QKeyEvent /*444 QKeyEvent **/) {
 // index:0
 // Protected virtual
 // void keyReleaseEvent(class QKeyEvent *)
-func (this *QWidget) KeyReleaseEvent(event *qtgui.QKeyEvent /*444 QKeyEvent **/) {
+func (this *QWidget) KeyReleaseEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget15keyReleaseEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2856,7 +2856,7 @@ func (this *QWidget) KeyReleaseEvent(event *qtgui.QKeyEvent /*444 QKeyEvent **/)
 // index:0
 // Protected virtual
 // void focusInEvent(class QFocusEvent *)
-func (this *QWidget) FocusInEvent(event *qtgui.QFocusEvent /*444 QFocusEvent **/) {
+func (this *QWidget) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2866,7 +2866,7 @@ func (this *QWidget) FocusInEvent(event *qtgui.QFocusEvent /*444 QFocusEvent **/
 // index:0
 // Protected virtual
 // void focusOutEvent(class QFocusEvent *)
-func (this *QWidget) FocusOutEvent(event *qtgui.QFocusEvent /*444 QFocusEvent **/) {
+func (this *QWidget) FocusOutEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2876,7 +2876,7 @@ func (this *QWidget) FocusOutEvent(event *qtgui.QFocusEvent /*444 QFocusEvent **
 // index:0
 // Protected virtual
 // void enterEvent(class QEvent *)
-func (this *QWidget) EnterEvent(event *qtcore.QEvent /*444 QEvent **/) {
+func (this *QWidget) EnterEvent(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget10enterEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2886,7 +2886,7 @@ func (this *QWidget) EnterEvent(event *qtcore.QEvent /*444 QEvent **/) {
 // index:0
 // Protected virtual
 // void leaveEvent(class QEvent *)
-func (this *QWidget) LeaveEvent(event *qtcore.QEvent /*444 QEvent **/) {
+func (this *QWidget) LeaveEvent(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget10leaveEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2896,7 +2896,7 @@ func (this *QWidget) LeaveEvent(event *qtcore.QEvent /*444 QEvent **/) {
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QWidget) PaintEvent(event *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+func (this *QWidget) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2906,7 +2906,7 @@ func (this *QWidget) PaintEvent(event *qtgui.QPaintEvent /*444 QPaintEvent **/) 
 // index:0
 // Protected virtual
 // void moveEvent(class QMoveEvent *)
-func (this *QWidget) MoveEvent(event *qtgui.QMoveEvent /*444 QMoveEvent **/) {
+func (this *QWidget) MoveEvent(event *qtgui.QMoveEvent /*777 QMoveEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget9moveEventEP10QMoveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2916,7 +2916,7 @@ func (this *QWidget) MoveEvent(event *qtgui.QMoveEvent /*444 QMoveEvent **/) {
 // index:0
 // Protected virtual
 // void resizeEvent(class QResizeEvent *)
-func (this *QWidget) ResizeEvent(event *qtgui.QResizeEvent /*444 QResizeEvent **/) {
+func (this *QWidget) ResizeEvent(event *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2926,7 +2926,7 @@ func (this *QWidget) ResizeEvent(event *qtgui.QResizeEvent /*444 QResizeEvent **
 // index:0
 // Protected virtual
 // void closeEvent(class QCloseEvent *)
-func (this *QWidget) CloseEvent(event *qtgui.QCloseEvent /*444 QCloseEvent **/) {
+func (this *QWidget) CloseEvent(event *qtgui.QCloseEvent /*777 QCloseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget10closeEventEP11QCloseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2936,7 +2936,7 @@ func (this *QWidget) CloseEvent(event *qtgui.QCloseEvent /*444 QCloseEvent **/) 
 // index:0
 // Protected virtual
 // void contextMenuEvent(class QContextMenuEvent *)
-func (this *QWidget) ContextMenuEvent(event *qtgui.QContextMenuEvent /*444 QContextMenuEvent **/) {
+func (this *QWidget) ContextMenuEvent(event *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget16contextMenuEventEP17QContextMenuEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2946,7 +2946,7 @@ func (this *QWidget) ContextMenuEvent(event *qtgui.QContextMenuEvent /*444 QCont
 // index:0
 // Protected virtual
 // void tabletEvent(class QTabletEvent *)
-func (this *QWidget) TabletEvent(event *qtgui.QTabletEvent /*444 QTabletEvent **/) {
+func (this *QWidget) TabletEvent(event *qtgui.QTabletEvent /*777 QTabletEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget11tabletEventEP12QTabletEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2956,7 +2956,7 @@ func (this *QWidget) TabletEvent(event *qtgui.QTabletEvent /*444 QTabletEvent **
 // index:0
 // Protected virtual
 // void actionEvent(class QActionEvent *)
-func (this *QWidget) ActionEvent(event *qtgui.QActionEvent /*444 QActionEvent **/) {
+func (this *QWidget) ActionEvent(event *qtgui.QActionEvent /*777 QActionEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget11actionEventEP12QActionEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2966,7 +2966,7 @@ func (this *QWidget) ActionEvent(event *qtgui.QActionEvent /*444 QActionEvent **
 // index:0
 // Protected virtual
 // void dragEnterEvent(class QDragEnterEvent *)
-func (this *QWidget) DragEnterEvent(event *qtgui.QDragEnterEvent /*444 QDragEnterEvent **/) {
+func (this *QWidget) DragEnterEvent(event *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget14dragEnterEventEP15QDragEnterEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2976,7 +2976,7 @@ func (this *QWidget) DragEnterEvent(event *qtgui.QDragEnterEvent /*444 QDragEnte
 // index:0
 // Protected virtual
 // void dragMoveEvent(class QDragMoveEvent *)
-func (this *QWidget) DragMoveEvent(event *qtgui.QDragMoveEvent /*444 QDragMoveEvent **/) {
+func (this *QWidget) DragMoveEvent(event *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget13dragMoveEventEP14QDragMoveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2986,7 +2986,7 @@ func (this *QWidget) DragMoveEvent(event *qtgui.QDragMoveEvent /*444 QDragMoveEv
 // index:0
 // Protected virtual
 // void dragLeaveEvent(class QDragLeaveEvent *)
-func (this *QWidget) DragLeaveEvent(event *qtgui.QDragLeaveEvent /*444 QDragLeaveEvent **/) {
+func (this *QWidget) DragLeaveEvent(event *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget14dragLeaveEventEP15QDragLeaveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -2996,7 +2996,7 @@ func (this *QWidget) DragLeaveEvent(event *qtgui.QDragLeaveEvent /*444 QDragLeav
 // index:0
 // Protected virtual
 // void dropEvent(class QDropEvent *)
-func (this *QWidget) DropEvent(event *qtgui.QDropEvent /*444 QDropEvent **/) {
+func (this *QWidget) DropEvent(event *qtgui.QDropEvent /*777 QDropEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget9dropEventEP10QDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -3006,7 +3006,7 @@ func (this *QWidget) DropEvent(event *qtgui.QDropEvent /*444 QDropEvent **/) {
 // index:0
 // Protected virtual
 // void showEvent(class QShowEvent *)
-func (this *QWidget) ShowEvent(event *qtgui.QShowEvent /*444 QShowEvent **/) {
+func (this *QWidget) ShowEvent(event *qtgui.QShowEvent /*777 QShowEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget9showEventEP10QShowEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -3016,7 +3016,7 @@ func (this *QWidget) ShowEvent(event *qtgui.QShowEvent /*444 QShowEvent **/) {
 // index:0
 // Protected virtual
 // void hideEvent(class QHideEvent *)
-func (this *QWidget) HideEvent(event *qtgui.QHideEvent /*444 QHideEvent **/) {
+func (this *QWidget) HideEvent(event *qtgui.QHideEvent /*777 QHideEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget9hideEventEP10QHideEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -3038,7 +3038,7 @@ func (this *QWidget) NativeEvent(eventType *qtcore.QByteArray, message unsafe.Po
 // index:0
 // Protected virtual
 // void changeEvent(class QEvent *)
-func (this *QWidget) ChangeEvent(arg0 *qtcore.QEvent /*444 QEvent **/) {
+func (this *QWidget) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -3059,7 +3059,7 @@ func (this *QWidget) Metric(arg0 int) int {
 // index:0
 // Protected virtual
 // void initPainter(class QPainter *)
-func (this *QWidget) InitPainter(painter *qtgui.QPainter /*444 QPainter **/) {
+func (this *QWidget) InitPainter(painter *qtgui.QPainter /*777 QPainter **/) {
 	var convArg0 = painter.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget11initPainterEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -3069,7 +3069,7 @@ func (this *QWidget) InitPainter(painter *qtgui.QPainter /*444 QPainter **/) {
 // index:0
 // Protected virtual
 // QPaintDevice * redirected(class QPoint *)
-func (this *QWidget) Redirected(offset *qtcore.QPoint /*444 QPoint **/) *qtgui.QPaintDevice /*444 QPaintDevice **/ {
+func (this *QWidget) Redirected(offset *qtcore.QPoint /*777 QPoint **/) *qtgui.QPaintDevice /*777 QPaintDevice **/ {
 	var convArg0 = offset.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget10redirectedEP6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -3082,7 +3082,7 @@ func (this *QWidget) Redirected(offset *qtcore.QPoint /*444 QPoint **/) *qtgui.Q
 // index:0
 // Protected virtual
 // QPainter * sharedPainter()
-func (this *QWidget) SharedPainter() *qtgui.QPainter /*444 QPainter **/ {
+func (this *QWidget) SharedPainter() *qtgui.QPainter /*777 QPainter **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWidget13sharedPainterEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -3094,7 +3094,7 @@ func (this *QWidget) SharedPainter() *qtgui.QPainter /*444 QPainter **/ {
 // index:0
 // Protected virtual
 // void inputMethodEvent(class QInputMethodEvent *)
-func (this *QWidget) InputMethodEvent(arg0 *qtgui.QInputMethodEvent /*444 QInputMethodEvent **/) {
+func (this *QWidget) InputMethodEvent(arg0 *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget16inputMethodEventEP17QInputMethodEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

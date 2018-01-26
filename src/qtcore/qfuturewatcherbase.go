@@ -70,7 +70,7 @@ func (*QFutureWatcherBase) NewFromPointer(cthis unsafe.Pointer) *QFutureWatcherB
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QFutureWatcherBase) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QFutureWatcherBase) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QFutureWatcherBase10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QFutureWatcherBase) MetaObject() *QMetaObject /*444 const QMetaObjec
 // index:0
 // Public
 // void QFutureWatcherBase(class QObject *)
-func NewQFutureWatcherBase(parent *QObject /*444 QObject **/) *QFutureWatcherBase {
+func NewQFutureWatcherBase(parent *QObject /*777 QObject **/) *QFutureWatcherBase {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBaseC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -215,7 +215,7 @@ func (this *QFutureWatcherBase) SetPendingResultsLimit(limit int) {
 // index:0
 // Public virtual
 // bool event(class QEvent *)
-func (this *QFutureWatcherBase) Event(event *QEvent /*444 QEvent **/) bool {
+func (this *QFutureWatcherBase) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

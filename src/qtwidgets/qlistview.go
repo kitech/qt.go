@@ -78,7 +78,7 @@ func (*QListView) NewFromPointer(cthis unsafe.Pointer) *QListView {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QListView) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QListView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QListView10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QListView) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject 
 // index:0
 // Public
 // void QListView(class QWidget *)
-func NewQListView(parent *QWidget /*444 QWidget **/) *QListView {
+func NewQListView(parent *QWidget /*777 QWidget **/) *QListView {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListViewC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -473,7 +473,7 @@ func (this *QListView) SetRootIndex(index *qtcore.QModelIndex) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QListView) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QListView) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -537,7 +537,7 @@ func (this *QListView) RowsAboutToBeRemoved(parent *qtcore.QModelIndex, start in
 // index:0
 // Protected virtual
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QListView) MouseMoveEvent(e *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QListView) MouseMoveEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -547,7 +547,7 @@ func (this *QListView) MouseMoveEvent(e *qtgui.QMouseEvent /*444 QMouseEvent **/
 // index:0
 // Protected virtual
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QListView) MouseReleaseEvent(e *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QListView) MouseReleaseEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -557,7 +557,7 @@ func (this *QListView) MouseReleaseEvent(e *qtgui.QMouseEvent /*444 QMouseEvent 
 // index:0
 // Protected virtual
 // void wheelEvent(class QWheelEvent *)
-func (this *QListView) WheelEvent(e *qtgui.QWheelEvent /*444 QWheelEvent **/) {
+func (this *QListView) WheelEvent(e *qtgui.QWheelEvent /*777 QWheelEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView10wheelEventEP11QWheelEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -567,7 +567,7 @@ func (this *QListView) WheelEvent(e *qtgui.QWheelEvent /*444 QWheelEvent **/) {
 // index:0
 // Protected virtual
 // void timerEvent(class QTimerEvent *)
-func (this *QListView) TimerEvent(e *qtcore.QTimerEvent /*444 QTimerEvent **/) {
+func (this *QListView) TimerEvent(e *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -577,7 +577,7 @@ func (this *QListView) TimerEvent(e *qtcore.QTimerEvent /*444 QTimerEvent **/) {
 // index:0
 // Protected virtual
 // void resizeEvent(class QResizeEvent *)
-func (this *QListView) ResizeEvent(e *qtgui.QResizeEvent /*444 QResizeEvent **/) {
+func (this *QListView) ResizeEvent(e *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -587,7 +587,7 @@ func (this *QListView) ResizeEvent(e *qtgui.QResizeEvent /*444 QResizeEvent **/)
 // index:0
 // Protected virtual
 // void dragMoveEvent(class QDragMoveEvent *)
-func (this *QListView) DragMoveEvent(e *qtgui.QDragMoveEvent /*444 QDragMoveEvent **/) {
+func (this *QListView) DragMoveEvent(e *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView13dragMoveEventEP14QDragMoveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -597,7 +597,7 @@ func (this *QListView) DragMoveEvent(e *qtgui.QDragMoveEvent /*444 QDragMoveEven
 // index:0
 // Protected virtual
 // void dragLeaveEvent(class QDragLeaveEvent *)
-func (this *QListView) DragLeaveEvent(e *qtgui.QDragLeaveEvent /*444 QDragLeaveEvent **/) {
+func (this *QListView) DragLeaveEvent(e *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView14dragLeaveEventEP15QDragLeaveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -607,7 +607,7 @@ func (this *QListView) DragLeaveEvent(e *qtgui.QDragLeaveEvent /*444 QDragLeaveE
 // index:0
 // Protected virtual
 // void dropEvent(class QDropEvent *)
-func (this *QListView) DropEvent(e *qtgui.QDropEvent /*444 QDropEvent **/) {
+func (this *QListView) DropEvent(e *qtgui.QDropEvent /*777 QDropEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView9dropEventEP10QDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -631,7 +631,7 @@ func (this *QListView) ViewOptions() *QStyleOptionViewItem /*123*/ {
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QListView) PaintEvent(e *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+func (this *QListView) PaintEvent(e *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

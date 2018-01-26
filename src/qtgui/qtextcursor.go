@@ -85,7 +85,7 @@ func NewQTextCursor() *QTextCursor {
 // index:1
 // Public
 // void QTextCursor(class QTextDocument *)
-func NewQTextCursor_1(document *QTextDocument /*444 QTextDocument **/) *QTextCursor {
+func NewQTextCursor_1(document *QTextDocument /*777 QTextDocument **/) *QTextCursor {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = document.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursorC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -98,7 +98,7 @@ func NewQTextCursor_1(document *QTextDocument /*444 QTextDocument **/) *QTextCur
 // index:2
 // Public
 // void QTextCursor(class QTextFrame *)
-func NewQTextCursor_2(frame *QTextFrame /*444 QTextFrame **/) *QTextCursor {
+func NewQTextCursor_2(frame *QTextFrame /*777 QTextFrame **/) *QTextCursor {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = frame.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursorC2EP10QTextFrame", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -604,7 +604,7 @@ func (this *QTextCursor) InsertBlock_2(format *QTextBlockFormat, charFormat *QTe
 // index:0
 // Public
 // QTextList * insertList(const class QTextListFormat &)
-func (this *QTextCursor) InsertList(format *QTextListFormat) *QTextList /*444 QTextList **/ {
+func (this *QTextCursor) InsertList(format *QTextListFormat) *QTextList /*777 QTextList **/ {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor10insertListERK15QTextListFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -617,7 +617,7 @@ func (this *QTextCursor) InsertList(format *QTextListFormat) *QTextList /*444 QT
 // index:1
 // Public
 // QTextList * insertList(class QTextListFormat::Style)
-func (this *QTextCursor) InsertList_1(style int) *QTextList /*444 QTextList **/ {
+func (this *QTextCursor) InsertList_1(style int) *QTextList /*777 QTextList **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor10insertListEN15QTextListFormat5StyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -629,7 +629,7 @@ func (this *QTextCursor) InsertList_1(style int) *QTextList /*444 QTextList **/ 
 // index:0
 // Public
 // QTextList * createList(const class QTextListFormat &)
-func (this *QTextCursor) CreateList(format *QTextListFormat) *QTextList /*444 QTextList **/ {
+func (this *QTextCursor) CreateList(format *QTextListFormat) *QTextList /*777 QTextList **/ {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor10createListERK15QTextListFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -642,7 +642,7 @@ func (this *QTextCursor) CreateList(format *QTextListFormat) *QTextList /*444 QT
 // index:1
 // Public
 // QTextList * createList(class QTextListFormat::Style)
-func (this *QTextCursor) CreateList_1(style int) *QTextList /*444 QTextList **/ {
+func (this *QTextCursor) CreateList_1(style int) *QTextList /*777 QTextList **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor10createListEN15QTextListFormat5StyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -654,7 +654,7 @@ func (this *QTextCursor) CreateList_1(style int) *QTextList /*444 QTextList **/ 
 // index:0
 // Public
 // QTextList * currentList()
-func (this *QTextCursor) CurrentList() *QTextList /*444 QTextList **/ {
+func (this *QTextCursor) CurrentList() *QTextList /*777 QTextList **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor11currentListEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -666,7 +666,7 @@ func (this *QTextCursor) CurrentList() *QTextList /*444 QTextList **/ {
 // index:0
 // Public
 // QTextTable * insertTable(int, int, const class QTextTableFormat &)
-func (this *QTextCursor) InsertTable(rows int, cols int, format *QTextTableFormat) *QTextTable /*444 QTextTable **/ {
+func (this *QTextCursor) InsertTable(rows int, cols int, format *QTextTableFormat) *QTextTable /*777 QTextTable **/ {
 	var convArg2 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor11insertTableEiiRK16QTextTableFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), rows, cols, convArg2)
 	gopp.ErrPrint(err, rv)
@@ -679,7 +679,7 @@ func (this *QTextCursor) InsertTable(rows int, cols int, format *QTextTableForma
 // index:1
 // Public
 // QTextTable * insertTable(int, int)
-func (this *QTextCursor) InsertTable_1(rows int, cols int) *QTextTable /*444 QTextTable **/ {
+func (this *QTextCursor) InsertTable_1(rows int, cols int) *QTextTable /*777 QTextTable **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor11insertTableEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), rows, cols)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -691,7 +691,7 @@ func (this *QTextCursor) InsertTable_1(rows int, cols int) *QTextTable /*444 QTe
 // index:0
 // Public
 // QTextTable * currentTable()
-func (this *QTextCursor) CurrentTable() *QTextTable /*444 QTextTable **/ {
+func (this *QTextCursor) CurrentTable() *QTextTable /*777 QTextTable **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor12currentTableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -703,7 +703,7 @@ func (this *QTextCursor) CurrentTable() *QTextTable /*444 QTextTable **/ {
 // index:0
 // Public
 // QTextFrame * insertFrame(const class QTextFrameFormat &)
-func (this *QTextCursor) InsertFrame(format *QTextFrameFormat) *QTextFrame /*444 QTextFrame **/ {
+func (this *QTextCursor) InsertFrame(format *QTextFrameFormat) *QTextFrame /*777 QTextFrame **/ {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor11insertFrameERK16QTextFrameFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -716,7 +716,7 @@ func (this *QTextCursor) InsertFrame(format *QTextFrameFormat) *QTextFrame /*444
 // index:0
 // Public
 // QTextFrame * currentFrame()
-func (this *QTextCursor) CurrentFrame() *QTextFrame /*444 QTextFrame **/ {
+func (this *QTextCursor) CurrentFrame() *QTextFrame /*777 QTextFrame **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor12currentFrameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -850,7 +850,7 @@ func (this *QTextCursor) ColumnNumber() int {
 // index:0
 // Public
 // QTextDocument * document()
-func (this *QTextCursor) Document() *QTextDocument /*444 QTextDocument **/ {
+func (this *QTextCursor) Document() *QTextDocument /*777 QTextDocument **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor8documentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

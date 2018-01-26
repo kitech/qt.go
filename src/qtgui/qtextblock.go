@@ -129,7 +129,7 @@ func (this *QTextBlock) Contains(position int) bool {
 // index:0
 // Public
 // QTextLayout * layout()
-func (this *QTextBlock) Layout() *QTextLayout /*444 QTextLayout **/ {
+func (this *QTextBlock) Layout() *QTextLayout /*777 QTextLayout **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock6layoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -225,7 +225,7 @@ func (this *QTextBlock) Text() *qtcore.QString /*123*/ {
 // index:0
 // Public
 // const QTextDocument * document()
-func (this *QTextBlock) Document() *QTextDocument /*444 const QTextDocument **/ {
+func (this *QTextBlock) Document() *QTextDocument /*777 const QTextDocument **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8documentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -237,7 +237,7 @@ func (this *QTextBlock) Document() *QTextDocument /*444 const QTextDocument **/ 
 // index:0
 // Public
 // QTextList * textList()
-func (this *QTextBlock) TextList() *QTextList /*444 QTextList **/ {
+func (this *QTextBlock) TextList() *QTextList /*777 QTextList **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8textListEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -249,7 +249,7 @@ func (this *QTextBlock) TextList() *QTextList /*444 QTextList **/ {
 // index:0
 // Public
 // QTextBlockUserData * userData()
-func (this *QTextBlock) UserData() *QTextBlockUserData /*444 QTextBlockUserData **/ {
+func (this *QTextBlock) UserData() *QTextBlockUserData /*777 QTextBlockUserData **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8userDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -261,7 +261,7 @@ func (this *QTextBlock) UserData() *QTextBlockUserData /*444 QTextBlockUserData 
 // index:0
 // Public
 // void setUserData(class QTextBlockUserData *)
-func (this *QTextBlock) SetUserData(data *QTextBlockUserData /*444 QTextBlockUserData **/) {
+func (this *QTextBlock) SetUserData(data *QTextBlockUserData /*777 QTextBlockUserData **/) {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock11setUserDataEP18QTextBlockUserData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

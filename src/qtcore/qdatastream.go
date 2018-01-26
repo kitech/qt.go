@@ -81,7 +81,7 @@ func NewQDataStream() *QDataStream {
 // index:1
 // Public
 // void QDataStream(class QIODevice *)
-func NewQDataStream_1(arg0 *QIODevice /*444 QIODevice **/) *QDataStream {
+func NewQDataStream_1(arg0 *QIODevice /*777 QIODevice **/) *QDataStream {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamC2EP9QIODevice", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -116,7 +116,7 @@ func DeleteQDataStream(*QDataStream) {
 // index:0
 // Public
 // QIODevice * device()
-func (this *QDataStream) Device() *QIODevice /*444 QIODevice **/ {
+func (this *QDataStream) Device() *QIODevice /*777 QIODevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -128,7 +128,7 @@ func (this *QDataStream) Device() *QIODevice /*444 QIODevice **/ {
 // index:0
 // Public
 // void setDevice(class QIODevice *)
-func (this *QDataStream) SetDevice(arg0 *QIODevice /*444 QIODevice **/) {
+func (this *QDataStream) SetDevice(arg0 *QIODevice /*777 QIODevice **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

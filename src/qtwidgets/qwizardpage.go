@@ -78,7 +78,7 @@ func (*QWizardPage) NewFromPointer(cthis unsafe.Pointer) *QWizardPage {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QWizardPage) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QWizardPage) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWizardPage10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QWizardPage) MetaObject() *qtcore.QMetaObject /*444 const QMetaObjec
 // index:0
 // Public
 // void QWizardPage(class QWidget *)
-func NewQWizardPage(parent *QWidget /*444 QWidget **/) *QWizardPage {
+func NewQWizardPage(parent *QWidget /*777 QWidget **/) *QWizardPage {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPageC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -334,7 +334,7 @@ func (this *QWizardPage) Field(name *qtcore.QString) *qtcore.QVariant /*123*/ {
 // index:0
 // Protected
 // void registerField(const class QString &, class QWidget *, const char *, const char *)
-func (this *QWizardPage) RegisterField(name *qtcore.QString, widget *QWidget /*444 QWidget **/, property string, changedSignal string) {
+func (this *QWizardPage) RegisterField(name *qtcore.QString, widget *QWidget /*777 QWidget **/, property string, changedSignal string) {
 	var convArg0 = name.GetCthis()
 	var convArg1 = widget.GetCthis()
 	var convArg2 = qtrt.CString(property)
@@ -349,7 +349,7 @@ func (this *QWizardPage) RegisterField(name *qtcore.QString, widget *QWidget /*4
 // index:0
 // Protected
 // QWizard * wizard()
-func (this *QWizardPage) Wizard() *QWizard /*444 QWizard **/ {
+func (this *QWizardPage) Wizard() *QWizard /*777 QWizard **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWizardPage6wizardEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

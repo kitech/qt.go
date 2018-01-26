@@ -74,7 +74,7 @@ func (*QTextObject) NewFromPointer(cthis unsafe.Pointer) *QTextObject {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QTextObject) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QTextObject) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -86,7 +86,7 @@ func (this *QTextObject) MetaObject() *qtcore.QMetaObject /*444 const QMetaObjec
 // index:0
 // Protected
 // void QTextObject(class QTextDocument *)
-func NewQTextObject(doc *QTextDocument /*444 QTextDocument **/) *QTextObject {
+func NewQTextObject(doc *QTextDocument /*777 QTextDocument **/) *QTextObject {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = doc.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextObjectC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -143,7 +143,7 @@ func (this *QTextObject) FormatIndex() int {
 // index:0
 // Public
 // QTextDocument * document()
-func (this *QTextObject) Document() *QTextDocument /*444 QTextDocument **/ {
+func (this *QTextObject) Document() *QTextDocument /*777 QTextDocument **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject8documentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

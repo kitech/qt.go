@@ -78,7 +78,7 @@ func (*QWizard) NewFromPointer(cthis unsafe.Pointer) *QWizard {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QWizard) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QWizard) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QWizard) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **
 // index:0
 // Public
 // void QWizard(class QWidget *, Qt::WindowFlags)
-func NewQWizard(parent *QWidget /*444 QWidget **/, flags int) *QWizard {
+func NewQWizard(parent *QWidget /*777 QWidget **/, flags int) *QWizard {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizardC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, flags)
@@ -112,7 +112,7 @@ func DeleteQWizard(*QWizard) {
 // index:0
 // Public
 // int addPage(class QWizardPage *)
-func (this *QWizard) AddPage(page *QWizardPage /*444 QWizardPage **/) int {
+func (this *QWizard) AddPage(page *QWizardPage /*777 QWizardPage **/) int {
 	var convArg0 = page.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard7addPageEP11QWizardPage", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -124,7 +124,7 @@ func (this *QWizard) AddPage(page *QWizardPage /*444 QWizardPage **/) int {
 // index:0
 // Public
 // void setPage(int, class QWizardPage *)
-func (this *QWizard) SetPage(id int, page *QWizardPage /*444 QWizardPage **/) {
+func (this *QWizard) SetPage(id int, page *QWizardPage /*777 QWizardPage **/) {
 	var convArg1 = page.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard7setPageEiP11QWizardPage", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -143,7 +143,7 @@ func (this *QWizard) RemovePage(id int) {
 // index:0
 // Public
 // QWizardPage * page(int)
-func (this *QWizard) Page(id int) *QWizardPage /*444 QWizardPage **/ {
+func (this *QWizard) Page(id int) *QWizardPage /*777 QWizardPage **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard4pageEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -186,7 +186,7 @@ func (this *QWizard) StartId() int {
 // index:0
 // Public
 // QWizardPage * currentPage()
-func (this *QWizard) CurrentPage() *QWizardPage /*444 QWizardPage **/ {
+func (this *QWizard) CurrentPage() *QWizardPage /*777 QWizardPage **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard11currentPageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -332,7 +332,7 @@ func (this *QWizard) ButtonText(which int) *qtcore.QString /*123*/ {
 // index:0
 // Public
 // void setButton(enum QWizard::WizardButton, class QAbstractButton *)
-func (this *QWizard) SetButton(which int, button *QAbstractButton /*444 QAbstractButton **/) {
+func (this *QWizard) SetButton(which int, button *QAbstractButton /*777 QAbstractButton **/) {
 	var convArg1 = button.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard9setButtonENS_12WizardButtonEP15QAbstractButton", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -342,7 +342,7 @@ func (this *QWizard) SetButton(which int, button *QAbstractButton /*444 QAbstrac
 // index:0
 // Public
 // QAbstractButton * button(enum QWizard::WizardButton)
-func (this *QWizard) Button(which int) *QAbstractButton /*444 QAbstractButton **/ {
+func (this *QWizard) Button(which int) *QAbstractButton /*777 QAbstractButton **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard6buttonENS_12WizardButtonE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), which)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -418,7 +418,7 @@ func (this *QWizard) Pixmap(which int) *qtgui.QPixmap /*123*/ {
 // index:0
 // Public
 // void setSideWidget(class QWidget *)
-func (this *QWizard) SetSideWidget(widget *QWidget /*444 QWidget **/) {
+func (this *QWizard) SetSideWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard13setSideWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -428,7 +428,7 @@ func (this *QWizard) SetSideWidget(widget *QWidget /*444 QWidget **/) {
 // index:0
 // Public
 // QWidget * sideWidget()
-func (this *QWizard) SideWidget() *QWidget /*444 QWidget **/ {
+func (this *QWizard) SideWidget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard10sideWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -550,7 +550,7 @@ func (this *QWizard) Restart() {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QWizard) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QWizard) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -562,7 +562,7 @@ func (this *QWizard) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
 // index:0
 // Protected virtual
 // void resizeEvent(class QResizeEvent *)
-func (this *QWizard) ResizeEvent(event *qtgui.QResizeEvent /*444 QResizeEvent **/) {
+func (this *QWizard) ResizeEvent(event *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -572,7 +572,7 @@ func (this *QWizard) ResizeEvent(event *qtgui.QResizeEvent /*444 QResizeEvent **
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QWizard) PaintEvent(event *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+func (this *QWizard) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

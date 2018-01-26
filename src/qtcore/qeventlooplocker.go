@@ -81,7 +81,7 @@ func NewQEventLoopLocker() *QEventLoopLocker {
 // index:1
 // Public
 // void QEventLoopLocker(class QEventLoop *)
-func NewQEventLoopLocker_1(loop *QEventLoop /*444 QEventLoop **/) *QEventLoopLocker {
+func NewQEventLoopLocker_1(loop *QEventLoop /*777 QEventLoop **/) *QEventLoopLocker {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = loop.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP10QEventLoop", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -94,7 +94,7 @@ func NewQEventLoopLocker_1(loop *QEventLoop /*444 QEventLoop **/) *QEventLoopLoc
 // index:2
 // Public
 // void QEventLoopLocker(class QThread *)
-func NewQEventLoopLocker_2(thread *QThread /*444 QThread **/) *QEventLoopLocker {
+func NewQEventLoopLocker_2(thread *QThread /*777 QThread **/) *QEventLoopLocker {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = thread.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP7QThread", ffiqt.FFI_TYPE_VOID, cthis, convArg0)

@@ -77,7 +77,7 @@ func (*QOffscreenSurface) NewFromPointer(cthis unsafe.Pointer) *QOffscreenSurfac
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QOffscreenSurface) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QOffscreenSurface) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QOffscreenSurface10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -89,7 +89,7 @@ func (this *QOffscreenSurface) MetaObject() *qtcore.QMetaObject /*444 const QMet
 // index:0
 // Public
 // void QOffscreenSurface(class QScreen *, class QObject *)
-func NewQOffscreenSurface(screen *QScreen /*444 QScreen **/, parent *qtcore.QObject /*444 QObject **/) *QOffscreenSurface {
+func NewQOffscreenSurface(screen *QScreen /*777 QScreen **/, parent *qtcore.QObject /*777 QObject **/) *QOffscreenSurface {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = screen.GetCthis()
 	var convArg1 = parent.GetCthis()
@@ -103,7 +103,7 @@ func NewQOffscreenSurface(screen *QScreen /*444 QScreen **/, parent *qtcore.QObj
 // index:1
 // Public
 // void QOffscreenSurface(class QScreen *)
-func NewQOffscreenSurface_1(screen *QScreen /*444 QScreen **/) *QOffscreenSurface {
+func NewQOffscreenSurface_1(screen *QScreen /*777 QScreen **/) *QOffscreenSurface {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = screen.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QOffscreenSurfaceC2EP7QScreen", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -217,7 +217,7 @@ func (this *QOffscreenSurface) Size() *qtcore.QSize /*123*/ {
 // index:0
 // Public
 // QScreen * screen()
-func (this *QOffscreenSurface) Screen() *QScreen /*444 QScreen **/ {
+func (this *QOffscreenSurface) Screen() *QScreen /*777 QScreen **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QOffscreenSurface6screenEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -229,7 +229,7 @@ func (this *QOffscreenSurface) Screen() *QScreen /*444 QScreen **/ {
 // index:0
 // Public
 // void setScreen(class QScreen *)
-func (this *QOffscreenSurface) SetScreen(screen *QScreen /*444 QScreen **/) {
+func (this *QOffscreenSurface) SetScreen(screen *QScreen /*777 QScreen **/) {
 	var convArg0 = screen.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QOffscreenSurface9setScreenEP7QScreen", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -259,7 +259,7 @@ func (this *QOffscreenSurface) SetNativeHandle(handle unsafe.Pointer /*666*/) {
 // index:0
 // Public
 // void screenChanged(class QScreen *)
-func (this *QOffscreenSurface) ScreenChanged(screen *QScreen /*444 QScreen **/) {
+func (this *QOffscreenSurface) ScreenChanged(screen *QScreen /*777 QScreen **/) {
 	var convArg0 = screen.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QOffscreenSurface13screenChangedEP7QScreen", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

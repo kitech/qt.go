@@ -77,11 +77,11 @@ func (*QToolTip) NewFromPointer(cthis unsafe.Pointer) *QToolTip {
 // index:0
 // Public static
 // void showText(const class QPoint &, const class QString &, class QWidget *)
-func (this *QToolTip) ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*444 QWidget **/) {
+func (this *QToolTip) ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget", ffiqt.FFI_TYPE_POINTER, pos, text, w)
 	gopp.ErrPrint(err, rv)
 }
-func QToolTip_ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*444 QWidget **/) {
+func QToolTip_ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/) {
 	var nilthis *QToolTip
 	nilthis.ShowText(pos, text, w)
 }
@@ -90,11 +90,11 @@ func QToolTip_ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*44
 // index:1
 // Public static
 // void showText(const class QPoint &, const class QString &, class QWidget *, const class QRect &)
-func (this *QToolTip) ShowText_1(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*444 QWidget **/, rect *qtcore.QRect) {
+func (this *QToolTip) ShowText_1(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/, rect *qtcore.QRect) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect", ffiqt.FFI_TYPE_POINTER, pos, text, w, rect)
 	gopp.ErrPrint(err, rv)
 }
-func QToolTip_ShowText_1(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*444 QWidget **/, rect *qtcore.QRect) {
+func QToolTip_ShowText_1(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/, rect *qtcore.QRect) {
 	var nilthis *QToolTip
 	nilthis.ShowText_1(pos, text, w, rect)
 }
@@ -103,11 +103,11 @@ func QToolTip_ShowText_1(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*
 // index:2
 // Public static
 // void showText(const class QPoint &, const class QString &, class QWidget *, const class QRect &, int)
-func (this *QToolTip) ShowText_2(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*444 QWidget **/, rect *qtcore.QRect, msecShowTime int) {
+func (this *QToolTip) ShowText_2(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/, rect *qtcore.QRect, msecShowTime int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti", ffiqt.FFI_TYPE_POINTER, pos, text, w, rect, msecShowTime)
 	gopp.ErrPrint(err, rv)
 }
-func QToolTip_ShowText_2(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*444 QWidget **/, rect *qtcore.QRect, msecShowTime int) {
+func QToolTip_ShowText_2(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/, rect *qtcore.QRect, msecShowTime int) {
 	var nilthis *QToolTip
 	nilthis.ShowText_2(pos, text, w, rect, msecShowTime)
 }

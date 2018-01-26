@@ -78,7 +78,7 @@ func (*QGraphicsDropShadowEffect) NewFromPointer(cthis unsafe.Pointer) *QGraphic
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QGraphicsDropShadowEffect) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QGraphicsDropShadowEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QGraphicsDropShadowEffect10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QGraphicsDropShadowEffect) MetaObject() *qtcore.QMetaObject /*444 co
 // index:0
 // Public
 // void QGraphicsDropShadowEffect(class QObject *)
-func NewQGraphicsDropShadowEffect(parent *qtcore.QObject /*444 QObject **/) *QGraphicsDropShadowEffect {
+func NewQGraphicsDropShadowEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsDropShadowEffect {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffectC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -282,7 +282,7 @@ func (this *QGraphicsDropShadowEffect) ColorChanged(color *qtgui.QColor) {
 // index:0
 // Protected virtual
 // void draw(class QPainter *)
-func (this *QGraphicsDropShadowEffect) Draw(painter *qtgui.QPainter /*444 QPainter **/) {
+func (this *QGraphicsDropShadowEffect) Draw(painter *qtgui.QPainter /*777 QPainter **/) {
 	var convArg0 = painter.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect4drawEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

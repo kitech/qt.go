@@ -78,7 +78,7 @@ func (*QSystemTrayIcon) NewFromPointer(cthis unsafe.Pointer) *QSystemTrayIcon {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QSystemTrayIcon) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QSystemTrayIcon) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSystemTrayIcon10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QSystemTrayIcon) MetaObject() *qtcore.QMetaObject /*444 const QMetaO
 // index:0
 // Public
 // void QSystemTrayIcon(class QObject *)
-func NewQSystemTrayIcon(parent *qtcore.QObject /*444 QObject **/) *QSystemTrayIcon {
+func NewQSystemTrayIcon(parent *qtcore.QObject /*777 QObject **/) *QSystemTrayIcon {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIconC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -103,7 +103,7 @@ func NewQSystemTrayIcon(parent *qtcore.QObject /*444 QObject **/) *QSystemTrayIc
 // index:1
 // Public
 // void QSystemTrayIcon(const class QIcon &, class QObject *)
-func NewQSystemTrayIcon_1(icon *qtgui.QIcon, parent *qtcore.QObject /*444 QObject **/) *QSystemTrayIcon {
+func NewQSystemTrayIcon_1(icon *qtgui.QIcon, parent *qtcore.QObject /*777 QObject **/) *QSystemTrayIcon {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = icon.GetCthis()
 	var convArg1 = parent.GetCthis()
@@ -126,7 +126,7 @@ func DeleteQSystemTrayIcon(*QSystemTrayIcon) {
 // index:0
 // Public
 // void setContextMenu(class QMenu *)
-func (this *QSystemTrayIcon) SetContextMenu(menu *QMenu /*444 QMenu **/) {
+func (this *QSystemTrayIcon) SetContextMenu(menu *QMenu /*777 QMenu **/) {
 	var convArg0 = menu.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon14setContextMenuEP5QMenu", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -136,7 +136,7 @@ func (this *QSystemTrayIcon) SetContextMenu(menu *QMenu /*444 QMenu **/) {
 // index:0
 // Public
 // QMenu * contextMenu()
-func (this *QSystemTrayIcon) ContextMenu() *QMenu /*444 QMenu **/ {
+func (this *QSystemTrayIcon) ContextMenu() *QMenu /*777 QMenu **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSystemTrayIcon11contextMenuEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -321,7 +321,7 @@ func (this *QSystemTrayIcon) MessageClicked() {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QSystemTrayIcon) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QSystemTrayIcon) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

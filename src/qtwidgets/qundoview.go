@@ -78,7 +78,7 @@ func (*QUndoView) NewFromPointer(cthis unsafe.Pointer) *QUndoView {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QUndoView) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QUndoView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUndoView10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QUndoView) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject 
 // index:0
 // Public
 // void QUndoView(class QWidget *)
-func NewQUndoView(parent *QWidget /*444 QWidget **/) *QUndoView {
+func NewQUndoView(parent *QWidget /*777 QWidget **/) *QUndoView {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUndoViewC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -103,7 +103,7 @@ func NewQUndoView(parent *QWidget /*444 QWidget **/) *QUndoView {
 // index:1
 // Public
 // void QUndoView(class QUndoStack *, class QWidget *)
-func NewQUndoView_1(stack *QUndoStack /*444 QUndoStack **/, parent *QWidget /*444 QWidget **/) *QUndoView {
+func NewQUndoView_1(stack *QUndoStack /*777 QUndoStack **/, parent *QWidget /*777 QWidget **/) *QUndoView {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = stack.GetCthis()
 	var convArg1 = parent.GetCthis()
@@ -117,7 +117,7 @@ func NewQUndoView_1(stack *QUndoStack /*444 QUndoStack **/, parent *QWidget /*44
 // index:2
 // Public
 // void QUndoView(class QUndoGroup *, class QWidget *)
-func NewQUndoView_2(group *QUndoGroup /*444 QUndoGroup **/, parent *QWidget /*444 QWidget **/) *QUndoView {
+func NewQUndoView_2(group *QUndoGroup /*777 QUndoGroup **/, parent *QWidget /*777 QWidget **/) *QUndoView {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = group.GetCthis()
 	var convArg1 = parent.GetCthis()
@@ -140,7 +140,7 @@ func DeleteQUndoView(*QUndoView) {
 // index:0
 // Public
 // QUndoStack * stack()
-func (this *QUndoView) Stack() *QUndoStack /*444 QUndoStack **/ {
+func (this *QUndoView) Stack() *QUndoStack /*777 QUndoStack **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUndoView5stackEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -152,7 +152,7 @@ func (this *QUndoView) Stack() *QUndoStack /*444 QUndoStack **/ {
 // index:0
 // Public
 // QUndoGroup * group()
-func (this *QUndoView) Group() *QUndoGroup /*444 QUndoGroup **/ {
+func (this *QUndoView) Group() *QUndoGroup /*777 QUndoGroup **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUndoView5groupEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -212,7 +212,7 @@ func (this *QUndoView) CleanIcon() *qtgui.QIcon /*123*/ {
 // index:0
 // Public
 // void setStack(class QUndoStack *)
-func (this *QUndoView) SetStack(stack *QUndoStack /*444 QUndoStack **/) {
+func (this *QUndoView) SetStack(stack *QUndoStack /*777 QUndoStack **/) {
 	var convArg0 = stack.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUndoView8setStackEP10QUndoStack", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -222,7 +222,7 @@ func (this *QUndoView) SetStack(stack *QUndoStack /*444 QUndoStack **/) {
 // index:0
 // Public
 // void setGroup(class QUndoGroup *)
-func (this *QUndoView) SetGroup(group *QUndoGroup /*444 QUndoGroup **/) {
+func (this *QUndoView) SetGroup(group *QUndoGroup /*777 QUndoGroup **/) {
 	var convArg0 = group.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUndoView8setGroupEP10QUndoGroup", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

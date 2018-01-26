@@ -222,7 +222,7 @@ func (this *QItemSelectionRange) Parent() *QModelIndex /*123*/ {
 // index:0
 // Public inline
 // const QAbstractItemModel * model()
-func (this *QItemSelectionRange) Model() *QAbstractItemModel /*444 const QAbstractItemModel **/ {
+func (this *QItemSelectionRange) Model() *QAbstractItemModel /*777 const QAbstractItemModel **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange5modelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

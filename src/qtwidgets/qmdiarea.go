@@ -78,7 +78,7 @@ func (*QMdiArea) NewFromPointer(cthis unsafe.Pointer) *QMdiArea {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QMdiArea) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QMdiArea) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMdiArea10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QMdiArea) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject *
 // index:0
 // Public
 // void QMdiArea(class QWidget *)
-func NewQMdiArea(parent *QWidget /*444 QWidget **/) *QMdiArea {
+func NewQMdiArea(parent *QWidget /*777 QWidget **/) *QMdiArea {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiAreaC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -140,7 +140,7 @@ func (this *QMdiArea) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public
 // QMdiSubWindow * currentSubWindow()
-func (this *QMdiArea) CurrentSubWindow() *QMdiSubWindow /*444 QMdiSubWindow **/ {
+func (this *QMdiArea) CurrentSubWindow() *QMdiSubWindow /*777 QMdiSubWindow **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMdiArea16currentSubWindowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -152,7 +152,7 @@ func (this *QMdiArea) CurrentSubWindow() *QMdiSubWindow /*444 QMdiSubWindow **/ 
 // index:0
 // Public
 // QMdiSubWindow * activeSubWindow()
-func (this *QMdiArea) ActiveSubWindow() *QMdiSubWindow /*444 QMdiSubWindow **/ {
+func (this *QMdiArea) ActiveSubWindow() *QMdiSubWindow /*777 QMdiSubWindow **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMdiArea15activeSubWindowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -164,7 +164,7 @@ func (this *QMdiArea) ActiveSubWindow() *QMdiSubWindow /*444 QMdiSubWindow **/ {
 // index:0
 // Public
 // QMdiSubWindow * addSubWindow(class QWidget *, Qt::WindowFlags)
-func (this *QMdiArea) AddSubWindow(widget *QWidget /*444 QWidget **/, flags int) *QMdiSubWindow /*444 QMdiSubWindow **/ {
+func (this *QMdiArea) AddSubWindow(widget *QWidget /*777 QWidget **/, flags int) *QMdiSubWindow /*777 QMdiSubWindow **/ {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea12addSubWindowEP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags)
 	gopp.ErrPrint(err, rv)
@@ -177,7 +177,7 @@ func (this *QMdiArea) AddSubWindow(widget *QWidget /*444 QWidget **/, flags int)
 // index:0
 // Public
 // void removeSubWindow(class QWidget *)
-func (this *QMdiArea) RemoveSubWindow(widget *QWidget /*444 QWidget **/) {
+func (this *QMdiArea) RemoveSubWindow(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea15removeSubWindowEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -371,7 +371,7 @@ func (this *QMdiArea) TabPosition() int {
 // index:0
 // Public
 // void subWindowActivated(class QMdiSubWindow *)
-func (this *QMdiArea) SubWindowActivated(arg0 *QMdiSubWindow /*444 QMdiSubWindow **/) {
+func (this *QMdiArea) SubWindowActivated(arg0 *QMdiSubWindow /*777 QMdiSubWindow **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea18subWindowActivatedEP13QMdiSubWindow", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -381,7 +381,7 @@ func (this *QMdiArea) SubWindowActivated(arg0 *QMdiSubWindow /*444 QMdiSubWindow
 // index:0
 // Public
 // void setActiveSubWindow(class QMdiSubWindow *)
-func (this *QMdiArea) SetActiveSubWindow(window *QMdiSubWindow /*444 QMdiSubWindow **/) {
+func (this *QMdiArea) SetActiveSubWindow(window *QMdiSubWindow /*777 QMdiSubWindow **/) {
 	var convArg0 = window.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea18setActiveSubWindowEP13QMdiSubWindow", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -445,7 +445,7 @@ func (this *QMdiArea) ActivatePreviousSubWindow() {
 // index:0
 // Protected virtual
 // void setupViewport(class QWidget *)
-func (this *QMdiArea) SetupViewport(viewport *QWidget /*444 QWidget **/) {
+func (this *QMdiArea) SetupViewport(viewport *QWidget /*777 QWidget **/) {
 	var convArg0 = viewport.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea13setupViewportEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -455,7 +455,7 @@ func (this *QMdiArea) SetupViewport(viewport *QWidget /*444 QWidget **/) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QMdiArea) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QMdiArea) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -467,7 +467,7 @@ func (this *QMdiArea) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
 // index:0
 // Protected virtual
 // bool eventFilter(class QObject *, class QEvent *)
-func (this *QMdiArea) EventFilter(object *qtcore.QObject /*444 QObject **/, event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QMdiArea) EventFilter(object *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = object.GetCthis()
 	var convArg1 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea11eventFilterEP7QObjectP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -480,7 +480,7 @@ func (this *QMdiArea) EventFilter(object *qtcore.QObject /*444 QObject **/, even
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QMdiArea) PaintEvent(paintEvent *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+func (this *QMdiArea) PaintEvent(paintEvent *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = paintEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -490,7 +490,7 @@ func (this *QMdiArea) PaintEvent(paintEvent *qtgui.QPaintEvent /*444 QPaintEvent
 // index:0
 // Protected virtual
 // void childEvent(class QChildEvent *)
-func (this *QMdiArea) ChildEvent(childEvent *qtcore.QChildEvent /*444 QChildEvent **/) {
+func (this *QMdiArea) ChildEvent(childEvent *qtcore.QChildEvent /*777 QChildEvent **/) {
 	var convArg0 = childEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea10childEventEP11QChildEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -500,7 +500,7 @@ func (this *QMdiArea) ChildEvent(childEvent *qtcore.QChildEvent /*444 QChildEven
 // index:0
 // Protected virtual
 // void resizeEvent(class QResizeEvent *)
-func (this *QMdiArea) ResizeEvent(resizeEvent *qtgui.QResizeEvent /*444 QResizeEvent **/) {
+func (this *QMdiArea) ResizeEvent(resizeEvent *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = resizeEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -510,7 +510,7 @@ func (this *QMdiArea) ResizeEvent(resizeEvent *qtgui.QResizeEvent /*444 QResizeE
 // index:0
 // Protected virtual
 // void timerEvent(class QTimerEvent *)
-func (this *QMdiArea) TimerEvent(timerEvent *qtcore.QTimerEvent /*444 QTimerEvent **/) {
+func (this *QMdiArea) TimerEvent(timerEvent *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = timerEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -520,7 +520,7 @@ func (this *QMdiArea) TimerEvent(timerEvent *qtcore.QTimerEvent /*444 QTimerEven
 // index:0
 // Protected virtual
 // void showEvent(class QShowEvent *)
-func (this *QMdiArea) ShowEvent(showEvent *qtgui.QShowEvent /*444 QShowEvent **/) {
+func (this *QMdiArea) ShowEvent(showEvent *qtgui.QShowEvent /*777 QShowEvent **/) {
 	var convArg0 = showEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea9showEventEP10QShowEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -530,7 +530,7 @@ func (this *QMdiArea) ShowEvent(showEvent *qtgui.QShowEvent /*444 QShowEvent **/
 // index:0
 // Protected virtual
 // bool viewportEvent(class QEvent *)
-func (this *QMdiArea) ViewportEvent(event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QMdiArea) ViewportEvent(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea13viewportEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

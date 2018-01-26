@@ -73,7 +73,7 @@ func (*QBackingStore) NewFromPointer(cthis unsafe.Pointer) *QBackingStore {
 // index:0
 // Public
 // void QBackingStore(class QWindow *)
-func NewQBackingStore(window *QWindow /*444 QWindow **/) *QBackingStore {
+func NewQBackingStore(window *QWindow /*777 QWindow **/) *QBackingStore {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = window.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStoreC2EP7QWindow", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -95,7 +95,7 @@ func DeleteQBackingStore(*QBackingStore) {
 // index:0
 // Public
 // QWindow * window()
-func (this *QBackingStore) Window() *QWindow /*444 QWindow **/ {
+func (this *QBackingStore) Window() *QWindow /*777 QWindow **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QBackingStore6windowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -107,7 +107,7 @@ func (this *QBackingStore) Window() *QWindow /*444 QWindow **/ {
 // index:0
 // Public
 // QPaintDevice * paintDevice()
-func (this *QBackingStore) PaintDevice() *QPaintDevice /*444 QPaintDevice **/ {
+func (this *QBackingStore) PaintDevice() *QPaintDevice /*777 QPaintDevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStore11paintDeviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -119,7 +119,7 @@ func (this *QBackingStore) PaintDevice() *QPaintDevice /*444 QPaintDevice **/ {
 // index:0
 // Public
 // void flush(const class QRegion &, class QWindow *, const class QPoint &)
-func (this *QBackingStore) Flush(region *QRegion, window *QWindow /*444 QWindow **/, offset *qtcore.QPoint) {
+func (this *QBackingStore) Flush(region *QRegion, window *QWindow /*777 QWindow **/, offset *qtcore.QPoint) {
 	var convArg0 = region.GetCthis()
 	var convArg1 = window.GetCthis()
 	var convArg2 = offset.GetCthis()

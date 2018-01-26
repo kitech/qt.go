@@ -191,7 +191,7 @@ func (this *QRawFont) Weight() int {
 // index:0
 // Public
 // bool glyphIndexesForChars(const class QChar *, int, quint32 *, int *)
-func (this *QRawFont) GlyphIndexesForChars(chars *qtcore.QChar /*444 const QChar **/, numChars int, glyphIndexes unsafe.Pointer /*666*/, numGlyphs unsafe.Pointer /*666*/) bool {
+func (this *QRawFont) GlyphIndexesForChars(chars *qtcore.QChar /*777 const QChar **/, numChars int, glyphIndexes unsafe.Pointer /*666*/, numGlyphs unsafe.Pointer /*666*/) bool {
 	var convArg0 = chars.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QRawFont20glyphIndexesForCharsEPK5QChariPjPi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, numChars, &glyphIndexes, &numGlyphs)
 	gopp.ErrPrint(err, rv)
@@ -203,7 +203,7 @@ func (this *QRawFont) GlyphIndexesForChars(chars *qtcore.QChar /*444 const QChar
 // index:0
 // Public
 // bool advancesForGlyphIndexes(const quint32 *, class QPointF *, int)
-func (this *QRawFont) AdvancesForGlyphIndexes(glyphIndexes unsafe.Pointer /*666*/, advances *qtcore.QPointF /*444 QPointF **/, numGlyphs int) bool {
+func (this *QRawFont) AdvancesForGlyphIndexes(glyphIndexes unsafe.Pointer /*666*/, advances *qtcore.QPointF /*777 QPointF **/, numGlyphs int) bool {
 	var convArg1 = advances.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &glyphIndexes, convArg1, numGlyphs)
 	gopp.ErrPrint(err, rv)
@@ -215,7 +215,7 @@ func (this *QRawFont) AdvancesForGlyphIndexes(glyphIndexes unsafe.Pointer /*666*
 // index:1
 // Public
 // bool advancesForGlyphIndexes(const quint32 *, class QPointF *, int, QRawFont::LayoutFlags)
-func (this *QRawFont) AdvancesForGlyphIndexes_1(glyphIndexes unsafe.Pointer /*666*/, advances *qtcore.QPointF /*444 QPointF **/, numGlyphs int, layoutFlags int) bool {
+func (this *QRawFont) AdvancesForGlyphIndexes_1(glyphIndexes unsafe.Pointer /*666*/, advances *qtcore.QPointF /*777 QPointF **/, numGlyphs int, layoutFlags int) bool {
 	var convArg1 = advances.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi6QFlagsINS_10LayoutFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &glyphIndexes, convArg1, numGlyphs, layoutFlags)
 	gopp.ErrPrint(err, rv)

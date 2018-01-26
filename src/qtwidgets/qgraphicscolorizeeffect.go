@@ -78,7 +78,7 @@ func (*QGraphicsColorizeEffect) NewFromPointer(cthis unsafe.Pointer) *QGraphicsC
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QGraphicsColorizeEffect) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QGraphicsColorizeEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsColorizeEffect10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QGraphicsColorizeEffect) MetaObject() *qtcore.QMetaObject /*444 cons
 // index:0
 // Public
 // void QGraphicsColorizeEffect(class QObject *)
-func NewQGraphicsColorizeEffect(parent *qtcore.QObject /*444 QObject **/) *QGraphicsColorizeEffect {
+func NewQGraphicsColorizeEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsColorizeEffect {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffectC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -175,7 +175,7 @@ func (this *QGraphicsColorizeEffect) StrengthChanged(strength float64) {
 // index:0
 // Protected virtual
 // void draw(class QPainter *)
-func (this *QGraphicsColorizeEffect) Draw(painter *qtgui.QPainter /*444 QPainter **/) {
+func (this *QGraphicsColorizeEffect) Draw(painter *qtgui.QPainter /*777 QPainter **/) {
 	var convArg0 = painter.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect4drawEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

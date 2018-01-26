@@ -70,7 +70,7 @@ func (*QPropertyAnimation) NewFromPointer(cthis unsafe.Pointer) *QPropertyAnimat
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QPropertyAnimation) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QPropertyAnimation) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QPropertyAnimation10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QPropertyAnimation) MetaObject() *QMetaObject /*444 const QMetaObjec
 // index:0
 // Public
 // void QPropertyAnimation(class QObject *)
-func NewQPropertyAnimation(parent *QObject /*444 QObject **/) *QPropertyAnimation {
+func NewQPropertyAnimation(parent *QObject /*777 QObject **/) *QPropertyAnimation {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPropertyAnimationC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -95,7 +95,7 @@ func NewQPropertyAnimation(parent *QObject /*444 QObject **/) *QPropertyAnimatio
 // index:1
 // Public
 // void QPropertyAnimation(class QObject *, const class QByteArray &, class QObject *)
-func NewQPropertyAnimation_1(target *QObject /*444 QObject **/, propertyName *QByteArray, parent *QObject /*444 QObject **/) *QPropertyAnimation {
+func NewQPropertyAnimation_1(target *QObject /*777 QObject **/, propertyName *QByteArray, parent *QObject /*777 QObject **/) *QPropertyAnimation {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = target.GetCthis()
 	var convArg1 = propertyName.GetCthis()
@@ -119,7 +119,7 @@ func DeleteQPropertyAnimation(*QPropertyAnimation) {
 // index:0
 // Public
 // QObject * targetObject()
-func (this *QPropertyAnimation) TargetObject() *QObject /*444 QObject **/ {
+func (this *QPropertyAnimation) TargetObject() *QObject /*777 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QPropertyAnimation12targetObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -131,7 +131,7 @@ func (this *QPropertyAnimation) TargetObject() *QObject /*444 QObject **/ {
 // index:0
 // Public
 // void setTargetObject(class QObject *)
-func (this *QPropertyAnimation) SetTargetObject(target *QObject /*444 QObject **/) {
+func (this *QPropertyAnimation) SetTargetObject(target *QObject /*777 QObject **/) {
 	var convArg0 = target.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPropertyAnimation15setTargetObjectEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -165,7 +165,7 @@ func (this *QPropertyAnimation) SetPropertyName(propertyName *QByteArray) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QPropertyAnimation) Event(event *QEvent /*444 QEvent **/) bool {
+func (this *QPropertyAnimation) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPropertyAnimation5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

@@ -78,7 +78,7 @@ func (*QSplitterHandle) NewFromPointer(cthis unsafe.Pointer) *QSplitterHandle {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QSplitterHandle) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QSplitterHandle) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSplitterHandle10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QSplitterHandle) MetaObject() *qtcore.QMetaObject /*444 const QMetaO
 // index:0
 // Public
 // void QSplitterHandle(Qt::Orientation, class QSplitter *)
-func NewQSplitterHandle(o int, parent *QSplitter /*444 QSplitter **/) *QSplitterHandle {
+func NewQSplitterHandle(o int, parent *QSplitter /*777 QSplitter **/) *QSplitterHandle {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSplitterHandleC2EN2Qt11OrientationEP9QSplitter", ffiqt.FFI_TYPE_VOID, cthis, o, convArg1)
@@ -143,7 +143,7 @@ func (this *QSplitterHandle) OpaqueResize() bool {
 // index:0
 // Public
 // QSplitter * splitter()
-func (this *QSplitterHandle) Splitter() *QSplitter /*444 QSplitter **/ {
+func (this *QSplitterHandle) Splitter() *QSplitter /*777 QSplitter **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSplitterHandle8splitterEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -169,7 +169,7 @@ func (this *QSplitterHandle) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QSplitterHandle) PaintEvent(arg0 *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+func (this *QSplitterHandle) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSplitterHandle10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -179,7 +179,7 @@ func (this *QSplitterHandle) PaintEvent(arg0 *qtgui.QPaintEvent /*444 QPaintEven
 // index:0
 // Protected virtual
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QSplitterHandle) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QSplitterHandle) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSplitterHandle14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -189,7 +189,7 @@ func (this *QSplitterHandle) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*444 QMouse
 // index:0
 // Protected virtual
 // void mousePressEvent(class QMouseEvent *)
-func (this *QSplitterHandle) MousePressEvent(arg0 *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QSplitterHandle) MousePressEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSplitterHandle15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -199,7 +199,7 @@ func (this *QSplitterHandle) MousePressEvent(arg0 *qtgui.QMouseEvent /*444 QMous
 // index:0
 // Protected virtual
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QSplitterHandle) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QSplitterHandle) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSplitterHandle17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -209,7 +209,7 @@ func (this *QSplitterHandle) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*444 QMo
 // index:0
 // Protected virtual
 // void resizeEvent(class QResizeEvent *)
-func (this *QSplitterHandle) ResizeEvent(arg0 *qtgui.QResizeEvent /*444 QResizeEvent **/) {
+func (this *QSplitterHandle) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSplitterHandle11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -219,7 +219,7 @@ func (this *QSplitterHandle) ResizeEvent(arg0 *qtgui.QResizeEvent /*444 QResizeE
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QSplitterHandle) Event(arg0 *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QSplitterHandle) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSplitterHandle5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

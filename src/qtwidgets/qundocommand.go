@@ -77,7 +77,7 @@ func (*QUndoCommand) NewFromPointer(cthis unsafe.Pointer) *QUndoCommand {
 // index:0
 // Public
 // void QUndoCommand(class QUndoCommand *)
-func NewQUndoCommand(parent *QUndoCommand /*444 QUndoCommand **/) *QUndoCommand {
+func NewQUndoCommand(parent *QUndoCommand /*777 QUndoCommand **/) *QUndoCommand {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommandC2EPS_", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -90,7 +90,7 @@ func NewQUndoCommand(parent *QUndoCommand /*444 QUndoCommand **/) *QUndoCommand 
 // index:1
 // Public
 // void QUndoCommand(const class QString &, class QUndoCommand *)
-func NewQUndoCommand_1(text *qtcore.QString, parent *QUndoCommand /*444 QUndoCommand **/) *QUndoCommand {
+func NewQUndoCommand_1(text *qtcore.QString, parent *QUndoCommand /*777 QUndoCommand **/) *QUndoCommand {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = text.GetCthis()
 	var convArg1 = parent.GetCthis()
@@ -200,7 +200,7 @@ func (this *QUndoCommand) Id() int {
 // index:0
 // Public virtual
 // bool mergeWith(const class QUndoCommand *)
-func (this *QUndoCommand) MergeWith(other *QUndoCommand /*444 const QUndoCommand **/) bool {
+func (this *QUndoCommand) MergeWith(other *QUndoCommand /*777 const QUndoCommand **/) bool {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand9mergeWithEPKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -223,7 +223,7 @@ func (this *QUndoCommand) ChildCount() int {
 // index:0
 // Public
 // const QUndoCommand * child(int)
-func (this *QUndoCommand) Child(index int) *QUndoCommand /*444 const QUndoCommand **/ {
+func (this *QUndoCommand) Child(index int) *QUndoCommand /*777 const QUndoCommand **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand5childEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv

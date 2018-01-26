@@ -196,7 +196,7 @@ func (this *QSpacerItem) Geometry() *qtcore.QRect /*123*/ {
 // index:0
 // Public virtual
 // QSpacerItem * spacerItem()
-func (this *QSpacerItem) SpacerItem() *QSpacerItem /*444 QSpacerItem **/ {
+func (this *QSpacerItem) SpacerItem() *QSpacerItem /*777 QSpacerItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItem10spacerItemEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

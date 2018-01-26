@@ -78,7 +78,7 @@ func (*QGroupBox) NewFromPointer(cthis unsafe.Pointer) *QGroupBox {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QGroupBox) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QGroupBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGroupBox10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QGroupBox) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject 
 // index:0
 // Public
 // void QGroupBox(class QWidget *)
-func NewQGroupBox(parent *QWidget /*444 QWidget **/) *QGroupBox {
+func NewQGroupBox(parent *QWidget /*777 QWidget **/) *QGroupBox {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBoxC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -103,7 +103,7 @@ func NewQGroupBox(parent *QWidget /*444 QWidget **/) *QGroupBox {
 // index:1
 // Public
 // void QGroupBox(const class QString &, class QWidget *)
-func NewQGroupBox_1(title *qtcore.QString, parent *QWidget /*444 QWidget **/) *QGroupBox {
+func NewQGroupBox_1(title *qtcore.QString, parent *QWidget /*777 QWidget **/) *QGroupBox {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = title.GetCthis()
 	var convArg1 = parent.GetCthis()
@@ -262,7 +262,7 @@ func (this *QGroupBox) Toggled(arg0 bool) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QGroupBox) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QGroupBox) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -274,7 +274,7 @@ func (this *QGroupBox) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
 // index:0
 // Protected virtual
 // void childEvent(class QChildEvent *)
-func (this *QGroupBox) ChildEvent(event *qtcore.QChildEvent /*444 QChildEvent **/) {
+func (this *QGroupBox) ChildEvent(event *qtcore.QChildEvent /*777 QChildEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox10childEventEP11QChildEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -284,7 +284,7 @@ func (this *QGroupBox) ChildEvent(event *qtcore.QChildEvent /*444 QChildEvent **
 // index:0
 // Protected virtual
 // void resizeEvent(class QResizeEvent *)
-func (this *QGroupBox) ResizeEvent(event *qtgui.QResizeEvent /*444 QResizeEvent **/) {
+func (this *QGroupBox) ResizeEvent(event *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -294,7 +294,7 @@ func (this *QGroupBox) ResizeEvent(event *qtgui.QResizeEvent /*444 QResizeEvent 
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QGroupBox) PaintEvent(event *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+func (this *QGroupBox) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -304,7 +304,7 @@ func (this *QGroupBox) PaintEvent(event *qtgui.QPaintEvent /*444 QPaintEvent **/
 // index:0
 // Protected virtual
 // void focusInEvent(class QFocusEvent *)
-func (this *QGroupBox) FocusInEvent(event *qtgui.QFocusEvent /*444 QFocusEvent **/) {
+func (this *QGroupBox) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -314,7 +314,7 @@ func (this *QGroupBox) FocusInEvent(event *qtgui.QFocusEvent /*444 QFocusEvent *
 // index:0
 // Protected virtual
 // void changeEvent(class QEvent *)
-func (this *QGroupBox) ChangeEvent(event *qtcore.QEvent /*444 QEvent **/) {
+func (this *QGroupBox) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -324,7 +324,7 @@ func (this *QGroupBox) ChangeEvent(event *qtcore.QEvent /*444 QEvent **/) {
 // index:0
 // Protected virtual
 // void mousePressEvent(class QMouseEvent *)
-func (this *QGroupBox) MousePressEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QGroupBox) MousePressEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -334,7 +334,7 @@ func (this *QGroupBox) MousePressEvent(event *qtgui.QMouseEvent /*444 QMouseEven
 // index:0
 // Protected virtual
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QGroupBox) MouseMoveEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QGroupBox) MouseMoveEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -344,7 +344,7 @@ func (this *QGroupBox) MouseMoveEvent(event *qtgui.QMouseEvent /*444 QMouseEvent
 // index:0
 // Protected virtual
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QGroupBox) MouseReleaseEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QGroupBox) MouseReleaseEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -354,7 +354,7 @@ func (this *QGroupBox) MouseReleaseEvent(event *qtgui.QMouseEvent /*444 QMouseEv
 // index:0
 // Protected
 // void initStyleOption(class QStyleOptionGroupBox *)
-func (this *QGroupBox) InitStyleOption(option *QStyleOptionGroupBox /*444 QStyleOptionGroupBox **/) {
+func (this *QGroupBox) InitStyleOption(option *QStyleOptionGroupBox /*777 QStyleOptionGroupBox **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGroupBox15initStyleOptionEP20QStyleOptionGroupBox", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

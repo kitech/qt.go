@@ -78,7 +78,7 @@ func (*QCalendarWidget) NewFromPointer(cthis unsafe.Pointer) *QCalendarWidget {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QCalendarWidget) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QCalendarWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QCalendarWidget10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QCalendarWidget) MetaObject() *qtcore.QMetaObject /*444 const QMetaO
 // index:0
 // Public
 // void QCalendarWidget(class QWidget *)
-func NewQCalendarWidget(parent *QWidget /*444 QWidget **/) *QCalendarWidget {
+func NewQCalendarWidget(parent *QWidget /*777 QWidget **/) *QCalendarWidget {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QCalendarWidgetC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -440,7 +440,7 @@ func (this *QCalendarWidget) SetDateEditAcceptDelay(delay int) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QCalendarWidget) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QCalendarWidget) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QCalendarWidget5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -452,7 +452,7 @@ func (this *QCalendarWidget) Event(event *qtcore.QEvent /*444 QEvent **/) bool {
 // index:0
 // Protected virtual
 // bool eventFilter(class QObject *, class QEvent *)
-func (this *QCalendarWidget) EventFilter(watched *qtcore.QObject /*444 QObject **/, event *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QCalendarWidget) EventFilter(watched *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = watched.GetCthis()
 	var convArg1 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QCalendarWidget11eventFilterEP7QObjectP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -465,7 +465,7 @@ func (this *QCalendarWidget) EventFilter(watched *qtcore.QObject /*444 QObject *
 // index:0
 // Protected virtual
 // void mousePressEvent(class QMouseEvent *)
-func (this *QCalendarWidget) MousePressEvent(event *qtgui.QMouseEvent /*444 QMouseEvent **/) {
+func (this *QCalendarWidget) MousePressEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QCalendarWidget15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -475,7 +475,7 @@ func (this *QCalendarWidget) MousePressEvent(event *qtgui.QMouseEvent /*444 QMou
 // index:0
 // Protected virtual
 // void resizeEvent(class QResizeEvent *)
-func (this *QCalendarWidget) ResizeEvent(event *qtgui.QResizeEvent /*444 QResizeEvent **/) {
+func (this *QCalendarWidget) ResizeEvent(event *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QCalendarWidget11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -485,7 +485,7 @@ func (this *QCalendarWidget) ResizeEvent(event *qtgui.QResizeEvent /*444 QResize
 // index:0
 // Protected virtual
 // void keyPressEvent(class QKeyEvent *)
-func (this *QCalendarWidget) KeyPressEvent(event *qtgui.QKeyEvent /*444 QKeyEvent **/) {
+func (this *QCalendarWidget) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QCalendarWidget13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -495,7 +495,7 @@ func (this *QCalendarWidget) KeyPressEvent(event *qtgui.QKeyEvent /*444 QKeyEven
 // index:0
 // Protected virtual
 // void paintCell(class QPainter *, const class QRect &, const class QDate &)
-func (this *QCalendarWidget) PaintCell(painter *qtgui.QPainter /*444 QPainter **/, rect *qtcore.QRect, date *qtcore.QDate) {
+func (this *QCalendarWidget) PaintCell(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, date *qtcore.QDate) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = rect.GetCthis()
 	var convArg2 = date.GetCthis()

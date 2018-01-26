@@ -78,7 +78,7 @@ func (*QFontComboBox) NewFromPointer(cthis unsafe.Pointer) *QFontComboBox {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QFontComboBox) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QFontComboBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontComboBox10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QFontComboBox) MetaObject() *qtcore.QMetaObject /*444 const QMetaObj
 // index:0
 // Public
 // void QFontComboBox(class QWidget *)
-func NewQFontComboBox(parent *QWidget /*444 QWidget **/) *QFontComboBox {
+func NewQFontComboBox(parent *QWidget /*777 QWidget **/) *QFontComboBox {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontComboBoxC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -191,7 +191,7 @@ func (this *QFontComboBox) CurrentFontChanged(f *qtgui.QFont) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QFontComboBox) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QFontComboBox) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontComboBox5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

@@ -74,7 +74,7 @@ func (*QAccessibleTextSelectionEvent) NewFromPointer(cthis unsafe.Pointer) *QAcc
 // index:0
 // Public inline
 // void QAccessibleTextSelectionEvent(class QObject *, int, int)
-func NewQAccessibleTextSelectionEvent(obj *qtcore.QObject /*444 QObject **/, start int, end int) *QAccessibleTextSelectionEvent {
+func NewQAccessibleTextSelectionEvent(obj *qtcore.QObject /*777 QObject **/, start int, end int) *QAccessibleTextSelectionEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventC2EP7QObjectii", ffiqt.FFI_TYPE_VOID, cthis, convArg0, start, end)
@@ -87,7 +87,7 @@ func NewQAccessibleTextSelectionEvent(obj *qtcore.QObject /*444 QObject **/, sta
 // index:1
 // Public inline
 // void QAccessibleTextSelectionEvent(class QAccessibleInterface *, int, int)
-func NewQAccessibleTextSelectionEvent_1(iface *QAccessibleInterface /*444 QAccessibleInterface **/, start int, end int) *QAccessibleTextSelectionEvent {
+func NewQAccessibleTextSelectionEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, start int, end int) *QAccessibleTextSelectionEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = iface.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventC2EP20QAccessibleInterfaceii", ffiqt.FFI_TYPE_VOID, cthis, convArg0, start, end)

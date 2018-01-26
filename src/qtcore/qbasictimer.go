@@ -112,7 +112,7 @@ func (this *QBasicTimer) TimerId() int {
 // index:0
 // Public
 // void start(int, class QObject *)
-func (this *QBasicTimer) Start(msec int, obj *QObject /*444 QObject **/) {
+func (this *QBasicTimer) Start(msec int, obj *QObject /*777 QObject **/) {
 	var convArg1 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicTimer5startEiP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -122,7 +122,7 @@ func (this *QBasicTimer) Start(msec int, obj *QObject /*444 QObject **/) {
 // index:1
 // Public
 // void start(int, Qt::TimerType, class QObject *)
-func (this *QBasicTimer) Start_1(msec int, timerType int, obj *QObject /*444 QObject **/) {
+func (this *QBasicTimer) Start_1(msec int, timerType int, obj *QObject /*777 QObject **/) {
 	var convArg2 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicTimer5startEiN2Qt9TimerTypeEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec, timerType, convArg2)
 	gopp.ErrPrint(err, rv)

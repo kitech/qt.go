@@ -70,7 +70,7 @@ func (*QAbstractState) NewFromPointer(cthis unsafe.Pointer) *QAbstractState {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QAbstractState) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QAbstractState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QAbstractState10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -91,7 +91,7 @@ func DeleteQAbstractState(*QAbstractState) {
 // index:0
 // Public
 // QState * parentState()
-func (this *QAbstractState) ParentState() *QState /*444 QState **/ {
+func (this *QAbstractState) ParentState() *QState /*777 QState **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QAbstractState11parentStateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -103,7 +103,7 @@ func (this *QAbstractState) ParentState() *QState /*444 QState **/ {
 // index:0
 // Public
 // QStateMachine * machine()
-func (this *QAbstractState) Machine() *QStateMachine /*444 QStateMachine **/ {
+func (this *QAbstractState) Machine() *QStateMachine /*777 QStateMachine **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QAbstractState7machineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -135,7 +135,7 @@ func (this *QAbstractState) ActiveChanged(active bool) {
 // index:0
 // Protected
 // void QAbstractState(class QState *)
-func NewQAbstractState(parent *QState /*444 QState **/) *QAbstractState {
+func NewQAbstractState(parent *QState /*777 QState **/) *QAbstractState {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QAbstractStateC1EP6QState", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -148,7 +148,7 @@ func NewQAbstractState(parent *QState /*444 QState **/) *QAbstractState {
 // index:0
 // Protected pure virtual
 // void onEntry(class QEvent *)
-func (this *QAbstractState) OnEntry(event *QEvent /*444 QEvent **/) {
+func (this *QAbstractState) OnEntry(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QAbstractState7onEntryEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -158,7 +158,7 @@ func (this *QAbstractState) OnEntry(event *QEvent /*444 QEvent **/) {
 // index:0
 // Protected pure virtual
 // void onExit(class QEvent *)
-func (this *QAbstractState) OnExit(event *QEvent /*444 QEvent **/) {
+func (this *QAbstractState) OnExit(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QAbstractState6onExitEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -168,7 +168,7 @@ func (this *QAbstractState) OnExit(event *QEvent /*444 QEvent **/) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QAbstractState) Event(e *QEvent /*444 QEvent **/) bool {
+func (this *QAbstractState) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QAbstractState5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

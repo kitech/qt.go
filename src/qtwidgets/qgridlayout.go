@@ -78,7 +78,7 @@ func (*QGridLayout) NewFromPointer(cthis unsafe.Pointer) *QGridLayout {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QGridLayout) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QGridLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QGridLayout) MetaObject() *qtcore.QMetaObject /*444 const QMetaObjec
 // index:0
 // Public
 // void QGridLayout(class QWidget *)
-func NewQGridLayout(parent *QWidget /*444 QWidget **/) *QGridLayout {
+func NewQGridLayout(parent *QWidget /*777 QWidget **/) *QGridLayout {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayoutC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -395,7 +395,7 @@ func (this *QGridLayout) Invalidate() {
 // index:0
 // Public inline
 // void addWidget(class QWidget *)
-func (this *QGridLayout) AddWidget(w *QWidget /*444 QWidget **/) {
+func (this *QGridLayout) AddWidget(w *QWidget /*777 QWidget **/) {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout9addWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -425,7 +425,7 @@ func (this *QGridLayout) OriginCorner() int {
 // index:0
 // Public virtual
 // QLayoutItem * itemAt(int)
-func (this *QGridLayout) ItemAt(index int) *QLayoutItem /*444 QLayoutItem **/ {
+func (this *QGridLayout) ItemAt(index int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout6itemAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -437,7 +437,7 @@ func (this *QGridLayout) ItemAt(index int) *QLayoutItem /*444 QLayoutItem **/ {
 // index:0
 // Public
 // QLayoutItem * itemAtPosition(int, int)
-func (this *QGridLayout) ItemAtPosition(row int, column int) *QLayoutItem /*444 QLayoutItem **/ {
+func (this *QGridLayout) ItemAtPosition(row int, column int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout14itemAtPositionEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -449,7 +449,7 @@ func (this *QGridLayout) ItemAtPosition(row int, column int) *QLayoutItem /*444 
 // index:0
 // Public virtual
 // QLayoutItem * takeAt(int)
-func (this *QGridLayout) TakeAt(index int) *QLayoutItem /*444 QLayoutItem **/ {
+func (this *QGridLayout) TakeAt(index int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout6takeAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -500,7 +500,7 @@ func (this *QGridLayout) GetItemPosition(idx int, row unsafe.Pointer /*666*/, co
 // index:0
 // Protected virtual
 // void addItem(class QLayoutItem *)
-func (this *QGridLayout) AddItem(arg0 *QLayoutItem /*444 QLayoutItem **/) {
+func (this *QGridLayout) AddItem(arg0 *QLayoutItem /*777 QLayoutItem **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout7addItemEP11QLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

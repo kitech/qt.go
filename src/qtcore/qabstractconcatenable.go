@@ -95,11 +95,11 @@ func QAbstractConcatenable_ConvertFromAscii_1(a byte, out *QChar) {
 // index:0
 // Protected static
 // void appendLatin1To(const char *, int, class QChar *)
-func (this *QAbstractConcatenable) AppendLatin1To(a string, len int, out *QChar /*444 QChar **/) {
+func (this *QAbstractConcatenable) AppendLatin1To(a string, len int, out *QChar /*777 QChar **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractConcatenable14appendLatin1ToEPKciP5QChar", ffiqt.FFI_TYPE_POINTER, a, len, out)
 	gopp.ErrPrint(err, rv)
 }
-func QAbstractConcatenable_AppendLatin1To(a string, len int, out *QChar /*444 QChar **/) {
+func QAbstractConcatenable_AppendLatin1To(a string, len int, out *QChar /*777 QChar **/) {
 	var nilthis *QAbstractConcatenable
 	nilthis.AppendLatin1To(a, len, out)
 }

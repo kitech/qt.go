@@ -89,11 +89,11 @@ func QDesktopServices_OpenUrl(url *qtcore.QUrl) bool {
 // index:0
 // Public static
 // void setUrlHandler(const class QString &, class QObject *, const char *)
-func (this *QDesktopServices) SetUrlHandler(scheme *qtcore.QString, receiver *qtcore.QObject /*444 QObject **/, method string) {
+func (this *QDesktopServices) SetUrlHandler(scheme *qtcore.QString, receiver *qtcore.QObject /*777 QObject **/, method string) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc", ffiqt.FFI_TYPE_POINTER, scheme, receiver, method)
 	gopp.ErrPrint(err, rv)
 }
-func QDesktopServices_SetUrlHandler(scheme *qtcore.QString, receiver *qtcore.QObject /*444 QObject **/, method string) {
+func QDesktopServices_SetUrlHandler(scheme *qtcore.QString, receiver *qtcore.QObject /*777 QObject **/, method string) {
 	var nilthis *QDesktopServices
 	nilthis.SetUrlHandler(scheme, receiver, method)
 }

@@ -106,7 +106,7 @@ func (this *QStringView) Size() int64 {
 // index:0
 // Public inline
 // QStringView::const_pointer data()
-func (this *QStringView) Data() *QChar /*444 const QChar **/ {
+func (this *QStringView) Data() *QChar /*777 const QChar **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -383,7 +383,7 @@ func (this *QStringView) EndsWith_3(c *QChar /*123*/, cs int) bool {
 // index:0
 // Public inline
 // QStringView::const_iterator begin()
-func (this *QStringView) Begin() *QChar /*444 const QChar **/ {
+func (this *QStringView) Begin() *QChar /*777 const QChar **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5beginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -395,7 +395,7 @@ func (this *QStringView) Begin() *QChar /*444 const QChar **/ {
 // index:0
 // Public inline
 // QStringView::const_iterator end()
-func (this *QStringView) End() *QChar /*444 const QChar **/ {
+func (this *QStringView) End() *QChar /*777 const QChar **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -407,7 +407,7 @@ func (this *QStringView) End() *QChar /*444 const QChar **/ {
 // index:0
 // Public inline
 // QStringView::const_iterator cbegin()
-func (this *QStringView) Cbegin() *QChar /*444 const QChar **/ {
+func (this *QStringView) Cbegin() *QChar /*777 const QChar **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView6cbeginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -419,7 +419,7 @@ func (this *QStringView) Cbegin() *QChar /*444 const QChar **/ {
 // index:0
 // Public inline
 // QStringView::const_iterator cend()
-func (this *QStringView) Cend() *QChar /*444 const QChar **/ {
+func (this *QStringView) Cend() *QChar /*777 const QChar **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4cendEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

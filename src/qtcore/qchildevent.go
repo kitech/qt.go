@@ -70,7 +70,7 @@ func (*QChildEvent) NewFromPointer(cthis unsafe.Pointer) *QChildEvent {
 // index:0
 // Public
 // void QChildEvent(enum QEvent::Type, class QObject *)
-func NewQChildEvent(type_ int, child *QObject /*444 QObject **/) *QChildEvent {
+func NewQChildEvent(type_ int, child *QObject /*777 QObject **/) *QChildEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg1 = child.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QChildEventC2EN6QEvent4TypeEP7QObject", ffiqt.FFI_TYPE_VOID, cthis, type_, convArg1)
@@ -92,7 +92,7 @@ func DeleteQChildEvent(*QChildEvent) {
 // index:0
 // Public inline
 // QObject * child()
-func (this *QChildEvent) Child() *QObject /*444 QObject **/ {
+func (this *QChildEvent) Child() *QObject /*777 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent5childEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

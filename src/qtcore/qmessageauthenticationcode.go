@@ -131,7 +131,7 @@ func (this *QMessageAuthenticationCode) AddData_1(data *QByteArray) {
 // index:2
 // Public
 // bool addData(class QIODevice *)
-func (this *QMessageAuthenticationCode) AddData_2(device *QIODevice /*444 QIODevice **/) bool {
+func (this *QMessageAuthenticationCode) AddData_2(device *QIODevice /*777 QIODevice **/) bool {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode7addDataEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

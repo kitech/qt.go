@@ -228,7 +228,7 @@ func (this *QMetaMethod) Revision() int {
 // index:0
 // Public inline
 // const QMetaObject * enclosingMetaObject()
-func (this *QMetaMethod) EnclosingMetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QMetaMethod) EnclosingMetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod19enclosingMetaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -240,7 +240,7 @@ func (this *QMetaMethod) EnclosingMetaObject() *QMetaObject /*444 const QMetaObj
 // index:0
 // Public
 // bool invoke(class QObject *, Qt::ConnectionType, class QGenericReturnArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument)
-func (this *QMetaMethod) Invoke(object *QObject /*444 QObject **/, connectionType int, returnValue *QGenericReturnArgument /*123*/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
+func (this *QMetaMethod) Invoke(object *QObject /*777 QObject **/, connectionType int, returnValue *QGenericReturnArgument /*123*/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
 	var convArg0 = object.GetCthis()
 	var convArg2 = returnValue.GetCthis()
 	var convArg3 = val0.GetCthis()
@@ -263,7 +263,7 @@ func (this *QMetaMethod) Invoke(object *QObject /*444 QObject **/, connectionTyp
 // index:1
 // Public inline
 // bool invoke(class QObject *, class QGenericReturnArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument)
-func (this *QMetaMethod) Invoke_1(object *QObject /*444 QObject **/, returnValue *QGenericReturnArgument /*123*/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
+func (this *QMetaMethod) Invoke_1(object *QObject /*777 QObject **/, returnValue *QGenericReturnArgument /*123*/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
 	var convArg0 = object.GetCthis()
 	var convArg1 = returnValue.GetCthis()
 	var convArg2 = val0.GetCthis()
@@ -286,7 +286,7 @@ func (this *QMetaMethod) Invoke_1(object *QObject /*444 QObject **/, returnValue
 // index:2
 // Public inline
 // bool invoke(class QObject *, Qt::ConnectionType, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument)
-func (this *QMetaMethod) Invoke_2(object *QObject /*444 QObject **/, connectionType int, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
+func (this *QMetaMethod) Invoke_2(object *QObject /*777 QObject **/, connectionType int, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
 	var convArg0 = object.GetCthis()
 	var convArg2 = val0.GetCthis()
 	var convArg3 = val1.GetCthis()
@@ -308,7 +308,7 @@ func (this *QMetaMethod) Invoke_2(object *QObject /*444 QObject **/, connectionT
 // index:3
 // Public inline
 // bool invoke(class QObject *, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument, class QGenericArgument)
-func (this *QMetaMethod) Invoke_3(object *QObject /*444 QObject **/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
+func (this *QMetaMethod) Invoke_3(object *QObject /*777 QObject **/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
 	var convArg0 = object.GetCthis()
 	var convArg1 = val0.GetCthis()
 	var convArg2 = val1.GetCthis()

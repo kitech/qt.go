@@ -99,7 +99,7 @@ func DeleteQGraphicsSceneEvent(*QGraphicsSceneEvent) {
 // index:0
 // Public
 // QWidget * widget()
-func (this *QGraphicsSceneEvent) Widget() *QWidget /*444 QWidget **/ {
+func (this *QGraphicsSceneEvent) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsSceneEvent6widgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -111,7 +111,7 @@ func (this *QGraphicsSceneEvent) Widget() *QWidget /*444 QWidget **/ {
 // index:0
 // Public
 // void setWidget(class QWidget *)
-func (this *QGraphicsSceneEvent) SetWidget(widget *QWidget /*444 QWidget **/) {
+func (this *QGraphicsSceneEvent) SetWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEvent9setWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

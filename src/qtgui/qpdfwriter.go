@@ -77,7 +77,7 @@ func (*QPdfWriter) NewFromPointer(cthis unsafe.Pointer) *QPdfWriter {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QPdfWriter) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QPdfWriter) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPdfWriter10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -102,7 +102,7 @@ func NewQPdfWriter(filename *qtcore.QString) *QPdfWriter {
 // index:1
 // Public
 // void QPdfWriter(class QIODevice *)
-func NewQPdfWriter_1(device *qtcore.QIODevice /*444 QIODevice **/) *QPdfWriter {
+func NewQPdfWriter_1(device *qtcore.QIODevice /*777 QIODevice **/) *QPdfWriter {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPdfWriterC2EP9QIODevice", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -242,7 +242,7 @@ func (this *QPdfWriter) SetPageSizeMM(size *qtcore.QSizeF) {
 // index:0
 // Protected virtual
 // QPaintEngine * paintEngine()
-func (this *QPdfWriter) PaintEngine() *QPaintEngine /*444 QPaintEngine **/ {
+func (this *QPdfWriter) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPdfWriter11paintEngineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

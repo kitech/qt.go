@@ -70,7 +70,7 @@ func (*QMimeData) NewFromPointer(cthis unsafe.Pointer) *QMimeData {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QMimeData) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QMimeData) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

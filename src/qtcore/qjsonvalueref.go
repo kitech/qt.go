@@ -69,7 +69,7 @@ func (*QJsonValueRef) NewFromPointer(cthis unsafe.Pointer) *QJsonValueRef {
 // index:0
 // Public inline
 // void QJsonValueRef(class QJsonArray *, int)
-func NewQJsonValueRef(array *QJsonArray /*444 QJsonArray **/, idx int) *QJsonValueRef {
+func NewQJsonValueRef(array *QJsonArray /*777 QJsonArray **/, idx int) *QJsonValueRef {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = array.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonValueRefC2EP10QJsonArrayi", ffiqt.FFI_TYPE_VOID, cthis, convArg0, idx)
@@ -82,7 +82,7 @@ func NewQJsonValueRef(array *QJsonArray /*444 QJsonArray **/, idx int) *QJsonVal
 // index:1
 // Public inline
 // void QJsonValueRef(class QJsonObject *, int)
-func NewQJsonValueRef_1(object *QJsonObject /*444 QJsonObject **/, idx int) *QJsonValueRef {
+func NewQJsonValueRef_1(object *QJsonObject /*777 QJsonObject **/, idx int) *QJsonValueRef {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = object.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonValueRefC2EP11QJsonObjecti", ffiqt.FFI_TYPE_VOID, cthis, convArg0, idx)

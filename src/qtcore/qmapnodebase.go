@@ -69,7 +69,7 @@ func (*QMapNodeBase) NewFromPointer(cthis unsafe.Pointer) *QMapNodeBase {
 // index:0
 // Public
 // const QMapNodeBase * nextNode()
-func (this *QMapNodeBase) NextNode() *QMapNodeBase /*444 const QMapNodeBase **/ {
+func (this *QMapNodeBase) NextNode() *QMapNodeBase /*777 const QMapNodeBase **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QMapNodeBase8nextNodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -81,7 +81,7 @@ func (this *QMapNodeBase) NextNode() *QMapNodeBase /*444 const QMapNodeBase **/ 
 // index:1
 // Public inline
 // QMapNodeBase * nextNode()
-func (this *QMapNodeBase) NextNode_1() *QMapNodeBase /*444 QMapNodeBase **/ {
+func (this *QMapNodeBase) NextNode_1() *QMapNodeBase /*777 QMapNodeBase **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapNodeBase8nextNodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -93,7 +93,7 @@ func (this *QMapNodeBase) NextNode_1() *QMapNodeBase /*444 QMapNodeBase **/ {
 // index:0
 // Public
 // const QMapNodeBase * previousNode()
-func (this *QMapNodeBase) PreviousNode() *QMapNodeBase /*444 const QMapNodeBase **/ {
+func (this *QMapNodeBase) PreviousNode() *QMapNodeBase /*777 const QMapNodeBase **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QMapNodeBase12previousNodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -105,7 +105,7 @@ func (this *QMapNodeBase) PreviousNode() *QMapNodeBase /*444 const QMapNodeBase 
 // index:1
 // Public inline
 // QMapNodeBase * previousNode()
-func (this *QMapNodeBase) PreviousNode_1() *QMapNodeBase /*444 QMapNodeBase **/ {
+func (this *QMapNodeBase) PreviousNode_1() *QMapNodeBase /*777 QMapNodeBase **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapNodeBase12previousNodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -137,7 +137,7 @@ func (this *QMapNodeBase) SetColor(c int) {
 // index:0
 // Public inline
 // QMapNodeBase * parent()
-func (this *QMapNodeBase) Parent() *QMapNodeBase /*444 QMapNodeBase **/ {
+func (this *QMapNodeBase) Parent() *QMapNodeBase /*777 QMapNodeBase **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QMapNodeBase6parentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

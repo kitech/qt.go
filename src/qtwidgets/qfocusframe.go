@@ -78,7 +78,7 @@ func (*QFocusFrame) NewFromPointer(cthis unsafe.Pointer) *QFocusFrame {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QFocusFrame) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QFocusFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFocusFrame10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QFocusFrame) MetaObject() *qtcore.QMetaObject /*444 const QMetaObjec
 // index:0
 // Public
 // void QFocusFrame(class QWidget *)
-func NewQFocusFrame(parent *QWidget /*444 QWidget **/) *QFocusFrame {
+func NewQFocusFrame(parent *QWidget /*777 QWidget **/) *QFocusFrame {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFocusFrameC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -112,7 +112,7 @@ func DeleteQFocusFrame(*QFocusFrame) {
 // index:0
 // Public
 // void setWidget(class QWidget *)
-func (this *QFocusFrame) SetWidget(widget *QWidget /*444 QWidget **/) {
+func (this *QFocusFrame) SetWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFocusFrame9setWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -122,7 +122,7 @@ func (this *QFocusFrame) SetWidget(widget *QWidget /*444 QWidget **/) {
 // index:0
 // Public
 // QWidget * widget()
-func (this *QFocusFrame) Widget() *QWidget /*444 QWidget **/ {
+func (this *QFocusFrame) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFocusFrame6widgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -134,7 +134,7 @@ func (this *QFocusFrame) Widget() *QWidget /*444 QWidget **/ {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QFocusFrame) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QFocusFrame) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFocusFrame5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -146,7 +146,7 @@ func (this *QFocusFrame) Event(e *qtcore.QEvent /*444 QEvent **/) bool {
 // index:0
 // Protected virtual
 // bool eventFilter(class QObject *, class QEvent *)
-func (this *QFocusFrame) EventFilter(arg0 *qtcore.QObject /*444 QObject **/, arg1 *qtcore.QEvent /*444 QEvent **/) bool {
+func (this *QFocusFrame) EventFilter(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFocusFrame11eventFilterEP7QObjectP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
@@ -159,7 +159,7 @@ func (this *QFocusFrame) EventFilter(arg0 *qtcore.QObject /*444 QObject **/, arg
 // index:0
 // Protected virtual
 // void paintEvent(class QPaintEvent *)
-func (this *QFocusFrame) PaintEvent(arg0 *qtgui.QPaintEvent /*444 QPaintEvent **/) {
+func (this *QFocusFrame) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFocusFrame10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -169,7 +169,7 @@ func (this *QFocusFrame) PaintEvent(arg0 *qtgui.QPaintEvent /*444 QPaintEvent **
 // index:0
 // Protected
 // void initStyleOption(class QStyleOption *)
-func (this *QFocusFrame) InitStyleOption(option *QStyleOption /*444 QStyleOption **/) {
+func (this *QFocusFrame) InitStyleOption(option *QStyleOption /*777 QStyleOption **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFocusFrame15initStyleOptionEP12QStyleOption", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

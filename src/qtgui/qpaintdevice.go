@@ -104,7 +104,7 @@ func (this *QPaintDevice) PaintingActive() bool {
 // index:0
 // Public pure virtual
 // QPaintEngine * paintEngine()
-func (this *QPaintDevice) PaintEngine() *QPaintEngine /*444 QPaintEngine **/ {
+func (this *QPaintDevice) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice11paintEngineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -300,7 +300,7 @@ func (this *QPaintDevice) Metric(metric int) int {
 // index:0
 // Protected virtual
 // void initPainter(class QPainter *)
-func (this *QPaintDevice) InitPainter(painter *QPainter /*444 QPainter **/) {
+func (this *QPaintDevice) InitPainter(painter *QPainter /*777 QPainter **/) {
 	var convArg0 = painter.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice11initPainterEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -310,7 +310,7 @@ func (this *QPaintDevice) InitPainter(painter *QPainter /*444 QPainter **/) {
 // index:0
 // Protected virtual
 // QPaintDevice * redirected(class QPoint *)
-func (this *QPaintDevice) Redirected(offset *qtcore.QPoint /*444 QPoint **/) *QPaintDevice /*444 QPaintDevice **/ {
+func (this *QPaintDevice) Redirected(offset *qtcore.QPoint /*777 QPoint **/) *QPaintDevice /*777 QPaintDevice **/ {
 	var convArg0 = offset.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice10redirectedEP6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -323,7 +323,7 @@ func (this *QPaintDevice) Redirected(offset *qtcore.QPoint /*444 QPoint **/) *QP
 // index:0
 // Protected virtual
 // QPainter * sharedPainter()
-func (this *QPaintDevice) SharedPainter() *QPainter /*444 QPainter **/ {
+func (this *QPaintDevice) SharedPainter() *QPainter /*777 QPainter **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice13sharedPainterEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

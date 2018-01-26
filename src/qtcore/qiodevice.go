@@ -70,7 +70,7 @@ func (*QIODevice) NewFromPointer(cthis unsafe.Pointer) *QIODevice {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QIODevice) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QIODevice) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -94,7 +94,7 @@ func NewQIODevice() *QIODevice {
 // index:1
 // Public
 // void QIODevice(class QObject *)
-func NewQIODevice_1(parent *QObject /*444 QObject **/) *QIODevice {
+func NewQIODevice_1(parent *QObject /*777 QObject **/) *QIODevice {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODeviceC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)

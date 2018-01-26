@@ -78,7 +78,7 @@ func (*QVBoxLayout) NewFromPointer(cthis unsafe.Pointer) *QVBoxLayout {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QVBoxLayout) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QVBoxLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QVBoxLayout10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -102,7 +102,7 @@ func NewQVBoxLayout() *QVBoxLayout {
 // index:1
 // Public
 // void QVBoxLayout(class QWidget *)
-func NewQVBoxLayout_1(parent *QWidget /*444 QWidget **/) *QVBoxLayout {
+func NewQVBoxLayout_1(parent *QWidget /*777 QWidget **/) *QVBoxLayout {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QVBoxLayoutC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)

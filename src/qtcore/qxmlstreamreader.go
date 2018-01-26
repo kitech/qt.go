@@ -81,7 +81,7 @@ func NewQXmlStreamReader() *QXmlStreamReader {
 // index:1
 // Public
 // void QXmlStreamReader(class QIODevice *)
-func NewQXmlStreamReader_1(device *QIODevice /*444 QIODevice **/) *QXmlStreamReader {
+func NewQXmlStreamReader_1(device *QIODevice /*777 QIODevice **/) *QXmlStreamReader {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2EP9QIODevice", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -143,7 +143,7 @@ func DeleteQXmlStreamReader(*QXmlStreamReader) {
 // index:0
 // Public
 // void setDevice(class QIODevice *)
-func (this *QXmlStreamReader) SetDevice(device *QIODevice /*444 QIODevice **/) {
+func (this *QXmlStreamReader) SetDevice(device *QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -153,7 +153,7 @@ func (this *QXmlStreamReader) SetDevice(device *QIODevice /*444 QIODevice **/) {
 // index:0
 // Public
 // QIODevice * device()
-func (this *QXmlStreamReader) Device() *QIODevice /*444 QIODevice **/ {
+func (this *QXmlStreamReader) Device() *QIODevice /*777 QIODevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -709,7 +709,7 @@ func (this *QXmlStreamReader) HasError() bool {
 // index:0
 // Public
 // void setEntityResolver(class QXmlStreamEntityResolver *)
-func (this *QXmlStreamReader) SetEntityResolver(resolver *QXmlStreamEntityResolver /*444 QXmlStreamEntityResolver **/) {
+func (this *QXmlStreamReader) SetEntityResolver(resolver *QXmlStreamEntityResolver /*777 QXmlStreamEntityResolver **/) {
 	var convArg0 = resolver.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -719,7 +719,7 @@ func (this *QXmlStreamReader) SetEntityResolver(resolver *QXmlStreamEntityResolv
 // index:0
 // Public
 // QXmlStreamEntityResolver * entityResolver()
-func (this *QXmlStreamReader) EntityResolver() *QXmlStreamEntityResolver /*444 QXmlStreamEntityResolver **/ {
+func (this *QXmlStreamReader) EntityResolver() *QXmlStreamEntityResolver /*777 QXmlStreamEntityResolver **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamReader14entityResolverEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

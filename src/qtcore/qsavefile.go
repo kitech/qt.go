@@ -69,7 +69,7 @@ func (*QSaveFile) NewFromPointer(cthis unsafe.Pointer) *QSaveFile {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QSaveFile) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QSaveFile) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSaveFile10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -94,7 +94,7 @@ func NewQSaveFile(name *QString) *QSaveFile {
 // index:1
 // Public
 // void QSaveFile(class QObject *)
-func NewQSaveFile_1(parent *QObject /*444 QObject **/) *QSaveFile {
+func NewQSaveFile_1(parent *QObject /*777 QObject **/) *QSaveFile {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFileC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -107,7 +107,7 @@ func NewQSaveFile_1(parent *QObject /*444 QObject **/) *QSaveFile {
 // index:2
 // Public
 // void QSaveFile(const class QString &, class QObject *)
-func NewQSaveFile_2(name *QString, parent *QObject /*444 QObject **/) *QSaveFile {
+func NewQSaveFile_2(name *QString, parent *QObject /*777 QObject **/) *QSaveFile {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = name.GetCthis()
 	var convArg1 = parent.GetCthis()

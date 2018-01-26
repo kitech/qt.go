@@ -78,7 +78,7 @@ func (*QAbstractGraphicsShapeItem) NewFromPointer(cthis unsafe.Pointer) *QAbstra
 // index:0
 // Public
 // void QAbstractGraphicsShapeItem(class QGraphicsItem *)
-func NewQAbstractGraphicsShapeItem(parent *QGraphicsItem /*444 QGraphicsItem **/) *QAbstractGraphicsShapeItem {
+func NewQAbstractGraphicsShapeItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *QAbstractGraphicsShapeItem {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAbstractGraphicsShapeItemC1EP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -148,7 +148,7 @@ func (this *QAbstractGraphicsShapeItem) SetBrush(brush *qtgui.QBrush) {
 // index:0
 // Public virtual
 // bool isObscuredBy(const class QGraphicsItem *)
-func (this *QAbstractGraphicsShapeItem) IsObscuredBy(item *QGraphicsItem /*444 const QGraphicsItem **/) bool {
+func (this *QAbstractGraphicsShapeItem) IsObscuredBy(item *QGraphicsItem /*777 const QGraphicsItem **/) bool {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAbstractGraphicsShapeItem12isObscuredByEPK13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

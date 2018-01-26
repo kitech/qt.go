@@ -82,7 +82,7 @@ func DeleteQAccessibleTableInterface(*QAccessibleTableInterface) {
 // index:0
 // Public pure virtual
 // QAccessibleInterface * caption()
-func (this *QAccessibleTableInterface) Caption() *QAccessibleInterface /*444 QAccessibleInterface **/ {
+func (this *QAccessibleTableInterface) Caption() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface7captionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -94,7 +94,7 @@ func (this *QAccessibleTableInterface) Caption() *QAccessibleInterface /*444 QAc
 // index:0
 // Public pure virtual
 // QAccessibleInterface * summary()
-func (this *QAccessibleTableInterface) Summary() *QAccessibleInterface /*444 QAccessibleInterface **/ {
+func (this *QAccessibleTableInterface) Summary() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface7summaryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -106,7 +106,7 @@ func (this *QAccessibleTableInterface) Summary() *QAccessibleInterface /*444 QAc
 // index:0
 // Public pure virtual
 // QAccessibleInterface * cellAt(int, int)
-func (this *QAccessibleTableInterface) CellAt(row int, column int) *QAccessibleInterface /*444 QAccessibleInterface **/ {
+func (this *QAccessibleTableInterface) CellAt(row int, column int) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface6cellAtEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -267,7 +267,7 @@ func (this *QAccessibleTableInterface) UnselectColumn(column int) bool {
 // index:0
 // Public pure virtual
 // void modelChange(class QAccessibleTableModelChangeEvent *)
-func (this *QAccessibleTableInterface) ModelChange(event *QAccessibleTableModelChangeEvent /*444 QAccessibleTableModelChangeEvent **/) {
+func (this *QAccessibleTableInterface) ModelChange(event *QAccessibleTableModelChangeEvent /*777 QAccessibleTableModelChangeEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QAccessibleTableInterface11modelChangeEP32QAccessibleTableModelChangeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

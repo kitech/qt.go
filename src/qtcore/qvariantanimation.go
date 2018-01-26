@@ -70,7 +70,7 @@ func (*QVariantAnimation) NewFromPointer(cthis unsafe.Pointer) *QVariantAnimatio
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QVariantAnimation) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QVariantAnimation) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QVariantAnimation) MetaObject() *QMetaObject /*444 const QMetaObject
 // index:0
 // Public
 // void QVariantAnimation(class QObject *)
-func NewQVariantAnimation(parent *QObject /*444 QObject **/) *QVariantAnimation {
+func NewQVariantAnimation(parent *QObject /*777 QObject **/) *QVariantAnimation {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimationC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -244,7 +244,7 @@ func (this *QVariantAnimation) ValueChanged(value *QVariant) {
 // index:0
 // Protected virtual
 // bool event(class QEvent *)
-func (this *QVariantAnimation) Event(event *QEvent /*444 QEvent **/) bool {
+func (this *QVariantAnimation) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

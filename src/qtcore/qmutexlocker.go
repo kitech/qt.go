@@ -69,7 +69,7 @@ func (*QMutexLocker) NewFromPointer(cthis unsafe.Pointer) *QMutexLocker {
 // index:0
 // Public inline
 // void QMutexLocker(class QBasicMutex *)
-func NewQMutexLocker(m *QBasicMutex /*444 QBasicMutex **/) *QMutexLocker {
+func NewQMutexLocker(m *QBasicMutex /*777 QBasicMutex **/) *QMutexLocker {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = m.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMutexLockerC2EP11QBasicMutex", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -109,7 +109,7 @@ func (this *QMutexLocker) Relock() {
 // index:0
 // Public inline
 // QMutex * mutex()
-func (this *QMutexLocker) Mutex() *QMutex /*444 QMutex **/ {
+func (this *QMutexLocker) Mutex() *QMutex /*777 QMutex **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QMutexLocker5mutexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

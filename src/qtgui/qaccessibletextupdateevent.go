@@ -74,7 +74,7 @@ func (*QAccessibleTextUpdateEvent) NewFromPointer(cthis unsafe.Pointer) *QAccess
 // index:0
 // Public inline
 // void QAccessibleTextUpdateEvent(class QObject *, int, const class QString &, const class QString &)
-func NewQAccessibleTextUpdateEvent(obj *qtcore.QObject /*444 QObject **/, position int, oldText *qtcore.QString, text *qtcore.QString) *QAccessibleTextUpdateEvent {
+func NewQAccessibleTextUpdateEvent(obj *qtcore.QObject /*777 QObject **/, position int, oldText *qtcore.QString, text *qtcore.QString) *QAccessibleTextUpdateEvent {
 	cthis := qtrt.Calloc(1, 256) // 56
 	var convArg0 = obj.GetCthis()
 	var convArg2 = oldText.GetCthis()
@@ -89,7 +89,7 @@ func NewQAccessibleTextUpdateEvent(obj *qtcore.QObject /*444 QObject **/, positi
 // index:1
 // Public inline
 // void QAccessibleTextUpdateEvent(class QAccessibleInterface *, int, const class QString &, const class QString &)
-func NewQAccessibleTextUpdateEvent_1(iface *QAccessibleInterface /*444 QAccessibleInterface **/, position int, oldText *qtcore.QString, text *qtcore.QString) *QAccessibleTextUpdateEvent {
+func NewQAccessibleTextUpdateEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, position int, oldText *qtcore.QString, text *qtcore.QString) *QAccessibleTextUpdateEvent {
 	cthis := qtrt.Calloc(1, 256) // 56
 	var convArg0 = iface.GetCthis()
 	var convArg2 = oldText.GetCthis()

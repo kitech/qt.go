@@ -70,7 +70,7 @@ func (*QEventLoop) NewFromPointer(cthis unsafe.Pointer) *QEventLoop {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QEventLoop) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
+func (this *QEventLoop) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QEventLoop10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -82,7 +82,7 @@ func (this *QEventLoop) MetaObject() *QMetaObject /*444 const QMetaObject **/ {
 // index:0
 // Public
 // void QEventLoop(class QObject *)
-func NewQEventLoop(parent *QObject /*444 QObject **/) *QEventLoop {
+func NewQEventLoop(parent *QObject /*777 QObject **/) *QEventLoop {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoopC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -164,7 +164,7 @@ func (this *QEventLoop) WakeUp() {
 // index:0
 // Public virtual
 // bool event(class QEvent *)
-func (this *QEventLoop) Event(event *QEvent /*444 QEvent **/) bool {
+func (this *QEventLoop) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

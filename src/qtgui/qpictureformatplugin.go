@@ -74,7 +74,7 @@ func (*QPictureFormatPlugin) NewFromPointer(cthis unsafe.Pointer) *QPictureForma
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QPictureFormatPlugin) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QPictureFormatPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QPictureFormatPlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -86,7 +86,7 @@ func (this *QPictureFormatPlugin) MetaObject() *qtcore.QMetaObject /*444 const Q
 // index:0
 // Public
 // void QPictureFormatPlugin(class QObject *)
-func NewQPictureFormatPlugin(parent *qtcore.QObject /*444 QObject **/) *QPictureFormatPlugin {
+func NewQPictureFormatPlugin(parent *qtcore.QObject /*777 QObject **/) *QPictureFormatPlugin {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QPictureFormatPluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -108,7 +108,7 @@ func DeleteQPictureFormatPlugin(*QPictureFormatPlugin) {
 // index:0
 // Public virtual
 // bool loadPicture(const class QString &, const class QString &, class QPicture *)
-func (this *QPictureFormatPlugin) LoadPicture(format *qtcore.QString, filename *qtcore.QString, pic *QPicture /*444 QPicture **/) bool {
+func (this *QPictureFormatPlugin) LoadPicture(format *qtcore.QString, filename *qtcore.QString, pic *QPicture /*777 QPicture **/) bool {
 	var convArg0 = format.GetCthis()
 	var convArg1 = filename.GetCthis()
 	var convArg2 = pic.GetCthis()

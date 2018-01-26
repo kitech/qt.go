@@ -78,7 +78,7 @@ func (*QSwipeGesture) NewFromPointer(cthis unsafe.Pointer) *QSwipeGesture {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QSwipeGesture) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QSwipeGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QSwipeGesture) MetaObject() *qtcore.QMetaObject /*444 const QMetaObj
 // index:0
 // Public
 // void QSwipeGesture(class QObject *)
-func NewQSwipeGesture(parent *qtcore.QObject /*444 QObject **/) *QSwipeGesture {
+func NewQSwipeGesture(parent *qtcore.QObject /*777 QObject **/) *QSwipeGesture {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSwipeGestureC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)

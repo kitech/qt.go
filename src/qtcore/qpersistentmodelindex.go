@@ -224,7 +224,7 @@ func (this *QPersistentModelIndex) Flags() int {
 // index:0
 // Public
 // const QAbstractItemModel * model()
-func (this *QPersistentModelIndex) Model() *QAbstractItemModel /*444 const QAbstractItemModel **/ {
+func (this *QPersistentModelIndex) Model() *QAbstractItemModel /*777 const QAbstractItemModel **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex5modelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

@@ -78,7 +78,7 @@ func (*QGraphicsGridLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsGridL
 // index:0
 // Public
 // void QGraphicsGridLayout(class QGraphicsLayoutItem *)
-func NewQGraphicsGridLayout(parent *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/) *QGraphicsGridLayout {
+func NewQGraphicsGridLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) *QGraphicsGridLayout {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsGridLayoutC2EP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -389,7 +389,7 @@ func (this *QGraphicsGridLayout) ColumnAlignment(column int) int {
 // index:0
 // Public
 // Qt::Alignment alignment(class QGraphicsLayoutItem *)
-func (this *QGraphicsGridLayout) Alignment(item *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/) int {
+func (this *QGraphicsGridLayout) Alignment(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) int {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout9alignmentEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -423,7 +423,7 @@ func (this *QGraphicsGridLayout) ColumnCount() int {
 // index:0
 // Public
 // QGraphicsLayoutItem * itemAt(int, int)
-func (this *QGraphicsGridLayout) ItemAt(row int, column int) *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/ {
+func (this *QGraphicsGridLayout) ItemAt(row int, column int) *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout6itemAtEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -435,7 +435,7 @@ func (this *QGraphicsGridLayout) ItemAt(row int, column int) *QGraphicsLayoutIte
 // index:1
 // Public virtual
 // QGraphicsLayoutItem * itemAt(int)
-func (this *QGraphicsGridLayout) ItemAt_1(index int) *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/ {
+func (this *QGraphicsGridLayout) ItemAt_1(index int) *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout6itemAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -467,7 +467,7 @@ func (this *QGraphicsGridLayout) RemoveAt(index int) {
 // index:0
 // Public
 // void removeItem(class QGraphicsLayoutItem *)
-func (this *QGraphicsGridLayout) RemoveItem(item *QGraphicsLayoutItem /*444 QGraphicsLayoutItem **/) {
+func (this *QGraphicsGridLayout) RemoveItem(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsGridLayout10removeItemEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)

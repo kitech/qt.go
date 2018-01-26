@@ -78,7 +78,7 @@ func (*QWidgetItemV2) NewFromPointer(cthis unsafe.Pointer) *QWidgetItemV2 {
 // index:0
 // Public
 // void QWidgetItemV2(class QWidget *)
-func NewQWidgetItemV2(widget *QWidget /*444 QWidget **/) *QWidgetItemV2 {
+func NewQWidgetItemV2(widget *QWidget /*777 QWidget **/) *QWidgetItemV2 {
 	cthis := qtrt.Calloc(1, 256) // 88
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QWidgetItemV2C2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)

@@ -73,14 +73,14 @@ func (*QAccessible) NewFromPointer(cthis unsafe.Pointer) *QAccessible {
 // index:0
 // Public static
 // QAccessibleInterface * queryAccessibleInterface(class QObject *)
-func (this *QAccessible) QueryAccessibleInterface(arg0 *qtcore.QObject /*444 QObject **/) *QAccessibleInterface /*444 QAccessibleInterface **/ {
+func (this *QAccessible) QueryAccessibleInterface(arg0 *qtcore.QObject /*777 QObject **/) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QAccessible24queryAccessibleInterfaceEP7QObject", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QAccessible_QueryAccessibleInterface(arg0 *qtcore.QObject /*444 QObject **/) *QAccessibleInterface /*444 QAccessibleInterface **/ {
+func QAccessible_QueryAccessibleInterface(arg0 *qtcore.QObject /*777 QObject **/) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	var nilthis *QAccessible
 	rv := nilthis.QueryAccessibleInterface(arg0)
 	return rv
@@ -90,13 +90,13 @@ func QAccessible_QueryAccessibleInterface(arg0 *qtcore.QObject /*444 QObject **/
 // index:0
 // Public static
 // QAccessible::Id uniqueId(class QAccessibleInterface *)
-func (this *QAccessible) UniqueId(iface *QAccessibleInterface /*444 QAccessibleInterface **/) uint {
+func (this *QAccessible) UniqueId(iface *QAccessibleInterface /*777 QAccessibleInterface **/) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QAccessible8uniqueIdEP20QAccessibleInterface", ffiqt.FFI_TYPE_POINTER, iface)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return uint(rv) // 222
 }
-func QAccessible_UniqueId(iface *QAccessibleInterface /*444 QAccessibleInterface **/) uint {
+func QAccessible_UniqueId(iface *QAccessibleInterface /*777 QAccessibleInterface **/) uint {
 	var nilthis *QAccessible
 	rv := nilthis.UniqueId(iface)
 	return rv
@@ -106,14 +106,14 @@ func QAccessible_UniqueId(iface *QAccessibleInterface /*444 QAccessibleInterface
 // index:0
 // Public static
 // QAccessibleInterface * accessibleInterface(QAccessible::Id)
-func (this *QAccessible) AccessibleInterface(uniqueId uint) *QAccessibleInterface /*444 QAccessibleInterface **/ {
+func (this *QAccessible) AccessibleInterface(uniqueId uint) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QAccessible19accessibleInterfaceEj", ffiqt.FFI_TYPE_POINTER, uniqueId)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QAccessible_AccessibleInterface(uniqueId uint) *QAccessibleInterface /*444 QAccessibleInterface **/ {
+func QAccessible_AccessibleInterface(uniqueId uint) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	var nilthis *QAccessible
 	rv := nilthis.AccessibleInterface(uniqueId)
 	return rv
@@ -123,13 +123,13 @@ func QAccessible_AccessibleInterface(uniqueId uint) *QAccessibleInterface /*444 
 // index:0
 // Public static
 // QAccessible::Id registerAccessibleInterface(class QAccessibleInterface *)
-func (this *QAccessible) RegisterAccessibleInterface(iface *QAccessibleInterface /*444 QAccessibleInterface **/) uint {
+func (this *QAccessible) RegisterAccessibleInterface(iface *QAccessibleInterface /*777 QAccessibleInterface **/) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QAccessible27registerAccessibleInterfaceEP20QAccessibleInterface", ffiqt.FFI_TYPE_POINTER, iface)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return uint(rv) // 222
 }
-func QAccessible_RegisterAccessibleInterface(iface *QAccessibleInterface /*444 QAccessibleInterface **/) uint {
+func QAccessible_RegisterAccessibleInterface(iface *QAccessibleInterface /*777 QAccessibleInterface **/) uint {
 	var nilthis *QAccessible
 	rv := nilthis.RegisterAccessibleInterface(iface)
 	return rv
@@ -152,11 +152,11 @@ func QAccessible_DeleteAccessibleInterface(uniqueId uint) {
 // index:0
 // Public static
 // void updateAccessibility(class QAccessibleEvent *)
-func (this *QAccessible) UpdateAccessibility(event *QAccessibleEvent /*444 QAccessibleEvent **/) {
+func (this *QAccessible) UpdateAccessibility(event *QAccessibleEvent /*777 QAccessibleEvent **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QAccessible19updateAccessibilityEP16QAccessibleEvent", ffiqt.FFI_TYPE_POINTER, event)
 	gopp.ErrPrint(err, rv)
 }
-func QAccessible_UpdateAccessibility(event *QAccessibleEvent /*444 QAccessibleEvent **/) {
+func QAccessible_UpdateAccessibility(event *QAccessibleEvent /*777 QAccessibleEvent **/) {
 	var nilthis *QAccessible
 	nilthis.UpdateAccessibility(event)
 }
@@ -194,11 +194,11 @@ func QAccessible_SetActive(active bool) {
 // index:0
 // Public static
 // void setRootObject(class QObject *)
-func (this *QAccessible) SetRootObject(object *qtcore.QObject /*444 QObject **/) {
+func (this *QAccessible) SetRootObject(object *qtcore.QObject /*777 QObject **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QAccessible13setRootObjectEP7QObject", ffiqt.FFI_TYPE_POINTER, object)
 	gopp.ErrPrint(err, rv)
 }
-func QAccessible_SetRootObject(object *qtcore.QObject /*444 QObject **/) {
+func QAccessible_SetRootObject(object *qtcore.QObject /*777 QObject **/) {
 	var nilthis *QAccessible
 	nilthis.SetRootObject(object)
 }

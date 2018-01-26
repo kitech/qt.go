@@ -150,7 +150,7 @@ func (this *QPicture) SetData(data string, size uint) {
 // index:0
 // Public
 // bool play(class QPainter *)
-func (this *QPicture) Play(p *QPainter /*444 QPainter **/) bool {
+func (this *QPicture) Play(p *QPainter /*777 QPainter **/) bool {
 	var convArg0 = p.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture4playEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -162,7 +162,7 @@ func (this *QPicture) Play(p *QPainter /*444 QPainter **/) bool {
 // index:0
 // Public
 // bool load(class QIODevice *, const char *)
-func (this *QPicture) Load(dev *qtcore.QIODevice /*444 QIODevice **/, format string) bool {
+func (this *QPicture) Load(dev *qtcore.QIODevice /*777 QIODevice **/, format string) bool {
 	var convArg0 = dev.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
@@ -190,7 +190,7 @@ func (this *QPicture) Load_1(fileName *qtcore.QString, format string) bool {
 // index:0
 // Public
 // bool save(class QIODevice *, const char *)
-func (this *QPicture) Save(dev *qtcore.QIODevice /*444 QIODevice **/, format string) bool {
+func (this *QPicture) Save(dev *qtcore.QIODevice /*777 QIODevice **/, format string) bool {
 	var convArg0 = dev.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
@@ -288,7 +288,7 @@ func QPicture_PictureFormat(fileName *qtcore.QString) string {
 // index:0
 // Public virtual
 // QPaintEngine * paintEngine()
-func (this *QPicture) PaintEngine() *QPaintEngine /*444 QPaintEngine **/ {
+func (this *QPicture) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture11paintEngineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

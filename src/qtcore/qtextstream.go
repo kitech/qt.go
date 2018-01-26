@@ -81,7 +81,7 @@ func NewQTextStream() *QTextStream {
 // index:1
 // Public
 // void QTextStream(class QIODevice *)
-func NewQTextStream_1(device *QIODevice /*444 QIODevice **/) *QTextStream {
+func NewQTextStream_1(device *QIODevice /*777 QIODevice **/) *QTextStream {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStreamC2EP9QIODevice", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -103,7 +103,7 @@ func DeleteQTextStream(*QTextStream) {
 // index:0
 // Public
 // void setCodec(class QTextCodec *)
-func (this *QTextStream) SetCodec(codec *QTextCodec /*444 QTextCodec **/) {
+func (this *QTextStream) SetCodec(codec *QTextCodec /*777 QTextCodec **/) {
 	var convArg0 = codec.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream8setCodecEP10QTextCodec", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -124,7 +124,7 @@ func (this *QTextStream) SetCodec_1(codecName string) {
 // index:0
 // Public
 // QTextCodec * codec()
-func (this *QTextStream) Codec() *QTextCodec /*444 QTextCodec **/ {
+func (this *QTextStream) Codec() *QTextCodec /*777 QTextCodec **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream5codecEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -200,7 +200,7 @@ func (this *QTextStream) Locale() *QLocale /*123*/ {
 // index:0
 // Public
 // void setDevice(class QIODevice *)
-func (this *QTextStream) SetDevice(device *QIODevice /*444 QIODevice **/) {
+func (this *QTextStream) SetDevice(device *QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -210,7 +210,7 @@ func (this *QTextStream) SetDevice(device *QIODevice /*444 QIODevice **/) {
 // index:0
 // Public
 // QIODevice * device()
-func (this *QTextStream) Device() *QIODevice /*444 QIODevice **/ {
+func (this *QTextStream) Device() *QIODevice /*777 QIODevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -222,7 +222,7 @@ func (this *QTextStream) Device() *QIODevice /*444 QIODevice **/ {
 // index:0
 // Public
 // QString * string()
-func (this *QTextStream) String() *QString /*444 QString **/ {
+func (this *QTextStream) String() *QString /*777 QString **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream6stringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -337,7 +337,7 @@ func (this *QTextStream) ReadLine(maxlen int64) *QString /*123*/ {
 // index:0
 // Public
 // bool readLineInto(class QString *, qint64)
-func (this *QTextStream) ReadLineInto(line *QString /*444 QString **/, maxlen int64) bool {
+func (this *QTextStream) ReadLineInto(line *QString /*777 QString **/, maxlen int64) bool {
 	var convArg0 = line.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream12readLineIntoEP7QStringx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	gopp.ErrPrint(err, rv)

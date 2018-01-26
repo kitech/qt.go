@@ -74,7 +74,7 @@ func (*QClipboard) NewFromPointer(cthis unsafe.Pointer) *QClipboard {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QClipboard) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QClipboard) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -189,7 +189,7 @@ func (this *QClipboard) SetText(arg0 *qtcore.QString, mode int) {
 // index:0
 // Public
 // const QMimeData * mimeData(enum QClipboard::Mode)
-func (this *QClipboard) MimeData(mode int) *qtcore.QMimeData /*444 const QMimeData **/ {
+func (this *QClipboard) MimeData(mode int) *qtcore.QMimeData /*777 const QMimeData **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard8mimeDataENS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -201,7 +201,7 @@ func (this *QClipboard) MimeData(mode int) *qtcore.QMimeData /*444 const QMimeDa
 // index:0
 // Public
 // void setMimeData(class QMimeData *, enum QClipboard::Mode)
-func (this *QClipboard) SetMimeData(data *qtcore.QMimeData /*444 QMimeData **/, mode int) {
+func (this *QClipboard) SetMimeData(data *qtcore.QMimeData /*777 QMimeData **/, mode int) {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard11setMimeDataEP9QMimeDataNS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)

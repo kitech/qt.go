@@ -74,7 +74,7 @@ func (*QAccessibleValueChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QAcces
 // index:0
 // Public inline
 // void QAccessibleValueChangeEvent(class QObject *, const class QVariant &)
-func NewQAccessibleValueChangeEvent(obj *qtcore.QObject /*444 QObject **/, val *qtcore.QVariant) *QAccessibleValueChangeEvent {
+func NewQAccessibleValueChangeEvent(obj *qtcore.QObject /*777 QObject **/, val *qtcore.QVariant) *QAccessibleValueChangeEvent {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = obj.GetCthis()
 	var convArg1 = val.GetCthis()
@@ -88,7 +88,7 @@ func NewQAccessibleValueChangeEvent(obj *qtcore.QObject /*444 QObject **/, val *
 // index:1
 // Public inline
 // void QAccessibleValueChangeEvent(class QAccessibleInterface *, const class QVariant &)
-func NewQAccessibleValueChangeEvent_1(iface *QAccessibleInterface /*444 QAccessibleInterface **/, val *qtcore.QVariant) *QAccessibleValueChangeEvent {
+func NewQAccessibleValueChangeEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, val *qtcore.QVariant) *QAccessibleValueChangeEvent {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = iface.GetCthis()
 	var convArg1 = val.GetCthis()

@@ -954,7 +954,7 @@ func (this *QImage) InvertPixels(arg0 int) {
 // index:0
 // Public
 // bool load(class QIODevice *, const char *)
-func (this *QImage) Load(device *qtcore.QIODevice /*444 QIODevice **/, format string) bool {
+func (this *QImage) Load(device *qtcore.QIODevice /*777 QIODevice **/, format string) bool {
 	var convArg0 = device.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
@@ -1023,7 +1023,7 @@ func (this *QImage) Save(fileName *qtcore.QString, format string, quality int) b
 // index:1
 // Public
 // bool save(class QIODevice *, const char *, int)
-func (this *QImage) Save_1(device *qtcore.QIODevice /*444 QIODevice **/, format string, quality int) bool {
+func (this *QImage) Save_1(device *qtcore.QIODevice /*777 QIODevice **/, format string, quality int) bool {
 	var convArg0 = device.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
@@ -1082,7 +1082,7 @@ func (this *QImage) CacheKey() int64 {
 // index:0
 // Public virtual
 // QPaintEngine * paintEngine()
-func (this *QImage) PaintEngine() *QPaintEngine /*444 QPaintEngine **/ {
+func (this *QImage) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QImage11paintEngineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

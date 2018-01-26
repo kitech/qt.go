@@ -78,7 +78,7 @@ func (*QScroller) NewFromPointer(cthis unsafe.Pointer) *QScroller {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QScroller) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QScroller) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QScroller10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,13 +90,13 @@ func (this *QScroller) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject 
 // index:0
 // Public static
 // bool hasScroller(class QObject *)
-func (this *QScroller) HasScroller(target *qtcore.QObject /*444 QObject **/) bool {
+func (this *QScroller) HasScroller(target *qtcore.QObject /*777 QObject **/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller11hasScrollerEP7QObject", ffiqt.FFI_TYPE_POINTER, target)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
 }
-func QScroller_HasScroller(target *qtcore.QObject /*444 QObject **/) bool {
+func QScroller_HasScroller(target *qtcore.QObject /*777 QObject **/) bool {
 	var nilthis *QScroller
 	rv := nilthis.HasScroller(target)
 	return rv
@@ -106,14 +106,14 @@ func QScroller_HasScroller(target *qtcore.QObject /*444 QObject **/) bool {
 // index:0
 // Public static
 // QScroller * scroller(class QObject *)
-func (this *QScroller) Scroller(target *qtcore.QObject /*444 QObject **/) *QScroller /*444 QScroller **/ {
+func (this *QScroller) Scroller(target *qtcore.QObject /*777 QObject **/) *QScroller /*777 QScroller **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller8scrollerEP7QObject", ffiqt.FFI_TYPE_POINTER, target)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQScrollerFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QScroller_Scroller(target *qtcore.QObject /*444 QObject **/) *QScroller /*444 QScroller **/ {
+func QScroller_Scroller(target *qtcore.QObject /*777 QObject **/) *QScroller /*777 QScroller **/ {
 	var nilthis *QScroller
 	rv := nilthis.Scroller(target)
 	return rv
@@ -123,14 +123,14 @@ func QScroller_Scroller(target *qtcore.QObject /*444 QObject **/) *QScroller /*4
 // index:1
 // Public static
 // const QScroller * scroller(const class QObject *)
-func (this *QScroller) Scroller_1(target *qtcore.QObject /*444 const QObject **/) *QScroller /*444 const QScroller **/ {
+func (this *QScroller) Scroller_1(target *qtcore.QObject /*777 const QObject **/) *QScroller /*777 const QScroller **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller8scrollerEPK7QObject", ffiqt.FFI_TYPE_POINTER, target)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQScrollerFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
 }
-func QScroller_Scroller_1(target *qtcore.QObject /*444 const QObject **/) *QScroller /*444 const QScroller **/ {
+func QScroller_Scroller_1(target *qtcore.QObject /*777 const QObject **/) *QScroller /*777 const QScroller **/ {
 	var nilthis *QScroller
 	rv := nilthis.Scroller_1(target)
 	return rv
@@ -140,13 +140,13 @@ func QScroller_Scroller_1(target *qtcore.QObject /*444 const QObject **/) *QScro
 // index:0
 // Public static
 // Qt::GestureType grabGesture(class QObject *, enum QScroller::ScrollerGestureType)
-func (this *QScroller) GrabGesture(target *qtcore.QObject /*444 QObject **/, gestureType int) int {
+func (this *QScroller) GrabGesture(target *qtcore.QObject /*777 QObject **/, gestureType int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller11grabGestureEP7QObjectNS_19ScrollerGestureTypeE", ffiqt.FFI_TYPE_POINTER, target, gestureType)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv)
 }
-func QScroller_GrabGesture(target *qtcore.QObject /*444 QObject **/, gestureType int) int {
+func QScroller_GrabGesture(target *qtcore.QObject /*777 QObject **/, gestureType int) int {
 	var nilthis *QScroller
 	rv := nilthis.GrabGesture(target, gestureType)
 	return rv
@@ -156,13 +156,13 @@ func QScroller_GrabGesture(target *qtcore.QObject /*444 QObject **/, gestureType
 // index:0
 // Public static
 // Qt::GestureType grabbedGesture(class QObject *)
-func (this *QScroller) GrabbedGesture(target *qtcore.QObject /*444 QObject **/) int {
+func (this *QScroller) GrabbedGesture(target *qtcore.QObject /*777 QObject **/) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller14grabbedGestureEP7QObject", ffiqt.FFI_TYPE_POINTER, target)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv)
 }
-func QScroller_GrabbedGesture(target *qtcore.QObject /*444 QObject **/) int {
+func QScroller_GrabbedGesture(target *qtcore.QObject /*777 QObject **/) int {
 	var nilthis *QScroller
 	rv := nilthis.GrabbedGesture(target)
 	return rv
@@ -172,11 +172,11 @@ func QScroller_GrabbedGesture(target *qtcore.QObject /*444 QObject **/) int {
 // index:0
 // Public static
 // void ungrabGesture(class QObject *)
-func (this *QScroller) UngrabGesture(target *qtcore.QObject /*444 QObject **/) {
+func (this *QScroller) UngrabGesture(target *qtcore.QObject /*777 QObject **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller13ungrabGestureEP7QObject", ffiqt.FFI_TYPE_POINTER, target)
 	gopp.ErrPrint(err, rv)
 }
-func QScroller_UngrabGesture(target *qtcore.QObject /*444 QObject **/) {
+func QScroller_UngrabGesture(target *qtcore.QObject /*777 QObject **/) {
 	var nilthis *QScroller
 	nilthis.UngrabGesture(target)
 }
@@ -185,7 +185,7 @@ func QScroller_UngrabGesture(target *qtcore.QObject /*444 QObject **/) {
 // index:0
 // Public
 // QObject * target()
-func (this *QScroller) Target() *qtcore.QObject /*444 QObject **/ {
+func (this *QScroller) Target() *qtcore.QObject /*777 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QScroller6targetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

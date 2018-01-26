@@ -78,7 +78,7 @@ func (*QDirModel) NewFromPointer(cthis unsafe.Pointer) *QDirModel {
 // index:0
 // Public virtual
 // const QMetaObject * metaObject()
-func (this *QDirModel) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject **/ {
+func (this *QDirModel) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -90,7 +90,7 @@ func (this *QDirModel) MetaObject() *qtcore.QMetaObject /*444 const QMetaObject 
 // index:0
 // Public
 // void QDirModel(class QObject *)
-func NewQDirModel(parent *qtcore.QObject /*444 QObject **/) *QDirModel {
+func NewQDirModel(parent *qtcore.QObject /*777 QObject **/) *QDirModel {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModelC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
@@ -256,7 +256,7 @@ func (this *QDirModel) Sort(column int, order int) {
 // index:0
 // Public virtual
 // bool dropMimeData(const class QMimeData *, Qt::DropAction, int, int, const class QModelIndex &)
-func (this *QDirModel) DropMimeData(data *qtcore.QMimeData /*444 const QMimeData **/, action int, row int, column int, parent *qtcore.QModelIndex) bool {
+func (this *QDirModel) DropMimeData(data *qtcore.QMimeData /*777 const QMimeData **/, action int, row int, column int, parent *qtcore.QModelIndex) bool {
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action, row, column, convArg4)
@@ -280,7 +280,7 @@ func (this *QDirModel) SupportedDropActions() int {
 // index:0
 // Public
 // void setIconProvider(class QFileIconProvider *)
-func (this *QDirModel) SetIconProvider(provider *QFileIconProvider /*444 QFileIconProvider **/) {
+func (this *QDirModel) SetIconProvider(provider *QFileIconProvider /*777 QFileIconProvider **/) {
 	var convArg0 = provider.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel15setIconProviderEP17QFileIconProvider", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
@@ -290,7 +290,7 @@ func (this *QDirModel) SetIconProvider(provider *QFileIconProvider /*444 QFileIc
 // index:0
 // Public
 // QFileIconProvider * iconProvider()
-func (this *QDirModel) IconProvider() *QFileIconProvider /*444 QFileIconProvider **/ {
+func (this *QDirModel) IconProvider() *QFileIconProvider /*777 QFileIconProvider **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel12iconProviderEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

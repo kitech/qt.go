@@ -192,7 +192,7 @@ func (this *QModelIndex) Flags() int {
 // index:0
 // Public inline
 // const QAbstractItemModel * model()
-func (this *QModelIndex) Model() *QAbstractItemModel /*444 const QAbstractItemModel **/ {
+func (this *QModelIndex) Model() *QAbstractItemModel /*777 const QAbstractItemModel **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex5modelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

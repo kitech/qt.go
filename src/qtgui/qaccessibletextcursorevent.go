@@ -74,7 +74,7 @@ func (*QAccessibleTextCursorEvent) NewFromPointer(cthis unsafe.Pointer) *QAccess
 // index:0
 // Public inline
 // void QAccessibleTextCursorEvent(class QObject *, int)
-func NewQAccessibleTextCursorEvent(obj *qtcore.QObject /*444 QObject **/, cursorPos int) *QAccessibleTextCursorEvent {
+func NewQAccessibleTextCursorEvent(obj *qtcore.QObject /*777 QObject **/, cursorPos int) *QAccessibleTextCursorEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEventC2EP7QObjecti", ffiqt.FFI_TYPE_VOID, cthis, convArg0, cursorPos)
@@ -87,7 +87,7 @@ func NewQAccessibleTextCursorEvent(obj *qtcore.QObject /*444 QObject **/, cursor
 // index:1
 // Public inline
 // void QAccessibleTextCursorEvent(class QAccessibleInterface *, int)
-func NewQAccessibleTextCursorEvent_1(iface *QAccessibleInterface /*444 QAccessibleInterface **/, cursorPos int) *QAccessibleTextCursorEvent {
+func NewQAccessibleTextCursorEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, cursorPos int) *QAccessibleTextCursorEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = iface.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEventC2EP20QAccessibleInterfacei", ffiqt.FFI_TYPE_VOID, cthis, convArg0, cursorPos)

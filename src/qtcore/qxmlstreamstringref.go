@@ -147,7 +147,7 @@ func (this *QXmlStreamStringRef) Clear() {
 // index:0
 // Public inline
 // const QString * string()
-func (this *QXmlStreamStringRef) String() *QString /*444 const QString **/ {
+func (this *QXmlStreamStringRef) String() *QString /*777 const QString **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef6stringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv

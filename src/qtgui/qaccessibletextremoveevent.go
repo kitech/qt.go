@@ -74,7 +74,7 @@ func (*QAccessibleTextRemoveEvent) NewFromPointer(cthis unsafe.Pointer) *QAccess
 // index:0
 // Public inline
 // void QAccessibleTextRemoveEvent(class QObject *, int, const class QString &)
-func NewQAccessibleTextRemoveEvent(obj *qtcore.QObject /*444 QObject **/, position int, text *qtcore.QString) *QAccessibleTextRemoveEvent {
+func NewQAccessibleTextRemoveEvent(obj *qtcore.QObject /*777 QObject **/, position int, text *qtcore.QString) *QAccessibleTextRemoveEvent {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = obj.GetCthis()
 	var convArg2 = text.GetCthis()
@@ -88,7 +88,7 @@ func NewQAccessibleTextRemoveEvent(obj *qtcore.QObject /*444 QObject **/, positi
 // index:1
 // Public inline
 // void QAccessibleTextRemoveEvent(class QAccessibleInterface *, int, const class QString &)
-func NewQAccessibleTextRemoveEvent_1(iface *QAccessibleInterface /*444 QAccessibleInterface **/, position int, text *qtcore.QString) *QAccessibleTextRemoveEvent {
+func NewQAccessibleTextRemoveEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, position int, text *qtcore.QString) *QAccessibleTextRemoveEvent {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = iface.GetCthis()
 	var convArg2 = text.GetCthis()
