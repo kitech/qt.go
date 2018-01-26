@@ -1,5 +1,5 @@
 
-GOPATH := $(PWD):$(GOPATH)
+# GOPATH := $(PWD):$(GOPATH)
 
 all:
 	@echo ${GOPATH}
@@ -8,26 +8,26 @@ all:
 	# go build -v -x gui
 	# go build -v -x widgets
 
-qtrt:
-	CC=clang CXX=clang++ go install -v -x qtrt
+qtrt_:
+	CC=clang CXX=clang++ go install -v -x ./qtrt
 
 core:
-	CC=clang CXX=clang++ go install -v -x qtcore
+	CC=clang CXX=clang++ go install -v -x ./qtcore
 
 gui:
-	CC=clang CXX=clang++ go install -v -x qtgui
+	CC=clang CXX=clang++ go install -v -x ./qtgui
 
 widgets:
-	CC=clang CXX=clang++ go install -v -x qtwidgets
+	CC=clang CXX=clang++ go install -v -x ./qtwidgets
 
 network:
-	CC=clang CXX=clang++ go install -v -x qtnetwork
+	CC=clang CXX=clang++ go install -v -x ./qtnetwork
 
 qml:
-	CC=clang CXX=clang++ go install -v -x qtqml
+	CC=clang CXX=clang++ go install -v -x ./qtqml
 
 quick:
-	CC=clang CXX=clang++ go install -v -x qtquick
+	CC=clang CXX=clang++ go install -v -x ./qtquick
 
 eg:
 	# CC=clang CXX=clang++ go build -v -x src/eg/coreapp.go
