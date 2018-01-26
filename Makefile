@@ -26,6 +26,9 @@ network:
 qml:
 	CC=clang CXX=clang++ go install -v -x qtqml
 
+quick:
+	CC=clang CXX=clang++ go install -v -x qtquick
+
 eg:
 	# CC=clang CXX=clang++ go build -v -x src/eg/coreapp.go
 	# CC=clang CXX=clang++ go build -v -x src/eg/guiapp.go

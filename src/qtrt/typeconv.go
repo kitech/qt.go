@@ -6,12 +6,14 @@ package qtrt
 
 static void carr_set_item(char** pp, int idx, char*p)
 { pp[idx] = p; }
-
+static char* carr_get_item(char** pp, int idx)
+{ return pp[idx]; }
 */
 import "C"
 import "unsafe"
 import "reflect"
 import "log"
+import "math"
 
 func test_123() {
 	// var a0 interface{}
@@ -98,4 +100,17 @@ func StringSliceToCCharPP(ss []string) unsafe.Pointer {
 	}
 
 	return p
+}
+
+func CCharPPToStringSlice(charpp unsafe.Pointer) []string {
+	ss := []string{}
+	var pp **C.char = (**C.char)(charpp)
+	for i := 0; i < math.MaxInt32; i++ {
+		p := C.carr_get_item(pp, C.int(i))
+		if p == nil {
+			break
+		}
+		ss = append(ss, C.GoString(p))
+	}
+	return ss
 }
