@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QTextObject) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // /usr/include/qt/QtGui/qtextobject.h:65
 // index:0
 // Protected
-// void QTextObject(class QTextDocument *)
+// void QTextObject(QTextDocument *)
 func NewQTextObject(doc *QTextDocument /*777 QTextDocument **/) *QTextObject {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = doc.GetCthis()
@@ -107,7 +107,7 @@ func DeleteQTextObject(*QTextObject) {
 // /usr/include/qt/QtGui/qtextobject.h:68
 // index:0
 // Protected
-// void setFormat(const class QTextFormat &)
+// void setFormat(const QTextFormat &)
 func (this *QTextObject) SetFormat(format *QTextFormat) {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextObject9setFormatERK11QTextFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

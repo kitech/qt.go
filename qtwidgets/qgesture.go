@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject *
 // /usr/include/qt/QtWidgets/qgesture.h:73
 // index:0
 // Public
-// void QGesture(class QObject *)
+// void QGesture(QObject *)
 func NewQGesture(parent *qtcore.QObject /*777 QObject **/) *QGesture {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -147,7 +147,7 @@ func (this *QGesture) HotSpot() *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtWidgets/qgesture.h:81
 // index:0
 // Public
-// void setHotSpot(const class QPointF &)
+// void setHotSpot(const QPointF &)
 func (this *QGesture) SetHotSpot(value *qtcore.QPointF) {
 	var convArg0 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGesture10setHotSpotERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -177,7 +177,7 @@ func (this *QGesture) UnsetHotSpot() {
 // /usr/include/qt/QtWidgets/qgesture.h:90
 // index:0
 // Public
-// void setGestureCancelPolicy(enum QGesture::GestureCancelPolicy)
+// void setGestureCancelPolicy(QGesture::GestureCancelPolicy)
 func (this *QGesture) SetGestureCancelPolicy(policy int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGesture22setGestureCancelPolicyENS_19GestureCancelPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)

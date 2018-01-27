@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -97,7 +97,7 @@ func DeleteQGestureRecognizer(*QGestureRecognizer) {
 // /usr/include/qt/QtWidgets/qgesturerecognizer.h:80
 // index:0
 // Public virtual
-// QGesture * create(class QObject *)
+// QGesture * create(QObject *)
 func (this *QGestureRecognizer) Create(target *qtcore.QObject /*777 QObject **/) *QGesture /*777 QGesture **/ {
 	var convArg0 = target.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGestureRecognizer6createEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -110,7 +110,7 @@ func (this *QGestureRecognizer) Create(target *qtcore.QObject /*777 QObject **/)
 // /usr/include/qt/QtWidgets/qgesturerecognizer.h:81
 // index:0
 // Public pure virtual
-// QGestureRecognizer::Result recognize(class QGesture *, class QObject *, class QEvent *)
+// QGestureRecognizer::Result recognize(QGesture *, QObject *, QEvent *)
 func (this *QGestureRecognizer) Recognize(state *QGesture /*777 QGesture **/, watched *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) int {
 	var convArg0 = state.GetCthis()
 	var convArg1 = watched.GetCthis()
@@ -124,7 +124,7 @@ func (this *QGestureRecognizer) Recognize(state *QGesture /*777 QGesture **/, wa
 // /usr/include/qt/QtWidgets/qgesturerecognizer.h:83
 // index:0
 // Public virtual
-// void reset(class QGesture *)
+// void reset(QGesture *)
 func (this *QGestureRecognizer) Reset(state *QGesture /*777 QGesture **/) {
 	var convArg0 = state.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGestureRecognizer5resetEP8QGesture", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -134,7 +134,7 @@ func (this *QGestureRecognizer) Reset(state *QGesture /*777 QGesture **/) {
 // /usr/include/qt/QtWidgets/qgesturerecognizer.h:85
 // index:0
 // Public static
-// Qt::GestureType registerRecognizer(class QGestureRecognizer *)
+// Qt::GestureType registerRecognizer(QGestureRecognizer *)
 func (this *QGestureRecognizer) RegisterRecognizer(recognizer *QGestureRecognizer /*777 QGestureRecognizer **/) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGestureRecognizer18registerRecognizerEPS_", ffiqt.FFI_TYPE_POINTER, recognizer)
 	gopp.ErrPrint(err, rv)

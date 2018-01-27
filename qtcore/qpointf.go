@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQPointF() *QPointF {
 // /usr/include/qt/QtCore/qpoint.h:223
 // index:1
 // Public inline
-// void QPointF(const class QPoint &)
+// void QPointF(const QPoint &)
 func NewQPointF_1(p *QPoint) *QPointF {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = p.GetCthis()
@@ -189,7 +189,7 @@ func (this *QPointF) Ry() float64 {
 // /usr/include/qt/QtCore/qpoint.h:243
 // index:0
 // Public static inline
-// qreal dotProduct(const class QPointF &, const class QPointF &)
+// qreal dotProduct(const QPointF &, const QPointF &)
 func (this *QPointF) DotProduct(p1 *QPointF, p2 *QPointF) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointF10dotProductERKS_S1_", ffiqt.FFI_TYPE_POINTER, p1, p2)
 	gopp.ErrPrint(err, rv)

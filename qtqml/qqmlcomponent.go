@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -89,7 +89,7 @@ func (this *QQmlComponent) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // /usr/include/qt/QtQml/qqmlcomponent.h:80
 // index:0
 // Public
-// void QQmlComponent(class QObject *)
+// void QQmlComponent(QObject *)
 func NewQQmlComponent(parent *qtcore.QObject /*777 QObject **/) *QQmlComponent {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -102,7 +102,7 @@ func NewQQmlComponent(parent *qtcore.QObject /*777 QObject **/) *QQmlComponent {
 // /usr/include/qt/QtQml/qqmlcomponent.h:81
 // index:1
 // Public
-// void QQmlComponent(class QQmlEngine *, class QObject *)
+// void QQmlComponent(QQmlEngine *, QObject *)
 func NewQQmlComponent_1(arg0 *QQmlEngine /*777 QQmlEngine **/, parent *qtcore.QObject /*777 QObject **/) *QQmlComponent {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = arg0.GetCthis()
@@ -116,7 +116,7 @@ func NewQQmlComponent_1(arg0 *QQmlEngine /*777 QQmlEngine **/, parent *qtcore.QO
 // /usr/include/qt/QtQml/qqmlcomponent.h:82
 // index:2
 // Public
-// void QQmlComponent(class QQmlEngine *, const class QString &, class QObject *)
+// void QQmlComponent(QQmlEngine *, const QString &, QObject *)
 func NewQQmlComponent_2(arg0 *QQmlEngine /*777 QQmlEngine **/, fileName *qtcore.QString, parent *qtcore.QObject /*777 QObject **/) *QQmlComponent {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = arg0.GetCthis()
@@ -131,7 +131,7 @@ func NewQQmlComponent_2(arg0 *QQmlEngine /*777 QQmlEngine **/, fileName *qtcore.
 // /usr/include/qt/QtQml/qqmlcomponent.h:83
 // index:3
 // Public
-// void QQmlComponent(class QQmlEngine *, const class QString &, enum QQmlComponent::CompilationMode, class QObject *)
+// void QQmlComponent(QQmlEngine *, const QString &, QQmlComponent::CompilationMode, QObject *)
 func NewQQmlComponent_3(arg0 *QQmlEngine /*777 QQmlEngine **/, fileName *qtcore.QString, mode int, parent *qtcore.QObject /*777 QObject **/) *QQmlComponent {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = arg0.GetCthis()
@@ -146,7 +146,7 @@ func NewQQmlComponent_3(arg0 *QQmlEngine /*777 QQmlEngine **/, fileName *qtcore.
 // /usr/include/qt/QtQml/qqmlcomponent.h:84
 // index:4
 // Public
-// void QQmlComponent(class QQmlEngine *, const class QUrl &, class QObject *)
+// void QQmlComponent(QQmlEngine *, const QUrl &, QObject *)
 func NewQQmlComponent_4(arg0 *QQmlEngine /*777 QQmlEngine **/, url *qtcore.QUrl, parent *qtcore.QObject /*777 QObject **/) *QQmlComponent {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = arg0.GetCthis()
@@ -161,7 +161,7 @@ func NewQQmlComponent_4(arg0 *QQmlEngine /*777 QQmlEngine **/, url *qtcore.QUrl,
 // /usr/include/qt/QtQml/qqmlcomponent.h:85
 // index:5
 // Public
-// void QQmlComponent(class QQmlEngine *, const class QUrl &, enum QQmlComponent::CompilationMode, class QObject *)
+// void QQmlComponent(QQmlEngine *, const QUrl &, QQmlComponent::CompilationMode, QObject *)
 func NewQQmlComponent_5(arg0 *QQmlEngine /*777 QQmlEngine **/, url *qtcore.QUrl, mode int, parent *qtcore.QObject /*777 QObject **/) *QQmlComponent {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = arg0.GetCthis()
@@ -279,7 +279,7 @@ func (this *QQmlComponent) Url() *qtcore.QUrl /*123*/ {
 // /usr/include/qt/QtQml/qqmlcomponent.h:104
 // index:0
 // Public virtual
-// QObject * create(class QQmlContext *)
+// QObject * create(QQmlContext *)
 func (this *QQmlComponent) Create(context *QQmlContext /*777 QQmlContext **/) *qtcore.QObject /*777 QObject **/ {
 	var convArg0 = context.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QQmlComponent6createEP11QQmlContext", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -292,7 +292,7 @@ func (this *QQmlComponent) Create(context *QQmlContext /*777 QQmlContext **/) *q
 // /usr/include/qt/QtQml/qqmlcomponent.h:108
 // index:1
 // Public
-// void create(class QQmlIncubator &, class QQmlContext *, class QQmlContext *)
+// void create(QQmlIncubator &, QQmlContext *, QQmlContext *)
 func (this *QQmlComponent) Create_1(arg0 *QQmlIncubator, context *QQmlContext /*777 QQmlContext **/, forContext *QQmlContext /*777 QQmlContext **/) {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = context.GetCthis()
@@ -304,7 +304,7 @@ func (this *QQmlComponent) Create_1(arg0 *QQmlIncubator, context *QQmlContext /*
 // /usr/include/qt/QtQml/qqmlcomponent.h:105
 // index:0
 // Public virtual
-// QObject * beginCreate(class QQmlContext *)
+// QObject * beginCreate(QQmlContext *)
 func (this *QQmlComponent) BeginCreate(arg0 *QQmlContext /*777 QQmlContext **/) *qtcore.QObject /*777 QObject **/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QQmlComponent11beginCreateEP11QQmlContext", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -338,7 +338,7 @@ func (this *QQmlComponent) CreationContext() *QQmlContext /*777 QQmlContext **/ 
 // /usr/include/qt/QtQml/qqmlcomponent.h:113
 // index:0
 // Public static
-// QQmlComponentAttached * qmlAttachedProperties(class QObject *)
+// QQmlComponentAttached * qmlAttachedProperties(QObject *)
 func (this *QQmlComponent) QmlAttachedProperties(arg0 *qtcore.QObject /*777 QObject **/) unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QQmlComponent21qmlAttachedPropertiesEP7QObject", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
@@ -354,7 +354,7 @@ func QQmlComponent_QmlAttachedProperties(arg0 *qtcore.QObject /*777 QObject **/)
 // /usr/include/qt/QtQml/qqmlcomponent.h:116
 // index:0
 // Public
-// void loadUrl(const class QUrl &)
+// void loadUrl(const QUrl &)
 func (this *QQmlComponent) LoadUrl(url *qtcore.QUrl) {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QQmlComponent7loadUrlERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -364,7 +364,7 @@ func (this *QQmlComponent) LoadUrl(url *qtcore.QUrl) {
 // /usr/include/qt/QtQml/qqmlcomponent.h:117
 // index:1
 // Public
-// void loadUrl(const class QUrl &, enum QQmlComponent::CompilationMode)
+// void loadUrl(const QUrl &, QQmlComponent::CompilationMode)
 func (this *QQmlComponent) LoadUrl_1(url *qtcore.QUrl, mode int) {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QQmlComponent7loadUrlERK4QUrlNS_15CompilationModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
@@ -374,7 +374,7 @@ func (this *QQmlComponent) LoadUrl_1(url *qtcore.QUrl, mode int) {
 // /usr/include/qt/QtQml/qqmlcomponent.h:118
 // index:0
 // Public
-// void setData(const class QByteArray &, const class QUrl &)
+// void setData(const QByteArray &, const QUrl &)
 func (this *QQmlComponent) SetData(arg0 *qtcore.QByteArray, baseUrl *qtcore.QUrl) {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = baseUrl.GetCthis()
@@ -385,7 +385,7 @@ func (this *QQmlComponent) SetData(arg0 *qtcore.QByteArray, baseUrl *qtcore.QUrl
 // /usr/include/qt/QtQml/qqmlcomponent.h:121
 // index:0
 // Public
-// void statusChanged(class QQmlComponent::Status)
+// void statusChanged(QQmlComponent::Status)
 func (this *QQmlComponent) StatusChanged(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QQmlComponent13statusChangedENS_6StatusE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

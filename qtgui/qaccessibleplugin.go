@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QAccessiblePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // /usr/include/qt/QtGui/qaccessibleplugin.h:63
 // index:0
 // Public
-// void QAccessiblePlugin(class QObject *)
+// void QAccessiblePlugin(QObject *)
 func NewQAccessiblePlugin(parent *qtcore.QObject /*777 QObject **/) *QAccessiblePlugin {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -107,7 +107,7 @@ func DeleteQAccessiblePlugin(*QAccessiblePlugin) {
 // /usr/include/qt/QtGui/qaccessibleplugin.h:66
 // index:0
 // Public pure virtual
-// QAccessibleInterface * create(const class QString &, class QObject *)
+// QAccessibleInterface * create(const QString &, QObject *)
 func (this *QAccessiblePlugin) Create(key *qtcore.QString, object *qtcore.QObject /*777 QObject **/) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	var convArg0 = key.GetCthis()
 	var convArg1 = object.GetCthis()

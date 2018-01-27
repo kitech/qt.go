@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QGraphicsRotation) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:126
 // index:0
 // Public
-// void QGraphicsRotation(class QObject *)
+// void QGraphicsRotation(QObject *)
 func NewQGraphicsRotation(parent *qtcore.QObject /*777 QObject **/) *QGraphicsRotation {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -125,7 +125,7 @@ func (this *QGraphicsRotation) Origin() *qtgui.QVector3D /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:130
 // index:0
 // Public
-// void setOrigin(const class QVector3D &)
+// void setOrigin(const QVector3D &)
 func (this *QGraphicsRotation) SetOrigin(point *qtgui.QVector3D) {
 	var convArg0 = point.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation9setOriginERK9QVector3D", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -169,7 +169,7 @@ func (this *QGraphicsRotation) Axis() *qtgui.QVector3D /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:136
 // index:0
 // Public
-// void setAxis(const class QVector3D &)
+// void setAxis(const QVector3D &)
 func (this *QGraphicsRotation) SetAxis(axis *qtgui.QVector3D) {
 	var convArg0 = axis.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotation7setAxisERK9QVector3D", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -188,7 +188,7 @@ func (this *QGraphicsRotation) SetAxis_1(axis int) {
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:139
 // index:0
 // Public virtual
-// void applyTo(class QMatrix4x4 *)
+// void applyTo(QMatrix4x4 *)
 func (this *QGraphicsRotation) ApplyTo(matrix *qtgui.QMatrix4x4 /*777 QMatrix4x4 **/) {
 	var convArg0 = matrix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRotation7applyToEP10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

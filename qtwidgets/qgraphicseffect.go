@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QGraphicsEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:82
 // index:0
 // Public
-// void QGraphicsEffect(class QObject *)
+// void QGraphicsEffect(QObject *)
 func NewQGraphicsEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsEffect {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -111,7 +111,7 @@ func DeleteQGraphicsEffect(*QGraphicsEffect) {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:85
 // index:0
 // Public virtual
-// QRectF boundingRectFor(const class QRectF &)
+// QRectF boundingRectFor(const QRectF &)
 func (this *QGraphicsEffect) BoundingRectFor(sourceRect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = sourceRect.GetCthis()
@@ -151,7 +151,7 @@ func (this *QGraphicsEffect) IsEnabled() bool {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:91
 // index:0
 // Public
-// void setEnabled(_Bool)
+// void setEnabled(bool)
 func (this *QGraphicsEffect) SetEnabled(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsEffect10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -169,7 +169,7 @@ func (this *QGraphicsEffect) Update() {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:95
 // index:0
 // Public
-// void enabledChanged(_Bool)
+// void enabledChanged(bool)
 func (this *QGraphicsEffect) EnabledChanged(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsEffect14enabledChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -178,7 +178,7 @@ func (this *QGraphicsEffect) EnabledChanged(enabled bool) {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:99
 // index:0
 // Protected pure virtual
-// void draw(class QPainter *)
+// void draw(QPainter *)
 func (this *QGraphicsEffect) Draw(painter *qtgui.QPainter /*777 QPainter **/) {
 	var convArg0 = painter.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsEffect4drawEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -231,7 +231,7 @@ func (this *QGraphicsEffect) SourceBoundingRect(system int) *qtcore.QRectF /*123
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:105
 // index:0
 // Protected
-// void drawSource(class QPainter *)
+// void drawSource(QPainter *)
 func (this *QGraphicsEffect) DrawSource(painter *qtgui.QPainter /*777 QPainter **/) {
 	var convArg0 = painter.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsEffect10drawSourceEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -241,7 +241,7 @@ func (this *QGraphicsEffect) DrawSource(painter *qtgui.QPainter /*777 QPainter *
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:106
 // index:0
 // Protected
-// QPixmap sourcePixmap(Qt::CoordinateSystem, class QPoint *, enum QGraphicsEffect::PixmapPadMode)
+// QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, QGraphicsEffect::PixmapPadMode)
 func (this *QGraphicsEffect) SourcePixmap(system int, offset *qtcore.QPoint /*777 QPoint **/, mode int) *qtgui.QPixmap /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = offset.GetCthis()

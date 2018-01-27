@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -94,7 +94,7 @@ func (this *QAssociativeIterable) End() unsafe.Pointer /*444*/ {
 // /usr/include/qt/QtCore/qvariant.h:682
 // index:0
 // Public
-// QAssociativeIterable::const_iterator find(const class QVariant &)
+// QAssociativeIterable::const_iterator find(const QVariant &)
 func (this *QAssociativeIterable) Find(key *QVariant) unsafe.Pointer /*444*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
@@ -108,7 +108,7 @@ func (this *QAssociativeIterable) Find(key *QVariant) unsafe.Pointer /*444*/ {
 // /usr/include/qt/QtCore/qvariant.h:684
 // index:0
 // Public
-// QVariant value(const class QVariant &)
+// QVariant value(const QVariant &)
 func (this *QAssociativeIterable) Value(key *QVariant) *QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()

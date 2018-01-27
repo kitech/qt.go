@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QJsonValuePtr) NewFromPointer(cthis unsafe.Pointer) *QJsonValuePtr {
 // /usr/include/qt/QtCore/qjsonvalue.h:226
 // index:0
 // Public inline
-// void QJsonValuePtr(const class QJsonValue &)
+// void QJsonValuePtr(const QJsonValue &)
 func NewQJsonValuePtr(val *QJsonValue) *QJsonValuePtr {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = val.GetCthis()

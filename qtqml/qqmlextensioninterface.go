@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -86,7 +86,7 @@ func DeleteQQmlExtensionInterface(*QQmlExtensionInterface) {
 // /usr/include/qt/QtQml/qqmlextensioninterface.h:62
 // index:0
 // Public pure virtual
-// void initializeEngine(class QQmlEngine *, const char *)
+// void initializeEngine(QQmlEngine *, const char *)
 func (this *QQmlExtensionInterface) InitializeEngine(engine *QQmlEngine /*777 QQmlEngine **/, uri string) {
 	var convArg0 = engine.GetCthis()
 	var convArg1 = qtrt.CString(uri)

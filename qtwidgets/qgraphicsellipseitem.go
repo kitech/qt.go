@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -77,7 +77,7 @@ func (*QGraphicsEllipseItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsElli
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:699
 // index:0
 // Public
-// void QGraphicsEllipseItem(class QGraphicsItem *)
+// void QGraphicsEllipseItem(QGraphicsItem *)
 func NewQGraphicsEllipseItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -90,7 +90,7 @@ func NewQGraphicsEllipseItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGr
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:700
 // index:1
 // Public
-// void QGraphicsEllipseItem(const class QRectF &, class QGraphicsItem *)
+// void QGraphicsEllipseItem(const QRectF &, QGraphicsItem *)
 func NewQGraphicsEllipseItem_1(rect *qtcore.QRectF, parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = rect.GetCthis()
@@ -104,7 +104,7 @@ func NewQGraphicsEllipseItem_1(rect *qtcore.QRectF, parent *QGraphicsItem /*777 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:701
 // index:2
 // Public
-// void QGraphicsEllipseItem(qreal, qreal, qreal, qreal, class QGraphicsItem *)
+// void QGraphicsEllipseItem(qreal, qreal, qreal, qreal, QGraphicsItem *)
 func NewQGraphicsEllipseItem_2(x float64, y float64, w float64, h float64, parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsEllipseItem {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg4 = parent.GetCthis()
@@ -140,7 +140,7 @@ func (this *QGraphicsEllipseItem) Rect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:705
 // index:0
 // Public
-// void setRect(const class QRectF &)
+// void setRect(const QRectF &)
 func (this *QGraphicsEllipseItem) SetRect(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsEllipseItem7setRectERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -227,7 +227,7 @@ func (this *QGraphicsEllipseItem) Shape() *qtgui.QPainterPath /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:716
 // index:0
 // Public virtual
-// bool contains(const class QPointF &)
+// bool contains(const QPointF &)
 func (this *QGraphicsEllipseItem) Contains(point *qtcore.QPointF) bool {
 	var convArg0 = point.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem8containsERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -239,7 +239,7 @@ func (this *QGraphicsEllipseItem) Contains(point *qtcore.QPointF) bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:718
 // index:0
 // Public virtual
-// void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
+// void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
 func (this *QGraphicsEllipseItem) Paint(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionGraphicsItem /*777 const QStyleOptionGraphicsItem **/, widget *QWidget /*777 QWidget **/) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = option.GetCthis()
@@ -251,7 +251,7 @@ func (this *QGraphicsEllipseItem) Paint(painter *qtgui.QPainter /*777 QPainter *
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:720
 // index:0
 // Public virtual
-// bool isObscuredBy(const class QGraphicsItem *)
+// bool isObscuredBy(const QGraphicsItem *)
 func (this *QGraphicsEllipseItem) IsObscuredBy(item *QGraphicsItem /*777 const QGraphicsItem **/) bool {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem12isObscuredByEPK13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -288,7 +288,7 @@ func (this *QGraphicsEllipseItem) Type() int {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:727
 // index:0
 // Protected virtual
-// bool supportsExtension(enum QGraphicsItem::Extension)
+// bool supportsExtension(QGraphicsItem::Extension)
 func (this *QGraphicsEllipseItem) SupportsExtension(extension int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	gopp.ErrPrint(err, rv)
@@ -299,7 +299,7 @@ func (this *QGraphicsEllipseItem) SupportsExtension(extension int) bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:728
 // index:0
 // Protected virtual
-// void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
+// void setExtension(QGraphicsItem::Extension, const QVariant &)
 func (this *QGraphicsEllipseItem) SetExtension(extension int, variant *qtcore.QVariant) {
 	var convArg1 = variant.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsEllipseItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension, convArg1)
@@ -309,7 +309,7 @@ func (this *QGraphicsEllipseItem) SetExtension(extension int, variant *qtcore.QV
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:729
 // index:0
 // Protected virtual
-// QVariant extension(const class QVariant &)
+// QVariant extension(const QVariant &)
 func (this *QGraphicsEllipseItem) Extension(variant *qtcore.QVariant) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = variant.GetCthis()

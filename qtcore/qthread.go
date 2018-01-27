@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -143,7 +143,7 @@ func QThread_YieldCurrentThread() {
 // /usr/include/qt/QtCore/qthread.h:79
 // index:0
 // Public
-// void QThread(class QObject *)
+// void QThread(QObject *)
 func NewQThread(parent *QObject /*777 QObject **/) *QThread {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -165,7 +165,7 @@ func DeleteQThread(*QThread) {
 // /usr/include/qt/QtCore/qthread.h:96
 // index:0
 // Public
-// void setPriority(enum QThread::Priority)
+// void setPriority(QThread::Priority)
 func (this *QThread) SetPriority(priority int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread11setPriorityENS_8PriorityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), priority)
 	gopp.ErrPrint(err, rv)
@@ -268,7 +268,7 @@ func (this *QThread) EventDispatcher() *QAbstractEventDispatcher /*777 QAbstract
 // /usr/include/qt/QtCore/qthread.h:111
 // index:0
 // Public
-// void setEventDispatcher(class QAbstractEventDispatcher *)
+// void setEventDispatcher(QAbstractEventDispatcher *)
 func (this *QThread) SetEventDispatcher(eventDispatcher *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/) {
 	var convArg0 = eventDispatcher.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -278,7 +278,7 @@ func (this *QThread) SetEventDispatcher(eventDispatcher *QAbstractEventDispatche
 // /usr/include/qt/QtCore/qthread.h:113
 // index:0
 // Public virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QThread) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -301,7 +301,7 @@ func (this *QThread) LoopLevel() int {
 // /usr/include/qt/QtCore/qthread.h:134
 // index:0
 // Public
-// void start(enum QThread::Priority)
+// void start(QThread::Priority)
 func (this *QThread) Start(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread5startENS_8PriorityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -398,7 +398,7 @@ func (this *QThread) Exec() int {
 // /usr/include/qt/QtCore/qthread.h:154
 // index:0
 // Protected static
-// void setTerminationEnabled(_Bool)
+// void setTerminationEnabled(bool)
 func (this *QThread) SetTerminationEnabled(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread21setTerminationEnabledEb", ffiqt.FFI_TYPE_POINTER, enabled)
 	gopp.ErrPrint(err, rv)

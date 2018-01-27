@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QRadioButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // /usr/include/qt/QtWidgets/qradiobutton.h:59
 // index:0
 // Public
-// void QRadioButton(class QWidget *)
+// void QRadioButton(QWidget *)
 func NewQRadioButton(parent *QWidget /*777 QWidget **/) *QRadioButton {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -102,7 +102,7 @@ func NewQRadioButton(parent *QWidget /*777 QWidget **/) *QRadioButton {
 // /usr/include/qt/QtWidgets/qradiobutton.h:60
 // index:1
 // Public
-// void QRadioButton(const class QString &, class QWidget *)
+// void QRadioButton(const QString &, QWidget *)
 func NewQRadioButton_1(text *qtcore.QString, parent *QWidget /*777 QWidget **/) *QRadioButton {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = text.GetCthis()
@@ -153,7 +153,7 @@ func (this *QRadioButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qradiobutton.h:67
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QRadioButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QRadioButton5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -165,7 +165,7 @@ func (this *QRadioButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qradiobutton.h:68
 // index:0
 // Protected virtual
-// bool hitButton(const class QPoint &)
+// bool hitButton(const QPoint &)
 func (this *QRadioButton) HitButton(arg0 *qtcore.QPoint) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QRadioButton9hitButtonERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -177,7 +177,7 @@ func (this *QRadioButton) HitButton(arg0 *qtcore.QPoint) bool {
 // /usr/include/qt/QtWidgets/qradiobutton.h:69
 // index:0
 // Protected virtual
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QRadioButton) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QRadioButton10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -187,7 +187,7 @@ func (this *QRadioButton) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent *
 // /usr/include/qt/QtWidgets/qradiobutton.h:70
 // index:0
 // Protected virtual
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QRadioButton) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QRadioButton14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -197,7 +197,7 @@ func (this *QRadioButton) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEve
 // /usr/include/qt/QtWidgets/qradiobutton.h:71
 // index:0
 // Protected
-// void initStyleOption(class QStyleOptionButton *)
+// void initStyleOption(QStyleOptionButton *)
 func (this *QRadioButton) InitStyleOption(button *QStyleOptionButton /*777 QStyleOptionButton **/) {
 	var convArg0 = button.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QRadioButton15initStyleOptionEP18QStyleOptionButton", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

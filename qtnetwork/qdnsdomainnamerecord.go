@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -93,7 +93,7 @@ func DeleteQDnsDomainNameRecord(*QDnsDomainNameRecord) {
 // /usr/include/qt/QtNetwork/qdnslookup.h:71
 // index:0
 // Public inline
-// void swap(class QDnsDomainNameRecord &)
+// void swap(QDnsDomainNameRecord &)
 func (this *QDnsDomainNameRecord) Swap(other *QDnsDomainNameRecord) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QDnsDomainNameRecord4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

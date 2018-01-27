@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -88,7 +88,7 @@ func NewQQmlProperty() *QQmlProperty {
 // /usr/include/qt/QtQml/qqmlproperty.h:74
 // index:1
 // Public
-// void QQmlProperty(class QObject *)
+// void QQmlProperty(QObject *)
 func NewQQmlProperty_1(arg0 *qtcore.QObject /*777 QObject **/) *QQmlProperty {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = arg0.GetCthis()
@@ -101,7 +101,7 @@ func NewQQmlProperty_1(arg0 *qtcore.QObject /*777 QObject **/) *QQmlProperty {
 // /usr/include/qt/QtQml/qqmlproperty.h:75
 // index:2
 // Public
-// void QQmlProperty(class QObject *, class QQmlContext *)
+// void QQmlProperty(QObject *, QQmlContext *)
 func NewQQmlProperty_2(arg0 *qtcore.QObject /*777 QObject **/, arg1 *QQmlContext /*777 QQmlContext **/) *QQmlProperty {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = arg0.GetCthis()
@@ -115,7 +115,7 @@ func NewQQmlProperty_2(arg0 *qtcore.QObject /*777 QObject **/, arg1 *QQmlContext
 // /usr/include/qt/QtQml/qqmlproperty.h:76
 // index:3
 // Public
-// void QQmlProperty(class QObject *, class QQmlEngine *)
+// void QQmlProperty(QObject *, QQmlEngine *)
 func NewQQmlProperty_3(arg0 *qtcore.QObject /*777 QObject **/, arg1 *QQmlEngine /*777 QQmlEngine **/) *QQmlProperty {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = arg0.GetCthis()
@@ -129,7 +129,7 @@ func NewQQmlProperty_3(arg0 *qtcore.QObject /*777 QObject **/, arg1 *QQmlEngine 
 // /usr/include/qt/QtQml/qqmlproperty.h:78
 // index:4
 // Public
-// void QQmlProperty(class QObject *, const class QString &)
+// void QQmlProperty(QObject *, const QString &)
 func NewQQmlProperty_4(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QString) *QQmlProperty {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = arg0.GetCthis()
@@ -143,7 +143,7 @@ func NewQQmlProperty_4(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QStr
 // /usr/include/qt/QtQml/qqmlproperty.h:79
 // index:5
 // Public
-// void QQmlProperty(class QObject *, const class QString &, class QQmlContext *)
+// void QQmlProperty(QObject *, const QString &, QQmlContext *)
 func NewQQmlProperty_5(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QString, arg2 *QQmlContext /*777 QQmlContext **/) *QQmlProperty {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = arg0.GetCthis()
@@ -158,7 +158,7 @@ func NewQQmlProperty_5(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QStr
 // /usr/include/qt/QtQml/qqmlproperty.h:80
 // index:6
 // Public
-// void QQmlProperty(class QObject *, const class QString &, class QQmlEngine *)
+// void QQmlProperty(QObject *, const QString &, QQmlEngine *)
 func NewQQmlProperty_6(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QString, arg2 *QQmlEngine /*777 QQmlEngine **/) *QQmlProperty {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = arg0.GetCthis()
@@ -287,7 +287,7 @@ func (this *QQmlProperty) Read() *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtQml/qqmlproperty.h:99
 // index:1
 // Public static
-// QVariant read(const class QObject *, const class QString &)
+// QVariant read(const QObject *, const QString &)
 func (this *QQmlProperty) Read_1(arg0 *qtcore.QObject /*777 const QObject **/, arg1 *qtcore.QString) *qtcore.QVariant /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQmlProperty4readEPK7QObjectRK7QString", ffiqt.FFI_TYPE_POINTER, arg0, arg1)
 	gopp.ErrPrint(err, rv)
@@ -304,7 +304,7 @@ func QQmlProperty_Read_1(arg0 *qtcore.QObject /*777 const QObject **/, arg1 *qtc
 // /usr/include/qt/QtQml/qqmlproperty.h:100
 // index:2
 // Public static
-// QVariant read(const class QObject *, const class QString &, class QQmlContext *)
+// QVariant read(const QObject *, const QString &, QQmlContext *)
 func (this *QQmlProperty) Read_2(arg0 *qtcore.QObject /*777 const QObject **/, arg1 *qtcore.QString, arg2 *QQmlContext /*777 QQmlContext **/) *qtcore.QVariant /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQmlProperty4readEPK7QObjectRK7QStringP11QQmlContext", ffiqt.FFI_TYPE_POINTER, arg0, arg1, arg2)
 	gopp.ErrPrint(err, rv)
@@ -321,7 +321,7 @@ func QQmlProperty_Read_2(arg0 *qtcore.QObject /*777 const QObject **/, arg1 *qtc
 // /usr/include/qt/QtQml/qqmlproperty.h:101
 // index:3
 // Public static
-// QVariant read(const class QObject *, const class QString &, class QQmlEngine *)
+// QVariant read(const QObject *, const QString &, QQmlEngine *)
 func (this *QQmlProperty) Read_3(arg0 *qtcore.QObject /*777 const QObject **/, arg1 *qtcore.QString, arg2 *QQmlEngine /*777 QQmlEngine **/) *qtcore.QVariant /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQmlProperty4readEPK7QObjectRK7QStringP10QQmlEngine", ffiqt.FFI_TYPE_POINTER, arg0, arg1, arg2)
 	gopp.ErrPrint(err, rv)
@@ -338,7 +338,7 @@ func QQmlProperty_Read_3(arg0 *qtcore.QObject /*777 const QObject **/, arg1 *qtc
 // /usr/include/qt/QtQml/qqmlproperty.h:103
 // index:0
 // Public
-// bool write(const class QVariant &)
+// bool write(const QVariant &)
 func (this *QQmlProperty) Write(arg0 *qtcore.QVariant) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QQmlProperty5writeERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -350,7 +350,7 @@ func (this *QQmlProperty) Write(arg0 *qtcore.QVariant) bool {
 // /usr/include/qt/QtQml/qqmlproperty.h:104
 // index:1
 // Public static
-// bool write(class QObject *, const class QString &, const class QVariant &)
+// bool write(QObject *, const QString &, const QVariant &)
 func (this *QQmlProperty) Write_1(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QString, arg2 *qtcore.QVariant) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQmlProperty5writeEP7QObjectRK7QStringRK8QVariant", ffiqt.FFI_TYPE_POINTER, arg0, arg1, arg2)
 	gopp.ErrPrint(err, rv)
@@ -366,7 +366,7 @@ func QQmlProperty_Write_1(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.Q
 // /usr/include/qt/QtQml/qqmlproperty.h:105
 // index:2
 // Public static
-// bool write(class QObject *, const class QString &, const class QVariant &, class QQmlContext *)
+// bool write(QObject *, const QString &, const QVariant &, QQmlContext *)
 func (this *QQmlProperty) Write_2(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QString, arg2 *qtcore.QVariant, arg3 *QQmlContext /*777 QQmlContext **/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQmlProperty5writeEP7QObjectRK7QStringRK8QVariantP11QQmlContext", ffiqt.FFI_TYPE_POINTER, arg0, arg1, arg2, arg3)
 	gopp.ErrPrint(err, rv)
@@ -382,7 +382,7 @@ func QQmlProperty_Write_2(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.Q
 // /usr/include/qt/QtQml/qqmlproperty.h:106
 // index:3
 // Public static
-// bool write(class QObject *, const class QString &, const class QVariant &, class QQmlEngine *)
+// bool write(QObject *, const QString &, const QVariant &, QQmlEngine *)
 func (this *QQmlProperty) Write_3(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QString, arg2 *qtcore.QVariant, arg3 *QQmlEngine /*777 QQmlEngine **/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQmlProperty5writeEP7QObjectRK7QStringRK8QVariantP10QQmlEngine", ffiqt.FFI_TYPE_POINTER, arg0, arg1, arg2, arg3)
 	gopp.ErrPrint(err, rv)
@@ -431,7 +431,7 @@ func (this *QQmlProperty) NeedsNotifySignal() bool {
 // /usr/include/qt/QtQml/qqmlproperty.h:112
 // index:0
 // Public
-// bool connectNotifySignal(class QObject *, const char *)
+// bool connectNotifySignal(QObject *, const char *)
 func (this *QQmlProperty) ConnectNotifySignal(dest *qtcore.QObject /*777 QObject **/, slot string) bool {
 	var convArg0 = dest.GetCthis()
 	var convArg1 = qtrt.CString(slot)
@@ -445,7 +445,7 @@ func (this *QQmlProperty) ConnectNotifySignal(dest *qtcore.QObject /*777 QObject
 // /usr/include/qt/QtQml/qqmlproperty.h:113
 // index:1
 // Public
-// bool connectNotifySignal(class QObject *, int)
+// bool connectNotifySignal(QObject *, int)
 func (this *QQmlProperty) ConnectNotifySignal_1(dest *qtcore.QObject /*777 QObject **/, method int) bool {
 	var convArg0 = dest.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QQmlProperty19connectNotifySignalEP7QObjecti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, method)

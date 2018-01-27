@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -101,7 +101,7 @@ func NewQQmlExpression() *QQmlExpression {
 // /usr/include/qt/QtQml/qqmlexpression.h:63
 // index:1
 // Public
-// void QQmlExpression(class QQmlContext *, class QObject *, const class QString &, class QObject *)
+// void QQmlExpression(QQmlContext *, QObject *, const QString &, QObject *)
 func NewQQmlExpression_1(arg0 *QQmlContext /*777 QQmlContext **/, arg1 *qtcore.QObject /*777 QObject **/, arg2 *qtcore.QString, arg3 *qtcore.QObject /*777 QObject **/) *QQmlExpression {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = arg0.GetCthis()
@@ -117,7 +117,7 @@ func NewQQmlExpression_1(arg0 *QQmlContext /*777 QQmlContext **/, arg1 *qtcore.Q
 // /usr/include/qt/QtQml/qqmlexpression.h:64
 // index:2
 // Public
-// void QQmlExpression(const class QQmlScriptString &, class QQmlContext *, class QObject *, class QObject *)
+// void QQmlExpression(const QQmlScriptString &, QQmlContext *, QObject *, QObject *)
 func NewQQmlExpression_2(arg0 *QQmlScriptString, arg1 *QQmlContext /*777 QQmlContext **/, arg2 *qtcore.QObject /*777 QObject **/, arg3 *qtcore.QObject /*777 QObject **/) *QQmlExpression {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = arg0.GetCthis()
@@ -180,7 +180,7 @@ func (this *QQmlExpression) Expression() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtQml/qqmlexpression.h:71
 // index:0
 // Public
-// void setExpression(const class QString &)
+// void setExpression(const QString &)
 func (this *QQmlExpression) SetExpression(arg0 *qtcore.QString) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QQmlExpression13setExpressionERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -201,7 +201,7 @@ func (this *QQmlExpression) NotifyOnValueChanged() bool {
 // /usr/include/qt/QtQml/qqmlexpression.h:74
 // index:0
 // Public
-// void setNotifyOnValueChanged(_Bool)
+// void setNotifyOnValueChanged(bool)
 func (this *QQmlExpression) SetNotifyOnValueChanged(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QQmlExpression23setNotifyOnValueChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -246,7 +246,7 @@ func (this *QQmlExpression) ColumnNumber() int {
 // /usr/include/qt/QtQml/qqmlexpression.h:79
 // index:0
 // Public
-// void setSourceLocation(const class QString &, int, int)
+// void setSourceLocation(const QString &, int, int)
 func (this *QQmlExpression) SetSourceLocation(fileName *qtcore.QString, line int, column int) {
 	var convArg0 = fileName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QQmlExpression17setSourceLocationERK7QStringii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, line, column)
@@ -302,7 +302,7 @@ func (this *QQmlExpression) Error() *QQmlError /*123*/ {
 // /usr/include/qt/QtQml/qqmlexpression.h:87
 // index:0
 // Public
-// QVariant evaluate(_Bool *)
+// QVariant evaluate(bool *)
 func (this *QQmlExpression) Evaluate(valueIsUndefined unsafe.Pointer /*666*/) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QQmlExpression8evaluateEPb", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), &valueIsUndefined)

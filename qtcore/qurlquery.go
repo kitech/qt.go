@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQUrlQuery() *QUrlQuery {
 // /usr/include/qt/QtCore/qurlquery.h:60
 // index:1
 // Public
-// void QUrlQuery(const class QUrl &)
+// void QUrlQuery(const QUrl &)
 func NewQUrlQuery_1(url *QUrl) *QUrlQuery {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = url.GetCthis()
@@ -93,7 +93,7 @@ func NewQUrlQuery_1(url *QUrl) *QUrlQuery {
 // /usr/include/qt/QtCore/qurlquery.h:61
 // index:2
 // Public
-// void QUrlQuery(const class QString &)
+// void QUrlQuery(const QString &)
 func NewQUrlQuery_2(queryString *QString) *QUrlQuery {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = queryString.GetCthis()
@@ -115,7 +115,7 @@ func DeleteQUrlQuery(*QUrlQuery) {
 // /usr/include/qt/QtCore/qurlquery.h:73
 // index:0
 // Public inline
-// void swap(class QUrlQuery &)
+// void swap(QUrlQuery &)
 func (this *QUrlQuery) Swap(other *QUrlQuery) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -156,7 +156,7 @@ func (this *QUrlQuery) Clear() {
 // /usr/include/qt/QtCore/qurlquery.h:80
 // index:0
 // Public
-// void setQuery(const class QString &)
+// void setQuery(const QString &)
 func (this *QUrlQuery) SetQuery(queryString *QString) {
 	var convArg0 = queryString.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery8setQueryERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -166,7 +166,7 @@ func (this *QUrlQuery) SetQuery(queryString *QString) {
 // /usr/include/qt/QtCore/qurlquery.h:84
 // index:0
 // Public
-// void setQueryDelimiters(class QChar, class QChar)
+// void setQueryDelimiters(QChar, QChar)
 func (this *QUrlQuery) SetQueryDelimiters(valueDelimiter *QChar /*123*/, pairDelimiter *QChar /*123*/) {
 	var convArg0 = valueDelimiter.GetCthis()
 	var convArg1 = pairDelimiter.GetCthis()
@@ -205,7 +205,7 @@ func (this *QUrlQuery) QueryPairDelimiter() *QChar /*123*/ {
 // /usr/include/qt/QtCore/qurlquery.h:91
 // index:0
 // Public
-// bool hasQueryItem(const class QString &)
+// bool hasQueryItem(const QString &)
 func (this *QUrlQuery) HasQueryItem(key *QString) bool {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUrlQuery12hasQueryItemERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -217,7 +217,7 @@ func (this *QUrlQuery) HasQueryItem(key *QString) bool {
 // /usr/include/qt/QtCore/qurlquery.h:92
 // index:0
 // Public
-// void addQueryItem(const class QString &, const class QString &)
+// void addQueryItem(const QString &, const QString &)
 func (this *QUrlQuery) AddQueryItem(key *QString, value *QString) {
 	var convArg0 = key.GetCthis()
 	var convArg1 = value.GetCthis()
@@ -228,7 +228,7 @@ func (this *QUrlQuery) AddQueryItem(key *QString, value *QString) {
 // /usr/include/qt/QtCore/qurlquery.h:93
 // index:0
 // Public
-// void removeQueryItem(const class QString &)
+// void removeQueryItem(const QString &)
 func (this *QUrlQuery) RemoveQueryItem(key *QString) {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery15removeQueryItemERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -238,7 +238,7 @@ func (this *QUrlQuery) RemoveQueryItem(key *QString) {
 // /usr/include/qt/QtCore/qurlquery.h:96
 // index:0
 // Public
-// void removeAllQueryItems(const class QString &)
+// void removeAllQueryItems(const QString &)
 func (this *QUrlQuery) RemoveAllQueryItems(key *QString) {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQuery19removeAllQueryItemsERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

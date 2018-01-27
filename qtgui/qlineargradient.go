@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func NewQLinearGradient() *QLinearGradient {
 // /usr/include/qt/QtGui/qbrush.h:258
 // index:1
 // Public
-// void QLinearGradient(const class QPointF &, const class QPointF &)
+// void QLinearGradient(const QPointF &, const QPointF &)
 func NewQLinearGradient_1(start *qtcore.QPointF, finalStop *qtcore.QPointF) *QLinearGradient {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = start.GetCthis()
@@ -125,7 +125,7 @@ func (this *QLinearGradient) Start() *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtGui/qbrush.h:262
 // index:0
 // Public
-// void setStart(const class QPointF &)
+// void setStart(const QPointF &)
 func (this *QLinearGradient) SetStart(start *qtcore.QPointF) {
 	var convArg0 = start.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QLinearGradient8setStartERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -158,7 +158,7 @@ func (this *QLinearGradient) FinalStop() *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtGui/qbrush.h:266
 // index:0
 // Public
-// void setFinalStop(const class QPointF &)
+// void setFinalStop(const QPointF &)
 func (this *QLinearGradient) SetFinalStop(stop *qtcore.QPointF) {
 	var convArg0 = stop.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QLinearGradient12setFinalStopERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

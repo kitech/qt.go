@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QKeyEventTransition) MetaObject() *qtcore.QMetaObject /*777 const QM
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:57
 // index:0
 // Public
-// void QKeyEventTransition(class QState *)
+// void QKeyEventTransition(QState *)
 func NewQKeyEventTransition(sourceState *qtcore.QState /*777 QState **/) *QKeyEventTransition {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = sourceState.GetCthis()
@@ -102,7 +102,7 @@ func NewQKeyEventTransition(sourceState *qtcore.QState /*777 QState **/) *QKeyEv
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:58
 // index:1
 // Public
-// void QKeyEventTransition(class QObject *, class QEvent::Type, int, class QState *)
+// void QKeyEventTransition(QObject *, QEvent::Type, int, QState *)
 func NewQKeyEventTransition_1(object *qtcore.QObject /*777 QObject **/, type_ int, key int, sourceState *qtcore.QState /*777 QState **/) *QKeyEventTransition {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = object.GetCthis()
@@ -156,7 +156,7 @@ func (this *QKeyEventTransition) ModifierMask() int {
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:69
 // index:0
 // Protected virtual
-// void onTransition(class QEvent *)
+// void onTransition(QEvent *)
 func (this *QKeyEventTransition) OnTransition(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransition12onTransitionEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -166,7 +166,7 @@ func (this *QKeyEventTransition) OnTransition(event *qtcore.QEvent /*777 QEvent 
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:70
 // index:0
 // Protected virtual
-// bool eventTest(class QEvent *)
+// bool eventTest(QEvent *)
 func (this *QKeyEventTransition) EventTest(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransition9eventTestEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

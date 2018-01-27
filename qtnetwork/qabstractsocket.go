@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QAbstractSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // /usr/include/qt/QtNetwork/qabstractsocket.h:139
 // index:0
 // Public
-// void QAbstractSocket(enum QAbstractSocket::SocketType, class QObject *)
+// void QAbstractSocket(QAbstractSocket::SocketType, QObject *)
 func NewQAbstractSocket(socketType int, parent *qtcore.QObject /*777 QObject **/) *QAbstractSocket {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = parent.GetCthis()
@@ -284,7 +284,7 @@ func (this *QAbstractSocket) SocketDescriptor() int64 {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:177
 // index:0
 // Public virtual
-// void setSocketOption(class QAbstractSocket::SocketOption, const class QVariant &)
+// void setSocketOption(QAbstractSocket::SocketOption, const QVariant &)
 func (this *QAbstractSocket) SetSocketOption(option int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSocket15setSocketOptionENS_12SocketOptionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, convArg1)
@@ -294,7 +294,7 @@ func (this *QAbstractSocket) SetSocketOption(option int, value *qtcore.QVariant)
 // /usr/include/qt/QtNetwork/qabstractsocket.h:178
 // index:0
 // Public virtual
-// QVariant socketOption(class QAbstractSocket::SocketOption)
+// QVariant socketOption(QAbstractSocket::SocketOption)
 func (this *QAbstractSocket) SocketOption(option int) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSocket12socketOptionENS_12SocketOptionE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), option)
@@ -341,7 +341,7 @@ func (this *QAbstractSocket) Error() int {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:206
 // index:1
 // Public
-// void error(class QAbstractSocket::SocketError)
+// void error(QAbstractSocket::SocketError)
 func (this *QAbstractSocket) Error_1(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSocket5errorENS_11SocketErrorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -436,7 +436,7 @@ func (this *QAbstractSocket) WaitForDisconnected(msecs int) bool {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:197
 // index:0
 // Public
-// void setProxy(const class QNetworkProxy &)
+// void setProxy(const QNetworkProxy &)
 func (this *QAbstractSocket) SetProxy(networkProxy *QNetworkProxy) {
 	var convArg0 = networkProxy.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSocket8setProxyERK13QNetworkProxy", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -487,7 +487,7 @@ func (this *QAbstractSocket) Disconnected() {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:205
 // index:0
 // Public
-// void stateChanged(class QAbstractSocket::SocketState)
+// void stateChanged(QAbstractSocket::SocketState)
 func (this *QAbstractSocket) StateChanged(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSocket12stateChangedENS_11SocketStateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -496,7 +496,7 @@ func (this *QAbstractSocket) StateChanged(arg0 int) {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:208
 // index:0
 // Public
-// void proxyAuthenticationRequired(const class QNetworkProxy &, class QAuthenticator *)
+// void proxyAuthenticationRequired(const QNetworkProxy &, QAuthenticator *)
 func (this *QAbstractSocket) ProxyAuthenticationRequired(proxy *QNetworkProxy, authenticator *QAuthenticator /*777 QAuthenticator **/) {
 	var convArg0 = proxy.GetCthis()
 	var convArg1 = authenticator.GetCthis()
@@ -546,7 +546,7 @@ func (this *QAbstractSocket) WriteData(data string, len int64) int64 {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:216
 // index:0
 // Protected
-// void setSocketState(enum QAbstractSocket::SocketState)
+// void setSocketState(QAbstractSocket::SocketState)
 func (this *QAbstractSocket) SetSocketState(state int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSocket14setSocketStateENS_11SocketStateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	gopp.ErrPrint(err, rv)
@@ -555,7 +555,7 @@ func (this *QAbstractSocket) SetSocketState(state int) {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:217
 // index:0
 // Protected
-// void setSocketError(enum QAbstractSocket::SocketError)
+// void setSocketError(QAbstractSocket::SocketError)
 func (this *QAbstractSocket) SetSocketError(socketError int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSocket14setSocketErrorENS_11SocketErrorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), socketError)
 	gopp.ErrPrint(err, rv)
@@ -573,7 +573,7 @@ func (this *QAbstractSocket) SetLocalPort(port uint16) {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:219
 // index:0
 // Protected
-// void setLocalAddress(const class QHostAddress &)
+// void setLocalAddress(const QHostAddress &)
 func (this *QAbstractSocket) SetLocalAddress(address *QHostAddress) {
 	var convArg0 = address.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSocket15setLocalAddressERK12QHostAddress", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -592,7 +592,7 @@ func (this *QAbstractSocket) SetPeerPort(port uint16) {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:221
 // index:0
 // Protected
-// void setPeerAddress(const class QHostAddress &)
+// void setPeerAddress(const QHostAddress &)
 func (this *QAbstractSocket) SetPeerAddress(address *QHostAddress) {
 	var convArg0 = address.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSocket14setPeerAddressERK12QHostAddress", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -602,7 +602,7 @@ func (this *QAbstractSocket) SetPeerAddress(address *QHostAddress) {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:222
 // index:0
 // Protected
-// void setPeerName(const class QString &)
+// void setPeerName(const QString &)
 func (this *QAbstractSocket) SetPeerName(name *qtcore.QString) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSocket11setPeerNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

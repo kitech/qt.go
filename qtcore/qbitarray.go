@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQBitArray() *QBitArray {
 // /usr/include/qt/QtCore/qbitarray.h:58
 // index:1
 // Public
-// void QBitArray(int, _Bool)
+// void QBitArray(int, bool)
 func NewQBitArray_1(size int, val bool) *QBitArray {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArrayC2Eib", ffiqt.FFI_TYPE_VOID, cthis, size, val)
@@ -92,7 +92,7 @@ func NewQBitArray_1(size int, val bool) *QBitArray {
 // /usr/include/qt/QtCore/qbitarray.h:67
 // index:0
 // Public inline
-// void swap(class QBitArray &)
+// void swap(QBitArray &)
 func (this *QBitArray) Swap(other *QBitArray) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -124,7 +124,7 @@ func (this *QBitArray) Count() int {
 // /usr/include/qt/QtCore/qbitarray.h:71
 // index:1
 // Public
-// int count(_Bool)
+// int count(bool)
 func (this *QBitArray) Count_1(on bool) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QBitArray5countEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
@@ -215,7 +215,7 @@ func (this *QBitArray) SetBit(i int) {
 // /usr/include/qt/QtCore/qbitarray.h:84
 // index:1
 // Public
-// void setBit(int, _Bool)
+// void setBit(int, bool)
 func (this *QBitArray) SetBit_1(i int, val bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray6setBitEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i, val)
 	gopp.ErrPrint(err, rv)
@@ -255,7 +255,7 @@ func (this *QBitArray) At(i int) bool {
 // /usr/include/qt/QtCore/qbitarray.h:102
 // index:0
 // Public inline
-// bool fill(_Bool, int)
+// bool fill(bool, int)
 func (this *QBitArray) Fill(val bool, size int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray4fillEbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), val, size)
 	gopp.ErrPrint(err, rv)
@@ -266,7 +266,7 @@ func (this *QBitArray) Fill(val bool, size int) bool {
 // /usr/include/qt/QtCore/qbitarray.h:103
 // index:1
 // Public
-// void fill(_Bool, int, int)
+// void fill(bool, int, int)
 func (this *QBitArray) Fill_1(val bool, first int, last int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray4fillEbii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), val, first, last)
 	gopp.ErrPrint(err, rv)

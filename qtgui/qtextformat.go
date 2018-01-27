@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -105,7 +105,7 @@ func DeleteQTextFormat(*QTextFormat) {
 // /usr/include/qt/QtGui/qtextformat.h:296
 // index:0
 // Public inline
-// void swap(class QTextFormat &)
+// void swap(QTextFormat &)
 func (this *QTextFormat) Swap(other *QTextFormat) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextFormat4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -115,7 +115,7 @@ func (this *QTextFormat) Swap(other *QTextFormat) {
 // /usr/include/qt/QtGui/qtextformat.h:299
 // index:0
 // Public
-// void merge(const class QTextFormat &)
+// void merge(const QTextFormat &)
 func (this *QTextFormat) Merge(other *QTextFormat) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextFormat5mergeERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -192,7 +192,7 @@ func (this *QTextFormat) Property(propertyId int) *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtGui/qtextformat.h:310
 // index:0
 // Public
-// void setProperty(int, const class QVariant &)
+// void setProperty(int, const QVariant &)
 func (this *QTextFormat) SetProperty(propertyId int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextFormat11setPropertyEiRK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), propertyId, convArg1)
@@ -551,7 +551,7 @@ func (this *QTextFormat) LayoutDirection() int {
 // /usr/include/qt/QtGui/qtextformat.h:358
 // index:0
 // Public inline
-// void setBackground(const class QBrush &)
+// void setBackground(const QBrush &)
 func (this *QTextFormat) SetBackground(brush *QBrush) {
 	var convArg0 = brush.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextFormat13setBackgroundERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -584,7 +584,7 @@ func (this *QTextFormat) ClearBackground() {
 // /usr/include/qt/QtGui/qtextformat.h:365
 // index:0
 // Public inline
-// void setForeground(const class QBrush &)
+// void setForeground(const QBrush &)
 func (this *QTextFormat) SetForeground(brush *QBrush) {
 	var convArg0 = brush.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextFormat13setForegroundERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

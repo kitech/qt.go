@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QJsonValueRef) NewFromPointer(cthis unsafe.Pointer) *QJsonValueRef {
 // /usr/include/qt/QtCore/qjsonvalue.h:174
 // index:0
 // Public inline
-// void QJsonValueRef(class QJsonArray *, int)
+// void QJsonValueRef(QJsonArray *, int)
 func NewQJsonValueRef(array *QJsonArray /*777 QJsonArray **/, idx int) *QJsonValueRef {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = array.GetCthis()
@@ -81,7 +81,7 @@ func NewQJsonValueRef(array *QJsonArray /*777 QJsonArray **/, idx int) *QJsonVal
 // /usr/include/qt/QtCore/qjsonvalue.h:176
 // index:1
 // Public inline
-// void QJsonValueRef(class QJsonObject *, int)
+// void QJsonValueRef(QJsonObject *, int)
 func NewQJsonValueRef_1(object *QJsonObject /*777 QJsonObject **/, idx int) *QJsonValueRef {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = object.GetCthis()
@@ -207,7 +207,7 @@ func (this *QJsonValueRef) ToBool() bool {
 // /usr/include/qt/QtCore/qjsonvalue.h:201
 // index:1
 // Public inline
-// bool toBool(_Bool)
+// bool toBool(bool)
 func (this *QJsonValueRef) ToBool_1(defaultValue bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6toBoolEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
 	gopp.ErrPrint(err, rv)
@@ -276,7 +276,7 @@ func (this *QJsonValueRef) ToString() *QString /*123*/ {
 // /usr/include/qt/QtCore/qjsonvalue.h:204
 // index:1
 // Public inline
-// QString toString(const class QString &)
+// QString toString(const QString &)
 func (this *QJsonValueRef) ToString_1(defaultValue *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = defaultValue.GetCthis()

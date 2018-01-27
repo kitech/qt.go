@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QWriteLocker) NewFromPointer(cthis unsafe.Pointer) *QWriteLocker {
 // /usr/include/qt/QtCore/qreadwritelock.h:131
 // index:0
 // Public inline
-// void QWriteLocker(class QReadWriteLock *)
+// void QWriteLocker(QReadWriteLock *)
 func NewQWriteLocker(readWriteLock *QReadWriteLock /*777 QReadWriteLock **/) *QWriteLocker {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = readWriteLock.GetCthis()

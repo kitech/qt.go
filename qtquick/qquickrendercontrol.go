@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -97,7 +97,7 @@ func (this *QQuickRenderControl) MetaObject() *qtcore.QMetaObject /*777 const QM
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:58
 // index:0
 // Public
-// void QQuickRenderControl(class QObject *)
+// void QQuickRenderControl(QObject *)
 func NewQQuickRenderControl(parent *qtcore.QObject /*777 QObject **/) *QQuickRenderControl {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -119,7 +119,7 @@ func DeleteQQuickRenderControl(*QQuickRenderControl) {
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:61
 // index:0
 // Public
-// void prepareThread(class QThread *)
+// void prepareThread(QThread *)
 func (this *QQuickRenderControl) PrepareThread(targetThread *qtcore.QThread /*777 QThread **/) {
 	var convArg0 = targetThread.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickRenderControl13prepareThreadEP7QThread", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -181,7 +181,7 @@ func (this *QQuickRenderControl) Grab() *qtgui.QImage /*123*/ {
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:71
 // index:0
 // Public static
-// QWindow * renderWindowFor(class QQuickWindow *, class QPoint *)
+// QWindow * renderWindowFor(QQuickWindow *, QPoint *)
 func (this *QQuickRenderControl) RenderWindowFor(win *QQuickWindow /*777 QQuickWindow **/, offset *qtcore.QPoint /*777 QPoint **/) *qtgui.QWindow /*777 QWindow **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickRenderControl15renderWindowForEP12QQuickWindowP6QPoint", ffiqt.FFI_TYPE_POINTER, win, offset)
 	gopp.ErrPrint(err, rv)
@@ -198,7 +198,7 @@ func QQuickRenderControl_RenderWindowFor(win *QQuickWindow /*777 QQuickWindow **
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:72
 // index:0
 // Public inline virtual
-// QWindow * renderWindow(class QPoint *)
+// QWindow * renderWindow(QPoint *)
 func (this *QQuickRenderControl) RenderWindow(offset *qtcore.QPoint /*777 QPoint **/) *qtgui.QWindow /*777 QWindow **/ {
 	var convArg0 = offset.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickRenderControl12renderWindowEP6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

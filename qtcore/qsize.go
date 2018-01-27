@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -197,7 +197,7 @@ func (this *QSize) Scale(w int, h int, mode int) {
 // /usr/include/qt/QtCore/qsize.h:70
 // index:1
 // Public inline
-// void scale(const class QSize &, Qt::AspectRatioMode)
+// void scale(const QSize &, Qt::AspectRatioMode)
 func (this *QSize) Scale_1(s *QSize, mode int) {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QSize5scaleERKS_N2Qt15AspectRatioModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
@@ -221,7 +221,7 @@ func (this *QSize) Scaled(w int, h int, mode int) *QSize /*123*/ {
 // /usr/include/qt/QtCore/qsize.h:72
 // index:1
 // Public
-// QSize scaled(const class QSize &, Qt::AspectRatioMode)
+// QSize scaled(const QSize &, Qt::AspectRatioMode)
 func (this *QSize) Scaled_1(s *QSize, mode int) *QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = s.GetCthis()
@@ -236,7 +236,7 @@ func (this *QSize) Scaled_1(s *QSize, mode int) *QSize /*123*/ {
 // /usr/include/qt/QtCore/qsize.h:74
 // index:0
 // Public inline
-// QSize expandedTo(const class QSize &)
+// QSize expandedTo(const QSize &)
 func (this *QSize) ExpandedTo(arg0 *QSize) *QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
@@ -251,7 +251,7 @@ func (this *QSize) ExpandedTo(arg0 *QSize) *QSize /*123*/ {
 // /usr/include/qt/QtCore/qsize.h:75
 // index:0
 // Public inline
-// QSize boundedTo(const class QSize &)
+// QSize boundedTo(const QSize &)
 func (this *QSize) BoundedTo(arg0 *QSize) *QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()

@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -85,7 +85,7 @@ func DeleteQItemEditorCreatorBase(*QItemEditorCreatorBase) {
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:60
 // index:0
 // Public pure virtual
-// QWidget * createWidget(class QWidget *)
+// QWidget * createWidget(QWidget *)
 func (this *QItemEditorCreatorBase) CreateWidget(parent *QWidget /*777 QWidget **/) *QWidget /*777 QWidget **/ {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

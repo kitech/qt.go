@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -48,7 +48,7 @@ type QVariantHash struct {
 	*qtrt.CObject
 }
 
-// QHash::Node * concrete(struct QHashData::Node *)
+// QHash::Node * concrete(QHashData::Node *)
 func (this *QVariantHash) Concrete_0() {
 	// QVariantHash_concrete_0()
 }
@@ -125,7 +125,7 @@ func (this *QVariantHash) IsDetached_0() bool {
 	return 0 == 0
 }
 
-// void setSharable(_Bool)
+// void setSharable(bool)
 func (this *QVariantHash) SetSharable_0() {
 	// QVariantHash_setSharable_0()
 }
@@ -314,12 +314,12 @@ func (this *QVariantHash) Equal_range_1() {
 	// QVariantHash_equal_range_1()
 }
 
-// QHash::iterator erase(class QHash::iterator)
+// QHash::iterator erase(QHash::iterator)
 func (this *QVariantHash) Erase_0() {
 	// QVariantHash_erase_0()
 }
 
-// QHash::iterator erase(class QHash::const_iterator)
+// QHash::iterator erase(QHash::const_iterator)
 func (this *QVariantHash) Erase_1() {
 	// QVariantHash_erase_1()
 }
@@ -371,7 +371,7 @@ func (this *QVariantHash) Detach_helper_0() {
 	// QVariantHash_detach_helper_0()
 }
 
-// void freeData(struct QHashData *)
+// void freeData(QHashData *)
 func (this *QVariantHash) FreeData_0() {
 	// QVariantHash_freeData_0()
 }
@@ -396,29 +396,29 @@ func (this *QVariantHash) DeleteNode_0() {
 	// QVariantHash_deleteNode_0()
 }
 
-// void deleteNode2(struct QHashData::Node *)
+// void deleteNode2(QHashData::Node *)
 func (this *QVariantHash) DeleteNode2_0() {
 	// QVariantHash_deleteNode2_0()
 }
 
-// void duplicateNode(struct QHashData::Node *, void *)
+// void duplicateNode(QHashData::Node *, void *)
 func (this *QVariantHash) DuplicateNode_0() {
 	// QVariantHash_duplicateNode_0()
 }
 
-// bool isValidIterator(const class QHash::iterator &)
+// bool isValidIterator(const QHash::iterator &)
 func (this *QVariantHash) IsValidIterator_0() bool {
 	// QVariantHash_isValidIterator_0()
 	return 0 == 0
 }
 
-// bool isValidIterator(const class QHash::const_iterator &)
+// bool isValidIterator(const QHash::const_iterator &)
 func (this *QVariantHash) IsValidIterator_1() bool {
 	// QVariantHash_isValidIterator_1()
 	return 0 == 0
 }
 
-// bool isValidNode(struct QHashData::Node *)
+// bool isValidNode(QHashData::Node *)
 func (this *QVariantHash) IsValidNode_0() bool {
 	// QVariantHash_isValidNode_0()
 	return 0 == 0

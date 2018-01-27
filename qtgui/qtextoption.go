@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -124,7 +124,7 @@ func (this *QTextOption) TextDirection() int {
 // /usr/include/qt/QtGui/qtextoption.h:105
 // index:0
 // Public inline
-// void setWrapMode(enum QTextOption::WrapMode)
+// void setWrapMode(QTextOption::WrapMode)
 func (this *QTextOption) SetWrapMode(wrap int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption11setWrapModeENS_8WrapModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), wrap)
 	gopp.ErrPrint(err, rv)
@@ -204,7 +204,7 @@ func (this *QTextOption) TabStopDistance() float64 {
 // /usr/include/qt/QtGui/qtextoption.h:134
 // index:0
 // Public inline
-// void setUseDesignMetrics(_Bool)
+// void setUseDesignMetrics(bool)
 func (this *QTextOption) SetUseDesignMetrics(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption19setUseDesignMetricsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)

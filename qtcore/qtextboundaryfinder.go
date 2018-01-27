@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQTextBoundaryFinder() *QTextBoundaryFinder {
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:76
 // index:1
 // Public
-// void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const class QString &)
+// void QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType, const QString &)
 func NewQTextBoundaryFinder_1(type_ int, string *QString) *QTextBoundaryFinder {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = string.GetCthis()
@@ -93,7 +93,7 @@ func NewQTextBoundaryFinder_1(type_ int, string *QString) *QTextBoundaryFinder {
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:77
 // index:2
 // Public
-// void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const class QChar *, int, unsigned char *, int)
+// void QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType, const QChar *, int, unsigned char *, int)
 func NewQTextBoundaryFinder_2(type_ int, chars *QChar /*777 const QChar **/, length int, buffer unsafe.Pointer /*666*/, bufferSize int) *QTextBoundaryFinder {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = chars.GetCthis()

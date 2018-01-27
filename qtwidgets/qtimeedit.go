@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QTimeEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:207
 // index:0
 // Public
-// void QTimeEdit(class QWidget *)
+// void QTimeEdit(QWidget *)
 func NewQTimeEdit(parent *QWidget /*777 QWidget **/) *QTimeEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -102,7 +102,7 @@ func NewQTimeEdit(parent *QWidget /*777 QWidget **/) *QTimeEdit {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:208
 // index:1
 // Public
-// void QTimeEdit(const class QTime &, class QWidget *)
+// void QTimeEdit(const QTime &, QWidget *)
 func NewQTimeEdit_1(time *qtcore.QTime, parent *QWidget /*777 QWidget **/) *QTimeEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = time.GetCthis()
@@ -125,7 +125,7 @@ func DeleteQTimeEdit(*QTimeEdit) {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:212
 // index:0
 // Public
-// void userTimeChanged(const class QTime &)
+// void userTimeChanged(const QTime &)
 func (this *QTimeEdit) UserTimeChanged(time *qtcore.QTime) {
 	var convArg0 = time.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeEdit15userTimeChangedERK5QTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

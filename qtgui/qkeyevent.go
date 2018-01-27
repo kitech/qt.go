@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -93,7 +93,7 @@ func (this *QKeyEvent) Key() int {
 // /usr/include/qt/QtGui/qevent.h:347
 // index:0
 // Public
-// bool matches(class QKeySequence::StandardKey)
+// bool matches(QKeySequence::StandardKey)
 func (this *QKeyEvent) Matches(key int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent7matchesEN12QKeySequence11StandardKeyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), key)
 	gopp.ErrPrint(err, rv)

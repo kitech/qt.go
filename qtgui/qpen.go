@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -96,7 +96,7 @@ func NewQPen_1(arg0 int) *QPen {
 // /usr/include/qt/QtGui/qpen.h:65
 // index:2
 // Public
-// void QPen(const class QColor &)
+// void QPen(const QColor &)
 func NewQPen_2(color *QColor) *QPen {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = color.GetCthis()
@@ -109,7 +109,7 @@ func NewQPen_2(color *QColor) *QPen {
 // /usr/include/qt/QtGui/qpen.h:66
 // index:3
 // Public
-// void QPen(const class QBrush &, qreal, Qt::PenStyle, Qt::PenCapStyle, Qt::PenJoinStyle)
+// void QPen(const QBrush &, qreal, Qt::PenStyle, Qt::PenCapStyle, Qt::PenJoinStyle)
 func NewQPen_3(brush *QBrush, width float64, s int, c int, j int) *QPen {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = brush.GetCthis()
@@ -131,7 +131,7 @@ func DeleteQPen(*QPen) {
 // /usr/include/qt/QtGui/qpen.h:79
 // index:0
 // Public inline
-// void swap(class QPen &)
+// void swap(QPen &)
 func (this *QPen) Swap(other *QPen) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPen4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -255,7 +255,7 @@ func (this *QPen) Color() *QColor /*123*/ {
 // /usr/include/qt/QtGui/qpen.h:100
 // index:0
 // Public
-// void setColor(const class QColor &)
+// void setColor(const QColor &)
 func (this *QPen) SetColor(color *QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPen8setColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -279,7 +279,7 @@ func (this *QPen) Brush() *QBrush /*123*/ {
 // /usr/include/qt/QtGui/qpen.h:103
 // index:0
 // Public
-// void setBrush(const class QBrush &)
+// void setBrush(const QBrush &)
 func (this *QPen) SetBrush(brush *QBrush) {
 	var convArg0 = brush.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPen8setBrushERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -351,7 +351,7 @@ func (this *QPen) IsCosmetic() bool {
 // /usr/include/qt/QtGui/qpen.h:114
 // index:0
 // Public
-// void setCosmetic(_Bool)
+// void setCosmetic(bool)
 func (this *QPen) SetCosmetic(cosmetic bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPen11setCosmeticEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cosmetic)
 	gopp.ErrPrint(err, rv)

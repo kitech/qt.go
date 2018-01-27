@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -72,7 +72,7 @@ func (*QBackingStore) NewFromPointer(cthis unsafe.Pointer) *QBackingStore {
 // /usr/include/qt/QtGui/qbackingstore.h:62
 // index:0
 // Public
-// void QBackingStore(class QWindow *)
+// void QBackingStore(QWindow *)
 func NewQBackingStore(window *QWindow /*777 QWindow **/) *QBackingStore {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = window.GetCthis()
@@ -118,7 +118,7 @@ func (this *QBackingStore) PaintDevice() *QPaintDevice /*777 QPaintDevice **/ {
 // /usr/include/qt/QtGui/qbackingstore.h:69
 // index:0
 // Public
-// void flush(const class QRegion &, class QWindow *, const class QPoint &)
+// void flush(const QRegion &, QWindow *, const QPoint &)
 func (this *QBackingStore) Flush(region *QRegion, window *QWindow /*777 QWindow **/, offset *qtcore.QPoint) {
 	var convArg0 = region.GetCthis()
 	var convArg1 = window.GetCthis()
@@ -130,7 +130,7 @@ func (this *QBackingStore) Flush(region *QRegion, window *QWindow /*777 QWindow 
 // /usr/include/qt/QtGui/qbackingstore.h:71
 // index:0
 // Public
-// void resize(const class QSize &)
+// void resize(const QSize &)
 func (this *QBackingStore) Resize(size *qtcore.QSize) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStore6resizeERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -154,7 +154,7 @@ func (this *QBackingStore) Size() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtGui/qbackingstore.h:74
 // index:0
 // Public
-// bool scroll(const class QRegion &, int, int)
+// bool scroll(const QRegion &, int, int)
 func (this *QBackingStore) Scroll(area *QRegion, dx int, dy int) bool {
 	var convArg0 = area.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStore6scrollERK7QRegionii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, dx, dy)
@@ -166,7 +166,7 @@ func (this *QBackingStore) Scroll(area *QRegion, dx int, dy int) bool {
 // /usr/include/qt/QtGui/qbackingstore.h:76
 // index:0
 // Public
-// void beginPaint(const class QRegion &)
+// void beginPaint(const QRegion &)
 func (this *QBackingStore) BeginPaint(arg0 *QRegion) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStore10beginPaintERK7QRegion", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -185,7 +185,7 @@ func (this *QBackingStore) EndPaint() {
 // /usr/include/qt/QtGui/qbackingstore.h:79
 // index:0
 // Public
-// void setStaticContents(const class QRegion &)
+// void setStaticContents(const QRegion &)
 func (this *QBackingStore) SetStaticContents(region *QRegion) {
 	var convArg0 = region.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStore17setStaticContentsERK7QRegion", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -93,7 +93,7 @@ func (this *QInputMethodQueryEvent) Queries() int {
 // /usr/include/qt/QtGui/qevent.h:586
 // index:0
 // Public
-// void setValue(Qt::InputMethodQuery, const class QVariant &)
+// void setValue(Qt::InputMethodQuery, const QVariant &)
 func (this *QInputMethodQueryEvent) SetValue(query int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QInputMethodQueryEvent8setValueEN2Qt16InputMethodQueryERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), query, convArg1)

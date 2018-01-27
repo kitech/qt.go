@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQRegExp() *QRegExp {
 // /usr/include/qt/QtCore/qregexp.h:71
 // index:1
 // Public
-// void QRegExp(const class QString &, Qt::CaseSensitivity, enum QRegExp::PatternSyntax)
+// void QRegExp(const QString &, Qt::CaseSensitivity, QRegExp::PatternSyntax)
 func NewQRegExp_1(pattern *QString, cs int, syntax int) *QRegExp {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = pattern.GetCthis()
@@ -102,7 +102,7 @@ func DeleteQRegExp(*QRegExp) {
 // /usr/include/qt/QtCore/qregexp.h:79
 // index:0
 // Public inline
-// void swap(class QRegExp &)
+// void swap(QRegExp &)
 func (this *QRegExp) Swap(other *QRegExp) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -148,7 +148,7 @@ func (this *QRegExp) Pattern() *QString /*123*/ {
 // /usr/include/qt/QtCore/qregexp.h:87
 // index:0
 // Public
-// void setPattern(const class QString &)
+// void setPattern(const QString &)
 func (this *QRegExp) SetPattern(pattern *QString) {
 	var convArg0 = pattern.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp10setPatternERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -189,7 +189,7 @@ func (this *QRegExp) PatternSyntax() int {
 // /usr/include/qt/QtCore/qregexp.h:91
 // index:0
 // Public
-// void setPatternSyntax(enum QRegExp::PatternSyntax)
+// void setPatternSyntax(QRegExp::PatternSyntax)
 func (this *QRegExp) SetPatternSyntax(syntax int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp16setPatternSyntaxENS_13PatternSyntaxE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), syntax)
 	gopp.ErrPrint(err, rv)
@@ -209,7 +209,7 @@ func (this *QRegExp) IsMinimal() bool {
 // /usr/include/qt/QtCore/qregexp.h:94
 // index:0
 // Public
-// void setMinimal(_Bool)
+// void setMinimal(bool)
 func (this *QRegExp) SetMinimal(minimal bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp10setMinimalEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), minimal)
 	gopp.ErrPrint(err, rv)
@@ -218,7 +218,7 @@ func (this *QRegExp) SetMinimal(minimal bool) {
 // /usr/include/qt/QtCore/qregexp.h:96
 // index:0
 // Public
-// bool exactMatch(const class QString &)
+// bool exactMatch(const QString &)
 func (this *QRegExp) ExactMatch(str *QString) bool {
 	var convArg0 = str.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp10exactMatchERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -230,7 +230,7 @@ func (this *QRegExp) ExactMatch(str *QString) bool {
 // /usr/include/qt/QtCore/qregexp.h:98
 // index:0
 // Public
-// int indexIn(const class QString &, int, enum QRegExp::CaretMode)
+// int indexIn(const QString &, int, QRegExp::CaretMode)
 func (this *QRegExp) IndexIn(str *QString, offset int, caretMode int) int {
 	var convArg0 = str.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp7indexInERK7QStringiNS_9CaretModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, caretMode)
@@ -242,7 +242,7 @@ func (this *QRegExp) IndexIn(str *QString, offset int, caretMode int) int {
 // /usr/include/qt/QtCore/qregexp.h:99
 // index:0
 // Public
-// int lastIndexIn(const class QString &, int, enum QRegExp::CaretMode)
+// int lastIndexIn(const QString &, int, QRegExp::CaretMode)
 func (this *QRegExp) LastIndexIn(str *QString, offset int, caretMode int) int {
 	var convArg0 = str.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp11lastIndexInERK7QStringiNS_9CaretModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, caretMode)
@@ -354,7 +354,7 @@ func (this *QRegExp) ErrorString_1() *QString /*123*/ {
 // /usr/include/qt/QtCore/qregexp.h:113
 // index:0
 // Public static
-// QString escape(const class QString &)
+// QString escape(const QString &)
 func (this *QRegExp) Escape(str *QString) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp6escapeERK7QString", ffiqt.FFI_TYPE_POINTER, str)
 	gopp.ErrPrint(err, rv)

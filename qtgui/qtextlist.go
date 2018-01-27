@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QTextList) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // /usr/include/qt/QtGui/qtextlist.h:57
 // index:0
 // Public
-// void QTextList(class QTextDocument *)
+// void QTextList(QTextDocument *)
 func NewQTextList(doc *QTextDocument /*777 QTextDocument **/) *QTextList {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = doc.GetCthis()
@@ -143,7 +143,7 @@ func (this *QTextList) Item(i int) *QTextBlock /*123*/ {
 // /usr/include/qt/QtGui/qtextlist.h:67
 // index:0
 // Public
-// int itemNumber(const class QTextBlock &)
+// int itemNumber(const QTextBlock &)
 func (this *QTextList) ItemNumber(arg0 *QTextBlock) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList10itemNumberERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -155,7 +155,7 @@ func (this *QTextList) ItemNumber(arg0 *QTextBlock) int {
 // /usr/include/qt/QtGui/qtextlist.h:68
 // index:0
 // Public
-// QString itemText(const class QTextBlock &)
+// QString itemText(const QTextBlock &)
 func (this *QTextList) ItemText(arg0 *QTextBlock) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
@@ -179,7 +179,7 @@ func (this *QTextList) RemoveItem(i int) {
 // /usr/include/qt/QtGui/qtextlist.h:71
 // index:0
 // Public
-// void remove(const class QTextBlock &)
+// void remove(const QTextBlock &)
 func (this *QTextList) Remove(arg0 *QTextBlock) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextList6removeERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -189,7 +189,7 @@ func (this *QTextList) Remove(arg0 *QTextBlock) {
 // /usr/include/qt/QtGui/qtextlist.h:73
 // index:0
 // Public
-// void add(const class QTextBlock &)
+// void add(const QTextBlock &)
 func (this *QTextList) Add(block *QTextBlock) {
 	var convArg0 = block.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextList3addERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -199,7 +199,7 @@ func (this *QTextList) Add(block *QTextBlock) {
 // /usr/include/qt/QtGui/qtextlist.h:75
 // index:0
 // Public inline
-// void setFormat(const class QTextListFormat &)
+// void setFormat(const QTextListFormat &)
 func (this *QTextList) SetFormat(format *QTextListFormat) {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextList9setFormatERK15QTextListFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

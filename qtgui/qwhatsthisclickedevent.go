@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -73,7 +73,7 @@ func (*QWhatsThisClickedEvent) NewFromPointer(cthis unsafe.Pointer) *QWhatsThisC
 // /usr/include/qt/QtGui/qevent.h:713
 // index:0
 // Public
-// void QWhatsThisClickedEvent(const class QString &)
+// void QWhatsThisClickedEvent(const QString &)
 func NewQWhatsThisClickedEvent(href *qtcore.QString) *QWhatsThisClickedEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = href.GetCthis()

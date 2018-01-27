@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -107,7 +107,7 @@ func DeleteQGuiApplication(*QGuiApplication) {
 // /usr/include/qt/QtGui/qguiapplication.h:91
 // index:0
 // Public static
-// void setApplicationDisplayName(const class QString &)
+// void setApplicationDisplayName(const QString &)
 func (this *QGuiApplication) SetApplicationDisplayName(name *qtcore.QString) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication25setApplicationDisplayNameERK7QString", ffiqt.FFI_TYPE_POINTER, name)
 	gopp.ErrPrint(err, rv)
@@ -137,7 +137,7 @@ func QGuiApplication_ApplicationDisplayName() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qguiapplication.h:94
 // index:0
 // Public static
-// void setDesktopFileName(const class QString &)
+// void setDesktopFileName(const QString &)
 func (this *QGuiApplication) SetDesktopFileName(name *qtcore.QString) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication18setDesktopFileNameERK7QString", ffiqt.FFI_TYPE_POINTER, name)
 	gopp.ErrPrint(err, rv)
@@ -167,7 +167,7 @@ func QGuiApplication_DesktopFileName() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qguiapplication.h:99
 // index:0
 // Public static
-// QWindow * topLevelAt(const class QPoint &)
+// QWindow * topLevelAt(const QPoint &)
 func (this *QGuiApplication) TopLevelAt(pos *qtcore.QPoint) *QWindow /*777 QWindow **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication10topLevelAtERK6QPoint", ffiqt.FFI_TYPE_POINTER, pos)
 	gopp.ErrPrint(err, rv)
@@ -184,7 +184,7 @@ func QGuiApplication_TopLevelAt(pos *qtcore.QPoint) *QWindow /*777 QWindow **/ {
 // /usr/include/qt/QtGui/qguiapplication.h:101
 // index:0
 // Public static
-// void setWindowIcon(const class QIcon &)
+// void setWindowIcon(const QIcon &)
 func (this *QGuiApplication) SetWindowIcon(icon *QIcon) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication13setWindowIconERK5QIcon", ffiqt.FFI_TYPE_POINTER, icon)
 	gopp.ErrPrint(err, rv)
@@ -299,7 +299,7 @@ func QGuiApplication_PrimaryScreen() *QScreen /*777 QScreen **/ {
 // /usr/include/qt/QtGui/qguiapplication.h:113
 // index:0
 // Public static
-// QScreen * screenAt(const class QPoint &)
+// QScreen * screenAt(const QPoint &)
 func (this *QGuiApplication) ScreenAt(point *qtcore.QPoint) *QScreen /*777 QScreen **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication8screenAtERK6QPoint", ffiqt.FFI_TYPE_POINTER, point)
 	gopp.ErrPrint(err, rv)
@@ -344,7 +344,7 @@ func QGuiApplication_OverrideCursor() *QCursor /*777 QCursor **/ {
 // /usr/include/qt/QtGui/qguiapplication.h:119
 // index:0
 // Public static
-// void setOverrideCursor(const class QCursor &)
+// void setOverrideCursor(const QCursor &)
 func (this *QGuiApplication) SetOverrideCursor(arg0 *QCursor) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication17setOverrideCursorERK7QCursor", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
@@ -357,7 +357,7 @@ func QGuiApplication_SetOverrideCursor(arg0 *QCursor) {
 // /usr/include/qt/QtGui/qguiapplication.h:120
 // index:0
 // Public static
-// void changeOverrideCursor(const class QCursor &)
+// void changeOverrideCursor(const QCursor &)
 func (this *QGuiApplication) ChangeOverrideCursor(arg0 *QCursor) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication20changeOverrideCursorERK7QCursor", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
@@ -400,7 +400,7 @@ func QGuiApplication_Font() *QFont /*123*/ {
 // /usr/include/qt/QtGui/qguiapplication.h:125
 // index:0
 // Public static
-// void setFont(const class QFont &)
+// void setFont(const QFont &)
 func (this *QGuiApplication) SetFont(arg0 *QFont) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication7setFontERK5QFont", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
@@ -447,7 +447,7 @@ func QGuiApplication_Palette() *QPalette /*123*/ {
 // /usr/include/qt/QtGui/qguiapplication.h:132
 // index:0
 // Public static
-// void setPalette(const class QPalette &)
+// void setPalette(const QPalette &)
 func (this *QGuiApplication) SetPalette(pal *QPalette) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication10setPaletteERK8QPalette", ffiqt.FFI_TYPE_POINTER, pal)
 	gopp.ErrPrint(err, rv)
@@ -586,7 +586,7 @@ func QGuiApplication_StyleHints() *QStyleHints /*777 QStyleHints **/ {
 // /usr/include/qt/QtGui/qguiapplication.h:145
 // index:0
 // Public static
-// void setDesktopSettingsAware(_Bool)
+// void setDesktopSettingsAware(bool)
 func (this *QGuiApplication) SetDesktopSettingsAware(on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication23setDesktopSettingsAwareEb", ffiqt.FFI_TYPE_POINTER, on)
 	gopp.ErrPrint(err, rv)
@@ -632,7 +632,7 @@ func QGuiApplication_InputMethod() *QInputMethod /*777 QInputMethod **/ {
 // /usr/include/qt/QtGui/qguiapplication.h:152
 // index:0
 // Public static
-// QFunctionPointer platformFunction(const class QByteArray &)
+// QFunctionPointer platformFunction(const QByteArray &)
 func (this *QGuiApplication) PlatformFunction(function *qtcore.QByteArray) unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication16platformFunctionERK10QByteArray", ffiqt.FFI_TYPE_POINTER, function)
 	gopp.ErrPrint(err, rv)
@@ -648,7 +648,7 @@ func QGuiApplication_PlatformFunction(function *qtcore.QByteArray) unsafe.Pointe
 // /usr/include/qt/QtGui/qguiapplication.h:154
 // index:0
 // Public static
-// void setQuitOnLastWindowClosed(_Bool)
+// void setQuitOnLastWindowClosed(bool)
 func (this *QGuiApplication) SetQuitOnLastWindowClosed(quit bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication25setQuitOnLastWindowClosedEb", ffiqt.FFI_TYPE_POINTER, quit)
 	gopp.ErrPrint(err, rv)
@@ -709,7 +709,7 @@ func QGuiApplication_Exec() int {
 // /usr/include/qt/QtGui/qguiapplication.h:160
 // index:0
 // Public virtual
-// bool notify(class QObject *, class QEvent *)
+// bool notify(QObject *, QEvent *)
 func (this *QGuiApplication) Notify(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
@@ -788,7 +788,7 @@ func QGuiApplication_IsFallbackSessionManagementEnabled() bool {
 // /usr/include/qt/QtGui/qguiapplication.h:170
 // index:0
 // Public static
-// void setFallbackSessionManagementEnabled(_Bool)
+// void setFallbackSessionManagementEnabled(bool)
 func (this *QGuiApplication) SetFallbackSessionManagementEnabled(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication35setFallbackSessionManagementEnabledEb", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
@@ -823,7 +823,7 @@ func (this *QGuiApplication) FontDatabaseChanged() {
 // /usr/include/qt/QtGui/qguiapplication.h:176
 // index:0
 // Public
-// void screenAdded(class QScreen *)
+// void screenAdded(QScreen *)
 func (this *QGuiApplication) ScreenAdded(screen *QScreen /*777 QScreen **/) {
 	var convArg0 = screen.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication11screenAddedEP7QScreen", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -833,7 +833,7 @@ func (this *QGuiApplication) ScreenAdded(screen *QScreen /*777 QScreen **/) {
 // /usr/include/qt/QtGui/qguiapplication.h:177
 // index:0
 // Public
-// void screenRemoved(class QScreen *)
+// void screenRemoved(QScreen *)
 func (this *QGuiApplication) ScreenRemoved(screen *QScreen /*777 QScreen **/) {
 	var convArg0 = screen.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication13screenRemovedEP7QScreen", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -843,7 +843,7 @@ func (this *QGuiApplication) ScreenRemoved(screen *QScreen /*777 QScreen **/) {
 // /usr/include/qt/QtGui/qguiapplication.h:178
 // index:0
 // Public
-// void primaryScreenChanged(class QScreen *)
+// void primaryScreenChanged(QScreen *)
 func (this *QGuiApplication) PrimaryScreenChanged(screen *QScreen /*777 QScreen **/) {
 	var convArg0 = screen.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication20primaryScreenChangedEP7QScreen", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -862,7 +862,7 @@ func (this *QGuiApplication) LastWindowClosed() {
 // /usr/include/qt/QtGui/qguiapplication.h:180
 // index:0
 // Public
-// void focusObjectChanged(class QObject *)
+// void focusObjectChanged(QObject *)
 func (this *QGuiApplication) FocusObjectChanged(focusObject *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = focusObject.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication18focusObjectChangedEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -872,7 +872,7 @@ func (this *QGuiApplication) FocusObjectChanged(focusObject *qtcore.QObject /*77
 // /usr/include/qt/QtGui/qguiapplication.h:181
 // index:0
 // Public
-// void focusWindowChanged(class QWindow *)
+// void focusWindowChanged(QWindow *)
 func (this *QGuiApplication) FocusWindowChanged(focusWindow *QWindow /*777 QWindow **/) {
 	var convArg0 = focusWindow.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication18focusWindowChangedEP7QWindow", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -900,7 +900,7 @@ func (this *QGuiApplication) LayoutDirectionChanged(direction int) {
 // /usr/include/qt/QtGui/qguiapplication.h:185
 // index:0
 // Public
-// void commitDataRequest(class QSessionManager &)
+// void commitDataRequest(QSessionManager &)
 func (this *QGuiApplication) CommitDataRequest(sessionManager *QSessionManager) {
 	var convArg0 = sessionManager.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication17commitDataRequestER15QSessionManager", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -910,7 +910,7 @@ func (this *QGuiApplication) CommitDataRequest(sessionManager *QSessionManager) 
 // /usr/include/qt/QtGui/qguiapplication.h:186
 // index:0
 // Public
-// void saveStateRequest(class QSessionManager &)
+// void saveStateRequest(QSessionManager &)
 func (this *QGuiApplication) SaveStateRequest(sessionManager *QSessionManager) {
 	var convArg0 = sessionManager.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication16saveStateRequestER15QSessionManager", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -920,7 +920,7 @@ func (this *QGuiApplication) SaveStateRequest(sessionManager *QSessionManager) {
 // /usr/include/qt/QtGui/qguiapplication.h:188
 // index:0
 // Public
-// void paletteChanged(const class QPalette &)
+// void paletteChanged(const QPalette &)
 func (this *QGuiApplication) PaletteChanged(pal *QPalette) {
 	var convArg0 = pal.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication14paletteChangedERK8QPalette", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -939,7 +939,7 @@ func (this *QGuiApplication) ApplicationDisplayNameChanged() {
 // /usr/include/qt/QtGui/qguiapplication.h:192
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QGuiApplication) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplication5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QTapAndHoldGesture) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // /usr/include/qt/QtWidgets/qgesture.h:260
 // index:0
 // Public
-// void QTapAndHoldGesture(class QObject *)
+// void QTapAndHoldGesture(QObject *)
 func NewQTapAndHoldGesture(parent *qtcore.QObject /*777 QObject **/) *QTapAndHoldGesture {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -125,7 +125,7 @@ func (this *QTapAndHoldGesture) Position() *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtWidgets/qgesture.h:264
 // index:0
 // Public
-// void setPosition(const class QPointF &)
+// void setPosition(const QPointF &)
 func (this *QTapAndHoldGesture) SetPosition(pos *qtcore.QPointF) {
 	var convArg0 = pos.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QTapAndHoldGesture11setPositionERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

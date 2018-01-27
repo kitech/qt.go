@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -96,7 +96,7 @@ func NewQBrush_1(bs int) *QBrush {
 // /usr/include/qt/QtGui/qbrush.h:68
 // index:2
 // Public
-// void QBrush(const class QColor &, Qt::BrushStyle)
+// void QBrush(const QColor &, Qt::BrushStyle)
 func NewQBrush_2(color *QColor, bs int) *QBrush {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = color.GetCthis()
@@ -121,7 +121,7 @@ func NewQBrush_3(color int, bs int) *QBrush {
 // /usr/include/qt/QtGui/qbrush.h:71
 // index:4
 // Public
-// void QBrush(const class QColor &, const class QPixmap &)
+// void QBrush(const QColor &, const QPixmap &)
 func NewQBrush_4(color *QColor, pixmap *QPixmap) *QBrush {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = color.GetCthis()
@@ -135,7 +135,7 @@ func NewQBrush_4(color *QColor, pixmap *QPixmap) *QBrush {
 // /usr/include/qt/QtGui/qbrush.h:72
 // index:5
 // Public
-// void QBrush(Qt::GlobalColor, const class QPixmap &)
+// void QBrush(Qt::GlobalColor, const QPixmap &)
 func NewQBrush_5(color int, pixmap *QPixmap) *QBrush {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg1 = pixmap.GetCthis()
@@ -148,7 +148,7 @@ func NewQBrush_5(color int, pixmap *QPixmap) *QBrush {
 // /usr/include/qt/QtGui/qbrush.h:73
 // index:6
 // Public
-// void QBrush(const class QPixmap &)
+// void QBrush(const QPixmap &)
 func NewQBrush_6(pixmap *QPixmap) *QBrush {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = pixmap.GetCthis()
@@ -161,7 +161,7 @@ func NewQBrush_6(pixmap *QPixmap) *QBrush {
 // /usr/include/qt/QtGui/qbrush.h:74
 // index:7
 // Public
-// void QBrush(const class QImage &)
+// void QBrush(const QImage &)
 func NewQBrush_7(image *QImage) *QBrush {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = image.GetCthis()
@@ -174,7 +174,7 @@ func NewQBrush_7(image *QImage) *QBrush {
 // /usr/include/qt/QtGui/qbrush.h:78
 // index:8
 // Public
-// void QBrush(const class QGradient &)
+// void QBrush(const QGradient &)
 func NewQBrush_8(gradient *QGradient) *QBrush {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = gradient.GetCthis()
@@ -196,7 +196,7 @@ func DeleteQBrush(*QBrush) {
 // /usr/include/qt/QtGui/qbrush.h:86
 // index:0
 // Public inline
-// void swap(class QBrush &)
+// void swap(QBrush &)
 func (this *QBrush) Swap(other *QBrush) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrush4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -238,7 +238,7 @@ func (this *QBrush) Matrix() *QMatrix {
 // /usr/include/qt/QtGui/qbrush.h:95
 // index:0
 // Public
-// void setMatrix(const class QMatrix &)
+// void setMatrix(const QMatrix &)
 func (this *QBrush) SetMatrix(mat *QMatrix) {
 	var convArg0 = mat.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrush9setMatrixERK7QMatrix", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -262,7 +262,7 @@ func (this *QBrush) Transform() *QTransform /*123*/ {
 // /usr/include/qt/QtGui/qbrush.h:98
 // index:0
 // Public
-// void setTransform(const class QTransform &)
+// void setTransform(const QTransform &)
 func (this *QBrush) SetTransform(arg0 *QTransform) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrush12setTransformERK10QTransform", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -286,7 +286,7 @@ func (this *QBrush) Texture() *QPixmap /*123*/ {
 // /usr/include/qt/QtGui/qbrush.h:101
 // index:0
 // Public
-// void setTexture(const class QPixmap &)
+// void setTexture(const QPixmap &)
 func (this *QBrush) SetTexture(pixmap *QPixmap) {
 	var convArg0 = pixmap.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrush10setTextureERK7QPixmap", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -310,7 +310,7 @@ func (this *QBrush) TextureImage() *QImage /*123*/ {
 // /usr/include/qt/QtGui/qbrush.h:104
 // index:0
 // Public
-// void setTextureImage(const class QImage &)
+// void setTextureImage(const QImage &)
 func (this *QBrush) SetTextureImage(image *QImage) {
 	var convArg0 = image.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrush15setTextureImageERK6QImage", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -332,7 +332,7 @@ func (this *QBrush) Color() *QColor {
 // /usr/include/qt/QtGui/qbrush.h:107
 // index:0
 // Public
-// void setColor(const class QColor &)
+// void setColor(const QColor &)
 func (this *QBrush) SetColor(color *QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrush8setColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

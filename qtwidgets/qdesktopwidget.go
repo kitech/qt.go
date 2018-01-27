@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -154,7 +154,7 @@ func (this *QDesktopWidget) PrimaryScreen() int {
 // /usr/include/qt/QtWidgets/qdesktopwidget.h:68
 // index:0
 // Public
-// int screenNumber(const class QWidget *)
+// int screenNumber(const QWidget *)
 func (this *QDesktopWidget) ScreenNumber(widget *QWidget /*777 const QWidget **/) int {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDesktopWidget12screenNumberEPK7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -166,7 +166,7 @@ func (this *QDesktopWidget) ScreenNumber(widget *QWidget /*777 const QWidget **/
 // /usr/include/qt/QtWidgets/qdesktopwidget.h:69
 // index:1
 // Public
-// int screenNumber(const class QPoint &)
+// int screenNumber(const QPoint &)
 func (this *QDesktopWidget) ScreenNumber_1(arg0 *qtcore.QPoint) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDesktopWidget12screenNumberERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -204,7 +204,7 @@ func (this *QDesktopWidget) ScreenGeometry(screen int) *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtWidgets/qdesktopwidget.h:74
 // index:1
 // Public
-// const QRect screenGeometry(const class QWidget *)
+// const QRect screenGeometry(const QWidget *)
 func (this *QDesktopWidget) ScreenGeometry_1(widget *QWidget /*777 const QWidget **/) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = widget.GetCthis()
@@ -219,7 +219,7 @@ func (this *QDesktopWidget) ScreenGeometry_1(widget *QWidget /*777 const QWidget
 // /usr/include/qt/QtWidgets/qdesktopwidget.h:75
 // index:2
 // Public inline
-// const QRect screenGeometry(const class QPoint &)
+// const QRect screenGeometry(const QPoint &)
 func (this *QDesktopWidget) ScreenGeometry_2(point *qtcore.QPoint) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = point.GetCthis()
@@ -248,7 +248,7 @@ func (this *QDesktopWidget) AvailableGeometry(screen int) *qtcore.QRect /*123*/ 
 // /usr/include/qt/QtWidgets/qdesktopwidget.h:79
 // index:1
 // Public
-// const QRect availableGeometry(const class QWidget *)
+// const QRect availableGeometry(const QWidget *)
 func (this *QDesktopWidget) AvailableGeometry_1(widget *QWidget /*777 const QWidget **/) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = widget.GetCthis()
@@ -263,7 +263,7 @@ func (this *QDesktopWidget) AvailableGeometry_1(widget *QWidget /*777 const QWid
 // /usr/include/qt/QtWidgets/qdesktopwidget.h:80
 // index:2
 // Public inline
-// const QRect availableGeometry(const class QPoint &)
+// const QRect availableGeometry(const QPoint &)
 func (this *QDesktopWidget) AvailableGeometry_2(point *qtcore.QPoint) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = point.GetCthis()
@@ -314,7 +314,7 @@ func (this *QDesktopWidget) PrimaryScreenChanged() {
 // /usr/include/qt/QtWidgets/qdesktopwidget.h:90
 // index:0
 // Protected virtual
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QDesktopWidget) ResizeEvent(e *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDesktopWidget11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QAbstractTableModel) MetaObject() *QMetaObject /*777 const QMetaObje
 // /usr/include/qt/QtCore/qabstractitemmodel.h:370
 // index:0
 // Public
-// void QAbstractTableModel(class QObject *)
+// void QAbstractTableModel(QObject *)
 func NewQAbstractTableModel(parent *QObject /*777 QObject **/) *QAbstractTableModel {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -103,7 +103,7 @@ func DeleteQAbstractTableModel(*QAbstractTableModel) {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:373
 // index:0
 // Public virtual
-// QModelIndex index(int, int, const class QModelIndex &)
+// QModelIndex index(int, int, const QModelIndex &)
 func (this *QAbstractTableModel) Index(row int, column int, parent *QModelIndex) *QModelIndex /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg2 = parent.GetCthis()
@@ -118,7 +118,7 @@ func (this *QAbstractTableModel) Index(row int, column int, parent *QModelIndex)
 // /usr/include/qt/QtCore/qabstractitemmodel.h:374
 // index:0
 // Public virtual
-// QModelIndex sibling(int, int, const class QModelIndex &)
+// QModelIndex sibling(int, int, const QModelIndex &)
 func (this *QAbstractTableModel) Sibling(row int, column int, idx *QModelIndex) *QModelIndex /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg2 = idx.GetCthis()
@@ -133,7 +133,7 @@ func (this *QAbstractTableModel) Sibling(row int, column int, idx *QModelIndex) 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:375
 // index:0
 // Public virtual
-// bool dropMimeData(const class QMimeData *, Qt::DropAction, int, int, const class QModelIndex &)
+// bool dropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &)
 func (this *QAbstractTableModel) DropMimeData(data *QMimeData /*777 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
@@ -146,7 +146,7 @@ func (this *QAbstractTableModel) DropMimeData(data *QMimeData /*777 const QMimeD
 // /usr/include/qt/QtCore/qabstractitemmodel.h:378
 // index:0
 // Public virtual
-// Qt::ItemFlags flags(const class QModelIndex &)
+// Qt::ItemFlags flags(const QModelIndex &)
 func (this *QAbstractTableModel) Flags(index *QModelIndex) int {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractTableModel5flagsERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

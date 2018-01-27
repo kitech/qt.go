@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func NewQTextBlockFormat() *QTextBlockFormat {
 // /usr/include/qt/QtGui/qtextformat.h:649
 // index:1
 // Protected
-// void QTextBlockFormat(const class QTextFormat &)
+// void QTextBlockFormat(const QTextFormat &)
 func NewQTextBlockFormat_1(fmt *QTextFormat) *QTextBlockFormat {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = fmt.GetCthis()
@@ -282,7 +282,7 @@ func (this *QTextBlockFormat) LineHeightType() int {
 // /usr/include/qt/QtGui/qtextformat.h:635
 // index:0
 // Public inline
-// void setNonBreakableLines(_Bool)
+// void setNonBreakableLines(bool)
 func (this *QTextBlockFormat) SetNonBreakableLines(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat20setNonBreakableLinesEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)

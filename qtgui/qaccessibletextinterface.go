@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -162,7 +162,7 @@ func (this *QAccessibleTextInterface) Text(startOffset int, endOffset int) *qtco
 // /usr/include/qt/QtGui/qaccessible.h:537
 // index:0
 // Public virtual
-// QString textBeforeOffset(int, class QAccessible::TextBoundaryType, int *, int *)
+// QString textBeforeOffset(int, QAccessible::TextBoundaryType, int *, int *)
 func (this *QAccessibleTextInterface) TextBeforeOffset(offset int, boundaryType int, startOffset unsafe.Pointer /*666*/, endOffset unsafe.Pointer /*666*/) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface16textBeforeOffsetEiN11QAccessible16TextBoundaryTypeEPiS2_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), offset, boundaryType, &startOffset, &endOffset)
@@ -176,7 +176,7 @@ func (this *QAccessibleTextInterface) TextBeforeOffset(offset int, boundaryType 
 // /usr/include/qt/QtGui/qaccessible.h:539
 // index:0
 // Public virtual
-// QString textAfterOffset(int, class QAccessible::TextBoundaryType, int *, int *)
+// QString textAfterOffset(int, QAccessible::TextBoundaryType, int *, int *)
 func (this *QAccessibleTextInterface) TextAfterOffset(offset int, boundaryType int, startOffset unsafe.Pointer /*666*/, endOffset unsafe.Pointer /*666*/) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface15textAfterOffsetEiN11QAccessible16TextBoundaryTypeEPiS2_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), offset, boundaryType, &startOffset, &endOffset)
@@ -190,7 +190,7 @@ func (this *QAccessibleTextInterface) TextAfterOffset(offset int, boundaryType i
 // /usr/include/qt/QtGui/qaccessible.h:541
 // index:0
 // Public virtual
-// QString textAtOffset(int, class QAccessible::TextBoundaryType, int *, int *)
+// QString textAtOffset(int, QAccessible::TextBoundaryType, int *, int *)
 func (this *QAccessibleTextInterface) TextAtOffset(offset int, boundaryType int, startOffset unsafe.Pointer /*666*/, endOffset unsafe.Pointer /*666*/) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface12textAtOffsetEiN11QAccessible16TextBoundaryTypeEPiS2_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), offset, boundaryType, &startOffset, &endOffset)
@@ -229,7 +229,7 @@ func (this *QAccessibleTextInterface) CharacterRect(offset int) *qtcore.QRect /*
 // /usr/include/qt/QtGui/qaccessible.h:547
 // index:0
 // Public pure virtual
-// int offsetAtPoint(const class QPoint &)
+// int offsetAtPoint(const QPoint &)
 func (this *QAccessibleTextInterface) OffsetAtPoint(point *qtcore.QPoint) int {
 	var convArg0 = point.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface13offsetAtPointERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

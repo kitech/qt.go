@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQVariant() *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:201
 // index:1
 // Public
-// void QVariant(enum QVariant::Type)
+// void QVariant(QVariant::Type)
 func NewQVariant_1(type_ int) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ENS_4TypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)
@@ -116,7 +116,7 @@ func NewQVariant_3(typeId int, copy unsafe.Pointer /*666*/, flags uint) *QVarian
 // /usr/include/qt/QtCore/qvariant.h:207
 // index:4
 // Public
-// void QVariant(class QDataStream &)
+// void QVariant(QDataStream &)
 func NewQVariant_4(s *QDataStream) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = s.GetCthis()
@@ -177,7 +177,7 @@ func NewQVariant_8(ull uint64) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:214
 // index:9
 // Public
-// void QVariant(_Bool)
+// void QVariant(bool)
 func NewQVariant_9(b bool) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Eb", ffiqt.FFI_TYPE_VOID, cthis, b)
@@ -227,7 +227,7 @@ func NewQVariant_12(str string) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:221
 // index:13
 // Public
-// void QVariant(const class QByteArray &)
+// void QVariant(const QByteArray &)
 func NewQVariant_13(bytearray *QByteArray) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = bytearray.GetCthis()
@@ -240,7 +240,7 @@ func NewQVariant_13(bytearray *QByteArray) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:222
 // index:14
 // Public
-// void QVariant(const class QBitArray &)
+// void QVariant(const QBitArray &)
 func NewQVariant_14(bitarray *QBitArray) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = bitarray.GetCthis()
@@ -253,7 +253,7 @@ func NewQVariant_14(bitarray *QBitArray) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:223
 // index:15
 // Public
-// void QVariant(const class QString &)
+// void QVariant(const QString &)
 func NewQVariant_15(string *QString) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = string.GetCthis()
@@ -266,7 +266,7 @@ func NewQVariant_15(string *QString) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:224
 // index:16
 // Public
-// void QVariant(class QLatin1String)
+// void QVariant(QLatin1String)
 func NewQVariant_16(string *QLatin1String /*123*/) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = string.GetCthis()
@@ -279,7 +279,7 @@ func NewQVariant_16(string *QLatin1String /*123*/) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:225
 // index:17
 // Public
-// void QVariant(const class QStringList &)
+// void QVariant(const QStringList &)
 func NewQVariant_17(stringlist *QStringList) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = stringlist.GetCthis()
@@ -292,7 +292,7 @@ func NewQVariant_17(stringlist *QStringList) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:226
 // index:18
 // Public
-// void QVariant(class QChar)
+// void QVariant(QChar)
 func NewQVariant_18(qchar *QChar /*123*/) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = qchar.GetCthis()
@@ -305,7 +305,7 @@ func NewQVariant_18(qchar *QChar /*123*/) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:227
 // index:19
 // Public
-// void QVariant(const class QDate &)
+// void QVariant(const QDate &)
 func NewQVariant_19(date *QDate) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = date.GetCthis()
@@ -318,7 +318,7 @@ func NewQVariant_19(date *QDate) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:228
 // index:20
 // Public
-// void QVariant(const class QTime &)
+// void QVariant(const QTime &)
 func NewQVariant_20(time *QTime) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = time.GetCthis()
@@ -331,7 +331,7 @@ func NewQVariant_20(time *QTime) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:229
 // index:21
 // Public
-// void QVariant(const class QDateTime &)
+// void QVariant(const QDateTime &)
 func NewQVariant_21(datetime *QDateTime) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = datetime.GetCthis()
@@ -344,7 +344,7 @@ func NewQVariant_21(datetime *QDateTime) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:234
 // index:22
 // Public
-// void QVariant(const class QSize &)
+// void QVariant(const QSize &)
 func NewQVariant_22(size *QSize) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = size.GetCthis()
@@ -357,7 +357,7 @@ func NewQVariant_22(size *QSize) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:235
 // index:23
 // Public
-// void QVariant(const class QSizeF &)
+// void QVariant(const QSizeF &)
 func NewQVariant_23(size *QSizeF) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = size.GetCthis()
@@ -370,7 +370,7 @@ func NewQVariant_23(size *QSizeF) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:236
 // index:24
 // Public
-// void QVariant(const class QPoint &)
+// void QVariant(const QPoint &)
 func NewQVariant_24(pt *QPoint) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = pt.GetCthis()
@@ -383,7 +383,7 @@ func NewQVariant_24(pt *QPoint) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:237
 // index:25
 // Public
-// void QVariant(const class QPointF &)
+// void QVariant(const QPointF &)
 func NewQVariant_25(pt *QPointF) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = pt.GetCthis()
@@ -396,7 +396,7 @@ func NewQVariant_25(pt *QPointF) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:238
 // index:26
 // Public
-// void QVariant(const class QLine &)
+// void QVariant(const QLine &)
 func NewQVariant_26(line *QLine) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = line.GetCthis()
@@ -409,7 +409,7 @@ func NewQVariant_26(line *QLine) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:239
 // index:27
 // Public
-// void QVariant(const class QLineF &)
+// void QVariant(const QLineF &)
 func NewQVariant_27(line *QLineF) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = line.GetCthis()
@@ -422,7 +422,7 @@ func NewQVariant_27(line *QLineF) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:240
 // index:28
 // Public
-// void QVariant(const class QRect &)
+// void QVariant(const QRect &)
 func NewQVariant_28(rect *QRect) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = rect.GetCthis()
@@ -435,7 +435,7 @@ func NewQVariant_28(rect *QRect) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:241
 // index:29
 // Public
-// void QVariant(const class QRectF &)
+// void QVariant(const QRectF &)
 func NewQVariant_29(rect *QRectF) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = rect.GetCthis()
@@ -448,7 +448,7 @@ func NewQVariant_29(rect *QRectF) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:243
 // index:30
 // Public
-// void QVariant(const class QLocale &)
+// void QVariant(const QLocale &)
 func NewQVariant_30(locale *QLocale) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = locale.GetCthis()
@@ -461,7 +461,7 @@ func NewQVariant_30(locale *QLocale) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:245
 // index:31
 // Public
-// void QVariant(const class QRegExp &)
+// void QVariant(const QRegExp &)
 func NewQVariant_31(regExp *QRegExp) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = regExp.GetCthis()
@@ -474,7 +474,7 @@ func NewQVariant_31(regExp *QRegExp) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:249
 // index:32
 // Public
-// void QVariant(const class QRegularExpression &)
+// void QVariant(const QRegularExpression &)
 func NewQVariant_32(re *QRegularExpression) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = re.GetCthis()
@@ -487,7 +487,7 @@ func NewQVariant_32(re *QRegularExpression) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:251
 // index:33
 // Public
-// void QVariant(const class QUrl &)
+// void QVariant(const QUrl &)
 func NewQVariant_33(url *QUrl) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = url.GetCthis()
@@ -500,7 +500,7 @@ func NewQVariant_33(url *QUrl) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:252
 // index:34
 // Public
-// void QVariant(const class QEasingCurve &)
+// void QVariant(const QEasingCurve &)
 func NewQVariant_34(easing *QEasingCurve) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = easing.GetCthis()
@@ -513,7 +513,7 @@ func NewQVariant_34(easing *QEasingCurve) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:253
 // index:35
 // Public
-// void QVariant(const class QUuid &)
+// void QVariant(const QUuid &)
 func NewQVariant_35(uuid *QUuid) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = uuid.GetCthis()
@@ -526,7 +526,7 @@ func NewQVariant_35(uuid *QUuid) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:254
 // index:36
 // Public
-// void QVariant(const class QModelIndex &)
+// void QVariant(const QModelIndex &)
 func NewQVariant_36(modelIndex *QModelIndex) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = modelIndex.GetCthis()
@@ -539,7 +539,7 @@ func NewQVariant_36(modelIndex *QModelIndex) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:255
 // index:37
 // Public
-// void QVariant(const class QPersistentModelIndex &)
+// void QVariant(const QPersistentModelIndex &)
 func NewQVariant_37(modelIndex *QPersistentModelIndex) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = modelIndex.GetCthis()
@@ -552,7 +552,7 @@ func NewQVariant_37(modelIndex *QPersistentModelIndex) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:256
 // index:38
 // Public
-// void QVariant(const class QJsonValue &)
+// void QVariant(const QJsonValue &)
 func NewQVariant_38(jsonValue *QJsonValue) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = jsonValue.GetCthis()
@@ -565,7 +565,7 @@ func NewQVariant_38(jsonValue *QJsonValue) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:257
 // index:39
 // Public
-// void QVariant(const class QJsonObject &)
+// void QVariant(const QJsonObject &)
 func NewQVariant_39(jsonObject *QJsonObject) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = jsonObject.GetCthis()
@@ -578,7 +578,7 @@ func NewQVariant_39(jsonObject *QJsonObject) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:258
 // index:40
 // Public
-// void QVariant(const class QJsonArray &)
+// void QVariant(const QJsonArray &)
 func NewQVariant_40(jsonArray *QJsonArray) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = jsonArray.GetCthis()
@@ -591,7 +591,7 @@ func NewQVariant_40(jsonArray *QJsonArray) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:259
 // index:41
 // Public
-// void QVariant(const class QJsonDocument &)
+// void QVariant(const QJsonDocument &)
 func NewQVariant_41(jsonDocument *QJsonDocument) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = jsonDocument.GetCthis()
@@ -613,7 +613,7 @@ func DeleteQVariant(*QVariant) {
 // /usr/include/qt/QtCore/qvariant.h:270
 // index:0
 // Public inline
-// void swap(class QVariant &)
+// void swap(QVariant &)
 func (this *QVariant) Swap(other *QVariant) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariant4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -740,7 +740,7 @@ func (this *QVariant) IsDetached() bool {
 // /usr/include/qt/QtCore/qvariant.h:287
 // index:0
 // Public
-// int toInt(_Bool *)
+// int toInt(bool *)
 func (this *QVariant) ToInt(ok unsafe.Pointer /*666*/) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant5toIntEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -751,7 +751,7 @@ func (this *QVariant) ToInt(ok unsafe.Pointer /*666*/) int {
 // /usr/include/qt/QtCore/qvariant.h:288
 // index:0
 // Public
-// uint toUInt(_Bool *)
+// uint toUInt(bool *)
 func (this *QVariant) ToUInt(ok unsafe.Pointer /*666*/) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toUIntEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -762,7 +762,7 @@ func (this *QVariant) ToUInt(ok unsafe.Pointer /*666*/) uint {
 // /usr/include/qt/QtCore/qvariant.h:289
 // index:0
 // Public
-// qlonglong toLongLong(_Bool *)
+// qlonglong toLongLong(bool *)
 func (this *QVariant) ToLongLong(ok unsafe.Pointer /*666*/) int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant10toLongLongEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -773,7 +773,7 @@ func (this *QVariant) ToLongLong(ok unsafe.Pointer /*666*/) int64 {
 // /usr/include/qt/QtCore/qvariant.h:290
 // index:0
 // Public
-// qulonglong toULongLong(_Bool *)
+// qulonglong toULongLong(bool *)
 func (this *QVariant) ToULongLong(ok unsafe.Pointer /*666*/) uint64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant11toULongLongEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -795,7 +795,7 @@ func (this *QVariant) ToBool() bool {
 // /usr/include/qt/QtCore/qvariant.h:292
 // index:0
 // Public
-// double toDouble(_Bool *)
+// double toDouble(bool *)
 func (this *QVariant) ToDouble(ok unsafe.Pointer /*666*/) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toDoubleEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -806,7 +806,7 @@ func (this *QVariant) ToDouble(ok unsafe.Pointer /*666*/) float64 {
 // /usr/include/qt/QtCore/qvariant.h:293
 // index:0
 // Public
-// float toFloat(_Bool *)
+// float toFloat(bool *)
 func (this *QVariant) ToFloat(ok unsafe.Pointer /*666*/) float32 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toFloatEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -817,7 +817,7 @@ func (this *QVariant) ToFloat(ok unsafe.Pointer /*666*/) float32 {
 // /usr/include/qt/QtCore/qvariant.h:294
 // index:0
 // Public
-// qreal toReal(_Bool *)
+// qreal toReal(bool *)
 func (this *QVariant) ToReal(ok unsafe.Pointer /*666*/) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toRealEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -1206,7 +1206,7 @@ func (this *QVariant) ToJsonDocument() *QJsonDocument /*123*/ {
 // /usr/include/qt/QtCore/qvariant.h:337
 // index:0
 // Public
-// void load(class QDataStream &)
+// void load(QDataStream &)
 func (this *QVariant) Load(ds *QDataStream) {
 	var convArg0 = ds.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariant4loadER11QDataStream", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1216,7 +1216,7 @@ func (this *QVariant) Load(ds *QDataStream) {
 // /usr/include/qt/QtCore/qvariant.h:338
 // index:0
 // Public
-// void save(class QDataStream &)
+// void save(QDataStream &)
 func (this *QVariant) Save(ds *QDataStream) {
 	var convArg0 = ds.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant4saveER11QDataStream", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1300,7 +1300,7 @@ func (this *QVariant) Create(type_ int, copy unsafe.Pointer /*666*/) {
 // /usr/include/qt/QtCore/qvariant.h:465
 // index:0
 // Protected
-// bool cmp(const class QVariant &)
+// bool cmp(const QVariant &)
 func (this *QVariant) Cmp(other *QVariant) bool {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant3cmpERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1312,7 +1312,7 @@ func (this *QVariant) Cmp(other *QVariant) bool {
 // /usr/include/qt/QtCore/qvariant.h:466
 // index:0
 // Protected
-// int compare(const class QVariant &)
+// int compare(const QVariant &)
 func (this *QVariant) Compare(other *QVariant) int {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7compareERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

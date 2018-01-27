@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -89,7 +89,7 @@ func (this *QQmlEngine) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtQml/qqmlengine.h:100
 // index:0
 // Public
-// void QQmlEngine(class QObject *)
+// void QQmlEngine(QObject *)
 func NewQQmlEngine(p *qtcore.QObject /*777 QObject **/) *QQmlEngine {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = p.GetCthis()
@@ -141,7 +141,7 @@ func (this *QQmlEngine) TrimComponentCache() {
 // /usr/include/qt/QtQml/qqmlengine.h:109
 // index:0
 // Public
-// void setImportPathList(const class QStringList &)
+// void setImportPathList(const QStringList &)
 func (this *QQmlEngine) SetImportPathList(paths *qtcore.QStringList) {
 	var convArg0 = paths.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine17setImportPathListERK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -151,7 +151,7 @@ func (this *QQmlEngine) SetImportPathList(paths *qtcore.QStringList) {
 // /usr/include/qt/QtQml/qqmlengine.h:110
 // index:0
 // Public
-// void addImportPath(const class QString &)
+// void addImportPath(const QString &)
 func (this *QQmlEngine) AddImportPath(dir *qtcore.QString) {
 	var convArg0 = dir.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine13addImportPathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -161,7 +161,7 @@ func (this *QQmlEngine) AddImportPath(dir *qtcore.QString) {
 // /usr/include/qt/QtQml/qqmlengine.h:113
 // index:0
 // Public
-// void setPluginPathList(const class QStringList &)
+// void setPluginPathList(const QStringList &)
 func (this *QQmlEngine) SetPluginPathList(paths *qtcore.QStringList) {
 	var convArg0 = paths.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine17setPluginPathListERK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -171,7 +171,7 @@ func (this *QQmlEngine) SetPluginPathList(paths *qtcore.QStringList) {
 // /usr/include/qt/QtQml/qqmlengine.h:114
 // index:0
 // Public
-// void addPluginPath(const class QString &)
+// void addPluginPath(const QString &)
 func (this *QQmlEngine) AddPluginPath(dir *qtcore.QString) {
 	var convArg0 = dir.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine13addPluginPathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -181,7 +181,7 @@ func (this *QQmlEngine) AddPluginPath(dir *qtcore.QString) {
 // /usr/include/qt/QtQml/qqmlengine.h:116
 // index:0
 // Public
-// bool addNamedBundle(const class QString &, const class QString &)
+// bool addNamedBundle(const QString &, const QString &)
 func (this *QQmlEngine) AddNamedBundle(name *qtcore.QString, fileName *qtcore.QString) bool {
 	var convArg0 = name.GetCthis()
 	var convArg1 = fileName.GetCthis()
@@ -194,7 +194,7 @@ func (this *QQmlEngine) AddNamedBundle(name *qtcore.QString, fileName *qtcore.QS
 // /usr/include/qt/QtQml/qqmlengine.h:121
 // index:0
 // Public
-// void setNetworkAccessManagerFactory(class QQmlNetworkAccessManagerFactory *)
+// void setNetworkAccessManagerFactory(QQmlNetworkAccessManagerFactory *)
 func (this *QQmlEngine) SetNetworkAccessManagerFactory(arg0 *QQmlNetworkAccessManagerFactory /*777 QQmlNetworkAccessManagerFactory **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine30setNetworkAccessManagerFactoryEP31QQmlNetworkAccessManagerFactory", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -228,7 +228,7 @@ func (this *QQmlEngine) NetworkAccessManager() *qtnetwork.QNetworkAccessManager 
 // /usr/include/qt/QtQml/qqmlengine.h:127
 // index:0
 // Public
-// void setUrlInterceptor(class QQmlAbstractUrlInterceptor *)
+// void setUrlInterceptor(QQmlAbstractUrlInterceptor *)
 func (this *QQmlEngine) SetUrlInterceptor(urlInterceptor *QQmlAbstractUrlInterceptor /*777 QQmlAbstractUrlInterceptor **/) {
 	var convArg0 = urlInterceptor.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine17setUrlInterceptorEP26QQmlAbstractUrlInterceptor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -250,7 +250,7 @@ func (this *QQmlEngine) UrlInterceptor() *QQmlAbstractUrlInterceptor /*777 QQmlA
 // /usr/include/qt/QtQml/qqmlengine.h:130
 // index:0
 // Public
-// void addImageProvider(const class QString &, class QQmlImageProviderBase *)
+// void addImageProvider(const QString &, QQmlImageProviderBase *)
 func (this *QQmlEngine) AddImageProvider(id *qtcore.QString, arg1 unsafe.Pointer /*666*/) {
 	var convArg0 = id.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine16addImageProviderERK7QStringP21QQmlImageProviderBase", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -260,7 +260,7 @@ func (this *QQmlEngine) AddImageProvider(id *qtcore.QString, arg1 unsafe.Pointer
 // /usr/include/qt/QtQml/qqmlengine.h:131
 // index:0
 // Public
-// QQmlImageProviderBase * imageProvider(const class QString &)
+// QQmlImageProviderBase * imageProvider(const QString &)
 func (this *QQmlEngine) ImageProvider(id *qtcore.QString) unsafe.Pointer /*666*/ {
 	var convArg0 = id.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QQmlEngine13imageProviderERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -272,7 +272,7 @@ func (this *QQmlEngine) ImageProvider(id *qtcore.QString) unsafe.Pointer /*666*/
 // /usr/include/qt/QtQml/qqmlengine.h:132
 // index:0
 // Public
-// void removeImageProvider(const class QString &)
+// void removeImageProvider(const QString &)
 func (this *QQmlEngine) RemoveImageProvider(id *qtcore.QString) {
 	var convArg0 = id.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine19removeImageProviderERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -282,7 +282,7 @@ func (this *QQmlEngine) RemoveImageProvider(id *qtcore.QString) {
 // /usr/include/qt/QtQml/qqmlengine.h:134
 // index:0
 // Public
-// void setIncubationController(class QQmlIncubationController *)
+// void setIncubationController(QQmlIncubationController *)
 func (this *QQmlEngine) SetIncubationController(arg0 *QQmlIncubationController /*777 QQmlIncubationController **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine23setIncubationControllerEP24QQmlIncubationController", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -304,7 +304,7 @@ func (this *QQmlEngine) IncubationController() *QQmlIncubationController /*777 Q
 // /usr/include/qt/QtQml/qqmlengine.h:137
 // index:0
 // Public
-// void setOfflineStoragePath(const class QString &)
+// void setOfflineStoragePath(const QString &)
 func (this *QQmlEngine) SetOfflineStoragePath(dir *qtcore.QString) {
 	var convArg0 = dir.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine21setOfflineStoragePathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -328,7 +328,7 @@ func (this *QQmlEngine) OfflineStoragePath() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtQml/qqmlengine.h:139
 // index:0
 // Public
-// QString offlineStorageDatabaseFilePath(const class QString &)
+// QString offlineStorageDatabaseFilePath(const QString &)
 func (this *QQmlEngine) OfflineStorageDatabaseFilePath(databaseName *qtcore.QString) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = databaseName.GetCthis()
@@ -357,7 +357,7 @@ func (this *QQmlEngine) BaseUrl() *qtcore.QUrl /*123*/ {
 // /usr/include/qt/QtQml/qqmlengine.h:142
 // index:0
 // Public
-// void setBaseUrl(const class QUrl &)
+// void setBaseUrl(const QUrl &)
 func (this *QQmlEngine) SetBaseUrl(arg0 *qtcore.QUrl) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine10setBaseUrlERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -378,7 +378,7 @@ func (this *QQmlEngine) OutputWarningsToStandardError() bool {
 // /usr/include/qt/QtQml/qqmlengine.h:145
 // index:0
 // Public
-// void setOutputWarningsToStandardError(_Bool)
+// void setOutputWarningsToStandardError(bool)
 func (this *QQmlEngine) SetOutputWarningsToStandardError(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine32setOutputWarningsToStandardErrorEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -396,7 +396,7 @@ func (this *QQmlEngine) Retranslate() {
 // /usr/include/qt/QtQml/qqmlengine.h:151
 // index:0
 // Public static
-// QQmlContext * contextForObject(const class QObject *)
+// QQmlContext * contextForObject(const QObject *)
 func (this *QQmlEngine) ContextForObject(arg0 *qtcore.QObject /*777 const QObject **/) *QQmlContext /*777 QQmlContext **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine16contextForObjectEPK7QObject", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
@@ -413,7 +413,7 @@ func QQmlEngine_ContextForObject(arg0 *qtcore.QObject /*777 const QObject **/) *
 // /usr/include/qt/QtQml/qqmlengine.h:152
 // index:0
 // Public static
-// void setContextForObject(class QObject *, class QQmlContext *)
+// void setContextForObject(QObject *, QQmlContext *)
 func (this *QQmlEngine) SetContextForObject(arg0 *qtcore.QObject /*777 QObject **/, arg1 *QQmlContext /*777 QQmlContext **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine19setContextForObjectEP7QObjectP11QQmlContext", ffiqt.FFI_TYPE_POINTER, arg0, arg1)
 	gopp.ErrPrint(err, rv)
@@ -426,7 +426,7 @@ func QQmlEngine_SetContextForObject(arg0 *qtcore.QObject /*777 QObject **/, arg1
 // /usr/include/qt/QtQml/qqmlengine.h:155
 // index:0
 // Public static
-// void setObjectOwnership(class QObject *, enum QQmlEngine::ObjectOwnership)
+// void setObjectOwnership(QObject *, QQmlEngine::ObjectOwnership)
 func (this *QQmlEngine) SetObjectOwnership(arg0 *qtcore.QObject /*777 QObject **/, arg1 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine18setObjectOwnershipEP7QObjectNS_15ObjectOwnershipE", ffiqt.FFI_TYPE_POINTER, arg0, arg1)
 	gopp.ErrPrint(err, rv)
@@ -439,7 +439,7 @@ func QQmlEngine_SetObjectOwnership(arg0 *qtcore.QObject /*777 QObject **/, arg1 
 // /usr/include/qt/QtQml/qqmlengine.h:156
 // index:0
 // Public static
-// QQmlEngine::ObjectOwnership objectOwnership(class QObject *)
+// QQmlEngine::ObjectOwnership objectOwnership(QObject *)
 func (this *QQmlEngine) ObjectOwnership(arg0 *qtcore.QObject /*777 QObject **/) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine15objectOwnershipEP7QObject", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
@@ -455,7 +455,7 @@ func QQmlEngine_ObjectOwnership(arg0 *qtcore.QObject /*777 QObject **/) int {
 // /usr/include/qt/QtQml/qqmlengine.h:159
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QQmlEngine) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -73,7 +73,7 @@ func (*QEnterEvent) NewFromPointer(cthis unsafe.Pointer) *QEnterEvent {
 // /usr/include/qt/QtGui/qevent.h:85
 // index:0
 // Public
-// void QEnterEvent(const class QPointF &, const class QPointF &, const class QPointF &)
+// void QEnterEvent(const QPointF &, const QPointF &, const QPointF &)
 func NewQEnterEvent(localPos *qtcore.QPointF, windowPos *qtcore.QPointF, screenPos *qtcore.QPointF) *QEnterEvent {
 	cthis := qtrt.Calloc(1, 256) // 72
 	var convArg0 = localPos.GetCthis()

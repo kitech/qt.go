@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQDataStream() *QDataStream {
 // /usr/include/qt/QtCore/qdatastream.h:124
 // index:1
 // Public
-// void QDataStream(class QIODevice *)
+// void QDataStream(QIODevice *)
 func NewQDataStream_1(arg0 *QIODevice /*777 QIODevice **/) *QDataStream {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = arg0.GetCthis()
@@ -93,7 +93,7 @@ func NewQDataStream_1(arg0 *QIODevice /*777 QIODevice **/) *QDataStream {
 // /usr/include/qt/QtCore/qdatastream.h:126
 // index:2
 // Public
-// void QDataStream(const class QByteArray &)
+// void QDataStream(const QByteArray &)
 func NewQDataStream_2(arg0 *QByteArray) *QDataStream {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = arg0.GetCthis()
@@ -127,7 +127,7 @@ func (this *QDataStream) Device() *QIODevice /*777 QIODevice **/ {
 // /usr/include/qt/QtCore/qdatastream.h:130
 // index:0
 // Public
-// void setDevice(class QIODevice *)
+// void setDevice(QIODevice *)
 func (this *QDataStream) SetDevice(arg0 *QIODevice /*777 QIODevice **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -168,7 +168,7 @@ func (this *QDataStream) Status() int {
 // /usr/include/qt/QtCore/qdatastream.h:136
 // index:0
 // Public
-// void setStatus(enum QDataStream::Status)
+// void setStatus(QDataStream::Status)
 func (this *QDataStream) SetStatus(status int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream9setStatusENS_6StatusE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), status)
 	gopp.ErrPrint(err, rv)
@@ -197,7 +197,7 @@ func (this *QDataStream) FloatingPointPrecision() int {
 // /usr/include/qt/QtCore/qdatastream.h:140
 // index:0
 // Public
-// void setFloatingPointPrecision(enum QDataStream::FloatingPointPrecision)
+// void setFloatingPointPrecision(QDataStream::FloatingPointPrecision)
 func (this *QDataStream) SetFloatingPointPrecision(precision int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream25setFloatingPointPrecisionENS_22FloatingPointPrecisionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), precision)
 	gopp.ErrPrint(err, rv)
@@ -217,7 +217,7 @@ func (this *QDataStream) ByteOrder() int {
 // /usr/include/qt/QtCore/qdatastream.h:143
 // index:0
 // Public
-// void setByteOrder(enum QDataStream::ByteOrder)
+// void setByteOrder(QDataStream::ByteOrder)
 func (this *QDataStream) SetByteOrder(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream12setByteOrderENS_9ByteOrderE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

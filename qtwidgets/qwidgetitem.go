@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -77,7 +77,7 @@ func (*QWidgetItem) NewFromPointer(cthis unsafe.Pointer) *QWidgetItem {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:126
 // index:0
 // Public inline
-// void QWidgetItem(class QWidget *)
+// void QWidgetItem(QWidget *)
 func NewQWidgetItem(w *QWidget /*777 QWidget **/) *QWidgetItem {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = w.GetCthis()
@@ -163,7 +163,7 @@ func (this *QWidgetItem) IsEmpty() bool {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:134
 // index:0
 // Public virtual
-// void setGeometry(const class QRect &)
+// void setGeometry(const QRect &)
 func (this *QWidgetItem) SetGeometry(arg0 *qtcore.QRect) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWidgetItem11setGeometryERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

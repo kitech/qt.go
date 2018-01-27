@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QRegularExpressionValidator) MetaObject() *qtcore.QMetaObject /*777 
 // /usr/include/qt/QtGui/qvalidator.h:207
 // index:0
 // Public
-// void QRegularExpressionValidator(class QObject *)
+// void QRegularExpressionValidator(QObject *)
 func NewQRegularExpressionValidator(parent *qtcore.QObject /*777 QObject **/) *QRegularExpressionValidator {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -98,7 +98,7 @@ func NewQRegularExpressionValidator(parent *qtcore.QObject /*777 QObject **/) *Q
 // /usr/include/qt/QtGui/qvalidator.h:208
 // index:1
 // Public
-// void QRegularExpressionValidator(const class QRegularExpression &, class QObject *)
+// void QRegularExpressionValidator(const QRegularExpression &, QObject *)
 func NewQRegularExpressionValidator_1(re *qtcore.QRegularExpression, parent *qtcore.QObject /*777 QObject **/) *QRegularExpressionValidator {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = re.GetCthis()
@@ -121,7 +121,7 @@ func DeleteQRegularExpressionValidator(*QRegularExpressionValidator) {
 // /usr/include/qt/QtGui/qvalidator.h:211
 // index:0
 // Public virtual
-// QValidator::State validate(class QString &, int &)
+// QValidator::State validate(QString &, int &)
 func (this *QRegularExpressionValidator) Validate(input *qtcore.QString, pos int) int {
 	var convArg0 = input.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator8validateER7QStringRi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
@@ -147,7 +147,7 @@ func (this *QRegularExpressionValidator) RegularExpression() *qtcore.QRegularExp
 // /usr/include/qt/QtGui/qvalidator.h:216
 // index:0
 // Public
-// void setRegularExpression(const class QRegularExpression &)
+// void setRegularExpression(const QRegularExpression &)
 func (this *QRegularExpressionValidator) SetRegularExpression(re *qtcore.QRegularExpression) {
 	var convArg0 = re.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QRegularExpressionValidator20setRegularExpressionERK18QRegularExpression", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -157,7 +157,7 @@ func (this *QRegularExpressionValidator) SetRegularExpression(re *qtcore.QRegula
 // /usr/include/qt/QtGui/qvalidator.h:219
 // index:0
 // Public
-// void regularExpressionChanged(const class QRegularExpression &)
+// void regularExpressionChanged(const QRegularExpression &)
 func (this *QRegularExpressionValidator) RegularExpressionChanged(re *qtcore.QRegularExpression) {
 	var convArg0 = re.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QRegularExpressionValidator24regularExpressionChangedERK18QRegularExpression", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

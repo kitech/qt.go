@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QThreadPool) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // /usr/include/qt/QtCore/qthreadpool.h:65
 // index:0
 // Public
-// void QThreadPool(class QObject *)
+// void QThreadPool(QObject *)
 func NewQThreadPool(parent *QObject /*777 QObject **/) *QThreadPool {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -120,7 +120,7 @@ func QThreadPool_GlobalInstance() *QThreadPool /*777 QThreadPool **/ {
 // /usr/include/qt/QtCore/qthreadpool.h:70
 // index:0
 // Public
-// void start(class QRunnable *, int)
+// void start(QRunnable *, int)
 func (this *QThreadPool) Start(runnable *QRunnable /*777 QRunnable **/, priority int) {
 	var convArg0 = runnable.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool5startEP9QRunnablei", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, priority)
@@ -130,7 +130,7 @@ func (this *QThreadPool) Start(runnable *QRunnable /*777 QRunnable **/, priority
 // /usr/include/qt/QtCore/qthreadpool.h:71
 // index:0
 // Public
-// bool tryStart(class QRunnable *)
+// bool tryStart(QRunnable *)
 func (this *QThreadPool) TryStart(runnable *QRunnable /*777 QRunnable **/) bool {
 	var convArg0 = runnable.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool8tryStartEP9QRunnable", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -251,7 +251,7 @@ func (this *QThreadPool) Clear() {
 // /usr/include/qt/QtCore/qthreadpool.h:93
 // index:0
 // Public
-// void cancel(class QRunnable *)
+// void cancel(QRunnable *)
 func (this *QThreadPool) Cancel(runnable *QRunnable /*777 QRunnable **/) {
 	var convArg0 = runnable.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool6cancelEP9QRunnable", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -261,7 +261,7 @@ func (this *QThreadPool) Cancel(runnable *QRunnable /*777 QRunnable **/) {
 // /usr/include/qt/QtCore/qthreadpool.h:95
 // index:0
 // Public
-// bool tryTake(class QRunnable *)
+// bool tryTake(QRunnable *)
 func (this *QThreadPool) TryTake(runnable *QRunnable /*777 QRunnable **/) bool {
 	var convArg0 = runnable.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool7tryTakeEP9QRunnable", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

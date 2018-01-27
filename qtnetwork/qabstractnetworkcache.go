@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -94,7 +94,7 @@ func DeleteQAbstractNetworkCache(*QAbstractNetworkCache) {
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:121
 // index:0
 // Public pure virtual
-// QNetworkCacheMetaData metaData(const class QUrl &)
+// QNetworkCacheMetaData metaData(const QUrl &)
 func (this *QAbstractNetworkCache) MetaData(url *qtcore.QUrl) *QNetworkCacheMetaData /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = url.GetCthis()
@@ -109,7 +109,7 @@ func (this *QAbstractNetworkCache) MetaData(url *qtcore.QUrl) *QNetworkCacheMeta
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:122
 // index:0
 // Public pure virtual
-// void updateMetaData(const class QNetworkCacheMetaData &)
+// void updateMetaData(const QNetworkCacheMetaData &)
 func (this *QAbstractNetworkCache) UpdateMetaData(metaData *QNetworkCacheMetaData) {
 	var convArg0 = metaData.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractNetworkCache14updateMetaDataERK21QNetworkCacheMetaData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -119,7 +119,7 @@ func (this *QAbstractNetworkCache) UpdateMetaData(metaData *QNetworkCacheMetaDat
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:123
 // index:0
 // Public pure virtual
-// QIODevice * data(const class QUrl &)
+// QIODevice * data(const QUrl &)
 func (this *QAbstractNetworkCache) Data(url *qtcore.QUrl) *qtcore.QIODevice /*777 QIODevice **/ {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractNetworkCache4dataERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -132,7 +132,7 @@ func (this *QAbstractNetworkCache) Data(url *qtcore.QUrl) *qtcore.QIODevice /*77
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:124
 // index:0
 // Public pure virtual
-// bool remove(const class QUrl &)
+// bool remove(const QUrl &)
 func (this *QAbstractNetworkCache) Remove(url *qtcore.QUrl) bool {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractNetworkCache6removeERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -155,7 +155,7 @@ func (this *QAbstractNetworkCache) CacheSize() int64 {
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:127
 // index:0
 // Public pure virtual
-// QIODevice * prepare(const class QNetworkCacheMetaData &)
+// QIODevice * prepare(const QNetworkCacheMetaData &)
 func (this *QAbstractNetworkCache) Prepare(metaData *QNetworkCacheMetaData) *qtcore.QIODevice /*777 QIODevice **/ {
 	var convArg0 = metaData.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractNetworkCache7prepareERK21QNetworkCacheMetaData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -177,7 +177,7 @@ func (this *QAbstractNetworkCache) Clear() {
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:134
 // index:0
 // Protected
-// void QAbstractNetworkCache(class QObject *)
+// void QAbstractNetworkCache(QObject *)
 func NewQAbstractNetworkCache(parent *qtcore.QObject /*777 QObject **/) *QAbstractNetworkCache {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()

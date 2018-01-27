@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQUrl() *QUrl {
 // /usr/include/qt/QtCore/qurl.h:182
 // index:1
 // Public
-// void QUrl(const class QString &, enum QUrl::ParsingMode)
+// void QUrl(const QString &, QUrl::ParsingMode)
 func NewQUrl_1(url *QString, mode int) *QUrl {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = url.GetCthis()
@@ -102,7 +102,7 @@ func DeleteQUrl(*QUrl) {
 // /usr/include/qt/QtCore/qurl.h:193
 // index:0
 // Public inline
-// void swap(class QUrl &)
+// void swap(QUrl &)
 func (this *QUrl) Swap(other *QUrl) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -112,7 +112,7 @@ func (this *QUrl) Swap(other *QUrl) {
 // /usr/include/qt/QtCore/qurl.h:195
 // index:0
 // Public
-// void setUrl(const class QString &, enum QUrl::ParsingMode)
+// void setUrl(const QString &, QUrl::ParsingMode)
 func (this *QUrl) SetUrl(url *QString, mode int) {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl6setUrlERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
@@ -122,7 +122,7 @@ func (this *QUrl) SetUrl(url *QString, mode int) {
 // /usr/include/qt/QtCore/qurl.h:202
 // index:0
 // Public static
-// QUrl fromEncoded(const class QByteArray &, enum QUrl::ParsingMode)
+// QUrl fromEncoded(const QByteArray &, QUrl::ParsingMode)
 func (this *QUrl) FromEncoded(url *QByteArray, mode int) *QUrl /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl11fromEncodedERK10QByteArrayNS_11ParsingModeE", ffiqt.FFI_TYPE_POINTER, url, mode)
 	gopp.ErrPrint(err, rv)
@@ -139,7 +139,7 @@ func QUrl_FromEncoded(url *QByteArray, mode int) *QUrl /*123*/ {
 // /usr/include/qt/QtCore/qurl.h:210
 // index:0
 // Public static
-// QUrl fromUserInput(const class QString &)
+// QUrl fromUserInput(const QString &)
 func (this *QUrl) FromUserInput(userInput *QString) *QUrl /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl13fromUserInputERK7QString", ffiqt.FFI_TYPE_POINTER, userInput)
 	gopp.ErrPrint(err, rv)
@@ -201,7 +201,7 @@ func (this *QUrl) Clear() {
 // /usr/include/qt/QtCore/qurl.h:221
 // index:0
 // Public
-// void setScheme(const class QString &)
+// void setScheme(const QString &)
 func (this *QUrl) SetScheme(scheme *QString) {
 	var convArg0 = scheme.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl9setSchemeERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -225,7 +225,7 @@ func (this *QUrl) Scheme() *QString /*123*/ {
 // /usr/include/qt/QtCore/qurl.h:224
 // index:0
 // Public
-// void setAuthority(const class QString &, enum QUrl::ParsingMode)
+// void setAuthority(const QString &, QUrl::ParsingMode)
 func (this *QUrl) SetAuthority(authority *QString, mode int) {
 	var convArg0 = authority.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl12setAuthorityERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
@@ -235,7 +235,7 @@ func (this *QUrl) SetAuthority(authority *QString, mode int) {
 // /usr/include/qt/QtCore/qurl.h:227
 // index:0
 // Public
-// void setUserInfo(const class QString &, enum QUrl::ParsingMode)
+// void setUserInfo(const QString &, QUrl::ParsingMode)
 func (this *QUrl) SetUserInfo(userInfo *QString, mode int) {
 	var convArg0 = userInfo.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl11setUserInfoERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
@@ -245,7 +245,7 @@ func (this *QUrl) SetUserInfo(userInfo *QString, mode int) {
 // /usr/include/qt/QtCore/qurl.h:230
 // index:0
 // Public
-// void setUserName(const class QString &, enum QUrl::ParsingMode)
+// void setUserName(const QString &, QUrl::ParsingMode)
 func (this *QUrl) SetUserName(userName *QString, mode int) {
 	var convArg0 = userName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl11setUserNameERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
@@ -255,7 +255,7 @@ func (this *QUrl) SetUserName(userName *QString, mode int) {
 // /usr/include/qt/QtCore/qurl.h:233
 // index:0
 // Public
-// void setPassword(const class QString &, enum QUrl::ParsingMode)
+// void setPassword(const QString &, QUrl::ParsingMode)
 func (this *QUrl) SetPassword(password *QString, mode int) {
 	var convArg0 = password.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl11setPasswordERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
@@ -265,7 +265,7 @@ func (this *QUrl) SetPassword(password *QString, mode int) {
 // /usr/include/qt/QtCore/qurl.h:236
 // index:0
 // Public
-// void setHost(const class QString &, enum QUrl::ParsingMode)
+// void setHost(const QString &, QUrl::ParsingMode)
 func (this *QUrl) SetHost(host *QString, mode int) {
 	var convArg0 = host.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl7setHostERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
@@ -295,7 +295,7 @@ func (this *QUrl) Port(defaultPort int) int {
 // /usr/include/qt/QtCore/qurl.h:245
 // index:0
 // Public
-// void setPath(const class QString &, enum QUrl::ParsingMode)
+// void setPath(const QString &, QUrl::ParsingMode)
 func (this *QUrl) SetPath(path *QString, mode int) {
 	var convArg0 = path.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl7setPathERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
@@ -316,7 +316,7 @@ func (this *QUrl) HasQuery() bool {
 // /usr/include/qt/QtCore/qurl.h:250
 // index:0
 // Public
-// void setQuery(const class QString &, enum QUrl::ParsingMode)
+// void setQuery(const QString &, QUrl::ParsingMode)
 func (this *QUrl) SetQuery(query *QString, mode int) {
 	var convArg0 = query.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl8setQueryERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
@@ -326,7 +326,7 @@ func (this *QUrl) SetQuery(query *QString, mode int) {
 // /usr/include/qt/QtCore/qurl.h:251
 // index:1
 // Public
-// void setQuery(const class QUrlQuery &)
+// void setQuery(const QUrlQuery &)
 func (this *QUrl) SetQuery_1(query *QUrlQuery) {
 	var convArg0 = query.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl8setQueryERK9QUrlQuery", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -347,7 +347,7 @@ func (this *QUrl) HasFragment() bool {
 // /usr/include/qt/QtCore/qurl.h:256
 // index:0
 // Public
-// void setFragment(const class QString &, enum QUrl::ParsingMode)
+// void setFragment(const QString &, QUrl::ParsingMode)
 func (this *QUrl) SetFragment(fragment *QString, mode int) {
 	var convArg0 = fragment.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl11setFragmentERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
@@ -357,7 +357,7 @@ func (this *QUrl) SetFragment(fragment *QString, mode int) {
 // /usr/include/qt/QtCore/qurl.h:258
 // index:0
 // Public
-// QUrl resolved(const class QUrl &)
+// QUrl resolved(const QUrl &)
 func (this *QUrl) Resolved(relative *QUrl) *QUrl /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = relative.GetCthis()
@@ -383,7 +383,7 @@ func (this *QUrl) IsRelative() bool {
 // /usr/include/qt/QtCore/qurl.h:261
 // index:0
 // Public
-// bool isParentOf(const class QUrl &)
+// bool isParentOf(const QUrl &)
 func (this *QUrl) IsParentOf(url *QUrl) bool {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QUrl10isParentOfERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -406,7 +406,7 @@ func (this *QUrl) IsLocalFile() bool {
 // /usr/include/qt/QtCore/qurl.h:264
 // index:0
 // Public static
-// QUrl fromLocalFile(const class QString &)
+// QUrl fromLocalFile(const QString &)
 func (this *QUrl) FromLocalFile(localfile *QString) *QUrl /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl13fromLocalFileERK7QString", ffiqt.FFI_TYPE_POINTER, localfile)
 	gopp.ErrPrint(err, rv)
@@ -457,7 +457,7 @@ func (this *QUrl) IsDetached() bool {
 // /usr/include/qt/QtCore/qurl.h:276
 // index:0
 // Public static
-// QString fromPercentEncoding(const class QByteArray &)
+// QString fromPercentEncoding(const QByteArray &)
 func (this *QUrl) FromPercentEncoding(arg0 *QByteArray) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl19fromPercentEncodingERK10QByteArray", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
@@ -474,7 +474,7 @@ func QUrl_FromPercentEncoding(arg0 *QByteArray) *QString /*123*/ {
 // /usr/include/qt/QtCore/qurl.h:277
 // index:0
 // Public static
-// QByteArray toPercentEncoding(const class QString &, const class QByteArray &, const class QByteArray &)
+// QByteArray toPercentEncoding(const QString &, const QByteArray &, const QByteArray &)
 func (this *QUrl) ToPercentEncoding(arg0 *QString, exclude *QByteArray, include *QByteArray) *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl17toPercentEncodingERK7QStringRK10QByteArrayS5_", ffiqt.FFI_TYPE_POINTER, arg0, exclude, include)
 	gopp.ErrPrint(err, rv)
@@ -491,7 +491,7 @@ func QUrl_ToPercentEncoding(arg0 *QString, exclude *QByteArray, include *QByteAr
 // /usr/include/qt/QtCore/qurl.h:357
 // index:0
 // Public static
-// QString fromAce(const class QByteArray &)
+// QString fromAce(const QByteArray &)
 func (this *QUrl) FromAce(arg0 *QByteArray) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl7fromAceERK10QByteArray", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
@@ -508,7 +508,7 @@ func QUrl_FromAce(arg0 *QByteArray) *QString /*123*/ {
 // /usr/include/qt/QtCore/qurl.h:358
 // index:0
 // Public static
-// QByteArray toAce(const class QString &)
+// QByteArray toAce(const QString &)
 func (this *QUrl) ToAce(arg0 *QString) *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl5toAceERK7QString", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
@@ -525,7 +525,7 @@ func QUrl_ToAce(arg0 *QString) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qurl.h:363
 // index:0
 // Public static
-// void setIdnWhitelist(const class QStringList &)
+// void setIdnWhitelist(const QStringList &)
 func (this *QUrl) SetIdnWhitelist(arg0 *QStringList) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl15setIdnWhitelistERK11QStringList", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)

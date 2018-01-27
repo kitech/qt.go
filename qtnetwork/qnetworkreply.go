@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -182,7 +182,7 @@ func (this *QNetworkReply) Error() int {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:159
 // index:1
 // Public
-// void error(class QNetworkReply::NetworkError)
+// void error(QNetworkReply::NetworkError)
 func (this *QNetworkReply) Error_1(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkReply5errorENS_12NetworkErrorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -227,7 +227,7 @@ func (this *QNetworkReply) Url() *qtcore.QUrl /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:133
 // index:0
 // Public
-// QVariant header(class QNetworkRequest::KnownHeaders)
+// QVariant header(QNetworkRequest::KnownHeaders)
 func (this *QNetworkReply) Header(header int) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QNetworkReply6headerEN15QNetworkRequest12KnownHeadersE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), header)
@@ -241,7 +241,7 @@ func (this *QNetworkReply) Header(header int) *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:136
 // index:0
 // Public
-// bool hasRawHeader(const class QByteArray &)
+// bool hasRawHeader(const QByteArray &)
 func (this *QNetworkReply) HasRawHeader(headerName *qtcore.QByteArray) bool {
 	var convArg0 = headerName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QNetworkReply12hasRawHeaderERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -253,7 +253,7 @@ func (this *QNetworkReply) HasRawHeader(headerName *qtcore.QByteArray) bool {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:138
 // index:0
 // Public
-// QByteArray rawHeader(const class QByteArray &)
+// QByteArray rawHeader(const QByteArray &)
 func (this *QNetworkReply) RawHeader(headerName *qtcore.QByteArray) *qtcore.QByteArray /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = headerName.GetCthis()
@@ -268,7 +268,7 @@ func (this *QNetworkReply) RawHeader(headerName *qtcore.QByteArray) *qtcore.QByt
 // /usr/include/qt/QtNetwork/qnetworkreply.h:144
 // index:0
 // Public
-// QVariant attribute(class QNetworkRequest::Attribute)
+// QVariant attribute(QNetworkRequest::Attribute)
 func (this *QNetworkReply) Attribute(code int) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QNetworkReply9attributeEN15QNetworkRequest9AttributeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), code)
@@ -296,7 +296,7 @@ func (this *QNetworkReply) SslConfiguration() *QSslConfiguration /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:148
 // index:0
 // Public
-// void setSslConfiguration(const class QSslConfiguration &)
+// void setSslConfiguration(const QSslConfiguration &)
 func (this *QNetworkReply) SetSslConfiguration(configuration *QSslConfiguration) {
 	var convArg0 = configuration.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkReply19setSslConfigurationERK17QSslConfiguration", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -351,7 +351,7 @@ func (this *QNetworkReply) Encrypted() {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:163
 // index:0
 // Public
-// void preSharedKeyAuthenticationRequired(class QSslPreSharedKeyAuthenticator *)
+// void preSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator *)
 func (this *QNetworkReply) PreSharedKeyAuthenticationRequired(authenticator *QSslPreSharedKeyAuthenticator /*777 QSslPreSharedKeyAuthenticator **/) {
 	var convArg0 = authenticator.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkReply34preSharedKeyAuthenticationRequiredEP29QSslPreSharedKeyAuthenticator", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -361,7 +361,7 @@ func (this *QNetworkReply) PreSharedKeyAuthenticationRequired(authenticator *QSs
 // /usr/include/qt/QtNetwork/qnetworkreply.h:165
 // index:0
 // Public
-// void redirected(const class QUrl &)
+// void redirected(const QUrl &)
 func (this *QNetworkReply) Redirected(url *qtcore.QUrl) {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkReply10redirectedERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -398,7 +398,7 @@ func (this *QNetworkReply) DownloadProgress(bytesReceived int64, bytesTotal int6
 // /usr/include/qt/QtNetwork/qnetworkreply.h:172
 // index:0
 // Protected
-// void QNetworkReply(class QObject *)
+// void QNetworkReply(QObject *)
 func NewQNetworkReply(parent *qtcore.QObject /*777 QObject **/) *QNetworkReply {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -424,7 +424,7 @@ func (this *QNetworkReply) WriteData(data string, len int64) int64 {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:176
 // index:0
 // Protected
-// void setOperation(class QNetworkAccessManager::Operation)
+// void setOperation(QNetworkAccessManager::Operation)
 func (this *QNetworkReply) SetOperation(operation int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkReply12setOperationEN21QNetworkAccessManager9OperationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), operation)
 	gopp.ErrPrint(err, rv)
@@ -433,7 +433,7 @@ func (this *QNetworkReply) SetOperation(operation int) {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:177
 // index:0
 // Protected
-// void setRequest(const class QNetworkRequest &)
+// void setRequest(const QNetworkRequest &)
 func (this *QNetworkReply) SetRequest(request *QNetworkRequest) {
 	var convArg0 = request.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkReply10setRequestERK15QNetworkRequest", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -443,7 +443,7 @@ func (this *QNetworkReply) SetRequest(request *QNetworkRequest) {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:178
 // index:0
 // Protected
-// void setError(enum QNetworkReply::NetworkError, const class QString &)
+// void setError(QNetworkReply::NetworkError, const QString &)
 func (this *QNetworkReply) SetError(errorCode int, errorString *qtcore.QString) {
 	var convArg1 = errorString.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkReply8setErrorENS_12NetworkErrorERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), errorCode, convArg1)
@@ -453,7 +453,7 @@ func (this *QNetworkReply) SetError(errorCode int, errorString *qtcore.QString) 
 // /usr/include/qt/QtNetwork/qnetworkreply.h:179
 // index:0
 // Protected
-// void setFinished(_Bool)
+// void setFinished(bool)
 func (this *QNetworkReply) SetFinished(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkReply11setFinishedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -462,7 +462,7 @@ func (this *QNetworkReply) SetFinished(arg0 bool) {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:180
 // index:0
 // Protected
-// void setUrl(const class QUrl &)
+// void setUrl(const QUrl &)
 func (this *QNetworkReply) SetUrl(url *qtcore.QUrl) {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkReply6setUrlERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -472,7 +472,7 @@ func (this *QNetworkReply) SetUrl(url *qtcore.QUrl) {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:181
 // index:0
 // Protected
-// void setHeader(class QNetworkRequest::KnownHeaders, const class QVariant &)
+// void setHeader(QNetworkRequest::KnownHeaders, const QVariant &)
 func (this *QNetworkReply) SetHeader(header int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkReply9setHeaderEN15QNetworkRequest12KnownHeadersERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), header, convArg1)
@@ -482,7 +482,7 @@ func (this *QNetworkReply) SetHeader(header int, value *qtcore.QVariant) {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:182
 // index:0
 // Protected
-// void setRawHeader(const class QByteArray &, const class QByteArray &)
+// void setRawHeader(const QByteArray &, const QByteArray &)
 func (this *QNetworkReply) SetRawHeader(headerName *qtcore.QByteArray, value *qtcore.QByteArray) {
 	var convArg0 = headerName.GetCthis()
 	var convArg1 = value.GetCthis()
@@ -493,7 +493,7 @@ func (this *QNetworkReply) SetRawHeader(headerName *qtcore.QByteArray, value *qt
 // /usr/include/qt/QtNetwork/qnetworkreply.h:183
 // index:0
 // Protected
-// void setAttribute(class QNetworkRequest::Attribute, const class QVariant &)
+// void setAttribute(QNetworkRequest::Attribute, const QVariant &)
 func (this *QNetworkReply) SetAttribute(code int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkReply12setAttributeEN15QNetworkRequest9AttributeERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), code, convArg1)
@@ -503,7 +503,7 @@ func (this *QNetworkReply) SetAttribute(code int, value *qtcore.QVariant) {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:185
 // index:0
 // Protected virtual
-// void sslConfigurationImplementation(class QSslConfiguration &)
+// void sslConfigurationImplementation(QSslConfiguration &)
 func (this *QNetworkReply) SslConfigurationImplementation(arg0 *QSslConfiguration) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QNetworkReply30sslConfigurationImplementationER17QSslConfiguration", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -513,7 +513,7 @@ func (this *QNetworkReply) SslConfigurationImplementation(arg0 *QSslConfiguratio
 // /usr/include/qt/QtNetwork/qnetworkreply.h:186
 // index:0
 // Protected virtual
-// void setSslConfigurationImplementation(const class QSslConfiguration &)
+// void setSslConfigurationImplementation(const QSslConfiguration &)
 func (this *QNetworkReply) SetSslConfigurationImplementation(arg0 *QSslConfiguration) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkReply33setSslConfigurationImplementationERK17QSslConfiguration", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

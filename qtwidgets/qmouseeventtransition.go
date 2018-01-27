@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QMouseEventTransition) MetaObject() *qtcore.QMetaObject /*777 const 
 // /usr/include/qt/QtWidgets/qmouseeventtransition.h:58
 // index:0
 // Public
-// void QMouseEventTransition(class QState *)
+// void QMouseEventTransition(QState *)
 func NewQMouseEventTransition(sourceState *qtcore.QState /*777 QState **/) *QMouseEventTransition {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = sourceState.GetCthis()
@@ -102,7 +102,7 @@ func NewQMouseEventTransition(sourceState *qtcore.QState /*777 QState **/) *QMou
 // /usr/include/qt/QtWidgets/qmouseeventtransition.h:59
 // index:1
 // Public
-// void QMouseEventTransition(class QObject *, class QEvent::Type, Qt::MouseButton, class QState *)
+// void QMouseEventTransition(QObject *, QEvent::Type, Qt::MouseButton, QState *)
 func NewQMouseEventTransition_1(object *qtcore.QObject /*777 QObject **/, type_ int, button int, sourceState *qtcore.QState /*777 QState **/) *QMouseEventTransition {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = object.GetCthis()
@@ -170,7 +170,7 @@ func (this *QMouseEventTransition) HitTestPath() *qtgui.QPainterPath /*123*/ {
 // /usr/include/qt/QtWidgets/qmouseeventtransition.h:70
 // index:0
 // Public
-// void setHitTestPath(const class QPainterPath &)
+// void setHitTestPath(const QPainterPath &)
 func (this *QMouseEventTransition) SetHitTestPath(path *qtgui.QPainterPath) {
 	var convArg0 = path.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QMouseEventTransition14setHitTestPathERK12QPainterPath", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -180,7 +180,7 @@ func (this *QMouseEventTransition) SetHitTestPath(path *qtgui.QPainterPath) {
 // /usr/include/qt/QtWidgets/qmouseeventtransition.h:73
 // index:0
 // Protected virtual
-// void onTransition(class QEvent *)
+// void onTransition(QEvent *)
 func (this *QMouseEventTransition) OnTransition(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QMouseEventTransition12onTransitionEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -190,7 +190,7 @@ func (this *QMouseEventTransition) OnTransition(event *qtcore.QEvent /*777 QEven
 // /usr/include/qt/QtWidgets/qmouseeventtransition.h:74
 // index:0
 // Protected virtual
-// bool eventTest(class QEvent *)
+// bool eventTest(QEvent *)
 func (this *QMouseEventTransition) EventTest(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QMouseEventTransition9eventTestEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

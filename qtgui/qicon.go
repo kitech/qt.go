@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQIcon() *QIcon {
 // /usr/include/qt/QtGui/qicon.h:61
 // index:1
 // Public
-// void QIcon(const class QPixmap &)
+// void QIcon(const QPixmap &)
 func NewQIcon_1(pixmap *QPixmap) *QIcon {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = pixmap.GetCthis()
@@ -97,7 +97,7 @@ func NewQIcon_1(pixmap *QPixmap) *QIcon {
 // /usr/include/qt/QtGui/qicon.h:68
 // index:2
 // Public
-// void QIcon(const class QString &)
+// void QIcon(const QString &)
 func NewQIcon_2(fileName *qtcore.QString) *QIcon {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = fileName.GetCthis()
@@ -110,7 +110,7 @@ func NewQIcon_2(fileName *qtcore.QString) *QIcon {
 // /usr/include/qt/QtGui/qicon.h:69
 // index:3
 // Public
-// void QIcon(class QIconEngine *)
+// void QIcon(QIconEngine *)
 func NewQIcon_3(engine *QIconEngine /*777 QIconEngine **/) *QIcon {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = engine.GetCthis()
@@ -132,7 +132,7 @@ func DeleteQIcon(*QIcon) {
 // /usr/include/qt/QtGui/qicon.h:76
 // index:0
 // Public inline
-// void swap(class QIcon &)
+// void swap(QIcon &)
 func (this *QIcon) Swap(other *QIcon) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -142,7 +142,7 @@ func (this *QIcon) Swap(other *QIcon) {
 // /usr/include/qt/QtGui/qicon.h:81
 // index:0
 // Public
-// QPixmap pixmap(const class QSize &, enum QIcon::Mode, enum QIcon::State)
+// QPixmap pixmap(const QSize &, QIcon::Mode, QIcon::State)
 func (this *QIcon) Pixmap(size *qtcore.QSize, mode int, state int) *QPixmap /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = size.GetCthis()
@@ -157,7 +157,7 @@ func (this *QIcon) Pixmap(size *qtcore.QSize, mode int, state int) *QPixmap /*12
 // /usr/include/qt/QtGui/qicon.h:82
 // index:1
 // Public inline
-// QPixmap pixmap(int, int, enum QIcon::Mode, enum QIcon::State)
+// QPixmap pixmap(int, int, QIcon::Mode, QIcon::State)
 func (this *QIcon) Pixmap_1(w int, h int, mode int, state int) *QPixmap /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiiNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), w, h, mode, state)
@@ -171,7 +171,7 @@ func (this *QIcon) Pixmap_1(w int, h int, mode int, state int) *QPixmap /*123*/ 
 // /usr/include/qt/QtGui/qicon.h:84
 // index:2
 // Public inline
-// QPixmap pixmap(int, enum QIcon::Mode, enum QIcon::State)
+// QPixmap pixmap(int, QIcon::Mode, QIcon::State)
 func (this *QIcon) Pixmap_2(extent int, mode int, state int) *QPixmap /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), extent, mode, state)
@@ -185,7 +185,7 @@ func (this *QIcon) Pixmap_2(extent int, mode int, state int) *QPixmap /*123*/ {
 // /usr/include/qt/QtGui/qicon.h:86
 // index:3
 // Public
-// QPixmap pixmap(class QWindow *, const class QSize &, enum QIcon::Mode, enum QIcon::State)
+// QPixmap pixmap(QWindow *, const QSize &, QIcon::Mode, QIcon::State)
 func (this *QIcon) Pixmap_3(window *QWindow /*777 QWindow **/, size *qtcore.QSize, mode int, state int) *QPixmap /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = window.GetCthis()
@@ -201,7 +201,7 @@ func (this *QIcon) Pixmap_3(window *QWindow /*777 QWindow **/, size *qtcore.QSiz
 // /usr/include/qt/QtGui/qicon.h:88
 // index:0
 // Public
-// QSize actualSize(const class QSize &, enum QIcon::Mode, enum QIcon::State)
+// QSize actualSize(const QSize &, QIcon::Mode, QIcon::State)
 func (this *QIcon) ActualSize(size *qtcore.QSize, mode int, state int) *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = size.GetCthis()
@@ -216,7 +216,7 @@ func (this *QIcon) ActualSize(size *qtcore.QSize, mode int, state int) *qtcore.Q
 // /usr/include/qt/QtGui/qicon.h:89
 // index:1
 // Public
-// QSize actualSize(class QWindow *, const class QSize &, enum QIcon::Mode, enum QIcon::State)
+// QSize actualSize(QWindow *, const QSize &, QIcon::Mode, QIcon::State)
 func (this *QIcon) ActualSize_1(window *QWindow /*777 QWindow **/, size *qtcore.QSize, mode int, state int) *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = window.GetCthis()
@@ -288,7 +288,7 @@ func (this *QIcon) CacheKey() int64 {
 // /usr/include/qt/QtGui/qicon.h:106
 // index:0
 // Public
-// void addPixmap(const class QPixmap &, enum QIcon::Mode, enum QIcon::State)
+// void addPixmap(const QPixmap &, QIcon::Mode, QIcon::State)
 func (this *QIcon) AddPixmap(pixmap *QPixmap, mode int, state int) {
 	var convArg0 = pixmap.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9addPixmapERK7QPixmapNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, state)
@@ -298,7 +298,7 @@ func (this *QIcon) AddPixmap(pixmap *QPixmap, mode int, state int) {
 // /usr/include/qt/QtGui/qicon.h:107
 // index:0
 // Public
-// void addFile(const class QString &, const class QSize &, enum QIcon::Mode, enum QIcon::State)
+// void addFile(const QString &, const QSize &, QIcon::Mode, QIcon::State)
 func (this *QIcon) AddFile(fileName *qtcore.QString, size *qtcore.QSize, mode int, state int) {
 	var convArg0 = fileName.GetCthis()
 	var convArg1 = size.GetCthis()
@@ -309,7 +309,7 @@ func (this *QIcon) AddFile(fileName *qtcore.QString, size *qtcore.QSize, mode in
 // /usr/include/qt/QtGui/qicon.h:111
 // index:0
 // Public
-// void setIsMask(_Bool)
+// void setIsMask(bool)
 func (this *QIcon) SetIsMask(isMask bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9setIsMaskEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), isMask)
 	gopp.ErrPrint(err, rv)
@@ -329,7 +329,7 @@ func (this *QIcon) IsMask() bool {
 // /usr/include/qt/QtGui/qicon.h:114
 // index:0
 // Public static
-// QIcon fromTheme(const class QString &)
+// QIcon fromTheme(const QString &)
 func (this *QIcon) FromTheme(name *qtcore.QString) *QIcon /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9fromThemeERK7QString", ffiqt.FFI_TYPE_POINTER, name)
 	gopp.ErrPrint(err, rv)
@@ -346,7 +346,7 @@ func QIcon_FromTheme(name *qtcore.QString) *QIcon /*123*/ {
 // /usr/include/qt/QtGui/qicon.h:115
 // index:1
 // Public static
-// QIcon fromTheme(const class QString &, const class QIcon &)
+// QIcon fromTheme(const QString &, const QIcon &)
 func (this *QIcon) FromTheme_1(name *qtcore.QString, fallback *QIcon) *QIcon /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9fromThemeERK7QStringRKS_", ffiqt.FFI_TYPE_POINTER, name, fallback)
 	gopp.ErrPrint(err, rv)
@@ -363,7 +363,7 @@ func QIcon_FromTheme_1(name *qtcore.QString, fallback *QIcon) *QIcon /*123*/ {
 // /usr/include/qt/QtGui/qicon.h:116
 // index:0
 // Public static
-// bool hasThemeIcon(const class QString &)
+// bool hasThemeIcon(const QString &)
 func (this *QIcon) HasThemeIcon(name *qtcore.QString) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon12hasThemeIconERK7QString", ffiqt.FFI_TYPE_POINTER, name)
 	gopp.ErrPrint(err, rv)
@@ -379,7 +379,7 @@ func QIcon_HasThemeIcon(name *qtcore.QString) bool {
 // /usr/include/qt/QtGui/qicon.h:119
 // index:0
 // Public static
-// void setThemeSearchPaths(const class QStringList &)
+// void setThemeSearchPaths(const QStringList &)
 func (this *QIcon) SetThemeSearchPaths(searchpath *qtcore.QStringList) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon19setThemeSearchPathsERK11QStringList", ffiqt.FFI_TYPE_POINTER, searchpath)
 	gopp.ErrPrint(err, rv)
@@ -409,7 +409,7 @@ func QIcon_ThemeName() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qicon.h:122
 // index:0
 // Public static
-// void setThemeName(const class QString &)
+// void setThemeName(const QString &)
 func (this *QIcon) SetThemeName(path *qtcore.QString) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon12setThemeNameERK7QString", ffiqt.FFI_TYPE_POINTER, path)
 	gopp.ErrPrint(err, rv)

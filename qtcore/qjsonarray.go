@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -89,7 +89,7 @@ func DeleteQJsonArray(*QJsonArray) {
 // /usr/include/qt/QtCore/qjsonarray.h:89
 // index:0
 // Public static
-// QJsonArray fromStringList(const class QStringList &)
+// QJsonArray fromStringList(const QStringList &)
 func (this *QJsonArray) FromStringList(list *QStringList) *QJsonArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray14fromStringListERK11QStringList", ffiqt.FFI_TYPE_POINTER, list)
 	gopp.ErrPrint(err, rv)
@@ -222,7 +222,7 @@ func (this *QJsonArray) RemoveLast() {
 // /usr/include/qt/QtCore/qjsonarray.h:109
 // index:0
 // Public
-// void replace(int, const class QJsonValue &)
+// void replace(int, const QJsonValue &)
 func (this *QJsonArray) Replace(i int, value *QJsonValue) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray7replaceEiRK10QJsonValue", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i, convArg1)
@@ -232,7 +232,7 @@ func (this *QJsonArray) Replace(i int, value *QJsonValue) {
 // /usr/include/qt/QtCore/qjsonarray.h:111
 // index:0
 // Public
-// bool contains(const class QJsonValue &)
+// bool contains(const QJsonValue &)
 func (this *QJsonArray) Contains(element *QJsonValue) bool {
 	var convArg0 = element.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray8containsERK10QJsonValue", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -244,7 +244,7 @@ func (this *QJsonArray) Contains(element *QJsonValue) bool {
 // /usr/include/qt/QtCore/qjsonarray.h:118
 // index:0
 // Public inline
-// void swap(class QJsonArray &)
+// void swap(QJsonArray &)
 func (this *QJsonArray) Swap(other *QJsonArray) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -332,7 +332,7 @@ func (this *QJsonArray) ConstEnd() unsafe.Pointer /*444*/ {
 // /usr/include/qt/QtCore/qjsonarray.h:236
 // index:0
 // Public inline
-// void push_back(const class QJsonValue &)
+// void push_back(const QJsonValue &)
 func (this *QJsonArray) Push_back(t *QJsonValue) {
 	var convArg0 = t.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray9push_backERK10QJsonValue", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -342,7 +342,7 @@ func (this *QJsonArray) Push_back(t *QJsonValue) {
 // /usr/include/qt/QtCore/qjsonarray.h:237
 // index:0
 // Public inline
-// void push_front(const class QJsonValue &)
+// void push_front(const QJsonValue &)
 func (this *QJsonArray) Push_front(t *QJsonValue) {
 	var convArg0 = t.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray10push_frontERK10QJsonValue", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

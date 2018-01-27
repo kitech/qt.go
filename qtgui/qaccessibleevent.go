@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -72,7 +72,7 @@ func (*QAccessibleEvent) NewFromPointer(cthis unsafe.Pointer) *QAccessibleEvent 
 // /usr/include/qt/QtGui/qaccessible.h:668
 // index:0
 // Public inline
-// void QAccessibleEvent(class QObject *, class QAccessible::Event)
+// void QAccessibleEvent(QObject *, QAccessible::Event)
 func NewQAccessibleEvent(obj *qtcore.QObject /*777 QObject **/, typ int) *QAccessibleEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = obj.GetCthis()
@@ -85,7 +85,7 @@ func NewQAccessibleEvent(obj *qtcore.QObject /*777 QObject **/, typ int) *QAcces
 // /usr/include/qt/QtGui/qaccessible.h:684
 // index:1
 // Public inline
-// void QAccessibleEvent(class QAccessibleInterface *, class QAccessible::Event)
+// void QAccessibleEvent(QAccessibleInterface *, QAccessible::Event)
 func NewQAccessibleEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, typ int) *QAccessibleEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = iface.GetCthis()

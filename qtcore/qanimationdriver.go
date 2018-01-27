@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QAnimationDriver) MetaObject() *QMetaObject /*777 const QMetaObject 
 // /usr/include/qt/QtCore/qabstractanimation.h:139
 // index:0
 // Public
-// void QAnimationDriver(class QObject *)
+// void QAnimationDriver(QObject *)
 func NewQAnimationDriver(parent *QObject /*777 QObject **/) *QAnimationDriver {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()

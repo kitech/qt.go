@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QDateEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:220
 // index:0
 // Public
-// void QDateEdit(class QWidget *)
+// void QDateEdit(QWidget *)
 func NewQDateEdit(parent *QWidget /*777 QWidget **/) *QDateEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -102,7 +102,7 @@ func NewQDateEdit(parent *QWidget /*777 QWidget **/) *QDateEdit {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:221
 // index:1
 // Public
-// void QDateEdit(const class QDate &, class QWidget *)
+// void QDateEdit(const QDate &, QWidget *)
 func NewQDateEdit_1(date *qtcore.QDate, parent *QWidget /*777 QWidget **/) *QDateEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = date.GetCthis()
@@ -125,7 +125,7 @@ func DeleteQDateEdit(*QDateEdit) {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:225
 // index:0
 // Public
-// void userDateChanged(const class QDate &)
+// void userDateChanged(const QDate &)
 func (this *QDateEdit) UserDateChanged(date *qtcore.QDate) {
 	var convArg0 = date.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateEdit15userDateChangedERK5QDate", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

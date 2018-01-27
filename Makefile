@@ -10,6 +10,10 @@ all:
 
 qtrt-:
 	CC=clang CXX=clang++ go install -v -x ./qtrt
+ffiqt:
+	CC=clang CXX=clang++ go install -v -x ./cffiqt
+mock:
+	CC=clang CXX=clang++ go install -v -x ./qtmock
 
 core:
 	CC=clang CXX=clang++ go install -v -x ./qtcore
@@ -28,6 +32,15 @@ qml:
 
 quick:
 	CC=clang CXX=clang++ go install -v -x ./qtquick
+
+quicktmpl:
+	CC=clang CXX=clang++ go install -v -x ./qtquicktemplates2
+
+quickctrl:
+	CC=clang CXX=clang++ go install -v -x ./qtquickcontrols2
+
+quickwgt:
+	CC=clang CXX=clang++ go install -v -x ./qtquickwidgets
 
 eg-:
 	# CC=clang CXX=clang++ go build -v -x eg/coreapp.go

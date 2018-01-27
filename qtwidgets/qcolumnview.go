@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QColumnView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // /usr/include/qt/QtWidgets/qcolumnview.h:58
 // index:0
 // Public
-// void updatePreviewWidget(const class QModelIndex &)
+// void updatePreviewWidget(const QModelIndex &)
 func (this *QColumnView) UpdatePreviewWidget(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView19updatePreviewWidgetERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -99,7 +99,7 @@ func (this *QColumnView) UpdatePreviewWidget(index *qtcore.QModelIndex) {
 // /usr/include/qt/QtWidgets/qcolumnview.h:61
 // index:0
 // Public
-// void QColumnView(class QWidget *)
+// void QColumnView(QWidget *)
 func NewQColumnView(parent *QWidget /*777 QWidget **/) *QColumnView {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -121,7 +121,7 @@ func DeleteQColumnView(*QColumnView) {
 // /usr/include/qt/QtWidgets/qcolumnview.h:65
 // index:0
 // Public virtual
-// QModelIndex indexAt(const class QPoint &)
+// QModelIndex indexAt(const QPoint &)
 func (this *QColumnView) IndexAt(point *qtcore.QPoint) *qtcore.QModelIndex /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = point.GetCthis()
@@ -136,7 +136,7 @@ func (this *QColumnView) IndexAt(point *qtcore.QPoint) *qtcore.QModelIndex /*123
 // /usr/include/qt/QtWidgets/qcolumnview.h:66
 // index:0
 // Public virtual
-// void scrollTo(const class QModelIndex &, enum QAbstractItemView::ScrollHint)
+// void scrollTo(const QModelIndex &, QAbstractItemView::ScrollHint)
 func (this *QColumnView) ScrollTo(index *qtcore.QModelIndex, hint int) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView8scrollToERK11QModelIndexN17QAbstractItemView10ScrollHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
@@ -160,7 +160,7 @@ func (this *QColumnView) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qcolumnview.h:68
 // index:0
 // Public virtual
-// QRect visualRect(const class QModelIndex &)
+// QRect visualRect(const QModelIndex &)
 func (this *QColumnView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
@@ -175,7 +175,7 @@ func (this *QColumnView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*1
 // /usr/include/qt/QtWidgets/qcolumnview.h:69
 // index:0
 // Public virtual
-// void setModel(class QAbstractItemModel *)
+// void setModel(QAbstractItemModel *)
 func (this *QColumnView) SetModel(model *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/) {
 	var convArg0 = model.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView8setModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -185,7 +185,7 @@ func (this *QColumnView) SetModel(model *qtcore.QAbstractItemModel /*777 QAbstra
 // /usr/include/qt/QtWidgets/qcolumnview.h:70
 // index:0
 // Public virtual
-// void setSelectionModel(class QItemSelectionModel *)
+// void setSelectionModel(QItemSelectionModel *)
 func (this *QColumnView) SetSelectionModel(selectionModel *qtcore.QItemSelectionModel /*777 QItemSelectionModel **/) {
 	var convArg0 = selectionModel.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView17setSelectionModelEP19QItemSelectionModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -195,7 +195,7 @@ func (this *QColumnView) SetSelectionModel(selectionModel *qtcore.QItemSelection
 // /usr/include/qt/QtWidgets/qcolumnview.h:71
 // index:0
 // Public virtual
-// void setRootIndex(const class QModelIndex &)
+// void setRootIndex(const QModelIndex &)
 func (this *QColumnView) SetRootIndex(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView12setRootIndexERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -214,7 +214,7 @@ func (this *QColumnView) SelectAll() {
 // /usr/include/qt/QtWidgets/qcolumnview.h:75
 // index:0
 // Public
-// void setResizeGripsVisible(_Bool)
+// void setResizeGripsVisible(bool)
 func (this *QColumnView) SetResizeGripsVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView21setResizeGripsVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
@@ -246,7 +246,7 @@ func (this *QColumnView) PreviewWidget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qcolumnview.h:79
 // index:0
 // Public
-// void setPreviewWidget(class QWidget *)
+// void setPreviewWidget(QWidget *)
 func (this *QColumnView) SetPreviewWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView16setPreviewWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -256,7 +256,7 @@ func (this *QColumnView) SetPreviewWidget(widget *QWidget /*777 QWidget **/) {
 // /usr/include/qt/QtWidgets/qcolumnview.h:88
 // index:0
 // Protected virtual
-// bool isIndexHidden(const class QModelIndex &)
+// bool isIndexHidden(const QModelIndex &)
 func (this *QColumnView) IsIndexHidden(index *qtcore.QModelIndex) bool {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QColumnView13isIndexHiddenERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -268,7 +268,7 @@ func (this *QColumnView) IsIndexHidden(index *qtcore.QModelIndex) bool {
 // /usr/include/qt/QtWidgets/qcolumnview.h:90
 // index:0
 // Protected virtual
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QColumnView) ResizeEvent(event *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -278,7 +278,7 @@ func (this *QColumnView) ResizeEvent(event *qtgui.QResizeEvent /*777 QResizeEven
 // /usr/include/qt/QtWidgets/qcolumnview.h:91
 // index:0
 // Protected virtual
-// void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
+// void setSelection(const QRect &, QItemSelectionModel::SelectionFlags)
 func (this *QColumnView) SetSelection(rect *qtcore.QRect, command int) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView12setSelectionERK5QRect6QFlagsIN19QItemSelectionModel13SelectionFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
@@ -288,7 +288,7 @@ func (this *QColumnView) SetSelection(rect *qtcore.QRect, command int) {
 // /usr/include/qt/QtWidgets/qcolumnview.h:92
 // index:0
 // Protected virtual
-// QRegion visualRegionForSelection(const class QItemSelection &)
+// QRegion visualRegionForSelection(const QItemSelection &)
 func (this *QColumnView) VisualRegionForSelection(selection *qtcore.QItemSelection) *qtgui.QRegion /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = selection.GetCthis()
@@ -325,7 +325,7 @@ func (this *QColumnView) VerticalOffset() int {
 // /usr/include/qt/QtWidgets/qcolumnview.h:95
 // index:0
 // Protected virtual
-// void rowsInserted(const class QModelIndex &, int, int)
+// void rowsInserted(const QModelIndex &, int, int)
 func (this *QColumnView) RowsInserted(parent *qtcore.QModelIndex, start int, end int) {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView12rowsInsertedERK11QModelIndexii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
@@ -335,7 +335,7 @@ func (this *QColumnView) RowsInserted(parent *qtcore.QModelIndex, start int, end
 // /usr/include/qt/QtWidgets/qcolumnview.h:96
 // index:0
 // Protected virtual
-// void currentChanged(const class QModelIndex &, const class QModelIndex &)
+// void currentChanged(const QModelIndex &, const QModelIndex &)
 func (this *QColumnView) CurrentChanged(current *qtcore.QModelIndex, previous *qtcore.QModelIndex) {
 	var convArg0 = current.GetCthis()
 	var convArg1 = previous.GetCthis()
@@ -355,7 +355,7 @@ func (this *QColumnView) ScrollContentsBy(dx int, dy int) {
 // /usr/include/qt/QtWidgets/qcolumnview.h:100
 // index:0
 // Protected virtual
-// QAbstractItemView * createColumn(const class QModelIndex &)
+// QAbstractItemView * createColumn(const QModelIndex &)
 func (this *QColumnView) CreateColumn(rootIndex *qtcore.QModelIndex) *QAbstractItemView /*777 QAbstractItemView **/ {
 	var convArg0 = rootIndex.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView12createColumnERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -368,7 +368,7 @@ func (this *QColumnView) CreateColumn(rootIndex *qtcore.QModelIndex) *QAbstractI
 // /usr/include/qt/QtWidgets/qcolumnview.h:101
 // index:0
 // Protected
-// void initializeColumn(class QAbstractItemView *)
+// void initializeColumn(QAbstractItemView *)
 func (this *QColumnView) InitializeColumn(column *QAbstractItemView /*777 QAbstractItemView **/) {
 	var convArg0 = column.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QColumnView16initializeColumnEP17QAbstractItemView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

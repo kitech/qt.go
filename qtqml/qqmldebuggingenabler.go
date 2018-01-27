@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -76,7 +76,7 @@ func (*QQmlDebuggingEnabler) NewFromPointer(cthis unsafe.Pointer) *QQmlDebugging
 // /usr/include/qt/QtQml/qqmldebug.h:58
 // index:0
 // Public
-// void QQmlDebuggingEnabler(_Bool)
+// void QQmlDebuggingEnabler(bool)
 func NewQQmlDebuggingEnabler(printWarning bool) *QQmlDebuggingEnabler {
 	cthis := qtrt.Calloc(1, 256) // 1
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQmlDebuggingEnablerC2Eb", ffiqt.FFI_TYPE_VOID, cthis, printWarning)
@@ -88,7 +88,7 @@ func NewQQmlDebuggingEnabler(printWarning bool) *QQmlDebuggingEnabler {
 // /usr/include/qt/QtQml/qqmldebug.h:65
 // index:0
 // Public static
-// void setServices(const class QStringList &)
+// void setServices(const QStringList &)
 func (this *QQmlDebuggingEnabler) SetServices(services *qtcore.QStringList) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler11setServicesERK11QStringList", ffiqt.FFI_TYPE_POINTER, services)
 	gopp.ErrPrint(err, rv)
@@ -101,7 +101,7 @@ func QQmlDebuggingEnabler_SetServices(services *qtcore.QStringList) {
 // /usr/include/qt/QtQml/qqmldebug.h:67
 // index:0
 // Public static
-// bool startTcpDebugServer(int, enum QQmlDebuggingEnabler::StartMode, const class QString &)
+// bool startTcpDebugServer(int, QQmlDebuggingEnabler::StartMode, const QString &)
 func (this *QQmlDebuggingEnabler) StartTcpDebugServer(port int, mode int, hostName *qtcore.QString) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler19startTcpDebugServerEiNS_9StartModeERK7QString", ffiqt.FFI_TYPE_POINTER, port, mode, hostName)
 	gopp.ErrPrint(err, rv)
@@ -117,7 +117,7 @@ func QQmlDebuggingEnabler_StartTcpDebugServer(port int, mode int, hostName *qtco
 // /usr/include/qt/QtQml/qqmldebug.h:69
 // index:0
 // Public static
-// bool connectToLocalDebugger(const class QString &, enum QQmlDebuggingEnabler::StartMode)
+// bool connectToLocalDebugger(const QString &, QQmlDebuggingEnabler::StartMode)
 func (this *QQmlDebuggingEnabler) ConnectToLocalDebugger(socketFileName *qtcore.QString, mode int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler22connectToLocalDebuggerERK7QStringNS_9StartModeE", ffiqt.FFI_TYPE_POINTER, socketFileName, mode)
 	gopp.ErrPrint(err, rv)

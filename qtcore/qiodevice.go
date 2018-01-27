@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -93,7 +93,7 @@ func NewQIODevice() *QIODevice {
 // /usr/include/qt/QtCore/qiodevice.h:85
 // index:1
 // Public
-// void QIODevice(class QObject *)
+// void QIODevice(QObject *)
 func NewQIODevice_1(parent *QObject /*777 QObject **/) *QIODevice {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -126,7 +126,7 @@ func (this *QIODevice) OpenMode() int {
 // /usr/include/qt/QtCore/qiodevice.h:91
 // index:0
 // Public
-// void setTextModeEnabled(_Bool)
+// void setTextModeEnabled(bool)
 func (this *QIODevice) SetTextModeEnabled(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice18setTextModeEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -481,7 +481,7 @@ func (this *QIODevice) Write_1(data string) int64 {
 // /usr/include/qt/QtCore/qiodevice.h:134
 // index:2
 // Public inline
-// qint64 write(const class QByteArray &)
+// qint64 write(const QByteArray &)
 func (this *QIODevice) Write_2(data *QByteArray) int64 {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice5writeERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -693,7 +693,7 @@ func (this *QIODevice) WriteData(data string, len int64) int64 {
 // /usr/include/qt/QtCore/qiodevice.h:172
 // index:0
 // Protected
-// void setErrorString(const class QString &)
+// void setErrorString(const QString &)
 func (this *QIODevice) SetErrorString(errorString *QString) {
 	var convArg0 = errorString.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice14setErrorStringERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

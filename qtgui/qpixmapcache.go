@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -101,7 +101,7 @@ func QPixmapCache_SetCacheLimit(arg0 int) {
 // /usr/include/qt/QtGui/qpixmapcache.h:79
 // index:0
 // Public static
-// QPixmap * find(const class QString &)
+// QPixmap * find(const QString &)
 func (this *QPixmapCache) Find(key *qtcore.QString) *QPixmap /*777 QPixmap **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QString", ffiqt.FFI_TYPE_POINTER, key)
 	gopp.ErrPrint(err, rv)
@@ -118,7 +118,7 @@ func QPixmapCache_Find(key *qtcore.QString) *QPixmap /*777 QPixmap **/ {
 // /usr/include/qt/QtGui/qpixmapcache.h:80
 // index:1
 // Public static
-// bool find(const class QString &, class QPixmap &)
+// bool find(const QString &, QPixmap &)
 func (this *QPixmapCache) Find_1(key *qtcore.QString, pixmap *QPixmap) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringR7QPixmap", ffiqt.FFI_TYPE_POINTER, key, pixmap)
 	gopp.ErrPrint(err, rv)
@@ -134,7 +134,7 @@ func QPixmapCache_Find_1(key *qtcore.QString, pixmap *QPixmap) bool {
 // /usr/include/qt/QtGui/qpixmapcache.h:81
 // index:2
 // Public static
-// bool find(const class QString &, class QPixmap *)
+// bool find(const QString &, QPixmap *)
 func (this *QPixmapCache) Find_2(key *qtcore.QString, pixmap *QPixmap /*777 QPixmap **/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringP7QPixmap", ffiqt.FFI_TYPE_POINTER, key, pixmap)
 	gopp.ErrPrint(err, rv)
@@ -150,7 +150,7 @@ func QPixmapCache_Find_2(key *qtcore.QString, pixmap *QPixmap /*777 QPixmap **/)
 // /usr/include/qt/QtGui/qpixmapcache.h:86
 // index:0
 // Public static
-// void remove(const class QString &)
+// void remove(const QString &)
 func (this *QPixmapCache) Remove(key *qtcore.QString) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache6removeERK7QString", ffiqt.FFI_TYPE_POINTER, key)
 	gopp.ErrPrint(err, rv)

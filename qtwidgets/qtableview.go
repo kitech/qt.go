@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QTableView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtWidgets/qtableview.h:65
 // index:0
 // Public
-// void QTableView(class QWidget *)
+// void QTableView(QWidget *)
 func NewQTableView(parent *QWidget /*777 QWidget **/) *QTableView {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -111,7 +111,7 @@ func DeleteQTableView(*QTableView) {
 // /usr/include/qt/QtWidgets/qtableview.h:68
 // index:0
 // Public virtual
-// void setModel(class QAbstractItemModel *)
+// void setModel(QAbstractItemModel *)
 func (this *QTableView) SetModel(model *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/) {
 	var convArg0 = model.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView8setModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -121,7 +121,7 @@ func (this *QTableView) SetModel(model *qtcore.QAbstractItemModel /*777 QAbstrac
 // /usr/include/qt/QtWidgets/qtableview.h:69
 // index:0
 // Public virtual
-// void setRootIndex(const class QModelIndex &)
+// void setRootIndex(const QModelIndex &)
 func (this *QTableView) SetRootIndex(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView12setRootIndexERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -131,7 +131,7 @@ func (this *QTableView) SetRootIndex(index *qtcore.QModelIndex) {
 // /usr/include/qt/QtWidgets/qtableview.h:70
 // index:0
 // Public virtual
-// void setSelectionModel(class QItemSelectionModel *)
+// void setSelectionModel(QItemSelectionModel *)
 func (this *QTableView) SetSelectionModel(selectionModel *qtcore.QItemSelectionModel /*777 QItemSelectionModel **/) {
 	var convArg0 = selectionModel.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView17setSelectionModelEP19QItemSelectionModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -174,7 +174,7 @@ func (this *QTableView) VerticalHeader() *QHeaderView /*777 QHeaderView **/ {
 // /usr/include/qt/QtWidgets/qtableview.h:75
 // index:0
 // Public
-// void setHorizontalHeader(class QHeaderView *)
+// void setHorizontalHeader(QHeaderView *)
 func (this *QTableView) SetHorizontalHeader(header *QHeaderView /*777 QHeaderView **/) {
 	var convArg0 = header.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView19setHorizontalHeaderEP11QHeaderView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -184,7 +184,7 @@ func (this *QTableView) SetHorizontalHeader(header *QHeaderView /*777 QHeaderVie
 // /usr/include/qt/QtWidgets/qtableview.h:76
 // index:0
 // Public
-// void setVerticalHeader(class QHeaderView *)
+// void setVerticalHeader(QHeaderView *)
 func (this *QTableView) SetVerticalHeader(header *QHeaderView /*777 QHeaderView **/) {
 	var convArg0 = header.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView17setVerticalHeaderEP11QHeaderView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -289,7 +289,7 @@ func (this *QTableView) IsRowHidden(row int) bool {
 // /usr/include/qt/QtWidgets/qtableview.h:91
 // index:0
 // Public
-// void setRowHidden(int, _Bool)
+// void setRowHidden(int, bool)
 func (this *QTableView) SetRowHidden(row int, hide bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView12setRowHiddenEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, hide)
 	gopp.ErrPrint(err, rv)
@@ -309,7 +309,7 @@ func (this *QTableView) IsColumnHidden(column int) bool {
 // /usr/include/qt/QtWidgets/qtableview.h:94
 // index:0
 // Public
-// void setColumnHidden(int, _Bool)
+// void setColumnHidden(int, bool)
 func (this *QTableView) SetColumnHidden(column int, hide bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView15setColumnHiddenEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, hide)
 	gopp.ErrPrint(err, rv)
@@ -318,7 +318,7 @@ func (this *QTableView) SetColumnHidden(column int, hide bool) {
 // /usr/include/qt/QtWidgets/qtableview.h:96
 // index:0
 // Public
-// void setSortingEnabled(_Bool)
+// void setSortingEnabled(bool)
 func (this *QTableView) SetSortingEnabled(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView17setSortingEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -369,7 +369,7 @@ func (this *QTableView) SetGridStyle(style int) {
 // /usr/include/qt/QtWidgets/qtableview.h:104
 // index:0
 // Public
-// void setWordWrap(_Bool)
+// void setWordWrap(bool)
 func (this *QTableView) SetWordWrap(on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView11setWordWrapEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
@@ -389,7 +389,7 @@ func (this *QTableView) WordWrap() bool {
 // /usr/include/qt/QtWidgets/qtableview.h:108
 // index:0
 // Public
-// void setCornerButtonEnabled(_Bool)
+// void setCornerButtonEnabled(bool)
 func (this *QTableView) SetCornerButtonEnabled(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView22setCornerButtonEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -409,7 +409,7 @@ func (this *QTableView) IsCornerButtonEnabled() bool {
 // /usr/include/qt/QtWidgets/qtableview.h:112
 // index:0
 // Public virtual
-// QRect visualRect(const class QModelIndex &)
+// QRect visualRect(const QModelIndex &)
 func (this *QTableView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
@@ -424,7 +424,7 @@ func (this *QTableView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*12
 // /usr/include/qt/QtWidgets/qtableview.h:113
 // index:0
 // Public virtual
-// void scrollTo(const class QModelIndex &, enum QAbstractItemView::ScrollHint)
+// void scrollTo(const QModelIndex &, QAbstractItemView::ScrollHint)
 func (this *QTableView) ScrollTo(index *qtcore.QModelIndex, hint int) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView8scrollToERK11QModelIndexN17QAbstractItemView10ScrollHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
@@ -434,7 +434,7 @@ func (this *QTableView) ScrollTo(index *qtcore.QModelIndex, hint int) {
 // /usr/include/qt/QtWidgets/qtableview.h:114
 // index:0
 // Public virtual
-// QModelIndex indexAt(const class QPoint &)
+// QModelIndex indexAt(const QPoint &)
 func (this *QTableView) IndexAt(p *qtcore.QPoint) *qtcore.QModelIndex /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = p.GetCthis()
@@ -597,7 +597,7 @@ func (this *QTableView) ResizeColumnsToContents() {
 // /usr/include/qt/QtWidgets/qtableview.h:135
 // index:0
 // Public
-// void setShowGrid(_Bool)
+// void setShowGrid(bool)
 func (this *QTableView) SetShowGrid(show bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView11setShowGridEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), show)
 	gopp.ErrPrint(err, rv)
@@ -683,7 +683,7 @@ func (this *QTableView) ViewOptions() *QStyleOptionViewItem /*123*/ {
 // /usr/include/qt/QtWidgets/qtableview.h:150
 // index:0
 // Protected virtual
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QTableView) PaintEvent(e *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -693,7 +693,7 @@ func (this *QTableView) PaintEvent(e *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 // /usr/include/qt/QtWidgets/qtableview.h:152
 // index:0
 // Protected virtual
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QTableView) TimerEvent(event *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -725,7 +725,7 @@ func (this *QTableView) VerticalOffset() int {
 // /usr/include/qt/QtWidgets/qtableview.h:158
 // index:0
 // Protected virtual
-// void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
+// void setSelection(const QRect &, QItemSelectionModel::SelectionFlags)
 func (this *QTableView) SetSelection(rect *qtcore.QRect, command int) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView12setSelectionERK5QRect6QFlagsIN19QItemSelectionModel13SelectionFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
@@ -735,7 +735,7 @@ func (this *QTableView) SetSelection(rect *qtcore.QRect, command int) {
 // /usr/include/qt/QtWidgets/qtableview.h:159
 // index:0
 // Protected virtual
-// QRegion visualRegionForSelection(const class QItemSelection &)
+// QRegion visualRegionForSelection(const QItemSelection &)
 func (this *QTableView) VisualRegionForSelection(selection *qtcore.QItemSelection) *qtgui.QRegion /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = selection.GetCthis()
@@ -813,7 +813,7 @@ func (this *QTableView) HorizontalScrollbarAction(action int) {
 // /usr/include/qt/QtWidgets/qtableview.h:172
 // index:0
 // Protected virtual
-// bool isIndexHidden(const class QModelIndex &)
+// bool isIndexHidden(const QModelIndex &)
 func (this *QTableView) IsIndexHidden(index *qtcore.QModelIndex) bool {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTableView13isIndexHiddenERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -825,7 +825,7 @@ func (this *QTableView) IsIndexHidden(index *qtcore.QModelIndex) bool {
 // /usr/include/qt/QtWidgets/qtableview.h:174
 // index:0
 // Protected virtual
-// void selectionChanged(const class QItemSelection &, const class QItemSelection &)
+// void selectionChanged(const QItemSelection &, const QItemSelection &)
 func (this *QTableView) SelectionChanged(selected *qtcore.QItemSelection, deselected *qtcore.QItemSelection) {
 	var convArg0 = selected.GetCthis()
 	var convArg1 = deselected.GetCthis()
@@ -836,7 +836,7 @@ func (this *QTableView) SelectionChanged(selected *qtcore.QItemSelection, desele
 // /usr/include/qt/QtWidgets/qtableview.h:176
 // index:0
 // Protected virtual
-// void currentChanged(const class QModelIndex &, const class QModelIndex &)
+// void currentChanged(const QModelIndex &, const QModelIndex &)
 func (this *QTableView) CurrentChanged(current *qtcore.QModelIndex, previous *qtcore.QModelIndex) {
 	var convArg0 = current.GetCthis()
 	var convArg1 = previous.GetCthis()

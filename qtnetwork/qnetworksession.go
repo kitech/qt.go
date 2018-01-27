@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QNetworkSession) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // /usr/include/qt/QtNetwork/qnetworksession.h:90
 // index:0
 // Public
-// void QNetworkSession(const class QNetworkConfiguration &, class QObject *)
+// void QNetworkSession(const QNetworkConfiguration &, QObject *)
 func NewQNetworkSession(connConfig *QNetworkConfiguration, parent *qtcore.QObject /*777 QObject **/) *QNetworkSession {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = connConfig.GetCthis()
@@ -169,7 +169,7 @@ func (this *QNetworkSession) Error() int {
 // /usr/include/qt/QtNetwork/qnetworksession.h:128
 // index:1
 // Public
-// void error(class QNetworkSession::SessionError)
+// void error(QNetworkSession::SessionError)
 func (this *QNetworkSession) Error_1(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QNetworkSession5errorENS_12SessionErrorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -192,7 +192,7 @@ func (this *QNetworkSession) ErrorString() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworksession.h:102
 // index:0
 // Public
-// QVariant sessionProperty(const class QString &)
+// QVariant sessionProperty(const QString &)
 func (this *QNetworkSession) SessionProperty(key *qtcore.QString) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
@@ -207,7 +207,7 @@ func (this *QNetworkSession) SessionProperty(key *qtcore.QString) *qtcore.QVaria
 // /usr/include/qt/QtNetwork/qnetworksession.h:103
 // index:0
 // Public
-// void setSessionProperty(const class QString &, const class QVariant &)
+// void setSessionProperty(const QString &, const QVariant &)
 func (this *QNetworkSession) SetSessionProperty(key *qtcore.QString, value *qtcore.QVariant) {
 	var convArg0 = key.GetCthis()
 	var convArg1 = value.GetCthis()
@@ -336,7 +336,7 @@ func (this *QNetworkSession) Reject() {
 // /usr/include/qt/QtNetwork/qnetworksession.h:125
 // index:0
 // Public
-// void stateChanged(class QNetworkSession::State)
+// void stateChanged(QNetworkSession::State)
 func (this *QNetworkSession) StateChanged(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QNetworkSession12stateChangedENS_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -363,7 +363,7 @@ func (this *QNetworkSession) Closed() {
 // /usr/include/qt/QtNetwork/qnetworksession.h:129
 // index:0
 // Public
-// void preferredConfigurationChanged(const class QNetworkConfiguration &, _Bool)
+// void preferredConfigurationChanged(const QNetworkConfiguration &, bool)
 func (this *QNetworkSession) PreferredConfigurationChanged(config *QNetworkConfiguration, isSeamless bool) {
 	var convArg0 = config.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QNetworkSession29preferredConfigurationChangedERK21QNetworkConfigurationb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, isSeamless)
@@ -382,7 +382,7 @@ func (this *QNetworkSession) NewConfigurationActivated() {
 // /usr/include/qt/QtNetwork/qnetworksession.h:134
 // index:0
 // Protected virtual
-// void connectNotify(const class QMetaMethod &)
+// void connectNotify(const QMetaMethod &)
 func (this *QNetworkSession) ConnectNotify(signal *qtcore.QMetaMethod) {
 	var convArg0 = signal.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QNetworkSession13connectNotifyERK11QMetaMethod", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -392,7 +392,7 @@ func (this *QNetworkSession) ConnectNotify(signal *qtcore.QMetaMethod) {
 // /usr/include/qt/QtNetwork/qnetworksession.h:135
 // index:0
 // Protected virtual
-// void disconnectNotify(const class QMetaMethod &)
+// void disconnectNotify(const QMetaMethod &)
 func (this *QNetworkSession) DisconnectNotify(signal *qtcore.QMetaMethod) {
 	var convArg0 = signal.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QNetworkSession16disconnectNotifyERK11QMetaMethod", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

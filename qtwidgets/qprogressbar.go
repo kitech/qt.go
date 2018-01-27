@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QProgressBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // /usr/include/qt/QtWidgets/qprogressbar.h:71
 // index:0
 // Public
-// void QProgressBar(class QWidget *)
+// void QProgressBar(QWidget *)
 func NewQProgressBar(parent *QWidget /*777 QWidget **/) *QProgressBar {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -158,7 +158,7 @@ func (this *QProgressBar) Text() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qprogressbar.h:80
 // index:0
 // Public
-// void setTextVisible(_Bool)
+// void setTextVisible(bool)
 func (this *QProgressBar) SetTextVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar14setTextVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
@@ -228,7 +228,7 @@ func (this *QProgressBar) Orientation() int {
 // /usr/include/qt/QtWidgets/qprogressbar.h:91
 // index:0
 // Public
-// void setInvertedAppearance(_Bool)
+// void setInvertedAppearance(bool)
 func (this *QProgressBar) SetInvertedAppearance(invert bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar21setInvertedAppearanceEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), invert)
 	gopp.ErrPrint(err, rv)
@@ -248,7 +248,7 @@ func (this *QProgressBar) InvertedAppearance() bool {
 // /usr/include/qt/QtWidgets/qprogressbar.h:93
 // index:0
 // Public
-// void setTextDirection(class QProgressBar::Direction)
+// void setTextDirection(QProgressBar::Direction)
 func (this *QProgressBar) SetTextDirection(textDirection int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar16setTextDirectionENS_9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), textDirection)
 	gopp.ErrPrint(err, rv)
@@ -268,7 +268,7 @@ func (this *QProgressBar) TextDirection() int {
 // /usr/include/qt/QtWidgets/qprogressbar.h:96
 // index:0
 // Public
-// void setFormat(const class QString &)
+// void setFormat(const QString &)
 func (this *QProgressBar) SetFormat(format *qtcore.QString) {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar9setFormatERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -364,7 +364,7 @@ func (this *QProgressBar) ValueChanged(value int) {
 // /usr/include/qt/QtWidgets/qprogressbar.h:112
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QProgressBar) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -376,7 +376,7 @@ func (this *QProgressBar) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qprogressbar.h:113
 // index:0
 // Protected virtual
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QProgressBar) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -386,7 +386,7 @@ func (this *QProgressBar) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent *
 // /usr/include/qt/QtWidgets/qprogressbar.h:114
 // index:0
 // Protected
-// void initStyleOption(class QStyleOptionProgressBar *)
+// void initStyleOption(QStyleOptionProgressBar *)
 func (this *QProgressBar) InitStyleOption(option *QStyleOptionProgressBar /*777 QStyleOptionProgressBar **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar15initStyleOptionEP23QStyleOptionProgressBar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

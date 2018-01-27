@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QJsonValue) NewFromPointer(cthis unsafe.Pointer) *QJsonValue {
 // /usr/include/qt/QtCore/qjsonvalue.h:76
 // index:0
 // Public
-// void QJsonValue(enum QJsonValue::Type)
+// void QJsonValue(QJsonValue::Type)
 func NewQJsonValue(arg0 int) *QJsonValue {
 	cthis := qtrt.Calloc(1, 256) // 24
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValueC2ENS_4TypeE", ffiqt.FFI_TYPE_VOID, cthis, arg0)
@@ -80,7 +80,7 @@ func NewQJsonValue(arg0 int) *QJsonValue {
 // /usr/include/qt/QtCore/qjsonvalue.h:77
 // index:1
 // Public
-// void QJsonValue(_Bool)
+// void QJsonValue(bool)
 func NewQJsonValue_1(b bool) *QJsonValue {
 	cthis := qtrt.Calloc(1, 256) // 24
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValueC2Eb", ffiqt.FFI_TYPE_VOID, cthis, b)
@@ -128,7 +128,7 @@ func NewQJsonValue_4(n int64) *QJsonValue {
 // /usr/include/qt/QtCore/qjsonvalue.h:81
 // index:5
 // Public
-// void QJsonValue(const class QString &)
+// void QJsonValue(const QString &)
 func NewQJsonValue_5(s *QString) *QJsonValue {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = s.GetCthis()
@@ -141,7 +141,7 @@ func NewQJsonValue_5(s *QString) *QJsonValue {
 // /usr/include/qt/QtCore/qjsonvalue.h:82
 // index:6
 // Public
-// void QJsonValue(class QLatin1String)
+// void QJsonValue(QLatin1String)
 func NewQJsonValue_6(s *QLatin1String /*123*/) *QJsonValue {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = s.GetCthis()
@@ -168,7 +168,7 @@ func NewQJsonValue_7(s string) *QJsonValue {
 // /usr/include/qt/QtCore/qjsonvalue.h:87
 // index:8
 // Public
-// void QJsonValue(const class QJsonArray &)
+// void QJsonValue(const QJsonArray &)
 func NewQJsonValue_8(a *QJsonArray) *QJsonValue {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = a.GetCthis()
@@ -181,7 +181,7 @@ func NewQJsonValue_8(a *QJsonArray) *QJsonValue {
 // /usr/include/qt/QtCore/qjsonvalue.h:88
 // index:9
 // Public
-// void QJsonValue(const class QJsonObject &)
+// void QJsonValue(const QJsonObject &)
 func NewQJsonValue_9(o *QJsonObject) *QJsonValue {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = o.GetCthis()
@@ -203,7 +203,7 @@ func DeleteQJsonValue(*QJsonValue) {
 // /usr/include/qt/QtCore/qjsonvalue.h:111
 // index:0
 // Public inline
-// void swap(class QJsonValue &)
+// void swap(QJsonValue &)
 func (this *QJsonValue) Swap(other *QJsonValue) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValue4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -213,7 +213,7 @@ func (this *QJsonValue) Swap(other *QJsonValue) {
 // /usr/include/qt/QtCore/qjsonvalue.h:118
 // index:0
 // Public static
-// QJsonValue fromVariant(const class QVariant &)
+// QJsonValue fromVariant(const QVariant &)
 func (this *QJsonValue) FromVariant(variant *QVariant) *QJsonValue /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValue11fromVariantERK8QVariant", ffiqt.FFI_TYPE_POINTER, variant)
 	gopp.ErrPrint(err, rv)
@@ -332,7 +332,7 @@ func (this *QJsonValue) IsUndefined() bool {
 // /usr/include/qt/QtCore/qjsonvalue.h:130
 // index:0
 // Public
-// bool toBool(_Bool)
+// bool toBool(bool)
 func (this *QJsonValue) ToBool(defaultValue bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue6toBoolEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
 	gopp.ErrPrint(err, rv)
@@ -379,7 +379,7 @@ func (this *QJsonValue) ToString() *QString /*123*/ {
 // /usr/include/qt/QtCore/qjsonvalue.h:134
 // index:1
 // Public
-// QString toString(const class QString &)
+// QString toString(const QString &)
 func (this *QJsonValue) ToString_1(defaultValue *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = defaultValue.GetCthis()
@@ -408,7 +408,7 @@ func (this *QJsonValue) ToArray() *QJsonArray /*123*/ {
 // /usr/include/qt/QtCore/qjsonvalue.h:136
 // index:1
 // Public
-// QJsonArray toArray(const class QJsonArray &)
+// QJsonArray toArray(const QJsonArray &)
 func (this *QJsonValue) ToArray_1(defaultValue *QJsonArray) *QJsonArray /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = defaultValue.GetCthis()
@@ -437,7 +437,7 @@ func (this *QJsonValue) ToObject() *QJsonObject /*123*/ {
 // /usr/include/qt/QtCore/qjsonvalue.h:138
 // index:1
 // Public
-// QJsonObject toObject(const class QJsonObject &)
+// QJsonObject toObject(const QJsonObject &)
 func (this *QJsonValue) ToObject_1(defaultValue *QJsonObject) *QJsonObject /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = defaultValue.GetCthis()

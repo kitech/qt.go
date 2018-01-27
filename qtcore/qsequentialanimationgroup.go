@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QSequentialAnimationGroup) MetaObject() *QMetaObject /*777 const QMe
 // /usr/include/qt/QtCore/qsequentialanimationgroup.h:59
 // index:0
 // Public
-// void QSequentialAnimationGroup(class QObject *)
+// void QSequentialAnimationGroup(QObject *)
 func NewQSequentialAnimationGroup(parent *QObject /*777 QObject **/) *QSequentialAnimationGroup {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -150,7 +150,7 @@ func (this *QSequentialAnimationGroup) Duration() int {
 // /usr/include/qt/QtCore/qsequentialanimationgroup.h:69
 // index:0
 // Public
-// void currentAnimationChanged(class QAbstractAnimation *)
+// void currentAnimationChanged(QAbstractAnimation *)
 func (this *QSequentialAnimationGroup) CurrentAnimationChanged(current *QAbstractAnimation /*777 QAbstractAnimation **/) {
 	var convArg0 = current.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -160,7 +160,7 @@ func (this *QSequentialAnimationGroup) CurrentAnimationChanged(current *QAbstrac
 // /usr/include/qt/QtCore/qsequentialanimationgroup.h:73
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QSequentialAnimationGroup) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -181,7 +181,7 @@ func (this *QSequentialAnimationGroup) UpdateCurrentTime(arg0 int) {
 // /usr/include/qt/QtCore/qsequentialanimationgroup.h:76
 // index:0
 // Protected virtual
-// void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
+// void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
 func (this *QSequentialAnimationGroup) UpdateState(newState int, oldState int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup11updateStateEN18QAbstractAnimation5StateES1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
 	gopp.ErrPrint(err, rv)
@@ -190,7 +190,7 @@ func (this *QSequentialAnimationGroup) UpdateState(newState int, oldState int) {
 // /usr/include/qt/QtCore/qsequentialanimationgroup.h:77
 // index:0
 // Protected virtual
-// void updateDirection(class QAbstractAnimation::Direction)
+// void updateDirection(QAbstractAnimation::Direction)
 func (this *QSequentialAnimationGroup) UpdateDirection(direction int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroup15updateDirectionEN18QAbstractAnimation9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), direction)
 	gopp.ErrPrint(err, rv)

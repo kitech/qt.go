@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -106,7 +106,7 @@ func DeleteQSGTransformNode(*QSGTransformNode) {
 // /usr/include/qt/QtQuick/qsgnode.h:287
 // index:0
 // Public
-// void setMatrix(const class QMatrix4x4 &)
+// void setMatrix(const QMatrix4x4 &)
 func (this *QSGTransformNode) SetMatrix(matrix *qtgui.QMatrix4x4) {
 	var convArg0 = matrix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSGTransformNode9setMatrixERK10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -128,7 +128,7 @@ func (this *QSGTransformNode) Matrix() *qtgui.QMatrix4x4 {
 // /usr/include/qt/QtQuick/qsgnode.h:290
 // index:0
 // Public
-// void setCombinedMatrix(const class QMatrix4x4 &)
+// void setCombinedMatrix(const QMatrix4x4 &)
 func (this *QSGTransformNode) SetCombinedMatrix(matrix *qtgui.QMatrix4x4) {
 	var convArg0 = matrix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSGTransformNode17setCombinedMatrixERK10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

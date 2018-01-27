@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -89,7 +89,7 @@ func DeleteQMimeDatabase(*QMimeDatabase) {
 // /usr/include/qt/QtCore/qmimedatabase.h:66
 // index:0
 // Public
-// QMimeType mimeTypeForName(const class QString &)
+// QMimeType mimeTypeForName(const QString &)
 func (this *QMimeDatabase) MimeTypeForName(nameOrAlias *QString) *QMimeType /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = nameOrAlias.GetCthis()
@@ -104,7 +104,7 @@ func (this *QMimeDatabase) MimeTypeForName(nameOrAlias *QString) *QMimeType /*12
 // /usr/include/qt/QtCore/qmimedatabase.h:74
 // index:0
 // Public
-// QMimeType mimeTypeForFile(const class QString &, enum QMimeDatabase::MatchMode)
+// QMimeType mimeTypeForFile(const QString &, QMimeDatabase::MatchMode)
 func (this *QMimeDatabase) MimeTypeForFile(fileName *QString, mode int) *QMimeType /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fileName.GetCthis()
@@ -119,7 +119,7 @@ func (this *QMimeDatabase) MimeTypeForFile(fileName *QString, mode int) *QMimeTy
 // /usr/include/qt/QtCore/qmimedatabase.h:75
 // index:1
 // Public
-// QMimeType mimeTypeForFile(const class QFileInfo &, enum QMimeDatabase::MatchMode)
+// QMimeType mimeTypeForFile(const QFileInfo &, QMimeDatabase::MatchMode)
 func (this *QMimeDatabase) MimeTypeForFile_1(fileInfo *QFileInfo, mode int) *QMimeType /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fileInfo.GetCthis()
@@ -134,7 +134,7 @@ func (this *QMimeDatabase) MimeTypeForFile_1(fileInfo *QFileInfo, mode int) *QMi
 // /usr/include/qt/QtCore/qmimedatabase.h:78
 // index:0
 // Public
-// QMimeType mimeTypeForData(const class QByteArray &)
+// QMimeType mimeTypeForData(const QByteArray &)
 func (this *QMimeDatabase) MimeTypeForData(data *QByteArray) *QMimeType /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = data.GetCthis()
@@ -149,7 +149,7 @@ func (this *QMimeDatabase) MimeTypeForData(data *QByteArray) *QMimeType /*123*/ 
 // /usr/include/qt/QtCore/qmimedatabase.h:79
 // index:1
 // Public
-// QMimeType mimeTypeForData(class QIODevice *)
+// QMimeType mimeTypeForData(QIODevice *)
 func (this *QMimeDatabase) MimeTypeForData_1(device *QIODevice /*777 QIODevice **/) *QMimeType /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = device.GetCthis()
@@ -164,7 +164,7 @@ func (this *QMimeDatabase) MimeTypeForData_1(device *QIODevice /*777 QIODevice *
 // /usr/include/qt/QtCore/qmimedatabase.h:81
 // index:0
 // Public
-// QMimeType mimeTypeForUrl(const class QUrl &)
+// QMimeType mimeTypeForUrl(const QUrl &)
 func (this *QMimeDatabase) MimeTypeForUrl(url *QUrl) *QMimeType /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = url.GetCthis()
@@ -179,7 +179,7 @@ func (this *QMimeDatabase) MimeTypeForUrl(url *QUrl) *QMimeType /*123*/ {
 // /usr/include/qt/QtCore/qmimedatabase.h:82
 // index:0
 // Public
-// QMimeType mimeTypeForFileNameAndData(const class QString &, class QIODevice *)
+// QMimeType mimeTypeForFileNameAndData(const QString &, QIODevice *)
 func (this *QMimeDatabase) MimeTypeForFileNameAndData(fileName *QString, device *QIODevice /*777 QIODevice **/) *QMimeType /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fileName.GetCthis()
@@ -195,7 +195,7 @@ func (this *QMimeDatabase) MimeTypeForFileNameAndData(fileName *QString, device 
 // /usr/include/qt/QtCore/qmimedatabase.h:83
 // index:1
 // Public
-// QMimeType mimeTypeForFileNameAndData(const class QString &, const class QByteArray &)
+// QMimeType mimeTypeForFileNameAndData(const QString &, const QByteArray &)
 func (this *QMimeDatabase) MimeTypeForFileNameAndData_1(fileName *QString, data *QByteArray) *QMimeType /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fileName.GetCthis()
@@ -211,7 +211,7 @@ func (this *QMimeDatabase) MimeTypeForFileNameAndData_1(fileName *QString, data 
 // /usr/include/qt/QtCore/qmimedatabase.h:85
 // index:0
 // Public
-// QString suffixForFileName(const class QString &)
+// QString suffixForFileName(const QString &)
 func (this *QMimeDatabase) SuffixForFileName(fileName *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fileName.GetCthis()

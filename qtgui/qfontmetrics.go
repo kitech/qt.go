@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -72,7 +72,7 @@ func (*QFontMetrics) NewFromPointer(cthis unsafe.Pointer) *QFontMetrics {
 // /usr/include/qt/QtGui/qfontmetrics.h:61
 // index:0
 // Public
-// void QFontMetrics(const class QFont &)
+// void QFontMetrics(const QFont &)
 func NewQFontMetrics(arg0 *QFont) *QFontMetrics {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = arg0.GetCthis()
@@ -85,7 +85,7 @@ func NewQFontMetrics(arg0 *QFont) *QFontMetrics {
 // /usr/include/qt/QtGui/qfontmetrics.h:62
 // index:1
 // Public
-// void QFontMetrics(const class QFont &, class QPaintDevice *)
+// void QFontMetrics(const QFont &, QPaintDevice *)
 func NewQFontMetrics_1(arg0 *QFont, pd *QPaintDevice /*777 QPaintDevice **/) *QFontMetrics {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = arg0.GetCthis()
@@ -108,7 +108,7 @@ func DeleteQFontMetrics(*QFontMetrics) {
 // /usr/include/qt/QtGui/qfontmetrics.h:72
 // index:0
 // Public inline
-// void swap(class QFontMetrics &)
+// void swap(QFontMetrics &)
 func (this *QFontMetrics) Swap(other *QFontMetrics) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QFontMetrics4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -239,7 +239,7 @@ func (this *QFontMetrics) AverageCharWidth() int {
 // /usr/include/qt/QtGui/qfontmetrics.h:88
 // index:0
 // Public
-// bool inFont(class QChar)
+// bool inFont(QChar)
 func (this *QFontMetrics) InFont(arg0 *qtcore.QChar /*123*/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics6inFontE5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -262,7 +262,7 @@ func (this *QFontMetrics) InFontUcs4(ucs4 uint) bool {
 // /usr/include/qt/QtGui/qfontmetrics.h:91
 // index:0
 // Public
-// int leftBearing(class QChar)
+// int leftBearing(QChar)
 func (this *QFontMetrics) LeftBearing(arg0 *qtcore.QChar /*123*/) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics11leftBearingE5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -274,7 +274,7 @@ func (this *QFontMetrics) LeftBearing(arg0 *qtcore.QChar /*123*/) int {
 // /usr/include/qt/QtGui/qfontmetrics.h:92
 // index:0
 // Public
-// int rightBearing(class QChar)
+// int rightBearing(QChar)
 func (this *QFontMetrics) RightBearing(arg0 *qtcore.QChar /*123*/) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics12rightBearingE5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -286,7 +286,7 @@ func (this *QFontMetrics) RightBearing(arg0 *qtcore.QChar /*123*/) int {
 // /usr/include/qt/QtGui/qfontmetrics.h:93
 // index:0
 // Public
-// int width(const class QString &, int)
+// int width(const QString &, int)
 func (this *QFontMetrics) Width(arg0 *qtcore.QString, len int) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics5widthERK7QStringi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
@@ -298,7 +298,7 @@ func (this *QFontMetrics) Width(arg0 *qtcore.QString, len int) int {
 // /usr/include/qt/QtGui/qfontmetrics.h:94
 // index:1
 // Public
-// int width(const class QString &, int, int)
+// int width(const QString &, int, int)
 func (this *QFontMetrics) Width_1(arg0 *qtcore.QString, len int, flags int) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics5widthERK7QStringii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len, flags)
@@ -310,7 +310,7 @@ func (this *QFontMetrics) Width_1(arg0 *qtcore.QString, len int, flags int) int 
 // /usr/include/qt/QtGui/qfontmetrics.h:96
 // index:2
 // Public
-// int width(class QChar)
+// int width(QChar)
 func (this *QFontMetrics) Width_2(arg0 *qtcore.QChar /*123*/) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics5widthE5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -322,7 +322,7 @@ func (this *QFontMetrics) Width_2(arg0 *qtcore.QChar /*123*/) int {
 // /usr/include/qt/QtGui/qfontmetrics.h:98
 // index:0
 // Public
-// int charWidth(const class QString &, int)
+// int charWidth(const QString &, int)
 func (this *QFontMetrics) CharWidth(str *qtcore.QString, pos int) int {
 	var convArg0 = str.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QFontMetrics9charWidthERK7QStringi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pos)
@@ -334,7 +334,7 @@ func (this *QFontMetrics) CharWidth(str *qtcore.QString, pos int) int {
 // /usr/include/qt/QtGui/qfontmetrics.h:101
 // index:0
 // Public
-// QRect boundingRect(class QChar)
+// QRect boundingRect(QChar)
 func (this *QFontMetrics) BoundingRect(arg0 *qtcore.QChar /*123*/) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
@@ -349,7 +349,7 @@ func (this *QFontMetrics) BoundingRect(arg0 *qtcore.QChar /*123*/) *qtcore.QRect
 // /usr/include/qt/QtGui/qfontmetrics.h:103
 // index:1
 // Public
-// QRect boundingRect(const class QString &)
+// QRect boundingRect(const QString &)
 func (this *QFontMetrics) BoundingRect_1(text *qtcore.QString) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = text.GetCthis()
@@ -364,7 +364,7 @@ func (this *QFontMetrics) BoundingRect_1(text *qtcore.QString) *qtcore.QRect /*1
 // /usr/include/qt/QtGui/qfontmetrics.h:104
 // index:2
 // Public
-// QRect boundingRect(const class QRect &, int, const class QString &, int, int *)
+// QRect boundingRect(const QRect &, int, const QString &, int, int *)
 func (this *QFontMetrics) BoundingRect_2(r *qtcore.QRect, flags int, text *qtcore.QString, tabstops int, tabarray unsafe.Pointer /*666*/) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
@@ -380,7 +380,7 @@ func (this *QFontMetrics) BoundingRect_2(r *qtcore.QRect, flags int, text *qtcor
 // /usr/include/qt/QtGui/qfontmetrics.h:105
 // index:3
 // Public inline
-// QRect boundingRect(int, int, int, int, int, const class QString &, int, int *)
+// QRect boundingRect(int, int, int, int, int, const QString &, int, int *)
 func (this *QFontMetrics) BoundingRect_3(x int, y int, w int, h int, flags int, text *qtcore.QString, tabstops int, tabarray unsafe.Pointer /*666*/) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg5 = text.GetCthis()
@@ -395,7 +395,7 @@ func (this *QFontMetrics) BoundingRect_3(x int, y int, w int, h int, flags int, 
 // /usr/include/qt/QtGui/qfontmetrics.h:108
 // index:0
 // Public
-// QSize size(int, const class QString &, int, int *)
+// QSize size(int, const QString &, int, int *)
 func (this *QFontMetrics) Size(flags int, str *qtcore.QString, tabstops int, tabarray unsafe.Pointer /*666*/) *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = str.GetCthis()
@@ -410,7 +410,7 @@ func (this *QFontMetrics) Size(flags int, str *qtcore.QString, tabstops int, tab
 // /usr/include/qt/QtGui/qfontmetrics.h:110
 // index:0
 // Public
-// QRect tightBoundingRect(const class QString &)
+// QRect tightBoundingRect(const QString &)
 func (this *QFontMetrics) TightBoundingRect(text *qtcore.QString) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = text.GetCthis()
@@ -425,7 +425,7 @@ func (this *QFontMetrics) TightBoundingRect(text *qtcore.QString) *qtcore.QRect 
 // /usr/include/qt/QtGui/qfontmetrics.h:112
 // index:0
 // Public
-// QString elidedText(const class QString &, Qt::TextElideMode, int, int)
+// QString elidedText(const QString &, Qt::TextElideMode, int, int)
 func (this *QFontMetrics) ElidedText(text *qtcore.QString, mode int, width int, flags int) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = text.GetCthis()

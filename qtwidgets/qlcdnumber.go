@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QLCDNumber) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtWidgets/qlcdnumber.h:62
 // index:0
 // Public
-// void QLCDNumber(class QWidget *)
+// void QLCDNumber(QWidget *)
 func NewQLCDNumber(parent *QWidget /*777 QWidget **/) *QLCDNumber {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -102,7 +102,7 @@ func NewQLCDNumber(parent *QWidget /*777 QWidget **/) *QLCDNumber {
 // /usr/include/qt/QtWidgets/qlcdnumber.h:63
 // index:1
 // Public
-// void QLCDNumber(uint, class QWidget *)
+// void QLCDNumber(uint, QWidget *)
 func NewQLCDNumber_1(numDigits uint, parent *QWidget /*777 QWidget **/) *QLCDNumber {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = parent.GetCthis()
@@ -188,7 +188,7 @@ func (this *QLCDNumber) Mode() int {
 // /usr/include/qt/QtWidgets/qlcdnumber.h:83
 // index:0
 // Public
-// void setMode(enum QLCDNumber::Mode)
+// void setMode(QLCDNumber::Mode)
 func (this *QLCDNumber) SetMode(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber7setModeENS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -208,7 +208,7 @@ func (this *QLCDNumber) SegmentStyle() int {
 // /usr/include/qt/QtWidgets/qlcdnumber.h:86
 // index:0
 // Public
-// void setSegmentStyle(enum QLCDNumber::SegmentStyle)
+// void setSegmentStyle(QLCDNumber::SegmentStyle)
 func (this *QLCDNumber) SetSegmentStyle(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber15setSegmentStyleENS_12SegmentStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -253,7 +253,7 @@ func (this *QLCDNumber) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlcdnumber.h:94
 // index:0
 // Public
-// void display(const class QString &)
+// void display(const QString &)
 func (this *QLCDNumber) Display(str *qtcore.QString) {
 	var convArg0 = str.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber7displayERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -317,7 +317,7 @@ func (this *QLCDNumber) SetBinMode() {
 // /usr/include/qt/QtWidgets/qlcdnumber.h:101
 // index:0
 // Public
-// void setSmallDecimalPoint(_Bool)
+// void setSmallDecimalPoint(bool)
 func (this *QLCDNumber) SetSmallDecimalPoint(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber20setSmallDecimalPointEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -335,7 +335,7 @@ func (this *QLCDNumber) Overflow() {
 // /usr/include/qt/QtWidgets/qlcdnumber.h:107
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QLCDNumber) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -347,7 +347,7 @@ func (this *QLCDNumber) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qlcdnumber.h:108
 // index:0
 // Protected virtual
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QLCDNumber) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

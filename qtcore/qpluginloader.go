@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QPluginLoader) MetaObject() *QMetaObject /*777 const QMetaObject **/
 // /usr/include/qt/QtCore/qpluginloader.h:62
 // index:0
 // Public
-// void QPluginLoader(class QObject *)
+// void QPluginLoader(QObject *)
 func NewQPluginLoader(parent *QObject /*777 QObject **/) *QPluginLoader {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = parent.GetCthis()
@@ -94,7 +94,7 @@ func NewQPluginLoader(parent *QObject /*777 QObject **/) *QPluginLoader {
 // /usr/include/qt/QtCore/qpluginloader.h:63
 // index:1
 // Public
-// void QPluginLoader(const class QString &, class QObject *)
+// void QPluginLoader(const QString &, QObject *)
 func NewQPluginLoader_1(fileName *QString, parent *QObject /*777 QObject **/) *QPluginLoader {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = fileName.GetCthis()
@@ -176,7 +176,7 @@ func (this *QPluginLoader) IsLoaded() bool {
 // /usr/include/qt/QtCore/qpluginloader.h:76
 // index:0
 // Public
-// void setFileName(const class QString &)
+// void setFileName(const QString &)
 func (this *QPluginLoader) SetFileName(fileName *QString) {
 	var convArg0 = fileName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoader11setFileNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQStringMatcher() *QStringMatcher {
 // /usr/include/qt/QtCore/qstringmatcher.h:54
 // index:1
 // Public
-// void QStringMatcher(const class QString &, Qt::CaseSensitivity)
+// void QStringMatcher(const QString &, Qt::CaseSensitivity)
 func NewQStringMatcher_1(pattern *QString, cs int) *QStringMatcher {
 	cthis := qtrt.Calloc(1, 256) // 1048
 	var convArg0 = pattern.GetCthis()
@@ -93,7 +93,7 @@ func NewQStringMatcher_1(pattern *QString, cs int) *QStringMatcher {
 // /usr/include/qt/QtCore/qstringmatcher.h:56
 // index:2
 // Public
-// void QStringMatcher(const class QChar *, int, Qt::CaseSensitivity)
+// void QStringMatcher(const QChar *, int, Qt::CaseSensitivity)
 func NewQStringMatcher_2(uc *QChar /*777 const QChar **/, len int, cs int) *QStringMatcher {
 	cthis := qtrt.Calloc(1, 256) // 1048
 	var convArg0 = uc.GetCthis()
@@ -115,7 +115,7 @@ func DeleteQStringMatcher(*QStringMatcher) {
 // /usr/include/qt/QtCore/qstringmatcher.h:63
 // index:0
 // Public
-// void setPattern(const class QString &)
+// void setPattern(const QString &)
 func (this *QStringMatcher) SetPattern(pattern *QString) {
 	var convArg0 = pattern.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStringMatcher10setPatternERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -134,7 +134,7 @@ func (this *QStringMatcher) SetCaseSensitivity(cs int) {
 // /usr/include/qt/QtCore/qstringmatcher.h:66
 // index:0
 // Public
-// int indexIn(const class QString &, int)
+// int indexIn(const QString &, int)
 func (this *QStringMatcher) IndexIn(str *QString, from int) int {
 	var convArg0 = str.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStringMatcher7indexInERK7QStringi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
@@ -146,7 +146,7 @@ func (this *QStringMatcher) IndexIn(str *QString, from int) int {
 // /usr/include/qt/QtCore/qstringmatcher.h:67
 // index:1
 // Public
-// int indexIn(const class QChar *, int, int)
+// int indexIn(const QChar *, int, int)
 func (this *QStringMatcher) IndexIn_1(str *QChar /*777 const QChar **/, length int, from int) int {
 	var convArg0 = str.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStringMatcher7indexInEPK5QCharii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, length, from)

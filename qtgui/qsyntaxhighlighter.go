@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QSyntaxHighlighter) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:65
 // index:0
 // Public
-// void QSyntaxHighlighter(class QObject *)
+// void QSyntaxHighlighter(QObject *)
 func NewQSyntaxHighlighter(parent *qtcore.QObject /*777 QObject **/) *QSyntaxHighlighter {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -98,7 +98,7 @@ func NewQSyntaxHighlighter(parent *qtcore.QObject /*777 QObject **/) *QSyntaxHig
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:66
 // index:1
 // Public
-// void QSyntaxHighlighter(class QTextDocument *)
+// void QSyntaxHighlighter(QTextDocument *)
 func NewQSyntaxHighlighter_1(parent *QTextDocument /*777 QTextDocument **/) *QSyntaxHighlighter {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -120,7 +120,7 @@ func DeleteQSyntaxHighlighter(*QSyntaxHighlighter) {
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:69
 // index:0
 // Public
-// void setDocument(class QTextDocument *)
+// void setDocument(QTextDocument *)
 func (this *QSyntaxHighlighter) SetDocument(doc *QTextDocument /*777 QTextDocument **/) {
 	var convArg0 = doc.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSyntaxHighlighter11setDocumentEP13QTextDocument", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -151,7 +151,7 @@ func (this *QSyntaxHighlighter) Rehighlight() {
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:74
 // index:0
 // Public
-// void rehighlightBlock(const class QTextBlock &)
+// void rehighlightBlock(const QTextBlock &)
 func (this *QSyntaxHighlighter) RehighlightBlock(block *QTextBlock) {
 	var convArg0 = block.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -161,7 +161,7 @@ func (this *QSyntaxHighlighter) RehighlightBlock(block *QTextBlock) {
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:77
 // index:0
 // Protected pure virtual
-// void highlightBlock(const class QString &)
+// void highlightBlock(const QString &)
 func (this *QSyntaxHighlighter) HighlightBlock(text *qtcore.QString) {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSyntaxHighlighter14highlightBlockERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -171,7 +171,7 @@ func (this *QSyntaxHighlighter) HighlightBlock(text *qtcore.QString) {
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:79
 // index:0
 // Protected
-// void setFormat(int, int, const class QTextCharFormat &)
+// void setFormat(int, int, const QTextCharFormat &)
 func (this *QSyntaxHighlighter) SetFormat(start int, count int, format *QTextCharFormat) {
 	var convArg2 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSyntaxHighlighter9setFormatEiiRK15QTextCharFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), start, count, convArg2)
@@ -181,7 +181,7 @@ func (this *QSyntaxHighlighter) SetFormat(start int, count int, format *QTextCha
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:80
 // index:1
 // Protected
-// void setFormat(int, int, const class QColor &)
+// void setFormat(int, int, const QColor &)
 func (this *QSyntaxHighlighter) SetFormat_1(start int, count int, color *QColor) {
 	var convArg2 = color.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSyntaxHighlighter9setFormatEiiRK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), start, count, convArg2)
@@ -191,7 +191,7 @@ func (this *QSyntaxHighlighter) SetFormat_1(start int, count int, color *QColor)
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:81
 // index:2
 // Protected
-// void setFormat(int, int, const class QFont &)
+// void setFormat(int, int, const QFont &)
 func (this *QSyntaxHighlighter) SetFormat_2(start int, count int, font *QFont) {
 	var convArg2 = font.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSyntaxHighlighter9setFormatEiiRK5QFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), start, count, convArg2)
@@ -246,7 +246,7 @@ func (this *QSyntaxHighlighter) SetCurrentBlockState(newState int) {
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:88
 // index:0
 // Protected
-// void setCurrentBlockUserData(class QTextBlockUserData *)
+// void setCurrentBlockUserData(QTextBlockUserData *)
 func (this *QSyntaxHighlighter) SetCurrentBlockUserData(data *QTextBlockUserData /*777 QTextBlockUserData **/) {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSyntaxHighlighter23setCurrentBlockUserDataEP18QTextBlockUserData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

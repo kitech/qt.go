@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -76,7 +76,7 @@ func (*QListWidgetItem) NewFromPointer(cthis unsafe.Pointer) *QListWidgetItem {
 // /usr/include/qt/QtWidgets/qlistwidget.h:64
 // index:0
 // Public
-// void QListWidgetItem(class QListWidget *, int)
+// void QListWidgetItem(QListWidget *, int)
 func NewQListWidgetItem(view *QListWidget /*777 QListWidget **/, type_ int) *QListWidgetItem {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = view.GetCthis()
@@ -89,7 +89,7 @@ func NewQListWidgetItem(view *QListWidget /*777 QListWidget **/, type_ int) *QLi
 // /usr/include/qt/QtWidgets/qlistwidget.h:65
 // index:1
 // Public
-// void QListWidgetItem(const class QString &, class QListWidget *, int)
+// void QListWidgetItem(const QString &, QListWidget *, int)
 func NewQListWidgetItem_1(text *qtcore.QString, view *QListWidget /*777 QListWidget **/, type_ int) *QListWidgetItem {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = text.GetCthis()
@@ -103,7 +103,7 @@ func NewQListWidgetItem_1(text *qtcore.QString, view *QListWidget /*777 QListWid
 // /usr/include/qt/QtWidgets/qlistwidget.h:66
 // index:2
 // Public
-// void QListWidgetItem(const class QIcon &, const class QString &, class QListWidget *, int)
+// void QListWidgetItem(const QIcon &, const QString &, QListWidget *, int)
 func NewQListWidgetItem_2(icon *qtgui.QIcon, text *qtcore.QString, view *QListWidget /*777 QListWidget **/, type_ int) *QListWidgetItem {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = icon.GetCthis()
@@ -151,7 +151,7 @@ func (this *QListWidgetItem) ListWidget() *QListWidget /*777 QListWidget **/ {
 // /usr/include/qt/QtWidgets/qlistwidget.h:75
 // index:0
 // Public inline
-// void setSelected(_Bool)
+// void setSelected(bool)
 func (this *QListWidgetItem) SetSelected(select_ bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem11setSelectedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), select_)
 	gopp.ErrPrint(err, rv)
@@ -171,7 +171,7 @@ func (this *QListWidgetItem) IsSelected() bool {
 // /usr/include/qt/QtWidgets/qlistwidget.h:78
 // index:0
 // Public inline
-// void setHidden(_Bool)
+// void setHidden(bool)
 func (this *QListWidgetItem) SetHidden(hide bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem9setHiddenEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hide)
 	gopp.ErrPrint(err, rv)
@@ -225,7 +225,7 @@ func (this *QListWidgetItem) Text() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qlistwidget.h:86
 // index:0
 // Public inline
-// void setText(const class QString &)
+// void setText(const QString &)
 func (this *QListWidgetItem) SetText(text *qtcore.QString) {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -249,7 +249,7 @@ func (this *QListWidgetItem) Icon() *qtgui.QIcon /*123*/ {
 // /usr/include/qt/QtWidgets/qlistwidget.h:90
 // index:0
 // Public inline
-// void setIcon(const class QIcon &)
+// void setIcon(const QIcon &)
 func (this *QListWidgetItem) SetIcon(icon *qtgui.QIcon) {
 	var convArg0 = icon.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setIconERK5QIcon", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -273,7 +273,7 @@ func (this *QListWidgetItem) StatusTip() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qlistwidget.h:94
 // index:0
 // Public inline
-// void setStatusTip(const class QString &)
+// void setStatusTip(const QString &)
 func (this *QListWidgetItem) SetStatusTip(statusTip *qtcore.QString) {
 	var convArg0 = statusTip.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem12setStatusTipERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -297,7 +297,7 @@ func (this *QListWidgetItem) ToolTip() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qlistwidget.h:99
 // index:0
 // Public inline
-// void setToolTip(const class QString &)
+// void setToolTip(const QString &)
 func (this *QListWidgetItem) SetToolTip(toolTip *qtcore.QString) {
 	var convArg0 = toolTip.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem10setToolTipERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -321,7 +321,7 @@ func (this *QListWidgetItem) WhatsThis() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qlistwidget.h:105
 // index:0
 // Public inline
-// void setWhatsThis(const class QString &)
+// void setWhatsThis(const QString &)
 func (this *QListWidgetItem) SetWhatsThis(whatsThis *qtcore.QString) {
 	var convArg0 = whatsThis.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem12setWhatsThisERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -345,7 +345,7 @@ func (this *QListWidgetItem) Font() *qtgui.QFont /*123*/ {
 // /usr/include/qt/QtWidgets/qlistwidget.h:110
 // index:0
 // Public inline
-// void setFont(const class QFont &)
+// void setFont(const QFont &)
 func (this *QListWidgetItem) SetFont(font *qtgui.QFont) {
 	var convArg0 = font.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setFontERK5QFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -389,7 +389,7 @@ func (this *QListWidgetItem) BackgroundColor() *qtgui.QColor /*123*/ {
 // /usr/include/qt/QtWidgets/qlistwidget.h:119
 // index:0
 // Public inline virtual
-// void setBackgroundColor(const class QColor &)
+// void setBackgroundColor(const QColor &)
 func (this *QListWidgetItem) SetBackgroundColor(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem18setBackgroundColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -413,7 +413,7 @@ func (this *QListWidgetItem) Background() *qtgui.QBrush /*123*/ {
 // /usr/include/qt/QtWidgets/qlistwidget.h:124
 // index:0
 // Public inline
-// void setBackground(const class QBrush &)
+// void setBackground(const QBrush &)
 func (this *QListWidgetItem) SetBackground(brush *qtgui.QBrush) {
 	var convArg0 = brush.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem13setBackgroundERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -437,7 +437,7 @@ func (this *QListWidgetItem) TextColor() *qtgui.QColor /*123*/ {
 // /usr/include/qt/QtWidgets/qlistwidget.h:129
 // index:0
 // Public inline
-// void setTextColor(const class QColor &)
+// void setTextColor(const QColor &)
 func (this *QListWidgetItem) SetTextColor(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem12setTextColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -461,7 +461,7 @@ func (this *QListWidgetItem) Foreground() *qtgui.QBrush /*123*/ {
 // /usr/include/qt/QtWidgets/qlistwidget.h:134
 // index:0
 // Public inline
-// void setForeground(const class QBrush &)
+// void setForeground(const QBrush &)
 func (this *QListWidgetItem) SetForeground(brush *qtgui.QBrush) {
 	var convArg0 = brush.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem13setForegroundERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -505,7 +505,7 @@ func (this *QListWidgetItem) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlistwidget.h:144
 // index:0
 // Public inline
-// void setSizeHint(const class QSize &)
+// void setSizeHint(const QSize &)
 func (this *QListWidgetItem) SetSizeHint(size *qtcore.QSize) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem11setSizeHintERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -529,7 +529,7 @@ func (this *QListWidgetItem) Data(role int) *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtWidgets/qlistwidget.h:148
 // index:0
 // Public virtual
-// void setData(int, const class QVariant &)
+// void setData(int, const QVariant &)
 func (this *QListWidgetItem) SetData(role int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem7setDataEiRK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), role, convArg1)
@@ -539,7 +539,7 @@ func (this *QListWidgetItem) SetData(role int, value *qtcore.QVariant) {
 // /usr/include/qt/QtWidgets/qlistwidget.h:153
 // index:0
 // Public virtual
-// void read(class QDataStream &)
+// void read(QDataStream &)
 func (this *QListWidgetItem) Read(in *qtcore.QDataStream) {
 	var convArg0 = in.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem4readER11QDataStream", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -549,7 +549,7 @@ func (this *QListWidgetItem) Read(in *qtcore.QDataStream) {
 // /usr/include/qt/QtWidgets/qlistwidget.h:154
 // index:0
 // Public virtual
-// void write(class QDataStream &)
+// void write(QDataStream &)
 func (this *QListWidgetItem) Write(out *qtcore.QDataStream) {
 	var convArg0 = out.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem5writeER11QDataStream", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

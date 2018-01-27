@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QCollator) NewFromPointer(cthis unsafe.Pointer) *QCollator {
 // /usr/include/qt/QtCore/qcollator.h:86
 // index:0
 // Public
-// void QCollator(const class QLocale &)
+// void QCollator(const QLocale &)
 func NewQCollator(locale *QLocale) *QCollator {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = locale.GetCthis()
@@ -90,7 +90,7 @@ func DeleteQCollator(*QCollator) {
 // /usr/include/qt/QtCore/qcollator.h:97
 // index:0
 // Public inline
-// void swap(class QCollator &)
+// void swap(QCollator &)
 func (this *QCollator) Swap(other *QCollator) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollator4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -100,7 +100,7 @@ func (this *QCollator) Swap(other *QCollator) {
 // /usr/include/qt/QtCore/qcollator.h:100
 // index:0
 // Public
-// void setLocale(const class QLocale &)
+// void setLocale(const QLocale &)
 func (this *QCollator) SetLocale(locale *QLocale) {
 	var convArg0 = locale.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollator9setLocaleERK7QLocale", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -144,7 +144,7 @@ func (this *QCollator) SetCaseSensitivity(cs int) {
 // /usr/include/qt/QtCore/qcollator.h:106
 // index:0
 // Public
-// void setNumericMode(_Bool)
+// void setNumericMode(bool)
 func (this *QCollator) SetNumericMode(on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollator14setNumericModeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
@@ -164,7 +164,7 @@ func (this *QCollator) NumericMode() bool {
 // /usr/include/qt/QtCore/qcollator.h:109
 // index:0
 // Public
-// void setIgnorePunctuation(_Bool)
+// void setIgnorePunctuation(bool)
 func (this *QCollator) SetIgnorePunctuation(on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollator20setIgnorePunctuationEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
@@ -184,7 +184,7 @@ func (this *QCollator) IgnorePunctuation() bool {
 // /usr/include/qt/QtCore/qcollator.h:112
 // index:0
 // Public
-// int compare(const class QString &, const class QString &)
+// int compare(const QString &, const QString &)
 func (this *QCollator) Compare(s1 *QString, s2 *QString) int {
 	var convArg0 = s1.GetCthis()
 	var convArg1 = s2.GetCthis()
@@ -197,7 +197,7 @@ func (this *QCollator) Compare(s1 *QString, s2 *QString) int {
 // /usr/include/qt/QtCore/qcollator.h:113
 // index:1
 // Public
-// int compare(const class QStringRef &, const class QStringRef &)
+// int compare(const QStringRef &, const QStringRef &)
 func (this *QCollator) Compare_1(s1 *QStringRef, s2 *QStringRef) int {
 	var convArg0 = s1.GetCthis()
 	var convArg1 = s2.GetCthis()
@@ -210,7 +210,7 @@ func (this *QCollator) Compare_1(s1 *QStringRef, s2 *QStringRef) int {
 // /usr/include/qt/QtCore/qcollator.h:114
 // index:2
 // Public
-// int compare(const class QChar *, int, const class QChar *, int)
+// int compare(const QChar *, int, const QChar *, int)
 func (this *QCollator) Compare_2(s1 *QChar /*777 const QChar **/, len1 int, s2 *QChar /*777 const QChar **/, len2 int) int {
 	var convArg0 = s1.GetCthis()
 	var convArg2 = s2.GetCthis()
@@ -223,7 +223,7 @@ func (this *QCollator) Compare_2(s1 *QChar /*777 const QChar **/, len1 int, s2 *
 // /usr/include/qt/QtCore/qcollator.h:119
 // index:0
 // Public
-// QCollatorSortKey sortKey(const class QString &)
+// QCollatorSortKey sortKey(const QString &)
 func (this *QCollator) SortKey(string *QString) *QCollatorSortKey /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = string.GetCthis()

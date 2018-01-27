@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -93,7 +93,7 @@ func DeleteQTextTableCell(*QTextTableCell) {
 // /usr/include/qt/QtGui/qtexttable.h:63
 // index:0
 // Public
-// void setFormat(const class QTextCharFormat &)
+// void setFormat(const QTextCharFormat &)
 func (this *QTextTableCell) SetFormat(format *QTextCharFormat) {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTextTableCell9setFormatERK15QTextCharFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

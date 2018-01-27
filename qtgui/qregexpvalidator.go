@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QRegExpValidator) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 // /usr/include/qt/QtGui/qvalidator.h:177
 // index:0
 // Public
-// void QRegExpValidator(class QObject *)
+// void QRegExpValidator(QObject *)
 func NewQRegExpValidator(parent *qtcore.QObject /*777 QObject **/) *QRegExpValidator {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = parent.GetCthis()
@@ -98,7 +98,7 @@ func NewQRegExpValidator(parent *qtcore.QObject /*777 QObject **/) *QRegExpValid
 // /usr/include/qt/QtGui/qvalidator.h:178
 // index:1
 // Public
-// void QRegExpValidator(const class QRegExp &, class QObject *)
+// void QRegExpValidator(const QRegExp &, QObject *)
 func NewQRegExpValidator_1(rx *qtcore.QRegExp, parent *qtcore.QObject /*777 QObject **/) *QRegExpValidator {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = rx.GetCthis()
@@ -121,7 +121,7 @@ func DeleteQRegExpValidator(*QRegExpValidator) {
 // /usr/include/qt/QtGui/qvalidator.h:181
 // index:0
 // Public virtual
-// QValidator::State validate(class QString &, int &)
+// QValidator::State validate(QString &, int &)
 func (this *QRegExpValidator) Validate(input *qtcore.QString, pos int) int {
 	var convArg0 = input.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QRegExpValidator8validateER7QStringRi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
@@ -133,7 +133,7 @@ func (this *QRegExpValidator) Validate(input *qtcore.QString, pos int) int {
 // /usr/include/qt/QtGui/qvalidator.h:183
 // index:0
 // Public
-// void setRegExp(const class QRegExp &)
+// void setRegExp(const QRegExp &)
 func (this *QRegExpValidator) SetRegExp(rx *qtcore.QRegExp) {
 	var convArg0 = rx.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRegExpValidator9setRegExpERK7QRegExp", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -155,7 +155,7 @@ func (this *QRegExpValidator) RegExp() *qtcore.QRegExp {
 // /usr/include/qt/QtGui/qvalidator.h:187
 // index:0
 // Public
-// void regExpChanged(const class QRegExp &)
+// void regExpChanged(const QRegExp &)
 func (this *QRegExpValidator) RegExpChanged(regExp *qtcore.QRegExp) {
 	var convArg0 = regExp.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRegExpValidator13regExpChangedERK7QRegExp", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

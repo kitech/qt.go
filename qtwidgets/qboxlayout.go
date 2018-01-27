@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QBoxLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtWidgets/qboxlayout.h:64
 // index:0
 // Public
-// void QBoxLayout(enum QBoxLayout::Direction, class QWidget *)
+// void QBoxLayout(QBoxLayout::Direction, QWidget *)
 func NewQBoxLayout(arg0 int, parent *QWidget /*777 QWidget **/) *QBoxLayout {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg1 = parent.GetCthis()
@@ -122,7 +122,7 @@ func (this *QBoxLayout) Direction() int {
 // /usr/include/qt/QtWidgets/qboxlayout.h:69
 // index:0
 // Public
-// void setDirection(enum QBoxLayout::Direction)
+// void setDirection(QBoxLayout::Direction)
 func (this *QBoxLayout) SetDirection(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout12setDirectionENS_9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -149,7 +149,7 @@ func (this *QBoxLayout) AddStretch(stretch int) {
 // /usr/include/qt/QtWidgets/qboxlayout.h:73
 // index:0
 // Public
-// void addSpacerItem(class QSpacerItem *)
+// void addSpacerItem(QSpacerItem *)
 func (this *QBoxLayout) AddSpacerItem(spacerItem *QSpacerItem /*777 QSpacerItem **/) {
 	var convArg0 = spacerItem.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout13addSpacerItemEP11QSpacerItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -159,7 +159,7 @@ func (this *QBoxLayout) AddSpacerItem(spacerItem *QSpacerItem /*777 QSpacerItem 
 // /usr/include/qt/QtWidgets/qboxlayout.h:75
 // index:0
 // Public
-// void addLayout(class QLayout *, int)
+// void addLayout(QLayout *, int)
 func (this *QBoxLayout) AddLayout(layout *QLayout /*777 QLayout **/, stretch int) {
 	var convArg0 = layout.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout9addLayoutEP7QLayouti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
@@ -178,7 +178,7 @@ func (this *QBoxLayout) AddStrut(arg0 int) {
 // /usr/include/qt/QtWidgets/qboxlayout.h:77
 // index:0
 // Public virtual
-// void addItem(class QLayoutItem *)
+// void addItem(QLayoutItem *)
 func (this *QBoxLayout) AddItem(arg0 *QLayoutItem /*777 QLayoutItem **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout7addItemEP11QLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -206,7 +206,7 @@ func (this *QBoxLayout) InsertStretch(index int, stretch int) {
 // /usr/include/qt/QtWidgets/qboxlayout.h:81
 // index:0
 // Public
-// void insertSpacerItem(int, class QSpacerItem *)
+// void insertSpacerItem(int, QSpacerItem *)
 func (this *QBoxLayout) InsertSpacerItem(index int, spacerItem *QSpacerItem /*777 QSpacerItem **/) {
 	var convArg1 = spacerItem.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout16insertSpacerItemEiP11QSpacerItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
@@ -216,7 +216,7 @@ func (this *QBoxLayout) InsertSpacerItem(index int, spacerItem *QSpacerItem /*77
 // /usr/include/qt/QtWidgets/qboxlayout.h:83
 // index:0
 // Public
-// void insertLayout(int, class QLayout *, int)
+// void insertLayout(int, QLayout *, int)
 func (this *QBoxLayout) InsertLayout(index int, layout *QLayout /*777 QLayout **/, stretch int) {
 	var convArg1 = layout.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout12insertLayoutEiP7QLayouti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
@@ -226,7 +226,7 @@ func (this *QBoxLayout) InsertLayout(index int, layout *QLayout /*777 QLayout **
 // /usr/include/qt/QtWidgets/qboxlayout.h:84
 // index:0
 // Public
-// void insertItem(int, class QLayoutItem *)
+// void insertItem(int, QLayoutItem *)
 func (this *QBoxLayout) InsertItem(index int, arg1 *QLayoutItem /*777 QLayoutItem **/) {
 	var convArg1 = arg1.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout10insertItemEiP11QLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
@@ -256,7 +256,7 @@ func (this *QBoxLayout) SetSpacing(spacing int) {
 // /usr/include/qt/QtWidgets/qboxlayout.h:89
 // index:0
 // Public
-// bool setStretchFactor(class QWidget *, int)
+// bool setStretchFactor(QWidget *, int)
 func (this *QBoxLayout) SetStretchFactor(w *QWidget /*777 QWidget **/, stretch int) bool {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout16setStretchFactorEP7QWidgeti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
@@ -268,7 +268,7 @@ func (this *QBoxLayout) SetStretchFactor(w *QWidget /*777 QWidget **/, stretch i
 // /usr/include/qt/QtWidgets/qboxlayout.h:90
 // index:1
 // Public
-// bool setStretchFactor(class QLayout *, int)
+// bool setStretchFactor(QLayout *, int)
 func (this *QBoxLayout) SetStretchFactor_1(l *QLayout /*777 QLayout **/, stretch int) bool {
 	var convArg0 = l.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout16setStretchFactorEP7QLayouti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
@@ -430,7 +430,7 @@ func (this *QBoxLayout) Count() int {
 // /usr/include/qt/QtWidgets/qboxlayout.h:107
 // index:0
 // Public virtual
-// void setGeometry(const class QRect &)
+// void setGeometry(const QRect &)
 func (this *QBoxLayout) SetGeometry(arg0 *qtcore.QRect) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout11setGeometryERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

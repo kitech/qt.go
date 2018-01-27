@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -97,7 +97,7 @@ func (this *QSGEngine) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // /usr/include/qt/QtQuick/qsgengine.h:70
 // index:0
 // Public
-// void QSGEngine(class QObject *)
+// void QSGEngine(QObject *)
 func NewQSGEngine(parent *qtcore.QObject /*777 QObject **/) *QSGEngine {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()

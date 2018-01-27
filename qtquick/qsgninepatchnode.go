@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -94,7 +94,7 @@ func DeleteQSGNinePatchNode(*QSGNinePatchNode) {
 // /usr/include/qt/QtQuick/qsgninepatchnode.h:53
 // index:0
 // Public pure virtual
-// void setTexture(class QSGTexture *)
+// void setTexture(QSGTexture *)
 func (this *QSGNinePatchNode) SetTexture(texture *QSGTexture /*777 QSGTexture **/) {
 	var convArg0 = texture.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSGNinePatchNode10setTextureEP10QSGTexture", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -104,7 +104,7 @@ func (this *QSGNinePatchNode) SetTexture(texture *QSGTexture /*777 QSGTexture **
 // /usr/include/qt/QtQuick/qsgninepatchnode.h:54
 // index:0
 // Public pure virtual
-// void setBounds(const class QRectF &)
+// void setBounds(const QRectF &)
 func (this *QSGNinePatchNode) SetBounds(bounds *qtcore.QRectF) {
 	var convArg0 = bounds.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSGNinePatchNode9setBoundsERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -141,7 +141,7 @@ func (this *QSGNinePatchNode) Update() {
 // /usr/include/qt/QtQuick/qsgninepatchnode.h:59
 // index:0
 // Public static
-// void rebuildGeometry(class QSGTexture *, class QSGGeometry *, const class QVector4D &, const class QRectF &, qreal)
+// void rebuildGeometry(QSGTexture *, QSGGeometry *, const QVector4D &, const QRectF &, qreal)
 func (this *QSGNinePatchNode) RebuildGeometry(texture *QSGTexture /*777 QSGTexture **/, geometry *QSGGeometry /*777 QSGGeometry **/, padding *qtgui.QVector4D, bounds *qtcore.QRectF, dpr float64) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSGNinePatchNode15rebuildGeometryEP10QSGTextureP11QSGGeometryRK9QVector4DRK6QRectFd", ffiqt.FFI_TYPE_POINTER, texture, geometry, padding, bounds, dpr)
 	gopp.ErrPrint(err, rv)

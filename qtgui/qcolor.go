@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -120,7 +120,7 @@ func NewQColor_3(rgb uint) *QColor {
 // /usr/include/qt/QtGui/qcolor.h:74
 // index:4
 // Public
-// void QColor(class QRgba64)
+// void QColor(QRgba64)
 func NewQColor_4(rgba64 *QRgba64 /*123*/) *QColor {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = rgba64.GetCthis()
@@ -133,7 +133,7 @@ func NewQColor_4(rgba64 *QRgba64 /*123*/) *QColor {
 // /usr/include/qt/QtGui/qcolor.h:76
 // index:5
 // Public inline
-// void QColor(const class QString &)
+// void QColor(const QString &)
 func NewQColor_5(name *qtcore.QString) *QColor {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = name.GetCthis()
@@ -146,7 +146,7 @@ func NewQColor_5(name *qtcore.QString) *QColor {
 // /usr/include/qt/QtGui/qcolor.h:78
 // index:6
 // Public inline
-// void QColor(class QStringView)
+// void QColor(QStringView)
 func NewQColor_6(name *qtcore.QStringView /*123*/) *QColor {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = name.GetCthis()
@@ -173,7 +173,7 @@ func NewQColor_7(aname string) *QColor {
 // /usr/include/qt/QtGui/qcolor.h:80
 // index:8
 // Public inline
-// void QColor(class QLatin1String)
+// void QColor(QLatin1String)
 func NewQColor_8(name *qtcore.QLatin1String /*123*/) *QColor {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = name.GetCthis()
@@ -186,7 +186,7 @@ func NewQColor_8(name *qtcore.QLatin1String /*123*/) *QColor {
 // /usr/include/qt/QtGui/qcolor.h:81
 // index:9
 // Public
-// void QColor(enum QColor::Spec)
+// void QColor(QColor::Spec)
 func NewQColor_9(spec int) *QColor {
 	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2ENS_4SpecE", ffiqt.FFI_TYPE_VOID, cthis, spec)
@@ -223,7 +223,7 @@ func (this *QColor) Name() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qcolor.h:99
 // index:1
 // Public
-// QString name(enum QColor::NameFormat)
+// QString name(QColor::NameFormat)
 func (this *QColor) Name_1(format int) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4nameENS_10NameFormatE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), format)
@@ -237,7 +237,7 @@ func (this *QColor) Name_1(format int) *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qcolor.h:102
 // index:0
 // Public
-// void setNamedColor(const class QString &)
+// void setNamedColor(const QString &)
 func (this *QColor) SetNamedColor(name *qtcore.QString) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor13setNamedColorERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -247,7 +247,7 @@ func (this *QColor) SetNamedColor(name *qtcore.QString) {
 // /usr/include/qt/QtGui/qcolor.h:104
 // index:1
 // Public
-// void setNamedColor(class QStringView)
+// void setNamedColor(QStringView)
 func (this *QColor) SetNamedColor_1(name *qtcore.QStringView /*123*/) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor13setNamedColorE11QStringView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -257,7 +257,7 @@ func (this *QColor) SetNamedColor_1(name *qtcore.QStringView /*123*/) {
 // /usr/include/qt/QtGui/qcolor.h:105
 // index:2
 // Public
-// void setNamedColor(class QLatin1String)
+// void setNamedColor(QLatin1String)
 func (this *QColor) SetNamedColor_2(name *qtcore.QLatin1String /*123*/) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor13setNamedColorE13QLatin1String", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -497,7 +497,7 @@ func (this *QColor) Rgba64() *QRgba64 /*123*/ {
 // /usr/include/qt/QtGui/qcolor.h:139
 // index:0
 // Public
-// void setRgba64(class QRgba64)
+// void setRgba64(QRgba64)
 func (this *QColor) SetRgba64(rgba *QRgba64 /*123*/) {
 	var convArg0 = rgba.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor9setRgba64E7QRgba64", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -966,7 +966,7 @@ func (this *QColor) ToHsl() *QColor /*123*/ {
 // /usr/include/qt/QtGui/qcolor.h:200
 // index:0
 // Public
-// QColor convertTo(enum QColor::Spec)
+// QColor convertTo(QColor::Spec)
 func (this *QColor) ConvertTo(colorSpec int) *QColor /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor9convertToENS_4SpecE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), colorSpec)
@@ -1065,7 +1065,7 @@ func QColor_FromRgba64(r uint16, g uint16, b uint16, a uint16) *QColor /*123*/ {
 // /usr/include/qt/QtGui/qcolor.h:209
 // index:1
 // Public static
-// QColor fromRgba64(class QRgba64)
+// QColor fromRgba64(QRgba64)
 func (this *QColor) FromRgba64_1(rgba *QRgba64 /*123*/) *QColor /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor10fromRgba64E7QRgba64", ffiqt.FFI_TYPE_POINTER, rgba)
 	gopp.ErrPrint(err, rv)
@@ -1240,7 +1240,7 @@ func (this *QColor) Darker(f int) *QColor /*123*/ {
 // /usr/include/qt/QtGui/qcolor.h:231
 // index:0
 // Public static
-// bool isValidColor(const class QString &)
+// bool isValidColor(const QString &)
 func (this *QColor) IsValidColor(name *qtcore.QString) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor12isValidColorERK7QString", ffiqt.FFI_TYPE_POINTER, name)
 	gopp.ErrPrint(err, rv)
@@ -1256,7 +1256,7 @@ func QColor_IsValidColor(name *qtcore.QString) bool {
 // /usr/include/qt/QtGui/qcolor.h:233
 // index:1
 // Public static
-// bool isValidColor(class QStringView)
+// bool isValidColor(QStringView)
 func (this *QColor) IsValidColor_1(arg0 *qtcore.QStringView /*123*/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor12isValidColorE11QStringView", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
@@ -1272,7 +1272,7 @@ func QColor_IsValidColor_1(arg0 *qtcore.QStringView /*123*/) bool {
 // /usr/include/qt/QtGui/qcolor.h:234
 // index:2
 // Public static
-// bool isValidColor(class QLatin1String)
+// bool isValidColor(QLatin1String)
 func (this *QColor) IsValidColor_2(arg0 *qtcore.QLatin1String /*123*/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor12isValidColorE13QLatin1String", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)

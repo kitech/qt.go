@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQXmlStreamAttribute() *QXmlStreamAttribute {
 // /usr/include/qt/QtCore/qxmlstream.h:110
 // index:1
 // Public
-// void QXmlStreamAttribute(const class QString &, const class QString &)
+// void QXmlStreamAttribute(const QString &, const QString &)
 func NewQXmlStreamAttribute_1(qualifiedName *QString, value *QString) *QXmlStreamAttribute {
 	cthis := qtrt.Calloc(1, 256) // 80
 	var convArg0 = qualifiedName.GetCthis()
@@ -94,7 +94,7 @@ func NewQXmlStreamAttribute_1(qualifiedName *QString, value *QString) *QXmlStrea
 // /usr/include/qt/QtCore/qxmlstream.h:112
 // index:2
 // Public
-// void QXmlStreamAttribute(const class QString &, const class QString &, const class QString &)
+// void QXmlStreamAttribute(const QString &, const QString &, const QString &)
 func NewQXmlStreamAttribute_2(namespaceUri *QString, name *QString, value *QString) *QXmlStreamAttribute {
 	cthis := qtrt.Calloc(1, 256) // 80
 	var convArg0 = namespaceUri.GetCthis()

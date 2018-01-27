@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -360,7 +360,7 @@ func (this *QStyleHints) UseHoverEffects() bool {
 // /usr/include/qt/QtGui/qstylehints.h:104
 // index:0
 // Public
-// void setUseHoverEffects(_Bool)
+// void setUseHoverEffects(bool)
 func (this *QStyleHints) SetUseHoverEffects(useHoverEffects bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints18setUseHoverEffectsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), useHoverEffects)
 	gopp.ErrPrint(err, rv)
@@ -452,7 +452,7 @@ func (this *QStyleHints) TabFocusBehaviorChanged(tabFocusBehavior int) {
 // /usr/include/qt/QtGui/qstylehints.h:116
 // index:0
 // Public
-// void useHoverEffectsChanged(_Bool)
+// void useHoverEffectsChanged(bool)
 func (this *QStyleHints) UseHoverEffectsChanged(useHoverEffects bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints22useHoverEffectsChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), useHoverEffects)
 	gopp.ErrPrint(err, rv)

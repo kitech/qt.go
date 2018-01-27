@@ -205,6 +205,16 @@ func getSymAddr(symname string) unsafe.Pointer {
 	return nil
 }
 
+// TODO
+// get method symbol via virtual table offset
+// ptr is class instance ptr
+// midx is virtual method offset
+// bidx is virtual base class offset
+// return is the virtual method function pointer
+func getSymByVTable(ptr unsafe.Pointer, midx int, bidx int) unsafe.Pointer {
+	return ptr
+}
+
 func convArgs(args ...interface{}) (argtys []byte, argvals []uint64) {
 	argtys = make([]byte, 20)
 	argvals = make([]uint64, 20)

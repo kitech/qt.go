@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QShortcut) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // /usr/include/qt/QtWidgets/qshortcut.h:63
 // index:0
 // Public
-// void QShortcut(class QWidget *)
+// void QShortcut(QWidget *)
 func NewQShortcut(parent *QWidget /*777 QWidget **/) *QShortcut {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -102,7 +102,7 @@ func NewQShortcut(parent *QWidget /*777 QWidget **/) *QShortcut {
 // /usr/include/qt/QtWidgets/qshortcut.h:64
 // index:1
 // Public
-// void QShortcut(const class QKeySequence &, class QWidget *, const char *, const char *, Qt::ShortcutContext)
+// void QShortcut(const QKeySequence &, QWidget *, const char *, const char *, Qt::ShortcutContext)
 func NewQShortcut_1(key *qtgui.QKeySequence, parent *QWidget /*777 QWidget **/, member string, ambiguousMember string, context int) *QShortcut {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = key.GetCthis()
@@ -129,7 +129,7 @@ func DeleteQShortcut(*QShortcut) {
 // /usr/include/qt/QtWidgets/qshortcut.h:69
 // index:0
 // Public
-// void setKey(const class QKeySequence &)
+// void setKey(const QKeySequence &)
 func (this *QShortcut) SetKey(key *qtgui.QKeySequence) {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut6setKeyERK12QKeySequence", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -153,7 +153,7 @@ func (this *QShortcut) Key() *qtgui.QKeySequence /*123*/ {
 // /usr/include/qt/QtWidgets/qshortcut.h:72
 // index:0
 // Public
-// void setEnabled(_Bool)
+// void setEnabled(bool)
 func (this *QShortcut) SetEnabled(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -193,7 +193,7 @@ func (this *QShortcut) Context() int {
 // /usr/include/qt/QtWidgets/qshortcut.h:78
 // index:0
 // Public
-// void setWhatsThis(const class QString &)
+// void setWhatsThis(const QString &)
 func (this *QShortcut) SetWhatsThis(text *qtcore.QString) {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut12setWhatsThisERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -217,7 +217,7 @@ func (this *QShortcut) WhatsThis() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qshortcut.h:81
 // index:0
 // Public
-// void setAutoRepeat(_Bool)
+// void setAutoRepeat(bool)
 func (this *QShortcut) SetAutoRepeat(on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut13setAutoRepeatEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
@@ -278,7 +278,7 @@ func (this *QShortcut) ActivatedAmbiguously() {
 // /usr/include/qt/QtWidgets/qshortcut.h:94
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QShortcut) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

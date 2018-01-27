@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QFutureInterfaceBase) NewFromPointer(cthis unsafe.Pointer) *QFutureInterf
 // /usr/include/qt/QtCore/qfutureinterface.h:73
 // index:0
 // Public
-// void QFutureInterfaceBase(enum QFutureInterfaceBase::State)
+// void QFutureInterfaceBase(QFutureInterfaceBase::State)
 func NewQFutureInterfaceBase(initialState int) *QFutureInterfaceBase {
 	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBaseC2ENS_5StateE", ffiqt.FFI_TYPE_VOID, cthis, initialState)
@@ -125,7 +125,7 @@ func (this *QFutureInterfaceBase) ReportResultsReady(beginIndex int, endIndex in
 // /usr/include/qt/QtCore/qfutureinterface.h:86
 // index:0
 // Public
-// void setRunnable(class QRunnable *)
+// void setRunnable(QRunnable *)
 func (this *QFutureInterfaceBase) SetRunnable(runnable *QRunnable /*777 QRunnable **/) {
 	var convArg0 = runnable.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase11setRunnableEP9QRunnable", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -135,7 +135,7 @@ func (this *QFutureInterfaceBase) SetRunnable(runnable *QRunnable /*777 QRunnabl
 // /usr/include/qt/QtCore/qfutureinterface.h:87
 // index:0
 // Public
-// void setThreadPool(class QThreadPool *)
+// void setThreadPool(QThreadPool *)
 func (this *QFutureInterfaceBase) SetThreadPool(pool *QThreadPool /*777 QThreadPool **/) {
 	var convArg0 = pool.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase13setThreadPoolEP11QThreadPool", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -145,7 +145,7 @@ func (this *QFutureInterfaceBase) SetThreadPool(pool *QThreadPool /*777 QThreadP
 // /usr/include/qt/QtCore/qfutureinterface.h:88
 // index:0
 // Public
-// void setFilterMode(_Bool)
+// void setFilterMode(bool)
 func (this *QFutureInterfaceBase) SetFilterMode(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase13setFilterModeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -216,7 +216,7 @@ func (this *QFutureInterfaceBase) ProgressValue() int {
 // /usr/include/qt/QtCore/qfutureinterface.h:95
 // index:0
 // Public
-// void setProgressValueAndText(int, const class QString &)
+// void setProgressValueAndText(int, const QString &)
 func (this *QFutureInterfaceBase) SetProgressValueAndText(progressValue int, progressText *QString) {
 	var convArg1 = progressText.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase23setProgressValueAndTextEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), progressValue, convArg1)
@@ -271,7 +271,7 @@ func (this *QFutureInterfaceBase) ResultCount() int {
 // /usr/include/qt/QtCore/qfutureinterface.h:102
 // index:0
 // Public
-// bool queryState(enum QFutureInterfaceBase::State)
+// bool queryState(QFutureInterfaceBase::State)
 func (this *QFutureInterfaceBase) QueryState(state int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase10queryStateENS_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	gopp.ErrPrint(err, rv)
@@ -368,7 +368,7 @@ func (this *QFutureInterfaceBase) Cancel() {
 // /usr/include/qt/QtCore/qfutureinterface.h:112
 // index:0
 // Public
-// void setPaused(_Bool)
+// void setPaused(bool)
 func (this *QFutureInterfaceBase) SetPaused(paused bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase9setPausedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), paused)
 	gopp.ErrPrint(err, rv)
@@ -386,7 +386,7 @@ func (this *QFutureInterfaceBase) TogglePaused() {
 // /usr/include/qt/QtCore/qfutureinterface.h:114
 // index:0
 // Public
-// void setThrottled(_Bool)
+// void setThrottled(bool)
 func (this *QFutureInterfaceBase) SetThrottled(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase12setThrottledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)

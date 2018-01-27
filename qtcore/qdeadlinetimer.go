@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQDeadlineTimer(type_ int) *QDeadlineTimer {
 // /usr/include/qt/QtCore/qdeadlinetimer.h:67
 // index:1
 // Public inline
-// void QDeadlineTimer(enum QDeadlineTimer::ForeverConstant, Qt::TimerType)
+// void QDeadlineTimer(QDeadlineTimer::ForeverConstant, Qt::TimerType)
 func NewQDeadlineTimer_1(arg0 int, type_ int) *QDeadlineTimer {
 	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimerC2ENS_15ForeverConstantEN2Qt9TimerTypeE", ffiqt.FFI_TYPE_VOID, cthis, arg0, type_)
@@ -104,7 +104,7 @@ func NewQDeadlineTimer_2(msecs int64, type_ int) *QDeadlineTimer {
 // /usr/include/qt/QtCore/qdeadlinetimer.h:71
 // index:0
 // Public inline
-// void swap(class QDeadlineTimer &)
+// void swap(QDeadlineTimer &)
 func (this *QDeadlineTimer) Swap(other *QDeadlineTimer) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimer4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -236,7 +236,7 @@ func (this *QDeadlineTimer) SetPreciseDeadline(secs int64, nsecs int64, type_ in
 // /usr/include/qt/QtCore/qdeadlinetimer.h:94
 // index:0
 // Public static
-// QDeadlineTimer addNSecs(class QDeadlineTimer, qint64)
+// QDeadlineTimer addNSecs(QDeadlineTimer, qint64)
 func (this *QDeadlineTimer) AddNSecs(dt *QDeadlineTimer /*123*/, nsecs int64) *QDeadlineTimer /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimer8addNSecsES_x", ffiqt.FFI_TYPE_POINTER, dt, nsecs)
 	gopp.ErrPrint(err, rv)

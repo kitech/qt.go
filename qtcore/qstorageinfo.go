@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQStorageInfo() *QStorageInfo {
 // /usr/include/qt/QtCore/qstorageinfo.h:59
 // index:1
 // Public
-// void QStorageInfo(const class QString &)
+// void QStorageInfo(const QString &)
 func NewQStorageInfo_1(path *QString) *QStorageInfo {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = path.GetCthis()
@@ -93,7 +93,7 @@ func NewQStorageInfo_1(path *QString) *QStorageInfo {
 // /usr/include/qt/QtCore/qstorageinfo.h:60
 // index:2
 // Public
-// void QStorageInfo(const class QDir &)
+// void QStorageInfo(const QDir &)
 func NewQStorageInfo_2(dir *QDir) *QStorageInfo {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = dir.GetCthis()
@@ -115,7 +115,7 @@ func DeleteQStorageInfo(*QStorageInfo) {
 // /usr/include/qt/QtCore/qstorageinfo.h:69
 // index:0
 // Public inline
-// void swap(class QStorageInfo &)
+// void swap(QStorageInfo &)
 func (this *QStorageInfo) Swap(other *QStorageInfo) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStorageInfo4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -125,7 +125,7 @@ func (this *QStorageInfo) Swap(other *QStorageInfo) {
 // /usr/include/qt/QtCore/qstorageinfo.h:72
 // index:0
 // Public
-// void setPath(const class QString &)
+// void setPath(const QString &)
 func (this *QStorageInfo) SetPath(path *QString) {
 	var convArg0 = path.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStorageInfo7setPathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QMdiSubWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:69
 // index:0
 // Public
-// void QMdiSubWindow(class QWidget *, Qt::WindowFlags)
+// void QMdiSubWindow(QWidget *, Qt::WindowFlags)
 func NewQMdiSubWindow(parent *QWidget /*777 QWidget **/, flags int) *QMdiSubWindow {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -139,7 +139,7 @@ func (this *QMdiSubWindow) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:75
 // index:0
 // Public
-// void setWidget(class QWidget *)
+// void setWidget(QWidget *)
 func (this *QMdiSubWindow) SetWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow9setWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -196,7 +196,7 @@ func (this *QMdiSubWindow) IsShaded() bool {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:83
 // index:0
 // Public
-// void setOption(enum QMdiSubWindow::SubWindowOption, _Bool)
+// void setOption(QMdiSubWindow::SubWindowOption, bool)
 func (this *QMdiSubWindow) SetOption(option int, on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow9setOptionENS_15SubWindowOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	gopp.ErrPrint(err, rv)
@@ -205,7 +205,7 @@ func (this *QMdiSubWindow) SetOption(option int, on bool) {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:84
 // index:0
 // Public
-// bool testOption(enum QMdiSubWindow::SubWindowOption)
+// bool testOption(QMdiSubWindow::SubWindowOption)
 func (this *QMdiSubWindow) TestOption(arg0 int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMdiSubWindow10testOptionENS_15SubWindowOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -256,7 +256,7 @@ func (this *QMdiSubWindow) KeyboardPageStep() int {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:93
 // index:0
 // Public
-// void setSystemMenu(class QMenu *)
+// void setSystemMenu(QMenu *)
 func (this *QMdiSubWindow) SetSystemMenu(systemMenu *QMenu /*777 QMenu **/) {
 	var convArg0 = systemMenu.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow13setSystemMenuEP5QMenu", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -317,7 +317,7 @@ func (this *QMdiSubWindow) ShowShaded() {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:110
 // index:0
 // Protected virtual
-// bool eventFilter(class QObject *, class QEvent *)
+// bool eventFilter(QObject *, QEvent *)
 func (this *QMdiSubWindow) EventFilter(object *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = object.GetCthis()
 	var convArg1 = event.GetCthis()
@@ -330,7 +330,7 @@ func (this *QMdiSubWindow) EventFilter(object *qtcore.QObject /*777 QObject **/,
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:111
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QMdiSubWindow) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -342,7 +342,7 @@ func (this *QMdiSubWindow) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:112
 // index:0
 // Protected virtual
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QMdiSubWindow) ShowEvent(showEvent *qtgui.QShowEvent /*777 QShowEvent **/) {
 	var convArg0 = showEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow9showEventEP10QShowEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -352,7 +352,7 @@ func (this *QMdiSubWindow) ShowEvent(showEvent *qtgui.QShowEvent /*777 QShowEven
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:113
 // index:0
 // Protected virtual
-// void hideEvent(class QHideEvent *)
+// void hideEvent(QHideEvent *)
 func (this *QMdiSubWindow) HideEvent(hideEvent *qtgui.QHideEvent /*777 QHideEvent **/) {
 	var convArg0 = hideEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow9hideEventEP10QHideEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -362,7 +362,7 @@ func (this *QMdiSubWindow) HideEvent(hideEvent *qtgui.QHideEvent /*777 QHideEven
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:114
 // index:0
 // Protected virtual
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QMdiSubWindow) ChangeEvent(changeEvent *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = changeEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -372,7 +372,7 @@ func (this *QMdiSubWindow) ChangeEvent(changeEvent *qtcore.QEvent /*777 QEvent *
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:115
 // index:0
 // Protected virtual
-// void closeEvent(class QCloseEvent *)
+// void closeEvent(QCloseEvent *)
 func (this *QMdiSubWindow) CloseEvent(closeEvent *qtgui.QCloseEvent /*777 QCloseEvent **/) {
 	var convArg0 = closeEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow10closeEventEP11QCloseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -382,7 +382,7 @@ func (this *QMdiSubWindow) CloseEvent(closeEvent *qtgui.QCloseEvent /*777 QClose
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:116
 // index:0
 // Protected virtual
-// void leaveEvent(class QEvent *)
+// void leaveEvent(QEvent *)
 func (this *QMdiSubWindow) LeaveEvent(leaveEvent *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = leaveEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow10leaveEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -392,7 +392,7 @@ func (this *QMdiSubWindow) LeaveEvent(leaveEvent *qtcore.QEvent /*777 QEvent **/
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:117
 // index:0
 // Protected virtual
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QMdiSubWindow) ResizeEvent(resizeEvent *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = resizeEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -402,7 +402,7 @@ func (this *QMdiSubWindow) ResizeEvent(resizeEvent *qtgui.QResizeEvent /*777 QRe
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:118
 // index:0
 // Protected virtual
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QMdiSubWindow) TimerEvent(timerEvent *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = timerEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -412,7 +412,7 @@ func (this *QMdiSubWindow) TimerEvent(timerEvent *qtcore.QTimerEvent /*777 QTime
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:119
 // index:0
 // Protected virtual
-// void moveEvent(class QMoveEvent *)
+// void moveEvent(QMoveEvent *)
 func (this *QMdiSubWindow) MoveEvent(moveEvent *qtgui.QMoveEvent /*777 QMoveEvent **/) {
 	var convArg0 = moveEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow9moveEventEP10QMoveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -422,7 +422,7 @@ func (this *QMdiSubWindow) MoveEvent(moveEvent *qtgui.QMoveEvent /*777 QMoveEven
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:120
 // index:0
 // Protected virtual
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QMdiSubWindow) PaintEvent(paintEvent *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = paintEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -432,7 +432,7 @@ func (this *QMdiSubWindow) PaintEvent(paintEvent *qtgui.QPaintEvent /*777 QPaint
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:121
 // index:0
 // Protected virtual
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QMdiSubWindow) MousePressEvent(mouseEvent *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = mouseEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -442,7 +442,7 @@ func (this *QMdiSubWindow) MousePressEvent(mouseEvent *qtgui.QMouseEvent /*777 Q
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:122
 // index:0
 // Protected virtual
-// void mouseDoubleClickEvent(class QMouseEvent *)
+// void mouseDoubleClickEvent(QMouseEvent *)
 func (this *QMdiSubWindow) MouseDoubleClickEvent(mouseEvent *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = mouseEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow21mouseDoubleClickEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -452,7 +452,7 @@ func (this *QMdiSubWindow) MouseDoubleClickEvent(mouseEvent *qtgui.QMouseEvent /
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:123
 // index:0
 // Protected virtual
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QMdiSubWindow) MouseReleaseEvent(mouseEvent *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = mouseEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -462,7 +462,7 @@ func (this *QMdiSubWindow) MouseReleaseEvent(mouseEvent *qtgui.QMouseEvent /*777
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:124
 // index:0
 // Protected virtual
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QMdiSubWindow) MouseMoveEvent(mouseEvent *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = mouseEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -472,7 +472,7 @@ func (this *QMdiSubWindow) MouseMoveEvent(mouseEvent *qtgui.QMouseEvent /*777 QM
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:125
 // index:0
 // Protected virtual
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QMdiSubWindow) KeyPressEvent(keyEvent *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = keyEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -482,7 +482,7 @@ func (this *QMdiSubWindow) KeyPressEvent(keyEvent *qtgui.QKeyEvent /*777 QKeyEve
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:127
 // index:0
 // Protected virtual
-// void contextMenuEvent(class QContextMenuEvent *)
+// void contextMenuEvent(QContextMenuEvent *)
 func (this *QMdiSubWindow) ContextMenuEvent(contextMenuEvent *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) {
 	var convArg0 = contextMenuEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow16contextMenuEventEP17QContextMenuEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -492,7 +492,7 @@ func (this *QMdiSubWindow) ContextMenuEvent(contextMenuEvent *qtgui.QContextMenu
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:129
 // index:0
 // Protected virtual
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QMdiSubWindow) FocusInEvent(focusInEvent *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = focusInEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -502,7 +502,7 @@ func (this *QMdiSubWindow) FocusInEvent(focusInEvent *qtgui.QFocusEvent /*777 QF
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:130
 // index:0
 // Protected virtual
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QMdiSubWindow) FocusOutEvent(focusOutEvent *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = focusOutEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -512,7 +512,7 @@ func (this *QMdiSubWindow) FocusOutEvent(focusOutEvent *qtgui.QFocusEvent /*777 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:131
 // index:0
 // Protected virtual
-// void childEvent(class QChildEvent *)
+// void childEvent(QChildEvent *)
 func (this *QMdiSubWindow) ChildEvent(childEvent *qtcore.QChildEvent /*777 QChildEvent **/) {
 	var convArg0 = childEvent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow10childEventEP11QChildEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

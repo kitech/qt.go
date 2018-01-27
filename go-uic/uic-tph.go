@@ -222,12 +222,14 @@ func onSetupUi(line string) {
 				refmtval = strings.TrimRight(refmtval[6:], ")")
 			case "HorizontalScrollBarPolicy":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
+			case "SizeAdjustPolicy":
+				refmtval = "qtwidgets." + strings.Replace(refmtval, ":", "_", -1)
 			case "MaximumSize", "MinimumSize":
 				refmtsuf = "_1"
 			case "Widget":
 				// refmtname = "this." + refmtname
 				refmtval = "this." + strings.Title(refmtval)
-			case "Bold":
+			case "Bold", "OpenExternalLinks":
 				refmtval = untitle(refmtval) // True => true
 			case "Pixmap":
 				refmtval = fmt.Sprintf("qtgui.NewQPixmap_3(qtcore.NewQString_5(\"%s\"), \"dummy123\", 0)", strings.Split(refmtval, "\"")[1])

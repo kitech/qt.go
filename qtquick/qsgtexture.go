@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -211,7 +211,7 @@ func (this *QSGTexture) Bind() {
 // /usr/include/qt/QtQuick/qsgtexture.h:91
 // index:0
 // Public
-// void updateBindOptions(_Bool)
+// void updateBindOptions(bool)
 func (this *QSGTexture) UpdateBindOptions(force bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSGTexture17updateBindOptionsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), force)
 	gopp.ErrPrint(err, rv)
@@ -220,7 +220,7 @@ func (this *QSGTexture) UpdateBindOptions(force bool) {
 // /usr/include/qt/QtQuick/qsgtexture.h:93
 // index:0
 // Public
-// void setMipmapFiltering(enum QSGTexture::Filtering)
+// void setMipmapFiltering(QSGTexture::Filtering)
 func (this *QSGTexture) SetMipmapFiltering(filter int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSGTexture18setMipmapFilteringENS_9FilteringE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), filter)
 	gopp.ErrPrint(err, rv)
@@ -240,7 +240,7 @@ func (this *QSGTexture) MipmapFiltering() int {
 // /usr/include/qt/QtQuick/qsgtexture.h:96
 // index:0
 // Public
-// void setFiltering(enum QSGTexture::Filtering)
+// void setFiltering(QSGTexture::Filtering)
 func (this *QSGTexture) SetFiltering(filter int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSGTexture12setFilteringENS_9FilteringE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), filter)
 	gopp.ErrPrint(err, rv)
@@ -260,7 +260,7 @@ func (this *QSGTexture) Filtering() int {
 // /usr/include/qt/QtQuick/qsgtexture.h:99
 // index:0
 // Public
-// void setAnisotropyLevel(enum QSGTexture::AnisotropyLevel)
+// void setAnisotropyLevel(QSGTexture::AnisotropyLevel)
 func (this *QSGTexture) SetAnisotropyLevel(level int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSGTexture18setAnisotropyLevelENS_15AnisotropyLevelE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), level)
 	gopp.ErrPrint(err, rv)
@@ -280,7 +280,7 @@ func (this *QSGTexture) AnisotropyLevel() int {
 // /usr/include/qt/QtQuick/qsgtexture.h:102
 // index:0
 // Public
-// void setHorizontalWrapMode(enum QSGTexture::WrapMode)
+// void setHorizontalWrapMode(QSGTexture::WrapMode)
 func (this *QSGTexture) SetHorizontalWrapMode(hwrap int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSGTexture21setHorizontalWrapModeENS_8WrapModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hwrap)
 	gopp.ErrPrint(err, rv)
@@ -300,7 +300,7 @@ func (this *QSGTexture) HorizontalWrapMode() int {
 // /usr/include/qt/QtQuick/qsgtexture.h:105
 // index:0
 // Public
-// void setVerticalWrapMode(enum QSGTexture::WrapMode)
+// void setVerticalWrapMode(QSGTexture::WrapMode)
 func (this *QSGTexture) SetVerticalWrapMode(vwrap int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSGTexture19setVerticalWrapModeENS_8WrapModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), vwrap)
 	gopp.ErrPrint(err, rv)
@@ -320,7 +320,7 @@ func (this *QSGTexture) VerticalWrapMode() int {
 // /usr/include/qt/QtQuick/qsgtexture.h:108
 // index:0
 // Public inline
-// QRectF convertToNormalizedSourceRect(const class QRectF &)
+// QRectF convertToNormalizedSourceRect(const QRectF &)
 func (this *QSGTexture) ConvertToNormalizedSourceRect(rect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = rect.GetCthis()

@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQSslError() *QSslError {
 // /usr/include/qt/QtNetwork/qsslerror.h:89
 // index:1
 // Public
-// void QSslError(enum QSslError::SslError)
+// void QSslError(QSslError::SslError)
 func NewQSslError_1(error int) *QSslError {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSslErrorC2ENS_8SslErrorE", ffiqt.FFI_TYPE_VOID, cthis, error)
@@ -96,7 +96,7 @@ func NewQSslError_1(error int) *QSslError {
 // /usr/include/qt/QtNetwork/qsslerror.h:90
 // index:2
 // Public
-// void QSslError(enum QSslError::SslError, const class QSslCertificate &)
+// void QSslError(QSslError::SslError, const QSslCertificate &)
 func NewQSslError_2(error int, certificate *QSslCertificate) *QSslError {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg1 = certificate.GetCthis()
@@ -109,7 +109,7 @@ func NewQSslError_2(error int, certificate *QSslCertificate) *QSslError {
 // /usr/include/qt/QtNetwork/qsslerror.h:94
 // index:0
 // Public inline
-// void swap(class QSslError &)
+// void swap(QSslError &)
 func (this *QSslError) Swap(other *QSslError) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSslError4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

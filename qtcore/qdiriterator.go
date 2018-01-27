@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QDirIterator) NewFromPointer(cthis unsafe.Pointer) *QDirIterator {
 // /usr/include/qt/QtCore/qdiriterator.h:58
 // index:0
 // Public
-// void QDirIterator(const class QDir &, QDirIterator::IteratorFlags)
+// void QDirIterator(const QDir &, QDirIterator::IteratorFlags)
 func NewQDirIterator(dir *QDir, flags int) *QDirIterator {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = dir.GetCthis()
@@ -81,7 +81,7 @@ func NewQDirIterator(dir *QDir, flags int) *QDirIterator {
 // /usr/include/qt/QtCore/qdiriterator.h:59
 // index:1
 // Public
-// void QDirIterator(const class QString &, QDirIterator::IteratorFlags)
+// void QDirIterator(const QString &, QDirIterator::IteratorFlags)
 func NewQDirIterator_1(path *QString, flags int) *QDirIterator {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = path.GetCthis()

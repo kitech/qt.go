@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QTextFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtGui/qtextobject.h:123
 // index:0
 // Public
-// void QTextFrame(class QTextDocument *)
+// void QTextFrame(QTextDocument *)
 func NewQTextFrame(doc *QTextDocument /*777 QTextDocument **/) *QTextFrame {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = doc.GetCthis()
@@ -107,7 +107,7 @@ func DeleteQTextFrame(*QTextFrame) {
 // /usr/include/qt/QtGui/qtextobject.h:126
 // index:0
 // Public inline
-// void setFrameFormat(const class QTextFrameFormat &)
+// void setFrameFormat(const QTextFrameFormat &)
 func (this *QTextFrame) SetFrameFormat(format *QTextFrameFormat) {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -193,7 +193,7 @@ func (this *QTextFrame) LayoutData() *QTextFrameLayoutData /*777 QTextFrameLayou
 // /usr/include/qt/QtGui/qtextobject.h:135
 // index:0
 // Public
-// void setLayoutData(class QTextFrameLayoutData *)
+// void setLayoutData(QTextFrameLayoutData *)
 func (this *QTextFrame) SetLayoutData(data *QTextFrameLayoutData /*777 QTextFrameLayoutData **/) {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

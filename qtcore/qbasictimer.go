@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -111,7 +111,7 @@ func (this *QBasicTimer) TimerId() int {
 // /usr/include/qt/QtCore/qbasictimer.h:61
 // index:0
 // Public
-// void start(int, class QObject *)
+// void start(int, QObject *)
 func (this *QBasicTimer) Start(msec int, obj *QObject /*777 QObject **/) {
 	var convArg1 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicTimer5startEiP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec, convArg1)
@@ -121,7 +121,7 @@ func (this *QBasicTimer) Start(msec int, obj *QObject /*777 QObject **/) {
 // /usr/include/qt/QtCore/qbasictimer.h:62
 // index:1
 // Public
-// void start(int, Qt::TimerType, class QObject *)
+// void start(int, Qt::TimerType, QObject *)
 func (this *QBasicTimer) Start_1(msec int, timerType int, obj *QObject /*777 QObject **/) {
 	var convArg2 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicTimer5startEiN2Qt9TimerTypeEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec, timerType, convArg2)

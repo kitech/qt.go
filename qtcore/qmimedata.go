@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -127,7 +127,7 @@ func (this *QMimeData) Text() *QString /*123*/ {
 // /usr/include/qt/QtCore/qmimedata.h:64
 // index:0
 // Public
-// void setText(const class QString &)
+// void setText(const QString &)
 func (this *QMimeData) SetText(text *QString) {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData7setTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -162,7 +162,7 @@ func (this *QMimeData) Html() *QString /*123*/ {
 // /usr/include/qt/QtCore/qmimedata.h:68
 // index:0
 // Public
-// void setHtml(const class QString &)
+// void setHtml(const QString &)
 func (this *QMimeData) SetHtml(html *QString) {
 	var convArg0 = html.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData7setHtmlERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -197,7 +197,7 @@ func (this *QMimeData) ImageData() *QVariant /*123*/ {
 // /usr/include/qt/QtCore/qmimedata.h:72
 // index:0
 // Public
-// void setImageData(const class QVariant &)
+// void setImageData(const QVariant &)
 func (this *QMimeData) SetImageData(image *QVariant) {
 	var convArg0 = image.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData12setImageDataERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -232,7 +232,7 @@ func (this *QMimeData) ColorData() *QVariant /*123*/ {
 // /usr/include/qt/QtCore/qmimedata.h:76
 // index:0
 // Public
-// void setColorData(const class QVariant &)
+// void setColorData(const QVariant &)
 func (this *QMimeData) SetColorData(color *QVariant) {
 	var convArg0 = color.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData12setColorDataERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -253,7 +253,7 @@ func (this *QMimeData) HasColor() bool {
 // /usr/include/qt/QtCore/qmimedata.h:79
 // index:0
 // Public
-// QByteArray data(const class QString &)
+// QByteArray data(const QString &)
 func (this *QMimeData) Data(mimetype *QString) *QByteArray /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = mimetype.GetCthis()
@@ -268,7 +268,7 @@ func (this *QMimeData) Data(mimetype *QString) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qmimedata.h:80
 // index:0
 // Public
-// void setData(const class QString &, const class QByteArray &)
+// void setData(const QString &, const QByteArray &)
 func (this *QMimeData) SetData(mimetype *QString, data *QByteArray) {
 	var convArg0 = mimetype.GetCthis()
 	var convArg1 = data.GetCthis()
@@ -279,7 +279,7 @@ func (this *QMimeData) SetData(mimetype *QString, data *QByteArray) {
 // /usr/include/qt/QtCore/qmimedata.h:81
 // index:0
 // Public
-// void removeFormat(const class QString &)
+// void removeFormat(const QString &)
 func (this *QMimeData) RemoveFormat(mimetype *QString) {
 	var convArg0 = mimetype.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeData12removeFormatERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -289,7 +289,7 @@ func (this *QMimeData) RemoveFormat(mimetype *QString) {
 // /usr/include/qt/QtCore/qmimedata.h:83
 // index:0
 // Public virtual
-// bool hasFormat(const class QString &)
+// bool hasFormat(const QString &)
 func (this *QMimeData) HasFormat(mimetype *QString) bool {
 	var convArg0 = mimetype.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData9hasFormatERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -310,7 +310,7 @@ func (this *QMimeData) Clear() {
 // /usr/include/qt/QtCore/qmimedata.h:88
 // index:0
 // Protected virtual
-// QVariant retrieveData(const class QString &, class QVariant::Type)
+// QVariant retrieveData(const QString &, QVariant::Type)
 func (this *QMimeData) RetrieveData(mimetype *QString, preferredType int) *QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = mimetype.GetCthis()

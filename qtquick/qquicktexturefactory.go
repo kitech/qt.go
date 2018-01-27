@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -106,7 +106,7 @@ func DeleteQQuickTextureFactory(*QQuickTextureFactory) {
 // /usr/include/qt/QtQuick/qquickimageprovider.h:63
 // index:0
 // Public pure virtual
-// QSGTexture * createTexture(class QQuickWindow *)
+// QSGTexture * createTexture(QQuickWindow *)
 func (this *QQuickTextureFactory) CreateTexture(window *QQuickWindow /*777 QQuickWindow **/) *QSGTexture /*777 QSGTexture **/ {
 	var convArg0 = window.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickTextureFactory13createTextureEP12QQuickWindow", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -158,7 +158,7 @@ func (this *QQuickTextureFactory) Image() *qtgui.QImage /*123*/ {
 // /usr/include/qt/QtQuick/qquickimageprovider.h:68
 // index:0
 // Public static
-// QQuickTextureFactory * textureFactoryForImage(const class QImage &)
+// QQuickTextureFactory * textureFactoryForImage(const QImage &)
 func (this *QQuickTextureFactory) TextureFactoryForImage(image *qtgui.QImage) *QQuickTextureFactory /*777 QQuickTextureFactory **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQuickTextureFactory22textureFactoryForImageERK6QImage", ffiqt.FFI_TYPE_POINTER, image)
 	gopp.ErrPrint(err, rv)

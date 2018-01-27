@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QStylePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // /usr/include/qt/QtWidgets/qstyleplugin.h:58
 // index:0
 // Public
-// void QStylePlugin(class QObject *)
+// void QStylePlugin(QObject *)
 func NewQStylePlugin(parent *qtcore.QObject /*777 QObject **/) *QStylePlugin {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -111,7 +111,7 @@ func DeleteQStylePlugin(*QStylePlugin) {
 // /usr/include/qt/QtWidgets/qstyleplugin.h:61
 // index:0
 // Public pure virtual
-// QStyle * create(const class QString &)
+// QStyle * create(const QString &)
 func (this *QStylePlugin) Create(key *qtcore.QString) *QStyle /*777 QStyle **/ {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStylePlugin6createERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

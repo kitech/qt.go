@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -77,7 +77,7 @@ func (*QGraphicsPathItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsPathIte
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:628
 // index:0
 // Public
-// void QGraphicsPathItem(class QGraphicsItem *)
+// void QGraphicsPathItem(QGraphicsItem *)
 func NewQGraphicsPathItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsPathItem {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -90,7 +90,7 @@ func NewQGraphicsPathItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraph
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:629
 // index:1
 // Public
-// void QGraphicsPathItem(const class QPainterPath &, class QGraphicsItem *)
+// void QGraphicsPathItem(const QPainterPath &, QGraphicsItem *)
 func NewQGraphicsPathItem_1(path *qtgui.QPainterPath, parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsPathItem {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = path.GetCthis()
@@ -127,7 +127,7 @@ func (this *QGraphicsPathItem) Path() *qtgui.QPainterPath /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:633
 // index:0
 // Public
-// void setPath(const class QPainterPath &)
+// void setPath(const QPainterPath &)
 func (this *QGraphicsPathItem) SetPath(path *qtgui.QPainterPath) {
 	var convArg0 = path.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsPathItem7setPathERK12QPainterPath", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -165,7 +165,7 @@ func (this *QGraphicsPathItem) Shape() *qtgui.QPainterPath /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:637
 // index:0
 // Public virtual
-// bool contains(const class QPointF &)
+// bool contains(const QPointF &)
 func (this *QGraphicsPathItem) Contains(point *qtcore.QPointF) bool {
 	var convArg0 = point.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsPathItem8containsERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -177,7 +177,7 @@ func (this *QGraphicsPathItem) Contains(point *qtcore.QPointF) bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:639
 // index:0
 // Public virtual
-// void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
+// void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
 func (this *QGraphicsPathItem) Paint(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionGraphicsItem /*777 const QStyleOptionGraphicsItem **/, widget *QWidget /*777 QWidget **/) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = option.GetCthis()
@@ -189,7 +189,7 @@ func (this *QGraphicsPathItem) Paint(painter *qtgui.QPainter /*777 QPainter **/,
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:641
 // index:0
 // Public virtual
-// bool isObscuredBy(const class QGraphicsItem *)
+// bool isObscuredBy(const QGraphicsItem *)
 func (this *QGraphicsPathItem) IsObscuredBy(item *QGraphicsItem /*777 const QGraphicsItem **/) bool {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsPathItem12isObscuredByEPK13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -226,7 +226,7 @@ func (this *QGraphicsPathItem) Type() int {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:648
 // index:0
 // Protected virtual
-// bool supportsExtension(enum QGraphicsItem::Extension)
+// bool supportsExtension(QGraphicsItem::Extension)
 func (this *QGraphicsPathItem) SupportsExtension(extension int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsPathItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	gopp.ErrPrint(err, rv)
@@ -237,7 +237,7 @@ func (this *QGraphicsPathItem) SupportsExtension(extension int) bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:649
 // index:0
 // Protected virtual
-// void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
+// void setExtension(QGraphicsItem::Extension, const QVariant &)
 func (this *QGraphicsPathItem) SetExtension(extension int, variant *qtcore.QVariant) {
 	var convArg1 = variant.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsPathItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension, convArg1)
@@ -247,7 +247,7 @@ func (this *QGraphicsPathItem) SetExtension(extension int, variant *qtcore.QVari
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:650
 // index:0
 // Protected virtual
-// QVariant extension(const class QVariant &)
+// QVariant extension(const QVariant &)
 func (this *QGraphicsPathItem) Extension(variant *qtcore.QVariant) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = variant.GetCthis()

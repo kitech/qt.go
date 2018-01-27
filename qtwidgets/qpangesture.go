@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QPanGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // /usr/include/qt/QtWidgets/qgesture.h:117
 // index:0
 // Public
-// void QPanGesture(class QObject *)
+// void QPanGesture(QObject *)
 func NewQPanGesture(parent *qtcore.QObject /*777 QObject **/) *QPanGesture {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -164,7 +164,7 @@ func (this *QPanGesture) Acceleration() float64 {
 // /usr/include/qt/QtWidgets/qgesture.h:125
 // index:0
 // Public
-// void setLastOffset(const class QPointF &)
+// void setLastOffset(const QPointF &)
 func (this *QPanGesture) SetLastOffset(value *qtcore.QPointF) {
 	var convArg0 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPanGesture13setLastOffsetERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -174,7 +174,7 @@ func (this *QPanGesture) SetLastOffset(value *qtcore.QPointF) {
 // /usr/include/qt/QtWidgets/qgesture.h:126
 // index:0
 // Public
-// void setOffset(const class QPointF &)
+// void setOffset(const QPointF &)
 func (this *QPanGesture) SetOffset(value *qtcore.QPointF) {
 	var convArg0 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPanGesture9setOffsetERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

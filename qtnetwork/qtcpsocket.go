@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QTcpSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtNetwork/qtcpsocket.h:56
 // index:0
 // Public
-// void QTcpSocket(class QObject *)
+// void QTcpSocket(QObject *)
 func NewQTcpSocket(parent *qtcore.QObject /*777 QObject **/) *QTcpSocket {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()

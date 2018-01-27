@@ -1,9 +1,9 @@
 package qtmock
 
 import (
-	"mkuse/cffiqt"
 	"unsafe"
 
+	"qt.go/cffiqt"
 	"qt.go/qtcore"
 )
 

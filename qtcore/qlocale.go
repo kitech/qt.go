@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQLocale() *QLocale {
 // /usr/include/qt/QtCore/qlocale.h:930
 // index:1
 // Public
-// void QLocale(const class QString &)
+// void QLocale(const QString &)
 func NewQLocale_1(name *QString) *QLocale {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = name.GetCthis()
@@ -93,7 +93,7 @@ func NewQLocale_1(name *QString) *QLocale {
 // /usr/include/qt/QtCore/qlocale.h:931
 // index:2
 // Public
-// void QLocale(enum QLocale::Language, enum QLocale::Country)
+// void QLocale(QLocale::Language, QLocale::Country)
 func NewQLocale_2(language int, country int) *QLocale {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_7CountryE", ffiqt.FFI_TYPE_VOID, cthis, language, country)
@@ -105,7 +105,7 @@ func NewQLocale_2(language int, country int) *QLocale {
 // /usr/include/qt/QtCore/qlocale.h:932
 // index:3
 // Public
-// void QLocale(enum QLocale::Language, enum QLocale::Script, enum QLocale::Country)
+// void QLocale(QLocale::Language, QLocale::Script, QLocale::Country)
 func NewQLocale_3(language int, script int, country int) *QLocale {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_6ScriptENS_7CountryE", ffiqt.FFI_TYPE_VOID, cthis, language, script, country)
@@ -126,7 +126,7 @@ func DeleteQLocale(*QLocale) {
 // /usr/include/qt/QtCore/qlocale.h:940
 // index:0
 // Public inline
-// void swap(class QLocale &)
+// void swap(QLocale &)
 func (this *QLocale) Swap(other *QLocale) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -225,7 +225,7 @@ func (this *QLocale) NativeCountryName() *QString /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:952
 // index:0
 // Public
-// short toShort(const class QString &, _Bool *)
+// short toShort(const QString &, bool *)
 func (this *QLocale) ToShort(s *QString, ok unsafe.Pointer /*666*/) int16 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toShortERK7QStringPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -237,7 +237,7 @@ func (this *QLocale) ToShort(s *QString, ok unsafe.Pointer /*666*/) int16 {
 // /usr/include/qt/QtCore/qlocale.h:961
 // index:1
 // Public
-// short toShort(const class QStringRef &, _Bool *)
+// short toShort(const QStringRef &, bool *)
 func (this *QLocale) ToShort_1(s *QStringRef, ok unsafe.Pointer /*666*/) int16 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toShortERK10QStringRefPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -249,7 +249,7 @@ func (this *QLocale) ToShort_1(s *QStringRef, ok unsafe.Pointer /*666*/) int16 {
 // /usr/include/qt/QtCore/qlocale.h:971
 // index:2
 // Public
-// short toShort(class QStringView, _Bool *)
+// short toShort(QStringView, bool *)
 func (this *QLocale) ToShort_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) int16 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toShortE11QStringViewPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -261,7 +261,7 @@ func (this *QLocale) ToShort_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/
 // /usr/include/qt/QtCore/qlocale.h:953
 // index:0
 // Public
-// ushort toUShort(const class QString &, _Bool *)
+// ushort toUShort(const QString &, bool *)
 func (this *QLocale) ToUShort(s *QString, ok unsafe.Pointer /*666*/) uint16 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toUShortERK7QStringPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -273,7 +273,7 @@ func (this *QLocale) ToUShort(s *QString, ok unsafe.Pointer /*666*/) uint16 {
 // /usr/include/qt/QtCore/qlocale.h:962
 // index:1
 // Public
-// ushort toUShort(const class QStringRef &, _Bool *)
+// ushort toUShort(const QStringRef &, bool *)
 func (this *QLocale) ToUShort_1(s *QStringRef, ok unsafe.Pointer /*666*/) uint16 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toUShortERK10QStringRefPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -285,7 +285,7 @@ func (this *QLocale) ToUShort_1(s *QStringRef, ok unsafe.Pointer /*666*/) uint16
 // /usr/include/qt/QtCore/qlocale.h:972
 // index:2
 // Public
-// ushort toUShort(class QStringView, _Bool *)
+// ushort toUShort(QStringView, bool *)
 func (this *QLocale) ToUShort_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) uint16 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toUShortE11QStringViewPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -297,7 +297,7 @@ func (this *QLocale) ToUShort_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*
 // /usr/include/qt/QtCore/qlocale.h:954
 // index:0
 // Public
-// int toInt(const class QString &, _Bool *)
+// int toInt(const QString &, bool *)
 func (this *QLocale) ToInt(s *QString, ok unsafe.Pointer /*666*/) int {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale5toIntERK7QStringPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -309,7 +309,7 @@ func (this *QLocale) ToInt(s *QString, ok unsafe.Pointer /*666*/) int {
 // /usr/include/qt/QtCore/qlocale.h:963
 // index:1
 // Public
-// int toInt(const class QStringRef &, _Bool *)
+// int toInt(const QStringRef &, bool *)
 func (this *QLocale) ToInt_1(s *QStringRef, ok unsafe.Pointer /*666*/) int {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale5toIntERK10QStringRefPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -321,7 +321,7 @@ func (this *QLocale) ToInt_1(s *QStringRef, ok unsafe.Pointer /*666*/) int {
 // /usr/include/qt/QtCore/qlocale.h:973
 // index:2
 // Public
-// int toInt(class QStringView, _Bool *)
+// int toInt(QStringView, bool *)
 func (this *QLocale) ToInt_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) int {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale5toIntE11QStringViewPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -333,7 +333,7 @@ func (this *QLocale) ToInt_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) 
 // /usr/include/qt/QtCore/qlocale.h:955
 // index:0
 // Public
-// uint toUInt(const class QString &, _Bool *)
+// uint toUInt(const QString &, bool *)
 func (this *QLocale) ToUInt(s *QString, ok unsafe.Pointer /*666*/) uint {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toUIntERK7QStringPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -345,7 +345,7 @@ func (this *QLocale) ToUInt(s *QString, ok unsafe.Pointer /*666*/) uint {
 // /usr/include/qt/QtCore/qlocale.h:964
 // index:1
 // Public
-// uint toUInt(const class QStringRef &, _Bool *)
+// uint toUInt(const QStringRef &, bool *)
 func (this *QLocale) ToUInt_1(s *QStringRef, ok unsafe.Pointer /*666*/) uint {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toUIntERK10QStringRefPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -357,7 +357,7 @@ func (this *QLocale) ToUInt_1(s *QStringRef, ok unsafe.Pointer /*666*/) uint {
 // /usr/include/qt/QtCore/qlocale.h:974
 // index:2
 // Public
-// uint toUInt(class QStringView, _Bool *)
+// uint toUInt(QStringView, bool *)
 func (this *QLocale) ToUInt_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) uint {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toUIntE11QStringViewPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -369,7 +369,7 @@ func (this *QLocale) ToUInt_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/)
 // /usr/include/qt/QtCore/qlocale.h:956
 // index:0
 // Public
-// qlonglong toLongLong(const class QString &, _Bool *)
+// qlonglong toLongLong(const QString &, bool *)
 func (this *QLocale) ToLongLong(s *QString, ok unsafe.Pointer /*666*/) int64 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10toLongLongERK7QStringPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -381,7 +381,7 @@ func (this *QLocale) ToLongLong(s *QString, ok unsafe.Pointer /*666*/) int64 {
 // /usr/include/qt/QtCore/qlocale.h:965
 // index:1
 // Public
-// qlonglong toLongLong(const class QStringRef &, _Bool *)
+// qlonglong toLongLong(const QStringRef &, bool *)
 func (this *QLocale) ToLongLong_1(s *QStringRef, ok unsafe.Pointer /*666*/) int64 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10toLongLongERK10QStringRefPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -393,7 +393,7 @@ func (this *QLocale) ToLongLong_1(s *QStringRef, ok unsafe.Pointer /*666*/) int6
 // /usr/include/qt/QtCore/qlocale.h:975
 // index:2
 // Public
-// qlonglong toLongLong(class QStringView, _Bool *)
+// qlonglong toLongLong(QStringView, bool *)
 func (this *QLocale) ToLongLong_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) int64 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10toLongLongE11QStringViewPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -405,7 +405,7 @@ func (this *QLocale) ToLongLong_2(s *QStringView /*123*/, ok unsafe.Pointer /*66
 // /usr/include/qt/QtCore/qlocale.h:957
 // index:0
 // Public
-// qulonglong toULongLong(const class QString &, _Bool *)
+// qulonglong toULongLong(const QString &, bool *)
 func (this *QLocale) ToULongLong(s *QString, ok unsafe.Pointer /*666*/) uint64 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11toULongLongERK7QStringPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -417,7 +417,7 @@ func (this *QLocale) ToULongLong(s *QString, ok unsafe.Pointer /*666*/) uint64 {
 // /usr/include/qt/QtCore/qlocale.h:966
 // index:1
 // Public
-// qulonglong toULongLong(const class QStringRef &, _Bool *)
+// qulonglong toULongLong(const QStringRef &, bool *)
 func (this *QLocale) ToULongLong_1(s *QStringRef, ok unsafe.Pointer /*666*/) uint64 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11toULongLongERK10QStringRefPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -429,7 +429,7 @@ func (this *QLocale) ToULongLong_1(s *QStringRef, ok unsafe.Pointer /*666*/) uin
 // /usr/include/qt/QtCore/qlocale.h:976
 // index:2
 // Public
-// qulonglong toULongLong(class QStringView, _Bool *)
+// qulonglong toULongLong(QStringView, bool *)
 func (this *QLocale) ToULongLong_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) uint64 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11toULongLongE11QStringViewPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -441,7 +441,7 @@ func (this *QLocale) ToULongLong_2(s *QStringView /*123*/, ok unsafe.Pointer /*6
 // /usr/include/qt/QtCore/qlocale.h:958
 // index:0
 // Public
-// float toFloat(const class QString &, _Bool *)
+// float toFloat(const QString &, bool *)
 func (this *QLocale) ToFloat(s *QString, ok unsafe.Pointer /*666*/) float32 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toFloatERK7QStringPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -453,7 +453,7 @@ func (this *QLocale) ToFloat(s *QString, ok unsafe.Pointer /*666*/) float32 {
 // /usr/include/qt/QtCore/qlocale.h:967
 // index:1
 // Public
-// float toFloat(const class QStringRef &, _Bool *)
+// float toFloat(const QStringRef &, bool *)
 func (this *QLocale) ToFloat_1(s *QStringRef, ok unsafe.Pointer /*666*/) float32 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toFloatERK10QStringRefPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -465,7 +465,7 @@ func (this *QLocale) ToFloat_1(s *QStringRef, ok unsafe.Pointer /*666*/) float32
 // /usr/include/qt/QtCore/qlocale.h:977
 // index:2
 // Public
-// float toFloat(class QStringView, _Bool *)
+// float toFloat(QStringView, bool *)
 func (this *QLocale) ToFloat_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) float32 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toFloatE11QStringViewPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -477,7 +477,7 @@ func (this *QLocale) ToFloat_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/
 // /usr/include/qt/QtCore/qlocale.h:959
 // index:0
 // Public
-// double toDouble(const class QString &, _Bool *)
+// double toDouble(const QString &, bool *)
 func (this *QLocale) ToDouble(s *QString, ok unsafe.Pointer /*666*/) float64 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toDoubleERK7QStringPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -489,7 +489,7 @@ func (this *QLocale) ToDouble(s *QString, ok unsafe.Pointer /*666*/) float64 {
 // /usr/include/qt/QtCore/qlocale.h:968
 // index:1
 // Public
-// double toDouble(const class QStringRef &, _Bool *)
+// double toDouble(const QStringRef &, bool *)
 func (this *QLocale) ToDouble_1(s *QStringRef, ok unsafe.Pointer /*666*/) float64 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toDoubleERK10QStringRefPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -501,7 +501,7 @@ func (this *QLocale) ToDouble_1(s *QStringRef, ok unsafe.Pointer /*666*/) float6
 // /usr/include/qt/QtCore/qlocale.h:978
 // index:2
 // Public
-// double toDouble(class QStringView, _Bool *)
+// double toDouble(QStringView, bool *)
 func (this *QLocale) ToDouble_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) float64 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toDoubleE11QStringViewPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -625,7 +625,7 @@ func (this *QLocale) ToString_7(i float32, f byte, prec int) *QString /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:990
 // index:8
 // Public
-// QString toString(const class QDate &, const class QString &)
+// QString toString(const QDate &, const QString &)
 func (this *QLocale) ToString_8(date *QDate, formatStr *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = date.GetCthis()
@@ -641,7 +641,7 @@ func (this *QLocale) ToString_8(date *QDate, formatStr *QString) *QString /*123*
 // /usr/include/qt/QtCore/qlocale.h:991
 // index:9
 // Public
-// QString toString(const class QTime &, const class QString &)
+// QString toString(const QTime &, const QString &)
 func (this *QLocale) ToString_9(time *QTime, formatStr *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = time.GetCthis()
@@ -657,7 +657,7 @@ func (this *QLocale) ToString_9(time *QTime, formatStr *QString) *QString /*123*
 // /usr/include/qt/QtCore/qlocale.h:992
 // index:10
 // Public
-// QString toString(const class QDateTime &, const class QString &)
+// QString toString(const QDateTime &, const QString &)
 func (this *QLocale) ToString_10(dateTime *QDateTime, format *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = dateTime.GetCthis()
@@ -673,7 +673,7 @@ func (this *QLocale) ToString_10(dateTime *QDateTime, format *QString) *QString 
 // /usr/include/qt/QtCore/qlocale.h:994
 // index:11
 // Public
-// QString toString(const class QDate &, class QStringView)
+// QString toString(const QDate &, QStringView)
 func (this *QLocale) ToString_11(date *QDate, formatStr *QStringView /*123*/) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = date.GetCthis()
@@ -689,7 +689,7 @@ func (this *QLocale) ToString_11(date *QDate, formatStr *QStringView /*123*/) *Q
 // /usr/include/qt/QtCore/qlocale.h:995
 // index:12
 // Public
-// QString toString(const class QTime &, class QStringView)
+// QString toString(const QTime &, QStringView)
 func (this *QLocale) ToString_12(time *QTime, formatStr *QStringView /*123*/) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = time.GetCthis()
@@ -705,7 +705,7 @@ func (this *QLocale) ToString_12(time *QTime, formatStr *QStringView /*123*/) *Q
 // /usr/include/qt/QtCore/qlocale.h:996
 // index:13
 // Public
-// QString toString(const class QDateTime &, class QStringView)
+// QString toString(const QDateTime &, QStringView)
 func (this *QLocale) ToString_13(dateTime *QDateTime, format *QStringView /*123*/) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = dateTime.GetCthis()
@@ -721,7 +721,7 @@ func (this *QLocale) ToString_13(dateTime *QDateTime, format *QStringView /*123*
 // /usr/include/qt/QtCore/qlocale.h:997
 // index:14
 // Public
-// QString toString(const class QDate &, enum QLocale::FormatType)
+// QString toString(const QDate &, QLocale::FormatType)
 func (this *QLocale) ToString_14(date *QDate, format int) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = date.GetCthis()
@@ -736,7 +736,7 @@ func (this *QLocale) ToString_14(date *QDate, format int) *QString /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:998
 // index:15
 // Public
-// QString toString(const class QTime &, enum QLocale::FormatType)
+// QString toString(const QTime &, QLocale::FormatType)
 func (this *QLocale) ToString_15(time *QTime, format int) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = time.GetCthis()
@@ -751,7 +751,7 @@ func (this *QLocale) ToString_15(time *QTime, format int) *QString /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:999
 // index:16
 // Public
-// QString toString(const class QDateTime &, enum QLocale::FormatType)
+// QString toString(const QDateTime &, QLocale::FormatType)
 func (this *QLocale) ToString_16(dateTime *QDateTime, format int) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = dateTime.GetCthis()
@@ -766,7 +766,7 @@ func (this *QLocale) ToString_16(dateTime *QDateTime, format int) *QString /*123
 // /usr/include/qt/QtCore/qlocale.h:1001
 // index:0
 // Public
-// QString dateFormat(enum QLocale::FormatType)
+// QString dateFormat(QLocale::FormatType)
 func (this *QLocale) DateFormat(format int) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10dateFormatENS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), format)
@@ -780,7 +780,7 @@ func (this *QLocale) DateFormat(format int) *QString /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1002
 // index:0
 // Public
-// QString timeFormat(enum QLocale::FormatType)
+// QString timeFormat(QLocale::FormatType)
 func (this *QLocale) TimeFormat(format int) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10timeFormatENS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), format)
@@ -794,7 +794,7 @@ func (this *QLocale) TimeFormat(format int) *QString /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1003
 // index:0
 // Public
-// QString dateTimeFormat(enum QLocale::FormatType)
+// QString dateTimeFormat(QLocale::FormatType)
 func (this *QLocale) DateTimeFormat(format int) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale14dateTimeFormatENS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), format)
@@ -808,7 +808,7 @@ func (this *QLocale) DateTimeFormat(format int) *QString /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1005
 // index:0
 // Public
-// QDate toDate(const class QString &, enum QLocale::FormatType)
+// QDate toDate(const QString &, QLocale::FormatType)
 func (this *QLocale) ToDate(string *QString, arg1 int) *QDate /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = string.GetCthis()
@@ -823,7 +823,7 @@ func (this *QLocale) ToDate(string *QString, arg1 int) *QDate /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1008
 // index:1
 // Public
-// QDate toDate(const class QString &, const class QString &)
+// QDate toDate(const QString &, const QString &)
 func (this *QLocale) ToDate_1(string *QString, format *QString) *QDate /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = string.GetCthis()
@@ -839,7 +839,7 @@ func (this *QLocale) ToDate_1(string *QString, format *QString) *QDate /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1006
 // index:0
 // Public
-// QTime toTime(const class QString &, enum QLocale::FormatType)
+// QTime toTime(const QString &, QLocale::FormatType)
 func (this *QLocale) ToTime(string *QString, arg1 int) *QTime /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = string.GetCthis()
@@ -854,7 +854,7 @@ func (this *QLocale) ToTime(string *QString, arg1 int) *QTime /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1009
 // index:1
 // Public
-// QTime toTime(const class QString &, const class QString &)
+// QTime toTime(const QString &, const QString &)
 func (this *QLocale) ToTime_1(string *QString, format *QString) *QTime /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = string.GetCthis()
@@ -870,7 +870,7 @@ func (this *QLocale) ToTime_1(string *QString, format *QString) *QTime /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1007
 // index:0
 // Public
-// QDateTime toDateTime(const class QString &, enum QLocale::FormatType)
+// QDateTime toDateTime(const QString &, QLocale::FormatType)
 func (this *QLocale) ToDateTime(string *QString, format int) *QDateTime /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = string.GetCthis()
@@ -885,7 +885,7 @@ func (this *QLocale) ToDateTime(string *QString, format int) *QDateTime /*123*/ 
 // /usr/include/qt/QtCore/qlocale.h:1010
 // index:1
 // Public
-// QDateTime toDateTime(const class QString &, const class QString &)
+// QDateTime toDateTime(const QString &, const QString &)
 func (this *QLocale) ToDateTime_1(string *QString, format *QString) *QDateTime /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = string.GetCthis()
@@ -999,7 +999,7 @@ func (this *QLocale) Exponential() *QChar /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1023
 // index:0
 // Public
-// QString monthName(int, enum QLocale::FormatType)
+// QString monthName(int, QLocale::FormatType)
 func (this *QLocale) MonthName(arg0 int, format int) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale9monthNameEiNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0, format)
@@ -1013,7 +1013,7 @@ func (this *QLocale) MonthName(arg0 int, format int) *QString /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1024
 // index:0
 // Public
-// QString standaloneMonthName(int, enum QLocale::FormatType)
+// QString standaloneMonthName(int, QLocale::FormatType)
 func (this *QLocale) StandaloneMonthName(arg0 int, format int) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale19standaloneMonthNameEiNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0, format)
@@ -1027,7 +1027,7 @@ func (this *QLocale) StandaloneMonthName(arg0 int, format int) *QString /*123*/ 
 // /usr/include/qt/QtCore/qlocale.h:1025
 // index:0
 // Public
-// QString dayName(int, enum QLocale::FormatType)
+// QString dayName(int, QLocale::FormatType)
 func (this *QLocale) DayName(arg0 int, format int) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7dayNameEiNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0, format)
@@ -1041,7 +1041,7 @@ func (this *QLocale) DayName(arg0 int, format int) *QString /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1026
 // index:0
 // Public
-// QString standaloneDayName(int, enum QLocale::FormatType)
+// QString standaloneDayName(int, QLocale::FormatType)
 func (this *QLocale) StandaloneDayName(arg0 int, format int) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale17standaloneDayNameEiNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0, format)
@@ -1116,7 +1116,7 @@ func (this *QLocale) TextDirection() int {
 // /usr/include/qt/QtCore/qlocale.h:1038
 // index:0
 // Public
-// QString toUpper(const class QString &)
+// QString toUpper(const QString &)
 func (this *QLocale) ToUpper(str *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = str.GetCthis()
@@ -1131,7 +1131,7 @@ func (this *QLocale) ToUpper(str *QString) *QString /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1039
 // index:0
 // Public
-// QString toLower(const class QString &)
+// QString toLower(const QString &)
 func (this *QLocale) ToLower(str *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = str.GetCthis()
@@ -1146,7 +1146,7 @@ func (this *QLocale) ToLower(str *QString) *QString /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1041
 // index:0
 // Public
-// QString currencySymbol(enum QLocale::CurrencySymbolFormat)
+// QString currencySymbol(QLocale::CurrencySymbolFormat)
 func (this *QLocale) CurrencySymbol(arg0 int) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale14currencySymbolENS_20CurrencySymbolFormatE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0)
@@ -1160,7 +1160,7 @@ func (this *QLocale) CurrencySymbol(arg0 int) *QString /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1042
 // index:0
 // Public
-// QString toCurrencyString(qlonglong, const class QString &)
+// QString toCurrencyString(qlonglong, const QString &)
 func (this *QLocale) ToCurrencyString(arg0 int64, symbol *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = symbol.GetCthis()
@@ -1175,7 +1175,7 @@ func (this *QLocale) ToCurrencyString(arg0 int64, symbol *QString) *QString /*12
 // /usr/include/qt/QtCore/qlocale.h:1043
 // index:1
 // Public
-// QString toCurrencyString(qulonglong, const class QString &)
+// QString toCurrencyString(qulonglong, const QString &)
 func (this *QLocale) ToCurrencyString_1(arg0 uint64, symbol *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = symbol.GetCthis()
@@ -1190,7 +1190,7 @@ func (this *QLocale) ToCurrencyString_1(arg0 uint64, symbol *QString) *QString /
 // /usr/include/qt/QtCore/qlocale.h:1044
 // index:2
 // Public inline
-// QString toCurrencyString(short, const class QString &)
+// QString toCurrencyString(short, const QString &)
 func (this *QLocale) ToCurrencyString_2(arg0 int16, symbol *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = symbol.GetCthis()
@@ -1205,7 +1205,7 @@ func (this *QLocale) ToCurrencyString_2(arg0 int16, symbol *QString) *QString /*
 // /usr/include/qt/QtCore/qlocale.h:1045
 // index:3
 // Public inline
-// QString toCurrencyString(ushort, const class QString &)
+// QString toCurrencyString(ushort, const QString &)
 func (this *QLocale) ToCurrencyString_3(arg0 uint16, symbol *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = symbol.GetCthis()
@@ -1220,7 +1220,7 @@ func (this *QLocale) ToCurrencyString_3(arg0 uint16, symbol *QString) *QString /
 // /usr/include/qt/QtCore/qlocale.h:1046
 // index:4
 // Public inline
-// QString toCurrencyString(int, const class QString &)
+// QString toCurrencyString(int, const QString &)
 func (this *QLocale) ToCurrencyString_4(arg0 int, symbol *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = symbol.GetCthis()
@@ -1235,7 +1235,7 @@ func (this *QLocale) ToCurrencyString_4(arg0 int, symbol *QString) *QString /*12
 // /usr/include/qt/QtCore/qlocale.h:1047
 // index:5
 // Public inline
-// QString toCurrencyString(uint, const class QString &)
+// QString toCurrencyString(uint, const QString &)
 func (this *QLocale) ToCurrencyString_5(arg0 uint, symbol *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = symbol.GetCthis()
@@ -1250,7 +1250,7 @@ func (this *QLocale) ToCurrencyString_5(arg0 uint, symbol *QString) *QString /*1
 // /usr/include/qt/QtCore/qlocale.h:1053
 // index:6
 // Public
-// QString toCurrencyString(double, const class QString &)
+// QString toCurrencyString(double, const QString &)
 func (this *QLocale) ToCurrencyString_6(arg0 float64, symbol *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = symbol.GetCthis()
@@ -1265,7 +1265,7 @@ func (this *QLocale) ToCurrencyString_6(arg0 float64, symbol *QString) *QString 
 // /usr/include/qt/QtCore/qlocale.h:1054
 // index:7
 // Public
-// QString toCurrencyString(double, const class QString &, int)
+// QString toCurrencyString(double, const QString &, int)
 func (this *QLocale) ToCurrencyString_7(arg0 float64, symbol *QString, precision int) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = symbol.GetCthis()
@@ -1280,7 +1280,7 @@ func (this *QLocale) ToCurrencyString_7(arg0 float64, symbol *QString, precision
 // /usr/include/qt/QtCore/qlocale.h:1055
 // index:8
 // Public inline
-// QString toCurrencyString(float, const class QString &)
+// QString toCurrencyString(float, const QString &)
 func (this *QLocale) ToCurrencyString_8(i float32, symbol *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = symbol.GetCthis()
@@ -1295,7 +1295,7 @@ func (this *QLocale) ToCurrencyString_8(i float32, symbol *QString) *QString /*1
 // /usr/include/qt/QtCore/qlocale.h:1057
 // index:9
 // Public inline
-// QString toCurrencyString(float, const class QString &, int)
+// QString toCurrencyString(float, const QString &, int)
 func (this *QLocale) ToCurrencyString_9(i float32, symbol *QString, precision int) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = symbol.GetCthis()
@@ -1310,7 +1310,7 @@ func (this *QLocale) ToCurrencyString_9(i float32, symbol *QString, precision in
 // /usr/include/qt/QtCore/qlocale.h:1068
 // index:0
 // Public static
-// QString languageToString(enum QLocale::Language)
+// QString languageToString(QLocale::Language)
 func (this *QLocale) LanguageToString(language int) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale16languageToStringENS_8LanguageE", ffiqt.FFI_TYPE_POINTER, language)
 	gopp.ErrPrint(err, rv)
@@ -1327,7 +1327,7 @@ func QLocale_LanguageToString(language int) *QString /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1069
 // index:0
 // Public static
-// QString countryToString(enum QLocale::Country)
+// QString countryToString(QLocale::Country)
 func (this *QLocale) CountryToString(country int) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale15countryToStringENS_7CountryE", ffiqt.FFI_TYPE_POINTER, country)
 	gopp.ErrPrint(err, rv)
@@ -1344,7 +1344,7 @@ func QLocale_CountryToString(country int) *QString /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1070
 // index:0
 // Public static
-// QString scriptToString(enum QLocale::Script)
+// QString scriptToString(QLocale::Script)
 func (this *QLocale) ScriptToString(script int) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale14scriptToStringENS_6ScriptE", ffiqt.FFI_TYPE_POINTER, script)
 	gopp.ErrPrint(err, rv)
@@ -1361,7 +1361,7 @@ func QLocale_ScriptToString(script int) *QString /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1071
 // index:0
 // Public static
-// void setDefault(const class QLocale &)
+// void setDefault(const QLocale &)
 func (this *QLocale) SetDefault(locale *QLocale) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale10setDefaultERKS_", ffiqt.FFI_TYPE_POINTER, locale)
 	gopp.ErrPrint(err, rv)
@@ -1419,7 +1419,7 @@ func (this *QLocale) NumberOptions() int {
 // /usr/include/qt/QtCore/qlocale.h:1083
 // index:0
 // Public
-// QString quoteString(const class QString &, enum QLocale::QuotationStyle)
+// QString quoteString(const QString &, QLocale::QuotationStyle)
 func (this *QLocale) QuoteString(str *QString, style int) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = str.GetCthis()
@@ -1434,7 +1434,7 @@ func (this *QLocale) QuoteString(str *QString, style int) *QString /*123*/ {
 // /usr/include/qt/QtCore/qlocale.h:1084
 // index:1
 // Public
-// QString quoteString(const class QStringRef &, enum QLocale::QuotationStyle)
+// QString quoteString(const QStringRef &, QLocale::QuotationStyle)
 func (this *QLocale) QuoteString_1(str *QStringRef, style int) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = str.GetCthis()
@@ -1449,7 +1449,7 @@ func (this *QLocale) QuoteString_1(str *QStringRef, style int) *QString /*123*/ 
 // /usr/include/qt/QtCore/qlocale.h:1086
 // index:0
 // Public
-// QString createSeparatedList(const class QStringList &)
+// QString createSeparatedList(const QStringList &)
 func (this *QLocale) CreateSeparatedList(strl *QStringList) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = strl.GetCthis()

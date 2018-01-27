@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -98,7 +98,7 @@ func NewQMessageLogContext_1(fileName string, lineNumber int, functionName strin
 // /usr/include/qt/QtCore/qlogging.h:71
 // index:0
 // Public
-// void copy(const class QMessageLogContext &)
+// void copy(const QMessageLogContext &)
 func (this *QMessageLogContext) Copy(logContext *QMessageLogContext) {
 	var convArg0 = logContext.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QMessageLogContext4copyERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

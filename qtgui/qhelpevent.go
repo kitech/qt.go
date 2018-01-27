@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -73,7 +73,7 @@ func (*QHelpEvent) NewFromPointer(cthis unsafe.Pointer) *QHelpEvent {
 // /usr/include/qt/QtGui/qevent.h:680
 // index:0
 // Public
-// void QHelpEvent(enum QEvent::Type, const class QPoint &, const class QPoint &)
+// void QHelpEvent(QEvent::Type, const QPoint &, const QPoint &)
 func NewQHelpEvent(type_ int, pos *qtcore.QPoint, globalPos *qtcore.QPoint) *QHelpEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg1 = pos.GetCthis()

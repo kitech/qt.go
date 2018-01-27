@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QOperatingSystemVersion) NewFromPointer(cthis unsafe.Pointer) *QOperating
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:85
 // index:0
 // Public inline
-// void QOperatingSystemVersion(enum QOperatingSystemVersion::OSType, int, int, int)
+// void QOperatingSystemVersion(QOperatingSystemVersion::OSType, int, int, int)
 func NewQOperatingSystemVersion(osType int, vmajor int, vminor int, vmicro int) *QOperatingSystemVersion {
 	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QOperatingSystemVersionC2ENS_6OSTypeEiii", ffiqt.FFI_TYPE_VOID, cthis, osType, vmajor, vminor, vmicro)

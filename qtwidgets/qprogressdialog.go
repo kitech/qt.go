@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QProgressDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // /usr/include/qt/QtWidgets/qprogressdialog.h:71
 // index:0
 // Public
-// void QProgressDialog(class QWidget *, Qt::WindowFlags)
+// void QProgressDialog(QWidget *, Qt::WindowFlags)
 func NewQProgressDialog(parent *QWidget /*777 QWidget **/, flags int) *QProgressDialog {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -102,7 +102,7 @@ func NewQProgressDialog(parent *QWidget /*777 QWidget **/, flags int) *QProgress
 // /usr/include/qt/QtWidgets/qprogressdialog.h:72
 // index:1
 // Public
-// void QProgressDialog(const class QString &, const class QString &, int, int, class QWidget *, Qt::WindowFlags)
+// void QProgressDialog(const QString &, const QString &, int, int, QWidget *, Qt::WindowFlags)
 func NewQProgressDialog_1(labelText *qtcore.QString, cancelButtonText *qtcore.QString, minimum int, maximum int, parent *QWidget /*777 QWidget **/, flags int) *QProgressDialog {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = labelText.GetCthis()
@@ -126,7 +126,7 @@ func DeleteQProgressDialog(*QProgressDialog) {
 // /usr/include/qt/QtWidgets/qprogressdialog.h:77
 // index:0
 // Public
-// void setLabel(class QLabel *)
+// void setLabel(QLabel *)
 func (this *QProgressDialog) SetLabel(label *QLabel /*777 QLabel **/) {
 	var convArg0 = label.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog8setLabelEP6QLabel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -136,7 +136,7 @@ func (this *QProgressDialog) SetLabel(label *QLabel /*777 QLabel **/) {
 // /usr/include/qt/QtWidgets/qprogressdialog.h:78
 // index:0
 // Public
-// void setCancelButton(class QPushButton *)
+// void setCancelButton(QPushButton *)
 func (this *QProgressDialog) SetCancelButton(button *QPushButton /*777 QPushButton **/) {
 	var convArg0 = button.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog15setCancelButtonEP11QPushButton", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -146,7 +146,7 @@ func (this *QProgressDialog) SetCancelButton(button *QPushButton /*777 QPushButt
 // /usr/include/qt/QtWidgets/qprogressdialog.h:79
 // index:0
 // Public
-// void setBar(class QProgressBar *)
+// void setBar(QProgressBar *)
 func (this *QProgressDialog) SetBar(bar *QProgressBar /*777 QProgressBar **/) {
 	var convArg0 = bar.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog6setBarEP12QProgressBar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -239,7 +239,7 @@ func (this *QProgressDialog) MinimumDuration() int {
 // /usr/include/qt/QtWidgets/qprogressdialog.h:93
 // index:0
 // Public
-// void setAutoReset(_Bool)
+// void setAutoReset(bool)
 func (this *QProgressDialog) SetAutoReset(reset bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog12setAutoResetEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), reset)
 	gopp.ErrPrint(err, rv)
@@ -259,7 +259,7 @@ func (this *QProgressDialog) AutoReset() bool {
 // /usr/include/qt/QtWidgets/qprogressdialog.h:95
 // index:0
 // Public
-// void setAutoClose(_Bool)
+// void setAutoClose(bool)
 func (this *QProgressDialog) SetAutoClose(close bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog12setAutoCloseEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), close)
 	gopp.ErrPrint(err, rv)
@@ -279,7 +279,7 @@ func (this *QProgressDialog) AutoClose() bool {
 // /usr/include/qt/QtWidgets/qprogressdialog.h:99
 // index:0
 // Public
-// void open(class QObject *, const char *)
+// void open(QObject *, const char *)
 func (this *QProgressDialog) Open(receiver *qtcore.QObject /*777 QObject **/, member string) {
 	var convArg0 = receiver.GetCthis()
 	var convArg1 = qtrt.CString(member)
@@ -345,7 +345,7 @@ func (this *QProgressDialog) SetValue(progress int) {
 // /usr/include/qt/QtWidgets/qprogressdialog.h:108
 // index:0
 // Public
-// void setLabelText(const class QString &)
+// void setLabelText(const QString &)
 func (this *QProgressDialog) SetLabelText(text *qtcore.QString) {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog12setLabelTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -355,7 +355,7 @@ func (this *QProgressDialog) SetLabelText(text *qtcore.QString) {
 // /usr/include/qt/QtWidgets/qprogressdialog.h:109
 // index:0
 // Public
-// void setCancelButtonText(const class QString &)
+// void setCancelButtonText(const QString &)
 func (this *QProgressDialog) SetCancelButtonText(text *qtcore.QString) {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog19setCancelButtonTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -383,7 +383,7 @@ func (this *QProgressDialog) Canceled() {
 // /usr/include/qt/QtWidgets/qprogressdialog.h:116
 // index:0
 // Protected virtual
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QProgressDialog) ResizeEvent(event *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -393,7 +393,7 @@ func (this *QProgressDialog) ResizeEvent(event *qtgui.QResizeEvent /*777 QResize
 // /usr/include/qt/QtWidgets/qprogressdialog.h:117
 // index:0
 // Protected virtual
-// void closeEvent(class QCloseEvent *)
+// void closeEvent(QCloseEvent *)
 func (this *QProgressDialog) CloseEvent(event *qtgui.QCloseEvent /*777 QCloseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog10closeEventEP11QCloseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -403,7 +403,7 @@ func (this *QProgressDialog) CloseEvent(event *qtgui.QCloseEvent /*777 QCloseEve
 // /usr/include/qt/QtWidgets/qprogressdialog.h:118
 // index:0
 // Protected virtual
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QProgressDialog) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -413,7 +413,7 @@ func (this *QProgressDialog) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) 
 // /usr/include/qt/QtWidgets/qprogressdialog.h:119
 // index:0
 // Protected virtual
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QProgressDialog) ShowEvent(event *qtgui.QShowEvent /*777 QShowEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog9showEventEP10QShowEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

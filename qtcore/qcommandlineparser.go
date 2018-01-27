@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -89,7 +89,7 @@ func DeleteQCommandLineParser(*QCommandLineParser) {
 // /usr/include/qt/QtCore/qcommandlineparser.h:66
 // index:0
 // Public
-// void setSingleDashWordOptionMode(enum QCommandLineParser::SingleDashWordOptionMode)
+// void setSingleDashWordOptionMode(QCommandLineParser::SingleDashWordOptionMode)
 func (this *QCommandLineParser) SetSingleDashWordOptionMode(parsingMode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser27setSingleDashWordOptionModeENS_24SingleDashWordOptionModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), parsingMode)
 	gopp.ErrPrint(err, rv)
@@ -98,7 +98,7 @@ func (this *QCommandLineParser) SetSingleDashWordOptionMode(parsingMode int) {
 // /usr/include/qt/QtCore/qcommandlineparser.h:72
 // index:0
 // Public
-// void setOptionsAfterPositionalArgumentsMode(enum QCommandLineParser::OptionsAfterPositionalArgumentsMode)
+// void setOptionsAfterPositionalArgumentsMode(QCommandLineParser::OptionsAfterPositionalArgumentsMode)
 func (this *QCommandLineParser) SetOptionsAfterPositionalArgumentsMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser38setOptionsAfterPositionalArgumentsModeENS_35OptionsAfterPositionalArgumentsModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -107,7 +107,7 @@ func (this *QCommandLineParser) SetOptionsAfterPositionalArgumentsMode(mode int)
 // /usr/include/qt/QtCore/qcommandlineparser.h:74
 // index:0
 // Public
-// bool addOption(const class QCommandLineOption &)
+// bool addOption(const QCommandLineOption &)
 func (this *QCommandLineParser) AddOption(commandLineOption *QCommandLineOption) bool {
 	var convArg0 = commandLineOption.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser9addOptionERK18QCommandLineOption", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -147,7 +147,7 @@ func (this *QCommandLineParser) AddHelpOption() *QCommandLineOption /*123*/ {
 // /usr/include/qt/QtCore/qcommandlineparser.h:79
 // index:0
 // Public
-// void setApplicationDescription(const class QString &)
+// void setApplicationDescription(const QString &)
 func (this *QCommandLineParser) SetApplicationDescription(description *QString) {
 	var convArg0 = description.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser25setApplicationDescriptionERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -171,7 +171,7 @@ func (this *QCommandLineParser) ApplicationDescription() *QString /*123*/ {
 // /usr/include/qt/QtCore/qcommandlineparser.h:81
 // index:0
 // Public
-// void addPositionalArgument(const class QString &, const class QString &, const class QString &)
+// void addPositionalArgument(const QString &, const QString &, const QString &)
 func (this *QCommandLineParser) AddPositionalArgument(name *QString, description *QString, syntax *QString) {
 	var convArg0 = name.GetCthis()
 	var convArg1 = description.GetCthis()
@@ -192,7 +192,7 @@ func (this *QCommandLineParser) ClearPositionalArguments() {
 // /usr/include/qt/QtCore/qcommandlineparser.h:84
 // index:0
 // Public
-// void process(const class QStringList &)
+// void process(const QStringList &)
 func (this *QCommandLineParser) Process(arguments *QStringList) {
 	var convArg0 = arguments.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser7processERK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -202,7 +202,7 @@ func (this *QCommandLineParser) Process(arguments *QStringList) {
 // /usr/include/qt/QtCore/qcommandlineparser.h:85
 // index:1
 // Public
-// void process(const class QCoreApplication &)
+// void process(const QCoreApplication &)
 func (this *QCommandLineParser) Process_1(app *QCoreApplication) {
 	var convArg0 = app.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser7processERK16QCoreApplication", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -212,7 +212,7 @@ func (this *QCommandLineParser) Process_1(app *QCoreApplication) {
 // /usr/include/qt/QtCore/qcommandlineparser.h:87
 // index:0
 // Public
-// bool parse(const class QStringList &)
+// bool parse(const QStringList &)
 func (this *QCommandLineParser) Parse(arguments *QStringList) bool {
 	var convArg0 = arguments.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser5parseERK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -238,7 +238,7 @@ func (this *QCommandLineParser) ErrorText() *QString /*123*/ {
 // /usr/include/qt/QtCore/qcommandlineparser.h:90
 // index:0
 // Public
-// bool isSet(const class QString &)
+// bool isSet(const QString &)
 func (this *QCommandLineParser) IsSet(name *QString) bool {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser5isSetERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -250,7 +250,7 @@ func (this *QCommandLineParser) IsSet(name *QString) bool {
 // /usr/include/qt/QtCore/qcommandlineparser.h:94
 // index:1
 // Public
-// bool isSet(const class QCommandLineOption &)
+// bool isSet(const QCommandLineOption &)
 func (this *QCommandLineParser) IsSet_1(option *QCommandLineOption) bool {
 	var convArg0 = option.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser5isSetERK18QCommandLineOption", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -262,7 +262,7 @@ func (this *QCommandLineParser) IsSet_1(option *QCommandLineOption) bool {
 // /usr/include/qt/QtCore/qcommandlineparser.h:91
 // index:0
 // Public
-// QString value(const class QString &)
+// QString value(const QString &)
 func (this *QCommandLineParser) Value(name *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = name.GetCthis()
@@ -277,7 +277,7 @@ func (this *QCommandLineParser) Value(name *QString) *QString /*123*/ {
 // /usr/include/qt/QtCore/qcommandlineparser.h:95
 // index:1
 // Public
-// QString value(const class QCommandLineOption &)
+// QString value(const QCommandLineOption &)
 func (this *QCommandLineParser) Value_1(option *QCommandLineOption) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = option.GetCthis()

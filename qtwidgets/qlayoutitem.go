@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -138,7 +138,7 @@ func (this *QLayoutItem) ExpandingDirections() int {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:69
 // index:0
 // Public pure virtual
-// void setGeometry(const class QRect &)
+// void setGeometry(const QRect &)
 func (this *QLayoutItem) SetGeometry(arg0 *qtcore.QRect) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QLayoutItem11setGeometryERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

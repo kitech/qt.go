@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QAbstractTransition) MetaObject() *QMetaObject /*777 const QMetaObje
 // /usr/include/qt/QtCore/qabstracttransition.h:75
 // index:0
 // Public
-// void QAbstractTransition(class QState *)
+// void QAbstractTransition(QState *)
 func NewQAbstractTransition(sourceState *QState /*777 QState **/) *QAbstractTransition {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = sourceState.GetCthis()
@@ -127,7 +127,7 @@ func (this *QAbstractTransition) TargetState() *QAbstractState /*777 QAbstractSt
 // /usr/include/qt/QtCore/qabstracttransition.h:80
 // index:0
 // Public
-// void setTargetState(class QAbstractState *)
+// void setTargetState(QAbstractState *)
 func (this *QAbstractTransition) SetTargetState(target *QAbstractState /*777 QAbstractState **/) {
 	var convArg0 = target.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransition14setTargetStateEP14QAbstractState", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -148,7 +148,7 @@ func (this *QAbstractTransition) TransitionType() int {
 // /usr/include/qt/QtCore/qabstracttransition.h:85
 // index:0
 // Public
-// void setTransitionType(enum QAbstractTransition::TransitionType)
+// void setTransitionType(QAbstractTransition::TransitionType)
 func (this *QAbstractTransition) SetTransitionType(type_ int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransition17setTransitionTypeENS_14TransitionTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
@@ -169,7 +169,7 @@ func (this *QAbstractTransition) Machine() *QStateMachine /*777 QStateMachine **
 // /usr/include/qt/QtCore/qabstracttransition.h:90
 // index:0
 // Public
-// void addAnimation(class QAbstractAnimation *)
+// void addAnimation(QAbstractAnimation *)
 func (this *QAbstractTransition) AddAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
 	var convArg0 = animation.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -179,7 +179,7 @@ func (this *QAbstractTransition) AddAnimation(animation *QAbstractAnimation /*77
 // /usr/include/qt/QtCore/qabstracttransition.h:91
 // index:0
 // Public
-// void removeAnimation(class QAbstractAnimation *)
+// void removeAnimation(QAbstractAnimation *)
 func (this *QAbstractTransition) RemoveAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
 	var convArg0 = animation.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -189,7 +189,7 @@ func (this *QAbstractTransition) RemoveAnimation(animation *QAbstractAnimation /
 // /usr/include/qt/QtCore/qabstracttransition.h:101
 // index:0
 // Protected pure virtual
-// bool eventTest(class QEvent *)
+// bool eventTest(QEvent *)
 func (this *QAbstractTransition) EventTest(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransition9eventTestEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -201,7 +201,7 @@ func (this *QAbstractTransition) EventTest(event *QEvent /*777 QEvent **/) bool 
 // /usr/include/qt/QtCore/qabstracttransition.h:103
 // index:0
 // Protected pure virtual
-// void onTransition(class QEvent *)
+// void onTransition(QEvent *)
 func (this *QAbstractTransition) OnTransition(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransition12onTransitionEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -211,7 +211,7 @@ func (this *QAbstractTransition) OnTransition(event *QEvent /*777 QEvent **/) {
 // /usr/include/qt/QtCore/qabstracttransition.h:105
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QAbstractTransition) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransition5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

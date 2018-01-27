@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -94,7 +94,7 @@ func DeleteQInputMethodEvent(*QInputMethodEvent) {
 // /usr/include/qt/QtGui/qevent.h:559
 // index:0
 // Public
-// void setCommitString(const class QString &, int, int)
+// void setCommitString(const QString &, int, int)
 func (this *QInputMethodEvent) SetCommitString(commitString *qtcore.QString, replaceFrom int, replaceLength int) {
 	var convArg0 = commitString.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QInputMethodEvent15setCommitStringERK7QStringii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, replaceFrom, replaceLength)

@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -73,7 +73,7 @@ func (*QScrollEvent) NewFromPointer(cthis unsafe.Pointer) *QScrollEvent {
 // /usr/include/qt/QtGui/qevent.h:1022
 // index:0
 // Public
-// void QScrollEvent(const class QPointF &, const class QPointF &, enum QScrollEvent::ScrollState)
+// void QScrollEvent(const QPointF &, const QPointF &, QScrollEvent::ScrollState)
 func NewQScrollEvent(contentPos *qtcore.QPointF, overshoot *qtcore.QPointF, scrollState int) *QScrollEvent {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = contentPos.GetCthis()

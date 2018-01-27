@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -69,7 +69,7 @@ func (*QDynamicPropertyChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QDynam
 // /usr/include/qt/QtCore/qcoreevent.h:365
 // index:0
 // Public
-// void QDynamicPropertyChangeEvent(const class QByteArray &)
+// void QDynamicPropertyChangeEvent(const QByteArray &)
 func NewQDynamicPropertyChangeEvent(name *QByteArray) *QDynamicPropertyChangeEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = name.GetCthis()

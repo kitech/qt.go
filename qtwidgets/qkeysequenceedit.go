@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QKeySequenceEdit) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 // /usr/include/qt/QtWidgets/qkeysequenceedit.h:58
 // index:0
 // Public
-// void QKeySequenceEdit(class QWidget *)
+// void QKeySequenceEdit(QWidget *)
 func NewQKeySequenceEdit(parent *QWidget /*777 QWidget **/) *QKeySequenceEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -102,7 +102,7 @@ func NewQKeySequenceEdit(parent *QWidget /*777 QWidget **/) *QKeySequenceEdit {
 // /usr/include/qt/QtWidgets/qkeysequenceedit.h:59
 // index:1
 // Public
-// void QKeySequenceEdit(const class QKeySequence &, class QWidget *)
+// void QKeySequenceEdit(const QKeySequence &, QWidget *)
 func NewQKeySequenceEdit_1(keySequence *qtgui.QKeySequence, parent *QWidget /*777 QWidget **/) *QKeySequenceEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = keySequence.GetCthis()
@@ -139,7 +139,7 @@ func (this *QKeySequenceEdit) KeySequence() *qtgui.QKeySequence /*123*/ {
 // /usr/include/qt/QtWidgets/qkeysequenceedit.h:65
 // index:0
 // Public
-// void setKeySequence(const class QKeySequence &)
+// void setKeySequence(const QKeySequence &)
 func (this *QKeySequenceEdit) SetKeySequence(keySequence *qtgui.QKeySequence) {
 	var convArg0 = keySequence.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -167,7 +167,7 @@ func (this *QKeySequenceEdit) EditingFinished() {
 // /usr/include/qt/QtWidgets/qkeysequenceedit.h:70
 // index:0
 // Public
-// void keySequenceChanged(const class QKeySequence &)
+// void keySequenceChanged(const QKeySequence &)
 func (this *QKeySequenceEdit) KeySequenceChanged(keySequence *qtgui.QKeySequence) {
 	var convArg0 = keySequence.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QKeySequenceEdit18keySequenceChangedERK12QKeySequence", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -177,7 +177,7 @@ func (this *QKeySequenceEdit) KeySequenceChanged(keySequence *qtgui.QKeySequence
 // /usr/include/qt/QtWidgets/qkeysequenceedit.h:75
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QKeySequenceEdit) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QKeySequenceEdit5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -189,7 +189,7 @@ func (this *QKeySequenceEdit) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qkeysequenceedit.h:76
 // index:0
 // Protected virtual
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QKeySequenceEdit) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QKeySequenceEdit13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -199,7 +199,7 @@ func (this *QKeySequenceEdit) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEven
 // /usr/include/qt/QtWidgets/qkeysequenceedit.h:77
 // index:0
 // Protected virtual
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QKeySequenceEdit) KeyReleaseEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QKeySequenceEdit15keyReleaseEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -209,7 +209,7 @@ func (this *QKeySequenceEdit) KeyReleaseEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEv
 // /usr/include/qt/QtWidgets/qkeysequenceedit.h:78
 // index:0
 // Protected virtual
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QKeySequenceEdit) TimerEvent(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QKeySequenceEdit10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

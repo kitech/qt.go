@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QFinalState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // /usr/include/qt/QtCore/qfinalstate.h:54
 // index:0
 // Public
-// void QFinalState(class QState *)
+// void QFinalState(QState *)
 func NewQFinalState(parent *QState /*777 QState **/) *QFinalState {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -103,7 +103,7 @@ func DeleteQFinalState(*QFinalState) {
 // /usr/include/qt/QtCore/qfinalstate.h:58
 // index:0
 // Protected virtual
-// void onEntry(class QEvent *)
+// void onEntry(QEvent *)
 func (this *QFinalState) OnEntry(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState7onEntryEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -113,7 +113,7 @@ func (this *QFinalState) OnEntry(event *QEvent /*777 QEvent **/) {
 // /usr/include/qt/QtCore/qfinalstate.h:59
 // index:0
 // Protected virtual
-// void onExit(class QEvent *)
+// void onExit(QEvent *)
 func (this *QFinalState) OnExit(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState6onExitEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -123,7 +123,7 @@ func (this *QFinalState) OnExit(event *QEvent /*777 QEvent **/) {
 // /usr/include/qt/QtCore/qfinalstate.h:61
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QFinalState) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

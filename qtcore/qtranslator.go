@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QTranslator) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // /usr/include/qt/QtCore/qtranslator.h:58
 // index:0
 // Public
-// void QTranslator(class QObject *)
+// void QTranslator(QObject *)
 func NewQTranslator(parent *QObject /*777 QObject **/) *QTranslator {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -134,7 +134,7 @@ func (this *QTranslator) IsEmpty() bool {
 // /usr/include/qt/QtCore/qtranslator.h:66
 // index:0
 // Public
-// bool load(const class QString &, const class QString &, const class QString &, const class QString &)
+// bool load(const QString &, const QString &, const QString &, const QString &)
 func (this *QTranslator) Load(filename *QString, directory *QString, search_delimiters *QString, suffix *QString) bool {
 	var convArg0 = filename.GetCthis()
 	var convArg1 = directory.GetCthis()
@@ -149,7 +149,7 @@ func (this *QTranslator) Load(filename *QString, directory *QString, search_deli
 // /usr/include/qt/QtCore/qtranslator.h:70
 // index:1
 // Public
-// bool load(const class QLocale &, const class QString &, const class QString &, const class QString &, const class QString &)
+// bool load(const QLocale &, const QString &, const QString &, const QString &, const QString &)
 func (this *QTranslator) Load_1(locale *QLocale, filename *QString, prefix *QString, directory *QString, suffix *QString) bool {
 	var convArg0 = locale.GetCthis()
 	var convArg1 = filename.GetCthis()
@@ -165,7 +165,7 @@ func (this *QTranslator) Load_1(locale *QLocale, filename *QString, prefix *QStr
 // /usr/include/qt/QtCore/qtranslator.h:75
 // index:2
 // Public
-// bool load(const uchar *, int, const class QString &)
+// bool load(const uchar *, int, const QString &)
 func (this *QTranslator) Load_2(data unsafe.Pointer /*666*/, len int, directory *QString) bool {
 	var convArg2 = directory.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTranslator4loadEPKhiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &data, len, convArg2)

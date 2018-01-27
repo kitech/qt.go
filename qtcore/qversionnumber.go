@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -207,7 +207,7 @@ func (this *QVersionNumber) SegmentCount() int {
 // /usr/include/qt/QtCore/qversionnumber.h:276
 // index:0
 // Public
-// bool isPrefixOf(const class QVersionNumber &)
+// bool isPrefixOf(const QVersionNumber &)
 func (this *QVersionNumber) IsPrefixOf(other *QVersionNumber) bool {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QVersionNumber10isPrefixOfERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -219,7 +219,7 @@ func (this *QVersionNumber) IsPrefixOf(other *QVersionNumber) bool {
 // /usr/include/qt/QtCore/qversionnumber.h:278
 // index:0
 // Public static
-// int compare(const class QVersionNumber &, const class QVersionNumber &)
+// int compare(const QVersionNumber &, const QVersionNumber &)
 func (this *QVersionNumber) Compare(v1 *QVersionNumber, v2 *QVersionNumber) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumber7compareERKS_S1_", ffiqt.FFI_TYPE_POINTER, v1, v2)
 	gopp.ErrPrint(err, rv)
@@ -235,7 +235,7 @@ func QVersionNumber_Compare(v1 *QVersionNumber, v2 *QVersionNumber) int {
 // /usr/include/qt/QtCore/qversionnumber.h:280
 // index:0
 // Public static
-// QVersionNumber commonPrefix(const class QVersionNumber &, const class QVersionNumber &)
+// QVersionNumber commonPrefix(const QVersionNumber &, const QVersionNumber &)
 func (this *QVersionNumber) CommonPrefix(v1 *QVersionNumber, v2 *QVersionNumber) *QVersionNumber /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumber12commonPrefixERKS_S1_", ffiqt.FFI_TYPE_POINTER, v1, v2)
 	gopp.ErrPrint(err, rv)
@@ -266,7 +266,7 @@ func (this *QVersionNumber) ToString() *QString /*123*/ {
 // /usr/include/qt/QtCore/qversionnumber.h:284
 // index:0
 // Public static
-// QVersionNumber fromString(const class QString &, int *)
+// QVersionNumber fromString(const QString &, int *)
 func (this *QVersionNumber) FromString(string *QString, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringERK7QStringPi", ffiqt.FFI_TYPE_POINTER, string, suffixIndex)
 	gopp.ErrPrint(err, rv)
@@ -283,7 +283,7 @@ func QVersionNumber_FromString(string *QString, suffixIndex unsafe.Pointer /*666
 // /usr/include/qt/QtCore/qversionnumber.h:286
 // index:1
 // Public static
-// QVersionNumber fromString(class QLatin1String, int *)
+// QVersionNumber fromString(QLatin1String, int *)
 func (this *QVersionNumber) FromString_1(string *QLatin1String /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringE13QLatin1StringPi", ffiqt.FFI_TYPE_POINTER, string, suffixIndex)
 	gopp.ErrPrint(err, rv)
@@ -300,7 +300,7 @@ func QVersionNumber_FromString_1(string *QLatin1String /*123*/, suffixIndex unsa
 // /usr/include/qt/QtCore/qversionnumber.h:287
 // index:2
 // Public static
-// QVersionNumber fromString(class QStringView, int *)
+// QVersionNumber fromString(QStringView, int *)
 func (this *QVersionNumber) FromString_2(string *QStringView /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringE11QStringViewPi", ffiqt.FFI_TYPE_POINTER, string, suffixIndex)
 	gopp.ErrPrint(err, rv)

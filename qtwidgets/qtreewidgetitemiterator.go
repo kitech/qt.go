@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -76,7 +76,7 @@ func (*QTreeWidgetItemIterator) NewFromPointer(cthis unsafe.Pointer) *QTreeWidge
 // /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:85
 // index:0
 // Public
-// void QTreeWidgetItemIterator(class QTreeWidget *, QTreeWidgetItemIterator::IteratorFlags)
+// void QTreeWidgetItemIterator(QTreeWidget *, QTreeWidgetItemIterator::IteratorFlags)
 func NewQTreeWidgetItemIterator(widget *QTreeWidget /*777 QTreeWidget **/, flags int) *QTreeWidgetItemIterator {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = widget.GetCthis()
@@ -89,7 +89,7 @@ func NewQTreeWidgetItemIterator(widget *QTreeWidget /*777 QTreeWidget **/, flags
 // /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:86
 // index:1
 // Public
-// void QTreeWidgetItemIterator(class QTreeWidgetItem *, QTreeWidgetItemIterator::IteratorFlags)
+// void QTreeWidgetItemIterator(QTreeWidgetItem *, QTreeWidgetItemIterator::IteratorFlags)
 func NewQTreeWidgetItemIterator_1(item *QTreeWidgetItem /*777 QTreeWidgetItem **/, flags int) *QTreeWidgetItemIterator {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = item.GetCthis()

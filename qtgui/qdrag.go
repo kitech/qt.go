@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QDrag) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ 
 // /usr/include/qt/QtGui/qdrag.h:62
 // index:0
 // Public
-// void QDrag(class QObject *)
+// void QDrag(QObject *)
 func NewQDrag(dragSource *qtcore.QObject /*777 QObject **/) *QDrag {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = dragSource.GetCthis()
@@ -107,7 +107,7 @@ func DeleteQDrag(*QDrag) {
 // /usr/include/qt/QtGui/qdrag.h:65
 // index:0
 // Public
-// void setMimeData(class QMimeData *)
+// void setMimeData(QMimeData *)
 func (this *QDrag) SetMimeData(data *qtcore.QMimeData /*777 QMimeData **/) {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag11setMimeDataEP9QMimeData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -129,7 +129,7 @@ func (this *QDrag) MimeData() *qtcore.QMimeData /*777 QMimeData **/ {
 // /usr/include/qt/QtGui/qdrag.h:68
 // index:0
 // Public
-// void setPixmap(const class QPixmap &)
+// void setPixmap(const QPixmap &)
 func (this *QDrag) SetPixmap(arg0 *QPixmap) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag9setPixmapERK7QPixmap", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -153,7 +153,7 @@ func (this *QDrag) Pixmap() *QPixmap /*123*/ {
 // /usr/include/qt/QtGui/qdrag.h:71
 // index:0
 // Public
-// void setHotSpot(const class QPoint &)
+// void setHotSpot(const QPoint &)
 func (this *QDrag) SetHotSpot(hotspot *qtcore.QPoint) {
 	var convArg0 = hotspot.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag10setHotSpotERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -201,7 +201,7 @@ func (this *QDrag) Target() *qtcore.QObject /*777 QObject **/ {
 // /usr/include/qt/QtGui/qdrag.h:81
 // index:0
 // Public
-// void setDragCursor(const class QPixmap &, Qt::DropAction)
+// void setDragCursor(const QPixmap &, Qt::DropAction)
 func (this *QDrag) SetDragCursor(cursor *QPixmap, action int) {
 	var convArg0 = cursor.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag13setDragCursorERK7QPixmapN2Qt10DropActionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action)
@@ -269,7 +269,7 @@ func (this *QDrag) ActionChanged(action int) {
 // /usr/include/qt/QtGui/qdrag.h:91
 // index:0
 // Public
-// void targetChanged(class QObject *)
+// void targetChanged(QObject *)
 func (this *QDrag) TargetChanged(newTarget *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = newTarget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag13targetChangedEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

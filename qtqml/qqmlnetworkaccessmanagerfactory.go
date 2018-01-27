@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -85,7 +85,7 @@ func DeleteQQmlNetworkAccessManagerFactory(*QQmlNetworkAccessManagerFactory) {
 // /usr/include/qt/QtQml/qqmlnetworkaccessmanagerfactory.h:55
 // index:0
 // Public pure virtual
-// QNetworkAccessManager * create(class QObject *)
+// QNetworkAccessManager * create(QObject *)
 func (this *QQmlNetworkAccessManagerFactory) Create(parent *qtcore.QObject /*777 QObject **/) *qtnetwork.QNetworkAccessManager /*777 QNetworkAccessManager **/ {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN31QQmlNetworkAccessManagerFactory6createEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQEventLoopLocker() *QEventLoopLocker {
 // /usr/include/qt/QtCore/qeventloop.h:94
 // index:1
 // Public
-// void QEventLoopLocker(class QEventLoop *)
+// void QEventLoopLocker(QEventLoop *)
 func NewQEventLoopLocker_1(loop *QEventLoop /*777 QEventLoop **/) *QEventLoopLocker {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = loop.GetCthis()
@@ -93,7 +93,7 @@ func NewQEventLoopLocker_1(loop *QEventLoop /*777 QEventLoop **/) *QEventLoopLoc
 // /usr/include/qt/QtCore/qeventloop.h:95
 // index:2
 // Public
-// void QEventLoopLocker(class QThread *)
+// void QEventLoopLocker(QThread *)
 func NewQEventLoopLocker_2(thread *QThread /*777 QThread **/) *QEventLoopLocker {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = thread.GetCthis()

@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -161,7 +161,7 @@ func (this *QColormap) Size() int {
 // /usr/include/qt/QtWidgets/qcolormap.h:75
 // index:0
 // Public
-// uint pixel(const class QColor &)
+// uint pixel(const QColor &)
 func (this *QColormap) Pixel(color *qtgui.QColor) uint {
 	var convArg0 = color.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap5pixelERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

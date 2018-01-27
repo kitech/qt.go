@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -175,7 +175,7 @@ func (this *QAccessibleInterface) ChildCount() int {
 // /usr/include/qt/QtGui/qaccessible.h:478
 // index:0
 // Public pure virtual
-// int indexOfChild(const class QAccessibleInterface *)
+// int indexOfChild(const QAccessibleInterface *)
 func (this *QAccessibleInterface) IndexOfChild(arg0 *QAccessibleInterface /*777 const QAccessibleInterface **/) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface12indexOfChildEPKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -187,7 +187,7 @@ func (this *QAccessibleInterface) IndexOfChild(arg0 *QAccessibleInterface /*777 
 // /usr/include/qt/QtGui/qaccessible.h:481
 // index:0
 // Public pure virtual
-// QString text(class QAccessible::Text)
+// QString text(QAccessible::Text)
 func (this *QAccessibleInterface) Text(t int) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface4textEN11QAccessible4TextE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), t)
@@ -201,7 +201,7 @@ func (this *QAccessibleInterface) Text(t int) *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qaccessible.h:482
 // index:0
 // Public pure virtual
-// void setText(class QAccessible::Text, const class QString &)
+// void setText(QAccessible::Text, const QString &)
 func (this *QAccessibleInterface) SetText(t int, text *qtcore.QString) {
 	var convArg1 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QAccessibleInterface7setTextEN11QAccessible4TextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), t, convArg1)
@@ -356,7 +356,7 @@ func (this *QAccessibleInterface) Virtual_hook(id int, data unsafe.Pointer /*666
 // /usr/include/qt/QtGui/qaccessible.h:513
 // index:0
 // Public inline virtual
-// void * interface_cast(class QAccessible::InterfaceType)
+// void * interface_cast(QAccessible::InterfaceType)
 func (this *QAccessibleInterface) Interface_cast(arg0 int) unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QAccessibleInterface14interface_castEN11QAccessible13InterfaceTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -76,7 +76,7 @@ func (*QAccessibleWidget) NewFromPointer(cthis unsafe.Pointer) *QAccessibleWidge
 // /usr/include/qt/QtWidgets/qaccessiblewidget.h:56
 // index:0
 // Public
-// void QAccessibleWidget(class QWidget *, class QAccessible::Role, const class QString &)
+// void QAccessibleWidget(QWidget *, QAccessible::Role, const QString &)
 func NewQAccessibleWidget(o *QWidget /*777 QWidget **/, r int, name *qtcore.QString) *QAccessibleWidget {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = o.GetCthis()
@@ -124,7 +124,7 @@ func (this *QAccessibleWidget) ChildCount() int {
 // /usr/include/qt/QtWidgets/qaccessiblewidget.h:61
 // index:0
 // Public virtual
-// int indexOfChild(const class QAccessibleInterface *)
+// int indexOfChild(const QAccessibleInterface *)
 func (this *QAccessibleWidget) IndexOfChild(child *qtgui.QAccessibleInterface /*777 const QAccessibleInterface **/) int {
 	var convArg0 = child.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -186,7 +186,7 @@ func (this *QAccessibleWidget) Child(index int) *qtgui.QAccessibleInterface /*77
 // /usr/include/qt/QtWidgets/qaccessiblewidget.h:70
 // index:0
 // Public virtual
-// QString text(class QAccessible::Text)
+// QString text(QAccessible::Text)
 func (this *QAccessibleWidget) Text(t int) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessibleWidget4textEN11QAccessible4TextE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), t)
@@ -250,7 +250,7 @@ func (this *QAccessibleWidget) BackgroundColor() *qtgui.QColor /*123*/ {
 // /usr/include/qt/QtWidgets/qaccessiblewidget.h:77
 // index:0
 // Public virtual
-// void * interface_cast(class QAccessible::InterfaceType)
+// void * interface_cast(QAccessible::InterfaceType)
 func (this *QAccessibleWidget) Interface_cast(t int) unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleWidget14interface_castEN11QAccessible13InterfaceTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	gopp.ErrPrint(err, rv)
@@ -261,7 +261,7 @@ func (this *QAccessibleWidget) Interface_cast(t int) unsafe.Pointer /*666*/ {
 // /usr/include/qt/QtWidgets/qaccessiblewidget.h:81
 // index:0
 // Public virtual
-// void doAction(const class QString &)
+// void doAction(const QString &)
 func (this *QAccessibleWidget) DoAction(actionName *qtcore.QString) {
 	var convArg0 = actionName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleWidget8doActionERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -304,7 +304,7 @@ func (this *QAccessibleWidget) ParentObject() *qtcore.QObject /*777 QObject **/ 
 // /usr/include/qt/QtWidgets/qaccessiblewidget.h:88
 // index:0
 // Protected
-// void addControllingSignal(const class QString &)
+// void addControllingSignal(const QString &)
 func (this *QAccessibleWidget) AddControllingSignal(signal *qtcore.QString) {
 	var convArg0 = signal.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleWidget20addControllingSignalERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

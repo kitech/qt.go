@@ -1,8 +1,8 @@
 package qtcore
 
 import "unsafe"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -201,7 +201,7 @@ func QEnvironmentVariable(varName string) *QString /*123*/ {
 // /usr/include/qt/QtCore/qglobal.h:1134
 // index:1
 // Invalid
-// QString qEnvironmentVariable(const char *, const class QString &)
+// QString qEnvironmentVariable(const char *, const QString &)
 func QEnvironmentVariable_1(varName string, defaultValue *QString) *QString /*123*/ {
 	var convArg0 = qtrt.CString(varName)
 	defer qtrt.FreeMem(convArg0)
@@ -242,7 +242,7 @@ func QEnvironmentVariableIsSet(varName string) bool {
 // /usr/include/qt/QtCore/qglobal.h:1141
 // index:0
 // Invalid
-// int qEnvironmentVariableIntValue(const char *, _Bool *)
+// int qEnvironmentVariableIntValue(const char *, bool *)
 func QEnvironmentVariableIntValue(varName string, ok unsafe.Pointer /*666*/) int {
 	var convArg0 = qtrt.CString(varName)
 	defer qtrt.FreeMem(convArg0)
@@ -310,7 +310,7 @@ func QInstallMessageHandler(arg0 unsafe.Pointer /*666*/) unsafe.Pointer /*666*/ 
 // /usr/include/qt/QtCore/qlogging.h:193
 // index:0
 // Invalid
-// void qSetMessagePattern(const class QString &)
+// void qSetMessagePattern(const QString &)
 func QSetMessagePattern(messagePattern *QString) {
 	var convArg0 = messagePattern.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z18qSetMessagePatternRK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -320,7 +320,7 @@ func QSetMessagePattern(messagePattern *QString) {
 // /usr/include/qt/QtCore/qlogging.h:194
 // index:0
 // Invalid
-// QString qFormatLogMessage(enum QtMsgType, const class QMessageLogContext &, const class QString &)
+// QString qFormatLogMessage(QtMsgType, const QMessageLogContext &, const QString &)
 func QFormatLogMessage(type_ int, context *QMessageLogContext, buf *QString) *QString /*123*/ {
 	var convArg1 = context.GetCthis()
 	var convArg2 = buf.GetCthis()
@@ -518,7 +518,7 @@ func QUncompress(data unsafe.Pointer /*666*/, nbytes int) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:685
 // index:1
 // Invalid inline
-// QByteArray qCompress(const class QByteArray &, int)
+// QByteArray qCompress(const QByteArray &, int)
 func QCompress_1(data *QByteArray, compressionLevel int) *QByteArray /*123*/ {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z9qCompressRK10QByteArrayi", ffiqt.FFI_TYPE_POINTER, convArg0, compressionLevel)
@@ -531,7 +531,7 @@ func QCompress_1(data *QByteArray, compressionLevel int) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:687
 // index:1
 // Invalid inline
-// QByteArray qUncompress(const class QByteArray &)
+// QByteArray qUncompress(const QByteArray &)
 func QUncompress_1(data *QByteArray) *QByteArray /*123*/ {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z11qUncompressRK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -894,7 +894,7 @@ func QHash_13(key float64, seed uint) uint {
 // /usr/include/qt/QtCore/qhashfunctions.h:96
 // index:14
 // Invalid inline
-// uint qHash(const class QChar, uint)
+// uint qHash(const QChar, uint)
 func QHash_14(key *QChar /*123*/, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHash5QCharj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -906,7 +906,7 @@ func QHash_14(key *QChar /*123*/, seed uint) uint {
 // /usr/include/qt/QtCore/qhashfunctions.h:97
 // index:15
 // Invalid
-// uint qHash(const class QByteArray &, uint)
+// uint qHash(const QByteArray &, uint)
 func QHash_15(key *QByteArray, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK10QByteArrayj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -918,7 +918,7 @@ func QHash_15(key *QByteArray, seed uint) uint {
 // /usr/include/qt/QtCore/qhashfunctions.h:99
 // index:16
 // Invalid
-// uint qHash(const class QString &, uint)
+// uint qHash(const QString &, uint)
 func QHash_16(key *QString, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK7QStringj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -930,7 +930,7 @@ func QHash_16(key *QString, seed uint) uint {
 // /usr/include/qt/QtCore/qhashfunctions.h:100
 // index:17
 // Invalid
-// uint qHash(const class QStringRef &, uint)
+// uint qHash(const QStringRef &, uint)
 func QHash_17(key *QStringRef, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK10QStringRefj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -942,7 +942,7 @@ func QHash_17(key *QStringRef, seed uint) uint {
 // /usr/include/qt/QtCore/qhashfunctions.h:102
 // index:18
 // Invalid
-// uint qHash(class QStringView, uint)
+// uint qHash(QStringView, uint)
 func QHash_18(key *QStringView /*123*/, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHash11QStringViewj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -954,7 +954,7 @@ func QHash_18(key *QStringView /*123*/, seed uint) uint {
 // /usr/include/qt/QtCore/qhashfunctions.h:103
 // index:19
 // Invalid
-// uint qHash(const class QBitArray &, uint)
+// uint qHash(const QBitArray &, uint)
 func QHash_19(key *QBitArray, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK9QBitArrayj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -966,7 +966,7 @@ func QHash_19(key *QBitArray, seed uint) uint {
 // /usr/include/qt/QtCore/qhashfunctions.h:104
 // index:20
 // Invalid
-// uint qHash(class QLatin1String, uint)
+// uint qHash(QLatin1String, uint)
 func QHash_20(key *QLatin1String /*123*/, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHash13QLatin1Stringj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -978,7 +978,7 @@ func QHash_20(key *QLatin1String /*123*/, seed uint) uint {
 // /usr/include/qt/QtCore/qregexp.h:56
 // index:21
 // Invalid
-// uint qHash(const class QRegExp &, uint)
+// uint qHash(const QRegExp &, uint)
 func QHash_21(key *QRegExp, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK7QRegExpj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -990,7 +990,7 @@ func QHash_21(key *QRegExp, seed uint) uint {
 // /usr/include/qt/QtCore/qobject.h:93
 // index:0
 // Invalid
-// QObject * qt_qFindChild_helper(const class QObject *, const class QString &, const struct QMetaObject &, Qt::FindChildOptions)
+// QObject * qt_qFindChild_helper(const QObject *, const QString &, const QMetaObject &, Qt::FindChildOptions)
 func Qt_qFindChild_helper(parent *QObject /*777 const QObject **/, name *QString, mo *QMetaObject, options int) *QObject /*777 QObject **/ {
 	var convArg0 = parent.GetCthis()
 	var convArg1 = name.GetCthis()
@@ -1005,7 +1005,7 @@ func Qt_qFindChild_helper(parent *QObject /*777 const QObject **/, name *QString
 // /usr/include/qt/QtCore/qabstractitemmodel.h:102
 // index:22
 // Invalid
-// uint qHash(const class QPersistentModelIndex &, uint)
+// uint qHash(const QPersistentModelIndex &, uint)
 func QHash_22(index *QPersistentModelIndex, seed uint) uint {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK21QPersistentModelIndexj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -1017,7 +1017,7 @@ func QHash_22(index *QPersistentModelIndex, seed uint) uint {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:149
 // index:23
 // Invalid inline
-// uint qHash(const class QPersistentModelIndex &, uint)
+// uint qHash(const QPersistentModelIndex &, uint)
 func QHash_23(index *QPersistentModelIndex, seed uint) uint {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK21QPersistentModelIndexj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -1029,7 +1029,7 @@ func QHash_23(index *QPersistentModelIndex, seed uint) uint {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:437
 // index:24
 // Invalid inline
-// uint qHash(const class QModelIndex &)
+// uint qHash(const QModelIndex &)
 func QHash_24(index *QModelIndex) uint {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -1041,7 +1041,7 @@ func QHash_24(index *QModelIndex) uint {
 // /usr/include/qt/QtCore/qlocale.h:62
 // index:25
 // Invalid
-// uint qHash(const class QLocale &, uint)
+// uint qHash(const QLocale &, uint)
 func QHash_25(key *QLocale, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK7QLocalej", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -1092,7 +1092,7 @@ func QAppName() *QString /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:412
 // index:26
 // Invalid
-// uint qHash(const class QDateTime &, uint)
+// uint qHash(const QDateTime &, uint)
 func QHash_26(key *QDateTime, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK9QDateTimej", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -1104,7 +1104,7 @@ func QHash_26(key *QDateTime, seed uint) uint {
 // /usr/include/qt/QtCore/qdatetime.h:413
 // index:27
 // Invalid
-// uint qHash(const class QDate &, uint)
+// uint qHash(const QDate &, uint)
 func QHash_27(key *QDate, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK5QDatej", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -1116,7 +1116,7 @@ func QHash_27(key *QDate, seed uint) uint {
 // /usr/include/qt/QtCore/qdatetime.h:414
 // index:28
 // Invalid
-// uint qHash(const class QTime &, uint)
+// uint qHash(const QTime &, uint)
 func QHash_28(key *QTime, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK5QTimej", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -1140,7 +1140,7 @@ func QSetFieldWidth(width int) *QTextStreamManipulator /*123*/ {
 // /usr/include/qt/QtCore/qtextstream.h:273
 // index:0
 // Invalid inline
-// QTextStreamManipulator qSetPadChar(class QChar)
+// QTextStreamManipulator qSetPadChar(QChar)
 func QSetPadChar(ch *QChar /*123*/) *QTextStreamManipulator /*123*/ {
 	var convArg0 = ch.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z11qSetPadChar5QChar", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -1165,7 +1165,7 @@ func QSetRealNumberPrecision(precision int) *QTextStreamManipulator /*123*/ {
 // /usr/include/qt/QtCore/qitemselectionmodel.h:227
 // index:29
 // Invalid inline
-// uint qHash(const class QItemSelectionRange &)
+// uint qHash(const QItemSelectionRange &)
 func QHash_29(arg0 *QItemSelectionRange) uint {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK19QItemSelectionRange", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -1177,7 +1177,7 @@ func QHash_29(arg0 *QItemSelectionRange) uint {
 // /usr/include/qt/QtCore/qversionnumber.h:54
 // index:30
 // Invalid
-// uint qHash(const class QVersionNumber &, uint)
+// uint qHash(const QVersionNumber &, uint)
 func QHash_30(key *QVersionNumber, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK14QVersionNumberj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -1453,7 +1453,7 @@ func QNextPowerOfTwo_3(v int64) uint64 {
 // /usr/include/qt/QtCore/qmimetype.h:58
 // index:31
 // Invalid
-// uint qHash(const class QMimeType &, uint)
+// uint qHash(const QMimeType &, uint)
 func QHash_31(key *QMimeType, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK9QMimeTypej", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -1465,7 +1465,7 @@ func QHash_31(key *QMimeType, seed uint) uint {
 // /usr/include/qt/QtCore/qplugin.h:78
 // index:0
 // Invalid
-// void qRegisterStaticPluginFunction(struct QStaticPlugin)
+// void qRegisterStaticPluginFunction(QStaticPlugin)
 func QRegisterStaticPluginFunction(staticPlugin *QStaticPlugin /*123*/) {
 	var convArg0 = staticPlugin.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z29qRegisterStaticPluginFunction13QStaticPlugin", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -1475,7 +1475,7 @@ func QRegisterStaticPluginFunction(staticPlugin *QStaticPlugin /*123*/) {
 // /usr/include/qt/QtCore/qregularexpression.h:62
 // index:32
 // Invalid
-// uint qHash(const class QRegularExpression &, uint)
+// uint qHash(const QRegularExpression &, uint)
 func QHash_32(key *QRegularExpression, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK18QRegularExpressionj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -1487,7 +1487,7 @@ func QHash_32(key *QRegularExpression, seed uint) uint {
 // /usr/include/qt/QtCore/qurl.h:122
 // index:33
 // Invalid
-// uint qHash(const class QUrl &, uint)
+// uint qHash(const QUrl &, uint)
 func QHash_33(url *QUrl, seed uint) uint {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK4QUrlj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -1499,7 +1499,7 @@ func QHash_33(url *QUrl, seed uint) uint {
 // /usr/include/qt/QtCore/qurlquery.h:53
 // index:34
 // Invalid
-// uint qHash(const class QUrlQuery &, uint)
+// uint qHash(const QUrlQuery &, uint)
 func QHash_34(key *QUrlQuery, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK9QUrlQueryj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -1511,7 +1511,7 @@ func QHash_34(key *QUrlQuery, seed uint) uint {
 // /usr/include/qt/QtCore/quuid.h:235
 // index:35
 // Invalid
-// uint qHash(const class QUuid &, uint)
+// uint qHash(const QUuid &, uint)
 func QHash_35(uuid *QUuid, seed uint) uint {
 	var convArg0 = uuid.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK5QUuidj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
@@ -1520,7 +1520,7 @@ func QHash_35(uuid *QUuid, seed uint) uint {
 	return uint(rv) // 222
 }
 
-// /home/me/oss/qt.gen/headers/QtCore/extra_export.h:6
+// ./headers/QtCore/extra_export.h:6
 // index:0
 // Invalid
 // bool qRegisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *)
@@ -1531,7 +1531,7 @@ func QRegisterResourceData(arg0 int, arg1 unsafe.Pointer /*666*/, arg2 unsafe.Po
 	return rv != 0
 }
 
-// /home/me/oss/qt.gen/headers/QtCore/extra_export.h:7
+// ./headers/QtCore/extra_export.h:7
 // index:0
 // Invalid
 // bool qUnregisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *)

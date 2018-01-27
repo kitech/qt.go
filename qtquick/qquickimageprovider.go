@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -84,7 +84,7 @@ func (*QQuickImageProvider) NewFromPointer(cthis unsafe.Pointer) *QQuickImagePro
 // /usr/include/qt/QtQuick/qquickimageprovider.h:92
 // index:0
 // Public
-// void QQuickImageProvider(enum QQmlImageProviderBase::ImageType, QQmlImageProviderBase::Flags)
+// void QQuickImageProvider(QQmlImageProviderBase::ImageType, QQmlImageProviderBase::Flags)
 func NewQQuickImageProvider(type_ int, flags int) *QQuickImageProvider {
 	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickImageProviderC2EN21QQmlImageProviderBase9ImageTypeE6QFlagsINS0_4FlagEE", ffiqt.FFI_TYPE_VOID, cthis, type_, flags)
@@ -127,7 +127,7 @@ func (this *QQuickImageProvider) Flags() int {
 // /usr/include/qt/QtQuick/qquickimageprovider.h:103
 // index:0
 // Public virtual
-// QImage requestImage(const class QString &, class QSize *, const class QSize &)
+// QImage requestImage(const QString &, QSize *, const QSize &)
 func (this *QQuickImageProvider) RequestImage(id *qtcore.QString, size *qtcore.QSize /*777 QSize **/, requestedSize *qtcore.QSize) *qtgui.QImage /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = id.GetCthis()
@@ -144,7 +144,7 @@ func (this *QQuickImageProvider) RequestImage(id *qtcore.QString, size *qtcore.Q
 // /usr/include/qt/QtQuick/qquickimageprovider.h:104
 // index:0
 // Public virtual
-// QPixmap requestPixmap(const class QString &, class QSize *, const class QSize &)
+// QPixmap requestPixmap(const QString &, QSize *, const QSize &)
 func (this *QQuickImageProvider) RequestPixmap(id *qtcore.QString, size *qtcore.QSize /*777 QSize **/, requestedSize *qtcore.QSize) *qtgui.QPixmap /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = id.GetCthis()
@@ -161,7 +161,7 @@ func (this *QQuickImageProvider) RequestPixmap(id *qtcore.QString, size *qtcore.
 // /usr/include/qt/QtQuick/qquickimageprovider.h:105
 // index:0
 // Public virtual
-// QQuickTextureFactory * requestTexture(const class QString &, class QSize *, const class QSize &)
+// QQuickTextureFactory * requestTexture(const QString &, QSize *, const QSize &)
 func (this *QQuickImageProvider) RequestTexture(id *qtcore.QString, size *qtcore.QSize /*777 QSize **/, requestedSize *qtcore.QSize) *QQuickTextureFactory /*777 QQuickTextureFactory **/ {
 	var convArg0 = id.GetCthis()
 	var convArg1 = size.GetCthis()

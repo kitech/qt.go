@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QIntValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // /usr/include/qt/QtGui/qvalidator.h:96
 // index:0
 // Public
-// void QIntValidator(class QObject *)
+// void QIntValidator(QObject *)
 func NewQIntValidator(parent *qtcore.QObject /*777 QObject **/) *QIntValidator {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = parent.GetCthis()
@@ -98,7 +98,7 @@ func NewQIntValidator(parent *qtcore.QObject /*777 QObject **/) *QIntValidator {
 // /usr/include/qt/QtGui/qvalidator.h:97
 // index:1
 // Public
-// void QIntValidator(int, int, class QObject *)
+// void QIntValidator(int, int, QObject *)
 func NewQIntValidator_1(bottom int, top int, parent *qtcore.QObject /*777 QObject **/) *QIntValidator {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg2 = parent.GetCthis()
@@ -120,7 +120,7 @@ func DeleteQIntValidator(*QIntValidator) {
 // /usr/include/qt/QtGui/qvalidator.h:100
 // index:0
 // Public virtual
-// QValidator::State validate(class QString &, int &)
+// QValidator::State validate(QString &, int &)
 func (this *QIntValidator) Validate(arg0 *qtcore.QString, arg1 int) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QIntValidator8validateER7QStringRi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &arg1)
@@ -132,7 +132,7 @@ func (this *QIntValidator) Validate(arg0 *qtcore.QString, arg1 int) int {
 // /usr/include/qt/QtGui/qvalidator.h:101
 // index:0
 // Public virtual
-// void fixup(class QString &)
+// void fixup(QString &)
 func (this *QIntValidator) Fixup(input *qtcore.QString) {
 	var convArg0 = input.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QIntValidator5fixupER7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

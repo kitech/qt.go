@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QImageIOPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // /usr/include/qt/QtGui/qimageiohandler.h:143
 // index:0
 // Public
-// void QImageIOPlugin(class QObject *)
+// void QImageIOPlugin(QObject *)
 func NewQImageIOPlugin(parent *qtcore.QObject /*777 QObject **/) *QImageIOPlugin {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -107,7 +107,7 @@ func DeleteQImageIOPlugin(*QImageIOPlugin) {
 // /usr/include/qt/QtGui/qimageiohandler.h:153
 // index:0
 // Public pure virtual
-// QImageIOPlugin::Capabilities capabilities(class QIODevice *, const class QByteArray &)
+// QImageIOPlugin::Capabilities capabilities(QIODevice *, const QByteArray &)
 func (this *QImageIOPlugin) Capabilities(device *qtcore.QIODevice /*777 QIODevice **/, format *qtcore.QByteArray) int {
 	var convArg0 = device.GetCthis()
 	var convArg1 = format.GetCthis()
@@ -120,7 +120,7 @@ func (this *QImageIOPlugin) Capabilities(device *qtcore.QIODevice /*777 QIODevic
 // /usr/include/qt/QtGui/qimageiohandler.h:154
 // index:0
 // Public pure virtual
-// QImageIOHandler * create(class QIODevice *, const class QByteArray &)
+// QImageIOHandler * create(QIODevice *, const QByteArray &)
 func (this *QImageIOPlugin) Create(device *qtcore.QIODevice /*777 QIODevice **/, format *qtcore.QByteArray) *QImageIOHandler /*777 QImageIOHandler **/ {
 	var convArg0 = device.GetCthis()
 	var convArg1 = format.GetCthis()

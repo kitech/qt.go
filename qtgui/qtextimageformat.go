@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func NewQTextImageFormat() *QTextImageFormat {
 // /usr/include/qt/QtGui/qtextformat.h:752
 // index:1
 // Protected
-// void QTextImageFormat(const class QTextFormat &)
+// void QTextImageFormat(const QTextFormat &)
 func NewQTextImageFormat_1(format *QTextFormat) *QTextImageFormat {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = format.GetCthis()
@@ -109,7 +109,7 @@ func (this *QTextImageFormat) IsValid() bool {
 // /usr/include/qt/QtGui/qtextformat.h:739
 // index:0
 // Public inline
-// void setName(const class QString &)
+// void setName(const QString &)
 func (this *QTextImageFormat) SetName(name *qtcore.QString) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextImageFormat7setNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

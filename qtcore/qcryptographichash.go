@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QCryptographicHash) NewFromPointer(cthis unsafe.Pointer) *QCryptographicH
 // /usr/include/qt/QtCore/qcryptographichash.h:92
 // index:0
 // Public
-// void QCryptographicHash(enum QCryptographicHash::Algorithm)
+// void QCryptographicHash(QCryptographicHash::Algorithm)
 func NewQCryptographicHash(method int) *QCryptographicHash {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHashC2ENS_9AlgorithmE", ffiqt.FFI_TYPE_VOID, cthis, method)
@@ -109,7 +109,7 @@ func (this *QCryptographicHash) AddData(data string, length int) {
 // /usr/include/qt/QtCore/qcryptographichash.h:98
 // index:1
 // Public
-// void addData(const class QByteArray &)
+// void addData(const QByteArray &)
 func (this *QCryptographicHash) AddData_1(data *QByteArray) {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash7addDataERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -119,7 +119,7 @@ func (this *QCryptographicHash) AddData_1(data *QByteArray) {
 // /usr/include/qt/QtCore/qcryptographichash.h:99
 // index:2
 // Public
-// bool addData(class QIODevice *)
+// bool addData(QIODevice *)
 func (this *QCryptographicHash) AddData_2(device *QIODevice /*777 QIODevice **/) bool {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash7addDataEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -145,7 +145,7 @@ func (this *QCryptographicHash) Result() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qcryptographichash.h:103
 // index:0
 // Public static
-// QByteArray hash(const class QByteArray &, enum QCryptographicHash::Algorithm)
+// QByteArray hash(const QByteArray &, QCryptographicHash::Algorithm)
 func (this *QCryptographicHash) Hash(data *QByteArray, method int) *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash4hashERK10QByteArrayNS_9AlgorithmE", ffiqt.FFI_TYPE_POINTER, data, method)
 	gopp.ErrPrint(err, rv)

@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QMutexLocker) NewFromPointer(cthis unsafe.Pointer) *QMutexLocker {
 // /usr/include/qt/QtCore/qmutex.h:199
 // index:0
 // Public inline
-// void QMutexLocker(class QBasicMutex *)
+// void QMutexLocker(QBasicMutex *)
 func NewQMutexLocker(m *QBasicMutex /*777 QBasicMutex **/) *QMutexLocker {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = m.GetCthis()

@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -94,7 +94,7 @@ func DeleteQSGRectangleNode(*QSGRectangleNode) {
 // /usr/include/qt/QtQuick/qsgrectanglenode.h:52
 // index:0
 // Public pure virtual
-// void setRect(const class QRectF &)
+// void setRect(const QRectF &)
 func (this *QSGRectangleNode) SetRect(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSGRectangleNode7setRectERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -127,7 +127,7 @@ func (this *QSGRectangleNode) Rect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtQuick/qsgrectanglenode.h:56
 // index:0
 // Public pure virtual
-// void setColor(const class QColor &)
+// void setColor(const QColor &)
 func (this *QSGRectangleNode) SetColor(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSGRectangleNode8setColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

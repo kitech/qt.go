@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -106,7 +106,7 @@ func DeleteQSGSimpleTextureNode(*QSGSimpleTextureNode) {
 // /usr/include/qt/QtQuick/qsgsimpletexturenode.h:57
 // index:0
 // Public
-// void setRect(const class QRectF &)
+// void setRect(const QRectF &)
 func (this *QSGSimpleTextureNode) SetRect(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode7setRectERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -139,7 +139,7 @@ func (this *QSGSimpleTextureNode) Rect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtQuick/qsgsimpletexturenode.h:61
 // index:0
 // Public
-// void setSourceRect(const class QRectF &)
+// void setSourceRect(const QRectF &)
 func (this *QSGSimpleTextureNode) SetSourceRect(r *qtcore.QRectF) {
 	var convArg0 = r.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode13setSourceRectERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -172,7 +172,7 @@ func (this *QSGSimpleTextureNode) SourceRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtQuick/qsgsimpletexturenode.h:65
 // index:0
 // Public
-// void setTexture(class QSGTexture *)
+// void setTexture(QSGTexture *)
 func (this *QSGSimpleTextureNode) SetTexture(texture *QSGTexture /*777 QSGTexture **/) {
 	var convArg0 = texture.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode10setTextureEP10QSGTexture", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -194,7 +194,7 @@ func (this *QSGSimpleTextureNode) Texture() *QSGTexture /*777 QSGTexture **/ {
 // /usr/include/qt/QtQuick/qsgsimpletexturenode.h:68
 // index:0
 // Public
-// void setFiltering(class QSGTexture::Filtering)
+// void setFiltering(QSGTexture::Filtering)
 func (this *QSGSimpleTextureNode) SetFiltering(filtering int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode12setFilteringEN10QSGTexture9FilteringE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), filtering)
 	gopp.ErrPrint(err, rv)
@@ -225,7 +225,7 @@ func (this *QSGSimpleTextureNode) TextureCoordinatesTransform() int {
 // /usr/include/qt/QtQuick/qsgsimpletexturenode.h:81
 // index:0
 // Public
-// void setOwnsTexture(_Bool)
+// void setOwnsTexture(bool)
 func (this *QSGSimpleTextureNode) SetOwnsTexture(owns bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode14setOwnsTextureEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), owns)
 	gopp.ErrPrint(err, rv)

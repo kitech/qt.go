@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -110,7 +110,7 @@ func DeleteQSslDiffieHellmanParameters(*QSslDiffieHellmanParameters) {
 // /usr/include/qt/QtNetwork/qssldiffiehellmanparameters.h:92
 // index:0
 // Public inline
-// void swap(class QSslDiffieHellmanParameters &)
+// void swap(QSslDiffieHellmanParameters &)
 func (this *QSslDiffieHellmanParameters) Swap(other *QSslDiffieHellmanParameters) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParameters4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -120,7 +120,7 @@ func (this *QSslDiffieHellmanParameters) Swap(other *QSslDiffieHellmanParameters
 // /usr/include/qt/QtNetwork/qssldiffiehellmanparameters.h:94
 // index:0
 // Public static
-// QSslDiffieHellmanParameters fromEncoded(const class QByteArray &, QSsl::EncodingFormat)
+// QSslDiffieHellmanParameters fromEncoded(const QByteArray &, QSsl::EncodingFormat)
 func (this *QSslDiffieHellmanParameters) FromEncoded(encoded *qtcore.QByteArray, format int) *QSslDiffieHellmanParameters /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParameters11fromEncodedERK10QByteArrayN4QSsl14EncodingFormatE", ffiqt.FFI_TYPE_POINTER, encoded, format)
 	gopp.ErrPrint(err, rv)
@@ -137,7 +137,7 @@ func QSslDiffieHellmanParameters_FromEncoded(encoded *qtcore.QByteArray, format 
 // /usr/include/qt/QtNetwork/qssldiffiehellmanparameters.h:95
 // index:1
 // Public static
-// QSslDiffieHellmanParameters fromEncoded(class QIODevice *, QSsl::EncodingFormat)
+// QSslDiffieHellmanParameters fromEncoded(QIODevice *, QSsl::EncodingFormat)
 func (this *QSslDiffieHellmanParameters) FromEncoded_1(device *qtcore.QIODevice /*777 QIODevice **/, format int) *QSslDiffieHellmanParameters /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParameters11fromEncodedEP9QIODeviceN4QSsl14EncodingFormatE", ffiqt.FFI_TYPE_POINTER, device, format)
 	gopp.ErrPrint(err, rv)

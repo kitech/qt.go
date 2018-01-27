@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -73,7 +73,7 @@ func (*QAccessibleTextUpdateEvent) NewFromPointer(cthis unsafe.Pointer) *QAccess
 // /usr/include/qt/QtGui/qaccessible.h:864
 // index:0
 // Public inline
-// void QAccessibleTextUpdateEvent(class QObject *, int, const class QString &, const class QString &)
+// void QAccessibleTextUpdateEvent(QObject *, int, const QString &, const QString &)
 func NewQAccessibleTextUpdateEvent(obj *qtcore.QObject /*777 QObject **/, position int, oldText *qtcore.QString, text *qtcore.QString) *QAccessibleTextUpdateEvent {
 	cthis := qtrt.Calloc(1, 256) // 56
 	var convArg0 = obj.GetCthis()
@@ -88,7 +88,7 @@ func NewQAccessibleTextUpdateEvent(obj *qtcore.QObject /*777 QObject **/, positi
 // /usr/include/qt/QtGui/qaccessible.h:870
 // index:1
 // Public inline
-// void QAccessibleTextUpdateEvent(class QAccessibleInterface *, int, const class QString &, const class QString &)
+// void QAccessibleTextUpdateEvent(QAccessibleInterface *, int, const QString &, const QString &)
 func NewQAccessibleTextUpdateEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, position int, oldText *qtcore.QString, text *qtcore.QString) *QAccessibleTextUpdateEvent {
 	cthis := qtrt.Calloc(1, 256) // 56
 	var convArg0 = iface.GetCthis()

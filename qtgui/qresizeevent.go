@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -73,7 +73,7 @@ func (*QResizeEvent) NewFromPointer(cthis unsafe.Pointer) *QResizeEvent {
 // /usr/include/qt/QtGui/qevent.h:463
 // index:0
 // Public
-// void QResizeEvent(const class QSize &, const class QSize &)
+// void QResizeEvent(const QSize &, const QSize &)
 func NewQResizeEvent(size *qtcore.QSize, oldSize *qtcore.QSize) *QResizeEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = size.GetCthis()

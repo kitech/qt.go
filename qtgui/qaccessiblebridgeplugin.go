@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QAccessibleBridgePlugin) MetaObject() *qtcore.QMetaObject /*777 cons
 // /usr/include/qt/QtGui/qaccessiblebridge.h:69
 // index:0
 // Public
-// void QAccessibleBridgePlugin(class QObject *)
+// void QAccessibleBridgePlugin(QObject *)
 func NewQAccessibleBridgePlugin(parent *qtcore.QObject /*777 QObject **/) *QAccessibleBridgePlugin {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -107,7 +107,7 @@ func DeleteQAccessibleBridgePlugin(*QAccessibleBridgePlugin) {
 // /usr/include/qt/QtGui/qaccessiblebridge.h:72
 // index:0
 // Public pure virtual
-// QAccessibleBridge * create(const class QString &)
+// QAccessibleBridge * create(const QString &)
 func (this *QAccessibleBridgePlugin) Create(key *qtcore.QString) *QAccessibleBridge /*777 QAccessibleBridge **/ {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QAccessibleBridgePlugin6createERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

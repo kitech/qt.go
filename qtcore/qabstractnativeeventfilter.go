@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -89,7 +89,7 @@ func DeleteQAbstractNativeEventFilter(*QAbstractNativeEventFilter) {
 // /usr/include/qt/QtCore/qabstractnativeeventfilter.h:55
 // index:0
 // Public pure virtual
-// bool nativeEventFilter(const class QByteArray &, void *, long *)
+// bool nativeEventFilter(const QByteArray &, void *, long *)
 func (this *QAbstractNativeEventFilter) NativeEventFilter(eventType *QByteArray, message unsafe.Pointer /*666*/, result unsafe.Pointer /*666*/) bool {
 	var convArg0 = eventType.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAbstractNativeEventFilter17nativeEventFilterERK10QByteArrayPvPl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, message, &result)

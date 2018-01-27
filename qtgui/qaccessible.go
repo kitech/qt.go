@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -72,7 +72,7 @@ func (*QAccessible) NewFromPointer(cthis unsafe.Pointer) *QAccessible {
 // /usr/include/qt/QtGui/qaccessible.h:414
 // index:0
 // Public static
-// QAccessibleInterface * queryAccessibleInterface(class QObject *)
+// QAccessibleInterface * queryAccessibleInterface(QObject *)
 func (this *QAccessible) QueryAccessibleInterface(arg0 *qtcore.QObject /*777 QObject **/) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QAccessible24queryAccessibleInterfaceEP7QObject", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
@@ -89,7 +89,7 @@ func QAccessible_QueryAccessibleInterface(arg0 *qtcore.QObject /*777 QObject **/
 // /usr/include/qt/QtGui/qaccessible.h:415
 // index:0
 // Public static
-// QAccessible::Id uniqueId(class QAccessibleInterface *)
+// QAccessible::Id uniqueId(QAccessibleInterface *)
 func (this *QAccessible) UniqueId(iface *QAccessibleInterface /*777 QAccessibleInterface **/) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QAccessible8uniqueIdEP20QAccessibleInterface", ffiqt.FFI_TYPE_POINTER, iface)
 	gopp.ErrPrint(err, rv)
@@ -122,7 +122,7 @@ func QAccessible_AccessibleInterface(uniqueId uint) *QAccessibleInterface /*777 
 // /usr/include/qt/QtGui/qaccessible.h:417
 // index:0
 // Public static
-// QAccessible::Id registerAccessibleInterface(class QAccessibleInterface *)
+// QAccessible::Id registerAccessibleInterface(QAccessibleInterface *)
 func (this *QAccessible) RegisterAccessibleInterface(iface *QAccessibleInterface /*777 QAccessibleInterface **/) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QAccessible27registerAccessibleInterfaceEP20QAccessibleInterface", ffiqt.FFI_TYPE_POINTER, iface)
 	gopp.ErrPrint(err, rv)
@@ -151,7 +151,7 @@ func QAccessible_DeleteAccessibleInterface(uniqueId uint) {
 // /usr/include/qt/QtGui/qaccessible.h:424
 // index:0
 // Public static
-// void updateAccessibility(class QAccessibleEvent *)
+// void updateAccessibility(QAccessibleEvent *)
 func (this *QAccessible) UpdateAccessibility(event *QAccessibleEvent /*777 QAccessibleEvent **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QAccessible19updateAccessibilityEP16QAccessibleEvent", ffiqt.FFI_TYPE_POINTER, event)
 	gopp.ErrPrint(err, rv)
@@ -180,7 +180,7 @@ func QAccessible_IsActive() bool {
 // /usr/include/qt/QtGui/qaccessible.h:427
 // index:0
 // Public static
-// void setActive(_Bool)
+// void setActive(bool)
 func (this *QAccessible) SetActive(active bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QAccessible9setActiveEb", ffiqt.FFI_TYPE_POINTER, active)
 	gopp.ErrPrint(err, rv)
@@ -193,7 +193,7 @@ func QAccessible_SetActive(active bool) {
 // /usr/include/qt/QtGui/qaccessible.h:428
 // index:0
 // Public static
-// void setRootObject(class QObject *)
+// void setRootObject(QObject *)
 func (this *QAccessible) SetRootObject(object *qtcore.QObject /*777 QObject **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QAccessible13setRootObjectEP7QObject", ffiqt.FFI_TYPE_POINTER, object)
 	gopp.ErrPrint(err, rv)

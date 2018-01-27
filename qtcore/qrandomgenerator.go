@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -104,7 +104,7 @@ func NewQRandomGenerator_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*66
 // /usr/include/qt/QtCore/qrandom.h:172
 // index:3
 // Protected
-// void QRandomGenerator(enum QRandomGenerator::System)
+// void QRandomGenerator(QRandomGenerator::System)
 func NewQRandomGenerator_3(arg0 int) *QRandomGenerator {
 	cthis := qtrt.Calloc(1, 256) // 2512
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGeneratorC2ENS_6SystemE", ffiqt.FFI_TYPE_VOID, cthis, arg0)

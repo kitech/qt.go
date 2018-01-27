@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -88,7 +88,7 @@ func (this *QGraphicsTextItem) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:877
 // index:0
 // Public
-// void QGraphicsTextItem(class QGraphicsItem *)
+// void QGraphicsTextItem(QGraphicsItem *)
 func NewQGraphicsTextItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsTextItem {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = parent.GetCthis()
@@ -101,7 +101,7 @@ func NewQGraphicsTextItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraph
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:878
 // index:1
 // Public
-// void QGraphicsTextItem(const class QString &, class QGraphicsItem *)
+// void QGraphicsTextItem(const QString &, QGraphicsItem *)
 func NewQGraphicsTextItem_1(text *qtcore.QString, parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsTextItem {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = text.GetCthis()
@@ -138,7 +138,7 @@ func (this *QGraphicsTextItem) ToHtml() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:882
 // index:0
 // Public
-// void setHtml(const class QString &)
+// void setHtml(const QString &)
 func (this *QGraphicsTextItem) SetHtml(html *qtcore.QString) {
 	var convArg0 = html.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem7setHtmlERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -162,7 +162,7 @@ func (this *QGraphicsTextItem) ToPlainText() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:885
 // index:0
 // Public
-// void setPlainText(const class QString &)
+// void setPlainText(const QString &)
 func (this *QGraphicsTextItem) SetPlainText(text *qtcore.QString) {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem12setPlainTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -186,7 +186,7 @@ func (this *QGraphicsTextItem) Font() *qtgui.QFont /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:888
 // index:0
 // Public
-// void setFont(const class QFont &)
+// void setFont(const QFont &)
 func (this *QGraphicsTextItem) SetFont(font *qtgui.QFont) {
 	var convArg0 = font.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem7setFontERK5QFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -196,7 +196,7 @@ func (this *QGraphicsTextItem) SetFont(font *qtgui.QFont) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:890
 // index:0
 // Public
-// void setDefaultTextColor(const class QColor &)
+// void setDefaultTextColor(const QColor &)
 func (this *QGraphicsTextItem) SetDefaultTextColor(c *qtgui.QColor) {
 	var convArg0 = c.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem19setDefaultTextColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -248,7 +248,7 @@ func (this *QGraphicsTextItem) Shape() *qtgui.QPainterPath /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:895
 // index:0
 // Public virtual
-// bool contains(const class QPointF &)
+// bool contains(const QPointF &)
 func (this *QGraphicsTextItem) Contains(point *qtcore.QPointF) bool {
 	var convArg0 = point.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem8containsERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -260,7 +260,7 @@ func (this *QGraphicsTextItem) Contains(point *qtcore.QPointF) bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:897
 // index:0
 // Public virtual
-// void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
+// void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
 func (this *QGraphicsTextItem) Paint(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionGraphicsItem /*777 const QStyleOptionGraphicsItem **/, widget *QWidget /*777 QWidget **/) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = option.GetCthis()
@@ -272,7 +272,7 @@ func (this *QGraphicsTextItem) Paint(painter *qtgui.QPainter /*777 QPainter **/,
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:899
 // index:0
 // Public virtual
-// bool isObscuredBy(const class QGraphicsItem *)
+// bool isObscuredBy(const QGraphicsItem *)
 func (this *QGraphicsTextItem) IsObscuredBy(item *QGraphicsItem /*777 const QGraphicsItem **/) bool {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -338,7 +338,7 @@ func (this *QGraphicsTextItem) AdjustSize() {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:910
 // index:0
 // Public
-// void setDocument(class QTextDocument *)
+// void setDocument(QTextDocument *)
 func (this *QGraphicsTextItem) SetDocument(document *qtgui.QTextDocument /*777 QTextDocument **/) {
 	var convArg0 = document.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem11setDocumentEP13QTextDocument", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -380,7 +380,7 @@ func (this *QGraphicsTextItem) TextInteractionFlags() int {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:916
 // index:0
 // Public
-// void setTabChangesFocus(_Bool)
+// void setTabChangesFocus(bool)
 func (this *QGraphicsTextItem) SetTabChangesFocus(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem18setTabChangesFocusEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -400,7 +400,7 @@ func (this *QGraphicsTextItem) TabChangesFocus() bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:919
 // index:0
 // Public
-// void setOpenExternalLinks(_Bool)
+// void setOpenExternalLinks(bool)
 func (this *QGraphicsTextItem) SetOpenExternalLinks(open bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem20setOpenExternalLinksEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), open)
 	gopp.ErrPrint(err, rv)
@@ -420,7 +420,7 @@ func (this *QGraphicsTextItem) OpenExternalLinks() bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:922
 // index:0
 // Public
-// void setTextCursor(const class QTextCursor &)
+// void setTextCursor(const QTextCursor &)
 func (this *QGraphicsTextItem) SetTextCursor(cursor *qtgui.QTextCursor) {
 	var convArg0 = cursor.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem13setTextCursorERK11QTextCursor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -444,7 +444,7 @@ func (this *QGraphicsTextItem) TextCursor() *qtgui.QTextCursor /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:926
 // index:0
 // Public
-// void linkActivated(const class QString &)
+// void linkActivated(const QString &)
 func (this *QGraphicsTextItem) LinkActivated(arg0 *qtcore.QString) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem13linkActivatedERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -454,7 +454,7 @@ func (this *QGraphicsTextItem) LinkActivated(arg0 *qtcore.QString) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:927
 // index:0
 // Public
-// void linkHovered(const class QString &)
+// void linkHovered(const QString &)
 func (this *QGraphicsTextItem) LinkHovered(arg0 *qtcore.QString) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem11linkHoveredERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -464,7 +464,7 @@ func (this *QGraphicsTextItem) LinkHovered(arg0 *qtcore.QString) {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:930
 // index:0
 // Protected virtual
-// bool sceneEvent(class QEvent *)
+// bool sceneEvent(QEvent *)
 func (this *QGraphicsTextItem) SceneEvent(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem10sceneEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -476,7 +476,7 @@ func (this *QGraphicsTextItem) SceneEvent(event *qtcore.QEvent /*777 QEvent **/)
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:931
 // index:0
 // Protected virtual
-// void mousePressEvent(class QGraphicsSceneMouseEvent *)
+// void mousePressEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsTextItem) MousePressEvent(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem15mousePressEventEP24QGraphicsSceneMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -486,7 +486,7 @@ func (this *QGraphicsTextItem) MousePressEvent(event *QGraphicsSceneMouseEvent /
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:932
 // index:0
 // Protected virtual
-// void mouseMoveEvent(class QGraphicsSceneMouseEvent *)
+// void mouseMoveEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsTextItem) MouseMoveEvent(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem14mouseMoveEventEP24QGraphicsSceneMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -496,7 +496,7 @@ func (this *QGraphicsTextItem) MouseMoveEvent(event *QGraphicsSceneMouseEvent /*
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:933
 // index:0
 // Protected virtual
-// void mouseReleaseEvent(class QGraphicsSceneMouseEvent *)
+// void mouseReleaseEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsTextItem) MouseReleaseEvent(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -506,7 +506,7 @@ func (this *QGraphicsTextItem) MouseReleaseEvent(event *QGraphicsSceneMouseEvent
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:934
 // index:0
 // Protected virtual
-// void mouseDoubleClickEvent(class QGraphicsSceneMouseEvent *)
+// void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsTextItem) MouseDoubleClickEvent(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -516,7 +516,7 @@ func (this *QGraphicsTextItem) MouseDoubleClickEvent(event *QGraphicsSceneMouseE
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:935
 // index:0
 // Protected virtual
-// void contextMenuEvent(class QGraphicsSceneContextMenuEvent *)
+// void contextMenuEvent(QGraphicsSceneContextMenuEvent *)
 func (this *QGraphicsTextItem) ContextMenuEvent(event *QGraphicsSceneContextMenuEvent /*777 QGraphicsSceneContextMenuEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -526,7 +526,7 @@ func (this *QGraphicsTextItem) ContextMenuEvent(event *QGraphicsSceneContextMenu
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:936
 // index:0
 // Protected virtual
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QGraphicsTextItem) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -536,7 +536,7 @@ func (this *QGraphicsTextItem) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEv
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:937
 // index:0
 // Protected virtual
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QGraphicsTextItem) KeyReleaseEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem15keyReleaseEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -546,7 +546,7 @@ func (this *QGraphicsTextItem) KeyReleaseEvent(event *qtgui.QKeyEvent /*777 QKey
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:938
 // index:0
 // Protected virtual
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QGraphicsTextItem) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -556,7 +556,7 @@ func (this *QGraphicsTextItem) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocu
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:939
 // index:0
 // Protected virtual
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QGraphicsTextItem) FocusOutEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -566,7 +566,7 @@ func (this *QGraphicsTextItem) FocusOutEvent(event *qtgui.QFocusEvent /*777 QFoc
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:940
 // index:0
 // Protected virtual
-// void dragEnterEvent(class QGraphicsSceneDragDropEvent *)
+// void dragEnterEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsTextItem) DragEnterEvent(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem14dragEnterEventEP27QGraphicsSceneDragDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -576,7 +576,7 @@ func (this *QGraphicsTextItem) DragEnterEvent(event *QGraphicsSceneDragDropEvent
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:941
 // index:0
 // Protected virtual
-// void dragLeaveEvent(class QGraphicsSceneDragDropEvent *)
+// void dragLeaveEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsTextItem) DragLeaveEvent(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -586,7 +586,7 @@ func (this *QGraphicsTextItem) DragLeaveEvent(event *QGraphicsSceneDragDropEvent
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:942
 // index:0
 // Protected virtual
-// void dragMoveEvent(class QGraphicsSceneDragDropEvent *)
+// void dragMoveEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsTextItem) DragMoveEvent(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem13dragMoveEventEP27QGraphicsSceneDragDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -596,7 +596,7 @@ func (this *QGraphicsTextItem) DragMoveEvent(event *QGraphicsSceneDragDropEvent 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:943
 // index:0
 // Protected virtual
-// void dropEvent(class QGraphicsSceneDragDropEvent *)
+// void dropEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsTextItem) DropEvent(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem9dropEventEP27QGraphicsSceneDragDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -606,7 +606,7 @@ func (this *QGraphicsTextItem) DropEvent(event *QGraphicsSceneDragDropEvent /*77
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:944
 // index:0
 // Protected virtual
-// void inputMethodEvent(class QInputMethodEvent *)
+// void inputMethodEvent(QInputMethodEvent *)
 func (this *QGraphicsTextItem) InputMethodEvent(event *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem16inputMethodEventEP17QInputMethodEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -616,7 +616,7 @@ func (this *QGraphicsTextItem) InputMethodEvent(event *qtgui.QInputMethodEvent /
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:945
 // index:0
 // Protected virtual
-// void hoverEnterEvent(class QGraphicsSceneHoverEvent *)
+// void hoverEnterEvent(QGraphicsSceneHoverEvent *)
 func (this *QGraphicsTextItem) HoverEnterEvent(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem15hoverEnterEventEP24QGraphicsSceneHoverEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -626,7 +626,7 @@ func (this *QGraphicsTextItem) HoverEnterEvent(event *QGraphicsSceneHoverEvent /
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:946
 // index:0
 // Protected virtual
-// void hoverMoveEvent(class QGraphicsSceneHoverEvent *)
+// void hoverMoveEvent(QGraphicsSceneHoverEvent *)
 func (this *QGraphicsTextItem) HoverMoveEvent(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem14hoverMoveEventEP24QGraphicsSceneHoverEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -636,7 +636,7 @@ func (this *QGraphicsTextItem) HoverMoveEvent(event *QGraphicsSceneHoverEvent /*
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:947
 // index:0
 // Protected virtual
-// void hoverLeaveEvent(class QGraphicsSceneHoverEvent *)
+// void hoverLeaveEvent(QGraphicsSceneHoverEvent *)
 func (this *QGraphicsTextItem) HoverLeaveEvent(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -660,7 +660,7 @@ func (this *QGraphicsTextItem) InputMethodQuery(query int) *qtcore.QVariant /*12
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:951
 // index:0
 // Protected virtual
-// bool supportsExtension(enum QGraphicsItem::Extension)
+// bool supportsExtension(QGraphicsItem::Extension)
 func (this *QGraphicsTextItem) SupportsExtension(extension int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	gopp.ErrPrint(err, rv)
@@ -671,7 +671,7 @@ func (this *QGraphicsTextItem) SupportsExtension(extension int) bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:952
 // index:0
 // Protected virtual
-// void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
+// void setExtension(QGraphicsItem::Extension, const QVariant &)
 func (this *QGraphicsTextItem) SetExtension(extension int, variant *qtcore.QVariant) {
 	var convArg1 = variant.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension, convArg1)
@@ -681,7 +681,7 @@ func (this *QGraphicsTextItem) SetExtension(extension int, variant *qtcore.QVari
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:953
 // index:0
 // Protected virtual
-// QVariant extension(const class QVariant &)
+// QVariant extension(const QVariant &)
 func (this *QGraphicsTextItem) Extension(variant *qtcore.QVariant) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = variant.GetCthis()

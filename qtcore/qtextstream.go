@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQTextStream() *QTextStream {
 // /usr/include/qt/QtCore/qtextstream.h:94
 // index:1
 // Public
-// void QTextStream(class QIODevice *)
+// void QTextStream(QIODevice *)
 func NewQTextStream_1(device *QIODevice /*777 QIODevice **/) *QTextStream {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = device.GetCthis()
@@ -102,7 +102,7 @@ func DeleteQTextStream(*QTextStream) {
 // /usr/include/qt/QtCore/qtextstream.h:102
 // index:0
 // Public
-// void setCodec(class QTextCodec *)
+// void setCodec(QTextCodec *)
 func (this *QTextStream) SetCodec(codec *QTextCodec /*777 QTextCodec **/) {
 	var convArg0 = codec.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream8setCodecEP10QTextCodec", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -135,7 +135,7 @@ func (this *QTextStream) Codec() *QTextCodec /*777 QTextCodec **/ {
 // /usr/include/qt/QtCore/qtextstream.h:105
 // index:0
 // Public
-// void setAutoDetectUnicode(_Bool)
+// void setAutoDetectUnicode(bool)
 func (this *QTextStream) SetAutoDetectUnicode(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream20setAutoDetectUnicodeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -155,7 +155,7 @@ func (this *QTextStream) AutoDetectUnicode() bool {
 // /usr/include/qt/QtCore/qtextstream.h:107
 // index:0
 // Public
-// void setGenerateByteOrderMark(_Bool)
+// void setGenerateByteOrderMark(bool)
 func (this *QTextStream) SetGenerateByteOrderMark(generate bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream24setGenerateByteOrderMarkEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), generate)
 	gopp.ErrPrint(err, rv)
@@ -175,7 +175,7 @@ func (this *QTextStream) GenerateByteOrderMark() bool {
 // /usr/include/qt/QtCore/qtextstream.h:111
 // index:0
 // Public
-// void setLocale(const class QLocale &)
+// void setLocale(const QLocale &)
 func (this *QTextStream) SetLocale(locale *QLocale) {
 	var convArg0 = locale.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream9setLocaleERK7QLocale", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -199,7 +199,7 @@ func (this *QTextStream) Locale() *QLocale /*123*/ {
 // /usr/include/qt/QtCore/qtextstream.h:114
 // index:0
 // Public
-// void setDevice(class QIODevice *)
+// void setDevice(QIODevice *)
 func (this *QTextStream) SetDevice(device *QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -244,7 +244,7 @@ func (this *QTextStream) Status() int {
 // /usr/include/qt/QtCore/qtextstream.h:121
 // index:0
 // Public
-// void setStatus(enum QTextStream::Status)
+// void setStatus(QTextStream::Status)
 func (this *QTextStream) SetStatus(status int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream9setStatusENS_6StatusE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), status)
 	gopp.ErrPrint(err, rv)
@@ -336,7 +336,7 @@ func (this *QTextStream) ReadLine(maxlen int64) *QString /*123*/ {
 // /usr/include/qt/QtCore/qtextstream.h:133
 // index:0
 // Public
-// bool readLineInto(class QString *, qint64)
+// bool readLineInto(QString *, qint64)
 func (this *QTextStream) ReadLineInto(line *QString /*777 QString **/, maxlen int64) bool {
 	var convArg0 = line.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream12readLineIntoEP7QStringx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
@@ -376,7 +376,7 @@ func (this *QTextStream) Read(maxlen int64) *QString /*123*/ {
 // /usr/include/qt/QtCore/qtextstream.h:137
 // index:0
 // Public
-// void setFieldAlignment(enum QTextStream::FieldAlignment)
+// void setFieldAlignment(QTextStream::FieldAlignment)
 func (this *QTextStream) SetFieldAlignment(alignment int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream17setFieldAlignmentENS_14FieldAlignmentE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
 	gopp.ErrPrint(err, rv)
@@ -396,7 +396,7 @@ func (this *QTextStream) FieldAlignment() int {
 // /usr/include/qt/QtCore/qtextstream.h:140
 // index:0
 // Public
-// void setPadChar(class QChar)
+// void setPadChar(QChar)
 func (this *QTextStream) SetPadChar(ch *QChar /*123*/) {
 	var convArg0 = ch.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream10setPadCharE5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -480,7 +480,7 @@ func (this *QTextStream) IntegerBase() int {
 // /usr/include/qt/QtCore/qtextstream.h:152
 // index:0
 // Public
-// void setRealNumberNotation(enum QTextStream::RealNumberNotation)
+// void setRealNumberNotation(QTextStream::RealNumberNotation)
 func (this *QTextStream) SetRealNumberNotation(notation int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream21setRealNumberNotationENS_18RealNumberNotationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), notation)
 	gopp.ErrPrint(err, rv)

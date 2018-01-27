@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQSslEllipticCurve() *QSslEllipticCurve {
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:64
 // index:0
 // Public static
-// QSslEllipticCurve fromShortName(const class QString &)
+// QSslEllipticCurve fromShortName(const QString &)
 func (this *QSslEllipticCurve) FromShortName(name *qtcore.QString) *QSslEllipticCurve /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslEllipticCurve13fromShortNameERK7QString", ffiqt.FFI_TYPE_POINTER, name)
 	gopp.ErrPrint(err, rv)
@@ -101,7 +101,7 @@ func QSslEllipticCurve_FromShortName(name *qtcore.QString) *QSslEllipticCurve /*
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:65
 // index:0
 // Public static
-// QSslEllipticCurve fromLongName(const class QString &)
+// QSslEllipticCurve fromLongName(const QString &)
 func (this *QSslEllipticCurve) FromLongName(name *qtcore.QString) *QSslEllipticCurve /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslEllipticCurve12fromLongNameERK7QString", ffiqt.FFI_TYPE_POINTER, name)
 	gopp.ErrPrint(err, rv)

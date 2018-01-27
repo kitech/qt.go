@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -97,7 +97,7 @@ func DeleteQScrollerProperties(*QScrollerProperties) {
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:68
 // index:0
 // Public static
-// void setDefaultScrollerProperties(const class QScrollerProperties &)
+// void setDefaultScrollerProperties(const QScrollerProperties &)
 func (this *QScrollerProperties) SetDefaultScrollerProperties(sp *QScrollerProperties) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerProperties28setDefaultScrollerPropertiesERKS_", ffiqt.FFI_TYPE_POINTER, sp)
 	gopp.ErrPrint(err, rv)
@@ -123,7 +123,7 @@ func QScrollerProperties_UnsetDefaultScrollerProperties() {
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:117
 // index:0
 // Public
-// QVariant scrollMetric(enum QScrollerProperties::ScrollMetric)
+// QVariant scrollMetric(QScrollerProperties::ScrollMetric)
 func (this *QScrollerProperties) ScrollMetric(metric int) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollerProperties12scrollMetricENS_12ScrollMetricE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), metric)
@@ -137,7 +137,7 @@ func (this *QScrollerProperties) ScrollMetric(metric int) *qtcore.QVariant /*123
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:118
 // index:0
 // Public
-// void setScrollMetric(enum QScrollerProperties::ScrollMetric, const class QVariant &)
+// void setScrollMetric(QScrollerProperties::ScrollMetric, const QVariant &)
 func (this *QScrollerProperties) SetScrollMetric(metric int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerProperties15setScrollMetricENS_12ScrollMetricERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), metric, convArg1)

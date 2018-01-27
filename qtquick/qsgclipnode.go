@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -106,7 +106,7 @@ func DeleteQSGClipNode(*QSGClipNode) {
 // /usr/include/qt/QtQuick/qsgnode.h:267
 // index:0
 // Public
-// void setIsRectangular(_Bool)
+// void setIsRectangular(bool)
 func (this *QSGClipNode) SetIsRectangular(rectHint bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGClipNode16setIsRectangularEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), rectHint)
 	gopp.ErrPrint(err, rv)
@@ -126,7 +126,7 @@ func (this *QSGClipNode) IsRectangular() bool {
 // /usr/include/qt/QtQuick/qsgnode.h:270
 // index:0
 // Public
-// void setClipRect(const class QRectF &)
+// void setClipRect(const QRectF &)
 func (this *QSGClipNode) SetClipRect(arg0 *qtcore.QRectF) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGClipNode11setClipRectERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -96,7 +96,7 @@ func NewQPolygon_1(size int) *QPolygon {
 // /usr/include/qt/QtGui/qpolygon.h:66
 // index:2
 // Public
-// void QPolygon(const class QRect &, _Bool)
+// void QPolygon(const QRect &, bool)
 func NewQPolygon_2(r *qtcore.QRect, closed bool) *QPolygon {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = r.GetCthis()
@@ -130,7 +130,7 @@ func DeleteQPolygon(*QPolygon) {
 // /usr/include/qt/QtGui/qpolygon.h:74
 // index:0
 // Public inline
-// void swap(class QPolygon &)
+// void swap(QPolygon &)
 func (this *QPolygon) Swap(other *QPolygon) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygon4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -149,7 +149,7 @@ func (this *QPolygon) Translate(dx int, dy int) {
 // /usr/include/qt/QtGui/qpolygon.h:79
 // index:1
 // Public
-// void translate(const class QPoint &)
+// void translate(const QPoint &)
 func (this *QPolygon) Translate_1(offset *qtcore.QPoint) {
 	var convArg0 = offset.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygon9translateERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -173,7 +173,7 @@ func (this *QPolygon) Translated(dx int, dy int) *QPolygon /*123*/ {
 // /usr/include/qt/QtGui/qpolygon.h:82
 // index:1
 // Public inline
-// QPolygon translated(const class QPoint &)
+// QPolygon translated(const QPoint &)
 func (this *QPolygon) Translated_1(offset *qtcore.QPoint) *QPolygon /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = offset.GetCthis()
@@ -234,7 +234,7 @@ func (this *QPolygon) SetPoint(index int, x int, y int) {
 // /usr/include/qt/QtGui/qpolygon.h:89
 // index:1
 // Public
-// void setPoint(int, const class QPoint &)
+// void setPoint(int, const QPoint &)
 func (this *QPolygon) SetPoint_1(index int, p *qtcore.QPoint) {
 	var convArg1 = p.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygon8setPointEiRK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
@@ -262,7 +262,7 @@ func (this *QPolygon) PutPoints(index int, nPoints int, points unsafe.Pointer /*
 // /usr/include/qt/QtGui/qpolygon.h:94
 // index:1
 // Public
-// void putPoints(int, int, const class QPolygon &, int)
+// void putPoints(int, int, const QPolygon &, int)
 func (this *QPolygon) PutPoints_1(index int, nPoints int, from *QPolygon, fromIndex int) {
 	var convArg2 = from.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygon9putPointsEiiRKS_i", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, nPoints, convArg2, fromIndex)
@@ -272,7 +272,7 @@ func (this *QPolygon) PutPoints_1(index int, nPoints int, from *QPolygon, fromIn
 // /usr/include/qt/QtGui/qpolygon.h:96
 // index:0
 // Public
-// bool containsPoint(const class QPoint &, Qt::FillRule)
+// bool containsPoint(const QPoint &, Qt::FillRule)
 func (this *QPolygon) ContainsPoint(pt *qtcore.QPoint, fillRule int) bool {
 	var convArg0 = pt.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon13containsPointERK6QPointN2Qt8FillRuleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fillRule)
@@ -284,7 +284,7 @@ func (this *QPolygon) ContainsPoint(pt *qtcore.QPoint, fillRule int) bool {
 // /usr/include/qt/QtGui/qpolygon.h:98
 // index:0
 // Public
-// QPolygon united(const class QPolygon &)
+// QPolygon united(const QPolygon &)
 func (this *QPolygon) United(r *QPolygon) *QPolygon /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
@@ -299,7 +299,7 @@ func (this *QPolygon) United(r *QPolygon) *QPolygon /*123*/ {
 // /usr/include/qt/QtGui/qpolygon.h:99
 // index:0
 // Public
-// QPolygon intersected(const class QPolygon &)
+// QPolygon intersected(const QPolygon &)
 func (this *QPolygon) Intersected(r *QPolygon) *QPolygon /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
@@ -314,7 +314,7 @@ func (this *QPolygon) Intersected(r *QPolygon) *QPolygon /*123*/ {
 // /usr/include/qt/QtGui/qpolygon.h:100
 // index:0
 // Public
-// QPolygon subtracted(const class QPolygon &)
+// QPolygon subtracted(const QPolygon &)
 func (this *QPolygon) Subtracted(r *QPolygon) *QPolygon /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
@@ -329,7 +329,7 @@ func (this *QPolygon) Subtracted(r *QPolygon) *QPolygon /*123*/ {
 // /usr/include/qt/QtGui/qpolygon.h:102
 // index:0
 // Public
-// bool intersects(const class QPolygon &)
+// bool intersects(const QPolygon &)
 func (this *QPolygon) Intersects(r *QPolygon) bool {
 	var convArg0 = r.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon10intersectsERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

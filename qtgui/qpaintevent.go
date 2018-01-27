@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -73,7 +73,7 @@ func (*QPaintEvent) NewFromPointer(cthis unsafe.Pointer) *QPaintEvent {
 // /usr/include/qt/QtGui/qevent.h:405
 // index:0
 // Public
-// void QPaintEvent(const class QRegion &)
+// void QPaintEvent(const QRegion &)
 func NewQPaintEvent(paintRegion *QRegion) *QPaintEvent {
 	cthis := qtrt.Calloc(1, 256) // 56
 	var convArg0 = paintRegion.GetCthis()
@@ -86,7 +86,7 @@ func NewQPaintEvent(paintRegion *QRegion) *QPaintEvent {
 // /usr/include/qt/QtGui/qevent.h:406
 // index:1
 // Public
-// void QPaintEvent(const class QRect &)
+// void QPaintEvent(const QRect &)
 func NewQPaintEvent_1(paintRect *qtcore.QRect) *QPaintEvent {
 	cthis := qtrt.Calloc(1, 256) // 56
 	var convArg0 = paintRect.GetCthis()

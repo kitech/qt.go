@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QErrorMessage) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // /usr/include/qt/QtWidgets/qerrormessage.h:58
 // index:0
 // Public
-// void QErrorMessage(class QWidget *)
+// void QErrorMessage(QWidget *)
 func NewQErrorMessage(parent *QWidget /*777 QWidget **/) *QErrorMessage {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -128,7 +128,7 @@ func QErrorMessage_QtHandler() *QErrorMessage /*777 QErrorMessage **/ {
 // /usr/include/qt/QtWidgets/qerrormessage.h:64
 // index:0
 // Public
-// void showMessage(const class QString &)
+// void showMessage(const QString &)
 func (this *QErrorMessage) ShowMessage(message *qtcore.QString) {
 	var convArg0 = message.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage11showMessageERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -138,7 +138,7 @@ func (this *QErrorMessage) ShowMessage(message *qtcore.QString) {
 // /usr/include/qt/QtWidgets/qerrormessage.h:65
 // index:1
 // Public
-// void showMessage(const class QString &, const class QString &)
+// void showMessage(const QString &, const QString &)
 func (this *QErrorMessage) ShowMessage_1(message *qtcore.QString, type_ *qtcore.QString) {
 	var convArg0 = message.GetCthis()
 	var convArg1 = type_.GetCthis()
@@ -158,7 +158,7 @@ func (this *QErrorMessage) Done(arg0 int) {
 // /usr/include/qt/QtWidgets/qerrormessage.h:69
 // index:0
 // Protected virtual
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QErrorMessage) ChangeEvent(e *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

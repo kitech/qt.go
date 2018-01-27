@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QPinchGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // /usr/include/qt/QtWidgets/qgesture.h:165
 // index:0
 // Public
-// void QPinchGesture(class QObject *)
+// void QPinchGesture(QObject *)
 func NewQPinchGesture(parent *qtcore.QObject /*777 QObject **/) *QPinchGesture {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -193,7 +193,7 @@ func (this *QPinchGesture) CenterPoint() *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtWidgets/qgesture.h:177
 // index:0
 // Public
-// void setStartCenterPoint(const class QPointF &)
+// void setStartCenterPoint(const QPointF &)
 func (this *QPinchGesture) SetStartCenterPoint(value *qtcore.QPointF) {
 	var convArg0 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture19setStartCenterPointERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -203,7 +203,7 @@ func (this *QPinchGesture) SetStartCenterPoint(value *qtcore.QPointF) {
 // /usr/include/qt/QtWidgets/qgesture.h:178
 // index:0
 // Public
-// void setLastCenterPoint(const class QPointF &)
+// void setLastCenterPoint(const QPointF &)
 func (this *QPinchGesture) SetLastCenterPoint(value *qtcore.QPointF) {
 	var convArg0 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture18setLastCenterPointERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -213,7 +213,7 @@ func (this *QPinchGesture) SetLastCenterPoint(value *qtcore.QPointF) {
 // /usr/include/qt/QtWidgets/qgesture.h:179
 // index:0
 // Public
-// void setCenterPoint(const class QPointF &)
+// void setCenterPoint(const QPointF &)
 func (this *QPinchGesture) SetCenterPoint(value *qtcore.QPointF) {
 	var convArg0 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGesture14setCenterPointERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

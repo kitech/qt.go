@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -93,7 +93,7 @@ func DeleteQHostInfo(*QHostInfo) {
 // /usr/include/qt/QtNetwork/qhostinfo.h:69
 // index:0
 // Public inline
-// void swap(class QHostInfo &)
+// void swap(QHostInfo &)
 func (this *QHostInfo) Swap(other *QHostInfo) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -117,7 +117,7 @@ func (this *QHostInfo) HostName() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtNetwork/qhostinfo.h:72
 // index:0
 // Public
-// void setHostName(const class QString &)
+// void setHostName(const QString &)
 func (this *QHostInfo) SetHostName(name *qtcore.QString) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo11setHostNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -138,7 +138,7 @@ func (this *QHostInfo) Error() int {
 // /usr/include/qt/QtNetwork/qhostinfo.h:78
 // index:0
 // Public
-// void setError(enum QHostInfo::HostInfoError)
+// void setError(QHostInfo::HostInfoError)
 func (this *QHostInfo) SetError(error int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo8setErrorENS_13HostInfoErrorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), error)
 	gopp.ErrPrint(err, rv)
@@ -161,7 +161,7 @@ func (this *QHostInfo) ErrorString() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtNetwork/qhostinfo.h:81
 // index:0
 // Public
-// void setErrorString(const class QString &)
+// void setErrorString(const QString &)
 func (this *QHostInfo) SetErrorString(errorString *qtcore.QString) {
 	var convArg0 = errorString.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo14setErrorStringERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -191,7 +191,7 @@ func (this *QHostInfo) LookupId() int {
 // /usr/include/qt/QtNetwork/qhostinfo.h:86
 // index:0
 // Public static
-// int lookupHost(const class QString &, class QObject *, const char *)
+// int lookupHost(const QString &, QObject *, const char *)
 func (this *QHostInfo) LookupHost(name *qtcore.QString, receiver *qtcore.QObject /*777 QObject **/, member string) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo10lookupHostERK7QStringP7QObjectPKc", ffiqt.FFI_TYPE_POINTER, name, receiver, member)
 	gopp.ErrPrint(err, rv)
@@ -220,7 +220,7 @@ func QHostInfo_AbortHostLookup(lookupId int) {
 // /usr/include/qt/QtNetwork/qhostinfo.h:89
 // index:0
 // Public static
-// QHostInfo fromName(const class QString &)
+// QHostInfo fromName(const QString &)
 func (this *QHostInfo) FromName(name *qtcore.QString) *QHostInfo /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo8fromNameERK7QString", ffiqt.FFI_TYPE_POINTER, name)
 	gopp.ErrPrint(err, rv)

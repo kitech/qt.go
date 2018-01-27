@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QDnsLookup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtNetwork/qdnslookup.h:221
 // index:0
 // Public
-// void QDnsLookup(class QObject *)
+// void QDnsLookup(QObject *)
 func NewQDnsLookup(parent *qtcore.QObject /*777 QObject **/) *QDnsLookup {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -98,7 +98,7 @@ func NewQDnsLookup(parent *qtcore.QObject /*777 QObject **/) *QDnsLookup {
 // /usr/include/qt/QtNetwork/qdnslookup.h:222
 // index:1
 // Public
-// void QDnsLookup(enum QDnsLookup::Type, const class QString &, class QObject *)
+// void QDnsLookup(QDnsLookup::Type, const QString &, QObject *)
 func NewQDnsLookup_1(type_ int, name *qtcore.QString, parent *qtcore.QObject /*777 QObject **/) *QDnsLookup {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = name.GetCthis()
@@ -112,7 +112,7 @@ func NewQDnsLookup_1(type_ int, name *qtcore.QString, parent *qtcore.QObject /*7
 // /usr/include/qt/QtNetwork/qdnslookup.h:223
 // index:2
 // Public
-// void QDnsLookup(enum QDnsLookup::Type, const class QString &, const class QHostAddress &, class QObject *)
+// void QDnsLookup(QDnsLookup::Type, const QString &, const QHostAddress &, QObject *)
 func NewQDnsLookup_2(type_ int, name *qtcore.QString, nameserver *QHostAddress, parent *qtcore.QObject /*777 QObject **/) *QDnsLookup {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = name.GetCthis()
@@ -186,7 +186,7 @@ func (this *QDnsLookup) Name() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtNetwork/qdnslookup.h:231
 // index:0
 // Public
-// void setName(const class QString &)
+// void setName(const QString &)
 func (this *QDnsLookup) SetName(name *qtcore.QString) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDnsLookup7setNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -207,7 +207,7 @@ func (this *QDnsLookup) Type() int {
 // /usr/include/qt/QtNetwork/qdnslookup.h:234
 // index:0
 // Public
-// void setType(class QDnsLookup::Type)
+// void setType(QDnsLookup::Type)
 func (this *QDnsLookup) SetType(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDnsLookup7setTypeENS_4TypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -230,7 +230,7 @@ func (this *QDnsLookup) Nameserver() *QHostAddress /*123*/ {
 // /usr/include/qt/QtNetwork/qdnslookup.h:237
 // index:0
 // Public
-// void setNameserver(const class QHostAddress &)
+// void setNameserver(const QHostAddress &)
 func (this *QDnsLookup) SetNameserver(nameserver *QHostAddress) {
 	var convArg0 = nameserver.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDnsLookup13setNameserverERK12QHostAddress", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -267,7 +267,7 @@ func (this *QDnsLookup) Finished() {
 // /usr/include/qt/QtNetwork/qdnslookup.h:254
 // index:0
 // Public
-// void nameChanged(const class QString &)
+// void nameChanged(const QString &)
 func (this *QDnsLookup) NameChanged(name *qtcore.QString) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDnsLookup11nameChangedERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -277,7 +277,7 @@ func (this *QDnsLookup) NameChanged(name *qtcore.QString) {
 // /usr/include/qt/QtNetwork/qdnslookup.h:255
 // index:0
 // Public
-// void typeChanged(enum QDnsLookup::Type)
+// void typeChanged(QDnsLookup::Type)
 func (this *QDnsLookup) TypeChanged(type_ int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDnsLookup11typeChangedENS_4TypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
@@ -286,7 +286,7 @@ func (this *QDnsLookup) TypeChanged(type_ int) {
 // /usr/include/qt/QtNetwork/qdnslookup.h:256
 // index:0
 // Public
-// void nameserverChanged(const class QHostAddress &)
+// void nameserverChanged(const QHostAddress &)
 func (this *QDnsLookup) NameserverChanged(nameserver *QHostAddress) {
 	var convArg0 = nameserver.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDnsLookup17nameserverChangedERK12QHostAddress", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

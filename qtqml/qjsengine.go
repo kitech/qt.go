@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -101,7 +101,7 @@ func NewQJSEngine() *QJSEngine {
 // /usr/include/qt/QtQml/qjsengine.h:65
 // index:1
 // Public
-// void QJSEngine(class QObject *)
+// void QJSEngine(QObject *)
 func NewQJSEngine_1(parent *qtcore.QObject /*777 QObject **/) *QJSEngine {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = parent.GetCthis()
@@ -137,7 +137,7 @@ func (this *QJSEngine) GlobalObject() *QJSValue /*123*/ {
 // /usr/include/qt/QtQml/qjsengine.h:70
 // index:0
 // Public
-// QJSValue evaluate(const class QString &, const class QString &, int)
+// QJSValue evaluate(const QString &, const QString &, int)
 func (this *QJSEngine) Evaluate(program *qtcore.QString, fileName *qtcore.QString, lineNumber int) *QJSValue /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = program.GetCthis()
@@ -181,7 +181,7 @@ func (this *QJSEngine) NewArray(length uint) *QJSValue /*123*/ {
 // /usr/include/qt/QtQml/qjsengine.h:75
 // index:0
 // Public
-// QJSValue newQObject(class QObject *)
+// QJSValue newQObject(QObject *)
 func (this *QJSEngine) NewQObject(object *qtcore.QObject /*777 QObject **/) *QJSValue /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = object.GetCthis()
@@ -205,7 +205,7 @@ func (this *QJSEngine) CollectGarbage() {
 // /usr/include/qt/QtQml/qjsengine.h:99
 // index:0
 // Public
-// void installTranslatorFunctions(const class QJSValue &)
+// void installTranslatorFunctions(const QJSValue &)
 func (this *QJSEngine) InstallTranslatorFunctions(object *QJSValue) {
 	var convArg0 = object.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QJSEngine26installTranslatorFunctionsERK8QJSValue", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

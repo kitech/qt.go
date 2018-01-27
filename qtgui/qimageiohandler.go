@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -93,7 +93,7 @@ func DeleteQImageIOHandler(*QImageIOHandler) {
 // /usr/include/qt/QtGui/qimageiohandler.h:65
 // index:0
 // Public
-// void setDevice(class QIODevice *)
+// void setDevice(QIODevice *)
 func (this *QImageIOHandler) SetDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -115,7 +115,7 @@ func (this *QImageIOHandler) Device() *qtcore.QIODevice /*777 QIODevice **/ {
 // /usr/include/qt/QtGui/qimageiohandler.h:68
 // index:0
 // Public
-// void setFormat(const class QByteArray &)
+// void setFormat(const QByteArray &)
 func (this *QImageIOHandler) SetFormat(format *qtcore.QByteArray) {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler9setFormatERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -125,7 +125,7 @@ func (this *QImageIOHandler) SetFormat(format *qtcore.QByteArray) {
 // /usr/include/qt/QtGui/qimageiohandler.h:69
 // index:1
 // Public
-// void setFormat(const class QByteArray &)
+// void setFormat(const QByteArray &)
 func (this *QImageIOHandler) SetFormat_1(format *qtcore.QByteArray) {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler9setFormatERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -174,7 +174,7 @@ func (this *QImageIOHandler) CanRead() bool {
 // /usr/include/qt/QtGui/qimageiohandler.h:75
 // index:0
 // Public pure virtual
-// bool read(class QImage *)
+// bool read(QImage *)
 func (this *QImageIOHandler) Read(image *QImage /*777 QImage **/) bool {
 	var convArg0 = image.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler4readEP6QImage", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -186,7 +186,7 @@ func (this *QImageIOHandler) Read(image *QImage /*777 QImage **/) bool {
 // /usr/include/qt/QtGui/qimageiohandler.h:76
 // index:0
 // Public virtual
-// bool write(const class QImage &)
+// bool write(const QImage &)
 func (this *QImageIOHandler) Write(image *QImage) bool {
 	var convArg0 = image.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler5writeERK6QImage", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -198,7 +198,7 @@ func (this *QImageIOHandler) Write(image *QImage) bool {
 // /usr/include/qt/QtGui/qimageiohandler.h:115
 // index:0
 // Public virtual
-// QVariant option(enum QImageIOHandler::ImageOption)
+// QVariant option(QImageIOHandler::ImageOption)
 func (this *QImageIOHandler) Option(option int) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler6optionENS_11ImageOptionE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), option)
@@ -212,7 +212,7 @@ func (this *QImageIOHandler) Option(option int) *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtGui/qimageiohandler.h:116
 // index:0
 // Public virtual
-// void setOption(enum QImageIOHandler::ImageOption, const class QVariant &)
+// void setOption(QImageIOHandler::ImageOption, const QVariant &)
 func (this *QImageIOHandler) SetOption(option int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler9setOptionENS_11ImageOptionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, convArg1)
@@ -222,7 +222,7 @@ func (this *QImageIOHandler) SetOption(option int, value *qtcore.QVariant) {
 // /usr/include/qt/QtGui/qimageiohandler.h:117
 // index:0
 // Public virtual
-// bool supportsOption(enum QImageIOHandler::ImageOption)
+// bool supportsOption(QImageIOHandler::ImageOption)
 func (this *QImageIOHandler) SupportsOption(option int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler14supportsOptionENS_11ImageOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)

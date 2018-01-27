@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -88,7 +88,7 @@ func NewQQmlListReference() *QQmlListReference {
 // /usr/include/qt/QtQml/qqmllist.h:143
 // index:1
 // Public
-// void QQmlListReference(class QObject *, const char *, class QQmlEngine *)
+// void QQmlListReference(QObject *, const char *, QQmlEngine *)
 func NewQQmlListReference_1(arg0 *qtcore.QObject /*777 QObject **/, property string, arg2 *QQmlEngine /*777 QQmlEngine **/) *QQmlListReference {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = arg0.GetCthis()

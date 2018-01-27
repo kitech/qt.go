@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QGraphicsBlurEffect) MetaObject() *qtcore.QMetaObject /*777 const QM
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:170
 // index:0
 // Public
-// void QGraphicsBlurEffect(class QObject *)
+// void QGraphicsBlurEffect(QObject *)
 func NewQGraphicsBlurEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsBlurEffect {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -111,7 +111,7 @@ func DeleteQGraphicsBlurEffect(*QGraphicsBlurEffect) {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:173
 // index:0
 // Public virtual
-// QRectF boundingRectFor(const class QRectF &)
+// QRectF boundingRectFor(const QRectF &)
 func (this *QGraphicsBlurEffect) BoundingRectFor(rect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = rect.GetCthis()
@@ -166,7 +166,7 @@ func (this *QGraphicsBlurEffect) BlurRadiusChanged(blurRadius float64) {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:186
 // index:0
 // Protected virtual
-// void draw(class QPainter *)
+// void draw(QPainter *)
 func (this *QGraphicsBlurEffect) Draw(painter *qtgui.QPainter /*777 QPainter **/) {
 	var convArg0 = painter.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect4drawEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

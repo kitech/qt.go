@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -89,7 +89,7 @@ func (this *QQmlContext) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // /usr/include/qt/QtQml/qqmlcontext.h:65
 // index:0
 // Public
-// void QQmlContext(class QQmlEngine *, class QObject *)
+// void QQmlContext(QQmlEngine *, QObject *)
 func NewQQmlContext(parent *QQmlEngine /*777 QQmlEngine **/, objParent *qtcore.QObject /*777 QObject **/) *QQmlContext {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -103,7 +103,7 @@ func NewQQmlContext(parent *QQmlEngine /*777 QQmlEngine **/, objParent *qtcore.Q
 // /usr/include/qt/QtQml/qqmlcontext.h:66
 // index:1
 // Public
-// void QQmlContext(class QQmlContext *, class QObject *)
+// void QQmlContext(QQmlContext *, QObject *)
 func NewQQmlContext_1(parent *QQmlContext /*777 QQmlContext **/, objParent *qtcore.QObject /*777 QObject **/) *QQmlContext {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -173,7 +173,7 @@ func (this *QQmlContext) ContextObject() *qtcore.QObject /*777 QObject **/ {
 // /usr/include/qt/QtQml/qqmlcontext.h:75
 // index:0
 // Public
-// void setContextObject(class QObject *)
+// void setContextObject(QObject *)
 func (this *QQmlContext) SetContextObject(arg0 *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQmlContext16setContextObjectEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -183,7 +183,7 @@ func (this *QQmlContext) SetContextObject(arg0 *qtcore.QObject /*777 QObject **/
 // /usr/include/qt/QtQml/qqmlcontext.h:77
 // index:0
 // Public
-// QVariant contextProperty(const class QString &)
+// QVariant contextProperty(const QString &)
 func (this *QQmlContext) ContextProperty(arg0 *qtcore.QString) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
@@ -198,7 +198,7 @@ func (this *QQmlContext) ContextProperty(arg0 *qtcore.QString) *qtcore.QVariant 
 // /usr/include/qt/QtQml/qqmlcontext.h:78
 // index:0
 // Public
-// void setContextProperty(const class QString &, class QObject *)
+// void setContextProperty(const QString &, QObject *)
 func (this *QQmlContext) SetContextProperty(arg0 *qtcore.QString, arg1 *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
@@ -209,7 +209,7 @@ func (this *QQmlContext) SetContextProperty(arg0 *qtcore.QString, arg1 *qtcore.Q
 // /usr/include/qt/QtQml/qqmlcontext.h:79
 // index:1
 // Public
-// void setContextProperty(const class QString &, const class QVariant &)
+// void setContextProperty(const QString &, const QVariant &)
 func (this *QQmlContext) SetContextProperty_1(arg0 *qtcore.QString, arg1 *qtcore.QVariant) {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
@@ -220,7 +220,7 @@ func (this *QQmlContext) SetContextProperty_1(arg0 *qtcore.QString, arg1 *qtcore
 // /usr/include/qt/QtQml/qqmlcontext.h:82
 // index:0
 // Public
-// QString nameForObject(class QObject *)
+// QString nameForObject(QObject *)
 func (this *QQmlContext) NameForObject(arg0 *qtcore.QObject /*777 QObject **/) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
@@ -235,7 +235,7 @@ func (this *QQmlContext) NameForObject(arg0 *qtcore.QObject /*777 QObject **/) *
 // /usr/include/qt/QtQml/qqmlcontext.h:84
 // index:0
 // Public
-// QUrl resolvedUrl(const class QUrl &)
+// QUrl resolvedUrl(const QUrl &)
 func (this *QQmlContext) ResolvedUrl(arg0 *qtcore.QUrl) *qtcore.QUrl /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
@@ -250,7 +250,7 @@ func (this *QQmlContext) ResolvedUrl(arg0 *qtcore.QUrl) *qtcore.QUrl /*123*/ {
 // /usr/include/qt/QtQml/qqmlcontext.h:86
 // index:0
 // Public
-// void setBaseUrl(const class QUrl &)
+// void setBaseUrl(const QUrl &)
 func (this *QQmlContext) SetBaseUrl(arg0 *qtcore.QUrl) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQmlContext10setBaseUrlERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

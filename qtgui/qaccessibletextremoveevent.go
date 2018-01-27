@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -73,7 +73,7 @@ func (*QAccessibleTextRemoveEvent) NewFromPointer(cthis unsafe.Pointer) *QAccess
 // /usr/include/qt/QtGui/qaccessible.h:834
 // index:0
 // Public inline
-// void QAccessibleTextRemoveEvent(class QObject *, int, const class QString &)
+// void QAccessibleTextRemoveEvent(QObject *, int, const QString &)
 func NewQAccessibleTextRemoveEvent(obj *qtcore.QObject /*777 QObject **/, position int, text *qtcore.QString) *QAccessibleTextRemoveEvent {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = obj.GetCthis()
@@ -87,7 +87,7 @@ func NewQAccessibleTextRemoveEvent(obj *qtcore.QObject /*777 QObject **/, positi
 // /usr/include/qt/QtGui/qaccessible.h:840
 // index:1
 // Public inline
-// void QAccessibleTextRemoveEvent(class QAccessibleInterface *, int, const class QString &)
+// void QAccessibleTextRemoveEvent(QAccessibleInterface *, int, const QString &)
 func NewQAccessibleTextRemoveEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, position int, text *qtcore.QString) *QAccessibleTextRemoveEvent {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = iface.GetCthis()

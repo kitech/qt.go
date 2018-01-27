@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QAbstractProxyModel) MetaObject() *QMetaObject /*777 const QMetaObje
 // /usr/include/qt/QtCore/qabstractproxymodel.h:59
 // index:0
 // Public
-// void QAbstractProxyModel(class QObject *)
+// void QAbstractProxyModel(QObject *)
 func NewQAbstractProxyModel(parent *QObject /*777 QObject **/) *QAbstractProxyModel {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -103,7 +103,7 @@ func DeleteQAbstractProxyModel(*QAbstractProxyModel) {
 // /usr/include/qt/QtCore/qabstractproxymodel.h:62
 // index:0
 // Public virtual
-// void setSourceModel(class QAbstractItemModel *)
+// void setSourceModel(QAbstractItemModel *)
 func (this *QAbstractProxyModel) SetSourceModel(sourceModel *QAbstractItemModel /*777 QAbstractItemModel **/) {
 	var convArg0 = sourceModel.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractProxyModel14setSourceModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -125,7 +125,7 @@ func (this *QAbstractProxyModel) SourceModel() *QAbstractItemModel /*777 QAbstra
 // /usr/include/qt/QtCore/qabstractproxymodel.h:65
 // index:0
 // Public pure virtual
-// QModelIndex mapToSource(const class QModelIndex &)
+// QModelIndex mapToSource(const QModelIndex &)
 func (this *QAbstractProxyModel) MapToSource(proxyIndex *QModelIndex) *QModelIndex /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = proxyIndex.GetCthis()
@@ -140,7 +140,7 @@ func (this *QAbstractProxyModel) MapToSource(proxyIndex *QModelIndex) *QModelInd
 // /usr/include/qt/QtCore/qabstractproxymodel.h:66
 // index:0
 // Public pure virtual
-// QModelIndex mapFromSource(const class QModelIndex &)
+// QModelIndex mapFromSource(const QModelIndex &)
 func (this *QAbstractProxyModel) MapFromSource(sourceIndex *QModelIndex) *QModelIndex /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = sourceIndex.GetCthis()
@@ -155,7 +155,7 @@ func (this *QAbstractProxyModel) MapFromSource(sourceIndex *QModelIndex) *QModel
 // /usr/include/qt/QtCore/qabstractproxymodel.h:68
 // index:0
 // Public virtual
-// QItemSelection mapSelectionToSource(const class QItemSelection &)
+// QItemSelection mapSelectionToSource(const QItemSelection &)
 func (this *QAbstractProxyModel) MapSelectionToSource(selection *QItemSelection) *QItemSelection /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = selection.GetCthis()
@@ -170,7 +170,7 @@ func (this *QAbstractProxyModel) MapSelectionToSource(selection *QItemSelection)
 // /usr/include/qt/QtCore/qabstractproxymodel.h:69
 // index:0
 // Public virtual
-// QItemSelection mapSelectionFromSource(const class QItemSelection &)
+// QItemSelection mapSelectionFromSource(const QItemSelection &)
 func (this *QAbstractProxyModel) MapSelectionFromSource(selection *QItemSelection) *QItemSelection /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = selection.GetCthis()
@@ -205,7 +205,7 @@ func (this *QAbstractProxyModel) Revert() {
 // /usr/include/qt/QtCore/qabstractproxymodel.h:74
 // index:0
 // Public virtual
-// QVariant data(const class QModelIndex &, int)
+// QVariant data(const QModelIndex &, int)
 func (this *QAbstractProxyModel) Data(proxyIndex *QModelIndex, role int) *QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = proxyIndex.GetCthis()
@@ -234,7 +234,7 @@ func (this *QAbstractProxyModel) HeaderData(section int, orientation int, role i
 // /usr/include/qt/QtCore/qabstractproxymodel.h:77
 // index:0
 // Public virtual
-// Qt::ItemFlags flags(const class QModelIndex &)
+// Qt::ItemFlags flags(const QModelIndex &)
 func (this *QAbstractProxyModel) Flags(index *QModelIndex) int {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel5flagsERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -246,7 +246,7 @@ func (this *QAbstractProxyModel) Flags(index *QModelIndex) int {
 // /usr/include/qt/QtCore/qabstractproxymodel.h:79
 // index:0
 // Public virtual
-// bool setData(const class QModelIndex &, const class QVariant &, int)
+// bool setData(const QModelIndex &, const QVariant &, int)
 func (this *QAbstractProxyModel) SetData(index *QModelIndex, value *QVariant, role int) bool {
 	var convArg0 = index.GetCthis()
 	var convArg1 = value.GetCthis()
@@ -259,7 +259,7 @@ func (this *QAbstractProxyModel) SetData(index *QModelIndex, value *QVariant, ro
 // /usr/include/qt/QtCore/qabstractproxymodel.h:81
 // index:0
 // Public virtual
-// bool setHeaderData(int, Qt::Orientation, const class QVariant &, int)
+// bool setHeaderData(int, Qt::Orientation, const QVariant &, int)
 func (this *QAbstractProxyModel) SetHeaderData(section int, orientation int, value *QVariant, role int) bool {
 	var convArg2 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractProxyModel13setHeaderDataEiN2Qt11OrientationERK8QVarianti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, convArg2, role)
@@ -271,7 +271,7 @@ func (this *QAbstractProxyModel) SetHeaderData(section int, orientation int, val
 // /usr/include/qt/QtCore/qabstractproxymodel.h:83
 // index:0
 // Public virtual
-// QModelIndex buddy(const class QModelIndex &)
+// QModelIndex buddy(const QModelIndex &)
 func (this *QAbstractProxyModel) Buddy(index *QModelIndex) *QModelIndex /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
@@ -286,7 +286,7 @@ func (this *QAbstractProxyModel) Buddy(index *QModelIndex) *QModelIndex /*123*/ 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:84
 // index:0
 // Public virtual
-// bool canFetchMore(const class QModelIndex &)
+// bool canFetchMore(const QModelIndex &)
 func (this *QAbstractProxyModel) CanFetchMore(parent *QModelIndex) bool {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel12canFetchMoreERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -298,7 +298,7 @@ func (this *QAbstractProxyModel) CanFetchMore(parent *QModelIndex) bool {
 // /usr/include/qt/QtCore/qabstractproxymodel.h:85
 // index:0
 // Public virtual
-// void fetchMore(const class QModelIndex &)
+// void fetchMore(const QModelIndex &)
 func (this *QAbstractProxyModel) FetchMore(parent *QModelIndex) {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractProxyModel9fetchMoreERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -317,7 +317,7 @@ func (this *QAbstractProxyModel) Sort(column int, order int) {
 // /usr/include/qt/QtCore/qabstractproxymodel.h:87
 // index:0
 // Public virtual
-// QSize span(const class QModelIndex &)
+// QSize span(const QModelIndex &)
 func (this *QAbstractProxyModel) Span(index *QModelIndex) *QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
@@ -332,7 +332,7 @@ func (this *QAbstractProxyModel) Span(index *QModelIndex) *QSize /*123*/ {
 // /usr/include/qt/QtCore/qabstractproxymodel.h:88
 // index:0
 // Public virtual
-// bool hasChildren(const class QModelIndex &)
+// bool hasChildren(const QModelIndex &)
 func (this *QAbstractProxyModel) HasChildren(parent *QModelIndex) bool {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractProxyModel11hasChildrenERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -344,7 +344,7 @@ func (this *QAbstractProxyModel) HasChildren(parent *QModelIndex) bool {
 // /usr/include/qt/QtCore/qabstractproxymodel.h:89
 // index:0
 // Public virtual
-// QModelIndex sibling(int, int, const class QModelIndex &)
+// QModelIndex sibling(int, int, const QModelIndex &)
 func (this *QAbstractProxyModel) Sibling(row int, column int, idx *QModelIndex) *QModelIndex /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg2 = idx.GetCthis()
@@ -359,7 +359,7 @@ func (this *QAbstractProxyModel) Sibling(row int, column int, idx *QModelIndex) 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:92
 // index:0
 // Public virtual
-// bool canDropMimeData(const class QMimeData *, Qt::DropAction, int, int, const class QModelIndex &)
+// bool canDropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &)
 func (this *QAbstractProxyModel) CanDropMimeData(data *QMimeData /*777 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
@@ -372,7 +372,7 @@ func (this *QAbstractProxyModel) CanDropMimeData(data *QMimeData /*777 const QMi
 // /usr/include/qt/QtCore/qabstractproxymodel.h:94
 // index:0
 // Public virtual
-// bool dropMimeData(const class QMimeData *, Qt::DropAction, int, int, const class QModelIndex &)
+// bool dropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &)
 func (this *QAbstractProxyModel) DropMimeData(data *QMimeData /*777 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()

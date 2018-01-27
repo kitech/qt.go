@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -107,7 +107,7 @@ func (this *QWidgetList) IsDetached_0() bool {
 	return 0 == 0
 }
 
-// void setSharable(_Bool)
+// void setSharable(bool)
 func (this *QWidgetList) SetSharable_0() {
 	// QWidgetList_setSharable_0()
 }
@@ -316,17 +316,17 @@ func (this *QWidgetList) Crend_0() {
 	// QWidgetList_crend_0()
 }
 
-// QList::iterator insert(class QList::iterator, const T &)
+// QList::iterator insert(QList::iterator, const T &)
 func (this *QWidgetList) Insert_1() {
 	// QWidgetList_insert_1()
 }
 
-// QList::iterator erase(class QList::iterator)
+// QList::iterator erase(QList::iterator)
 func (this *QWidgetList) Erase_0() {
 	// QWidgetList_erase_0()
 }
 
-// QList::iterator erase(class QList::iterator, class QList::iterator)
+// QList::iterator erase(QList::iterator, QList::iterator)
 func (this *QWidgetList) Erase_1() {
 	// QWidgetList_erase_1()
 }
@@ -547,68 +547,68 @@ func (this *QWidgetList) Detach_helper_1() {
 	// QWidgetList_detach_helper_1()
 }
 
-// void dealloc(struct QListData::Data *)
+// void dealloc(QListData::Data *)
 func (this *QWidgetList) Dealloc_0() {
 	// QWidgetList_dealloc_0()
 }
 
-// void node_construct(struct QList::Node *, const T &)
+// void node_construct(QList::Node *, const T &)
 func (this *QWidgetList) Node_construct_0() {
 	// QWidgetList_node_construct_0()
 }
 
-// void node_destruct(struct QList::Node *)
+// void node_destruct(QList::Node *)
 func (this *QWidgetList) Node_destruct_0() {
 	// QWidgetList_node_destruct_0()
 }
 
-// void node_copy(struct QList::Node *, struct QList::Node *, struct QList::Node *)
+// void node_copy(QList::Node *, QList::Node *, QList::Node *)
 func (this *QWidgetList) Node_copy_0() {
 	// QWidgetList_node_copy_0()
 }
 
-// void node_destruct(struct QList::Node *, struct QList::Node *)
+// void node_destruct(QList::Node *, QList::Node *)
 func (this *QWidgetList) Node_destruct_1() {
 	// QWidgetList_node_destruct_1()
 }
 
-// bool isValidIterator(const class QList::iterator &)
+// bool isValidIterator(const QList::iterator &)
 func (this *QWidgetList) IsValidIterator_0() bool {
 	// QWidgetList_isValidIterator_0()
 	return 0 == 0
 }
 
-// bool op_eq_impl(const QList<T> &, struct QListData::NotArrayCompatibleLayout)
+// bool op_eq_impl(const QList<T> &, QListData::NotArrayCompatibleLayout)
 func (this *QWidgetList) Op_eq_impl_0() bool {
 	// QWidgetList_op_eq_impl_0()
 	return 0 == 0
 }
 
-// bool op_eq_impl(const QList<T> &, struct QListData::ArrayCompatibleLayout)
+// bool op_eq_impl(const QList<T> &, QListData::ArrayCompatibleLayout)
 func (this *QWidgetList) Op_eq_impl_1() bool {
 	// QWidgetList_op_eq_impl_1()
 	return 0 == 0
 }
 
-// bool contains_impl(const T &, struct QListData::NotArrayCompatibleLayout)
+// bool contains_impl(const T &, QListData::NotArrayCompatibleLayout)
 func (this *QWidgetList) Contains_impl_0() bool {
 	// QWidgetList_contains_impl_0()
 	return 0 == 0
 }
 
-// bool contains_impl(const T &, struct QListData::ArrayCompatibleLayout)
+// bool contains_impl(const T &, QListData::ArrayCompatibleLayout)
 func (this *QWidgetList) Contains_impl_1() bool {
 	// QWidgetList_contains_impl_1()
 	return 0 == 0
 }
 
-// int count_impl(const T &, struct QListData::NotArrayCompatibleLayout)
+// int count_impl(const T &, QListData::NotArrayCompatibleLayout)
 func (this *QWidgetList) Count_impl_0() int {
 	// QWidgetList_count_impl_0()
 	return 0
 }
 
-// int count_impl(const T &, struct QListData::ArrayCompatibleLayout)
+// int count_impl(const T &, QListData::ArrayCompatibleLayout)
 func (this *QWidgetList) Count_impl_1() int {
 	// QWidgetList_count_impl_1()
 	return 0

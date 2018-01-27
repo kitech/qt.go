@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QSplitter) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // /usr/include/qt/QtWidgets/qsplitter.h:67
 // index:0
 // Public
-// void QSplitter(class QWidget *)
+// void QSplitter(QWidget *)
 func NewQSplitter(parent *QWidget /*777 QWidget **/) *QSplitter {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -102,7 +102,7 @@ func NewQSplitter(parent *QWidget /*777 QWidget **/) *QSplitter {
 // /usr/include/qt/QtWidgets/qsplitter.h:68
 // index:1
 // Public
-// void QSplitter(Qt::Orientation, class QWidget *)
+// void QSplitter(Qt::Orientation, QWidget *)
 func NewQSplitter_1(arg0 int, parent *QWidget /*777 QWidget **/) *QSplitter {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = parent.GetCthis()
@@ -124,7 +124,7 @@ func DeleteQSplitter(*QSplitter) {
 // /usr/include/qt/QtWidgets/qsplitter.h:71
 // index:0
 // Public
-// void addWidget(class QWidget *)
+// void addWidget(QWidget *)
 func (this *QSplitter) AddWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSplitter9addWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -134,7 +134,7 @@ func (this *QSplitter) AddWidget(widget *QWidget /*777 QWidget **/) {
 // /usr/include/qt/QtWidgets/qsplitter.h:72
 // index:0
 // Public
-// void insertWidget(int, class QWidget *)
+// void insertWidget(int, QWidget *)
 func (this *QSplitter) InsertWidget(index int, widget *QWidget /*777 QWidget **/) {
 	var convArg1 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSplitter12insertWidgetEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
@@ -144,7 +144,7 @@ func (this *QSplitter) InsertWidget(index int, widget *QWidget /*777 QWidget **/
 // /usr/include/qt/QtWidgets/qsplitter.h:73
 // index:0
 // Public
-// QWidget * replaceWidget(int, class QWidget *)
+// QWidget * replaceWidget(int, QWidget *)
 func (this *QSplitter) ReplaceWidget(index int, widget *QWidget /*777 QWidget **/) *QWidget /*777 QWidget **/ {
 	var convArg1 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSplitter13replaceWidgetEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
@@ -177,7 +177,7 @@ func (this *QSplitter) Orientation() int {
 // /usr/include/qt/QtWidgets/qsplitter.h:78
 // index:0
 // Public
-// void setChildrenCollapsible(_Bool)
+// void setChildrenCollapsible(bool)
 func (this *QSplitter) SetChildrenCollapsible(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSplitter22setChildrenCollapsibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -197,7 +197,7 @@ func (this *QSplitter) ChildrenCollapsible() bool {
 // /usr/include/qt/QtWidgets/qsplitter.h:81
 // index:0
 // Public
-// void setCollapsible(int, _Bool)
+// void setCollapsible(int, bool)
 func (this *QSplitter) SetCollapsible(index int, arg1 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSplitter14setCollapsibleEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, arg1)
 	gopp.ErrPrint(err, rv)
@@ -217,7 +217,7 @@ func (this *QSplitter) IsCollapsible(index int) bool {
 // /usr/include/qt/QtWidgets/qsplitter.h:83
 // index:0
 // Public
-// void setOpaqueResize(_Bool)
+// void setOpaqueResize(bool)
 func (this *QSplitter) SetOpaqueResize(opaque bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSplitter15setOpaqueResizeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), opaque)
 	gopp.ErrPrint(err, rv)
@@ -288,7 +288,7 @@ func (this *QSplitter) SaveState() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtWidgets/qsplitter.h:94
 // index:0
 // Public
-// bool restoreState(const class QByteArray &)
+// bool restoreState(const QByteArray &)
 func (this *QSplitter) RestoreState(state *qtcore.QByteArray) bool {
 	var convArg0 = state.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSplitter12restoreStateERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -320,7 +320,7 @@ func (this *QSplitter) SetHandleWidth(arg0 int) {
 // /usr/include/qt/QtWidgets/qsplitter.h:99
 // index:0
 // Public
-// int indexOf(class QWidget *)
+// int indexOf(QWidget *)
 func (this *QSplitter) IndexOf(w *QWidget /*777 QWidget **/) int {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSplitter7indexOfEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -406,7 +406,7 @@ func (this *QSplitter) CreateHandle() *QSplitterHandle /*777 QSplitterHandle **/
 // /usr/include/qt/QtWidgets/qsplitter.h:114
 // index:0
 // Protected virtual
-// void childEvent(class QChildEvent *)
+// void childEvent(QChildEvent *)
 func (this *QSplitter) ChildEvent(arg0 *qtcore.QChildEvent /*777 QChildEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSplitter10childEventEP11QChildEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -416,7 +416,7 @@ func (this *QSplitter) ChildEvent(arg0 *qtcore.QChildEvent /*777 QChildEvent **/
 // /usr/include/qt/QtWidgets/qsplitter.h:116
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QSplitter) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSplitter5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -428,7 +428,7 @@ func (this *QSplitter) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qsplitter.h:117
 // index:0
 // Protected virtual
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QSplitter) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSplitter11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -438,7 +438,7 @@ func (this *QSplitter) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent *
 // /usr/include/qt/QtWidgets/qsplitter.h:119
 // index:0
 // Protected virtual
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QSplitter) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSplitter11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QStackedWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // /usr/include/qt/QtWidgets/qstackedwidget.h:59
 // index:0
 // Public
-// void QStackedWidget(class QWidget *)
+// void QStackedWidget(QWidget *)
 func NewQStackedWidget(parent *QWidget /*777 QWidget **/) *QStackedWidget {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -111,7 +111,7 @@ func DeleteQStackedWidget(*QStackedWidget) {
 // /usr/include/qt/QtWidgets/qstackedwidget.h:62
 // index:0
 // Public
-// int addWidget(class QWidget *)
+// int addWidget(QWidget *)
 func (this *QStackedWidget) AddWidget(w *QWidget /*777 QWidget **/) int {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget9addWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -123,7 +123,7 @@ func (this *QStackedWidget) AddWidget(w *QWidget /*777 QWidget **/) int {
 // /usr/include/qt/QtWidgets/qstackedwidget.h:63
 // index:0
 // Public
-// int insertWidget(int, class QWidget *)
+// int insertWidget(int, QWidget *)
 func (this *QStackedWidget) InsertWidget(index int, w *QWidget /*777 QWidget **/) int {
 	var convArg1 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget12insertWidgetEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
@@ -135,7 +135,7 @@ func (this *QStackedWidget) InsertWidget(index int, w *QWidget /*777 QWidget **/
 // /usr/include/qt/QtWidgets/qstackedwidget.h:64
 // index:0
 // Public
-// void removeWidget(class QWidget *)
+// void removeWidget(QWidget *)
 func (this *QStackedWidget) RemoveWidget(w *QWidget /*777 QWidget **/) {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget12removeWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -168,7 +168,7 @@ func (this *QStackedWidget) CurrentIndex() int {
 // /usr/include/qt/QtWidgets/qstackedwidget.h:69
 // index:0
 // Public
-// int indexOf(class QWidget *)
+// int indexOf(QWidget *)
 func (this *QStackedWidget) IndexOf(arg0 *QWidget /*777 QWidget **/) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget7indexOfEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -212,7 +212,7 @@ func (this *QStackedWidget) SetCurrentIndex(index int) {
 // /usr/include/qt/QtWidgets/qstackedwidget.h:75
 // index:0
 // Public
-// void setCurrentWidget(class QWidget *)
+// void setCurrentWidget(QWidget *)
 func (this *QStackedWidget) SetCurrentWidget(w *QWidget /*777 QWidget **/) {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget16setCurrentWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -240,7 +240,7 @@ func (this *QStackedWidget) WidgetRemoved(index int) {
 // /usr/include/qt/QtWidgets/qstackedwidget.h:82
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QStackedWidget) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQNetworkDatagram() *QNetworkDatagram {
 // /usr/include/qt/QtNetwork/qnetworkdatagram.h:57
 // index:1
 // Public
-// void QNetworkDatagram(const class QByteArray &, const class QHostAddress &, quint16)
+// void QNetworkDatagram(const QByteArray &, const QHostAddress &, quint16)
 func NewQNetworkDatagram_1(data *qtcore.QByteArray, destinationAddress *QHostAddress, port uint16) *QNetworkDatagram {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = data.GetCthis()
@@ -107,7 +107,7 @@ func DeleteQNetworkDatagram(*QNetworkDatagram) {
 // /usr/include/qt/QtNetwork/qnetworkdatagram.h:70
 // index:0
 // Public inline
-// void swap(class QNetworkDatagram &)
+// void swap(QNetworkDatagram &)
 func (this *QNetworkDatagram) Swap(other *QNetworkDatagram) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QNetworkDatagram4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -218,7 +218,7 @@ func (this *QNetworkDatagram) DestinationPort() int {
 // /usr/include/qt/QtNetwork/qnetworkdatagram.h:85
 // index:0
 // Public
-// void setSender(const class QHostAddress &, quint16)
+// void setSender(const QHostAddress &, quint16)
 func (this *QNetworkDatagram) SetSender(address *QHostAddress, port uint16) {
 	var convArg0 = address.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QNetworkDatagram9setSenderERK12QHostAddresst", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
@@ -228,7 +228,7 @@ func (this *QNetworkDatagram) SetSender(address *QHostAddress, port uint16) {
 // /usr/include/qt/QtNetwork/qnetworkdatagram.h:86
 // index:0
 // Public
-// void setDestination(const class QHostAddress &, quint16)
+// void setDestination(const QHostAddress &, quint16)
 func (this *QNetworkDatagram) SetDestination(address *QHostAddress, port uint16) {
 	var convArg0 = address.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QNetworkDatagram14setDestinationERK12QHostAddresst", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
@@ -272,7 +272,7 @@ func (this *QNetworkDatagram) Data() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkdatagram.h:92
 // index:0
 // Public
-// void setData(const class QByteArray &)
+// void setData(const QByteArray &)
 func (this *QNetworkDatagram) SetData(data *qtcore.QByteArray) {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QNetworkDatagram7setDataERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -282,7 +282,7 @@ func (this *QNetworkDatagram) SetData(data *qtcore.QByteArray) {
 // /usr/include/qt/QtNetwork/qnetworkdatagram.h:95
 // index:0
 // Public inline
-// QNetworkDatagram makeReply(const class QByteArray &)
+// QNetworkDatagram makeReply(const QByteArray &)
 func (this *QNetworkDatagram) MakeReply(payload *qtcore.QByteArray) *QNetworkDatagram /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = payload.GetCthis()
@@ -297,7 +297,7 @@ func (this *QNetworkDatagram) MakeReply(payload *qtcore.QByteArray) *QNetworkDat
 // /usr/include/qt/QtNetwork/qnetworkdatagram.h:97
 // index:1
 // Public inline
-// QNetworkDatagram makeReply(const class QByteArray &)
+// QNetworkDatagram makeReply(const QByteArray &)
 func (this *QNetworkDatagram) MakeReply_1(payload *qtcore.QByteArray) *QNetworkDatagram /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = payload.GetCthis()

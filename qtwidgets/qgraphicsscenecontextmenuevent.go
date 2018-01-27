@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -77,7 +77,7 @@ func (*QGraphicsSceneContextMenuEvent) NewFromPointer(cthis unsafe.Pointer) *QGr
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:174
 // index:0
 // Public
-// void QGraphicsSceneContextMenuEvent(enum QEvent::Type)
+// void QGraphicsSceneContextMenuEvent(QEvent::Type)
 func NewQGraphicsSceneContextMenuEvent(type_ int) *QGraphicsSceneContextMenuEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	rv, err := ffiqt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)
@@ -112,7 +112,7 @@ func (this *QGraphicsSceneContextMenuEvent) Pos() *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:178
 // index:0
 // Public
-// void setPos(const class QPointF &)
+// void setPos(const QPointF &)
 func (this *QGraphicsSceneContextMenuEvent) SetPos(pos *qtcore.QPointF) {
 	var convArg0 = pos.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -136,7 +136,7 @@ func (this *QGraphicsSceneContextMenuEvent) ScenePos() *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:181
 // index:0
 // Public
-// void setScenePos(const class QPointF &)
+// void setScenePos(const QPointF &)
 func (this *QGraphicsSceneContextMenuEvent) SetScenePos(pos *qtcore.QPointF) {
 	var convArg0 = pos.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -160,7 +160,7 @@ func (this *QGraphicsSceneContextMenuEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:184
 // index:0
 // Public
-// void setScreenPos(const class QPoint &)
+// void setScreenPos(const QPoint &)
 func (this *QGraphicsSceneContextMenuEvent) SetScreenPos(pos *qtcore.QPoint) {
 	var convArg0 = pos.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -192,7 +192,7 @@ func (this *QGraphicsSceneContextMenuEvent) Reason() int {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:190
 // index:0
 // Public
-// void setReason(enum QGraphicsSceneContextMenuEvent::Reason)
+// void setReason(QGraphicsSceneContextMenuEvent::Reason)
 func (this *QGraphicsSceneContextMenuEvent) SetReason(reason int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEvent9setReasonENS_6ReasonE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), reason)
 	gopp.ErrPrint(err, rv)

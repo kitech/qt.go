@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQXmlStreamStringRef() *QXmlStreamStringRef {
 // /usr/include/qt/QtCore/qxmlstream.h:59
 // index:1
 // Public inline
-// void QXmlStreamStringRef(const class QStringRef &)
+// void QXmlStreamStringRef(const QStringRef &)
 func NewQXmlStreamStringRef_1(aString *QStringRef) *QXmlStreamStringRef {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = aString.GetCthis()
@@ -93,7 +93,7 @@ func NewQXmlStreamStringRef_1(aString *QStringRef) *QXmlStreamStringRef {
 // /usr/include/qt/QtCore/qxmlstream.h:61
 // index:2
 // Public inline
-// void QXmlStreamStringRef(const class QString &)
+// void QXmlStreamStringRef(const QString &)
 func NewQXmlStreamStringRef_2(aString *QString) *QXmlStreamStringRef {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = aString.GetCthis()
@@ -106,7 +106,7 @@ func NewQXmlStreamStringRef_2(aString *QString) *QXmlStreamStringRef {
 // /usr/include/qt/QtCore/qxmlstream.h:63
 // index:3
 // Public inline
-// void QXmlStreamStringRef(class QString &&)
+// void QXmlStreamStringRef(QString &&)
 func NewQXmlStreamStringRef_3(aString unsafe.Pointer /*333*/) *QXmlStreamStringRef {
 	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2EO7QString", ffiqt.FFI_TYPE_VOID, cthis, aString)
@@ -127,7 +127,7 @@ func DeleteQXmlStreamStringRef(*QXmlStreamStringRef) {
 // /usr/include/qt/QtCore/qxmlstream.h:82
 // index:0
 // Public inline
-// void swap(class QXmlStreamStringRef &)
+// void swap(QXmlStreamStringRef &)
 func (this *QXmlStreamStringRef) Swap(other *QXmlStreamStringRef) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRef4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

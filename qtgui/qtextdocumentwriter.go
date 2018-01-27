@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQTextDocumentWriter() *QTextDocumentWriter {
 // /usr/include/qt/QtGui/qtextdocumentwriter.h:58
 // index:1
 // Public
-// void QTextDocumentWriter(class QIODevice *, const class QByteArray &)
+// void QTextDocumentWriter(QIODevice *, const QByteArray &)
 func NewQTextDocumentWriter_1(device *qtcore.QIODevice /*777 QIODevice **/, format *qtcore.QByteArray) *QTextDocumentWriter {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = device.GetCthis()
@@ -98,7 +98,7 @@ func NewQTextDocumentWriter_1(device *qtcore.QIODevice /*777 QIODevice **/, form
 // /usr/include/qt/QtGui/qtextdocumentwriter.h:59
 // index:2
 // Public
-// void QTextDocumentWriter(const class QString &, const class QByteArray &)
+// void QTextDocumentWriter(const QString &, const QByteArray &)
 func NewQTextDocumentWriter_2(fileName *qtcore.QString, format *qtcore.QByteArray) *QTextDocumentWriter {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = fileName.GetCthis()
@@ -121,7 +121,7 @@ func DeleteQTextDocumentWriter(*QTextDocumentWriter) {
 // /usr/include/qt/QtGui/qtextdocumentwriter.h:62
 // index:0
 // Public
-// void setFormat(const class QByteArray &)
+// void setFormat(const QByteArray &)
 func (this *QTextDocumentWriter) SetFormat(format *qtcore.QByteArray) {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextDocumentWriter9setFormatERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -145,7 +145,7 @@ func (this *QTextDocumentWriter) Format() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtGui/qtextdocumentwriter.h:65
 // index:0
 // Public
-// void setDevice(class QIODevice *)
+// void setDevice(QIODevice *)
 func (this *QTextDocumentWriter) SetDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextDocumentWriter9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -167,7 +167,7 @@ func (this *QTextDocumentWriter) Device() *qtcore.QIODevice /*777 QIODevice **/ 
 // /usr/include/qt/QtGui/qtextdocumentwriter.h:67
 // index:0
 // Public
-// void setFileName(const class QString &)
+// void setFileName(const QString &)
 func (this *QTextDocumentWriter) SetFileName(fileName *qtcore.QString) {
 	var convArg0 = fileName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextDocumentWriter11setFileNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -191,7 +191,7 @@ func (this *QTextDocumentWriter) FileName() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qtextdocumentwriter.h:70
 // index:0
 // Public
-// bool write(const class QTextDocument *)
+// bool write(const QTextDocument *)
 func (this *QTextDocumentWriter) Write(document *QTextDocument /*777 const QTextDocument **/) bool {
 	var convArg0 = document.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextDocumentWriter5writeEPK13QTextDocument", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -203,7 +203,7 @@ func (this *QTextDocumentWriter) Write(document *QTextDocument /*777 const QText
 // /usr/include/qt/QtGui/qtextdocumentwriter.h:71
 // index:1
 // Public
-// bool write(const class QTextDocumentFragment &)
+// bool write(const QTextDocumentFragment &)
 func (this *QTextDocumentWriter) Write_1(fragment *QTextDocumentFragment) bool {
 	var convArg0 = fragment.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextDocumentWriter5writeERK21QTextDocumentFragment", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -215,7 +215,7 @@ func (this *QTextDocumentWriter) Write_1(fragment *QTextDocumentFragment) bool {
 // /usr/include/qt/QtGui/qtextdocumentwriter.h:74
 // index:0
 // Public
-// void setCodec(class QTextCodec *)
+// void setCodec(QTextCodec *)
 func (this *QTextDocumentWriter) SetCodec(codec *qtcore.QTextCodec /*777 QTextCodec **/) {
 	var convArg0 = codec.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextDocumentWriter8setCodecEP10QTextCodec", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

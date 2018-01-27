@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -76,7 +76,7 @@ func (*QGraphicsLayoutItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLayou
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:57
 // index:0
 // Public
-// void QGraphicsLayoutItem(class QGraphicsLayoutItem *, _Bool)
+// void QGraphicsLayoutItem(QGraphicsLayoutItem *, bool)
 func NewQGraphicsLayoutItem(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, isLayout bool) *QGraphicsLayoutItem {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -98,7 +98,7 @@ func DeleteQGraphicsLayoutItem(*QGraphicsLayoutItem) {
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:60
 // index:0
 // Public
-// void setSizePolicy(const class QSizePolicy &)
+// void setSizePolicy(const QSizePolicy &)
 func (this *QGraphicsLayoutItem) SetSizePolicy(policy *QSizePolicy) {
 	var convArg0 = policy.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem13setSizePolicyERK11QSizePolicy", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -108,7 +108,7 @@ func (this *QGraphicsLayoutItem) SetSizePolicy(policy *QSizePolicy) {
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:61
 // index:1
 // Public
-// void setSizePolicy(class QSizePolicy::Policy, class QSizePolicy::Policy, class QSizePolicy::ControlType)
+// void setSizePolicy(QSizePolicy::Policy, QSizePolicy::Policy, QSizePolicy::ControlType)
 func (this *QGraphicsLayoutItem) SetSizePolicy_1(hPolicy int, vPolicy int, controlType int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem13setSizePolicyEN11QSizePolicy6PolicyES1_NS0_11ControlTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hPolicy, vPolicy, controlType)
 	gopp.ErrPrint(err, rv)
@@ -131,7 +131,7 @@ func (this *QGraphicsLayoutItem) SizePolicy() *QSizePolicy /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:64
 // index:0
 // Public
-// void setMinimumSize(const class QSizeF &)
+// void setMinimumSize(const QSizeF &)
 func (this *QGraphicsLayoutItem) SetMinimumSize(size *qtcore.QSizeF) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem14setMinimumSizeERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -204,7 +204,7 @@ func (this *QGraphicsLayoutItem) MinimumHeight() float64 {
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:72
 // index:0
 // Public
-// void setPreferredSize(const class QSizeF &)
+// void setPreferredSize(const QSizeF &)
 func (this *QGraphicsLayoutItem) SetPreferredSize(size *qtcore.QSizeF) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem16setPreferredSizeERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -277,7 +277,7 @@ func (this *QGraphicsLayoutItem) PreferredHeight() float64 {
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:80
 // index:0
 // Public
-// void setMaximumSize(const class QSizeF &)
+// void setMaximumSize(const QSizeF &)
 func (this *QGraphicsLayoutItem) SetMaximumSize(size *qtcore.QSizeF) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem14setMaximumSizeERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -350,7 +350,7 @@ func (this *QGraphicsLayoutItem) MaximumHeight() float64 {
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:88
 // index:0
 // Public virtual
-// void setGeometry(const class QRectF &)
+// void setGeometry(const QRectF &)
 func (this *QGraphicsLayoutItem) SetGeometry(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem11setGeometryERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -397,7 +397,7 @@ func (this *QGraphicsLayoutItem) ContentsRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:93
 // index:0
 // Public
-// QSizeF effectiveSizeHint(Qt::SizeHint, const class QSizeF &)
+// QSizeF effectiveSizeHint(Qt::SizeHint, const QSizeF &)
 func (this *QGraphicsLayoutItem) EffectiveSizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = constraint.GetCthis()
@@ -433,7 +433,7 @@ func (this *QGraphicsLayoutItem) ParentLayoutItem() *QGraphicsLayoutItem /*777 Q
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:98
 // index:0
 // Public
-// void setParentLayoutItem(class QGraphicsLayoutItem *)
+// void setParentLayoutItem(QGraphicsLayoutItem *)
 func (this *QGraphicsLayoutItem) SetParentLayoutItem(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem19setParentLayoutItemEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -477,7 +477,7 @@ func (this *QGraphicsLayoutItem) OwnedByLayout() bool {
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:105
 // index:0
 // Protected
-// void setGraphicsItem(class QGraphicsItem *)
+// void setGraphicsItem(QGraphicsItem *)
 func (this *QGraphicsLayoutItem) SetGraphicsItem(item *QGraphicsItem /*777 QGraphicsItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem15setGraphicsItemEP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -487,7 +487,7 @@ func (this *QGraphicsLayoutItem) SetGraphicsItem(item *QGraphicsItem /*777 QGrap
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:106
 // index:0
 // Protected
-// void setOwnedByLayout(_Bool)
+// void setOwnedByLayout(bool)
 func (this *QGraphicsLayoutItem) SetOwnedByLayout(ownedByLayout bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsLayoutItem16setOwnedByLayoutEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ownedByLayout)
 	gopp.ErrPrint(err, rv)
@@ -496,7 +496,7 @@ func (this *QGraphicsLayoutItem) SetOwnedByLayout(ownedByLayout bool) {
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:109
 // index:0
 // Protected pure virtual
-// QSizeF sizeHint(Qt::SizeHint, const class QSizeF &)
+// QSizeF sizeHint(Qt::SizeHint, const QSizeF &)
 func (this *QGraphicsLayoutItem) SizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = constraint.GetCthis()

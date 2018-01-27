@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -118,7 +118,7 @@ func (this *QGraphicsAnchor) Spacing() float64 {
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:64
 // index:0
 // Public
-// void setSizePolicy(class QSizePolicy::Policy)
+// void setSizePolicy(QSizePolicy::Policy)
 func (this *QGraphicsAnchor) SetSizePolicy(policy int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsAnchor13setSizePolicyEN11QSizePolicy6PolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)

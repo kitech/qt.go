@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -157,7 +157,7 @@ func (this *QMetaEnum) Scope() string {
 // /usr/include/qt/QtCore/qmetaobject.h:221
 // index:0
 // Public
-// int keyToValue(const char *, _Bool *)
+// int keyToValue(const char *, bool *)
 func (this *QMetaEnum) KeyToValue(key string, ok unsafe.Pointer /*666*/) int {
 	var convArg0 = qtrt.CString(key)
 	defer qtrt.FreeMem(convArg0)
@@ -181,7 +181,7 @@ func (this *QMetaEnum) ValueToKey(value int) string {
 // /usr/include/qt/QtCore/qmetaobject.h:223
 // index:0
 // Public
-// int keysToValue(const char *, _Bool *)
+// int keysToValue(const char *, bool *)
 func (this *QMetaEnum) KeysToValue(keys string, ok unsafe.Pointer /*666*/) int {
 	var convArg0 = qtrt.CString(keys)
 	defer qtrt.FreeMem(convArg0)

@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -92,7 +92,7 @@ func NewQMarginsF_1(left float64, top float64, right float64, bottom float64) *Q
 // /usr/include/qt/QtCore/qmargins.h:290
 // index:2
 // Public inline
-// void QMarginsF(const class QMargins &)
+// void QMarginsF(const QMargins &)
 func NewQMarginsF_2(margins *QMargins) *QMarginsF {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = margins.GetCthis()

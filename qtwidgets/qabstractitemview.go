@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QAbstractItemView) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // /usr/include/qt/QtWidgets/qabstractitemview.h:127
 // index:0
 // Public
-// void QAbstractItemView(class QWidget *)
+// void QAbstractItemView(QWidget *)
 func NewQAbstractItemView(parent *QWidget /*777 QWidget **/) *QAbstractItemView {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -111,7 +111,7 @@ func DeleteQAbstractItemView(*QAbstractItemView) {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:130
 // index:0
 // Public virtual
-// void setModel(class QAbstractItemModel *)
+// void setModel(QAbstractItemModel *)
 func (this *QAbstractItemView) SetModel(model *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/) {
 	var convArg0 = model.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView8setModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -133,7 +133,7 @@ func (this *QAbstractItemView) Model() *qtcore.QAbstractItemModel /*777 QAbstrac
 // /usr/include/qt/QtWidgets/qabstractitemview.h:133
 // index:0
 // Public virtual
-// void setSelectionModel(class QItemSelectionModel *)
+// void setSelectionModel(QItemSelectionModel *)
 func (this *QAbstractItemView) SetSelectionModel(selectionModel *qtcore.QItemSelectionModel /*777 QItemSelectionModel **/) {
 	var convArg0 = selectionModel.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView17setSelectionModelEP19QItemSelectionModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -155,7 +155,7 @@ func (this *QAbstractItemView) SelectionModel() *qtcore.QItemSelectionModel /*77
 // /usr/include/qt/QtWidgets/qabstractitemview.h:136
 // index:0
 // Public
-// void setItemDelegate(class QAbstractItemDelegate *)
+// void setItemDelegate(QAbstractItemDelegate *)
 func (this *QAbstractItemView) SetItemDelegate(delegate *QAbstractItemDelegate /*777 QAbstractItemDelegate **/) {
 	var convArg0 = delegate.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView15setItemDelegateEP21QAbstractItemDelegate", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -177,7 +177,7 @@ func (this *QAbstractItemView) ItemDelegate() *QAbstractItemDelegate /*777 QAbst
 // /usr/include/qt/QtWidgets/qabstractitemview.h:226
 // index:1
 // Public
-// QAbstractItemDelegate * itemDelegate(const class QModelIndex &)
+// QAbstractItemDelegate * itemDelegate(const QModelIndex &)
 func (this *QAbstractItemView) ItemDelegate_1(index *qtcore.QModelIndex) *QAbstractItemDelegate /*777 QAbstractItemDelegate **/ {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAbstractItemView12itemDelegateERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -190,7 +190,7 @@ func (this *QAbstractItemView) ItemDelegate_1(index *qtcore.QModelIndex) *QAbstr
 // /usr/include/qt/QtWidgets/qabstractitemview.h:139
 // index:0
 // Public
-// void setSelectionMode(class QAbstractItemView::SelectionMode)
+// void setSelectionMode(QAbstractItemView::SelectionMode)
 func (this *QAbstractItemView) SetSelectionMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView16setSelectionModeENS_13SelectionModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -210,7 +210,7 @@ func (this *QAbstractItemView) SelectionMode() int {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:142
 // index:0
 // Public
-// void setSelectionBehavior(class QAbstractItemView::SelectionBehavior)
+// void setSelectionBehavior(QAbstractItemView::SelectionBehavior)
 func (this *QAbstractItemView) SetSelectionBehavior(behavior int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView20setSelectionBehaviorENS_17SelectionBehaviorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), behavior)
 	gopp.ErrPrint(err, rv)
@@ -269,7 +269,7 @@ func (this *QAbstractItemView) EditTriggers() int {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:151
 // index:0
 // Public
-// void setVerticalScrollMode(enum QAbstractItemView::ScrollMode)
+// void setVerticalScrollMode(QAbstractItemView::ScrollMode)
 func (this *QAbstractItemView) SetVerticalScrollMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView21setVerticalScrollModeENS_10ScrollModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -298,7 +298,7 @@ func (this *QAbstractItemView) ResetVerticalScrollMode() {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:155
 // index:0
 // Public
-// void setHorizontalScrollMode(enum QAbstractItemView::ScrollMode)
+// void setHorizontalScrollMode(QAbstractItemView::ScrollMode)
 func (this *QAbstractItemView) SetHorizontalScrollMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView23setHorizontalScrollModeENS_10ScrollModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -327,7 +327,7 @@ func (this *QAbstractItemView) ResetHorizontalScrollMode() {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:159
 // index:0
 // Public
-// void setAutoScroll(_Bool)
+// void setAutoScroll(bool)
 func (this *QAbstractItemView) SetAutoScroll(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView13setAutoScrollEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -367,7 +367,7 @@ func (this *QAbstractItemView) AutoScrollMargin() int {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:165
 // index:0
 // Public
-// void setTabKeyNavigation(_Bool)
+// void setTabKeyNavigation(bool)
 func (this *QAbstractItemView) SetTabKeyNavigation(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView19setTabKeyNavigationEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -387,7 +387,7 @@ func (this *QAbstractItemView) TabKeyNavigation() bool {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:169
 // index:0
 // Public
-// void setDropIndicatorShown(_Bool)
+// void setDropIndicatorShown(bool)
 func (this *QAbstractItemView) SetDropIndicatorShown(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView21setDropIndicatorShownEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -407,7 +407,7 @@ func (this *QAbstractItemView) ShowDropIndicator() bool {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:172
 // index:0
 // Public
-// void setDragEnabled(_Bool)
+// void setDragEnabled(bool)
 func (this *QAbstractItemView) SetDragEnabled(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView14setDragEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -427,7 +427,7 @@ func (this *QAbstractItemView) DragEnabled() bool {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:175
 // index:0
 // Public
-// void setDragDropOverwriteMode(_Bool)
+// void setDragDropOverwriteMode(bool)
 func (this *QAbstractItemView) SetDragDropOverwriteMode(overwrite bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView24setDragDropOverwriteModeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), overwrite)
 	gopp.ErrPrint(err, rv)
@@ -447,7 +447,7 @@ func (this *QAbstractItemView) DragDropOverwriteMode() bool {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:187
 // index:0
 // Public
-// void setDragDropMode(enum QAbstractItemView::DragDropMode)
+// void setDragDropMode(QAbstractItemView::DragDropMode)
 func (this *QAbstractItemView) SetDragDropMode(behavior int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView15setDragDropModeENS_12DragDropModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), behavior)
 	gopp.ErrPrint(err, rv)
@@ -487,7 +487,7 @@ func (this *QAbstractItemView) DefaultDropAction() int {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:194
 // index:0
 // Public
-// void setAlternatingRowColors(_Bool)
+// void setAlternatingRowColors(bool)
 func (this *QAbstractItemView) SetAlternatingRowColors(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView23setAlternatingRowColorsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -507,7 +507,7 @@ func (this *QAbstractItemView) AlternatingRowColors() bool {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:197
 // index:0
 // Public
-// void setIconSize(const class QSize &)
+// void setIconSize(const QSize &)
 func (this *QAbstractItemView) SetIconSize(size *qtcore.QSize) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView11setIconSizeERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -551,7 +551,7 @@ func (this *QAbstractItemView) TextElideMode() int {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:203
 // index:0
 // Public virtual
-// void keyboardSearch(const class QString &)
+// void keyboardSearch(const QString &)
 func (this *QAbstractItemView) KeyboardSearch(search *qtcore.QString) {
 	var convArg0 = search.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView14keyboardSearchERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -561,7 +561,7 @@ func (this *QAbstractItemView) KeyboardSearch(search *qtcore.QString) {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:205
 // index:0
 // Public pure virtual
-// QRect visualRect(const class QModelIndex &)
+// QRect visualRect(const QModelIndex &)
 func (this *QAbstractItemView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
@@ -576,7 +576,7 @@ func (this *QAbstractItemView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRe
 // /usr/include/qt/QtWidgets/qabstractitemview.h:206
 // index:0
 // Public pure virtual
-// void scrollTo(const class QModelIndex &, enum QAbstractItemView::ScrollHint)
+// void scrollTo(const QModelIndex &, QAbstractItemView::ScrollHint)
 func (this *QAbstractItemView) ScrollTo(index *qtcore.QModelIndex, hint int) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView8scrollToERK11QModelIndexNS_10ScrollHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
@@ -586,7 +586,7 @@ func (this *QAbstractItemView) ScrollTo(index *qtcore.QModelIndex, hint int) {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:207
 // index:0
 // Public pure virtual
-// QModelIndex indexAt(const class QPoint &)
+// QModelIndex indexAt(const QPoint &)
 func (this *QAbstractItemView) IndexAt(point *qtcore.QPoint) *qtcore.QModelIndex /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = point.GetCthis()
@@ -601,7 +601,7 @@ func (this *QAbstractItemView) IndexAt(point *qtcore.QPoint) *qtcore.QModelIndex
 // /usr/include/qt/QtWidgets/qabstractitemview.h:209
 // index:0
 // Public
-// QSize sizeHintForIndex(const class QModelIndex &)
+// QSize sizeHintForIndex(const QModelIndex &)
 func (this *QAbstractItemView) SizeHintForIndex(index *qtcore.QModelIndex) *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
@@ -638,7 +638,7 @@ func (this *QAbstractItemView) SizeHintForColumn(column int) int {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:213
 // index:0
 // Public
-// void openPersistentEditor(const class QModelIndex &)
+// void openPersistentEditor(const QModelIndex &)
 func (this *QAbstractItemView) OpenPersistentEditor(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView20openPersistentEditorERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -648,7 +648,7 @@ func (this *QAbstractItemView) OpenPersistentEditor(index *qtcore.QModelIndex) {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:214
 // index:0
 // Public
-// void closePersistentEditor(const class QModelIndex &)
+// void closePersistentEditor(const QModelIndex &)
 func (this *QAbstractItemView) ClosePersistentEditor(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView21closePersistentEditorERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -658,7 +658,7 @@ func (this *QAbstractItemView) ClosePersistentEditor(index *qtcore.QModelIndex) 
 // /usr/include/qt/QtWidgets/qabstractitemview.h:215
 // index:0
 // Public
-// bool isPersistentEditorOpen(const class QModelIndex &)
+// bool isPersistentEditorOpen(const QModelIndex &)
 func (this *QAbstractItemView) IsPersistentEditorOpen(index *qtcore.QModelIndex) bool {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAbstractItemView22isPersistentEditorOpenERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -670,7 +670,7 @@ func (this *QAbstractItemView) IsPersistentEditorOpen(index *qtcore.QModelIndex)
 // /usr/include/qt/QtWidgets/qabstractitemview.h:217
 // index:0
 // Public
-// void setIndexWidget(const class QModelIndex &, class QWidget *)
+// void setIndexWidget(const QModelIndex &, QWidget *)
 func (this *QAbstractItemView) SetIndexWidget(index *qtcore.QModelIndex, widget *QWidget /*777 QWidget **/) {
 	var convArg0 = index.GetCthis()
 	var convArg1 = widget.GetCthis()
@@ -681,7 +681,7 @@ func (this *QAbstractItemView) SetIndexWidget(index *qtcore.QModelIndex, widget 
 // /usr/include/qt/QtWidgets/qabstractitemview.h:218
 // index:0
 // Public
-// QWidget * indexWidget(const class QModelIndex &)
+// QWidget * indexWidget(const QModelIndex &)
 func (this *QAbstractItemView) IndexWidget(index *qtcore.QModelIndex) *QWidget /*777 QWidget **/ {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAbstractItemView11indexWidgetERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -694,7 +694,7 @@ func (this *QAbstractItemView) IndexWidget(index *qtcore.QModelIndex) *QWidget /
 // /usr/include/qt/QtWidgets/qabstractitemview.h:220
 // index:0
 // Public
-// void setItemDelegateForRow(int, class QAbstractItemDelegate *)
+// void setItemDelegateForRow(int, QAbstractItemDelegate *)
 func (this *QAbstractItemView) SetItemDelegateForRow(row int, delegate *QAbstractItemDelegate /*777 QAbstractItemDelegate **/) {
 	var convArg1 = delegate.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView21setItemDelegateForRowEiP21QAbstractItemDelegate", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
@@ -716,7 +716,7 @@ func (this *QAbstractItemView) ItemDelegateForRow(row int) *QAbstractItemDelegat
 // /usr/include/qt/QtWidgets/qabstractitemview.h:223
 // index:0
 // Public
-// void setItemDelegateForColumn(int, class QAbstractItemDelegate *)
+// void setItemDelegateForColumn(int, QAbstractItemDelegate *)
 func (this *QAbstractItemView) SetItemDelegateForColumn(column int, delegate *QAbstractItemDelegate /*777 QAbstractItemDelegate **/) {
 	var convArg1 = delegate.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView24setItemDelegateForColumnEiP21QAbstractItemDelegate", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
@@ -761,7 +761,7 @@ func (this *QAbstractItemView) Reset() {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:234
 // index:0
 // Public virtual
-// void setRootIndex(const class QModelIndex &)
+// void setRootIndex(const QModelIndex &)
 func (this *QAbstractItemView) SetRootIndex(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView12setRootIndexERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -789,7 +789,7 @@ func (this *QAbstractItemView) SelectAll() {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:237
 // index:0
 // Public
-// void edit(const class QModelIndex &)
+// void edit(const QModelIndex &)
 func (this *QAbstractItemView) Edit(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView4editERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -799,7 +799,7 @@ func (this *QAbstractItemView) Edit(index *qtcore.QModelIndex) {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:295
 // index:1
 // Protected virtual
-// bool edit(const class QModelIndex &, enum QAbstractItemView::EditTrigger, class QEvent *)
+// bool edit(const QModelIndex &, QAbstractItemView::EditTrigger, QEvent *)
 func (this *QAbstractItemView) Edit_1(index *qtcore.QModelIndex, trigger int, event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = index.GetCthis()
 	var convArg2 = event.GetCthis()
@@ -821,7 +821,7 @@ func (this *QAbstractItemView) ClearSelection() {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:239
 // index:0
 // Public
-// void setCurrentIndex(const class QModelIndex &)
+// void setCurrentIndex(const QModelIndex &)
 func (this *QAbstractItemView) SetCurrentIndex(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView15setCurrentIndexERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -849,7 +849,7 @@ func (this *QAbstractItemView) ScrollToBottom() {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:242
 // index:0
 // Public
-// void update(const class QModelIndex &)
+// void update(const QModelIndex &)
 func (this *QAbstractItemView) Update(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView6updateERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -859,7 +859,7 @@ func (this *QAbstractItemView) Update(index *qtcore.QModelIndex) {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:246
 // index:0
 // Protected virtual
-// void rowsInserted(const class QModelIndex &, int, int)
+// void rowsInserted(const QModelIndex &, int, int)
 func (this *QAbstractItemView) RowsInserted(parent *qtcore.QModelIndex, start int, end int) {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView12rowsInsertedERK11QModelIndexii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
@@ -869,7 +869,7 @@ func (this *QAbstractItemView) RowsInserted(parent *qtcore.QModelIndex, start in
 // /usr/include/qt/QtWidgets/qabstractitemview.h:247
 // index:0
 // Protected virtual
-// void rowsAboutToBeRemoved(const class QModelIndex &, int, int)
+// void rowsAboutToBeRemoved(const QModelIndex &, int, int)
 func (this *QAbstractItemView) RowsAboutToBeRemoved(parent *qtcore.QModelIndex, start int, end int) {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView20rowsAboutToBeRemovedERK11QModelIndexii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
@@ -879,7 +879,7 @@ func (this *QAbstractItemView) RowsAboutToBeRemoved(parent *qtcore.QModelIndex, 
 // /usr/include/qt/QtWidgets/qabstractitemview.h:248
 // index:0
 // Protected virtual
-// void selectionChanged(const class QItemSelection &, const class QItemSelection &)
+// void selectionChanged(const QItemSelection &, const QItemSelection &)
 func (this *QAbstractItemView) SelectionChanged(selected *qtcore.QItemSelection, deselected *qtcore.QItemSelection) {
 	var convArg0 = selected.GetCthis()
 	var convArg1 = deselected.GetCthis()
@@ -890,7 +890,7 @@ func (this *QAbstractItemView) SelectionChanged(selected *qtcore.QItemSelection,
 // /usr/include/qt/QtWidgets/qabstractitemview.h:249
 // index:0
 // Protected virtual
-// void currentChanged(const class QModelIndex &, const class QModelIndex &)
+// void currentChanged(const QModelIndex &, const QModelIndex &)
 func (this *QAbstractItemView) CurrentChanged(current *qtcore.QModelIndex, previous *qtcore.QModelIndex) {
 	var convArg0 = current.GetCthis()
 	var convArg1 = previous.GetCthis()
@@ -964,7 +964,7 @@ func (this *QAbstractItemView) HorizontalScrollbarValueChanged(value int) {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:257
 // index:0
 // Protected virtual
-// void closeEditor(class QWidget *, class QAbstractItemDelegate::EndEditHint)
+// void closeEditor(QWidget *, QAbstractItemDelegate::EndEditHint)
 func (this *QAbstractItemView) CloseEditor(editor *QWidget /*777 QWidget **/, hint int) {
 	var convArg0 = editor.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView11closeEditorEP7QWidgetN21QAbstractItemDelegate11EndEditHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
@@ -974,7 +974,7 @@ func (this *QAbstractItemView) CloseEditor(editor *QWidget /*777 QWidget **/, hi
 // /usr/include/qt/QtWidgets/qabstractitemview.h:258
 // index:0
 // Protected virtual
-// void commitData(class QWidget *)
+// void commitData(QWidget *)
 func (this *QAbstractItemView) CommitData(editor *QWidget /*777 QWidget **/) {
 	var convArg0 = editor.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView10commitDataEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -984,7 +984,7 @@ func (this *QAbstractItemView) CommitData(editor *QWidget /*777 QWidget **/) {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:259
 // index:0
 // Protected virtual
-// void editorDestroyed(class QObject *)
+// void editorDestroyed(QObject *)
 func (this *QAbstractItemView) EditorDestroyed(editor *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = editor.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView15editorDestroyedEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -994,7 +994,7 @@ func (this *QAbstractItemView) EditorDestroyed(editor *qtcore.QObject /*777 QObj
 // /usr/include/qt/QtWidgets/qabstractitemview.h:262
 // index:0
 // Public
-// void pressed(const class QModelIndex &)
+// void pressed(const QModelIndex &)
 func (this *QAbstractItemView) Pressed(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView7pressedERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1004,7 +1004,7 @@ func (this *QAbstractItemView) Pressed(index *qtcore.QModelIndex) {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:263
 // index:0
 // Public
-// void clicked(const class QModelIndex &)
+// void clicked(const QModelIndex &)
 func (this *QAbstractItemView) Clicked(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView7clickedERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1014,7 +1014,7 @@ func (this *QAbstractItemView) Clicked(index *qtcore.QModelIndex) {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:264
 // index:0
 // Public
-// void doubleClicked(const class QModelIndex &)
+// void doubleClicked(const QModelIndex &)
 func (this *QAbstractItemView) DoubleClicked(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView13doubleClickedERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1024,7 +1024,7 @@ func (this *QAbstractItemView) DoubleClicked(index *qtcore.QModelIndex) {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:266
 // index:0
 // Public
-// void activated(const class QModelIndex &)
+// void activated(const QModelIndex &)
 func (this *QAbstractItemView) Activated(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView9activatedERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1034,7 +1034,7 @@ func (this *QAbstractItemView) Activated(index *qtcore.QModelIndex) {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:267
 // index:0
 // Public
-// void entered(const class QModelIndex &)
+// void entered(const QModelIndex &)
 func (this *QAbstractItemView) Entered(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView7enteredERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1053,7 +1053,7 @@ func (this *QAbstractItemView) ViewportEntered() {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:270
 // index:0
 // Public
-// void iconSizeChanged(const class QSize &)
+// void iconSizeChanged(const QSize &)
 func (this *QAbstractItemView) IconSizeChanged(size *qtcore.QSize) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView15iconSizeChangedERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1125,7 +1125,7 @@ func (this *QAbstractItemView) VerticalOffset() int {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:289
 // index:0
 // Protected pure virtual
-// bool isIndexHidden(const class QModelIndex &)
+// bool isIndexHidden(const QModelIndex &)
 func (this *QAbstractItemView) IsIndexHidden(index *qtcore.QModelIndex) bool {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAbstractItemView13isIndexHiddenERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1137,7 +1137,7 @@ func (this *QAbstractItemView) IsIndexHidden(index *qtcore.QModelIndex) bool {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:291
 // index:0
 // Protected pure virtual
-// void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
+// void setSelection(const QRect &, QItemSelectionModel::SelectionFlags)
 func (this *QAbstractItemView) SetSelection(rect *qtcore.QRect, command int) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView12setSelectionERK5QRect6QFlagsIN19QItemSelectionModel13SelectionFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
@@ -1147,7 +1147,7 @@ func (this *QAbstractItemView) SetSelection(rect *qtcore.QRect, command int) {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:292
 // index:0
 // Protected pure virtual
-// QRegion visualRegionForSelection(const class QItemSelection &)
+// QRegion visualRegionForSelection(const QItemSelection &)
 func (this *QAbstractItemView) VisualRegionForSelection(selection *qtcore.QItemSelection) *qtgui.QRegion /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = selection.GetCthis()
@@ -1162,7 +1162,7 @@ func (this *QAbstractItemView) VisualRegionForSelection(selection *qtcore.QItemS
 // /usr/include/qt/QtWidgets/qabstractitemview.h:297
 // index:0
 // Protected virtual
-// QItemSelectionModel::SelectionFlags selectionCommand(const class QModelIndex &, const class QEvent *)
+// QItemSelectionModel::SelectionFlags selectionCommand(const QModelIndex &, const QEvent *)
 func (this *QAbstractItemView) SelectionCommand(index *qtcore.QModelIndex, event *qtcore.QEvent /*777 const QEvent **/) int {
 	var convArg0 = index.GetCthis()
 	var convArg1 = event.GetCthis()
@@ -1200,7 +1200,7 @@ func (this *QAbstractItemView) State() int {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:317
 // index:0
 // Protected
-// void setState(enum QAbstractItemView::State)
+// void setState(QAbstractItemView::State)
 func (this *QAbstractItemView) SetState(state int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView8setStateENS_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	gopp.ErrPrint(err, rv)
@@ -1227,7 +1227,7 @@ func (this *QAbstractItemView) ExecuteDelayedItemsLayout() {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:322
 // index:0
 // Protected
-// void setDirtyRegion(const class QRegion &)
+// void setDirtyRegion(const QRegion &)
 func (this *QAbstractItemView) SetDirtyRegion(region *qtgui.QRegion) {
 	var convArg0 = region.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView14setDirtyRegionERK7QRegion", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1287,7 +1287,7 @@ func (this *QAbstractItemView) DoAutoScroll() {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:330
 // index:0
 // Protected virtual
-// bool focusNextPrevChild(_Bool)
+// bool focusNextPrevChild(bool)
 func (this *QAbstractItemView) FocusNextPrevChild(next bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), next)
 	gopp.ErrPrint(err, rv)
@@ -1298,7 +1298,7 @@ func (this *QAbstractItemView) FocusNextPrevChild(next bool) bool {
 // /usr/include/qt/QtWidgets/qabstractitemview.h:331
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QAbstractItemView) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1310,7 +1310,7 @@ func (this *QAbstractItemView) Event(event *qtcore.QEvent /*777 QEvent **/) bool
 // /usr/include/qt/QtWidgets/qabstractitemview.h:332
 // index:0
 // Protected virtual
-// bool viewportEvent(class QEvent *)
+// bool viewportEvent(QEvent *)
 func (this *QAbstractItemView) ViewportEvent(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView13viewportEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1322,7 +1322,7 @@ func (this *QAbstractItemView) ViewportEvent(event *qtcore.QEvent /*777 QEvent *
 // /usr/include/qt/QtWidgets/qabstractitemview.h:333
 // index:0
 // Protected virtual
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QAbstractItemView) MousePressEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1332,7 +1332,7 @@ func (this *QAbstractItemView) MousePressEvent(event *qtgui.QMouseEvent /*777 QM
 // /usr/include/qt/QtWidgets/qabstractitemview.h:334
 // index:0
 // Protected virtual
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QAbstractItemView) MouseMoveEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1342,7 +1342,7 @@ func (this *QAbstractItemView) MouseMoveEvent(event *qtgui.QMouseEvent /*777 QMo
 // /usr/include/qt/QtWidgets/qabstractitemview.h:335
 // index:0
 // Protected virtual
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QAbstractItemView) MouseReleaseEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1352,7 +1352,7 @@ func (this *QAbstractItemView) MouseReleaseEvent(event *qtgui.QMouseEvent /*777 
 // /usr/include/qt/QtWidgets/qabstractitemview.h:336
 // index:0
 // Protected virtual
-// void mouseDoubleClickEvent(class QMouseEvent *)
+// void mouseDoubleClickEvent(QMouseEvent *)
 func (this *QAbstractItemView) MouseDoubleClickEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView21mouseDoubleClickEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1362,7 +1362,7 @@ func (this *QAbstractItemView) MouseDoubleClickEvent(event *qtgui.QMouseEvent /*
 // /usr/include/qt/QtWidgets/qabstractitemview.h:338
 // index:0
 // Protected virtual
-// void dragEnterEvent(class QDragEnterEvent *)
+// void dragEnterEvent(QDragEnterEvent *)
 func (this *QAbstractItemView) DragEnterEvent(event *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView14dragEnterEventEP15QDragEnterEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1372,7 +1372,7 @@ func (this *QAbstractItemView) DragEnterEvent(event *qtgui.QDragEnterEvent /*777
 // /usr/include/qt/QtWidgets/qabstractitemview.h:339
 // index:0
 // Protected virtual
-// void dragMoveEvent(class QDragMoveEvent *)
+// void dragMoveEvent(QDragMoveEvent *)
 func (this *QAbstractItemView) DragMoveEvent(event *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView13dragMoveEventEP14QDragMoveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1382,7 +1382,7 @@ func (this *QAbstractItemView) DragMoveEvent(event *qtgui.QDragMoveEvent /*777 Q
 // /usr/include/qt/QtWidgets/qabstractitemview.h:340
 // index:0
 // Protected virtual
-// void dragLeaveEvent(class QDragLeaveEvent *)
+// void dragLeaveEvent(QDragLeaveEvent *)
 func (this *QAbstractItemView) DragLeaveEvent(event *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView14dragLeaveEventEP15QDragLeaveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1392,7 +1392,7 @@ func (this *QAbstractItemView) DragLeaveEvent(event *qtgui.QDragLeaveEvent /*777
 // /usr/include/qt/QtWidgets/qabstractitemview.h:341
 // index:0
 // Protected virtual
-// void dropEvent(class QDropEvent *)
+// void dropEvent(QDropEvent *)
 func (this *QAbstractItemView) DropEvent(event *qtgui.QDropEvent /*777 QDropEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView9dropEventEP10QDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1402,7 +1402,7 @@ func (this *QAbstractItemView) DropEvent(event *qtgui.QDropEvent /*777 QDropEven
 // /usr/include/qt/QtWidgets/qabstractitemview.h:343
 // index:0
 // Protected virtual
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QAbstractItemView) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1412,7 +1412,7 @@ func (this *QAbstractItemView) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocu
 // /usr/include/qt/QtWidgets/qabstractitemview.h:344
 // index:0
 // Protected virtual
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QAbstractItemView) FocusOutEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1422,7 +1422,7 @@ func (this *QAbstractItemView) FocusOutEvent(event *qtgui.QFocusEvent /*777 QFoc
 // /usr/include/qt/QtWidgets/qabstractitemview.h:345
 // index:0
 // Protected virtual
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QAbstractItemView) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1432,7 +1432,7 @@ func (this *QAbstractItemView) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEv
 // /usr/include/qt/QtWidgets/qabstractitemview.h:346
 // index:0
 // Protected virtual
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QAbstractItemView) ResizeEvent(event *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1442,7 +1442,7 @@ func (this *QAbstractItemView) ResizeEvent(event *qtgui.QResizeEvent /*777 QResi
 // /usr/include/qt/QtWidgets/qabstractitemview.h:347
 // index:0
 // Protected virtual
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QAbstractItemView) TimerEvent(event *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1452,7 +1452,7 @@ func (this *QAbstractItemView) TimerEvent(event *qtcore.QTimerEvent /*777 QTimer
 // /usr/include/qt/QtWidgets/qabstractitemview.h:348
 // index:0
 // Protected virtual
-// void inputMethodEvent(class QInputMethodEvent *)
+// void inputMethodEvent(QInputMethodEvent *)
 func (this *QAbstractItemView) InputMethodEvent(event *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView16inputMethodEventEP17QInputMethodEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

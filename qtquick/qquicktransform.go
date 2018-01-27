@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -97,7 +97,7 @@ func (this *QQuickTransform) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // /usr/include/qt/QtQuick/qquickitem.h:62
 // index:0
 // Public
-// void QQuickTransform(class QObject *)
+// void QQuickTransform(QObject *)
 func NewQQuickTransform(parent *qtcore.QObject /*777 QObject **/) *QQuickTransform {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -119,7 +119,7 @@ func DeleteQQuickTransform(*QQuickTransform) {
 // /usr/include/qt/QtQuick/qquickitem.h:65
 // index:0
 // Public
-// void appendToItem(class QQuickItem *)
+// void appendToItem(QQuickItem *)
 func (this *QQuickTransform) AppendToItem(arg0 *QQuickItem /*777 QQuickItem **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QQuickTransform12appendToItemEP10QQuickItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -129,7 +129,7 @@ func (this *QQuickTransform) AppendToItem(arg0 *QQuickItem /*777 QQuickItem **/)
 // /usr/include/qt/QtQuick/qquickitem.h:66
 // index:0
 // Public
-// void prependToItem(class QQuickItem *)
+// void prependToItem(QQuickItem *)
 func (this *QQuickTransform) PrependToItem(arg0 *QQuickItem /*777 QQuickItem **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QQuickTransform13prependToItemEP10QQuickItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -139,7 +139,7 @@ func (this *QQuickTransform) PrependToItem(arg0 *QQuickItem /*777 QQuickItem **/
 // /usr/include/qt/QtQuick/qquickitem.h:68
 // index:0
 // Public pure virtual
-// void applyTo(class QMatrix4x4 *)
+// void applyTo(QMatrix4x4 *)
 func (this *QQuickTransform) ApplyTo(matrix *qtgui.QMatrix4x4 /*777 QMatrix4x4 **/) {
 	var convArg0 = matrix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QQuickTransform7applyToEP10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

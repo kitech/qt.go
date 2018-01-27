@@ -1,8 +1,8 @@
 package qtgui
 
 import "unsafe"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -151,7 +151,7 @@ func QUnpremultiply(p uint) uint {
 // /usr/include/qt/QtGui/qaccessible.h:972
 // index:0
 // Invalid
-// const char * qAccessibleRoleString(class QAccessible::Role)
+// const char * qAccessibleRoleString(QAccessible::Role)
 func QAccessibleRoleString(role int) string {
 	rv, err := ffiqt.InvokeQtFunc6("_Z21qAccessibleRoleStringN11QAccessible4RoleE", ffiqt.FFI_TYPE_POINTER, role)
 	gopp.ErrPrint(err, rv)
@@ -162,7 +162,7 @@ func QAccessibleRoleString(role int) string {
 // /usr/include/qt/QtGui/qaccessible.h:973
 // index:0
 // Invalid
-// const char * qAccessibleEventString(class QAccessible::Event)
+// const char * qAccessibleEventString(QAccessible::Event)
 func QAccessibleEventString(event int) string {
 	rv, err := ffiqt.InvokeQtFunc6("_Z22qAccessibleEventStringN11QAccessible5EventE", ffiqt.FFI_TYPE_POINTER, event)
 	gopp.ErrPrint(err, rv)
@@ -173,7 +173,7 @@ func QAccessibleEventString(event int) string {
 // /usr/include/qt/QtGui/qaccessible.h:974
 // index:0
 // Invalid
-// QString qAccessibleLocalizedActionDescription(const class QString &)
+// QString qAccessibleLocalizedActionDescription(const QString &)
 func QAccessibleLocalizedActionDescription(actionName *qtcore.QString) *qtcore.QString /*123*/ {
 	var convArg0 = actionName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z37qAccessibleLocalizedActionDescriptionRK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -186,7 +186,7 @@ func QAccessibleLocalizedActionDescription(actionName *qtcore.QString) *qtcore.Q
 // /usr/include/qt/QtGui/qquaternion.h:323
 // index:2
 // Invalid inline
-// bool qFuzzyCompare(const class QQuaternion &, const class QQuaternion &)
+// bool qFuzzyCompare(const QQuaternion &, const QQuaternion &)
 func QFuzzyCompare_2(q1 *QQuaternion, q2 *QQuaternion) bool {
 	var convArg0 = q1.GetCthis()
 	var convArg1 = q2.GetCthis()

@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQHstsPolicy() *QHstsPolicy {
 // /usr/include/qt/QtNetwork/qhstspolicy.h:64
 // index:1
 // Public
-// void QHstsPolicy(const class QDateTime &, QHstsPolicy::PolicyFlags, const class QString &, class QUrl::ParsingMode)
+// void QHstsPolicy(const QDateTime &, QHstsPolicy::PolicyFlags, const QString &, QUrl::ParsingMode)
 func NewQHstsPolicy_1(expiry *qtcore.QDateTime, flags int, host *qtcore.QString, mode int) *QHstsPolicy {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = expiry.GetCthis()
@@ -107,7 +107,7 @@ func DeleteQHstsPolicy(*QHstsPolicy) {
 // /usr/include/qt/QtNetwork/qhstspolicy.h:71
 // index:0
 // Public inline
-// void swap(class QHstsPolicy &)
+// void swap(QHstsPolicy &)
 func (this *QHstsPolicy) Swap(other *QHstsPolicy) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHstsPolicy4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -117,7 +117,7 @@ func (this *QHstsPolicy) Swap(other *QHstsPolicy) {
 // /usr/include/qt/QtNetwork/qhstspolicy.h:73
 // index:0
 // Public
-// void setHost(const class QString &, class QUrl::ParsingMode)
+// void setHost(const QString &, QUrl::ParsingMode)
 func (this *QHstsPolicy) SetHost(host *qtcore.QString, mode int) {
 	var convArg0 = host.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHstsPolicy7setHostERK7QStringN4QUrl11ParsingModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
@@ -127,7 +127,7 @@ func (this *QHstsPolicy) SetHost(host *qtcore.QString, mode int) {
 // /usr/include/qt/QtNetwork/qhstspolicy.h:75
 // index:0
 // Public
-// void setExpiry(const class QDateTime &)
+// void setExpiry(const QDateTime &)
 func (this *QHstsPolicy) SetExpiry(expiry *qtcore.QDateTime) {
 	var convArg0 = expiry.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHstsPolicy9setExpiryERK9QDateTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -151,7 +151,7 @@ func (this *QHstsPolicy) Expiry() *qtcore.QDateTime /*123*/ {
 // /usr/include/qt/QtNetwork/qhstspolicy.h:77
 // index:0
 // Public
-// void setIncludesSubDomains(_Bool)
+// void setIncludesSubDomains(bool)
 func (this *QHstsPolicy) SetIncludesSubDomains(include bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHstsPolicy21setIncludesSubDomainsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), include)
 	gopp.ErrPrint(err, rv)

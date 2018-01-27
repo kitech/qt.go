@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -108,7 +108,7 @@ func NewQQuaternion_2(scalar float32, xpos float32, ypos float32, zpos float32) 
 // /usr/include/qt/QtGui/qquaternion.h:63
 // index:3
 // Public
-// void QQuaternion(float, const class QVector3D &)
+// void QQuaternion(float, const QVector3D &)
 func NewQQuaternion_3(scalar float32, vector *QVector3D) *QQuaternion {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = vector.GetCthis()
@@ -121,7 +121,7 @@ func NewQQuaternion_3(scalar float32, vector *QVector3D) *QQuaternion {
 // /usr/include/qt/QtGui/qquaternion.h:66
 // index:4
 // Public
-// void QQuaternion(const class QVector4D &)
+// void QQuaternion(const QVector4D &)
 func NewQQuaternion_4(vector *QVector4D) *QQuaternion {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = vector.GetCthis()
@@ -170,7 +170,7 @@ func (this *QQuaternion) Vector() *QVector3D /*123*/ {
 // /usr/include/qt/QtGui/qquaternion.h:74
 // index:0
 // Public
-// void setVector(const class QVector3D &)
+// void setVector(const QVector3D &)
 func (this *QQuaternion) SetVector(vector *QVector3D) {
 	var convArg0 = vector.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion9setVectorERK9QVector3D", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -269,7 +269,7 @@ func (this *QQuaternion) SetScalar(scalar float32) {
 // /usr/include/qt/QtGui/qquaternion.h:88
 // index:0
 // Public static inline
-// float dotProduct(const class QQuaternion &, const class QQuaternion &)
+// float dotProduct(const QQuaternion &, const QQuaternion &)
 func (this *QQuaternion) DotProduct(q1 *QQuaternion, q2 *QQuaternion) float32 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion10dotProductERKS_S1_", ffiqt.FFI_TYPE_POINTER, q1, q2)
 	gopp.ErrPrint(err, rv)
@@ -372,7 +372,7 @@ func (this *QQuaternion) Conjugate() *QQuaternion /*123*/ {
 // /usr/include/qt/QtGui/qquaternion.h:103
 // index:0
 // Public
-// QVector3D rotatedVector(const class QVector3D &)
+// QVector3D rotatedVector(const QVector3D &)
 func (this *QQuaternion) RotatedVector(vector *QVector3D) *QVector3D /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = vector.GetCthis()
@@ -401,7 +401,7 @@ func (this *QQuaternion) ToVector4D() *QVector4D /*123*/ {
 // /usr/include/qt/QtGui/qquaternion.h:130
 // index:0
 // Public inline
-// void getAxisAndAngle(class QVector3D *, float *)
+// void getAxisAndAngle(QVector3D *, float *)
 func (this *QQuaternion) GetAxisAndAngle(axis *QVector3D /*777 QVector3D **/, angle unsafe.Pointer /*666*/) {
 	var convArg0 = axis.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQuaternion15getAxisAndAngleEP9QVector3DPf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &angle)
@@ -420,7 +420,7 @@ func (this *QQuaternion) GetAxisAndAngle_1(x unsafe.Pointer /*666*/, y unsafe.Po
 // /usr/include/qt/QtGui/qquaternion.h:131
 // index:0
 // Public static
-// QQuaternion fromAxisAndAngle(const class QVector3D &, float)
+// QQuaternion fromAxisAndAngle(const QVector3D &, float)
 func (this *QQuaternion) FromAxisAndAngle(axis *QVector3D, angle float32) *QQuaternion /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion16fromAxisAndAngleERK9QVector3Df", ffiqt.FFI_TYPE_POINTER, axis, angle)
 	gopp.ErrPrint(err, rv)
@@ -468,7 +468,7 @@ func (this *QQuaternion) ToEulerAngles() *QVector3D /*123*/ {
 // /usr/include/qt/QtGui/qquaternion.h:139
 // index:0
 // Public static inline
-// QQuaternion fromEulerAngles(const class QVector3D &)
+// QQuaternion fromEulerAngles(const QVector3D &)
 func (this *QQuaternion) FromEulerAngles(eulerAngles *QVector3D) *QQuaternion /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion15fromEulerAnglesERK9QVector3D", ffiqt.FFI_TYPE_POINTER, eulerAngles)
 	gopp.ErrPrint(err, rv)
@@ -511,7 +511,7 @@ func (this *QQuaternion) GetEulerAngles(pitch unsafe.Pointer /*666*/, yaw unsafe
 // /usr/include/qt/QtGui/qquaternion.h:148
 // index:0
 // Public
-// void getAxes(class QVector3D *, class QVector3D *, class QVector3D *)
+// void getAxes(QVector3D *, QVector3D *, QVector3D *)
 func (this *QQuaternion) GetAxes(xAxis *QVector3D /*777 QVector3D **/, yAxis *QVector3D /*777 QVector3D **/, zAxis *QVector3D /*777 QVector3D **/) {
 	var convArg0 = xAxis.GetCthis()
 	var convArg1 = yAxis.GetCthis()
@@ -523,7 +523,7 @@ func (this *QQuaternion) GetAxes(xAxis *QVector3D /*777 QVector3D **/, yAxis *QV
 // /usr/include/qt/QtGui/qquaternion.h:149
 // index:0
 // Public static
-// QQuaternion fromAxes(const class QVector3D &, const class QVector3D &, const class QVector3D &)
+// QQuaternion fromAxes(const QVector3D &, const QVector3D &, const QVector3D &)
 func (this *QQuaternion) FromAxes(xAxis *QVector3D, yAxis *QVector3D, zAxis *QVector3D) *QQuaternion /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion8fromAxesERK9QVector3DS2_S2_", ffiqt.FFI_TYPE_POINTER, xAxis, yAxis, zAxis)
 	gopp.ErrPrint(err, rv)
@@ -540,7 +540,7 @@ func QQuaternion_FromAxes(xAxis *QVector3D, yAxis *QVector3D, zAxis *QVector3D) 
 // /usr/include/qt/QtGui/qquaternion.h:151
 // index:0
 // Public static
-// QQuaternion fromDirection(const class QVector3D &, const class QVector3D &)
+// QQuaternion fromDirection(const QVector3D &, const QVector3D &)
 func (this *QQuaternion) FromDirection(direction *QVector3D, up *QVector3D) *QQuaternion /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion13fromDirectionERK9QVector3DS2_", ffiqt.FFI_TYPE_POINTER, direction, up)
 	gopp.ErrPrint(err, rv)
@@ -557,7 +557,7 @@ func QQuaternion_FromDirection(direction *QVector3D, up *QVector3D) *QQuaternion
 // /usr/include/qt/QtGui/qquaternion.h:153
 // index:0
 // Public static
-// QQuaternion rotationTo(const class QVector3D &, const class QVector3D &)
+// QQuaternion rotationTo(const QVector3D &, const QVector3D &)
 func (this *QQuaternion) RotationTo(from *QVector3D, to *QVector3D) *QQuaternion /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion10rotationToERK9QVector3DS2_", ffiqt.FFI_TYPE_POINTER, from, to)
 	gopp.ErrPrint(err, rv)
@@ -574,7 +574,7 @@ func QQuaternion_RotationTo(from *QVector3D, to *QVector3D) *QQuaternion /*123*/
 // /usr/include/qt/QtGui/qquaternion.h:156
 // index:0
 // Public static
-// QQuaternion slerp(const class QQuaternion &, const class QQuaternion &, float)
+// QQuaternion slerp(const QQuaternion &, const QQuaternion &, float)
 func (this *QQuaternion) Slerp(q1 *QQuaternion, q2 *QQuaternion, t float32) *QQuaternion /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion5slerpERKS_S1_f", ffiqt.FFI_TYPE_POINTER, q1, q2, t)
 	gopp.ErrPrint(err, rv)
@@ -591,7 +591,7 @@ func QQuaternion_Slerp(q1 *QQuaternion, q2 *QQuaternion, t float32) *QQuaternion
 // /usr/include/qt/QtGui/qquaternion.h:158
 // index:0
 // Public static
-// QQuaternion nlerp(const class QQuaternion &, const class QQuaternion &, float)
+// QQuaternion nlerp(const QQuaternion &, const QQuaternion &, float)
 func (this *QQuaternion) Nlerp(q1 *QQuaternion, q2 *QQuaternion, t float32) *QQuaternion /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQuaternion5nlerpERKS_S1_f", ffiqt.FFI_TYPE_POINTER, q1, q2, t)
 	gopp.ErrPrint(err, rv)

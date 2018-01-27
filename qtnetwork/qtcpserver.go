@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QTcpServer) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtNetwork/qtcpserver.h:61
 // index:0
 // Public
-// void QTcpServer(class QObject *)
+// void QTcpServer(QObject *)
 func NewQTcpServer(parent *qtcore.QObject /*777 QObject **/) *QTcpServer {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -107,7 +107,7 @@ func DeleteQTcpServer(*QTcpServer) {
 // /usr/include/qt/QtNetwork/qtcpserver.h:64
 // index:0
 // Public
-// bool listen(const class QHostAddress &, quint16)
+// bool listen(const QHostAddress &, quint16)
 func (this *QTcpServer) Listen(address *QHostAddress, port uint16) bool {
 	var convArg0 = address.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTcpServer6listenERK12QHostAddresst", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
@@ -206,7 +206,7 @@ func (this *QTcpServer) SetSocketDescriptor(socketDescriptor int64) bool {
 // /usr/include/qt/QtNetwork/qtcpserver.h:78
 // index:0
 // Public
-// bool waitForNewConnection(int, _Bool *)
+// bool waitForNewConnection(int, bool *)
 func (this *QTcpServer) WaitForNewConnection(msec int, timedOut unsafe.Pointer /*666*/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTcpServer20waitForNewConnectionEiPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec, &timedOut)
 	gopp.ErrPrint(err, rv)
@@ -283,7 +283,7 @@ func (this *QTcpServer) ResumeAccepting() {
 // /usr/include/qt/QtNetwork/qtcpserver.h:89
 // index:0
 // Public
-// void setProxy(const class QNetworkProxy &)
+// void setProxy(const QNetworkProxy &)
 func (this *QTcpServer) SetProxy(networkProxy *QNetworkProxy) {
 	var convArg0 = networkProxy.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTcpServer8setProxyERK13QNetworkProxy", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -316,7 +316,7 @@ func (this *QTcpServer) IncomingConnection(handle int64) {
 // /usr/include/qt/QtNetwork/qtcpserver.h:95
 // index:0
 // Protected
-// void addPendingConnection(class QTcpSocket *)
+// void addPendingConnection(QTcpSocket *)
 func (this *QTcpServer) AddPendingConnection(socket *QTcpSocket /*777 QTcpSocket **/) {
 	var convArg0 = socket.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTcpServer20addPendingConnectionEP10QTcpSocket", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -335,7 +335,7 @@ func (this *QTcpServer) NewConnection() {
 // /usr/include/qt/QtNetwork/qtcpserver.h:102
 // index:0
 // Public
-// void acceptError(class QAbstractSocket::SocketError)
+// void acceptError(QAbstractSocket::SocketError)
 func (this *QTcpServer) AcceptError(socketError int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTcpServer11acceptErrorEN15QAbstractSocket11SocketErrorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), socketError)
 	gopp.ErrPrint(err, rv)

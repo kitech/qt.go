@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QDoubleValidator) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 // /usr/include/qt/QtGui/qvalidator.h:133
 // index:0
 // Public
-// void QDoubleValidator(class QObject *)
+// void QDoubleValidator(QObject *)
 func NewQDoubleValidator(parent *qtcore.QObject /*777 QObject **/) *QDoubleValidator {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = parent.GetCthis()
@@ -98,7 +98,7 @@ func NewQDoubleValidator(parent *qtcore.QObject /*777 QObject **/) *QDoubleValid
 // /usr/include/qt/QtGui/qvalidator.h:134
 // index:1
 // Public
-// void QDoubleValidator(double, double, int, class QObject *)
+// void QDoubleValidator(double, double, int, QObject *)
 func NewQDoubleValidator_1(bottom float64, top float64, decimals int, parent *qtcore.QObject /*777 QObject **/) *QDoubleValidator {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg3 = parent.GetCthis()
@@ -120,7 +120,7 @@ func DeleteQDoubleValidator(*QDoubleValidator) {
 // /usr/include/qt/QtGui/qvalidator.h:142
 // index:0
 // Public virtual
-// QValidator::State validate(class QString &, int &)
+// QValidator::State validate(QString &, int &)
 func (this *QDoubleValidator) Validate(arg0 *qtcore.QString, arg1 int) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDoubleValidator8validateER7QStringRi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &arg1)
@@ -168,7 +168,7 @@ func (this *QDoubleValidator) SetDecimals(arg0 int) {
 // /usr/include/qt/QtGui/qvalidator.h:148
 // index:0
 // Public
-// void setNotation(enum QDoubleValidator::Notation)
+// void setNotation(QDoubleValidator::Notation)
 func (this *QDoubleValidator) SetNotation(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDoubleValidator11setNotationENS_8NotationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -248,7 +248,7 @@ func (this *QDoubleValidator) DecimalsChanged(decimals int) {
 // /usr/include/qt/QtGui/qvalidator.h:159
 // index:0
 // Public
-// void notationChanged(class QDoubleValidator::Notation)
+// void notationChanged(QDoubleValidator::Notation)
 func (this *QDoubleValidator) NotationChanged(notation int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDoubleValidator15notationChangedENS_8NotationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), notation)
 	gopp.ErrPrint(err, rv)

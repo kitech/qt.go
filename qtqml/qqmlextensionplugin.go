@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -92,7 +92,7 @@ func (this *QQmlExtensionPlugin) MetaObject() *qtcore.QMetaObject /*777 const QM
 // /usr/include/qt/QtQml/qqmlextensionplugin.h:61
 // index:0
 // Public
-// void QQmlExtensionPlugin(class QObject *)
+// void QQmlExtensionPlugin(QObject *)
 func NewQQmlExtensionPlugin(parent *qtcore.QObject /*777 QObject **/) *QQmlExtensionPlugin {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = parent.GetCthis()
@@ -139,7 +139,7 @@ func (this *QQmlExtensionPlugin) RegisterTypes(uri string) {
 // /usr/include/qt/QtQml/qqmlextensionplugin.h:67
 // index:0
 // Public virtual
-// void initializeEngine(class QQmlEngine *, const char *)
+// void initializeEngine(QQmlEngine *, const char *)
 func (this *QQmlExtensionPlugin) InitializeEngine(engine *QQmlEngine /*777 QQmlEngine **/, uri string) {
 	var convArg0 = engine.GetCthis()
 	var convArg1 = qtrt.CString(uri)

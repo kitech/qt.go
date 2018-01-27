@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -96,7 +96,7 @@ func NewQPolygonF_1(size int) *QPolygonF {
 // /usr/include/qt/QtGui/qpolygon.h:151
 // index:2
 // Public
-// void QPolygonF(const class QRectF &)
+// void QPolygonF(const QRectF &)
 func NewQPolygonF_2(r *qtcore.QRectF) *QPolygonF {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = r.GetCthis()
@@ -109,7 +109,7 @@ func NewQPolygonF_2(r *qtcore.QRectF) *QPolygonF {
 // /usr/include/qt/QtGui/qpolygon.h:152
 // index:3
 // Public
-// void QPolygonF(const class QPolygon &)
+// void QPolygonF(const QPolygon &)
 func NewQPolygonF_3(a *QPolygon) *QPolygonF {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = a.GetCthis()
@@ -131,7 +131,7 @@ func DeleteQPolygonF(*QPolygonF) {
 // /usr/include/qt/QtGui/qpolygon.h:159
 // index:0
 // Public inline
-// void swap(class QPolygonF &)
+// void swap(QPolygonF &)
 func (this *QPolygonF) Swap(other *QPolygonF) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPolygonF4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -150,7 +150,7 @@ func (this *QPolygonF) Translate(dx float64, dy float64) {
 // /usr/include/qt/QtGui/qpolygon.h:164
 // index:1
 // Public
-// void translate(const class QPointF &)
+// void translate(const QPointF &)
 func (this *QPolygonF) Translate_1(offset *qtcore.QPointF) {
 	var convArg0 = offset.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPolygonF9translateERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -174,7 +174,7 @@ func (this *QPolygonF) Translated(dx float64, dy float64) *QPolygonF /*123*/ {
 // /usr/include/qt/QtGui/qpolygon.h:167
 // index:1
 // Public
-// QPolygonF translated(const class QPointF &)
+// QPolygonF translated(const QPointF &)
 func (this *QPolygonF) Translated_1(offset *qtcore.QPointF) *QPolygonF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = offset.GetCthis()
@@ -228,7 +228,7 @@ func (this *QPolygonF) BoundingRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qpolygon.h:175
 // index:0
 // Public
-// bool containsPoint(const class QPointF &, Qt::FillRule)
+// bool containsPoint(const QPointF &, Qt::FillRule)
 func (this *QPolygonF) ContainsPoint(pt *qtcore.QPointF, fillRule int) bool {
 	var convArg0 = pt.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF13containsPointERK7QPointFN2Qt8FillRuleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fillRule)
@@ -240,7 +240,7 @@ func (this *QPolygonF) ContainsPoint(pt *qtcore.QPointF, fillRule int) bool {
 // /usr/include/qt/QtGui/qpolygon.h:177
 // index:0
 // Public
-// QPolygonF united(const class QPolygonF &)
+// QPolygonF united(const QPolygonF &)
 func (this *QPolygonF) United(r *QPolygonF) *QPolygonF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
@@ -255,7 +255,7 @@ func (this *QPolygonF) United(r *QPolygonF) *QPolygonF /*123*/ {
 // /usr/include/qt/QtGui/qpolygon.h:178
 // index:0
 // Public
-// QPolygonF intersected(const class QPolygonF &)
+// QPolygonF intersected(const QPolygonF &)
 func (this *QPolygonF) Intersected(r *QPolygonF) *QPolygonF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
@@ -270,7 +270,7 @@ func (this *QPolygonF) Intersected(r *QPolygonF) *QPolygonF /*123*/ {
 // /usr/include/qt/QtGui/qpolygon.h:179
 // index:0
 // Public
-// QPolygonF subtracted(const class QPolygonF &)
+// QPolygonF subtracted(const QPolygonF &)
 func (this *QPolygonF) Subtracted(r *QPolygonF) *QPolygonF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
@@ -285,7 +285,7 @@ func (this *QPolygonF) Subtracted(r *QPolygonF) *QPolygonF /*123*/ {
 // /usr/include/qt/QtGui/qpolygon.h:181
 // index:0
 // Public
-// bool intersects(const class QPolygonF &)
+// bool intersects(const QPolygonF &)
 func (this *QPolygonF) Intersects(r *QPolygonF) bool {
 	var convArg0 = r.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF10intersectsERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

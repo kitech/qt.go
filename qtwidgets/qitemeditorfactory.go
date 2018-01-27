@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -97,7 +97,7 @@ func DeleteQItemEditorFactory(*QItemEditorFactory) {
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:101
 // index:0
 // Public virtual
-// QWidget * createEditor(int, class QWidget *)
+// QWidget * createEditor(int, QWidget *)
 func (this *QItemEditorFactory) CreateEditor(userType int, parent *QWidget /*777 QWidget **/) *QWidget /*777 QWidget **/ {
 	var convArg1 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QItemEditorFactory12createEditorEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), userType, convArg1)
@@ -124,7 +124,7 @@ func (this *QItemEditorFactory) ValuePropertyName(userType int) *qtcore.QByteArr
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:104
 // index:0
 // Public
-// void registerEditor(int, class QItemEditorCreatorBase *)
+// void registerEditor(int, QItemEditorCreatorBase *)
 func (this *QItemEditorFactory) RegisterEditor(userType int, creator *QItemEditorCreatorBase /*777 QItemEditorCreatorBase **/) {
 	var convArg1 = creator.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), userType, convArg1)
@@ -151,7 +151,7 @@ func QItemEditorFactory_DefaultFactory() *QItemEditorFactory /*777 const QItemEd
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:107
 // index:0
 // Public static
-// void setDefaultFactory(class QItemEditorFactory *)
+// void setDefaultFactory(QItemEditorFactory *)
 func (this *QItemEditorFactory) SetDefaultFactory(factory *QItemEditorFactory /*777 QItemEditorFactory **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactory17setDefaultFactoryEPS_", ffiqt.FFI_TYPE_POINTER, factory)
 	gopp.ErrPrint(err, rv)

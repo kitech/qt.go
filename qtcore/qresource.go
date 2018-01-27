@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QResource) NewFromPointer(cthis unsafe.Pointer) *QResource {
 // /usr/include/qt/QtCore/qresource.h:57
 // index:0
 // Public
-// void QResource(const class QString &, const class QLocale &)
+// void QResource(const QString &, const QLocale &)
 func NewQResource(file *QString, locale *QLocale) *QResource {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = file.GetCthis()
@@ -91,7 +91,7 @@ func DeleteQResource(*QResource) {
 // /usr/include/qt/QtCore/qresource.h:60
 // index:0
 // Public
-// void setFileName(const class QString &)
+// void setFileName(const QString &)
 func (this *QResource) SetFileName(file *QString) {
 	var convArg0 = file.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResource11setFileNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -129,7 +129,7 @@ func (this *QResource) AbsoluteFilePath() *QString /*123*/ {
 // /usr/include/qt/QtCore/qresource.h:64
 // index:0
 // Public
-// void setLocale(const class QLocale &)
+// void setLocale(const QLocale &)
 func (this *QResource) SetLocale(locale *QLocale) {
 	var convArg0 = locale.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResource9setLocaleERK7QLocale", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -211,7 +211,7 @@ func (this *QResource) LastModified() *QDateTime /*123*/ {
 // /usr/include/qt/QtCore/qresource.h:74
 // index:0
 // Public static
-// void addSearchPath(const class QString &)
+// void addSearchPath(const QString &)
 func (this *QResource) AddSearchPath(path *QString) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResource13addSearchPathERK7QString", ffiqt.FFI_TYPE_POINTER, path)
 	gopp.ErrPrint(err, rv)
@@ -224,7 +224,7 @@ func QResource_AddSearchPath(path *QString) {
 // /usr/include/qt/QtCore/qresource.h:77
 // index:0
 // Public static
-// bool registerResource(const class QString &, const class QString &)
+// bool registerResource(const QString &, const QString &)
 func (this *QResource) RegisterResource(rccFilename *QString, resourceRoot *QString) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResource16registerResourceERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, rccFilename, resourceRoot)
 	gopp.ErrPrint(err, rv)
@@ -240,7 +240,7 @@ func QResource_RegisterResource(rccFilename *QString, resourceRoot *QString) boo
 // /usr/include/qt/QtCore/qresource.h:80
 // index:1
 // Public static
-// bool registerResource(const uchar *, const class QString &)
+// bool registerResource(const uchar *, const QString &)
 func (this *QResource) RegisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot *QString) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResource16registerResourceEPKhRK7QString", ffiqt.FFI_TYPE_POINTER, rccData, resourceRoot)
 	gopp.ErrPrint(err, rv)
@@ -256,7 +256,7 @@ func QResource_RegisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot *
 // /usr/include/qt/QtCore/qresource.h:78
 // index:0
 // Public static
-// bool unregisterResource(const class QString &, const class QString &)
+// bool unregisterResource(const QString &, const QString &)
 func (this *QResource) UnregisterResource(rccFilename *QString, resourceRoot *QString) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResource18unregisterResourceERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, rccFilename, resourceRoot)
 	gopp.ErrPrint(err, rv)
@@ -272,7 +272,7 @@ func QResource_UnregisterResource(rccFilename *QString, resourceRoot *QString) b
 // /usr/include/qt/QtCore/qresource.h:81
 // index:1
 // Public static
-// bool unregisterResource(const uchar *, const class QString &)
+// bool unregisterResource(const uchar *, const QString &)
 func (this *QResource) UnregisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot *QString) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResource18unregisterResourceEPKhRK7QString", ffiqt.FFI_TYPE_POINTER, rccData, resourceRoot)
 	gopp.ErrPrint(err, rv)

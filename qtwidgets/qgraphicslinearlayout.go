@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -77,7 +77,7 @@ func (*QGraphicsLinearLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLin
 // /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:56
 // index:0
 // Public
-// void QGraphicsLinearLayout(class QGraphicsLayoutItem *)
+// void QGraphicsLinearLayout(QGraphicsLayoutItem *)
 func NewQGraphicsLinearLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) *QGraphicsLinearLayout {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -90,7 +90,7 @@ func NewQGraphicsLinearLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutI
 // /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:57
 // index:1
 // Public
-// void QGraphicsLinearLayout(Qt::Orientation, class QGraphicsLayoutItem *)
+// void QGraphicsLinearLayout(Qt::Orientation, QGraphicsLayoutItem *)
 func NewQGraphicsLinearLayout_1(orientation int, parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) *QGraphicsLinearLayout {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = parent.GetCthis()
@@ -132,7 +132,7 @@ func (this *QGraphicsLinearLayout) Orientation() int {
 // /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:63
 // index:0
 // Public inline
-// void addItem(class QGraphicsLayoutItem *)
+// void addItem(QGraphicsLayoutItem *)
 func (this *QGraphicsLinearLayout) AddItem(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsLinearLayout7addItemEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -151,7 +151,7 @@ func (this *QGraphicsLinearLayout) AddStretch(stretch int) {
 // /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:66
 // index:0
 // Public
-// void insertItem(int, class QGraphicsLayoutItem *)
+// void insertItem(int, QGraphicsLayoutItem *)
 func (this *QGraphicsLinearLayout) InsertItem(index int, item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) {
 	var convArg1 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsLinearLayout10insertItemEiP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
@@ -170,7 +170,7 @@ func (this *QGraphicsLinearLayout) InsertStretch(index int, stretch int) {
 // /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:69
 // index:0
 // Public
-// void removeItem(class QGraphicsLayoutItem *)
+// void removeItem(QGraphicsLayoutItem *)
 func (this *QGraphicsLinearLayout) RemoveItem(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsLinearLayout10removeItemEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -229,7 +229,7 @@ func (this *QGraphicsLinearLayout) ItemSpacing(index int) float64 {
 // /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:77
 // index:0
 // Public
-// void setStretchFactor(class QGraphicsLayoutItem *, int)
+// void setStretchFactor(QGraphicsLayoutItem *, int)
 func (this *QGraphicsLinearLayout) SetStretchFactor(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, stretch int) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsLinearLayout16setStretchFactorEP19QGraphicsLayoutItemi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
@@ -239,7 +239,7 @@ func (this *QGraphicsLinearLayout) SetStretchFactor(item *QGraphicsLayoutItem /*
 // /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:78
 // index:0
 // Public
-// int stretchFactor(class QGraphicsLayoutItem *)
+// int stretchFactor(QGraphicsLayoutItem *)
 func (this *QGraphicsLinearLayout) StretchFactor(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) int {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsLinearLayout13stretchFactorEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -251,7 +251,7 @@ func (this *QGraphicsLinearLayout) StretchFactor(item *QGraphicsLayoutItem /*777
 // /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:81
 // index:0
 // Public
-// Qt::Alignment alignment(class QGraphicsLayoutItem *)
+// Qt::Alignment alignment(QGraphicsLayoutItem *)
 func (this *QGraphicsLinearLayout) Alignment(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) int {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsLinearLayout9alignmentEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -263,7 +263,7 @@ func (this *QGraphicsLinearLayout) Alignment(item *QGraphicsLayoutItem /*777 QGr
 // /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:83
 // index:0
 // Public virtual
-// void setGeometry(const class QRectF &)
+// void setGeometry(const QRectF &)
 func (this *QGraphicsLinearLayout) SetGeometry(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsLinearLayout11setGeometryERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -305,7 +305,7 @@ func (this *QGraphicsLinearLayout) Invalidate() {
 // /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:89
 // index:0
 // Public virtual
-// QSizeF sizeHint(Qt::SizeHint, const class QSizeF &)
+// QSizeF sizeHint(Qt::SizeHint, const QSizeF &)
 func (this *QGraphicsLinearLayout) SizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = constraint.GetCthis()

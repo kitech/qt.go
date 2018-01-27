@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -93,7 +93,7 @@ func DeleteQNetworkConfiguration(*QNetworkConfiguration) {
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:64
 // index:0
 // Public inline
-// void swap(class QNetworkConfiguration &)
+// void swap(QNetworkConfiguration &)
 func (this *QNetworkConfiguration) Swap(other *QNetworkConfiguration) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkConfiguration4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

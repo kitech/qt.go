@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -89,7 +89,7 @@ func (this *QQmlFileSelector) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 // /usr/include/qt/QtQml/qqmlfileselector.h:57
 // index:0
 // Public
-// void QQmlFileSelector(class QQmlEngine *, class QObject *)
+// void QQmlFileSelector(QQmlEngine *, QObject *)
 func NewQQmlFileSelector(engine *QQmlEngine /*777 QQmlEngine **/, parent *qtcore.QObject /*777 QObject **/) *QQmlFileSelector {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = engine.GetCthis()
@@ -124,7 +124,7 @@ func (this *QQmlFileSelector) Selector() *qtcore.QFileSelector /*777 QFileSelect
 // /usr/include/qt/QtQml/qqmlfileselector.h:60
 // index:0
 // Public
-// void setSelector(class QFileSelector *)
+// void setSelector(QFileSelector *)
 func (this *QQmlFileSelector) SetSelector(selector *qtcore.QFileSelector /*777 QFileSelector **/) {
 	var convArg0 = selector.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QQmlFileSelector11setSelectorEP13QFileSelector", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -134,7 +134,7 @@ func (this *QQmlFileSelector) SetSelector(selector *qtcore.QFileSelector /*777 Q
 // /usr/include/qt/QtQml/qqmlfileselector.h:61
 // index:0
 // Public
-// void setExtraSelectors(class QStringList &)
+// void setExtraSelectors(QStringList &)
 func (this *QQmlFileSelector) SetExtraSelectors(strings *qtcore.QStringList) {
 	var convArg0 = strings.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QQmlFileSelector17setExtraSelectorsER11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -144,7 +144,7 @@ func (this *QQmlFileSelector) SetExtraSelectors(strings *qtcore.QStringList) {
 // /usr/include/qt/QtQml/qqmlfileselector.h:62
 // index:1
 // Public
-// void setExtraSelectors(const class QStringList &)
+// void setExtraSelectors(const QStringList &)
 func (this *QQmlFileSelector) SetExtraSelectors_1(strings *qtcore.QStringList) {
 	var convArg0 = strings.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QQmlFileSelector17setExtraSelectorsERK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -154,7 +154,7 @@ func (this *QQmlFileSelector) SetExtraSelectors_1(strings *qtcore.QStringList) {
 // /usr/include/qt/QtQml/qqmlfileselector.h:63
 // index:0
 // Public static
-// QQmlFileSelector * get(class QQmlEngine *)
+// QQmlFileSelector * get(QQmlEngine *)
 func (this *QQmlFileSelector) Get(arg0 *QQmlEngine /*777 QQmlEngine **/) *QQmlFileSelector /*777 QQmlFileSelector **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QQmlFileSelector3getEP10QQmlEngine", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)

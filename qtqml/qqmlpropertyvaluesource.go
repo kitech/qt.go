@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -97,7 +97,7 @@ func DeleteQQmlPropertyValueSource(*QQmlPropertyValueSource) {
 // /usr/include/qt/QtQml/qqmlpropertyvaluesource.h:55
 // index:0
 // Public pure virtual
-// void setTarget(const class QQmlProperty &)
+// void setTarget(const QQmlProperty &)
 func (this *QQmlPropertyValueSource) SetTarget(arg0 *QQmlProperty) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QQmlPropertyValueSource9setTargetERK12QQmlProperty", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

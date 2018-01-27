@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func NewQTextFrameFormat() *QTextFrameFormat {
 // /usr/include/qt/QtGui/qtextformat.h:852
 // index:1
 // Protected
-// void QTextFrameFormat(const class QTextFormat &)
+// void QTextFrameFormat(const QTextFormat &)
 func NewQTextFrameFormat_1(fmt *QTextFormat) *QTextFrameFormat {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = fmt.GetCthis()
@@ -109,7 +109,7 @@ func (this *QTextFrameFormat) IsValid() bool {
 // /usr/include/qt/QtGui/qtextformat.h:796
 // index:0
 // Public inline
-// void setPosition(enum QTextFrameFormat::Position)
+// void setPosition(QTextFrameFormat::Position)
 func (this *QTextFrameFormat) SetPosition(f int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat11setPositionENS_8PositionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	gopp.ErrPrint(err, rv)
@@ -149,7 +149,7 @@ func (this *QTextFrameFormat) Border() float64 {
 // /usr/include/qt/QtGui/qtextformat.h:805
 // index:0
 // Public inline
-// void setBorderBrush(const class QBrush &)
+// void setBorderBrush(const QBrush &)
 func (this *QTextFrameFormat) SetBorderBrush(brush *QBrush) {
 	var convArg0 = brush.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat14setBorderBrushERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -173,7 +173,7 @@ func (this *QTextFrameFormat) BorderBrush() *QBrush /*123*/ {
 // /usr/include/qt/QtGui/qtextformat.h:810
 // index:0
 // Public inline
-// void setBorderStyle(enum QTextFrameFormat::BorderStyle)
+// void setBorderStyle(QTextFrameFormat::BorderStyle)
 func (this *QTextFrameFormat) SetBorderStyle(style int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat14setBorderStyleENS_11BorderStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	gopp.ErrPrint(err, rv)
@@ -322,7 +322,7 @@ func (this *QTextFrameFormat) SetWidth(width float64) {
 // /usr/include/qt/QtGui/qtextformat.h:836
 // index:1
 // Public inline
-// void setWidth(const class QTextLength &)
+// void setWidth(const QTextLength &)
 func (this *QTextFrameFormat) SetWidth_1(length *QTextLength) {
 	var convArg0 = length.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat8setWidthERK11QTextLength", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -355,7 +355,7 @@ func (this *QTextFrameFormat) SetHeight(height float64) {
 // /usr/include/qt/QtGui/qtextformat.h:842
 // index:1
 // Public inline
-// void setHeight(const class QTextLength &)
+// void setHeight(const QTextLength &)
 func (this *QTextFrameFormat) SetHeight_1(height *QTextLength) {
 	var convArg0 = height.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat9setHeightERK11QTextLength", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

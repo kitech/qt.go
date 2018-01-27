@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -69,7 +69,7 @@ func (*QChildEvent) NewFromPointer(cthis unsafe.Pointer) *QChildEvent {
 // /usr/include/qt/QtCore/qcoreevent.h:352
 // index:0
 // Public
-// void QChildEvent(enum QEvent::Type, class QObject *)
+// void QChildEvent(QEvent::Type, QObject *)
 func NewQChildEvent(type_ int, child *QObject /*777 QObject **/) *QChildEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg1 = child.GetCthis()

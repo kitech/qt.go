@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtGui/qvalidator.h:62
 // index:0
 // Public
-// void QValidator(class QObject *)
+// void QValidator(QObject *)
 func NewQValidator(parent *qtcore.QObject /*777 QObject **/) *QValidator {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -107,7 +107,7 @@ func DeleteQValidator(*QValidator) {
 // /usr/include/qt/QtGui/qvalidator.h:71
 // index:0
 // Public
-// void setLocale(const class QLocale &)
+// void setLocale(const QLocale &)
 func (this *QValidator) SetLocale(locale *qtcore.QLocale) {
 	var convArg0 = locale.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QValidator9setLocaleERK7QLocale", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -131,7 +131,7 @@ func (this *QValidator) Locale() *qtcore.QLocale /*123*/ {
 // /usr/include/qt/QtGui/qvalidator.h:74
 // index:0
 // Public pure virtual
-// QValidator::State validate(class QString &, int &)
+// QValidator::State validate(QString &, int &)
 func (this *QValidator) Validate(arg0 *qtcore.QString, arg1 int) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QValidator8validateER7QStringRi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &arg1)
@@ -143,7 +143,7 @@ func (this *QValidator) Validate(arg0 *qtcore.QString, arg1 int) int {
 // /usr/include/qt/QtGui/qvalidator.h:75
 // index:0
 // Public virtual
-// void fixup(class QString &)
+// void fixup(QString &)
 func (this *QValidator) Fixup(arg0 *qtcore.QString) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QValidator5fixupER7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

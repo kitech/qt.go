@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -81,7 +81,7 @@ func DeleteQTextObjectInterface(*QTextObjectInterface) {
 // /usr/include/qt/QtGui/qabstracttextdocumentlayout.h:142
 // index:0
 // Public pure virtual
-// QSizeF intrinsicSize(class QTextDocument *, int, const class QTextFormat &)
+// QSizeF intrinsicSize(QTextDocument *, int, const QTextFormat &)
 func (this *QTextObjectInterface) IntrinsicSize(doc *QTextDocument /*777 QTextDocument **/, posInDocument int, format *QTextFormat) *qtcore.QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = doc.GetCthis()
@@ -97,7 +97,7 @@ func (this *QTextObjectInterface) IntrinsicSize(doc *QTextDocument /*777 QTextDo
 // /usr/include/qt/QtGui/qabstracttextdocumentlayout.h:143
 // index:0
 // Public pure virtual
-// void drawObject(class QPainter *, const class QRectF &, class QTextDocument *, int, const class QTextFormat &)
+// void drawObject(QPainter *, const QRectF &, QTextDocument *, int, const QTextFormat &)
 func (this *QTextObjectInterface) DrawObject(painter *QPainter /*777 QPainter **/, rect *qtcore.QRectF, doc *QTextDocument /*777 QTextDocument **/, posInDocument int, format *QTextFormat) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = rect.GetCthis()

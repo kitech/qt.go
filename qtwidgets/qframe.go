@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/
 // /usr/include/qt/QtWidgets/qframe.h:64
 // index:0
 // Public
-// void QFrame(class QWidget *, Qt::WindowFlags)
+// void QFrame(QWidget *, Qt::WindowFlags)
 func NewQFrame(parent *QWidget /*777 QWidget **/, f int) *QFrame {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -167,7 +167,7 @@ func (this *QFrame) FrameShape() int {
 // /usr/include/qt/QtWidgets/qframe.h:97
 // index:0
 // Public
-// void setFrameShape(enum QFrame::Shape)
+// void setFrameShape(QFrame::Shape)
 func (this *QFrame) SetFrameShape(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame13setFrameShapeENS_5ShapeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -187,7 +187,7 @@ func (this *QFrame) FrameShadow() int {
 // /usr/include/qt/QtWidgets/qframe.h:99
 // index:0
 // Public
-// void setFrameShadow(enum QFrame::Shadow)
+// void setFrameShadow(QFrame::Shadow)
 func (this *QFrame) SetFrameShadow(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame14setFrameShadowENS_6ShadowE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -250,7 +250,7 @@ func (this *QFrame) FrameRect() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtWidgets/qframe.h:108
 // index:0
 // Public
-// void setFrameRect(const class QRect &)
+// void setFrameRect(const QRect &)
 func (this *QFrame) SetFrameRect(arg0 *qtcore.QRect) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame12setFrameRectERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -260,7 +260,7 @@ func (this *QFrame) SetFrameRect(arg0 *qtcore.QRect) {
 // /usr/include/qt/QtWidgets/qframe.h:111
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QFrame) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -272,7 +272,7 @@ func (this *QFrame) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qframe.h:112
 // index:0
 // Protected virtual
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QFrame) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -282,7 +282,7 @@ func (this *QFrame) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 // /usr/include/qt/QtWidgets/qframe.h:113
 // index:0
 // Protected virtual
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QFrame) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -292,7 +292,7 @@ func (this *QFrame) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 // /usr/include/qt/QtWidgets/qframe.h:114
 // index:0
 // Protected
-// void drawFrame(class QPainter *)
+// void drawFrame(QPainter *)
 func (this *QFrame) DrawFrame(arg0 *qtgui.QPainter /*777 QPainter **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame9drawFrameEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -302,7 +302,7 @@ func (this *QFrame) DrawFrame(arg0 *qtgui.QPainter /*777 QPainter **/) {
 // /usr/include/qt/QtWidgets/qframe.h:119
 // index:0
 // Protected
-// void initStyleOption(class QStyleOptionFrame *)
+// void initStyleOption(QStyleOptionFrame *)
 func (this *QFrame) InitStyleOption(option *QStyleOptionFrame /*777 QStyleOptionFrame **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame15initStyleOptionEP17QStyleOptionFrame", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

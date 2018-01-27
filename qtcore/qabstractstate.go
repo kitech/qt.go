@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -125,7 +125,7 @@ func (this *QAbstractState) Active() bool {
 // /usr/include/qt/QtCore/qabstractstate.h:68
 // index:0
 // Public
-// void activeChanged(_Bool)
+// void activeChanged(bool)
 func (this *QAbstractState) ActiveChanged(active bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QAbstractState13activeChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), active)
 	gopp.ErrPrint(err, rv)
@@ -134,7 +134,7 @@ func (this *QAbstractState) ActiveChanged(active bool) {
 // /usr/include/qt/QtCore/qabstractstate.h:71
 // index:0
 // Protected
-// void QAbstractState(class QState *)
+// void QAbstractState(QState *)
 func NewQAbstractState(parent *QState /*777 QState **/) *QAbstractState {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -147,7 +147,7 @@ func NewQAbstractState(parent *QState /*777 QState **/) *QAbstractState {
 // /usr/include/qt/QtCore/qabstractstate.h:73
 // index:0
 // Protected pure virtual
-// void onEntry(class QEvent *)
+// void onEntry(QEvent *)
 func (this *QAbstractState) OnEntry(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QAbstractState7onEntryEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -157,7 +157,7 @@ func (this *QAbstractState) OnEntry(event *QEvent /*777 QEvent **/) {
 // /usr/include/qt/QtCore/qabstractstate.h:74
 // index:0
 // Protected pure virtual
-// void onExit(class QEvent *)
+// void onExit(QEvent *)
 func (this *QAbstractState) OnExit(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QAbstractState6onExitEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -167,7 +167,7 @@ func (this *QAbstractState) OnExit(event *QEvent /*777 QEvent **/) {
 // /usr/include/qt/QtCore/qabstractstate.h:76
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QAbstractState) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QAbstractState5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

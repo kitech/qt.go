@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QLocalSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // /usr/include/qt/QtNetwork/qlocalsocket.h:82
 // index:0
 // Public
-// void QLocalSocket(class QObject *)
+// void QLocalSocket(QObject *)
 func NewQLocalSocket(parent *qtcore.QObject /*777 QObject **/) *QLocalSocket {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -116,7 +116,7 @@ func (this *QLocalSocket) DisconnectFromServer() {
 // /usr/include/qt/QtNetwork/qlocalsocket.h:89
 // index:0
 // Public
-// void setServerName(const class QString &)
+// void setServerName(const QString &)
 func (this *QLocalSocket) SetServerName(name *qtcore.QString) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocket13setServerNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -227,7 +227,7 @@ func (this *QLocalSocket) Error() int {
 // /usr/include/qt/QtNetwork/qlocalsocket.h:120
 // index:1
 // Public
-// void error(class QLocalSocket::LocalSocketError)
+// void error(QLocalSocket::LocalSocketError)
 func (this *QLocalSocket) Error_1(socketError int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocket5errorENS_16LocalSocketErrorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), socketError)
 	gopp.ErrPrint(err, rv)
@@ -362,7 +362,7 @@ func (this *QLocalSocket) Disconnected() {
 // /usr/include/qt/QtNetwork/qlocalsocket.h:121
 // index:0
 // Public
-// void stateChanged(class QLocalSocket::LocalSocketState)
+// void stateChanged(QLocalSocket::LocalSocketState)
 func (this *QLocalSocket) StateChanged(socketState int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocket12stateChangedENS_16LocalSocketStateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), socketState)
 	gopp.ErrPrint(err, rv)

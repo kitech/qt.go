@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -107,7 +107,7 @@ func (this *QAuthenticator) User() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtNetwork/qauthenticator.h:66
 // index:0
 // Public
-// void setUser(const class QString &)
+// void setUser(const QString &)
 func (this *QAuthenticator) SetUser(user *qtcore.QString) {
 	var convArg0 = user.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QAuthenticator7setUserERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -131,7 +131,7 @@ func (this *QAuthenticator) Password() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtNetwork/qauthenticator.h:69
 // index:0
 // Public
-// void setPassword(const class QString &)
+// void setPassword(const QString &)
 func (this *QAuthenticator) SetPassword(password *qtcore.QString) {
 	var convArg0 = password.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QAuthenticator11setPasswordERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -155,7 +155,7 @@ func (this *QAuthenticator) Realm() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtNetwork/qauthenticator.h:72
 // index:0
 // Public
-// void setRealm(const class QString &)
+// void setRealm(const QString &)
 func (this *QAuthenticator) SetRealm(realm *qtcore.QString) {
 	var convArg0 = realm.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QAuthenticator8setRealmERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -165,7 +165,7 @@ func (this *QAuthenticator) SetRealm(realm *qtcore.QString) {
 // /usr/include/qt/QtNetwork/qauthenticator.h:74
 // index:0
 // Public
-// QVariant option(const class QString &)
+// QVariant option(const QString &)
 func (this *QAuthenticator) Option(opt *qtcore.QString) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = opt.GetCthis()
@@ -180,7 +180,7 @@ func (this *QAuthenticator) Option(opt *qtcore.QString) *qtcore.QVariant /*123*/
 // /usr/include/qt/QtNetwork/qauthenticator.h:76
 // index:0
 // Public
-// void setOption(const class QString &, const class QVariant &)
+// void setOption(const QString &, const QVariant &)
 func (this *QAuthenticator) SetOption(opt *qtcore.QString, value *qtcore.QVariant) {
 	var convArg0 = opt.GetCthis()
 	var convArg1 = value.GetCthis()

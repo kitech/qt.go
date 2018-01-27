@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -176,7 +176,7 @@ func (this *QPoint) Ry() int {
 // /usr/include/qt/QtCore/qpoint.h:79
 // index:0
 // Public static inline
-// int dotProduct(const class QPoint &, const class QPoint &)
+// int dotProduct(const QPoint &, const QPoint &)
 func (this *QPoint) DotProduct(p1 *QPoint, p2 *QPoint) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPoint10dotProductERKS_S1_", ffiqt.FFI_TYPE_POINTER, p1, p2)
 	gopp.ErrPrint(err, rv)

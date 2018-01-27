@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -98,7 +98,7 @@ func (this *QGestureEvent) Gesture(type_ int) *QGesture /*777 QGesture **/ {
 // /usr/include/qt/QtWidgets/qgesture.h:291
 // index:0
 // Public
-// void setAccepted(class QGesture *, _Bool)
+// void setAccepted(QGesture *, bool)
 func (this *QGestureEvent) SetAccepted(arg0 *QGesture /*777 QGesture **/, arg1 bool) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent11setAcceptedEP8QGestureb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
@@ -108,7 +108,7 @@ func (this *QGestureEvent) SetAccepted(arg0 *QGesture /*777 QGesture **/, arg1 b
 // /usr/include/qt/QtWidgets/qgesture.h:296
 // index:1
 // Public
-// void setAccepted(Qt::GestureType, _Bool)
+// void setAccepted(Qt::GestureType, bool)
 func (this *QGestureEvent) SetAccepted_1(arg0 int, arg1 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent11setAcceptedEN2Qt11GestureTypeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
 	gopp.ErrPrint(err, rv)
@@ -117,7 +117,7 @@ func (this *QGestureEvent) SetAccepted_1(arg0 int, arg1 bool) {
 // /usr/include/qt/QtWidgets/qgesture.h:292
 // index:0
 // Public
-// void accept(class QGesture *)
+// void accept(QGesture *)
 func (this *QGestureEvent) Accept(arg0 *QGesture /*777 QGesture **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent6acceptEP8QGesture", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -136,7 +136,7 @@ func (this *QGestureEvent) Accept_1(arg0 int) {
 // /usr/include/qt/QtWidgets/qgesture.h:293
 // index:0
 // Public
-// void ignore(class QGesture *)
+// void ignore(QGesture *)
 func (this *QGestureEvent) Ignore(arg0 *QGesture /*777 QGesture **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent6ignoreEP8QGesture", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -155,7 +155,7 @@ func (this *QGestureEvent) Ignore_1(arg0 int) {
 // /usr/include/qt/QtWidgets/qgesture.h:294
 // index:0
 // Public
-// bool isAccepted(class QGesture *)
+// bool isAccepted(QGesture *)
 func (this *QGestureEvent) IsAccepted(arg0 *QGesture /*777 QGesture **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent10isAcceptedEP8QGesture", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -178,7 +178,7 @@ func (this *QGestureEvent) IsAccepted_1(arg0 int) bool {
 // /usr/include/qt/QtWidgets/qgesture.h:301
 // index:0
 // Public
-// void setWidget(class QWidget *)
+// void setWidget(QWidget *)
 func (this *QGestureEvent) SetWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent9setWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -200,7 +200,7 @@ func (this *QGestureEvent) Widget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qgesture.h:305
 // index:0
 // Public
-// QPointF mapToGraphicsScene(const class QPointF &)
+// QPointF mapToGraphicsScene(const QPointF &)
 func (this *QGestureEvent) MapToGraphicsScene(gesturePoint *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = gesturePoint.GetCthis()

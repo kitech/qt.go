@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQKeySequence() *QKeySequence {
 // /usr/include/qt/QtGui/qkeysequence.h:157
 // index:1
 // Public
-// void QKeySequence(const class QString &, enum QKeySequence::SequenceFormat)
+// void QKeySequence(const QString &, QKeySequence::SequenceFormat)
 func NewQKeySequence_1(key *qtcore.QString, format int) *QKeySequence {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = key.GetCthis()
@@ -109,7 +109,7 @@ func NewQKeySequence_2(k1 int, k2 int, k3 int, k4 int) *QKeySequence {
 // /usr/include/qt/QtGui/qkeysequence.h:160
 // index:3
 // Public
-// void QKeySequence(enum QKeySequence::StandardKey)
+// void QKeySequence(QKeySequence::StandardKey)
 func NewQKeySequence_3(key int) *QKeySequence {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequenceC2ENS_11StandardKeyE", ffiqt.FFI_TYPE_VOID, cthis, key)
@@ -152,7 +152,7 @@ func (this *QKeySequence) IsEmpty() bool {
 // /usr/include/qt/QtGui/qkeysequence.h:172
 // index:0
 // Public
-// QString toString(enum QKeySequence::SequenceFormat)
+// QString toString(QKeySequence::SequenceFormat)
 func (this *QKeySequence) ToString(format int) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QKeySequence8toStringENS_14SequenceFormatE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), format)
@@ -166,7 +166,7 @@ func (this *QKeySequence) ToString(format int) *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qkeysequence.h:173
 // index:0
 // Public static
-// QKeySequence fromString(const class QString &, enum QKeySequence::SequenceFormat)
+// QKeySequence fromString(const QString &, QKeySequence::SequenceFormat)
 func (this *QKeySequence) FromString(str *qtcore.QString, format int) *QKeySequence /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequence10fromStringERK7QStringNS_14SequenceFormatE", ffiqt.FFI_TYPE_POINTER, str, format)
 	gopp.ErrPrint(err, rv)
@@ -183,7 +183,7 @@ func QKeySequence_FromString(str *qtcore.QString, format int) *QKeySequence /*12
 // /usr/include/qt/QtGui/qkeysequence.h:178
 // index:0
 // Public
-// QKeySequence::SequenceMatch matches(const class QKeySequence &)
+// QKeySequence::SequenceMatch matches(const QKeySequence &)
 func (this *QKeySequence) Matches(seq *QKeySequence) int {
 	var convArg0 = seq.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QKeySequence7matchesERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -195,7 +195,7 @@ func (this *QKeySequence) Matches(seq *QKeySequence) int {
 // /usr/include/qt/QtGui/qkeysequence.h:179
 // index:0
 // Public static
-// QKeySequence mnemonic(const class QString &)
+// QKeySequence mnemonic(const QString &)
 func (this *QKeySequence) Mnemonic(text *qtcore.QString) *QKeySequence /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequence8mnemonicERK7QString", ffiqt.FFI_TYPE_POINTER, text)
 	gopp.ErrPrint(err, rv)
@@ -212,7 +212,7 @@ func QKeySequence_Mnemonic(text *qtcore.QString) *QKeySequence /*123*/ {
 // /usr/include/qt/QtGui/qkeysequence.h:192
 // index:0
 // Public inline
-// void swap(class QKeySequence &)
+// void swap(QKeySequence &)
 func (this *QKeySequence) Swap(other *QKeySequence) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequence4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

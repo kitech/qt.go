@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -72,7 +72,7 @@ func (*QDesktopServices) NewFromPointer(cthis unsafe.Pointer) *QDesktopServices 
 // /usr/include/qt/QtGui/qdesktopservices.h:59
 // index:0
 // Public static
-// bool openUrl(const class QUrl &)
+// bool openUrl(const QUrl &)
 func (this *QDesktopServices) OpenUrl(url *qtcore.QUrl) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDesktopServices7openUrlERK4QUrl", ffiqt.FFI_TYPE_POINTER, url)
 	gopp.ErrPrint(err, rv)
@@ -88,7 +88,7 @@ func QDesktopServices_OpenUrl(url *qtcore.QUrl) bool {
 // /usr/include/qt/QtGui/qdesktopservices.h:60
 // index:0
 // Public static
-// void setUrlHandler(const class QString &, class QObject *, const char *)
+// void setUrlHandler(const QString &, QObject *, const char *)
 func (this *QDesktopServices) SetUrlHandler(scheme *qtcore.QString, receiver *qtcore.QObject /*777 QObject **/, method string) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc", ffiqt.FFI_TYPE_POINTER, scheme, receiver, method)
 	gopp.ErrPrint(err, rv)
@@ -101,7 +101,7 @@ func QDesktopServices_SetUrlHandler(scheme *qtcore.QString, receiver *qtcore.QOb
 // /usr/include/qt/QtGui/qdesktopservices.h:61
 // index:0
 // Public static
-// void unsetUrlHandler(const class QString &)
+// void unsetUrlHandler(const QString &)
 func (this *QDesktopServices) UnsetUrlHandler(scheme *qtcore.QString) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDesktopServices15unsetUrlHandlerERK7QString", ffiqt.FFI_TYPE_POINTER, scheme)
 	gopp.ErrPrint(err, rv)

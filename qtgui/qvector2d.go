@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -108,7 +108,7 @@ func NewQVector2D_2(xpos float32, ypos float32) *QVector2D {
 // /usr/include/qt/QtGui/qvector2d.h:62
 // index:3
 // Public inline
-// void QVector2D(const class QPoint &)
+// void QVector2D(const QPoint &)
 func NewQVector2D_3(point *qtcore.QPoint) *QVector2D {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = point.GetCthis()
@@ -121,7 +121,7 @@ func NewQVector2D_3(point *qtcore.QPoint) *QVector2D {
 // /usr/include/qt/QtGui/qvector2d.h:63
 // index:4
 // Public inline
-// void QVector2D(const class QPointF &)
+// void QVector2D(const QPointF &)
 func NewQVector2D_4(point *qtcore.QPointF) *QVector2D {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = point.GetCthis()
@@ -134,7 +134,7 @@ func NewQVector2D_4(point *qtcore.QPointF) *QVector2D {
 // /usr/include/qt/QtGui/qvector2d.h:65
 // index:5
 // Public
-// void QVector2D(const class QVector3D &)
+// void QVector2D(const QVector3D &)
 func NewQVector2D_5(vector *QVector3D) *QVector2D {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = vector.GetCthis()
@@ -147,7 +147,7 @@ func NewQVector2D_5(vector *QVector3D) *QVector2D {
 // /usr/include/qt/QtGui/qvector2d.h:68
 // index:6
 // Public
-// void QVector2D(const class QVector4D &)
+// void QVector2D(const QVector4D &)
 func NewQVector2D_6(vector *QVector4D) *QVector2D {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = vector.GetCthis()
@@ -256,7 +256,7 @@ func (this *QVector2D) Normalize() {
 // /usr/include/qt/QtGui/qvector2d.h:88
 // index:0
 // Public
-// float distanceToPoint(const class QVector2D &)
+// float distanceToPoint(const QVector2D &)
 func (this *QVector2D) DistanceToPoint(point *QVector2D) float32 {
 	var convArg0 = point.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D15distanceToPointERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -268,7 +268,7 @@ func (this *QVector2D) DistanceToPoint(point *QVector2D) float32 {
 // /usr/include/qt/QtGui/qvector2d.h:89
 // index:0
 // Public
-// float distanceToLine(const class QVector2D &, const class QVector2D &)
+// float distanceToLine(const QVector2D &, const QVector2D &)
 func (this *QVector2D) DistanceToLine(point *QVector2D, direction *QVector2D) float32 {
 	var convArg0 = point.GetCthis()
 	var convArg1 = direction.GetCthis()
@@ -281,7 +281,7 @@ func (this *QVector2D) DistanceToLine(point *QVector2D, direction *QVector2D) fl
 // /usr/include/qt/QtGui/qvector2d.h:98
 // index:0
 // Public static
-// float dotProduct(const class QVector2D &, const class QVector2D &)
+// float dotProduct(const QVector2D &, const QVector2D &)
 func (this *QVector2D) DotProduct(v1 *QVector2D, v2 *QVector2D) float32 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector2D10dotProductERKS_S1_", ffiqt.FFI_TYPE_POINTER, v1, v2)
 	gopp.ErrPrint(err, rv)

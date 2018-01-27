@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -73,7 +73,7 @@ func (*QAccessibleValueChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QAcces
 // /usr/include/qt/QtGui/qaccessible.h:898
 // index:0
 // Public inline
-// void QAccessibleValueChangeEvent(class QObject *, const class QVariant &)
+// void QAccessibleValueChangeEvent(QObject *, const QVariant &)
 func NewQAccessibleValueChangeEvent(obj *qtcore.QObject /*777 QObject **/, val *qtcore.QVariant) *QAccessibleValueChangeEvent {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = obj.GetCthis()
@@ -87,7 +87,7 @@ func NewQAccessibleValueChangeEvent(obj *qtcore.QObject /*777 QObject **/, val *
 // /usr/include/qt/QtGui/qaccessible.h:904
 // index:1
 // Public inline
-// void QAccessibleValueChangeEvent(class QAccessibleInterface *, const class QVariant &)
+// void QAccessibleValueChangeEvent(QAccessibleInterface *, const QVariant &)
 func NewQAccessibleValueChangeEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, val *qtcore.QVariant) *QAccessibleValueChangeEvent {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = iface.GetCthis()
@@ -110,7 +110,7 @@ func DeleteQAccessibleValueChangeEvent(*QAccessibleValueChangeEvent) {
 // /usr/include/qt/QtGui/qaccessible.h:913
 // index:0
 // Public inline
-// void setValue(const class QVariant &)
+// void setValue(const QVariant &)
 func (this *QAccessibleValueChangeEvent) SetValue(val *qtcore.QVariant) {
 	var convArg0 = val.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEvent8setValueERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -109,7 +109,7 @@ func (this *QRunnable) AutoDelete() bool {
 // /usr/include/qt/QtCore/qrunnable.h:64
 // index:0
 // Public inline
-// void setAutoDelete(_Bool)
+// void setAutoDelete(bool)
 func (this *QRunnable) SetAutoDelete(_autoDelete bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QRunnable13setAutoDeleteEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), _autoDelete)
 	gopp.ErrPrint(err, rv)

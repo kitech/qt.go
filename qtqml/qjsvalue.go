@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -76,7 +76,7 @@ func (*QJSValue) NewFromPointer(cthis unsafe.Pointer) *QJSValue {
 // /usr/include/qt/QtQml/qjsvalue.h:72
 // index:0
 // Public
-// void QJSValue(enum QJSValue::SpecialValue)
+// void QJSValue(QJSValue::SpecialValue)
 func NewQJSValue(value int) *QJSValue {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValueC2ENS_12SpecialValueE", ffiqt.FFI_TYPE_VOID, cthis, value)
@@ -88,7 +88,7 @@ func NewQJSValue(value int) *QJSValue {
 // /usr/include/qt/QtQml/qjsvalue.h:82
 // index:1
 // Public
-// void QJSValue(_Bool)
+// void QJSValue(bool)
 func NewQJSValue_1(value bool) *QJSValue {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValueC2Eb", ffiqt.FFI_TYPE_VOID, cthis, value)
@@ -136,7 +136,7 @@ func NewQJSValue_4(value float64) *QJSValue {
 // /usr/include/qt/QtQml/qjsvalue.h:86
 // index:5
 // Public
-// void QJSValue(const class QString &)
+// void QJSValue(const QString &)
 func NewQJSValue_5(value *qtcore.QString) *QJSValue {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = value.GetCthis()
@@ -149,7 +149,7 @@ func NewQJSValue_5(value *qtcore.QString) *QJSValue {
 // /usr/include/qt/QtQml/qjsvalue.h:87
 // index:6
 // Public
-// void QJSValue(const class QLatin1String &)
+// void QJSValue(const QLatin1String &)
 func NewQJSValue_6(value *qtcore.QLatin1String) *QJSValue {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = value.GetCthis()
@@ -438,7 +438,7 @@ func (this *QJSValue) ToDateTime() *qtcore.QDateTime /*123*/ {
 // /usr/include/qt/QtQml/qjsvalue.h:118
 // index:0
 // Public
-// bool equals(const class QJSValue &)
+// bool equals(const QJSValue &)
 func (this *QJSValue) Equals(other *QJSValue) bool {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue6equalsERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -450,7 +450,7 @@ func (this *QJSValue) Equals(other *QJSValue) bool {
 // /usr/include/qt/QtQml/qjsvalue.h:119
 // index:0
 // Public
-// bool strictlyEquals(const class QJSValue &)
+// bool strictlyEquals(const QJSValue &)
 func (this *QJSValue) StrictlyEquals(other *QJSValue) bool {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue14strictlyEqualsERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -476,7 +476,7 @@ func (this *QJSValue) Prototype() *QJSValue /*123*/ {
 // /usr/include/qt/QtQml/qjsvalue.h:122
 // index:0
 // Public
-// void setPrototype(const class QJSValue &)
+// void setPrototype(const QJSValue &)
 func (this *QJSValue) SetPrototype(prototype *QJSValue) {
 	var convArg0 = prototype.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValue12setPrototypeERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -486,7 +486,7 @@ func (this *QJSValue) SetPrototype(prototype *QJSValue) {
 // /usr/include/qt/QtQml/qjsvalue.h:124
 // index:0
 // Public
-// QJSValue property(const class QString &)
+// QJSValue property(const QString &)
 func (this *QJSValue) Property(name *qtcore.QString) *QJSValue /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = name.GetCthis()
@@ -515,7 +515,7 @@ func (this *QJSValue) Property_1(arrayIndex uint) *QJSValue /*123*/ {
 // /usr/include/qt/QtQml/qjsvalue.h:125
 // index:0
 // Public
-// void setProperty(const class QString &, const class QJSValue &)
+// void setProperty(const QString &, const QJSValue &)
 func (this *QJSValue) SetProperty(name *qtcore.QString, value *QJSValue) {
 	var convArg0 = name.GetCthis()
 	var convArg1 = value.GetCthis()
@@ -526,7 +526,7 @@ func (this *QJSValue) SetProperty(name *qtcore.QString, value *QJSValue) {
 // /usr/include/qt/QtQml/qjsvalue.h:131
 // index:1
 // Public
-// void setProperty(quint32, const class QJSValue &)
+// void setProperty(quint32, const QJSValue &)
 func (this *QJSValue) SetProperty_1(arrayIndex uint, value *QJSValue) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValue11setPropertyEjRKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arrayIndex, convArg1)
@@ -536,7 +536,7 @@ func (this *QJSValue) SetProperty_1(arrayIndex uint, value *QJSValue) {
 // /usr/include/qt/QtQml/qjsvalue.h:127
 // index:0
 // Public
-// bool hasProperty(const class QString &)
+// bool hasProperty(const QString &)
 func (this *QJSValue) HasProperty(name *qtcore.QString) bool {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue11hasPropertyERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -548,7 +548,7 @@ func (this *QJSValue) HasProperty(name *qtcore.QString) bool {
 // /usr/include/qt/QtQml/qjsvalue.h:128
 // index:0
 // Public
-// bool hasOwnProperty(const class QString &)
+// bool hasOwnProperty(const QString &)
 func (this *QJSValue) HasOwnProperty(name *qtcore.QString) bool {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue14hasOwnPropertyERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -560,7 +560,7 @@ func (this *QJSValue) HasOwnProperty(name *qtcore.QString) bool {
 // /usr/include/qt/QtQml/qjsvalue.h:133
 // index:0
 // Public
-// bool deleteProperty(const class QString &)
+// bool deleteProperty(const QString &)
 func (this *QJSValue) DeleteProperty(name *qtcore.QString) bool {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValue14deletePropertyERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

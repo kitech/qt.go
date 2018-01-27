@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -153,7 +153,7 @@ func (this *QSessionManager) Cancel() {
 // /usr/include/qt/QtGui/qsessionmanager.h:80
 // index:0
 // Public
-// void setRestartHint(enum QSessionManager::RestartHint)
+// void setRestartHint(QSessionManager::RestartHint)
 func (this *QSessionManager) SetRestartHint(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager14setRestartHintENS_11RestartHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -173,7 +173,7 @@ func (this *QSessionManager) RestartHint() int {
 // /usr/include/qt/QtGui/qsessionmanager.h:83
 // index:0
 // Public
-// void setRestartCommand(const class QStringList &)
+// void setRestartCommand(const QStringList &)
 func (this *QSessionManager) SetRestartCommand(arg0 *qtcore.QStringList) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager17setRestartCommandERK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -183,7 +183,7 @@ func (this *QSessionManager) SetRestartCommand(arg0 *qtcore.QStringList) {
 // /usr/include/qt/QtGui/qsessionmanager.h:85
 // index:0
 // Public
-// void setDiscardCommand(const class QStringList &)
+// void setDiscardCommand(const QStringList &)
 func (this *QSessionManager) SetDiscardCommand(arg0 *qtcore.QStringList) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager17setDiscardCommandERK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -193,7 +193,7 @@ func (this *QSessionManager) SetDiscardCommand(arg0 *qtcore.QStringList) {
 // /usr/include/qt/QtGui/qsessionmanager.h:88
 // index:0
 // Public
-// void setManagerProperty(const class QString &, const class QString &)
+// void setManagerProperty(const QString &, const QString &)
 func (this *QSessionManager) SetManagerProperty(name *qtcore.QString, value *qtcore.QString) {
 	var convArg0 = name.GetCthis()
 	var convArg1 = value.GetCthis()
@@ -204,7 +204,7 @@ func (this *QSessionManager) SetManagerProperty(name *qtcore.QString, value *qtc
 // /usr/include/qt/QtGui/qsessionmanager.h:89
 // index:1
 // Public
-// void setManagerProperty(const class QString &, const class QStringList &)
+// void setManagerProperty(const QString &, const QStringList &)
 func (this *QSessionManager) SetManagerProperty_1(name *qtcore.QString, value *qtcore.QStringList) {
 	var convArg0 = name.GetCthis()
 	var convArg1 = value.GetCthis()

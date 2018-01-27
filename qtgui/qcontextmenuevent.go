@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -73,7 +73,7 @@ func (*QContextMenuEvent) NewFromPointer(cthis unsafe.Pointer) *QContextMenuEven
 // /usr/include/qt/QtGui/qevent.h:513
 // index:0
 // Public
-// void QContextMenuEvent(enum QContextMenuEvent::Reason, const class QPoint &, const class QPoint &)
+// void QContextMenuEvent(QContextMenuEvent::Reason, const QPoint &, const QPoint &)
 func NewQContextMenuEvent(reason int, pos *qtcore.QPoint, globalPos *qtcore.QPoint) *QContextMenuEvent {
 	cthis := qtrt.Calloc(1, 256) // 56
 	var convArg1 = pos.GetCthis()
@@ -87,7 +87,7 @@ func NewQContextMenuEvent(reason int, pos *qtcore.QPoint, globalPos *qtcore.QPoi
 // /usr/include/qt/QtGui/qevent.h:514
 // index:1
 // Public
-// void QContextMenuEvent(enum QContextMenuEvent::Reason, const class QPoint &)
+// void QContextMenuEvent(QContextMenuEvent::Reason, const QPoint &)
 func NewQContextMenuEvent_1(reason int, pos *qtcore.QPoint) *QContextMenuEvent {
 	cthis := qtrt.Calloc(1, 256) // 56
 	var convArg1 = pos.GetCthis()

@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QTextTable) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtGui/qtexttable.h:102
 // index:0
 // Public
-// void QTextTable(class QTextDocument *)
+// void QTextTable(QTextDocument *)
 func NewQTextTable(doc *QTextDocument /*777 QTextDocument **/) *QTextTable {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = doc.GetCthis()
@@ -179,7 +179,7 @@ func (this *QTextTable) MergeCells(row int, col int, numRows int, numCols int) {
 // /usr/include/qt/QtGui/qtexttable.h:114
 // index:1
 // Public
-// void mergeCells(const class QTextCursor &)
+// void mergeCells(const QTextCursor &)
 func (this *QTextTable) MergeCells_1(cursor *QTextCursor) {
 	var convArg0 = cursor.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable10mergeCellsERK11QTextCursor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -248,7 +248,7 @@ func (this *QTextTable) CellAt_1(position int) *QTextTableCell /*123*/ {
 // /usr/include/qt/QtGui/qtexttable.h:122
 // index:2
 // Public
-// QTextTableCell cellAt(const class QTextCursor &)
+// QTextTableCell cellAt(const QTextCursor &)
 func (this *QTextTable) CellAt_2(c *QTextCursor) *QTextTableCell /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = c.GetCthis()
@@ -263,7 +263,7 @@ func (this *QTextTable) CellAt_2(c *QTextCursor) *QTextTableCell /*123*/ {
 // /usr/include/qt/QtGui/qtexttable.h:124
 // index:0
 // Public
-// QTextCursor rowStart(const class QTextCursor &)
+// QTextCursor rowStart(const QTextCursor &)
 func (this *QTextTable) RowStart(c *QTextCursor) *QTextCursor /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = c.GetCthis()
@@ -278,7 +278,7 @@ func (this *QTextTable) RowStart(c *QTextCursor) *QTextCursor /*123*/ {
 // /usr/include/qt/QtGui/qtexttable.h:125
 // index:0
 // Public
-// QTextCursor rowEnd(const class QTextCursor &)
+// QTextCursor rowEnd(const QTextCursor &)
 func (this *QTextTable) RowEnd(c *QTextCursor) *QTextCursor /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = c.GetCthis()
@@ -293,7 +293,7 @@ func (this *QTextTable) RowEnd(c *QTextCursor) *QTextCursor /*123*/ {
 // /usr/include/qt/QtGui/qtexttable.h:127
 // index:0
 // Public
-// void setFormat(const class QTextTableFormat &)
+// void setFormat(const QTextTableFormat &)
 func (this *QTextTable) SetFormat(format *QTextTableFormat) {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTable9setFormatERK16QTextTableFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

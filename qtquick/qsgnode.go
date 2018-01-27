@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -96,7 +96,7 @@ func NewQSGNode() *QSGNode {
 // /usr/include/qt/QtQuick/qsgnode.h:165
 // index:1
 // Protected
-// void QSGNode(enum QSGNode::NodeType)
+// void QSGNode(QSGNode::NodeType)
 func NewQSGNode_1(type_ int) *QSGNode {
 	cthis := qtrt.Calloc(1, 256) // 80
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSGNodeC2ENS_8NodeTypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)
@@ -129,7 +129,7 @@ func (this *QSGNode) Parent() *QSGNode /*777 QSGNode **/ {
 // /usr/include/qt/QtQuick/qsgnode.h:135
 // index:0
 // Public
-// void removeChildNode(class QSGNode *)
+// void removeChildNode(QSGNode *)
 func (this *QSGNode) RemoveChildNode(node *QSGNode /*777 QSGNode **/) {
 	var convArg0 = node.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSGNode15removeChildNodeEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -148,7 +148,7 @@ func (this *QSGNode) RemoveAllChildNodes() {
 // /usr/include/qt/QtQuick/qsgnode.h:137
 // index:0
 // Public
-// void prependChildNode(class QSGNode *)
+// void prependChildNode(QSGNode *)
 func (this *QSGNode) PrependChildNode(node *QSGNode /*777 QSGNode **/) {
 	var convArg0 = node.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSGNode16prependChildNodeEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -158,7 +158,7 @@ func (this *QSGNode) PrependChildNode(node *QSGNode /*777 QSGNode **/) {
 // /usr/include/qt/QtQuick/qsgnode.h:138
 // index:0
 // Public
-// void appendChildNode(class QSGNode *)
+// void appendChildNode(QSGNode *)
 func (this *QSGNode) AppendChildNode(node *QSGNode /*777 QSGNode **/) {
 	var convArg0 = node.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSGNode15appendChildNodeEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -168,7 +168,7 @@ func (this *QSGNode) AppendChildNode(node *QSGNode /*777 QSGNode **/) {
 // /usr/include/qt/QtQuick/qsgnode.h:139
 // index:0
 // Public
-// void insertChildNodeBefore(class QSGNode *, class QSGNode *)
+// void insertChildNodeBefore(QSGNode *, QSGNode *)
 func (this *QSGNode) InsertChildNodeBefore(node *QSGNode /*777 QSGNode **/, before *QSGNode /*777 QSGNode **/) {
 	var convArg0 = node.GetCthis()
 	var convArg1 = before.GetCthis()
@@ -179,7 +179,7 @@ func (this *QSGNode) InsertChildNodeBefore(node *QSGNode /*777 QSGNode **/, befo
 // /usr/include/qt/QtQuick/qsgnode.h:140
 // index:0
 // Public
-// void insertChildNodeAfter(class QSGNode *, class QSGNode *)
+// void insertChildNodeAfter(QSGNode *, QSGNode *)
 func (this *QSGNode) InsertChildNodeAfter(node *QSGNode /*777 QSGNode **/, after *QSGNode /*777 QSGNode **/) {
 	var convArg0 = node.GetCthis()
 	var convArg1 = after.GetCthis()
@@ -190,7 +190,7 @@ func (this *QSGNode) InsertChildNodeAfter(node *QSGNode /*777 QSGNode **/, after
 // /usr/include/qt/QtQuick/qsgnode.h:141
 // index:0
 // Public
-// void reparentChildNodesTo(class QSGNode *)
+// void reparentChildNodesTo(QSGNode *)
 func (this *QSGNode) ReparentChildNodesTo(newParent *QSGNode /*777 QSGNode **/) {
 	var convArg0 = newParent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSGNode20reparentChildNodesToEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -324,7 +324,7 @@ func (this *QSGNode) Flags() int {
 // /usr/include/qt/QtQuick/qsgnode.h:159
 // index:0
 // Public
-// void setFlag(enum QSGNode::Flag, _Bool)
+// void setFlag(QSGNode::Flag, bool)
 func (this *QSGNode) SetFlag(arg0 int, arg1 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSGNode7setFlagENS_4FlagEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
 	gopp.ErrPrint(err, rv)
@@ -333,7 +333,7 @@ func (this *QSGNode) SetFlag(arg0 int, arg1 bool) {
 // /usr/include/qt/QtQuick/qsgnode.h:160
 // index:0
 // Public
-// void setFlags(QSGNode::Flags, _Bool)
+// void setFlags(QSGNode::Flags, bool)
 func (this *QSGNode) SetFlags(arg0 int, arg1 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSGNode8setFlagsE6QFlagsINS_4FlagEEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
 	gopp.ErrPrint(err, rv)

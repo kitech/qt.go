@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QVariantComparisonHelper) NewFromPointer(cthis unsafe.Pointer) *QVariantC
 // /usr/include/qt/QtCore/qvariant.h:560
 // index:0
 // Public inline
-// void QVariantComparisonHelper(const class QVariant &)
+// void QVariantComparisonHelper(const QVariant &)
 func NewQVariantComparisonHelper(var_ *QVariant) *QVariantComparisonHelper {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = var_.GetCthis()

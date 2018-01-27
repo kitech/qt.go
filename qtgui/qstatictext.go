@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQStaticText() *QStaticText {
 // /usr/include/qt/QtGui/qstatictext.h:65
 // index:1
 // Public
-// void QStaticText(const class QString &)
+// void QStaticText(const QString &)
 func NewQStaticText_1(text *qtcore.QString) *QStaticText {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = text.GetCthis()
@@ -106,7 +106,7 @@ func DeleteQStaticText(*QStaticText) {
 // /usr/include/qt/QtGui/qstatictext.h:73
 // index:0
 // Public inline
-// void swap(class QStaticText &)
+// void swap(QStaticText &)
 func (this *QStaticText) Swap(other *QStaticText) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -116,7 +116,7 @@ func (this *QStaticText) Swap(other *QStaticText) {
 // /usr/include/qt/QtGui/qstatictext.h:75
 // index:0
 // Public
-// void setText(const class QString &)
+// void setText(const QString &)
 func (this *QStaticText) SetText(text *qtcore.QString) {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText7setTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -180,7 +180,7 @@ func (this *QStaticText) TextWidth() float64 {
 // /usr/include/qt/QtGui/qstatictext.h:84
 // index:0
 // Public
-// void setTextOption(const class QTextOption &)
+// void setTextOption(const QTextOption &)
 func (this *QStaticText) SetTextOption(textOption *QTextOption) {
 	var convArg0 = textOption.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText13setTextOptionERK11QTextOption", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -218,7 +218,7 @@ func (this *QStaticText) Size() *qtcore.QSizeF /*123*/ {
 // /usr/include/qt/QtGui/qstatictext.h:89
 // index:0
 // Public
-// void prepare(const class QTransform &, const class QFont &)
+// void prepare(const QTransform &, const QFont &)
 func (this *QStaticText) Prepare(matrix *QTransform, font *QFont) {
 	var convArg0 = matrix.GetCthis()
 	var convArg1 = font.GetCthis()
@@ -229,7 +229,7 @@ func (this *QStaticText) Prepare(matrix *QTransform, font *QFont) {
 // /usr/include/qt/QtGui/qstatictext.h:91
 // index:0
 // Public
-// void setPerformanceHint(enum QStaticText::PerformanceHint)
+// void setPerformanceHint(QStaticText::PerformanceHint)
 func (this *QStaticText) SetPerformanceHint(performanceHint int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText18setPerformanceHintENS_15PerformanceHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), performanceHint)
 	gopp.ErrPrint(err, rv)

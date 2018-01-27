@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QGraphicsScale) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:88
 // index:0
 // Public
-// void QGraphicsScale(class QObject *)
+// void QGraphicsScale(QObject *)
 func NewQGraphicsScale(parent *qtcore.QObject /*777 QObject **/) *QGraphicsScale {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -125,7 +125,7 @@ func (this *QGraphicsScale) Origin() *qtgui.QVector3D /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:92
 // index:0
 // Public
-// void setOrigin(const class QVector3D &)
+// void setOrigin(const QVector3D &)
 func (this *QGraphicsScale) SetOrigin(point *qtgui.QVector3D) {
 	var convArg0 = point.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScale9setOriginERK9QVector3D", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -195,7 +195,7 @@ func (this *QGraphicsScale) SetZScale(arg0 float64) {
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:103
 // index:0
 // Public virtual
-// void applyTo(class QMatrix4x4 *)
+// void applyTo(QMatrix4x4 *)
 func (this *QGraphicsScale) ApplyTo(matrix *qtgui.QMatrix4x4 /*777 QMatrix4x4 **/) {
 	var convArg0 = matrix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale7applyToEP10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

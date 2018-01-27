@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -102,7 +102,7 @@ func DeleteQObjectCleanupHandler(*QObjectCleanupHandler) {
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:56
 // index:0
 // Public
-// QObject * add(class QObject *)
+// QObject * add(QObject *)
 func (this *QObjectCleanupHandler) Add(object *QObject /*777 QObject **/) *QObject /*777 QObject **/ {
 	var convArg0 = object.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler3addEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -115,7 +115,7 @@ func (this *QObjectCleanupHandler) Add(object *QObject /*777 QObject **/) *QObje
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:57
 // index:0
 // Public
-// void remove(class QObject *)
+// void remove(QObject *)
 func (this *QObjectCleanupHandler) Remove(object *QObject /*777 QObject **/) {
 	var convArg0 = object.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler6removeEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

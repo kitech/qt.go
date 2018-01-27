@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQSizeF() *QSizeF {
 // /usr/include/qt/QtCore/qsize.h:219
 // index:1
 // Public inline
-// void QSizeF(const class QSize &)
+// void QSizeF(const QSize &)
 func NewQSizeF_1(sz *QSize) *QSizeF {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = sz.GetCthis()
@@ -210,7 +210,7 @@ func (this *QSizeF) Scale(w float64, h float64, mode int) {
 // /usr/include/qt/QtCore/qsize.h:234
 // index:1
 // Public inline
-// void scale(const class QSizeF &, Qt::AspectRatioMode)
+// void scale(const QSizeF &, Qt::AspectRatioMode)
 func (this *QSizeF) Scale_1(s *QSizeF, mode int) {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QSizeF5scaleERKS_N2Qt15AspectRatioModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
@@ -234,7 +234,7 @@ func (this *QSizeF) Scaled(w float64, h float64, mode int) *QSizeF /*123*/ {
 // /usr/include/qt/QtCore/qsize.h:236
 // index:1
 // Public
-// QSizeF scaled(const class QSizeF &, Qt::AspectRatioMode)
+// QSizeF scaled(const QSizeF &, Qt::AspectRatioMode)
 func (this *QSizeF) Scaled_1(s *QSizeF, mode int) *QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = s.GetCthis()
@@ -249,7 +249,7 @@ func (this *QSizeF) Scaled_1(s *QSizeF, mode int) *QSizeF /*123*/ {
 // /usr/include/qt/QtCore/qsize.h:238
 // index:0
 // Public inline
-// QSizeF expandedTo(const class QSizeF &)
+// QSizeF expandedTo(const QSizeF &)
 func (this *QSizeF) ExpandedTo(arg0 *QSizeF) *QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
@@ -264,7 +264,7 @@ func (this *QSizeF) ExpandedTo(arg0 *QSizeF) *QSizeF /*123*/ {
 // /usr/include/qt/QtCore/qsize.h:239
 // index:0
 // Public inline
-// QSizeF boundedTo(const class QSizeF &)
+// QSizeF boundedTo(const QSizeF &)
 func (this *QSizeF) BoundedTo(arg0 *QSizeF) *QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()

@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -97,7 +97,7 @@ func DeleteQStyleOption(*QStyleOption) {
 // /usr/include/qt/QtWidgets/qstyleoption.h:106
 // index:0
 // Public
-// void init(const class QWidget *)
+// void init(const QWidget *)
 func (this *QStyleOption) Init(w *QWidget /*777 const QWidget **/) {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOption4initEPK7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -107,7 +107,7 @@ func (this *QStyleOption) Init(w *QWidget /*777 const QWidget **/) {
 // /usr/include/qt/QtWidgets/qstyleoption.h:107
 // index:0
 // Public inline
-// void initFrom(const class QWidget *)
+// void initFrom(const QWidget *)
 func (this *QStyleOption) InitFrom(w *QWidget /*777 const QWidget **/) {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOption8initFromEPK7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

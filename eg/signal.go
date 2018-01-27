@@ -5,8 +5,9 @@ package main
 import "C"
 import (
 	"log"
-	"mkuse/cffiqt"
-	"qtcore"
+
+	"qt.go/cffiqt"
+	"qt.go/qtcore"
 	// "github.com/therecipe/qt/core"
 )
 

@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QWizardPage) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // /usr/include/qt/QtWidgets/qwizard.h:218
 // index:0
 // Public
-// void QWizardPage(class QWidget *)
+// void QWizardPage(QWidget *)
 func NewQWizardPage(parent *QWidget /*777 QWidget **/) *QWizardPage {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -111,7 +111,7 @@ func DeleteQWizardPage(*QWizardPage) {
 // /usr/include/qt/QtWidgets/qwizard.h:221
 // index:0
 // Public
-// void setTitle(const class QString &)
+// void setTitle(const QString &)
 func (this *QWizardPage) SetTitle(title *qtcore.QString) {
 	var convArg0 = title.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPage8setTitleERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -135,7 +135,7 @@ func (this *QWizardPage) Title() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qwizard.h:223
 // index:0
 // Public
-// void setSubTitle(const class QString &)
+// void setSubTitle(const QString &)
 func (this *QWizardPage) SetSubTitle(subTitle *qtcore.QString) {
 	var convArg0 = subTitle.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPage11setSubTitleERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -159,7 +159,7 @@ func (this *QWizardPage) SubTitle() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qwizard.h:225
 // index:0
 // Public
-// void setPixmap(class QWizard::WizardPixmap, const class QPixmap &)
+// void setPixmap(QWizard::WizardPixmap, const QPixmap &)
 func (this *QWizardPage) SetPixmap(which int, pixmap *qtgui.QPixmap) {
 	var convArg1 = pixmap.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPage9setPixmapEN7QWizard12WizardPixmapERK7QPixmap", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
@@ -169,7 +169,7 @@ func (this *QWizardPage) SetPixmap(which int, pixmap *qtgui.QPixmap) {
 // /usr/include/qt/QtWidgets/qwizard.h:226
 // index:0
 // Public
-// QPixmap pixmap(class QWizard::WizardPixmap)
+// QPixmap pixmap(QWizard::WizardPixmap)
 func (this *QWizardPage) Pixmap(which int) *qtgui.QPixmap /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWizardPage6pixmapEN7QWizard12WizardPixmapE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), which)
@@ -183,7 +183,7 @@ func (this *QWizardPage) Pixmap(which int) *qtgui.QPixmap /*123*/ {
 // /usr/include/qt/QtWidgets/qwizard.h:227
 // index:0
 // Public
-// void setFinalPage(_Bool)
+// void setFinalPage(bool)
 func (this *QWizardPage) SetFinalPage(finalPage bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPage12setFinalPageEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), finalPage)
 	gopp.ErrPrint(err, rv)
@@ -203,7 +203,7 @@ func (this *QWizardPage) IsFinalPage() bool {
 // /usr/include/qt/QtWidgets/qwizard.h:229
 // index:0
 // Public
-// void setCommitPage(_Bool)
+// void setCommitPage(bool)
 func (this *QWizardPage) SetCommitPage(commitPage bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPage13setCommitPageEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), commitPage)
 	gopp.ErrPrint(err, rv)
@@ -223,7 +223,7 @@ func (this *QWizardPage) IsCommitPage() bool {
 // /usr/include/qt/QtWidgets/qwizard.h:231
 // index:0
 // Public
-// void setButtonText(class QWizard::WizardButton, const class QString &)
+// void setButtonText(QWizard::WizardButton, const QString &)
 func (this *QWizardPage) SetButtonText(which int, text *qtcore.QString) {
 	var convArg1 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPage13setButtonTextEN7QWizard12WizardButtonERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
@@ -233,7 +233,7 @@ func (this *QWizardPage) SetButtonText(which int, text *qtcore.QString) {
 // /usr/include/qt/QtWidgets/qwizard.h:232
 // index:0
 // Public
-// QString buttonText(class QWizard::WizardButton)
+// QString buttonText(QWizard::WizardButton)
 func (this *QWizardPage) ButtonText(which int) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWizardPage10buttonTextEN7QWizard12WizardButtonE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), which)
@@ -307,7 +307,7 @@ func (this *QWizardPage) CompleteChanged() {
 // /usr/include/qt/QtWidgets/qwizard.h:244
 // index:0
 // Protected
-// void setField(const class QString &, const class QVariant &)
+// void setField(const QString &, const QVariant &)
 func (this *QWizardPage) SetField(name *qtcore.QString, value *qtcore.QVariant) {
 	var convArg0 = name.GetCthis()
 	var convArg1 = value.GetCthis()
@@ -318,7 +318,7 @@ func (this *QWizardPage) SetField(name *qtcore.QString, value *qtcore.QVariant) 
 // /usr/include/qt/QtWidgets/qwizard.h:245
 // index:0
 // Protected
-// QVariant field(const class QString &)
+// QVariant field(const QString &)
 func (this *QWizardPage) Field(name *qtcore.QString) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = name.GetCthis()
@@ -333,7 +333,7 @@ func (this *QWizardPage) Field(name *qtcore.QString) *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtWidgets/qwizard.h:246
 // index:0
 // Protected
-// void registerField(const class QString &, class QWidget *, const char *, const char *)
+// void registerField(const QString &, QWidget *, const char *, const char *)
 func (this *QWizardPage) RegisterField(name *qtcore.QString, widget *QWidget /*777 QWidget **/, property string, changedSignal string) {
 	var convArg0 = name.GetCthis()
 	var convArg1 = widget.GetCthis()

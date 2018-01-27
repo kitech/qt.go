@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -140,7 +140,7 @@ func NewQChar_5(rc int) *QChar {
 // /usr/include/qt/QtCore/qchar.h:87
 // index:6
 // Public inline
-// void QChar(enum QChar::SpecialCharacter)
+// void QChar(QChar::SpecialCharacter)
 func NewQChar_6(s int) *QChar {
 	cthis := qtrt.Calloc(1, 256) // 2
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QCharC2ENS_16SpecialCharacterE", ffiqt.FFI_TYPE_VOID, cthis, s)
@@ -1204,7 +1204,7 @@ func QChar_SurrogateToUcs4(high uint16, low uint16) uint {
 // /usr/include/qt/QtCore/qchar.h:491
 // index:1
 // Public static inline
-// uint surrogateToUcs4(class QChar, class QChar)
+// uint surrogateToUcs4(QChar, QChar)
 func (this *QChar) SurrogateToUcs4_1(high *QChar /*123*/, low *QChar /*123*/) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar15surrogateToUcs4ES_S_", ffiqt.FFI_TYPE_POINTER, high, low)
 	gopp.ErrPrint(err, rv)

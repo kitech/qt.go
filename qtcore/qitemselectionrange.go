@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQItemSelectionRange() *QItemSelectionRange {
 // /usr/include/qt/QtCore/qitemselectionmodel.h:70
 // index:1
 // Public inline
-// void QItemSelectionRange(const class QModelIndex &, const class QModelIndex &)
+// void QItemSelectionRange(const QModelIndex &, const QModelIndex &)
 func NewQItemSelectionRange_1(topL *QModelIndex, bottomR *QModelIndex) *QItemSelectionRange {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = topL.GetCthis()
@@ -94,7 +94,7 @@ func NewQItemSelectionRange_1(topL *QModelIndex, bottomR *QModelIndex) *QItemSel
 // /usr/include/qt/QtCore/qitemselectionmodel.h:71
 // index:2
 // Public inline
-// void QItemSelectionRange(const class QModelIndex &)
+// void QItemSelectionRange(const QModelIndex &)
 func NewQItemSelectionRange_2(index *QModelIndex) *QItemSelectionRange {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = index.GetCthis()
@@ -107,7 +107,7 @@ func NewQItemSelectionRange_2(index *QModelIndex) *QItemSelectionRange {
 // /usr/include/qt/QtCore/qitemselectionmodel.h:73
 // index:0
 // Public inline
-// void swap(class QItemSelectionRange &)
+// void swap(QItemSelectionRange &)
 func (this *QItemSelectionRange) Swap(other *QItemSelectionRange) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QItemSelectionRange4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -233,7 +233,7 @@ func (this *QItemSelectionRange) Model() *QAbstractItemModel /*777 const QAbstra
 // /usr/include/qt/QtCore/qitemselectionmodel.h:91
 // index:0
 // Public inline
-// bool contains(const class QModelIndex &)
+// bool contains(const QModelIndex &)
 func (this *QItemSelectionRange) Contains(index *QModelIndex) bool {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange8containsERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -245,7 +245,7 @@ func (this *QItemSelectionRange) Contains(index *QModelIndex) bool {
 // /usr/include/qt/QtCore/qitemselectionmodel.h:98
 // index:1
 // Public inline
-// bool contains(int, int, const class QModelIndex &)
+// bool contains(int, int, const QModelIndex &)
 func (this *QItemSelectionRange) Contains_1(row int, column int, parentIndex *QModelIndex) bool {
 	var convArg2 = parentIndex.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange8containsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
@@ -257,7 +257,7 @@ func (this *QItemSelectionRange) Contains_1(row int, column int, parentIndex *QM
 // /usr/include/qt/QtCore/qitemselectionmodel.h:105
 // index:0
 // Public
-// bool intersects(const class QItemSelectionRange &)
+// bool intersects(const QItemSelectionRange &)
 func (this *QItemSelectionRange) Intersects(other *QItemSelectionRange) bool {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange10intersectsERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -269,7 +269,7 @@ func (this *QItemSelectionRange) Intersects(other *QItemSelectionRange) bool {
 // /usr/include/qt/QtCore/qitemselectionmodel.h:110
 // index:0
 // Public
-// QItemSelectionRange intersected(const class QItemSelectionRange &)
+// QItemSelectionRange intersected(const QItemSelectionRange &)
 func (this *QItemSelectionRange) Intersected(other *QItemSelectionRange) *QItemSelectionRange /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = other.GetCthis()

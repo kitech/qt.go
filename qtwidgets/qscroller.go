@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QScroller) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // /usr/include/qt/QtWidgets/qscroller.h:92
 // index:0
 // Public static
-// bool hasScroller(class QObject *)
+// bool hasScroller(QObject *)
 func (this *QScroller) HasScroller(target *qtcore.QObject /*777 QObject **/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller11hasScrollerEP7QObject", ffiqt.FFI_TYPE_POINTER, target)
 	gopp.ErrPrint(err, rv)
@@ -105,7 +105,7 @@ func QScroller_HasScroller(target *qtcore.QObject /*777 QObject **/) bool {
 // /usr/include/qt/QtWidgets/qscroller.h:94
 // index:0
 // Public static
-// QScroller * scroller(class QObject *)
+// QScroller * scroller(QObject *)
 func (this *QScroller) Scroller(target *qtcore.QObject /*777 QObject **/) *QScroller /*777 QScroller **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller8scrollerEP7QObject", ffiqt.FFI_TYPE_POINTER, target)
 	gopp.ErrPrint(err, rv)
@@ -122,7 +122,7 @@ func QScroller_Scroller(target *qtcore.QObject /*777 QObject **/) *QScroller /*7
 // /usr/include/qt/QtWidgets/qscroller.h:95
 // index:1
 // Public static
-// const QScroller * scroller(const class QObject *)
+// const QScroller * scroller(const QObject *)
 func (this *QScroller) Scroller_1(target *qtcore.QObject /*777 const QObject **/) *QScroller /*777 const QScroller **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller8scrollerEPK7QObject", ffiqt.FFI_TYPE_POINTER, target)
 	gopp.ErrPrint(err, rv)
@@ -139,7 +139,7 @@ func QScroller_Scroller_1(target *qtcore.QObject /*777 const QObject **/) *QScro
 // /usr/include/qt/QtWidgets/qscroller.h:98
 // index:0
 // Public static
-// Qt::GestureType grabGesture(class QObject *, enum QScroller::ScrollerGestureType)
+// Qt::GestureType grabGesture(QObject *, QScroller::ScrollerGestureType)
 func (this *QScroller) GrabGesture(target *qtcore.QObject /*777 QObject **/, gestureType int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller11grabGestureEP7QObjectNS_19ScrollerGestureTypeE", ffiqt.FFI_TYPE_POINTER, target, gestureType)
 	gopp.ErrPrint(err, rv)
@@ -155,7 +155,7 @@ func QScroller_GrabGesture(target *qtcore.QObject /*777 QObject **/, gestureType
 // /usr/include/qt/QtWidgets/qscroller.h:99
 // index:0
 // Public static
-// Qt::GestureType grabbedGesture(class QObject *)
+// Qt::GestureType grabbedGesture(QObject *)
 func (this *QScroller) GrabbedGesture(target *qtcore.QObject /*777 QObject **/) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller14grabbedGestureEP7QObject", ffiqt.FFI_TYPE_POINTER, target)
 	gopp.ErrPrint(err, rv)
@@ -171,7 +171,7 @@ func QScroller_GrabbedGesture(target *qtcore.QObject /*777 QObject **/) int {
 // /usr/include/qt/QtWidgets/qscroller.h:100
 // index:0
 // Public static
-// void ungrabGesture(class QObject *)
+// void ungrabGesture(QObject *)
 func (this *QScroller) UngrabGesture(target *qtcore.QObject /*777 QObject **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller13ungrabGestureEP7QObject", ffiqt.FFI_TYPE_POINTER, target)
 	gopp.ErrPrint(err, rv)
@@ -207,7 +207,7 @@ func (this *QScroller) State() int {
 // /usr/include/qt/QtWidgets/qscroller.h:109
 // index:0
 // Public
-// bool handleInput(enum QScroller::Input, const class QPointF &, qint64)
+// bool handleInput(QScroller::Input, const QPointF &, qint64)
 func (this *QScroller) HandleInput(input int, position *qtcore.QPointF, timestamp int64) bool {
 	var convArg1 = position.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller11handleInputENS_5InputERK7QPointFx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), input, convArg1, timestamp)
@@ -302,7 +302,7 @@ func (this *QScroller) SetSnapPositionsY(first float64, interval float64) {
 // /usr/include/qt/QtWidgets/qscroller.h:124
 // index:0
 // Public
-// void setScrollerProperties(const class QScrollerProperties &)
+// void setScrollerProperties(const QScrollerProperties &)
 func (this *QScroller) SetScrollerProperties(prop *QScrollerProperties) {
 	var convArg0 = prop.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller21setScrollerPropertiesERK19QScrollerProperties", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -312,7 +312,7 @@ func (this *QScroller) SetScrollerProperties(prop *QScrollerProperties) {
 // /usr/include/qt/QtWidgets/qscroller.h:125
 // index:0
 // Public
-// void scrollTo(const class QPointF &)
+// void scrollTo(const QPointF &)
 func (this *QScroller) ScrollTo(pos *qtcore.QPointF) {
 	var convArg0 = pos.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller8scrollToERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -322,7 +322,7 @@ func (this *QScroller) ScrollTo(pos *qtcore.QPointF) {
 // /usr/include/qt/QtWidgets/qscroller.h:126
 // index:1
 // Public
-// void scrollTo(const class QPointF &, int)
+// void scrollTo(const QPointF &, int)
 func (this *QScroller) ScrollTo_1(pos *qtcore.QPointF, scrollTime int) {
 	var convArg0 = pos.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller8scrollToERK7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, scrollTime)
@@ -332,7 +332,7 @@ func (this *QScroller) ScrollTo_1(pos *qtcore.QPointF, scrollTime int) {
 // /usr/include/qt/QtWidgets/qscroller.h:127
 // index:0
 // Public
-// void ensureVisible(const class QRectF &, qreal, qreal)
+// void ensureVisible(const QRectF &, qreal, qreal)
 func (this *QScroller) EnsureVisible(rect *qtcore.QRectF, xmargin float64, ymargin float64) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller13ensureVisibleERK6QRectFdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin)
@@ -342,7 +342,7 @@ func (this *QScroller) EnsureVisible(rect *qtcore.QRectF, xmargin float64, ymarg
 // /usr/include/qt/QtWidgets/qscroller.h:128
 // index:1
 // Public
-// void ensureVisible(const class QRectF &, qreal, qreal, int)
+// void ensureVisible(const QRectF &, qreal, qreal, int)
 func (this *QScroller) EnsureVisible_1(rect *qtcore.QRectF, xmargin float64, ymargin float64, scrollTime int) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller13ensureVisibleERK6QRectFddi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, xmargin, ymargin, scrollTime)
@@ -361,7 +361,7 @@ func (this *QScroller) ResendPrepareEvent() {
 // /usr/include/qt/QtWidgets/qscroller.h:132
 // index:0
 // Public
-// void stateChanged(class QScroller::State)
+// void stateChanged(QScroller::State)
 func (this *QScroller) StateChanged(newstate int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller12stateChangedENS_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), newstate)
 	gopp.ErrPrint(err, rv)
@@ -370,7 +370,7 @@ func (this *QScroller) StateChanged(newstate int) {
 // /usr/include/qt/QtWidgets/qscroller.h:133
 // index:0
 // Public
-// void scrollerPropertiesChanged(const class QScrollerProperties &)
+// void scrollerPropertiesChanged(const QScrollerProperties &)
 func (this *QScroller) ScrollerPropertiesChanged(arg0 *QScrollerProperties) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller25scrollerPropertiesChangedERK19QScrollerProperties", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

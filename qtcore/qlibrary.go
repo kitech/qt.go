@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QLibrary) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // /usr/include/qt/QtCore/qlibrary.h:68
 // index:0
 // Public
-// void QLibrary(class QObject *)
+// void QLibrary(QObject *)
 func NewQLibrary(parent *QObject /*777 QObject **/) *QLibrary {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = parent.GetCthis()
@@ -94,7 +94,7 @@ func NewQLibrary(parent *QObject /*777 QObject **/) *QLibrary {
 // /usr/include/qt/QtCore/qlibrary.h:69
 // index:1
 // Public
-// void QLibrary(const class QString &, class QObject *)
+// void QLibrary(const QString &, QObject *)
 func NewQLibrary_1(fileName *QString, parent *QObject /*777 QObject **/) *QLibrary {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = fileName.GetCthis()
@@ -108,7 +108,7 @@ func NewQLibrary_1(fileName *QString, parent *QObject /*777 QObject **/) *QLibra
 // /usr/include/qt/QtCore/qlibrary.h:70
 // index:2
 // Public
-// void QLibrary(const class QString &, int, class QObject *)
+// void QLibrary(const QString &, int, QObject *)
 func NewQLibrary_2(fileName *QString, verNum int, parent *QObject /*777 QObject **/) *QLibrary {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = fileName.GetCthis()
@@ -122,7 +122,7 @@ func NewQLibrary_2(fileName *QString, verNum int, parent *QObject /*777 QObject 
 // /usr/include/qt/QtCore/qlibrary.h:71
 // index:3
 // Public
-// void QLibrary(const class QString &, const class QString &, class QObject *)
+// void QLibrary(const QString &, const QString &, QObject *)
 func NewQLibrary_3(fileName *QString, version *QString, parent *QObject /*777 QObject **/) *QLibrary {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = fileName.GetCthis()
@@ -159,7 +159,7 @@ func (this *QLibrary) Resolve(symbol string) unsafe.Pointer /*666*/ {
 // /usr/include/qt/QtCore/qlibrary.h:75
 // index:1
 // Public static
-// QFunctionPointer resolve(const class QString &, const char *)
+// QFunctionPointer resolve(const QString &, const char *)
 func (this *QLibrary) Resolve_1(fileName *QString, symbol string) unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibrary7resolveERK7QStringPKc", ffiqt.FFI_TYPE_POINTER, fileName, symbol)
 	gopp.ErrPrint(err, rv)
@@ -175,7 +175,7 @@ func QLibrary_Resolve_1(fileName *QString, symbol string) unsafe.Pointer /*666*/
 // /usr/include/qt/QtCore/qlibrary.h:76
 // index:2
 // Public static
-// QFunctionPointer resolve(const class QString &, int, const char *)
+// QFunctionPointer resolve(const QString &, int, const char *)
 func (this *QLibrary) Resolve_2(fileName *QString, verNum int, symbol string) unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibrary7resolveERK7QStringiPKc", ffiqt.FFI_TYPE_POINTER, fileName, verNum, symbol)
 	gopp.ErrPrint(err, rv)
@@ -191,7 +191,7 @@ func QLibrary_Resolve_2(fileName *QString, verNum int, symbol string) unsafe.Poi
 // /usr/include/qt/QtCore/qlibrary.h:77
 // index:3
 // Public static
-// QFunctionPointer resolve(const class QString &, const class QString &, const char *)
+// QFunctionPointer resolve(const QString &, const QString &, const char *)
 func (this *QLibrary) Resolve_3(fileName *QString, version *QString, symbol string) unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibrary7resolveERK7QStringS2_PKc", ffiqt.FFI_TYPE_POINTER, fileName, version, symbol)
 	gopp.ErrPrint(err, rv)
@@ -240,7 +240,7 @@ func (this *QLibrary) IsLoaded() bool {
 // /usr/include/qt/QtCore/qlibrary.h:83
 // index:0
 // Public static
-// bool isLibrary(const class QString &)
+// bool isLibrary(const QString &)
 func (this *QLibrary) IsLibrary(fileName *QString) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibrary9isLibraryERK7QString", ffiqt.FFI_TYPE_POINTER, fileName)
 	gopp.ErrPrint(err, rv)
@@ -256,7 +256,7 @@ func QLibrary_IsLibrary(fileName *QString) bool {
 // /usr/include/qt/QtCore/qlibrary.h:85
 // index:0
 // Public
-// void setFileName(const class QString &)
+// void setFileName(const QString &)
 func (this *QLibrary) SetFileName(fileName *QString) {
 	var convArg0 = fileName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibrary11setFileNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -280,7 +280,7 @@ func (this *QLibrary) FileName() *QString /*123*/ {
 // /usr/include/qt/QtCore/qlibrary.h:88
 // index:0
 // Public
-// void setFileNameAndVersion(const class QString &, int)
+// void setFileNameAndVersion(const QString &, int)
 func (this *QLibrary) SetFileNameAndVersion(fileName *QString, verNum int) {
 	var convArg0 = fileName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibrary21setFileNameAndVersionERK7QStringi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, verNum)
@@ -290,7 +290,7 @@ func (this *QLibrary) SetFileNameAndVersion(fileName *QString, verNum int) {
 // /usr/include/qt/QtCore/qlibrary.h:89
 // index:1
 // Public
-// void setFileNameAndVersion(const class QString &, const class QString &)
+// void setFileNameAndVersion(const QString &, const QString &)
 func (this *QLibrary) SetFileNameAndVersion_1(fileName *QString, version *QString) {
 	var convArg0 = fileName.GetCthis()
 	var convArg1 = version.GetCthis()

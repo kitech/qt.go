@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -73,7 +73,7 @@ func (*QScreenOrientationChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QScr
 // /usr/include/qt/QtGui/qevent.h:1038
 // index:0
 // Public
-// void QScreenOrientationChangeEvent(class QScreen *, Qt::ScreenOrientation)
+// void QScreenOrientationChangeEvent(QScreen *, Qt::ScreenOrientation)
 func NewQScreenOrientationChangeEvent(screen *QScreen /*777 QScreen **/, orientation int) *QScreenOrientationChangeEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = screen.GetCthis()

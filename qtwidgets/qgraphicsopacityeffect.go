@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QGraphicsOpacityEffect) MetaObject() *qtcore.QMetaObject /*777 const
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:258
 // index:0
 // Public
-// void QGraphicsOpacityEffect(class QObject *)
+// void QGraphicsOpacityEffect(QObject *)
 func NewQGraphicsOpacityEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsOpacityEffect {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -145,7 +145,7 @@ func (this *QGraphicsOpacityEffect) SetOpacity(opacity float64) {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:266
 // index:0
 // Public
-// void setOpacityMask(const class QBrush &)
+// void setOpacityMask(const QBrush &)
 func (this *QGraphicsOpacityEffect) SetOpacityMask(mask *qtgui.QBrush) {
 	var convArg0 = mask.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffect14setOpacityMaskERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -164,7 +164,7 @@ func (this *QGraphicsOpacityEffect) OpacityChanged(opacity float64) {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:270
 // index:0
 // Public
-// void opacityMaskChanged(const class QBrush &)
+// void opacityMaskChanged(const QBrush &)
 func (this *QGraphicsOpacityEffect) OpacityMaskChanged(mask *qtgui.QBrush) {
 	var convArg0 = mask.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffect18opacityMaskChangedERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -174,7 +174,7 @@ func (this *QGraphicsOpacityEffect) OpacityMaskChanged(mask *qtgui.QBrush) {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:273
 // index:0
 // Protected virtual
-// void draw(class QPainter *)
+// void draw(QPainter *)
 func (this *QGraphicsOpacityEffect) Draw(painter *qtgui.QPainter /*777 QPainter **/) {
 	var convArg0 = painter.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffect4drawEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

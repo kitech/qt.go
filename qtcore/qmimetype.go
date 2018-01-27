@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQMimeType() *QMimeType {
 // /usr/include/qt/QtCore/qmimetype.h:84
 // index:0
 // Public inline
-// void swap(class QMimeType &)
+// void swap(QMimeType &)
 func (this *QMimeType) Swap(other *QMimeType) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeType4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -191,7 +191,7 @@ func (this *QMimeType) PreferredSuffix() *QString /*123*/ {
 // /usr/include/qt/QtCore/qmimetype.h:113
 // index:0
 // Public
-// bool inherits(const class QString &)
+// bool inherits(const QString &)
 func (this *QMimeType) Inherits(mimeTypeName *QString) bool {
 	var convArg0 = mimeTypeName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType8inheritsERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

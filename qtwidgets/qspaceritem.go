@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -77,7 +77,7 @@ func (*QSpacerItem) NewFromPointer(cthis unsafe.Pointer) *QSpacerItem {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:95
 // index:0
 // Public inline
-// void QSpacerItem(int, int, class QSizePolicy::Policy, class QSizePolicy::Policy)
+// void QSpacerItem(int, int, QSizePolicy::Policy, QSizePolicy::Policy)
 func NewQSpacerItem(w int, h int, hData int, vData int) *QSpacerItem {
 	cthis := qtrt.Calloc(1, 256) // 40
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItemC2EiiN11QSizePolicy6PolicyES1_", ffiqt.FFI_TYPE_VOID, cthis, w, h, hData, vData)
@@ -98,7 +98,7 @@ func DeleteQSpacerItem(*QSpacerItem) {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:101
 // index:0
 // Public
-// void changeSize(int, int, class QSizePolicy::Policy, class QSizePolicy::Policy)
+// void changeSize(int, int, QSizePolicy::Policy, QSizePolicy::Policy)
 func (this *QSpacerItem) ChangeSize(w int, h int, hData int, vData int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItem10changeSizeEiiN11QSizePolicy6PolicyES1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w, h, hData, vData)
 	gopp.ErrPrint(err, rv)
@@ -171,7 +171,7 @@ func (this *QSpacerItem) IsEmpty() bool {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:109
 // index:0
 // Public virtual
-// void setGeometry(const class QRect &)
+// void setGeometry(const QRect &)
 func (this *QSpacerItem) SetGeometry(arg0 *qtcore.QRect) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItem11setGeometryERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -5,9 +5,10 @@ import (
 	"gopp"
 	"io/ioutil"
 	"log"
-	"mkuse/cffiqt/qtsymbols"
 	"os"
 	"strings"
+
+	"qt.go/cffiqt/qtsymbols"
 
 	simplejson "github.com/bitly/go-simplejson"
 	"github.com/clbanning/mxj"

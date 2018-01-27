@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QUndoGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtWidgets/qundogroup.h:61
 // index:0
 // Public
-// void QUndoGroup(class QObject *)
+// void QUndoGroup(QObject *)
 func NewQUndoGroup(parent *qtcore.QObject /*777 QObject **/) *QUndoGroup {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -111,7 +111,7 @@ func DeleteQUndoGroup(*QUndoGroup) {
 // /usr/include/qt/QtWidgets/qundogroup.h:64
 // index:0
 // Public
-// void addStack(class QUndoStack *)
+// void addStack(QUndoStack *)
 func (this *QUndoGroup) AddStack(stack *QUndoStack /*777 QUndoStack **/) {
 	var convArg0 = stack.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup8addStackEP10QUndoStack", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -121,7 +121,7 @@ func (this *QUndoGroup) AddStack(stack *QUndoStack /*777 QUndoStack **/) {
 // /usr/include/qt/QtWidgets/qundogroup.h:65
 // index:0
 // Public
-// void removeStack(class QUndoStack *)
+// void removeStack(QUndoStack *)
 func (this *QUndoGroup) RemoveStack(stack *QUndoStack /*777 QUndoStack **/) {
 	var convArg0 = stack.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup11removeStackEP10QUndoStack", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -143,7 +143,7 @@ func (this *QUndoGroup) ActiveStack() *QUndoStack /*777 QUndoStack **/ {
 // /usr/include/qt/QtWidgets/qundogroup.h:70
 // index:0
 // Public
-// QAction * createUndoAction(class QObject *, const class QString &)
+// QAction * createUndoAction(QObject *, const QString &)
 func (this *QUndoGroup) CreateUndoAction(parent *qtcore.QObject /*777 QObject **/, prefix *qtcore.QString) *QAction /*777 QAction **/ {
 	var convArg0 = parent.GetCthis()
 	var convArg1 = prefix.GetCthis()
@@ -157,7 +157,7 @@ func (this *QUndoGroup) CreateUndoAction(parent *qtcore.QObject /*777 QObject **
 // /usr/include/qt/QtWidgets/qundogroup.h:72
 // index:0
 // Public
-// QAction * createRedoAction(class QObject *, const class QString &)
+// QAction * createRedoAction(QObject *, const QString &)
 func (this *QUndoGroup) CreateRedoAction(parent *qtcore.QObject /*777 QObject **/, prefix *qtcore.QString) *QAction /*777 QAction **/ {
 	var convArg0 = parent.GetCthis()
 	var convArg1 = prefix.GetCthis()
@@ -250,7 +250,7 @@ func (this *QUndoGroup) Redo() {
 // /usr/include/qt/QtWidgets/qundogroup.h:84
 // index:0
 // Public
-// void setActiveStack(class QUndoStack *)
+// void setActiveStack(QUndoStack *)
 func (this *QUndoGroup) SetActiveStack(stack *QUndoStack /*777 QUndoStack **/) {
 	var convArg0 = stack.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup14setActiveStackEP10QUndoStack", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -260,7 +260,7 @@ func (this *QUndoGroup) SetActiveStack(stack *QUndoStack /*777 QUndoStack **/) {
 // /usr/include/qt/QtWidgets/qundogroup.h:87
 // index:0
 // Public
-// void activeStackChanged(class QUndoStack *)
+// void activeStackChanged(QUndoStack *)
 func (this *QUndoGroup) ActiveStackChanged(stack *QUndoStack /*777 QUndoStack **/) {
 	var convArg0 = stack.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup18activeStackChangedEP10QUndoStack", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -279,7 +279,7 @@ func (this *QUndoGroup) IndexChanged(idx int) {
 // /usr/include/qt/QtWidgets/qundogroup.h:89
 // index:0
 // Public
-// void cleanChanged(_Bool)
+// void cleanChanged(bool)
 func (this *QUndoGroup) CleanChanged(clean bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup12cleanChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), clean)
 	gopp.ErrPrint(err, rv)
@@ -288,7 +288,7 @@ func (this *QUndoGroup) CleanChanged(clean bool) {
 // /usr/include/qt/QtWidgets/qundogroup.h:90
 // index:0
 // Public
-// void canUndoChanged(_Bool)
+// void canUndoChanged(bool)
 func (this *QUndoGroup) CanUndoChanged(canUndo bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup14canUndoChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), canUndo)
 	gopp.ErrPrint(err, rv)
@@ -297,7 +297,7 @@ func (this *QUndoGroup) CanUndoChanged(canUndo bool) {
 // /usr/include/qt/QtWidgets/qundogroup.h:91
 // index:0
 // Public
-// void canRedoChanged(_Bool)
+// void canRedoChanged(bool)
 func (this *QUndoGroup) CanRedoChanged(canRedo bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup14canRedoChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), canRedo)
 	gopp.ErrPrint(err, rv)
@@ -306,7 +306,7 @@ func (this *QUndoGroup) CanRedoChanged(canRedo bool) {
 // /usr/include/qt/QtWidgets/qundogroup.h:92
 // index:0
 // Public
-// void undoTextChanged(const class QString &)
+// void undoTextChanged(const QString &)
 func (this *QUndoGroup) UndoTextChanged(undoText *qtcore.QString) {
 	var convArg0 = undoText.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup15undoTextChangedERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -316,7 +316,7 @@ func (this *QUndoGroup) UndoTextChanged(undoText *qtcore.QString) {
 // /usr/include/qt/QtWidgets/qundogroup.h:93
 // index:0
 // Public
-// void redoTextChanged(const class QString &)
+// void redoTextChanged(const QString &)
 func (this *QUndoGroup) RedoTextChanged(redoText *qtcore.QString) {
 	var convArg0 = redoText.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup15redoTextChangedERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

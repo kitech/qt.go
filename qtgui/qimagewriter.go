@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQImageWriter() *QImageWriter {
 // /usr/include/qt/QtGui/qimagewriter.h:68
 // index:1
 // Public
-// void QImageWriter(class QIODevice *, const class QByteArray &)
+// void QImageWriter(QIODevice *, const QByteArray &)
 func NewQImageWriter_1(device *qtcore.QIODevice /*777 QIODevice **/, format *qtcore.QByteArray) *QImageWriter {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = device.GetCthis()
@@ -98,7 +98,7 @@ func NewQImageWriter_1(device *qtcore.QIODevice /*777 QIODevice **/, format *qtc
 // /usr/include/qt/QtGui/qimagewriter.h:69
 // index:2
 // Public
-// void QImageWriter(const class QString &, const class QByteArray &)
+// void QImageWriter(const QString &, const QByteArray &)
 func NewQImageWriter_2(fileName *qtcore.QString, format *qtcore.QByteArray) *QImageWriter {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = fileName.GetCthis()
@@ -121,7 +121,7 @@ func DeleteQImageWriter(*QImageWriter) {
 // /usr/include/qt/QtGui/qimagewriter.h:72
 // index:0
 // Public
-// void setFormat(const class QByteArray &)
+// void setFormat(const QByteArray &)
 func (this *QImageWriter) SetFormat(format *qtcore.QByteArray) {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageWriter9setFormatERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -145,7 +145,7 @@ func (this *QImageWriter) Format() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtGui/qimagewriter.h:75
 // index:0
 // Public
-// void setDevice(class QIODevice *)
+// void setDevice(QIODevice *)
 func (this *QImageWriter) SetDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageWriter9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -167,7 +167,7 @@ func (this *QImageWriter) Device() *qtcore.QIODevice /*777 QIODevice **/ {
 // /usr/include/qt/QtGui/qimagewriter.h:78
 // index:0
 // Public
-// void setFileName(const class QString &)
+// void setFileName(const QString &)
 func (this *QImageWriter) SetFileName(fileName *qtcore.QString) {
 	var convArg0 = fileName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageWriter11setFileNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -251,7 +251,7 @@ func (this *QImageWriter) Gamma() float32 {
 // /usr/include/qt/QtGui/qimagewriter.h:90
 // index:0
 // Public
-// void setSubType(const class QByteArray &)
+// void setSubType(const QByteArray &)
 func (this *QImageWriter) SetSubType(type_ *qtcore.QByteArray) {
 	var convArg0 = type_.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageWriter10setSubTypeERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -275,7 +275,7 @@ func (this *QImageWriter) SubType() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtGui/qimagewriter.h:94
 // index:0
 // Public
-// void setOptimizedWrite(_Bool)
+// void setOptimizedWrite(bool)
 func (this *QImageWriter) SetOptimizedWrite(optimize bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageWriter17setOptimizedWriteEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), optimize)
 	gopp.ErrPrint(err, rv)
@@ -295,7 +295,7 @@ func (this *QImageWriter) OptimizedWrite() bool {
 // /usr/include/qt/QtGui/qimagewriter.h:97
 // index:0
 // Public
-// void setProgressiveScanWrite(_Bool)
+// void setProgressiveScanWrite(bool)
 func (this *QImageWriter) SetProgressiveScanWrite(progressive bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageWriter23setProgressiveScanWriteEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), progressive)
 	gopp.ErrPrint(err, rv)
@@ -326,7 +326,7 @@ func (this *QImageWriter) Transformation() int {
 // /usr/include/qt/QtGui/qimagewriter.h:104
 // index:0
 // Public
-// void setDescription(const class QString &)
+// void setDescription(const QString &)
 func (this *QImageWriter) SetDescription(description *qtcore.QString) {
 	var convArg0 = description.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageWriter14setDescriptionERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -350,7 +350,7 @@ func (this *QImageWriter) Description() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qimagewriter.h:107
 // index:0
 // Public
-// void setText(const class QString &, const class QString &)
+// void setText(const QString &, const QString &)
 func (this *QImageWriter) SetText(key *qtcore.QString, text *qtcore.QString) {
 	var convArg0 = key.GetCthis()
 	var convArg1 = text.GetCthis()
@@ -372,7 +372,7 @@ func (this *QImageWriter) CanWrite() bool {
 // /usr/include/qt/QtGui/qimagewriter.h:110
 // index:0
 // Public
-// bool write(const class QImage &)
+// bool write(const QImage &)
 func (this *QImageWriter) Write(image *QImage) bool {
 	var convArg0 = image.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageWriter5writeERK6QImage", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -409,7 +409,7 @@ func (this *QImageWriter) ErrorString() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qimagewriter.h:115
 // index:0
 // Public
-// bool supportsOption(class QImageIOHandler::ImageOption)
+// bool supportsOption(QImageIOHandler::ImageOption)
 func (this *QImageWriter) SupportsOption(option int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageWriter14supportsOptionEN15QImageIOHandler11ImageOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)

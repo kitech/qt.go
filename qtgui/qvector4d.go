@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -108,7 +108,7 @@ func NewQVector4D_2(xpos float32, ypos float32, zpos float32, wpos float32) *QVe
 // /usr/include/qt/QtGui/qvector4d.h:62
 // index:3
 // Public inline
-// void QVector4D(const class QPoint &)
+// void QVector4D(const QPoint &)
 func NewQVector4D_3(point *qtcore.QPoint) *QVector4D {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = point.GetCthis()
@@ -121,7 +121,7 @@ func NewQVector4D_3(point *qtcore.QPoint) *QVector4D {
 // /usr/include/qt/QtGui/qvector4d.h:63
 // index:4
 // Public inline
-// void QVector4D(const class QPointF &)
+// void QVector4D(const QPointF &)
 func NewQVector4D_4(point *qtcore.QPointF) *QVector4D {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = point.GetCthis()
@@ -134,7 +134,7 @@ func NewQVector4D_4(point *qtcore.QPointF) *QVector4D {
 // /usr/include/qt/QtGui/qvector4d.h:65
 // index:5
 // Public
-// void QVector4D(const class QVector2D &)
+// void QVector4D(const QVector2D &)
 func NewQVector4D_5(vector *QVector2D) *QVector4D {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = vector.GetCthis()
@@ -147,7 +147,7 @@ func NewQVector4D_5(vector *QVector2D) *QVector4D {
 // /usr/include/qt/QtGui/qvector4d.h:66
 // index:6
 // Public
-// void QVector4D(const class QVector2D &, float, float)
+// void QVector4D(const QVector2D &, float, float)
 func NewQVector4D_6(vector *QVector2D, zpos float32, wpos float32) *QVector4D {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = vector.GetCthis()
@@ -160,7 +160,7 @@ func NewQVector4D_6(vector *QVector2D, zpos float32, wpos float32) *QVector4D {
 // /usr/include/qt/QtGui/qvector4d.h:69
 // index:7
 // Public
-// void QVector4D(const class QVector3D &)
+// void QVector4D(const QVector3D &)
 func NewQVector4D_7(vector *QVector3D) *QVector4D {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = vector.GetCthis()
@@ -173,7 +173,7 @@ func NewQVector4D_7(vector *QVector3D) *QVector4D {
 // /usr/include/qt/QtGui/qvector4d.h:70
 // index:8
 // Public
-// void QVector4D(const class QVector3D &, float)
+// void QVector4D(const QVector3D &, float)
 func NewQVector4D_8(vector *QVector3D, wpos float32) *QVector4D {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = vector.GetCthis()
@@ -322,7 +322,7 @@ func (this *QVector4D) Normalize() {
 // /usr/include/qt/QtGui/qvector4d.h:101
 // index:0
 // Public static
-// float dotProduct(const class QVector4D &, const class QVector4D &)
+// float dotProduct(const QVector4D &, const QVector4D &)
 func (this *QVector4D) DotProduct(v1 *QVector4D, v2 *QVector4D) float32 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector4D10dotProductERKS_S1_", ffiqt.FFI_TYPE_POINTER, v1, v2)
 	gopp.ErrPrint(err, rv)

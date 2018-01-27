@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -88,7 +88,7 @@ func (this *QOffscreenSurface) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // /usr/include/qt/QtGui/qoffscreensurface.h:61
 // index:0
 // Public
-// void QOffscreenSurface(class QScreen *, class QObject *)
+// void QOffscreenSurface(QScreen *, QObject *)
 func NewQOffscreenSurface(screen *QScreen /*777 QScreen **/, parent *qtcore.QObject /*777 QObject **/) *QOffscreenSurface {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = screen.GetCthis()
@@ -102,7 +102,7 @@ func NewQOffscreenSurface(screen *QScreen /*777 QScreen **/, parent *qtcore.QObj
 // /usr/include/qt/QtGui/qoffscreensurface.h:62
 // index:1
 // Public
-// void QOffscreenSurface(class QScreen *)
+// void QOffscreenSurface(QScreen *)
 func NewQOffscreenSurface_1(screen *QScreen /*777 QScreen **/) *QOffscreenSurface {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = screen.GetCthis()
@@ -164,7 +164,7 @@ func (this *QOffscreenSurface) IsValid() bool {
 // /usr/include/qt/QtGui/qoffscreensurface.h:72
 // index:0
 // Public
-// void setFormat(const class QSurfaceFormat &)
+// void setFormat(const QSurfaceFormat &)
 func (this *QOffscreenSurface) SetFormat(format *QSurfaceFormat) {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QOffscreenSurface9setFormatERK14QSurfaceFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -228,7 +228,7 @@ func (this *QOffscreenSurface) Screen() *QScreen /*777 QScreen **/ {
 // /usr/include/qt/QtGui/qoffscreensurface.h:79
 // index:0
 // Public
-// void setScreen(class QScreen *)
+// void setScreen(QScreen *)
 func (this *QOffscreenSurface) SetScreen(screen *QScreen /*777 QScreen **/) {
 	var convArg0 = screen.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QOffscreenSurface9setScreenEP7QScreen", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -258,7 +258,7 @@ func (this *QOffscreenSurface) SetNativeHandle(handle unsafe.Pointer /*666*/) {
 // /usr/include/qt/QtGui/qoffscreensurface.h:87
 // index:0
 // Public
-// void screenChanged(class QScreen *)
+// void screenChanged(QScreen *)
 func (this *QOffscreenSurface) ScreenChanged(screen *QScreen /*777 QScreen **/) {
 	var convArg0 = screen.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QOffscreenSurface13screenChangedEP7QScreen", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

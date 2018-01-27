@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -105,7 +105,7 @@ func (this *QPagedPaintDevice) NewPage() bool {
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:219
 // index:0
 // Public
-// bool setPageLayout(const class QPageLayout &)
+// bool setPageLayout(const QPageLayout &)
 func (this *QPagedPaintDevice) SetPageLayout(pageLayout *QPageLayout) bool {
 	var convArg0 = pageLayout.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -117,7 +117,7 @@ func (this *QPagedPaintDevice) SetPageLayout(pageLayout *QPageLayout) bool {
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:220
 // index:0
 // Public
-// bool setPageSize(const class QPageSize &)
+// bool setPageSize(const QPageSize &)
 func (this *QPagedPaintDevice) SetPageSize(pageSize *QPageSize) bool {
 	var convArg0 = pageSize.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice11setPageSizeERK9QPageSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -129,7 +129,7 @@ func (this *QPagedPaintDevice) SetPageSize(pageSize *QPageSize) bool {
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:226
 // index:1
 // Public virtual
-// void setPageSize(enum QPagedPaintDevice::PageSize)
+// void setPageSize(QPagedPaintDevice::PageSize)
 func (this *QPagedPaintDevice) SetPageSize_1(size int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice11setPageSizeENS_8PageSizeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
@@ -138,7 +138,7 @@ func (this *QPagedPaintDevice) SetPageSize_1(size int) {
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:221
 // index:0
 // Public
-// bool setPageOrientation(class QPageLayout::Orientation)
+// bool setPageOrientation(QPageLayout::Orientation)
 func (this *QPagedPaintDevice) SetPageOrientation(orientation int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice18setPageOrientationEN11QPageLayout11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), orientation)
 	gopp.ErrPrint(err, rv)
@@ -149,7 +149,7 @@ func (this *QPagedPaintDevice) SetPageOrientation(orientation int) bool {
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:222
 // index:0
 // Public
-// bool setPageMargins(const class QMarginsF &)
+// bool setPageMargins(const QMarginsF &)
 func (this *QPagedPaintDevice) SetPageMargins(margins *qtcore.QMarginsF) bool {
 	var convArg0 = margins.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -161,7 +161,7 @@ func (this *QPagedPaintDevice) SetPageMargins(margins *qtcore.QMarginsF) bool {
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:223
 // index:1
 // Public
-// bool setPageMargins(const class QMarginsF &, class QPageLayout::Unit)
+// bool setPageMargins(const QMarginsF &, QPageLayout::Unit)
 func (this *QPagedPaintDevice) SetPageMargins_1(margins *qtcore.QMarginsF, units int) bool {
 	var convArg0 = margins.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsFN11QPageLayout4UnitE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, units)
@@ -198,7 +198,7 @@ func (this *QPagedPaintDevice) PageSize() int {
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:229
 // index:0
 // Public virtual
-// void setPageSizeMM(const class QSizeF &)
+// void setPageSizeMM(const QSizeF &)
 func (this *QPagedPaintDevice) SetPageSizeMM(size *qtcore.QSizeF) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice13setPageSizeMMERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

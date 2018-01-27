@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QSignalBlocker) NewFromPointer(cthis unsafe.Pointer) *QSignalBlocker {
 // /usr/include/qt/QtCore/qobject.h:547
 // index:0
 // Public inline
-// void QSignalBlocker(class QObject *)
+// void QSignalBlocker(QObject *)
 func NewQSignalBlocker(o *QObject /*777 QObject **/) *QSignalBlocker {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = o.GetCthis()
@@ -81,7 +81,7 @@ func NewQSignalBlocker(o *QObject /*777 QObject **/) *QSignalBlocker {
 // /usr/include/qt/QtCore/qobject.h:548
 // index:1
 // Public inline
-// void QSignalBlocker(class QObject &)
+// void QSignalBlocker(QObject &)
 func NewQSignalBlocker_1(o *QObject) *QSignalBlocker {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = o.GetCthis()

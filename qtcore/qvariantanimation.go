@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QVariantAnimation) MetaObject() *QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtCore/qvariantanimation.h:68
 // index:0
 // Public
-// void QVariantAnimation(class QObject *)
+// void QVariantAnimation(QObject *)
 func NewQVariantAnimation(parent *QObject /*777 QObject **/) *QVariantAnimation {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -117,7 +117,7 @@ func (this *QVariantAnimation) StartValue() *QVariant /*123*/ {
 // /usr/include/qt/QtCore/qvariantanimation.h:72
 // index:0
 // Public
-// void setStartValue(const class QVariant &)
+// void setStartValue(const QVariant &)
 func (this *QVariantAnimation) SetStartValue(value *QVariant) {
 	var convArg0 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation13setStartValueERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -141,7 +141,7 @@ func (this *QVariantAnimation) EndValue() *QVariant /*123*/ {
 // /usr/include/qt/QtCore/qvariantanimation.h:75
 // index:0
 // Public
-// void setEndValue(const class QVariant &)
+// void setEndValue(const QVariant &)
 func (this *QVariantAnimation) SetEndValue(value *QVariant) {
 	var convArg0 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation11setEndValueERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -165,7 +165,7 @@ func (this *QVariantAnimation) KeyValueAt(step float64) *QVariant /*123*/ {
 // /usr/include/qt/QtCore/qvariantanimation.h:78
 // index:0
 // Public
-// void setKeyValueAt(qreal, const class QVariant &)
+// void setKeyValueAt(qreal, const QVariant &)
 func (this *QVariantAnimation) SetKeyValueAt(step float64, value *QVariant) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step, convArg1)
@@ -223,7 +223,7 @@ func (this *QVariantAnimation) EasingCurve() *QEasingCurve /*123*/ {
 // /usr/include/qt/QtCore/qvariantanimation.h:89
 // index:0
 // Public
-// void setEasingCurve(const class QEasingCurve &)
+// void setEasingCurve(const QEasingCurve &)
 func (this *QVariantAnimation) SetEasingCurve(easing *QEasingCurve) {
 	var convArg0 = easing.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -233,7 +233,7 @@ func (this *QVariantAnimation) SetEasingCurve(easing *QEasingCurve) {
 // /usr/include/qt/QtCore/qvariantanimation.h:94
 // index:0
 // Public
-// void valueChanged(const class QVariant &)
+// void valueChanged(const QVariant &)
 func (this *QVariantAnimation) ValueChanged(value *QVariant) {
 	var convArg0 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation12valueChangedERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -243,7 +243,7 @@ func (this *QVariantAnimation) ValueChanged(value *QVariant) {
 // /usr/include/qt/QtCore/qvariantanimation.h:98
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QVariantAnimation) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -264,7 +264,7 @@ func (this *QVariantAnimation) UpdateCurrentTime(arg0 int) {
 // /usr/include/qt/QtCore/qvariantanimation.h:101
 // index:0
 // Protected virtual
-// void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
+// void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
 func (this *QVariantAnimation) UpdateState(newState int, oldState int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation11updateStateEN18QAbstractAnimation5StateES1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
 	gopp.ErrPrint(err, rv)
@@ -273,7 +273,7 @@ func (this *QVariantAnimation) UpdateState(newState int, oldState int) {
 // /usr/include/qt/QtCore/qvariantanimation.h:103
 // index:0
 // Protected virtual
-// void updateCurrentValue(const class QVariant &)
+// void updateCurrentValue(const QVariant &)
 func (this *QVariantAnimation) UpdateCurrentValue(value *QVariant) {
 	var convArg0 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimation18updateCurrentValueERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -283,7 +283,7 @@ func (this *QVariantAnimation) UpdateCurrentValue(value *QVariant) {
 // /usr/include/qt/QtCore/qvariantanimation.h:104
 // index:0
 // Protected virtual
-// QVariant interpolated(const class QVariant &, const class QVariant &, qreal)
+// QVariant interpolated(const QVariant &, const QVariant &, qreal)
 func (this *QVariantAnimation) Interpolated(from *QVariant, to *QVariant, progress float64) *QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = from.GetCthis()

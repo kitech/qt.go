@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QBuffer) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // /usr/include/qt/QtCore/qbuffer.h:60
 // index:0
 // Public
-// void QBuffer(class QObject *)
+// void QBuffer(QObject *)
 func NewQBuffer(parent *QObject /*777 QObject **/) *QBuffer {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -94,7 +94,7 @@ func NewQBuffer(parent *QObject /*777 QObject **/) *QBuffer {
 // /usr/include/qt/QtCore/qbuffer.h:61
 // index:1
 // Public
-// void QBuffer(class QByteArray *, class QObject *)
+// void QBuffer(QByteArray *, QObject *)
 func NewQBuffer_1(buf *QByteArray /*777 QByteArray **/, parent *QObject /*777 QObject **/) *QBuffer {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = buf.GetCthis()
@@ -141,7 +141,7 @@ func (this *QBuffer) Buffer_1() *QByteArray {
 // /usr/include/qt/QtCore/qbuffer.h:70
 // index:0
 // Public
-// void setBuffer(class QByteArray *)
+// void setBuffer(QByteArray *)
 func (this *QBuffer) SetBuffer(a *QByteArray /*777 QByteArray **/) {
 	var convArg0 = a.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer9setBufferEP10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -151,7 +151,7 @@ func (this *QBuffer) SetBuffer(a *QByteArray /*777 QByteArray **/) {
 // /usr/include/qt/QtCore/qbuffer.h:72
 // index:0
 // Public
-// void setData(const class QByteArray &)
+// void setData(const QByteArray &)
 func (this *QBuffer) SetData(data *QByteArray) {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer7setDataERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -248,7 +248,7 @@ func (this *QBuffer) CanReadLine() bool {
 // /usr/include/qt/QtCore/qbuffer.h:87
 // index:0
 // Protected virtual
-// void connectNotify(const class QMetaMethod &)
+// void connectNotify(const QMetaMethod &)
 func (this *QBuffer) ConnectNotify(arg0 *QMetaMethod) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer13connectNotifyERK11QMetaMethod", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -258,7 +258,7 @@ func (this *QBuffer) ConnectNotify(arg0 *QMetaMethod) {
 // /usr/include/qt/QtCore/qbuffer.h:88
 // index:0
 // Protected virtual
-// void disconnectNotify(const class QMetaMethod &)
+// void disconnectNotify(const QMetaMethod &)
 func (this *QBuffer) DisconnectNotify(arg0 *QMetaMethod) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer16disconnectNotifyERK11QMetaMethod", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -93,7 +93,7 @@ func DeleteQNetworkAddressEntry(*QNetworkAddressEntry) {
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:67
 // index:0
 // Public inline
-// void swap(class QNetworkAddressEntry &)
+// void swap(QNetworkAddressEntry &)
 func (this *QNetworkAddressEntry) Swap(other *QNetworkAddressEntry) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkAddressEntry4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -117,7 +117,7 @@ func (this *QNetworkAddressEntry) Ip() *QHostAddress /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:74
 // index:0
 // Public
-// void setIp(const class QHostAddress &)
+// void setIp(const QHostAddress &)
 func (this *QNetworkAddressEntry) SetIp(newIp *QHostAddress) {
 	var convArg0 = newIp.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkAddressEntry5setIpERK12QHostAddress", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -141,7 +141,7 @@ func (this *QNetworkAddressEntry) Netmask() *QHostAddress /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:77
 // index:0
 // Public
-// void setNetmask(const class QHostAddress &)
+// void setNetmask(const QHostAddress &)
 func (this *QNetworkAddressEntry) SetNetmask(newNetmask *QHostAddress) {
 	var convArg0 = newNetmask.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkAddressEntry10setNetmaskERK12QHostAddress", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -185,7 +185,7 @@ func (this *QNetworkAddressEntry) Broadcast() *QHostAddress /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:82
 // index:0
 // Public
-// void setBroadcast(const class QHostAddress &)
+// void setBroadcast(const QHostAddress &)
 func (this *QNetworkAddressEntry) SetBroadcast(newBroadcast *QHostAddress) {
 	var convArg0 = newBroadcast.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkAddressEntry12setBroadcastERK12QHostAddress", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

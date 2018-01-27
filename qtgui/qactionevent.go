@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -73,7 +73,7 @@ func (*QActionEvent) NewFromPointer(cthis unsafe.Pointer) *QActionEvent {
 // /usr/include/qt/QtGui/qevent.h:727
 // index:0
 // Public
-// void QActionEvent(int, class QAction *, class QAction *)
+// void QActionEvent(int, QAction *, QAction *)
 func NewQActionEvent(type_ int, action unsafe.Pointer /*666*/, before unsafe.Pointer /*666*/) *QActionEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionEventC2EiP7QActionS1_", ffiqt.FFI_TYPE_VOID, cthis, type_, action, before)

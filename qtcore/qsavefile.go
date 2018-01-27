@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func (this *QSaveFile) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // /usr/include/qt/QtCore/qsavefile.h:68
 // index:0
 // Public
-// void QSaveFile(const class QString &)
+// void QSaveFile(const QString &)
 func NewQSaveFile(name *QString) *QSaveFile {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = name.GetCthis()
@@ -93,7 +93,7 @@ func NewQSaveFile(name *QString) *QSaveFile {
 // /usr/include/qt/QtCore/qsavefile.h:70
 // index:1
 // Public
-// void QSaveFile(class QObject *)
+// void QSaveFile(QObject *)
 func NewQSaveFile_1(parent *QObject /*777 QObject **/) *QSaveFile {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -106,7 +106,7 @@ func NewQSaveFile_1(parent *QObject /*777 QObject **/) *QSaveFile {
 // /usr/include/qt/QtCore/qsavefile.h:71
 // index:2
 // Public
-// void QSaveFile(const class QString &, class QObject *)
+// void QSaveFile(const QString &, QObject *)
 func NewQSaveFile_2(name *QString, parent *QObject /*777 QObject **/) *QSaveFile {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = name.GetCthis()
@@ -143,7 +143,7 @@ func (this *QSaveFile) FileName() *QString /*123*/ {
 // /usr/include/qt/QtCore/qsavefile.h:76
 // index:0
 // Public
-// void setFileName(const class QString &)
+// void setFileName(const QString &)
 func (this *QSaveFile) SetFileName(name *QString) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFile11setFileNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -173,7 +173,7 @@ func (this *QSaveFile) CancelWriting() {
 // /usr/include/qt/QtCore/qsavefile.h:83
 // index:0
 // Public
-// void setDirectWriteFallback(_Bool)
+// void setDirectWriteFallback(bool)
 func (this *QSaveFile) SetDirectWriteFallback(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFile22setDirectWriteFallbackEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)

@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQPainterPathStroker() *QPainterPathStroker {
 // /usr/include/qt/QtGui/qpainterpath.h:247
 // index:1
 // Public
-// void QPainterPathStroker(const class QPen &)
+// void QPainterPathStroker(const QPen &)
 func NewQPainterPathStroker_1(pen *QPen) *QPainterPathStroker {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = pen.GetCthis()
@@ -235,7 +235,7 @@ func (this *QPainterPathStroker) DashOffset() float64 {
 // /usr/include/qt/QtGui/qpainterpath.h:272
 // index:0
 // Public
-// QPainterPath createStroke(const class QPainterPath &)
+// QPainterPath createStroke(const QPainterPath &)
 func (this *QPainterPathStroker) CreateStroke(path *QPainterPath) *QPainterPath /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = path.GetCthis()

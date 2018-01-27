@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -89,7 +89,7 @@ func (this *QQmlPropertyMap) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // /usr/include/qt/QtQml/qqmlpropertymap.h:58
 // index:0
 // Public
-// void QQmlPropertyMap(class QObject *)
+// void QQmlPropertyMap(QObject *)
 func NewQQmlPropertyMap(parent *qtcore.QObject /*777 QObject **/) *QQmlPropertyMap {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -111,7 +111,7 @@ func DeleteQQmlPropertyMap(*QQmlPropertyMap) {
 // /usr/include/qt/QtQml/qqmlpropertymap.h:61
 // index:0
 // Public
-// QVariant value(const class QString &)
+// QVariant value(const QString &)
 func (this *QQmlPropertyMap) Value(key *qtcore.QString) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
@@ -126,7 +126,7 @@ func (this *QQmlPropertyMap) Value(key *qtcore.QString) *qtcore.QVariant /*123*/
 // /usr/include/qt/QtQml/qqmlpropertymap.h:63
 // index:0
 // Public
-// void clear(const class QString &)
+// void clear(const QString &)
 func (this *QQmlPropertyMap) Clear(key *qtcore.QString) {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QQmlPropertyMap5clearERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -169,7 +169,7 @@ func (this *QQmlPropertyMap) IsEmpty() bool {
 // /usr/include/qt/QtQml/qqmlpropertymap.h:70
 // index:0
 // Public
-// bool contains(const class QString &)
+// bool contains(const QString &)
 func (this *QQmlPropertyMap) Contains(key *qtcore.QString) bool {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QQmlPropertyMap8containsERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -181,7 +181,7 @@ func (this *QQmlPropertyMap) Contains(key *qtcore.QString) bool {
 // /usr/include/qt/QtQml/qqmlpropertymap.h:76
 // index:0
 // Public
-// void valueChanged(const class QString &, const class QVariant &)
+// void valueChanged(const QString &, const QVariant &)
 func (this *QQmlPropertyMap) ValueChanged(key *qtcore.QString, value *qtcore.QVariant) {
 	var convArg0 = key.GetCthis()
 	var convArg1 = value.GetCthis()
@@ -192,7 +192,7 @@ func (this *QQmlPropertyMap) ValueChanged(key *qtcore.QString, value *qtcore.QVa
 // /usr/include/qt/QtQml/qqmlpropertymap.h:79
 // index:0
 // Protected virtual
-// QVariant updateValue(const class QString &, const class QVariant &)
+// QVariant updateValue(const QString &, const QVariant &)
 func (this *QQmlPropertyMap) UpdateValue(key *qtcore.QString, input *qtcore.QVariant) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()

@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -77,7 +77,7 @@ func (*QGraphicsGridLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsGridL
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:56
 // index:0
 // Public
-// void QGraphicsGridLayout(class QGraphicsLayoutItem *)
+// void QGraphicsGridLayout(QGraphicsLayoutItem *)
 func NewQGraphicsGridLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) *QGraphicsGridLayout {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -388,7 +388,7 @@ func (this *QGraphicsGridLayout) ColumnAlignment(column int) int {
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:101
 // index:0
 // Public
-// Qt::Alignment alignment(class QGraphicsLayoutItem *)
+// Qt::Alignment alignment(QGraphicsLayoutItem *)
 func (this *QGraphicsGridLayout) Alignment(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) int {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsGridLayout9alignmentEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -466,7 +466,7 @@ func (this *QGraphicsGridLayout) RemoveAt(index int) {
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:112
 // index:0
 // Public
-// void removeItem(class QGraphicsLayoutItem *)
+// void removeItem(QGraphicsLayoutItem *)
 func (this *QGraphicsGridLayout) RemoveItem(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsGridLayout10removeItemEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -485,7 +485,7 @@ func (this *QGraphicsGridLayout) Invalidate() {
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:117
 // index:0
 // Public virtual
-// void setGeometry(const class QRectF &)
+// void setGeometry(const QRectF &)
 func (this *QGraphicsGridLayout) SetGeometry(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsGridLayout11setGeometryERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -495,7 +495,7 @@ func (this *QGraphicsGridLayout) SetGeometry(rect *qtcore.QRectF) {
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:118
 // index:0
 // Public virtual
-// QSizeF sizeHint(Qt::SizeHint, const class QSizeF &)
+// QSizeF sizeHint(Qt::SizeHint, const QSizeF &)
 func (this *QGraphicsGridLayout) SizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = constraint.GetCthis()

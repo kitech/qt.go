@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -72,7 +72,7 @@ func (*QFontInfo) NewFromPointer(cthis unsafe.Pointer) *QFontInfo {
 // /usr/include/qt/QtGui/qfontinfo.h:53
 // index:0
 // Public
-// void QFontInfo(const class QFont &)
+// void QFontInfo(const QFont &)
 func NewQFontInfo(arg0 *QFont) *QFontInfo {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = arg0.GetCthis()
@@ -94,7 +94,7 @@ func DeleteQFontInfo(*QFontInfo) {
 // /usr/include/qt/QtGui/qfontinfo.h:59
 // index:0
 // Public inline
-// void swap(class QFontInfo &)
+// void swap(QFontInfo &)
 func (this *QFontInfo) Swap(other *QFontInfo) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFontInfo4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQStandardItem() *QStandardItem {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:66
 // index:1
 // Public
-// void QStandardItem(const class QString &)
+// void QStandardItem(const QString &)
 func NewQStandardItem_1(text *qtcore.QString) *QStandardItem {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = text.GetCthis()
@@ -97,7 +97,7 @@ func NewQStandardItem_1(text *qtcore.QString) *QStandardItem {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:67
 // index:2
 // Public
-// void QStandardItem(const class QIcon &, const class QString &)
+// void QStandardItem(const QIcon &, const QString &)
 func NewQStandardItem_2(icon *QIcon, text *qtcore.QString) *QStandardItem {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = icon.GetCthis()
@@ -146,7 +146,7 @@ func (this *QStandardItem) Data(role int) *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:72
 // index:0
 // Public virtual
-// void setData(const class QVariant &, int)
+// void setData(const QVariant &, int)
 func (this *QStandardItem) SetData(value *qtcore.QVariant, role int) {
 	var convArg0 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem7setDataERK8QVarianti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
@@ -170,7 +170,7 @@ func (this *QStandardItem) Text() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:77
 // index:0
 // Public inline
-// void setText(const class QString &)
+// void setText(const QString &)
 func (this *QStandardItem) SetText(text *qtcore.QString) {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem7setTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -194,7 +194,7 @@ func (this *QStandardItem) Icon() *QIcon /*123*/ {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:82
 // index:0
 // Public inline
-// void setIcon(const class QIcon &)
+// void setIcon(const QIcon &)
 func (this *QStandardItem) SetIcon(icon *QIcon) {
 	var convArg0 = icon.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem7setIconERK5QIcon", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -218,7 +218,7 @@ func (this *QStandardItem) ToolTip() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:88
 // index:0
 // Public inline
-// void setToolTip(const class QString &)
+// void setToolTip(const QString &)
 func (this *QStandardItem) SetToolTip(toolTip *qtcore.QString) {
 	var convArg0 = toolTip.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem10setToolTipERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -242,7 +242,7 @@ func (this *QStandardItem) StatusTip() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:95
 // index:0
 // Public inline
-// void setStatusTip(const class QString &)
+// void setStatusTip(const QString &)
 func (this *QStandardItem) SetStatusTip(statusTip *qtcore.QString) {
 	var convArg0 = statusTip.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem12setStatusTipERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -266,7 +266,7 @@ func (this *QStandardItem) WhatsThis() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:102
 // index:0
 // Public inline
-// void setWhatsThis(const class QString &)
+// void setWhatsThis(const QString &)
 func (this *QStandardItem) SetWhatsThis(whatsThis *qtcore.QString) {
 	var convArg0 = whatsThis.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem12setWhatsThisERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -290,7 +290,7 @@ func (this *QStandardItem) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:108
 // index:0
 // Public inline
-// void setSizeHint(const class QSize &)
+// void setSizeHint(const QSize &)
 func (this *QStandardItem) SetSizeHint(sizeHint *qtcore.QSize) {
 	var convArg0 = sizeHint.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem11setSizeHintERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -314,7 +314,7 @@ func (this *QStandardItem) Font() *QFont /*123*/ {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:113
 // index:0
 // Public inline
-// void setFont(const class QFont &)
+// void setFont(const QFont &)
 func (this *QStandardItem) SetFont(font *QFont) {
 	var convArg0 = font.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem7setFontERK5QFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -349,7 +349,7 @@ func (this *QStandardItem) Background() *QBrush /*123*/ {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:123
 // index:0
 // Public inline
-// void setBackground(const class QBrush &)
+// void setBackground(const QBrush &)
 func (this *QStandardItem) SetBackground(brush *QBrush) {
 	var convArg0 = brush.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem13setBackgroundERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -373,7 +373,7 @@ func (this *QStandardItem) Foreground() *QBrush /*123*/ {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:128
 // index:0
 // Public inline
-// void setForeground(const class QBrush &)
+// void setForeground(const QBrush &)
 func (this *QStandardItem) SetForeground(brush *QBrush) {
 	var convArg0 = brush.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem13setForegroundERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -417,7 +417,7 @@ func (this *QStandardItem) AccessibleText() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:138
 // index:0
 // Public inline
-// void setAccessibleText(const class QString &)
+// void setAccessibleText(const QString &)
 func (this *QStandardItem) SetAccessibleText(accessibleText *qtcore.QString) {
 	var convArg0 = accessibleText.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem17setAccessibleTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -441,7 +441,7 @@ func (this *QStandardItem) AccessibleDescription() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:143
 // index:0
 // Public inline
-// void setAccessibleDescription(const class QString &)
+// void setAccessibleDescription(const QString &)
 func (this *QStandardItem) SetAccessibleDescription(accessibleDescription *qtcore.QString) {
 	var convArg0 = accessibleDescription.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem24setAccessibleDescriptionERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -482,7 +482,7 @@ func (this *QStandardItem) IsEnabled() bool {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:151
 // index:0
 // Public
-// void setEnabled(_Bool)
+// void setEnabled(bool)
 func (this *QStandardItem) SetEnabled(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -502,7 +502,7 @@ func (this *QStandardItem) IsEditable() bool {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:156
 // index:0
 // Public
-// void setEditable(_Bool)
+// void setEditable(bool)
 func (this *QStandardItem) SetEditable(editable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem11setEditableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), editable)
 	gopp.ErrPrint(err, rv)
@@ -522,7 +522,7 @@ func (this *QStandardItem) IsSelectable() bool {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:161
 // index:0
 // Public
-// void setSelectable(_Bool)
+// void setSelectable(bool)
 func (this *QStandardItem) SetSelectable(selectable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem13setSelectableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), selectable)
 	gopp.ErrPrint(err, rv)
@@ -542,7 +542,7 @@ func (this *QStandardItem) IsCheckable() bool {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:166
 // index:0
 // Public
-// void setCheckable(_Bool)
+// void setCheckable(bool)
 func (this *QStandardItem) SetCheckable(checkable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem12setCheckableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), checkable)
 	gopp.ErrPrint(err, rv)
@@ -562,7 +562,7 @@ func (this *QStandardItem) IsAutoTristate() bool {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:171
 // index:0
 // Public
-// void setAutoTristate(_Bool)
+// void setAutoTristate(bool)
 func (this *QStandardItem) SetAutoTristate(tristate bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem15setAutoTristateEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), tristate)
 	gopp.ErrPrint(err, rv)
@@ -582,7 +582,7 @@ func (this *QStandardItem) IsUserTristate() bool {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:176
 // index:0
 // Public
-// void setUserTristate(_Bool)
+// void setUserTristate(bool)
 func (this *QStandardItem) SetUserTristate(tristate bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem15setUserTristateEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), tristate)
 	gopp.ErrPrint(err, rv)
@@ -602,7 +602,7 @@ func (this *QStandardItem) IsTristate() bool {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:180
 // index:0
 // Public
-// void setTristate(_Bool)
+// void setTristate(bool)
 func (this *QStandardItem) SetTristate(tristate bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem11setTristateEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), tristate)
 	gopp.ErrPrint(err, rv)
@@ -622,7 +622,7 @@ func (this *QStandardItem) IsDragEnabled() bool {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:187
 // index:0
 // Public
-// void setDragEnabled(_Bool)
+// void setDragEnabled(bool)
 func (this *QStandardItem) SetDragEnabled(dragEnabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem14setDragEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), dragEnabled)
 	gopp.ErrPrint(err, rv)
@@ -642,7 +642,7 @@ func (this *QStandardItem) IsDropEnabled() bool {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:192
 // index:0
 // Public
-// void setDropEnabled(_Bool)
+// void setDropEnabled(bool)
 func (this *QStandardItem) SetDropEnabled(dropEnabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem14setDropEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), dropEnabled)
 	gopp.ErrPrint(err, rv)
@@ -774,7 +774,7 @@ func (this *QStandardItem) Child(row int, column int) *QStandardItem /*777 QStan
 // /usr/include/qt/QtGui/qstandarditemmodel.h:208
 // index:0
 // Public
-// void setChild(int, int, class QStandardItem *)
+// void setChild(int, int, QStandardItem *)
 func (this *QStandardItem) SetChild(row int, column int, item *QStandardItem /*777 QStandardItem **/) {
 	var convArg2 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem8setChildEiiPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
@@ -784,7 +784,7 @@ func (this *QStandardItem) SetChild(row int, column int, item *QStandardItem /*7
 // /usr/include/qt/QtGui/qstandarditemmodel.h:209
 // index:1
 // Public inline
-// void setChild(int, class QStandardItem *)
+// void setChild(int, QStandardItem *)
 func (this *QStandardItem) SetChild_1(row int, item *QStandardItem /*777 QStandardItem **/) {
 	var convArg1 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem8setChildEiPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
@@ -848,7 +848,7 @@ func (this *QStandardItem) RemoveColumns(column int, count int) {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:225
 // index:0
 // Public inline
-// void insertRow(int, class QStandardItem *)
+// void insertRow(int, QStandardItem *)
 func (this *QStandardItem) InsertRow(row int, item *QStandardItem /*777 QStandardItem **/) {
 	var convArg1 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem9insertRowEiPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
@@ -858,7 +858,7 @@ func (this *QStandardItem) InsertRow(row int, item *QStandardItem /*777 QStandar
 // /usr/include/qt/QtGui/qstandarditemmodel.h:226
 // index:0
 // Public inline
-// void appendRow(class QStandardItem *)
+// void appendRow(QStandardItem *)
 func (this *QStandardItem) AppendRow(item *QStandardItem /*777 QStandardItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem9appendRowEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -912,7 +912,7 @@ func (this *QStandardItem) Type() int {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:240
 // index:0
 // Public virtual
-// void read(class QDataStream &)
+// void read(QDataStream &)
 func (this *QStandardItem) Read(in *qtcore.QDataStream) {
 	var convArg0 = in.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem4readER11QDataStream", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -922,7 +922,7 @@ func (this *QStandardItem) Read(in *qtcore.QDataStream) {
 // /usr/include/qt/QtGui/qstandarditemmodel.h:241
 // index:0
 // Public virtual
-// void write(class QDataStream &)
+// void write(QDataStream &)
 func (this *QStandardItem) Write(out *qtcore.QDataStream) {
 	var convArg0 = out.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStandardItem5writeER11QDataStream", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

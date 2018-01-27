@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -94,7 +94,7 @@ func DeleteQSGBasicGeometryNode(*QSGBasicGeometryNode) {
 // /usr/include/qt/QtQuick/qsgnode.h:200
 // index:0
 // Public
-// void setGeometry(class QSGGeometry *)
+// void setGeometry(QSGGeometry *)
 func (this *QSGBasicGeometryNode) SetGeometry(geometry *QSGGeometry /*777 QSGGeometry **/) {
 	var convArg0 = geometry.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGBasicGeometryNode11setGeometryEP11QSGGeometry", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -152,7 +152,7 @@ func (this *QSGBasicGeometryNode) ClipList() *QSGClipNode /*777 const QSGClipNod
 // /usr/include/qt/QtQuick/qsgnode.h:207
 // index:0
 // Public inline
-// void setRendererMatrix(const class QMatrix4x4 *)
+// void setRendererMatrix(const QMatrix4x4 *)
 func (this *QSGBasicGeometryNode) SetRendererMatrix(m *qtgui.QMatrix4x4 /*777 const QMatrix4x4 **/) {
 	var convArg0 = m.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGBasicGeometryNode17setRendererMatrixEPK10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -162,7 +162,7 @@ func (this *QSGBasicGeometryNode) SetRendererMatrix(m *qtgui.QMatrix4x4 /*777 co
 // /usr/include/qt/QtQuick/qsgnode.h:208
 // index:0
 // Public inline
-// void setRendererClipList(const class QSGClipNode *)
+// void setRendererClipList(const QSGClipNode *)
 func (this *QSGBasicGeometryNode) SetRendererClipList(c *QSGClipNode /*777 const QSGClipNode **/) {
 	var convArg0 = c.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGBasicGeometryNode19setRendererClipListEPK11QSGClipNode", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -172,7 +172,7 @@ func (this *QSGBasicGeometryNode) SetRendererClipList(c *QSGClipNode /*777 const
 // /usr/include/qt/QtQuick/qsgnode.h:211
 // index:0
 // Protected
-// void QSGBasicGeometryNode(enum QSGNode::NodeType)
+// void QSGBasicGeometryNode(QSGNode::NodeType)
 func NewQSGBasicGeometryNode(type_ int) *QSGBasicGeometryNode {
 	cthis := qtrt.Calloc(1, 256) // 112
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGBasicGeometryNodeC2EN7QSGNode8NodeTypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)

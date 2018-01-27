@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QDateTimeEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:95
 // index:0
 // Public
-// void QDateTimeEdit(class QWidget *)
+// void QDateTimeEdit(QWidget *)
 func NewQDateTimeEdit(parent *QWidget /*777 QWidget **/) *QDateTimeEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -102,7 +102,7 @@ func NewQDateTimeEdit(parent *QWidget /*777 QWidget **/) *QDateTimeEdit {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:96
 // index:1
 // Public
-// void QDateTimeEdit(const class QDateTime &, class QWidget *)
+// void QDateTimeEdit(const QDateTime &, QWidget *)
 func NewQDateTimeEdit_1(dt *qtcore.QDateTime, parent *QWidget /*777 QWidget **/) *QDateTimeEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = dt.GetCthis()
@@ -116,7 +116,7 @@ func NewQDateTimeEdit_1(dt *qtcore.QDateTime, parent *QWidget /*777 QWidget **/)
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:97
 // index:2
 // Public
-// void QDateTimeEdit(const class QDate &, class QWidget *)
+// void QDateTimeEdit(const QDate &, QWidget *)
 func NewQDateTimeEdit_2(d *qtcore.QDate, parent *QWidget /*777 QWidget **/) *QDateTimeEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = d.GetCthis()
@@ -130,7 +130,7 @@ func NewQDateTimeEdit_2(d *qtcore.QDate, parent *QWidget /*777 QWidget **/) *QDa
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:98
 // index:3
 // Public
-// void QDateTimeEdit(const class QTime &, class QWidget *)
+// void QDateTimeEdit(const QTime &, QWidget *)
 func NewQDateTimeEdit_3(t *qtcore.QTime, parent *QWidget /*777 QWidget **/) *QDateTimeEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = t.GetCthis()
@@ -144,7 +144,7 @@ func NewQDateTimeEdit_3(t *qtcore.QTime, parent *QWidget /*777 QWidget **/) *QDa
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:194
 // index:4
 // Protected
-// void QDateTimeEdit(const class QVariant &, class QVariant::Type, class QWidget *)
+// void QDateTimeEdit(const QVariant &, QVariant::Type, QWidget *)
 func NewQDateTimeEdit_4(val *qtcore.QVariant, parserType int, parent *QWidget /*777 QWidget **/) *QDateTimeEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = val.GetCthis()
@@ -232,7 +232,7 @@ func (this *QDateTimeEdit) ClearMinimumDateTime() {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:107
 // index:0
 // Public
-// void setMinimumDateTime(const class QDateTime &)
+// void setMinimumDateTime(const QDateTime &)
 func (this *QDateTimeEdit) SetMinimumDateTime(dt *qtcore.QDateTime) {
 	var convArg0 = dt.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit18setMinimumDateTimeERK9QDateTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -265,7 +265,7 @@ func (this *QDateTimeEdit) ClearMaximumDateTime() {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:111
 // index:0
 // Public
-// void setMaximumDateTime(const class QDateTime &)
+// void setMaximumDateTime(const QDateTime &)
 func (this *QDateTimeEdit) SetMaximumDateTime(dt *qtcore.QDateTime) {
 	var convArg0 = dt.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit18setMaximumDateTimeERK9QDateTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -275,7 +275,7 @@ func (this *QDateTimeEdit) SetMaximumDateTime(dt *qtcore.QDateTime) {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:113
 // index:0
 // Public
-// void setDateTimeRange(const class QDateTime &, const class QDateTime &)
+// void setDateTimeRange(const QDateTime &, const QDateTime &)
 func (this *QDateTimeEdit) SetDateTimeRange(min *qtcore.QDateTime, max *qtcore.QDateTime) {
 	var convArg0 = min.GetCthis()
 	var convArg1 = max.GetCthis()
@@ -300,7 +300,7 @@ func (this *QDateTimeEdit) MinimumDate() *qtcore.QDate /*123*/ {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:116
 // index:0
 // Public
-// void setMinimumDate(const class QDate &)
+// void setMinimumDate(const QDate &)
 func (this *QDateTimeEdit) SetMinimumDate(min *qtcore.QDate) {
 	var convArg0 = min.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit14setMinimumDateERK5QDate", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -333,7 +333,7 @@ func (this *QDateTimeEdit) MaximumDate() *qtcore.QDate /*123*/ {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:120
 // index:0
 // Public
-// void setMaximumDate(const class QDate &)
+// void setMaximumDate(const QDate &)
 func (this *QDateTimeEdit) SetMaximumDate(max *qtcore.QDate) {
 	var convArg0 = max.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit14setMaximumDateERK5QDate", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -352,7 +352,7 @@ func (this *QDateTimeEdit) ClearMaximumDate() {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:123
 // index:0
 // Public
-// void setDateRange(const class QDate &, const class QDate &)
+// void setDateRange(const QDate &, const QDate &)
 func (this *QDateTimeEdit) SetDateRange(min *qtcore.QDate, max *qtcore.QDate) {
 	var convArg0 = min.GetCthis()
 	var convArg1 = max.GetCthis()
@@ -377,7 +377,7 @@ func (this *QDateTimeEdit) MinimumTime() *qtcore.QTime /*123*/ {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:126
 // index:0
 // Public
-// void setMinimumTime(const class QTime &)
+// void setMinimumTime(const QTime &)
 func (this *QDateTimeEdit) SetMinimumTime(min *qtcore.QTime) {
 	var convArg0 = min.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit14setMinimumTimeERK5QTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -410,7 +410,7 @@ func (this *QDateTimeEdit) MaximumTime() *qtcore.QTime /*123*/ {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:130
 // index:0
 // Public
-// void setMaximumTime(const class QTime &)
+// void setMaximumTime(const QTime &)
 func (this *QDateTimeEdit) SetMaximumTime(max *qtcore.QTime) {
 	var convArg0 = max.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit14setMaximumTimeERK5QTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -429,7 +429,7 @@ func (this *QDateTimeEdit) ClearMaximumTime() {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:133
 // index:0
 // Public
-// void setTimeRange(const class QTime &, const class QTime &)
+// void setTimeRange(const QTime &, const QTime &)
 func (this *QDateTimeEdit) SetTimeRange(min *qtcore.QTime, max *qtcore.QTime) {
 	var convArg0 = min.GetCthis()
 	var convArg1 = max.GetCthis()
@@ -473,7 +473,7 @@ func (this *QDateTimeEdit) SectionAt(index int) int {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:138
 // index:0
 // Public
-// void setCurrentSection(enum QDateTimeEdit::Section)
+// void setCurrentSection(QDateTimeEdit::Section)
 func (this *QDateTimeEdit) SetCurrentSection(section int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit17setCurrentSectionENS_7SectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), section)
 	gopp.ErrPrint(err, rv)
@@ -514,7 +514,7 @@ func (this *QDateTimeEdit) CalendarWidget() *QCalendarWidget /*777 QCalendarWidg
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:144
 // index:0
 // Public
-// void setCalendarWidget(class QCalendarWidget *)
+// void setCalendarWidget(QCalendarWidget *)
 func (this *QDateTimeEdit) SetCalendarWidget(calendarWidget *QCalendarWidget /*777 QCalendarWidget **/) {
 	var convArg0 = calendarWidget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit17setCalendarWidgetEP15QCalendarWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -535,7 +535,7 @@ func (this *QDateTimeEdit) SectionCount() int {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:148
 // index:0
 // Public
-// void setSelectedSection(enum QDateTimeEdit::Section)
+// void setSelectedSection(QDateTimeEdit::Section)
 func (this *QDateTimeEdit) SetSelectedSection(section int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit18setSelectedSectionENS_7SectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), section)
 	gopp.ErrPrint(err, rv)
@@ -544,7 +544,7 @@ func (this *QDateTimeEdit) SetSelectedSection(section int) {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:150
 // index:0
 // Public
-// QString sectionText(enum QDateTimeEdit::Section)
+// QString sectionText(QDateTimeEdit::Section)
 func (this *QDateTimeEdit) SectionText(section int) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit11sectionTextENS_7SectionE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), section)
@@ -572,7 +572,7 @@ func (this *QDateTimeEdit) DisplayFormat() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:153
 // index:0
 // Public
-// void setDisplayFormat(const class QString &)
+// void setDisplayFormat(const QString &)
 func (this *QDateTimeEdit) SetDisplayFormat(format *qtcore.QString) {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit16setDisplayFormatERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -593,7 +593,7 @@ func (this *QDateTimeEdit) CalendarPopup() bool {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:156
 // index:0
 // Public
-// void setCalendarPopup(_Bool)
+// void setCalendarPopup(bool)
 func (this *QDateTimeEdit) SetCalendarPopup(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit16setCalendarPopupEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -654,7 +654,7 @@ func (this *QDateTimeEdit) StepBy(steps int) {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:166
 // index:0
 // Public virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QDateTimeEdit) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -666,7 +666,7 @@ func (this *QDateTimeEdit) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:168
 // index:0
 // Public
-// void dateTimeChanged(const class QDateTime &)
+// void dateTimeChanged(const QDateTime &)
 func (this *QDateTimeEdit) DateTimeChanged(dateTime *qtcore.QDateTime) {
 	var convArg0 = dateTime.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit15dateTimeChangedERK9QDateTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -676,7 +676,7 @@ func (this *QDateTimeEdit) DateTimeChanged(dateTime *qtcore.QDateTime) {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:169
 // index:0
 // Public
-// void timeChanged(const class QTime &)
+// void timeChanged(const QTime &)
 func (this *QDateTimeEdit) TimeChanged(time *qtcore.QTime) {
 	var convArg0 = time.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit11timeChangedERK5QTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -686,7 +686,7 @@ func (this *QDateTimeEdit) TimeChanged(time *qtcore.QTime) {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:170
 // index:0
 // Public
-// void dateChanged(const class QDate &)
+// void dateChanged(const QDate &)
 func (this *QDateTimeEdit) DateChanged(date *qtcore.QDate) {
 	var convArg0 = date.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit11dateChangedERK5QDate", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -696,7 +696,7 @@ func (this *QDateTimeEdit) DateChanged(date *qtcore.QDate) {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:173
 // index:0
 // Public
-// void setDateTime(const class QDateTime &)
+// void setDateTime(const QDateTime &)
 func (this *QDateTimeEdit) SetDateTime(dateTime *qtcore.QDateTime) {
 	var convArg0 = dateTime.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit11setDateTimeERK9QDateTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -706,7 +706,7 @@ func (this *QDateTimeEdit) SetDateTime(dateTime *qtcore.QDateTime) {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:174
 // index:0
 // Public
-// void setDate(const class QDate &)
+// void setDate(const QDate &)
 func (this *QDateTimeEdit) SetDate(date *qtcore.QDate) {
 	var convArg0 = date.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit7setDateERK5QDate", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -716,7 +716,7 @@ func (this *QDateTimeEdit) SetDate(date *qtcore.QDate) {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:175
 // index:0
 // Public
-// void setTime(const class QTime &)
+// void setTime(const QTime &)
 func (this *QDateTimeEdit) SetTime(time *qtcore.QTime) {
 	var convArg0 = time.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit7setTimeERK5QTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -726,7 +726,7 @@ func (this *QDateTimeEdit) SetTime(time *qtcore.QTime) {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:178
 // index:0
 // Protected virtual
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QDateTimeEdit) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -736,7 +736,7 @@ func (this *QDateTimeEdit) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEvent 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:180
 // index:0
 // Protected virtual
-// void wheelEvent(class QWheelEvent *)
+// void wheelEvent(QWheelEvent *)
 func (this *QDateTimeEdit) WheelEvent(event *qtgui.QWheelEvent /*777 QWheelEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit10wheelEventEP11QWheelEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -746,7 +746,7 @@ func (this *QDateTimeEdit) WheelEvent(event *qtgui.QWheelEvent /*777 QWheelEvent
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:182
 // index:0
 // Protected virtual
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QDateTimeEdit) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -756,7 +756,7 @@ func (this *QDateTimeEdit) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEve
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:183
 // index:0
 // Protected virtual
-// bool focusNextPrevChild(_Bool)
+// bool focusNextPrevChild(bool)
 func (this *QDateTimeEdit) FocusNextPrevChild(next bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), next)
 	gopp.ErrPrint(err, rv)
@@ -767,7 +767,7 @@ func (this *QDateTimeEdit) FocusNextPrevChild(next bool) bool {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:184
 // index:0
 // Protected virtual
-// QValidator::State validate(class QString &, int &)
+// QValidator::State validate(QString &, int &)
 func (this *QDateTimeEdit) Validate(input *qtcore.QString, pos int) int {
 	var convArg0 = input.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit8validateER7QStringRi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
@@ -779,7 +779,7 @@ func (this *QDateTimeEdit) Validate(input *qtcore.QString, pos int) int {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:185
 // index:0
 // Protected virtual
-// void fixup(class QString &)
+// void fixup(QString &)
 func (this *QDateTimeEdit) Fixup(input *qtcore.QString) {
 	var convArg0 = input.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit5fixupER7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -789,7 +789,7 @@ func (this *QDateTimeEdit) Fixup(input *qtcore.QString) {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:187
 // index:0
 // Protected virtual
-// QDateTime dateTimeFromText(const class QString &)
+// QDateTime dateTimeFromText(const QString &)
 func (this *QDateTimeEdit) DateTimeFromText(text *qtcore.QString) *qtcore.QDateTime /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = text.GetCthis()
@@ -804,7 +804,7 @@ func (this *QDateTimeEdit) DateTimeFromText(text *qtcore.QString) *qtcore.QDateT
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:188
 // index:0
 // Protected virtual
-// QString textFromDateTime(const class QDateTime &)
+// QString textFromDateTime(const QDateTime &)
 func (this *QDateTimeEdit) TextFromDateTime(dt *qtcore.QDateTime) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = dt.GetCthis()
@@ -830,7 +830,7 @@ func (this *QDateTimeEdit) StepEnabled() int {
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:190
 // index:0
 // Protected virtual
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QDateTimeEdit) MousePressEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -840,7 +840,7 @@ func (this *QDateTimeEdit) MousePressEvent(event *qtgui.QMouseEvent /*777 QMouse
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:191
 // index:0
 // Protected virtual
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QDateTimeEdit) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEdit10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -850,7 +850,7 @@ func (this *QDateTimeEdit) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:192
 // index:0
 // Protected
-// void initStyleOption(class QStyleOptionSpinBox *)
+// void initStyleOption(QStyleOptionSpinBox *)
 func (this *QDateTimeEdit) InitStyleOption(option *QStyleOptionSpinBox /*777 QStyleOptionSpinBox **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QDateTimeEdit15initStyleOptionEP19QStyleOptionSpinBox", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

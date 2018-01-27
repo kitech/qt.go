@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -275,7 +275,7 @@ func NewQPaintDevice() *QPaintDevice {
 // /usr/include/qt/QtGui/qpaintdevice.h:101
 // index:1
 // Private inline
-// void QPaintDevice(const class QPaintDevice &)
+// void QPaintDevice(const QPaintDevice &)
 func NewQPaintDevice_1(arg0 *QPaintDevice) *QPaintDevice {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = arg0.GetCthis()
@@ -288,7 +288,7 @@ func NewQPaintDevice_1(arg0 *QPaintDevice) *QPaintDevice {
 // /usr/include/qt/QtGui/qpaintdevice.h:94
 // index:0
 // Protected virtual
-// int metric(enum QPaintDevice::PaintDeviceMetric)
+// int metric(QPaintDevice::PaintDeviceMetric)
 func (this *QPaintDevice) Metric(metric int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice6metricENS_17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), metric)
 	gopp.ErrPrint(err, rv)
@@ -299,7 +299,7 @@ func (this *QPaintDevice) Metric(metric int) int {
 // /usr/include/qt/QtGui/qpaintdevice.h:95
 // index:0
 // Protected virtual
-// void initPainter(class QPainter *)
+// void initPainter(QPainter *)
 func (this *QPaintDevice) InitPainter(painter *QPainter /*777 QPainter **/) {
 	var convArg0 = painter.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice11initPainterEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -309,7 +309,7 @@ func (this *QPaintDevice) InitPainter(painter *QPainter /*777 QPainter **/) {
 // /usr/include/qt/QtGui/qpaintdevice.h:96
 // index:0
 // Protected virtual
-// QPaintDevice * redirected(class QPoint *)
+// QPaintDevice * redirected(QPoint *)
 func (this *QPaintDevice) Redirected(offset *qtcore.QPoint /*777 QPoint **/) *QPaintDevice /*777 QPaintDevice **/ {
 	var convArg0 = offset.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice10redirectedEP6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

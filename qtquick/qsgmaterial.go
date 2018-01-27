@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -129,7 +129,7 @@ func (this *QSGMaterial) CreateShader() *QSGMaterialShader /*777 QSGMaterialShad
 // /usr/include/qt/QtQuick/qsgmaterial.h:151
 // index:0
 // Public virtual
-// int compare(const class QSGMaterial *)
+// int compare(const QSGMaterial *)
 func (this *QSGMaterial) Compare(other *QSGMaterial /*777 const QSGMaterial **/) int {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGMaterial7compareEPKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -152,7 +152,7 @@ func (this *QSGMaterial) Flags() int {
 // /usr/include/qt/QtQuick/qsgmaterial.h:154
 // index:0
 // Public
-// void setFlag(QSGMaterial::Flags, _Bool)
+// void setFlag(QSGMaterial::Flags, bool)
 func (this *QSGMaterial) SetFlag(flags int, on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGMaterial7setFlagE6QFlagsINS_4FlagEEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags, on)
 	gopp.ErrPrint(err, rv)

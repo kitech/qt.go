@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QListView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // /usr/include/qt/QtWidgets/qlistview.h:81
 // index:0
 // Public
-// void QListView(class QWidget *)
+// void QListView(QWidget *)
 func NewQListView(parent *QWidget /*777 QWidget **/) *QListView {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -111,7 +111,7 @@ func DeleteQListView(*QListView) {
 // /usr/include/qt/QtWidgets/qlistview.h:84
 // index:0
 // Public
-// void setMovement(enum QListView::Movement)
+// void setMovement(QListView::Movement)
 func (this *QListView) SetMovement(movement int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView11setMovementENS_8MovementE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), movement)
 	gopp.ErrPrint(err, rv)
@@ -131,7 +131,7 @@ func (this *QListView) Movement() int {
 // /usr/include/qt/QtWidgets/qlistview.h:87
 // index:0
 // Public
-// void setFlow(enum QListView::Flow)
+// void setFlow(QListView::Flow)
 func (this *QListView) SetFlow(flow int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView7setFlowENS_4FlowE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flow)
 	gopp.ErrPrint(err, rv)
@@ -151,7 +151,7 @@ func (this *QListView) Flow() int {
 // /usr/include/qt/QtWidgets/qlistview.h:90
 // index:0
 // Public
-// void setWrapping(_Bool)
+// void setWrapping(bool)
 func (this *QListView) SetWrapping(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView11setWrappingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -171,7 +171,7 @@ func (this *QListView) IsWrapping() bool {
 // /usr/include/qt/QtWidgets/qlistview.h:93
 // index:0
 // Public
-// void setResizeMode(enum QListView::ResizeMode)
+// void setResizeMode(QListView::ResizeMode)
 func (this *QListView) SetResizeMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView13setResizeModeENS_10ResizeModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -191,7 +191,7 @@ func (this *QListView) ResizeMode() int {
 // /usr/include/qt/QtWidgets/qlistview.h:96
 // index:0
 // Public
-// void setLayoutMode(enum QListView::LayoutMode)
+// void setLayoutMode(QListView::LayoutMode)
 func (this *QListView) SetLayoutMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView13setLayoutModeENS_10LayoutModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -251,7 +251,7 @@ func (this *QListView) BatchSize() int {
 // /usr/include/qt/QtWidgets/qlistview.h:105
 // index:0
 // Public
-// void setGridSize(const class QSize &)
+// void setGridSize(const QSize &)
 func (this *QListView) SetGridSize(size *qtcore.QSize) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView11setGridSizeERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -275,7 +275,7 @@ func (this *QListView) GridSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlistview.h:108
 // index:0
 // Public
-// void setViewMode(enum QListView::ViewMode)
+// void setViewMode(QListView::ViewMode)
 func (this *QListView) SetViewMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView11setViewModeENS_8ViewModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -315,7 +315,7 @@ func (this *QListView) IsRowHidden(row int) bool {
 // /usr/include/qt/QtWidgets/qlistview.h:114
 // index:0
 // Public
-// void setRowHidden(int, _Bool)
+// void setRowHidden(int, bool)
 func (this *QListView) SetRowHidden(row int, hide bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView12setRowHiddenEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, hide)
 	gopp.ErrPrint(err, rv)
@@ -344,7 +344,7 @@ func (this *QListView) ModelColumn() int {
 // /usr/include/qt/QtWidgets/qlistview.h:119
 // index:0
 // Public
-// void setUniformItemSizes(_Bool)
+// void setUniformItemSizes(bool)
 func (this *QListView) SetUniformItemSizes(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView19setUniformItemSizesEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -364,7 +364,7 @@ func (this *QListView) UniformItemSizes() bool {
 // /usr/include/qt/QtWidgets/qlistview.h:122
 // index:0
 // Public
-// void setWordWrap(_Bool)
+// void setWordWrap(bool)
 func (this *QListView) SetWordWrap(on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView11setWordWrapEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
@@ -384,7 +384,7 @@ func (this *QListView) WordWrap() bool {
 // /usr/include/qt/QtWidgets/qlistview.h:125
 // index:0
 // Public
-// void setSelectionRectVisible(_Bool)
+// void setSelectionRectVisible(bool)
 func (this *QListView) SetSelectionRectVisible(show bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView23setSelectionRectVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), show)
 	gopp.ErrPrint(err, rv)
@@ -404,7 +404,7 @@ func (this *QListView) IsSelectionRectVisible() bool {
 // /usr/include/qt/QtWidgets/qlistview.h:128
 // index:0
 // Public virtual
-// QRect visualRect(const class QModelIndex &)
+// QRect visualRect(const QModelIndex &)
 func (this *QListView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
@@ -419,7 +419,7 @@ func (this *QListView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*123
 // /usr/include/qt/QtWidgets/qlistview.h:129
 // index:0
 // Public virtual
-// void scrollTo(const class QModelIndex &, enum QAbstractItemView::ScrollHint)
+// void scrollTo(const QModelIndex &, QAbstractItemView::ScrollHint)
 func (this *QListView) ScrollTo(index *qtcore.QModelIndex, hint int) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView8scrollToERK11QModelIndexN17QAbstractItemView10ScrollHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
@@ -429,7 +429,7 @@ func (this *QListView) ScrollTo(index *qtcore.QModelIndex, hint int) {
 // /usr/include/qt/QtWidgets/qlistview.h:130
 // index:0
 // Public virtual
-// QModelIndex indexAt(const class QPoint &)
+// QModelIndex indexAt(const QPoint &)
 func (this *QListView) IndexAt(p *qtcore.QPoint) *qtcore.QModelIndex /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = p.GetCthis()
@@ -462,7 +462,7 @@ func (this *QListView) Reset() {
 // /usr/include/qt/QtWidgets/qlistview.h:134
 // index:0
 // Public virtual
-// void setRootIndex(const class QModelIndex &)
+// void setRootIndex(const QModelIndex &)
 func (this *QListView) SetRootIndex(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView12setRootIndexERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -472,7 +472,7 @@ func (this *QListView) SetRootIndex(index *qtcore.QModelIndex) {
 // /usr/include/qt/QtWidgets/qlistview.h:142
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QListView) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -516,7 +516,7 @@ func (this *QListView) ContentsSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlistview.h:150
 // index:0
 // Protected virtual
-// void rowsInserted(const class QModelIndex &, int, int)
+// void rowsInserted(const QModelIndex &, int, int)
 func (this *QListView) RowsInserted(parent *qtcore.QModelIndex, start int, end int) {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView12rowsInsertedERK11QModelIndexii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
@@ -526,7 +526,7 @@ func (this *QListView) RowsInserted(parent *qtcore.QModelIndex, start int, end i
 // /usr/include/qt/QtWidgets/qlistview.h:151
 // index:0
 // Protected virtual
-// void rowsAboutToBeRemoved(const class QModelIndex &, int, int)
+// void rowsAboutToBeRemoved(const QModelIndex &, int, int)
 func (this *QListView) RowsAboutToBeRemoved(parent *qtcore.QModelIndex, start int, end int) {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView20rowsAboutToBeRemovedERK11QModelIndexii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, start, end)
@@ -536,7 +536,7 @@ func (this *QListView) RowsAboutToBeRemoved(parent *qtcore.QModelIndex, start in
 // /usr/include/qt/QtWidgets/qlistview.h:153
 // index:0
 // Protected virtual
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QListView) MouseMoveEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -546,7 +546,7 @@ func (this *QListView) MouseMoveEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/
 // /usr/include/qt/QtWidgets/qlistview.h:154
 // index:0
 // Protected virtual
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QListView) MouseReleaseEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -556,7 +556,7 @@ func (this *QListView) MouseReleaseEvent(e *qtgui.QMouseEvent /*777 QMouseEvent 
 // /usr/include/qt/QtWidgets/qlistview.h:156
 // index:0
 // Protected virtual
-// void wheelEvent(class QWheelEvent *)
+// void wheelEvent(QWheelEvent *)
 func (this *QListView) WheelEvent(e *qtgui.QWheelEvent /*777 QWheelEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView10wheelEventEP11QWheelEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -566,7 +566,7 @@ func (this *QListView) WheelEvent(e *qtgui.QWheelEvent /*777 QWheelEvent **/) {
 // /usr/include/qt/QtWidgets/qlistview.h:159
 // index:0
 // Protected virtual
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QListView) TimerEvent(e *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -576,7 +576,7 @@ func (this *QListView) TimerEvent(e *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 // /usr/include/qt/QtWidgets/qlistview.h:160
 // index:0
 // Protected virtual
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QListView) ResizeEvent(e *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -586,7 +586,7 @@ func (this *QListView) ResizeEvent(e *qtgui.QResizeEvent /*777 QResizeEvent **/)
 // /usr/include/qt/QtWidgets/qlistview.h:162
 // index:0
 // Protected virtual
-// void dragMoveEvent(class QDragMoveEvent *)
+// void dragMoveEvent(QDragMoveEvent *)
 func (this *QListView) DragMoveEvent(e *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView13dragMoveEventEP14QDragMoveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -596,7 +596,7 @@ func (this *QListView) DragMoveEvent(e *qtgui.QDragMoveEvent /*777 QDragMoveEven
 // /usr/include/qt/QtWidgets/qlistview.h:163
 // index:0
 // Protected virtual
-// void dragLeaveEvent(class QDragLeaveEvent *)
+// void dragLeaveEvent(QDragLeaveEvent *)
 func (this *QListView) DragLeaveEvent(e *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView14dragLeaveEventEP15QDragLeaveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -606,7 +606,7 @@ func (this *QListView) DragLeaveEvent(e *qtgui.QDragLeaveEvent /*777 QDragLeaveE
 // /usr/include/qt/QtWidgets/qlistview.h:164
 // index:0
 // Protected virtual
-// void dropEvent(class QDropEvent *)
+// void dropEvent(QDropEvent *)
 func (this *QListView) DropEvent(e *qtgui.QDropEvent /*777 QDropEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView9dropEventEP10QDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -630,7 +630,7 @@ func (this *QListView) ViewOptions() *QStyleOptionViewItem /*123*/ {
 // /usr/include/qt/QtWidgets/qlistview.h:169
 // index:0
 // Protected virtual
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QListView) PaintEvent(e *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -662,7 +662,7 @@ func (this *QListView) VerticalOffset() int {
 // /usr/include/qt/QtWidgets/qlistview.h:174
 // index:0
 // Protected
-// QRect rectForIndex(const class QModelIndex &)
+// QRect rectForIndex(const QModelIndex &)
 func (this *QListView) RectForIndex(index *qtcore.QModelIndex) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
@@ -677,7 +677,7 @@ func (this *QListView) RectForIndex(index *qtcore.QModelIndex) *qtcore.QRect /*1
 // /usr/include/qt/QtWidgets/qlistview.h:175
 // index:0
 // Protected
-// void setPositionForIndex(const class QPoint &, const class QModelIndex &)
+// void setPositionForIndex(const QPoint &, const QModelIndex &)
 func (this *QListView) SetPositionForIndex(position *qtcore.QPoint, index *qtcore.QModelIndex) {
 	var convArg0 = position.GetCthis()
 	var convArg1 = index.GetCthis()
@@ -688,7 +688,7 @@ func (this *QListView) SetPositionForIndex(position *qtcore.QPoint, index *qtcor
 // /usr/include/qt/QtWidgets/qlistview.h:177
 // index:0
 // Protected virtual
-// void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
+// void setSelection(const QRect &, QItemSelectionModel::SelectionFlags)
 func (this *QListView) SetSelection(rect *qtcore.QRect, command int) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView12setSelectionERK5QRect6QFlagsIN19QItemSelectionModel13SelectionFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
@@ -698,7 +698,7 @@ func (this *QListView) SetSelection(rect *qtcore.QRect, command int) {
 // /usr/include/qt/QtWidgets/qlistview.h:178
 // index:0
 // Protected virtual
-// QRegion visualRegionForSelection(const class QItemSelection &)
+// QRegion visualRegionForSelection(const QItemSelection &)
 func (this *QListView) VisualRegionForSelection(selection *qtcore.QItemSelection) *qtgui.QRegion /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = selection.GetCthis()
@@ -722,7 +722,7 @@ func (this *QListView) UpdateGeometries() {
 // /usr/include/qt/QtWidgets/qlistview.h:183
 // index:0
 // Protected virtual
-// bool isIndexHidden(const class QModelIndex &)
+// bool isIndexHidden(const QModelIndex &)
 func (this *QListView) IsIndexHidden(index *qtcore.QModelIndex) bool {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QListView13isIndexHiddenERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -734,7 +734,7 @@ func (this *QListView) IsIndexHidden(index *qtcore.QModelIndex) bool {
 // /usr/include/qt/QtWidgets/qlistview.h:185
 // index:0
 // Protected virtual
-// void selectionChanged(const class QItemSelection &, const class QItemSelection &)
+// void selectionChanged(const QItemSelection &, const QItemSelection &)
 func (this *QListView) SelectionChanged(selected *qtcore.QItemSelection, deselected *qtcore.QItemSelection) {
 	var convArg0 = selected.GetCthis()
 	var convArg1 = deselected.GetCthis()
@@ -745,7 +745,7 @@ func (this *QListView) SelectionChanged(selected *qtcore.QItemSelection, deselec
 // /usr/include/qt/QtWidgets/qlistview.h:186
 // index:0
 // Protected virtual
-// void currentChanged(const class QModelIndex &, const class QModelIndex &)
+// void currentChanged(const QModelIndex &, const QModelIndex &)
 func (this *QListView) CurrentChanged(current *qtcore.QModelIndex, previous *qtcore.QModelIndex) {
 	var convArg0 = current.GetCthis()
 	var convArg1 = previous.GetCthis()

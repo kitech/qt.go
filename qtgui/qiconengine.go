@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -93,7 +93,7 @@ func DeleteQIconEngine(*QIconEngine) {
 // /usr/include/qt/QtGui/qiconengine.h:56
 // index:0
 // Public pure virtual
-// void paint(class QPainter *, const class QRect &, class QIcon::Mode, class QIcon::State)
+// void paint(QPainter *, const QRect &, QIcon::Mode, QIcon::State)
 func (this *QIconEngine) Paint(painter *QPainter /*777 QPainter **/, rect *qtcore.QRect, mode int, state int) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = rect.GetCthis()
@@ -104,7 +104,7 @@ func (this *QIconEngine) Paint(painter *QPainter /*777 QPainter **/, rect *qtcor
 // /usr/include/qt/QtGui/qiconengine.h:57
 // index:0
 // Public virtual
-// QSize actualSize(const class QSize &, class QIcon::Mode, class QIcon::State)
+// QSize actualSize(const QSize &, QIcon::Mode, QIcon::State)
 func (this *QIconEngine) ActualSize(size *qtcore.QSize, mode int, state int) *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = size.GetCthis()
@@ -119,7 +119,7 @@ func (this *QIconEngine) ActualSize(size *qtcore.QSize, mode int, state int) *qt
 // /usr/include/qt/QtGui/qiconengine.h:58
 // index:0
 // Public virtual
-// QPixmap pixmap(const class QSize &, class QIcon::Mode, class QIcon::State)
+// QPixmap pixmap(const QSize &, QIcon::Mode, QIcon::State)
 func (this *QIconEngine) Pixmap(size *qtcore.QSize, mode int, state int) *QPixmap /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = size.GetCthis()
@@ -134,7 +134,7 @@ func (this *QIconEngine) Pixmap(size *qtcore.QSize, mode int, state int) *QPixma
 // /usr/include/qt/QtGui/qiconengine.h:60
 // index:0
 // Public virtual
-// void addPixmap(const class QPixmap &, class QIcon::Mode, class QIcon::State)
+// void addPixmap(const QPixmap &, QIcon::Mode, QIcon::State)
 func (this *QIconEngine) AddPixmap(pixmap *QPixmap, mode int, state int) {
 	var convArg0 = pixmap.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QIconEngine9addPixmapERK7QPixmapN5QIcon4ModeENS3_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, state)
@@ -144,7 +144,7 @@ func (this *QIconEngine) AddPixmap(pixmap *QPixmap, mode int, state int) {
 // /usr/include/qt/QtGui/qiconengine.h:61
 // index:0
 // Public virtual
-// void addFile(const class QString &, const class QSize &, class QIcon::Mode, class QIcon::State)
+// void addFile(const QString &, const QSize &, QIcon::Mode, QIcon::State)
 func (this *QIconEngine) AddFile(fileName *qtcore.QString, size *qtcore.QSize, mode int, state int) {
 	var convArg0 = fileName.GetCthis()
 	var convArg1 = size.GetCthis()
@@ -181,7 +181,7 @@ func (this *QIconEngine) Clone() *QIconEngine /*777 QIconEngine **/ {
 // /usr/include/qt/QtGui/qiconengine.h:65
 // index:0
 // Public virtual
-// bool read(class QDataStream &)
+// bool read(QDataStream &)
 func (this *QIconEngine) Read(in *qtcore.QDataStream) bool {
 	var convArg0 = in.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QIconEngine4readER11QDataStream", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -193,7 +193,7 @@ func (this *QIconEngine) Read(in *qtcore.QDataStream) bool {
 // /usr/include/qt/QtGui/qiconengine.h:66
 // index:0
 // Public virtual
-// bool write(class QDataStream &)
+// bool write(QDataStream &)
 func (this *QIconEngine) Write(out *qtcore.QDataStream) bool {
 	var convArg0 = out.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QIconEngine5writeER11QDataStream", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -230,7 +230,7 @@ func (this *QIconEngine) IsNull() bool {
 // /usr/include/qt/QtGui/qiconengine.h:82
 // index:0
 // Public
-// QPixmap scaledPixmap(const class QSize &, class QIcon::Mode, class QIcon::State, qreal)
+// QPixmap scaledPixmap(const QSize &, QIcon::Mode, QIcon::State, qreal)
 func (this *QIconEngine) ScaledPixmap(size *qtcore.QSize, mode int, state int, scale float64) *QPixmap /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = size.GetCthis()

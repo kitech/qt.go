@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -69,7 +69,7 @@ func (*QMutex) NewFromPointer(cthis unsafe.Pointer) *QMutex {
 // /usr/include/qt/QtCore/qmutex.h:130
 // index:0
 // Public
-// void QMutex(enum QMutex::RecursionMode)
+// void QMutex(QMutex::RecursionMode)
 func NewQMutex(mode int) *QMutex {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutexC2ENS_13RecursionModeE", ffiqt.FFI_TYPE_VOID, cthis, mode)

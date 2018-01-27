@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -149,7 +149,7 @@ func (this *QPicture) SetData(data string, size uint) {
 // /usr/include/qt/QtGui/qpicture.h:70
 // index:0
 // Public
-// bool play(class QPainter *)
+// bool play(QPainter *)
 func (this *QPicture) Play(p *QPainter /*777 QPainter **/) bool {
 	var convArg0 = p.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture4playEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -161,7 +161,7 @@ func (this *QPicture) Play(p *QPainter /*777 QPainter **/) bool {
 // /usr/include/qt/QtGui/qpicture.h:72
 // index:0
 // Public
-// bool load(class QIODevice *, const char *)
+// bool load(QIODevice *, const char *)
 func (this *QPicture) Load(dev *qtcore.QIODevice /*777 QIODevice **/, format string) bool {
 	var convArg0 = dev.GetCthis()
 	var convArg1 = qtrt.CString(format)
@@ -175,7 +175,7 @@ func (this *QPicture) Load(dev *qtcore.QIODevice /*777 QIODevice **/, format str
 // /usr/include/qt/QtGui/qpicture.h:73
 // index:1
 // Public
-// bool load(const class QString &, const char *)
+// bool load(const QString &, const char *)
 func (this *QPicture) Load_1(fileName *qtcore.QString, format string) bool {
 	var convArg0 = fileName.GetCthis()
 	var convArg1 = qtrt.CString(format)
@@ -189,7 +189,7 @@ func (this *QPicture) Load_1(fileName *qtcore.QString, format string) bool {
 // /usr/include/qt/QtGui/qpicture.h:74
 // index:0
 // Public
-// bool save(class QIODevice *, const char *)
+// bool save(QIODevice *, const char *)
 func (this *QPicture) Save(dev *qtcore.QIODevice /*777 QIODevice **/, format string) bool {
 	var convArg0 = dev.GetCthis()
 	var convArg1 = qtrt.CString(format)
@@ -203,7 +203,7 @@ func (this *QPicture) Save(dev *qtcore.QIODevice /*777 QIODevice **/, format str
 // /usr/include/qt/QtGui/qpicture.h:75
 // index:1
 // Public
-// bool save(const class QString &, const char *)
+// bool save(const QString &, const char *)
 func (this *QPicture) Save_1(fileName *qtcore.QString, format string) bool {
 	var convArg0 = fileName.GetCthis()
 	var convArg1 = qtrt.CString(format)
@@ -231,7 +231,7 @@ func (this *QPicture) BoundingRect() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtGui/qpicture.h:78
 // index:0
 // Public
-// void setBoundingRect(const class QRect &)
+// void setBoundingRect(const QRect &)
 func (this *QPicture) SetBoundingRect(r *qtcore.QRect) {
 	var convArg0 = r.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture15setBoundingRectERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -241,7 +241,7 @@ func (this *QPicture) SetBoundingRect(r *qtcore.QRect) {
 // /usr/include/qt/QtGui/qpicture.h:85
 // index:0
 // Public inline
-// void swap(class QPicture &)
+// void swap(QPicture &)
 func (this *QPicture) Swap(other *QPicture) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -271,7 +271,7 @@ func (this *QPicture) IsDetached() bool {
 // /usr/include/qt/QtGui/qpicture.h:94
 // index:0
 // Public static
-// const char * pictureFormat(const class QString &)
+// const char * pictureFormat(const QString &)
 func (this *QPicture) PictureFormat(fileName *qtcore.QString) string {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPicture13pictureFormatERK7QString", ffiqt.FFI_TYPE_POINTER, fileName)
 	gopp.ErrPrint(err, rv)
@@ -299,7 +299,7 @@ func (this *QPicture) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 // /usr/include/qt/QtGui/qpicture.h:106
 // index:0
 // Protected virtual
-// int metric(enum QPaintDevice::PaintDeviceMetric)
+// int metric(QPaintDevice::PaintDeviceMetric)
 func (this *QPicture) Metric(m int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPicture6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), m)
 	gopp.ErrPrint(err, rv)

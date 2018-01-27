@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QGraphicsColorizeEffect) MetaObject() *qtcore.QMetaObject /*777 cons
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:132
 // index:0
 // Public
-// void QGraphicsColorizeEffect(class QObject *)
+// void QGraphicsColorizeEffect(QObject *)
 func NewQGraphicsColorizeEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsColorizeEffect {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -136,7 +136,7 @@ func (this *QGraphicsColorizeEffect) Strength() float64 {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:139
 // index:0
 // Public
-// void setColor(const class QColor &)
+// void setColor(const QColor &)
 func (this *QGraphicsColorizeEffect) SetColor(c *qtgui.QColor) {
 	var convArg0 = c.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect8setColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -155,7 +155,7 @@ func (this *QGraphicsColorizeEffect) SetStrength(strength float64) {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:143
 // index:0
 // Public
-// void colorChanged(const class QColor &)
+// void colorChanged(const QColor &)
 func (this *QGraphicsColorizeEffect) ColorChanged(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect12colorChangedERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -174,7 +174,7 @@ func (this *QGraphicsColorizeEffect) StrengthChanged(strength float64) {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:147
 // index:0
 // Protected virtual
-// void draw(class QPainter *)
+// void draw(QPainter *)
 func (this *QGraphicsColorizeEffect) Draw(painter *qtgui.QPainter /*777 QPainter **/) {
 	var convArg0 = painter.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffect4drawEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

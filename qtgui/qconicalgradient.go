@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func NewQConicalGradient() *QConicalGradient {
 // /usr/include/qt/QtGui/qbrush.h:307
 // index:1
 // Public
-// void QConicalGradient(const class QPointF &, qreal)
+// void QConicalGradient(const QPointF &, qreal)
 func NewQConicalGradient_1(center *qtcore.QPointF, startAngle float64) *QConicalGradient {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = center.GetCthis()
@@ -124,7 +124,7 @@ func (this *QConicalGradient) Center() *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtGui/qbrush.h:311
 // index:0
 // Public
-// void setCenter(const class QPointF &)
+// void setCenter(const QPointF &)
 func (this *QConicalGradient) SetCenter(center *qtcore.QPointF) {
 	var convArg0 = center.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QConicalGradient9setCenterERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

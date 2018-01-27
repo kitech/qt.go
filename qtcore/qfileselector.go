@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QFileSelector) MetaObject() *QMetaObject /*777 const QMetaObject **/
 // /usr/include/qt/QtCore/qfileselector.h:53
 // index:0
 // Public
-// void QFileSelector(class QObject *)
+// void QFileSelector(QObject *)
 func NewQFileSelector(parent *QObject /*777 QObject **/) *QFileSelector {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -103,7 +103,7 @@ func DeleteQFileSelector(*QFileSelector) {
 // /usr/include/qt/QtCore/qfileselector.h:56
 // index:0
 // Public
-// QString select(const class QString &)
+// QString select(const QString &)
 func (this *QFileSelector) Select(filePath *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = filePath.GetCthis()
@@ -118,7 +118,7 @@ func (this *QFileSelector) Select(filePath *QString) *QString /*123*/ {
 // /usr/include/qt/QtCore/qfileselector.h:57
 // index:1
 // Public
-// QUrl select(const class QUrl &)
+// QUrl select(const QUrl &)
 func (this *QFileSelector) Select_1(filePath *QUrl) *QUrl /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = filePath.GetCthis()
@@ -133,7 +133,7 @@ func (this *QFileSelector) Select_1(filePath *QUrl) *QUrl /*123*/ {
 // /usr/include/qt/QtCore/qfileselector.h:60
 // index:0
 // Public
-// void setExtraSelectors(const class QStringList &)
+// void setExtraSelectors(const QStringList &)
 func (this *QFileSelector) SetExtraSelectors(list *QStringList) {
 	var convArg0 = list.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFileSelector17setExtraSelectorsERK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

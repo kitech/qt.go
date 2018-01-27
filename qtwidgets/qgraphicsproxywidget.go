@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QGraphicsProxyWidget) MetaObject() *qtcore.QMetaObject /*777 const Q
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:56
 // index:0
 // Public
-// void QGraphicsProxyWidget(class QGraphicsItem *, Qt::WindowFlags)
+// void QGraphicsProxyWidget(QGraphicsItem *, Qt::WindowFlags)
 func NewQGraphicsProxyWidget(parent *QGraphicsItem /*777 QGraphicsItem **/, wFlags int) *QGraphicsProxyWidget {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -111,7 +111,7 @@ func DeleteQGraphicsProxyWidget(*QGraphicsProxyWidget) {
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:59
 // index:0
 // Public
-// void setWidget(class QWidget *)
+// void setWidget(QWidget *)
 func (this *QGraphicsProxyWidget) SetWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget9setWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -133,7 +133,7 @@ func (this *QGraphicsProxyWidget) Widget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:62
 // index:0
 // Public
-// QRectF subWidgetRect(const class QWidget *)
+// QRectF subWidgetRect(const QWidget *)
 func (this *QGraphicsProxyWidget) SubWidgetRect(widget *QWidget /*777 const QWidget **/) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = widget.GetCthis()
@@ -148,7 +148,7 @@ func (this *QGraphicsProxyWidget) SubWidgetRect(widget *QWidget /*777 const QWid
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:64
 // index:0
 // Public virtual
-// void setGeometry(const class QRectF &)
+// void setGeometry(const QRectF &)
 func (this *QGraphicsProxyWidget) SetGeometry(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget11setGeometryERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -158,7 +158,7 @@ func (this *QGraphicsProxyWidget) SetGeometry(rect *qtcore.QRectF) {
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:66
 // index:0
 // Public virtual
-// void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
+// void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
 func (this *QGraphicsProxyWidget) Paint(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionGraphicsItem /*777 const QStyleOptionGraphicsItem **/, widget *QWidget /*777 QWidget **/) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = option.GetCthis()
@@ -181,7 +181,7 @@ func (this *QGraphicsProxyWidget) Type() int {
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:73
 // index:0
 // Public
-// QGraphicsProxyWidget * createProxyForChildWidget(class QWidget *)
+// QGraphicsProxyWidget * createProxyForChildWidget(QWidget *)
 func (this *QGraphicsProxyWidget) CreateProxyForChildWidget(child *QWidget /*777 QWidget **/) *QGraphicsProxyWidget /*777 QGraphicsProxyWidget **/ {
 	var convArg0 = child.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget25createProxyForChildWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -194,7 +194,7 @@ func (this *QGraphicsProxyWidget) CreateProxyForChildWidget(child *QWidget /*777
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:76
 // index:0
 // Protected virtual
-// QVariant itemChange(enum QGraphicsItem::GraphicsItemChange, const class QVariant &)
+// QVariant itemChange(QGraphicsItem::GraphicsItemChange, const QVariant &)
 func (this *QGraphicsProxyWidget) ItemChange(change int, value *qtcore.QVariant) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = value.GetCthis()
@@ -209,7 +209,7 @@ func (this *QGraphicsProxyWidget) ItemChange(change int, value *qtcore.QVariant)
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:78
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QGraphicsProxyWidget) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -221,7 +221,7 @@ func (this *QGraphicsProxyWidget) Event(event *qtcore.QEvent /*777 QEvent **/) b
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:79
 // index:0
 // Protected virtual
-// bool eventFilter(class QObject *, class QEvent *)
+// bool eventFilter(QObject *, QEvent *)
 func (this *QGraphicsProxyWidget) EventFilter(object *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = object.GetCthis()
 	var convArg1 = event.GetCthis()
@@ -234,7 +234,7 @@ func (this *QGraphicsProxyWidget) EventFilter(object *qtcore.QObject /*777 QObje
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:81
 // index:0
 // Protected virtual
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QGraphicsProxyWidget) ShowEvent(event *qtgui.QShowEvent /*777 QShowEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget9showEventEP10QShowEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -244,7 +244,7 @@ func (this *QGraphicsProxyWidget) ShowEvent(event *qtgui.QShowEvent /*777 QShowE
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:82
 // index:0
 // Protected virtual
-// void hideEvent(class QHideEvent *)
+// void hideEvent(QHideEvent *)
 func (this *QGraphicsProxyWidget) HideEvent(event *qtgui.QHideEvent /*777 QHideEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget9hideEventEP10QHideEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -254,7 +254,7 @@ func (this *QGraphicsProxyWidget) HideEvent(event *qtgui.QHideEvent /*777 QHideE
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:85
 // index:0
 // Protected virtual
-// void contextMenuEvent(class QGraphicsSceneContextMenuEvent *)
+// void contextMenuEvent(QGraphicsSceneContextMenuEvent *)
 func (this *QGraphicsProxyWidget) ContextMenuEvent(event *QGraphicsSceneContextMenuEvent /*777 QGraphicsSceneContextMenuEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget16contextMenuEventEP30QGraphicsSceneContextMenuEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -264,7 +264,7 @@ func (this *QGraphicsProxyWidget) ContextMenuEvent(event *QGraphicsSceneContextM
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:89
 // index:0
 // Protected virtual
-// void dragEnterEvent(class QGraphicsSceneDragDropEvent *)
+// void dragEnterEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsProxyWidget) DragEnterEvent(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget14dragEnterEventEP27QGraphicsSceneDragDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -274,7 +274,7 @@ func (this *QGraphicsProxyWidget) DragEnterEvent(event *QGraphicsSceneDragDropEv
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:90
 // index:0
 // Protected virtual
-// void dragLeaveEvent(class QGraphicsSceneDragDropEvent *)
+// void dragLeaveEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsProxyWidget) DragLeaveEvent(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget14dragLeaveEventEP27QGraphicsSceneDragDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -284,7 +284,7 @@ func (this *QGraphicsProxyWidget) DragLeaveEvent(event *QGraphicsSceneDragDropEv
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:91
 // index:0
 // Protected virtual
-// void dragMoveEvent(class QGraphicsSceneDragDropEvent *)
+// void dragMoveEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsProxyWidget) DragMoveEvent(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget13dragMoveEventEP27QGraphicsSceneDragDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -294,7 +294,7 @@ func (this *QGraphicsProxyWidget) DragMoveEvent(event *QGraphicsSceneDragDropEve
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:92
 // index:0
 // Protected virtual
-// void dropEvent(class QGraphicsSceneDragDropEvent *)
+// void dropEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsProxyWidget) DropEvent(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget9dropEventEP27QGraphicsSceneDragDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -304,7 +304,7 @@ func (this *QGraphicsProxyWidget) DropEvent(event *QGraphicsSceneDragDropEvent /
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:95
 // index:0
 // Protected virtual
-// void hoverEnterEvent(class QGraphicsSceneHoverEvent *)
+// void hoverEnterEvent(QGraphicsSceneHoverEvent *)
 func (this *QGraphicsProxyWidget) HoverEnterEvent(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget15hoverEnterEventEP24QGraphicsSceneHoverEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -314,7 +314,7 @@ func (this *QGraphicsProxyWidget) HoverEnterEvent(event *QGraphicsSceneHoverEven
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:96
 // index:0
 // Protected virtual
-// void hoverLeaveEvent(class QGraphicsSceneHoverEvent *)
+// void hoverLeaveEvent(QGraphicsSceneHoverEvent *)
 func (this *QGraphicsProxyWidget) HoverLeaveEvent(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget15hoverLeaveEventEP24QGraphicsSceneHoverEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -324,7 +324,7 @@ func (this *QGraphicsProxyWidget) HoverLeaveEvent(event *QGraphicsSceneHoverEven
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:97
 // index:0
 // Protected virtual
-// void hoverMoveEvent(class QGraphicsSceneHoverEvent *)
+// void hoverMoveEvent(QGraphicsSceneHoverEvent *)
 func (this *QGraphicsProxyWidget) HoverMoveEvent(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget14hoverMoveEventEP24QGraphicsSceneHoverEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -334,7 +334,7 @@ func (this *QGraphicsProxyWidget) HoverMoveEvent(event *QGraphicsSceneHoverEvent
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:98
 // index:0
 // Protected virtual
-// void grabMouseEvent(class QEvent *)
+// void grabMouseEvent(QEvent *)
 func (this *QGraphicsProxyWidget) GrabMouseEvent(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget14grabMouseEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -344,7 +344,7 @@ func (this *QGraphicsProxyWidget) GrabMouseEvent(event *qtcore.QEvent /*777 QEve
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:99
 // index:0
 // Protected virtual
-// void ungrabMouseEvent(class QEvent *)
+// void ungrabMouseEvent(QEvent *)
 func (this *QGraphicsProxyWidget) UngrabMouseEvent(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget16ungrabMouseEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -354,7 +354,7 @@ func (this *QGraphicsProxyWidget) UngrabMouseEvent(event *qtcore.QEvent /*777 QE
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:101
 // index:0
 // Protected virtual
-// void mouseMoveEvent(class QGraphicsSceneMouseEvent *)
+// void mouseMoveEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsProxyWidget) MouseMoveEvent(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget14mouseMoveEventEP24QGraphicsSceneMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -364,7 +364,7 @@ func (this *QGraphicsProxyWidget) MouseMoveEvent(event *QGraphicsSceneMouseEvent
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:102
 // index:0
 // Protected virtual
-// void mousePressEvent(class QGraphicsSceneMouseEvent *)
+// void mousePressEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsProxyWidget) MousePressEvent(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget15mousePressEventEP24QGraphicsSceneMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -374,7 +374,7 @@ func (this *QGraphicsProxyWidget) MousePressEvent(event *QGraphicsSceneMouseEven
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:103
 // index:0
 // Protected virtual
-// void mouseReleaseEvent(class QGraphicsSceneMouseEvent *)
+// void mouseReleaseEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsProxyWidget) MouseReleaseEvent(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget17mouseReleaseEventEP24QGraphicsSceneMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -384,7 +384,7 @@ func (this *QGraphicsProxyWidget) MouseReleaseEvent(event *QGraphicsSceneMouseEv
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:104
 // index:0
 // Protected virtual
-// void mouseDoubleClickEvent(class QGraphicsSceneMouseEvent *)
+// void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsProxyWidget) MouseDoubleClickEvent(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -394,7 +394,7 @@ func (this *QGraphicsProxyWidget) MouseDoubleClickEvent(event *QGraphicsSceneMou
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:106
 // index:0
 // Protected virtual
-// void wheelEvent(class QGraphicsSceneWheelEvent *)
+// void wheelEvent(QGraphicsSceneWheelEvent *)
 func (this *QGraphicsProxyWidget) WheelEvent(event *QGraphicsSceneWheelEvent /*777 QGraphicsSceneWheelEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget10wheelEventEP24QGraphicsSceneWheelEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -404,7 +404,7 @@ func (this *QGraphicsProxyWidget) WheelEvent(event *QGraphicsSceneWheelEvent /*7
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:109
 // index:0
 // Protected virtual
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QGraphicsProxyWidget) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -414,7 +414,7 @@ func (this *QGraphicsProxyWidget) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKe
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:110
 // index:0
 // Protected virtual
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QGraphicsProxyWidget) KeyReleaseEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget15keyReleaseEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -424,7 +424,7 @@ func (this *QGraphicsProxyWidget) KeyReleaseEvent(event *qtgui.QKeyEvent /*777 Q
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:112
 // index:0
 // Protected virtual
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QGraphicsProxyWidget) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -434,7 +434,7 @@ func (this *QGraphicsProxyWidget) FocusInEvent(event *qtgui.QFocusEvent /*777 QF
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:113
 // index:0
 // Protected virtual
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QGraphicsProxyWidget) FocusOutEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -444,7 +444,7 @@ func (this *QGraphicsProxyWidget) FocusOutEvent(event *qtgui.QFocusEvent /*777 Q
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:114
 // index:0
 // Protected virtual
-// bool focusNextPrevChild(_Bool)
+// bool focusNextPrevChild(bool)
 func (this *QGraphicsProxyWidget) FocusNextPrevChild(next bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), next)
 	gopp.ErrPrint(err, rv)
@@ -469,7 +469,7 @@ func (this *QGraphicsProxyWidget) InputMethodQuery(query int) *qtcore.QVariant /
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:117
 // index:0
 // Protected virtual
-// void inputMethodEvent(class QInputMethodEvent *)
+// void inputMethodEvent(QInputMethodEvent *)
 func (this *QGraphicsProxyWidget) InputMethodEvent(event *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget16inputMethodEventEP17QInputMethodEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -479,7 +479,7 @@ func (this *QGraphicsProxyWidget) InputMethodEvent(event *qtgui.QInputMethodEven
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:119
 // index:0
 // Protected virtual
-// QSizeF sizeHint(Qt::SizeHint, const class QSizeF &)
+// QSizeF sizeHint(Qt::SizeHint, const QSizeF &)
 func (this *QGraphicsProxyWidget) SizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = constraint.GetCthis()
@@ -494,7 +494,7 @@ func (this *QGraphicsProxyWidget) SizeHint(which int, constraint *qtcore.QSizeF)
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:120
 // index:0
 // Protected virtual
-// void resizeEvent(class QGraphicsSceneResizeEvent *)
+// void resizeEvent(QGraphicsSceneResizeEvent *)
 func (this *QGraphicsProxyWidget) ResizeEvent(event *QGraphicsSceneResizeEvent /*777 QGraphicsSceneResizeEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget11resizeEventEP25QGraphicsSceneResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -504,7 +504,7 @@ func (this *QGraphicsProxyWidget) ResizeEvent(event *QGraphicsSceneResizeEvent /
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:123
 // index:0
 // Protected
-// QGraphicsProxyWidget * newProxyWidget(const class QWidget *)
+// QGraphicsProxyWidget * newProxyWidget(const QWidget *)
 func (this *QGraphicsProxyWidget) NewProxyWidget(arg0 *QWidget /*777 const QWidget **/) *QGraphicsProxyWidget /*777 QGraphicsProxyWidget **/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidget14newProxyWidgetEPK7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

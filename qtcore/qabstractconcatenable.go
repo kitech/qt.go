@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QAbstractConcatenable) NewFromPointer(cthis unsafe.Pointer) *QAbstractCon
 // /usr/include/qt/QtCore/qstringbuilder.h:61
 // index:0
 // Protected static
-// void convertFromAscii(const char *, int, class QChar *&)
+// void convertFromAscii(const char *, int, QChar *&)
 func (this *QAbstractConcatenable) ConvertFromAscii(a string, len int, out *QChar) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractConcatenable16convertFromAsciiEPKciRP5QChar", ffiqt.FFI_TYPE_POINTER, a, len, out)
 	gopp.ErrPrint(err, rv)
@@ -81,7 +81,7 @@ func QAbstractConcatenable_ConvertFromAscii(a string, len int, out *QChar) {
 // /usr/include/qt/QtCore/qstringbuilder.h:62
 // index:1
 // Protected static inline
-// void convertFromAscii(char, class QChar *&)
+// void convertFromAscii(char, QChar *&)
 func (this *QAbstractConcatenable) ConvertFromAscii_1(a byte, out *QChar) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractConcatenable16convertFromAsciiEcRP5QChar", ffiqt.FFI_TYPE_POINTER, a, out)
 	gopp.ErrPrint(err, rv)
@@ -94,7 +94,7 @@ func QAbstractConcatenable_ConvertFromAscii_1(a byte, out *QChar) {
 // /usr/include/qt/QtCore/qstringbuilder.h:66
 // index:0
 // Protected static
-// void appendLatin1To(const char *, int, class QChar *)
+// void appendLatin1To(const char *, int, QChar *)
 func (this *QAbstractConcatenable) AppendLatin1To(a string, len int, out *QChar /*777 QChar **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractConcatenable14appendLatin1ToEPKciP5QChar", ffiqt.FFI_TYPE_POINTER, a, len, out)
 	gopp.ErrPrint(err, rv)

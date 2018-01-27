@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func (this *QObject) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // /usr/include/qt/QtCore/qobject.h:123
 // index:0
 // Public
-// void QObject(class QObject *)
+// void QObject(QObject *)
 func NewQObject(parent *QObject /*777 QObject **/) *QObject {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -102,7 +102,7 @@ func DeleteQObject(*QObject) {
 // /usr/include/qt/QtCore/qobject.h:126
 // index:0
 // Public virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QObject) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -114,7 +114,7 @@ func (this *QObject) Event(event *QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtCore/qobject.h:127
 // index:0
 // Public virtual
-// bool eventFilter(class QObject *, class QEvent *)
+// bool eventFilter(QObject *, QEvent *)
 func (this *QObject) EventFilter(watched *QObject /*777 QObject **/, event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = watched.GetCthis()
 	var convArg1 = event.GetCthis()
@@ -141,7 +141,7 @@ func (this *QObject) ObjectName() *QString /*123*/ {
 // /usr/include/qt/QtCore/qobject.h:145
 // index:0
 // Public
-// void setObjectName(const class QString &)
+// void setObjectName(const QString &)
 func (this *QObject) SetObjectName(name *QString) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject13setObjectNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -184,7 +184,7 @@ func (this *QObject) SignalsBlocked() bool {
 // /usr/include/qt/QtCore/qobject.h:151
 // index:0
 // Public
-// bool blockSignals(_Bool)
+// bool blockSignals(bool)
 func (this *QObject) BlockSignals(b bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject12blockSignalsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -207,7 +207,7 @@ func (this *QObject) Thread() *QThread /*777 QThread **/ {
 // /usr/include/qt/QtCore/qobject.h:154
 // index:0
 // Public
-// void moveToThread(class QThread *)
+// void moveToThread(QThread *)
 func (this *QObject) MoveToThread(thread *QThread /*777 QThread **/) {
 	var convArg0 = thread.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject12moveToThreadEP7QThread", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -237,7 +237,7 @@ func (this *QObject) KillTimer(id int) {
 // /usr/include/qt/QtCore/qobject.h:209
 // index:0
 // Public
-// void setParent(class QObject *)
+// void setParent(QObject *)
 func (this *QObject) SetParent(parent *QObject /*777 QObject **/) {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject9setParentEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -247,7 +247,7 @@ func (this *QObject) SetParent(parent *QObject /*777 QObject **/) {
 // /usr/include/qt/QtCore/qobject.h:210
 // index:0
 // Public
-// void installEventFilter(class QObject *)
+// void installEventFilter(QObject *)
 func (this *QObject) InstallEventFilter(filterObj *QObject /*777 QObject **/) {
 	var convArg0 = filterObj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject18installEventFilterEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -257,7 +257,7 @@ func (this *QObject) InstallEventFilter(filterObj *QObject /*777 QObject **/) {
 // /usr/include/qt/QtCore/qobject.h:211
 // index:0
 // Public
-// void removeEventFilter(class QObject *)
+// void removeEventFilter(QObject *)
 func (this *QObject) RemoveEventFilter(obj *QObject /*777 QObject **/) {
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject17removeEventFilterEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -267,7 +267,7 @@ func (this *QObject) RemoveEventFilter(obj *QObject /*777 QObject **/) {
 // /usr/include/qt/QtCore/qobject.h:213
 // index:0
 // Public static
-// QMetaObject::Connection connect(const class QObject *, const char *, const class QObject *, const char *, Qt::ConnectionType)
+// QMetaObject::Connection connect(const QObject *, const char *, const QObject *, const char *, Qt::ConnectionType)
 func (this *QObject) Connect(sender *QObject /*777 const QObject **/, signal string, receiver *QObject /*777 const QObject **/, member string, arg4 int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject7connectEPKS_PKcS1_S3_N2Qt14ConnectionTypeE", ffiqt.FFI_TYPE_POINTER, sender, signal, receiver, member, arg4)
 	gopp.ErrPrint(err, rv)
@@ -283,7 +283,7 @@ func QObject_Connect(sender *QObject /*777 const QObject **/, signal string, rec
 // /usr/include/qt/QtCore/qobject.h:216
 // index:1
 // Public static
-// QMetaObject::Connection connect(const class QObject *, const class QMetaMethod &, const class QObject *, const class QMetaMethod &, Qt::ConnectionType)
+// QMetaObject::Connection connect(const QObject *, const QMetaMethod &, const QObject *, const QMetaMethod &, Qt::ConnectionType)
 func (this *QObject) Connect_1(sender *QObject /*777 const QObject **/, signal *QMetaMethod, receiver *QObject /*777 const QObject **/, method *QMetaMethod, type_ int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject7connectEPKS_RK11QMetaMethodS1_S4_N2Qt14ConnectionTypeE", ffiqt.FFI_TYPE_POINTER, sender, signal, receiver, method, type_)
 	gopp.ErrPrint(err, rv)
@@ -299,7 +299,7 @@ func QObject_Connect_1(sender *QObject /*777 const QObject **/, signal *QMetaMet
 // /usr/include/qt/QtCore/qobject.h:220
 // index:2
 // Public inline
-// QMetaObject::Connection connect(const class QObject *, const char *, const char *, Qt::ConnectionType)
+// QMetaObject::Connection connect(const QObject *, const char *, const char *, Qt::ConnectionType)
 func (this *QObject) Connect_2(sender *QObject /*777 const QObject **/, signal string, member string, type_ int) int {
 	var convArg0 = sender.GetCthis()
 	var convArg1 = qtrt.CString(signal)
@@ -315,7 +315,7 @@ func (this *QObject) Connect_2(sender *QObject /*777 const QObject **/, signal s
 // /usr/include/qt/QtCore/qobject.h:342
 // index:0
 // Public static
-// bool disconnect(const class QObject *, const char *, const class QObject *, const char *)
+// bool disconnect(const QObject *, const char *, const QObject *, const char *)
 func (this *QObject) Disconnect(sender *QObject /*777 const QObject **/, signal string, receiver *QObject /*777 const QObject **/, member string) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject10disconnectEPKS_PKcS1_S3_", ffiqt.FFI_TYPE_POINTER, sender, signal, receiver, member)
 	gopp.ErrPrint(err, rv)
@@ -331,7 +331,7 @@ func QObject_Disconnect(sender *QObject /*777 const QObject **/, signal string, 
 // /usr/include/qt/QtCore/qobject.h:344
 // index:1
 // Public static
-// bool disconnect(const class QObject *, const class QMetaMethod &, const class QObject *, const class QMetaMethod &)
+// bool disconnect(const QObject *, const QMetaMethod &, const QObject *, const QMetaMethod &)
 func (this *QObject) Disconnect_1(sender *QObject /*777 const QObject **/, signal *QMetaMethod, receiver *QObject /*777 const QObject **/, member *QMetaMethod) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_", ffiqt.FFI_TYPE_POINTER, sender, signal, receiver, member)
 	gopp.ErrPrint(err, rv)
@@ -347,7 +347,7 @@ func QObject_Disconnect_1(sender *QObject /*777 const QObject **/, signal *QMeta
 // /usr/include/qt/QtCore/qobject.h:346
 // index:2
 // Public inline
-// bool disconnect(const char *, const class QObject *, const char *)
+// bool disconnect(const char *, const QObject *, const char *)
 func (this *QObject) Disconnect_2(signal string, receiver *QObject /*777 const QObject **/, member string) bool {
 	var convArg0 = qtrt.CString(signal)
 	defer qtrt.FreeMem(convArg0)
@@ -363,7 +363,7 @@ func (this *QObject) Disconnect_2(signal string, receiver *QObject /*777 const Q
 // /usr/include/qt/QtCore/qobject.h:349
 // index:3
 // Public inline
-// bool disconnect(const class QObject *, const char *)
+// bool disconnect(const QObject *, const char *)
 func (this *QObject) Disconnect_3(receiver *QObject /*777 const QObject **/, member string) bool {
 	var convArg0 = receiver.GetCthis()
 	var convArg1 = qtrt.CString(member)
@@ -413,7 +413,7 @@ func (this *QObject) DumpObjectInfo_1() {
 // /usr/include/qt/QtCore/qobject.h:397
 // index:0
 // Public
-// bool setProperty(const char *, const class QVariant &)
+// bool setProperty(const char *, const QVariant &)
 func (this *QObject) SetProperty(name string, value *QVariant) bool {
 	var convArg0 = qtrt.CString(name)
 	defer qtrt.FreeMem(convArg0)
@@ -459,7 +459,7 @@ func QObject_RegisterUserData() uint {
 // /usr/include/qt/QtCore/qobject.h:404
 // index:0
 // Public
-// void setUserData(uint, class QObjectUserData *)
+// void setUserData(uint, QObjectUserData *)
 func (this *QObject) SetUserData(id uint, data *QObjectUserData /*777 QObjectUserData **/) {
 	var convArg1 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject11setUserDataEjP15QObjectUserData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id, convArg1)
@@ -481,7 +481,7 @@ func (this *QObject) UserData(id uint) *QObjectUserData /*777 QObjectUserData **
 // /usr/include/qt/QtCore/qobject.h:409
 // index:0
 // Public
-// void destroyed(class QObject *)
+// void destroyed(QObject *)
 func (this *QObject) Destroyed(arg0 *QObject /*777 QObject **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject9destroyedEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -561,7 +561,7 @@ func (this *QObject) Receivers(signal string) int {
 // /usr/include/qt/QtCore/qobject.h:425
 // index:0
 // Protected
-// bool isSignalConnected(const class QMetaMethod &)
+// bool isSignalConnected(const QMetaMethod &)
 func (this *QObject) IsSignalConnected(signal *QMetaMethod) bool {
 	var convArg0 = signal.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QObject17isSignalConnectedERK11QMetaMethod", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -573,7 +573,7 @@ func (this *QObject) IsSignalConnected(signal *QMetaMethod) bool {
 // /usr/include/qt/QtCore/qobject.h:427
 // index:0
 // Protected virtual
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QObject) TimerEvent(event *QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -583,7 +583,7 @@ func (this *QObject) TimerEvent(event *QTimerEvent /*777 QTimerEvent **/) {
 // /usr/include/qt/QtCore/qobject.h:428
 // index:0
 // Protected virtual
-// void childEvent(class QChildEvent *)
+// void childEvent(QChildEvent *)
 func (this *QObject) ChildEvent(event *QChildEvent /*777 QChildEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject10childEventEP11QChildEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -593,7 +593,7 @@ func (this *QObject) ChildEvent(event *QChildEvent /*777 QChildEvent **/) {
 // /usr/include/qt/QtCore/qobject.h:429
 // index:0
 // Protected virtual
-// void customEvent(class QEvent *)
+// void customEvent(QEvent *)
 func (this *QObject) CustomEvent(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject11customEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -603,7 +603,7 @@ func (this *QObject) CustomEvent(event *QEvent /*777 QEvent **/) {
 // /usr/include/qt/QtCore/qobject.h:431
 // index:0
 // Protected virtual
-// void connectNotify(const class QMetaMethod &)
+// void connectNotify(const QMetaMethod &)
 func (this *QObject) ConnectNotify(signal *QMetaMethod) {
 	var convArg0 = signal.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject13connectNotifyERK11QMetaMethod", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -613,7 +613,7 @@ func (this *QObject) ConnectNotify(signal *QMetaMethod) {
 // /usr/include/qt/QtCore/qobject.h:432
 // index:0
 // Protected virtual
-// void disconnectNotify(const class QMetaMethod &)
+// void disconnectNotify(const QMetaMethod &)
 func (this *QObject) DisconnectNotify(signal *QMetaMethod) {
 	var convArg0 = signal.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject16disconnectNotifyERK11QMetaMethod", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

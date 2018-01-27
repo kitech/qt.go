@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -127,7 +127,7 @@ func (this *QMapNodeBase) Color() int {
 // /usr/include/qt/QtCore/qmap.h:97
 // index:0
 // Public inline
-// void setColor(enum QMapNodeBase::Color)
+// void setColor(QMapNodeBase::Color)
 func (this *QMapNodeBase) SetColor(c int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapNodeBase8setColorENS_5ColorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	gopp.ErrPrint(err, rv)

@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -188,7 +188,7 @@ func (this *QTime) ToString(f int) *QString /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:173
 // index:1
 // Public
-// QString toString(const class QString &)
+// QString toString(const QString &)
 func (this *QTime) ToString_1(format *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = format.GetCthis()
@@ -203,7 +203,7 @@ func (this *QTime) ToString_1(format *QString) *QString /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:175
 // index:2
 // Public
-// QString toString(class QStringView)
+// QString toString(QStringView)
 func (this *QTime) ToString_2(format *QStringView /*123*/) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = format.GetCthis()
@@ -243,7 +243,7 @@ func (this *QTime) AddSecs(secs int) *QTime /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:180
 // index:0
 // Public
-// int secsTo(const class QTime &)
+// int secsTo(const QTime &)
 func (this *QTime) SecsTo(arg0 *QTime) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QTime6secsToERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -269,7 +269,7 @@ func (this *QTime) AddMSecs(ms int) *QTime /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:182
 // index:0
 // Public
-// int msecsTo(const class QTime &)
+// int msecsTo(const QTime &)
 func (this *QTime) MsecsTo(arg0 *QTime) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QTime7msecsToERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -326,7 +326,7 @@ func QTime_CurrentTime() *QTime /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:196
 // index:0
 // Public static
-// QTime fromString(const class QString &, Qt::DateFormat)
+// QTime fromString(const QString &, Qt::DateFormat)
 func (this *QTime) FromString(s *QString, f int) *QTime /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QTime10fromStringERK7QStringN2Qt10DateFormatE", ffiqt.FFI_TYPE_POINTER, s, f)
 	gopp.ErrPrint(err, rv)
@@ -343,7 +343,7 @@ func QTime_FromString(s *QString, f int) *QTime /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:197
 // index:1
 // Public static
-// QTime fromString(const class QString &, const class QString &)
+// QTime fromString(const QString &, const QString &)
 func (this *QTime) FromString_1(s *QString, format *QString) *QTime /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QTime10fromStringERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, s, format)
 	gopp.ErrPrint(err, rv)

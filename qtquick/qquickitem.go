@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -100,7 +100,7 @@ func (this *QQuickItem) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtQuick/qquickitem.h:199
 // index:0
 // Public
-// void QQuickItem(class QQuickItem *)
+// void QQuickItem(QQuickItem *)
 func NewQQuickItem(parent *QQuickItem /*777 QQuickItem **/) *QQuickItem {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = parent.GetCthis()
@@ -146,7 +146,7 @@ func (this *QQuickItem) ParentItem() *QQuickItem /*777 QQuickItem **/ {
 // /usr/include/qt/QtQuick/qquickitem.h:204
 // index:0
 // Public
-// void setParentItem(class QQuickItem *)
+// void setParentItem(QQuickItem *)
 func (this *QQuickItem) SetParentItem(parent *QQuickItem /*777 QQuickItem **/) {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem13setParentItemEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -156,7 +156,7 @@ func (this *QQuickItem) SetParentItem(parent *QQuickItem /*777 QQuickItem **/) {
 // /usr/include/qt/QtQuick/qquickitem.h:205
 // index:0
 // Public
-// void stackBefore(const class QQuickItem *)
+// void stackBefore(const QQuickItem *)
 func (this *QQuickItem) StackBefore(arg0 *QQuickItem /*777 const QQuickItem **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem11stackBeforeEPKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -166,7 +166,7 @@ func (this *QQuickItem) StackBefore(arg0 *QQuickItem /*777 const QQuickItem **/)
 // /usr/include/qt/QtQuick/qquickitem.h:206
 // index:0
 // Public
-// void stackAfter(const class QQuickItem *)
+// void stackAfter(const QQuickItem *)
 func (this *QQuickItem) StackAfter(arg0 *QQuickItem /*777 const QQuickItem **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem10stackAfterEPKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -201,7 +201,7 @@ func (this *QQuickItem) Clip() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:212
 // index:0
 // Public
-// void setClip(_Bool)
+// void setClip(bool)
 func (this *QQuickItem) SetClip(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem7setClipEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -224,7 +224,7 @@ func (this *QQuickItem) State() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtQuick/qquickitem.h:215
 // index:0
 // Public
-// void setState(const class QString &)
+// void setState(const QString &)
 func (this *QQuickItem) SetState(arg0 *qtcore.QString) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem8setStateERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -308,7 +308,7 @@ func (this *QQuickItem) SetY(arg0 float64) {
 // /usr/include/qt/QtQuick/qquickitem.h:227
 // index:0
 // Public
-// void setPosition(const class QPointF &)
+// void setPosition(const QPointF &)
 func (this *QQuickItem) SetPosition(arg0 *qtcore.QPointF) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem11setPositionERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -430,7 +430,7 @@ func (this *QQuickItem) Size() *qtcore.QSizeF /*123*/ {
 // /usr/include/qt/QtQuick/qquickitem.h:242
 // index:0
 // Public
-// void setSize(const class QSizeF &)
+// void setSize(const QSizeF &)
 func (this *QQuickItem) SetSize(size *qtcore.QSizeF) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem7setSizeERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -451,7 +451,7 @@ func (this *QQuickItem) TransformOrigin() int {
 // /usr/include/qt/QtQuick/qquickitem.h:245
 // index:0
 // Public
-// void setTransformOrigin(enum QQuickItem::TransformOrigin)
+// void setTransformOrigin(QQuickItem::TransformOrigin)
 func (this *QQuickItem) SetTransformOrigin(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem18setTransformOriginENS_15TransformOriginE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -474,7 +474,7 @@ func (this *QQuickItem) TransformOriginPoint() *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtQuick/qquickitem.h:247
 // index:0
 // Public
-// void setTransformOriginPoint(const class QPointF &)
+// void setTransformOriginPoint(const QPointF &)
 func (this *QQuickItem) SetTransformOriginPoint(arg0 *qtcore.QPointF) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem23setTransformOriginPointERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -575,7 +575,7 @@ func (this *QQuickItem) IsVisible() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:261
 // index:0
 // Public
-// void setVisible(_Bool)
+// void setVisible(bool)
 func (this *QQuickItem) SetVisible(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -595,7 +595,7 @@ func (this *QQuickItem) IsEnabled() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:264
 // index:0
 // Public
-// void setEnabled(_Bool)
+// void setEnabled(bool)
 func (this *QQuickItem) SetEnabled(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -615,7 +615,7 @@ func (this *QQuickItem) Smooth() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:267
 // index:0
 // Public
-// void setSmooth(_Bool)
+// void setSmooth(bool)
 func (this *QQuickItem) SetSmooth(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem9setSmoothEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -635,7 +635,7 @@ func (this *QQuickItem) ActiveFocusOnTab() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:270
 // index:0
 // Public
-// void setActiveFocusOnTab(_Bool)
+// void setActiveFocusOnTab(bool)
 func (this *QQuickItem) SetActiveFocusOnTab(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem19setActiveFocusOnTabEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -655,7 +655,7 @@ func (this *QQuickItem) Antialiasing() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:273
 // index:0
 // Public
-// void setAntialiasing(_Bool)
+// void setAntialiasing(bool)
 func (this *QQuickItem) SetAntialiasing(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem15setAntialiasingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -684,7 +684,7 @@ func (this *QQuickItem) Flags() int {
 // /usr/include/qt/QtQuick/qquickitem.h:277
 // index:0
 // Public
-// void setFlag(enum QQuickItem::Flag, _Bool)
+// void setFlag(QQuickItem::Flag, bool)
 func (this *QQuickItem) SetFlag(flag int, enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem7setFlagENS_4FlagEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flag, enabled)
 	gopp.ErrPrint(err, rv)
@@ -752,7 +752,7 @@ func (this *QQuickItem) HasFocus() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:285
 // index:0
 // Public
-// void setFocus(_Bool)
+// void setFocus(bool)
 func (this *QQuickItem) SetFocus(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem8setFocusEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -761,7 +761,7 @@ func (this *QQuickItem) SetFocus(arg0 bool) {
 // /usr/include/qt/QtQuick/qquickitem.h:286
 // index:1
 // Public
-// void setFocus(_Bool, Qt::FocusReason)
+// void setFocus(bool, Qt::FocusReason)
 func (this *QQuickItem) SetFocus_1(focus bool, reason int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem8setFocusEbN2Qt11FocusReasonE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), focus, reason)
 	gopp.ErrPrint(err, rv)
@@ -793,7 +793,7 @@ func (this *QQuickItem) ScopedFocusItem() *QQuickItem /*777 QQuickItem **/ {
 // /usr/include/qt/QtQuick/qquickitem.h:290
 // index:0
 // Public
-// bool isAncestorOf(const class QQuickItem *)
+// bool isAncestorOf(const QQuickItem *)
 func (this *QQuickItem) IsAncestorOf(child *QQuickItem /*777 const QQuickItem **/) bool {
 	var convArg0 = child.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QQuickItem12isAncestorOfEPKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -827,7 +827,7 @@ func (this *QQuickItem) AcceptHoverEvents() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:295
 // index:0
 // Public
-// void setAcceptHoverEvents(_Bool)
+// void setAcceptHoverEvents(bool)
 func (this *QQuickItem) SetAcceptHoverEvents(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem20setAcceptHoverEventsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -847,7 +847,7 @@ func (this *QQuickItem) AcceptTouchEvents() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:297
 // index:0
 // Public
-// void setAcceptTouchEvents(_Bool)
+// void setAcceptTouchEvents(bool)
 func (this *QQuickItem) SetAcceptTouchEvents(accept bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem20setAcceptTouchEventsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), accept)
 	gopp.ErrPrint(err, rv)
@@ -870,7 +870,7 @@ func (this *QQuickItem) Cursor() *qtgui.QCursor /*123*/ {
 // /usr/include/qt/QtQuick/qquickitem.h:301
 // index:0
 // Public
-// void setCursor(const class QCursor &)
+// void setCursor(const QCursor &)
 func (this *QQuickItem) SetCursor(cursor *qtgui.QCursor) {
 	var convArg0 = cursor.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem9setCursorERK7QCursor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -929,7 +929,7 @@ func (this *QQuickItem) KeepMouseGrab() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:309
 // index:0
 // Public
-// void setKeepMouseGrab(_Bool)
+// void setKeepMouseGrab(bool)
 func (this *QQuickItem) SetKeepMouseGrab(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem16setKeepMouseGrabEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -949,7 +949,7 @@ func (this *QQuickItem) FiltersChildMouseEvents() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:311
 // index:0
 // Public
-// void setFiltersChildMouseEvents(_Bool)
+// void setFiltersChildMouseEvents(bool)
 func (this *QQuickItem) SetFiltersChildMouseEvents(filter bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem26setFiltersChildMouseEventsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), filter)
 	gopp.ErrPrint(err, rv)
@@ -978,7 +978,7 @@ func (this *QQuickItem) KeepTouchGrab() bool {
 // /usr/include/qt/QtQuick/qquickitem.h:316
 // index:0
 // Public
-// void setKeepTouchGrab(_Bool)
+// void setKeepTouchGrab(bool)
 func (this *QQuickItem) SetKeepTouchGrab(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem16setKeepTouchGrabEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -987,7 +987,7 @@ func (this *QQuickItem) SetKeepTouchGrab(arg0 bool) {
 // /usr/include/qt/QtQuick/qquickitem.h:319
 // index:0
 // Public
-// bool grabToImage(const class QJSValue &, const class QSize &)
+// bool grabToImage(const QJSValue &, const QSize &)
 func (this *QQuickItem) GrabToImage(callback *qtqml.QJSValue, targetSize *qtcore.QSize) bool {
 	var convArg0 = callback.GetCthis()
 	var convArg1 = targetSize.GetCthis()
@@ -1000,7 +1000,7 @@ func (this *QQuickItem) GrabToImage(callback *qtqml.QJSValue, targetSize *qtcore
 // /usr/include/qt/QtQuick/qquickitem.h:322
 // index:0
 // Public virtual
-// bool contains(const class QPointF &)
+// bool contains(const QPointF &)
 func (this *QQuickItem) Contains(point *qtcore.QPointF) bool {
 	var convArg0 = point.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QQuickItem8containsERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1012,7 +1012,7 @@ func (this *QQuickItem) Contains(point *qtcore.QPointF) bool {
 // /usr/include/qt/QtQuick/qquickitem.h:324
 // index:0
 // Public
-// QTransform itemTransform(class QQuickItem *, _Bool *)
+// QTransform itemTransform(QQuickItem *, bool *)
 func (this *QQuickItem) ItemTransform(arg0 *QQuickItem /*777 QQuickItem **/, arg1 unsafe.Pointer /*666*/) *qtgui.QTransform /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
@@ -1027,7 +1027,7 @@ func (this *QQuickItem) ItemTransform(arg0 *QQuickItem /*777 QQuickItem **/, arg
 // /usr/include/qt/QtQuick/qquickitem.h:325
 // index:0
 // Public
-// QPointF mapToItem(const class QQuickItem *, const class QPointF &)
+// QPointF mapToItem(const QQuickItem *, const QPointF &)
 func (this *QQuickItem) MapToItem(item *QQuickItem /*777 const QQuickItem **/, point *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = item.GetCthis()
@@ -1043,7 +1043,7 @@ func (this *QQuickItem) MapToItem(item *QQuickItem /*777 const QQuickItem **/, p
 // /usr/include/qt/QtQuick/qquickitem.h:326
 // index:0
 // Public
-// QPointF mapToScene(const class QPointF &)
+// QPointF mapToScene(const QPointF &)
 func (this *QQuickItem) MapToScene(point *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = point.GetCthis()
@@ -1058,7 +1058,7 @@ func (this *QQuickItem) MapToScene(point *qtcore.QPointF) *qtcore.QPointF /*123*
 // /usr/include/qt/QtQuick/qquickitem.h:327
 // index:0
 // Public
-// QPointF mapToGlobal(const class QPointF &)
+// QPointF mapToGlobal(const QPointF &)
 func (this *QQuickItem) MapToGlobal(point *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = point.GetCthis()
@@ -1073,7 +1073,7 @@ func (this *QQuickItem) MapToGlobal(point *qtcore.QPointF) *qtcore.QPointF /*123
 // /usr/include/qt/QtQuick/qquickitem.h:328
 // index:0
 // Public
-// QRectF mapRectToItem(const class QQuickItem *, const class QRectF &)
+// QRectF mapRectToItem(const QQuickItem *, const QRectF &)
 func (this *QQuickItem) MapRectToItem(item *QQuickItem /*777 const QQuickItem **/, rect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = item.GetCthis()
@@ -1089,7 +1089,7 @@ func (this *QQuickItem) MapRectToItem(item *QQuickItem /*777 const QQuickItem **
 // /usr/include/qt/QtQuick/qquickitem.h:329
 // index:0
 // Public
-// QRectF mapRectToScene(const class QRectF &)
+// QRectF mapRectToScene(const QRectF &)
 func (this *QQuickItem) MapRectToScene(rect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = rect.GetCthis()
@@ -1104,7 +1104,7 @@ func (this *QQuickItem) MapRectToScene(rect *qtcore.QRectF) *qtcore.QRectF /*123
 // /usr/include/qt/QtQuick/qquickitem.h:330
 // index:0
 // Public
-// QPointF mapFromItem(const class QQuickItem *, const class QPointF &)
+// QPointF mapFromItem(const QQuickItem *, const QPointF &)
 func (this *QQuickItem) MapFromItem(item *QQuickItem /*777 const QQuickItem **/, point *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = item.GetCthis()
@@ -1120,7 +1120,7 @@ func (this *QQuickItem) MapFromItem(item *QQuickItem /*777 const QQuickItem **/,
 // /usr/include/qt/QtQuick/qquickitem.h:331
 // index:0
 // Public
-// QPointF mapFromScene(const class QPointF &)
+// QPointF mapFromScene(const QPointF &)
 func (this *QQuickItem) MapFromScene(point *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = point.GetCthis()
@@ -1135,7 +1135,7 @@ func (this *QQuickItem) MapFromScene(point *qtcore.QPointF) *qtcore.QPointF /*12
 // /usr/include/qt/QtQuick/qquickitem.h:332
 // index:0
 // Public
-// QPointF mapFromGlobal(const class QPointF &)
+// QPointF mapFromGlobal(const QPointF &)
 func (this *QQuickItem) MapFromGlobal(point *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = point.GetCthis()
@@ -1150,7 +1150,7 @@ func (this *QQuickItem) MapFromGlobal(point *qtcore.QPointF) *qtcore.QPointF /*1
 // /usr/include/qt/QtQuick/qquickitem.h:333
 // index:0
 // Public
-// QRectF mapRectFromItem(const class QQuickItem *, const class QRectF &)
+// QRectF mapRectFromItem(const QQuickItem *, const QRectF &)
 func (this *QQuickItem) MapRectFromItem(item *QQuickItem /*777 const QQuickItem **/, rect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = item.GetCthis()
@@ -1166,7 +1166,7 @@ func (this *QQuickItem) MapRectFromItem(item *QQuickItem /*777 const QQuickItem 
 // /usr/include/qt/QtQuick/qquickitem.h:334
 // index:0
 // Public
-// QRectF mapRectFromScene(const class QRectF &)
+// QRectF mapRectFromScene(const QRectF &)
 func (this *QQuickItem) MapRectFromScene(rect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = rect.GetCthis()
@@ -1208,7 +1208,7 @@ func (this *QQuickItem) ForceActiveFocus_1(reason int) {
 // /usr/include/qt/QtQuick/qquickitem.h:344
 // index:0
 // Public
-// QQuickItem * nextItemInFocusChain(_Bool)
+// QQuickItem * nextItemInFocusChain(bool)
 func (this *QQuickItem) NextItemInFocusChain(forward bool) *QQuickItem /*777 QQuickItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem20nextItemInFocusChainEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), forward)
 	gopp.ErrPrint(err, rv)
@@ -1278,7 +1278,7 @@ func (this *QQuickItem) Update() {
 // /usr/include/qt/QtQuick/qquickitem.h:365
 // index:0
 // Public
-// void childrenRectChanged(const class QRectF &)
+// void childrenRectChanged(const QRectF &)
 func (this *QQuickItem) ChildrenRectChanged(arg0 *qtcore.QRectF) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem19childrenRectChangedERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1297,7 +1297,7 @@ func (this *QQuickItem) BaselineOffsetChanged(arg0 float64) {
 // /usr/include/qt/QtQuick/qquickitem.h:367
 // index:0
 // Public
-// void stateChanged(const class QString &)
+// void stateChanged(const QString &)
 func (this *QQuickItem) StateChanged(arg0 *qtcore.QString) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem12stateChangedERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1307,7 +1307,7 @@ func (this *QQuickItem) StateChanged(arg0 *qtcore.QString) {
 // /usr/include/qt/QtQuick/qquickitem.h:368
 // index:0
 // Public
-// void focusChanged(_Bool)
+// void focusChanged(bool)
 func (this *QQuickItem) FocusChanged(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem12focusChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -1316,7 +1316,7 @@ func (this *QQuickItem) FocusChanged(arg0 bool) {
 // /usr/include/qt/QtQuick/qquickitem.h:369
 // index:0
 // Public
-// void activeFocusChanged(_Bool)
+// void activeFocusChanged(bool)
 func (this *QQuickItem) ActiveFocusChanged(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem18activeFocusChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -1325,7 +1325,7 @@ func (this *QQuickItem) ActiveFocusChanged(arg0 bool) {
 // /usr/include/qt/QtQuick/qquickitem.h:370
 // index:0
 // Public
-// void activeFocusOnTabChanged(_Bool)
+// void activeFocusOnTabChanged(bool)
 func (this *QQuickItem) ActiveFocusOnTabChanged(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem23activeFocusOnTabChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -1334,7 +1334,7 @@ func (this *QQuickItem) ActiveFocusOnTabChanged(arg0 bool) {
 // /usr/include/qt/QtQuick/qquickitem.h:371
 // index:0
 // Public
-// void parentChanged(class QQuickItem *)
+// void parentChanged(QQuickItem *)
 func (this *QQuickItem) ParentChanged(arg0 *QQuickItem /*777 QQuickItem **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem13parentChangedEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1344,7 +1344,7 @@ func (this *QQuickItem) ParentChanged(arg0 *QQuickItem /*777 QQuickItem **/) {
 // /usr/include/qt/QtQuick/qquickitem.h:372
 // index:0
 // Public
-// void transformOriginChanged(enum QQuickItem::TransformOrigin)
+// void transformOriginChanged(QQuickItem::TransformOrigin)
 func (this *QQuickItem) TransformOriginChanged(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem22transformOriginChangedENS_15TransformOriginE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -1353,7 +1353,7 @@ func (this *QQuickItem) TransformOriginChanged(arg0 int) {
 // /usr/include/qt/QtQuick/qquickitem.h:373
 // index:0
 // Public
-// void smoothChanged(_Bool)
+// void smoothChanged(bool)
 func (this *QQuickItem) SmoothChanged(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem13smoothChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -1362,7 +1362,7 @@ func (this *QQuickItem) SmoothChanged(arg0 bool) {
 // /usr/include/qt/QtQuick/qquickitem.h:374
 // index:0
 // Public
-// void antialiasingChanged(_Bool)
+// void antialiasingChanged(bool)
 func (this *QQuickItem) AntialiasingChanged(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem19antialiasingChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -1371,7 +1371,7 @@ func (this *QQuickItem) AntialiasingChanged(arg0 bool) {
 // /usr/include/qt/QtQuick/qquickitem.h:375
 // index:0
 // Public
-// void clipChanged(_Bool)
+// void clipChanged(bool)
 func (this *QQuickItem) ClipChanged(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem11clipChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -1380,7 +1380,7 @@ func (this *QQuickItem) ClipChanged(arg0 bool) {
 // /usr/include/qt/QtQuick/qquickitem.h:376
 // index:0
 // Public
-// void windowChanged(class QQuickWindow *)
+// void windowChanged(QQuickWindow *)
 func (this *QQuickItem) WindowChanged(window *QQuickWindow /*777 QQuickWindow **/) {
 	var convArg0 = window.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem13windowChangedEP12QQuickWindow", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1516,7 +1516,7 @@ func (this *QQuickItem) ImplicitHeightChanged() {
 // /usr/include/qt/QtQuick/qquickitem.h:395
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QQuickItem) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1588,7 +1588,7 @@ func (this *QQuickItem) ComponentComplete() {
 // /usr/include/qt/QtQuick/qquickitem.h:411
 // index:0
 // Protected virtual
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QQuickItem) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1598,7 +1598,7 @@ func (this *QQuickItem) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/
 // /usr/include/qt/QtQuick/qquickitem.h:412
 // index:0
 // Protected virtual
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QQuickItem) KeyReleaseEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem15keyReleaseEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1608,7 +1608,7 @@ func (this *QQuickItem) KeyReleaseEvent(event *qtgui.QKeyEvent /*777 QKeyEvent *
 // /usr/include/qt/QtQuick/qquickitem.h:414
 // index:0
 // Protected virtual
-// void inputMethodEvent(class QInputMethodEvent *)
+// void inputMethodEvent(QInputMethodEvent *)
 func (this *QQuickItem) InputMethodEvent(arg0 *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem16inputMethodEventEP17QInputMethodEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1618,7 +1618,7 @@ func (this *QQuickItem) InputMethodEvent(arg0 *qtgui.QInputMethodEvent /*777 QIn
 // /usr/include/qt/QtQuick/qquickitem.h:416
 // index:0
 // Protected virtual
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QQuickItem) FocusInEvent(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1628,7 +1628,7 @@ func (this *QQuickItem) FocusInEvent(arg0 *qtgui.QFocusEvent /*777 QFocusEvent *
 // /usr/include/qt/QtQuick/qquickitem.h:417
 // index:0
 // Protected virtual
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QQuickItem) FocusOutEvent(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1638,7 +1638,7 @@ func (this *QQuickItem) FocusOutEvent(arg0 *qtgui.QFocusEvent /*777 QFocusEvent 
 // /usr/include/qt/QtQuick/qquickitem.h:418
 // index:0
 // Protected virtual
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QQuickItem) MousePressEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1648,7 +1648,7 @@ func (this *QQuickItem) MousePressEvent(event *qtgui.QMouseEvent /*777 QMouseEve
 // /usr/include/qt/QtQuick/qquickitem.h:419
 // index:0
 // Protected virtual
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QQuickItem) MouseMoveEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1658,7 +1658,7 @@ func (this *QQuickItem) MouseMoveEvent(event *qtgui.QMouseEvent /*777 QMouseEven
 // /usr/include/qt/QtQuick/qquickitem.h:420
 // index:0
 // Protected virtual
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QQuickItem) MouseReleaseEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1668,7 +1668,7 @@ func (this *QQuickItem) MouseReleaseEvent(event *qtgui.QMouseEvent /*777 QMouseE
 // /usr/include/qt/QtQuick/qquickitem.h:421
 // index:0
 // Protected virtual
-// void mouseDoubleClickEvent(class QMouseEvent *)
+// void mouseDoubleClickEvent(QMouseEvent *)
 func (this *QQuickItem) MouseDoubleClickEvent(event *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem21mouseDoubleClickEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1696,7 +1696,7 @@ func (this *QQuickItem) TouchUngrabEvent() {
 // /usr/include/qt/QtQuick/qquickitem.h:425
 // index:0
 // Protected virtual
-// void wheelEvent(class QWheelEvent *)
+// void wheelEvent(QWheelEvent *)
 func (this *QQuickItem) WheelEvent(event *qtgui.QWheelEvent /*777 QWheelEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem10wheelEventEP11QWheelEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1706,7 +1706,7 @@ func (this *QQuickItem) WheelEvent(event *qtgui.QWheelEvent /*777 QWheelEvent **
 // /usr/include/qt/QtQuick/qquickitem.h:427
 // index:0
 // Protected virtual
-// void touchEvent(class QTouchEvent *)
+// void touchEvent(QTouchEvent *)
 func (this *QQuickItem) TouchEvent(event *qtgui.QTouchEvent /*777 QTouchEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem10touchEventEP11QTouchEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1716,7 +1716,7 @@ func (this *QQuickItem) TouchEvent(event *qtgui.QTouchEvent /*777 QTouchEvent **
 // /usr/include/qt/QtQuick/qquickitem.h:428
 // index:0
 // Protected virtual
-// void hoverEnterEvent(class QHoverEvent *)
+// void hoverEnterEvent(QHoverEvent *)
 func (this *QQuickItem) HoverEnterEvent(event *qtgui.QHoverEvent /*777 QHoverEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem15hoverEnterEventEP11QHoverEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1726,7 +1726,7 @@ func (this *QQuickItem) HoverEnterEvent(event *qtgui.QHoverEvent /*777 QHoverEve
 // /usr/include/qt/QtQuick/qquickitem.h:429
 // index:0
 // Protected virtual
-// void hoverMoveEvent(class QHoverEvent *)
+// void hoverMoveEvent(QHoverEvent *)
 func (this *QQuickItem) HoverMoveEvent(event *qtgui.QHoverEvent /*777 QHoverEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem14hoverMoveEventEP11QHoverEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1736,7 +1736,7 @@ func (this *QQuickItem) HoverMoveEvent(event *qtgui.QHoverEvent /*777 QHoverEven
 // /usr/include/qt/QtQuick/qquickitem.h:430
 // index:0
 // Protected virtual
-// void hoverLeaveEvent(class QHoverEvent *)
+// void hoverLeaveEvent(QHoverEvent *)
 func (this *QQuickItem) HoverLeaveEvent(event *qtgui.QHoverEvent /*777 QHoverEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem15hoverLeaveEventEP11QHoverEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1746,7 +1746,7 @@ func (this *QQuickItem) HoverLeaveEvent(event *qtgui.QHoverEvent /*777 QHoverEve
 // /usr/include/qt/QtQuick/qquickitem.h:432
 // index:0
 // Protected virtual
-// void dragEnterEvent(class QDragEnterEvent *)
+// void dragEnterEvent(QDragEnterEvent *)
 func (this *QQuickItem) DragEnterEvent(arg0 *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem14dragEnterEventEP15QDragEnterEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1756,7 +1756,7 @@ func (this *QQuickItem) DragEnterEvent(arg0 *qtgui.QDragEnterEvent /*777 QDragEn
 // /usr/include/qt/QtQuick/qquickitem.h:433
 // index:0
 // Protected virtual
-// void dragMoveEvent(class QDragMoveEvent *)
+// void dragMoveEvent(QDragMoveEvent *)
 func (this *QQuickItem) DragMoveEvent(arg0 *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem13dragMoveEventEP14QDragMoveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1766,7 +1766,7 @@ func (this *QQuickItem) DragMoveEvent(arg0 *qtgui.QDragMoveEvent /*777 QDragMove
 // /usr/include/qt/QtQuick/qquickitem.h:434
 // index:0
 // Protected virtual
-// void dragLeaveEvent(class QDragLeaveEvent *)
+// void dragLeaveEvent(QDragLeaveEvent *)
 func (this *QQuickItem) DragLeaveEvent(arg0 *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem14dragLeaveEventEP15QDragLeaveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1776,7 +1776,7 @@ func (this *QQuickItem) DragLeaveEvent(arg0 *qtgui.QDragLeaveEvent /*777 QDragLe
 // /usr/include/qt/QtQuick/qquickitem.h:435
 // index:0
 // Protected virtual
-// void dropEvent(class QDropEvent *)
+// void dropEvent(QDropEvent *)
 func (this *QQuickItem) DropEvent(arg0 *qtgui.QDropEvent /*777 QDropEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickItem9dropEventEP10QDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1786,7 +1786,7 @@ func (this *QQuickItem) DropEvent(arg0 *qtgui.QDropEvent /*777 QDropEvent **/) {
 // /usr/include/qt/QtQuick/qquickitem.h:437
 // index:0
 // Protected virtual
-// bool childMouseEventFilter(class QQuickItem *, class QEvent *)
+// bool childMouseEventFilter(QQuickItem *, QEvent *)
 func (this *QQuickItem) ChildMouseEventFilter(arg0 *QQuickItem /*777 QQuickItem **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
@@ -1808,7 +1808,7 @@ func (this *QQuickItem) WindowDeactivateEvent() {
 // /usr/include/qt/QtQuick/qquickitem.h:440
 // index:0
 // Protected virtual
-// void geometryChanged(const class QRectF &, const class QRectF &)
+// void geometryChanged(const QRectF &, const QRectF &)
 func (this *QQuickItem) GeometryChanged(newGeometry *qtcore.QRectF, oldGeometry *qtcore.QRectF) {
 	var convArg0 = newGeometry.GetCthis()
 	var convArg1 = oldGeometry.GetCthis()

@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QStringListModel) MetaObject() *QMetaObject /*777 const QMetaObject 
 // /usr/include/qt/QtCore/qstringlistmodel.h:55
 // index:0
 // Public
-// void QStringListModel(class QObject *)
+// void QStringListModel(QObject *)
 func NewQStringListModel(parent *QObject /*777 QObject **/) *QStringListModel {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = parent.GetCthis()
@@ -94,7 +94,7 @@ func NewQStringListModel(parent *QObject /*777 QObject **/) *QStringListModel {
 // /usr/include/qt/QtCore/qstringlistmodel.h:56
 // index:1
 // Public
-// void QStringListModel(const class QStringList &, class QObject *)
+// void QStringListModel(const QStringList &, QObject *)
 func NewQStringListModel_1(strings *QStringList, parent *QObject /*777 QObject **/) *QStringListModel {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = strings.GetCthis()
@@ -108,7 +108,7 @@ func NewQStringListModel_1(strings *QStringList, parent *QObject /*777 QObject *
 // /usr/include/qt/QtCore/qstringlistmodel.h:58
 // index:0
 // Public virtual
-// int rowCount(const class QModelIndex &)
+// int rowCount(const QModelIndex &)
 func (this *QStringListModel) RowCount(parent *QModelIndex) int {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel8rowCountERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -120,7 +120,7 @@ func (this *QStringListModel) RowCount(parent *QModelIndex) int {
 // /usr/include/qt/QtCore/qstringlistmodel.h:59
 // index:0
 // Public virtual
-// QModelIndex sibling(int, int, const class QModelIndex &)
+// QModelIndex sibling(int, int, const QModelIndex &)
 func (this *QStringListModel) Sibling(row int, column int, idx *QModelIndex) *QModelIndex /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg2 = idx.GetCthis()
@@ -135,7 +135,7 @@ func (this *QStringListModel) Sibling(row int, column int, idx *QModelIndex) *QM
 // /usr/include/qt/QtCore/qstringlistmodel.h:61
 // index:0
 // Public virtual
-// QVariant data(const class QModelIndex &, int)
+// QVariant data(const QModelIndex &, int)
 func (this *QStringListModel) Data(index *QModelIndex, role int) *QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
@@ -150,7 +150,7 @@ func (this *QStringListModel) Data(index *QModelIndex, role int) *QVariant /*123
 // /usr/include/qt/QtCore/qstringlistmodel.h:62
 // index:0
 // Public virtual
-// bool setData(const class QModelIndex &, const class QVariant &, int)
+// bool setData(const QModelIndex &, const QVariant &, int)
 func (this *QStringListModel) SetData(index *QModelIndex, value *QVariant, role int) bool {
 	var convArg0 = index.GetCthis()
 	var convArg1 = value.GetCthis()
@@ -163,7 +163,7 @@ func (this *QStringListModel) SetData(index *QModelIndex, value *QVariant, role 
 // /usr/include/qt/QtCore/qstringlistmodel.h:64
 // index:0
 // Public virtual
-// Qt::ItemFlags flags(const class QModelIndex &)
+// Qt::ItemFlags flags(const QModelIndex &)
 func (this *QStringListModel) Flags(index *QModelIndex) int {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel5flagsERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -175,7 +175,7 @@ func (this *QStringListModel) Flags(index *QModelIndex) int {
 // /usr/include/qt/QtCore/qstringlistmodel.h:66
 // index:0
 // Public virtual
-// bool insertRows(int, int, const class QModelIndex &)
+// bool insertRows(int, int, const QModelIndex &)
 func (this *QStringListModel) InsertRows(row int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel10insertRowsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
@@ -187,7 +187,7 @@ func (this *QStringListModel) InsertRows(row int, count int, parent *QModelIndex
 // /usr/include/qt/QtCore/qstringlistmodel.h:67
 // index:0
 // Public virtual
-// bool removeRows(int, int, const class QModelIndex &)
+// bool removeRows(int, int, const QModelIndex &)
 func (this *QStringListModel) RemoveRows(row int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel10removeRowsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
@@ -208,7 +208,7 @@ func (this *QStringListModel) Sort(column int, order int) {
 // /usr/include/qt/QtCore/qstringlistmodel.h:72
 // index:0
 // Public
-// void setStringList(const class QStringList &)
+// void setStringList(const QStringList &)
 func (this *QStringListModel) SetStringList(strings *QStringList) {
 	var convArg0 = strings.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModel13setStringListERK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

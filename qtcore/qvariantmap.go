@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -103,7 +103,7 @@ func (this *QVariantMap) IsDetached_0() bool {
 	return 0 == 0
 }
 
-// void setSharable(_Bool)
+// void setSharable(bool)
 func (this *QVariantMap) SetSharable_0() {
 	// QVariantMap_setSharable_0()
 }
@@ -305,7 +305,7 @@ func (this *QVariantMap) ConstKeyValueEnd_0() {
 	// QVariantMap_constKeyValueEnd_0()
 }
 
-// QMap::iterator erase(class QMap::iterator)
+// QMap::iterator erase(QMap::iterator)
 func (this *QVariantMap) Erase_0() {
 	// QVariantMap_erase_0()
 }
@@ -356,7 +356,7 @@ func (this *QVariantMap) Insert_0() {
 	// QVariantMap_insert_0()
 }
 
-// QMap::iterator insert(class QMap::const_iterator, const Key &, const T &)
+// QMap::iterator insert(QMap::const_iterator, const Key &, const T &)
 func (this *QVariantMap) Insert_1() {
 	// QVariantMap_insert_1()
 }
@@ -366,7 +366,7 @@ func (this *QVariantMap) InsertMulti_0() {
 	// QVariantMap_insertMulti_0()
 }
 
-// QMap::iterator insertMulti(class QMap::const_iterator, const Key &, const T &)
+// QMap::iterator insertMulti(QMap::const_iterator, const Key &, const T &)
 func (this *QVariantMap) InsertMulti_1() {
 	// QVariantMap_insertMulti_1()
 }
@@ -397,7 +397,7 @@ func (this *QVariantMap) Detach_helper_0() {
 	// QVariantMap_detach_helper_0()
 }
 
-// bool isValidIterator(const class QMap::const_iterator &)
+// bool isValidIterator(const QMap::const_iterator &)
 func (this *QVariantMap) IsValidIterator_0() bool {
 	// QVariantMap_isValidIterator_0()
 	return 0 == 0

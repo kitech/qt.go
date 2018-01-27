@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func NewQTextListFormat() *QTextListFormat {
 // /usr/include/qt/QtGui/qtextformat.h:714
 // index:1
 // Protected
-// void QTextListFormat(const class QTextFormat &)
+// void QTextListFormat(const QTextFormat &)
 func NewQTextListFormat_1(fmt *QTextFormat) *QTextListFormat {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = fmt.GetCthis()
@@ -109,7 +109,7 @@ func (this *QTextListFormat) IsValid() bool {
 // /usr/include/qt/QtGui/qtextformat.h:697
 // index:0
 // Public inline
-// void setStyle(enum QTextListFormat::Style)
+// void setStyle(QTextListFormat::Style)
 func (this *QTextListFormat) SetStyle(style int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextListFormat8setStyleENS_5StyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	gopp.ErrPrint(err, rv)
@@ -149,7 +149,7 @@ func (this *QTextListFormat) Indent() int {
 // /usr/include/qt/QtGui/qtextformat.h:705
 // index:0
 // Public inline
-// void setNumberPrefix(const class QString &)
+// void setNumberPrefix(const QString &)
 func (this *QTextListFormat) SetNumberPrefix(numberPrefix *qtcore.QString) {
 	var convArg0 = numberPrefix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextListFormat15setNumberPrefixERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -173,7 +173,7 @@ func (this *QTextListFormat) NumberPrefix() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qtextformat.h:709
 // index:0
 // Public inline
-// void setNumberSuffix(const class QString &)
+// void setNumberSuffix(const QString &)
 func (this *QTextListFormat) SetNumberSuffix(numberSuffix *qtcore.QString) {
 	var convArg0 = numberSuffix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextListFormat15setNumberSuffixERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

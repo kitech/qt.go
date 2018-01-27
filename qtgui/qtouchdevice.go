@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -140,7 +140,7 @@ func (this *QTouchDevice) MaximumTouchPoints() int {
 // /usr/include/qt/QtGui/qtouchdevice.h:83
 // index:0
 // Public
-// void setName(const class QString &)
+// void setName(const QString &)
 func (this *QTouchDevice) SetName(name *qtcore.QString) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice7setNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -150,7 +150,7 @@ func (this *QTouchDevice) SetName(name *qtcore.QString) {
 // /usr/include/qt/QtGui/qtouchdevice.h:84
 // index:0
 // Public
-// void setType(enum QTouchDevice::DeviceType)
+// void setType(QTouchDevice::DeviceType)
 func (this *QTouchDevice) SetType(devType int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice7setTypeENS_10DeviceTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), devType)
 	gopp.ErrPrint(err, rv)

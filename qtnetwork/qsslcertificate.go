@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -72,7 +72,7 @@ func (*QSslCertificate) NewFromPointer(cthis unsafe.Pointer) *QSslCertificate {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:89
 // index:0
 // Public
-// void QSslCertificate(class QIODevice *, QSsl::EncodingFormat)
+// void QSslCertificate(QIODevice *, QSsl::EncodingFormat)
 func NewQSslCertificate(device *qtcore.QIODevice /*777 QIODevice **/, format int) *QSslCertificate {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = device.GetCthis()
@@ -85,7 +85,7 @@ func NewQSslCertificate(device *qtcore.QIODevice /*777 QIODevice **/, format int
 // /usr/include/qt/QtNetwork/qsslcertificate.h:90
 // index:1
 // Public
-// void QSslCertificate(const class QByteArray &, QSsl::EncodingFormat)
+// void QSslCertificate(const QByteArray &, QSsl::EncodingFormat)
 func NewQSslCertificate_1(data *qtcore.QByteArray, format int) *QSslCertificate {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = data.GetCthis()
@@ -107,7 +107,7 @@ func DeleteQSslCertificate(*QSslCertificate) {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:98
 // index:0
 // Public inline
-// void swap(class QSslCertificate &)
+// void swap(QSslCertificate &)
 func (this *QSslCertificate) Swap(other *QSslCertificate) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSslCertificate4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -187,7 +187,7 @@ func (this *QSslCertificate) SerialNumber() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtNetwork/qsslcertificate.h:120
 // index:0
 // Public
-// QByteArray digest(class QCryptographicHash::Algorithm)
+// QByteArray digest(QCryptographicHash::Algorithm)
 func (this *QSslCertificate) Digest(algorithm int) *qtcore.QByteArray /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSslCertificate6digestEN18QCryptographicHash9AlgorithmE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), algorithm)

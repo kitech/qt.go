@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QFontComboBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // /usr/include/qt/QtWidgets/qfontcombobox.h:61
 // index:0
 // Public
-// void QFontComboBox(class QWidget *)
+// void QFontComboBox(QWidget *)
 func NewQFontComboBox(parent *QWidget /*777 QWidget **/) *QFontComboBox {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -111,7 +111,7 @@ func DeleteQFontComboBox(*QFontComboBox) {
 // /usr/include/qt/QtWidgets/qfontcombobox.h:64
 // index:0
 // Public
-// void setWritingSystem(class QFontDatabase::WritingSystem)
+// void setWritingSystem(QFontDatabase::WritingSystem)
 func (this *QFontComboBox) SetWritingSystem(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontComboBox16setWritingSystemEN13QFontDatabase13WritingSystemE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -170,7 +170,7 @@ func (this *QFontComboBox) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qfontcombobox.h:84
 // index:0
 // Public
-// void setCurrentFont(const class QFont &)
+// void setCurrentFont(const QFont &)
 func (this *QFontComboBox) SetCurrentFont(f *qtgui.QFont) {
 	var convArg0 = f.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontComboBox14setCurrentFontERK5QFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -180,7 +180,7 @@ func (this *QFontComboBox) SetCurrentFont(f *qtgui.QFont) {
 // /usr/include/qt/QtWidgets/qfontcombobox.h:87
 // index:0
 // Public
-// void currentFontChanged(const class QFont &)
+// void currentFontChanged(const QFont &)
 func (this *QFontComboBox) CurrentFontChanged(f *qtgui.QFont) {
 	var convArg0 = f.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontComboBox18currentFontChangedERK5QFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -190,7 +190,7 @@ func (this *QFontComboBox) CurrentFontChanged(f *qtgui.QFont) {
 // /usr/include/qt/QtWidgets/qfontcombobox.h:90
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QFontComboBox) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontComboBox5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

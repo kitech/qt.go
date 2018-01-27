@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQFileInfo() *QFileInfo {
 // /usr/include/qt/QtCore/qfileinfo.h:63
 // index:1
 // Public
-// void QFileInfo(const class QString &)
+// void QFileInfo(const QString &)
 func NewQFileInfo_1(file *QString) *QFileInfo {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = file.GetCthis()
@@ -93,7 +93,7 @@ func NewQFileInfo_1(file *QString) *QFileInfo {
 // /usr/include/qt/QtCore/qfileinfo.h:64
 // index:2
 // Public
-// void QFileInfo(const class QFile &)
+// void QFileInfo(const QFile &)
 func NewQFileInfo_2(file *QFile) *QFileInfo {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = file.GetCthis()
@@ -106,7 +106,7 @@ func NewQFileInfo_2(file *QFile) *QFileInfo {
 // /usr/include/qt/QtCore/qfileinfo.h:65
 // index:3
 // Public
-// void QFileInfo(const class QDir &, const class QString &)
+// void QFileInfo(const QDir &, const QString &)
 func NewQFileInfo_3(dir *QDir, file *QString) *QFileInfo {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = dir.GetCthis()
@@ -129,7 +129,7 @@ func DeleteQFileInfo(*QFileInfo) {
 // /usr/include/qt/QtCore/qfileinfo.h:74
 // index:0
 // Public inline
-// void swap(class QFileInfo &)
+// void swap(QFileInfo &)
 func (this *QFileInfo) Swap(other *QFileInfo) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfo4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -139,7 +139,7 @@ func (this *QFileInfo) Swap(other *QFileInfo) {
 // /usr/include/qt/QtCore/qfileinfo.h:80
 // index:0
 // Public
-// void setFile(const class QString &)
+// void setFile(const QString &)
 func (this *QFileInfo) SetFile(file *QString) {
 	var convArg0 = file.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfo7setFileERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -149,7 +149,7 @@ func (this *QFileInfo) SetFile(file *QString) {
 // /usr/include/qt/QtCore/qfileinfo.h:81
 // index:1
 // Public
-// void setFile(const class QFile &)
+// void setFile(const QFile &)
 func (this *QFileInfo) SetFile_1(file *QFile) {
 	var convArg0 = file.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfo7setFileERK5QFile", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -159,7 +159,7 @@ func (this *QFileInfo) SetFile_1(file *QFile) {
 // /usr/include/qt/QtCore/qfileinfo.h:82
 // index:2
 // Public
-// void setFile(const class QDir &, const class QString &)
+// void setFile(const QDir &, const QString &)
 func (this *QFileInfo) SetFile_2(dir *QDir, file *QString) {
 	var convArg0 = dir.GetCthis()
 	var convArg1 = file.GetCthis()
@@ -181,7 +181,7 @@ func (this *QFileInfo) Exists() bool {
 // /usr/include/qt/QtCore/qfileinfo.h:84
 // index:1
 // Public static
-// bool exists(const class QString &)
+// bool exists(const QString &)
 func (this *QFileInfo) Exists_1(file *QString) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfo6existsERK7QString", ffiqt.FFI_TYPE_POINTER, file)
 	gopp.ErrPrint(err, rv)
@@ -715,7 +715,7 @@ func (this *QFileInfo) LastRead() *QDateTime /*123*/ {
 // /usr/include/qt/QtCore/qfileinfo.h:141
 // index:0
 // Public
-// QDateTime fileTime(class QFile::FileTime)
+// QDateTime fileTime(QFile::FileTime)
 func (this *QFileInfo) FileTime(time int) *QDateTime /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo8fileTimeEN11QFileDevice8FileTimeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), time)
@@ -740,7 +740,7 @@ func (this *QFileInfo) Caching() bool {
 // /usr/include/qt/QtCore/qfileinfo.h:144
 // index:0
 // Public
-// void setCaching(_Bool)
+// void setCaching(bool)
 func (this *QFileInfo) SetCaching(on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfo10setCachingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)

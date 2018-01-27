@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQLineF() *QLineF {
 // /usr/include/qt/QtCore/qline.h:220
 // index:1
 // Public inline
-// void QLineF(const class QPointF &, const class QPointF &)
+// void QLineF(const QPointF &, const QPointF &)
 func NewQLineF_1(pt1 *QPointF, pt2 *QPointF) *QLineF {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = pt1.GetCthis()
@@ -106,7 +106,7 @@ func NewQLineF_2(x1 float64, y1 float64, x2 float64, y2 float64) *QLineF {
 // /usr/include/qt/QtCore/qline.h:222
 // index:3
 // Public inline
-// void QLineF(const class QLine &)
+// void QLineF(const QLine &)
 func NewQLineF_3(line *QLine) *QLineF {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = line.GetCthis()
@@ -272,7 +272,7 @@ func (this *QLineF) Angle() float64 {
 // /usr/include/qt/QtCore/qline.h:254
 // index:1
 // Public
-// qreal angle(const class QLineF &)
+// qreal angle(const QLineF &)
 func (this *QLineF) Angle_1(l *QLineF) float64 {
 	var convArg0 = l.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF5angleERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -293,7 +293,7 @@ func (this *QLineF) SetAngle(angle float64) {
 // /usr/include/qt/QtCore/qline.h:246
 // index:0
 // Public
-// qreal angleTo(const class QLineF &)
+// qreal angleTo(const QLineF &)
 func (this *QLineF) AngleTo(l *QLineF) float64 {
 	var convArg0 = l.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF7angleToERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -333,7 +333,7 @@ func (this *QLineF) NormalVector() *QLineF /*123*/ {
 // /usr/include/qt/QtCore/qline.h:252
 // index:0
 // Public
-// QLineF::IntersectType intersect(const class QLineF &, class QPointF *)
+// QLineF::IntersectType intersect(const QLineF &, QPointF *)
 func (this *QLineF) Intersect(l *QLineF, intersectionPoint *QPointF /*777 QPointF **/) int {
 	var convArg0 = l.GetCthis()
 	var convArg1 = intersectionPoint.GetCthis()
@@ -360,7 +360,7 @@ func (this *QLineF) PointAt(t float64) *QPointF /*123*/ {
 // /usr/include/qt/QtCore/qline.h:257
 // index:0
 // Public inline
-// void translate(const class QPointF &)
+// void translate(const QPointF &)
 func (this *QLineF) Translate(p *QPointF) {
 	var convArg0 = p.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF9translateERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -379,7 +379,7 @@ func (this *QLineF) Translate_1(dx float64, dy float64) {
 // /usr/include/qt/QtCore/qline.h:260
 // index:0
 // Public inline
-// QLineF translated(const class QPointF &)
+// QLineF translated(const QPointF &)
 func (this *QLineF) Translated(p *QPointF) *QLineF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = p.GetCthis()
@@ -422,7 +422,7 @@ func (this *QLineF) Center() *QPointF /*123*/ {
 // /usr/include/qt/QtCore/qline.h:265
 // index:0
 // Public inline
-// void setP1(const class QPointF &)
+// void setP1(const QPointF &)
 func (this *QLineF) SetP1(p1 *QPointF) {
 	var convArg0 = p1.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF5setP1ERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -432,7 +432,7 @@ func (this *QLineF) SetP1(p1 *QPointF) {
 // /usr/include/qt/QtCore/qline.h:266
 // index:0
 // Public inline
-// void setP2(const class QPointF &)
+// void setP2(const QPointF &)
 func (this *QLineF) SetP2(p2 *QPointF) {
 	var convArg0 = p2.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF5setP2ERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -442,7 +442,7 @@ func (this *QLineF) SetP2(p2 *QPointF) {
 // /usr/include/qt/QtCore/qline.h:267
 // index:0
 // Public inline
-// void setPoints(const class QPointF &, const class QPointF &)
+// void setPoints(const QPointF &, const QPointF &)
 func (this *QLineF) SetPoints(p1 *QPointF, p2 *QPointF) {
 	var convArg0 = p1.GetCthis()
 	var convArg1 = p2.GetCthis()

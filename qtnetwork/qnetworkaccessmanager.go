@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QNetworkAccessManager) MetaObject() *qtcore.QMetaObject /*777 const 
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:103
 // index:0
 // Public
-// void QNetworkAccessManager(class QObject *)
+// void QNetworkAccessManager(QObject *)
 func NewQNetworkAccessManager(parent *qtcore.QObject /*777 QObject **/) *QNetworkAccessManager {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -139,7 +139,7 @@ func (this *QNetworkAccessManager) Proxy() *QNetworkProxy /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:115
 // index:0
 // Public
-// void setProxy(const class QNetworkProxy &)
+// void setProxy(const QNetworkProxy &)
 func (this *QNetworkAccessManager) SetProxy(proxy *QNetworkProxy) {
 	var convArg0 = proxy.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager8setProxyERK13QNetworkProxy", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -161,7 +161,7 @@ func (this *QNetworkAccessManager) ProxyFactory() *QNetworkProxyFactory /*777 QN
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:117
 // index:0
 // Public
-// void setProxyFactory(class QNetworkProxyFactory *)
+// void setProxyFactory(QNetworkProxyFactory *)
 func (this *QNetworkAccessManager) SetProxyFactory(factory *QNetworkProxyFactory /*777 QNetworkProxyFactory **/) {
 	var convArg0 = factory.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager15setProxyFactoryEP20QNetworkProxyFactory", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -183,7 +183,7 @@ func (this *QNetworkAccessManager) Cache() *QAbstractNetworkCache /*777 QAbstrac
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:121
 // index:0
 // Public
-// void setCache(class QAbstractNetworkCache *)
+// void setCache(QAbstractNetworkCache *)
 func (this *QNetworkAccessManager) SetCache(cache *QAbstractNetworkCache /*777 QAbstractNetworkCache **/) {
 	var convArg0 = cache.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager8setCacheEP21QAbstractNetworkCache", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -205,7 +205,7 @@ func (this *QNetworkAccessManager) CookieJar() *QNetworkCookieJar /*777 QNetwork
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:124
 // index:0
 // Public
-// void setCookieJar(class QNetworkCookieJar *)
+// void setCookieJar(QNetworkCookieJar *)
 func (this *QNetworkAccessManager) SetCookieJar(cookieJar *QNetworkCookieJar /*777 QNetworkCookieJar **/) {
 	var convArg0 = cookieJar.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager12setCookieJarEP17QNetworkCookieJar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -215,7 +215,7 @@ func (this *QNetworkAccessManager) SetCookieJar(cookieJar *QNetworkCookieJar /*7
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:126
 // index:0
 // Public
-// void setStrictTransportSecurityEnabled(_Bool)
+// void setStrictTransportSecurityEnabled(bool)
 func (this *QNetworkAccessManager) SetStrictTransportSecurityEnabled(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager33setStrictTransportSecurityEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -235,7 +235,7 @@ func (this *QNetworkAccessManager) IsStrictTransportSecurityEnabled() bool {
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:128
 // index:0
 // Public
-// void enableStrictTransportSecurityStore(_Bool, const class QString &)
+// void enableStrictTransportSecurityStore(bool, const QString &)
 func (this *QNetworkAccessManager) EnableStrictTransportSecurityStore(enabled bool, storeDir *qtcore.QString) {
 	var convArg1 = storeDir.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager34enableStrictTransportSecurityStoreEbRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled, convArg1)
@@ -256,7 +256,7 @@ func (this *QNetworkAccessManager) IsStrictTransportSecurityStoreEnabled() bool 
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:133
 // index:0
 // Public
-// QNetworkReply * head(const class QNetworkRequest &)
+// QNetworkReply * head(const QNetworkRequest &)
 func (this *QNetworkAccessManager) Head(request *QNetworkRequest) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 = request.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager4headERK15QNetworkRequest", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -269,7 +269,7 @@ func (this *QNetworkAccessManager) Head(request *QNetworkRequest) *QNetworkReply
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:134
 // index:0
 // Public
-// QNetworkReply * get(const class QNetworkRequest &)
+// QNetworkReply * get(const QNetworkRequest &)
 func (this *QNetworkAccessManager) Get(request *QNetworkRequest) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 = request.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager3getERK15QNetworkRequest", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -282,7 +282,7 @@ func (this *QNetworkAccessManager) Get(request *QNetworkRequest) *QNetworkReply 
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:135
 // index:0
 // Public
-// QNetworkReply * post(const class QNetworkRequest &, class QIODevice *)
+// QNetworkReply * post(const QNetworkRequest &, QIODevice *)
 func (this *QNetworkAccessManager) Post(request *QNetworkRequest, data *qtcore.QIODevice /*777 QIODevice **/) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 = request.GetCthis()
 	var convArg1 = data.GetCthis()
@@ -296,7 +296,7 @@ func (this *QNetworkAccessManager) Post(request *QNetworkRequest, data *qtcore.Q
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:136
 // index:1
 // Public
-// QNetworkReply * post(const class QNetworkRequest &, const class QByteArray &)
+// QNetworkReply * post(const QNetworkRequest &, const QByteArray &)
 func (this *QNetworkAccessManager) Post_1(request *QNetworkRequest, data *qtcore.QByteArray) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 = request.GetCthis()
 	var convArg1 = data.GetCthis()
@@ -310,7 +310,7 @@ func (this *QNetworkAccessManager) Post_1(request *QNetworkRequest, data *qtcore
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:137
 // index:2
 // Public
-// QNetworkReply * post(const class QNetworkRequest &, class QHttpMultiPart *)
+// QNetworkReply * post(const QNetworkRequest &, QHttpMultiPart *)
 func (this *QNetworkAccessManager) Post_2(request *QNetworkRequest, multiPart *QHttpMultiPart /*777 QHttpMultiPart **/) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 = request.GetCthis()
 	var convArg1 = multiPart.GetCthis()
@@ -324,7 +324,7 @@ func (this *QNetworkAccessManager) Post_2(request *QNetworkRequest, multiPart *Q
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:138
 // index:0
 // Public
-// QNetworkReply * put(const class QNetworkRequest &, class QIODevice *)
+// QNetworkReply * put(const QNetworkRequest &, QIODevice *)
 func (this *QNetworkAccessManager) Put(request *QNetworkRequest, data *qtcore.QIODevice /*777 QIODevice **/) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 = request.GetCthis()
 	var convArg1 = data.GetCthis()
@@ -338,7 +338,7 @@ func (this *QNetworkAccessManager) Put(request *QNetworkRequest, data *qtcore.QI
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:139
 // index:1
 // Public
-// QNetworkReply * put(const class QNetworkRequest &, const class QByteArray &)
+// QNetworkReply * put(const QNetworkRequest &, const QByteArray &)
 func (this *QNetworkAccessManager) Put_1(request *QNetworkRequest, data *qtcore.QByteArray) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 = request.GetCthis()
 	var convArg1 = data.GetCthis()
@@ -352,7 +352,7 @@ func (this *QNetworkAccessManager) Put_1(request *QNetworkRequest, data *qtcore.
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:140
 // index:2
 // Public
-// QNetworkReply * put(const class QNetworkRequest &, class QHttpMultiPart *)
+// QNetworkReply * put(const QNetworkRequest &, QHttpMultiPart *)
 func (this *QNetworkAccessManager) Put_2(request *QNetworkRequest, multiPart *QHttpMultiPart /*777 QHttpMultiPart **/) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 = request.GetCthis()
 	var convArg1 = multiPart.GetCthis()
@@ -366,7 +366,7 @@ func (this *QNetworkAccessManager) Put_2(request *QNetworkRequest, multiPart *QH
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:141
 // index:0
 // Public
-// QNetworkReply * deleteResource(const class QNetworkRequest &)
+// QNetworkReply * deleteResource(const QNetworkRequest &)
 func (this *QNetworkAccessManager) DeleteResource(request *QNetworkRequest) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 = request.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager14deleteResourceERK15QNetworkRequest", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -379,7 +379,7 @@ func (this *QNetworkAccessManager) DeleteResource(request *QNetworkRequest) *QNe
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:142
 // index:0
 // Public
-// QNetworkReply * sendCustomRequest(const class QNetworkRequest &, const class QByteArray &, class QIODevice *)
+// QNetworkReply * sendCustomRequest(const QNetworkRequest &, const QByteArray &, QIODevice *)
 func (this *QNetworkAccessManager) SendCustomRequest(request *QNetworkRequest, verb *qtcore.QByteArray, data *qtcore.QIODevice /*777 QIODevice **/) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 = request.GetCthis()
 	var convArg1 = verb.GetCthis()
@@ -394,7 +394,7 @@ func (this *QNetworkAccessManager) SendCustomRequest(request *QNetworkRequest, v
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:143
 // index:1
 // Public
-// QNetworkReply * sendCustomRequest(const class QNetworkRequest &, const class QByteArray &, const class QByteArray &)
+// QNetworkReply * sendCustomRequest(const QNetworkRequest &, const QByteArray &, const QByteArray &)
 func (this *QNetworkAccessManager) SendCustomRequest_1(request *QNetworkRequest, verb *qtcore.QByteArray, data *qtcore.QByteArray) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 = request.GetCthis()
 	var convArg1 = verb.GetCthis()
@@ -409,7 +409,7 @@ func (this *QNetworkAccessManager) SendCustomRequest_1(request *QNetworkRequest,
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:144
 // index:2
 // Public
-// QNetworkReply * sendCustomRequest(const class QNetworkRequest &, const class QByteArray &, class QHttpMultiPart *)
+// QNetworkReply * sendCustomRequest(const QNetworkRequest &, const QByteArray &, QHttpMultiPart *)
 func (this *QNetworkAccessManager) SendCustomRequest_2(request *QNetworkRequest, verb *qtcore.QByteArray, multiPart *QHttpMultiPart /*777 QHttpMultiPart **/) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg0 = request.GetCthis()
 	var convArg1 = verb.GetCthis()
@@ -424,7 +424,7 @@ func (this *QNetworkAccessManager) SendCustomRequest_2(request *QNetworkRequest,
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:147
 // index:0
 // Public
-// void setConfiguration(const class QNetworkConfiguration &)
+// void setConfiguration(const QNetworkConfiguration &)
 func (this *QNetworkAccessManager) SetConfiguration(config *QNetworkConfiguration) {
 	var convArg0 = config.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager16setConfigurationERK21QNetworkConfiguration", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -462,7 +462,7 @@ func (this *QNetworkAccessManager) ActiveConfiguration() *QNetworkConfiguration 
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:151
 // index:0
 // Public
-// void setNetworkAccessible(enum QNetworkAccessManager::NetworkAccessibility)
+// void setNetworkAccessible(QNetworkAccessManager::NetworkAccessibility)
 func (this *QNetworkAccessManager) SetNetworkAccessible(accessible int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager20setNetworkAccessibleENS_20NetworkAccessibilityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), accessible)
 	gopp.ErrPrint(err, rv)
@@ -482,7 +482,7 @@ func (this *QNetworkAccessManager) NetworkAccessible() int {
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:156
 // index:0
 // Public
-// void connectToHostEncrypted(const class QString &, quint16, const class QSslConfiguration &)
+// void connectToHostEncrypted(const QString &, quint16, const QSslConfiguration &)
 func (this *QNetworkAccessManager) ConnectToHostEncrypted(hostName *qtcore.QString, port uint16, sslConfiguration *QSslConfiguration) {
 	var convArg0 = hostName.GetCthis()
 	var convArg2 = sslConfiguration.GetCthis()
@@ -493,7 +493,7 @@ func (this *QNetworkAccessManager) ConnectToHostEncrypted(hostName *qtcore.QStri
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:159
 // index:0
 // Public
-// void connectToHost(const class QString &, quint16)
+// void connectToHost(const QString &, quint16)
 func (this *QNetworkAccessManager) ConnectToHost(hostName *qtcore.QString, port uint16) {
 	var convArg0 = hostName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager13connectToHostERK7QStringt", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
@@ -503,7 +503,7 @@ func (this *QNetworkAccessManager) ConnectToHost(hostName *qtcore.QString, port 
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:161
 // index:0
 // Public
-// void setRedirectPolicy(class QNetworkRequest::RedirectPolicy)
+// void setRedirectPolicy(QNetworkRequest::RedirectPolicy)
 func (this *QNetworkAccessManager) SetRedirectPolicy(policy int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager17setRedirectPolicyEN15QNetworkRequest14RedirectPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)
@@ -523,7 +523,7 @@ func (this *QNetworkAccessManager) RedirectPolicy() int {
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:166
 // index:0
 // Public
-// void proxyAuthenticationRequired(const class QNetworkProxy &, class QAuthenticator *)
+// void proxyAuthenticationRequired(const QNetworkProxy &, QAuthenticator *)
 func (this *QNetworkAccessManager) ProxyAuthenticationRequired(proxy *QNetworkProxy, authenticator *QAuthenticator /*777 QAuthenticator **/) {
 	var convArg0 = proxy.GetCthis()
 	var convArg1 = authenticator.GetCthis()
@@ -534,7 +534,7 @@ func (this *QNetworkAccessManager) ProxyAuthenticationRequired(proxy *QNetworkPr
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:168
 // index:0
 // Public
-// void authenticationRequired(class QNetworkReply *, class QAuthenticator *)
+// void authenticationRequired(QNetworkReply *, QAuthenticator *)
 func (this *QNetworkAccessManager) AuthenticationRequired(reply *QNetworkReply /*777 QNetworkReply **/, authenticator *QAuthenticator /*777 QAuthenticator **/) {
 	var convArg0 = reply.GetCthis()
 	var convArg1 = authenticator.GetCthis()
@@ -545,7 +545,7 @@ func (this *QNetworkAccessManager) AuthenticationRequired(reply *QNetworkReply /
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:169
 // index:0
 // Public
-// void finished(class QNetworkReply *)
+// void finished(QNetworkReply *)
 func (this *QNetworkAccessManager) Finished(reply *QNetworkReply /*777 QNetworkReply **/) {
 	var convArg0 = reply.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager8finishedEP13QNetworkReply", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -555,7 +555,7 @@ func (this *QNetworkAccessManager) Finished(reply *QNetworkReply /*777 QNetworkR
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:171
 // index:0
 // Public
-// void encrypted(class QNetworkReply *)
+// void encrypted(QNetworkReply *)
 func (this *QNetworkAccessManager) Encrypted(reply *QNetworkReply /*777 QNetworkReply **/) {
 	var convArg0 = reply.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager9encryptedEP13QNetworkReply", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -565,7 +565,7 @@ func (this *QNetworkAccessManager) Encrypted(reply *QNetworkReply /*777 QNetwork
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:173
 // index:0
 // Public
-// void preSharedKeyAuthenticationRequired(class QNetworkReply *, class QSslPreSharedKeyAuthenticator *)
+// void preSharedKeyAuthenticationRequired(QNetworkReply *, QSslPreSharedKeyAuthenticator *)
 func (this *QNetworkAccessManager) PreSharedKeyAuthenticationRequired(reply *QNetworkReply /*777 QNetworkReply **/, authenticator *QSslPreSharedKeyAuthenticator /*777 QSslPreSharedKeyAuthenticator **/) {
 	var convArg0 = reply.GetCthis()
 	var convArg1 = authenticator.GetCthis()
@@ -585,7 +585,7 @@ func (this *QNetworkAccessManager) NetworkSessionConnected() {
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:179
 // index:0
 // Public
-// void networkAccessibleChanged(class QNetworkAccessManager::NetworkAccessibility)
+// void networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)
 func (this *QNetworkAccessManager) NetworkAccessibleChanged(accessible int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager24networkAccessibleChangedENS_20NetworkAccessibilityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), accessible)
 	gopp.ErrPrint(err, rv)
@@ -594,7 +594,7 @@ func (this *QNetworkAccessManager) NetworkAccessibleChanged(accessible int) {
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:183
 // index:0
 // Protected virtual
-// QNetworkReply * createRequest(enum QNetworkAccessManager::Operation, const class QNetworkRequest &, class QIODevice *)
+// QNetworkReply * createRequest(QNetworkAccessManager::Operation, const QNetworkRequest &, QIODevice *)
 func (this *QNetworkAccessManager) CreateRequest(op int, request *QNetworkRequest, outgoingData *qtcore.QIODevice /*777 QIODevice **/) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg1 = request.GetCthis()
 	var convArg2 = outgoingData.GetCthis()

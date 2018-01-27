@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQLine() *QLine {
 // /usr/include/qt/QtCore/qline.h:56
 // index:1
 // Public inline
-// void QLine(const class QPoint &, const class QPoint &)
+// void QLine(const QPoint &, const QPoint &)
 func NewQLine_1(pt1 *QPoint, pt2 *QPoint) *QLine {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = pt1.GetCthis()
@@ -211,7 +211,7 @@ func (this *QLine) Dy() int {
 // /usr/include/qt/QtCore/qline.h:73
 // index:0
 // Public inline
-// void translate(const class QPoint &)
+// void translate(const QPoint &)
 func (this *QLine) Translate(p *QPoint) {
 	var convArg0 = p.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QLine9translateERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -230,7 +230,7 @@ func (this *QLine) Translate_1(dx int, dy int) {
 // /usr/include/qt/QtCore/qline.h:76
 // index:0
 // Public inline
-// QLine translated(const class QPoint &)
+// QLine translated(const QPoint &)
 func (this *QLine) Translated(p *QPoint) *QLine /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = p.GetCthis()
@@ -273,7 +273,7 @@ func (this *QLine) Center() *QPoint /*123*/ {
 // /usr/include/qt/QtCore/qline.h:81
 // index:0
 // Public inline
-// void setP1(const class QPoint &)
+// void setP1(const QPoint &)
 func (this *QLine) SetP1(p1 *QPoint) {
 	var convArg0 = p1.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QLine5setP1ERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -283,7 +283,7 @@ func (this *QLine) SetP1(p1 *QPoint) {
 // /usr/include/qt/QtCore/qline.h:82
 // index:0
 // Public inline
-// void setP2(const class QPoint &)
+// void setP2(const QPoint &)
 func (this *QLine) SetP2(p2 *QPoint) {
 	var convArg0 = p2.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QLine5setP2ERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -293,7 +293,7 @@ func (this *QLine) SetP2(p2 *QPoint) {
 // /usr/include/qt/QtCore/qline.h:83
 // index:0
 // Public inline
-// void setPoints(const class QPoint &, const class QPoint &)
+// void setPoints(const QPoint &, const QPoint &)
 func (this *QLine) SetPoints(p1 *QPoint, p2 *QPoint) {
 	var convArg0 = p1.GetCthis()
 	var convArg1 = p2.GetCthis()

@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -73,7 +73,7 @@ func (*QPlatformSurfaceEvent) NewFromPointer(cthis unsafe.Pointer) *QPlatformSur
 // /usr/include/qt/QtGui/qevent.h:451
 // index:0
 // Public
-// void QPlatformSurfaceEvent(enum QPlatformSurfaceEvent::SurfaceEventType)
+// void QPlatformSurfaceEvent(QPlatformSurfaceEvent::SurfaceEventType)
 func NewQPlatformSurfaceEvent(surfaceEventType int) *QPlatformSurfaceEvent {
 	cthis := qtrt.Calloc(1, 256) // 24
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventC2ENS_16SurfaceEventTypeE", ffiqt.FFI_TYPE_VOID, cthis, surfaceEventType)

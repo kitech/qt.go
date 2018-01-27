@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QMovie) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/
 // /usr/include/qt/QtGui/qmovie.h:82
 // index:0
 // Public
-// void QMovie(class QObject *)
+// void QMovie(QObject *)
 func NewQMovie(parent *qtcore.QObject /*777 QObject **/) *QMovie {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -98,7 +98,7 @@ func NewQMovie(parent *qtcore.QObject /*777 QObject **/) *QMovie {
 // /usr/include/qt/QtGui/qmovie.h:83
 // index:1
 // Public
-// void QMovie(class QIODevice *, const class QByteArray &, class QObject *)
+// void QMovie(QIODevice *, const QByteArray &, QObject *)
 func NewQMovie_1(device *qtcore.QIODevice /*777 QIODevice **/, format *qtcore.QByteArray, parent *qtcore.QObject /*777 QObject **/) *QMovie {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = device.GetCthis()
@@ -113,7 +113,7 @@ func NewQMovie_1(device *qtcore.QIODevice /*777 QIODevice **/, format *qtcore.QB
 // /usr/include/qt/QtGui/qmovie.h:84
 // index:2
 // Public
-// void QMovie(const class QString &, const class QByteArray &, class QObject *)
+// void QMovie(const QString &, const QByteArray &, QObject *)
 func NewQMovie_2(fileName *qtcore.QString, format *qtcore.QByteArray, parent *qtcore.QObject /*777 QObject **/) *QMovie {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = fileName.GetCthis()
@@ -137,7 +137,7 @@ func DeleteQMovie(*QMovie) {
 // /usr/include/qt/QtGui/qmovie.h:89
 // index:0
 // Public
-// void setDevice(class QIODevice *)
+// void setDevice(QIODevice *)
 func (this *QMovie) SetDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMovie9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -159,7 +159,7 @@ func (this *QMovie) Device() *qtcore.QIODevice /*777 QIODevice **/ {
 // /usr/include/qt/QtGui/qmovie.h:92
 // index:0
 // Public
-// void setFileName(const class QString &)
+// void setFileName(const QString &)
 func (this *QMovie) SetFileName(fileName *qtcore.QString) {
 	var convArg0 = fileName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMovie11setFileNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -183,7 +183,7 @@ func (this *QMovie) FileName() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qmovie.h:95
 // index:0
 // Public
-// void setFormat(const class QByteArray &)
+// void setFormat(const QByteArray &)
 func (this *QMovie) SetFormat(format *qtcore.QByteArray) {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMovie9setFormatERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -207,7 +207,7 @@ func (this *QMovie) Format() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtGui/qmovie.h:98
 // index:0
 // Public
-// void setBackgroundColor(const class QColor &)
+// void setBackgroundColor(const QColor &)
 func (this *QMovie) SetBackgroundColor(color *QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMovie18setBackgroundColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -400,7 +400,7 @@ func (this *QMovie) ScaledSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtGui/qmovie.h:120
 // index:0
 // Public
-// void setScaledSize(const class QSize &)
+// void setScaledSize(const QSize &)
 func (this *QMovie) SetScaledSize(size *qtcore.QSize) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMovie13setScaledSizeERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -421,7 +421,7 @@ func (this *QMovie) CacheMode() int {
 // /usr/include/qt/QtGui/qmovie.h:123
 // index:0
 // Public
-// void setCacheMode(enum QMovie::CacheMode)
+// void setCacheMode(QMovie::CacheMode)
 func (this *QMovie) SetCacheMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMovie12setCacheModeENS_9CacheModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -439,7 +439,7 @@ func (this *QMovie) Started() {
 // /usr/include/qt/QtGui/qmovie.h:127
 // index:0
 // Public
-// void resized(const class QSize &)
+// void resized(const QSize &)
 func (this *QMovie) Resized(size *qtcore.QSize) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMovie7resizedERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -449,7 +449,7 @@ func (this *QMovie) Resized(size *qtcore.QSize) {
 // /usr/include/qt/QtGui/qmovie.h:128
 // index:0
 // Public
-// void updated(const class QRect &)
+// void updated(const QRect &)
 func (this *QMovie) Updated(rect *qtcore.QRect) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMovie7updatedERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -459,7 +459,7 @@ func (this *QMovie) Updated(rect *qtcore.QRect) {
 // /usr/include/qt/QtGui/qmovie.h:129
 // index:0
 // Public
-// void stateChanged(class QMovie::MovieState)
+// void stateChanged(QMovie::MovieState)
 func (this *QMovie) StateChanged(state int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMovie12stateChangedENS_10MovieStateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	gopp.ErrPrint(err, rv)
@@ -468,7 +468,7 @@ func (this *QMovie) StateChanged(state int) {
 // /usr/include/qt/QtGui/qmovie.h:130
 // index:0
 // Public
-// void error(class QImageReader::ImageReaderError)
+// void error(QImageReader::ImageReaderError)
 func (this *QMovie) Error(error int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMovie5errorEN12QImageReader16ImageReaderErrorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), error)
 	gopp.ErrPrint(err, rv)
@@ -515,7 +515,7 @@ func (this *QMovie) JumpToNextFrame() bool {
 // /usr/include/qt/QtGui/qmovie.h:137
 // index:0
 // Public
-// void setPaused(_Bool)
+// void setPaused(bool)
 func (this *QMovie) SetPaused(paused bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMovie9setPausedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), paused)
 	gopp.ErrPrint(err, rv)

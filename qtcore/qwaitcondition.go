@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -89,7 +89,7 @@ func DeleteQWaitCondition(*QWaitCondition) {
 // /usr/include/qt/QtCore/qwaitcondition.h:62
 // index:0
 // Public
-// bool wait(class QMutex *, unsigned long)
+// bool wait(QMutex *, unsigned long)
 func (this *QWaitCondition) Wait(lockedMutex *QMutex /*777 QMutex **/, time uint) bool {
 	var convArg0 = lockedMutex.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP6QMutexm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)
@@ -101,7 +101,7 @@ func (this *QWaitCondition) Wait(lockedMutex *QMutex /*777 QMutex **/, time uint
 // /usr/include/qt/QtCore/qwaitcondition.h:63
 // index:1
 // Public
-// bool wait(class QReadWriteLock *, unsigned long)
+// bool wait(QReadWriteLock *, unsigned long)
 func (this *QWaitCondition) Wait_1(lockedReadWriteLock *QReadWriteLock /*777 QReadWriteLock **/, time uint) bool {
 	var convArg0 = lockedReadWriteLock.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP14QReadWriteLockm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)

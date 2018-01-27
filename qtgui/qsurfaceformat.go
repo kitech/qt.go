@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -233,7 +233,7 @@ func (this *QSurfaceFormat) Samples() int {
 // /usr/include/qt/QtGui/qsurfaceformat.h:118
 // index:0
 // Public
-// void setSwapBehavior(enum QSurfaceFormat::SwapBehavior)
+// void setSwapBehavior(QSurfaceFormat::SwapBehavior)
 func (this *QSurfaceFormat) SetSwapBehavior(behavior int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat15setSwapBehaviorENS_12SwapBehaviorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), behavior)
 	gopp.ErrPrint(err, rv)
@@ -264,7 +264,7 @@ func (this *QSurfaceFormat) HasAlpha() bool {
 // /usr/include/qt/QtGui/qsurfaceformat.h:123
 // index:0
 // Public
-// void setProfile(enum QSurfaceFormat::OpenGLContextProfile)
+// void setProfile(QSurfaceFormat::OpenGLContextProfile)
 func (this *QSurfaceFormat) SetProfile(profile int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat10setProfileENS_20OpenGLContextProfileE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), profile)
 	gopp.ErrPrint(err, rv)
@@ -284,7 +284,7 @@ func (this *QSurfaceFormat) Profile() int {
 // /usr/include/qt/QtGui/qsurfaceformat.h:126
 // index:0
 // Public
-// void setRenderableType(enum QSurfaceFormat::RenderableType)
+// void setRenderableType(QSurfaceFormat::RenderableType)
 func (this *QSurfaceFormat) SetRenderableType(type_ int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat17setRenderableTypeENS_14RenderableTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
@@ -364,7 +364,7 @@ func (this *QSurfaceFormat) Stereo() bool {
 // /usr/include/qt/QtGui/qsurfaceformat.h:139
 // index:0
 // Public
-// void setStereo(_Bool)
+// void setStereo(bool)
 func (this *QSurfaceFormat) SetStereo(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat9setStereoEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -373,7 +373,7 @@ func (this *QSurfaceFormat) SetStereo(enable bool) {
 // /usr/include/qt/QtGui/qsurfaceformat.h:147
 // index:0
 // Public
-// void setOption(enum QSurfaceFormat::FormatOption, _Bool)
+// void setOption(QSurfaceFormat::FormatOption, bool)
 func (this *QSurfaceFormat) SetOption(option int, on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat9setOptionENS_12FormatOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	gopp.ErrPrint(err, rv)
@@ -382,7 +382,7 @@ func (this *QSurfaceFormat) SetOption(option int, on bool) {
 // /usr/include/qt/QtGui/qsurfaceformat.h:148
 // index:0
 // Public
-// bool testOption(enum QSurfaceFormat::FormatOption)
+// bool testOption(QSurfaceFormat::FormatOption)
 func (this *QSurfaceFormat) TestOption(option int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat10testOptionENS_12FormatOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
@@ -435,7 +435,7 @@ func (this *QSurfaceFormat) ColorSpace() int {
 // /usr/include/qt/QtGui/qsurfaceformat.h:155
 // index:0
 // Public
-// void setColorSpace(enum QSurfaceFormat::ColorSpace)
+// void setColorSpace(QSurfaceFormat::ColorSpace)
 func (this *QSurfaceFormat) SetColorSpace(colorSpace int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat13setColorSpaceENS_10ColorSpaceE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), colorSpace)
 	gopp.ErrPrint(err, rv)
@@ -444,7 +444,7 @@ func (this *QSurfaceFormat) SetColorSpace(colorSpace int) {
 // /usr/include/qt/QtGui/qsurfaceformat.h:157
 // index:0
 // Public static
-// void setDefaultFormat(const class QSurfaceFormat &)
+// void setDefaultFormat(const QSurfaceFormat &)
 func (this *QSurfaceFormat) SetDefaultFormat(format *QSurfaceFormat) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat16setDefaultFormatERKS_", ffiqt.FFI_TYPE_POINTER, format)
 	gopp.ErrPrint(err, rv)

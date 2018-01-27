@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QLabel) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/
 // /usr/include/qt/QtWidgets/qlabel.h:70
 // index:0
 // Public
-// void QLabel(class QWidget *, Qt::WindowFlags)
+// void QLabel(QWidget *, Qt::WindowFlags)
 func NewQLabel(parent *QWidget /*777 QWidget **/, f int) *QLabel {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -102,7 +102,7 @@ func NewQLabel(parent *QWidget /*777 QWidget **/, f int) *QLabel {
 // /usr/include/qt/QtWidgets/qlabel.h:71
 // index:1
 // Public
-// void QLabel(const class QString &, class QWidget *, Qt::WindowFlags)
+// void QLabel(const QString &, QWidget *, Qt::WindowFlags)
 func NewQLabel_1(text *qtcore.QString, parent *QWidget /*777 QWidget **/, f int) *QLabel {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = text.GetCthis()
@@ -206,7 +206,7 @@ func (this *QLabel) Alignment() int {
 // /usr/include/qt/QtWidgets/qlabel.h:89
 // index:0
 // Public
-// void setWordWrap(_Bool)
+// void setWordWrap(bool)
 func (this *QLabel) SetWordWrap(on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel11setWordWrapEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
@@ -277,7 +277,7 @@ func (this *QLabel) HasScaledContents() bool {
 // /usr/include/qt/QtWidgets/qlabel.h:99
 // index:0
 // Public
-// void setScaledContents(_Bool)
+// void setScaledContents(bool)
 func (this *QLabel) SetScaledContents(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel17setScaledContentsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -314,7 +314,7 @@ func (this *QLabel) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlabel.h:103
 // index:0
 // Public
-// void setBuddy(class QWidget *)
+// void setBuddy(QWidget *)
 func (this *QLabel) SetBuddy(arg0 *QWidget /*777 QWidget **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel8setBuddyEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -358,7 +358,7 @@ func (this *QLabel) OpenExternalLinks() bool {
 // /usr/include/qt/QtWidgets/qlabel.h:109
 // index:0
 // Public
-// void setOpenExternalLinks(_Bool)
+// void setOpenExternalLinks(bool)
 func (this *QLabel) SetOpenExternalLinks(open bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel20setOpenExternalLinksEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), open)
 	gopp.ErrPrint(err, rv)
@@ -432,7 +432,7 @@ func (this *QLabel) SelectionStart() int {
 // /usr/include/qt/QtWidgets/qlabel.h:120
 // index:0
 // Public
-// void setText(const class QString &)
+// void setText(const QString &)
 func (this *QLabel) SetText(arg0 *qtcore.QString) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel7setTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -442,7 +442,7 @@ func (this *QLabel) SetText(arg0 *qtcore.QString) {
 // /usr/include/qt/QtWidgets/qlabel.h:121
 // index:0
 // Public
-// void setPixmap(const class QPixmap &)
+// void setPixmap(const QPixmap &)
 func (this *QLabel) SetPixmap(arg0 *qtgui.QPixmap) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel9setPixmapERK7QPixmap", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -452,7 +452,7 @@ func (this *QLabel) SetPixmap(arg0 *qtgui.QPixmap) {
 // /usr/include/qt/QtWidgets/qlabel.h:123
 // index:0
 // Public
-// void setPicture(const class QPicture &)
+// void setPicture(const QPicture &)
 func (this *QLabel) SetPicture(arg0 *qtgui.QPicture) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel10setPictureERK8QPicture", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -462,7 +462,7 @@ func (this *QLabel) SetPicture(arg0 *qtgui.QPicture) {
 // /usr/include/qt/QtWidgets/qlabel.h:126
 // index:0
 // Public
-// void setMovie(class QMovie *)
+// void setMovie(QMovie *)
 func (this *QLabel) SetMovie(movie *qtgui.QMovie /*777 QMovie **/) {
 	var convArg0 = movie.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel8setMovieEP6QMovie", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -499,7 +499,7 @@ func (this *QLabel) Clear() {
 // /usr/include/qt/QtWidgets/qlabel.h:133
 // index:0
 // Public
-// void linkActivated(const class QString &)
+// void linkActivated(const QString &)
 func (this *QLabel) LinkActivated(link *qtcore.QString) {
 	var convArg0 = link.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel13linkActivatedERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -509,7 +509,7 @@ func (this *QLabel) LinkActivated(link *qtcore.QString) {
 // /usr/include/qt/QtWidgets/qlabel.h:134
 // index:0
 // Public
-// void linkHovered(const class QString &)
+// void linkHovered(const QString &)
 func (this *QLabel) LinkHovered(link *qtcore.QString) {
 	var convArg0 = link.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel11linkHoveredERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -519,7 +519,7 @@ func (this *QLabel) LinkHovered(link *qtcore.QString) {
 // /usr/include/qt/QtWidgets/qlabel.h:137
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QLabel) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -531,7 +531,7 @@ func (this *QLabel) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qlabel.h:138
 // index:0
 // Protected virtual
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QLabel) KeyPressEvent(ev *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -541,7 +541,7 @@ func (this *QLabel) KeyPressEvent(ev *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 // /usr/include/qt/QtWidgets/qlabel.h:139
 // index:0
 // Protected virtual
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QLabel) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -551,7 +551,7 @@ func (this *QLabel) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 // /usr/include/qt/QtWidgets/qlabel.h:140
 // index:0
 // Protected virtual
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QLabel) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -561,7 +561,7 @@ func (this *QLabel) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 // /usr/include/qt/QtWidgets/qlabel.h:141
 // index:0
 // Protected virtual
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QLabel) MousePressEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -571,7 +571,7 @@ func (this *QLabel) MousePressEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/)
 // /usr/include/qt/QtWidgets/qlabel.h:142
 // index:0
 // Protected virtual
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QLabel) MouseMoveEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -581,7 +581,7 @@ func (this *QLabel) MouseMoveEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) 
 // /usr/include/qt/QtWidgets/qlabel.h:143
 // index:0
 // Protected virtual
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QLabel) MouseReleaseEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -591,7 +591,7 @@ func (this *QLabel) MouseReleaseEvent(ev *qtgui.QMouseEvent /*777 QMouseEvent **
 // /usr/include/qt/QtWidgets/qlabel.h:145
 // index:0
 // Protected virtual
-// void contextMenuEvent(class QContextMenuEvent *)
+// void contextMenuEvent(QContextMenuEvent *)
 func (this *QLabel) ContextMenuEvent(ev *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel16contextMenuEventEP17QContextMenuEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -601,7 +601,7 @@ func (this *QLabel) ContextMenuEvent(ev *qtgui.QContextMenuEvent /*777 QContextM
 // /usr/include/qt/QtWidgets/qlabel.h:147
 // index:0
 // Protected virtual
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QLabel) FocusInEvent(ev *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -611,7 +611,7 @@ func (this *QLabel) FocusInEvent(ev *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 // /usr/include/qt/QtWidgets/qlabel.h:148
 // index:0
 // Protected virtual
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QLabel) FocusOutEvent(ev *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -621,7 +621,7 @@ func (this *QLabel) FocusOutEvent(ev *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 // /usr/include/qt/QtWidgets/qlabel.h:149
 // index:0
 // Protected virtual
-// bool focusNextPrevChild(_Bool)
+// bool focusNextPrevChild(bool)
 func (this *QLabel) FocusNextPrevChild(next bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), next)
 	gopp.ErrPrint(err, rv)

@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QToolButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // /usr/include/qt/QtWidgets/qtoolbutton.h:74
 // index:0
 // Public
-// void QToolButton(class QWidget *)
+// void QToolButton(QWidget *)
 func NewQToolButton(parent *QWidget /*777 QWidget **/) *QToolButton {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -170,7 +170,7 @@ func (this *QToolButton) SetArrowType(type_ int) {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:86
 // index:0
 // Public
-// void setMenu(class QMenu *)
+// void setMenu(QMenu *)
 func (this *QToolButton) SetMenu(menu *QMenu /*777 QMenu **/) {
 	var convArg0 = menu.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton7setMenuEP5QMenu", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -192,7 +192,7 @@ func (this *QToolButton) Menu() *QMenu /*777 QMenu **/ {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:89
 // index:0
 // Public
-// void setPopupMode(enum QToolButton::ToolButtonPopupMode)
+// void setPopupMode(QToolButton::ToolButtonPopupMode)
 func (this *QToolButton) SetPopupMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton12setPopupModeENS_19ToolButtonPopupModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -224,7 +224,7 @@ func (this *QToolButton) DefaultAction() *QAction /*777 QAction **/ {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:95
 // index:0
 // Public
-// void setAutoRaise(_Bool)
+// void setAutoRaise(bool)
 func (this *QToolButton) SetAutoRaise(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton12setAutoRaiseEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -262,7 +262,7 @@ func (this *QToolButton) SetToolButtonStyle(style int) {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:103
 // index:0
 // Public
-// void setDefaultAction(class QAction *)
+// void setDefaultAction(QAction *)
 func (this *QToolButton) SetDefaultAction(arg0 *QAction /*777 QAction **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton16setDefaultActionEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -272,7 +272,7 @@ func (this *QToolButton) SetDefaultAction(arg0 *QAction /*777 QAction **/) {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:106
 // index:0
 // Public
-// void triggered(class QAction *)
+// void triggered(QAction *)
 func (this *QToolButton) Triggered(arg0 *QAction /*777 QAction **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton9triggeredEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -282,7 +282,7 @@ func (this *QToolButton) Triggered(arg0 *QAction /*777 QAction **/) {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:109
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QToolButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -294,7 +294,7 @@ func (this *QToolButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:110
 // index:0
 // Protected virtual
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QToolButton) MousePressEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -304,7 +304,7 @@ func (this *QToolButton) MousePressEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEve
 // /usr/include/qt/QtWidgets/qtoolbutton.h:111
 // index:0
 // Protected virtual
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QToolButton) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -314,7 +314,7 @@ func (this *QToolButton) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*777 QMouseE
 // /usr/include/qt/QtWidgets/qtoolbutton.h:112
 // index:0
 // Protected virtual
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QToolButton) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -324,7 +324,7 @@ func (this *QToolButton) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **
 // /usr/include/qt/QtWidgets/qtoolbutton.h:113
 // index:0
 // Protected virtual
-// void actionEvent(class QActionEvent *)
+// void actionEvent(QActionEvent *)
 func (this *QToolButton) ActionEvent(arg0 *qtgui.QActionEvent /*777 QActionEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton11actionEventEP12QActionEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -334,7 +334,7 @@ func (this *QToolButton) ActionEvent(arg0 *qtgui.QActionEvent /*777 QActionEvent
 // /usr/include/qt/QtWidgets/qtoolbutton.h:115
 // index:0
 // Protected virtual
-// void enterEvent(class QEvent *)
+// void enterEvent(QEvent *)
 func (this *QToolButton) EnterEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton10enterEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -344,7 +344,7 @@ func (this *QToolButton) EnterEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:116
 // index:0
 // Protected virtual
-// void leaveEvent(class QEvent *)
+// void leaveEvent(QEvent *)
 func (this *QToolButton) LeaveEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton10leaveEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -354,7 +354,7 @@ func (this *QToolButton) LeaveEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:117
 // index:0
 // Protected virtual
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QToolButton) TimerEvent(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -364,7 +364,7 @@ func (this *QToolButton) TimerEvent(arg0 *qtcore.QTimerEvent /*777 QTimerEvent *
 // /usr/include/qt/QtWidgets/qtoolbutton.h:118
 // index:0
 // Protected virtual
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QToolButton) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -374,7 +374,7 @@ func (this *QToolButton) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:120
 // index:0
 // Protected virtual
-// bool hitButton(const class QPoint &)
+// bool hitButton(const QPoint &)
 func (this *QToolButton) HitButton(pos *qtcore.QPoint) bool {
 	var convArg0 = pos.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QToolButton9hitButtonERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -395,7 +395,7 @@ func (this *QToolButton) NextCheckState() {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:122
 // index:0
 // Protected
-// void initStyleOption(class QStyleOptionToolButton *)
+// void initStyleOption(QStyleOptionToolButton *)
 func (this *QToolButton) InitStyleOption(option *QStyleOptionToolButton /*777 QStyleOptionToolButton **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QToolButton15initStyleOptionEP22QStyleOptionToolButton", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

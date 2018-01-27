@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QAbstractSlider) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // /usr/include/qt/QtWidgets/qabstractslider.h:70
 // index:0
 // Public
-// void QAbstractSlider(class QWidget *)
+// void QAbstractSlider(QWidget *)
 func NewQAbstractSlider(parent *QWidget /*777 QWidget **/) *QAbstractSlider {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -202,7 +202,7 @@ func (this *QAbstractSlider) PageStep() int {
 // /usr/include/qt/QtWidgets/qabstractslider.h:87
 // index:0
 // Public
-// void setTracking(_Bool)
+// void setTracking(bool)
 func (this *QAbstractSlider) SetTracking(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSlider11setTrackingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -222,7 +222,7 @@ func (this *QAbstractSlider) HasTracking() bool {
 // /usr/include/qt/QtWidgets/qabstractslider.h:90
 // index:0
 // Public
-// void setSliderDown(_Bool)
+// void setSliderDown(bool)
 func (this *QAbstractSlider) SetSliderDown(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSlider13setSliderDownEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -262,7 +262,7 @@ func (this *QAbstractSlider) SliderPosition() int {
 // /usr/include/qt/QtWidgets/qabstractslider.h:96
 // index:0
 // Public
-// void setInvertedAppearance(_Bool)
+// void setInvertedAppearance(bool)
 func (this *QAbstractSlider) SetInvertedAppearance(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSlider21setInvertedAppearanceEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -282,7 +282,7 @@ func (this *QAbstractSlider) InvertedAppearance() bool {
 // /usr/include/qt/QtWidgets/qabstractslider.h:99
 // index:0
 // Public
-// void setInvertedControls(_Bool)
+// void setInvertedControls(bool)
 func (this *QAbstractSlider) SetInvertedControls(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSlider19setInvertedControlsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -313,7 +313,7 @@ func (this *QAbstractSlider) Value() int {
 // /usr/include/qt/QtWidgets/qabstractslider.h:115
 // index:0
 // Public
-// void triggerAction(enum QAbstractSlider::SliderAction)
+// void triggerAction(QAbstractSlider::SliderAction)
 func (this *QAbstractSlider) TriggerAction(action int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSlider13triggerActionENS_12SliderActionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), action)
 	gopp.ErrPrint(err, rv)
@@ -403,7 +403,7 @@ func (this *QAbstractSlider) ActionTriggered(action int) {
 // /usr/include/qt/QtWidgets/qabstractslider.h:134
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QAbstractSlider) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSlider5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -415,7 +415,7 @@ func (this *QAbstractSlider) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qabstractslider.h:136
 // index:0
 // Protected
-// void setRepeatAction(enum QAbstractSlider::SliderAction, int, int)
+// void setRepeatAction(QAbstractSlider::SliderAction, int, int)
 func (this *QAbstractSlider) SetRepeatAction(action int, thresholdTime int, repeatTime int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSlider15setRepeatActionENS_12SliderActionEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), action, thresholdTime, repeatTime)
 	gopp.ErrPrint(err, rv)
@@ -435,7 +435,7 @@ func (this *QAbstractSlider) RepeatAction() int {
 // /usr/include/qt/QtWidgets/qabstractslider.h:145
 // index:0
 // Protected virtual
-// void sliderChange(enum QAbstractSlider::SliderChange)
+// void sliderChange(QAbstractSlider::SliderChange)
 func (this *QAbstractSlider) SliderChange(change int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSlider12sliderChangeENS_12SliderChangeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), change)
 	gopp.ErrPrint(err, rv)
@@ -444,7 +444,7 @@ func (this *QAbstractSlider) SliderChange(change int) {
 // /usr/include/qt/QtWidgets/qabstractslider.h:147
 // index:0
 // Protected virtual
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QAbstractSlider) KeyPressEvent(ev *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = ev.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSlider13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -454,7 +454,7 @@ func (this *QAbstractSlider) KeyPressEvent(ev *qtgui.QKeyEvent /*777 QKeyEvent *
 // /usr/include/qt/QtWidgets/qabstractslider.h:148
 // index:0
 // Protected virtual
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QAbstractSlider) TimerEvent(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSlider10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -464,7 +464,7 @@ func (this *QAbstractSlider) TimerEvent(arg0 *qtcore.QTimerEvent /*777 QTimerEve
 // /usr/include/qt/QtWidgets/qabstractslider.h:150
 // index:0
 // Protected virtual
-// void wheelEvent(class QWheelEvent *)
+// void wheelEvent(QWheelEvent *)
 func (this *QAbstractSlider) WheelEvent(e *qtgui.QWheelEvent /*777 QWheelEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSlider10wheelEventEP11QWheelEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -474,7 +474,7 @@ func (this *QAbstractSlider) WheelEvent(e *qtgui.QWheelEvent /*777 QWheelEvent *
 // /usr/include/qt/QtWidgets/qabstractslider.h:152
 // index:0
 // Protected virtual
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QAbstractSlider) ChangeEvent(e *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSlider11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

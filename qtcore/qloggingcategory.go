@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -82,7 +82,7 @@ func NewQLoggingCategory(category string) *QLoggingCategory {
 // /usr/include/qt/QtCore/qloggingcategory.h:54
 // index:1
 // Public
-// void QLoggingCategory(const char *, enum QtMsgType)
+// void QLoggingCategory(const char *, QtMsgType)
 func NewQLoggingCategory_1(category string, severityLevel int) *QLoggingCategory {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = qtrt.CString(category)
@@ -105,7 +105,7 @@ func DeleteQLoggingCategory(*QLoggingCategory) {
 // /usr/include/qt/QtCore/qloggingcategory.h:57
 // index:0
 // Public
-// bool isEnabled(enum QtMsgType)
+// bool isEnabled(QtMsgType)
 func (this *QLoggingCategory) IsEnabled(type_ int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory9isEnabledE9QtMsgType", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
@@ -116,7 +116,7 @@ func (this *QLoggingCategory) IsEnabled(type_ int) bool {
 // /usr/include/qt/QtCore/qloggingcategory.h:58
 // index:0
 // Public
-// void setEnabled(enum QtMsgType, _Bool)
+// void setEnabled(QtMsgType, bool)
 func (this *QLoggingCategory) SetEnabled(type_ int, enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategory10setEnabledE9QtMsgTypeb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_, enable)
 	gopp.ErrPrint(err, rv)
@@ -197,7 +197,7 @@ func QLoggingCategory_DefaultCategory() *QLoggingCategory /*777 QLoggingCategory
 // /usr/include/qt/QtCore/qloggingcategory.h:82
 // index:0
 // Public static
-// void setFilterRules(const class QString &)
+// void setFilterRules(const QString &)
 func (this *QLoggingCategory) SetFilterRules(rules *QString) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategory14setFilterRulesERK7QString", ffiqt.FFI_TYPE_POINTER, rules)
 	gopp.ErrPrint(err, rv)

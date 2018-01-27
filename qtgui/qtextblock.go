@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -260,7 +260,7 @@ func (this *QTextBlock) UserData() *QTextBlockUserData /*777 QTextBlockUserData 
 // /usr/include/qt/QtGui/qtextobject.h:238
 // index:0
 // Public
-// void setUserData(class QTextBlockUserData *)
+// void setUserData(QTextBlockUserData *)
 func (this *QTextBlock) SetUserData(data *QTextBlockUserData /*777 QTextBlockUserData **/) {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock11setUserDataEP18QTextBlockUserData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -321,7 +321,7 @@ func (this *QTextBlock) IsVisible() bool {
 // /usr/include/qt/QtGui/qtextobject.h:247
 // index:0
 // Public
-// void setVisible(_Bool)
+// void setVisible(bool)
 func (this *QTextBlock) SetVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)

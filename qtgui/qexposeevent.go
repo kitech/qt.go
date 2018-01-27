@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -73,7 +73,7 @@ func (*QExposeEvent) NewFromPointer(cthis unsafe.Pointer) *QExposeEvent {
 // /usr/include/qt/QtGui/qevent.h:434
 // index:0
 // Public
-// void QExposeEvent(const class QRegion &)
+// void QExposeEvent(const QRegion &)
 func NewQExposeEvent(rgn *QRegion) *QExposeEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = rgn.GetCthis()

@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -122,7 +122,7 @@ func (this *QQmlError) Url() *qtcore.QUrl /*123*/ {
 // /usr/include/qt/QtQml/qqmlerror.h:64
 // index:0
 // Public
-// void setUrl(const class QUrl &)
+// void setUrl(const QUrl &)
 func (this *QQmlError) SetUrl(arg0 *qtcore.QUrl) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QQmlError6setUrlERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -146,7 +146,7 @@ func (this *QQmlError) Description() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtQml/qqmlerror.h:66
 // index:0
 // Public
-// void setDescription(const class QString &)
+// void setDescription(const QString &)
 func (this *QQmlError) SetDescription(arg0 *qtcore.QString) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QQmlError14setDescriptionERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -208,7 +208,7 @@ func (this *QQmlError) Object() *qtcore.QObject /*777 QObject **/ {
 // /usr/include/qt/QtQml/qqmlerror.h:72
 // index:0
 // Public
-// void setObject(class QObject *)
+// void setObject(QObject *)
 func (this *QQmlError) SetObject(arg0 *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QQmlError9setObjectEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -229,7 +229,7 @@ func (this *QQmlError) MessageType() int {
 // /usr/include/qt/QtQml/qqmlerror.h:74
 // index:0
 // Public
-// void setMessageType(enum QtMsgType)
+// void setMessageType(QtMsgType)
 func (this *QQmlError) SetMessageType(messageType int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QQmlError14setMessageTypeE9QtMsgType", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), messageType)
 	gopp.ErrPrint(err, rv)

@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QCommandLineOption) NewFromPointer(cthis unsafe.Pointer) *QCommandLineOpt
 // /usr/include/qt/QtCore/qcommandlineoption.h:61
 // index:0
 // Public
-// void QCommandLineOption(const class QString &)
+// void QCommandLineOption(const QString &)
 func NewQCommandLineOption(name *QString) *QCommandLineOption {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = name.GetCthis()
@@ -81,7 +81,7 @@ func NewQCommandLineOption(name *QString) *QCommandLineOption {
 // /usr/include/qt/QtCore/qcommandlineoption.h:62
 // index:1
 // Public
-// void QCommandLineOption(const class QStringList &)
+// void QCommandLineOption(const QStringList &)
 func NewQCommandLineOption_1(names *QStringList) *QCommandLineOption {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = names.GetCthis()
@@ -94,7 +94,7 @@ func NewQCommandLineOption_1(names *QStringList) *QCommandLineOption {
 // /usr/include/qt/QtCore/qcommandlineoption.h:63
 // index:2
 // Public
-// void QCommandLineOption(const class QString &, const class QString &, const class QString &, const class QString &)
+// void QCommandLineOption(const QString &, const QString &, const QString &, const QString &)
 func NewQCommandLineOption_2(name *QString, description *QString, valueName *QString, defaultValue *QString) *QCommandLineOption {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = name.GetCthis()
@@ -110,7 +110,7 @@ func NewQCommandLineOption_2(name *QString, description *QString, valueName *QSt
 // /usr/include/qt/QtCore/qcommandlineoption.h:66
 // index:3
 // Public
-// void QCommandLineOption(const class QStringList &, const class QString &, const class QString &, const class QString &)
+// void QCommandLineOption(const QStringList &, const QString &, const QString &, const QString &)
 func NewQCommandLineOption_3(names *QStringList, description *QString, valueName *QString, defaultValue *QString) *QCommandLineOption {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = names.GetCthis()
@@ -135,7 +135,7 @@ func DeleteQCommandLineOption(*QCommandLineOption) {
 // /usr/include/qt/QtCore/qcommandlineoption.h:78
 // index:0
 // Public inline
-// void swap(class QCommandLineOption &)
+// void swap(QCommandLineOption &)
 func (this *QCommandLineOption) Swap(other *QCommandLineOption) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -145,7 +145,7 @@ func (this *QCommandLineOption) Swap(other *QCommandLineOption) {
 // /usr/include/qt/QtCore/qcommandlineoption.h:83
 // index:0
 // Public
-// void setValueName(const class QString &)
+// void setValueName(const QString &)
 func (this *QCommandLineOption) SetValueName(name *QString) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption12setValueNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -169,7 +169,7 @@ func (this *QCommandLineOption) ValueName() *QString /*123*/ {
 // /usr/include/qt/QtCore/qcommandlineoption.h:86
 // index:0
 // Public
-// void setDescription(const class QString &)
+// void setDescription(const QString &)
 func (this *QCommandLineOption) SetDescription(description *QString) {
 	var convArg0 = description.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption14setDescriptionERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -193,7 +193,7 @@ func (this *QCommandLineOption) Description() *QString /*123*/ {
 // /usr/include/qt/QtCore/qcommandlineoption.h:89
 // index:0
 // Public
-// void setDefaultValue(const class QString &)
+// void setDefaultValue(const QString &)
 func (this *QCommandLineOption) SetDefaultValue(defaultValue *QString) {
 	var convArg0 = defaultValue.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption15setDefaultValueERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -203,7 +203,7 @@ func (this *QCommandLineOption) SetDefaultValue(defaultValue *QString) {
 // /usr/include/qt/QtCore/qcommandlineoption.h:90
 // index:0
 // Public
-// void setDefaultValues(const class QStringList &)
+// void setDefaultValues(const QStringList &)
 func (this *QCommandLineOption) SetDefaultValues(defaultValues *QStringList) {
 	var convArg0 = defaultValues.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption16setDefaultValuesERK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -233,7 +233,7 @@ func (this *QCommandLineOption) SetFlags(aflags int) {
 // /usr/include/qt/QtCore/qcommandlineoption.h:98
 // index:0
 // Public
-// void setHidden(_Bool)
+// void setHidden(bool)
 func (this *QCommandLineOption) SetHidden(hidden bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption9setHiddenEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hidden)
 	gopp.ErrPrint(err, rv)

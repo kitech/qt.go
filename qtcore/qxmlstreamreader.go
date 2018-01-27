@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQXmlStreamReader() *QXmlStreamReader {
 // /usr/include/qt/QtCore/qxmlstream.h:361
 // index:1
 // Public
-// void QXmlStreamReader(class QIODevice *)
+// void QXmlStreamReader(QIODevice *)
 func NewQXmlStreamReader_1(device *QIODevice /*777 QIODevice **/) *QXmlStreamReader {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = device.GetCthis()
@@ -93,7 +93,7 @@ func NewQXmlStreamReader_1(device *QIODevice /*777 QIODevice **/) *QXmlStreamRea
 // /usr/include/qt/QtCore/qxmlstream.h:362
 // index:2
 // Public
-// void QXmlStreamReader(const class QByteArray &)
+// void QXmlStreamReader(const QByteArray &)
 func NewQXmlStreamReader_2(data *QByteArray) *QXmlStreamReader {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = data.GetCthis()
@@ -106,7 +106,7 @@ func NewQXmlStreamReader_2(data *QByteArray) *QXmlStreamReader {
 // /usr/include/qt/QtCore/qxmlstream.h:363
 // index:3
 // Public
-// void QXmlStreamReader(const class QString &)
+// void QXmlStreamReader(const QString &)
 func NewQXmlStreamReader_3(data *QString) *QXmlStreamReader {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = data.GetCthis()
@@ -142,7 +142,7 @@ func DeleteQXmlStreamReader(*QXmlStreamReader) {
 // /usr/include/qt/QtCore/qxmlstream.h:367
 // index:0
 // Public
-// void setDevice(class QIODevice *)
+// void setDevice(QIODevice *)
 func (this *QXmlStreamReader) SetDevice(device *QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -164,7 +164,7 @@ func (this *QXmlStreamReader) Device() *QIODevice /*777 QIODevice **/ {
 // /usr/include/qt/QtCore/qxmlstream.h:369
 // index:0
 // Public
-// void addData(const class QByteArray &)
+// void addData(const QByteArray &)
 func (this *QXmlStreamReader) AddData(data *QByteArray) {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader7addDataERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -174,7 +174,7 @@ func (this *QXmlStreamReader) AddData(data *QByteArray) {
 // /usr/include/qt/QtCore/qxmlstream.h:370
 // index:1
 // Public
-// void addData(const class QString &)
+// void addData(const QString &)
 func (this *QXmlStreamReader) AddData_1(data *QString) {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader7addDataERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -271,7 +271,7 @@ func (this *QXmlStreamReader) TokenString() *QString /*123*/ {
 // /usr/include/qt/QtCore/qxmlstream.h:384
 // index:0
 // Public
-// void setNamespaceProcessing(_Bool)
+// void setNamespaceProcessing(bool)
 func (this *QXmlStreamReader) SetNamespaceProcessing(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader22setNamespaceProcessingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -498,7 +498,7 @@ func (this *QXmlStreamReader) Attributes() *QXmlStreamAttributes /*123*/ {
 // /usr/include/qt/QtCore/qxmlstream.h:414
 // index:0
 // Public
-// QString readElementText(enum QXmlStreamReader::ReadElementTextBehaviour)
+// QString readElementText(QXmlStreamReader::ReadElementTextBehaviour)
 func (this *QXmlStreamReader) ReadElementText(behaviour int) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader15readElementTextENS_24ReadElementTextBehaviourE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), behaviour)
@@ -610,7 +610,7 @@ func (this *QXmlStreamReader) Text() *QStringRef /*123*/ {
 // /usr/include/qt/QtCore/qxmlstream.h:427
 // index:0
 // Public
-// void addExtraNamespaceDeclaration(const class QXmlStreamNamespaceDeclaration &)
+// void addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration &)
 func (this *QXmlStreamReader) AddExtraNamespaceDeclaration(extraNamespaceDeclaraction *QXmlStreamNamespaceDeclaration) {
 	var convArg0 = extraNamespaceDeclaraction.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader28addExtraNamespaceDeclarationERK30QXmlStreamNamespaceDeclaration", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -662,7 +662,7 @@ func (this *QXmlStreamReader) DtdSystemId() *QStringRef /*123*/ {
 // /usr/include/qt/QtCore/qxmlstream.h:443
 // index:0
 // Public
-// void raiseError(const class QString &)
+// void raiseError(const QString &)
 func (this *QXmlStreamReader) RaiseError(message *QString) {
 	var convArg0 = message.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader10raiseErrorERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -708,7 +708,7 @@ func (this *QXmlStreamReader) HasError() bool {
 // /usr/include/qt/QtCore/qxmlstream.h:452
 // index:0
 // Public
-// void setEntityResolver(class QXmlStreamEntityResolver *)
+// void setEntityResolver(QXmlStreamEntityResolver *)
 func (this *QXmlStreamReader) SetEntityResolver(resolver *QXmlStreamEntityResolver /*777 QXmlStreamEntityResolver **/) {
 	var convArg0 = resolver.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

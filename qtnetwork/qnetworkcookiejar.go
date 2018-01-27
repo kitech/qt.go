@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QNetworkCookieJar) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // /usr/include/qt/QtNetwork/qnetworkcookiejar.h:57
 // index:0
 // Public
-// void QNetworkCookieJar(class QObject *)
+// void QNetworkCookieJar(QObject *)
 func NewQNetworkCookieJar(parent *qtcore.QObject /*777 QObject **/) *QNetworkCookieJar {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -107,7 +107,7 @@ func DeleteQNetworkCookieJar(*QNetworkCookieJar) {
 // /usr/include/qt/QtNetwork/qnetworkcookiejar.h:63
 // index:0
 // Public virtual
-// bool insertCookie(const class QNetworkCookie &)
+// bool insertCookie(const QNetworkCookie &)
 func (this *QNetworkCookieJar) InsertCookie(cookie *QNetworkCookie) bool {
 	var convArg0 = cookie.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QNetworkCookieJar12insertCookieERK14QNetworkCookie", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -119,7 +119,7 @@ func (this *QNetworkCookieJar) InsertCookie(cookie *QNetworkCookie) bool {
 // /usr/include/qt/QtNetwork/qnetworkcookiejar.h:64
 // index:0
 // Public virtual
-// bool updateCookie(const class QNetworkCookie &)
+// bool updateCookie(const QNetworkCookie &)
 func (this *QNetworkCookieJar) UpdateCookie(cookie *QNetworkCookie) bool {
 	var convArg0 = cookie.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QNetworkCookieJar12updateCookieERK14QNetworkCookie", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -131,7 +131,7 @@ func (this *QNetworkCookieJar) UpdateCookie(cookie *QNetworkCookie) bool {
 // /usr/include/qt/QtNetwork/qnetworkcookiejar.h:65
 // index:0
 // Public virtual
-// bool deleteCookie(const class QNetworkCookie &)
+// bool deleteCookie(const QNetworkCookie &)
 func (this *QNetworkCookieJar) DeleteCookie(cookie *QNetworkCookie) bool {
 	var convArg0 = cookie.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QNetworkCookieJar12deleteCookieERK14QNetworkCookie", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -143,7 +143,7 @@ func (this *QNetworkCookieJar) DeleteCookie(cookie *QNetworkCookie) bool {
 // /usr/include/qt/QtNetwork/qnetworkcookiejar.h:70
 // index:0
 // Protected virtual
-// bool validateCookie(const class QNetworkCookie &, const class QUrl &)
+// bool validateCookie(const QNetworkCookie &, const QUrl &)
 func (this *QNetworkCookieJar) ValidateCookie(cookie *QNetworkCookie, url *qtcore.QUrl) bool {
 	var convArg0 = cookie.GetCthis()
 	var convArg1 = url.GetCthis()

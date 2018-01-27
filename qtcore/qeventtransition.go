@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QEventTransition) MetaObject() *QMetaObject /*777 const QMetaObject 
 // /usr/include/qt/QtCore/qeventtransition.h:57
 // index:0
 // Public
-// void QEventTransition(class QState *)
+// void QEventTransition(QState *)
 func NewQEventTransition(sourceState *QState /*777 QState **/) *QEventTransition {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = sourceState.GetCthis()
@@ -94,7 +94,7 @@ func NewQEventTransition(sourceState *QState /*777 QState **/) *QEventTransition
 // /usr/include/qt/QtCore/qeventtransition.h:58
 // index:1
 // Public
-// void QEventTransition(class QObject *, class QEvent::Type, class QState *)
+// void QEventTransition(QObject *, QEvent::Type, QState *)
 func NewQEventTransition_1(object *QObject /*777 QObject **/, type_ int, sourceState *QState /*777 QState **/) *QEventTransition {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = object.GetCthis()
@@ -129,7 +129,7 @@ func (this *QEventTransition) EventSource() *QObject /*777 QObject **/ {
 // /usr/include/qt/QtCore/qeventtransition.h:62
 // index:0
 // Public
-// void setEventSource(class QObject *)
+// void setEventSource(QObject *)
 func (this *QEventTransition) SetEventSource(object *QObject /*777 QObject **/) {
 	var convArg0 = object.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventTransition14setEventSourceEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -150,7 +150,7 @@ func (this *QEventTransition) EventType() int {
 // /usr/include/qt/QtCore/qeventtransition.h:65
 // index:0
 // Public
-// void setEventType(class QEvent::Type)
+// void setEventType(QEvent::Type)
 func (this *QEventTransition) SetEventType(type_ int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventTransition12setEventTypeEN6QEvent4TypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
@@ -159,7 +159,7 @@ func (this *QEventTransition) SetEventType(type_ int) {
 // /usr/include/qt/QtCore/qeventtransition.h:68
 // index:0
 // Protected virtual
-// bool eventTest(class QEvent *)
+// bool eventTest(QEvent *)
 func (this *QEventTransition) EventTest(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventTransition9eventTestEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -171,7 +171,7 @@ func (this *QEventTransition) EventTest(event *QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtCore/qeventtransition.h:69
 // index:0
 // Protected virtual
-// void onTransition(class QEvent *)
+// void onTransition(QEvent *)
 func (this *QEventTransition) OnTransition(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventTransition12onTransitionEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -181,7 +181,7 @@ func (this *QEventTransition) OnTransition(event *QEvent /*777 QEvent **/) {
 // /usr/include/qt/QtCore/qeventtransition.h:71
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QEventTransition) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventTransition5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QPictureFormatPlugin) MetaObject() *qtcore.QMetaObject /*777 const Q
 // /usr/include/qt/QtGui/qpictureformatplugin.h:63
 // index:0
 // Public
-// void QPictureFormatPlugin(class QObject *)
+// void QPictureFormatPlugin(QObject *)
 func NewQPictureFormatPlugin(parent *qtcore.QObject /*777 QObject **/) *QPictureFormatPlugin {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -107,7 +107,7 @@ func DeleteQPictureFormatPlugin(*QPictureFormatPlugin) {
 // /usr/include/qt/QtGui/qpictureformatplugin.h:66
 // index:0
 // Public virtual
-// bool loadPicture(const class QString &, const class QString &, class QPicture *)
+// bool loadPicture(const QString &, const QString &, QPicture *)
 func (this *QPictureFormatPlugin) LoadPicture(format *qtcore.QString, filename *qtcore.QString, pic *QPicture /*777 QPicture **/) bool {
 	var convArg0 = format.GetCthis()
 	var convArg1 = filename.GetCthis()
@@ -121,7 +121,7 @@ func (this *QPictureFormatPlugin) LoadPicture(format *qtcore.QString, filename *
 // /usr/include/qt/QtGui/qpictureformatplugin.h:67
 // index:0
 // Public virtual
-// bool savePicture(const class QString &, const class QString &, const class QPicture &)
+// bool savePicture(const QString &, const QString &, const QPicture &)
 func (this *QPictureFormatPlugin) SavePicture(format *qtcore.QString, filename *qtcore.QString, pic *QPicture) bool {
 	var convArg0 = format.GetCthis()
 	var convArg1 = filename.GetCthis()
@@ -135,7 +135,7 @@ func (this *QPictureFormatPlugin) SavePicture(format *qtcore.QString, filename *
 // /usr/include/qt/QtGui/qpictureformatplugin.h:68
 // index:0
 // Public pure virtual
-// bool installIOHandler(const class QString &)
+// bool installIOHandler(const QString &)
 func (this *QPictureFormatPlugin) InstallIOHandler(format *qtcore.QString) bool {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QPictureFormatPlugin16installIOHandlerERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

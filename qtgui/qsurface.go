@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -142,7 +142,7 @@ func (this *QSurface) Size() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtGui/qsurface.h:85
 // index:0
 // Protected
-// void QSurface(enum QSurface::SurfaceClass)
+// void QSurface(QSurface::SurfaceClass)
 func NewQSurface(type_ int) *QSurface {
 	cthis := qtrt.Calloc(1, 256) // 24
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSurfaceC1ENS_12SurfaceClassE", ffiqt.FFI_TYPE_VOID, cthis, type_)

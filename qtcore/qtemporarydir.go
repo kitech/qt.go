@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQTemporaryDir() *QTemporaryDir {
 // /usr/include/qt/QtCore/qtemporarydir.h:57
 // index:1
 // Public
-// void QTemporaryDir(const class QString &)
+// void QTemporaryDir(const QString &)
 func NewQTemporaryDir_1(templateName *QString) *QTemporaryDir {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = templateName.GetCthis()
@@ -138,7 +138,7 @@ func (this *QTemporaryDir) AutoRemove() bool {
 // /usr/include/qt/QtCore/qtemporarydir.h:64
 // index:0
 // Public
-// void setAutoRemove(_Bool)
+// void setAutoRemove(bool)
 func (this *QTemporaryDir) SetAutoRemove(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTemporaryDir13setAutoRemoveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -172,7 +172,7 @@ func (this *QTemporaryDir) Path() *QString /*123*/ {
 // /usr/include/qt/QtCore/qtemporarydir.h:68
 // index:0
 // Public
-// QString filePath(const class QString &)
+// QString filePath(const QString &)
 func (this *QTemporaryDir) FilePath(fileName *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fileName.GetCthis()

@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -77,7 +77,7 @@ func DeleteQXmlStreamEntityResolver(*QXmlStreamEntityResolver) {
 // /usr/include/qt/QtCore/qxmlstream.h:337
 // index:0
 // Public virtual
-// QString resolveEntity(const class QString &, const class QString &)
+// QString resolveEntity(const QString &, const QString &)
 func (this *QXmlStreamEntityResolver) ResolveEntity(publicId *QString, systemId *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = publicId.GetCthis()
@@ -93,7 +93,7 @@ func (this *QXmlStreamEntityResolver) ResolveEntity(publicId *QString, systemId 
 // /usr/include/qt/QtCore/qxmlstream.h:338
 // index:0
 // Public virtual
-// QString resolveUndeclaredEntity(const class QString &)
+// QString resolveUndeclaredEntity(const QString &)
 func (this *QXmlStreamEntityResolver) ResolveUndeclaredEntity(name *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = name.GetCthis()

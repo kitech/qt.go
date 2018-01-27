@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -73,7 +73,7 @@ func (*QShortcutEvent) NewFromPointer(cthis unsafe.Pointer) *QShortcutEvent {
 // /usr/include/qt/QtGui/qevent.h:767
 // index:0
 // Public
-// void QShortcutEvent(const class QKeySequence &, int, _Bool)
+// void QShortcutEvent(const QKeySequence &, int, bool)
 func NewQShortcutEvent(key *QKeySequence, id int, ambiguous bool) *QShortcutEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = key.GetCthis()

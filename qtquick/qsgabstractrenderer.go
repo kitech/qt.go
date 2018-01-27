@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -106,7 +106,7 @@ func DeleteQSGAbstractRenderer(*QSGAbstractRenderer) {
 // /usr/include/qt/QtQuick/qsgabstractrenderer.h:67
 // index:0
 // Public
-// void setRootNode(class QSGRootNode *)
+// void setRootNode(QSGRootNode *)
 func (this *QSGAbstractRenderer) SetRootNode(node *QSGRootNode /*777 QSGRootNode **/) {
 	var convArg0 = node.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QSGAbstractRenderer11setRootNodeEP11QSGRootNode", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -128,7 +128,7 @@ func (this *QSGAbstractRenderer) RootNode() *QSGRootNode /*777 QSGRootNode **/ {
 // /usr/include/qt/QtQuick/qsgabstractrenderer.h:69
 // index:0
 // Public
-// void setDeviceRect(const class QRect &)
+// void setDeviceRect(const QRect &)
 func (this *QSGAbstractRenderer) SetDeviceRect(rect *qtcore.QRect) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QSGAbstractRenderer13setDeviceRectERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -138,7 +138,7 @@ func (this *QSGAbstractRenderer) SetDeviceRect(rect *qtcore.QRect) {
 // /usr/include/qt/QtQuick/qsgabstractrenderer.h:70
 // index:1
 // Public inline
-// void setDeviceRect(const class QSize &)
+// void setDeviceRect(const QSize &)
 func (this *QSGAbstractRenderer) SetDeviceRect_1(size *qtcore.QSize) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QSGAbstractRenderer13setDeviceRectERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -162,7 +162,7 @@ func (this *QSGAbstractRenderer) DeviceRect() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtQuick/qsgabstractrenderer.h:73
 // index:0
 // Public
-// void setViewportRect(const class QRect &)
+// void setViewportRect(const QRect &)
 func (this *QSGAbstractRenderer) SetViewportRect(rect *qtcore.QRect) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QSGAbstractRenderer15setViewportRectERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -172,7 +172,7 @@ func (this *QSGAbstractRenderer) SetViewportRect(rect *qtcore.QRect) {
 // /usr/include/qt/QtQuick/qsgabstractrenderer.h:74
 // index:1
 // Public inline
-// void setViewportRect(const class QSize &)
+// void setViewportRect(const QSize &)
 func (this *QSGAbstractRenderer) SetViewportRect_1(size *qtcore.QSize) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QSGAbstractRenderer15setViewportRectERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -196,7 +196,7 @@ func (this *QSGAbstractRenderer) ViewportRect() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtQuick/qsgabstractrenderer.h:77
 // index:0
 // Public
-// void setProjectionMatrixToRect(const class QRectF &)
+// void setProjectionMatrixToRect(const QRectF &)
 func (this *QSGAbstractRenderer) SetProjectionMatrixToRect(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QSGAbstractRenderer25setProjectionMatrixToRectERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -206,7 +206,7 @@ func (this *QSGAbstractRenderer) SetProjectionMatrixToRect(rect *qtcore.QRectF) 
 // /usr/include/qt/QtQuick/qsgabstractrenderer.h:78
 // index:0
 // Public
-// void setProjectionMatrix(const class QMatrix4x4 &)
+// void setProjectionMatrix(const QMatrix4x4 &)
 func (this *QSGAbstractRenderer) SetProjectionMatrix(matrix *qtgui.QMatrix4x4) {
 	var convArg0 = matrix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QSGAbstractRenderer19setProjectionMatrixERK10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -230,7 +230,7 @@ func (this *QSGAbstractRenderer) ProjectionMatrix() *qtgui.QMatrix4x4 /*123*/ {
 // /usr/include/qt/QtQuick/qsgabstractrenderer.h:81
 // index:0
 // Public
-// void setClearColor(const class QColor &)
+// void setClearColor(const QColor &)
 func (this *QSGAbstractRenderer) SetClearColor(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QSGAbstractRenderer13setClearColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -283,7 +283,7 @@ func (this *QSGAbstractRenderer) SceneGraphChanged() {
 // /usr/include/qt/QtQuick/qsgabstractrenderer.h:93
 // index:0
 // Protected
-// void QSGAbstractRenderer(class QObject *)
+// void QSGAbstractRenderer(QObject *)
 func NewQSGAbstractRenderer(parent *qtcore.QObject /*777 QObject **/) *QSGAbstractRenderer {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()

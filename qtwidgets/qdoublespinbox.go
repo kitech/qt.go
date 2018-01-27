@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QDoubleSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // /usr/include/qt/QtWidgets/qspinbox.h:126
 // index:0
 // Public
-// void QDoubleSpinBox(class QWidget *)
+// void QDoubleSpinBox(QWidget *)
 func NewQDoubleSpinBox(parent *QWidget /*777 QWidget **/) *QDoubleSpinBox {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -136,7 +136,7 @@ func (this *QDoubleSpinBox) Prefix() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qspinbox.h:132
 // index:0
 // Public
-// void setPrefix(const class QString &)
+// void setPrefix(const QString &)
 func (this *QDoubleSpinBox) SetPrefix(prefix *qtcore.QString) {
 	var convArg0 = prefix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBox9setPrefixERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -160,7 +160,7 @@ func (this *QDoubleSpinBox) Suffix() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qspinbox.h:135
 // index:0
 // Public
-// void setSuffix(const class QString &)
+// void setSuffix(const QString &)
 func (this *QDoubleSpinBox) SetSuffix(suffix *qtcore.QString) {
 	var convArg0 = suffix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBox9setSuffixERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -273,7 +273,7 @@ func (this *QDoubleSpinBox) SetDecimals(prec int) {
 // /usr/include/qt/QtWidgets/qspinbox.h:153
 // index:0
 // Public virtual
-// QValidator::State validate(class QString &, int &)
+// QValidator::State validate(QString &, int &)
 func (this *QDoubleSpinBox) Validate(input *qtcore.QString, pos int) int {
 	var convArg0 = input.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox8validateER7QStringRi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
@@ -285,7 +285,7 @@ func (this *QDoubleSpinBox) Validate(input *qtcore.QString, pos int) int {
 // /usr/include/qt/QtWidgets/qspinbox.h:154
 // index:0
 // Public virtual
-// double valueFromText(const class QString &)
+// double valueFromText(const QString &)
 func (this *QDoubleSpinBox) ValueFromText(text *qtcore.QString) float64 {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox13valueFromTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -311,7 +311,7 @@ func (this *QDoubleSpinBox) TextFromValue(val float64) *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qspinbox.h:156
 // index:0
 // Public virtual
-// void fixup(class QString &)
+// void fixup(QString &)
 func (this *QDoubleSpinBox) Fixup(str *qtcore.QString) {
 	var convArg0 = str.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox5fixupER7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -339,7 +339,7 @@ func (this *QDoubleSpinBox) ValueChanged(arg0 float64) {
 // /usr/include/qt/QtWidgets/qspinbox.h:163
 // index:1
 // Public
-// void valueChanged(const class QString &)
+// void valueChanged(const QString &)
 func (this *QDoubleSpinBox) ValueChanged_1(arg0 *qtcore.QString) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBox12valueChangedERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

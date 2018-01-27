@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QSignalMapper) MetaObject() *QMetaObject /*777 const QMetaObject **/
 // /usr/include/qt/QtCore/qsignalmapper.h:56
 // index:0
 // Public
-// void QSignalMapper(class QObject *)
+// void QSignalMapper(QObject *)
 func NewQSignalMapper(parent *QObject /*777 QObject **/) *QSignalMapper {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -103,7 +103,7 @@ func DeleteQSignalMapper(*QSignalMapper) {
 // /usr/include/qt/QtCore/qsignalmapper.h:59
 // index:0
 // Public
-// void setMapping(class QObject *, int)
+// void setMapping(QObject *, int)
 func (this *QSignalMapper) SetMapping(sender *QObject /*777 QObject **/, id int) {
 	var convArg0 = sender.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSignalMapper10setMappingEP7QObjecti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, id)
@@ -113,7 +113,7 @@ func (this *QSignalMapper) SetMapping(sender *QObject /*777 QObject **/, id int)
 // /usr/include/qt/QtCore/qsignalmapper.h:60
 // index:1
 // Public
-// void setMapping(class QObject *, const class QString &)
+// void setMapping(QObject *, const QString &)
 func (this *QSignalMapper) SetMapping_1(sender *QObject /*777 QObject **/, text *QString) {
 	var convArg0 = sender.GetCthis()
 	var convArg1 = text.GetCthis()
@@ -124,7 +124,7 @@ func (this *QSignalMapper) SetMapping_1(sender *QObject /*777 QObject **/, text 
 // /usr/include/qt/QtCore/qsignalmapper.h:61
 // index:2
 // Public
-// void setMapping(class QObject *, class QWidget *)
+// void setMapping(QObject *, QWidget *)
 func (this *QSignalMapper) SetMapping_2(sender *QObject /*777 QObject **/, widget unsafe.Pointer /*666*/) {
 	var convArg0 = sender.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSignalMapper10setMappingEP7QObjectP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, widget)
@@ -134,7 +134,7 @@ func (this *QSignalMapper) SetMapping_2(sender *QObject /*777 QObject **/, widge
 // /usr/include/qt/QtCore/qsignalmapper.h:62
 // index:3
 // Public
-// void setMapping(class QObject *, class QObject *)
+// void setMapping(QObject *, QObject *)
 func (this *QSignalMapper) SetMapping_3(sender *QObject /*777 QObject **/, object *QObject /*777 QObject **/) {
 	var convArg0 = sender.GetCthis()
 	var convArg1 = object.GetCthis()
@@ -145,7 +145,7 @@ func (this *QSignalMapper) SetMapping_3(sender *QObject /*777 QObject **/, objec
 // /usr/include/qt/QtCore/qsignalmapper.h:63
 // index:0
 // Public
-// void removeMappings(class QObject *)
+// void removeMappings(QObject *)
 func (this *QSignalMapper) RemoveMappings(sender *QObject /*777 QObject **/) {
 	var convArg0 = sender.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSignalMapper14removeMappingsEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -167,7 +167,7 @@ func (this *QSignalMapper) Mapping(id int) *QObject /*777 QObject **/ {
 // /usr/include/qt/QtCore/qsignalmapper.h:66
 // index:1
 // Public
-// QObject * mapping(const class QString &)
+// QObject * mapping(const QString &)
 func (this *QSignalMapper) Mapping_1(text *QString) *QObject /*777 QObject **/ {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSignalMapper7mappingERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -180,7 +180,7 @@ func (this *QSignalMapper) Mapping_1(text *QString) *QObject /*777 QObject **/ {
 // /usr/include/qt/QtCore/qsignalmapper.h:67
 // index:2
 // Public
-// QObject * mapping(class QWidget *)
+// QObject * mapping(QWidget *)
 func (this *QSignalMapper) Mapping_2(widget unsafe.Pointer /*666*/) *QObject /*777 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSignalMapper7mappingEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), widget)
 	gopp.ErrPrint(err, rv)
@@ -192,7 +192,7 @@ func (this *QSignalMapper) Mapping_2(widget unsafe.Pointer /*666*/) *QObject /*7
 // /usr/include/qt/QtCore/qsignalmapper.h:68
 // index:3
 // Public
-// QObject * mapping(class QObject *)
+// QObject * mapping(QObject *)
 func (this *QSignalMapper) Mapping_3(object *QObject /*777 QObject **/) *QObject /*777 QObject **/ {
 	var convArg0 = object.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSignalMapper7mappingEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -214,7 +214,7 @@ func (this *QSignalMapper) Mapped(arg0 int) {
 // /usr/include/qt/QtCore/qsignalmapper.h:72
 // index:1
 // Public
-// void mapped(const class QString &)
+// void mapped(const QString &)
 func (this *QSignalMapper) Mapped_1(arg0 *QString) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSignalMapper6mappedERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -224,7 +224,7 @@ func (this *QSignalMapper) Mapped_1(arg0 *QString) {
 // /usr/include/qt/QtCore/qsignalmapper.h:73
 // index:2
 // Public
-// void mapped(class QWidget *)
+// void mapped(QWidget *)
 func (this *QSignalMapper) Mapped_2(arg0 unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSignalMapper6mappedEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -233,7 +233,7 @@ func (this *QSignalMapper) Mapped_2(arg0 unsafe.Pointer /*666*/) {
 // /usr/include/qt/QtCore/qsignalmapper.h:74
 // index:3
 // Public
-// void mapped(class QObject *)
+// void mapped(QObject *)
 func (this *QSignalMapper) Mapped_3(arg0 *QObject /*777 QObject **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSignalMapper6mappedEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -252,7 +252,7 @@ func (this *QSignalMapper) Map() {
 // /usr/include/qt/QtCore/qsignalmapper.h:78
 // index:1
 // Public
-// void map(class QObject *)
+// void map(QObject *)
 func (this *QSignalMapper) Map_1(sender *QObject /*777 QObject **/) {
 	var convArg0 = sender.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSignalMapper3mapEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

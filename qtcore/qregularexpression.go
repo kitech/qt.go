@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -100,7 +100,7 @@ func DeleteQRegularExpression(*QRegularExpression) {
 // /usr/include/qt/QtCore/qregularexpression.h:95
 // index:0
 // Public inline
-// void swap(class QRegularExpression &)
+// void swap(QRegularExpression &)
 func (this *QRegularExpression) Swap(other *QRegularExpression) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRegularExpression4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -124,7 +124,7 @@ func (this *QRegularExpression) Pattern() *QString /*123*/ {
 // /usr/include/qt/QtCore/qregularexpression.h:98
 // index:0
 // Public
-// void setPattern(const class QString &)
+// void setPattern(const QString &)
 func (this *QRegularExpression) SetPattern(pattern *QString) {
 	var convArg0 = pattern.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRegularExpression10setPatternERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -190,7 +190,7 @@ func (this *QRegularExpression) Optimize() {
 // /usr/include/qt/QtCore/qregularexpression.h:143
 // index:0
 // Public static
-// QString escape(const class QString &)
+// QString escape(const QString &)
 func (this *QRegularExpression) Escape(str *QString) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRegularExpression6escapeERK7QString", ffiqt.FFI_TYPE_POINTER, str)
 	gopp.ErrPrint(err, rv)

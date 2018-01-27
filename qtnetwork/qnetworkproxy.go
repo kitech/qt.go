@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQNetworkProxy() *QNetworkProxy {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:161
 // index:1
 // Public
-// void QNetworkProxy(enum QNetworkProxy::ProxyType, const class QString &, quint16, const class QString &, const class QString &)
+// void QNetworkProxy(QNetworkProxy::ProxyType, const QString &, quint16, const QString &, const QString &)
 func NewQNetworkProxy_1(type_ int, hostName *qtcore.QString, port uint16, user *qtcore.QString, password *qtcore.QString) *QNetworkProxy {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg1 = hostName.GetCthis()
@@ -108,7 +108,7 @@ func DeleteQNetworkProxy(*QNetworkProxy) {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:170
 // index:0
 // Public inline
-// void swap(class QNetworkProxy &)
+// void swap(QNetworkProxy &)
 func (this *QNetworkProxy) Swap(other *QNetworkProxy) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkProxy4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -118,7 +118,7 @@ func (this *QNetworkProxy) Swap(other *QNetworkProxy) {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:176
 // index:0
 // Public
-// void setType(class QNetworkProxy::ProxyType)
+// void setType(QNetworkProxy::ProxyType)
 func (this *QNetworkProxy) SetType(type_ int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkProxy7setTypeENS_9ProxyTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
@@ -171,7 +171,7 @@ func (this *QNetworkProxy) IsTransparentProxy() bool {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:184
 // index:0
 // Public
-// void setUser(const class QString &)
+// void setUser(const QString &)
 func (this *QNetworkProxy) SetUser(userName *qtcore.QString) {
 	var convArg0 = userName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkProxy7setUserERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -195,7 +195,7 @@ func (this *QNetworkProxy) User() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:187
 // index:0
 // Public
-// void setPassword(const class QString &)
+// void setPassword(const QString &)
 func (this *QNetworkProxy) SetPassword(password *qtcore.QString) {
 	var convArg0 = password.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkProxy11setPasswordERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -219,7 +219,7 @@ func (this *QNetworkProxy) Password() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:190
 // index:0
 // Public
-// void setHostName(const class QString &)
+// void setHostName(const QString &)
 func (this *QNetworkProxy) SetHostName(hostName *qtcore.QString) {
 	var convArg0 = hostName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkProxy11setHostNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -263,7 +263,7 @@ func (this *QNetworkProxy) Port() uint16 {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:196
 // index:0
 // Public static
-// void setApplicationProxy(const class QNetworkProxy &)
+// void setApplicationProxy(const QNetworkProxy &)
 func (this *QNetworkProxy) SetApplicationProxy(proxy *QNetworkProxy) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkProxy19setApplicationProxyERKS_", ffiqt.FFI_TYPE_POINTER, proxy)
 	gopp.ErrPrint(err, rv)
@@ -293,7 +293,7 @@ func QNetworkProxy_ApplicationProxy() *QNetworkProxy /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:200
 // index:0
 // Public
-// QVariant header(class QNetworkRequest::KnownHeaders)
+// QVariant header(QNetworkRequest::KnownHeaders)
 func (this *QNetworkProxy) Header(header int) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QNetworkProxy6headerEN15QNetworkRequest12KnownHeadersE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), header)
@@ -307,7 +307,7 @@ func (this *QNetworkProxy) Header(header int) *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:201
 // index:0
 // Public
-// void setHeader(class QNetworkRequest::KnownHeaders, const class QVariant &)
+// void setHeader(QNetworkRequest::KnownHeaders, const QVariant &)
 func (this *QNetworkProxy) SetHeader(header int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkProxy9setHeaderEN15QNetworkRequest12KnownHeadersERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), header, convArg1)
@@ -317,7 +317,7 @@ func (this *QNetworkProxy) SetHeader(header int, value *qtcore.QVariant) {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:204
 // index:0
 // Public
-// bool hasRawHeader(const class QByteArray &)
+// bool hasRawHeader(const QByteArray &)
 func (this *QNetworkProxy) HasRawHeader(headerName *qtcore.QByteArray) bool {
 	var convArg0 = headerName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QNetworkProxy12hasRawHeaderERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -329,7 +329,7 @@ func (this *QNetworkProxy) HasRawHeader(headerName *qtcore.QByteArray) bool {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:206
 // index:0
 // Public
-// QByteArray rawHeader(const class QByteArray &)
+// QByteArray rawHeader(const QByteArray &)
 func (this *QNetworkProxy) RawHeader(headerName *qtcore.QByteArray) *qtcore.QByteArray /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = headerName.GetCthis()
@@ -344,7 +344,7 @@ func (this *QNetworkProxy) RawHeader(headerName *qtcore.QByteArray) *qtcore.QByt
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:207
 // index:0
 // Public
-// void setRawHeader(const class QByteArray &, const class QByteArray &)
+// void setRawHeader(const QByteArray &, const QByteArray &)
 func (this *QNetworkProxy) SetRawHeader(headerName *qtcore.QByteArray, value *qtcore.QByteArray) {
 	var convArg0 = headerName.GetCthis()
 	var convArg1 = value.GetCthis()

@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -97,7 +97,7 @@ func DeleteQQmlAbstractUrlInterceptor(*QQmlAbstractUrlInterceptor) {
 // /usr/include/qt/QtQml/qqmlabstracturlinterceptor.h:60
 // index:0
 // Public pure virtual
-// QUrl intercept(const class QUrl &, enum QQmlAbstractUrlInterceptor::DataType)
+// QUrl intercept(const QUrl &, QQmlAbstractUrlInterceptor::DataType)
 func (this *QQmlAbstractUrlInterceptor) Intercept(path *qtcore.QUrl, type_ int) *qtcore.QUrl /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = path.GetCthis()

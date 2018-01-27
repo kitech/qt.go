@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QSystemSemaphore) NewFromPointer(cthis unsafe.Pointer) *QSystemSemaphore 
 // /usr/include/qt/QtCore/qsystemsemaphore.h:74
 // index:0
 // Public
-// void QSystemSemaphore(const class QString &, int, enum QSystemSemaphore::AccessMode)
+// void QSystemSemaphore(const QString &, int, QSystemSemaphore::AccessMode)
 func NewQSystemSemaphore(key *QString, initialValue int, mode int) *QSystemSemaphore {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = key.GetCthis()
@@ -90,7 +90,7 @@ func DeleteQSystemSemaphore(*QSystemSemaphore) {
 // /usr/include/qt/QtCore/qsystemsemaphore.h:77
 // index:0
 // Public
-// void setKey(const class QString &, int, enum QSystemSemaphore::AccessMode)
+// void setKey(const QString &, int, QSystemSemaphore::AccessMode)
 func (this *QSystemSemaphore) SetKey(key *QString, initialValue int, mode int) {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphore6setKeyERK7QStringiNS_10AccessModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, initialValue, mode)

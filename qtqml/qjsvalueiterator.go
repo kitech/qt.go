@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -76,7 +76,7 @@ func (*QJSValueIterator) NewFromPointer(cthis unsafe.Pointer) *QJSValueIterator 
 // /usr/include/qt/QtQml/qjsvalueiterator.h:56
 // index:0
 // Public
-// void QJSValueIterator(const class QJSValue &)
+// void QJSValueIterator(const QJSValue &)
 func NewQJSValueIterator(value *QJSValue) *QJSValueIterator {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = value.GetCthis()

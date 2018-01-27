@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -266,7 +266,7 @@ func (this *QAccessibleTableInterface) UnselectColumn(column int) bool {
 // /usr/include/qt/QtGui/qaccessible.h:619
 // index:0
 // Public pure virtual
-// void modelChange(class QAccessibleTableModelChangeEvent *)
+// void modelChange(QAccessibleTableModelChangeEvent *)
 func (this *QAccessibleTableInterface) ModelChange(event *QAccessibleTableModelChangeEvent /*777 QAccessibleTableModelChangeEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QAccessibleTableInterface11modelChangeEP32QAccessibleTableModelChangeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -88,7 +88,7 @@ func (this *QPdfWriter) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtGui/qpdfwriter.h:60
 // index:0
 // Public
-// void QPdfWriter(const class QString &)
+// void QPdfWriter(const QString &)
 func NewQPdfWriter(filename *qtcore.QString) *QPdfWriter {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = filename.GetCthis()
@@ -101,7 +101,7 @@ func NewQPdfWriter(filename *qtcore.QString) *QPdfWriter {
 // /usr/include/qt/QtGui/qpdfwriter.h:61
 // index:1
 // Public
-// void QPdfWriter(class QIODevice *)
+// void QPdfWriter(QIODevice *)
 func NewQPdfWriter_1(device *qtcore.QIODevice /*777 QIODevice **/) *QPdfWriter {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = device.GetCthis()
@@ -123,7 +123,7 @@ func DeleteQPdfWriter(*QPdfWriter) {
 // /usr/include/qt/QtGui/qpdfwriter.h:64
 // index:0
 // Public
-// void setPdfVersion(enum QPagedPaintDevice::PdfVersion)
+// void setPdfVersion(QPagedPaintDevice::PdfVersion)
 func (this *QPdfWriter) SetPdfVersion(version int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPdfWriter13setPdfVersionEN17QPagedPaintDevice10PdfVersionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), version)
 	gopp.ErrPrint(err, rv)
@@ -157,7 +157,7 @@ func (this *QPdfWriter) Title() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qpdfwriter.h:68
 // index:0
 // Public
-// void setTitle(const class QString &)
+// void setTitle(const QString &)
 func (this *QPdfWriter) SetTitle(title *qtcore.QString) {
 	var convArg0 = title.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPdfWriter8setTitleERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -181,7 +181,7 @@ func (this *QPdfWriter) Creator() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qpdfwriter.h:71
 // index:0
 // Public
-// void setCreator(const class QString &)
+// void setCreator(const QString &)
 func (this *QPdfWriter) SetCreator(creator *qtcore.QString) {
 	var convArg0 = creator.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPdfWriter10setCreatorERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -222,7 +222,7 @@ func (this *QPdfWriter) Resolution() int {
 // /usr/include/qt/QtGui/qpdfwriter.h:89
 // index:0
 // Public virtual
-// void setPageSize(enum QPagedPaintDevice::PageSize)
+// void setPageSize(QPagedPaintDevice::PageSize)
 func (this *QPdfWriter) SetPageSize(size int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPdfWriter11setPageSizeEN17QPagedPaintDevice8PageSizeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
@@ -231,7 +231,7 @@ func (this *QPdfWriter) SetPageSize(size int) {
 // /usr/include/qt/QtGui/qpdfwriter.h:90
 // index:0
 // Public virtual
-// void setPageSizeMM(const class QSizeF &)
+// void setPageSizeMM(const QSizeF &)
 func (this *QPdfWriter) SetPageSizeMM(size *qtcore.QSizeF) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPdfWriter13setPageSizeMMERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -253,7 +253,7 @@ func (this *QPdfWriter) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 // /usr/include/qt/QtGui/qpdfwriter.h:96
 // index:0
 // Protected virtual
-// int metric(enum QPaintDevice::PaintDeviceMetric)
+// int metric(QPaintDevice::PaintDeviceMetric)
 func (this *QPdfWriter) Metric(id int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QPdfWriter6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)

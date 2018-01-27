@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQTextLength() *QTextLength {
 // /usr/include/qt/QtGui/qtextformat.h:91
 // index:1
 // Public inline
-// void QTextLength(enum QTextLength::Type, qreal)
+// void QTextLength(QTextLength::Type, qreal)
 func NewQTextLength_1(type_ int, value float64) *QTextLength {
 	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLengthC2ENS_4TypeEd", ffiqt.FFI_TYPE_VOID, cthis, type_, value)

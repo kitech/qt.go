@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func NewQStylePainter() *QStylePainter {
 // /usr/include/qt/QtWidgets/qstylepainter.h:55
 // index:1
 // Public inline
-// void QStylePainter(class QWidget *)
+// void QStylePainter(QWidget *)
 func NewQStylePainter_1(w *QWidget /*777 QWidget **/) *QStylePainter {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = w.GetCthis()
@@ -102,7 +102,7 @@ func NewQStylePainter_1(w *QWidget /*777 QWidget **/) *QStylePainter {
 // /usr/include/qt/QtWidgets/qstylepainter.h:56
 // index:2
 // Public inline
-// void QStylePainter(class QPaintDevice *, class QWidget *)
+// void QStylePainter(QPaintDevice *, QWidget *)
 func NewQStylePainter_2(pd *qtgui.QPaintDevice /*777 QPaintDevice **/, w *QWidget /*777 QWidget **/) *QStylePainter {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = pd.GetCthis()
@@ -116,7 +116,7 @@ func NewQStylePainter_2(pd *qtgui.QPaintDevice /*777 QPaintDevice **/, w *QWidge
 // /usr/include/qt/QtWidgets/qstylepainter.h:57
 // index:0
 // Public inline
-// bool begin(class QWidget *)
+// bool begin(QWidget *)
 func (this *QStylePainter) Begin(w *QWidget /*777 QWidget **/) bool {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainter5beginEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -128,7 +128,7 @@ func (this *QStylePainter) Begin(w *QWidget /*777 QWidget **/) bool {
 // /usr/include/qt/QtWidgets/qstylepainter.h:58
 // index:1
 // Public inline
-// bool begin(class QPaintDevice *, class QWidget *)
+// bool begin(QPaintDevice *, QWidget *)
 func (this *QStylePainter) Begin_1(pd *qtgui.QPaintDevice /*777 QPaintDevice **/, w *QWidget /*777 QWidget **/) bool {
 	var convArg0 = pd.GetCthis()
 	var convArg1 = w.GetCthis()
@@ -141,7 +141,7 @@ func (this *QStylePainter) Begin_1(pd *qtgui.QPaintDevice /*777 QPaintDevice **/
 // /usr/include/qt/QtWidgets/qstylepainter.h:64
 // index:0
 // Public inline
-// void drawPrimitive(class QStyle::PrimitiveElement, const class QStyleOption &)
+// void drawPrimitive(QStyle::PrimitiveElement, const QStyleOption &)
 func (this *QStylePainter) DrawPrimitive(pe int, opt *QStyleOption) {
 	var convArg1 = opt.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainter13drawPrimitiveEN6QStyle16PrimitiveElementERK12QStyleOption", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pe, convArg1)
@@ -151,7 +151,7 @@ func (this *QStylePainter) DrawPrimitive(pe int, opt *QStyleOption) {
 // /usr/include/qt/QtWidgets/qstylepainter.h:65
 // index:0
 // Public inline
-// void drawControl(class QStyle::ControlElement, const class QStyleOption &)
+// void drawControl(QStyle::ControlElement, const QStyleOption &)
 func (this *QStylePainter) DrawControl(ce int, opt *QStyleOption) {
 	var convArg1 = opt.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainter11drawControlEN6QStyle14ControlElementERK12QStyleOption", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ce, convArg1)
@@ -161,7 +161,7 @@ func (this *QStylePainter) DrawControl(ce int, opt *QStyleOption) {
 // /usr/include/qt/QtWidgets/qstylepainter.h:66
 // index:0
 // Public inline
-// void drawComplexControl(class QStyle::ComplexControl, const class QStyleOptionComplex &)
+// void drawComplexControl(QStyle::ComplexControl, const QStyleOptionComplex &)
 func (this *QStylePainter) DrawComplexControl(cc int, opt *QStyleOptionComplex) {
 	var convArg1 = opt.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainter18drawComplexControlEN6QStyle14ComplexControlERK19QStyleOptionComplex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cc, convArg1)
@@ -171,7 +171,7 @@ func (this *QStylePainter) DrawComplexControl(cc int, opt *QStyleOptionComplex) 
 // /usr/include/qt/QtWidgets/qstylepainter.h:67
 // index:0
 // Public inline
-// void drawItemText(const class QRect &, int, const class QPalette &, _Bool, const class QString &, class QPalette::ColorRole)
+// void drawItemText(const QRect &, int, const QPalette &, bool, const QString &, QPalette::ColorRole)
 func (this *QStylePainter) DrawItemText(r *qtcore.QRect, flags int, pal *qtgui.QPalette, enabled bool, text *qtcore.QString, textRole int) {
 	var convArg0 = r.GetCthis()
 	var convArg2 = pal.GetCthis()
@@ -183,7 +183,7 @@ func (this *QStylePainter) DrawItemText(r *qtcore.QRect, flags int, pal *qtgui.Q
 // /usr/include/qt/QtWidgets/qstylepainter.h:69
 // index:0
 // Public inline
-// void drawItemPixmap(const class QRect &, int, const class QPixmap &)
+// void drawItemPixmap(const QRect &, int, const QPixmap &)
 func (this *QStylePainter) DrawItemPixmap(r *qtcore.QRect, flags int, pixmap *qtgui.QPixmap) {
 	var convArg0 = r.GetCthis()
 	var convArg2 = pixmap.GetCthis()

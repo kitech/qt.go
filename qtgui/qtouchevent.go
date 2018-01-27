@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -140,7 +140,7 @@ func (this *QTouchEvent) Device() *QTouchDevice /*777 QTouchDevice **/ {
 // /usr/include/qt/QtGui/qevent.h:959
 // index:0
 // Public inline
-// void setWindow(class QWindow *)
+// void setWindow(QWindow *)
 func (this *QTouchEvent) SetWindow(awindow *QWindow /*777 QWindow **/) {
 	var convArg0 = awindow.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent9setWindowEP7QWindow", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -150,7 +150,7 @@ func (this *QTouchEvent) SetWindow(awindow *QWindow /*777 QWindow **/) {
 // /usr/include/qt/QtGui/qevent.h:960
 // index:0
 // Public inline
-// void setTarget(class QObject *)
+// void setTarget(QObject *)
 func (this *QTouchEvent) SetTarget(atarget *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = atarget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent9setTargetEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -160,7 +160,7 @@ func (this *QTouchEvent) SetTarget(atarget *qtcore.QObject /*777 QObject **/) {
 // /usr/include/qt/QtGui/qevent.h:963
 // index:0
 // Public inline
-// void setDevice(class QTouchDevice *)
+// void setDevice(QTouchDevice *)
 func (this *QTouchEvent) SetDevice(adevice *QTouchDevice /*777 QTouchDevice **/) {
 	var convArg0 = adevice.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent9setDeviceEP12QTouchDevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

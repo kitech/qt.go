@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -212,7 +212,7 @@ func (this *QMouseEvent) Buttons() int {
 // /usr/include/qt/QtGui/qevent.h:135
 // index:0
 // Public inline
-// void setLocalPos(const class QPointF &)
+// void setLocalPos(const QPointF &)
 func (this *QMouseEvent) SetLocalPos(localPosition *qtcore.QPointF) {
 	var convArg0 = localPosition.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMouseEvent11setLocalPosERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

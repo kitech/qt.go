@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -93,7 +93,7 @@ func DeleteQHttpPart(*QHttpPart) {
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:66
 // index:0
 // Public inline
-// void swap(class QHttpPart &)
+// void swap(QHttpPart &)
 func (this *QHttpPart) Swap(other *QHttpPart) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHttpPart4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -103,7 +103,7 @@ func (this *QHttpPart) Swap(other *QHttpPart) {
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:72
 // index:0
 // Public
-// void setHeader(class QNetworkRequest::KnownHeaders, const class QVariant &)
+// void setHeader(QNetworkRequest::KnownHeaders, const QVariant &)
 func (this *QHttpPart) SetHeader(header int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHttpPart9setHeaderEN15QNetworkRequest12KnownHeadersERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), header, convArg1)
@@ -113,7 +113,7 @@ func (this *QHttpPart) SetHeader(header int, value *qtcore.QVariant) {
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:73
 // index:0
 // Public
-// void setRawHeader(const class QByteArray &, const class QByteArray &)
+// void setRawHeader(const QByteArray &, const QByteArray &)
 func (this *QHttpPart) SetRawHeader(headerName *qtcore.QByteArray, headerValue *qtcore.QByteArray) {
 	var convArg0 = headerName.GetCthis()
 	var convArg1 = headerValue.GetCthis()
@@ -124,7 +124,7 @@ func (this *QHttpPart) SetRawHeader(headerName *qtcore.QByteArray, headerValue *
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:75
 // index:0
 // Public
-// void setBody(const class QByteArray &)
+// void setBody(const QByteArray &)
 func (this *QHttpPart) SetBody(body *qtcore.QByteArray) {
 	var convArg0 = body.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHttpPart7setBodyERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -134,7 +134,7 @@ func (this *QHttpPart) SetBody(body *qtcore.QByteArray) {
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:76
 // index:0
 // Public
-// void setBodyDevice(class QIODevice *)
+// void setBodyDevice(QIODevice *)
 func (this *QHttpPart) SetBodyDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHttpPart13setBodyDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

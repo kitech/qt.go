@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QEvent) NewFromPointer(cthis unsafe.Pointer) *QEvent {
 // /usr/include/qt/QtCore/qcoreevent.h:297
 // index:0
 // Public
-// void QEvent(enum QEvent::Type)
+// void QEvent(QEvent::Type)
 func NewQEvent(type_ int) *QEvent {
 	cthis := qtrt.Calloc(1, 256) // 24
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEventC2ENS_4TypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)
@@ -111,7 +111,7 @@ func (this *QEvent) Spontaneous() bool {
 // /usr/include/qt/QtCore/qcoreevent.h:304
 // index:0
 // Public inline
-// void setAccepted(_Bool)
+// void setAccepted(bool)
 func (this *QEvent) SetAccepted(accepted bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent11setAcceptedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), accepted)
 	gopp.ErrPrint(err, rv)

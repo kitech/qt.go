@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -76,7 +76,7 @@ func (*QToolTip) NewFromPointer(cthis unsafe.Pointer) *QToolTip {
 // /usr/include/qt/QtWidgets/qtooltip.h:56
 // index:0
 // Public static
-// void showText(const class QPoint &, const class QString &, class QWidget *)
+// void showText(const QPoint &, const QString &, QWidget *)
 func (this *QToolTip) ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget", ffiqt.FFI_TYPE_POINTER, pos, text, w)
 	gopp.ErrPrint(err, rv)
@@ -89,7 +89,7 @@ func QToolTip_ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*77
 // /usr/include/qt/QtWidgets/qtooltip.h:57
 // index:1
 // Public static
-// void showText(const class QPoint &, const class QString &, class QWidget *, const class QRect &)
+// void showText(const QPoint &, const QString &, QWidget *, const QRect &)
 func (this *QToolTip) ShowText_1(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/, rect *qtcore.QRect) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect", ffiqt.FFI_TYPE_POINTER, pos, text, w, rect)
 	gopp.ErrPrint(err, rv)
@@ -102,7 +102,7 @@ func QToolTip_ShowText_1(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*
 // /usr/include/qt/QtWidgets/qtooltip.h:58
 // index:2
 // Public static
-// void showText(const class QPoint &, const class QString &, class QWidget *, const class QRect &, int)
+// void showText(const QPoint &, const QString &, QWidget *, const QRect &, int)
 func (this *QToolTip) ShowText_2(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/, rect *qtcore.QRect, msecShowTime int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti", ffiqt.FFI_TYPE_POINTER, pos, text, w, rect, msecShowTime)
 	gopp.ErrPrint(err, rv)
@@ -178,7 +178,7 @@ func QToolTip_Palette() *qtgui.QPalette /*123*/ {
 // /usr/include/qt/QtWidgets/qtooltip.h:65
 // index:0
 // Public static
-// void setPalette(const class QPalette &)
+// void setPalette(const QPalette &)
 func (this *QToolTip) SetPalette(arg0 *qtgui.QPalette) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip10setPaletteERK8QPalette", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
@@ -208,7 +208,7 @@ func QToolTip_Font() *qtgui.QFont /*123*/ {
 // /usr/include/qt/QtWidgets/qtooltip.h:67
 // index:0
 // Public static
-// void setFont(const class QFont &)
+// void setFont(const QFont &)
 func (this *QToolTip) SetFont(arg0 *qtgui.QFont) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip7setFontERK5QFont", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)

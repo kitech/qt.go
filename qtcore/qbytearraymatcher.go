@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQByteArrayMatcher() *QByteArrayMatcher {
 // /usr/include/qt/QtCore/qbytearraymatcher.h:54
 // index:1
 // Public
-// void QByteArrayMatcher(const class QByteArray &)
+// void QByteArrayMatcher(const QByteArray &)
 func NewQByteArrayMatcher_1(pattern *QByteArray) *QByteArrayMatcher {
 	cthis := qtrt.Calloc(1, 256) // 1040
 	var convArg0 = pattern.GetCthis()
@@ -116,7 +116,7 @@ func DeleteQByteArrayMatcher(*QByteArrayMatcher) {
 // /usr/include/qt/QtCore/qbytearraymatcher.h:61
 // index:0
 // Public
-// void setPattern(const class QByteArray &)
+// void setPattern(const QByteArray &)
 func (this *QByteArrayMatcher) SetPattern(pattern *QByteArray) {
 	var convArg0 = pattern.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcher10setPatternERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -126,7 +126,7 @@ func (this *QByteArrayMatcher) SetPattern(pattern *QByteArray) {
 // /usr/include/qt/QtCore/qbytearraymatcher.h:63
 // index:0
 // Public
-// int indexIn(const class QByteArray &, int)
+// int indexIn(const QByteArray &, int)
 func (this *QByteArrayMatcher) IndexIn(ba *QByteArray, from int) int {
 	var convArg0 = ba.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInERK10QByteArrayi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)

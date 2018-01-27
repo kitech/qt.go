@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QTimer) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // /usr/include/qt/QtCore/qtimer.h:66
 // index:0
 // Public
-// void QTimer(class QObject *)
+// void QTimer(QObject *)
 func NewQTimer(parent *QObject /*777 QObject **/) *QTimer {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = parent.GetCthis()
@@ -176,7 +176,7 @@ func (this *QTimer) TimerType() int {
 // /usr/include/qt/QtCore/qtimer.h:80
 // index:0
 // Public inline
-// void setSingleShot(_Bool)
+// void setSingleShot(bool)
 func (this *QTimer) SetSingleShot(singleShot bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer13setSingleShotEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), singleShot)
 	gopp.ErrPrint(err, rv)
@@ -196,7 +196,7 @@ func (this *QTimer) IsSingleShot() bool {
 // /usr/include/qt/QtCore/qtimer.h:83
 // index:0
 // Public static
-// void singleShot(int, const class QObject *, const char *)
+// void singleShot(int, const QObject *, const char *)
 func (this *QTimer) SingleShot(msec int, receiver *QObject /*777 const QObject **/, member string) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer10singleShotEiPK7QObjectPKc", ffiqt.FFI_TYPE_POINTER, msec, receiver, member)
 	gopp.ErrPrint(err, rv)
@@ -209,7 +209,7 @@ func QTimer_SingleShot(msec int, receiver *QObject /*777 const QObject **/, memb
 // /usr/include/qt/QtCore/qtimer.h:84
 // index:1
 // Public static
-// void singleShot(int, Qt::TimerType, const class QObject *, const char *)
+// void singleShot(int, Qt::TimerType, const QObject *, const char *)
 func (this *QTimer) SingleShot_1(msec int, timerType int, receiver *QObject /*777 const QObject **/, member string) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer10singleShotEiN2Qt9TimerTypeEPK7QObjectPKc", ffiqt.FFI_TYPE_POINTER, msec, timerType, receiver, member)
 	gopp.ErrPrint(err, rv)
@@ -271,7 +271,7 @@ func (this *QTimer) RemainingTimeAsDuration() int {
 // /usr/include/qt/QtCore/qtimer.h:200
 // index:0
 // Protected virtual
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QTimer) TimerEvent(arg0 *QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQXmlStreamNamespaceDeclaration() *QXmlStreamNamespaceDeclaration {
 // /usr/include/qt/QtCore/qxmlstream.h:216
 // index:1
 // Public
-// void QXmlStreamNamespaceDeclaration(const class QString &, const class QString &)
+// void QXmlStreamNamespaceDeclaration(const QString &, const QString &)
 func NewQXmlStreamNamespaceDeclaration_1(prefix *QString, namespaceUri *QString) *QXmlStreamNamespaceDeclaration {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = prefix.GetCthis()

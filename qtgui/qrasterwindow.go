@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QRasterWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // /usr/include/qt/QtGui/qrasterwindow.h:56
 // index:0
 // Public
-// void QRasterWindow(class QWindow *)
+// void QRasterWindow(QWindow *)
 func NewQRasterWindow(parent *QWindow /*777 QWindow **/) *QRasterWindow {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = parent.GetCthis()
@@ -107,7 +107,7 @@ func DeleteQRasterWindow(*QRasterWindow) {
 // /usr/include/qt/QtGui/qrasterwindow.h:60
 // index:0
 // Protected virtual
-// int metric(enum QPaintDevice::PaintDeviceMetric)
+// int metric(QPaintDevice::PaintDeviceMetric)
 func (this *QRasterWindow) Metric(metric int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QRasterWindow6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), metric)
 	gopp.ErrPrint(err, rv)
@@ -118,7 +118,7 @@ func (this *QRasterWindow) Metric(metric int) int {
 // /usr/include/qt/QtGui/qrasterwindow.h:61
 // index:0
 // Protected virtual
-// QPaintDevice * redirected(class QPoint *)
+// QPaintDevice * redirected(QPoint *)
 func (this *QRasterWindow) Redirected(arg0 *qtcore.QPoint /*777 QPoint **/) *QPaintDevice /*777 QPaintDevice **/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QRasterWindow10redirectedEP6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

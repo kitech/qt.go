@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -186,7 +186,7 @@ func (this *QTextLine) Leading() float64 {
 // /usr/include/qt/QtGui/qtextlayout.h:225
 // index:0
 // Public
-// void setLeadingIncluded(_Bool)
+// void setLeadingIncluded(bool)
 func (this *QTextLine) SetLeadingIncluded(included bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextLine18setLeadingIncludedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), included)
 	gopp.ErrPrint(err, rv)
@@ -242,7 +242,7 @@ func (this *QTextLine) NaturalTextRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qtextlayout.h:242
 // index:0
 // Public
-// qreal cursorToX(int *, enum QTextLine::Edge)
+// qreal cursorToX(int *, QTextLine::Edge)
 func (this *QTextLine) CursorToX(cursorPos unsafe.Pointer /*666*/, edge int) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine9cursorToXEPiNS_4EdgeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &cursorPos, edge)
 	gopp.ErrPrint(err, rv)
@@ -253,7 +253,7 @@ func (this *QTextLine) CursorToX(cursorPos unsafe.Pointer /*666*/, edge int) flo
 // /usr/include/qt/QtGui/qtextlayout.h:243
 // index:1
 // Public inline
-// qreal cursorToX(int, enum QTextLine::Edge)
+// qreal cursorToX(int, QTextLine::Edge)
 func (this *QTextLine) CursorToX_1(cursorPos int, edge int) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine9cursorToXEiNS_4EdgeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cursorPos, edge)
 	gopp.ErrPrint(err, rv)
@@ -264,7 +264,7 @@ func (this *QTextLine) CursorToX_1(cursorPos int, edge int) float64 {
 // /usr/include/qt/QtGui/qtextlayout.h:244
 // index:0
 // Public
-// int xToCursor(qreal, enum QTextLine::CursorPosition)
+// int xToCursor(qreal, QTextLine::CursorPosition)
 func (this *QTextLine) XToCursor(x float64, arg1 int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine9xToCursorEdNS_14CursorPositionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, arg1)
 	gopp.ErrPrint(err, rv)
@@ -302,7 +302,7 @@ func (this *QTextLine) SetNumColumns_1(columns int, alignmentWidth float64) {
 // /usr/include/qt/QtGui/qtextlayout.h:250
 // index:0
 // Public
-// void setPosition(const class QPointF &)
+// void setPosition(const QPointF &)
 func (this *QTextLine) SetPosition(pos *qtcore.QPointF) {
 	var convArg0 = pos.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextLine11setPositionERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

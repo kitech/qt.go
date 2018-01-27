@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QMainWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // /usr/include/qt/QtWidgets/qmainwindow.h:94
 // index:0
 // Public
-// void QMainWindow(class QWidget *, Qt::WindowFlags)
+// void QMainWindow(QWidget *, Qt::WindowFlags)
 func NewQMainWindow(parent *QWidget /*777 QWidget **/, flags int) *QMainWindow {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -125,7 +125,7 @@ func (this *QMainWindow) IconSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qmainwindow.h:98
 // index:0
 // Public
-// void setIconSize(const class QSize &)
+// void setIconSize(const QSize &)
 func (this *QMainWindow) SetIconSize(iconSize *qtcore.QSize) {
 	var convArg0 = iconSize.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow11setIconSizeERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -188,7 +188,7 @@ func (this *QMainWindow) DocumentMode() bool {
 // /usr/include/qt/QtWidgets/qmainwindow.h:110
 // index:0
 // Public
-// void setDocumentMode(_Bool)
+// void setDocumentMode(bool)
 func (this *QMainWindow) SetDocumentMode(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow15setDocumentModeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -208,7 +208,7 @@ func (this *QMainWindow) TabShape() int {
 // /usr/include/qt/QtWidgets/qmainwindow.h:115
 // index:0
 // Public
-// void setTabShape(class QTabWidget::TabShape)
+// void setTabShape(QTabWidget::TabShape)
 func (this *QMainWindow) SetTabShape(tabShape int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow11setTabShapeEN10QTabWidget8TabShapeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), tabShape)
 	gopp.ErrPrint(err, rv)
@@ -239,7 +239,7 @@ func (this *QMainWindow) DockOptions() int {
 // /usr/include/qt/QtWidgets/qmainwindow.h:123
 // index:0
 // Public
-// bool isSeparator(const class QPoint &)
+// bool isSeparator(const QPoint &)
 func (this *QMainWindow) IsSeparator(pos *qtcore.QPoint) bool {
 	var convArg0 = pos.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMainWindow11isSeparatorERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -263,7 +263,7 @@ func (this *QMainWindow) MenuBar() *QMenuBar /*777 QMenuBar **/ {
 // /usr/include/qt/QtWidgets/qmainwindow.h:127
 // index:0
 // Public
-// void setMenuBar(class QMenuBar *)
+// void setMenuBar(QMenuBar *)
 func (this *QMainWindow) SetMenuBar(menubar *QMenuBar /*777 QMenuBar **/) {
 	var convArg0 = menubar.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow10setMenuBarEP8QMenuBar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -285,7 +285,7 @@ func (this *QMainWindow) MenuWidget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qmainwindow.h:130
 // index:0
 // Public
-// void setMenuWidget(class QWidget *)
+// void setMenuWidget(QWidget *)
 func (this *QMainWindow) SetMenuWidget(menubar *QWidget /*777 QWidget **/) {
 	var convArg0 = menubar.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow13setMenuWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -307,7 +307,7 @@ func (this *QMainWindow) StatusBar() *QStatusBar /*777 QStatusBar **/ {
 // /usr/include/qt/QtWidgets/qmainwindow.h:135
 // index:0
 // Public
-// void setStatusBar(class QStatusBar *)
+// void setStatusBar(QStatusBar *)
 func (this *QMainWindow) SetStatusBar(statusbar *QStatusBar /*777 QStatusBar **/) {
 	var convArg0 = statusbar.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow12setStatusBarEP10QStatusBar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -329,7 +329,7 @@ func (this *QMainWindow) CentralWidget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qmainwindow.h:139
 // index:0
 // Public
-// void setCentralWidget(class QWidget *)
+// void setCentralWidget(QWidget *)
 func (this *QMainWindow) SetCentralWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow16setCentralWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -380,7 +380,7 @@ func (this *QMainWindow) AddToolBarBreak(area int) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:150
 // index:0
 // Public
-// void insertToolBarBreak(class QToolBar *)
+// void insertToolBarBreak(QToolBar *)
 func (this *QMainWindow) InsertToolBarBreak(before *QToolBar /*777 QToolBar **/) {
 	var convArg0 = before.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow18insertToolBarBreakEP8QToolBar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -390,7 +390,7 @@ func (this *QMainWindow) InsertToolBarBreak(before *QToolBar /*777 QToolBar **/)
 // /usr/include/qt/QtWidgets/qmainwindow.h:152
 // index:0
 // Public
-// void addToolBar(Qt::ToolBarArea, class QToolBar *)
+// void addToolBar(Qt::ToolBarArea, QToolBar *)
 func (this *QMainWindow) AddToolBar(area int, toolbar *QToolBar /*777 QToolBar **/) {
 	var convArg1 = toolbar.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow10addToolBarEN2Qt11ToolBarAreaEP8QToolBar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), area, convArg1)
@@ -400,7 +400,7 @@ func (this *QMainWindow) AddToolBar(area int, toolbar *QToolBar /*777 QToolBar *
 // /usr/include/qt/QtWidgets/qmainwindow.h:153
 // index:1
 // Public
-// void addToolBar(class QToolBar *)
+// void addToolBar(QToolBar *)
 func (this *QMainWindow) AddToolBar_1(toolbar *QToolBar /*777 QToolBar **/) {
 	var convArg0 = toolbar.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow10addToolBarEP8QToolBar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -410,7 +410,7 @@ func (this *QMainWindow) AddToolBar_1(toolbar *QToolBar /*777 QToolBar **/) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:154
 // index:2
 // Public
-// QToolBar * addToolBar(const class QString &)
+// QToolBar * addToolBar(const QString &)
 func (this *QMainWindow) AddToolBar_2(title *qtcore.QString) *QToolBar /*777 QToolBar **/ {
 	var convArg0 = title.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow10addToolBarERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -423,7 +423,7 @@ func (this *QMainWindow) AddToolBar_2(title *qtcore.QString) *QToolBar /*777 QTo
 // /usr/include/qt/QtWidgets/qmainwindow.h:155
 // index:0
 // Public
-// void insertToolBar(class QToolBar *, class QToolBar *)
+// void insertToolBar(QToolBar *, QToolBar *)
 func (this *QMainWindow) InsertToolBar(before *QToolBar /*777 QToolBar **/, toolbar *QToolBar /*777 QToolBar **/) {
 	var convArg0 = before.GetCthis()
 	var convArg1 = toolbar.GetCthis()
@@ -434,7 +434,7 @@ func (this *QMainWindow) InsertToolBar(before *QToolBar /*777 QToolBar **/, tool
 // /usr/include/qt/QtWidgets/qmainwindow.h:156
 // index:0
 // Public
-// void removeToolBar(class QToolBar *)
+// void removeToolBar(QToolBar *)
 func (this *QMainWindow) RemoveToolBar(toolbar *QToolBar /*777 QToolBar **/) {
 	var convArg0 = toolbar.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow13removeToolBarEP8QToolBar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -444,7 +444,7 @@ func (this *QMainWindow) RemoveToolBar(toolbar *QToolBar /*777 QToolBar **/) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:157
 // index:0
 // Public
-// void removeToolBarBreak(class QToolBar *)
+// void removeToolBarBreak(QToolBar *)
 func (this *QMainWindow) RemoveToolBarBreak(before *QToolBar /*777 QToolBar **/) {
 	var convArg0 = before.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow18removeToolBarBreakEP8QToolBar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -465,7 +465,7 @@ func (this *QMainWindow) UnifiedTitleAndToolBarOnMac() bool {
 // /usr/include/qt/QtWidgets/qmainwindow.h:161
 // index:0
 // Public
-// Qt::ToolBarArea toolBarArea(class QToolBar *)
+// Qt::ToolBarArea toolBarArea(QToolBar *)
 func (this *QMainWindow) ToolBarArea(toolbar *QToolBar /*777 QToolBar **/) int {
 	var convArg0 = toolbar.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMainWindow11toolBarAreaEP8QToolBar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -477,7 +477,7 @@ func (this *QMainWindow) ToolBarArea(toolbar *QToolBar /*777 QToolBar **/) int {
 // /usr/include/qt/QtWidgets/qmainwindow.h:162
 // index:0
 // Public
-// bool toolBarBreak(class QToolBar *)
+// bool toolBarBreak(QToolBar *)
 func (this *QMainWindow) ToolBarBreak(toolbar *QToolBar /*777 QToolBar **/) bool {
 	var convArg0 = toolbar.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMainWindow12toolBarBreakEP8QToolBar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -489,7 +489,7 @@ func (this *QMainWindow) ToolBarBreak(toolbar *QToolBar /*777 QToolBar **/) bool
 // /usr/include/qt/QtWidgets/qmainwindow.h:165
 // index:0
 // Public
-// void addDockWidget(Qt::DockWidgetArea, class QDockWidget *)
+// void addDockWidget(Qt::DockWidgetArea, QDockWidget *)
 func (this *QMainWindow) AddDockWidget(area int, dockwidget *QDockWidget /*777 QDockWidget **/) {
 	var convArg1 = dockwidget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow13addDockWidgetEN2Qt14DockWidgetAreaEP11QDockWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), area, convArg1)
@@ -499,7 +499,7 @@ func (this *QMainWindow) AddDockWidget(area int, dockwidget *QDockWidget /*777 Q
 // /usr/include/qt/QtWidgets/qmainwindow.h:166
 // index:1
 // Public
-// void addDockWidget(Qt::DockWidgetArea, class QDockWidget *, Qt::Orientation)
+// void addDockWidget(Qt::DockWidgetArea, QDockWidget *, Qt::Orientation)
 func (this *QMainWindow) AddDockWidget_1(area int, dockwidget *QDockWidget /*777 QDockWidget **/, orientation int) {
 	var convArg1 = dockwidget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow13addDockWidgetEN2Qt14DockWidgetAreaEP11QDockWidgetNS0_11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), area, convArg1, orientation)
@@ -509,7 +509,7 @@ func (this *QMainWindow) AddDockWidget_1(area int, dockwidget *QDockWidget /*777
 // /usr/include/qt/QtWidgets/qmainwindow.h:168
 // index:0
 // Public
-// void splitDockWidget(class QDockWidget *, class QDockWidget *, Qt::Orientation)
+// void splitDockWidget(QDockWidget *, QDockWidget *, Qt::Orientation)
 func (this *QMainWindow) SplitDockWidget(after *QDockWidget /*777 QDockWidget **/, dockwidget *QDockWidget /*777 QDockWidget **/, orientation int) {
 	var convArg0 = after.GetCthis()
 	var convArg1 = dockwidget.GetCthis()
@@ -520,7 +520,7 @@ func (this *QMainWindow) SplitDockWidget(after *QDockWidget /*777 QDockWidget **
 // /usr/include/qt/QtWidgets/qmainwindow.h:170
 // index:0
 // Public
-// void tabifyDockWidget(class QDockWidget *, class QDockWidget *)
+// void tabifyDockWidget(QDockWidget *, QDockWidget *)
 func (this *QMainWindow) TabifyDockWidget(first *QDockWidget /*777 QDockWidget **/, second *QDockWidget /*777 QDockWidget **/) {
 	var convArg0 = first.GetCthis()
 	var convArg1 = second.GetCthis()
@@ -531,7 +531,7 @@ func (this *QMainWindow) TabifyDockWidget(first *QDockWidget /*777 QDockWidget *
 // /usr/include/qt/QtWidgets/qmainwindow.h:172
 // index:0
 // Public
-// void removeDockWidget(class QDockWidget *)
+// void removeDockWidget(QDockWidget *)
 func (this *QMainWindow) RemoveDockWidget(dockwidget *QDockWidget /*777 QDockWidget **/) {
 	var convArg0 = dockwidget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow16removeDockWidgetEP11QDockWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -541,7 +541,7 @@ func (this *QMainWindow) RemoveDockWidget(dockwidget *QDockWidget /*777 QDockWid
 // /usr/include/qt/QtWidgets/qmainwindow.h:173
 // index:0
 // Public
-// bool restoreDockWidget(class QDockWidget *)
+// bool restoreDockWidget(QDockWidget *)
 func (this *QMainWindow) RestoreDockWidget(dockwidget *QDockWidget /*777 QDockWidget **/) bool {
 	var convArg0 = dockwidget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow17restoreDockWidgetEP11QDockWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -553,7 +553,7 @@ func (this *QMainWindow) RestoreDockWidget(dockwidget *QDockWidget /*777 QDockWi
 // /usr/include/qt/QtWidgets/qmainwindow.h:175
 // index:0
 // Public
-// Qt::DockWidgetArea dockWidgetArea(class QDockWidget *)
+// Qt::DockWidgetArea dockWidgetArea(QDockWidget *)
 func (this *QMainWindow) DockWidgetArea(dockwidget *QDockWidget /*777 QDockWidget **/) int {
 	var convArg0 = dockwidget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMainWindow14dockWidgetAreaEP11QDockWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -579,7 +579,7 @@ func (this *QMainWindow) SaveState(version int) *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtWidgets/qmainwindow.h:182
 // index:0
 // Public
-// bool restoreState(const class QByteArray &, int)
+// bool restoreState(const QByteArray &, int)
 func (this *QMainWindow) RestoreState(state *qtcore.QByteArray, version int) bool {
 	var convArg0 = state.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow12restoreStateERK10QByteArrayi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, version)
@@ -603,7 +603,7 @@ func (this *QMainWindow) CreatePopupMenu() *QMenu /*777 QMenu **/ {
 // /usr/include/qt/QtWidgets/qmainwindow.h:190
 // index:0
 // Public
-// void setAnimated(_Bool)
+// void setAnimated(bool)
 func (this *QMainWindow) SetAnimated(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow11setAnimatedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -612,7 +612,7 @@ func (this *QMainWindow) SetAnimated(enabled bool) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:191
 // index:0
 // Public
-// void setDockNestingEnabled(_Bool)
+// void setDockNestingEnabled(bool)
 func (this *QMainWindow) SetDockNestingEnabled(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow21setDockNestingEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -621,7 +621,7 @@ func (this *QMainWindow) SetDockNestingEnabled(enabled bool) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:194
 // index:0
 // Public
-// void setUnifiedTitleAndToolBarOnMac(_Bool)
+// void setUnifiedTitleAndToolBarOnMac(bool)
 func (this *QMainWindow) SetUnifiedTitleAndToolBarOnMac(set bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), set)
 	gopp.ErrPrint(err, rv)
@@ -630,7 +630,7 @@ func (this *QMainWindow) SetUnifiedTitleAndToolBarOnMac(set bool) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:198
 // index:0
 // Public
-// void iconSizeChanged(const class QSize &)
+// void iconSizeChanged(const QSize &)
 func (this *QMainWindow) IconSizeChanged(iconSize *qtcore.QSize) {
 	var convArg0 = iconSize.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow15iconSizeChangedERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -649,7 +649,7 @@ func (this *QMainWindow) ToolButtonStyleChanged(toolButtonStyle int) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:201
 // index:0
 // Public
-// void tabifiedDockWidgetActivated(class QDockWidget *)
+// void tabifiedDockWidgetActivated(QDockWidget *)
 func (this *QMainWindow) TabifiedDockWidgetActivated(dockWidget *QDockWidget /*777 QDockWidget **/) {
 	var convArg0 = dockWidget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow27tabifiedDockWidgetActivatedEP11QDockWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -659,7 +659,7 @@ func (this *QMainWindow) TabifiedDockWidgetActivated(dockWidget *QDockWidget /*7
 // /usr/include/qt/QtWidgets/qmainwindow.h:206
 // index:0
 // Protected virtual
-// void contextMenuEvent(class QContextMenuEvent *)
+// void contextMenuEvent(QContextMenuEvent *)
 func (this *QMainWindow) ContextMenuEvent(event *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow16contextMenuEventEP17QContextMenuEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -669,7 +669,7 @@ func (this *QMainWindow) ContextMenuEvent(event *qtgui.QContextMenuEvent /*777 Q
 // /usr/include/qt/QtWidgets/qmainwindow.h:208
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QMainWindow) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

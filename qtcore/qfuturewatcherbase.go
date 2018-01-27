@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QFutureWatcherBase) MetaObject() *QMetaObject /*777 const QMetaObjec
 // /usr/include/qt/QtCore/qfuturewatcher.h:61
 // index:0
 // Public
-// void QFutureWatcherBase(class QObject *)
+// void QFutureWatcherBase(QObject *)
 func NewQFutureWatcherBase(parent *QObject /*777 QObject **/) *QFutureWatcherBase {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -214,7 +214,7 @@ func (this *QFutureWatcherBase) SetPendingResultsLimit(limit int) {
 // /usr/include/qt/QtCore/qfuturewatcher.h:79
 // index:0
 // Public virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QFutureWatcherBase) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -307,7 +307,7 @@ func (this *QFutureWatcherBase) ProgressValueChanged(progressValue int) {
 // /usr/include/qt/QtCore/qfuturewatcher.h:91
 // index:0
 // Public
-// void progressTextChanged(const class QString &)
+// void progressTextChanged(const QString &)
 func (this *QFutureWatcherBase) ProgressTextChanged(progressText *QString) {
 	var convArg0 = progressText.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase19progressTextChangedERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -326,7 +326,7 @@ func (this *QFutureWatcherBase) Cancel() {
 // /usr/include/qt/QtCore/qfuturewatcher.h:95
 // index:0
 // Public
-// void setPaused(_Bool)
+// void setPaused(bool)
 func (this *QFutureWatcherBase) SetPaused(paused bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase9setPausedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), paused)
 	gopp.ErrPrint(err, rv)
@@ -362,7 +362,7 @@ func (this *QFutureWatcherBase) TogglePaused() {
 // /usr/include/qt/QtCore/qfuturewatcher.h:101
 // index:0
 // Protected virtual
-// void connectNotify(const class QMetaMethod &)
+// void connectNotify(const QMetaMethod &)
 func (this *QFutureWatcherBase) ConnectNotify(signal *QMetaMethod) {
 	var convArg0 = signal.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase13connectNotifyERK11QMetaMethod", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -372,7 +372,7 @@ func (this *QFutureWatcherBase) ConnectNotify(signal *QMetaMethod) {
 // /usr/include/qt/QtCore/qfuturewatcher.h:102
 // index:0
 // Protected virtual
-// void disconnectNotify(const class QMetaMethod &)
+// void disconnectNotify(const QMetaMethod &)
 func (this *QFutureWatcherBase) DisconnectNotify(signal *QMetaMethod) {
 	var convArg0 = signal.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase16disconnectNotifyERK11QMetaMethod", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -391,7 +391,7 @@ func (this *QFutureWatcherBase) ConnectOutputInterface() {
 // /usr/include/qt/QtCore/qfuturewatcher.h:106
 // index:0
 // Protected
-// void disconnectOutputInterface(_Bool)
+// void disconnectOutputInterface(bool)
 func (this *QFutureWatcherBase) DisconnectOutputInterface(pendingAssignment bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase25disconnectOutputInterfaceEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pendingAssignment)
 	gopp.ErrPrint(err, rv)

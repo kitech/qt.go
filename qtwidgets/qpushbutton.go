@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QPushButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // /usr/include/qt/QtWidgets/qpushbutton.h:64
 // index:0
 // Public
-// void QPushButton(class QWidget *)
+// void QPushButton(QWidget *)
 func NewQPushButton(parent *QWidget /*777 QWidget **/) *QPushButton {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -102,7 +102,7 @@ func NewQPushButton(parent *QWidget /*777 QWidget **/) *QPushButton {
 // /usr/include/qt/QtWidgets/qpushbutton.h:65
 // index:1
 // Public
-// void QPushButton(const class QString &, class QWidget *)
+// void QPushButton(const QString &, QWidget *)
 func NewQPushButton_1(text *qtcore.QString, parent *QWidget /*777 QWidget **/) *QPushButton {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = text.GetCthis()
@@ -116,7 +116,7 @@ func NewQPushButton_1(text *qtcore.QString, parent *QWidget /*777 QWidget **/) *
 // /usr/include/qt/QtWidgets/qpushbutton.h:66
 // index:2
 // Public
-// void QPushButton(const class QIcon &, const class QString &, class QWidget *)
+// void QPushButton(const QIcon &, const QString &, QWidget *)
 func NewQPushButton_2(icon *qtgui.QIcon, text *qtcore.QString, parent *QWidget /*777 QWidget **/) *QPushButton {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = icon.GetCthis()
@@ -179,7 +179,7 @@ func (this *QPushButton) AutoDefault() bool {
 // /usr/include/qt/QtWidgets/qpushbutton.h:73
 // index:0
 // Public
-// void setAutoDefault(_Bool)
+// void setAutoDefault(bool)
 func (this *QPushButton) SetAutoDefault(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton14setAutoDefaultEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -199,7 +199,7 @@ func (this *QPushButton) IsDefault() bool {
 // /usr/include/qt/QtWidgets/qpushbutton.h:75
 // index:0
 // Public
-// void setDefault(_Bool)
+// void setDefault(bool)
 func (this *QPushButton) SetDefault(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton10setDefaultEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -208,7 +208,7 @@ func (this *QPushButton) SetDefault(arg0 bool) {
 // /usr/include/qt/QtWidgets/qpushbutton.h:78
 // index:0
 // Public
-// void setMenu(class QMenu *)
+// void setMenu(QMenu *)
 func (this *QPushButton) SetMenu(menu *QMenu /*777 QMenu **/) {
 	var convArg0 = menu.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton7setMenuEP5QMenu", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -230,7 +230,7 @@ func (this *QPushButton) Menu() *QMenu /*777 QMenu **/ {
 // /usr/include/qt/QtWidgets/qpushbutton.h:82
 // index:0
 // Public
-// void setFlat(_Bool)
+// void setFlat(bool)
 func (this *QPushButton) SetFlat(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton7setFlatEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -259,7 +259,7 @@ func (this *QPushButton) ShowMenu() {
 // /usr/include/qt/QtWidgets/qpushbutton.h:91
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QPushButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -271,7 +271,7 @@ func (this *QPushButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qpushbutton.h:92
 // index:0
 // Protected virtual
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QPushButton) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -281,7 +281,7 @@ func (this *QPushButton) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **
 // /usr/include/qt/QtWidgets/qpushbutton.h:93
 // index:0
 // Protected virtual
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QPushButton) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -291,7 +291,7 @@ func (this *QPushButton) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/
 // /usr/include/qt/QtWidgets/qpushbutton.h:94
 // index:0
 // Protected virtual
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QPushButton) FocusInEvent(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -301,7 +301,7 @@ func (this *QPushButton) FocusInEvent(arg0 *qtgui.QFocusEvent /*777 QFocusEvent 
 // /usr/include/qt/QtWidgets/qpushbutton.h:95
 // index:0
 // Protected virtual
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QPushButton) FocusOutEvent(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -311,7 +311,7 @@ func (this *QPushButton) FocusOutEvent(arg0 *qtgui.QFocusEvent /*777 QFocusEvent
 // /usr/include/qt/QtWidgets/qpushbutton.h:96
 // index:0
 // Protected
-// void initStyleOption(class QStyleOptionButton *)
+// void initStyleOption(QStyleOptionButton *)
 func (this *QPushButton) InitStyleOption(option *QStyleOptionButton /*777 QStyleOptionButton **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPushButton15initStyleOptionEP18QStyleOptionButton", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

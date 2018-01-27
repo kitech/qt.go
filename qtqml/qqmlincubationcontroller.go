@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -129,7 +129,7 @@ func (this *QQmlIncubationController) IncubateFor(msecs int) {
 // /usr/include/qt/QtQml/qqmlincubator.h:110
 // index:0
 // Public
-// void incubateWhile(volatile _Bool *, int)
+// void incubateWhile(volatile bool *, int)
 func (this *QQmlIncubationController) IncubateWhile(flag unsafe.Pointer /*666*/, msecs int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QQmlIncubationController13incubateWhileEPVbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &flag, msecs)
 	gopp.ErrPrint(err, rv)

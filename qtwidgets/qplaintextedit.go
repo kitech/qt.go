@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QPlainTextEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // /usr/include/qt/QtWidgets/qplaintextedit.h:94
 // index:0
 // Public
-// void QPlainTextEdit(class QWidget *)
+// void QPlainTextEdit(QWidget *)
 func NewQPlainTextEdit(parent *QWidget /*777 QWidget **/) *QPlainTextEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -102,7 +102,7 @@ func NewQPlainTextEdit(parent *QWidget /*777 QWidget **/) *QPlainTextEdit {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:95
 // index:1
 // Public
-// void QPlainTextEdit(const class QString &, class QWidget *)
+// void QPlainTextEdit(const QString &, QWidget *)
 func NewQPlainTextEdit_1(text *qtcore.QString, parent *QWidget /*777 QWidget **/) *QPlainTextEdit {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = text.GetCthis()
@@ -125,7 +125,7 @@ func DeleteQPlainTextEdit(*QPlainTextEdit) {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:98
 // index:0
 // Public
-// void setDocument(class QTextDocument *)
+// void setDocument(QTextDocument *)
 func (this *QPlainTextEdit) SetDocument(document *qtgui.QTextDocument /*777 QTextDocument **/) {
 	var convArg0 = document.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit11setDocumentEP13QTextDocument", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -147,7 +147,7 @@ func (this *QPlainTextEdit) Document() *qtgui.QTextDocument /*777 QTextDocument 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:101
 // index:0
 // Public
-// void setPlaceholderText(const class QString &)
+// void setPlaceholderText(const QString &)
 func (this *QPlainTextEdit) SetPlaceholderText(placeholderText *qtcore.QString) {
 	var convArg0 = placeholderText.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit18setPlaceholderTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -171,7 +171,7 @@ func (this *QPlainTextEdit) PlaceholderText() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:104
 // index:0
 // Public
-// void setTextCursor(const class QTextCursor &)
+// void setTextCursor(const QTextCursor &)
 func (this *QPlainTextEdit) SetTextCursor(cursor *qtgui.QTextCursor) {
 	var convArg0 = cursor.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit13setTextCursorERK11QTextCursor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -206,7 +206,7 @@ func (this *QPlainTextEdit) IsReadOnly() bool {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:108
 // index:0
 // Public
-// void setReadOnly(_Bool)
+// void setReadOnly(bool)
 func (this *QPlainTextEdit) SetReadOnly(ro bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit11setReadOnlyEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ro)
 	gopp.ErrPrint(err, rv)
@@ -235,7 +235,7 @@ func (this *QPlainTextEdit) TextInteractionFlags() int {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:113
 // index:0
 // Public
-// void mergeCurrentCharFormat(const class QTextCharFormat &)
+// void mergeCurrentCharFormat(const QTextCharFormat &)
 func (this *QPlainTextEdit) MergeCurrentCharFormat(modifier *qtgui.QTextCharFormat) {
 	var convArg0 = modifier.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit22mergeCurrentCharFormatERK15QTextCharFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -245,7 +245,7 @@ func (this *QPlainTextEdit) MergeCurrentCharFormat(modifier *qtgui.QTextCharForm
 // /usr/include/qt/QtWidgets/qplaintextedit.h:114
 // index:0
 // Public
-// void setCurrentCharFormat(const class QTextCharFormat &)
+// void setCurrentCharFormat(const QTextCharFormat &)
 func (this *QPlainTextEdit) SetCurrentCharFormat(format *qtgui.QTextCharFormat) {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit20setCurrentCharFormatERK15QTextCharFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -280,7 +280,7 @@ func (this *QPlainTextEdit) TabChangesFocus() bool {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:118
 // index:0
 // Public
-// void setTabChangesFocus(_Bool)
+// void setTabChangesFocus(bool)
 func (this *QPlainTextEdit) SetTabChangesFocus(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit18setTabChangesFocusEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -289,7 +289,7 @@ func (this *QPlainTextEdit) SetTabChangesFocus(b bool) {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:120
 // index:0
 // Public inline
-// void setDocumentTitle(const class QString &)
+// void setDocumentTitle(const QString &)
 func (this *QPlainTextEdit) SetDocumentTitle(title *qtcore.QString) {
 	var convArg0 = title.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit16setDocumentTitleERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -324,7 +324,7 @@ func (this *QPlainTextEdit) IsUndoRedoEnabled() bool {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:127
 // index:0
 // Public inline
-// void setUndoRedoEnabled(_Bool)
+// void setUndoRedoEnabled(bool)
 func (this *QPlainTextEdit) SetUndoRedoEnabled(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit18setUndoRedoEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -364,7 +364,7 @@ func (this *QPlainTextEdit) LineWrapMode() int {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:137
 // index:0
 // Public
-// void setLineWrapMode(enum QPlainTextEdit::LineWrapMode)
+// void setLineWrapMode(QPlainTextEdit::LineWrapMode)
 func (this *QPlainTextEdit) SetLineWrapMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit15setLineWrapModeENS_12LineWrapModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -384,7 +384,7 @@ func (this *QPlainTextEdit) WordWrapMode() int {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:140
 // index:0
 // Public
-// void setWordWrapMode(class QTextOption::WrapMode)
+// void setWordWrapMode(QTextOption::WrapMode)
 func (this *QPlainTextEdit) SetWordWrapMode(policy int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit15setWordWrapModeEN11QTextOption8WrapModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)
@@ -393,7 +393,7 @@ func (this *QPlainTextEdit) SetWordWrapMode(policy int) {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:142
 // index:0
 // Public
-// void setBackgroundVisible(_Bool)
+// void setBackgroundVisible(bool)
 func (this *QPlainTextEdit) SetBackgroundVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit20setBackgroundVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
@@ -413,7 +413,7 @@ func (this *QPlainTextEdit) BackgroundVisible() bool {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:145
 // index:0
 // Public
-// void setCenterOnScroll(_Bool)
+// void setCenterOnScroll(bool)
 func (this *QPlainTextEdit) SetCenterOnScroll(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit17setCenterOnScrollEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -433,7 +433,7 @@ func (this *QPlainTextEdit) CenterOnScroll() bool {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:148
 // index:0
 // Public
-// bool find(const class QString &, class QTextDocument::FindFlags)
+// bool find(const QString &, QTextDocument::FindFlags)
 func (this *QPlainTextEdit) Find(exp *qtcore.QString, options int) bool {
 	var convArg0 = exp.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit4findERK7QString6QFlagsIN13QTextDocument8FindFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, options)
@@ -445,7 +445,7 @@ func (this *QPlainTextEdit) Find(exp *qtcore.QString, options int) bool {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:150
 // index:1
 // Public
-// bool find(const class QRegExp &, class QTextDocument::FindFlags)
+// bool find(const QRegExp &, QTextDocument::FindFlags)
 func (this *QPlainTextEdit) Find_1(exp *qtcore.QRegExp, options int) bool {
 	var convArg0 = exp.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit4findERK7QRegExp6QFlagsIN13QTextDocument8FindFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, options)
@@ -480,7 +480,7 @@ func (this *QPlainTextEdit) EnsureCursorVisible() {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:158
 // index:0
 // Public virtual
-// QVariant loadResource(int, const class QUrl &)
+// QVariant loadResource(int, const QUrl &)
 func (this *QPlainTextEdit) LoadResource(type_ int, name *qtcore.QUrl) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = name.GetCthis()
@@ -507,7 +507,7 @@ func (this *QPlainTextEdit) CreateStandardContextMenu() *QMenu /*777 QMenu **/ {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:161
 // index:1
 // Public
-// QMenu * createStandardContextMenu(const class QPoint &)
+// QMenu * createStandardContextMenu(const QPoint &)
 func (this *QPlainTextEdit) CreateStandardContextMenu_1(position *qtcore.QPoint) *QMenu /*777 QMenu **/ {
 	var convArg0 = position.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit25createStandardContextMenuERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -520,7 +520,7 @@ func (this *QPlainTextEdit) CreateStandardContextMenu_1(position *qtcore.QPoint)
 // /usr/include/qt/QtWidgets/qplaintextedit.h:164
 // index:0
 // Public
-// QTextCursor cursorForPosition(const class QPoint &)
+// QTextCursor cursorForPosition(const QPoint &)
 func (this *QPlainTextEdit) CursorForPosition(pos *qtcore.QPoint) *qtgui.QTextCursor /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = pos.GetCthis()
@@ -535,7 +535,7 @@ func (this *QPlainTextEdit) CursorForPosition(pos *qtcore.QPoint) *qtgui.QTextCu
 // /usr/include/qt/QtWidgets/qplaintextedit.h:165
 // index:0
 // Public
-// QRect cursorRect(const class QTextCursor &)
+// QRect cursorRect(const QTextCursor &)
 func (this *QPlainTextEdit) CursorRect(cursor *qtgui.QTextCursor) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = cursor.GetCthis()
@@ -564,7 +564,7 @@ func (this *QPlainTextEdit) CursorRect_1() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:168
 // index:0
 // Public
-// QString anchorAt(const class QPoint &)
+// QString anchorAt(const QPoint &)
 func (this *QPlainTextEdit) AnchorAt(pos *qtcore.QPoint) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = pos.GetCthis()
@@ -590,7 +590,7 @@ func (this *QPlainTextEdit) OverwriteMode() bool {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:171
 // index:0
 // Public
-// void setOverwriteMode(_Bool)
+// void setOverwriteMode(bool)
 func (this *QPlainTextEdit) SetOverwriteMode(overwrite bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit16setOverwriteModeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), overwrite)
 	gopp.ErrPrint(err, rv)
@@ -659,7 +659,7 @@ func (this *QPlainTextEdit) SetCursorWidth(width int) {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:187
 // index:0
 // Public
-// void moveCursor(class QTextCursor::MoveOperation, class QTextCursor::MoveMode)
+// void moveCursor(QTextCursor::MoveOperation, QTextCursor::MoveMode)
 func (this *QPlainTextEdit) MoveCursor(operation int, mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit10moveCursorEN11QTextCursor13MoveOperationENS0_8MoveModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), operation, mode)
 	gopp.ErrPrint(err, rv)
@@ -679,7 +679,7 @@ func (this *QPlainTextEdit) CanPaste() bool {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:191
 // index:0
 // Public
-// void print(class QPagedPaintDevice *)
+// void print(QPagedPaintDevice *)
 func (this *QPlainTextEdit) Print(printer *qtgui.QPagedPaintDevice /*777 QPagedPaintDevice **/) {
 	var convArg0 = printer.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QPlainTextEdit5printEP17QPagedPaintDevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -714,7 +714,7 @@ func (this *QPlainTextEdit) InputMethodQuery(property int) *qtcore.QVariant /*12
 // /usr/include/qt/QtWidgets/qplaintextedit.h:195
 // index:1
 // Public
-// QVariant inputMethodQuery(Qt::InputMethodQuery, class QVariant)
+// QVariant inputMethodQuery(Qt::InputMethodQuery, QVariant)
 func (this *QPlainTextEdit) InputMethodQuery_1(query int, argument *qtcore.QVariant /*123*/) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = argument.GetCthis()
@@ -729,7 +729,7 @@ func (this *QPlainTextEdit) InputMethodQuery_1(query int, argument *qtcore.QVari
 // /usr/include/qt/QtWidgets/qplaintextedit.h:199
 // index:0
 // Public
-// void setPlainText(const class QString &)
+// void setPlainText(const QString &)
 func (this *QPlainTextEdit) SetPlainText(text *qtcore.QString) {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit12setPlainTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -802,7 +802,7 @@ func (this *QPlainTextEdit) SelectAll() {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:213
 // index:0
 // Public
-// void insertPlainText(const class QString &)
+// void insertPlainText(const QString &)
 func (this *QPlainTextEdit) InsertPlainText(text *qtcore.QString) {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit15insertPlainTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -812,7 +812,7 @@ func (this *QPlainTextEdit) InsertPlainText(text *qtcore.QString) {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:215
 // index:0
 // Public
-// void appendPlainText(const class QString &)
+// void appendPlainText(const QString &)
 func (this *QPlainTextEdit) AppendPlainText(text *qtcore.QString) {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit15appendPlainTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -822,7 +822,7 @@ func (this *QPlainTextEdit) AppendPlainText(text *qtcore.QString) {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:216
 // index:0
 // Public
-// void appendHtml(const class QString &)
+// void appendHtml(const QString &)
 func (this *QPlainTextEdit) AppendHtml(html *qtcore.QString) {
 	var convArg0 = html.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit10appendHtmlERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -868,7 +868,7 @@ func (this *QPlainTextEdit) TextChanged() {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:225
 // index:0
 // Public
-// void undoAvailable(_Bool)
+// void undoAvailable(bool)
 func (this *QPlainTextEdit) UndoAvailable(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit13undoAvailableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -877,7 +877,7 @@ func (this *QPlainTextEdit) UndoAvailable(b bool) {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:226
 // index:0
 // Public
-// void redoAvailable(_Bool)
+// void redoAvailable(bool)
 func (this *QPlainTextEdit) RedoAvailable(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit13redoAvailableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -886,7 +886,7 @@ func (this *QPlainTextEdit) RedoAvailable(b bool) {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:227
 // index:0
 // Public
-// void copyAvailable(_Bool)
+// void copyAvailable(bool)
 func (this *QPlainTextEdit) CopyAvailable(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit13copyAvailableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -913,7 +913,7 @@ func (this *QPlainTextEdit) CursorPositionChanged() {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:231
 // index:0
 // Public
-// void updateRequest(const class QRect &, int)
+// void updateRequest(const QRect &, int)
 func (this *QPlainTextEdit) UpdateRequest(rect *qtcore.QRect, dy int) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit13updateRequestERK5QRecti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, dy)
@@ -932,7 +932,7 @@ func (this *QPlainTextEdit) BlockCountChanged(newBlockCount int) {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:233
 // index:0
 // Public
-// void modificationChanged(_Bool)
+// void modificationChanged(bool)
 func (this *QPlainTextEdit) ModificationChanged(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit19modificationChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -941,7 +941,7 @@ func (this *QPlainTextEdit) ModificationChanged(arg0 bool) {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:236
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QPlainTextEdit) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -953,7 +953,7 @@ func (this *QPlainTextEdit) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:237
 // index:0
 // Protected virtual
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QPlainTextEdit) TimerEvent(e *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -963,7 +963,7 @@ func (this *QPlainTextEdit) TimerEvent(e *qtcore.QTimerEvent /*777 QTimerEvent *
 // /usr/include/qt/QtWidgets/qplaintextedit.h:238
 // index:0
 // Protected virtual
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QPlainTextEdit) KeyPressEvent(e *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -973,7 +973,7 @@ func (this *QPlainTextEdit) KeyPressEvent(e *qtgui.QKeyEvent /*777 QKeyEvent **/
 // /usr/include/qt/QtWidgets/qplaintextedit.h:239
 // index:0
 // Protected virtual
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QPlainTextEdit) KeyReleaseEvent(e *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit15keyReleaseEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -983,7 +983,7 @@ func (this *QPlainTextEdit) KeyReleaseEvent(e *qtgui.QKeyEvent /*777 QKeyEvent *
 // /usr/include/qt/QtWidgets/qplaintextedit.h:240
 // index:0
 // Protected virtual
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QPlainTextEdit) ResizeEvent(e *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -993,7 +993,7 @@ func (this *QPlainTextEdit) ResizeEvent(e *qtgui.QResizeEvent /*777 QResizeEvent
 // /usr/include/qt/QtWidgets/qplaintextedit.h:241
 // index:0
 // Protected virtual
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QPlainTextEdit) PaintEvent(e *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1003,7 +1003,7 @@ func (this *QPlainTextEdit) PaintEvent(e *qtgui.QPaintEvent /*777 QPaintEvent **
 // /usr/include/qt/QtWidgets/qplaintextedit.h:242
 // index:0
 // Protected virtual
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QPlainTextEdit) MousePressEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1013,7 +1013,7 @@ func (this *QPlainTextEdit) MousePressEvent(e *qtgui.QMouseEvent /*777 QMouseEve
 // /usr/include/qt/QtWidgets/qplaintextedit.h:243
 // index:0
 // Protected virtual
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QPlainTextEdit) MouseMoveEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1023,7 +1023,7 @@ func (this *QPlainTextEdit) MouseMoveEvent(e *qtgui.QMouseEvent /*777 QMouseEven
 // /usr/include/qt/QtWidgets/qplaintextedit.h:244
 // index:0
 // Protected virtual
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QPlainTextEdit) MouseReleaseEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1033,7 +1033,7 @@ func (this *QPlainTextEdit) MouseReleaseEvent(e *qtgui.QMouseEvent /*777 QMouseE
 // /usr/include/qt/QtWidgets/qplaintextedit.h:245
 // index:0
 // Protected virtual
-// void mouseDoubleClickEvent(class QMouseEvent *)
+// void mouseDoubleClickEvent(QMouseEvent *)
 func (this *QPlainTextEdit) MouseDoubleClickEvent(e *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit21mouseDoubleClickEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1043,7 +1043,7 @@ func (this *QPlainTextEdit) MouseDoubleClickEvent(e *qtgui.QMouseEvent /*777 QMo
 // /usr/include/qt/QtWidgets/qplaintextedit.h:246
 // index:0
 // Protected virtual
-// bool focusNextPrevChild(_Bool)
+// bool focusNextPrevChild(bool)
 func (this *QPlainTextEdit) FocusNextPrevChild(next bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), next)
 	gopp.ErrPrint(err, rv)
@@ -1054,7 +1054,7 @@ func (this *QPlainTextEdit) FocusNextPrevChild(next bool) bool {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:248
 // index:0
 // Protected virtual
-// void contextMenuEvent(class QContextMenuEvent *)
+// void contextMenuEvent(QContextMenuEvent *)
 func (this *QPlainTextEdit) ContextMenuEvent(e *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit16contextMenuEventEP17QContextMenuEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1064,7 +1064,7 @@ func (this *QPlainTextEdit) ContextMenuEvent(e *qtgui.QContextMenuEvent /*777 QC
 // /usr/include/qt/QtWidgets/qplaintextedit.h:251
 // index:0
 // Protected virtual
-// void dragEnterEvent(class QDragEnterEvent *)
+// void dragEnterEvent(QDragEnterEvent *)
 func (this *QPlainTextEdit) DragEnterEvent(e *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit14dragEnterEventEP15QDragEnterEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1074,7 +1074,7 @@ func (this *QPlainTextEdit) DragEnterEvent(e *qtgui.QDragEnterEvent /*777 QDragE
 // /usr/include/qt/QtWidgets/qplaintextedit.h:252
 // index:0
 // Protected virtual
-// void dragLeaveEvent(class QDragLeaveEvent *)
+// void dragLeaveEvent(QDragLeaveEvent *)
 func (this *QPlainTextEdit) DragLeaveEvent(e *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit14dragLeaveEventEP15QDragLeaveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1084,7 +1084,7 @@ func (this *QPlainTextEdit) DragLeaveEvent(e *qtgui.QDragLeaveEvent /*777 QDragL
 // /usr/include/qt/QtWidgets/qplaintextedit.h:253
 // index:0
 // Protected virtual
-// void dragMoveEvent(class QDragMoveEvent *)
+// void dragMoveEvent(QDragMoveEvent *)
 func (this *QPlainTextEdit) DragMoveEvent(e *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit13dragMoveEventEP14QDragMoveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1094,7 +1094,7 @@ func (this *QPlainTextEdit) DragMoveEvent(e *qtgui.QDragMoveEvent /*777 QDragMov
 // /usr/include/qt/QtWidgets/qplaintextedit.h:254
 // index:0
 // Protected virtual
-// void dropEvent(class QDropEvent *)
+// void dropEvent(QDropEvent *)
 func (this *QPlainTextEdit) DropEvent(e *qtgui.QDropEvent /*777 QDropEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit9dropEventEP10QDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1104,7 +1104,7 @@ func (this *QPlainTextEdit) DropEvent(e *qtgui.QDropEvent /*777 QDropEvent **/) 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:256
 // index:0
 // Protected virtual
-// void focusInEvent(class QFocusEvent *)
+// void focusInEvent(QFocusEvent *)
 func (this *QPlainTextEdit) FocusInEvent(e *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1114,7 +1114,7 @@ func (this *QPlainTextEdit) FocusInEvent(e *qtgui.QFocusEvent /*777 QFocusEvent 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:257
 // index:0
 // Protected virtual
-// void focusOutEvent(class QFocusEvent *)
+// void focusOutEvent(QFocusEvent *)
 func (this *QPlainTextEdit) FocusOutEvent(e *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1124,7 +1124,7 @@ func (this *QPlainTextEdit) FocusOutEvent(e *qtgui.QFocusEvent /*777 QFocusEvent
 // /usr/include/qt/QtWidgets/qplaintextedit.h:258
 // index:0
 // Protected virtual
-// void showEvent(class QShowEvent *)
+// void showEvent(QShowEvent *)
 func (this *QPlainTextEdit) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit9showEventEP10QShowEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1134,7 +1134,7 @@ func (this *QPlainTextEdit) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **
 // /usr/include/qt/QtWidgets/qplaintextedit.h:259
 // index:0
 // Protected virtual
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QPlainTextEdit) ChangeEvent(e *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1144,7 +1144,7 @@ func (this *QPlainTextEdit) ChangeEvent(e *qtcore.QEvent /*777 QEvent **/) {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:261
 // index:0
 // Protected virtual
-// void wheelEvent(class QWheelEvent *)
+// void wheelEvent(QWheelEvent *)
 func (this *QPlainTextEdit) WheelEvent(e *qtgui.QWheelEvent /*777 QWheelEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit10wheelEventEP11QWheelEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1166,7 +1166,7 @@ func (this *QPlainTextEdit) CreateMimeDataFromSelection() *qtcore.QMimeData /*77
 // /usr/include/qt/QtWidgets/qplaintextedit.h:265
 // index:0
 // Protected virtual
-// bool canInsertFromMimeData(const class QMimeData *)
+// bool canInsertFromMimeData(const QMimeData *)
 func (this *QPlainTextEdit) CanInsertFromMimeData(source *qtcore.QMimeData /*777 const QMimeData **/) bool {
 	var convArg0 = source.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QPlainTextEdit21canInsertFromMimeDataEPK9QMimeData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1178,7 +1178,7 @@ func (this *QPlainTextEdit) CanInsertFromMimeData(source *qtcore.QMimeData /*777
 // /usr/include/qt/QtWidgets/qplaintextedit.h:266
 // index:0
 // Protected virtual
-// void insertFromMimeData(const class QMimeData *)
+// void insertFromMimeData(const QMimeData *)
 func (this *QPlainTextEdit) InsertFromMimeData(source *qtcore.QMimeData /*777 const QMimeData **/) {
 	var convArg0 = source.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit18insertFromMimeDataEPK9QMimeData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1188,7 +1188,7 @@ func (this *QPlainTextEdit) InsertFromMimeData(source *qtcore.QMimeData /*777 co
 // /usr/include/qt/QtWidgets/qplaintextedit.h:268
 // index:0
 // Protected virtual
-// void inputMethodEvent(class QInputMethodEvent *)
+// void inputMethodEvent(QInputMethodEvent *)
 func (this *QPlainTextEdit) InputMethodEvent(arg0 *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit16inputMethodEventEP17QInputMethodEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1207,7 +1207,7 @@ func (this *QPlainTextEdit) ScrollContentsBy(dx int, dy int) {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:273
 // index:0
 // Protected virtual
-// void doSetTextCursor(const class QTextCursor &)
+// void doSetTextCursor(const QTextCursor &)
 func (this *QPlainTextEdit) DoSetTextCursor(cursor *qtgui.QTextCursor) {
 	var convArg0 = cursor.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEdit15doSetTextCursorERK11QTextCursor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1245,7 +1245,7 @@ func (this *QPlainTextEdit) ContentOffset() *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:277
 // index:0
 // Protected
-// QRectF blockBoundingRect(const class QTextBlock &)
+// QRectF blockBoundingRect(const QTextBlock &)
 func (this *QPlainTextEdit) BlockBoundingRect(block *qtgui.QTextBlock) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = block.GetCthis()
@@ -1260,7 +1260,7 @@ func (this *QPlainTextEdit) BlockBoundingRect(block *qtgui.QTextBlock) *qtcore.Q
 // /usr/include/qt/QtWidgets/qplaintextedit.h:278
 // index:0
 // Protected
-// QRectF blockBoundingGeometry(const class QTextBlock &)
+// QRectF blockBoundingGeometry(const QTextBlock &)
 func (this *QPlainTextEdit) BlockBoundingGeometry(block *qtgui.QTextBlock) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = block.GetCthis()

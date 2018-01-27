@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -73,7 +73,7 @@ func (*QStatusTipEvent) NewFromPointer(cthis unsafe.Pointer) *QStatusTipEvent {
 // /usr/include/qt/QtGui/qevent.h:700
 // index:0
 // Public
-// void QStatusTipEvent(const class QString &)
+// void QStatusTipEvent(const QString &)
 func NewQStatusTipEvent(tip *qtcore.QString) *QStatusTipEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = tip.GetCthis()

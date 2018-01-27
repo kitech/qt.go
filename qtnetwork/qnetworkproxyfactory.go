@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -109,7 +109,7 @@ func QNetworkProxyFactory_UsesSystemConfiguration() bool {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:225
 // index:0
 // Public static
-// void setUseSystemConfiguration(_Bool)
+// void setUseSystemConfiguration(bool)
 func (this *QNetworkProxyFactory) SetUseSystemConfiguration(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkProxyFactory25setUseSystemConfigurationEb", ffiqt.FFI_TYPE_POINTER, enable)
 	gopp.ErrPrint(err, rv)
@@ -122,7 +122,7 @@ func QNetworkProxyFactory_SetUseSystemConfiguration(enable bool) {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:226
 // index:0
 // Public static
-// void setApplicationProxyFactory(class QNetworkProxyFactory *)
+// void setApplicationProxyFactory(QNetworkProxyFactory *)
 func (this *QNetworkProxyFactory) SetApplicationProxyFactory(factory *QNetworkProxyFactory /*777 QNetworkProxyFactory **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkProxyFactory26setApplicationProxyFactoryEPS_", ffiqt.FFI_TYPE_POINTER, factory)
 	gopp.ErrPrint(err, rv)

@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QGridLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // /usr/include/qt/QtWidgets/qgridlayout.h:64
 // index:0
 // Public
-// void QGridLayout(class QWidget *)
+// void QGridLayout(QWidget *)
 func NewQGridLayout(parent *QWidget /*777 QWidget **/) *QGridLayout {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = parent.GetCthis()
@@ -394,7 +394,7 @@ func (this *QGridLayout) Invalidate() {
 // /usr/include/qt/QtWidgets/qgridlayout.h:102
 // index:0
 // Public inline
-// void addWidget(class QWidget *)
+// void addWidget(QWidget *)
 func (this *QGridLayout) AddWidget(w *QWidget /*777 QWidget **/) {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout9addWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -471,7 +471,7 @@ func (this *QGridLayout) Count() int {
 // /usr/include/qt/QtWidgets/qgridlayout.h:115
 // index:0
 // Public virtual
-// void setGeometry(const class QRect &)
+// void setGeometry(const QRect &)
 func (this *QGridLayout) SetGeometry(arg0 *qtcore.QRect) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout11setGeometryERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -499,7 +499,7 @@ func (this *QGridLayout) GetItemPosition(idx int, row unsafe.Pointer /*666*/, co
 // /usr/include/qt/QtWidgets/qgridlayout.h:123
 // index:0
 // Protected virtual
-// void addItem(class QLayoutItem *)
+// void addItem(QLayoutItem *)
 func (this *QGridLayout) AddItem(arg0 *QLayoutItem /*777 QLayoutItem **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout7addItemEP11QLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -77,7 +77,7 @@ func (*QGraphicsAnchorLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsAnc
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:79
 // index:0
 // Public
-// void QGraphicsAnchorLayout(class QGraphicsLayoutItem *)
+// void QGraphicsAnchorLayout(QGraphicsLayoutItem *)
 func NewQGraphicsAnchorLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) *QGraphicsAnchorLayout {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -99,7 +99,7 @@ func DeleteQGraphicsAnchorLayout(*QGraphicsAnchorLayout) {
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:82
 // index:0
 // Public
-// QGraphicsAnchor * addAnchor(class QGraphicsLayoutItem *, Qt::AnchorPoint, class QGraphicsLayoutItem *, Qt::AnchorPoint)
+// QGraphicsAnchor * addAnchor(QGraphicsLayoutItem *, Qt::AnchorPoint, QGraphicsLayoutItem *, Qt::AnchorPoint)
 func (this *QGraphicsAnchorLayout) AddAnchor(firstItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, firstEdge int, secondItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, secondEdge int) *QGraphicsAnchor /*777 QGraphicsAnchor **/ {
 	var convArg0 = firstItem.GetCthis()
 	var convArg2 = secondItem.GetCthis()
@@ -113,7 +113,7 @@ func (this *QGraphicsAnchorLayout) AddAnchor(firstItem *QGraphicsLayoutItem /*77
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:84
 // index:0
 // Public
-// QGraphicsAnchor * anchor(class QGraphicsLayoutItem *, Qt::AnchorPoint, class QGraphicsLayoutItem *, Qt::AnchorPoint)
+// QGraphicsAnchor * anchor(QGraphicsLayoutItem *, Qt::AnchorPoint, QGraphicsLayoutItem *, Qt::AnchorPoint)
 func (this *QGraphicsAnchorLayout) Anchor(firstItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, firstEdge int, secondItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, secondEdge int) *QGraphicsAnchor /*777 QGraphicsAnchor **/ {
 	var convArg0 = firstItem.GetCthis()
 	var convArg2 = secondItem.GetCthis()
@@ -127,7 +127,7 @@ func (this *QGraphicsAnchorLayout) Anchor(firstItem *QGraphicsLayoutItem /*777 Q
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:87
 // index:0
 // Public
-// void addCornerAnchors(class QGraphicsLayoutItem *, Qt::Corner, class QGraphicsLayoutItem *, Qt::Corner)
+// void addCornerAnchors(QGraphicsLayoutItem *, Qt::Corner, QGraphicsLayoutItem *, Qt::Corner)
 func (this *QGraphicsAnchorLayout) AddCornerAnchors(firstItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, firstCorner int, secondItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, secondCorner int) {
 	var convArg0 = firstItem.GetCthis()
 	var convArg2 = secondItem.GetCthis()
@@ -196,7 +196,7 @@ func (this *QGraphicsAnchorLayout) RemoveAt(index int) {
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:101
 // index:0
 // Public virtual
-// void setGeometry(const class QRectF &)
+// void setGeometry(const QRectF &)
 func (this *QGraphicsAnchorLayout) SetGeometry(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout11setGeometryERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -238,7 +238,7 @@ func (this *QGraphicsAnchorLayout) Invalidate() {
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:107
 // index:0
 // Protected virtual
-// QSizeF sizeHint(Qt::SizeHint, const class QSizeF &)
+// QSizeF sizeHint(Qt::SizeHint, const QSizeF &)
 func (this *QGraphicsAnchorLayout) SizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg1 = constraint.GetCthis()

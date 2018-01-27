@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQNetworkProxyQuery() *QNetworkProxyQuery {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:73
 // index:1
 // Public
-// void QNetworkProxyQuery(const class QUrl &, enum QNetworkProxyQuery::QueryType)
+// void QNetworkProxyQuery(const QUrl &, QNetworkProxyQuery::QueryType)
 func NewQNetworkProxyQuery_1(requestUrl *qtcore.QUrl, queryType int) *QNetworkProxyQuery {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = requestUrl.GetCthis()
@@ -97,7 +97,7 @@ func NewQNetworkProxyQuery_1(requestUrl *qtcore.QUrl, queryType int) *QNetworkPr
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:74
 // index:2
 // Public
-// void QNetworkProxyQuery(const class QString &, int, const class QString &, enum QNetworkProxyQuery::QueryType)
+// void QNetworkProxyQuery(const QString &, int, const QString &, QNetworkProxyQuery::QueryType)
 func NewQNetworkProxyQuery_2(hostname *qtcore.QString, port int, protocolTag *qtcore.QString, queryType int) *QNetworkProxyQuery {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = hostname.GetCthis()
@@ -111,7 +111,7 @@ func NewQNetworkProxyQuery_2(hostname *qtcore.QString, port int, protocolTag *qt
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:76
 // index:3
 // Public
-// void QNetworkProxyQuery(quint16, const class QString &, enum QNetworkProxyQuery::QueryType)
+// void QNetworkProxyQuery(quint16, const QString &, QNetworkProxyQuery::QueryType)
 func NewQNetworkProxyQuery_3(bindPort uint16, protocolTag *qtcore.QString, queryType int) *QNetworkProxyQuery {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg1 = protocolTag.GetCthis()
@@ -124,7 +124,7 @@ func NewQNetworkProxyQuery_3(bindPort uint16, protocolTag *qtcore.QString, query
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:80
 // index:4
 // Public
-// void QNetworkProxyQuery(const class QNetworkConfiguration &, const class QUrl &, enum QNetworkProxyQuery::QueryType)
+// void QNetworkProxyQuery(const QNetworkConfiguration &, const QUrl &, QNetworkProxyQuery::QueryType)
 func NewQNetworkProxyQuery_4(networkConfiguration *QNetworkConfiguration, requestUrl *qtcore.QUrl, queryType int) *QNetworkProxyQuery {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = networkConfiguration.GetCthis()
@@ -138,7 +138,7 @@ func NewQNetworkProxyQuery_4(networkConfiguration *QNetworkConfiguration, reques
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:83
 // index:5
 // Public
-// void QNetworkProxyQuery(const class QNetworkConfiguration &, const class QString &, int, const class QString &, enum QNetworkProxyQuery::QueryType)
+// void QNetworkProxyQuery(const QNetworkConfiguration &, const QString &, int, const QString &, QNetworkProxyQuery::QueryType)
 func NewQNetworkProxyQuery_5(networkConfiguration *QNetworkConfiguration, hostname *qtcore.QString, port int, protocolTag *qtcore.QString, queryType int) *QNetworkProxyQuery {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = networkConfiguration.GetCthis()
@@ -153,7 +153,7 @@ func NewQNetworkProxyQuery_5(networkConfiguration *QNetworkConfiguration, hostna
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:87
 // index:6
 // Public
-// void QNetworkProxyQuery(const class QNetworkConfiguration &, quint16, const class QString &, enum QNetworkProxyQuery::QueryType)
+// void QNetworkProxyQuery(const QNetworkConfiguration &, quint16, const QString &, QNetworkProxyQuery::QueryType)
 func NewQNetworkProxyQuery_6(networkConfiguration *QNetworkConfiguration, bindPort uint16, protocolTag *qtcore.QString, queryType int) *QNetworkProxyQuery {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = networkConfiguration.GetCthis()
@@ -176,7 +176,7 @@ func DeleteQNetworkProxyQuery(*QNetworkProxyQuery) {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:98
 // index:0
 // Public inline
-// void swap(class QNetworkProxyQuery &)
+// void swap(QNetworkProxyQuery &)
 func (this *QNetworkProxyQuery) Swap(other *QNetworkProxyQuery) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QNetworkProxyQuery4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -197,7 +197,7 @@ func (this *QNetworkProxyQuery) QueryType() int {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:105
 // index:0
 // Public
-// void setQueryType(enum QNetworkProxyQuery::QueryType)
+// void setQueryType(QNetworkProxyQuery::QueryType)
 func (this *QNetworkProxyQuery) SetQueryType(type_ int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QNetworkProxyQuery12setQueryTypeENS_9QueryTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
@@ -240,7 +240,7 @@ func (this *QNetworkProxyQuery) PeerHostName() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:111
 // index:0
 // Public
-// void setPeerHostName(const class QString &)
+// void setPeerHostName(const QString &)
 func (this *QNetworkProxyQuery) SetPeerHostName(hostname *qtcore.QString) {
 	var convArg0 = hostname.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QNetworkProxyQuery15setPeerHostNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -284,7 +284,7 @@ func (this *QNetworkProxyQuery) ProtocolTag() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:117
 // index:0
 // Public
-// void setProtocolTag(const class QString &)
+// void setProtocolTag(const QString &)
 func (this *QNetworkProxyQuery) SetProtocolTag(protocolTag *qtcore.QString) {
 	var convArg0 = protocolTag.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QNetworkProxyQuery14setProtocolTagERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -308,7 +308,7 @@ func (this *QNetworkProxyQuery) Url() *qtcore.QUrl /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:120
 // index:0
 // Public
-// void setUrl(const class QUrl &)
+// void setUrl(const QUrl &)
 func (this *QNetworkProxyQuery) SetUrl(url *qtcore.QUrl) {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QNetworkProxyQuery6setUrlERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -332,7 +332,7 @@ func (this *QNetworkProxyQuery) NetworkConfiguration() *QNetworkConfiguration /*
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:126
 // index:0
 // Public
-// void setNetworkConfiguration(const class QNetworkConfiguration &)
+// void setNetworkConfiguration(const QNetworkConfiguration &)
 func (this *QNetworkProxyQuery) SetNetworkConfiguration(networkConfiguration *QNetworkConfiguration) {
 	var convArg0 = networkConfiguration.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QNetworkProxyQuery23setNetworkConfigurationERK21QNetworkConfiguration", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

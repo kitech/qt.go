@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQPalette() *QPalette {
 // /usr/include/qt/QtGui/qpalette.h:59
 // index:1
 // Public
-// void QPalette(const class QColor &)
+// void QPalette(const QColor &)
 func NewQPalette_1(button *QColor) *QPalette {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = button.GetCthis()
@@ -109,7 +109,7 @@ func NewQPalette_2(button int) *QPalette {
 // /usr/include/qt/QtGui/qpalette.h:61
 // index:3
 // Public
-// void QPalette(const class QColor &, const class QColor &)
+// void QPalette(const QColor &, const QColor &)
 func NewQPalette_3(button *QColor, window *QColor) *QPalette {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = button.GetCthis()
@@ -123,7 +123,7 @@ func NewQPalette_3(button *QColor, window *QColor) *QPalette {
 // /usr/include/qt/QtGui/qpalette.h:62
 // index:4
 // Public
-// void QPalette(const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &)
+// void QPalette(const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &)
 func NewQPalette_4(windowText *QBrush, button *QBrush, light *QBrush, dark *QBrush, mid *QBrush, text *QBrush, bright_text *QBrush, base *QBrush, window *QBrush) *QPalette {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = windowText.GetCthis()
@@ -144,7 +144,7 @@ func NewQPalette_4(windowText *QBrush, button *QBrush, light *QBrush, dark *QBru
 // /usr/include/qt/QtGui/qpalette.h:65
 // index:5
 // Public
-// void QPalette(const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &)
+// void QPalette(const QColor &, const QColor &, const QColor &, const QColor &, const QColor &, const QColor &, const QColor &)
 func NewQPalette_5(windowText *QColor, window *QColor, light *QColor, dark *QColor, mid *QColor, text *QColor, base *QColor) *QPalette {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = windowText.GetCthis()
@@ -172,7 +172,7 @@ func DeleteQPalette(*QPalette) {
 // /usr/include/qt/QtGui/qpalette.h:81
 // index:0
 // Public inline
-// void swap(class QPalette &)
+// void swap(QPalette &)
 func (this *QPalette) Swap(other *QPalette) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -193,7 +193,7 @@ func (this *QPalette) CurrentColorGroup() int {
 // /usr/include/qt/QtGui/qpalette.h:105
 // index:0
 // Public inline
-// void setCurrentColorGroup(enum QPalette::ColorGroup)
+// void setCurrentColorGroup(QPalette::ColorGroup)
 func (this *QPalette) SetCurrentColorGroup(cg int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette20setCurrentColorGroupENS_10ColorGroupE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cg)
 	gopp.ErrPrint(err, rv)
@@ -202,7 +202,7 @@ func (this *QPalette) SetCurrentColorGroup(cg int) {
 // /usr/include/qt/QtGui/qpalette.h:107
 // index:0
 // Public inline
-// const QColor & color(enum QPalette::ColorGroup, enum QPalette::ColorRole)
+// const QColor & color(QPalette::ColorGroup, QPalette::ColorRole)
 func (this *QPalette) Color(cg int, cr int) *QColor {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette5colorENS_10ColorGroupENS_9ColorRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cg, cr)
 	gopp.ErrPrint(err, rv)
@@ -214,7 +214,7 @@ func (this *QPalette) Color(cg int, cr int) *QColor {
 // /usr/include/qt/QtGui/qpalette.h:121
 // index:1
 // Public inline
-// const QColor & color(enum QPalette::ColorRole)
+// const QColor & color(QPalette::ColorRole)
 func (this *QPalette) Color_1(cr int) *QColor {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette5colorENS_9ColorRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cr)
 	gopp.ErrPrint(err, rv)
@@ -226,7 +226,7 @@ func (this *QPalette) Color_1(cr int) *QColor {
 // /usr/include/qt/QtGui/qpalette.h:109
 // index:0
 // Public
-// const QBrush & brush(enum QPalette::ColorGroup, enum QPalette::ColorRole)
+// const QBrush & brush(QPalette::ColorGroup, QPalette::ColorRole)
 func (this *QPalette) Brush(cg int, cr int) *QBrush {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette5brushENS_10ColorGroupENS_9ColorRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cg, cr)
 	gopp.ErrPrint(err, rv)
@@ -238,7 +238,7 @@ func (this *QPalette) Brush(cg int, cr int) *QBrush {
 // /usr/include/qt/QtGui/qpalette.h:122
 // index:1
 // Public inline
-// const QBrush & brush(enum QPalette::ColorRole)
+// const QBrush & brush(QPalette::ColorRole)
 func (this *QPalette) Brush_1(cr int) *QBrush {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette5brushENS_9ColorRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cr)
 	gopp.ErrPrint(err, rv)
@@ -250,7 +250,7 @@ func (this *QPalette) Brush_1(cr int) *QBrush {
 // /usr/include/qt/QtGui/qpalette.h:110
 // index:0
 // Public inline
-// void setColor(enum QPalette::ColorGroup, enum QPalette::ColorRole, const class QColor &)
+// void setColor(QPalette::ColorGroup, QPalette::ColorRole, const QColor &)
 func (this *QPalette) SetColor(cg int, cr int, color *QColor) {
 	var convArg2 = color.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette8setColorENS_10ColorGroupENS_9ColorRoleERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cg, cr, convArg2)
@@ -260,7 +260,7 @@ func (this *QPalette) SetColor(cg int, cr int, color *QColor) {
 // /usr/include/qt/QtGui/qpalette.h:111
 // index:1
 // Public inline
-// void setColor(enum QPalette::ColorRole, const class QColor &)
+// void setColor(QPalette::ColorRole, const QColor &)
 func (this *QPalette) SetColor_1(cr int, color *QColor) {
 	var convArg1 = color.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette8setColorENS_9ColorRoleERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cr, convArg1)
@@ -270,7 +270,7 @@ func (this *QPalette) SetColor_1(cr int, color *QColor) {
 // /usr/include/qt/QtGui/qpalette.h:112
 // index:0
 // Public inline
-// void setBrush(enum QPalette::ColorRole, const class QBrush &)
+// void setBrush(QPalette::ColorRole, const QBrush &)
 func (this *QPalette) SetBrush(cr int, brush *QBrush) {
 	var convArg1 = brush.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette8setBrushENS_9ColorRoleERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cr, convArg1)
@@ -280,7 +280,7 @@ func (this *QPalette) SetBrush(cr int, brush *QBrush) {
 // /usr/include/qt/QtGui/qpalette.h:114
 // index:1
 // Public
-// void setBrush(enum QPalette::ColorGroup, enum QPalette::ColorRole, const class QBrush &)
+// void setBrush(QPalette::ColorGroup, QPalette::ColorRole, const QBrush &)
 func (this *QPalette) SetBrush_1(cg int, cr int, brush *QBrush) {
 	var convArg2 = brush.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette8setBrushENS_10ColorGroupENS_9ColorRoleERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cg, cr, convArg2)
@@ -290,7 +290,7 @@ func (this *QPalette) SetBrush_1(cg int, cr int, brush *QBrush) {
 // /usr/include/qt/QtGui/qpalette.h:113
 // index:0
 // Public
-// bool isBrushSet(enum QPalette::ColorGroup, enum QPalette::ColorRole)
+// bool isBrushSet(QPalette::ColorGroup, QPalette::ColorRole)
 func (this *QPalette) IsBrushSet(cg int, cr int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette10isBrushSetENS_10ColorGroupENS_9ColorRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cg, cr)
 	gopp.ErrPrint(err, rv)
@@ -301,7 +301,7 @@ func (this *QPalette) IsBrushSet(cg int, cr int) bool {
 // /usr/include/qt/QtGui/qpalette.h:115
 // index:0
 // Public
-// void setColorGroup(enum QPalette::ColorGroup, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &)
+// void setColorGroup(QPalette::ColorGroup, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &, const QBrush &)
 func (this *QPalette) SetColorGroup(cr int, windowText *QBrush, button *QBrush, light *QBrush, dark *QBrush, mid *QBrush, text *QBrush, bright_text *QBrush, base *QBrush, window *QBrush) {
 	var convArg1 = windowText.GetCthis()
 	var convArg2 = button.GetCthis()
@@ -319,7 +319,7 @@ func (this *QPalette) SetColorGroup(cr int, windowText *QBrush, button *QBrush, 
 // /usr/include/qt/QtGui/qpalette.h:119
 // index:0
 // Public
-// bool isEqual(enum QPalette::ColorGroup, enum QPalette::ColorGroup)
+// bool isEqual(QPalette::ColorGroup, QPalette::ColorGroup)
 func (this *QPalette) IsEqual(cr1 int, cr2 int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette7isEqualENS_10ColorGroupES0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cr1, cr2)
 	gopp.ErrPrint(err, rv)
@@ -582,7 +582,7 @@ func (this *QPalette) LinkVisited() *QBrush {
 // /usr/include/qt/QtGui/qpalette.h:147
 // index:0
 // Public
-// bool isCopyOf(const class QPalette &)
+// bool isCopyOf(const QPalette &)
 func (this *QPalette) IsCopyOf(p *QPalette) bool {
 	var convArg0 = p.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette8isCopyOfERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -605,7 +605,7 @@ func (this *QPalette) CacheKey() int64 {
 // /usr/include/qt/QtGui/qpalette.h:154
 // index:0
 // Public
-// QPalette resolve(const class QPalette &)
+// QPalette resolve(const QPalette &)
 func (this *QPalette) Resolve(arg0 *QPalette) *QPalette /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()

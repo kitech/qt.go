@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQXmlStreamAttributes() *QXmlStreamAttributes {
 // /usr/include/qt/QtCore/qxmlstream.h:165
 // index:0
 // Public
-// QStringRef value(const class QString &, const class QString &)
+// QStringRef value(const QString &, const QString &)
 func (this *QXmlStreamAttributes) Value(namespaceUri *QString, name *QString) *QStringRef /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = namespaceUri.GetCthis()
@@ -96,7 +96,7 @@ func (this *QXmlStreamAttributes) Value(namespaceUri *QString, name *QString) *Q
 // /usr/include/qt/QtCore/qxmlstream.h:166
 // index:1
 // Public
-// QStringRef value(const class QString &, class QLatin1String)
+// QStringRef value(const QString &, QLatin1String)
 func (this *QXmlStreamAttributes) Value_1(namespaceUri *QString, name *QLatin1String /*123*/) *QStringRef /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = namespaceUri.GetCthis()
@@ -112,7 +112,7 @@ func (this *QXmlStreamAttributes) Value_1(namespaceUri *QString, name *QLatin1St
 // /usr/include/qt/QtCore/qxmlstream.h:167
 // index:2
 // Public
-// QStringRef value(class QLatin1String, class QLatin1String)
+// QStringRef value(QLatin1String, QLatin1String)
 func (this *QXmlStreamAttributes) Value_2(namespaceUri *QLatin1String /*123*/, name *QLatin1String /*123*/) *QStringRef /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = namespaceUri.GetCthis()
@@ -128,7 +128,7 @@ func (this *QXmlStreamAttributes) Value_2(namespaceUri *QLatin1String /*123*/, n
 // /usr/include/qt/QtCore/qxmlstream.h:168
 // index:3
 // Public
-// QStringRef value(const class QString &)
+// QStringRef value(const QString &)
 func (this *QXmlStreamAttributes) Value_3(qualifiedName *QString) *QStringRef /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = qualifiedName.GetCthis()
@@ -143,7 +143,7 @@ func (this *QXmlStreamAttributes) Value_3(qualifiedName *QString) *QStringRef /*
 // /usr/include/qt/QtCore/qxmlstream.h:169
 // index:4
 // Public
-// QStringRef value(class QLatin1String)
+// QStringRef value(QLatin1String)
 func (this *QXmlStreamAttributes) Value_4(qualifiedName *QLatin1String /*123*/) *QStringRef /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = qualifiedName.GetCthis()
@@ -158,7 +158,7 @@ func (this *QXmlStreamAttributes) Value_4(qualifiedName *QLatin1String /*123*/) 
 // /usr/include/qt/QtCore/qxmlstream.h:173
 // index:0
 // Public inline
-// bool hasAttribute(const class QString &)
+// bool hasAttribute(const QString &)
 func (this *QXmlStreamAttributes) HasAttribute(qualifiedName *QString) bool {
 	var convArg0 = qualifiedName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes12hasAttributeERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -170,7 +170,7 @@ func (this *QXmlStreamAttributes) HasAttribute(qualifiedName *QString) bool {
 // /usr/include/qt/QtCore/qxmlstream.h:178
 // index:1
 // Public inline
-// bool hasAttribute(class QLatin1String)
+// bool hasAttribute(QLatin1String)
 func (this *QXmlStreamAttributes) HasAttribute_1(qualifiedName *QLatin1String /*123*/) bool {
 	var convArg0 = qualifiedName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes12hasAttributeE13QLatin1String", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -182,7 +182,7 @@ func (this *QXmlStreamAttributes) HasAttribute_1(qualifiedName *QLatin1String /*
 // /usr/include/qt/QtCore/qxmlstream.h:183
 // index:2
 // Public inline
-// bool hasAttribute(const class QString &, const class QString &)
+// bool hasAttribute(const QString &, const QString &)
 func (this *QXmlStreamAttributes) HasAttribute_2(namespaceUri *QString, name *QString) bool {
 	var convArg0 = namespaceUri.GetCthis()
 	var convArg1 = name.GetCthis()

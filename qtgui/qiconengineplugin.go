@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QIconEnginePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // /usr/include/qt/QtGui/qiconengineplugin.h:58
 // index:0
 // Public
-// void QIconEnginePlugin(class QObject *)
+// void QIconEnginePlugin(QObject *)
 func NewQIconEnginePlugin(parent *qtcore.QObject /*777 QObject **/) *QIconEnginePlugin {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -107,7 +107,7 @@ func DeleteQIconEnginePlugin(*QIconEnginePlugin) {
 // /usr/include/qt/QtGui/qiconengineplugin.h:61
 // index:0
 // Public pure virtual
-// QIconEngine * create(const class QString &)
+// QIconEngine * create(const QString &)
 func (this *QIconEnginePlugin) Create(filename *qtcore.QString) *QIconEngine /*777 QIconEngine **/ {
 	var convArg0 = filename.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIconEnginePlugin6createERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

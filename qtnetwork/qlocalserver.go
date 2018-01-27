@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -94,7 +94,7 @@ func (this *QLocalServer) NewConnection() {
 // /usr/include/qt/QtNetwork/qlocalserver.h:74
 // index:0
 // Public
-// void QLocalServer(class QObject *)
+// void QLocalServer(QObject *)
 func NewQLocalServer(parent *qtcore.QObject /*777 QObject **/) *QLocalServer {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -161,7 +161,7 @@ func (this *QLocalServer) IsListening() bool {
 // /usr/include/qt/QtNetwork/qlocalserver.h:81
 // index:0
 // Public
-// bool listen(const class QString &)
+// bool listen(const QString &)
 func (this *QLocalServer) Listen(name *qtcore.QString) bool {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalServer6listenERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -235,7 +235,7 @@ func (this *QLocalServer) FullServerName() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtNetwork/qlocalserver.h:87
 // index:0
 // Public static
-// bool removeServer(const class QString &)
+// bool removeServer(const QString &)
 func (this *QLocalServer) RemoveServer(name *qtcore.QString) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalServer12removeServerERK7QString", ffiqt.FFI_TYPE_POINTER, name)
 	gopp.ErrPrint(err, rv)
@@ -271,7 +271,7 @@ func (this *QLocalServer) SetMaxPendingConnections(numConnections int) {
 // /usr/include/qt/QtNetwork/qlocalserver.h:90
 // index:0
 // Public
-// bool waitForNewConnection(int, _Bool *)
+// bool waitForNewConnection(int, bool *)
 func (this *QLocalServer) WaitForNewConnection(msec int, timedOut unsafe.Pointer /*666*/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalServer20waitForNewConnectionEiPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec, &timedOut)
 	gopp.ErrPrint(err, rv)

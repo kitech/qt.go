@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -76,7 +76,7 @@ func (*QUndoCommand) NewFromPointer(cthis unsafe.Pointer) *QUndoCommand {
 // /usr/include/qt/QtWidgets/qundostack.h:60
 // index:0
 // Public
-// void QUndoCommand(class QUndoCommand *)
+// void QUndoCommand(QUndoCommand *)
 func NewQUndoCommand(parent *QUndoCommand /*777 QUndoCommand **/) *QUndoCommand {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -89,7 +89,7 @@ func NewQUndoCommand(parent *QUndoCommand /*777 QUndoCommand **/) *QUndoCommand 
 // /usr/include/qt/QtWidgets/qundostack.h:61
 // index:1
 // Public
-// void QUndoCommand(const class QString &, class QUndoCommand *)
+// void QUndoCommand(const QString &, QUndoCommand *)
 func NewQUndoCommand_1(text *qtcore.QString, parent *QUndoCommand /*777 QUndoCommand **/) *QUndoCommand {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = text.GetCthis()
@@ -158,7 +158,7 @@ func (this *QUndoCommand) ActionText() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qundostack.h:69
 // index:0
 // Public
-// void setText(const class QString &)
+// void setText(const QString &)
 func (this *QUndoCommand) SetText(text *qtcore.QString) {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand7setTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -179,7 +179,7 @@ func (this *QUndoCommand) IsObsolete() bool {
 // /usr/include/qt/QtWidgets/qundostack.h:72
 // index:0
 // Public
-// void setObsolete(_Bool)
+// void setObsolete(bool)
 func (this *QUndoCommand) SetObsolete(obsolete bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand11setObsoleteEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), obsolete)
 	gopp.ErrPrint(err, rv)
@@ -199,7 +199,7 @@ func (this *QUndoCommand) Id() int {
 // /usr/include/qt/QtWidgets/qundostack.h:75
 // index:0
 // Public virtual
-// bool mergeWith(const class QUndoCommand *)
+// bool mergeWith(const QUndoCommand *)
 func (this *QUndoCommand) MergeWith(other *QUndoCommand /*777 const QUndoCommand **/) bool {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand9mergeWithEPKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

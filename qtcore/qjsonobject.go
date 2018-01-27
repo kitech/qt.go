@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -89,7 +89,7 @@ func DeleteQJsonObject(*QJsonObject) {
 // /usr/include/qt/QtCore/qjsonobject.h:90
 // index:0
 // Public inline
-// void swap(class QJsonObject &)
+// void swap(QJsonObject &)
 func (this *QJsonObject) Swap(other *QJsonObject) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QJsonObject4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -143,7 +143,7 @@ func (this *QJsonObject) IsEmpty() bool {
 // /usr/include/qt/QtCore/qjsonobject.h:107
 // index:0
 // Public
-// QJsonValue value(const class QString &)
+// QJsonValue value(const QString &)
 func (this *QJsonObject) Value(key *QString) *QJsonValue /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
@@ -158,7 +158,7 @@ func (this *QJsonObject) Value(key *QString) *QJsonValue /*123*/ {
 // /usr/include/qt/QtCore/qjsonobject.h:108
 // index:1
 // Public
-// QJsonValue value(class QLatin1String)
+// QJsonValue value(QLatin1String)
 func (this *QJsonObject) Value_1(key *QLatin1String /*123*/) *QJsonValue /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
@@ -173,7 +173,7 @@ func (this *QJsonObject) Value_1(key *QLatin1String /*123*/) *QJsonValue /*123*/
 // /usr/include/qt/QtCore/qjsonobject.h:114
 // index:0
 // Public
-// void remove(const class QString &)
+// void remove(const QString &)
 func (this *QJsonObject) Remove(key *QString) {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QJsonObject6removeERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -183,7 +183,7 @@ func (this *QJsonObject) Remove(key *QString) {
 // /usr/include/qt/QtCore/qjsonobject.h:115
 // index:0
 // Public
-// QJsonValue take(const class QString &)
+// QJsonValue take(const QString &)
 func (this *QJsonObject) Take(key *QString) *QJsonValue /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
@@ -198,7 +198,7 @@ func (this *QJsonObject) Take(key *QString) *QJsonValue /*123*/ {
 // /usr/include/qt/QtCore/qjsonobject.h:116
 // index:0
 // Public
-// bool contains(const class QString &)
+// bool contains(const QString &)
 func (this *QJsonObject) Contains(key *QString) bool {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject8containsERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -210,7 +210,7 @@ func (this *QJsonObject) Contains(key *QString) bool {
 // /usr/include/qt/QtCore/qjsonobject.h:117
 // index:1
 // Public
-// bool contains(class QLatin1String)
+// bool contains(QLatin1String)
 func (this *QJsonObject) Contains_1(key *QLatin1String /*123*/) bool {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QJsonObject8containsE13QLatin1String", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -300,7 +300,7 @@ func (this *QJsonObject) ConstEnd() unsafe.Pointer /*444*/ {
 // /usr/include/qt/QtCore/qjsonobject.h:225
 // index:0
 // Public
-// QJsonObject::iterator find(const class QString &)
+// QJsonObject::iterator find(const QString &)
 func (this *QJsonObject) Find(key *QString) unsafe.Pointer /*444*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
@@ -314,7 +314,7 @@ func (this *QJsonObject) Find(key *QString) unsafe.Pointer /*444*/ {
 // /usr/include/qt/QtCore/qjsonobject.h:226
 // index:1
 // Public
-// QJsonObject::iterator find(class QLatin1String)
+// QJsonObject::iterator find(QLatin1String)
 func (this *QJsonObject) Find_1(key *QLatin1String /*123*/) unsafe.Pointer /*444*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
@@ -328,7 +328,7 @@ func (this *QJsonObject) Find_1(key *QLatin1String /*123*/) unsafe.Pointer /*444
 // /usr/include/qt/QtCore/qjsonobject.h:227
 // index:2
 // Public inline
-// QJsonObject::const_iterator find(const class QString &)
+// QJsonObject::const_iterator find(const QString &)
 func (this *QJsonObject) Find_2(key *QString) unsafe.Pointer /*444*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
@@ -342,7 +342,7 @@ func (this *QJsonObject) Find_2(key *QString) unsafe.Pointer /*444*/ {
 // /usr/include/qt/QtCore/qjsonobject.h:228
 // index:3
 // Public inline
-// QJsonObject::const_iterator find(class QLatin1String)
+// QJsonObject::const_iterator find(QLatin1String)
 func (this *QJsonObject) Find_3(key *QLatin1String /*123*/) unsafe.Pointer /*444*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
@@ -356,7 +356,7 @@ func (this *QJsonObject) Find_3(key *QLatin1String /*123*/) unsafe.Pointer /*444
 // /usr/include/qt/QtCore/qjsonobject.h:229
 // index:0
 // Public
-// QJsonObject::const_iterator constFind(const class QString &)
+// QJsonObject::const_iterator constFind(const QString &)
 func (this *QJsonObject) ConstFind(key *QString) unsafe.Pointer /*444*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
@@ -370,7 +370,7 @@ func (this *QJsonObject) ConstFind(key *QString) unsafe.Pointer /*444*/ {
 // /usr/include/qt/QtCore/qjsonobject.h:230
 // index:1
 // Public
-// QJsonObject::const_iterator constFind(class QLatin1String)
+// QJsonObject::const_iterator constFind(QLatin1String)
 func (this *QJsonObject) ConstFind_1(key *QLatin1String /*123*/) unsafe.Pointer /*444*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()

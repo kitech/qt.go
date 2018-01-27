@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QDataWidgetMapper) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:64
 // index:0
 // Public
-// void QDataWidgetMapper(class QObject *)
+// void QDataWidgetMapper(QObject *)
 func NewQDataWidgetMapper(parent *qtcore.QObject /*777 QObject **/) *QDataWidgetMapper {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -111,7 +111,7 @@ func DeleteQDataWidgetMapper(*QDataWidgetMapper) {
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:67
 // index:0
 // Public
-// void setModel(class QAbstractItemModel *)
+// void setModel(QAbstractItemModel *)
 func (this *QDataWidgetMapper) SetModel(model *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/) {
 	var convArg0 = model.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper8setModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -133,7 +133,7 @@ func (this *QDataWidgetMapper) Model() *qtcore.QAbstractItemModel /*777 QAbstrac
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:70
 // index:0
 // Public
-// void setItemDelegate(class QAbstractItemDelegate *)
+// void setItemDelegate(QAbstractItemDelegate *)
 func (this *QDataWidgetMapper) SetItemDelegate(delegate *QAbstractItemDelegate /*777 QAbstractItemDelegate **/) {
 	var convArg0 = delegate.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper15setItemDelegateEP21QAbstractItemDelegate", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -155,7 +155,7 @@ func (this *QDataWidgetMapper) ItemDelegate() *QAbstractItemDelegate /*777 QAbst
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:73
 // index:0
 // Public
-// void setRootIndex(const class QModelIndex &)
+// void setRootIndex(const QModelIndex &)
 func (this *QDataWidgetMapper) SetRootIndex(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper12setRootIndexERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -199,7 +199,7 @@ func (this *QDataWidgetMapper) Orientation() int {
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:81
 // index:0
 // Public
-// void setSubmitPolicy(enum QDataWidgetMapper::SubmitPolicy)
+// void setSubmitPolicy(QDataWidgetMapper::SubmitPolicy)
 func (this *QDataWidgetMapper) SetSubmitPolicy(policy int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper15setSubmitPolicyENS_12SubmitPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)
@@ -219,7 +219,7 @@ func (this *QDataWidgetMapper) SubmitPolicy() int {
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:84
 // index:0
 // Public
-// void addMapping(class QWidget *, int)
+// void addMapping(QWidget *, int)
 func (this *QDataWidgetMapper) AddMapping(widget *QWidget /*777 QWidget **/, section int) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper10addMappingEP7QWidgeti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, section)
@@ -229,7 +229,7 @@ func (this *QDataWidgetMapper) AddMapping(widget *QWidget /*777 QWidget **/, sec
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:85
 // index:1
 // Public
-// void addMapping(class QWidget *, int, const class QByteArray &)
+// void addMapping(QWidget *, int, const QByteArray &)
 func (this *QDataWidgetMapper) AddMapping_1(widget *QWidget /*777 QWidget **/, section int, propertyName *qtcore.QByteArray) {
 	var convArg0 = widget.GetCthis()
 	var convArg2 = propertyName.GetCthis()
@@ -240,7 +240,7 @@ func (this *QDataWidgetMapper) AddMapping_1(widget *QWidget /*777 QWidget **/, s
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:86
 // index:0
 // Public
-// void removeMapping(class QWidget *)
+// void removeMapping(QWidget *)
 func (this *QDataWidgetMapper) RemoveMapping(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper13removeMappingEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -250,7 +250,7 @@ func (this *QDataWidgetMapper) RemoveMapping(widget *QWidget /*777 QWidget **/) 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:87
 // index:0
 // Public
-// int mappedSection(class QWidget *)
+// int mappedSection(QWidget *)
 func (this *QDataWidgetMapper) MappedSection(widget *QWidget /*777 QWidget **/) int {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper13mappedSectionEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -262,7 +262,7 @@ func (this *QDataWidgetMapper) MappedSection(widget *QWidget /*777 QWidget **/) 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:88
 // index:0
 // Public
-// QByteArray mappedPropertyName(class QWidget *)
+// QByteArray mappedPropertyName(QWidget *)
 func (this *QDataWidgetMapper) MappedPropertyName(widget *QWidget /*777 QWidget **/) *qtcore.QByteArray /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = widget.GetCthis()
@@ -374,7 +374,7 @@ func (this *QDataWidgetMapper) SetCurrentIndex(index int) {
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:103
 // index:0
 // Public
-// void setCurrentModelIndex(const class QModelIndex &)
+// void setCurrentModelIndex(const QModelIndex &)
 func (this *QDataWidgetMapper) SetCurrentModelIndex(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

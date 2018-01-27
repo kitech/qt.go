@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -93,7 +93,7 @@ func NewQTemporaryFile() *QTemporaryFile {
 // /usr/include/qt/QtCore/qtemporaryfile.h:67
 // index:1
 // Public
-// void QTemporaryFile(const class QString &)
+// void QTemporaryFile(const QString &)
 func NewQTemporaryFile_1(templateName *QString) *QTemporaryFile {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = templateName.GetCthis()
@@ -106,7 +106,7 @@ func NewQTemporaryFile_1(templateName *QString) *QTemporaryFile {
 // /usr/include/qt/QtCore/qtemporaryfile.h:69
 // index:2
 // Public
-// void QTemporaryFile(class QObject *)
+// void QTemporaryFile(QObject *)
 func NewQTemporaryFile_2(parent *QObject /*777 QObject **/) *QTemporaryFile {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -119,7 +119,7 @@ func NewQTemporaryFile_2(parent *QObject /*777 QObject **/) *QTemporaryFile {
 // /usr/include/qt/QtCore/qtemporaryfile.h:70
 // index:3
 // Public
-// void QTemporaryFile(const class QString &, class QObject *)
+// void QTemporaryFile(const QString &, QObject *)
 func NewQTemporaryFile_3(templateName *QString, parent *QObject /*777 QObject **/) *QTemporaryFile {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = templateName.GetCthis()
@@ -153,7 +153,7 @@ func (this *QTemporaryFile) AutoRemove() bool {
 // /usr/include/qt/QtCore/qtemporaryfile.h:75
 // index:0
 // Public
-// void setAutoRemove(_Bool)
+// void setAutoRemove(bool)
 func (this *QTemporaryFile) SetAutoRemove(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile13setAutoRemoveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -201,7 +201,7 @@ func (this *QTemporaryFile) FileTemplate() *QString /*123*/ {
 // /usr/include/qt/QtCore/qtemporaryfile.h:82
 // index:0
 // Public
-// void setFileTemplate(const class QString &)
+// void setFileTemplate(const QString &)
 func (this *QTemporaryFile) SetFileTemplate(name *QString) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile15setFileTemplateERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -211,7 +211,7 @@ func (this *QTemporaryFile) SetFileTemplate(name *QString) {
 // /usr/include/qt/QtCore/qtemporaryfile.h:85
 // index:0
 // Public
-// bool rename(const class QString &)
+// bool rename(const QString &)
 func (this *QTemporaryFile) Rename(newName *QString) bool {
 	var convArg0 = newName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile6renameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -223,7 +223,7 @@ func (this *QTemporaryFile) Rename(newName *QString) bool {
 // /usr/include/qt/QtCore/qtemporaryfile.h:88
 // index:0
 // Public static inline
-// QTemporaryFile * createLocalFile(const class QString &)
+// QTemporaryFile * createLocalFile(const QString &)
 func (this *QTemporaryFile) CreateLocalFile(fileName *QString) *QTemporaryFile /*777 QTemporaryFile **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile15createLocalFileERK7QString", ffiqt.FFI_TYPE_POINTER, fileName)
 	gopp.ErrPrint(err, rv)
@@ -240,7 +240,7 @@ func QTemporaryFile_CreateLocalFile(fileName *QString) *QTemporaryFile /*777 QTe
 // /usr/include/qt/QtCore/qtemporaryfile.h:90
 // index:1
 // Public static inline
-// QTemporaryFile * createLocalFile(class QFile &)
+// QTemporaryFile * createLocalFile(QFile &)
 func (this *QTemporaryFile) CreateLocalFile_1(file *QFile) *QTemporaryFile /*777 QTemporaryFile **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile15createLocalFileER5QFile", ffiqt.FFI_TYPE_POINTER, file)
 	gopp.ErrPrint(err, rv)
@@ -257,7 +257,7 @@ func QTemporaryFile_CreateLocalFile_1(file *QFile) *QTemporaryFile /*777 QTempor
 // /usr/include/qt/QtCore/qtemporaryfile.h:93
 // index:0
 // Public static inline
-// QTemporaryFile * createNativeFile(const class QString &)
+// QTemporaryFile * createNativeFile(const QString &)
 func (this *QTemporaryFile) CreateNativeFile(fileName *QString) *QTemporaryFile /*777 QTemporaryFile **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile16createNativeFileERK7QString", ffiqt.FFI_TYPE_POINTER, fileName)
 	gopp.ErrPrint(err, rv)
@@ -274,7 +274,7 @@ func QTemporaryFile_CreateNativeFile(fileName *QString) *QTemporaryFile /*777 QT
 // /usr/include/qt/QtCore/qtemporaryfile.h:95
 // index:1
 // Public static
-// QTemporaryFile * createNativeFile(class QFile &)
+// QTemporaryFile * createNativeFile(QFile &)
 func (this *QTemporaryFile) CreateNativeFile_1(file *QFile) *QTemporaryFile /*777 QTemporaryFile **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile16createNativeFileER5QFile", ffiqt.FFI_TYPE_POINTER, file)
 	gopp.ErrPrint(err, rv)

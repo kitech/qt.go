@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QHttpMultiPart) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:101
 // index:0
 // Public
-// void QHttpMultiPart(class QObject *)
+// void QHttpMultiPart(QObject *)
 func NewQHttpMultiPart(parent *qtcore.QObject /*777 QObject **/) *QHttpMultiPart {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -98,7 +98,7 @@ func NewQHttpMultiPart(parent *qtcore.QObject /*777 QObject **/) *QHttpMultiPart
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:102
 // index:1
 // Public
-// void QHttpMultiPart(enum QHttpMultiPart::ContentType, class QObject *)
+// void QHttpMultiPart(QHttpMultiPart::ContentType, QObject *)
 func NewQHttpMultiPart_1(contentType int, parent *qtcore.QObject /*777 QObject **/) *QHttpMultiPart {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = parent.GetCthis()
@@ -120,7 +120,7 @@ func DeleteQHttpMultiPart(*QHttpMultiPart) {
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:107
 // index:0
 // Public
-// void setContentType(enum QHttpMultiPart::ContentType)
+// void setContentType(QHttpMultiPart::ContentType)
 func (this *QHttpMultiPart) SetContentType(contentType int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QHttpMultiPart14setContentTypeENS_11ContentTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), contentType)
 	gopp.ErrPrint(err, rv)
@@ -143,7 +143,7 @@ func (this *QHttpMultiPart) Boundary() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:110
 // index:0
 // Public
-// void setBoundary(const class QByteArray &)
+// void setBoundary(const QByteArray &)
 func (this *QHttpMultiPart) SetBoundary(boundary *qtcore.QByteArray) {
 	var convArg0 = boundary.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QHttpMultiPart11setBoundaryERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

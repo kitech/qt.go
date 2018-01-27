@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQSemaphoreReleaser() *QSemaphoreReleaser {
 // /usr/include/qt/QtCore/qsemaphore.h:76
 // index:1
 // Public inline
-// void QSemaphoreReleaser(class QSemaphore &, int)
+// void QSemaphoreReleaser(QSemaphore &, int)
 func NewQSemaphoreReleaser_1(sem *QSemaphore, n int) *QSemaphoreReleaser {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = sem.GetCthis()
@@ -93,7 +93,7 @@ func NewQSemaphoreReleaser_1(sem *QSemaphore, n int) *QSemaphoreReleaser {
 // /usr/include/qt/QtCore/qsemaphore.h:78
 // index:2
 // Public inline
-// void QSemaphoreReleaser(class QSemaphore *, int)
+// void QSemaphoreReleaser(QSemaphore *, int)
 func NewQSemaphoreReleaser_2(sem *QSemaphore /*777 QSemaphore **/, n int) *QSemaphoreReleaser {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = sem.GetCthis()
@@ -115,7 +115,7 @@ func DeleteQSemaphoreReleaser(*QSemaphoreReleaser) {
 // /usr/include/qt/QtCore/qsemaphore.h:92
 // index:0
 // Public inline
-// void swap(class QSemaphoreReleaser &)
+// void swap(QSemaphoreReleaser &)
 func (this *QSemaphoreReleaser) Swap(other *QSemaphoreReleaser) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaser4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

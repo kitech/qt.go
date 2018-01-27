@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QHistoryState) MetaObject() *QMetaObject /*777 const QMetaObject **/
 // /usr/include/qt/QtCore/qhistorystate.h:64
 // index:0
 // Public
-// void QHistoryState(class QState *)
+// void QHistoryState(QState *)
 func NewQHistoryState(parent *QState /*777 QState **/) *QHistoryState {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -94,7 +94,7 @@ func NewQHistoryState(parent *QState /*777 QState **/) *QHistoryState {
 // /usr/include/qt/QtCore/qhistorystate.h:65
 // index:1
 // Public
-// void QHistoryState(enum QHistoryState::HistoryType, class QState *)
+// void QHistoryState(QHistoryState::HistoryType, QState *)
 func NewQHistoryState_1(type_ int, parent *QState /*777 QState **/) *QHistoryState {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = parent.GetCthis()
@@ -128,7 +128,7 @@ func (this *QHistoryState) DefaultTransition() *QAbstractTransition /*777 QAbstr
 // /usr/include/qt/QtCore/qhistorystate.h:69
 // index:0
 // Public
-// void setDefaultTransition(class QAbstractTransition *)
+// void setDefaultTransition(QAbstractTransition *)
 func (this *QHistoryState) SetDefaultTransition(transition *QAbstractTransition /*777 QAbstractTransition **/) {
 	var convArg0 = transition.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryState20setDefaultTransitionEP19QAbstractTransition", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -150,7 +150,7 @@ func (this *QHistoryState) DefaultState() *QAbstractState /*777 QAbstractState *
 // /usr/include/qt/QtCore/qhistorystate.h:72
 // index:0
 // Public
-// void setDefaultState(class QAbstractState *)
+// void setDefaultState(QAbstractState *)
 func (this *QHistoryState) SetDefaultState(state *QAbstractState /*777 QAbstractState **/) {
 	var convArg0 = state.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryState15setDefaultStateEP14QAbstractState", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -171,7 +171,7 @@ func (this *QHistoryState) HistoryType() int {
 // /usr/include/qt/QtCore/qhistorystate.h:75
 // index:0
 // Public
-// void setHistoryType(enum QHistoryState::HistoryType)
+// void setHistoryType(QHistoryState::HistoryType)
 func (this *QHistoryState) SetHistoryType(type_ int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryState14setHistoryTypeENS_11HistoryTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
@@ -180,7 +180,7 @@ func (this *QHistoryState) SetHistoryType(type_ int) {
 // /usr/include/qt/QtCore/qhistorystate.h:83
 // index:0
 // Protected virtual
-// void onEntry(class QEvent *)
+// void onEntry(QEvent *)
 func (this *QHistoryState) OnEntry(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryState7onEntryEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -190,7 +190,7 @@ func (this *QHistoryState) OnEntry(event *QEvent /*777 QEvent **/) {
 // /usr/include/qt/QtCore/qhistorystate.h:84
 // index:0
 // Protected virtual
-// void onExit(class QEvent *)
+// void onExit(QEvent *)
 func (this *QHistoryState) OnExit(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryState6onExitEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -200,7 +200,7 @@ func (this *QHistoryState) OnExit(event *QEvent /*777 QEvent **/) {
 // /usr/include/qt/QtCore/qhistorystate.h:86
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QHistoryState) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryState5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

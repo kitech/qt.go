@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -107,7 +107,7 @@ func (this *QAccessibleApplication) ChildCount() int {
 // /usr/include/qt/QtGui/qaccessibleobject.h:83
 // index:0
 // Public virtual
-// int indexOfChild(const class QAccessibleInterface *)
+// int indexOfChild(const QAccessibleInterface *)
 func (this *QAccessibleApplication) IndexOfChild(arg0 *QAccessibleInterface /*777 const QAccessibleInterface **/) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -155,7 +155,7 @@ func (this *QAccessibleApplication) Child(index int) *QAccessibleInterface /*777
 // /usr/include/qt/QtGui/qaccessibleobject.h:91
 // index:0
 // Public virtual
-// QString text(class QAccessible::Text)
+// QString text(QAccessible::Text)
 func (this *QAccessibleApplication) Text(t int) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication4textEN11QAccessible4TextE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), t)

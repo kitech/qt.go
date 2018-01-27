@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -77,7 +77,7 @@ func (*QWidgetItemV2) NewFromPointer(cthis unsafe.Pointer) *QWidgetItemV2 {
 // /usr/include/qt/QtWidgets/qlayoutitem.h:148
 // index:0
 // Public
-// void QWidgetItemV2(class QWidget *)
+// void QWidgetItemV2(QWidget *)
 func NewQWidgetItemV2(widget *QWidget /*777 QWidget **/) *QWidgetItemV2 {
 	cthis := qtrt.Calloc(1, 256) // 88
 	var convArg0 = widget.GetCthis()

@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -106,7 +106,7 @@ func DeleteQSGGeometryNode(*QSGGeometryNode) {
 // /usr/include/qt/QtQuick/qsgnode.h:234
 // index:0
 // Public
-// void setMaterial(class QSGMaterial *)
+// void setMaterial(QSGMaterial *)
 func (this *QSGGeometryNode) SetMaterial(material *QSGMaterial /*777 QSGMaterial **/) {
 	var convArg0 = material.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSGGeometryNode11setMaterialEP11QSGMaterial", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -128,7 +128,7 @@ func (this *QSGGeometryNode) Material() *QSGMaterial /*777 QSGMaterial **/ {
 // /usr/include/qt/QtQuick/qsgnode.h:237
 // index:0
 // Public
-// void setOpaqueMaterial(class QSGMaterial *)
+// void setOpaqueMaterial(QSGMaterial *)
 func (this *QSGGeometryNode) SetOpaqueMaterial(material *QSGMaterial /*777 QSGMaterial **/) {
 	var convArg0 = material.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSGGeometryNode17setOpaqueMaterialEP11QSGMaterial", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -116,7 +116,7 @@ func NewQRandomGenerator64_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*
 // /usr/include/qt/QtCore/qrandom.h:230
 // index:3
 // Public inline
-// void QRandomGenerator64(const class QRandomGenerator &)
+// void QRandomGenerator64(const QRandomGenerator &)
 func NewQRandomGenerator64_3(other *QRandomGenerator) *QRandomGenerator64 {
 	cthis := qtrt.Calloc(1, 256) // 2512
 	var convArg0 = other.GetCthis()

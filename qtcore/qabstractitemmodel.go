@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QAbstractItemModel) MetaObject() *QMetaObject /*777 const QMetaObjec
 // /usr/include/qt/QtCore/qabstractitemmodel.h:174
 // index:0
 // Public
-// void QAbstractItemModel(class QObject *)
+// void QAbstractItemModel(QObject *)
 func NewQAbstractItemModel(parent *QObject /*777 QObject **/) *QAbstractItemModel {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -103,7 +103,7 @@ func DeleteQAbstractItemModel(*QAbstractItemModel) {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:177
 // index:0
 // Public
-// bool hasIndex(int, int, const class QModelIndex &)
+// bool hasIndex(int, int, const QModelIndex &)
 func (this *QAbstractItemModel) HasIndex(row int, column int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractItemModel8hasIndexEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
@@ -115,7 +115,7 @@ func (this *QAbstractItemModel) HasIndex(row int, column int, parent *QModelInde
 // /usr/include/qt/QtCore/qabstractitemmodel.h:178
 // index:0
 // Public pure virtual
-// QModelIndex index(int, int, const class QModelIndex &)
+// QModelIndex index(int, int, const QModelIndex &)
 func (this *QAbstractItemModel) Index(row int, column int, parent *QModelIndex) *QModelIndex /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg2 = parent.GetCthis()
@@ -130,7 +130,7 @@ func (this *QAbstractItemModel) Index(row int, column int, parent *QModelIndex) 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:180
 // index:0
 // Public pure virtual
-// QModelIndex parent(const class QModelIndex &)
+// QModelIndex parent(const QModelIndex &)
 func (this *QAbstractItemModel) Parent(child *QModelIndex) *QModelIndex /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = child.GetCthis()
@@ -145,7 +145,7 @@ func (this *QAbstractItemModel) Parent(child *QModelIndex) *QModelIndex /*123*/ 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:182
 // index:0
 // Public virtual
-// QModelIndex sibling(int, int, const class QModelIndex &)
+// QModelIndex sibling(int, int, const QModelIndex &)
 func (this *QAbstractItemModel) Sibling(row int, column int, idx *QModelIndex) *QModelIndex /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg2 = idx.GetCthis()
@@ -160,7 +160,7 @@ func (this *QAbstractItemModel) Sibling(row int, column int, idx *QModelIndex) *
 // /usr/include/qt/QtCore/qabstractitemmodel.h:183
 // index:0
 // Public pure virtual
-// int rowCount(const class QModelIndex &)
+// int rowCount(const QModelIndex &)
 func (this *QAbstractItemModel) RowCount(parent *QModelIndex) int {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractItemModel8rowCountERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -172,7 +172,7 @@ func (this *QAbstractItemModel) RowCount(parent *QModelIndex) int {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:184
 // index:0
 // Public pure virtual
-// int columnCount(const class QModelIndex &)
+// int columnCount(const QModelIndex &)
 func (this *QAbstractItemModel) ColumnCount(parent *QModelIndex) int {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractItemModel11columnCountERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -184,7 +184,7 @@ func (this *QAbstractItemModel) ColumnCount(parent *QModelIndex) int {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:185
 // index:0
 // Public virtual
-// bool hasChildren(const class QModelIndex &)
+// bool hasChildren(const QModelIndex &)
 func (this *QAbstractItemModel) HasChildren(parent *QModelIndex) bool {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractItemModel11hasChildrenERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -196,7 +196,7 @@ func (this *QAbstractItemModel) HasChildren(parent *QModelIndex) bool {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:187
 // index:0
 // Public pure virtual
-// QVariant data(const class QModelIndex &, int)
+// QVariant data(const QModelIndex &, int)
 func (this *QAbstractItemModel) Data(index *QModelIndex, role int) *QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
@@ -211,7 +211,7 @@ func (this *QAbstractItemModel) Data(index *QModelIndex, role int) *QVariant /*1
 // /usr/include/qt/QtCore/qabstractitemmodel.h:188
 // index:0
 // Public virtual
-// bool setData(const class QModelIndex &, const class QVariant &, int)
+// bool setData(const QModelIndex &, const QVariant &, int)
 func (this *QAbstractItemModel) SetData(index *QModelIndex, value *QVariant, role int) bool {
 	var convArg0 = index.GetCthis()
 	var convArg1 = value.GetCthis()
@@ -238,7 +238,7 @@ func (this *QAbstractItemModel) HeaderData(section int, orientation int, role in
 // /usr/include/qt/QtCore/qabstractitemmodel.h:192
 // index:0
 // Public virtual
-// bool setHeaderData(int, Qt::Orientation, const class QVariant &, int)
+// bool setHeaderData(int, Qt::Orientation, const QVariant &, int)
 func (this *QAbstractItemModel) SetHeaderData(section int, orientation int, value *QVariant, role int) bool {
 	var convArg2 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractItemModel13setHeaderDataEiN2Qt11OrientationERK8QVarianti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, convArg2, role)
@@ -250,7 +250,7 @@ func (this *QAbstractItemModel) SetHeaderData(section int, orientation int, valu
 // /usr/include/qt/QtCore/qabstractitemmodel.h:200
 // index:0
 // Public virtual
-// bool canDropMimeData(const class QMimeData *, Qt::DropAction, int, int, const class QModelIndex &)
+// bool canDropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &)
 func (this *QAbstractItemModel) CanDropMimeData(data *QMimeData /*777 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
@@ -263,7 +263,7 @@ func (this *QAbstractItemModel) CanDropMimeData(data *QMimeData /*777 const QMim
 // /usr/include/qt/QtCore/qabstractitemmodel.h:202
 // index:0
 // Public virtual
-// bool dropMimeData(const class QMimeData *, Qt::DropAction, int, int, const class QModelIndex &)
+// bool dropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &)
 func (this *QAbstractItemModel) DropMimeData(data *QMimeData /*777 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
@@ -298,7 +298,7 @@ func (this *QAbstractItemModel) SupportedDragActions() int {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:212
 // index:0
 // Public virtual
-// bool insertRows(int, int, const class QModelIndex &)
+// bool insertRows(int, int, const QModelIndex &)
 func (this *QAbstractItemModel) InsertRows(row int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractItemModel10insertRowsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
@@ -310,7 +310,7 @@ func (this *QAbstractItemModel) InsertRows(row int, count int, parent *QModelInd
 // /usr/include/qt/QtCore/qabstractitemmodel.h:213
 // index:0
 // Public virtual
-// bool insertColumns(int, int, const class QModelIndex &)
+// bool insertColumns(int, int, const QModelIndex &)
 func (this *QAbstractItemModel) InsertColumns(column int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractItemModel13insertColumnsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, count, convArg2)
@@ -322,7 +322,7 @@ func (this *QAbstractItemModel) InsertColumns(column int, count int, parent *QMo
 // /usr/include/qt/QtCore/qabstractitemmodel.h:214
 // index:0
 // Public virtual
-// bool removeRows(int, int, const class QModelIndex &)
+// bool removeRows(int, int, const QModelIndex &)
 func (this *QAbstractItemModel) RemoveRows(row int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractItemModel10removeRowsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, count, convArg2)
@@ -334,7 +334,7 @@ func (this *QAbstractItemModel) RemoveRows(row int, count int, parent *QModelInd
 // /usr/include/qt/QtCore/qabstractitemmodel.h:215
 // index:0
 // Public virtual
-// bool removeColumns(int, int, const class QModelIndex &)
+// bool removeColumns(int, int, const QModelIndex &)
 func (this *QAbstractItemModel) RemoveColumns(column int, count int, parent *QModelIndex) bool {
 	var convArg2 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractItemModel13removeColumnsEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, count, convArg2)
@@ -346,7 +346,7 @@ func (this *QAbstractItemModel) RemoveColumns(column int, count int, parent *QMo
 // /usr/include/qt/QtCore/qabstractitemmodel.h:216
 // index:0
 // Public virtual
-// bool moveRows(const class QModelIndex &, int, int, const class QModelIndex &, int)
+// bool moveRows(const QModelIndex &, int, int, const QModelIndex &, int)
 func (this *QAbstractItemModel) MoveRows(sourceParent *QModelIndex, sourceRow int, count int, destinationParent *QModelIndex, destinationChild int) bool {
 	var convArg0 = sourceParent.GetCthis()
 	var convArg3 = destinationParent.GetCthis()
@@ -359,7 +359,7 @@ func (this *QAbstractItemModel) MoveRows(sourceParent *QModelIndex, sourceRow in
 // /usr/include/qt/QtCore/qabstractitemmodel.h:218
 // index:0
 // Public virtual
-// bool moveColumns(const class QModelIndex &, int, int, const class QModelIndex &, int)
+// bool moveColumns(const QModelIndex &, int, int, const QModelIndex &, int)
 func (this *QAbstractItemModel) MoveColumns(sourceParent *QModelIndex, sourceColumn int, count int, destinationParent *QModelIndex, destinationChild int) bool {
 	var convArg0 = sourceParent.GetCthis()
 	var convArg3 = destinationParent.GetCthis()
@@ -372,7 +372,7 @@ func (this *QAbstractItemModel) MoveColumns(sourceParent *QModelIndex, sourceCol
 // /usr/include/qt/QtCore/qabstractitemmodel.h:221
 // index:0
 // Public inline
-// bool insertRow(int, const class QModelIndex &)
+// bool insertRow(int, const QModelIndex &)
 func (this *QAbstractItemModel) InsertRow(row int, parent *QModelIndex) bool {
 	var convArg1 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractItemModel9insertRowEiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
@@ -384,7 +384,7 @@ func (this *QAbstractItemModel) InsertRow(row int, parent *QModelIndex) bool {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:222
 // index:0
 // Public inline
-// bool insertColumn(int, const class QModelIndex &)
+// bool insertColumn(int, const QModelIndex &)
 func (this *QAbstractItemModel) InsertColumn(column int, parent *QModelIndex) bool {
 	var convArg1 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractItemModel12insertColumnEiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
@@ -396,7 +396,7 @@ func (this *QAbstractItemModel) InsertColumn(column int, parent *QModelIndex) bo
 // /usr/include/qt/QtCore/qabstractitemmodel.h:223
 // index:0
 // Public inline
-// bool removeRow(int, const class QModelIndex &)
+// bool removeRow(int, const QModelIndex &)
 func (this *QAbstractItemModel) RemoveRow(row int, parent *QModelIndex) bool {
 	var convArg1 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractItemModel9removeRowEiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, convArg1)
@@ -408,7 +408,7 @@ func (this *QAbstractItemModel) RemoveRow(row int, parent *QModelIndex) bool {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:224
 // index:0
 // Public inline
-// bool removeColumn(int, const class QModelIndex &)
+// bool removeColumn(int, const QModelIndex &)
 func (this *QAbstractItemModel) RemoveColumn(column int, parent *QModelIndex) bool {
 	var convArg1 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractItemModel12removeColumnEiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
@@ -420,7 +420,7 @@ func (this *QAbstractItemModel) RemoveColumn(column int, parent *QModelIndex) bo
 // /usr/include/qt/QtCore/qabstractitemmodel.h:225
 // index:0
 // Public inline
-// bool moveRow(const class QModelIndex &, int, const class QModelIndex &, int)
+// bool moveRow(const QModelIndex &, int, const QModelIndex &, int)
 func (this *QAbstractItemModel) MoveRow(sourceParent *QModelIndex, sourceRow int, destinationParent *QModelIndex, destinationChild int) bool {
 	var convArg0 = sourceParent.GetCthis()
 	var convArg2 = destinationParent.GetCthis()
@@ -433,7 +433,7 @@ func (this *QAbstractItemModel) MoveRow(sourceParent *QModelIndex, sourceRow int
 // /usr/include/qt/QtCore/qabstractitemmodel.h:227
 // index:0
 // Public inline
-// bool moveColumn(const class QModelIndex &, int, const class QModelIndex &, int)
+// bool moveColumn(const QModelIndex &, int, const QModelIndex &, int)
 func (this *QAbstractItemModel) MoveColumn(sourceParent *QModelIndex, sourceColumn int, destinationParent *QModelIndex, destinationChild int) bool {
 	var convArg0 = sourceParent.GetCthis()
 	var convArg2 = destinationParent.GetCthis()
@@ -446,7 +446,7 @@ func (this *QAbstractItemModel) MoveColumn(sourceParent *QModelIndex, sourceColu
 // /usr/include/qt/QtCore/qabstractitemmodel.h:230
 // index:0
 // Public virtual
-// void fetchMore(const class QModelIndex &)
+// void fetchMore(const QModelIndex &)
 func (this *QAbstractItemModel) FetchMore(parent *QModelIndex) {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractItemModel9fetchMoreERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -456,7 +456,7 @@ func (this *QAbstractItemModel) FetchMore(parent *QModelIndex) {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:231
 // index:0
 // Public virtual
-// bool canFetchMore(const class QModelIndex &)
+// bool canFetchMore(const QModelIndex &)
 func (this *QAbstractItemModel) CanFetchMore(parent *QModelIndex) bool {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractItemModel12canFetchMoreERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -468,7 +468,7 @@ func (this *QAbstractItemModel) CanFetchMore(parent *QModelIndex) bool {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:232
 // index:0
 // Public virtual
-// Qt::ItemFlags flags(const class QModelIndex &)
+// Qt::ItemFlags flags(const QModelIndex &)
 func (this *QAbstractItemModel) Flags(index *QModelIndex) int {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractItemModel5flagsERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -489,7 +489,7 @@ func (this *QAbstractItemModel) Sort(column int, order int) {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:234
 // index:0
 // Public virtual
-// QModelIndex buddy(const class QModelIndex &)
+// QModelIndex buddy(const QModelIndex &)
 func (this *QAbstractItemModel) Buddy(index *QModelIndex) *QModelIndex /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
@@ -504,7 +504,7 @@ func (this *QAbstractItemModel) Buddy(index *QModelIndex) *QModelIndex /*123*/ {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:239
 // index:0
 // Public virtual
-// QSize span(const class QModelIndex &)
+// QSize span(const QModelIndex &)
 func (this *QAbstractItemModel) Span(index *QModelIndex) *QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
@@ -585,7 +585,7 @@ func (this *QAbstractItemModel) CreateIndex_1(row int, column int, id uint64) *Q
 // /usr/include/qt/QtCore/qabstractitemmodel.h:295
 // index:0
 // Protected
-// bool decodeData(int, int, const class QModelIndex &, class QDataStream &)
+// bool decodeData(int, int, const QModelIndex &, QDataStream &)
 func (this *QAbstractItemModel) DecodeData(row int, column int, parent *QModelIndex, stream *QDataStream) bool {
 	var convArg2 = parent.GetCthis()
 	var convArg3 = stream.GetCthis()
@@ -598,7 +598,7 @@ func (this *QAbstractItemModel) DecodeData(row int, column int, parent *QModelIn
 // /usr/include/qt/QtCore/qabstractitemmodel.h:297
 // index:0
 // Protected
-// void beginInsertRows(const class QModelIndex &, int, int)
+// void beginInsertRows(const QModelIndex &, int, int)
 func (this *QAbstractItemModel) BeginInsertRows(parent *QModelIndex, first int, last int) {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractItemModel15beginInsertRowsERK11QModelIndexii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, first, last)
@@ -617,7 +617,7 @@ func (this *QAbstractItemModel) EndInsertRows() {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:300
 // index:0
 // Protected
-// void beginRemoveRows(const class QModelIndex &, int, int)
+// void beginRemoveRows(const QModelIndex &, int, int)
 func (this *QAbstractItemModel) BeginRemoveRows(parent *QModelIndex, first int, last int) {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractItemModel15beginRemoveRowsERK11QModelIndexii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, first, last)
@@ -636,7 +636,7 @@ func (this *QAbstractItemModel) EndRemoveRows() {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:303
 // index:0
 // Protected
-// bool beginMoveRows(const class QModelIndex &, int, int, const class QModelIndex &, int)
+// bool beginMoveRows(const QModelIndex &, int, int, const QModelIndex &, int)
 func (this *QAbstractItemModel) BeginMoveRows(sourceParent *QModelIndex, sourceFirst int, sourceLast int, destinationParent *QModelIndex, destinationRow int) bool {
 	var convArg0 = sourceParent.GetCthis()
 	var convArg3 = destinationParent.GetCthis()
@@ -658,7 +658,7 @@ func (this *QAbstractItemModel) EndMoveRows() {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:306
 // index:0
 // Protected
-// void beginInsertColumns(const class QModelIndex &, int, int)
+// void beginInsertColumns(const QModelIndex &, int, int)
 func (this *QAbstractItemModel) BeginInsertColumns(parent *QModelIndex, first int, last int) {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractItemModel18beginInsertColumnsERK11QModelIndexii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, first, last)
@@ -677,7 +677,7 @@ func (this *QAbstractItemModel) EndInsertColumns() {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:309
 // index:0
 // Protected
-// void beginRemoveColumns(const class QModelIndex &, int, int)
+// void beginRemoveColumns(const QModelIndex &, int, int)
 func (this *QAbstractItemModel) BeginRemoveColumns(parent *QModelIndex, first int, last int) {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractItemModel18beginRemoveColumnsERK11QModelIndexii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, first, last)
@@ -696,7 +696,7 @@ func (this *QAbstractItemModel) EndRemoveColumns() {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:312
 // index:0
 // Protected
-// bool beginMoveColumns(const class QModelIndex &, int, int, const class QModelIndex &, int)
+// bool beginMoveColumns(const QModelIndex &, int, int, const QModelIndex &, int)
 func (this *QAbstractItemModel) BeginMoveColumns(sourceParent *QModelIndex, sourceFirst int, sourceLast int, destinationParent *QModelIndex, destinationColumn int) bool {
 	var convArg0 = sourceParent.GetCthis()
 	var convArg3 = destinationParent.GetCthis()
@@ -736,7 +736,7 @@ func (this *QAbstractItemModel) EndResetModel() {
 // /usr/include/qt/QtCore/qabstractitemmodel.h:327
 // index:0
 // Protected
-// void changePersistentIndex(const class QModelIndex &, const class QModelIndex &)
+// void changePersistentIndex(const QModelIndex &, const QModelIndex &)
 func (this *QAbstractItemModel) ChangePersistentIndex(from *QModelIndex, to *QModelIndex) {
 	var convArg0 = from.GetCthis()
 	var convArg1 = to.GetCthis()

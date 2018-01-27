@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QTimeLine) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // /usr/include/qt/QtCore/qtimeline.h:79
 // index:0
 // Public
-// void QTimeLine(int, class QObject *)
+// void QTimeLine(int, QObject *)
 func NewQTimeLine(duration int, parent *QObject /*777 QObject **/) *QTimeLine {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = parent.GetCthis()
@@ -145,7 +145,7 @@ func (this *QTimeLine) Direction() int {
 // /usr/include/qt/QtCore/qtimeline.h:88
 // index:0
 // Public
-// void setDirection(enum QTimeLine::Direction)
+// void setDirection(QTimeLine::Direction)
 func (this *QTimeLine) SetDirection(direction int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine12setDirectionENS_9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), direction)
 	gopp.ErrPrint(err, rv)
@@ -254,7 +254,7 @@ func (this *QTimeLine) CurveShape() int {
 // /usr/include/qt/QtCore/qtimeline.h:103
 // index:0
 // Public
-// void setCurveShape(enum QTimeLine::CurveShape)
+// void setCurveShape(QTimeLine::CurveShape)
 func (this *QTimeLine) SetCurveShape(shape int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine13setCurveShapeENS_10CurveShapeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), shape)
 	gopp.ErrPrint(err, rv)
@@ -277,7 +277,7 @@ func (this *QTimeLine) EasingCurve() *QEasingCurve /*123*/ {
 // /usr/include/qt/QtCore/qtimeline.h:106
 // index:0
 // Public
-// void setEasingCurve(const class QEasingCurve &)
+// void setEasingCurve(const QEasingCurve &)
 func (this *QTimeLine) SetEasingCurve(curve *QEasingCurve) {
 	var convArg0 = curve.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine14setEasingCurveERK12QEasingCurve", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -369,7 +369,7 @@ func (this *QTimeLine) Stop() {
 // /usr/include/qt/QtCore/qtimeline.h:119
 // index:0
 // Public
-// void setPaused(_Bool)
+// void setPaused(bool)
 func (this *QTimeLine) SetPaused(paused bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine9setPausedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), paused)
 	gopp.ErrPrint(err, rv)
@@ -396,7 +396,7 @@ func (this *QTimeLine) ToggleDirection() {
 // /usr/include/qt/QtCore/qtimeline.h:130
 // index:0
 // Protected virtual
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QTimeLine) TimerEvent(event *QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

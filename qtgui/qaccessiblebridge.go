@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -81,7 +81,7 @@ func DeleteQAccessibleBridge(*QAccessibleBridge) {
 // /usr/include/qt/QtGui/qaccessiblebridge.h:59
 // index:0
 // Public pure virtual
-// void setRootObject(class QAccessibleInterface *)
+// void setRootObject(QAccessibleInterface *)
 func (this *QAccessibleBridge) SetRootObject(arg0 *QAccessibleInterface /*777 QAccessibleInterface **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleBridge13setRootObjectEP20QAccessibleInterface", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -91,7 +91,7 @@ func (this *QAccessibleBridge) SetRootObject(arg0 *QAccessibleInterface /*777 QA
 // /usr/include/qt/QtGui/qaccessiblebridge.h:60
 // index:0
 // Public pure virtual
-// void notifyAccessibilityUpdate(class QAccessibleEvent *)
+// void notifyAccessibilityUpdate(QAccessibleEvent *)
 func (this *QAccessibleBridge) NotifyAccessibilityUpdate(event *QAccessibleEvent /*777 QAccessibleEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleBridge25notifyAccessibilityUpdateEP16QAccessibleEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

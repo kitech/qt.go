@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQSslKey() *QSslKey {
 // /usr/include/qt/QtNetwork/qsslkey.h:64
 // index:1
 // Public
-// void QSslKey(const class QByteArray &, QSsl::KeyAlgorithm, QSsl::EncodingFormat, QSsl::KeyType, const class QByteArray &)
+// void QSslKey(const QByteArray &, QSsl::KeyAlgorithm, QSsl::EncodingFormat, QSsl::KeyType, const QByteArray &)
 func NewQSslKey_1(encoded *qtcore.QByteArray, algorithm int, format int, type_ int, passPhrase *qtcore.QByteArray) *QSslKey {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = encoded.GetCthis()
@@ -98,7 +98,7 @@ func NewQSslKey_1(encoded *qtcore.QByteArray, algorithm int, format int, type_ i
 // /usr/include/qt/QtNetwork/qsslkey.h:68
 // index:2
 // Public
-// void QSslKey(class QIODevice *, QSsl::KeyAlgorithm, QSsl::EncodingFormat, QSsl::KeyType, const class QByteArray &)
+// void QSslKey(QIODevice *, QSsl::KeyAlgorithm, QSsl::EncodingFormat, QSsl::KeyType, const QByteArray &)
 func NewQSslKey_2(device *qtcore.QIODevice /*777 QIODevice **/, algorithm int, format int, type_ int, passPhrase *qtcore.QByteArray) *QSslKey {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = device.GetCthis()
@@ -121,7 +121,7 @@ func DeleteQSslKey(*QSslKey) {
 // /usr/include/qt/QtNetwork/qsslkey.h:80
 // index:0
 // Public inline
-// void swap(class QSslKey &)
+// void swap(QSslKey &)
 func (this *QSslKey) Swap(other *QSslKey) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSslKey4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -184,7 +184,7 @@ func (this *QSslKey) Algorithm() int {
 // /usr/include/qt/QtNetwork/qsslkey.h:89
 // index:0
 // Public
-// QByteArray toPem(const class QByteArray &)
+// QByteArray toPem(const QByteArray &)
 func (this *QSslKey) ToPem(passPhrase *qtcore.QByteArray) *qtcore.QByteArray /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = passPhrase.GetCthis()
@@ -199,7 +199,7 @@ func (this *QSslKey) ToPem(passPhrase *qtcore.QByteArray) *qtcore.QByteArray /*1
 // /usr/include/qt/QtNetwork/qsslkey.h:90
 // index:0
 // Public
-// QByteArray toDer(const class QByteArray &)
+// QByteArray toDer(const QByteArray &)
 func (this *QSslKey) ToDer(passPhrase *qtcore.QByteArray) *qtcore.QByteArray /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = passPhrase.GetCthis()

@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -93,7 +93,7 @@ func DeleteQSslPreSharedKeyAuthenticator(*QSslPreSharedKeyAuthenticator) {
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:64
 // index:0
 // Public inline
-// void swap(class QSslPreSharedKeyAuthenticator &)
+// void swap(QSslPreSharedKeyAuthenticator &)
 func (this *QSslPreSharedKeyAuthenticator) Swap(other *QSslPreSharedKeyAuthenticator) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticator4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -117,7 +117,7 @@ func (this *QSslPreSharedKeyAuthenticator) IdentityHint() *qtcore.QByteArray /*1
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:68
 // index:0
 // Public
-// void setIdentity(const class QByteArray &)
+// void setIdentity(const QByteArray &)
 func (this *QSslPreSharedKeyAuthenticator) SetIdentity(identity *qtcore.QByteArray) {
 	var convArg0 = identity.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticator11setIdentityERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -152,7 +152,7 @@ func (this *QSslPreSharedKeyAuthenticator) MaximumIdentityLength() int {
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:72
 // index:0
 // Public
-// void setPreSharedKey(const class QByteArray &)
+// void setPreSharedKey(const QByteArray &)
 func (this *QSslPreSharedKeyAuthenticator) SetPreSharedKey(preSharedKey *qtcore.QByteArray) {
 	var convArg0 = preSharedKey.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticator15setPreSharedKeyERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

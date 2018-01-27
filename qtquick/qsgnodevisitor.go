@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -93,7 +93,7 @@ func DeleteQSGNodeVisitor(*QSGNodeVisitor) {
 // /usr/include/qt/QtQuick/qsgnode.h:340
 // index:0
 // Protected inline virtual
-// void enterTransformNode(class QSGTransformNode *)
+// void enterTransformNode(QSGTransformNode *)
 func (this *QSGNodeVisitor) EnterTransformNode(arg0 *QSGTransformNode /*777 QSGTransformNode **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGNodeVisitor18enterTransformNodeEP16QSGTransformNode", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -103,7 +103,7 @@ func (this *QSGNodeVisitor) EnterTransformNode(arg0 *QSGTransformNode /*777 QSGT
 // /usr/include/qt/QtQuick/qsgnode.h:341
 // index:0
 // Protected inline virtual
-// void leaveTransformNode(class QSGTransformNode *)
+// void leaveTransformNode(QSGTransformNode *)
 func (this *QSGNodeVisitor) LeaveTransformNode(arg0 *QSGTransformNode /*777 QSGTransformNode **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGNodeVisitor18leaveTransformNodeEP16QSGTransformNode", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -113,7 +113,7 @@ func (this *QSGNodeVisitor) LeaveTransformNode(arg0 *QSGTransformNode /*777 QSGT
 // /usr/include/qt/QtQuick/qsgnode.h:342
 // index:0
 // Protected inline virtual
-// void enterClipNode(class QSGClipNode *)
+// void enterClipNode(QSGClipNode *)
 func (this *QSGNodeVisitor) EnterClipNode(arg0 *QSGClipNode /*777 QSGClipNode **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGNodeVisitor13enterClipNodeEP11QSGClipNode", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -123,7 +123,7 @@ func (this *QSGNodeVisitor) EnterClipNode(arg0 *QSGClipNode /*777 QSGClipNode **
 // /usr/include/qt/QtQuick/qsgnode.h:343
 // index:0
 // Protected inline virtual
-// void leaveClipNode(class QSGClipNode *)
+// void leaveClipNode(QSGClipNode *)
 func (this *QSGNodeVisitor) LeaveClipNode(arg0 *QSGClipNode /*777 QSGClipNode **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGNodeVisitor13leaveClipNodeEP11QSGClipNode", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -133,7 +133,7 @@ func (this *QSGNodeVisitor) LeaveClipNode(arg0 *QSGClipNode /*777 QSGClipNode **
 // /usr/include/qt/QtQuick/qsgnode.h:344
 // index:0
 // Protected inline virtual
-// void enterGeometryNode(class QSGGeometryNode *)
+// void enterGeometryNode(QSGGeometryNode *)
 func (this *QSGNodeVisitor) EnterGeometryNode(arg0 *QSGGeometryNode /*777 QSGGeometryNode **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGNodeVisitor17enterGeometryNodeEP15QSGGeometryNode", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -143,7 +143,7 @@ func (this *QSGNodeVisitor) EnterGeometryNode(arg0 *QSGGeometryNode /*777 QSGGeo
 // /usr/include/qt/QtQuick/qsgnode.h:345
 // index:0
 // Protected inline virtual
-// void leaveGeometryNode(class QSGGeometryNode *)
+// void leaveGeometryNode(QSGGeometryNode *)
 func (this *QSGNodeVisitor) LeaveGeometryNode(arg0 *QSGGeometryNode /*777 QSGGeometryNode **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGNodeVisitor17leaveGeometryNodeEP15QSGGeometryNode", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -153,7 +153,7 @@ func (this *QSGNodeVisitor) LeaveGeometryNode(arg0 *QSGGeometryNode /*777 QSGGeo
 // /usr/include/qt/QtQuick/qsgnode.h:346
 // index:0
 // Protected inline virtual
-// void enterOpacityNode(class QSGOpacityNode *)
+// void enterOpacityNode(QSGOpacityNode *)
 func (this *QSGNodeVisitor) EnterOpacityNode(arg0 *QSGOpacityNode /*777 QSGOpacityNode **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGNodeVisitor16enterOpacityNodeEP14QSGOpacityNode", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -163,7 +163,7 @@ func (this *QSGNodeVisitor) EnterOpacityNode(arg0 *QSGOpacityNode /*777 QSGOpaci
 // /usr/include/qt/QtQuick/qsgnode.h:347
 // index:0
 // Protected inline virtual
-// void leaveOpacityNode(class QSGOpacityNode *)
+// void leaveOpacityNode(QSGOpacityNode *)
 func (this *QSGNodeVisitor) LeaveOpacityNode(arg0 *QSGOpacityNode /*777 QSGOpacityNode **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGNodeVisitor16leaveOpacityNodeEP14QSGOpacityNode", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -173,7 +173,7 @@ func (this *QSGNodeVisitor) LeaveOpacityNode(arg0 *QSGOpacityNode /*777 QSGOpaci
 // /usr/include/qt/QtQuick/qsgnode.h:348
 // index:0
 // Protected virtual
-// void visitNode(class QSGNode *)
+// void visitNode(QSGNode *)
 func (this *QSGNodeVisitor) VisitNode(n *QSGNode /*777 QSGNode **/) {
 	var convArg0 = n.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGNodeVisitor9visitNodeEP7QSGNode", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -183,7 +183,7 @@ func (this *QSGNodeVisitor) VisitNode(n *QSGNode /*777 QSGNode **/) {
 // /usr/include/qt/QtQuick/qsgnode.h:349
 // index:0
 // Protected virtual
-// void visitChildren(class QSGNode *)
+// void visitChildren(QSGNode *)
 func (this *QSGNodeVisitor) VisitChildren(n *QSGNode /*777 QSGNode **/) {
 	var convArg0 = n.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGNodeVisitor13visitChildrenEP7QSGNode", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

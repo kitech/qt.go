@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QSharedMemory) MetaObject() *QMetaObject /*777 const QMetaObject **/
 // /usr/include/qt/QtCore/qsharedmemory.h:77
 // index:0
 // Public
-// void QSharedMemory(class QObject *)
+// void QSharedMemory(QObject *)
 func NewQSharedMemory(parent *QObject /*777 QObject **/) *QSharedMemory {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -94,7 +94,7 @@ func NewQSharedMemory(parent *QObject /*777 QObject **/) *QSharedMemory {
 // /usr/include/qt/QtCore/qsharedmemory.h:78
 // index:1
 // Public
-// void QSharedMemory(const class QString &, class QObject *)
+// void QSharedMemory(const QString &, QObject *)
 func NewQSharedMemory_1(key *QString, parent *QObject /*777 QObject **/) *QSharedMemory {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = key.GetCthis()
@@ -117,7 +117,7 @@ func DeleteQSharedMemory(*QSharedMemory) {
 // /usr/include/qt/QtCore/qsharedmemory.h:81
 // index:0
 // Public
-// void setKey(const class QString &)
+// void setKey(const QString &)
 func (this *QSharedMemory) SetKey(key *QString) {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6setKeyERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -141,7 +141,7 @@ func (this *QSharedMemory) Key() *QString /*123*/ {
 // /usr/include/qt/QtCore/qsharedmemory.h:83
 // index:0
 // Public
-// void setNativeKey(const class QString &)
+// void setNativeKey(const QString &)
 func (this *QSharedMemory) SetNativeKey(key *QString) {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory12setNativeKeyERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -165,7 +165,7 @@ func (this *QSharedMemory) NativeKey() *QString /*123*/ {
 // /usr/include/qt/QtCore/qsharedmemory.h:86
 // index:0
 // Public
-// bool create(int, enum QSharedMemory::AccessMode)
+// bool create(int, QSharedMemory::AccessMode)
 func (this *QSharedMemory) Create(size int, mode int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6createEiNS_10AccessModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size, mode)
 	gopp.ErrPrint(err, rv)
@@ -187,7 +187,7 @@ func (this *QSharedMemory) Size() int {
 // /usr/include/qt/QtCore/qsharedmemory.h:89
 // index:0
 // Public
-// bool attach(enum QSharedMemory::AccessMode)
+// bool attach(QSharedMemory::AccessMode)
 func (this *QSharedMemory) Attach(mode int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6attachENS_10AccessModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)

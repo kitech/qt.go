@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQDateTime() *QDateTime {
 // /usr/include/qt/QtCore/qdatetime.h:262
 // index:1
 // Public
-// void QDateTime(const class QDate &)
+// void QDateTime(const QDate &)
 func NewQDateTime_1(arg0 *QDate) *QDateTime {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = arg0.GetCthis()
@@ -93,7 +93,7 @@ func NewQDateTime_1(arg0 *QDate) *QDateTime {
 // /usr/include/qt/QtCore/qdatetime.h:263
 // index:2
 // Public
-// void QDateTime(const class QDate &, const class QTime &, Qt::TimeSpec)
+// void QDateTime(const QDate &, const QTime &, Qt::TimeSpec)
 func NewQDateTime_2(arg0 *QDate, arg1 *QTime, spec int) *QDateTime {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = arg0.GetCthis()
@@ -107,7 +107,7 @@ func NewQDateTime_2(arg0 *QDate, arg1 *QTime, spec int) *QDateTime {
 // /usr/include/qt/QtCore/qdatetime.h:265
 // index:3
 // Public
-// void QDateTime(const class QDate &, const class QTime &, Qt::TimeSpec, int)
+// void QDateTime(const QDate &, const QTime &, Qt::TimeSpec, int)
 func NewQDateTime_3(date *QDate, time *QTime, spec int, offsetSeconds int) *QDateTime {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = date.GetCthis()
@@ -121,7 +121,7 @@ func NewQDateTime_3(date *QDate, time *QTime, spec int, offsetSeconds int) *QDat
 // /usr/include/qt/QtCore/qdatetime.h:267
 // index:4
 // Public
-// void QDateTime(const class QDate &, const class QTime &, const class QTimeZone &)
+// void QDateTime(const QDate &, const QTime &, const QTimeZone &)
 func NewQDateTime_4(date *QDate, time *QTime, timeZone *QTimeZone) *QDateTime {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = date.GetCthis()
@@ -145,7 +145,7 @@ func DeleteQDateTime(*QDateTime) {
 // /usr/include/qt/QtCore/qdatetime.h:278
 // index:0
 // Public inline
-// void swap(class QDateTime &)
+// void swap(QDateTime &)
 func (this *QDateTime) Swap(other *QDateTime) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateTime4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -288,7 +288,7 @@ func (this *QDateTime) ToSecsSinceEpoch() int64 {
 // /usr/include/qt/QtCore/qdatetime.h:296
 // index:0
 // Public
-// void setDate(const class QDate &)
+// void setDate(const QDate &)
 func (this *QDateTime) SetDate(date *QDate) {
 	var convArg0 = date.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateTime7setDateERK5QDate", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -298,7 +298,7 @@ func (this *QDateTime) SetDate(date *QDate) {
 // /usr/include/qt/QtCore/qdatetime.h:297
 // index:0
 // Public
-// void setTime(const class QTime &)
+// void setTime(const QTime &)
 func (this *QDateTime) SetTime(time *QTime) {
 	var convArg0 = time.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateTime7setTimeERK5QTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -326,7 +326,7 @@ func (this *QDateTime) SetOffsetFromUtc(offsetSeconds int) {
 // /usr/include/qt/QtCore/qdatetime.h:301
 // index:0
 // Public
-// void setTimeZone(const class QTimeZone &)
+// void setTimeZone(const QTimeZone &)
 func (this *QDateTime) SetTimeZone(toZone *QTimeZone) {
 	var convArg0 = toZone.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateTime11setTimeZoneERK9QTimeZone", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -368,7 +368,7 @@ func (this *QDateTime) ToString(f int) *QString /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:309
 // index:1
 // Public
-// QString toString(const class QString &)
+// QString toString(const QString &)
 func (this *QDateTime) ToString_1(format *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = format.GetCthis()
@@ -383,7 +383,7 @@ func (this *QDateTime) ToString_1(format *QString) *QString /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:311
 // index:2
 // Public
-// QString toString(class QStringView)
+// QString toString(QStringView)
 func (this *QDateTime) ToString_2(format *QStringView /*123*/) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = format.GetCthis()
@@ -524,7 +524,7 @@ func (this *QDateTime) ToOffsetFromUtc(offsetSeconds int) *QDateTime /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:324
 // index:0
 // Public
-// QDateTime toTimeZone(const class QTimeZone &)
+// QDateTime toTimeZone(const QTimeZone &)
 func (this *QDateTime) ToTimeZone(toZone *QTimeZone) *QDateTime /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = toZone.GetCthis()
@@ -539,7 +539,7 @@ func (this *QDateTime) ToTimeZone(toZone *QTimeZone) *QDateTime /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:327
 // index:0
 // Public
-// qint64 daysTo(const class QDateTime &)
+// qint64 daysTo(const QDateTime &)
 func (this *QDateTime) DaysTo(arg0 *QDateTime) int64 {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDateTime6daysToERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -551,7 +551,7 @@ func (this *QDateTime) DaysTo(arg0 *QDateTime) int64 {
 // /usr/include/qt/QtCore/qdatetime.h:328
 // index:0
 // Public
-// qint64 secsTo(const class QDateTime &)
+// qint64 secsTo(const QDateTime &)
 func (this *QDateTime) SecsTo(arg0 *QDateTime) int64 {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDateTime6secsToERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -563,7 +563,7 @@ func (this *QDateTime) SecsTo(arg0 *QDateTime) int64 {
 // /usr/include/qt/QtCore/qdatetime.h:329
 // index:0
 // Public
-// qint64 msecsTo(const class QDateTime &)
+// qint64 msecsTo(const QDateTime &)
 func (this *QDateTime) MsecsTo(arg0 *QDateTime) int64 {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDateTime7msecsToERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -629,7 +629,7 @@ func QDateTime_CurrentDateTimeUtc() *QDateTime /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:346
 // index:0
 // Public static
-// QDateTime fromString(const class QString &, Qt::DateFormat)
+// QDateTime fromString(const QString &, Qt::DateFormat)
 func (this *QDateTime) FromString(s *QString, f int) *QDateTime /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateTime10fromStringERK7QStringN2Qt10DateFormatE", ffiqt.FFI_TYPE_POINTER, s, f)
 	gopp.ErrPrint(err, rv)
@@ -646,7 +646,7 @@ func QDateTime_FromString(s *QString, f int) *QDateTime /*123*/ {
 // /usr/include/qt/QtCore/qdatetime.h:347
 // index:1
 // Public static
-// QDateTime fromString(const class QString &, const class QString &)
+// QDateTime fromString(const QString &, const QString &)
 func (this *QDateTime) FromString_1(s *QString, format *QString) *QDateTime /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateTime10fromStringERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, s, format)
 	gopp.ErrPrint(err, rv)
@@ -717,7 +717,7 @@ func QDateTime_FromTime_t_1(secsSince1Jan1970UTC uint, spec int, offsetFromUtc i
 // /usr/include/qt/QtCore/qdatetime.h:356
 // index:2
 // Public static
-// QDateTime fromTime_t(uint, const class QTimeZone &)
+// QDateTime fromTime_t(uint, const QTimeZone &)
 func (this *QDateTime) FromTime_t_2(secsSince1Jan1970UTC uint, timeZone *QTimeZone) *QDateTime /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateTime10fromTime_tEjRK9QTimeZone", ffiqt.FFI_TYPE_POINTER, secsSince1Jan1970UTC, timeZone)
 	gopp.ErrPrint(err, rv)
@@ -768,7 +768,7 @@ func QDateTime_FromMSecsSinceEpoch_1(msecs int64, spec int, offsetFromUtc int) *
 // /usr/include/qt/QtCore/qdatetime.h:365
 // index:2
 // Public static
-// QDateTime fromMSecsSinceEpoch(qint64, const class QTimeZone &)
+// QDateTime fromMSecsSinceEpoch(qint64, const QTimeZone &)
 func (this *QDateTime) FromMSecsSinceEpoch_2(msecs int64, timeZone *QTimeZone) *QDateTime /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateTime19fromMSecsSinceEpochExRK9QTimeZone", ffiqt.FFI_TYPE_POINTER, msecs, timeZone)
 	gopp.ErrPrint(err, rv)
@@ -802,7 +802,7 @@ func QDateTime_FromSecsSinceEpoch(secs int64, spe int, offsetFromUtc int) *QDate
 // /usr/include/qt/QtCore/qdatetime.h:366
 // index:1
 // Public static
-// QDateTime fromSecsSinceEpoch(qint64, const class QTimeZone &)
+// QDateTime fromSecsSinceEpoch(qint64, const QTimeZone &)
 func (this *QDateTime) FromSecsSinceEpoch_1(secs int64, timeZone *QTimeZone) *QDateTime /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateTime18fromSecsSinceEpochExRK9QTimeZone", ffiqt.FFI_TYPE_POINTER, secs, timeZone)
 	gopp.ErrPrint(err, rv)

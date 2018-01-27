@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QFileSystemWatcher) MetaObject() *QMetaObject /*777 const QMetaObjec
 // /usr/include/qt/QtCore/qfilesystemwatcher.h:58
 // index:0
 // Public
-// void QFileSystemWatcher(class QObject *)
+// void QFileSystemWatcher(QObject *)
 func NewQFileSystemWatcher(parent *QObject /*777 QObject **/) *QFileSystemWatcher {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -94,7 +94,7 @@ func NewQFileSystemWatcher(parent *QObject /*777 QObject **/) *QFileSystemWatche
 // /usr/include/qt/QtCore/qfilesystemwatcher.h:59
 // index:1
 // Public
-// void QFileSystemWatcher(const class QStringList &, class QObject *)
+// void QFileSystemWatcher(const QStringList &, QObject *)
 func NewQFileSystemWatcher_1(paths *QStringList, parent *QObject /*777 QObject **/) *QFileSystemWatcher {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = paths.GetCthis()
@@ -117,7 +117,7 @@ func DeleteQFileSystemWatcher(*QFileSystemWatcher) {
 // /usr/include/qt/QtCore/qfilesystemwatcher.h:62
 // index:0
 // Public
-// bool addPath(const class QString &)
+// bool addPath(const QString &)
 func (this *QFileSystemWatcher) AddPath(file *QString) bool {
 	var convArg0 = file.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFileSystemWatcher7addPathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -129,7 +129,7 @@ func (this *QFileSystemWatcher) AddPath(file *QString) bool {
 // /usr/include/qt/QtCore/qfilesystemwatcher.h:64
 // index:0
 // Public
-// bool removePath(const class QString &)
+// bool removePath(const QString &)
 func (this *QFileSystemWatcher) RemovePath(file *QString) bool {
 	var convArg0 = file.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFileSystemWatcher10removePathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QNetworkDiskCache) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:56
 // index:0
 // Public
-// void QNetworkDiskCache(class QObject *)
+// void QNetworkDiskCache(QObject *)
 func NewQNetworkDiskCache(parent *qtcore.QObject /*777 QObject **/) *QNetworkDiskCache {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -121,7 +121,7 @@ func (this *QNetworkDiskCache) CacheDirectory() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:60
 // index:0
 // Public
-// void setCacheDirectory(const class QString &)
+// void setCacheDirectory(const QString &)
 func (this *QNetworkDiskCache) SetCacheDirectory(cacheDir *qtcore.QString) {
 	var convArg0 = cacheDir.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QNetworkDiskCache17setCacheDirectoryERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -162,7 +162,7 @@ func (this *QNetworkDiskCache) CacheSize() int64 {
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:66
 // index:0
 // Public virtual
-// QNetworkCacheMetaData metaData(const class QUrl &)
+// QNetworkCacheMetaData metaData(const QUrl &)
 func (this *QNetworkDiskCache) MetaData(url *qtcore.QUrl) *QNetworkCacheMetaData /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = url.GetCthis()
@@ -177,7 +177,7 @@ func (this *QNetworkDiskCache) MetaData(url *qtcore.QUrl) *QNetworkCacheMetaData
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:67
 // index:0
 // Public virtual
-// void updateMetaData(const class QNetworkCacheMetaData &)
+// void updateMetaData(const QNetworkCacheMetaData &)
 func (this *QNetworkDiskCache) UpdateMetaData(metaData *QNetworkCacheMetaData) {
 	var convArg0 = metaData.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QNetworkDiskCache14updateMetaDataERK21QNetworkCacheMetaData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -187,7 +187,7 @@ func (this *QNetworkDiskCache) UpdateMetaData(metaData *QNetworkCacheMetaData) {
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:68
 // index:0
 // Public virtual
-// QIODevice * data(const class QUrl &)
+// QIODevice * data(const QUrl &)
 func (this *QNetworkDiskCache) Data(url *qtcore.QUrl) *qtcore.QIODevice /*777 QIODevice **/ {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QNetworkDiskCache4dataERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -200,7 +200,7 @@ func (this *QNetworkDiskCache) Data(url *qtcore.QUrl) *qtcore.QIODevice /*777 QI
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:69
 // index:0
 // Public virtual
-// bool remove(const class QUrl &)
+// bool remove(const QUrl &)
 func (this *QNetworkDiskCache) Remove(url *qtcore.QUrl) bool {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QNetworkDiskCache6removeERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -212,7 +212,7 @@ func (this *QNetworkDiskCache) Remove(url *qtcore.QUrl) bool {
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:70
 // index:0
 // Public virtual
-// QIODevice * prepare(const class QNetworkCacheMetaData &)
+// QIODevice * prepare(const QNetworkCacheMetaData &)
 func (this *QNetworkDiskCache) Prepare(metaData *QNetworkCacheMetaData) *qtcore.QIODevice /*777 QIODevice **/ {
 	var convArg0 = metaData.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QNetworkDiskCache7prepareERK21QNetworkCacheMetaData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -225,7 +225,7 @@ func (this *QNetworkDiskCache) Prepare(metaData *QNetworkCacheMetaData) *qtcore.
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h:73
 // index:0
 // Public
-// QNetworkCacheMetaData fileMetaData(const class QString &)
+// QNetworkCacheMetaData fileMetaData(const QString &)
 func (this *QNetworkDiskCache) FileMetaData(fileName *qtcore.QString) *QNetworkCacheMetaData /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fileName.GetCthis()

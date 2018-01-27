@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQSslCipher() *QSslCipher {
 // /usr/include/qt/QtNetwork/qsslcipher.h:59
 // index:1
 // Public
-// void QSslCipher(const class QString &)
+// void QSslCipher(const QString &)
 func NewQSslCipher_1(name *qtcore.QString) *QSslCipher {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = name.GetCthis()
@@ -97,7 +97,7 @@ func NewQSslCipher_1(name *qtcore.QString) *QSslCipher {
 // /usr/include/qt/QtNetwork/qsslcipher.h:60
 // index:2
 // Public
-// void QSslCipher(const class QString &, QSsl::SslProtocol)
+// void QSslCipher(const QString &, QSsl::SslProtocol)
 func NewQSslCipher_2(name *qtcore.QString, protocol int) *QSslCipher {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = name.GetCthis()
@@ -119,7 +119,7 @@ func DeleteQSslCipher(*QSslCipher) {
 // /usr/include/qt/QtNetwork/qsslcipher.h:68
 // index:0
 // Public inline
-// void swap(class QSslCipher &)
+// void swap(QSslCipher &)
 func (this *QSslCipher) Swap(other *QSslCipher) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSslCipher4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

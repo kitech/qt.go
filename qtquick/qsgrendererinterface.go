@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -104,7 +104,7 @@ func (this *QSGRendererInterface) GraphicsApi() int {
 // /usr/include/qt/QtQuick/qsgrendererinterface.h:90
 // index:0
 // Public virtual
-// void * getResource(class QQuickWindow *, enum QSGRendererInterface::Resource)
+// void * getResource(QQuickWindow *, QSGRendererInterface::Resource)
 func (this *QSGRendererInterface) GetResource(window *QQuickWindow /*777 QQuickWindow **/, resource int) unsafe.Pointer /*666*/ {
 	var convArg0 = window.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGRendererInterface11getResourceEP12QQuickWindowNS_8ResourceE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, resource)
@@ -116,7 +116,7 @@ func (this *QSGRendererInterface) GetResource(window *QQuickWindow /*777 QQuickW
 // /usr/include/qt/QtQuick/qsgrendererinterface.h:91
 // index:1
 // Public virtual
-// void * getResource(class QQuickWindow *, const char *)
+// void * getResource(QQuickWindow *, const char *)
 func (this *QSGRendererInterface) GetResource_1(window *QQuickWindow /*777 QQuickWindow **/, resource string) unsafe.Pointer /*666*/ {
 	var convArg0 = window.GetCthis()
 	var convArg1 = qtrt.CString(resource)

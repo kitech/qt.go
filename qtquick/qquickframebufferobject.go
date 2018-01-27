@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -97,7 +97,7 @@ func (this *QQuickFramebufferObject) MetaObject() *qtcore.QMetaObject /*777 cons
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:78
 // index:0
 // Public
-// void QQuickFramebufferObject(class QQuickItem *)
+// void QQuickFramebufferObject(QQuickItem *)
 func NewQQuickFramebufferObject(parent *QQuickItem /*777 QQuickItem **/) *QQuickFramebufferObject {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = parent.GetCthis()
@@ -121,7 +121,7 @@ func (this *QQuickFramebufferObject) TextureFollowsItemSize() bool {
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:81
 // index:0
 // Public
-// void setTextureFollowsItemSize(_Bool)
+// void setTextureFollowsItemSize(bool)
 func (this *QQuickFramebufferObject) SetTextureFollowsItemSize(follows bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QQuickFramebufferObject25setTextureFollowsItemSizeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), follows)
 	gopp.ErrPrint(err, rv)
@@ -141,7 +141,7 @@ func (this *QQuickFramebufferObject) MirrorVertically() bool {
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:84
 // index:0
 // Public
-// void setMirrorVertically(_Bool)
+// void setMirrorVertically(bool)
 func (this *QQuickFramebufferObject) SetMirrorVertically(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QQuickFramebufferObject19setMirrorVerticallyEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -193,7 +193,7 @@ func (this *QQuickFramebufferObject) ReleaseResources() {
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:93
 // index:0
 // Protected virtual
-// void geometryChanged(const class QRectF &, const class QRectF &)
+// void geometryChanged(const QRectF &, const QRectF &)
 func (this *QQuickFramebufferObject) GeometryChanged(newGeometry *qtcore.QRectF, oldGeometry *qtcore.QRectF) {
 	var convArg0 = newGeometry.GetCthis()
 	var convArg1 = oldGeometry.GetCthis()
@@ -204,7 +204,7 @@ func (this *QQuickFramebufferObject) GeometryChanged(newGeometry *qtcore.QRectF,
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:99
 // index:0
 // Public
-// void textureFollowsItemSizeChanged(_Bool)
+// void textureFollowsItemSizeChanged(bool)
 func (this *QQuickFramebufferObject) TextureFollowsItemSizeChanged(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QQuickFramebufferObject29textureFollowsItemSizeChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -213,7 +213,7 @@ func (this *QQuickFramebufferObject) TextureFollowsItemSizeChanged(arg0 bool) {
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:100
 // index:0
 // Public
-// void mirrorVerticallyChanged(_Bool)
+// void mirrorVerticallyChanged(bool)
 func (this *QQuickFramebufferObject) MirrorVerticallyChanged(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QQuickFramebufferObject23mirrorVerticallyChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

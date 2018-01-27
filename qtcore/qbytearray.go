@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -127,7 +127,7 @@ func DeleteQByteArray(*QByteArray) {
 // /usr/include/qt/QtCore/qbytearray.h:185
 // index:0
 // Public inline
-// void swap(class QByteArray &)
+// void swap(QByteArray &)
 func (this *QByteArray) Swap(other *QByteArray) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -262,7 +262,7 @@ func (this *QByteArray) IsDetached() bool {
 // /usr/include/qt/QtCore/qbytearray.h:207
 // index:0
 // Public inline
-// bool isSharedWith(const class QByteArray &)
+// bool isSharedWith(const QByteArray &)
 func (this *QByteArray) IsSharedWith(other *QByteArray) bool {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray12isSharedWithERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -368,7 +368,7 @@ func (this *QByteArray) IndexOf_1(c string, from int) int {
 // /usr/include/qt/QtCore/qbytearray.h:222
 // index:2
 // Public
-// int indexOf(const class QByteArray &, int)
+// int indexOf(const QByteArray &, int)
 func (this *QByteArray) IndexOf_2(a *QByteArray, from int) int {
 	var convArg0 = a.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray7indexOfERKS_i", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
@@ -380,7 +380,7 @@ func (this *QByteArray) IndexOf_2(a *QByteArray, from int) int {
 // /usr/include/qt/QtCore/qbytearray.h:331
 // index:3
 // Public
-// int indexOf(const class QString &, int)
+// int indexOf(const QString &, int)
 func (this *QByteArray) IndexOf_3(s *QString, from int) int {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray7indexOfERK7QStringi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
@@ -416,7 +416,7 @@ func (this *QByteArray) LastIndexOf_1(c string, from int) int {
 // /usr/include/qt/QtCore/qbytearray.h:225
 // index:2
 // Public
-// int lastIndexOf(const class QByteArray &, int)
+// int lastIndexOf(const QByteArray &, int)
 func (this *QByteArray) LastIndexOf_2(a *QByteArray, from int) int {
 	var convArg0 = a.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfERKS_i", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
@@ -428,7 +428,7 @@ func (this *QByteArray) LastIndexOf_2(a *QByteArray, from int) int {
 // /usr/include/qt/QtCore/qbytearray.h:332
 // index:3
 // Public
-// int lastIndexOf(const class QString &, int)
+// int lastIndexOf(const QString &, int)
 func (this *QByteArray) LastIndexOf_3(s *QString, from int) int {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfERK7QStringi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
@@ -464,7 +464,7 @@ func (this *QByteArray) Contains_1(a string) bool {
 // /usr/include/qt/QtCore/qbytearray.h:229
 // index:2
 // Public inline
-// bool contains(const class QByteArray &)
+// bool contains(const QByteArray &)
 func (this *QByteArray) Contains_2(a *QByteArray) bool {
 	var convArg0 = a.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8containsERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -500,7 +500,7 @@ func (this *QByteArray) Count_1(a string) int {
 // /usr/include/qt/QtCore/qbytearray.h:232
 // index:2
 // Public
-// int count(const class QByteArray &)
+// int count(const QByteArray &)
 func (this *QByteArray) Count_2(a *QByteArray) int {
 	var convArg0 = a.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray5countERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -579,7 +579,7 @@ func (this *QByteArray) Chopped(len int) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:240
 // index:0
 // Public
-// bool startsWith(const class QByteArray &)
+// bool startsWith(const QByteArray &)
 func (this *QByteArray) StartsWith(a *QByteArray) bool {
 	var convArg0 = a.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray10startsWithERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -615,7 +615,7 @@ func (this *QByteArray) StartsWith_2(c string) bool {
 // /usr/include/qt/QtCore/qbytearray.h:244
 // index:0
 // Public
-// bool endsWith(const class QByteArray &)
+// bool endsWith(const QByteArray &)
 func (this *QByteArray) EndsWith(a *QByteArray) bool {
 	var convArg0 = a.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8endsWithERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -781,7 +781,7 @@ func (this *QByteArray) Simplified_1() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:285
 // index:0
 // Public
-// QByteArray leftJustified(int, char, _Bool)
+// QByteArray leftJustified(int, char, bool)
 func (this *QByteArray) LeftJustified(width int, fill byte, truncate bool) *QByteArray /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray13leftJustifiedEicb", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), width, fill, truncate)
@@ -795,7 +795,7 @@ func (this *QByteArray) LeftJustified(width int, fill byte, truncate bool) *QByt
 // /usr/include/qt/QtCore/qbytearray.h:286
 // index:0
 // Public
-// QByteArray rightJustified(int, char, _Bool)
+// QByteArray rightJustified(int, char, bool)
 func (this *QByteArray) RightJustified(width int, fill byte, truncate bool) *QByteArray /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray14rightJustifiedEicb", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), width, fill, truncate)
@@ -849,7 +849,7 @@ func (this *QByteArray) Replace_1(index int, len int, s string, alen int) *QByte
 // /usr/include/qt/QtCore/qbytearray.h:306
 // index:2
 // Public
-// QByteArray & replace(int, int, const class QByteArray &)
+// QByteArray & replace(int, int, const QByteArray &)
 func (this *QByteArray) Replace_2(index int, len int, s *QByteArray) *QByteArray {
 	var convArg2 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7replaceEiiRKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, len, convArg2)
@@ -876,7 +876,7 @@ func (this *QByteArray) Replace_3(before byte, after string) *QByteArray {
 // /usr/include/qt/QtCore/qbytearray.h:308
 // index:4
 // Public
-// QByteArray & replace(char, const class QByteArray &)
+// QByteArray & replace(char, const QByteArray &)
 func (this *QByteArray) Replace_4(before byte, after *QByteArray) *QByteArray {
 	var convArg1 = after.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7replaceEcRKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), before, convArg1)
@@ -921,7 +921,7 @@ func (this *QByteArray) Replace_6(before string, bsize int, after string, asize 
 // /usr/include/qt/QtCore/qbytearray.h:311
 // index:7
 // Public
-// QByteArray & replace(const class QByteArray &, const class QByteArray &)
+// QByteArray & replace(const QByteArray &, const QByteArray &)
 func (this *QByteArray) Replace_7(before *QByteArray, after *QByteArray) *QByteArray {
 	var convArg0 = before.GetCthis()
 	var convArg1 = after.GetCthis()
@@ -935,7 +935,7 @@ func (this *QByteArray) Replace_7(before *QByteArray, after *QByteArray) *QByteA
 // /usr/include/qt/QtCore/qbytearray.h:312
 // index:8
 // Public inline
-// QByteArray & replace(const class QByteArray &, const char *)
+// QByteArray & replace(const QByteArray &, const char *)
 func (this *QByteArray) Replace_8(before *QByteArray, after string) *QByteArray {
 	var convArg0 = before.GetCthis()
 	var convArg1 = qtrt.CString(after)
@@ -950,7 +950,7 @@ func (this *QByteArray) Replace_8(before *QByteArray, after string) *QByteArray 
 // /usr/include/qt/QtCore/qbytearray.h:313
 // index:9
 // Public
-// QByteArray & replace(const char *, const class QByteArray &)
+// QByteArray & replace(const char *, const QByteArray &)
 func (this *QByteArray) Replace_9(before string, after *QByteArray) *QByteArray {
 	var convArg0 = qtrt.CString(before)
 	defer qtrt.FreeMem(convArg0)
@@ -977,7 +977,7 @@ func (this *QByteArray) Replace_10(before byte, after byte) *QByteArray {
 // /usr/include/qt/QtCore/qbytearray.h:326
 // index:11
 // Public
-// QByteArray & replace(const class QString &, const char *)
+// QByteArray & replace(const QString &, const char *)
 func (this *QByteArray) Replace_11(before *QString, after string) *QByteArray {
 	var convArg0 = before.GetCthis()
 	var convArg1 = qtrt.CString(after)
@@ -992,7 +992,7 @@ func (this *QByteArray) Replace_11(before *QString, after string) *QByteArray {
 // /usr/include/qt/QtCore/qbytearray.h:327
 // index:12
 // Public
-// QByteArray & replace(char, const class QString &)
+// QByteArray & replace(char, const QString &)
 func (this *QByteArray) Replace_12(c byte, after *QString) *QByteArray {
 	var convArg1 = after.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7replaceEcRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c, convArg1)
@@ -1005,7 +1005,7 @@ func (this *QByteArray) Replace_12(c byte, after *QString) *QByteArray {
 // /usr/include/qt/QtCore/qbytearray.h:328
 // index:13
 // Public
-// QByteArray & replace(const class QString &, const class QByteArray &)
+// QByteArray & replace(const QString &, const QByteArray &)
 func (this *QByteArray) Replace_13(before *QString, after *QByteArray) *QByteArray {
 	var convArg0 = before.GetCthis()
 	var convArg1 = after.GetCthis()
@@ -1033,7 +1033,7 @@ func (this *QByteArray) Repeated(times int) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:343
 // index:0
 // Public
-// short toShort(_Bool *, int)
+// short toShort(bool *, int)
 func (this *QByteArray) ToShort(ok unsafe.Pointer /*666*/, base int) int16 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray7toShortEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
@@ -1044,7 +1044,7 @@ func (this *QByteArray) ToShort(ok unsafe.Pointer /*666*/, base int) int16 {
 // /usr/include/qt/QtCore/qbytearray.h:344
 // index:0
 // Public
-// ushort toUShort(_Bool *, int)
+// ushort toUShort(bool *, int)
 func (this *QByteArray) ToUShort(ok unsafe.Pointer /*666*/, base int) uint16 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8toUShortEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
@@ -1055,7 +1055,7 @@ func (this *QByteArray) ToUShort(ok unsafe.Pointer /*666*/, base int) uint16 {
 // /usr/include/qt/QtCore/qbytearray.h:345
 // index:0
 // Public
-// int toInt(_Bool *, int)
+// int toInt(bool *, int)
 func (this *QByteArray) ToInt(ok unsafe.Pointer /*666*/, base int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray5toIntEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
@@ -1066,7 +1066,7 @@ func (this *QByteArray) ToInt(ok unsafe.Pointer /*666*/, base int) int {
 // /usr/include/qt/QtCore/qbytearray.h:346
 // index:0
 // Public
-// uint toUInt(_Bool *, int)
+// uint toUInt(bool *, int)
 func (this *QByteArray) ToUInt(ok unsafe.Pointer /*666*/, base int) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray6toUIntEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
@@ -1077,7 +1077,7 @@ func (this *QByteArray) ToUInt(ok unsafe.Pointer /*666*/, base int) uint {
 // /usr/include/qt/QtCore/qbytearray.h:347
 // index:0
 // Public
-// long toLong(_Bool *, int)
+// long toLong(bool *, int)
 func (this *QByteArray) ToLong(ok unsafe.Pointer /*666*/, base int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray6toLongEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
@@ -1088,7 +1088,7 @@ func (this *QByteArray) ToLong(ok unsafe.Pointer /*666*/, base int) int {
 // /usr/include/qt/QtCore/qbytearray.h:348
 // index:0
 // Public
-// ulong toULong(_Bool *, int)
+// ulong toULong(bool *, int)
 func (this *QByteArray) ToULong(ok unsafe.Pointer /*666*/, base int) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray7toULongEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
@@ -1099,7 +1099,7 @@ func (this *QByteArray) ToULong(ok unsafe.Pointer /*666*/, base int) uint {
 // /usr/include/qt/QtCore/qbytearray.h:349
 // index:0
 // Public
-// qlonglong toLongLong(_Bool *, int)
+// qlonglong toLongLong(bool *, int)
 func (this *QByteArray) ToLongLong(ok unsafe.Pointer /*666*/, base int) int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray10toLongLongEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
@@ -1110,7 +1110,7 @@ func (this *QByteArray) ToLongLong(ok unsafe.Pointer /*666*/, base int) int64 {
 // /usr/include/qt/QtCore/qbytearray.h:350
 // index:0
 // Public
-// qulonglong toULongLong(_Bool *, int)
+// qulonglong toULongLong(bool *, int)
 func (this *QByteArray) ToULongLong(ok unsafe.Pointer /*666*/, base int) uint64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray11toULongLongEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
@@ -1121,7 +1121,7 @@ func (this *QByteArray) ToULongLong(ok unsafe.Pointer /*666*/, base int) uint64 
 // /usr/include/qt/QtCore/qbytearray.h:351
 // index:0
 // Public
-// float toFloat(_Bool *)
+// float toFloat(bool *)
 func (this *QByteArray) ToFloat(ok unsafe.Pointer /*666*/) float32 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray7toFloatEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -1132,7 +1132,7 @@ func (this *QByteArray) ToFloat(ok unsafe.Pointer /*666*/) float32 {
 // /usr/include/qt/QtCore/qbytearray.h:352
 // index:0
 // Public
-// double toDouble(_Bool *)
+// double toDouble(bool *)
 func (this *QByteArray) ToDouble(ok unsafe.Pointer /*666*/) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8toDoubleEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -1185,7 +1185,7 @@ func (this *QByteArray) ToHex_1(separator byte) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:357
 // index:0
 // Public
-// QByteArray toPercentEncoding(const class QByteArray &, const class QByteArray &, char)
+// QByteArray toPercentEncoding(const QByteArray &, const QByteArray &, char)
 func (this *QByteArray) ToPercentEncoding(exclude *QByteArray, include *QByteArray, percent byte) *QByteArray /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = exclude.GetCthis()
@@ -1413,7 +1413,7 @@ func QByteArray_FromRawData(arg0 string, size int) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:378
 // index:0
 // Public static
-// QByteArray fromBase64(const class QByteArray &)
+// QByteArray fromBase64(const QByteArray &)
 func (this *QByteArray) FromBase64(base64 *QByteArray) *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray10fromBase64ERKS_", ffiqt.FFI_TYPE_POINTER, base64)
 	gopp.ErrPrint(err, rv)
@@ -1430,7 +1430,7 @@ func QByteArray_FromBase64(base64 *QByteArray) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:379
 // index:0
 // Public static
-// QByteArray fromHex(const class QByteArray &)
+// QByteArray fromHex(const QByteArray &)
 func (this *QByteArray) FromHex(hexEncoded *QByteArray) *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7fromHexERKS_", ffiqt.FFI_TYPE_POINTER, hexEncoded)
 	gopp.ErrPrint(err, rv)
@@ -1447,7 +1447,7 @@ func QByteArray_FromHex(hexEncoded *QByteArray) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qbytearray.h:380
 // index:0
 // Public static
-// QByteArray fromPercentEncoding(const class QByteArray &, char)
+// QByteArray fromPercentEncoding(const QByteArray &, char)
 func (this *QByteArray) FromPercentEncoding(pctEncoded *QByteArray, percent byte) *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray19fromPercentEncodingERKS_c", ffiqt.FFI_TYPE_POINTER, pctEncoded, percent)
 	gopp.ErrPrint(err, rv)
@@ -1572,7 +1572,7 @@ func (this *QByteArray) Push_back_1(c string) {
 // /usr/include/qt/QtCore/qbytearray.h:424
 // index:2
 // Public inline
-// void push_back(const class QByteArray &)
+// void push_back(const QByteArray &)
 func (this *QByteArray) Push_back_2(a *QByteArray) {
 	var convArg0 = a.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray9push_backERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1602,7 +1602,7 @@ func (this *QByteArray) Push_front_1(c string) {
 // /usr/include/qt/QtCore/qbytearray.h:427
 // index:2
 // Public inline
-// void push_front(const class QByteArray &)
+// void push_front(const QByteArray &)
 func (this *QByteArray) Push_front_2(a *QByteArray) {
 	var convArg0 = a.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray10push_frontERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QPlainTextDocumentLayout) MetaObject() *qtcore.QMetaObject /*777 con
 // /usr/include/qt/QtWidgets/qplaintextedit.h:302
 // index:0
 // Public
-// void QPlainTextDocumentLayout(class QTextDocument *)
+// void QPlainTextDocumentLayout(QTextDocument *)
 func NewQPlainTextDocumentLayout(document *qtgui.QTextDocument /*777 QTextDocument **/) *QPlainTextDocumentLayout {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = document.GetCthis()
@@ -111,7 +111,7 @@ func DeleteQPlainTextDocumentLayout(*QPlainTextDocumentLayout) {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:306
 // index:0
 // Public virtual
-// int hitTest(const class QPointF &, Qt::HitTestAccuracy)
+// int hitTest(const QPointF &, Qt::HitTestAccuracy)
 func (this *QPlainTextDocumentLayout) HitTest(arg0 *qtcore.QPointF, arg1 int) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout7hitTestERK7QPointFN2Qt15HitTestAccuracyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
@@ -148,7 +148,7 @@ func (this *QPlainTextDocumentLayout) DocumentSize() *qtcore.QSizeF /*123*/ {
 // /usr/include/qt/QtWidgets/qplaintextedit.h:311
 // index:0
 // Public virtual
-// QRectF frameBoundingRect(class QTextFrame *)
+// QRectF frameBoundingRect(QTextFrame *)
 func (this *QPlainTextDocumentLayout) FrameBoundingRect(arg0 *qtgui.QTextFrame /*777 QTextFrame **/) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
@@ -163,7 +163,7 @@ func (this *QPlainTextDocumentLayout) FrameBoundingRect(arg0 *qtgui.QTextFrame /
 // /usr/include/qt/QtWidgets/qplaintextedit.h:312
 // index:0
 // Public virtual
-// QRectF blockBoundingRect(const class QTextBlock &)
+// QRectF blockBoundingRect(const QTextBlock &)
 func (this *QPlainTextDocumentLayout) BlockBoundingRect(block *qtgui.QTextBlock) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = block.GetCthis()
@@ -178,7 +178,7 @@ func (this *QPlainTextDocumentLayout) BlockBoundingRect(block *qtgui.QTextBlock)
 // /usr/include/qt/QtWidgets/qplaintextedit.h:314
 // index:0
 // Public
-// void ensureBlockLayout(const class QTextBlock &)
+// void ensureBlockLayout(const QTextBlock &)
 func (this *QPlainTextDocumentLayout) EnsureBlockLayout(block *qtgui.QTextBlock) {
 	var convArg0 = block.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17ensureBlockLayoutERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

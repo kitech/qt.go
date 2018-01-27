@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QSocketNotifier) MetaObject() *QMetaObject /*777 const QMetaObject *
 // /usr/include/qt/QtCore/qsocketnotifier.h:56
 // index:0
 // Public
-// void QSocketNotifier(qintptr, enum QSocketNotifier::Type, class QObject *)
+// void QSocketNotifier(qintptr, QSocketNotifier::Type, QObject *)
 func NewQSocketNotifier(socket int64, arg1 int, parent *QObject /*777 QObject **/) *QSocketNotifier {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg2 = parent.GetCthis()
@@ -136,7 +136,7 @@ func (this *QSocketNotifier) IsEnabled() bool {
 // /usr/include/qt/QtCore/qsocketnotifier.h:65
 // index:0
 // Public
-// void setEnabled(_Bool)
+// void setEnabled(bool)
 func (this *QSocketNotifier) SetEnabled(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifier10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -145,7 +145,7 @@ func (this *QSocketNotifier) SetEnabled(arg0 bool) {
 // /usr/include/qt/QtCore/qsocketnotifier.h:71
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QSocketNotifier) Event(arg0 *QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifier5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -77,7 +77,7 @@ func (*QGraphicsLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLayout {
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:57
 // index:0
 // Public
-// void QGraphicsLayout(class QGraphicsLayoutItem *)
+// void QGraphicsLayout(QGraphicsLayoutItem *)
 func NewQGraphicsLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) *QGraphicsLayout {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -155,7 +155,7 @@ func (this *QGraphicsLayout) UpdateGeometry() {
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:68
 // index:0
 // Public virtual
-// void widgetEvent(class QEvent *)
+// void widgetEvent(QEvent *)
 func (this *QGraphicsLayout) WidgetEvent(e *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout11widgetEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -197,7 +197,7 @@ func (this *QGraphicsLayout) RemoveAt(index int) {
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:74
 // index:0
 // Public static
-// void setInstantInvalidatePropagation(_Bool)
+// void setInstantInvalidatePropagation(bool)
 func (this *QGraphicsLayout) SetInstantInvalidatePropagation(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout31setInstantInvalidatePropagationEb", ffiqt.FFI_TYPE_POINTER, enable)
 	gopp.ErrPrint(err, rv)
@@ -226,7 +226,7 @@ func QGraphicsLayout_InstantInvalidatePropagation() bool {
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:78
 // index:0
 // Protected
-// void addChildLayoutItem(class QGraphicsLayoutItem *)
+// void addChildLayoutItem(QGraphicsLayoutItem *)
 func (this *QGraphicsLayout) AddChildLayoutItem(layoutItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) {
 	var convArg0 = layoutItem.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout18addChildLayoutItemEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

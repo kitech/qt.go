@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -73,7 +73,7 @@ func (*QScrollPrepareEvent) NewFromPointer(cthis unsafe.Pointer) *QScrollPrepare
 // /usr/include/qt/QtGui/qevent.h:990
 // index:0
 // Public
-// void QScrollPrepareEvent(const class QPointF &)
+// void QScrollPrepareEvent(const QPointF &)
 func NewQScrollPrepareEvent(startPos *qtcore.QPointF) *QScrollPrepareEvent {
 	cthis := qtrt.Calloc(1, 256) // 112
 	var convArg0 = startPos.GetCthis()
@@ -151,7 +151,7 @@ func (this *QScrollPrepareEvent) ContentPos() *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtGui/qevent.h:999
 // index:0
 // Public
-// void setViewportSize(const class QSizeF &)
+// void setViewportSize(const QSizeF &)
 func (this *QScrollPrepareEvent) SetViewportSize(size *qtcore.QSizeF) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollPrepareEvent15setViewportSizeERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -161,7 +161,7 @@ func (this *QScrollPrepareEvent) SetViewportSize(size *qtcore.QSizeF) {
 // /usr/include/qt/QtGui/qevent.h:1000
 // index:0
 // Public
-// void setContentPosRange(const class QRectF &)
+// void setContentPosRange(const QRectF &)
 func (this *QScrollPrepareEvent) SetContentPosRange(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollPrepareEvent18setContentPosRangeERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -171,7 +171,7 @@ func (this *QScrollPrepareEvent) SetContentPosRange(rect *qtcore.QRectF) {
 // /usr/include/qt/QtGui/qevent.h:1001
 // index:0
 // Public
-// void setContentPos(const class QPointF &)
+// void setContentPos(const QPointF &)
 func (this *QScrollPrepareEvent) SetContentPos(pos *qtcore.QPointF) {
 	var convArg0 = pos.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollPrepareEvent13setContentPosERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

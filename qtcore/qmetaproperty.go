@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -168,7 +168,7 @@ func (this *QMetaProperty) IsResettable() bool {
 // /usr/include/qt/QtCore/qmetaobject.h:259
 // index:0
 // Public
-// bool isDesignable(const class QObject *)
+// bool isDesignable(const QObject *)
 func (this *QMetaProperty) IsDesignable(obj *QObject /*777 const QObject **/) bool {
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12isDesignableEPK7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -180,7 +180,7 @@ func (this *QMetaProperty) IsDesignable(obj *QObject /*777 const QObject **/) bo
 // /usr/include/qt/QtCore/qmetaobject.h:260
 // index:0
 // Public
-// bool isScriptable(const class QObject *)
+// bool isScriptable(const QObject *)
 func (this *QMetaProperty) IsScriptable(obj *QObject /*777 const QObject **/) bool {
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty12isScriptableEPK7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -192,7 +192,7 @@ func (this *QMetaProperty) IsScriptable(obj *QObject /*777 const QObject **/) bo
 // /usr/include/qt/QtCore/qmetaobject.h:261
 // index:0
 // Public
-// bool isStored(const class QObject *)
+// bool isStored(const QObject *)
 func (this *QMetaProperty) IsStored(obj *QObject /*777 const QObject **/) bool {
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty8isStoredEPK7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -204,7 +204,7 @@ func (this *QMetaProperty) IsStored(obj *QObject /*777 const QObject **/) bool {
 // /usr/include/qt/QtCore/qmetaobject.h:262
 // index:0
 // Public
-// bool isEditable(const class QObject *)
+// bool isEditable(const QObject *)
 func (this *QMetaProperty) IsEditable(obj *QObject /*777 const QObject **/) bool {
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty10isEditableEPK7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -216,7 +216,7 @@ func (this *QMetaProperty) IsEditable(obj *QObject /*777 const QObject **/) bool
 // /usr/include/qt/QtCore/qmetaobject.h:263
 // index:0
 // Public
-// bool isUser(const class QObject *)
+// bool isUser(const QObject *)
 func (this *QMetaProperty) IsUser(obj *QObject /*777 const QObject **/) bool {
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty6isUserEPK7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -333,7 +333,7 @@ func (this *QMetaProperty) Revision() int {
 // /usr/include/qt/QtCore/qmetaobject.h:277
 // index:0
 // Public
-// QVariant read(const class QObject *)
+// QVariant read(const QObject *)
 func (this *QMetaProperty) Read(obj *QObject /*777 const QObject **/) *QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = obj.GetCthis()
@@ -348,7 +348,7 @@ func (this *QMetaProperty) Read(obj *QObject /*777 const QObject **/) *QVariant 
 // /usr/include/qt/QtCore/qmetaobject.h:278
 // index:0
 // Public
-// bool write(class QObject *, const class QVariant &)
+// bool write(QObject *, const QVariant &)
 func (this *QMetaProperty) Write(obj *QObject /*777 QObject **/, value *QVariant) bool {
 	var convArg0 = obj.GetCthis()
 	var convArg1 = value.GetCthis()
@@ -361,7 +361,7 @@ func (this *QMetaProperty) Write(obj *QObject /*777 QObject **/, value *QVariant
 // /usr/include/qt/QtCore/qmetaobject.h:279
 // index:0
 // Public
-// bool reset(class QObject *)
+// bool reset(QObject *)
 func (this *QMetaProperty) Reset(obj *QObject /*777 QObject **/) bool {
 	var convArg0 = obj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty5resetEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -387,7 +387,7 @@ func (this *QMetaProperty) ReadOnGadget(gadget unsafe.Pointer /*666*/) *QVariant
 // /usr/include/qt/QtCore/qmetaobject.h:282
 // index:0
 // Public
-// bool writeOnGadget(void *, const class QVariant &)
+// bool writeOnGadget(void *, const QVariant &)
 func (this *QMetaProperty) WriteOnGadget(gadget unsafe.Pointer /*666*/, value *QVariant) bool {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty13writeOnGadgetEPvRK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), gadget, convArg1)

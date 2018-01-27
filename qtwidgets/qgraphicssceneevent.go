@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -77,7 +77,7 @@ func (*QGraphicsSceneEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphicsScene
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:67
 // index:0
 // Public
-// void QGraphicsSceneEvent(enum QEvent::Type)
+// void QGraphicsSceneEvent(QEvent::Type)
 func NewQGraphicsSceneEvent(type_ int) *QGraphicsSceneEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)
@@ -110,7 +110,7 @@ func (this *QGraphicsSceneEvent) Widget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:71
 // index:0
 // Public
-// void setWidget(class QWidget *)
+// void setWidget(QWidget *)
 func (this *QGraphicsSceneEvent) SetWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEvent9setWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -132,7 +132,7 @@ func NewQMatrix4x4_4(values unsafe.Pointer /*666*/, cols int, rows int) *QMatrix
 // /usr/include/qt/QtGui/qmatrix4x4.h:74
 // index:5
 // Public
-// void QMatrix4x4(const class QTransform &)
+// void QMatrix4x4(const QTransform &)
 func NewQMatrix4x4_5(transform *QTransform) *QMatrix4x4 {
 	cthis := qtrt.Calloc(1, 256) // 68
 	var convArg0 = transform.GetCthis()
@@ -145,7 +145,7 @@ func NewQMatrix4x4_5(transform *QTransform) *QMatrix4x4 {
 // /usr/include/qt/QtGui/qmatrix4x4.h:75
 // index:6
 // Public
-// void QMatrix4x4(const class QMatrix &)
+// void QMatrix4x4(const QMatrix &)
 func NewQMatrix4x4_6(matrix *QMatrix) *QMatrix4x4 {
 	cthis := qtrt.Calloc(1, 256) // 68
 	var convArg0 = matrix.GetCthis()
@@ -172,7 +172,7 @@ func (this *QMatrix4x4) Column(index int) *QVector4D /*123*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:82
 // index:0
 // Public inline
-// void setColumn(int, const class QVector4D &)
+// void setColumn(int, const QVector4D &)
 func (this *QMatrix4x4) SetColumn(index int, value *QVector4D) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x49setColumnEiRK9QVector4D", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
@@ -196,7 +196,7 @@ func (this *QMatrix4x4) Row(index int) *QVector4D /*123*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:85
 // index:0
 // Public inline
-// void setRow(int, const class QVector4D &)
+// void setRow(int, const QVector4D &)
 func (this *QMatrix4x4) SetRow(index int, value *QVector4D) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x46setRowEiRK9QVector4D", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
@@ -257,7 +257,7 @@ func (this *QMatrix4x4) Determinant() float64 {
 // /usr/include/qt/QtGui/qmatrix4x4.h:96
 // index:0
 // Public
-// QMatrix4x4 inverted(_Bool *)
+// QMatrix4x4 inverted(bool *)
 func (this *QMatrix4x4) Inverted(invertible unsafe.Pointer /*666*/) *QMatrix4x4 /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x48invertedEPb", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), &invertible)
@@ -285,7 +285,7 @@ func (this *QMatrix4x4) Transposed() *QMatrix4x4 /*123*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:131
 // index:0
 // Public
-// void scale(const class QVector3D &)
+// void scale(const QVector3D &)
 func (this *QMatrix4x4) Scale(vector *QVector3D) {
 	var convArg0 = vector.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x45scaleERK9QVector3D", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -322,7 +322,7 @@ func (this *QMatrix4x4) Scale_3(factor float32) {
 // /usr/include/qt/QtGui/qmatrix4x4.h:132
 // index:0
 // Public
-// void translate(const class QVector3D &)
+// void translate(const QVector3D &)
 func (this *QMatrix4x4) Translate(vector *QVector3D) {
 	var convArg0 = vector.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x49translateERK9QVector3D", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -350,7 +350,7 @@ func (this *QMatrix4x4) Translate_2(x float32, y float32, z float32) {
 // /usr/include/qt/QtGui/qmatrix4x4.h:133
 // index:0
 // Public
-// void rotate(float, const class QVector3D &)
+// void rotate(float, const QVector3D &)
 func (this *QMatrix4x4) Rotate(angle float32, vector *QVector3D) {
 	var convArg1 = vector.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x46rotateEfRK9QVector3D", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), angle, convArg1)
@@ -369,7 +369,7 @@ func (this *QMatrix4x4) Rotate_1(angle float32, x float32, y float32, z float32)
 // /usr/include/qt/QtGui/qmatrix4x4.h:142
 // index:2
 // Public
-// void rotate(const class QQuaternion &)
+// void rotate(const QQuaternion &)
 func (this *QMatrix4x4) Rotate_2(quaternion *QQuaternion) {
 	var convArg0 = quaternion.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x46rotateERK11QQuaternion", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -379,7 +379,7 @@ func (this *QMatrix4x4) Rotate_2(quaternion *QQuaternion) {
 // /usr/include/qt/QtGui/qmatrix4x4.h:145
 // index:0
 // Public
-// void ortho(const class QRect &)
+// void ortho(const QRect &)
 func (this *QMatrix4x4) Ortho(rect *qtcore.QRect) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x45orthoERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -389,7 +389,7 @@ func (this *QMatrix4x4) Ortho(rect *qtcore.QRect) {
 // /usr/include/qt/QtGui/qmatrix4x4.h:146
 // index:1
 // Public
-// void ortho(const class QRectF &)
+// void ortho(const QRectF &)
 func (this *QMatrix4x4) Ortho_1(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x45orthoERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -426,7 +426,7 @@ func (this *QMatrix4x4) Perspective(verticalAngle float32, aspectRatio float32, 
 // /usr/include/qt/QtGui/qmatrix4x4.h:151
 // index:0
 // Public
-// void lookAt(const class QVector3D &, const class QVector3D &, const class QVector3D &)
+// void lookAt(const QVector3D &, const QVector3D &, const QVector3D &)
 func (this *QMatrix4x4) LookAt(eye *QVector3D, center *QVector3D, up *QVector3D) {
 	var convArg0 = eye.GetCthis()
 	var convArg1 = center.GetCthis()
@@ -438,7 +438,7 @@ func (this *QMatrix4x4) LookAt(eye *QVector3D, center *QVector3D, up *QVector3D)
 // /usr/include/qt/QtGui/qmatrix4x4.h:153
 // index:0
 // Public
-// void viewport(const class QRectF &)
+// void viewport(const QRectF &)
 func (this *QMatrix4x4) Viewport(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMatrix4x48viewportERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -517,7 +517,7 @@ func (this *QMatrix4x4) ToTransform_1(distanceToPlane float32) *QTransform /*123
 // /usr/include/qt/QtGui/qmatrix4x4.h:163
 // index:0
 // Public
-// QPoint map(const class QPoint &)
+// QPoint map(const QPoint &)
 func (this *QMatrix4x4) Map(point *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = point.GetCthis()
@@ -532,7 +532,7 @@ func (this *QMatrix4x4) Map(point *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:164
 // index:1
 // Public
-// QPointF map(const class QPointF &)
+// QPointF map(const QPointF &)
 func (this *QMatrix4x4) Map_1(point *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = point.GetCthis()
@@ -547,7 +547,7 @@ func (this *QMatrix4x4) Map_1(point *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:166
 // index:2
 // Public
-// QVector3D map(const class QVector3D &)
+// QVector3D map(const QVector3D &)
 func (this *QMatrix4x4) Map_2(point *QVector3D) *QVector3D /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = point.GetCthis()
@@ -562,7 +562,7 @@ func (this *QMatrix4x4) Map_2(point *QVector3D) *QVector3D /*123*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:170
 // index:3
 // Public
-// QVector4D map(const class QVector4D &)
+// QVector4D map(const QVector4D &)
 func (this *QMatrix4x4) Map_3(point *QVector4D) *QVector4D /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = point.GetCthis()
@@ -577,7 +577,7 @@ func (this *QMatrix4x4) Map_3(point *QVector4D) *QVector4D /*123*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:167
 // index:0
 // Public
-// QVector3D mapVector(const class QVector3D &)
+// QVector3D mapVector(const QVector3D &)
 func (this *QMatrix4x4) MapVector(vector *QVector3D) *QVector3D /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = vector.GetCthis()
@@ -592,7 +592,7 @@ func (this *QMatrix4x4) MapVector(vector *QVector3D) *QVector3D /*123*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:172
 // index:0
 // Public
-// QRect mapRect(const class QRect &)
+// QRect mapRect(const QRect &)
 func (this *QMatrix4x4) MapRect(rect *qtcore.QRect) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = rect.GetCthis()
@@ -607,7 +607,7 @@ func (this *QMatrix4x4) MapRect(rect *qtcore.QRect) *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtGui/qmatrix4x4.h:173
 // index:1
 // Public
-// QRectF mapRect(const class QRectF &)
+// QRectF mapRect(const QRectF &)
 func (this *QMatrix4x4) MapRect_1(rect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = rect.GetCthis()

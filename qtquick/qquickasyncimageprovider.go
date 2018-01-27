@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -106,7 +106,7 @@ func DeleteQQuickAsyncImageProvider(*QQuickAsyncImageProvider) {
 // /usr/include/qt/QtQuick/qquickimageprovider.h:121
 // index:0
 // Public pure virtual
-// QQuickImageResponse * requestImageResponse(const class QString &, const class QSize &)
+// QQuickImageResponse * requestImageResponse(const QString &, const QSize &)
 func (this *QQuickAsyncImageProvider) RequestImageResponse(id *qtcore.QString, requestedSize *qtcore.QSize) *QQuickImageResponse /*777 QQuickImageResponse **/ {
 	var convArg0 = id.GetCthis()
 	var convArg1 = requestedSize.GetCthis()

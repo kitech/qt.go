@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQPageLayout() *QPageLayout {
 // /usr/include/qt/QtGui/qpagelayout.h:81
 // index:1
 // Public
-// void QPageLayout(const class QPageSize &, enum QPageLayout::Orientation, const class QMarginsF &, enum QPageLayout::Unit, const class QMarginsF &)
+// void QPageLayout(const QPageSize &, QPageLayout::Orientation, const QMarginsF &, QPageLayout::Unit, const QMarginsF &)
 func NewQPageLayout_1(pageSize *QPageSize, orientation int, margins *qtcore.QMarginsF, units int, minMargins *qtcore.QMarginsF) *QPageLayout {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = pageSize.GetCthis()
@@ -108,7 +108,7 @@ func DeleteQPageLayout(*QPageLayout) {
 // /usr/include/qt/QtGui/qpagelayout.h:91
 // index:0
 // Public inline
-// void swap(class QPageLayout &)
+// void swap(QPageLayout &)
 func (this *QPageLayout) Swap(other *QPageLayout) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPageLayout4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -118,7 +118,7 @@ func (this *QPageLayout) Swap(other *QPageLayout) {
 // /usr/include/qt/QtGui/qpagelayout.h:94
 // index:0
 // Public
-// bool isEquivalentTo(const class QPageLayout &)
+// bool isEquivalentTo(const QPageLayout &)
 func (this *QPageLayout) IsEquivalentTo(other *QPageLayout) bool {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPageLayout14isEquivalentToERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -141,7 +141,7 @@ func (this *QPageLayout) IsValid() bool {
 // /usr/include/qt/QtGui/qpagelayout.h:98
 // index:0
 // Public
-// void setMode(enum QPageLayout::Mode)
+// void setMode(QPageLayout::Mode)
 func (this *QPageLayout) SetMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPageLayout7setModeENS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -161,7 +161,7 @@ func (this *QPageLayout) Mode() int {
 // /usr/include/qt/QtGui/qpagelayout.h:101
 // index:0
 // Public
-// void setPageSize(const class QPageSize &, const class QMarginsF &)
+// void setPageSize(const QPageSize &, const QMarginsF &)
 func (this *QPageLayout) SetPageSize(pageSize *QPageSize, minMargins *qtcore.QMarginsF) {
 	var convArg0 = pageSize.GetCthis()
 	var convArg1 = minMargins.GetCthis()
@@ -186,7 +186,7 @@ func (this *QPageLayout) PageSize() *QPageSize /*123*/ {
 // /usr/include/qt/QtGui/qpagelayout.h:105
 // index:0
 // Public
-// void setOrientation(enum QPageLayout::Orientation)
+// void setOrientation(QPageLayout::Orientation)
 func (this *QPageLayout) SetOrientation(orientation int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPageLayout14setOrientationENS_11OrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), orientation)
 	gopp.ErrPrint(err, rv)
@@ -206,7 +206,7 @@ func (this *QPageLayout) Orientation() int {
 // /usr/include/qt/QtGui/qpagelayout.h:108
 // index:0
 // Public
-// void setUnits(enum QPageLayout::Unit)
+// void setUnits(QPageLayout::Unit)
 func (this *QPageLayout) SetUnits(units int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPageLayout8setUnitsENS_4UnitE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), units)
 	gopp.ErrPrint(err, rv)
@@ -226,7 +226,7 @@ func (this *QPageLayout) Units() int {
 // /usr/include/qt/QtGui/qpagelayout.h:111
 // index:0
 // Public
-// bool setMargins(const class QMarginsF &)
+// bool setMargins(const QMarginsF &)
 func (this *QPageLayout) SetMargins(margins *qtcore.QMarginsF) bool {
 	var convArg0 = margins.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPageLayout10setMarginsERK9QMarginsF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -296,7 +296,7 @@ func (this *QPageLayout) Margins() *qtcore.QMarginsF /*123*/ {
 // /usr/include/qt/QtGui/qpagelayout.h:118
 // index:1
 // Public
-// QMarginsF margins(enum QPageLayout::Unit)
+// QMarginsF margins(QPageLayout::Unit)
 func (this *QPageLayout) Margins_1(units int) *qtcore.QMarginsF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPageLayout7marginsENS_4UnitE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), units)
@@ -338,7 +338,7 @@ func (this *QPageLayout) MarginsPixels(resolution int) *qtcore.QMargins /*123*/ 
 // /usr/include/qt/QtGui/qpagelayout.h:122
 // index:0
 // Public
-// void setMinimumMargins(const class QMarginsF &)
+// void setMinimumMargins(const QMarginsF &)
 func (this *QPageLayout) SetMinimumMargins(minMargins *qtcore.QMarginsF) {
 	var convArg0 = minMargins.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPageLayout17setMinimumMarginsERK9QMarginsF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -390,7 +390,7 @@ func (this *QPageLayout) FullRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qpagelayout.h:127
 // index:1
 // Public
-// QRectF fullRect(enum QPageLayout::Unit)
+// QRectF fullRect(QPageLayout::Unit)
 func (this *QPageLayout) FullRect_1(units int) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPageLayout8fullRectENS_4UnitE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), units)
@@ -446,7 +446,7 @@ func (this *QPageLayout) PaintRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qpagelayout.h:132
 // index:1
 // Public
-// QRectF paintRect(enum QPageLayout::Unit)
+// QRectF paintRect(QPageLayout::Unit)
 func (this *QPageLayout) PaintRect_1(units int) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPageLayout9paintRectENS_4UnitE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), units)

@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QCompleter) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtWidgets/qcompleter.h:85
 // index:0
 // Public
-// void QCompleter(class QObject *)
+// void QCompleter(QObject *)
 func NewQCompleter(parent *qtcore.QObject /*777 QObject **/) *QCompleter {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -102,7 +102,7 @@ func NewQCompleter(parent *qtcore.QObject /*777 QObject **/) *QCompleter {
 // /usr/include/qt/QtWidgets/qcompleter.h:86
 // index:1
 // Public
-// void QCompleter(class QAbstractItemModel *, class QObject *)
+// void QCompleter(QAbstractItemModel *, QObject *)
 func NewQCompleter_1(model *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/, parent *qtcore.QObject /*777 QObject **/) *QCompleter {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = model.GetCthis()
@@ -116,7 +116,7 @@ func NewQCompleter_1(model *qtcore.QAbstractItemModel /*777 QAbstractItemModel *
 // /usr/include/qt/QtWidgets/qcompleter.h:88
 // index:2
 // Public
-// void QCompleter(const class QStringList &, class QObject *)
+// void QCompleter(const QStringList &, QObject *)
 func NewQCompleter_2(completions *qtcore.QStringList, parent *qtcore.QObject /*777 QObject **/) *QCompleter {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = completions.GetCthis()
@@ -139,7 +139,7 @@ func DeleteQCompleter(*QCompleter) {
 // /usr/include/qt/QtWidgets/qcompleter.h:92
 // index:0
 // Public
-// void setWidget(class QWidget *)
+// void setWidget(QWidget *)
 func (this *QCompleter) SetWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter9setWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -161,7 +161,7 @@ func (this *QCompleter) Widget() *QWidget /*777 QWidget **/ {
 // /usr/include/qt/QtWidgets/qcompleter.h:95
 // index:0
 // Public
-// void setModel(class QAbstractItemModel *)
+// void setModel(QAbstractItemModel *)
 func (this *QCompleter) SetModel(c *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/) {
 	var convArg0 = c.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter8setModelEP18QAbstractItemModel", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -183,7 +183,7 @@ func (this *QCompleter) Model() *qtcore.QAbstractItemModel /*777 QAbstractItemMo
 // /usr/include/qt/QtWidgets/qcompleter.h:98
 // index:0
 // Public
-// void setCompletionMode(enum QCompleter::CompletionMode)
+// void setCompletionMode(QCompleter::CompletionMode)
 func (this *QCompleter) SetCompletionMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter17setCompletionModeENS_14CompletionModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -235,7 +235,7 @@ func (this *QCompleter) Popup() *QAbstractItemView /*777 QAbstractItemView **/ {
 // /usr/include/qt/QtWidgets/qcompleter.h:105
 // index:0
 // Public
-// void setPopup(class QAbstractItemView *)
+// void setPopup(QAbstractItemView *)
 func (this *QCompleter) SetPopup(popup *QAbstractItemView /*777 QAbstractItemView **/) {
 	var convArg0 = popup.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter8setPopupEP17QAbstractItemView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -265,7 +265,7 @@ func (this *QCompleter) CaseSensitivity() int {
 // /usr/include/qt/QtWidgets/qcompleter.h:110
 // index:0
 // Public
-// void setModelSorting(enum QCompleter::ModelSorting)
+// void setModelSorting(QCompleter::ModelSorting)
 func (this *QCompleter) SetModelSorting(sorting int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter15setModelSortingENS_12ModelSortingE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), sorting)
 	gopp.ErrPrint(err, rv)
@@ -443,7 +443,7 @@ func (this *QCompleter) CompletionPrefix() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qcompleter.h:136
 // index:0
 // Public
-// void setCompletionPrefix(const class QString &)
+// void setCompletionPrefix(const QString &)
 func (this *QCompleter) SetCompletionPrefix(prefix *qtcore.QString) {
 	var convArg0 = prefix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter19setCompletionPrefixERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -453,7 +453,7 @@ func (this *QCompleter) SetCompletionPrefix(prefix *qtcore.QString) {
 // /usr/include/qt/QtWidgets/qcompleter.h:137
 // index:0
 // Public
-// void complete(const class QRect &)
+// void complete(const QRect &)
 func (this *QCompleter) Complete(rect *qtcore.QRect) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter8completeERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -463,7 +463,7 @@ func (this *QCompleter) Complete(rect *qtcore.QRect) {
 // /usr/include/qt/QtWidgets/qcompleter.h:138
 // index:0
 // Public
-// void setWrapAround(_Bool)
+// void setWrapAround(bool)
 func (this *QCompleter) SetWrapAround(wrap bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter13setWrapAroundEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), wrap)
 	gopp.ErrPrint(err, rv)
@@ -472,7 +472,7 @@ func (this *QCompleter) SetWrapAround(wrap bool) {
 // /usr/include/qt/QtWidgets/qcompleter.h:141
 // index:0
 // Public virtual
-// QString pathFromIndex(const class QModelIndex &)
+// QString pathFromIndex(const QModelIndex &)
 func (this *QCompleter) PathFromIndex(index *qtcore.QModelIndex) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
@@ -487,7 +487,7 @@ func (this *QCompleter) PathFromIndex(index *qtcore.QModelIndex) *qtcore.QString
 // /usr/include/qt/QtWidgets/qcompleter.h:145
 // index:0
 // Protected virtual
-// bool eventFilter(class QObject *, class QEvent *)
+// bool eventFilter(QObject *, QEvent *)
 func (this *QCompleter) EventFilter(o *qtcore.QObject /*777 QObject **/, e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = o.GetCthis()
 	var convArg1 = e.GetCthis()
@@ -500,7 +500,7 @@ func (this *QCompleter) EventFilter(o *qtcore.QObject /*777 QObject **/, e *qtco
 // /usr/include/qt/QtWidgets/qcompleter.h:146
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QCompleter) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -512,7 +512,7 @@ func (this *QCompleter) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qcompleter.h:149
 // index:0
 // Public
-// void activated(const class QString &)
+// void activated(const QString &)
 func (this *QCompleter) Activated(text *qtcore.QString) {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter9activatedERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -522,7 +522,7 @@ func (this *QCompleter) Activated(text *qtcore.QString) {
 // /usr/include/qt/QtWidgets/qcompleter.h:150
 // index:1
 // Public
-// void activated(const class QModelIndex &)
+// void activated(const QModelIndex &)
 func (this *QCompleter) Activated_1(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter9activatedERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -532,7 +532,7 @@ func (this *QCompleter) Activated_1(index *qtcore.QModelIndex) {
 // /usr/include/qt/QtWidgets/qcompleter.h:151
 // index:0
 // Public
-// void highlighted(const class QString &)
+// void highlighted(const QString &)
 func (this *QCompleter) Highlighted(text *qtcore.QString) {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter11highlightedERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -542,7 +542,7 @@ func (this *QCompleter) Highlighted(text *qtcore.QString) {
 // /usr/include/qt/QtWidgets/qcompleter.h:152
 // index:1
 // Public
-// void highlighted(const class QModelIndex &)
+// void highlighted(const QModelIndex &)
 func (this *QCompleter) Highlighted_1(index *qtcore.QModelIndex) {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter11highlightedERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -89,7 +89,7 @@ func DeleteQProcessEnvironment(*QProcessEnvironment) {
 // /usr/include/qt/QtCore/qprocess.h:78
 // index:0
 // Public inline
-// void swap(class QProcessEnvironment &)
+// void swap(QProcessEnvironment &)
 func (this *QProcessEnvironment) Swap(other *QProcessEnvironment) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QProcessEnvironment4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -119,7 +119,7 @@ func (this *QProcessEnvironment) Clear() {
 // /usr/include/qt/QtCore/qprocess.h:87
 // index:0
 // Public
-// bool contains(const class QString &)
+// bool contains(const QString &)
 func (this *QProcessEnvironment) Contains(name *QString) bool {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QProcessEnvironment8containsERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -131,7 +131,7 @@ func (this *QProcessEnvironment) Contains(name *QString) bool {
 // /usr/include/qt/QtCore/qprocess.h:89
 // index:0
 // Public
-// void remove(const class QString &)
+// void remove(const QString &)
 func (this *QProcessEnvironment) Remove(name *QString) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QProcessEnvironment6removeERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -141,7 +141,7 @@ func (this *QProcessEnvironment) Remove(name *QString) {
 // /usr/include/qt/QtCore/qprocess.h:90
 // index:0
 // Public
-// QString value(const class QString &, const class QString &)
+// QString value(const QString &, const QString &)
 func (this *QProcessEnvironment) Value(name *QString, defaultValue *QString) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = name.GetCthis()

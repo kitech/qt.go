@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func NewQRadialGradient() *QRadialGradient {
 // /usr/include/qt/QtGui/qbrush.h:275
 // index:1
 // Public
-// void QRadialGradient(const class QPointF &, qreal, const class QPointF &)
+// void QRadialGradient(const QPointF &, qreal, const QPointF &)
 func NewQRadialGradient_1(center *qtcore.QPointF, radius float64, focalPoint *qtcore.QPointF) *QRadialGradient {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = center.GetCthis()
@@ -111,7 +111,7 @@ func NewQRadialGradient_2(cx float64, cy float64, radius float64, fx float64, fy
 // /usr/include/qt/QtGui/qbrush.h:278
 // index:3
 // Public
-// void QRadialGradient(const class QPointF &, qreal)
+// void QRadialGradient(const QPointF &, qreal)
 func NewQRadialGradient_3(center *qtcore.QPointF, radius float64) *QRadialGradient {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = center.GetCthis()
@@ -136,7 +136,7 @@ func NewQRadialGradient_4(cx float64, cy float64, radius float64) *QRadialGradie
 // /usr/include/qt/QtGui/qbrush.h:281
 // index:5
 // Public
-// void QRadialGradient(const class QPointF &, qreal, const class QPointF &, qreal)
+// void QRadialGradient(const QPointF &, qreal, const QPointF &, qreal)
 func NewQRadialGradient_5(center *qtcore.QPointF, centerRadius float64, focalPoint *qtcore.QPointF, focalRadius float64) *QRadialGradient {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = center.GetCthis()
@@ -176,7 +176,7 @@ func (this *QRadialGradient) Center() *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtGui/qbrush.h:285
 // index:0
 // Public
-// void setCenter(const class QPointF &)
+// void setCenter(const QPointF &)
 func (this *QRadialGradient) SetCenter(center *qtcore.QPointF) {
 	var convArg0 = center.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradient9setCenterERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -209,7 +209,7 @@ func (this *QRadialGradient) FocalPoint() *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtGui/qbrush.h:289
 // index:0
 // Public
-// void setFocalPoint(const class QPointF &)
+// void setFocalPoint(const QPointF &)
 func (this *QRadialGradient) SetFocalPoint(focalPoint *qtcore.QPointF) {
 	var convArg0 = focalPoint.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QRadialGradient13setFocalPointERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

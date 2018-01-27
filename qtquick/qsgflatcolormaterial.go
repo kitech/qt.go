@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -121,7 +121,7 @@ func (this *QSGFlatColorMaterial) CreateShader() *QSGMaterialShader /*777 QSGMat
 // /usr/include/qt/QtQuick/qsgflatcolormaterial.h:55
 // index:0
 // Public
-// void setColor(const class QColor &)
+// void setColor(const QColor &)
 func (this *QSGFlatColorMaterial) SetColor(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGFlatColorMaterial8setColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -143,7 +143,7 @@ func (this *QSGFlatColorMaterial) Color() *qtgui.QColor {
 // /usr/include/qt/QtQuick/qsgflatcolormaterial.h:58
 // index:0
 // Public virtual
-// int compare(const class QSGMaterial *)
+// int compare(const QSGMaterial *)
 func (this *QSGFlatColorMaterial) Compare(other *QSGMaterial /*777 const QSGMaterial **/) int {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial7compareEPK11QSGMaterial", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

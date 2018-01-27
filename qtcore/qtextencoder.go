@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QTextEncoder) NewFromPointer(cthis unsafe.Pointer) *QTextEncoder {
 // /usr/include/qt/QtCore/qtextcodec.h:141
 // index:0
 // Public inline
-// void QTextEncoder(const class QTextCodec *)
+// void QTextEncoder(const QTextCodec *)
 func NewQTextEncoder(codec *QTextCodec /*777 const QTextCodec **/) *QTextEncoder {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = codec.GetCthis()
@@ -81,7 +81,7 @@ func NewQTextEncoder(codec *QTextCodec /*777 const QTextCodec **/) *QTextEncoder
 // /usr/include/qt/QtCore/qtextcodec.h:142
 // index:1
 // Public
-// void QTextEncoder(const class QTextCodec *, class QTextCodec::ConversionFlags)
+// void QTextEncoder(const QTextCodec *, QTextCodec::ConversionFlags)
 func NewQTextEncoder_1(codec *QTextCodec /*777 const QTextCodec **/, flags int) *QTextEncoder {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = codec.GetCthis()
@@ -103,7 +103,7 @@ func DeleteQTextEncoder(*QTextEncoder) {
 // /usr/include/qt/QtCore/qtextcodec.h:145
 // index:0
 // Public
-// QByteArray fromUnicode(const class QString &)
+// QByteArray fromUnicode(const QString &)
 func (this *QTextEncoder) FromUnicode(str *QString) *QByteArray /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = str.GetCthis()
@@ -118,7 +118,7 @@ func (this *QTextEncoder) FromUnicode(str *QString) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qtextcodec.h:147
 // index:1
 // Public
-// QByteArray fromUnicode(class QStringView)
+// QByteArray fromUnicode(QStringView)
 func (this *QTextEncoder) FromUnicode_1(str *QStringView /*123*/) *QByteArray /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = str.GetCthis()
@@ -133,7 +133,7 @@ func (this *QTextEncoder) FromUnicode_1(str *QStringView /*123*/) *QByteArray /*
 // /usr/include/qt/QtCore/qtextcodec.h:148
 // index:2
 // Public
-// QByteArray fromUnicode(const class QChar *, int)
+// QByteArray fromUnicode(const QChar *, int)
 func (this *QTextEncoder) FromUnicode_2(uc *QChar /*777 const QChar **/, len int) *QByteArray /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = uc.GetCthis()

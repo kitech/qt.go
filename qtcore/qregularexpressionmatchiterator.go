@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -89,7 +89,7 @@ func DeleteQRegularExpressionMatchIterator(*QRegularExpressionMatchIterator) {
 // /usr/include/qt/QtCore/qregularexpression.h:257
 // index:0
 // Public inline
-// void swap(class QRegularExpressionMatchIterator &)
+// void swap(QRegularExpressionMatchIterator &)
 func (this *QRegularExpressionMatchIterator) Swap(other *QRegularExpressionMatchIterator) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIterator4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

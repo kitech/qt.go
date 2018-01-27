@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func NewQTextTableCellFormat() *QTextTableCellFormat {
 // /usr/include/qt/QtGui/qtextformat.h:964
 // index:1
 // Protected
-// void QTextTableCellFormat(const class QTextFormat &)
+// void QTextTableCellFormat(const QTextFormat &)
 func NewQTextTableCellFormat_1(fmt *QTextFormat) *QTextTableCellFormat {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = fmt.GetCthis()

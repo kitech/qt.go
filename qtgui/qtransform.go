@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -120,7 +120,7 @@ func NewQTransform_3(h11 float64, h12 float64, h21 float64, h22 float64, dx floa
 // /usr/include/qt/QtGui/qtransform.h:76
 // index:4
 // Public
-// void QTransform(const class QMatrix &)
+// void QTransform(const QMatrix &)
 func NewQTransform_4(mtx *QMatrix) *QTransform {
 	cthis := qtrt.Calloc(1, 256) // 88
 	var convArg0 = mtx.GetCthis()
@@ -362,7 +362,7 @@ func (this *QTransform) SetMatrix(m11 float64, m12 float64, m13 float64, m21 flo
 // /usr/include/qt/QtGui/qtransform.h:119
 // index:0
 // Public
-// QTransform inverted(_Bool *)
+// QTransform inverted(bool *)
 func (this *QTransform) Inverted(invertible unsafe.Pointer /*666*/) *QTransform /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTransform8invertedEPb", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), &invertible)
@@ -464,7 +464,7 @@ func (this *QTransform) RotateRadians(a float64, axis int) *QTransform {
 // /usr/include/qt/QtGui/qtransform.h:129
 // index:0
 // Public static
-// bool squareToQuad(const class QPolygonF &, class QTransform &)
+// bool squareToQuad(const QPolygonF &, QTransform &)
 func (this *QTransform) SquareToQuad(square *QPolygonF, result *QTransform) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform12squareToQuadERK9QPolygonFRS_", ffiqt.FFI_TYPE_POINTER, square, result)
 	gopp.ErrPrint(err, rv)
@@ -480,7 +480,7 @@ func QTransform_SquareToQuad(square *QPolygonF, result *QTransform) bool {
 // /usr/include/qt/QtGui/qtransform.h:130
 // index:0
 // Public static
-// bool quadToSquare(const class QPolygonF &, class QTransform &)
+// bool quadToSquare(const QPolygonF &, QTransform &)
 func (this *QTransform) QuadToSquare(quad *QPolygonF, result *QTransform) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform12quadToSquareERK9QPolygonFRS_", ffiqt.FFI_TYPE_POINTER, quad, result)
 	gopp.ErrPrint(err, rv)
@@ -496,7 +496,7 @@ func QTransform_QuadToSquare(quad *QPolygonF, result *QTransform) bool {
 // /usr/include/qt/QtGui/qtransform.h:131
 // index:0
 // Public static
-// bool quadToQuad(const class QPolygonF &, const class QPolygonF &, class QTransform &)
+// bool quadToQuad(const QPolygonF &, const QPolygonF &, QTransform &)
 func (this *QTransform) QuadToQuad(one *QPolygonF, two *QPolygonF, result *QTransform) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransform10quadToQuadERK9QPolygonFS2_RS_", ffiqt.FFI_TYPE_POINTER, one, two, result)
 	gopp.ErrPrint(err, rv)
@@ -521,7 +521,7 @@ func (this *QTransform) Reset() {
 // /usr/include/qt/QtGui/qtransform.h:144
 // index:0
 // Public
-// QPoint map(const class QPoint &)
+// QPoint map(const QPoint &)
 func (this *QTransform) Map(p *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = p.GetCthis()
@@ -536,7 +536,7 @@ func (this *QTransform) Map(p *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:145
 // index:1
 // Public
-// QPointF map(const class QPointF &)
+// QPointF map(const QPointF &)
 func (this *QTransform) Map_1(p *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = p.GetCthis()
@@ -551,7 +551,7 @@ func (this *QTransform) Map_1(p *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:146
 // index:2
 // Public
-// QLine map(const class QLine &)
+// QLine map(const QLine &)
 func (this *QTransform) Map_2(l *qtcore.QLine) *qtcore.QLine /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = l.GetCthis()
@@ -566,7 +566,7 @@ func (this *QTransform) Map_2(l *qtcore.QLine) *qtcore.QLine /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:147
 // index:3
 // Public
-// QLineF map(const class QLineF &)
+// QLineF map(const QLineF &)
 func (this *QTransform) Map_3(l *qtcore.QLineF) *qtcore.QLineF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = l.GetCthis()
@@ -581,7 +581,7 @@ func (this *QTransform) Map_3(l *qtcore.QLineF) *qtcore.QLineF /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:148
 // index:4
 // Public
-// QPolygonF map(const class QPolygonF &)
+// QPolygonF map(const QPolygonF &)
 func (this *QTransform) Map_4(a *QPolygonF) *QPolygonF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = a.GetCthis()
@@ -596,7 +596,7 @@ func (this *QTransform) Map_4(a *QPolygonF) *QPolygonF /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:149
 // index:5
 // Public
-// QPolygon map(const class QPolygon &)
+// QPolygon map(const QPolygon &)
 func (this *QTransform) Map_5(a *QPolygon) *QPolygon /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = a.GetCthis()
@@ -611,7 +611,7 @@ func (this *QTransform) Map_5(a *QPolygon) *QPolygon /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:150
 // index:6
 // Public
-// QRegion map(const class QRegion &)
+// QRegion map(const QRegion &)
 func (this *QTransform) Map_6(r *QRegion) *QRegion /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
@@ -626,7 +626,7 @@ func (this *QTransform) Map_6(r *QRegion) *QRegion /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:151
 // index:7
 // Public
-// QPainterPath map(const class QPainterPath &)
+// QPainterPath map(const QPainterPath &)
 func (this *QTransform) Map_7(p *QPainterPath) *QPainterPath /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = p.GetCthis()
@@ -659,7 +659,7 @@ func (this *QTransform) Map_9(x float64, y float64, tx unsafe.Pointer /*666*/, t
 // /usr/include/qt/QtGui/qtransform.h:152
 // index:0
 // Public
-// QPolygon mapToPolygon(const class QRect &)
+// QPolygon mapToPolygon(const QRect &)
 func (this *QTransform) MapToPolygon(r *qtcore.QRect) *QPolygon /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
@@ -674,7 +674,7 @@ func (this *QTransform) MapToPolygon(r *qtcore.QRect) *QPolygon /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:153
 // index:0
 // Public
-// QRect mapRect(const class QRect &)
+// QRect mapRect(const QRect &)
 func (this *QTransform) MapRect(arg0 *qtcore.QRect) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
@@ -689,7 +689,7 @@ func (this *QTransform) MapRect(arg0 *qtcore.QRect) *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtGui/qtransform.h:154
 // index:1
 // Public
-// QRectF mapRect(const class QRectF &)
+// QRectF mapRect(const QRectF &)
 func (this *QTransform) MapRect_1(arg0 *qtcore.QRectF) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()

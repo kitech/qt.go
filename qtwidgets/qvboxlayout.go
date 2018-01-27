@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -101,7 +101,7 @@ func NewQVBoxLayout() *QVBoxLayout {
 // /usr/include/qt/QtWidgets/qboxlayout.h:131
 // index:1
 // Public
-// void QVBoxLayout(class QWidget *)
+// void QVBoxLayout(QWidget *)
 func NewQVBoxLayout_1(parent *QWidget /*777 QWidget **/) *QVBoxLayout {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = parent.GetCthis()

@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QTextBlockGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // /usr/include/qt/QtGui/qtextobject.h:95
 // index:0
 // Protected
-// void QTextBlockGroup(class QTextDocument *)
+// void QTextBlockGroup(QTextDocument *)
 func NewQTextBlockGroup(doc *QTextDocument /*777 QTextDocument **/) *QTextBlockGroup {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = doc.GetCthis()
@@ -107,7 +107,7 @@ func DeleteQTextBlockGroup(*QTextBlockGroup) {
 // /usr/include/qt/QtGui/qtextobject.h:98
 // index:0
 // Protected virtual
-// void blockInserted(const class QTextBlock &)
+// void blockInserted(const QTextBlock &)
 func (this *QTextBlockGroup) BlockInserted(block *QTextBlock) {
 	var convArg0 = block.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextBlockGroup13blockInsertedERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -117,7 +117,7 @@ func (this *QTextBlockGroup) BlockInserted(block *QTextBlock) {
 // /usr/include/qt/QtGui/qtextobject.h:99
 // index:0
 // Protected virtual
-// void blockRemoved(const class QTextBlock &)
+// void blockRemoved(const QTextBlock &)
 func (this *QTextBlockGroup) BlockRemoved(block *QTextBlock) {
 	var convArg0 = block.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextBlockGroup12blockRemovedERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -127,7 +127,7 @@ func (this *QTextBlockGroup) BlockRemoved(block *QTextBlock) {
 // /usr/include/qt/QtGui/qtextobject.h:100
 // index:0
 // Protected virtual
-// void blockFormatChanged(const class QTextBlock &)
+// void blockFormatChanged(const QTextBlock &)
 func (this *QTextBlockGroup) BlockFormatChanged(block *QTextBlock) {
 	var convArg0 = block.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextBlockGroup18blockFormatChangedERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

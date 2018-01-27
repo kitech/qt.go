@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -99,7 +99,7 @@ func (this *QInputMethod) InputItemTransform() *QTransform /*123*/ {
 // /usr/include/qt/QtGui/qinputmethod.h:69
 // index:0
 // Public
-// void setInputItemTransform(const class QTransform &)
+// void setInputItemTransform(const QTransform &)
 func (this *QInputMethod) SetInputItemTransform(transform *QTransform) {
 	var convArg0 = transform.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod21setInputItemTransformERK10QTransform", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -123,7 +123,7 @@ func (this *QInputMethod) InputItemRectangle() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qinputmethod.h:72
 // index:0
 // Public
-// void setInputItemRectangle(const class QRectF &)
+// void setInputItemRectangle(const QRectF &)
 func (this *QInputMethod) SetInputItemRectangle(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod21setInputItemRectangleERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -200,7 +200,7 @@ func (this *QInputMethod) IsVisible() bool {
 // /usr/include/qt/QtGui/qinputmethod.h:90
 // index:0
 // Public
-// void setVisible(_Bool)
+// void setVisible(bool)
 func (this *QInputMethod) SetVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
@@ -245,7 +245,7 @@ func (this *QInputMethod) InputDirection() int {
 // /usr/include/qt/QtGui/qinputmethod.h:97
 // index:0
 // Public static
-// QVariant queryFocusObject(Qt::InputMethodQuery, class QVariant)
+// QVariant queryFocusObject(Qt::InputMethodQuery, QVariant)
 func (this *QInputMethod) QueryFocusObject(query int, argument *qtcore.QVariant /*123*/) *qtcore.QVariant /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod16queryFocusObjectEN2Qt16InputMethodQueryE8QVariant", ffiqt.FFI_TYPE_POINTER, query, argument)
 	gopp.ErrPrint(err, rv)
@@ -298,7 +298,7 @@ func (this *QInputMethod) Commit() {
 // /usr/include/qt/QtGui/qinputmethod.h:107
 // index:0
 // Public
-// void invokeAction(enum QInputMethod::Action, int)
+// void invokeAction(QInputMethod::Action, int)
 func (this *QInputMethod) InvokeAction(a int, cursorPosition int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod12invokeActionENS_6ActionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), a, cursorPosition)
 	gopp.ErrPrint(err, rv)

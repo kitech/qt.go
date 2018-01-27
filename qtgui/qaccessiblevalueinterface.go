@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -95,7 +95,7 @@ func (this *QAccessibleValueInterface) CurrentValue() *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtGui/qaccessible.h:569
 // index:0
 // Public pure virtual
-// void setCurrentValue(const class QVariant &)
+// void setCurrentValue(const QVariant &)
 func (this *QAccessibleValueInterface) SetCurrentValue(value *qtcore.QVariant) {
 	var convArg0 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QAccessibleValueInterface15setCurrentValueERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -353,7 +353,7 @@ func (this *QSGGeometry) SizeOfVertex() int {
 // /usr/include/qt/QtQuick/qsggeometry.h:184
 // index:0
 // Public static
-// void updateRectGeometry(class QSGGeometry *, const class QRectF &)
+// void updateRectGeometry(QSGGeometry *, const QRectF &)
 func (this *QSGGeometry) UpdateRectGeometry(g *QSGGeometry /*777 QSGGeometry **/, rect *qtcore.QRectF) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry18updateRectGeometryEPS_RK6QRectF", ffiqt.FFI_TYPE_POINTER, g, rect)
 	gopp.ErrPrint(err, rv)
@@ -366,7 +366,7 @@ func QSGGeometry_UpdateRectGeometry(g *QSGGeometry /*777 QSGGeometry **/, rect *
 // /usr/include/qt/QtQuick/qsggeometry.h:185
 // index:0
 // Public static
-// void updateTexturedRectGeometry(class QSGGeometry *, const class QRectF &, const class QRectF &)
+// void updateTexturedRectGeometry(QSGGeometry *, const QRectF &, const QRectF &)
 func (this *QSGGeometry) UpdateTexturedRectGeometry(g *QSGGeometry /*777 QSGGeometry **/, rect *qtcore.QRectF, sourceRect *qtcore.QRectF) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry26updateTexturedRectGeometryEPS_RK6QRectFS3_", ffiqt.FFI_TYPE_POINTER, g, rect, sourceRect)
 	gopp.ErrPrint(err, rv)
@@ -379,7 +379,7 @@ func QSGGeometry_UpdateTexturedRectGeometry(g *QSGGeometry /*777 QSGGeometry **/
 // /usr/include/qt/QtQuick/qsggeometry.h:186
 // index:0
 // Public static
-// void updateColoredRectGeometry(class QSGGeometry *, const class QRectF &)
+// void updateColoredRectGeometry(QSGGeometry *, const QRectF &)
 func (this *QSGGeometry) UpdateColoredRectGeometry(g *QSGGeometry /*777 QSGGeometry **/, rect *qtcore.QRectF) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry25updateColoredRectGeometryEPS_RK6QRectF", ffiqt.FFI_TYPE_POINTER, g, rect)
 	gopp.ErrPrint(err, rv)
@@ -392,7 +392,7 @@ func QSGGeometry_UpdateColoredRectGeometry(g *QSGGeometry /*777 QSGGeometry **/,
 // /usr/include/qt/QtQuick/qsggeometry.h:188
 // index:0
 // Public
-// void setIndexDataPattern(enum QSGGeometry::DataPattern)
+// void setIndexDataPattern(QSGGeometry::DataPattern)
 func (this *QSGGeometry) SetIndexDataPattern(p int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry19setIndexDataPatternENS_11DataPatternE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), p)
 	gopp.ErrPrint(err, rv)
@@ -412,7 +412,7 @@ func (this *QSGGeometry) IndexDataPattern() int {
 // /usr/include/qt/QtQuick/qsggeometry.h:191
 // index:0
 // Public
-// void setVertexDataPattern(enum QSGGeometry::DataPattern)
+// void setVertexDataPattern(QSGGeometry::DataPattern)
 func (this *QSGGeometry) SetVertexDataPattern(p int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry20setVertexDataPatternENS_11DataPatternE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), p)
 	gopp.ErrPrint(err, rv)

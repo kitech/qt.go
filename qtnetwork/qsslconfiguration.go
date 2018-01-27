@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -93,7 +93,7 @@ func DeleteQSslConfiguration(*QSslConfiguration) {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:87
 // index:0
 // Public inline
-// void swap(class QSslConfiguration &)
+// void swap(QSslConfiguration &)
 func (this *QSslConfiguration) Swap(other *QSslConfiguration) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslConfiguration4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -145,7 +145,7 @@ func (this *QSslConfiguration) PeerVerifyMode() int {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:101
 // index:0
 // Public
-// void setPeerVerifyMode(class QSslSocket::PeerVerifyMode)
+// void setPeerVerifyMode(QSslSocket::PeerVerifyMode)
 func (this *QSslConfiguration) SetPeerVerifyMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslConfiguration17setPeerVerifyModeEN10QSslSocket14PeerVerifyModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -188,7 +188,7 @@ func (this *QSslConfiguration) LocalCertificate() *QSslCertificate /*123*/ {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:111
 // index:0
 // Public
-// void setLocalCertificate(const class QSslCertificate &)
+// void setLocalCertificate(const QSslCertificate &)
 func (this *QSslConfiguration) SetLocalCertificate(certificate *QSslCertificate) {
 	var convArg0 = certificate.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslConfiguration19setLocalCertificateERK15QSslCertificate", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -251,7 +251,7 @@ func (this *QSslConfiguration) PrivateKey() *QSslKey /*123*/ {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:120
 // index:0
 // Public
-// void setPrivateKey(const class QSslKey &)
+// void setPrivateKey(const QSslKey &)
 func (this *QSslConfiguration) SetPrivateKey(key *QSslKey) {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslConfiguration13setPrivateKeyERK7QSslKey", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -261,7 +261,7 @@ func (this *QSslConfiguration) SetPrivateKey(key *QSslKey) {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:132
 // index:0
 // Public
-// void setSslOption(QSsl::SslOption, _Bool)
+// void setSslOption(QSsl::SslOption, bool)
 func (this *QSslConfiguration) SetSslOption(option int, on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslConfiguration12setSslOptionEN4QSsl9SslOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	gopp.ErrPrint(err, rv)
@@ -295,7 +295,7 @@ func (this *QSslConfiguration) SessionTicket() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:136
 // index:0
 // Public
-// void setSessionTicket(const class QByteArray &)
+// void setSessionTicket(const QByteArray &)
 func (this *QSslConfiguration) SetSessionTicket(sessionTicket *qtcore.QByteArray) {
 	var convArg0 = sessionTicket.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslConfiguration16setSessionTicketERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -344,7 +344,7 @@ func (this *QSslConfiguration) PreSharedKeyIdentityHint() *qtcore.QByteArray /*1
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:147
 // index:0
 // Public
-// void setPreSharedKeyIdentityHint(const class QByteArray &)
+// void setPreSharedKeyIdentityHint(const QByteArray &)
 func (this *QSslConfiguration) SetPreSharedKeyIdentityHint(hint *qtcore.QByteArray) {
 	var convArg0 = hint.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslConfiguration27setPreSharedKeyIdentityHintERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -368,7 +368,7 @@ func (this *QSslConfiguration) DiffieHellmanParameters() *QSslDiffieHellmanParam
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:150
 // index:0
 // Public
-// void setDiffieHellmanParameters(const class QSslDiffieHellmanParameters &)
+// void setDiffieHellmanParameters(const QSslDiffieHellmanParameters &)
 func (this *QSslConfiguration) SetDiffieHellmanParameters(dhparams *QSslDiffieHellmanParameters) {
 	var convArg0 = dhparams.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslConfiguration26setDiffieHellmanParametersERK27QSslDiffieHellmanParameters", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -395,7 +395,7 @@ func QSslConfiguration_DefaultConfiguration() *QSslConfiguration /*123*/ {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:153
 // index:0
 // Public static
-// void setDefaultConfiguration(const class QSslConfiguration &)
+// void setDefaultConfiguration(const QSslConfiguration &)
 func (this *QSslConfiguration) SetDefaultConfiguration(configuration *QSslConfiguration) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslConfiguration23setDefaultConfigurationERKS_", ffiqt.FFI_TYPE_POINTER, configuration)
 	gopp.ErrPrint(err, rv)

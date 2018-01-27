@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -112,7 +112,7 @@ func (this *QGraphicsSceneResizeEvent) OldSize() *qtcore.QSizeF /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:301
 // index:0
 // Public
-// void setOldSize(const class QSizeF &)
+// void setOldSize(const QSizeF &)
 func (this *QGraphicsSceneResizeEvent) SetOldSize(size *qtcore.QSizeF) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -136,7 +136,7 @@ func (this *QGraphicsSceneResizeEvent) NewSize() *qtcore.QSizeF /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:304
 // index:0
 // Public
-// void setNewSize(const class QSizeF &)
+// void setNewSize(const QSizeF &)
 func (this *QGraphicsSceneResizeEvent) SetNewSize(size *qtcore.QSizeF) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

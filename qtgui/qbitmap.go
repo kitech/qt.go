@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func NewQBitmap() *QBitmap {
 // /usr/include/qt/QtGui/qbitmap.h:55
 // index:1
 // Public
-// void QBitmap(const class QPixmap &)
+// void QBitmap(const QPixmap &)
 func NewQBitmap_1(arg0 *QPixmap) *QBitmap {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = arg0.GetCthis()
@@ -110,7 +110,7 @@ func NewQBitmap_2(w int, h int) *QBitmap {
 // /usr/include/qt/QtGui/qbitmap.h:57
 // index:3
 // Public
-// void QBitmap(const class QSize &)
+// void QBitmap(const QSize &)
 func NewQBitmap_3(arg0 *qtcore.QSize) *QBitmap {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = arg0.GetCthis()
@@ -123,7 +123,7 @@ func NewQBitmap_3(arg0 *qtcore.QSize) *QBitmap {
 // /usr/include/qt/QtGui/qbitmap.h:58
 // index:4
 // Public
-// void QBitmap(const class QString &, const char *)
+// void QBitmap(const QString &, const char *)
 func NewQBitmap_4(fileName *qtcore.QString, format string) *QBitmap {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = fileName.GetCthis()
@@ -147,7 +147,7 @@ func DeleteQBitmap(*QBitmap) {
 // /usr/include/qt/QtGui/qbitmap.h:69
 // index:0
 // Public inline
-// void swap(class QBitmap &)
+// void swap(QBitmap &)
 func (this *QBitmap) Swap(other *QBitmap) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmap4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -166,7 +166,7 @@ func (this *QBitmap) Clear() {
 // /usr/include/qt/QtGui/qbitmap.h:74
 // index:0
 // Public static
-// QBitmap fromImage(const class QImage &, Qt::ImageConversionFlags)
+// QBitmap fromImage(const QImage &, Qt::ImageConversionFlags)
 func (this *QBitmap) FromImage(image *QImage, flags int) *QBitmap /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmap9fromImageERK6QImage6QFlagsIN2Qt19ImageConversionFlagEE", ffiqt.FFI_TYPE_POINTER, image, flags)
 	gopp.ErrPrint(err, rv)
@@ -183,7 +183,7 @@ func QBitmap_FromImage(image *QImage, flags int) *QBitmap /*123*/ {
 // /usr/include/qt/QtGui/qbitmap.h:75
 // index:0
 // Public static
-// QBitmap fromData(const class QSize &, const uchar *, class QImage::Format)
+// QBitmap fromData(const QSize &, const uchar *, QImage::Format)
 func (this *QBitmap) FromData(size *qtcore.QSize, bits unsafe.Pointer /*666*/, monoFormat int) *QBitmap /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmap8fromDataERK5QSizePKhN6QImage6FormatE", ffiqt.FFI_TYPE_POINTER, size, bits, monoFormat)
 	gopp.ErrPrint(err, rv)
@@ -200,7 +200,7 @@ func QBitmap_FromData(size *qtcore.QSize, bits unsafe.Pointer /*666*/, monoForma
 // /usr/include/qt/QtGui/qbitmap.h:78
 // index:0
 // Public
-// QBitmap transformed(const class QMatrix &)
+// QBitmap transformed(const QMatrix &)
 func (this *QBitmap) Transformed(arg0 *QMatrix) *QBitmap /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
@@ -215,7 +215,7 @@ func (this *QBitmap) Transformed(arg0 *QMatrix) *QBitmap /*123*/ {
 // /usr/include/qt/QtGui/qbitmap.h:79
 // index:1
 // Public
-// QBitmap transformed(const class QTransform &)
+// QBitmap transformed(const QTransform &)
 func (this *QBitmap) Transformed_1(matrix *QTransform) *QBitmap /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = matrix.GetCthis()

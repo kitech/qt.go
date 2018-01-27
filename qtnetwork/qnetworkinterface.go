@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -93,7 +93,7 @@ func DeleteQNetworkInterface(*QNetworkInterface) {
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:112
 // index:0
 // Public inline
-// void swap(class QNetworkInterface &)
+// void swap(QNetworkInterface &)
 func (this *QNetworkInterface) Swap(other *QNetworkInterface) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QNetworkInterface4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -178,7 +178,7 @@ func (this *QNetworkInterface) HardwareAddress() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:123
 // index:0
 // Public static
-// int interfaceIndexFromName(const class QString &)
+// int interfaceIndexFromName(const QString &)
 func (this *QNetworkInterface) InterfaceIndexFromName(name *qtcore.QString) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QNetworkInterface22interfaceIndexFromNameERK7QString", ffiqt.FFI_TYPE_POINTER, name)
 	gopp.ErrPrint(err, rv)
@@ -194,7 +194,7 @@ func QNetworkInterface_InterfaceIndexFromName(name *qtcore.QString) int {
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:124
 // index:0
 // Public static
-// QNetworkInterface interfaceFromName(const class QString &)
+// QNetworkInterface interfaceFromName(const QString &)
 func (this *QNetworkInterface) InterfaceFromName(name *qtcore.QString) *QNetworkInterface /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QNetworkInterface17interfaceFromNameERK7QString", ffiqt.FFI_TYPE_POINTER, name)
 	gopp.ErrPrint(err, rv)

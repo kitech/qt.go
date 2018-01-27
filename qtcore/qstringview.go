@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -286,7 +286,7 @@ func (this *QStringView) Trimmed() *QStringView /*123*/ {
 // /usr/include/qt/QtCore/qstringview.h:252
 // index:0
 // Public inline
-// bool startsWith(class QStringView, Qt::CaseSensitivity)
+// bool startsWith(QStringView, Qt::CaseSensitivity)
 func (this *QStringView) StartsWith(s *QStringView /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView10startsWithES_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
@@ -298,7 +298,7 @@ func (this *QStringView) StartsWith(s *QStringView /*123*/, cs int) bool {
 // /usr/include/qt/QtCore/qstringview.h:254
 // index:1
 // Public inline
-// bool startsWith(class QLatin1String, Qt::CaseSensitivity)
+// bool startsWith(QLatin1String, Qt::CaseSensitivity)
 func (this *QStringView) StartsWith_1(s *QLatin1String /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView10startsWithE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
@@ -310,7 +310,7 @@ func (this *QStringView) StartsWith_1(s *QLatin1String /*123*/, cs int) bool {
 // /usr/include/qt/QtCore/qstringview.h:255
 // index:2
 // Public inline
-// bool startsWith(class QChar)
+// bool startsWith(QChar)
 func (this *QStringView) StartsWith_2(c *QChar /*123*/) bool {
 	var convArg0 = c.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView10startsWithE5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -322,7 +322,7 @@ func (this *QStringView) StartsWith_2(c *QChar /*123*/) bool {
 // /usr/include/qt/QtCore/qstringview.h:257
 // index:3
 // Public inline
-// bool startsWith(class QChar, Qt::CaseSensitivity)
+// bool startsWith(QChar, Qt::CaseSensitivity)
 func (this *QStringView) StartsWith_3(c *QChar /*123*/, cs int) bool {
 	var convArg0 = c.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView10startsWithE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
@@ -334,7 +334,7 @@ func (this *QStringView) StartsWith_3(c *QChar /*123*/, cs int) bool {
 // /usr/include/qt/QtCore/qstringview.h:260
 // index:0
 // Public inline
-// bool endsWith(class QStringView, Qt::CaseSensitivity)
+// bool endsWith(QStringView, Qt::CaseSensitivity)
 func (this *QStringView) EndsWith(s *QStringView /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8endsWithES_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
@@ -346,7 +346,7 @@ func (this *QStringView) EndsWith(s *QStringView /*123*/, cs int) bool {
 // /usr/include/qt/QtCore/qstringview.h:262
 // index:1
 // Public inline
-// bool endsWith(class QLatin1String, Qt::CaseSensitivity)
+// bool endsWith(QLatin1String, Qt::CaseSensitivity)
 func (this *QStringView) EndsWith_1(s *QLatin1String /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8endsWithE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
@@ -358,7 +358,7 @@ func (this *QStringView) EndsWith_1(s *QLatin1String /*123*/, cs int) bool {
 // /usr/include/qt/QtCore/qstringview.h:263
 // index:2
 // Public inline
-// bool endsWith(class QChar)
+// bool endsWith(QChar)
 func (this *QStringView) EndsWith_2(c *QChar /*123*/) bool {
 	var convArg0 = c.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8endsWithE5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -370,7 +370,7 @@ func (this *QStringView) EndsWith_2(c *QChar /*123*/) bool {
 // /usr/include/qt/QtCore/qstringview.h:265
 // index:3
 // Public inline
-// bool endsWith(class QChar, Qt::CaseSensitivity)
+// bool endsWith(QChar, Qt::CaseSensitivity)
 func (this *QStringView) EndsWith_3(c *QChar /*123*/, cs int) bool {
 	var convArg0 = c.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8endsWithE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)

@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -92,7 +92,7 @@ func (this *QLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 // /usr/include/qt/QtWidgets/qlayout.h:80
 // index:0
 // Public
-// void QLayout(class QWidget *)
+// void QLayout(QWidget *)
 func NewQLayout(parent *QWidget /*777 QWidget **/) *QLayout {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = parent.GetCthis()
@@ -175,7 +175,7 @@ func (this *QLayout) SetContentsMargins(left int, top int, right int, bottom int
 // /usr/include/qt/QtWidgets/qlayout.h:91
 // index:1
 // Public
-// void setContentsMargins(const class QMargins &)
+// void setContentsMargins(const QMargins &)
 func (this *QLayout) SetContentsMargins_1(margins *qtcore.QMargins) {
 	var convArg0 = margins.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout18setContentsMarginsERK8QMargins", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -222,7 +222,7 @@ func (this *QLayout) ContentsRect() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtWidgets/qlayout.h:100
 // index:0
 // Public
-// void setSizeConstraint(enum QLayout::SizeConstraint)
+// void setSizeConstraint(QLayout::SizeConstraint)
 func (this *QLayout) SetSizeConstraint(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout17setSizeConstraintENS_14SizeConstraintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -242,7 +242,7 @@ func (this *QLayout) SizeConstraint() int {
 // /usr/include/qt/QtWidgets/qlayout.h:102
 // index:0
 // Public
-// void setMenuBar(class QWidget *)
+// void setMenuBar(QWidget *)
 func (this *QLayout) SetMenuBar(w *QWidget /*777 QWidget **/) {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout10setMenuBarEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -319,7 +319,7 @@ func (this *QLayout) Update() {
 // /usr/include/qt/QtWidgets/qlayout.h:112
 // index:0
 // Public
-// void addWidget(class QWidget *)
+// void addWidget(QWidget *)
 func (this *QLayout) AddWidget(w *QWidget /*777 QWidget **/) {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout9addWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -329,7 +329,7 @@ func (this *QLayout) AddWidget(w *QWidget /*777 QWidget **/) {
 // /usr/include/qt/QtWidgets/qlayout.h:113
 // index:0
 // Public pure virtual
-// void addItem(class QLayoutItem *)
+// void addItem(QLayoutItem *)
 func (this *QLayout) AddItem(arg0 *QLayoutItem /*777 QLayoutItem **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout7addItemEP11QLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -339,7 +339,7 @@ func (this *QLayout) AddItem(arg0 *QLayoutItem /*777 QLayoutItem **/) {
 // /usr/include/qt/QtWidgets/qlayout.h:115
 // index:0
 // Public
-// void removeWidget(class QWidget *)
+// void removeWidget(QWidget *)
 func (this *QLayout) RemoveWidget(w *QWidget /*777 QWidget **/) {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout12removeWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -349,7 +349,7 @@ func (this *QLayout) RemoveWidget(w *QWidget /*777 QWidget **/) {
 // /usr/include/qt/QtWidgets/qlayout.h:116
 // index:0
 // Public
-// void removeItem(class QLayoutItem *)
+// void removeItem(QLayoutItem *)
 func (this *QLayout) RemoveItem(arg0 *QLayoutItem /*777 QLayoutItem **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout10removeItemEP11QLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -398,7 +398,7 @@ func (this *QLayout) MaximumSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qlayout.h:121
 // index:0
 // Public virtual
-// void setGeometry(const class QRect &)
+// void setGeometry(const QRect &)
 func (this *QLayout) SetGeometry(arg0 *qtcore.QRect) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout11setGeometryERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -432,7 +432,7 @@ func (this *QLayout) TakeAt(index int) *QLayoutItem /*777 QLayoutItem **/ {
 // /usr/include/qt/QtWidgets/qlayout.h:124
 // index:0
 // Public virtual
-// int indexOf(class QWidget *)
+// int indexOf(QWidget *)
 func (this *QLayout) IndexOf(arg0 *QWidget /*777 QWidget **/) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLayout7indexOfEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -542,7 +542,7 @@ func (this *QLayout) Layout() *QLayout /*777 QLayout **/ {
 // /usr/include/qt/QtWidgets/qlayout.h:138
 // index:0
 // Public
-// void setEnabled(_Bool)
+// void setEnabled(bool)
 func (this *QLayout) SetEnabled(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -562,7 +562,7 @@ func (this *QLayout) IsEnabled() bool {
 // /usr/include/qt/QtWidgets/qlayout.h:142
 // index:0
 // Public static
-// QSize closestAcceptableSize(const class QWidget *, const class QSize &)
+// QSize closestAcceptableSize(const QWidget *, const QSize &)
 func (this *QLayout) ClosestAcceptableSize(w *QWidget /*777 const QWidget **/, s *qtcore.QSize) *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout21closestAcceptableSizeEPK7QWidgetRK5QSize", ffiqt.FFI_TYPE_POINTER, w, s)
 	gopp.ErrPrint(err, rv)
@@ -579,7 +579,7 @@ func QLayout_ClosestAcceptableSize(w *QWidget /*777 const QWidget **/, s *qtcore
 // /usr/include/qt/QtWidgets/qlayout.h:145
 // index:0
 // Protected
-// void widgetEvent(class QEvent *)
+// void widgetEvent(QEvent *)
 func (this *QLayout) WidgetEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout11widgetEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -589,7 +589,7 @@ func (this *QLayout) WidgetEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 // /usr/include/qt/QtWidgets/qlayout.h:146
 // index:0
 // Protected virtual
-// void childEvent(class QChildEvent *)
+// void childEvent(QChildEvent *)
 func (this *QLayout) ChildEvent(e *qtcore.QChildEvent /*777 QChildEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout10childEventEP11QChildEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -599,7 +599,7 @@ func (this *QLayout) ChildEvent(e *qtcore.QChildEvent /*777 QChildEvent **/) {
 // /usr/include/qt/QtWidgets/qlayout.h:147
 // index:0
 // Protected
-// void addChildLayout(class QLayout *)
+// void addChildLayout(QLayout *)
 func (this *QLayout) AddChildLayout(l *QLayout /*777 QLayout **/) {
 	var convArg0 = l.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout14addChildLayoutEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -609,7 +609,7 @@ func (this *QLayout) AddChildLayout(l *QLayout /*777 QLayout **/) {
 // /usr/include/qt/QtWidgets/qlayout.h:148
 // index:0
 // Protected
-// void addChildWidget(class QWidget *)
+// void addChildWidget(QWidget *)
 func (this *QLayout) AddChildWidget(w *QWidget /*777 QWidget **/) {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout14addChildWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -619,7 +619,7 @@ func (this *QLayout) AddChildWidget(w *QWidget /*777 QWidget **/) {
 // /usr/include/qt/QtWidgets/qlayout.h:149
 // index:0
 // Protected
-// bool adoptLayout(class QLayout *)
+// bool adoptLayout(QLayout *)
 func (this *QLayout) AdoptLayout(layout *QLayout /*777 QLayout **/) bool {
 	var convArg0 = layout.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout11adoptLayoutEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -631,7 +631,7 @@ func (this *QLayout) AdoptLayout(layout *QLayout /*777 QLayout **/) bool {
 // /usr/include/qt/QtWidgets/qlayout.h:151
 // index:0
 // Protected
-// QRect alignmentRect(const class QRect &)
+// QRect alignmentRect(const QRect &)
 func (this *QLayout) AlignmentRect(arg0 *qtcore.QRect) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()

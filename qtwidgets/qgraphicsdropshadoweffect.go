@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QGraphicsDropShadowEffect) MetaObject() *qtcore.QMetaObject /*777 co
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:205
 // index:0
 // Public
-// void QGraphicsDropShadowEffect(class QObject *)
+// void QGraphicsDropShadowEffect(QObject *)
 func NewQGraphicsDropShadowEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsDropShadowEffect {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -111,7 +111,7 @@ func DeleteQGraphicsDropShadowEffect(*QGraphicsDropShadowEffect) {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:208
 // index:0
 // Public virtual
-// QRectF boundingRectFor(const class QRectF &)
+// QRectF boundingRectFor(const QRectF &)
 func (this *QGraphicsDropShadowEffect) BoundingRectFor(rect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = rect.GetCthis()
@@ -187,7 +187,7 @@ func (this *QGraphicsDropShadowEffect) Color() *qtgui.QColor /*123*/ {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:221
 // index:0
 // Public
-// void setOffset(const class QPointF &)
+// void setOffset(const QPointF &)
 func (this *QGraphicsDropShadowEffect) SetOffset(ofs *qtcore.QPointF) {
 	var convArg0 = ofs.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect9setOffsetERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -242,7 +242,7 @@ func (this *QGraphicsDropShadowEffect) SetBlurRadius(blurRadius float64) {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:236
 // index:0
 // Public
-// void setColor(const class QColor &)
+// void setColor(const QColor &)
 func (this *QGraphicsDropShadowEffect) SetColor(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect8setColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -252,7 +252,7 @@ func (this *QGraphicsDropShadowEffect) SetColor(color *qtgui.QColor) {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:239
 // index:0
 // Public
-// void offsetChanged(const class QPointF &)
+// void offsetChanged(const QPointF &)
 func (this *QGraphicsDropShadowEffect) OffsetChanged(offset *qtcore.QPointF) {
 	var convArg0 = offset.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect13offsetChangedERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -271,7 +271,7 @@ func (this *QGraphicsDropShadowEffect) BlurRadiusChanged(blurRadius float64) {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:241
 // index:0
 // Public
-// void colorChanged(const class QColor &)
+// void colorChanged(const QColor &)
 func (this *QGraphicsDropShadowEffect) ColorChanged(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect12colorChangedERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -281,7 +281,7 @@ func (this *QGraphicsDropShadowEffect) ColorChanged(color *qtgui.QColor) {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:244
 // index:0
 // Protected virtual
-// void draw(class QPainter *)
+// void draw(QPainter *)
 func (this *QGraphicsDropShadowEffect) Draw(painter *qtgui.QPainter /*777 QPainter **/) {
 	var convArg0 = painter.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffect4drawEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

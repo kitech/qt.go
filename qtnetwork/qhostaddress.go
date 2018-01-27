@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -120,7 +120,7 @@ func NewQHostAddress_3(ip6Addr unsafe.Pointer /*666*/) *QHostAddress {
 // /usr/include/qt/QtNetwork/qhostaddress.h:100
 // index:4
 // Public
-// void QHostAddress(const class QString &)
+// void QHostAddress(const QString &)
 func NewQHostAddress_4(address *qtcore.QString) *QHostAddress {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = address.GetCthis()
@@ -133,7 +133,7 @@ func NewQHostAddress_4(address *qtcore.QString) *QHostAddress {
 // /usr/include/qt/QtNetwork/qhostaddress.h:102
 // index:5
 // Public
-// void QHostAddress(enum QHostAddress::SpecialAddress)
+// void QHostAddress(QHostAddress::SpecialAddress)
 func NewQHostAddress_5(address int) *QHostAddress {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddressC2ENS_14SpecialAddressE", ffiqt.FFI_TYPE_VOID, cthis, address)
@@ -154,7 +154,7 @@ func DeleteQHostAddress(*QHostAddress) {
 // /usr/include/qt/QtNetwork/qhostaddress.h:117
 // index:0
 // Public inline
-// void swap(class QHostAddress &)
+// void swap(QHostAddress &)
 func (this *QHostAddress) Swap(other *QHostAddress) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddress4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -191,7 +191,7 @@ func (this *QHostAddress) SetAddress_2(ip6Addr unsafe.Pointer /*666*/) {
 // /usr/include/qt/QtNetwork/qhostaddress.h:124
 // index:3
 // Public
-// bool setAddress(const class QString &)
+// bool setAddress(const QString &)
 func (this *QHostAddress) SetAddress_3(address *qtcore.QString) bool {
 	var convArg0 = address.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddress10setAddressERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -203,7 +203,7 @@ func (this *QHostAddress) SetAddress_3(address *qtcore.QString) bool {
 // /usr/include/qt/QtNetwork/qhostaddress.h:125
 // index:4
 // Public
-// void setAddress(enum QHostAddress::SpecialAddress)
+// void setAddress(QHostAddress::SpecialAddress)
 func (this *QHostAddress) SetAddress_4(address int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddress10setAddressENS_14SpecialAddressE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), address)
 	gopp.ErrPrint(err, rv)
@@ -234,7 +234,7 @@ func (this *QHostAddress) ToIPv4Address() uint {
 // /usr/include/qt/QtNetwork/qhostaddress.h:129
 // index:1
 // Public
-// quint32 toIPv4Address(_Bool *)
+// quint32 toIPv4Address(bool *)
 func (this *QHostAddress) ToIPv4Address_1(ok unsafe.Pointer /*666*/) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QHostAddress13toIPv4AddressEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -285,7 +285,7 @@ func (this *QHostAddress) ScopeId() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtNetwork/qhostaddress.h:135
 // index:0
 // Public
-// void setScopeId(const class QString &)
+// void setScopeId(const QString &)
 func (this *QHostAddress) SetScopeId(id *qtcore.QString) {
 	var convArg0 = id.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddress10setScopeIdERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -315,7 +315,7 @@ func (this *QHostAddress) Clear() {
 // /usr/include/qt/QtNetwork/qhostaddress.h:147
 // index:0
 // Public
-// bool isInSubnet(const class QHostAddress &, int)
+// bool isInSubnet(const QHostAddress &, int)
 func (this *QHostAddress) IsInSubnet(subnet *QHostAddress, netmask int) bool {
 	var convArg0 = subnet.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QHostAddress10isInSubnetERKS_i", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, netmask)

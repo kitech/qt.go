@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QToolBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject *
 // /usr/include/qt/QtWidgets/qtoolbar.h:79
 // index:0
 // Public
-// void QToolBar(const class QString &, class QWidget *)
+// void QToolBar(const QString &, QWidget *)
 func NewQToolBar(title *qtcore.QString, parent *QWidget /*777 QWidget **/) *QToolBar {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = title.GetCthis()
@@ -103,7 +103,7 @@ func NewQToolBar(title *qtcore.QString, parent *QWidget /*777 QWidget **/) *QToo
 // /usr/include/qt/QtWidgets/qtoolbar.h:80
 // index:1
 // Public
-// void QToolBar(class QWidget *)
+// void QToolBar(QWidget *)
 func NewQToolBar_1(parent *QWidget /*777 QWidget **/) *QToolBar {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -125,7 +125,7 @@ func DeleteQToolBar(*QToolBar) {
 // /usr/include/qt/QtWidgets/qtoolbar.h:83
 // index:0
 // Public
-// void setMovable(_Bool)
+// void setMovable(bool)
 func (this *QToolBar) SetMovable(movable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar10setMovableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), movable)
 	gopp.ErrPrint(err, rv)
@@ -196,7 +196,7 @@ func (this *QToolBar) Clear() {
 // /usr/include/qt/QtWidgets/qtoolbar.h:98
 // index:0
 // Public
-// QAction * addAction(const class QString &)
+// QAction * addAction(const QString &)
 func (this *QToolBar) AddAction(text *qtcore.QString) *QAction /*777 QAction **/ {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar9addActionERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -209,7 +209,7 @@ func (this *QToolBar) AddAction(text *qtcore.QString) *QAction /*777 QAction **/
 // /usr/include/qt/QtWidgets/qtoolbar.h:99
 // index:1
 // Public
-// QAction * addAction(const class QIcon &, const class QString &)
+// QAction * addAction(const QIcon &, const QString &)
 func (this *QToolBar) AddAction_1(icon *qtgui.QIcon, text *qtcore.QString) *QAction /*777 QAction **/ {
 	var convArg0 = icon.GetCthis()
 	var convArg1 = text.GetCthis()
@@ -223,7 +223,7 @@ func (this *QToolBar) AddAction_1(icon *qtgui.QIcon, text *qtcore.QString) *QAct
 // /usr/include/qt/QtWidgets/qtoolbar.h:100
 // index:2
 // Public
-// QAction * addAction(const class QString &, const class QObject *, const char *)
+// QAction * addAction(const QString &, const QObject *, const char *)
 func (this *QToolBar) AddAction_2(text *qtcore.QString, receiver *qtcore.QObject /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
 	var convArg0 = text.GetCthis()
 	var convArg1 = receiver.GetCthis()
@@ -239,7 +239,7 @@ func (this *QToolBar) AddAction_2(text *qtcore.QString, receiver *qtcore.QObject
 // /usr/include/qt/QtWidgets/qtoolbar.h:101
 // index:3
 // Public
-// QAction * addAction(const class QIcon &, const class QString &, const class QObject *, const char *)
+// QAction * addAction(const QIcon &, const QString &, const QObject *, const char *)
 func (this *QToolBar) AddAction_3(icon *qtgui.QIcon, text *qtcore.QString, receiver *qtcore.QObject /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
 	var convArg0 = icon.GetCthis()
 	var convArg1 = text.GetCthis()
@@ -268,7 +268,7 @@ func (this *QToolBar) AddSeparator() *QAction /*777 QAction **/ {
 // /usr/include/qt/QtWidgets/qtoolbar.h:156
 // index:0
 // Public
-// QAction * insertSeparator(class QAction *)
+// QAction * insertSeparator(QAction *)
 func (this *QToolBar) InsertSeparator(before *QAction /*777 QAction **/) *QAction /*777 QAction **/ {
 	var convArg0 = before.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar15insertSeparatorEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -281,7 +281,7 @@ func (this *QToolBar) InsertSeparator(before *QAction /*777 QAction **/) *QActio
 // /usr/include/qt/QtWidgets/qtoolbar.h:158
 // index:0
 // Public
-// QAction * addWidget(class QWidget *)
+// QAction * addWidget(QWidget *)
 func (this *QToolBar) AddWidget(widget *QWidget /*777 QWidget **/) *QAction /*777 QAction **/ {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar9addWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -294,7 +294,7 @@ func (this *QToolBar) AddWidget(widget *QWidget /*777 QWidget **/) *QAction /*77
 // /usr/include/qt/QtWidgets/qtoolbar.h:159
 // index:0
 // Public
-// QAction * insertWidget(class QAction *, class QWidget *)
+// QAction * insertWidget(QAction *, QWidget *)
 func (this *QToolBar) InsertWidget(before *QAction /*777 QAction **/, widget *QWidget /*777 QWidget **/) *QAction /*777 QAction **/ {
 	var convArg0 = before.GetCthis()
 	var convArg1 = widget.GetCthis()
@@ -308,7 +308,7 @@ func (this *QToolBar) InsertWidget(before *QAction /*777 QAction **/, widget *QW
 // /usr/include/qt/QtWidgets/qtoolbar.h:161
 // index:0
 // Public
-// QRect actionGeometry(class QAction *)
+// QRect actionGeometry(QAction *)
 func (this *QToolBar) ActionGeometry(action *QAction /*777 QAction **/) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = action.GetCthis()
@@ -323,7 +323,7 @@ func (this *QToolBar) ActionGeometry(action *QAction /*777 QAction **/) *qtcore.
 // /usr/include/qt/QtWidgets/qtoolbar.h:162
 // index:0
 // Public
-// QAction * actionAt(const class QPoint &)
+// QAction * actionAt(const QPoint &)
 func (this *QToolBar) ActionAt(p *qtcore.QPoint) *QAction /*777 QAction **/ {
 	var convArg0 = p.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBar8actionAtERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -385,7 +385,7 @@ func (this *QToolBar) ToolButtonStyle() int {
 // /usr/include/qt/QtWidgets/qtoolbar.h:170
 // index:0
 // Public
-// QWidget * widgetForAction(class QAction *)
+// QWidget * widgetForAction(QAction *)
 func (this *QToolBar) WidgetForAction(action *QAction /*777 QAction **/) *QWidget /*777 QWidget **/ {
 	var convArg0 = action.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBar15widgetForActionEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -409,7 +409,7 @@ func (this *QToolBar) IsFloatable() bool {
 // /usr/include/qt/QtWidgets/qtoolbar.h:173
 // index:0
 // Public
-// void setFloatable(_Bool)
+// void setFloatable(bool)
 func (this *QToolBar) SetFloatable(floatable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar12setFloatableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), floatable)
 	gopp.ErrPrint(err, rv)
@@ -429,7 +429,7 @@ func (this *QToolBar) IsFloating() bool {
 // /usr/include/qt/QtWidgets/qtoolbar.h:177
 // index:0
 // Public
-// void setIconSize(const class QSize &)
+// void setIconSize(const QSize &)
 func (this *QToolBar) SetIconSize(iconSize *qtcore.QSize) {
 	var convArg0 = iconSize.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar11setIconSizeERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -448,7 +448,7 @@ func (this *QToolBar) SetToolButtonStyle(toolButtonStyle int) {
 // /usr/include/qt/QtWidgets/qtoolbar.h:181
 // index:0
 // Public
-// void actionTriggered(class QAction *)
+// void actionTriggered(QAction *)
 func (this *QToolBar) ActionTriggered(action *QAction /*777 QAction **/) {
 	var convArg0 = action.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar15actionTriggeredEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -458,7 +458,7 @@ func (this *QToolBar) ActionTriggered(action *QAction /*777 QAction **/) {
 // /usr/include/qt/QtWidgets/qtoolbar.h:182
 // index:0
 // Public
-// void movableChanged(_Bool)
+// void movableChanged(bool)
 func (this *QToolBar) MovableChanged(movable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar14movableChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), movable)
 	gopp.ErrPrint(err, rv)
@@ -476,7 +476,7 @@ func (this *QToolBar) OrientationChanged(orientation int) {
 // /usr/include/qt/QtWidgets/qtoolbar.h:185
 // index:0
 // Public
-// void iconSizeChanged(const class QSize &)
+// void iconSizeChanged(const QSize &)
 func (this *QToolBar) IconSizeChanged(iconSize *qtcore.QSize) {
 	var convArg0 = iconSize.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar15iconSizeChangedERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -495,7 +495,7 @@ func (this *QToolBar) ToolButtonStyleChanged(toolButtonStyle int) {
 // /usr/include/qt/QtWidgets/qtoolbar.h:187
 // index:0
 // Public
-// void topLevelChanged(_Bool)
+// void topLevelChanged(bool)
 func (this *QToolBar) TopLevelChanged(topLevel bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar15topLevelChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), topLevel)
 	gopp.ErrPrint(err, rv)
@@ -504,7 +504,7 @@ func (this *QToolBar) TopLevelChanged(topLevel bool) {
 // /usr/include/qt/QtWidgets/qtoolbar.h:188
 // index:0
 // Public
-// void visibilityChanged(_Bool)
+// void visibilityChanged(bool)
 func (this *QToolBar) VisibilityChanged(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar17visibilityChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
@@ -513,7 +513,7 @@ func (this *QToolBar) VisibilityChanged(visible bool) {
 // /usr/include/qt/QtWidgets/qtoolbar.h:191
 // index:0
 // Protected virtual
-// void actionEvent(class QActionEvent *)
+// void actionEvent(QActionEvent *)
 func (this *QToolBar) ActionEvent(event *qtgui.QActionEvent /*777 QActionEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar11actionEventEP12QActionEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -523,7 +523,7 @@ func (this *QToolBar) ActionEvent(event *qtgui.QActionEvent /*777 QActionEvent *
 // /usr/include/qt/QtWidgets/qtoolbar.h:192
 // index:0
 // Protected virtual
-// void changeEvent(class QEvent *)
+// void changeEvent(QEvent *)
 func (this *QToolBar) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -533,7 +533,7 @@ func (this *QToolBar) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
 // /usr/include/qt/QtWidgets/qtoolbar.h:193
 // index:0
 // Protected virtual
-// void paintEvent(class QPaintEvent *)
+// void paintEvent(QPaintEvent *)
 func (this *QToolBar) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -543,7 +543,7 @@ func (this *QToolBar) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent **/)
 // /usr/include/qt/QtWidgets/qtoolbar.h:194
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QToolBar) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -555,7 +555,7 @@ func (this *QToolBar) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qtoolbar.h:195
 // index:0
 // Protected
-// void initStyleOption(class QStyleOptionToolBar *)
+// void initStyleOption(QStyleOptionToolBar *)
 func (this *QToolBar) InitStyleOption(option *QStyleOptionToolBar /*777 QStyleOptionToolBar **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBar15initStyleOptionEP19QStyleOptionToolBar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

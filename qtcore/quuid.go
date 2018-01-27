@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -92,7 +92,7 @@ func NewQUuid_1(l uint, w1 uint16, w2 uint16, b1 byte, b2 byte, b3 byte, b4 byte
 // /usr/include/qt/QtCore/quuid.h:119
 // index:2
 // Public
-// void QUuid(const class QString &)
+// void QUuid(const QString &)
 func NewQUuid_2(arg0 *QString) *QUuid {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = arg0.GetCthis()
@@ -119,7 +119,7 @@ func NewQUuid_3(arg0 string) *QUuid {
 // /usr/include/qt/QtCore/quuid.h:124
 // index:4
 // Public
-// void QUuid(const class QByteArray &)
+// void QUuid(const QByteArray &)
 func NewQUuid_4(arg0 *QByteArray) *QUuid {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = arg0.GetCthis()
@@ -132,7 +132,7 @@ func NewQUuid_4(arg0 *QByteArray) *QUuid {
 // /usr/include/qt/QtCore/quuid.h:120
 // index:0
 // Public static
-// QUuid fromString(class QStringView)
+// QUuid fromString(QStringView)
 func (this *QUuid) FromString(string *QStringView /*123*/) *QUuid /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuid10fromStringE11QStringView", ffiqt.FFI_TYPE_POINTER, string)
 	gopp.ErrPrint(err, rv)
@@ -149,7 +149,7 @@ func QUuid_FromString(string *QStringView /*123*/) *QUuid /*123*/ {
 // /usr/include/qt/QtCore/quuid.h:121
 // index:1
 // Public static
-// QUuid fromString(class QLatin1String)
+// QUuid fromString(QLatin1String)
 func (this *QUuid) FromString_1(string *QLatin1String /*123*/) *QUuid /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuid10fromStringE13QLatin1String", ffiqt.FFI_TYPE_POINTER, string)
 	gopp.ErrPrint(err, rv)
@@ -208,7 +208,7 @@ func (this *QUuid) ToRfc4122() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/quuid.h:127
 // index:0
 // Public static
-// QUuid fromRfc4122(const class QByteArray &)
+// QUuid fromRfc4122(const QByteArray &)
 func (this *QUuid) FromRfc4122(arg0 *QByteArray) *QUuid /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuid11fromRfc4122ERK10QByteArray", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
@@ -253,7 +253,7 @@ func QUuid_CreateUuid() *QUuid /*123*/ {
 // /usr/include/qt/QtCore/quuid.h:194
 // index:0
 // Public static
-// QUuid createUuidV3(const class QUuid &, const class QByteArray &)
+// QUuid createUuidV3(const QUuid &, const QByteArray &)
 func (this *QUuid) CreateUuidV3(ns *QUuid, baseData *QByteArray) *QUuid /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuid12createUuidV3ERKS_RK10QByteArray", ffiqt.FFI_TYPE_POINTER, ns, baseData)
 	gopp.ErrPrint(err, rv)
@@ -270,7 +270,7 @@ func QUuid_CreateUuidV3(ns *QUuid, baseData *QByteArray) *QUuid /*123*/ {
 // /usr/include/qt/QtCore/quuid.h:196
 // index:1
 // Public static inline
-// QUuid createUuidV3(const class QUuid &, const class QString &)
+// QUuid createUuidV3(const QUuid &, const QString &)
 func (this *QUuid) CreateUuidV3_1(ns *QUuid, baseData *QString) *QUuid /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuid12createUuidV3ERKS_RK7QString", ffiqt.FFI_TYPE_POINTER, ns, baseData)
 	gopp.ErrPrint(err, rv)
@@ -287,7 +287,7 @@ func QUuid_CreateUuidV3_1(ns *QUuid, baseData *QString) *QUuid /*123*/ {
 // /usr/include/qt/QtCore/quuid.h:195
 // index:0
 // Public static
-// QUuid createUuidV5(const class QUuid &, const class QByteArray &)
+// QUuid createUuidV5(const QUuid &, const QByteArray &)
 func (this *QUuid) CreateUuidV5(ns *QUuid, baseData *QByteArray) *QUuid /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuid12createUuidV5ERKS_RK10QByteArray", ffiqt.FFI_TYPE_POINTER, ns, baseData)
 	gopp.ErrPrint(err, rv)
@@ -304,7 +304,7 @@ func QUuid_CreateUuidV5(ns *QUuid, baseData *QByteArray) *QUuid /*123*/ {
 // /usr/include/qt/QtCore/quuid.h:201
 // index:1
 // Public static inline
-// QUuid createUuidV5(const class QUuid &, const class QString &)
+// QUuid createUuidV5(const QUuid &, const QString &)
 func (this *QUuid) CreateUuidV5_1(ns *QUuid, baseData *QString) *QUuid /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuid12createUuidV5ERKS_RK7QString", ffiqt.FFI_TYPE_POINTER, ns, baseData)
 	gopp.ErrPrint(err, rv)

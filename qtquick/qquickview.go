@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -97,7 +97,7 @@ func (this *QQuickView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtQuick/qquickview.h:63
 // index:0
 // Public
-// void QQuickView(class QWindow *)
+// void QQuickView(QWindow *)
 func NewQQuickView(parent *qtgui.QWindow /*777 QWindow **/) *QQuickView {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = parent.GetCthis()
@@ -110,7 +110,7 @@ func NewQQuickView(parent *qtgui.QWindow /*777 QWindow **/) *QQuickView {
 // /usr/include/qt/QtQuick/qquickview.h:64
 // index:1
 // Public
-// void QQuickView(class QQmlEngine *, class QWindow *)
+// void QQuickView(QQmlEngine *, QWindow *)
 func NewQQuickView_1(engine *qtqml.QQmlEngine /*777 QQmlEngine **/, parent *qtgui.QWindow /*777 QWindow **/) *QQuickView {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = engine.GetCthis()
@@ -124,7 +124,7 @@ func NewQQuickView_1(engine *qtqml.QQmlEngine /*777 QQmlEngine **/, parent *qtgu
 // /usr/include/qt/QtQuick/qquickview.h:65
 // index:2
 // Public
-// void QQuickView(const class QUrl &, class QWindow *)
+// void QQuickView(const QUrl &, QWindow *)
 func NewQQuickView_2(source *qtcore.QUrl, parent *qtgui.QWindow /*777 QWindow **/) *QQuickView {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = source.GetCthis()
@@ -208,7 +208,7 @@ func (this *QQuickView) ResizeMode() int {
 // /usr/include/qt/QtQuick/qquickview.h:78
 // index:0
 // Public
-// void setResizeMode(enum QQuickView::ResizeMode)
+// void setResizeMode(QQuickView::ResizeMode)
 func (this *QQuickView) SetResizeMode(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickView13setResizeModeENS_10ResizeModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -256,7 +256,7 @@ func (this *QQuickView) InitialSize() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtQuick/qquickview.h:90
 // index:0
 // Public
-// void setSource(const class QUrl &)
+// void setSource(const QUrl &)
 func (this *QQuickView) SetSource(arg0 *qtcore.QUrl) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickView9setSourceERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -266,7 +266,7 @@ func (this *QQuickView) SetSource(arg0 *qtcore.QUrl) {
 // /usr/include/qt/QtQuick/qquickview.h:91
 // index:0
 // Public
-// void setContent(const class QUrl &, class QQmlComponent *, class QObject *)
+// void setContent(const QUrl &, QQmlComponent *, QObject *)
 func (this *QQuickView) SetContent(url *qtcore.QUrl, component *qtqml.QQmlComponent /*777 QQmlComponent **/, item *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = url.GetCthis()
 	var convArg1 = component.GetCthis()
@@ -278,7 +278,7 @@ func (this *QQuickView) SetContent(url *qtcore.QUrl, component *qtqml.QQmlCompon
 // /usr/include/qt/QtQuick/qquickview.h:94
 // index:0
 // Public
-// void statusChanged(class QQuickView::Status)
+// void statusChanged(QQuickView::Status)
 func (this *QQuickView) StatusChanged(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickView13statusChangedENS_6StatusE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -287,7 +287,7 @@ func (this *QQuickView) StatusChanged(arg0 int) {
 // /usr/include/qt/QtQuick/qquickview.h:100
 // index:0
 // Protected virtual
-// void resizeEvent(class QResizeEvent *)
+// void resizeEvent(QResizeEvent *)
 func (this *QQuickView) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickView11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -297,7 +297,7 @@ func (this *QQuickView) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent 
 // /usr/include/qt/QtQuick/qquickview.h:101
 // index:0
 // Protected virtual
-// void timerEvent(class QTimerEvent *)
+// void timerEvent(QTimerEvent *)
 func (this *QQuickView) TimerEvent(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickView10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -307,7 +307,7 @@ func (this *QQuickView) TimerEvent(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **
 // /usr/include/qt/QtQuick/qquickview.h:103
 // index:0
 // Protected virtual
-// void keyPressEvent(class QKeyEvent *)
+// void keyPressEvent(QKeyEvent *)
 func (this *QQuickView) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickView13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -317,7 +317,7 @@ func (this *QQuickView) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/)
 // /usr/include/qt/QtQuick/qquickview.h:104
 // index:0
 // Protected virtual
-// void keyReleaseEvent(class QKeyEvent *)
+// void keyReleaseEvent(QKeyEvent *)
 func (this *QQuickView) KeyReleaseEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickView15keyReleaseEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -327,7 +327,7 @@ func (this *QQuickView) KeyReleaseEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **
 // /usr/include/qt/QtQuick/qquickview.h:105
 // index:0
 // Protected virtual
-// void mousePressEvent(class QMouseEvent *)
+// void mousePressEvent(QMouseEvent *)
 func (this *QQuickView) MousePressEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickView15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -337,7 +337,7 @@ func (this *QQuickView) MousePressEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEven
 // /usr/include/qt/QtQuick/qquickview.h:106
 // index:0
 // Protected virtual
-// void mouseReleaseEvent(class QMouseEvent *)
+// void mouseReleaseEvent(QMouseEvent *)
 func (this *QQuickView) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickView17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -347,7 +347,7 @@ func (this *QQuickView) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEv
 // /usr/include/qt/QtQuick/qquickview.h:107
 // index:0
 // Protected virtual
-// void mouseMoveEvent(class QMouseEvent *)
+// void mouseMoveEvent(QMouseEvent *)
 func (this *QQuickView) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickView14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

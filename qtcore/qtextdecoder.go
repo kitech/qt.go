@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QTextDecoder) NewFromPointer(cthis unsafe.Pointer) *QTextDecoder {
 // /usr/include/qt/QtCore/qtextcodec.h:158
 // index:0
 // Public inline
-// void QTextDecoder(const class QTextCodec *)
+// void QTextDecoder(const QTextCodec *)
 func NewQTextDecoder(codec *QTextCodec /*777 const QTextCodec **/) *QTextDecoder {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = codec.GetCthis()
@@ -81,7 +81,7 @@ func NewQTextDecoder(codec *QTextCodec /*777 const QTextCodec **/) *QTextDecoder
 // /usr/include/qt/QtCore/qtextcodec.h:159
 // index:1
 // Public
-// void QTextDecoder(const class QTextCodec *, class QTextCodec::ConversionFlags)
+// void QTextDecoder(const QTextCodec *, QTextCodec::ConversionFlags)
 func NewQTextDecoder_1(codec *QTextCodec /*777 const QTextCodec **/, flags int) *QTextDecoder {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = codec.GetCthis()
@@ -119,7 +119,7 @@ func (this *QTextDecoder) ToUnicode(chars string, len int) *QString /*123*/ {
 // /usr/include/qt/QtCore/qtextcodec.h:162
 // index:1
 // Public
-// QString toUnicode(const class QByteArray &)
+// QString toUnicode(const QByteArray &)
 func (this *QTextDecoder) ToUnicode_1(ba *QByteArray) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = ba.GetCthis()
@@ -134,7 +134,7 @@ func (this *QTextDecoder) ToUnicode_1(ba *QByteArray) *QString /*123*/ {
 // /usr/include/qt/QtCore/qtextcodec.h:163
 // index:2
 // Public
-// void toUnicode(class QString *, const char *, int)
+// void toUnicode(QString *, const char *, int)
 func (this *QTextDecoder) ToUnicode_2(target *QString /*777 QString **/, chars string, len int) {
 	var convArg0 = target.GetCthis()
 	var convArg1 = qtrt.CString(chars)

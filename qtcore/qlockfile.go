@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -68,7 +68,7 @@ func (*QLockFile) NewFromPointer(cthis unsafe.Pointer) *QLockFile {
 // /usr/include/qt/QtCore/qlockfile.h:53
 // index:0
 // Public
-// void QLockFile(const class QString &)
+// void QLockFile(const QString &)
 func NewQLockFile(fileName *QString) *QLockFile {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = fileName.GetCthis()
@@ -152,7 +152,7 @@ func (this *QLockFile) IsLocked() bool {
 // /usr/include/qt/QtCore/qlockfile.h:64
 // index:0
 // Public
-// bool getLockInfo(qint64 *, class QString *, class QString *)
+// bool getLockInfo(qint64 *, QString *, QString *)
 func (this *QLockFile) GetLockInfo(pid unsafe.Pointer /*666*/, hostname *QString /*777 QString **/, appname *QString /*777 QString **/) bool {
 	var convArg1 = hostname.GetCthis()
 	var convArg2 = appname.GetCthis()

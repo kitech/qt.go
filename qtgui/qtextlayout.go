@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -84,7 +84,7 @@ func NewQTextLayout() *QTextLayout {
 // /usr/include/qt/QtGui/qtextlayout.h:109
 // index:1
 // Public
-// void QTextLayout(const class QString &)
+// void QTextLayout(const QString &)
 func NewQTextLayout_1(text *qtcore.QString) *QTextLayout {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = text.GetCthis()
@@ -97,7 +97,7 @@ func NewQTextLayout_1(text *qtcore.QString) *QTextLayout {
 // /usr/include/qt/QtGui/qtextlayout.h:110
 // index:2
 // Public
-// void QTextLayout(const class QString &, const class QFont &, class QPaintDevice *)
+// void QTextLayout(const QString &, const QFont &, QPaintDevice *)
 func NewQTextLayout_2(text *qtcore.QString, font *QFont, paintdevice *QPaintDevice /*777 QPaintDevice **/) *QTextLayout {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = text.GetCthis()
@@ -112,7 +112,7 @@ func NewQTextLayout_2(text *qtcore.QString, font *QFont, paintdevice *QPaintDevi
 // /usr/include/qt/QtGui/qtextlayout.h:111
 // index:3
 // Public
-// void QTextLayout(const class QTextBlock &)
+// void QTextLayout(const QTextBlock &)
 func NewQTextLayout_3(b *QTextBlock) *QTextLayout {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = b.GetCthis()
@@ -134,7 +134,7 @@ func DeleteQTextLayout(*QTextLayout) {
 // /usr/include/qt/QtGui/qtextlayout.h:114
 // index:0
 // Public
-// void setFont(const class QFont &)
+// void setFont(const QFont &)
 func (this *QTextLayout) SetFont(f *QFont) {
 	var convArg0 = f.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout7setFontERK5QFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -158,7 +158,7 @@ func (this *QTextLayout) Font() *QFont /*123*/ {
 // /usr/include/qt/QtGui/qtextlayout.h:118
 // index:0
 // Public
-// void setRawFont(const class QRawFont &)
+// void setRawFont(const QRawFont &)
 func (this *QTextLayout) SetRawFont(rawFont *QRawFont) {
 	var convArg0 = rawFont.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout10setRawFontERK8QRawFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -168,7 +168,7 @@ func (this *QTextLayout) SetRawFont(rawFont *QRawFont) {
 // /usr/include/qt/QtGui/qtextlayout.h:121
 // index:0
 // Public
-// void setText(const class QString &)
+// void setText(const QString &)
 func (this *QTextLayout) SetText(string *qtcore.QString) {
 	var convArg0 = string.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout7setTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -192,7 +192,7 @@ func (this *QTextLayout) Text() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qtextlayout.h:124
 // index:0
 // Public
-// void setTextOption(const class QTextOption &)
+// void setTextOption(const QTextOption &)
 func (this *QTextLayout) SetTextOption(option *QTextOption) {
 	var convArg0 = option.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout13setTextOptionERK11QTextOption", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -214,7 +214,7 @@ func (this *QTextLayout) TextOption() *QTextOption {
 // /usr/include/qt/QtGui/qtextlayout.h:127
 // index:0
 // Public
-// void setPreeditArea(int, const class QString &)
+// void setPreeditArea(int, const QString &)
 func (this *QTextLayout) SetPreeditArea(position int, text *qtcore.QString) {
 	var convArg1 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout14setPreeditAreaEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), position, convArg1)
@@ -267,7 +267,7 @@ func (this *QTextLayout) ClearFormats() {
 // /usr/include/qt/QtGui/qtextlayout.h:150
 // index:0
 // Public
-// void setCacheEnabled(_Bool)
+// void setCacheEnabled(bool)
 func (this *QTextLayout) SetCacheEnabled(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout15setCacheEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -398,7 +398,7 @@ func (this *QTextLayout) IsValidCursorPosition(pos int) bool {
 // /usr/include/qt/QtGui/qtextlayout.h:171
 // index:0
 // Public
-// int nextCursorPosition(int, enum QTextLayout::CursorMode)
+// int nextCursorPosition(int, QTextLayout::CursorMode)
 func (this *QTextLayout) NextCursorPosition(oldPos int, mode int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout18nextCursorPositionEiNS_10CursorModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), oldPos, mode)
 	gopp.ErrPrint(err, rv)
@@ -409,7 +409,7 @@ func (this *QTextLayout) NextCursorPosition(oldPos int, mode int) int {
 // /usr/include/qt/QtGui/qtextlayout.h:172
 // index:0
 // Public
-// int previousCursorPosition(int, enum QTextLayout::CursorMode)
+// int previousCursorPosition(int, QTextLayout::CursorMode)
 func (this *QTextLayout) PreviousCursorPosition(oldPos int, mode int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout22previousCursorPositionEiNS_10CursorModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), oldPos, mode)
 	gopp.ErrPrint(err, rv)
@@ -442,7 +442,7 @@ func (this *QTextLayout) RightCursorPosition(oldPos int) int {
 // /usr/include/qt/QtGui/qtextlayout.h:178
 // index:0
 // Public
-// void drawCursor(class QPainter *, const class QPointF &, int)
+// void drawCursor(QPainter *, const QPointF &, int)
 func (this *QTextLayout) DrawCursor(p *QPainter /*777 QPainter **/, pos *qtcore.QPointF, cursorPosition int) {
 	var convArg0 = p.GetCthis()
 	var convArg1 = pos.GetCthis()
@@ -453,7 +453,7 @@ func (this *QTextLayout) DrawCursor(p *QPainter /*777 QPainter **/, pos *qtcore.
 // /usr/include/qt/QtGui/qtextlayout.h:179
 // index:1
 // Public
-// void drawCursor(class QPainter *, const class QPointF &, int, int)
+// void drawCursor(QPainter *, const QPointF &, int, int)
 func (this *QTextLayout) DrawCursor_1(p *QPainter /*777 QPainter **/, pos *qtcore.QPointF, cursorPosition int, width int) {
 	var convArg0 = p.GetCthis()
 	var convArg1 = pos.GetCthis()
@@ -478,7 +478,7 @@ func (this *QTextLayout) Position() *qtcore.QPointF /*123*/ {
 // /usr/include/qt/QtGui/qtextlayout.h:182
 // index:0
 // Public
-// void setPosition(const class QPointF &)
+// void setPosition(const QPointF &)
 func (this *QTextLayout) SetPosition(p *qtcore.QPointF) {
 	var convArg0 = p.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout11setPositionERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

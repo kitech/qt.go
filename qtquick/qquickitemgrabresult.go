@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -125,7 +125,7 @@ func (this *QQuickItemGrabResult) Url() *qtcore.QUrl /*123*/ {
 // /usr/include/qt/QtQuick/qquickitemgrabresult.h:68
 // index:0
 // Public
-// bool saveToFile(const class QString &)
+// bool saveToFile(const QString &)
 func (this *QQuickItemGrabResult) SaveToFile(fileName *qtcore.QString) bool {
 	var convArg0 = fileName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQuickItemGrabResult10saveToFileERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -137,7 +137,7 @@ func (this *QQuickItemGrabResult) SaveToFile(fileName *qtcore.QString) bool {
 // /usr/include/qt/QtQuick/qquickitemgrabresult.h:70
 // index:1
 // Public
-// bool saveToFile(const class QString &)
+// bool saveToFile(const QString &)
 func (this *QQuickItemGrabResult) SaveToFile_1(fileName *qtcore.QString) bool {
 	var convArg0 = fileName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult10saveToFileERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -149,7 +149,7 @@ func (this *QQuickItemGrabResult) SaveToFile_1(fileName *qtcore.QString) bool {
 // /usr/include/qt/QtQuick/qquickitemgrabresult.h:73
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QQuickItemGrabResult) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQuickItemGrabResult5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

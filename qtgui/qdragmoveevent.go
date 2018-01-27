@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -105,7 +105,7 @@ func (this *QDragMoveEvent) Accept() {
 // /usr/include/qt/QtGui/qevent.h:651
 // index:1
 // Public inline
-// void accept(const class QRect &)
+// void accept(const QRect &)
 func (this *QDragMoveEvent) Accept_1(r *qtcore.QRect) {
 	var convArg0 = r.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEvent6acceptERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -124,7 +124,7 @@ func (this *QDragMoveEvent) Ignore() {
 // /usr/include/qt/QtGui/qevent.h:652
 // index:1
 // Public inline
-// void ignore(const class QRect &)
+// void ignore(const QRect &)
 func (this *QDragMoveEvent) Ignore_1(r *qtcore.QRect) {
 	var convArg0 = r.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEvent6ignoreERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

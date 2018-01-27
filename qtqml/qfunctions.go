@@ -1,8 +1,8 @@
 package qtqml
 
 import "unsafe"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -34,7 +34,7 @@ func init() {
 // /usr/include/qt/QtQml/qqmlproperty.h:130
 // index:43
 // Invalid inline
-// uint qHash(const class QQmlProperty &)
+// uint qHash(const QQmlProperty &)
 func QHash_43(key *QQmlProperty) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK12QQmlProperty", ffiqt.FFI_TYPE_POINTER, convArg0)

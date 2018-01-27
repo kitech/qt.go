@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -81,7 +81,7 @@ func (this *QPauseAnimation) MetaObject() *QMetaObject /*777 const QMetaObject *
 // /usr/include/qt/QtCore/qpauseanimation.h:57
 // index:0
 // Public
-// void QPauseAnimation(class QObject *)
+// void QPauseAnimation(QObject *)
 func NewQPauseAnimation(parent *QObject /*777 QObject **/) *QPauseAnimation {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -94,7 +94,7 @@ func NewQPauseAnimation(parent *QObject /*777 QObject **/) *QPauseAnimation {
 // /usr/include/qt/QtCore/qpauseanimation.h:58
 // index:1
 // Public
-// void QPauseAnimation(int, class QObject *)
+// void QPauseAnimation(int, QObject *)
 func NewQPauseAnimation_1(msecs int, parent *QObject /*777 QObject **/) *QPauseAnimation {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = parent.GetCthis()
@@ -136,7 +136,7 @@ func (this *QPauseAnimation) SetDuration(msecs int) {
 // /usr/include/qt/QtCore/qpauseanimation.h:65
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QPauseAnimation) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimation5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

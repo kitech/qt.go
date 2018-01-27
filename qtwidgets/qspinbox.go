@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject *
 // /usr/include/qt/QtWidgets/qspinbox.h:65
 // index:0
 // Public
-// void QSpinBox(class QWidget *)
+// void QSpinBox(QWidget *)
 func NewQSpinBox(parent *QWidget /*777 QWidget **/) *QSpinBox {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
@@ -136,7 +136,7 @@ func (this *QSpinBox) Prefix() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qspinbox.h:71
 // index:0
 // Public
-// void setPrefix(const class QString &)
+// void setPrefix(const QString &)
 func (this *QSpinBox) SetPrefix(prefix *qtcore.QString) {
 	var convArg0 = prefix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox9setPrefixERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -160,7 +160,7 @@ func (this *QSpinBox) Suffix() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qspinbox.h:74
 // index:0
 // Public
-// void setSuffix(const class QString &)
+// void setSuffix(const QString &)
 func (this *QSpinBox) SetSuffix(suffix *qtcore.QString) {
 	var convArg0 = suffix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox9setSuffixERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -273,7 +273,7 @@ func (this *QSpinBox) SetDisplayIntegerBase(base int) {
 // /usr/include/qt/QtWidgets/qspinbox.h:93
 // index:0
 // Protected virtual
-// bool event(class QEvent *)
+// bool event(QEvent *)
 func (this *QSpinBox) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -285,7 +285,7 @@ func (this *QSpinBox) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qspinbox.h:94
 // index:0
 // Protected virtual
-// QValidator::State validate(class QString &, int &)
+// QValidator::State validate(QString &, int &)
 func (this *QSpinBox) Validate(input *qtcore.QString, pos int) int {
 	var convArg0 = input.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox8validateER7QStringRi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
@@ -297,7 +297,7 @@ func (this *QSpinBox) Validate(input *qtcore.QString, pos int) int {
 // /usr/include/qt/QtWidgets/qspinbox.h:95
 // index:0
 // Protected virtual
-// int valueFromText(const class QString &)
+// int valueFromText(const QString &)
 func (this *QSpinBox) ValueFromText(text *qtcore.QString) int {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox13valueFromTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -323,7 +323,7 @@ func (this *QSpinBox) TextFromValue(val int) *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qspinbox.h:97
 // index:0
 // Protected virtual
-// void fixup(class QString &)
+// void fixup(QString &)
 func (this *QSpinBox) Fixup(str *qtcore.QString) {
 	var convArg0 = str.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox5fixupER7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -351,7 +351,7 @@ func (this *QSpinBox) ValueChanged(arg0 int) {
 // /usr/include/qt/QtWidgets/qspinbox.h:105
 // index:1
 // Public
-// void valueChanged(const class QString &)
+// void valueChanged(const QString &)
 func (this *QSpinBox) ValueChanged_1(arg0 *qtcore.QString) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox12valueChangedERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

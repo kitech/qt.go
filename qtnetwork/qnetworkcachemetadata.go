@@ -16,8 +16,8 @@ package qtnetwork
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -93,7 +93,7 @@ func DeleteQNetworkCacheMetaData(*QNetworkCacheMetaData) {
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:75
 // index:0
 // Public inline
-// void swap(class QNetworkCacheMetaData &)
+// void swap(QNetworkCacheMetaData &)
 func (this *QNetworkCacheMetaData) Swap(other *QNetworkCacheMetaData) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkCacheMetaData4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -128,7 +128,7 @@ func (this *QNetworkCacheMetaData) Url() *qtcore.QUrl /*123*/ {
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:85
 // index:0
 // Public
-// void setUrl(const class QUrl &)
+// void setUrl(const QUrl &)
 func (this *QNetworkCacheMetaData) SetUrl(url *qtcore.QUrl) {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkCacheMetaData6setUrlERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -152,7 +152,7 @@ func (this *QNetworkCacheMetaData) LastModified() *qtcore.QDateTime /*123*/ {
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:91
 // index:0
 // Public
-// void setLastModified(const class QDateTime &)
+// void setLastModified(const QDateTime &)
 func (this *QNetworkCacheMetaData) SetLastModified(dateTime *qtcore.QDateTime) {
 	var convArg0 = dateTime.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkCacheMetaData15setLastModifiedERK9QDateTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -176,7 +176,7 @@ func (this *QNetworkCacheMetaData) ExpirationDate() *qtcore.QDateTime /*123*/ {
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:94
 // index:0
 // Public
-// void setExpirationDate(const class QDateTime &)
+// void setExpirationDate(const QDateTime &)
 func (this *QNetworkCacheMetaData) SetExpirationDate(dateTime *qtcore.QDateTime) {
 	var convArg0 = dateTime.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkCacheMetaData17setExpirationDateERK9QDateTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -197,7 +197,7 @@ func (this *QNetworkCacheMetaData) SaveToDisk() bool {
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:97
 // index:0
 // Public
-// void setSaveToDisk(_Bool)
+// void setSaveToDisk(bool)
 func (this *QNetworkCacheMetaData) SetSaveToDisk(allow bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkCacheMetaData13setSaveToDiskEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), allow)
 	gopp.ErrPrint(err, rv)

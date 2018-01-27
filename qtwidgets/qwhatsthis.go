@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -118,7 +118,7 @@ func QWhatsThis_LeaveWhatsThisMode() {
 // /usr/include/qt/QtWidgets/qwhatsthis.h:62
 // index:0
 // Public static
-// void showText(const class QPoint &, const class QString &, class QWidget *)
+// void showText(const QPoint &, const QString &, QWidget *)
 func (this *QWhatsThis) ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget", ffiqt.FFI_TYPE_POINTER, pos, text, w)
 	gopp.ErrPrint(err, rv)
@@ -144,7 +144,7 @@ func QWhatsThis_HideText() {
 // /usr/include/qt/QtWidgets/qwhatsthis.h:65
 // index:0
 // Public static
-// QAction * createAction(class QObject *)
+// QAction * createAction(QObject *)
 func (this *QWhatsThis) CreateAction(parent *qtcore.QObject /*777 QObject **/) *QAction /*777 QAction **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThis12createActionEP7QObject", ffiqt.FFI_TYPE_POINTER, parent)
 	gopp.ErrPrint(err, rv)

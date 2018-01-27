@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -196,7 +196,7 @@ func (this *QElapsedTimer) MsecsSinceReference() int64 {
 // /usr/include/qt/QtCore/qelapsedtimer.h:78
 // index:0
 // Public
-// qint64 msecsTo(const class QElapsedTimer &)
+// qint64 msecsTo(const QElapsedTimer &)
 func (this *QElapsedTimer) MsecsTo(other *QElapsedTimer) int64 {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QElapsedTimer7msecsToERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -208,7 +208,7 @@ func (this *QElapsedTimer) MsecsTo(other *QElapsedTimer) int64 {
 // /usr/include/qt/QtCore/qelapsedtimer.h:79
 // index:0
 // Public
-// qint64 secsTo(const class QElapsedTimer &)
+// qint64 secsTo(const QElapsedTimer &)
 func (this *QElapsedTimer) SecsTo(other *QElapsedTimer) int64 {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QElapsedTimer6secsToERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

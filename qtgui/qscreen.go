@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -419,7 +419,7 @@ func (this *QScreen) AngleBetween(a int, b int) int {
 // /usr/include/qt/QtGui/qscreen.h:143
 // index:0
 // Public
-// QTransform transformBetween(Qt::ScreenOrientation, Qt::ScreenOrientation, const class QRect &)
+// QTransform transformBetween(Qt::ScreenOrientation, Qt::ScreenOrientation, const QRect &)
 func (this *QScreen) TransformBetween(a int, b int, target *qtcore.QRect) *QTransform /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg2 = target.GetCthis()
@@ -434,7 +434,7 @@ func (this *QScreen) TransformBetween(a int, b int, target *qtcore.QRect) *QTran
 // /usr/include/qt/QtGui/qscreen.h:144
 // index:0
 // Public
-// QRect mapBetween(Qt::ScreenOrientation, Qt::ScreenOrientation, const class QRect &)
+// QRect mapBetween(Qt::ScreenOrientation, Qt::ScreenOrientation, const QRect &)
 func (this *QScreen) MapBetween(a int, b int, rect *qtcore.QRect) *qtcore.QRect /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg2 = rect.GetCthis()
@@ -496,7 +496,7 @@ func (this *QScreen) RefreshRate() float64 {
 // /usr/include/qt/QtGui/qscreen.h:154
 // index:0
 // Public
-// void geometryChanged(const class QRect &)
+// void geometryChanged(const QRect &)
 func (this *QScreen) GeometryChanged(geometry *qtcore.QRect) {
 	var convArg0 = geometry.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen15geometryChangedERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -506,7 +506,7 @@ func (this *QScreen) GeometryChanged(geometry *qtcore.QRect) {
 // /usr/include/qt/QtGui/qscreen.h:155
 // index:0
 // Public
-// void availableGeometryChanged(const class QRect &)
+// void availableGeometryChanged(const QRect &)
 func (this *QScreen) AvailableGeometryChanged(geometry *qtcore.QRect) {
 	var convArg0 = geometry.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen24availableGeometryChangedERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -516,7 +516,7 @@ func (this *QScreen) AvailableGeometryChanged(geometry *qtcore.QRect) {
 // /usr/include/qt/QtGui/qscreen.h:156
 // index:0
 // Public
-// void physicalSizeChanged(const class QSizeF &)
+// void physicalSizeChanged(const QSizeF &)
 func (this *QScreen) PhysicalSizeChanged(size *qtcore.QSizeF) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen19physicalSizeChangedERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -544,7 +544,7 @@ func (this *QScreen) LogicalDotsPerInchChanged(dpi float64) {
 // /usr/include/qt/QtGui/qscreen.h:159
 // index:0
 // Public
-// void virtualGeometryChanged(const class QRect &)
+// void virtualGeometryChanged(const QRect &)
 func (this *QScreen) VirtualGeometryChanged(rect *qtcore.QRect) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen22virtualGeometryChangedERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

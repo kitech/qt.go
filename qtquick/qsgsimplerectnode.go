@@ -16,8 +16,8 @@ package qtquick
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -85,7 +85,7 @@ func (*QSGSimpleRectNode) NewFromPointer(cthis unsafe.Pointer) *QSGSimpleRectNod
 // /usr/include/qt/QtQuick/qsgsimplerectnode.h:51
 // index:0
 // Public
-// void QSGSimpleRectNode(const class QRectF &, const class QColor &)
+// void QSGSimpleRectNode(const QRectF &, const QColor &)
 func NewQSGSimpleRectNode(rect *qtcore.QRectF, color *qtgui.QColor) *QSGSimpleRectNode {
 	cthis := qtrt.Calloc(1, 256) // 320
 	var convArg0 = rect.GetCthis()
@@ -111,7 +111,7 @@ func NewQSGSimpleRectNode_1() *QSGSimpleRectNode {
 // /usr/include/qt/QtQuick/qsgsimplerectnode.h:54
 // index:0
 // Public
-// void setRect(const class QRectF &)
+// void setRect(const QRectF &)
 func (this *QSGSimpleRectNode) SetRect(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSGSimpleRectNode7setRectERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -144,7 +144,7 @@ func (this *QSGSimpleRectNode) Rect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtQuick/qsgsimplerectnode.h:58
 // index:0
 // Public
-// void setColor(const class QColor &)
+// void setColor(const QColor &)
 func (this *QSGSimpleRectNode) SetColor(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSGSimpleRectNode8setColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

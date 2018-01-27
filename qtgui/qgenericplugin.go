@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -85,7 +85,7 @@ func (this *QGenericPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // /usr/include/qt/QtGui/qgenericplugin.h:55
 // index:0
 // Public
-// void QGenericPlugin(class QObject *)
+// void QGenericPlugin(QObject *)
 func NewQGenericPlugin(parent *qtcore.QObject /*777 QObject **/) *QGenericPlugin {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
@@ -107,7 +107,7 @@ func DeleteQGenericPlugin(*QGenericPlugin) {
 // /usr/include/qt/QtGui/qgenericplugin.h:58
 // index:0
 // Public pure virtual
-// QObject * create(const class QString &, const class QString &)
+// QObject * create(const QString &, const QString &)
 func (this *QGenericPlugin) Create(name *qtcore.QString, spec *qtcore.QString) *qtcore.QObject /*777 QObject **/ {
 	var convArg0 = name.GetCthis()
 	var convArg1 = spec.GetCthis()

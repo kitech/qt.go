@@ -16,8 +16,8 @@ package qtqml
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -144,7 +144,7 @@ func (this *QQmlScriptString) StringLiteral() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtQml/qqmlscriptstring.h:75
 // index:0
 // Public
-// qreal numberLiteral(_Bool *)
+// qreal numberLiteral(bool *)
 func (this *QQmlScriptString) NumberLiteral(ok unsafe.Pointer /*666*/) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QQmlScriptString13numberLiteralEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -155,7 +155,7 @@ func (this *QQmlScriptString) NumberLiteral(ok unsafe.Pointer /*666*/) float64 {
 // /usr/include/qt/QtQml/qqmlscriptstring.h:76
 // index:0
 // Public
-// bool booleanLiteral(_Bool *)
+// bool booleanLiteral(bool *)
 func (this *QQmlScriptString) BooleanLiteral(ok unsafe.Pointer /*666*/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QQmlScriptString14booleanLiteralEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)

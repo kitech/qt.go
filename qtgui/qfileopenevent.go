@@ -16,8 +16,8 @@ package qtgui
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -73,7 +73,7 @@ func (*QFileOpenEvent) NewFromPointer(cthis unsafe.Pointer) *QFileOpenEvent {
 // /usr/include/qt/QtGui/qevent.h:738
 // index:0
 // Public
-// void QFileOpenEvent(const class QString &)
+// void QFileOpenEvent(const QString &)
 func NewQFileOpenEvent(file *qtcore.QString) *QFileOpenEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = file.GetCthis()
@@ -86,7 +86,7 @@ func NewQFileOpenEvent(file *qtcore.QString) *QFileOpenEvent {
 // /usr/include/qt/QtGui/qevent.h:739
 // index:1
 // Public
-// void QFileOpenEvent(const class QUrl &)
+// void QFileOpenEvent(const QUrl &)
 func NewQFileOpenEvent_1(url *qtcore.QUrl) *QFileOpenEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = url.GetCthis()

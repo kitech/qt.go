@@ -16,8 +16,8 @@ package qtcore
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -80,7 +80,7 @@ func NewQTimeZone() *QTimeZone {
 // /usr/include/qt/QtCore/qtimezone.h:93
 // index:1
 // Public
-// void QTimeZone(const class QByteArray &)
+// void QTimeZone(const QByteArray &)
 func NewQTimeZone_1(ianaId *QByteArray) *QTimeZone {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = ianaId.GetCthis()
@@ -105,7 +105,7 @@ func NewQTimeZone_2(offsetSeconds int) *QTimeZone {
 // /usr/include/qt/QtCore/qtimezone.h:95
 // index:3
 // Public
-// void QTimeZone(const class QByteArray &, int, const class QString &, const class QString &, class QLocale::Country, const class QString &)
+// void QTimeZone(const QByteArray &, int, const QString &, const QString &, QLocale::Country, const QString &)
 func NewQTimeZone_3(zoneId *QByteArray, offsetSeconds int, name *QString, abbreviation *QString, country int, comment *QString) *QTimeZone {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = zoneId.GetCthis()
@@ -130,7 +130,7 @@ func DeleteQTimeZone(*QTimeZone) {
 // /usr/include/qt/QtCore/qtimezone.h:106
 // index:0
 // Public inline
-// void swap(class QTimeZone &)
+// void swap(QTimeZone &)
 func (this *QTimeZone) Swap(other *QTimeZone) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZone4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -190,7 +190,7 @@ func (this *QTimeZone) Comment() *QString /*123*/ {
 // /usr/include/qt/QtCore/qtimezone.h:118
 // index:0
 // Public
-// QString displayName(const class QDateTime &, class QTimeZone::NameType, const class QLocale &)
+// QString displayName(const QDateTime &, QTimeZone::NameType, const QLocale &)
 func (this *QTimeZone) DisplayName(atDateTime *QDateTime, nameType int, locale *QLocale) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = atDateTime.GetCthis()
@@ -206,7 +206,7 @@ func (this *QTimeZone) DisplayName(atDateTime *QDateTime, nameType int, locale *
 // /usr/include/qt/QtCore/qtimezone.h:121
 // index:1
 // Public
-// QString displayName(class QTimeZone::TimeType, class QTimeZone::NameType, const class QLocale &)
+// QString displayName(QTimeZone::TimeType, QTimeZone::NameType, const QLocale &)
 func (this *QTimeZone) DisplayName_1(timeType int, nameType int, locale *QLocale) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg2 = locale.GetCthis()
@@ -221,7 +221,7 @@ func (this *QTimeZone) DisplayName_1(timeType int, nameType int, locale *QLocale
 // /usr/include/qt/QtCore/qtimezone.h:124
 // index:0
 // Public
-// QString abbreviation(const class QDateTime &)
+// QString abbreviation(const QDateTime &)
 func (this *QTimeZone) Abbreviation(atDateTime *QDateTime) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = atDateTime.GetCthis()
@@ -236,7 +236,7 @@ func (this *QTimeZone) Abbreviation(atDateTime *QDateTime) *QString /*123*/ {
 // /usr/include/qt/QtCore/qtimezone.h:126
 // index:0
 // Public
-// int offsetFromUtc(const class QDateTime &)
+// int offsetFromUtc(const QDateTime &)
 func (this *QTimeZone) OffsetFromUtc(atDateTime *QDateTime) int {
 	var convArg0 = atDateTime.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone13offsetFromUtcERK9QDateTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -248,7 +248,7 @@ func (this *QTimeZone) OffsetFromUtc(atDateTime *QDateTime) int {
 // /usr/include/qt/QtCore/qtimezone.h:127
 // index:0
 // Public
-// int standardTimeOffset(const class QDateTime &)
+// int standardTimeOffset(const QDateTime &)
 func (this *QTimeZone) StandardTimeOffset(atDateTime *QDateTime) int {
 	var convArg0 = atDateTime.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone18standardTimeOffsetERK9QDateTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -260,7 +260,7 @@ func (this *QTimeZone) StandardTimeOffset(atDateTime *QDateTime) int {
 // /usr/include/qt/QtCore/qtimezone.h:128
 // index:0
 // Public
-// int daylightTimeOffset(const class QDateTime &)
+// int daylightTimeOffset(const QDateTime &)
 func (this *QTimeZone) DaylightTimeOffset(atDateTime *QDateTime) int {
 	var convArg0 = atDateTime.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone18daylightTimeOffsetERK9QDateTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -283,7 +283,7 @@ func (this *QTimeZone) HasDaylightTime() bool {
 // /usr/include/qt/QtCore/qtimezone.h:131
 // index:0
 // Public
-// bool isDaylightTime(const class QDateTime &)
+// bool isDaylightTime(const QDateTime &)
 func (this *QTimeZone) IsDaylightTime(atDateTime *QDateTime) bool {
 	var convArg0 = atDateTime.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeZone14isDaylightTimeERK9QDateTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -295,7 +295,7 @@ func (this *QTimeZone) IsDaylightTime(atDateTime *QDateTime) bool {
 // /usr/include/qt/QtCore/qtimezone.h:133
 // index:0
 // Public
-// QTimeZone::OffsetData offsetData(const class QDateTime &)
+// QTimeZone::OffsetData offsetData(const QDateTime &)
 func (this *QTimeZone) OffsetData(forDateTime *QDateTime) unsafe.Pointer /*444*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = forDateTime.GetCthis()
@@ -320,7 +320,7 @@ func (this *QTimeZone) HasTransitions() bool {
 // /usr/include/qt/QtCore/qtimezone.h:136
 // index:0
 // Public
-// QTimeZone::OffsetData nextTransition(const class QDateTime &)
+// QTimeZone::OffsetData nextTransition(const QDateTime &)
 func (this *QTimeZone) NextTransition(afterDateTime *QDateTime) unsafe.Pointer /*444*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = afterDateTime.GetCthis()
@@ -334,7 +334,7 @@ func (this *QTimeZone) NextTransition(afterDateTime *QDateTime) unsafe.Pointer /
 // /usr/include/qt/QtCore/qtimezone.h:137
 // index:0
 // Public
-// QTimeZone::OffsetData previousTransition(const class QDateTime &)
+// QTimeZone::OffsetData previousTransition(const QDateTime &)
 func (this *QTimeZone) PreviousTransition(beforeDateTime *QDateTime) unsafe.Pointer /*444*/ {
 	mv := qtrt.Calloc(1, 256)
 	var convArg0 = beforeDateTime.GetCthis()
@@ -399,7 +399,7 @@ func QTimeZone_Utc() *QTimeZone /*123*/ {
 // /usr/include/qt/QtCore/qtimezone.h:144
 // index:0
 // Public static
-// bool isTimeZoneIdAvailable(const class QByteArray &)
+// bool isTimeZoneIdAvailable(const QByteArray &)
 func (this *QTimeZone) IsTimeZoneIdAvailable(ianaId *QByteArray) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZone21isTimeZoneIdAvailableERK10QByteArray", ffiqt.FFI_TYPE_POINTER, ianaId)
 	gopp.ErrPrint(err, rv)
@@ -415,7 +415,7 @@ func QTimeZone_IsTimeZoneIdAvailable(ianaId *QByteArray) bool {
 // /usr/include/qt/QtCore/qtimezone.h:150
 // index:0
 // Public static
-// QByteArray ianaIdToWindowsId(const class QByteArray &)
+// QByteArray ianaIdToWindowsId(const QByteArray &)
 func (this *QTimeZone) IanaIdToWindowsId(ianaId *QByteArray) *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZone17ianaIdToWindowsIdERK10QByteArray", ffiqt.FFI_TYPE_POINTER, ianaId)
 	gopp.ErrPrint(err, rv)
@@ -432,7 +432,7 @@ func QTimeZone_IanaIdToWindowsId(ianaId *QByteArray) *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qtimezone.h:151
 // index:0
 // Public static
-// QByteArray windowsIdToDefaultIanaId(const class QByteArray &)
+// QByteArray windowsIdToDefaultIanaId(const QByteArray &)
 func (this *QTimeZone) WindowsIdToDefaultIanaId(windowsId *QByteArray) *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZone24windowsIdToDefaultIanaIdERK10QByteArray", ffiqt.FFI_TYPE_POINTER, windowsId)
 	gopp.ErrPrint(err, rv)
@@ -449,7 +449,7 @@ func QTimeZone_WindowsIdToDefaultIanaId(windowsId *QByteArray) *QByteArray /*123
 // /usr/include/qt/QtCore/qtimezone.h:152
 // index:1
 // Public static
-// QByteArray windowsIdToDefaultIanaId(const class QByteArray &, class QLocale::Country)
+// QByteArray windowsIdToDefaultIanaId(const QByteArray &, QLocale::Country)
 func (this *QTimeZone) WindowsIdToDefaultIanaId_1(windowsId *QByteArray, country int) *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZone24windowsIdToDefaultIanaIdERK10QByteArrayN7QLocale7CountryE", ffiqt.FFI_TYPE_POINTER, windowsId, country)
 	gopp.ErrPrint(err, rv)

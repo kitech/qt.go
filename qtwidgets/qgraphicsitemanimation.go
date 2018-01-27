@@ -16,8 +16,8 @@ package qtwidgets
 import "unsafe"
 import "reflect"
 import "fmt"
-import "mkuse/cffiqt"
 import "gopp"
+import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -89,7 +89,7 @@ func (this *QGraphicsItemAnimation) MetaObject() *qtcore.QMetaObject /*777 const
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:61
 // index:0
 // Public
-// void QGraphicsItemAnimation(class QObject *)
+// void QGraphicsItemAnimation(QObject *)
 func NewQGraphicsItemAnimation(parent *qtcore.QObject /*777 QObject **/) *QGraphicsItemAnimation {
 	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = parent.GetCthis()
@@ -123,7 +123,7 @@ func (this *QGraphicsItemAnimation) Item() *QGraphicsItem /*777 QGraphicsItem **
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:65
 // index:0
 // Public
-// void setItem(class QGraphicsItem *)
+// void setItem(QGraphicsItem *)
 func (this *QGraphicsItemAnimation) SetItem(item *QGraphicsItem /*777 QGraphicsItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation7setItemEP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -145,7 +145,7 @@ func (this *QGraphicsItemAnimation) TimeLine() *qtcore.QTimeLine /*777 QTimeLine
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:68
 // index:0
 // Public
-// void setTimeLine(class QTimeLine *)
+// void setTimeLine(QTimeLine *)
 func (this *QGraphicsItemAnimation) SetTimeLine(timeLine *qtcore.QTimeLine /*777 QTimeLine **/) {
 	var convArg0 = timeLine.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation11setTimeLineEP9QTimeLine", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -169,7 +169,7 @@ func (this *QGraphicsItemAnimation) PosAt(step float64) *qtcore.QPointF /*123*/ 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:72
 // index:0
 // Public
-// void setPosAt(qreal, const class QPointF &)
+// void setPosAt(qreal, const QPointF &)
 func (this *QGraphicsItemAnimation) SetPosAt(step float64, pos *qtcore.QPointF) {
 	var convArg1 = pos.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimation8setPosAtEdRK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step, convArg1)
