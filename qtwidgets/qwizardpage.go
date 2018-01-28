@@ -183,7 +183,7 @@ func (this *QWizardPage) Pixmap(which int) *qtgui.QPixmap /*123*/ {
 // /usr/include/qt/QtWidgets/qwizard.h:227
 // index:0
 // Public
-// void setFinalPage(bool)
+// void setFinalPage(_Bool)
 func (this *QWizardPage) SetFinalPage(finalPage bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPage12setFinalPageEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), finalPage)
 	gopp.ErrPrint(err, rv)
@@ -203,7 +203,7 @@ func (this *QWizardPage) IsFinalPage() bool {
 // /usr/include/qt/QtWidgets/qwizard.h:229
 // index:0
 // Public
-// void setCommitPage(bool)
+// void setCommitPage(_Bool)
 func (this *QWizardPage) SetCommitPage(commitPage bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPage13setCommitPageEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), commitPage)
 	gopp.ErrPrint(err, rv)
@@ -292,7 +292,7 @@ func (this *QWizardPage) NextId() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWizardPage6nextIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:241
@@ -320,8 +320,8 @@ func (this *QWizardPage) SetField(name *qtcore.QString, value *qtcore.QVariant) 
 // Protected
 // QVariant field(const QString &)
 func (this *QWizardPage) Field(name *qtcore.QString) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = name.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QWizardPage5fieldERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

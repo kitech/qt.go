@@ -111,10 +111,10 @@ func (this *QTextInlineObject) Rect() *qtcore.QRectF /*123*/ {
 // Public
 // qreal width()
 func (this *QTextInlineObject) Width() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject5widthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:77
@@ -122,10 +122,10 @@ func (this *QTextInlineObject) Width() float64 {
 // Public
 // qreal ascent()
 func (this *QTextInlineObject) Ascent() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject6ascentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject6ascentEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:78
@@ -133,10 +133,10 @@ func (this *QTextInlineObject) Ascent() float64 {
 // Public
 // qreal descent()
 func (this *QTextInlineObject) Descent() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject7descentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject7descentEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:79
@@ -144,10 +144,10 @@ func (this *QTextInlineObject) Descent() float64 {
 // Public
 // qreal height()
 func (this *QTextInlineObject) Height() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject6heightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject6heightEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:81
@@ -196,7 +196,7 @@ func (this *QTextInlineObject) TextPosition() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject12textPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:89
@@ -207,7 +207,7 @@ func (this *QTextInlineObject) FormatIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QTextInlineObject11formatIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:90

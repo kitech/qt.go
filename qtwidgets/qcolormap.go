@@ -144,7 +144,7 @@ func (this *QColormap) Depth() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap5depthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qcolormap.h:73
@@ -155,7 +155,7 @@ func (this *QColormap) Size() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QColormap4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qcolormap.h:75

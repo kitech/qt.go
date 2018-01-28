@@ -112,7 +112,7 @@ func (this *QTextList) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlist.h:62
@@ -149,7 +149,7 @@ func (this *QTextList) ItemNumber(arg0 *QTextBlock) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList10itemNumberERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlist.h:68
@@ -157,8 +157,8 @@ func (this *QTextList) ItemNumber(arg0 *QTextBlock) int {
 // Public
 // QString itemText(const QTextBlock &)
 func (this *QTextList) ItemText(arg0 *QTextBlock) *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextList8itemTextERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

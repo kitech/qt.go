@@ -161,7 +161,10 @@ func (this *QLibrary) Resolve(symbol string) unsafe.Pointer /*666*/ {
 // Public static
 // QFunctionPointer resolve(const QString &, const char *)
 func (this *QLibrary) Resolve_1(fileName *QString, symbol string) unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibrary7resolveERK7QStringPKc", ffiqt.FFI_TYPE_POINTER, fileName, symbol)
+	var convArg0 = fileName.GetCthis()
+	var convArg1 = qtrt.CString(symbol)
+	defer qtrt.FreeMem(convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibrary7resolveERK7QStringPKc", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -177,7 +180,10 @@ func QLibrary_Resolve_1(fileName *QString, symbol string) unsafe.Pointer /*666*/
 // Public static
 // QFunctionPointer resolve(const QString &, int, const char *)
 func (this *QLibrary) Resolve_2(fileName *QString, verNum int, symbol string) unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibrary7resolveERK7QStringiPKc", ffiqt.FFI_TYPE_POINTER, fileName, verNum, symbol)
+	var convArg0 = fileName.GetCthis()
+	var convArg2 = qtrt.CString(symbol)
+	defer qtrt.FreeMem(convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibrary7resolveERK7QStringiPKc", ffiqt.FFI_TYPE_POINTER, convArg0, verNum, convArg2)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -193,7 +199,11 @@ func QLibrary_Resolve_2(fileName *QString, verNum int, symbol string) unsafe.Poi
 // Public static
 // QFunctionPointer resolve(const QString &, const QString &, const char *)
 func (this *QLibrary) Resolve_3(fileName *QString, version *QString, symbol string) unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibrary7resolveERK7QStringS2_PKc", ffiqt.FFI_TYPE_POINTER, fileName, version, symbol)
+	var convArg0 = fileName.GetCthis()
+	var convArg1 = version.GetCthis()
+	var convArg2 = qtrt.CString(symbol)
+	defer qtrt.FreeMem(convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibrary7resolveERK7QStringS2_PKc", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -242,7 +252,8 @@ func (this *QLibrary) IsLoaded() bool {
 // Public static
 // bool isLibrary(const QString &)
 func (this *QLibrary) IsLibrary(fileName *QString) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibrary9isLibraryERK7QString", ffiqt.FFI_TYPE_POINTER, fileName)
+	var convArg0 = fileName.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibrary9isLibraryERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0

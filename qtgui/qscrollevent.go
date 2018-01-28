@@ -73,7 +73,7 @@ func (*QScrollEvent) NewFromPointer(cthis unsafe.Pointer) *QScrollEvent {
 // /usr/include/qt/QtGui/qevent.h:1022
 // index:0
 // Public
-// void QScrollEvent(const QPointF &, const QPointF &, QScrollEvent::ScrollState)
+// void QScrollEvent(const QPointF &, const QPointF &, enum QScrollEvent::ScrollState)
 func NewQScrollEvent(contentPos *qtcore.QPointF, overshoot *qtcore.QPointF, scrollState int) *QScrollEvent {
 	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = contentPos.GetCthis()

@@ -137,10 +137,10 @@ func (this *QGraphicsScale) SetOrigin(point *qtgui.QVector3D) {
 // Public
 // qreal xScale()
 func (this *QGraphicsScale) XScale() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale6xScaleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale6xScaleEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:95
@@ -157,10 +157,10 @@ func (this *QGraphicsScale) SetXScale(arg0 float64) {
 // Public
 // qreal yScale()
 func (this *QGraphicsScale) YScale() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale6yScaleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale6yScaleEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:98
@@ -177,10 +177,10 @@ func (this *QGraphicsScale) SetYScale(arg0 float64) {
 // Public
 // qreal zScale()
 func (this *QGraphicsScale) ZScale() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale6zScaleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale6zScaleEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:101

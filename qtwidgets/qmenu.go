@@ -342,7 +342,7 @@ func (this *QMenu) Clear() {
 // /usr/include/qt/QtWidgets/qmenu.h:173
 // index:0
 // Public
-// void setTearOffEnabled(bool)
+// void setTearOffEnabled(_Bool)
 func (this *QMenu) SetTearOffEnabled(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu17setTearOffEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -485,7 +485,7 @@ func (this *QMenu) Exec_1(pos *qtcore.QPoint, at *QAction /*777 QAction **/) *QA
 // QSize sizeHint()
 func (this *QMenu) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK5QMenu8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -498,8 +498,8 @@ func (this *QMenu) SizeHint() *qtcore.QSize /*123*/ {
 // Public
 // QRect actionGeometry(QAction *)
 func (this *QMenu) ActionGeometry(arg0 *QAction /*777 QAction **/) *qtcore.QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu14actionGeometryEP7QAction", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -605,7 +605,7 @@ func (this *QMenu) SeparatorsCollapsible() bool {
 // /usr/include/qt/QtWidgets/qmenu.h:220
 // index:0
 // Public
-// void setSeparatorsCollapsible(bool)
+// void setSeparatorsCollapsible(_Bool)
 func (this *QMenu) SetSeparatorsCollapsible(collapse bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu24setSeparatorsCollapsibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), collapse)
 	gopp.ErrPrint(err, rv)
@@ -625,7 +625,7 @@ func (this *QMenu) ToolTipsVisible() bool {
 // /usr/include/qt/QtWidgets/qmenu.h:223
 // index:0
 // Public
-// void setToolTipsVisible(bool)
+// void setToolTipsVisible(_Bool)
 func (this *QMenu) SetToolTipsVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu18setToolTipsVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
@@ -677,7 +677,7 @@ func (this *QMenu) ColumnCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QMenu11columnCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:234
@@ -815,7 +815,7 @@ func (this *QMenu) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 // /usr/include/qt/QtWidgets/qmenu.h:249
 // index:0
 // Protected virtual
-// bool focusNextPrevChild(bool)
+// bool focusNextPrevChild(_Bool)
 func (this *QMenu) FocusNextPrevChild(next bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenu18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), next)
 	gopp.ErrPrint(err, rv)

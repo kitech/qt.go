@@ -119,7 +119,7 @@ func (this *QTimer) TimerId() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer7timerIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qtimer.h:72
@@ -139,7 +139,7 @@ func (this *QTimer) Interval() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer8intervalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qtimer.h:75
@@ -150,7 +150,7 @@ func (this *QTimer) RemainingTime() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer13remainingTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qtimer.h:77
@@ -176,7 +176,7 @@ func (this *QTimer) TimerType() int {
 // /usr/include/qt/QtCore/qtimer.h:80
 // index:0
 // Public inline
-// void setSingleShot(bool)
+// void setSingleShot(_Bool)
 func (this *QTimer) SetSingleShot(singleShot bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer13setSingleShotEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), singleShot)
 	gopp.ErrPrint(err, rv)
@@ -198,7 +198,10 @@ func (this *QTimer) IsSingleShot() bool {
 // Public static
 // void singleShot(int, const QObject *, const char *)
 func (this *QTimer) SingleShot(msec int, receiver *QObject /*777 const QObject **/, member string) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer10singleShotEiPK7QObjectPKc", ffiqt.FFI_TYPE_POINTER, msec, receiver, member)
+	var convArg1 = receiver.GetCthis()
+	var convArg2 = qtrt.CString(member)
+	defer qtrt.FreeMem(convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer10singleShotEiPK7QObjectPKc", ffiqt.FFI_TYPE_POINTER, msec, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 func QTimer_SingleShot(msec int, receiver *QObject /*777 const QObject **/, member string) {
@@ -211,7 +214,10 @@ func QTimer_SingleShot(msec int, receiver *QObject /*777 const QObject **/, memb
 // Public static
 // void singleShot(int, Qt::TimerType, const QObject *, const char *)
 func (this *QTimer) SingleShot_1(msec int, timerType int, receiver *QObject /*777 const QObject **/, member string) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer10singleShotEiN2Qt9TimerTypeEPK7QObjectPKc", ffiqt.FFI_TYPE_POINTER, msec, timerType, receiver, member)
+	var convArg2 = receiver.GetCthis()
+	var convArg3 = qtrt.CString(member)
+	defer qtrt.FreeMem(convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer10singleShotEiN2Qt9TimerTypeEPK7QObjectPKc", ffiqt.FFI_TYPE_POINTER, msec, timerType, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 }
 func QTimer_SingleShot_1(msec int, timerType int, receiver *QObject /*777 const QObject **/, member string) {

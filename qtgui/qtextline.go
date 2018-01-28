@@ -111,10 +111,10 @@ func (this *QTextLine) Rect() *qtcore.QRectF /*123*/ {
 // Public
 // qreal x()
 func (this *QTextLine) X() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine1xEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:218
@@ -122,10 +122,10 @@ func (this *QTextLine) X() float64 {
 // Public
 // qreal y()
 func (this *QTextLine) Y() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine1yEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:219
@@ -133,10 +133,10 @@ func (this *QTextLine) Y() float64 {
 // Public
 // qreal width()
 func (this *QTextLine) Width() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine5widthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:220
@@ -144,10 +144,10 @@ func (this *QTextLine) Width() float64 {
 // Public
 // qreal ascent()
 func (this *QTextLine) Ascent() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine6ascentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine6ascentEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:221
@@ -155,10 +155,10 @@ func (this *QTextLine) Ascent() float64 {
 // Public
 // qreal descent()
 func (this *QTextLine) Descent() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine7descentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine7descentEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:222
@@ -166,10 +166,10 @@ func (this *QTextLine) Descent() float64 {
 // Public
 // qreal height()
 func (this *QTextLine) Height() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine6heightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine6heightEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:223
@@ -177,16 +177,16 @@ func (this *QTextLine) Height() float64 {
 // Public
 // qreal leading()
 func (this *QTextLine) Leading() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine7leadingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine7leadingEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:225
 // index:0
 // Public
-// void setLeadingIncluded(bool)
+// void setLeadingIncluded(_Bool)
 func (this *QTextLine) SetLeadingIncluded(included bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextLine18setLeadingIncludedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), included)
 	gopp.ErrPrint(err, rv)
@@ -208,10 +208,10 @@ func (this *QTextLine) LeadingIncluded() bool {
 // Public
 // qreal naturalTextWidth()
 func (this *QTextLine) NaturalTextWidth() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine16naturalTextWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine16naturalTextWidthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:229
@@ -219,10 +219,10 @@ func (this *QTextLine) NaturalTextWidth() float64 {
 // Public
 // qreal horizontalAdvance()
 func (this *QTextLine) HorizontalAdvance() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine17horizontalAdvanceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine17horizontalAdvanceEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:230
@@ -242,34 +242,34 @@ func (this *QTextLine) NaturalTextRect() *qtcore.QRectF /*123*/ {
 // /usr/include/qt/QtGui/qtextlayout.h:242
 // index:0
 // Public
-// qreal cursorToX(int *, QTextLine::Edge)
+// qreal cursorToX(int *, enum QTextLine::Edge)
 func (this *QTextLine) CursorToX(cursorPos unsafe.Pointer /*666*/, edge int) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine9cursorToXEPiNS_4EdgeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &cursorPos, edge)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine9cursorToXEPiNS_4EdgeE", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), &cursorPos, edge)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:243
 // index:1
 // Public inline
-// qreal cursorToX(int, QTextLine::Edge)
+// qreal cursorToX(int, enum QTextLine::Edge)
 func (this *QTextLine) CursorToX_1(cursorPos int, edge int) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine9cursorToXEiNS_4EdgeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cursorPos, edge)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine9cursorToXEiNS_4EdgeE", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), cursorPos, edge)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:244
 // index:0
 // Public
-// int xToCursor(qreal, QTextLine::CursorPosition)
+// int xToCursor(qreal, enum QTextLine::CursorPosition)
 func (this *QTextLine) XToCursor(x float64, arg1 int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine9xToCursorEdNS_14CursorPositionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, arg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:246
@@ -331,7 +331,7 @@ func (this *QTextLine) TextStart() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine9textStartEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:254
@@ -342,7 +342,7 @@ func (this *QTextLine) TextLength() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine10textLengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:256
@@ -353,7 +353,7 @@ func (this *QTextLine) LineNumber() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextLine10lineNumberEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 type QTextLine__Edge = int

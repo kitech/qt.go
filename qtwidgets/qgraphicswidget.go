@@ -252,7 +252,7 @@ func (this *QGraphicsWidget) AutoFillBackground() bool {
 // /usr/include/qt/QtWidgets/qgraphicswidget.h:103
 // index:0
 // Public
-// void setAutoFillBackground(bool)
+// void setAutoFillBackground(_Bool)
 func (this *QGraphicsWidget) SetAutoFillBackground(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsWidget21setAutoFillBackgroundEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -283,7 +283,7 @@ func (this *QGraphicsWidget) Resize_1(w float64, h float64) {
 // QSizeF size()
 func (this *QGraphicsWidget) Size() *qtcore.QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsWidget4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK15QGraphicsWidget4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -488,7 +488,9 @@ func (this *QGraphicsWidget) SetFocusPolicy(policy int) {
 // Public static
 // void setTabOrder(QGraphicsWidget *, QGraphicsWidget *)
 func (this *QGraphicsWidget) SetTabOrder(first *QGraphicsWidget /*777 QGraphicsWidget **/, second *QGraphicsWidget /*777 QGraphicsWidget **/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsWidget11setTabOrderEPS_S0_", ffiqt.FFI_TYPE_POINTER, first, second)
+	var convArg0 = first.GetCthis()
+	var convArg1 = second.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsWidget11setTabOrderEPS_S0_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 func QGraphicsWidget_SetTabOrder(first *QGraphicsWidget /*777 QGraphicsWidget **/, second *QGraphicsWidget /*777 QGraphicsWidget **/) {
@@ -517,7 +519,7 @@ func (this *QGraphicsWidget) GrabShortcut(sequence *qtgui.QKeySequence, context 
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsWidget12grabShortcutERK12QKeySequenceN2Qt15ShortcutContextE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, context)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicswidget.h:138
@@ -532,7 +534,7 @@ func (this *QGraphicsWidget) ReleaseShortcut(id int) {
 // /usr/include/qt/QtWidgets/qgraphicswidget.h:139
 // index:0
 // Public
-// void setShortcutEnabled(int, bool)
+// void setShortcutEnabled(int, _Bool)
 func (this *QGraphicsWidget) SetShortcutEnabled(id int, enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsWidget18setShortcutEnabledEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id, enabled)
 	gopp.ErrPrint(err, rv)
@@ -541,7 +543,7 @@ func (this *QGraphicsWidget) SetShortcutEnabled(id int, enabled bool) {
 // /usr/include/qt/QtWidgets/qgraphicswidget.h:140
 // index:0
 // Public
-// void setShortcutAutoRepeat(int, bool)
+// void setShortcutAutoRepeat(int, _Bool)
 func (this *QGraphicsWidget) SetShortcutAutoRepeat(id int, enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsWidget21setShortcutAutoRepeatEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id, enabled)
 	gopp.ErrPrint(err, rv)
@@ -581,7 +583,7 @@ func (this *QGraphicsWidget) RemoveAction(action *QAction /*777 QAction **/) {
 // /usr/include/qt/QtWidgets/qgraphicswidget.h:158
 // index:0
 // Public
-// void setAttribute(Qt::WidgetAttribute, bool)
+// void setAttribute(Qt::WidgetAttribute, _Bool)
 func (this *QGraphicsWidget) SetAttribute(attribute int, on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsWidget12setAttributeEN2Qt15WidgetAttributeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), attribute, on)
 	gopp.ErrPrint(err, rv)
@@ -606,7 +608,7 @@ func (this *QGraphicsWidget) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsWidget4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicswidget.h:166
@@ -705,9 +707,9 @@ func (this *QGraphicsWidget) InitStyleOption(option *QStyleOption /*777 QStyleOp
 // Protected virtual
 // QSizeF sizeHint(Qt::SizeHint, const QSizeF &)
 func (this *QGraphicsWidget) SizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg1 = constraint.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsWidget8sizeHintEN2Qt8SizeHintERK6QSizeF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), which, convArg1)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK15QGraphicsWidget8sizeHintEN2Qt8SizeHintERK6QSizeF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), which, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -727,10 +729,10 @@ func (this *QGraphicsWidget) UpdateGeometry() {
 // /usr/include/qt/QtWidgets/qgraphicswidget.h:191
 // index:0
 // Protected virtual
-// QVariant itemChange(QGraphicsItem::GraphicsItemChange, const QVariant &)
+// QVariant itemChange(enum QGraphicsItem::GraphicsItemChange, const QVariant &)
 func (this *QGraphicsWidget) ItemChange(change int, value *qtcore.QVariant) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg1 = value.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsWidget10itemChangeEN13QGraphicsItem18GraphicsItemChangeERK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), change, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -744,9 +746,9 @@ func (this *QGraphicsWidget) ItemChange(change int, value *qtcore.QVariant) *qtc
 // Protected virtual
 // QVariant propertyChange(const QString &, const QVariant &)
 func (this *QGraphicsWidget) PropertyChange(propertyName *qtcore.QString, value *qtcore.QVariant) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = propertyName.GetCthis()
 	var convArg1 = value.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsWidget14propertyChangeERK7QStringRK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -836,7 +838,7 @@ func (this *QGraphicsWidget) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusE
 // /usr/include/qt/QtWidgets/qgraphicswidget.h:207
 // index:0
 // Protected virtual
-// bool focusNextPrevChild(bool)
+// bool focusNextPrevChild(_Bool)
 func (this *QGraphicsWidget) FocusNextPrevChild(next bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsWidget18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), next)
 	gopp.ErrPrint(err, rv)

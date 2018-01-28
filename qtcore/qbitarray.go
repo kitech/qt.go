@@ -80,7 +80,7 @@ func NewQBitArray() *QBitArray {
 // /usr/include/qt/QtCore/qbitarray.h:58
 // index:1
 // Public
-// void QBitArray(int, bool)
+// void QBitArray(int, _Bool)
 func NewQBitArray_1(size int, val bool) *QBitArray {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArrayC2Eib", ffiqt.FFI_TYPE_VOID, cthis, size, val)
@@ -107,7 +107,7 @@ func (this *QBitArray) Size() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QBitArray4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qbitarray.h:70
@@ -118,18 +118,18 @@ func (this *QBitArray) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QBitArray5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qbitarray.h:71
 // index:1
 // Public
-// int count(bool)
+// int count(_Bool)
 func (this *QBitArray) Count_1(on bool) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QBitArray5countEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qbitarray.h:73
@@ -215,7 +215,7 @@ func (this *QBitArray) SetBit(i int) {
 // /usr/include/qt/QtCore/qbitarray.h:84
 // index:1
 // Public
-// void setBit(int, bool)
+// void setBit(int, _Bool)
 func (this *QBitArray) SetBit_1(i int, val bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray6setBitEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i, val)
 	gopp.ErrPrint(err, rv)
@@ -255,7 +255,7 @@ func (this *QBitArray) At(i int) bool {
 // /usr/include/qt/QtCore/qbitarray.h:102
 // index:0
 // Public inline
-// bool fill(bool, int)
+// bool fill(_Bool, int)
 func (this *QBitArray) Fill(val bool, size int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray4fillEbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), val, size)
 	gopp.ErrPrint(err, rv)
@@ -266,7 +266,7 @@ func (this *QBitArray) Fill(val bool, size int) bool {
 // /usr/include/qt/QtCore/qbitarray.h:103
 // index:1
 // Public
-// void fill(bool, int, int)
+// void fill(_Bool, int, int)
 func (this *QBitArray) Fill_1(val bool, first int, last int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray4fillEbii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), val, first, last)
 	gopp.ErrPrint(err, rv)

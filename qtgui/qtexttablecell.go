@@ -122,7 +122,7 @@ func (this *QTextTableCell) Row() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell3rowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:67
@@ -133,7 +133,7 @@ func (this *QTextTableCell) Column() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell6columnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:69
@@ -144,7 +144,7 @@ func (this *QTextTableCell) RowSpan() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell7rowSpanEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:70
@@ -155,7 +155,7 @@ func (this *QTextTableCell) ColumnSpan() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell10columnSpanEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:72
@@ -205,7 +205,7 @@ func (this *QTextTableCell) FirstPosition() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell13firstPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:77
@@ -216,7 +216,7 @@ func (this *QTextTableCell) LastPosition() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell12lastPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:84
@@ -249,7 +249,7 @@ func (this *QTextTableCell) TableCellFormatIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell20tableCellFormatIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 //  body block end

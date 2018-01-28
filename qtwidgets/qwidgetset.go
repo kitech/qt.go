@@ -112,7 +112,7 @@ func (this *QWidgetSet) IsDetached_0() bool {
 	return 0 == 0
 }
 
-// void setSharable(bool)
+// void setSharable(_Bool)
 func (this *QWidgetSet) SetSharable_0() {
 	// QWidgetSet_setSharable_0()
 }
@@ -210,12 +210,12 @@ func (this *QWidgetSet) Crend_0() {
 	// QWidgetSet_crend_0()
 }
 
-// QSet::iterator erase(QSet::iterator)
+// QSet::iterator erase(class QSet::iterator)
 func (this *QWidgetSet) Erase_0() {
 	// QWidgetSet_erase_0()
 }
 
-// QSet::iterator erase(QSet::const_iterator)
+// QSet::iterator erase(class QSet::const_iterator)
 func (this *QWidgetSet) Erase_1() {
 	// QWidgetSet_erase_1()
 }
@@ -370,18 +370,18 @@ func (this *QWidgetSet) FromList_0() *QWidgetSet {
 	return this
 }
 
-// QSet::const_iterator m2c(QSet::iterator)
+// QSet::const_iterator m2c(class QSet::iterator)
 func (this *QWidgetSet) M2c_0() {
 	// QWidgetSet_m2c_0()
 }
 
-// bool isValidIterator(const QSet::iterator &)
+// bool isValidIterator(const class QSet::iterator &)
 func (this *QWidgetSet) IsValidIterator_0() bool {
 	// QWidgetSet_isValidIterator_0()
 	return 0 == 0
 }
 
-// bool isValidIterator(const QSet::const_iterator &)
+// bool isValidIterator(const class QSet::const_iterator &)
 func (this *QWidgetSet) IsValidIterator_1() bool {
 	// QWidgetSet_isValidIterator_1()
 	return 0 == 0

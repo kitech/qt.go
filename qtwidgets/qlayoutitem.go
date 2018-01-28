@@ -88,7 +88,7 @@ func DeleteQLayoutItem(*QLayoutItem) {
 // QSize sizeHint()
 func (this *QLayoutItem) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLayoutItem8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK11QLayoutItem8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -102,7 +102,7 @@ func (this *QLayoutItem) SizeHint() *qtcore.QSize /*123*/ {
 // QSize minimumSize()
 func (this *QLayoutItem) MinimumSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLayoutItem11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK11QLayoutItem11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -116,7 +116,7 @@ func (this *QLayoutItem) MinimumSize() *qtcore.QSize /*123*/ {
 // QSize maximumSize()
 func (this *QLayoutItem) MaximumSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLayoutItem11maximumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK11QLayoutItem11maximumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -189,7 +189,7 @@ func (this *QLayoutItem) HeightForWidth(arg0 int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLayoutItem14heightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:74
@@ -200,7 +200,7 @@ func (this *QLayoutItem) MinimumHeightForWidth(arg0 int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLayoutItem21minimumHeightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:75

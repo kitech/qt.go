@@ -167,10 +167,10 @@ func (this *QGraphicsAnchorLayout) SetSpacing(spacing float64) {
 // Public
 // qreal horizontalSpacing()
 func (this *QGraphicsAnchorLayout) HorizontalSpacing() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout17horizontalSpacingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout17horizontalSpacingEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:98
@@ -178,10 +178,10 @@ func (this *QGraphicsAnchorLayout) HorizontalSpacing() float64 {
 // Public
 // qreal verticalSpacing()
 func (this *QGraphicsAnchorLayout) VerticalSpacing() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout15verticalSpacingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout15verticalSpacingEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:100
@@ -211,7 +211,7 @@ func (this *QGraphicsAnchorLayout) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:103
@@ -240,9 +240,9 @@ func (this *QGraphicsAnchorLayout) Invalidate() {
 // Protected virtual
 // QSizeF sizeHint(Qt::SizeHint, const QSizeF &)
 func (this *QGraphicsAnchorLayout) SizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg1 = constraint.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsAnchorLayout8sizeHintEN2Qt8SizeHintERK6QSizeF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), which, convArg1)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK21QGraphicsAnchorLayout8sizeHintEN2Qt8SizeHintERK6QSizeF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), which, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))

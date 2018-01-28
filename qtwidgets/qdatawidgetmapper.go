@@ -199,7 +199,7 @@ func (this *QDataWidgetMapper) Orientation() int {
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:81
 // index:0
 // Public
-// void setSubmitPolicy(QDataWidgetMapper::SubmitPolicy)
+// void setSubmitPolicy(enum QDataWidgetMapper::SubmitPolicy)
 func (this *QDataWidgetMapper) SetSubmitPolicy(policy int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapper15setSubmitPolicyENS_12SubmitPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)
@@ -256,7 +256,7 @@ func (this *QDataWidgetMapper) MappedSection(widget *QWidget /*777 QWidget **/) 
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper13mappedSectionEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:88
@@ -264,8 +264,8 @@ func (this *QDataWidgetMapper) MappedSection(widget *QWidget /*777 QWidget **/) 
 // Public
 // QByteArray mappedPropertyName(QWidget *)
 func (this *QDataWidgetMapper) MappedPropertyName(widget *QWidget /*777 QWidget **/) *qtcore.QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = widget.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -303,7 +303,7 @@ func (this *QDataWidgetMapper) CurrentIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QDataWidgetMapper12currentIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:95

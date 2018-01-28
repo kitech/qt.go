@@ -92,6 +92,31 @@ import (
 	"github.com/gonuts/ffi"
 )
 
+func itype2stype(itype byte) *C.ffi_type {
+	switch itype {
+	case FFI_TYPE_VOID:
+		return &C.ffi_type_void
+	case FFI_TYPE_POINTER:
+		return &C.ffi_type_pointer
+	case FFI_TYPE_INT:
+		return &C.ffi_type_sint
+	case FFI_TYPE_FLOAT:
+		return &C.ffi_type_float
+	case FFI_TYPE_DOUBLE:
+		return &C.ffi_type_double
+	case FFI_TYPE_SINT16:
+		return &C.ffi_type_sint16
+	case FFI_TYPE_SINT32:
+		return &C.ffi_type_sint32
+	case FFI_TYPE_SINT64:
+		return &C.ffi_type_sint64
+	default:
+		log.Println("unknown type:", itype)
+		break
+	}
+	return &C.ffi_type_void
+}
+
 /*
 TODO
   argtypes int[20]
@@ -165,7 +190,7 @@ func InvokeQtFunc(symname string, retype byte, types []byte, args ...interface{}
 }
 
 func InvokeQtFunc5(symname string, retype byte, argc int, types []byte, args []uint64) (VRetype, error) {
-	addr := getSymAddr(symname)
+	addr := GetQtSymAddr(symname)
 	log.Println("FFI Call:", symname, addr)
 
 	var retval C.uint64_t = 0
@@ -176,7 +201,7 @@ func InvokeQtFunc5(symname string, retype byte, argc int, types []byte, args []u
 }
 
 func InvokeQtFunc6(symname string, retype byte, args ...interface{}) (VRetype, error) {
-	addr := getSymAddr(symname)
+	addr := GetQtSymAddr(symname)
 	log.Println("FFI Call:", symname, addr, "retype=", retype, "argc=", len(args))
 
 	argtys, argvals := convArgs(args...)
@@ -187,10 +212,23 @@ func InvokeQtFunc6(symname string, retype byte, args ...interface{}) (VRetype, e
 	return uint64(retval), nil
 }
 
+// fix return QSize like pure record
+func InvokeQtFunc7(symname string, retype byte, retval unsafe.Pointer, args ...interface{}) (VRetype, error) {
+	addr := GetQtSymAddr(symname)
+	log.Println("FFI Call:", symname, addr, "retype=", retype, "argc=", len(args))
+
+	argtys, argvals := convArgs(args...)
+	// var retval C.uint64_t = 0
+	C.ffi_call_ex(addr, C.int(retype), (*C.uint64_t)(retval), C.int(len(argtys)),
+		(*C.uint8_t)(&argtys[0]), (*C.uint64_t)(&argvals[0]))
+
+	return uint64(uintptr(retval)), nil
+}
+
 func isUndefinedSymbolErr(err error) bool {
 	return err != nil && strings.Contains(err.Error(), ": undefined symbol: ")
 }
-func getSymAddr(symname string) unsafe.Pointer {
+func GetQtSymAddr(symname string) unsafe.Pointer {
 	for _, lib := range libs {
 		addr, err := lib.Symbol(symname)
 		if !isUndefinedSymbolErr(err) {
@@ -243,6 +281,11 @@ func convArg(argx interface{}) (argty byte, argval uint64) {
 	case reflect.Ptr:
 		argty = FFI_TYPE_POINTER
 		argval = uint64(av.Pointer())
+	case reflect.Float64:
+		argty = FFI_TYPE_DOUBLE
+		tv := uint64(0)
+		*(*float64)(unsafe.Pointer(&tv)) = argx.(float64)
+		argval = tv
 	case reflect.UnsafePointer:
 		argty = FFI_TYPE_POINTER
 		argval = uint64(av.Pointer())

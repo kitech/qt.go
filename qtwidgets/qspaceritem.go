@@ -110,7 +110,7 @@ func (this *QSpacerItem) ChangeSize(w int, h int, hData int, vData int) {
 // QSize sizeHint()
 func (this *QSpacerItem) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK11QSpacerItem8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -124,7 +124,7 @@ func (this *QSpacerItem) SizeHint() *qtcore.QSize /*123*/ {
 // QSize minimumSize()
 func (this *QSpacerItem) MinimumSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK11QSpacerItem11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -138,7 +138,7 @@ func (this *QSpacerItem) MinimumSize() *qtcore.QSize /*123*/ {
 // QSize maximumSize()
 func (this *QSpacerItem) MaximumSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem11maximumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK11QSpacerItem11maximumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))

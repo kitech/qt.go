@@ -225,10 +225,10 @@ func (this *QPinchGesture) SetCenterPoint(value *qtcore.QPointF) {
 // Public
 // qreal totalScaleFactor()
 func (this *QPinchGesture) TotalScaleFactor() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture16totalScaleFactorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture16totalScaleFactorEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:182
@@ -236,10 +236,10 @@ func (this *QPinchGesture) TotalScaleFactor() float64 {
 // Public
 // qreal lastScaleFactor()
 func (this *QPinchGesture) LastScaleFactor() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture15lastScaleFactorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture15lastScaleFactorEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:183
@@ -247,10 +247,10 @@ func (this *QPinchGesture) LastScaleFactor() float64 {
 // Public
 // qreal scaleFactor()
 func (this *QPinchGesture) ScaleFactor() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture11scaleFactorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture11scaleFactorEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:184
@@ -285,10 +285,10 @@ func (this *QPinchGesture) SetScaleFactor(value float64) {
 // Public
 // qreal totalRotationAngle()
 func (this *QPinchGesture) TotalRotationAngle() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture18totalRotationAngleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture18totalRotationAngleEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:189
@@ -296,10 +296,10 @@ func (this *QPinchGesture) TotalRotationAngle() float64 {
 // Public
 // qreal lastRotationAngle()
 func (this *QPinchGesture) LastRotationAngle() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture17lastRotationAngleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture17lastRotationAngleEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:190
@@ -307,10 +307,10 @@ func (this *QPinchGesture) LastRotationAngle() float64 {
 // Public
 // qreal rotationAngle()
 func (this *QPinchGesture) RotationAngle() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture13rotationAngleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPinchGesture13rotationAngleEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:191

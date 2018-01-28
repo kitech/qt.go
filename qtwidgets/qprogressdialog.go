@@ -172,7 +172,7 @@ func (this *QProgressDialog) Minimum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QProgressDialog7minimumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qprogressdialog.h:84
@@ -183,7 +183,7 @@ func (this *QProgressDialog) Maximum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QProgressDialog7maximumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qprogressdialog.h:86
@@ -194,7 +194,7 @@ func (this *QProgressDialog) Value() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QProgressDialog5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qprogressdialog.h:88
@@ -203,7 +203,7 @@ func (this *QProgressDialog) Value() int {
 // QSize sizeHint()
 func (this *QProgressDialog) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QProgressDialog8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK15QProgressDialog8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -233,13 +233,13 @@ func (this *QProgressDialog) MinimumDuration() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QProgressDialog15minimumDurationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qprogressdialog.h:93
 // index:0
 // Public
-// void setAutoReset(bool)
+// void setAutoReset(_Bool)
 func (this *QProgressDialog) SetAutoReset(reset bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog12setAutoResetEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), reset)
 	gopp.ErrPrint(err, rv)
@@ -259,7 +259,7 @@ func (this *QProgressDialog) AutoReset() bool {
 // /usr/include/qt/QtWidgets/qprogressdialog.h:95
 // index:0
 // Public
-// void setAutoClose(bool)
+// void setAutoClose(_Bool)
 func (this *QProgressDialog) SetAutoClose(close bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialog12setAutoCloseEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), close)
 	gopp.ErrPrint(err, rv)

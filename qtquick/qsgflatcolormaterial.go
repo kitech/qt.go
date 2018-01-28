@@ -149,7 +149,7 @@ func (this *QSGFlatColorMaterial) Compare(other *QSGMaterial /*777 const QSGMate
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial7compareEPK11QSGMaterial", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 //  body block end

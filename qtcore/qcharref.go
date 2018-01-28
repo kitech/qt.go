@@ -205,7 +205,7 @@ func (this *QCharRef) DigitValue() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QCharRef10digitValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qstring.h:1068
@@ -425,7 +425,7 @@ func (this *QCharRef) ToLatin1() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QCharRef8toLatin1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return byte(rv) // 111
+	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
 
 // /usr/include/qt/QtCore/qstring.h:1108

@@ -99,7 +99,7 @@ func (this *QStyleHints) MouseDoubleClickInterval() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints24mouseDoubleClickIntervalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:80
@@ -119,7 +119,7 @@ func (this *QStyleHints) MousePressAndHoldInterval() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints25mousePressAndHoldIntervalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:82
@@ -139,7 +139,7 @@ func (this *QStyleHints) StartDragDistance() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints17startDragDistanceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:84
@@ -159,7 +159,7 @@ func (this *QStyleHints) StartDragTime() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints13startDragTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:86
@@ -170,7 +170,7 @@ func (this *QStyleHints) StartDragVelocity() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints17startDragVelocityEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:87
@@ -190,7 +190,7 @@ func (this *QStyleHints) KeyboardInputInterval() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints21keyboardInputIntervalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:89
@@ -201,7 +201,7 @@ func (this *QStyleHints) KeyboardAutoRepeatRate() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints22keyboardAutoRepeatRateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:90
@@ -221,7 +221,7 @@ func (this *QStyleHints) CursorFlashTime() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints15cursorFlashTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:92
@@ -265,7 +265,7 @@ func (this *QStyleHints) PasswordMaskDelay() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints17passwordMaskDelayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:96
@@ -287,10 +287,10 @@ func (this *QStyleHints) PasswordMaskCharacter() *qtcore.QChar /*123*/ {
 // Public
 // qreal fontSmoothingGamma()
 func (this *QStyleHints) FontSmoothingGamma() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints18fontSmoothingGammaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints18fontSmoothingGammaEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:98
@@ -360,7 +360,7 @@ func (this *QStyleHints) UseHoverEffects() bool {
 // /usr/include/qt/QtGui/qstylehints.h:104
 // index:0
 // Public
-// void setUseHoverEffects(bool)
+// void setUseHoverEffects(_Bool)
 func (this *QStyleHints) SetUseHoverEffects(useHoverEffects bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints18setUseHoverEffectsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), useHoverEffects)
 	gopp.ErrPrint(err, rv)
@@ -374,7 +374,7 @@ func (this *QStyleHints) WheelScrollLines() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStyleHints16wheelScrollLinesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qstylehints.h:106
@@ -452,7 +452,7 @@ func (this *QStyleHints) TabFocusBehaviorChanged(tabFocusBehavior int) {
 // /usr/include/qt/QtGui/qstylehints.h:116
 // index:0
 // Public
-// void useHoverEffectsChanged(bool)
+// void useHoverEffectsChanged(_Bool)
 func (this *QStyleHints) UseHoverEffectsChanged(useHoverEffects bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints22useHoverEffectsChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), useHoverEffects)
 	gopp.ErrPrint(err, rv)

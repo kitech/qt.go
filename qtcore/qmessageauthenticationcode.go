@@ -158,7 +158,9 @@ func (this *QMessageAuthenticationCode) Result() *QByteArray /*123*/ {
 // Public static
 // QByteArray hash(const QByteArray &, const QByteArray &, QCryptographicHash::Algorithm)
 func (this *QMessageAuthenticationCode) Hash(message *QByteArray, key *QByteArray, method int) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode4hashERK10QByteArrayS2_N18QCryptographicHash9AlgorithmE", ffiqt.FFI_TYPE_POINTER, message, key, method)
+	var convArg0 = message.GetCthis()
+	var convArg1 = key.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode4hashERK10QByteArrayS2_N18QCryptographicHash9AlgorithmE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, method)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333

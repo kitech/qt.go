@@ -94,7 +94,7 @@ func NewQHistoryState(parent *QState /*777 QState **/) *QHistoryState {
 // /usr/include/qt/QtCore/qhistorystate.h:65
 // index:1
 // Public
-// void QHistoryState(QHistoryState::HistoryType, QState *)
+// void QHistoryState(enum QHistoryState::HistoryType, QState *)
 func NewQHistoryState_1(type_ int, parent *QState /*777 QState **/) *QHistoryState {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = parent.GetCthis()
@@ -171,7 +171,7 @@ func (this *QHistoryState) HistoryType() int {
 // /usr/include/qt/QtCore/qhistorystate.h:75
 // index:0
 // Public
-// void setHistoryType(QHistoryState::HistoryType)
+// void setHistoryType(enum QHistoryState::HistoryType)
 func (this *QHistoryState) SetHistoryType(type_ int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryState14setHistoryTypeENS_11HistoryTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)

@@ -279,7 +279,7 @@ func (this *QUndoGroup) IndexChanged(idx int) {
 // /usr/include/qt/QtWidgets/qundogroup.h:89
 // index:0
 // Public
-// void cleanChanged(bool)
+// void cleanChanged(_Bool)
 func (this *QUndoGroup) CleanChanged(clean bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup12cleanChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), clean)
 	gopp.ErrPrint(err, rv)
@@ -288,7 +288,7 @@ func (this *QUndoGroup) CleanChanged(clean bool) {
 // /usr/include/qt/QtWidgets/qundogroup.h:90
 // index:0
 // Public
-// void canUndoChanged(bool)
+// void canUndoChanged(_Bool)
 func (this *QUndoGroup) CanUndoChanged(canUndo bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup14canUndoChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), canUndo)
 	gopp.ErrPrint(err, rv)
@@ -297,7 +297,7 @@ func (this *QUndoGroup) CanUndoChanged(canUndo bool) {
 // /usr/include/qt/QtWidgets/qundogroup.h:91
 // index:0
 // Public
-// void canRedoChanged(bool)
+// void canRedoChanged(_Bool)
 func (this *QUndoGroup) CanRedoChanged(canRedo bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroup14canRedoChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), canRedo)
 	gopp.ErrPrint(err, rv)

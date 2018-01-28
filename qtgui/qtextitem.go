@@ -74,10 +74,10 @@ func (*QTextItem) NewFromPointer(cthis unsafe.Pointer) *QTextItem {
 // Public
 // qreal descent()
 func (this *QTextItem) Descent() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem7descentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem7descentEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qpaintengine.h:76
@@ -85,10 +85,10 @@ func (this *QTextItem) Descent() float64 {
 // Public
 // qreal ascent()
 func (this *QTextItem) Ascent() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem6ascentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem6ascentEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qpaintengine.h:77
@@ -96,10 +96,10 @@ func (this *QTextItem) Ascent() float64 {
 // Public
 // qreal width()
 func (this *QTextItem) Width() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem5widthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qpaintengine.h:79

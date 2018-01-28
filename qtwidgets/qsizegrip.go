@@ -114,7 +114,7 @@ func DeleteQSizeGrip(*QSizeGrip) {
 // QSize sizeHint()
 func (this *QSizeGrip) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSizeGrip8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK9QSizeGrip8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -125,7 +125,7 @@ func (this *QSizeGrip) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qsizegrip.h:59
 // index:0
 // Public virtual
-// void setVisible(bool)
+// void setVisible(_Bool)
 func (this *QSizeGrip) SetVisible(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSizeGrip10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

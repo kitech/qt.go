@@ -146,8 +146,8 @@ func (this *QTextDocumentFragment) ToPlainText() *qtcore.QString /*123*/ {
 // Public
 // QString toHtml(const QByteArray &)
 func (this *QTextDocumentFragment) ToHtml(encoding *qtcore.QByteArray) *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = encoding.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -161,7 +161,8 @@ func (this *QTextDocumentFragment) ToHtml(encoding *qtcore.QByteArray) *qtcore.Q
 // Public static
 // QTextDocumentFragment fromPlainText(const QString &)
 func (this *QTextDocumentFragment) FromPlainText(plainText *qtcore.QString) *QTextDocumentFragment /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragment13fromPlainTextERK7QString", ffiqt.FFI_TYPE_POINTER, plainText)
+	var convArg0 = plainText.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragment13fromPlainTextERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTextDocumentFragmentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -178,7 +179,8 @@ func QTextDocumentFragment_FromPlainText(plainText *qtcore.QString) *QTextDocume
 // Public static
 // QTextDocumentFragment fromHtml(const QString &)
 func (this *QTextDocumentFragment) FromHtml(html *qtcore.QString) *QTextDocumentFragment /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragment8fromHtmlERK7QString", ffiqt.FFI_TYPE_POINTER, html)
+	var convArg0 = html.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragment8fromHtmlERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTextDocumentFragmentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -195,7 +197,9 @@ func QTextDocumentFragment_FromHtml(html *qtcore.QString) *QTextDocumentFragment
 // Public static
 // QTextDocumentFragment fromHtml(const QString &, const QTextDocument *)
 func (this *QTextDocumentFragment) FromHtml_1(html *qtcore.QString, resourceProvider *QTextDocument /*777 const QTextDocument **/) *QTextDocumentFragment /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument", ffiqt.FFI_TYPE_POINTER, html, resourceProvider)
+	var convArg0 = html.GetCthis()
+	var convArg1 = resourceProvider.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTextDocumentFragmentFromPointer(unsafe.Pointer(uintptr(rv))) // 333

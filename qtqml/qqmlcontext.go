@@ -185,8 +185,8 @@ func (this *QQmlContext) SetContextObject(arg0 *qtcore.QObject /*777 QObject **/
 // Public
 // QVariant contextProperty(const QString &)
 func (this *QQmlContext) ContextProperty(arg0 *qtcore.QString) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQmlContext15contextPropertyERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -222,8 +222,8 @@ func (this *QQmlContext) SetContextProperty_1(arg0 *qtcore.QString, arg1 *qtcore
 // Public
 // QString nameForObject(QObject *)
 func (this *QQmlContext) NameForObject(arg0 *qtcore.QObject /*777 QObject **/) *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QQmlContext13nameForObjectEP7QObject", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -237,8 +237,8 @@ func (this *QQmlContext) NameForObject(arg0 *qtcore.QObject /*777 QObject **/) *
 // Public
 // QUrl resolvedUrl(const QUrl &)
 func (this *QQmlContext) ResolvedUrl(arg0 *qtcore.QUrl) *qtcore.QUrl /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QQmlContext11resolvedUrlERK4QUrl", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

@@ -85,7 +85,7 @@ func (this *QClipboard) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // /usr/include/qt/QtGui/qclipboard.h:65
 // index:0
 // Public
-// void clear(QClipboard::Mode)
+// void clear(enum QClipboard::Mode)
 func (this *QClipboard) Clear(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard5clearENS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -149,7 +149,7 @@ func (this *QClipboard) OwnsFindBuffer() bool {
 // /usr/include/qt/QtGui/qclipboard.h:74
 // index:0
 // Public
-// QString text(QClipboard::Mode)
+// QString text(enum QClipboard::Mode)
 func (this *QClipboard) Text(mode int) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard4textENS_4ModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), mode)
@@ -163,10 +163,10 @@ func (this *QClipboard) Text(mode int) *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qclipboard.h:75
 // index:1
 // Public
-// QString text(QString &, QClipboard::Mode)
+// QString text(QString &, enum QClipboard::Mode)
 func (this *QClipboard) Text_1(subtype *qtcore.QString, mode int) *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = subtype.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard4textER7QStringNS_4ModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -178,7 +178,7 @@ func (this *QClipboard) Text_1(subtype *qtcore.QString, mode int) *qtcore.QStrin
 // /usr/include/qt/QtGui/qclipboard.h:76
 // index:0
 // Public
-// void setText(const QString &, QClipboard::Mode)
+// void setText(const QString &, enum QClipboard::Mode)
 func (this *QClipboard) SetText(arg0 *qtcore.QString, mode int) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard7setTextERK7QStringNS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
@@ -188,7 +188,7 @@ func (this *QClipboard) SetText(arg0 *qtcore.QString, mode int) {
 // /usr/include/qt/QtGui/qclipboard.h:78
 // index:0
 // Public
-// const QMimeData * mimeData(QClipboard::Mode)
+// const QMimeData * mimeData(enum QClipboard::Mode)
 func (this *QClipboard) MimeData(mode int) *qtcore.QMimeData /*777 const QMimeData **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard8mimeDataENS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -200,7 +200,7 @@ func (this *QClipboard) MimeData(mode int) *qtcore.QMimeData /*777 const QMimeDa
 // /usr/include/qt/QtGui/qclipboard.h:79
 // index:0
 // Public
-// void setMimeData(QMimeData *, QClipboard::Mode)
+// void setMimeData(QMimeData *, enum QClipboard::Mode)
 func (this *QClipboard) SetMimeData(data *qtcore.QMimeData /*777 QMimeData **/, mode int) {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard11setMimeDataEP9QMimeDataNS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
@@ -210,7 +210,7 @@ func (this *QClipboard) SetMimeData(data *qtcore.QMimeData /*777 QMimeData **/, 
 // /usr/include/qt/QtGui/qclipboard.h:81
 // index:0
 // Public
-// QImage image(QClipboard::Mode)
+// QImage image(enum QClipboard::Mode)
 func (this *QClipboard) Image(mode int) *QImage /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard5imageENS_4ModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), mode)
@@ -224,7 +224,7 @@ func (this *QClipboard) Image(mode int) *QImage /*123*/ {
 // /usr/include/qt/QtGui/qclipboard.h:82
 // index:0
 // Public
-// QPixmap pixmap(QClipboard::Mode)
+// QPixmap pixmap(enum QClipboard::Mode)
 func (this *QClipboard) Pixmap(mode int) *QPixmap /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QClipboard6pixmapENS_4ModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), mode)
@@ -238,7 +238,7 @@ func (this *QClipboard) Pixmap(mode int) *QPixmap /*123*/ {
 // /usr/include/qt/QtGui/qclipboard.h:83
 // index:0
 // Public
-// void setImage(const QImage &, QClipboard::Mode)
+// void setImage(const QImage &, enum QClipboard::Mode)
 func (this *QClipboard) SetImage(arg0 *QImage, mode int) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard8setImageERK6QImageNS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
@@ -248,7 +248,7 @@ func (this *QClipboard) SetImage(arg0 *QImage, mode int) {
 // /usr/include/qt/QtGui/qclipboard.h:84
 // index:0
 // Public
-// void setPixmap(const QPixmap &, QClipboard::Mode)
+// void setPixmap(const QPixmap &, enum QClipboard::Mode)
 func (this *QClipboard) SetPixmap(arg0 *QPixmap, mode int) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard9setPixmapERK7QPixmapNS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)

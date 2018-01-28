@@ -135,7 +135,7 @@ func (this *QTextStream) Codec() *QTextCodec /*777 QTextCodec **/ {
 // /usr/include/qt/QtCore/qtextstream.h:105
 // index:0
 // Public
-// void setAutoDetectUnicode(bool)
+// void setAutoDetectUnicode(_Bool)
 func (this *QTextStream) SetAutoDetectUnicode(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream20setAutoDetectUnicodeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -155,7 +155,7 @@ func (this *QTextStream) AutoDetectUnicode() bool {
 // /usr/include/qt/QtCore/qtextstream.h:107
 // index:0
 // Public
-// void setGenerateByteOrderMark(bool)
+// void setGenerateByteOrderMark(_Bool)
 func (this *QTextStream) SetGenerateByteOrderMark(generate bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream24setGenerateByteOrderMarkEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), generate)
 	gopp.ErrPrint(err, rv)
@@ -244,7 +244,7 @@ func (this *QTextStream) Status() int {
 // /usr/include/qt/QtCore/qtextstream.h:121
 // index:0
 // Public
-// void setStatus(QTextStream::Status)
+// void setStatus(enum QTextStream::Status)
 func (this *QTextStream) SetStatus(status int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream9setStatusENS_6StatusE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), status)
 	gopp.ErrPrint(err, rv)
@@ -376,7 +376,7 @@ func (this *QTextStream) Read(maxlen int64) *QString /*123*/ {
 // /usr/include/qt/QtCore/qtextstream.h:137
 // index:0
 // Public
-// void setFieldAlignment(QTextStream::FieldAlignment)
+// void setFieldAlignment(enum QTextStream::FieldAlignment)
 func (this *QTextStream) SetFieldAlignment(alignment int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream17setFieldAlignmentENS_14FieldAlignmentE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
 	gopp.ErrPrint(err, rv)
@@ -434,7 +434,7 @@ func (this *QTextStream) FieldWidth() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream10fieldWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qtextstream.h:146
@@ -474,13 +474,13 @@ func (this *QTextStream) IntegerBase() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream11integerBaseEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qtextstream.h:152
 // index:0
 // Public
-// void setRealNumberNotation(QTextStream::RealNumberNotation)
+// void setRealNumberNotation(enum QTextStream::RealNumberNotation)
 func (this *QTextStream) SetRealNumberNotation(notation int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream21setRealNumberNotationENS_18RealNumberNotationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), notation)
 	gopp.ErrPrint(err, rv)
@@ -514,7 +514,7 @@ func (this *QTextStream) RealNumberPrecision() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextStream19realNumberPrecisionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 type QTextStream__RealNumberNotation = int

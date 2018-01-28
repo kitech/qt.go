@@ -113,8 +113,8 @@ func DeleteQQmlPropertyMap(*QQmlPropertyMap) {
 // Public
 // QVariant value(const QString &)
 func (this *QQmlPropertyMap) Value(key *qtcore.QString) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QQmlPropertyMap5valueERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -141,7 +141,7 @@ func (this *QQmlPropertyMap) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QQmlPropertyMap5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQml/qqmlpropertymap.h:68
@@ -152,7 +152,7 @@ func (this *QQmlPropertyMap) Size() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QQmlPropertyMap4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQml/qqmlpropertymap.h:69
@@ -194,9 +194,9 @@ func (this *QQmlPropertyMap) ValueChanged(key *qtcore.QString, value *qtcore.QVa
 // Protected virtual
 // QVariant updateValue(const QString &, const QVariant &)
 func (this *QQmlPropertyMap) UpdateValue(key *qtcore.QString, input *qtcore.QVariant) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
 	var convArg1 = input.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QQmlPropertyMap11updateValueERK7QStringRK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv

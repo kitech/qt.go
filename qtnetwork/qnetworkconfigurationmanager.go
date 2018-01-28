@@ -134,8 +134,8 @@ func (this *QNetworkConfigurationManager) DefaultConfiguration() *QNetworkConfig
 // Public
 // QNetworkConfiguration configurationFromIdentifier(const QString &)
 func (this *QNetworkConfigurationManager) ConfigurationFromIdentifier(identifier *qtcore.QString) *QNetworkConfiguration /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = identifier.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK28QNetworkConfigurationManager27configurationFromIdentifierERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -197,7 +197,7 @@ func (this *QNetworkConfigurationManager) ConfigurationChanged(config *QNetworkC
 // /usr/include/qt/QtNetwork/qnetworkconfigmanager.h:87
 // index:0
 // Public
-// void onlineStateChanged(bool)
+// void onlineStateChanged(_Bool)
 func (this *QNetworkConfigurationManager) OnlineStateChanged(isOnline bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN28QNetworkConfigurationManager18onlineStateChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), isOnline)
 	gopp.ErrPrint(err, rv)

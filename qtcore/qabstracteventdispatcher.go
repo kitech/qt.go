@@ -105,7 +105,8 @@ func DeleteQAbstractEventDispatcher(*QAbstractEventDispatcher) {
 // Public static
 // QAbstractEventDispatcher * instance(QThread *)
 func (this *QAbstractEventDispatcher) Instance(thread *QThread /*777 QThread **/) *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher8instanceEP7QThread", ffiqt.FFI_TYPE_POINTER, thread)
+	var convArg0 = thread.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher8instanceEP7QThread", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQAbstractEventDispatcherFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -168,7 +169,7 @@ func (this *QAbstractEventDispatcher) RegisterTimer(interval int, timerType int,
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher13registerTimerEiN2Qt9TimerTypeEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), interval, timerType, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qabstracteventdispatcher.h:91
@@ -212,7 +213,7 @@ func (this *QAbstractEventDispatcher) RemainingTime(timerId int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractEventDispatcher13remainingTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), timerId)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qabstracteventdispatcher.h:103

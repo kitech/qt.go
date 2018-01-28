@@ -104,7 +104,7 @@ func (this *QSGRendererInterface) GraphicsApi() int {
 // /usr/include/qt/QtQuick/qsgrendererinterface.h:90
 // index:0
 // Public virtual
-// void * getResource(QQuickWindow *, QSGRendererInterface::Resource)
+// void * getResource(QQuickWindow *, enum QSGRendererInterface::Resource)
 func (this *QSGRendererInterface) GetResource(window *QQuickWindow /*777 QQuickWindow **/, resource int) unsafe.Pointer /*666*/ {
 	var convArg0 = window.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGRendererInterface11getResourceEP12QQuickWindowNS_8ResourceE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, resource)

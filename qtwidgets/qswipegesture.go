@@ -135,10 +135,10 @@ func (this *QSwipeGesture) VerticalDirection() int {
 // Public
 // qreal swipeAngle()
 func (this *QSwipeGesture) SwipeAngle() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture10swipeAngleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture10swipeAngleEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:228

@@ -194,8 +194,8 @@ func (this *QNetworkSession) ErrorString() *qtcore.QString /*123*/ {
 // Public
 // QVariant sessionProperty(const QString &)
 func (this *QNetworkSession) SessionProperty(key *qtcore.QString) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QNetworkSession15sessionPropertyERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -363,7 +363,7 @@ func (this *QNetworkSession) Closed() {
 // /usr/include/qt/QtNetwork/qnetworksession.h:129
 // index:0
 // Public
-// void preferredConfigurationChanged(const QNetworkConfiguration &, bool)
+// void preferredConfigurationChanged(const QNetworkConfiguration &, _Bool)
 func (this *QNetworkSession) PreferredConfigurationChanged(config *QNetworkConfiguration, isSeamless bool) {
 	var convArg0 = config.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QNetworkSession29preferredConfigurationChangedERK21QNetworkConfigurationb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, isSeamless)

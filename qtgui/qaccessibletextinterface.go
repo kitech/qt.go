@@ -95,7 +95,7 @@ func (this *QAccessibleTextInterface) SelectionCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface14selectionCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:527
@@ -133,7 +133,7 @@ func (this *QAccessibleTextInterface) CursorPosition() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface14cursorPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:533
@@ -209,7 +209,7 @@ func (this *QAccessibleTextInterface) CharacterCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface14characterCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:546
@@ -235,7 +235,7 @@ func (this *QAccessibleTextInterface) OffsetAtPoint(point *qtcore.QPoint) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAccessibleTextInterface13offsetAtPointERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:549

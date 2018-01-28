@@ -170,7 +170,7 @@ func (this *QGraphicsLayout) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsLayout5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:71
@@ -197,7 +197,7 @@ func (this *QGraphicsLayout) RemoveAt(index int) {
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:74
 // index:0
 // Public static
-// void setInstantInvalidatePropagation(bool)
+// void setInstantInvalidatePropagation(_Bool)
 func (this *QGraphicsLayout) SetInstantInvalidatePropagation(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout31setInstantInvalidatePropagationEb", ffiqt.FFI_TYPE_POINTER, enable)
 	gopp.ErrPrint(err, rv)

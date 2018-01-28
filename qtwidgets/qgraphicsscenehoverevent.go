@@ -77,7 +77,7 @@ func (*QGraphicsSceneHoverEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphics
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:201
 // index:0
 // Public
-// void QGraphicsSceneHoverEvent(QEvent::Type)
+// void QGraphicsSceneHoverEvent(enum QEvent::Type)
 func NewQGraphicsSceneHoverEvent(type_ int) *QGraphicsSceneHoverEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)

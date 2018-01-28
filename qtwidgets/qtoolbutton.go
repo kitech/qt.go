@@ -114,7 +114,7 @@ func DeleteQToolButton(*QToolButton) {
 // QSize sizeHint()
 func (this *QToolButton) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QToolButton8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK11QToolButton8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -128,7 +128,7 @@ func (this *QToolButton) SizeHint() *qtcore.QSize /*123*/ {
 // QSize minimumSizeHint()
 func (this *QToolButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QToolButton15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK11QToolButton15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -192,7 +192,7 @@ func (this *QToolButton) Menu() *QMenu /*777 QMenu **/ {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:89
 // index:0
 // Public
-// void setPopupMode(QToolButton::ToolButtonPopupMode)
+// void setPopupMode(enum QToolButton::ToolButtonPopupMode)
 func (this *QToolButton) SetPopupMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton12setPopupModeENS_19ToolButtonPopupModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -224,7 +224,7 @@ func (this *QToolButton) DefaultAction() *QAction /*777 QAction **/ {
 // /usr/include/qt/QtWidgets/qtoolbutton.h:95
 // index:0
 // Public
-// void setAutoRaise(bool)
+// void setAutoRaise(_Bool)
 func (this *QToolButton) SetAutoRaise(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButton12setAutoRaiseEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)

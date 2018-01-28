@@ -159,7 +159,7 @@ func (this *QSslCipher) SupportedBits() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSslCipher13supportedBitsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtNetwork/qsslcipher.h:77
@@ -170,7 +170,7 @@ func (this *QSslCipher) UsedBits() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSslCipher8usedBitsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtNetwork/qsslcipher.h:79

@@ -339,7 +339,8 @@ func (this *QQmlFile) ConnectDownloadProgress_1(arg0 *qtcore.QObject /*777 QObje
 // Public static
 // bool isSynchronous(const QString &)
 func (this *QQmlFile) IsSynchronous(url *qtcore.QString) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile13isSynchronousERK7QString", ffiqt.FFI_TYPE_POINTER, url)
+	var convArg0 = url.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile13isSynchronousERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -355,7 +356,8 @@ func QQmlFile_IsSynchronous(url *qtcore.QString) bool {
 // Public static
 // bool isSynchronous(const QUrl &)
 func (this *QQmlFile) IsSynchronous_1(url *qtcore.QUrl) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile13isSynchronousERK4QUrl", ffiqt.FFI_TYPE_POINTER, url)
+	var convArg0 = url.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile13isSynchronousERK4QUrl", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -371,7 +373,8 @@ func QQmlFile_IsSynchronous_1(url *qtcore.QUrl) bool {
 // Public static
 // bool isLocalFile(const QString &)
 func (this *QQmlFile) IsLocalFile(url *qtcore.QString) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile11isLocalFileERK7QString", ffiqt.FFI_TYPE_POINTER, url)
+	var convArg0 = url.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile11isLocalFileERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -387,7 +390,8 @@ func QQmlFile_IsLocalFile(url *qtcore.QString) bool {
 // Public static
 // bool isLocalFile(const QUrl &)
 func (this *QQmlFile) IsLocalFile_1(url *qtcore.QUrl) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile11isLocalFileERK4QUrl", ffiqt.FFI_TYPE_POINTER, url)
+	var convArg0 = url.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile11isLocalFileERK4QUrl", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -403,7 +407,8 @@ func QQmlFile_IsLocalFile_1(url *qtcore.QUrl) bool {
 // Public static
 // QString urlToLocalFileOrQrc(const QString &)
 func (this *QQmlFile) UrlToLocalFileOrQrc(arg0 *qtcore.QString) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile19urlToLocalFileOrQrcERK7QString", ffiqt.FFI_TYPE_POINTER, arg0)
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile19urlToLocalFileOrQrcERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -420,7 +425,8 @@ func QQmlFile_UrlToLocalFileOrQrc(arg0 *qtcore.QString) *qtcore.QString /*123*/ 
 // Public static
 // QString urlToLocalFileOrQrc(const QUrl &)
 func (this *QQmlFile) UrlToLocalFileOrQrc_1(arg0 *qtcore.QUrl) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile19urlToLocalFileOrQrcERK4QUrl", ffiqt.FFI_TYPE_POINTER, arg0)
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile19urlToLocalFileOrQrcERK4QUrl", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333

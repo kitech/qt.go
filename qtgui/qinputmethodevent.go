@@ -144,7 +144,7 @@ func (this *QInputMethodEvent) ReplacementStart() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent16replacementStartEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:565
@@ -155,7 +155,7 @@ func (this *QInputMethodEvent) ReplacementLength() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent17replacementLengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 type QInputMethodEvent__AttributeType = int

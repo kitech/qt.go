@@ -113,10 +113,10 @@ func DeleteQDoubleSpinBox(*QDoubleSpinBox) {
 // Public
 // double value()
 func (this *QDoubleSpinBox) Value() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox5valueEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:131
@@ -186,10 +186,10 @@ func (this *QDoubleSpinBox) CleanText() *qtcore.QString /*123*/ {
 // Public
 // double singleStep()
 func (this *QDoubleSpinBox) SingleStep() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox10singleStepEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox10singleStepEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:140
@@ -206,10 +206,10 @@ func (this *QDoubleSpinBox) SetSingleStep(val float64) {
 // Public
 // double minimum()
 func (this *QDoubleSpinBox) Minimum() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox7minimumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox7minimumEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:143
@@ -226,10 +226,10 @@ func (this *QDoubleSpinBox) SetMinimum(min float64) {
 // Public
 // double maximum()
 func (this *QDoubleSpinBox) Maximum() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox7maximumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox7maximumEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:146
@@ -258,7 +258,7 @@ func (this *QDoubleSpinBox) Decimals() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox8decimalsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:151
@@ -288,10 +288,10 @@ func (this *QDoubleSpinBox) Validate(input *qtcore.QString, pos int) int {
 // double valueFromText(const QString &)
 func (this *QDoubleSpinBox) ValueFromText(text *qtcore.QString) float64 {
 	var convArg0 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox13valueFromTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDoubleSpinBox13valueFromTextERK7QString", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:155

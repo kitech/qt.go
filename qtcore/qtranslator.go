@@ -105,13 +105,13 @@ func DeleteQTranslator(*QTranslator) {
 // Public virtual
 // QString translate(const char *, const char *, const char *, int)
 func (this *QTranslator) Translate(context string, sourceText string, disambiguation string, n int) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = qtrt.CString(context)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(sourceText)
 	defer qtrt.FreeMem(convArg1)
 	var convArg2 = qtrt.CString(disambiguation)
 	defer qtrt.FreeMem(convArg2)
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTranslator9translateEPKcS1_S1_i", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, convArg2, n)
 	gopp.ErrPrint(err, rv)
 	//  return rv

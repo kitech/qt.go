@@ -84,7 +84,7 @@ func NewQNetworkProxyQuery() *QNetworkProxyQuery {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:73
 // index:1
 // Public
-// void QNetworkProxyQuery(const QUrl &, QNetworkProxyQuery::QueryType)
+// void QNetworkProxyQuery(const QUrl &, enum QNetworkProxyQuery::QueryType)
 func NewQNetworkProxyQuery_1(requestUrl *qtcore.QUrl, queryType int) *QNetworkProxyQuery {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = requestUrl.GetCthis()
@@ -97,7 +97,7 @@ func NewQNetworkProxyQuery_1(requestUrl *qtcore.QUrl, queryType int) *QNetworkPr
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:74
 // index:2
 // Public
-// void QNetworkProxyQuery(const QString &, int, const QString &, QNetworkProxyQuery::QueryType)
+// void QNetworkProxyQuery(const QString &, int, const QString &, enum QNetworkProxyQuery::QueryType)
 func NewQNetworkProxyQuery_2(hostname *qtcore.QString, port int, protocolTag *qtcore.QString, queryType int) *QNetworkProxyQuery {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = hostname.GetCthis()
@@ -111,7 +111,7 @@ func NewQNetworkProxyQuery_2(hostname *qtcore.QString, port int, protocolTag *qt
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:76
 // index:3
 // Public
-// void QNetworkProxyQuery(quint16, const QString &, QNetworkProxyQuery::QueryType)
+// void QNetworkProxyQuery(quint16, const QString &, enum QNetworkProxyQuery::QueryType)
 func NewQNetworkProxyQuery_3(bindPort uint16, protocolTag *qtcore.QString, queryType int) *QNetworkProxyQuery {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg1 = protocolTag.GetCthis()
@@ -124,7 +124,7 @@ func NewQNetworkProxyQuery_3(bindPort uint16, protocolTag *qtcore.QString, query
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:80
 // index:4
 // Public
-// void QNetworkProxyQuery(const QNetworkConfiguration &, const QUrl &, QNetworkProxyQuery::QueryType)
+// void QNetworkProxyQuery(const QNetworkConfiguration &, const QUrl &, enum QNetworkProxyQuery::QueryType)
 func NewQNetworkProxyQuery_4(networkConfiguration *QNetworkConfiguration, requestUrl *qtcore.QUrl, queryType int) *QNetworkProxyQuery {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = networkConfiguration.GetCthis()
@@ -138,7 +138,7 @@ func NewQNetworkProxyQuery_4(networkConfiguration *QNetworkConfiguration, reques
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:83
 // index:5
 // Public
-// void QNetworkProxyQuery(const QNetworkConfiguration &, const QString &, int, const QString &, QNetworkProxyQuery::QueryType)
+// void QNetworkProxyQuery(const QNetworkConfiguration &, const QString &, int, const QString &, enum QNetworkProxyQuery::QueryType)
 func NewQNetworkProxyQuery_5(networkConfiguration *QNetworkConfiguration, hostname *qtcore.QString, port int, protocolTag *qtcore.QString, queryType int) *QNetworkProxyQuery {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = networkConfiguration.GetCthis()
@@ -153,7 +153,7 @@ func NewQNetworkProxyQuery_5(networkConfiguration *QNetworkConfiguration, hostna
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:87
 // index:6
 // Public
-// void QNetworkProxyQuery(const QNetworkConfiguration &, quint16, const QString &, QNetworkProxyQuery::QueryType)
+// void QNetworkProxyQuery(const QNetworkConfiguration &, quint16, const QString &, enum QNetworkProxyQuery::QueryType)
 func NewQNetworkProxyQuery_6(networkConfiguration *QNetworkConfiguration, bindPort uint16, protocolTag *qtcore.QString, queryType int) *QNetworkProxyQuery {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = networkConfiguration.GetCthis()
@@ -197,7 +197,7 @@ func (this *QNetworkProxyQuery) QueryType() int {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:105
 // index:0
 // Public
-// void setQueryType(QNetworkProxyQuery::QueryType)
+// void setQueryType(enum QNetworkProxyQuery::QueryType)
 func (this *QNetworkProxyQuery) SetQueryType(type_ int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QNetworkProxyQuery12setQueryTypeENS_9QueryTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
@@ -211,7 +211,7 @@ func (this *QNetworkProxyQuery) PeerPort() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QNetworkProxyQuery8peerPortEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:108
@@ -255,7 +255,7 @@ func (this *QNetworkProxyQuery) LocalPort() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QNetworkProxyQuery9localPortEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:114

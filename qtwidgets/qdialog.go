@@ -116,13 +116,13 @@ func (this *QDialog) Result() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QDialog6resultEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qdialog.h:70
 // index:0
 // Public virtual
-// void setVisible(bool)
+// void setVisible(_Bool)
 func (this *QDialog) SetVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
@@ -176,7 +176,7 @@ func (this *QDialog) Extension() *QWidget /*777 QWidget **/ {
 // QSize sizeHint()
 func (this *QDialog) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QDialog8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QDialog8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -190,7 +190,7 @@ func (this *QDialog) SizeHint() *qtcore.QSize /*123*/ {
 // QSize minimumSizeHint()
 func (this *QDialog) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QDialog15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QDialog15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -201,7 +201,7 @@ func (this *QDialog) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qdialog.h:81
 // index:0
 // Public
-// void setSizeGripEnabled(bool)
+// void setSizeGripEnabled(_Bool)
 func (this *QDialog) SetSizeGripEnabled(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog18setSizeGripEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -221,7 +221,7 @@ func (this *QDialog) IsSizeGripEnabled() bool {
 // /usr/include/qt/QtWidgets/qdialog.h:84
 // index:0
 // Public
-// void setModal(bool)
+// void setModal(_Bool)
 func (this *QDialog) SetModal(modal bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog8setModalEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), modal)
 	gopp.ErrPrint(err, rv)
@@ -280,7 +280,7 @@ func (this *QDialog) Exec() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog4execEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qdialog.h:95
@@ -313,7 +313,7 @@ func (this *QDialog) Reject() {
 // /usr/include/qt/QtWidgets/qdialog.h:99
 // index:0
 // Public
-// void showExtension(bool)
+// void showExtension(_Bool)
 func (this *QDialog) ShowExtension(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialog13showExtensionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

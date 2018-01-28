@@ -179,7 +179,7 @@ func (this *QUndoCommand) IsObsolete() bool {
 // /usr/include/qt/QtWidgets/qundostack.h:72
 // index:0
 // Public
-// void setObsolete(bool)
+// void setObsolete(_Bool)
 func (this *QUndoCommand) SetObsolete(obsolete bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand11setObsoleteEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), obsolete)
 	gopp.ErrPrint(err, rv)
@@ -193,7 +193,7 @@ func (this *QUndoCommand) Id() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand2idEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qundostack.h:75
@@ -216,7 +216,7 @@ func (this *QUndoCommand) ChildCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand10childCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qundostack.h:78

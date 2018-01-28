@@ -108,7 +108,7 @@ func (this *QPoint) X() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QPoint1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qpoint.h:61
@@ -119,7 +119,7 @@ func (this *QPoint) Y() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QPoint1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qpoint.h:62
@@ -148,7 +148,7 @@ func (this *QPoint) ManhattanLength() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QPoint15manhattanLengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qpoint.h:67
@@ -159,7 +159,7 @@ func (this *QPoint) Rx() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPoint2rxEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 3331
+	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
 // /usr/include/qt/QtCore/qpoint.h:68
@@ -170,7 +170,7 @@ func (this *QPoint) Ry() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPoint2ryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 3331
+	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
 // /usr/include/qt/QtCore/qpoint.h:79
@@ -178,10 +178,12 @@ func (this *QPoint) Ry() int {
 // Public static inline
 // int dotProduct(const QPoint &, const QPoint &)
 func (this *QPoint) DotProduct(p1 *QPoint, p2 *QPoint) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPoint10dotProductERKS_S1_", ffiqt.FFI_TYPE_POINTER, p1, p2)
+	var convArg0 = p1.GetCthis()
+	var convArg1 = p2.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPoint10dotProductERKS_S1_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QPoint_DotProduct(p1 *QPoint, p2 *QPoint) int {
 	var nilthis *QPoint

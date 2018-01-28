@@ -216,7 +216,7 @@ func (this *QSslSocket) PeerVerifyDepth() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSslSocket15peerVerifyDepthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtNetwork/qsslsocket.h:109
@@ -525,7 +525,8 @@ func (this *QSslSocket) AddCaCertificate(certificate *QSslCertificate) {
 // Public static
 // bool addDefaultCaCertificates(const QString &, QSsl::EncodingFormat, QRegExp::PatternSyntax)
 func (this *QSslSocket) AddDefaultCaCertificates(path *qtcore.QString, format int, syntax int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSslSocket24addDefaultCaCertificatesERK7QStringN4QSsl14EncodingFormatEN7QRegExp13PatternSyntaxE", ffiqt.FFI_TYPE_POINTER, path, format, syntax)
+	var convArg0 = path.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSslSocket24addDefaultCaCertificatesERK7QStringN4QSsl14EncodingFormatEN7QRegExp13PatternSyntaxE", ffiqt.FFI_TYPE_POINTER, convArg0, format, syntax)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -541,7 +542,8 @@ func QSslSocket_AddDefaultCaCertificates(path *qtcore.QString, format int, synta
 // Public static
 // void addDefaultCaCertificate(const QSslCertificate &)
 func (this *QSslSocket) AddDefaultCaCertificate(certificate *QSslCertificate) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSslSocket23addDefaultCaCertificateERK15QSslCertificate", ffiqt.FFI_TYPE_POINTER, certificate)
+	var convArg0 = certificate.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSslSocket23addDefaultCaCertificateERK15QSslCertificate", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QSslSocket_AddDefaultCaCertificate(certificate *QSslCertificate) {
@@ -628,7 +630,7 @@ func (this *QSslSocket) SslLibraryVersionNumber() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSslSocket23sslLibraryVersionNumberEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QSslSocket_SslLibraryVersionNumber() int {
 	var nilthis *QSslSocket
@@ -661,7 +663,7 @@ func (this *QSslSocket) SslLibraryBuildVersionNumber() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSslSocket28sslLibraryBuildVersionNumberEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QSslSocket_SslLibraryBuildVersionNumber() int {
 	var nilthis *QSslSocket

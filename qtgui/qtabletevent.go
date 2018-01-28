@@ -139,7 +139,7 @@ func (this *QTabletEvent) X() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:271
@@ -150,7 +150,7 @@ func (this *QTabletEvent) Y() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:272
@@ -161,7 +161,7 @@ func (this *QTabletEvent) GlobalX() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent7globalXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:273
@@ -172,7 +172,7 @@ func (this *QTabletEvent) GlobalY() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent7globalYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:274
@@ -180,10 +180,10 @@ func (this *QTabletEvent) GlobalY() int {
 // Public inline
 // qreal hiResGlobalX()
 func (this *QTabletEvent) HiResGlobalX() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent12hiResGlobalXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent12hiResGlobalXEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:275
@@ -191,10 +191,10 @@ func (this *QTabletEvent) HiResGlobalX() float64 {
 // Public inline
 // qreal hiResGlobalY()
 func (this *QTabletEvent) HiResGlobalY() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent12hiResGlobalYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent12hiResGlobalYEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:276
@@ -235,10 +235,10 @@ func (this *QTabletEvent) UniqueId() int64 {
 // Public inline
 // qreal pressure()
 func (this *QTabletEvent) Pressure() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent8pressureEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent8pressureEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:280
@@ -249,7 +249,7 @@ func (this *QTabletEvent) Z() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent1zEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:281
@@ -257,10 +257,10 @@ func (this *QTabletEvent) Z() int {
 // Public inline
 // qreal tangentialPressure()
 func (this *QTabletEvent) TangentialPressure() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent18tangentialPressureEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent18tangentialPressureEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:282
@@ -268,10 +268,10 @@ func (this *QTabletEvent) TangentialPressure() float64 {
 // Public inline
 // qreal rotation()
 func (this *QTabletEvent) Rotation() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent8rotationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent8rotationEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:283
@@ -282,7 +282,7 @@ func (this *QTabletEvent) XTilt() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent5xTiltEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:284
@@ -293,7 +293,7 @@ func (this *QTabletEvent) YTilt() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent5yTiltEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:285

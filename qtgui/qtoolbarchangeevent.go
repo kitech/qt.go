@@ -73,7 +73,7 @@ func (*QToolBarChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QToolBarChange
 // /usr/include/qt/QtGui/qevent.h:754
 // index:0
 // Public
-// void QToolBarChangeEvent(bool)
+// void QToolBarChangeEvent(_Bool)
 func NewQToolBarChangeEvent(t bool) *QToolBarChangeEvent {
 	cthis := qtrt.Calloc(1, 256) // 24
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QToolBarChangeEventC2Eb", ffiqt.FFI_TYPE_VOID, cthis, t)

@@ -121,7 +121,7 @@ func (this *QQuickFramebufferObject) TextureFollowsItemSize() bool {
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:81
 // index:0
 // Public
-// void setTextureFollowsItemSize(bool)
+// void setTextureFollowsItemSize(_Bool)
 func (this *QQuickFramebufferObject) SetTextureFollowsItemSize(follows bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QQuickFramebufferObject25setTextureFollowsItemSizeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), follows)
 	gopp.ErrPrint(err, rv)
@@ -141,7 +141,7 @@ func (this *QQuickFramebufferObject) MirrorVertically() bool {
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:84
 // index:0
 // Public
-// void setMirrorVertically(bool)
+// void setMirrorVertically(_Bool)
 func (this *QQuickFramebufferObject) SetMirrorVertically(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QQuickFramebufferObject19setMirrorVerticallyEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -204,7 +204,7 @@ func (this *QQuickFramebufferObject) GeometryChanged(newGeometry *qtcore.QRectF,
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:99
 // index:0
 // Public
-// void textureFollowsItemSizeChanged(bool)
+// void textureFollowsItemSizeChanged(_Bool)
 func (this *QQuickFramebufferObject) TextureFollowsItemSizeChanged(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QQuickFramebufferObject29textureFollowsItemSizeChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -213,7 +213,7 @@ func (this *QQuickFramebufferObject) TextureFollowsItemSizeChanged(arg0 bool) {
 // /usr/include/qt/QtQuick/qquickframebufferobject.h:100
 // index:0
 // Public
-// void mirrorVerticallyChanged(bool)
+// void mirrorVerticallyChanged(_Bool)
 func (this *QQuickFramebufferObject) MirrorVerticallyChanged(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QQuickFramebufferObject23mirrorVerticallyChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

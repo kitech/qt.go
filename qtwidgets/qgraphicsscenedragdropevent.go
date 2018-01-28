@@ -77,7 +77,7 @@ func (*QGraphicsSceneDragDropEvent) NewFromPointer(cthis unsafe.Pointer) *QGraph
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:252
 // index:0
 // Public
-// void QGraphicsSceneDragDropEvent(QEvent::Type)
+// void QGraphicsSceneDragDropEvent(enum QEvent::Type)
 func NewQGraphicsSceneDragDropEvent(type_ int) *QGraphicsSceneDragDropEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)

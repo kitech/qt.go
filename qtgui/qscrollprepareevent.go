@@ -112,7 +112,7 @@ func (this *QScrollPrepareEvent) StartPos() *qtcore.QPointF /*123*/ {
 // QSizeF viewportSize()
 func (this *QScrollPrepareEvent) ViewportSize() *qtcore.QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollPrepareEvent12viewportSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK19QScrollPrepareEvent12viewportSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))

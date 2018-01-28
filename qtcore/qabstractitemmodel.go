@@ -117,8 +117,8 @@ func (this *QAbstractItemModel) HasIndex(row int, column int, parent *QModelInde
 // Public pure virtual
 // QModelIndex index(int, int, const QModelIndex &)
 func (this *QAbstractItemModel) Index(row int, column int, parent *QModelIndex) *QModelIndex /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg2 = parent.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractItemModel5indexEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), row, column, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -132,8 +132,8 @@ func (this *QAbstractItemModel) Index(row int, column int, parent *QModelIndex) 
 // Public pure virtual
 // QModelIndex parent(const QModelIndex &)
 func (this *QAbstractItemModel) Parent(child *QModelIndex) *QModelIndex /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = child.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractItemModel6parentERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -147,8 +147,8 @@ func (this *QAbstractItemModel) Parent(child *QModelIndex) *QModelIndex /*123*/ 
 // Public virtual
 // QModelIndex sibling(int, int, const QModelIndex &)
 func (this *QAbstractItemModel) Sibling(row int, column int, idx *QModelIndex) *QModelIndex /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg2 = idx.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractItemModel7siblingEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), row, column, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -166,7 +166,7 @@ func (this *QAbstractItemModel) RowCount(parent *QModelIndex) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractItemModel8rowCountERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:184
@@ -178,7 +178,7 @@ func (this *QAbstractItemModel) ColumnCount(parent *QModelIndex) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractItemModel11columnCountERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:185
@@ -198,8 +198,8 @@ func (this *QAbstractItemModel) HasChildren(parent *QModelIndex) bool {
 // Public pure virtual
 // QVariant data(const QModelIndex &, int)
 func (this *QAbstractItemModel) Data(index *QModelIndex, role int) *QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractItemModel4dataERK11QModelIndexi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, role)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -491,8 +491,8 @@ func (this *QAbstractItemModel) Sort(column int, order int) {
 // Public virtual
 // QModelIndex buddy(const QModelIndex &)
 func (this *QAbstractItemModel) Buddy(index *QModelIndex) *QModelIndex /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractItemModel5buddyERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -506,9 +506,9 @@ func (this *QAbstractItemModel) Buddy(index *QModelIndex) *QModelIndex /*123*/ {
 // Public virtual
 // QSize span(const QModelIndex &)
 func (this *QAbstractItemModel) Span(index *QModelIndex) *QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractItemModel4spanERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK18QAbstractItemModel4spanERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))

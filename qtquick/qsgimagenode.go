@@ -233,7 +233,7 @@ func (this *QSGImageNode) TextureCoordinatesTransform() int {
 // /usr/include/qt/QtQuick/qsgimagenode.h:82
 // index:0
 // Public pure virtual
-// void setOwnsTexture(bool)
+// void setOwnsTexture(_Bool)
 func (this *QSGImageNode) SetOwnsTexture(owns bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QSGImageNode14setOwnsTextureEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), owns)
 	gopp.ErrPrint(err, rv)

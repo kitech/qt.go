@@ -200,10 +200,10 @@ func (this *QGraphicsLinearLayout) SetSpacing(spacing float64) {
 // Public
 // qreal spacing()
 func (this *QGraphicsLinearLayout) Spacing() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsLinearLayout7spacingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsLinearLayout7spacingEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:74
@@ -220,10 +220,10 @@ func (this *QGraphicsLinearLayout) SetItemSpacing(index int, spacing float64) {
 // Public
 // qreal itemSpacing(int)
 func (this *QGraphicsLinearLayout) ItemSpacing(index int) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsLinearLayout11itemSpacingEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsLinearLayout11itemSpacingEi", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:77
@@ -245,7 +245,7 @@ func (this *QGraphicsLinearLayout) StretchFactor(item *QGraphicsLayoutItem /*777
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsLinearLayout13stretchFactorEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:81
@@ -278,7 +278,7 @@ func (this *QGraphicsLinearLayout) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsLinearLayout5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:86
@@ -307,9 +307,9 @@ func (this *QGraphicsLinearLayout) Invalidate() {
 // Public virtual
 // QSizeF sizeHint(Qt::SizeHint, const QSizeF &)
 func (this *QGraphicsLinearLayout) SizeHint(which int, constraint *qtcore.QSizeF) *qtcore.QSizeF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg1 = constraint.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QGraphicsLinearLayout8sizeHintEN2Qt8SizeHintERK6QSizeF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), which, convArg1)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK21QGraphicsLinearLayout8sizeHintEN2Qt8SizeHintERK6QSizeF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), which, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))

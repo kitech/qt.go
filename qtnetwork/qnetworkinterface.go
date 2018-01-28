@@ -119,7 +119,7 @@ func (this *QNetworkInterface) Index() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QNetworkInterface5indexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:117
@@ -180,10 +180,11 @@ func (this *QNetworkInterface) HardwareAddress() *qtcore.QString /*123*/ {
 // Public static
 // int interfaceIndexFromName(const QString &)
 func (this *QNetworkInterface) InterfaceIndexFromName(name *qtcore.QString) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QNetworkInterface22interfaceIndexFromNameERK7QString", ffiqt.FFI_TYPE_POINTER, name)
+	var convArg0 = name.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QNetworkInterface22interfaceIndexFromNameERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QNetworkInterface_InterfaceIndexFromName(name *qtcore.QString) int {
 	var nilthis *QNetworkInterface
@@ -196,7 +197,8 @@ func QNetworkInterface_InterfaceIndexFromName(name *qtcore.QString) int {
 // Public static
 // QNetworkInterface interfaceFromName(const QString &)
 func (this *QNetworkInterface) InterfaceFromName(name *qtcore.QString) *QNetworkInterface /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QNetworkInterface17interfaceFromNameERK7QString", ffiqt.FFI_TYPE_POINTER, name)
+	var convArg0 = name.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QNetworkInterface17interfaceFromNameERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQNetworkInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 333

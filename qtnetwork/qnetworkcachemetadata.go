@@ -197,7 +197,7 @@ func (this *QNetworkCacheMetaData) SaveToDisk() bool {
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:97
 // index:0
 // Public
-// void setSaveToDisk(bool)
+// void setSaveToDisk(_Bool)
 func (this *QNetworkCacheMetaData) SetSaveToDisk(allow bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkCacheMetaData13setSaveToDiskEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), allow)
 	gopp.ErrPrint(err, rv)

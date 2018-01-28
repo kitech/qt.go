@@ -97,10 +97,10 @@ func DeleteQQmlAbstractUrlInterceptor(*QQmlAbstractUrlInterceptor) {
 // /usr/include/qt/QtQml/qqmlabstracturlinterceptor.h:60
 // index:0
 // Public pure virtual
-// QUrl intercept(const QUrl &, QQmlAbstractUrlInterceptor::DataType)
+// QUrl intercept(const QUrl &, enum QQmlAbstractUrlInterceptor::DataType)
 func (this *QQmlAbstractUrlInterceptor) Intercept(path *qtcore.QUrl, type_ int) *qtcore.QUrl /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = path.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptor9interceptERK4QUrlNS_8DataTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, type_)
 	gopp.ErrPrint(err, rv)
 	//  return rv

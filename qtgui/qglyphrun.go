@@ -146,7 +146,7 @@ func (this *QGlyphRun) Clear() {
 // /usr/include/qt/QtGui/qglyphrun.h:96
 // index:0
 // Public
-// void setOverline(bool)
+// void setOverline(_Bool)
 func (this *QGlyphRun) SetOverline(overline bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun11setOverlineEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), overline)
 	gopp.ErrPrint(err, rv)
@@ -166,7 +166,7 @@ func (this *QGlyphRun) Overline() bool {
 // /usr/include/qt/QtGui/qglyphrun.h:99
 // index:0
 // Public
-// void setUnderline(bool)
+// void setUnderline(_Bool)
 func (this *QGlyphRun) SetUnderline(underline bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun12setUnderlineEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), underline)
 	gopp.ErrPrint(err, rv)
@@ -186,7 +186,7 @@ func (this *QGlyphRun) Underline() bool {
 // /usr/include/qt/QtGui/qglyphrun.h:102
 // index:0
 // Public
-// void setStrikeOut(bool)
+// void setStrikeOut(_Bool)
 func (this *QGlyphRun) SetStrikeOut(strikeOut bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun12setStrikeOutEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), strikeOut)
 	gopp.ErrPrint(err, rv)
@@ -206,7 +206,7 @@ func (this *QGlyphRun) StrikeOut() bool {
 // /usr/include/qt/QtGui/qglyphrun.h:105
 // index:0
 // Public
-// void setRightToLeft(bool)
+// void setRightToLeft(_Bool)
 func (this *QGlyphRun) SetRightToLeft(on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun14setRightToLeftEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
@@ -226,7 +226,7 @@ func (this *QGlyphRun) IsRightToLeft() bool {
 // /usr/include/qt/QtGui/qglyphrun.h:108
 // index:0
 // Public
-// void setFlag(QGlyphRun::GlyphRunFlag, bool)
+// void setFlag(enum QGlyphRun::GlyphRunFlag, _Bool)
 func (this *QGlyphRun) SetFlag(flag int, enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun7setFlagENS_12GlyphRunFlagEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flag, enabled)
 	gopp.ErrPrint(err, rv)

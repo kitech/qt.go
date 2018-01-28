@@ -103,10 +103,11 @@ func NewQStyleOptionGraphicsItem_1(version int) *QStyleOptionGraphicsItem {
 // Public static
 // qreal levelOfDetailFromTransform(const QTransform &)
 func (this *QStyleOptionGraphicsItem) LevelOfDetailFromTransform(worldTransform *qtgui.QTransform) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform", ffiqt.FFI_TYPE_POINTER, worldTransform)
+	var convArg0 = worldTransform.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 func QStyleOptionGraphicsItem_LevelOfDetailFromTransform(worldTransform *qtgui.QTransform) float64 {
 	var nilthis *QStyleOptionGraphicsItem

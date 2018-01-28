@@ -114,7 +114,7 @@ func (this *QStringListModel) RowCount(parent *QModelIndex) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel8rowCountERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qstringlistmodel.h:59
@@ -122,8 +122,8 @@ func (this *QStringListModel) RowCount(parent *QModelIndex) int {
 // Public virtual
 // QModelIndex sibling(int, int, const QModelIndex &)
 func (this *QStringListModel) Sibling(row int, column int, idx *QModelIndex) *QModelIndex /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg2 = idx.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel7siblingEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), row, column, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -137,8 +137,8 @@ func (this *QStringListModel) Sibling(row int, column int, idx *QModelIndex) *QM
 // Public virtual
 // QVariant data(const QModelIndex &, int)
 func (this *QStringListModel) Data(index *QModelIndex, role int) *QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QStringListModel4dataERK11QModelIndexi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, role)
 	gopp.ErrPrint(err, rv)
 	//  return rv

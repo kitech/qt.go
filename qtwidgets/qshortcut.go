@@ -153,7 +153,7 @@ func (this *QShortcut) Key() *qtgui.QKeySequence /*123*/ {
 // /usr/include/qt/QtWidgets/qshortcut.h:72
 // index:0
 // Public
-// void setEnabled(bool)
+// void setEnabled(_Bool)
 func (this *QShortcut) SetEnabled(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -217,7 +217,7 @@ func (this *QShortcut) WhatsThis() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qshortcut.h:81
 // index:0
 // Public
-// void setAutoRepeat(bool)
+// void setAutoRepeat(_Bool)
 func (this *QShortcut) SetAutoRepeat(on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcut13setAutoRepeatEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
@@ -242,7 +242,7 @@ func (this *QShortcut) Id() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QShortcut2idEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qshortcut.h:86

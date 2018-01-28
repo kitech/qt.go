@@ -127,7 +127,7 @@ func (this *QStatusBar) InsertWidget(index int, widget *QWidget /*777 QWidget **
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar12insertWidgetEiP7QWidgeti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:64
@@ -149,7 +149,7 @@ func (this *QStatusBar) InsertPermanentWidget(index int, widget *QWidget /*777 Q
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:66
@@ -165,7 +165,7 @@ func (this *QStatusBar) RemoveWidget(widget *QWidget /*777 QWidget **/) {
 // /usr/include/qt/QtWidgets/qstatusbar.h:68
 // index:0
 // Public
-// void setSizeGripEnabled(bool)
+// void setSizeGripEnabled(_Bool)
 func (this *QStatusBar) SetSizeGripEnabled(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar18setSizeGripEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

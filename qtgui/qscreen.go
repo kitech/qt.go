@@ -155,7 +155,7 @@ func (this *QScreen) Depth() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen5depthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qscreen.h:109
@@ -164,7 +164,7 @@ func (this *QScreen) Depth() int {
 // QSize size()
 func (this *QScreen) Size() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QScreen4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -192,7 +192,7 @@ func (this *QScreen) Geometry() *qtcore.QRect /*123*/ {
 // QSizeF physicalSize()
 func (this *QScreen) PhysicalSize() *qtcore.QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen12physicalSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QScreen12physicalSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -205,10 +205,10 @@ func (this *QScreen) PhysicalSize() *qtcore.QSizeF /*123*/ {
 // Public
 // qreal physicalDotsPerInchX()
 func (this *QScreen) PhysicalDotsPerInchX() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen20physicalDotsPerInchXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen20physicalDotsPerInchXEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qscreen.h:115
@@ -216,10 +216,10 @@ func (this *QScreen) PhysicalDotsPerInchX() float64 {
 // Public
 // qreal physicalDotsPerInchY()
 func (this *QScreen) PhysicalDotsPerInchY() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen20physicalDotsPerInchYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen20physicalDotsPerInchYEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qscreen.h:116
@@ -227,10 +227,10 @@ func (this *QScreen) PhysicalDotsPerInchY() float64 {
 // Public
 // qreal physicalDotsPerInch()
 func (this *QScreen) PhysicalDotsPerInch() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen19physicalDotsPerInchEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen19physicalDotsPerInchEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qscreen.h:118
@@ -238,10 +238,10 @@ func (this *QScreen) PhysicalDotsPerInch() float64 {
 // Public
 // qreal logicalDotsPerInchX()
 func (this *QScreen) LogicalDotsPerInchX() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen19logicalDotsPerInchXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen19logicalDotsPerInchXEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qscreen.h:119
@@ -249,10 +249,10 @@ func (this *QScreen) LogicalDotsPerInchX() float64 {
 // Public
 // qreal logicalDotsPerInchY()
 func (this *QScreen) LogicalDotsPerInchY() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen19logicalDotsPerInchYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen19logicalDotsPerInchYEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qscreen.h:120
@@ -260,10 +260,10 @@ func (this *QScreen) LogicalDotsPerInchY() float64 {
 // Public
 // qreal logicalDotsPerInch()
 func (this *QScreen) LogicalDotsPerInch() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen18logicalDotsPerInchEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen18logicalDotsPerInchEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qscreen.h:122
@@ -271,10 +271,10 @@ func (this *QScreen) LogicalDotsPerInch() float64 {
 // Public
 // qreal devicePixelRatio()
 func (this *QScreen) DevicePixelRatio() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen16devicePixelRatioEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen16devicePixelRatioEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qscreen.h:124
@@ -283,7 +283,7 @@ func (this *QScreen) DevicePixelRatio() float64 {
 // QSize availableSize()
 func (this *QScreen) AvailableSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen13availableSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QScreen13availableSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -311,7 +311,7 @@ func (this *QScreen) AvailableGeometry() *qtcore.QRect /*123*/ {
 // QSize virtualSize()
 func (this *QScreen) VirtualSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen11virtualSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QScreen11virtualSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -339,7 +339,7 @@ func (this *QScreen) VirtualGeometry() *qtcore.QRect /*123*/ {
 // QSize availableVirtualSize()
 func (this *QScreen) AvailableVirtualSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen20availableVirtualSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QScreen20availableVirtualSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -413,7 +413,7 @@ func (this *QScreen) AngleBetween(a int, b int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen12angleBetweenEN2Qt17ScreenOrientationES1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), a, b)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qscreen.h:143
@@ -421,8 +421,8 @@ func (this *QScreen) AngleBetween(a int, b int) int {
 // Public
 // QTransform transformBetween(Qt::ScreenOrientation, Qt::ScreenOrientation, const QRect &)
 func (this *QScreen) TransformBetween(a int, b int, target *qtcore.QRect) *QTransform /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg2 = target.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen16transformBetweenEN2Qt17ScreenOrientationES1_RK5QRect", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), a, b, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -436,8 +436,8 @@ func (this *QScreen) TransformBetween(a int, b int, target *qtcore.QRect) *QTran
 // Public
 // QRect mapBetween(Qt::ScreenOrientation, Qt::ScreenOrientation, const QRect &)
 func (this *QScreen) MapBetween(a int, b int, rect *qtcore.QRect) *qtcore.QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg2 = rect.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen10mapBetweenEN2Qt17ScreenOrientationES1_RK5QRect", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), a, b, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -487,10 +487,10 @@ func (this *QScreen) GrabWindow(window uint64, x int, y int, w int, h int) *QPix
 // Public
 // qreal refreshRate()
 func (this *QScreen) RefreshRate() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen11refreshRateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QScreen11refreshRateEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qscreen.h:154

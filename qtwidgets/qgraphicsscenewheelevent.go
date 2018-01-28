@@ -77,7 +77,7 @@ func (*QGraphicsSceneWheelEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphics
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:139
 // index:0
 // Public
-// void QGraphicsSceneWheelEvent(QEvent::Type)
+// void QGraphicsSceneWheelEvent(enum QEvent::Type)
 func NewQGraphicsSceneWheelEvent(type_ int) *QGraphicsSceneWheelEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneWheelEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)
@@ -197,7 +197,7 @@ func (this *QGraphicsSceneWheelEvent) Delta() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent5deltaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:158

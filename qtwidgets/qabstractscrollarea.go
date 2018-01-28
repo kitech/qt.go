@@ -242,7 +242,7 @@ func (this *QAbstractScrollArea) SetViewport(widget *QWidget /*777 QWidget **/) 
 // QSize maximumViewportSize()
 func (this *QAbstractScrollArea) MaximumViewportSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractScrollArea19maximumViewportSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK19QAbstractScrollArea19maximumViewportSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -256,7 +256,7 @@ func (this *QAbstractScrollArea) MaximumViewportSize() *qtcore.QSize /*123*/ {
 // QSize minimumSizeHint()
 func (this *QAbstractScrollArea) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractScrollArea15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK19QAbstractScrollArea15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -270,7 +270,7 @@ func (this *QAbstractScrollArea) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // QSize sizeHint()
 func (this *QAbstractScrollArea) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractScrollArea8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK19QAbstractScrollArea8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -302,7 +302,7 @@ func (this *QAbstractScrollArea) SizeAdjustPolicy() int {
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:101
 // index:0
 // Public
-// void setSizeAdjustPolicy(QAbstractScrollArea::SizeAdjustPolicy)
+// void setSizeAdjustPolicy(enum QAbstractScrollArea::SizeAdjustPolicy)
 func (this *QAbstractScrollArea) SetSizeAdjustPolicy(policy int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractScrollArea19setSizeAdjustPolicyENS_16SizeAdjustPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)
@@ -523,7 +523,7 @@ func (this *QAbstractScrollArea) ScrollContentsBy(dx int, dy int) {
 // QSize viewportSizeHint()
 func (this *QAbstractScrollArea) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QAbstractScrollArea16viewportSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK19QAbstractScrollArea16viewportSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))

@@ -168,7 +168,7 @@ func (this *QDoubleValidator) SetDecimals(arg0 int) {
 // /usr/include/qt/QtGui/qvalidator.h:148
 // index:0
 // Public
-// void setNotation(QDoubleValidator::Notation)
+// void setNotation(enum QDoubleValidator::Notation)
 func (this *QDoubleValidator) SetNotation(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDoubleValidator11setNotationENS_8NotationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -179,10 +179,10 @@ func (this *QDoubleValidator) SetNotation(arg0 int) {
 // Public inline
 // double bottom()
 func (this *QDoubleValidator) Bottom() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDoubleValidator6bottomEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDoubleValidator6bottomEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:151
@@ -190,10 +190,10 @@ func (this *QDoubleValidator) Bottom() float64 {
 // Public inline
 // double top()
 func (this *QDoubleValidator) Top() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDoubleValidator3topEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDoubleValidator3topEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:152
@@ -204,7 +204,7 @@ func (this *QDoubleValidator) Decimals() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDoubleValidator8decimalsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:153

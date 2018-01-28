@@ -138,7 +138,7 @@ func (this *QHostInfo) Error() int {
 // /usr/include/qt/QtNetwork/qhostinfo.h:78
 // index:0
 // Public
-// void setError(QHostInfo::HostInfoError)
+// void setError(enum QHostInfo::HostInfoError)
 func (this *QHostInfo) SetError(error int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo8setErrorENS_13HostInfoErrorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), error)
 	gopp.ErrPrint(err, rv)
@@ -185,7 +185,7 @@ func (this *QHostInfo) LookupId() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QHostInfo8lookupIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:86
@@ -193,10 +193,14 @@ func (this *QHostInfo) LookupId() int {
 // Public static
 // int lookupHost(const QString &, QObject *, const char *)
 func (this *QHostInfo) LookupHost(name *qtcore.QString, receiver *qtcore.QObject /*777 QObject **/, member string) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo10lookupHostERK7QStringP7QObjectPKc", ffiqt.FFI_TYPE_POINTER, name, receiver, member)
+	var convArg0 = name.GetCthis()
+	var convArg1 = receiver.GetCthis()
+	var convArg2 = qtrt.CString(member)
+	defer qtrt.FreeMem(convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo10lookupHostERK7QStringP7QObjectPKc", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QHostInfo_LookupHost(name *qtcore.QString, receiver *qtcore.QObject /*777 QObject **/, member string) int {
 	var nilthis *QHostInfo
@@ -222,7 +226,8 @@ func QHostInfo_AbortHostLookup(lookupId int) {
 // Public static
 // QHostInfo fromName(const QString &)
 func (this *QHostInfo) FromName(name *qtcore.QString) *QHostInfo /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo8fromNameERK7QString", ffiqt.FFI_TYPE_POINTER, name)
+	var convArg0 = name.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo8fromNameERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQHostInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333

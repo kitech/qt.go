@@ -169,7 +169,7 @@ func (this *QAccessibleInterface) ChildCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface10childCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:478
@@ -181,7 +181,7 @@ func (this *QAccessibleInterface) IndexOfChild(arg0 *QAccessibleInterface /*777 
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAccessibleInterface12indexOfChildEPKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:481

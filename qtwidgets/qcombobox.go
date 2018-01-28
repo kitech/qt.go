@@ -116,7 +116,7 @@ func (this *QComboBox) MaxVisibleItems() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QComboBox15maxVisibleItemsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:89
@@ -136,7 +136,7 @@ func (this *QComboBox) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QComboBox5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:92
@@ -156,7 +156,7 @@ func (this *QComboBox) MaxCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QComboBox8maxCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:96
@@ -173,7 +173,7 @@ func (this *QComboBox) AutoCompletion() bool {
 // /usr/include/qt/QtWidgets/qcombobox.h:97
 // index:0
 // Public
-// void setAutoCompletion(bool)
+// void setAutoCompletion(_Bool)
 func (this *QComboBox) SetAutoCompletion(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QComboBox17setAutoCompletionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -213,7 +213,7 @@ func (this *QComboBox) DuplicatesEnabled() bool {
 // /usr/include/qt/QtWidgets/qcombobox.h:104
 // index:0
 // Public
-// void setDuplicatesEnabled(bool)
+// void setDuplicatesEnabled(_Bool)
 func (this *QComboBox) SetDuplicatesEnabled(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QComboBox20setDuplicatesEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -222,7 +222,7 @@ func (this *QComboBox) SetDuplicatesEnabled(enable bool) {
 // /usr/include/qt/QtWidgets/qcombobox.h:106
 // index:0
 // Public
-// void setFrame(bool)
+// void setFrame(_Bool)
 func (this *QComboBox) SetFrame(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QComboBox8setFrameEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -248,7 +248,7 @@ func (this *QComboBox) FindText(text *qtcore.QString, flags int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QComboBox8findTextERK7QString6QFlagsIN2Qt9MatchFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:112
@@ -260,7 +260,7 @@ func (this *QComboBox) FindData(data *qtcore.QVariant, role int, flags int) int 
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QComboBox8findDataERK8QVarianti6QFlagsIN2Qt9MatchFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role, flags)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:126
@@ -277,7 +277,7 @@ func (this *QComboBox) InsertPolicy() int {
 // /usr/include/qt/QtWidgets/qcombobox.h:127
 // index:0
 // Public
-// void setInsertPolicy(QComboBox::InsertPolicy)
+// void setInsertPolicy(enum QComboBox::InsertPolicy)
 func (this *QComboBox) SetInsertPolicy(policy int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QComboBox15setInsertPolicyENS_12InsertPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)
@@ -297,7 +297,7 @@ func (this *QComboBox) SizeAdjustPolicy() int {
 // /usr/include/qt/QtWidgets/qcombobox.h:138
 // index:0
 // Public
-// void setSizeAdjustPolicy(QComboBox::SizeAdjustPolicy)
+// void setSizeAdjustPolicy(enum QComboBox::SizeAdjustPolicy)
 func (this *QComboBox) SetSizeAdjustPolicy(policy int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QComboBox19setSizeAdjustPolicyENS_16SizeAdjustPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)
@@ -311,7 +311,7 @@ func (this *QComboBox) MinimumContentsLength() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QComboBox21minimumContentsLengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:140
@@ -329,7 +329,7 @@ func (this *QComboBox) SetMinimumContentsLength(characters int) {
 // QSize iconSize()
 func (this *QComboBox) IconSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QComboBox8iconSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK9QComboBox8iconSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -361,7 +361,7 @@ func (this *QComboBox) IsEditable() bool {
 // /usr/include/qt/QtWidgets/qcombobox.h:145
 // index:0
 // Public
-// void setEditable(bool)
+// void setEditable(_Bool)
 func (this *QComboBox) SetEditable(editable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QComboBox11setEditableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), editable)
 	gopp.ErrPrint(err, rv)
@@ -509,7 +509,7 @@ func (this *QComboBox) ModelColumn() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QComboBox11modelColumnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:168
@@ -529,7 +529,7 @@ func (this *QComboBox) CurrentIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QComboBox12currentIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:171
@@ -744,7 +744,7 @@ func (this *QComboBox) SetView(itemView *QAbstractItemView /*777 QAbstractItemVi
 // QSize sizeHint()
 func (this *QComboBox) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QComboBox8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK9QComboBox8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -758,7 +758,7 @@ func (this *QComboBox) SizeHint() *qtcore.QSize /*123*/ {
 // QSize minimumSizeHint()
 func (this *QComboBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QComboBox15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK9QComboBox15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -815,8 +815,8 @@ func (this *QComboBox) InputMethodQuery(arg0 int) *qtcore.QVariant /*123*/ {
 // Public
 // QVariant inputMethodQuery(Qt::InputMethodQuery, const QVariant &)
 func (this *QComboBox) InputMethodQuery_1(query int, argument *qtcore.QVariant) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg1 = argument.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QComboBox16inputMethodQueryEN2Qt16InputMethodQueryERK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), query, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv

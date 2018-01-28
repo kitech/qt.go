@@ -150,7 +150,7 @@ func (this *QLine) X1() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine2x1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qline.h:65
@@ -161,7 +161,7 @@ func (this *QLine) Y1() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine2y1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qline.h:67
@@ -172,7 +172,7 @@ func (this *QLine) X2() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine2x2Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qline.h:68
@@ -183,7 +183,7 @@ func (this *QLine) Y2() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine2y2Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qline.h:70
@@ -194,7 +194,7 @@ func (this *QLine) Dx() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine2dxEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qline.h:71
@@ -205,7 +205,7 @@ func (this *QLine) Dy() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine2dyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qline.h:73
@@ -232,8 +232,8 @@ func (this *QLine) Translate_1(dx int, dy int) {
 // Public inline
 // QLine translated(const QPoint &)
 func (this *QLine) Translated(p *QPoint) *QLine /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = p.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QLine10translatedERK6QPoint", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

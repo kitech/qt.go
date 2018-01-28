@@ -91,7 +91,8 @@ func (this *QScroller) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // Public static
 // bool hasScroller(QObject *)
 func (this *QScroller) HasScroller(target *qtcore.QObject /*777 QObject **/) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller11hasScrollerEP7QObject", ffiqt.FFI_TYPE_POINTER, target)
+	var convArg0 = target.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller11hasScrollerEP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -107,7 +108,8 @@ func QScroller_HasScroller(target *qtcore.QObject /*777 QObject **/) bool {
 // Public static
 // QScroller * scroller(QObject *)
 func (this *QScroller) Scroller(target *qtcore.QObject /*777 QObject **/) *QScroller /*777 QScroller **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller8scrollerEP7QObject", ffiqt.FFI_TYPE_POINTER, target)
+	var convArg0 = target.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller8scrollerEP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQScrollerFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -124,7 +126,8 @@ func QScroller_Scroller(target *qtcore.QObject /*777 QObject **/) *QScroller /*7
 // Public static
 // const QScroller * scroller(const QObject *)
 func (this *QScroller) Scroller_1(target *qtcore.QObject /*777 const QObject **/) *QScroller /*777 const QScroller **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller8scrollerEPK7QObject", ffiqt.FFI_TYPE_POINTER, target)
+	var convArg0 = target.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller8scrollerEPK7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQScrollerFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -139,9 +142,10 @@ func QScroller_Scroller_1(target *qtcore.QObject /*777 const QObject **/) *QScro
 // /usr/include/qt/QtWidgets/qscroller.h:98
 // index:0
 // Public static
-// Qt::GestureType grabGesture(QObject *, QScroller::ScrollerGestureType)
+// Qt::GestureType grabGesture(QObject *, enum QScroller::ScrollerGestureType)
 func (this *QScroller) GrabGesture(target *qtcore.QObject /*777 QObject **/, gestureType int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller11grabGestureEP7QObjectNS_19ScrollerGestureTypeE", ffiqt.FFI_TYPE_POINTER, target, gestureType)
+	var convArg0 = target.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller11grabGestureEP7QObjectNS_19ScrollerGestureTypeE", ffiqt.FFI_TYPE_POINTER, convArg0, gestureType)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv)
@@ -157,7 +161,8 @@ func QScroller_GrabGesture(target *qtcore.QObject /*777 QObject **/, gestureType
 // Public static
 // Qt::GestureType grabbedGesture(QObject *)
 func (this *QScroller) GrabbedGesture(target *qtcore.QObject /*777 QObject **/) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller14grabbedGestureEP7QObject", ffiqt.FFI_TYPE_POINTER, target)
+	var convArg0 = target.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller14grabbedGestureEP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv)
@@ -173,7 +178,8 @@ func QScroller_GrabbedGesture(target *qtcore.QObject /*777 QObject **/) int {
 // Public static
 // void ungrabGesture(QObject *)
 func (this *QScroller) UngrabGesture(target *qtcore.QObject /*777 QObject **/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller13ungrabGestureEP7QObject", ffiqt.FFI_TYPE_POINTER, target)
+	var convArg0 = target.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller13ungrabGestureEP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QScroller_UngrabGesture(target *qtcore.QObject /*777 QObject **/) {
@@ -207,7 +213,7 @@ func (this *QScroller) State() int {
 // /usr/include/qt/QtWidgets/qscroller.h:109
 // index:0
 // Public
-// bool handleInput(QScroller::Input, const QPointF &, qint64)
+// bool handleInput(enum QScroller::Input, const QPointF &, qint64)
 func (this *QScroller) HandleInput(input int, position *qtcore.QPointF, timestamp int64) bool {
 	var convArg1 = position.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QScroller11handleInputENS_5InputERK7QPointFx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), input, convArg1, timestamp)

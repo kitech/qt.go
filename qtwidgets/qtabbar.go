@@ -122,7 +122,7 @@ func (this *QTabBar) Shape() int {
 // /usr/include/qt/QtWidgets/qtabbar.h:94
 // index:0
 // Public
-// void setShape(QTabBar::Shape)
+// void setShape(enum QTabBar::Shape)
 func (this *QTabBar) SetShape(shape int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QTabBar8setShapeENS_5ShapeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), shape)
 	gopp.ErrPrint(err, rv)
@@ -137,7 +137,7 @@ func (this *QTabBar) AddTab(text *qtcore.QString) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QTabBar6addTabERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:97
@@ -150,7 +150,7 @@ func (this *QTabBar) AddTab_1(icon *qtgui.QIcon, text *qtcore.QString) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QTabBar6addTabERK5QIconRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:99
@@ -162,7 +162,7 @@ func (this *QTabBar) InsertTab(index int, text *qtcore.QString) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QTabBar9insertTabEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:100
@@ -175,7 +175,7 @@ func (this *QTabBar) InsertTab_1(index int, icon *qtgui.QIcon, text *qtcore.QStr
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QTabBar9insertTabEiRK5QIconRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:102
@@ -210,7 +210,7 @@ func (this *QTabBar) IsTabEnabled(index int) bool {
 // /usr/include/qt/QtWidgets/qtabbar.h:106
 // index:0
 // Public
-// void setTabEnabled(int, bool)
+// void setTabEnabled(int, _Bool)
 func (this *QTabBar) SetTabEnabled(index int, arg1 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QTabBar13setTabEnabledEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, arg1)
 	gopp.ErrPrint(err, rv)
@@ -403,7 +403,7 @@ func (this *QTabBar) TabAt(pos *qtcore.QPoint) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QTabBar5tabAtERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:136
@@ -414,7 +414,7 @@ func (this *QTabBar) CurrentIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QTabBar12currentIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:137
@@ -425,7 +425,7 @@ func (this *QTabBar) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QTabBar5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:139
@@ -434,7 +434,7 @@ func (this *QTabBar) Count() int {
 // QSize sizeHint()
 func (this *QTabBar) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QTabBar8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QTabBar8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -448,7 +448,7 @@ func (this *QTabBar) SizeHint() *qtcore.QSize /*123*/ {
 // QSize minimumSizeHint()
 func (this *QTabBar) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QTabBar15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QTabBar15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -459,7 +459,7 @@ func (this *QTabBar) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qtabbar.h:142
 // index:0
 // Public
-// void setDrawBase(bool)
+// void setDrawBase(_Bool)
 func (this *QTabBar) SetDrawBase(drawTheBase bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QTabBar11setDrawBaseEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), drawTheBase)
 	gopp.ErrPrint(err, rv)
@@ -482,7 +482,7 @@ func (this *QTabBar) DrawBase() bool {
 // QSize iconSize()
 func (this *QTabBar) IconSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QTabBar8iconSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QTabBar8iconSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -514,7 +514,7 @@ func (this *QTabBar) UsesScrollButtons() bool {
 // /usr/include/qt/QtWidgets/qtabbar.h:149
 // index:0
 // Public
-// void setUsesScrollButtons(bool)
+// void setUsesScrollButtons(_Bool)
 func (this *QTabBar) SetUsesScrollButtons(useButtons bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QTabBar20setUsesScrollButtonsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), useButtons)
 	gopp.ErrPrint(err, rv)
@@ -534,7 +534,7 @@ func (this *QTabBar) TabsClosable() bool {
 // /usr/include/qt/QtWidgets/qtabbar.h:152
 // index:0
 // Public
-// void setTabsClosable(bool)
+// void setTabsClosable(_Bool)
 func (this *QTabBar) SetTabsClosable(closable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QTabBar15setTabsClosableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), closable)
 	gopp.ErrPrint(err, rv)
@@ -543,7 +543,7 @@ func (this *QTabBar) SetTabsClosable(closable bool) {
 // /usr/include/qt/QtWidgets/qtabbar.h:154
 // index:0
 // Public
-// void setTabButton(int, QTabBar::ButtonPosition, QWidget *)
+// void setTabButton(int, enum QTabBar::ButtonPosition, QWidget *)
 func (this *QTabBar) SetTabButton(index int, position int, widget *QWidget /*777 QWidget **/) {
 	var convArg2 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QTabBar12setTabButtonEiNS_14ButtonPositionEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, position, convArg2)
@@ -553,7 +553,7 @@ func (this *QTabBar) SetTabButton(index int, position int, widget *QWidget /*777
 // /usr/include/qt/QtWidgets/qtabbar.h:155
 // index:0
 // Public
-// QWidget * tabButton(int, QTabBar::ButtonPosition)
+// QWidget * tabButton(int, enum QTabBar::ButtonPosition)
 func (this *QTabBar) TabButton(index int, position int) *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QTabBar9tabButtonEiNS_14ButtonPositionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, position)
 	gopp.ErrPrint(err, rv)
@@ -576,7 +576,7 @@ func (this *QTabBar) SelectionBehaviorOnRemove() int {
 // /usr/include/qt/QtWidgets/qtabbar.h:158
 // index:0
 // Public
-// void setSelectionBehaviorOnRemove(QTabBar::SelectionBehavior)
+// void setSelectionBehaviorOnRemove(enum QTabBar::SelectionBehavior)
 func (this *QTabBar) SetSelectionBehaviorOnRemove(behavior int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QTabBar28setSelectionBehaviorOnRemoveENS_17SelectionBehaviorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), behavior)
 	gopp.ErrPrint(err, rv)
@@ -596,7 +596,7 @@ func (this *QTabBar) Expanding() bool {
 // /usr/include/qt/QtWidgets/qtabbar.h:161
 // index:0
 // Public
-// void setExpanding(bool)
+// void setExpanding(_Bool)
 func (this *QTabBar) SetExpanding(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QTabBar12setExpandingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -616,7 +616,7 @@ func (this *QTabBar) IsMovable() bool {
 // /usr/include/qt/QtWidgets/qtabbar.h:164
 // index:0
 // Public
-// void setMovable(bool)
+// void setMovable(_Bool)
 func (this *QTabBar) SetMovable(movable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QTabBar10setMovableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), movable)
 	gopp.ErrPrint(err, rv)
@@ -636,7 +636,7 @@ func (this *QTabBar) DocumentMode() bool {
 // /usr/include/qt/QtWidgets/qtabbar.h:167
 // index:0
 // Public
-// void setDocumentMode(bool)
+// void setDocumentMode(_Bool)
 func (this *QTabBar) SetDocumentMode(set bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QTabBar15setDocumentModeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), set)
 	gopp.ErrPrint(err, rv)
@@ -656,7 +656,7 @@ func (this *QTabBar) AutoHide() bool {
 // /usr/include/qt/QtWidgets/qtabbar.h:170
 // index:0
 // Public
-// void setAutoHide(bool)
+// void setAutoHide(_Bool)
 func (this *QTabBar) SetAutoHide(hide bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QTabBar11setAutoHideEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hide)
 	gopp.ErrPrint(err, rv)
@@ -676,7 +676,7 @@ func (this *QTabBar) ChangeCurrentOnDrag() bool {
 // /usr/include/qt/QtWidgets/qtabbar.h:173
 // index:0
 // Public
-// void setChangeCurrentOnDrag(bool)
+// void setChangeCurrentOnDrag(_Bool)
 func (this *QTabBar) SetChangeCurrentOnDrag(change bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QTabBar22setChangeCurrentOnDragEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), change)
 	gopp.ErrPrint(err, rv)
@@ -766,7 +766,7 @@ func (this *QTabBar) TabBarDoubleClicked(index int) {
 // QSize tabSizeHint(int)
 func (this *QTabBar) TabSizeHint(index int) *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QTabBar11tabSizeHintEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), index)
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QTabBar11tabSizeHintEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -780,7 +780,7 @@ func (this *QTabBar) TabSizeHint(index int) *qtcore.QSize /*123*/ {
 // QSize minimumTabSizeHint(int)
 func (this *QTabBar) MinimumTabSizeHint(index int) *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QTabBar18minimumTabSizeHintEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), index)
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QTabBar18minimumTabSizeHintEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))

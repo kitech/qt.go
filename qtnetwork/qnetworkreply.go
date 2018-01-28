@@ -255,8 +255,8 @@ func (this *QNetworkReply) HasRawHeader(headerName *qtcore.QByteArray) bool {
 // Public
 // QByteArray rawHeader(const QByteArray &)
 func (this *QNetworkReply) RawHeader(headerName *qtcore.QByteArray) *qtcore.QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = headerName.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QNetworkReply9rawHeaderERK10QByteArray", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -443,7 +443,7 @@ func (this *QNetworkReply) SetRequest(request *QNetworkRequest) {
 // /usr/include/qt/QtNetwork/qnetworkreply.h:178
 // index:0
 // Protected
-// void setError(QNetworkReply::NetworkError, const QString &)
+// void setError(enum QNetworkReply::NetworkError, const QString &)
 func (this *QNetworkReply) SetError(errorCode int, errorString *qtcore.QString) {
 	var convArg1 = errorString.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkReply8setErrorENS_12NetworkErrorERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), errorCode, convArg1)
@@ -453,7 +453,7 @@ func (this *QNetworkReply) SetError(errorCode int, errorString *qtcore.QString) 
 // /usr/include/qt/QtNetwork/qnetworkreply.h:179
 // index:0
 // Protected
-// void setFinished(bool)
+// void setFinished(_Bool)
 func (this *QNetworkReply) SetFinished(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QNetworkReply11setFinishedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

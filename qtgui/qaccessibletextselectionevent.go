@@ -122,7 +122,7 @@ func (this *QAccessibleTextSelectionEvent) SelectionStart() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTextSelectionEvent14selectionStartEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:794
@@ -133,7 +133,7 @@ func (this *QAccessibleTextSelectionEvent) SelectionEnd() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTextSelectionEvent12selectionEndEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 //  body block end

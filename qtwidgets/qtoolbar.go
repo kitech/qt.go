@@ -125,7 +125,7 @@ func DeleteQToolBar(*QToolBar) {
 // /usr/include/qt/QtWidgets/qtoolbar.h:83
 // index:0
 // Public
-// void setMovable(bool)
+// void setMovable(_Bool)
 func (this *QToolBar) SetMovable(movable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar10setMovableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), movable)
 	gopp.ErrPrint(err, rv)
@@ -310,8 +310,8 @@ func (this *QToolBar) InsertWidget(before *QAction /*777 QAction **/, widget *QW
 // Public
 // QRect actionGeometry(QAction *)
 func (this *QToolBar) ActionGeometry(action *QAction /*777 QAction **/) *qtcore.QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = action.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBar14actionGeometryEP7QAction", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -363,7 +363,7 @@ func (this *QToolBar) ToggleViewAction() *QAction /*777 QAction **/ {
 // QSize iconSize()
 func (this *QToolBar) IconSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBar8iconSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK8QToolBar8iconSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -409,7 +409,7 @@ func (this *QToolBar) IsFloatable() bool {
 // /usr/include/qt/QtWidgets/qtoolbar.h:173
 // index:0
 // Public
-// void setFloatable(bool)
+// void setFloatable(_Bool)
 func (this *QToolBar) SetFloatable(floatable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar12setFloatableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), floatable)
 	gopp.ErrPrint(err, rv)
@@ -458,7 +458,7 @@ func (this *QToolBar) ActionTriggered(action *QAction /*777 QAction **/) {
 // /usr/include/qt/QtWidgets/qtoolbar.h:182
 // index:0
 // Public
-// void movableChanged(bool)
+// void movableChanged(_Bool)
 func (this *QToolBar) MovableChanged(movable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar14movableChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), movable)
 	gopp.ErrPrint(err, rv)
@@ -495,7 +495,7 @@ func (this *QToolBar) ToolButtonStyleChanged(toolButtonStyle int) {
 // /usr/include/qt/QtWidgets/qtoolbar.h:187
 // index:0
 // Public
-// void topLevelChanged(bool)
+// void topLevelChanged(_Bool)
 func (this *QToolBar) TopLevelChanged(topLevel bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar15topLevelChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), topLevel)
 	gopp.ErrPrint(err, rv)
@@ -504,7 +504,7 @@ func (this *QToolBar) TopLevelChanged(topLevel bool) {
 // /usr/include/qt/QtWidgets/qtoolbar.h:188
 // index:0
 // Public
-// void visibilityChanged(bool)
+// void visibilityChanged(_Bool)
 func (this *QToolBar) VisibilityChanged(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar17visibilityChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)

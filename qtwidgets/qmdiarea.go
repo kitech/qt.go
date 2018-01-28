@@ -114,7 +114,7 @@ func DeleteQMdiArea(*QMdiArea) {
 // QSize sizeHint()
 func (this *QMdiArea) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMdiArea8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK8QMdiArea8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -128,7 +128,7 @@ func (this *QMdiArea) SizeHint() *qtcore.QSize /*123*/ {
 // QSize minimumSizeHint()
 func (this *QMdiArea) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMdiArea15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK8QMdiArea15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -221,7 +221,7 @@ func (this *QMdiArea) ActivationOrder() int {
 // /usr/include/qt/QtWidgets/qmdiarea.h:107
 // index:0
 // Public
-// void setActivationOrder(QMdiArea::WindowOrder)
+// void setActivationOrder(enum QMdiArea::WindowOrder)
 func (this *QMdiArea) SetActivationOrder(order int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea18setActivationOrderENS_11WindowOrderE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), order)
 	gopp.ErrPrint(err, rv)
@@ -230,7 +230,7 @@ func (this *QMdiArea) SetActivationOrder(order int) {
 // /usr/include/qt/QtWidgets/qmdiarea.h:109
 // index:0
 // Public
-// void setOption(QMdiArea::AreaOption, bool)
+// void setOption(enum QMdiArea::AreaOption, _Bool)
 func (this *QMdiArea) SetOption(option int, on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea9setOptionENS_10AreaOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	gopp.ErrPrint(err, rv)
@@ -239,7 +239,7 @@ func (this *QMdiArea) SetOption(option int, on bool) {
 // /usr/include/qt/QtWidgets/qmdiarea.h:110
 // index:0
 // Public
-// bool testOption(QMdiArea::AreaOption)
+// bool testOption(enum QMdiArea::AreaOption)
 func (this *QMdiArea) TestOption(opton int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMdiArea10testOptionENS_10AreaOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), opton)
 	gopp.ErrPrint(err, rv)
@@ -250,7 +250,7 @@ func (this *QMdiArea) TestOption(opton int) bool {
 // /usr/include/qt/QtWidgets/qmdiarea.h:112
 // index:0
 // Public
-// void setViewMode(QMdiArea::ViewMode)
+// void setViewMode(enum QMdiArea::ViewMode)
 func (this *QMdiArea) SetViewMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea11setViewModeENS_8ViewModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -281,7 +281,7 @@ func (this *QMdiArea) DocumentMode() bool {
 // /usr/include/qt/QtWidgets/qmdiarea.h:117
 // index:0
 // Public
-// void setDocumentMode(bool)
+// void setDocumentMode(_Bool)
 func (this *QMdiArea) SetDocumentMode(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea15setDocumentModeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -290,7 +290,7 @@ func (this *QMdiArea) SetDocumentMode(enabled bool) {
 // /usr/include/qt/QtWidgets/qmdiarea.h:119
 // index:0
 // Public
-// void setTabsClosable(bool)
+// void setTabsClosable(_Bool)
 func (this *QMdiArea) SetTabsClosable(closable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea15setTabsClosableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), closable)
 	gopp.ErrPrint(err, rv)
@@ -310,7 +310,7 @@ func (this *QMdiArea) TabsClosable() bool {
 // /usr/include/qt/QtWidgets/qmdiarea.h:122
 // index:0
 // Public
-// void setTabsMovable(bool)
+// void setTabsMovable(_Bool)
 func (this *QMdiArea) SetTabsMovable(movable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiArea14setTabsMovableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), movable)
 	gopp.ErrPrint(err, rv)

@@ -96,7 +96,7 @@ func NewQSGNode() *QSGNode {
 // /usr/include/qt/QtQuick/qsgnode.h:165
 // index:1
 // Protected
-// void QSGNode(QSGNode::NodeType)
+// void QSGNode(enum QSGNode::NodeType)
 func NewQSGNode_1(type_ int) *QSGNode {
 	cthis := qtrt.Calloc(1, 256) // 80
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSGNodeC2ENS_8NodeTypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)
@@ -205,7 +205,7 @@ func (this *QSGNode) ChildCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSGNode10childCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:144
@@ -324,7 +324,7 @@ func (this *QSGNode) Flags() int {
 // /usr/include/qt/QtQuick/qsgnode.h:159
 // index:0
 // Public
-// void setFlag(QSGNode::Flag, bool)
+// void setFlag(enum QSGNode::Flag, _Bool)
 func (this *QSGNode) SetFlag(arg0 int, arg1 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSGNode7setFlagENS_4FlagEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
 	gopp.ErrPrint(err, rv)
@@ -333,7 +333,7 @@ func (this *QSGNode) SetFlag(arg0 int, arg1 bool) {
 // /usr/include/qt/QtQuick/qsgnode.h:160
 // index:0
 // Public
-// void setFlags(QSGNode::Flags, bool)
+// void setFlags(QSGNode::Flags, _Bool)
 func (this *QSGNode) SetFlags(arg0 int, arg1 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSGNode8setFlagsE6QFlagsINS_4FlagEEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
 	gopp.ErrPrint(err, rv)

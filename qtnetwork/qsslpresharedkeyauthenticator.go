@@ -146,7 +146,7 @@ func (this *QSslPreSharedKeyAuthenticator) MaximumIdentityLength() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator21maximumIdentityLengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:72
@@ -181,7 +181,7 @@ func (this *QSslPreSharedKeyAuthenticator) MaximumPreSharedKeyLength() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator25maximumPreSharedKeyLengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 //  body block end

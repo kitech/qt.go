@@ -168,7 +168,7 @@ func (this *QDataStream) Status() int {
 // /usr/include/qt/QtCore/qdatastream.h:136
 // index:0
 // Public
-// void setStatus(QDataStream::Status)
+// void setStatus(enum QDataStream::Status)
 func (this *QDataStream) SetStatus(status int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream9setStatusENS_6StatusE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), status)
 	gopp.ErrPrint(err, rv)
@@ -197,7 +197,7 @@ func (this *QDataStream) FloatingPointPrecision() int {
 // /usr/include/qt/QtCore/qdatastream.h:140
 // index:0
 // Public
-// void setFloatingPointPrecision(QDataStream::FloatingPointPrecision)
+// void setFloatingPointPrecision(enum QDataStream::FloatingPointPrecision)
 func (this *QDataStream) SetFloatingPointPrecision(precision int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream25setFloatingPointPrecisionENS_22FloatingPointPrecisionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), precision)
 	gopp.ErrPrint(err, rv)
@@ -217,7 +217,7 @@ func (this *QDataStream) ByteOrder() int {
 // /usr/include/qt/QtCore/qdatastream.h:143
 // index:0
 // Public
-// void setByteOrder(QDataStream::ByteOrder)
+// void setByteOrder(enum QDataStream::ByteOrder)
 func (this *QDataStream) SetByteOrder(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream12setByteOrderENS_9ByteOrderE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -231,7 +231,7 @@ func (this *QDataStream) Version() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream7versionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:146
@@ -265,7 +265,7 @@ func (this *QDataStream) ReadRawData(arg0 string, len int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream11readRawDataEPci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:182
@@ -292,7 +292,7 @@ func (this *QDataStream) WriteRawData(arg0 string, len int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream12writeRawDataEPKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:185
@@ -303,7 +303,7 @@ func (this *QDataStream) SkipRawData(len int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream11skipRawDataEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), len)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:187

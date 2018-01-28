@@ -89,7 +89,7 @@ func (this *QRubberBand) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // /usr/include/qt/QtWidgets/qrubberband.h:59
 // index:0
 // Public
-// void QRubberBand(QRubberBand::Shape, QWidget *)
+// void QRubberBand(enum QRubberBand::Shape, QWidget *)
 func NewQRubberBand(arg0 int, arg1 *QWidget /*777 QWidget **/) *QRubberBand {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = arg1.GetCthis()

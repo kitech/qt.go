@@ -99,7 +99,7 @@ func (this *QFutureWatcherBase) ProgressValue() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QFutureWatcherBase13progressValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qfuturewatcher.h:65
@@ -110,7 +110,7 @@ func (this *QFutureWatcherBase) ProgressMinimum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QFutureWatcherBase15progressMinimumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qfuturewatcher.h:66
@@ -121,7 +121,7 @@ func (this *QFutureWatcherBase) ProgressMaximum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QFutureWatcherBase15progressMaximumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qfuturewatcher.h:67
@@ -326,7 +326,7 @@ func (this *QFutureWatcherBase) Cancel() {
 // /usr/include/qt/QtCore/qfuturewatcher.h:95
 // index:0
 // Public
-// void setPaused(bool)
+// void setPaused(_Bool)
 func (this *QFutureWatcherBase) SetPaused(paused bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase9setPausedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), paused)
 	gopp.ErrPrint(err, rv)
@@ -391,7 +391,7 @@ func (this *QFutureWatcherBase) ConnectOutputInterface() {
 // /usr/include/qt/QtCore/qfuturewatcher.h:106
 // index:0
 // Protected
-// void disconnectOutputInterface(bool)
+// void disconnectOutputInterface(_Bool)
 func (this *QFutureWatcherBase) DisconnectOutputInterface(pendingAssignment bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase25disconnectOutputInterfaceEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pendingAssignment)
 	gopp.ErrPrint(err, rv)

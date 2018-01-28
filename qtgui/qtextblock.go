@@ -100,7 +100,7 @@ func (this *QTextBlock) Position() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8positionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:217
@@ -111,7 +111,7 @@ func (this *QTextBlock) Length() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock6lengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:218
@@ -168,7 +168,7 @@ func (this *QTextBlock) BlockFormatIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock16blockFormatIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:224
@@ -193,7 +193,7 @@ func (this *QTextBlock) CharFormatIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock15charFormatIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:227
@@ -275,7 +275,7 @@ func (this *QTextBlock) UserState() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock9userStateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:241
@@ -295,7 +295,7 @@ func (this *QTextBlock) Revision() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock8revisionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:244
@@ -321,7 +321,7 @@ func (this *QTextBlock) IsVisible() bool {
 // /usr/include/qt/QtGui/qtextobject.h:247
 // index:0
 // Public
-// void setVisible(bool)
+// void setVisible(_Bool)
 func (this *QTextBlock) SetVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlock10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
@@ -335,7 +335,7 @@ func (this *QTextBlock) BlockNumber() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock11blockNumberEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:250
@@ -346,7 +346,7 @@ func (this *QTextBlock) FirstLineNumber() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock15firstLineNumberEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:252
@@ -366,7 +366,7 @@ func (this *QTextBlock) LineCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock9lineCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:283
@@ -431,7 +431,7 @@ func (this *QTextBlock) FragmentIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextBlock13fragmentIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 //  body block end

@@ -116,7 +116,7 @@ func (this *QProgressBar) Minimum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar7minimumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:75
@@ -127,7 +127,7 @@ func (this *QProgressBar) Maximum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar7maximumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:77
@@ -138,7 +138,7 @@ func (this *QProgressBar) Value() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:79
@@ -158,7 +158,7 @@ func (this *QProgressBar) Text() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qprogressbar.h:80
 // index:0
 // Public
-// void setTextVisible(bool)
+// void setTextVisible(_Bool)
 func (this *QProgressBar) SetTextVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar14setTextVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
@@ -192,7 +192,7 @@ func (this *QProgressBar) Alignment() int {
 // QSize sizeHint()
 func (this *QProgressBar) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK12QProgressBar8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -206,7 +206,7 @@ func (this *QProgressBar) SizeHint() *qtcore.QSize /*123*/ {
 // QSize minimumSizeHint()
 func (this *QProgressBar) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QProgressBar15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK12QProgressBar15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -228,7 +228,7 @@ func (this *QProgressBar) Orientation() int {
 // /usr/include/qt/QtWidgets/qprogressbar.h:91
 // index:0
 // Public
-// void setInvertedAppearance(bool)
+// void setInvertedAppearance(_Bool)
 func (this *QProgressBar) SetInvertedAppearance(invert bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar21setInvertedAppearanceEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), invert)
 	gopp.ErrPrint(err, rv)

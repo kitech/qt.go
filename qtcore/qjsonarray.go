@@ -91,7 +91,8 @@ func DeleteQJsonArray(*QJsonArray) {
 // Public static
 // QJsonArray fromStringList(const QStringList &)
 func (this *QJsonArray) FromStringList(list *QStringList) *QJsonArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray14fromStringListERK11QStringList", ffiqt.FFI_TYPE_POINTER, list)
+	var convArg0 = list.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArray14fromStringListERK11QStringList", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQJsonArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -111,7 +112,7 @@ func (this *QJsonArray) Size() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qjsonarray.h:94
@@ -122,7 +123,7 @@ func (this *QJsonArray) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonArray5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qjsonarray.h:96

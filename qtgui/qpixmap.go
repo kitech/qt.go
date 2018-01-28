@@ -172,7 +172,7 @@ func (this *QPixmap) DevType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPixmap7devTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qpixmap.h:88
@@ -183,7 +183,7 @@ func (this *QPixmap) Width() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPixmap5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qpixmap.h:89
@@ -194,7 +194,7 @@ func (this *QPixmap) Height() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPixmap6heightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qpixmap.h:90
@@ -203,7 +203,7 @@ func (this *QPixmap) Height() int {
 // QSize size()
 func (this *QPixmap) Size() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPixmap4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QPixmap4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -233,7 +233,7 @@ func (this *QPixmap) Depth() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPixmap5depthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qpixmap.h:94
@@ -244,7 +244,7 @@ func (this *QPixmap) DefaultDepth() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap12defaultDepthEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QPixmap_DefaultDepth() int {
 	var nilthis *QPixmap
@@ -312,10 +312,10 @@ func (this *QPixmap) SetMask(arg0 *QBitmap) {
 // Public
 // qreal devicePixelRatio()
 func (this *QPixmap) DevicePixelRatio() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPixmap16devicePixelRatioEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPixmap16devicePixelRatioEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qpixmap.h:104
@@ -352,7 +352,7 @@ func (this *QPixmap) HasAlphaChannel() bool {
 // /usr/include/qt/QtGui/qpixmap.h:110
 // index:0
 // Public
-// QBitmap createHeuristicMask(bool)
+// QBitmap createHeuristicMask(_Bool)
 func (this *QPixmap) CreateHeuristicMask(clipTight bool) *QBitmap /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPixmap19createHeuristicMaskEb", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), clipTight)
@@ -368,8 +368,8 @@ func (this *QPixmap) CreateHeuristicMask(clipTight bool) *QBitmap /*123*/ {
 // Public
 // QBitmap createMaskFromColor(const QColor &, Qt::MaskMode)
 func (this *QPixmap) CreateMaskFromColor(maskColor *QColor, mode int) *QBitmap /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = maskColor.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPixmap19createMaskFromColorERK6QColorN2Qt8MaskModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -400,7 +400,9 @@ func QPixmap_GrabWindow(arg0 uint64, x int, y int, w int, h int) *QPixmap /*123*
 // Public static
 // QPixmap grabWidget(QObject *, const QRect &)
 func (this *QPixmap) GrabWidget(widget *qtcore.QObject /*777 QObject **/, rect *qtcore.QRect) *QPixmap /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap10grabWidgetEP7QObjectRK5QRect", ffiqt.FFI_TYPE_POINTER, widget, rect)
+	var convArg0 = widget.GetCthis()
+	var convArg1 = rect.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap10grabWidgetEP7QObjectRK5QRect", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -417,7 +419,8 @@ func QPixmap_GrabWidget(widget *qtcore.QObject /*777 QObject **/, rect *qtcore.Q
 // Public static inline
 // QPixmap grabWidget(QObject *, int, int, int, int)
 func (this *QPixmap) GrabWidget_1(widget *qtcore.QObject /*777 QObject **/, x int, y int, w int, h int) *QPixmap /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap10grabWidgetEP7QObjectiiii", ffiqt.FFI_TYPE_POINTER, widget, x, y, w, h)
+	var convArg0 = widget.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap10grabWidgetEP7QObjectiiii", ffiqt.FFI_TYPE_POINTER, convArg0, x, y, w, h)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -448,8 +451,8 @@ func (this *QPixmap) Scaled(w int, h int, aspectMode int, mode int) *QPixmap /*1
 // Public
 // QPixmap scaled(const QSize &, Qt::AspectRatioMode, Qt::TransformationMode)
 func (this *QPixmap) Scaled_1(s *qtcore.QSize, aspectMode int, mode int) *QPixmap /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = s.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPixmap6scaledERK5QSizeN2Qt15AspectRatioModeENS3_18TransformationModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, aspectMode, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -491,8 +494,8 @@ func (this *QPixmap) ScaledToHeight(h int, mode int) *QPixmap /*123*/ {
 // Public
 // QPixmap transformed(const QMatrix &, Qt::TransformationMode)
 func (this *QPixmap) Transformed(arg0 *QMatrix, mode int) *QPixmap /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPixmap11transformedERK7QMatrixN2Qt18TransformationModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -506,8 +509,8 @@ func (this *QPixmap) Transformed(arg0 *QMatrix, mode int) *QPixmap /*123*/ {
 // Public
 // QPixmap transformed(const QTransform &, Qt::TransformationMode)
 func (this *QPixmap) Transformed_1(arg0 *QTransform, mode int) *QPixmap /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPixmap11transformedERK10QTransformN2Qt18TransformationModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -521,7 +524,8 @@ func (this *QPixmap) Transformed_1(arg0 *QTransform, mode int) *QPixmap /*123*/ 
 // Public static
 // QMatrix trueMatrix(const QMatrix &, int, int)
 func (this *QPixmap) TrueMatrix(m *QMatrix, w int, h int) *QMatrix /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap10trueMatrixERK7QMatrixii", ffiqt.FFI_TYPE_POINTER, m, w, h)
+	var convArg0 = m.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap10trueMatrixERK7QMatrixii", ffiqt.FFI_TYPE_POINTER, convArg0, w, h)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -538,7 +542,8 @@ func QPixmap_TrueMatrix(m *QMatrix, w int, h int) *QMatrix /*123*/ {
 // Public static
 // QTransform trueMatrix(const QTransform &, int, int)
 func (this *QPixmap) TrueMatrix_1(m *QTransform, w int, h int) *QTransform /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap10trueMatrixERK10QTransformii", ffiqt.FFI_TYPE_POINTER, m, w, h)
+	var convArg0 = m.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap10trueMatrixERK10QTransformii", ffiqt.FFI_TYPE_POINTER, convArg0, w, h)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -569,7 +574,8 @@ func (this *QPixmap) ToImage() *QImage /*123*/ {
 // Public static
 // QPixmap fromImage(const QImage &, Qt::ImageConversionFlags)
 func (this *QPixmap) FromImage(image *QImage, flags int) *QPixmap /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap9fromImageERK6QImage6QFlagsIN2Qt19ImageConversionFlagEE", ffiqt.FFI_TYPE_POINTER, image, flags)
+	var convArg0 = image.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap9fromImageERK6QImage6QFlagsIN2Qt19ImageConversionFlagEE", ffiqt.FFI_TYPE_POINTER, convArg0, flags)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -603,7 +609,8 @@ func QPixmap_FromImage_1(image unsafe.Pointer /*333*/, flags int) *QPixmap /*123
 // Public static
 // QPixmap fromImageReader(QImageReader *, Qt::ImageConversionFlags)
 func (this *QPixmap) FromImageReader(imageReader *QImageReader /*777 QImageReader **/, flags int) *QPixmap /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap15fromImageReaderEP12QImageReader6QFlagsIN2Qt19ImageConversionFlagEE", ffiqt.FFI_TYPE_POINTER, imageReader, flags)
+	var convArg0 = imageReader.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap15fromImageReaderEP12QImageReader6QFlagsIN2Qt19ImageConversionFlagEE", ffiqt.FFI_TYPE_POINTER, convArg0, flags)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -715,8 +722,8 @@ func (this *QPixmap) Copy(x int, y int, width int, height int) *QPixmap /*123*/ 
 // Public
 // QPixmap copy(const QRect &)
 func (this *QPixmap) Copy_1(rect *qtcore.QRect) *QPixmap /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = rect.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPixmap4copyERK5QRect", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -803,12 +810,12 @@ func (this *QPixmap) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 // /usr/include/qt/QtGui/qpixmap.h:175
 // index:0
 // Protected virtual
-// int metric(QPaintDevice::PaintDeviceMetric)
+// int metric(enum QPaintDevice::PaintDeviceMetric)
 func (this *QPixmap) Metric(arg0 int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPixmap6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qpixmap.h:176
@@ -816,7 +823,8 @@ func (this *QPixmap) Metric(arg0 int) int {
 // Protected static
 // QPixmap fromImageInPlace(QImage &, Qt::ImageConversionFlags)
 func (this *QPixmap) FromImageInPlace(image *QImage, flags int) *QPixmap /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap16fromImageInPlaceER6QImage6QFlagsIN2Qt19ImageConversionFlagEE", ffiqt.FFI_TYPE_POINTER, image, flags)
+	var convArg0 = image.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmap16fromImageInPlaceER6QImage6QFlagsIN2Qt19ImageConversionFlagEE", ffiqt.FFI_TYPE_POINTER, convArg0, flags)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333

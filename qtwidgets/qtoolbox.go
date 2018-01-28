@@ -118,7 +118,7 @@ func (this *QToolBox) AddItem(widget *QWidget /*777 QWidget **/, text *qtcore.QS
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox7addItemEP7QWidgetRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:64
@@ -132,7 +132,7 @@ func (this *QToolBox) AddItem_1(widget *QWidget /*777 QWidget **/, icon *qtgui.Q
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox7addItemEP7QWidgetRK5QIconRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:65
@@ -145,7 +145,7 @@ func (this *QToolBox) InsertItem(index int, widget *QWidget /*777 QWidget **/, t
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox10insertItemEiP7QWidgetRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:66
@@ -159,7 +159,7 @@ func (this *QToolBox) InsertItem_1(index int, widget *QWidget /*777 QWidget **/,
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox10insertItemEiP7QWidgetRK5QIconRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:68
@@ -174,7 +174,7 @@ func (this *QToolBox) RemoveItem(index int) {
 // /usr/include/qt/QtWidgets/qtoolbox.h:70
 // index:0
 // Public
-// void setItemEnabled(int, bool)
+// void setItemEnabled(int, _Bool)
 func (this *QToolBox) SetItemEnabled(index int, enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBox14setItemEnabledEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, enabled)
 	gopp.ErrPrint(err, rv)
@@ -271,7 +271,7 @@ func (this *QToolBox) CurrentIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBox12currentIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:85
@@ -307,7 +307,7 @@ func (this *QToolBox) IndexOf(widget *QWidget /*777 QWidget **/) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBox7indexOfEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:88
@@ -318,7 +318,7 @@ func (this *QToolBox) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QToolBox5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:91

@@ -116,7 +116,7 @@ func (this *QFrame) FrameStyle() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame10frameStyleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:68
@@ -136,7 +136,7 @@ func (this *QFrame) FrameWidth() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame10frameWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:72
@@ -145,7 +145,7 @@ func (this *QFrame) FrameWidth() int {
 // QSize sizeHint()
 func (this *QFrame) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK6QFrame8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -167,7 +167,7 @@ func (this *QFrame) FrameShape() int {
 // /usr/include/qt/QtWidgets/qframe.h:97
 // index:0
 // Public
-// void setFrameShape(QFrame::Shape)
+// void setFrameShape(enum QFrame::Shape)
 func (this *QFrame) SetFrameShape(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame13setFrameShapeENS_5ShapeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -187,7 +187,7 @@ func (this *QFrame) FrameShadow() int {
 // /usr/include/qt/QtWidgets/qframe.h:99
 // index:0
 // Public
-// void setFrameShadow(QFrame::Shadow)
+// void setFrameShadow(enum QFrame::Shadow)
 func (this *QFrame) SetFrameShadow(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame14setFrameShadowENS_6ShadowE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -201,7 +201,7 @@ func (this *QFrame) LineWidth() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame9lineWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:102
@@ -221,7 +221,7 @@ func (this *QFrame) MidLineWidth() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame12midLineWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:105

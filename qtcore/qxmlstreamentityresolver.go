@@ -79,9 +79,9 @@ func DeleteQXmlStreamEntityResolver(*QXmlStreamEntityResolver) {
 // Public virtual
 // QString resolveEntity(const QString &, const QString &)
 func (this *QXmlStreamEntityResolver) ResolveEntity(publicId *QString, systemId *QString) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = publicId.GetCthis()
 	var convArg1 = systemId.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -95,8 +95,8 @@ func (this *QXmlStreamEntityResolver) ResolveEntity(publicId *QString, systemId 
 // Public virtual
 // QString resolveUndeclaredEntity(const QString &)
 func (this *QXmlStreamEntityResolver) ResolveUndeclaredEntity(name *QString) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = name.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

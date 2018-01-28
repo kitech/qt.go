@@ -80,7 +80,7 @@ func NewQTextBoundaryFinder() *QTextBoundaryFinder {
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:76
 // index:1
 // Public
-// void QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType, const QString &)
+// void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const QString &)
 func NewQTextBoundaryFinder_1(type_ int, string *QString) *QTextBoundaryFinder {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = string.GetCthis()
@@ -93,7 +93,7 @@ func NewQTextBoundaryFinder_1(type_ int, string *QString) *QTextBoundaryFinder {
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:77
 // index:2
 // Public
-// void QTextBoundaryFinder(QTextBoundaryFinder::BoundaryType, const QChar *, int, unsigned char *, int)
+// void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const QChar *, int, unsigned char *, int)
 func NewQTextBoundaryFinder_2(type_ int, chars *QChar /*777 const QChar **/, length int, buffer unsafe.Pointer /*666*/, bufferSize int) *QTextBoundaryFinder {
 	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = chars.GetCthis()
@@ -174,7 +174,7 @@ func (this *QTextBoundaryFinder) Position() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder8positionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:87
@@ -194,7 +194,7 @@ func (this *QTextBoundaryFinder) ToNextBoundary() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinder14toNextBoundaryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:90
@@ -205,7 +205,7 @@ func (this *QTextBoundaryFinder) ToPreviousBoundary() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinder18toPreviousBoundaryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:92

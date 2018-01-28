@@ -124,7 +124,7 @@ func (this *QTextOption) TextDirection() int {
 // /usr/include/qt/QtGui/qtextoption.h:105
 // index:0
 // Public inline
-// void setWrapMode(QTextOption::WrapMode)
+// void setWrapMode(enum QTextOption::WrapMode)
 func (this *QTextOption) SetWrapMode(wrap int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption11setWrapModeENS_8WrapModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), wrap)
 	gopp.ErrPrint(err, rv)
@@ -175,10 +175,10 @@ func (this *QTextOption) SetTabStop(tabStop float64) {
 // Public inline
 // qreal tabStop()
 func (this *QTextOption) TabStop() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption7tabStopEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption7tabStopEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextoption.h:125
@@ -195,16 +195,16 @@ func (this *QTextOption) SetTabStopDistance(tabStopDistance float64) {
 // Public inline
 // qreal tabStopDistance()
 func (this *QTextOption) TabStopDistance() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption15tabStopDistanceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextOption15tabStopDistanceEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextoption.h:134
 // index:0
 // Public inline
-// void setUseDesignMetrics(bool)
+// void setUseDesignMetrics(_Bool)
 func (this *QTextOption) SetUseDesignMetrics(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption19setUseDesignMetricsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)

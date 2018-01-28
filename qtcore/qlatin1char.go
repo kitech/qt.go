@@ -85,7 +85,7 @@ func (this *QLatin1Char) ToLatin1() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLatin1Char8toLatin1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return byte(rv) // 111
+	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
 
 // /usr/include/qt/QtCore/qchar.h:55

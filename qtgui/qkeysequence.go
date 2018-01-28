@@ -84,7 +84,7 @@ func NewQKeySequence() *QKeySequence {
 // /usr/include/qt/QtGui/qkeysequence.h:157
 // index:1
 // Public
-// void QKeySequence(const QString &, QKeySequence::SequenceFormat)
+// void QKeySequence(const QString &, enum QKeySequence::SequenceFormat)
 func NewQKeySequence_1(key *qtcore.QString, format int) *QKeySequence {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = key.GetCthis()
@@ -109,7 +109,7 @@ func NewQKeySequence_2(k1 int, k2 int, k3 int, k4 int) *QKeySequence {
 // /usr/include/qt/QtGui/qkeysequence.h:160
 // index:3
 // Public
-// void QKeySequence(QKeySequence::StandardKey)
+// void QKeySequence(enum QKeySequence::StandardKey)
 func NewQKeySequence_3(key int) *QKeySequence {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequenceC2ENS_11StandardKeyE", ffiqt.FFI_TYPE_VOID, cthis, key)
@@ -135,7 +135,7 @@ func (this *QKeySequence) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QKeySequence5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qkeysequence.h:164
@@ -152,7 +152,7 @@ func (this *QKeySequence) IsEmpty() bool {
 // /usr/include/qt/QtGui/qkeysequence.h:172
 // index:0
 // Public
-// QString toString(QKeySequence::SequenceFormat)
+// QString toString(enum QKeySequence::SequenceFormat)
 func (this *QKeySequence) ToString(format int) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QKeySequence8toStringENS_14SequenceFormatE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), format)
@@ -166,9 +166,10 @@ func (this *QKeySequence) ToString(format int) *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qkeysequence.h:173
 // index:0
 // Public static
-// QKeySequence fromString(const QString &, QKeySequence::SequenceFormat)
+// QKeySequence fromString(const QString &, enum QKeySequence::SequenceFormat)
 func (this *QKeySequence) FromString(str *qtcore.QString, format int) *QKeySequence /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequence10fromStringERK7QStringNS_14SequenceFormatE", ffiqt.FFI_TYPE_POINTER, str, format)
+	var convArg0 = str.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequence10fromStringERK7QStringNS_14SequenceFormatE", ffiqt.FFI_TYPE_POINTER, convArg0, format)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -197,7 +198,8 @@ func (this *QKeySequence) Matches(seq *QKeySequence) int {
 // Public static
 // QKeySequence mnemonic(const QString &)
 func (this *QKeySequence) Mnemonic(text *qtcore.QString) *QKeySequence /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequence8mnemonicERK7QString", ffiqt.FFI_TYPE_POINTER, text)
+	var convArg0 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequence8mnemonicERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv))) // 333

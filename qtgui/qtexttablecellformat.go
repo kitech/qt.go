@@ -120,10 +120,10 @@ func (this *QTextTableCellFormat) SetTopPadding(padding float64) {
 // Public inline
 // qreal topPadding()
 func (this *QTextTableCellFormat) TopPadding() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat10topPaddingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat10topPaddingEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:952
@@ -140,10 +140,10 @@ func (this *QTextTableCellFormat) SetBottomPadding(padding float64) {
 // Public inline
 // qreal bottomPadding()
 func (this *QTextTableCellFormat) BottomPadding() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat13bottomPaddingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat13bottomPaddingEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:955
@@ -160,10 +160,10 @@ func (this *QTextTableCellFormat) SetLeftPadding(padding float64) {
 // Public inline
 // qreal leftPadding()
 func (this *QTextTableCellFormat) LeftPadding() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat11leftPaddingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat11leftPaddingEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:958
@@ -180,10 +180,10 @@ func (this *QTextTableCellFormat) SetRightPadding(padding float64) {
 // Public inline
 // qreal rightPadding()
 func (this *QTextTableCellFormat) RightPadding() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat12rightPaddingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QTextTableCellFormat12rightPaddingEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:961

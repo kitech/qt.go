@@ -69,7 +69,7 @@ func (*QMutex) NewFromPointer(cthis unsafe.Pointer) *QMutex {
 // /usr/include/qt/QtCore/qmutex.h:130
 // index:0
 // Public
-// void QMutex(QMutex::RecursionMode)
+// void QMutex(enum QMutex::RecursionMode)
 func NewQMutex(mode int) *QMutex {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutexC2ENS_13RecursionModeE", ffiqt.FFI_TYPE_VOID, cthis, mode)

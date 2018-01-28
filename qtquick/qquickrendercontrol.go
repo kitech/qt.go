@@ -183,7 +183,9 @@ func (this *QQuickRenderControl) Grab() *qtgui.QImage /*123*/ {
 // Public static
 // QWindow * renderWindowFor(QQuickWindow *, QPoint *)
 func (this *QQuickRenderControl) RenderWindowFor(win *QQuickWindow /*777 QQuickWindow **/, offset *qtcore.QPoint /*777 QPoint **/) *qtgui.QWindow /*777 QWindow **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickRenderControl15renderWindowForEP12QQuickWindowP6QPoint", ffiqt.FFI_TYPE_POINTER, win, offset)
+	var convArg0 = win.GetCthis()
+	var convArg1 = offset.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickRenderControl15renderWindowForEP12QQuickWindowP6QPoint", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtgui.NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444

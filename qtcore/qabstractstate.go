@@ -125,7 +125,7 @@ func (this *QAbstractState) Active() bool {
 // /usr/include/qt/QtCore/qabstractstate.h:68
 // index:0
 // Public
-// void activeChanged(bool)
+// void activeChanged(_Bool)
 func (this *QAbstractState) ActiveChanged(active bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QAbstractState13activeChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), active)
 	gopp.ErrPrint(err, rv)

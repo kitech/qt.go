@@ -73,7 +73,7 @@ func (*QShortcutEvent) NewFromPointer(cthis unsafe.Pointer) *QShortcutEvent {
 // /usr/include/qt/QtGui/qevent.h:767
 // index:0
 // Public
-// void QShortcutEvent(const QKeySequence &, int, bool)
+// void QShortcutEvent(const QKeySequence &, int, _Bool)
 func NewQShortcutEvent(key *QKeySequence, id int, ambiguous bool) *QShortcutEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = key.GetCthis()
@@ -112,7 +112,7 @@ func (this *QShortcutEvent) ShortcutId() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QShortcutEvent10shortcutIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:772

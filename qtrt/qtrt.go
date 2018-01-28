@@ -12,12 +12,9 @@ import (
 	"unsafe"
 )
 
-func Malloc(sz int) unsafe.Pointer        { return C.calloc(1, C.size_t(sz)) }
-func Calloc(n int, sz int) unsafe.Pointer { return C.calloc(C.size_t(n), C.size_t(sz)) }
-func FreeMem(p unsafe.Pointer)            { C.free(p) }
-func CString(s string) unsafe.Pointer     { return unsafe.Pointer(C.CString(s)) }
-func GoString(p unsafe.Pointer) string    { return C.GoString((*C.char)(p)) }
-func GoStringI(p uint64) string           { return GoString(unsafe.Pointer(uintptr(p))) }
+func CString(s string) unsafe.Pointer  { return unsafe.Pointer(C.CString(s)) }
+func GoString(p unsafe.Pointer) string { return C.GoString((*C.char)(p)) }
+func GoStringI(p uint64) string        { return GoString(unsafe.Pointer(uintptr(p))) }
 
 // 所有的Qt绑定类必须继承自这个
 type CObject struct {

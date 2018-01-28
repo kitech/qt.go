@@ -105,8 +105,8 @@ func DeleteQFileSelector(*QFileSelector) {
 // Public
 // QString select(const QString &)
 func (this *QFileSelector) Select(filePath *QString) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = filePath.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFileSelector6selectERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -120,8 +120,8 @@ func (this *QFileSelector) Select(filePath *QString) *QString /*123*/ {
 // Public
 // QUrl select(const QUrl &)
 func (this *QFileSelector) Select_1(filePath *QUrl) *QUrl /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = filePath.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFileSelector6selectERK4QUrl", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

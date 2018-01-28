@@ -153,7 +153,7 @@ func (this *QLatin1String) Size() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qstring.h:103

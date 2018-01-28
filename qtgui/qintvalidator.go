@@ -174,7 +174,7 @@ func (this *QIntValidator) Bottom() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QIntValidator6bottomEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:108
@@ -185,7 +185,7 @@ func (this *QIntValidator) Top() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QIntValidator3topEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:110

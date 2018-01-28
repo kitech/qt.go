@@ -143,9 +143,9 @@ func (this *QProcessEnvironment) Remove(name *QString) {
 // Public
 // QString value(const QString &, const QString &)
 func (this *QProcessEnvironment) Value(name *QString, defaultValue *QString) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = name.GetCthis()
 	var convArg1 = defaultValue.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QProcessEnvironment5valueERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv

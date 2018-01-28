@@ -129,7 +129,7 @@ func (this *QPagedPaintDevice) SetPageSize(pageSize *QPageSize) bool {
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:226
 // index:1
 // Public virtual
-// void setPageSize(QPagedPaintDevice::PageSize)
+// void setPageSize(enum QPagedPaintDevice::PageSize)
 func (this *QPagedPaintDevice) SetPageSize_1(size int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDevice11setPageSizeENS_8PageSizeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
@@ -211,7 +211,7 @@ func (this *QPagedPaintDevice) SetPageSizeMM(size *qtcore.QSizeF) {
 // QSizeF pageSizeMM()
 func (this *QPagedPaintDevice) PageSizeMM() *qtcore.QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QPagedPaintDevice10pageSizeMMEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK17QPagedPaintDevice10pageSizeMMEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))

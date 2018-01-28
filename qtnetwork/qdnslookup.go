@@ -98,7 +98,7 @@ func NewQDnsLookup(parent *qtcore.QObject /*777 QObject **/) *QDnsLookup {
 // /usr/include/qt/QtNetwork/qdnslookup.h:222
 // index:1
 // Public
-// void QDnsLookup(QDnsLookup::Type, const QString &, QObject *)
+// void QDnsLookup(enum QDnsLookup::Type, const QString &, QObject *)
 func NewQDnsLookup_1(type_ int, name *qtcore.QString, parent *qtcore.QObject /*777 QObject **/) *QDnsLookup {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = name.GetCthis()
@@ -112,7 +112,7 @@ func NewQDnsLookup_1(type_ int, name *qtcore.QString, parent *qtcore.QObject /*7
 // /usr/include/qt/QtNetwork/qdnslookup.h:223
 // index:2
 // Public
-// void QDnsLookup(QDnsLookup::Type, const QString &, const QHostAddress &, QObject *)
+// void QDnsLookup(enum QDnsLookup::Type, const QString &, const QHostAddress &, QObject *)
 func NewQDnsLookup_2(type_ int, name *qtcore.QString, nameserver *QHostAddress, parent *qtcore.QObject /*777 QObject **/) *QDnsLookup {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = name.GetCthis()
@@ -277,7 +277,7 @@ func (this *QDnsLookup) NameChanged(name *qtcore.QString) {
 // /usr/include/qt/QtNetwork/qdnslookup.h:255
 // index:0
 // Public
-// void typeChanged(QDnsLookup::Type)
+// void typeChanged(enum QDnsLookup::Type)
 func (this *QDnsLookup) TypeChanged(type_ int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDnsLookup11typeChangedENS_4TypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)

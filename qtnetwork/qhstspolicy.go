@@ -151,7 +151,7 @@ func (this *QHstsPolicy) Expiry() *qtcore.QDateTime /*123*/ {
 // /usr/include/qt/QtNetwork/qhstspolicy.h:77
 // index:0
 // Public
-// void setIncludesSubDomains(bool)
+// void setIncludesSubDomains(_Bool)
 func (this *QHstsPolicy) SetIncludesSubDomains(include bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHstsPolicy21setIncludesSubDomainsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), include)
 	gopp.ErrPrint(err, rv)

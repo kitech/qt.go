@@ -31,7 +31,7 @@ func QRound(d float64) int {
 	rv, err := ffiqt.InvokeQtFunc6("_Z6qRoundd", ffiqt.FFI_TYPE_POINTER, d)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qglobal.h:533
@@ -42,7 +42,7 @@ func QRound_1(d float32) int {
 	rv, err := ffiqt.InvokeQtFunc6("_Z6qRoundf", ffiqt.FFI_TYPE_POINTER, d)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qglobal.h:536
@@ -242,14 +242,14 @@ func QEnvironmentVariableIsSet(varName string) bool {
 // /usr/include/qt/QtCore/qglobal.h:1141
 // index:0
 // Invalid
-// int qEnvironmentVariableIntValue(const char *, bool *)
+// int qEnvironmentVariableIntValue(const char *, _Bool *)
 func QEnvironmentVariableIntValue(varName string, ok unsafe.Pointer /*666*/) int {
 	var convArg0 = qtrt.CString(varName)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := ffiqt.InvokeQtFunc6("_Z28qEnvironmentVariableIntValuePKcPb", ffiqt.FFI_TYPE_POINTER, convArg0, &ok)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qglobal.h:1143
@@ -260,7 +260,7 @@ func QIntCast(f float64) int {
 	rv, err := ffiqt.InvokeQtFunc6("_Z8qIntCastd", ffiqt.FFI_TYPE_POINTER, f)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qglobal.h:1144
@@ -271,7 +271,7 @@ func QIntCast_1(f float32) int {
 	rv, err := ffiqt.InvokeQtFunc6("_Z8qIntCastf", ffiqt.FFI_TYPE_POINTER, f)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qlogging.h:182
@@ -320,7 +320,7 @@ func QSetMessagePattern(messagePattern *QString) {
 // /usr/include/qt/QtCore/qlogging.h:194
 // index:0
 // Invalid
-// QString qFormatLogMessage(QtMsgType, const QMessageLogContext &, const QString &)
+// QString qFormatLogMessage(enum QtMsgType, const QMessageLogContext &, const QString &)
 func QFormatLogMessage(type_ int, context *QMessageLogContext, buf *QString) *QString /*123*/ {
 	var convArg1 = context.GetCthis()
 	var convArg2 = buf.GetCthis()
@@ -405,7 +405,7 @@ func QSNaN() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qSNaNv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qnumeric.h:55
@@ -416,7 +416,7 @@ func QQNaN() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qQNaNv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qnumeric.h:56
@@ -427,7 +427,7 @@ func QInf() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z4qInfv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qnumeric.h:58
@@ -714,7 +714,7 @@ func QGlobalQHashSeed() int {
 	rv, err := ffiqt.InvokeQtFunc6("_Z16qGlobalQHashSeedv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:68
@@ -738,10 +738,10 @@ func QHashBits(p unsafe.Pointer /*666*/, size uint, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:72
-// index:0
+// index:7
 // Invalid inline
 // uint qHash(char, uint)
-func QHash(key byte, seed uint) uint {
+func QHash_7(key byte, seed uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashcj", ffiqt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
 	// return rv
@@ -749,10 +749,10 @@ func QHash(key byte, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:73
-// index:1
+// index:8
 // Invalid inline
 // uint qHash(uchar, uint)
-func QHash_1(key byte, seed uint) uint {
+func QHash_8(key byte, seed uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashhj", ffiqt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
 	// return rv
@@ -760,10 +760,10 @@ func QHash_1(key byte, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:74
-// index:2
+// index:9
 // Invalid inline
 // uint qHash(signed char, uint)
-func QHash_2(key byte, seed uint) uint {
+func QHash_9(key byte, seed uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashaj", ffiqt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
 	// return rv
@@ -771,10 +771,10 @@ func QHash_2(key byte, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:75
-// index:3
+// index:10
 // Invalid inline
 // uint qHash(ushort, uint)
-func QHash_3(key uint16, seed uint) uint {
+func QHash_10(key uint16, seed uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashtj", ffiqt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
 	// return rv
@@ -782,10 +782,10 @@ func QHash_3(key uint16, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:76
-// index:4
+// index:11
 // Invalid inline
 // uint qHash(short, uint)
-func QHash_4(key int16, seed uint) uint {
+func QHash_11(key int16, seed uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashsj", ffiqt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
 	// return rv
@@ -793,10 +793,10 @@ func QHash_4(key int16, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:77
-// index:5
+// index:12
 // Invalid inline
 // uint qHash(uint, uint)
-func QHash_5(key uint, seed uint) uint {
+func QHash_12(key uint, seed uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashjj", ffiqt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
 	// return rv
@@ -804,10 +804,10 @@ func QHash_5(key uint, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:78
-// index:6
+// index:13
 // Invalid inline
 // uint qHash(int, uint)
-func QHash_6(key int, seed uint) uint {
+func QHash_13(key int, seed uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashij", ffiqt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
 	// return rv
@@ -815,10 +815,10 @@ func QHash_6(key int, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:79
-// index:7
+// index:14
 // Invalid inline
 // uint qHash(ulong, uint)
-func QHash_7(key uint, seed uint) uint {
+func QHash_14(key uint, seed uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashmj", ffiqt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
 	// return rv
@@ -826,10 +826,10 @@ func QHash_7(key uint, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:85
-// index:8
+// index:15
 // Invalid inline
 // uint qHash(long, uint)
-func QHash_8(key int, seed uint) uint {
+func QHash_15(key int, seed uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashlj", ffiqt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
 	// return rv
@@ -837,10 +837,10 @@ func QHash_8(key int, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:86
-// index:9
+// index:16
 // Invalid inline
 // uint qHash(quint64, uint)
-func QHash_9(key uint64, seed uint) uint {
+func QHash_16(key uint64, seed uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashyj", ffiqt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
 	// return rv
@@ -848,10 +848,10 @@ func QHash_9(key uint64, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:90
-// index:10
+// index:17
 // Invalid inline
 // uint qHash(qint64, uint)
-func QHash_10(key int64, seed uint) uint {
+func QHash_17(key int64, seed uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashxj", ffiqt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
 	// return rv
@@ -859,10 +859,10 @@ func QHash_10(key int64, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:91
-// index:11
+// index:18
 // Invalid
 // uint qHash(float, uint)
-func QHash_11(key float32, seed uint) uint {
+func QHash_18(key float32, seed uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashfj", ffiqt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
 	// return rv
@@ -870,10 +870,10 @@ func QHash_11(key float32, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:92
-// index:12
+// index:19
 // Invalid
 // uint qHash(double, uint)
-func QHash_12(key float64, seed uint) uint {
+func QHash_19(key float64, seed uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashdj", ffiqt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
 	// return rv
@@ -881,10 +881,10 @@ func QHash_12(key float64, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:94
-// index:13
+// index:20
 // Invalid
 // uint qHash(long double, uint)
-func QHash_13(key float64, seed uint) uint {
+func QHash_20(key float64, seed uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashej", ffiqt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
 	// return rv
@@ -892,10 +892,10 @@ func QHash_13(key float64, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:96
-// index:14
+// index:21
 // Invalid inline
 // uint qHash(const QChar, uint)
-func QHash_14(key *QChar /*123*/, seed uint) uint {
+func QHash_21(key *QChar /*123*/, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHash5QCharj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -904,10 +904,10 @@ func QHash_14(key *QChar /*123*/, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:97
-// index:15
+// index:22
 // Invalid
 // uint qHash(const QByteArray &, uint)
-func QHash_15(key *QByteArray, seed uint) uint {
+func QHash_22(key *QByteArray, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK10QByteArrayj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -916,10 +916,10 @@ func QHash_15(key *QByteArray, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:99
-// index:16
+// index:23
 // Invalid
 // uint qHash(const QString &, uint)
-func QHash_16(key *QString, seed uint) uint {
+func QHash_23(key *QString, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK7QStringj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -928,10 +928,10 @@ func QHash_16(key *QString, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:100
-// index:17
+// index:24
 // Invalid
 // uint qHash(const QStringRef &, uint)
-func QHash_17(key *QStringRef, seed uint) uint {
+func QHash_24(key *QStringRef, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK10QStringRefj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -940,10 +940,10 @@ func QHash_17(key *QStringRef, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:102
-// index:18
+// index:25
 // Invalid
 // uint qHash(QStringView, uint)
-func QHash_18(key *QStringView /*123*/, seed uint) uint {
+func QHash_25(key *QStringView /*123*/, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHash11QStringViewj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -952,10 +952,10 @@ func QHash_18(key *QStringView /*123*/, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:103
-// index:19
+// index:26
 // Invalid
 // uint qHash(const QBitArray &, uint)
-func QHash_19(key *QBitArray, seed uint) uint {
+func QHash_26(key *QBitArray, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK9QBitArrayj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -964,10 +964,10 @@ func QHash_19(key *QBitArray, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:104
-// index:20
+// index:27
 // Invalid
 // uint qHash(QLatin1String, uint)
-func QHash_20(key *QLatin1String /*123*/, seed uint) uint {
+func QHash_27(key *QLatin1String /*123*/, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHash13QLatin1Stringj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -976,10 +976,10 @@ func QHash_20(key *QLatin1String /*123*/, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qregexp.h:56
-// index:21
+// index:28
 // Invalid
 // uint qHash(const QRegExp &, uint)
-func QHash_21(key *QRegExp, seed uint) uint {
+func QHash_28(key *QRegExp, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK7QRegExpj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -990,7 +990,7 @@ func QHash_21(key *QRegExp, seed uint) uint {
 // /usr/include/qt/QtCore/qobject.h:93
 // index:0
 // Invalid
-// QObject * qt_qFindChild_helper(const QObject *, const QString &, const QMetaObject &, Qt::FindChildOptions)
+// QObject * qt_qFindChild_helper(const QObject *, const QString &, const struct QMetaObject &, Qt::FindChildOptions)
 func Qt_qFindChild_helper(parent *QObject /*777 const QObject **/, name *QString, mo *QMetaObject, options int) *QObject /*777 QObject **/ {
 	var convArg0 = parent.GetCthis()
 	var convArg1 = name.GetCthis()
@@ -1003,10 +1003,10 @@ func Qt_qFindChild_helper(parent *QObject /*777 const QObject **/, name *QString
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:102
-// index:22
+// index:29
 // Invalid
 // uint qHash(const QPersistentModelIndex &, uint)
-func QHash_22(index *QPersistentModelIndex, seed uint) uint {
+func QHash_29(index *QPersistentModelIndex, seed uint) uint {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK21QPersistentModelIndexj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -1015,10 +1015,10 @@ func QHash_22(index *QPersistentModelIndex, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:149
-// index:23
+// index:30
 // Invalid inline
 // uint qHash(const QPersistentModelIndex &, uint)
-func QHash_23(index *QPersistentModelIndex, seed uint) uint {
+func QHash_30(index *QPersistentModelIndex, seed uint) uint {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK21QPersistentModelIndexj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -1027,10 +1027,10 @@ func QHash_23(index *QPersistentModelIndex, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:437
-// index:24
+// index:31
 // Invalid inline
 // uint qHash(const QModelIndex &)
-func QHash_24(index *QModelIndex) uint {
+func QHash_31(index *QModelIndex) uint {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1039,10 +1039,10 @@ func QHash_24(index *QModelIndex) uint {
 }
 
 // /usr/include/qt/QtCore/qlocale.h:62
-// index:25
+// index:32
 // Invalid
 // uint qHash(const QLocale &, uint)
-func QHash_25(key *QLocale, seed uint) uint {
+func QHash_32(key *QLocale, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK7QLocalej", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -1090,10 +1090,10 @@ func QAppName() *QString /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:412
-// index:26
+// index:33
 // Invalid
 // uint qHash(const QDateTime &, uint)
-func QHash_26(key *QDateTime, seed uint) uint {
+func QHash_33(key *QDateTime, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK9QDateTimej", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -1102,10 +1102,10 @@ func QHash_26(key *QDateTime, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:413
-// index:27
+// index:34
 // Invalid
 // uint qHash(const QDate &, uint)
-func QHash_27(key *QDate, seed uint) uint {
+func QHash_34(key *QDate, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK5QDatej", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -1114,10 +1114,10 @@ func QHash_27(key *QDate, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:414
-// index:28
+// index:35
 // Invalid
 // uint qHash(const QTime &, uint)
-func QHash_28(key *QTime, seed uint) uint {
+func QHash_35(key *QTime, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK5QTimej", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -1163,10 +1163,10 @@ func QSetRealNumberPrecision(precision int) *QTextStreamManipulator /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:227
-// index:29
+// index:36
 // Invalid inline
 // uint qHash(const QItemSelectionRange &)
-func QHash_29(arg0 *QItemSelectionRange) uint {
+func QHash_36(arg0 *QItemSelectionRange) uint {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK19QItemSelectionRange", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1175,10 +1175,10 @@ func QHash_29(arg0 *QItemSelectionRange) uint {
 }
 
 // /usr/include/qt/QtCore/qversionnumber.h:54
-// index:30
+// index:37
 // Invalid
 // uint qHash(const QVersionNumber &, uint)
-func QHash_30(key *QVersionNumber, seed uint) uint {
+func QHash_37(key *QVersionNumber, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK14QVersionNumberj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -1194,7 +1194,7 @@ func QCeil(v float64) int {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qCeild", ffiqt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:74
@@ -1205,7 +1205,7 @@ func QFloor(v float64) int {
 	rv, err := ffiqt.InvokeQtFunc6("_Z6qFloord", ffiqt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:80
@@ -1216,7 +1216,7 @@ func QFabs(v float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qFabsd", ffiqt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:86
@@ -1227,7 +1227,7 @@ func QSin(v float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z4qSind", ffiqt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:92
@@ -1238,7 +1238,7 @@ func QCos(v float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z4qCosd", ffiqt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:98
@@ -1249,7 +1249,7 @@ func QTan(v float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z4qTand", ffiqt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:104
@@ -1260,7 +1260,7 @@ func QAcos(v float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qAcosd", ffiqt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:110
@@ -1271,7 +1271,7 @@ func QAsin(v float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qAsind", ffiqt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:116
@@ -1282,7 +1282,7 @@ func QAtan(v float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qAtand", ffiqt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:122
@@ -1293,7 +1293,7 @@ func QAtan2(y float64, x float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z6qAtan2dd", ffiqt.FFI_TYPE_POINTER, y, x)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:128
@@ -1304,7 +1304,7 @@ func QSqrt(v float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qSqrtd", ffiqt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:134
@@ -1315,7 +1315,7 @@ func QLn(v float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z3qLnd", ffiqt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:140
@@ -1326,7 +1326,7 @@ func QExp(v float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z4qExpd", ffiqt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:146
@@ -1337,7 +1337,7 @@ func QPow(x float64, y float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z4qPowdd", ffiqt.FFI_TYPE_POINTER, x, y)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:206
@@ -1348,7 +1348,7 @@ func QFastSin(x float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z8qFastSind", ffiqt.FFI_TYPE_POINTER, x)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:216
@@ -1359,7 +1359,7 @@ func QFastCos(x float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z8qFastCosd", ffiqt.FFI_TYPE_POINTER, x)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:226
@@ -1370,7 +1370,7 @@ func QDegreesToRadians(degrees float32) float32 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z17qDegreesToRadiansf", ffiqt.FFI_TYPE_POINTER, degrees)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:231
@@ -1381,7 +1381,7 @@ func QDegreesToRadians_1(degrees float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z17qDegreesToRadiansd", ffiqt.FFI_TYPE_POINTER, degrees)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:236
@@ -1392,7 +1392,7 @@ func QRadiansToDegrees(radians float32) float32 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z17qRadiansToDegreesf", ffiqt.FFI_TYPE_POINTER, radians)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:241
@@ -1403,7 +1403,7 @@ func QRadiansToDegrees_1(radians float64) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_Z17qRadiansToDegreesd", ffiqt.FFI_TYPE_POINTER, radians)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmath.h:247
@@ -1451,10 +1451,10 @@ func QNextPowerOfTwo_3(v int64) uint64 {
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:58
-// index:31
+// index:38
 // Invalid
 // uint qHash(const QMimeType &, uint)
-func QHash_31(key *QMimeType, seed uint) uint {
+func QHash_38(key *QMimeType, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK9QMimeTypej", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -1465,7 +1465,7 @@ func QHash_31(key *QMimeType, seed uint) uint {
 // /usr/include/qt/QtCore/qplugin.h:78
 // index:0
 // Invalid
-// void qRegisterStaticPluginFunction(QStaticPlugin)
+// void qRegisterStaticPluginFunction(struct QStaticPlugin)
 func QRegisterStaticPluginFunction(staticPlugin *QStaticPlugin /*123*/) {
 	var convArg0 = staticPlugin.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z29qRegisterStaticPluginFunction13QStaticPlugin", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -1473,10 +1473,10 @@ func QRegisterStaticPluginFunction(staticPlugin *QStaticPlugin /*123*/) {
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:62
-// index:32
+// index:39
 // Invalid
 // uint qHash(const QRegularExpression &, uint)
-func QHash_32(key *QRegularExpression, seed uint) uint {
+func QHash_39(key *QRegularExpression, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK18QRegularExpressionj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -1485,10 +1485,10 @@ func QHash_32(key *QRegularExpression, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qurl.h:122
-// index:33
+// index:40
 // Invalid
 // uint qHash(const QUrl &, uint)
-func QHash_33(url *QUrl, seed uint) uint {
+func QHash_40(url *QUrl, seed uint) uint {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK4QUrlj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -1497,10 +1497,10 @@ func QHash_33(url *QUrl, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:53
-// index:34
+// index:41
 // Invalid
 // uint qHash(const QUrlQuery &, uint)
-func QHash_34(key *QUrlQuery, seed uint) uint {
+func QHash_41(key *QUrlQuery, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK9QUrlQueryj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -1509,10 +1509,10 @@ func QHash_34(key *QUrlQuery, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/quuid.h:235
-// index:35
+// index:42
 // Invalid
 // uint qHash(const QUuid &, uint)
-func QHash_35(uuid *QUuid, seed uint) uint {
+func QHash_42(uuid *QUuid, seed uint) uint {
 	var convArg0 = uuid.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK5QUuidj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -1520,7 +1520,7 @@ func QHash_35(uuid *QUuid, seed uint) uint {
 	return uint(rv) // 222
 }
 
-// ./headers/QtCore/extra_export.h:6
+// /home/me/oss/qt.gen/headers/QtCore/extra_export.h:6
 // index:0
 // Invalid
 // bool qRegisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *)
@@ -1531,7 +1531,7 @@ func QRegisterResourceData(arg0 int, arg1 unsafe.Pointer /*666*/, arg2 unsafe.Po
 	return rv != 0
 }
 
-// ./headers/QtCore/extra_export.h:7
+// /home/me/oss/qt.gen/headers/QtCore/extra_export.h:7
 // index:0
 // Invalid
 // bool qUnregisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *)

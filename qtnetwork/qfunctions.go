@@ -28,10 +28,10 @@ func init() {
 
 //  body block begin
 // /usr/include/qt/QtNetwork/qhostaddress.h:69
-// index:37
+// index:0
 // Invalid
 // uint qHash(const QHostAddress &, uint)
-func QHash_37(key *QHostAddress, seed uint) uint {
+func QHash(key *QHostAddress, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK12QHostAddressj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -40,10 +40,10 @@ func QHash_37(key *QHostAddress, seed uint) uint {
 }
 
 // /usr/include/qt/QtNetwork/qsslcertificate.h:71
-// index:38
+// index:1
 // Invalid
 // uint qHash(const QSslCertificate &, uint)
-func QHash_38(key *QSslCertificate, seed uint) uint {
+func QHash_1(key *QSslCertificate, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK15QSslCertificatej", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -52,10 +52,10 @@ func QHash_38(key *QSslCertificate, seed uint) uint {
 }
 
 // /usr/include/qt/QtNetwork/qsslerror.h:115
-// index:39
+// index:2
 // Invalid
 // uint qHash(const QSslError &, uint)
-func QHash_39(key *QSslError, seed uint) uint {
+func QHash_2(key *QSslError, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK9QSslErrorj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -64,10 +64,10 @@ func QHash_39(key *QSslError, seed uint) uint {
 }
 
 // /usr/include/qt/QtNetwork/qssldiffiehellmanparameters.h:59
-// index:40
+// index:3
 // Invalid
 // uint qHash(const QSslDiffieHellmanParameters &, uint)
-func QHash_40(dhparam *QSslDiffieHellmanParameters, seed uint) uint {
+func QHash_3(dhparam *QSslDiffieHellmanParameters, seed uint) uint {
 	var convArg0 = dhparam.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK27QSslDiffieHellmanParametersj", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -76,10 +76,10 @@ func QHash_40(dhparam *QSslDiffieHellmanParameters, seed uint) uint {
 }
 
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:55
-// index:41
+// index:4
 // Invalid inline
 // uint qHash(QSslEllipticCurve, uint)
-func QHash_41(curve *QSslEllipticCurve /*123*/, seed uint) uint {
+func QHash_4(curve *QSslEllipticCurve /*123*/, seed uint) uint {
 	var convArg0 = curve.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHash17QSslEllipticCurvej", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
@@ -88,10 +88,10 @@ func QHash_41(curve *QSslEllipticCurve /*123*/, seed uint) uint {
 }
 
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:90
-// index:42
+// index:5
 // Invalid inline
 // uint qHash(QSslEllipticCurve, uint)
-func QHash_42(curve *QSslEllipticCurve /*123*/, seed uint) uint {
+func QHash_5(curve *QSslEllipticCurve /*123*/, seed uint) uint {
 	var convArg0 = curve.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHash17QSslEllipticCurvej", ffiqt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)

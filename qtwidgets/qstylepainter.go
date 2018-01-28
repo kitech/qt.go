@@ -171,7 +171,7 @@ func (this *QStylePainter) DrawComplexControl(cc int, opt *QStyleOptionComplex) 
 // /usr/include/qt/QtWidgets/qstylepainter.h:67
 // index:0
 // Public inline
-// void drawItemText(const QRect &, int, const QPalette &, bool, const QString &, QPalette::ColorRole)
+// void drawItemText(const QRect &, int, const QPalette &, _Bool, const QString &, QPalette::ColorRole)
 func (this *QStylePainter) DrawItemText(r *qtcore.QRect, flags int, pal *qtgui.QPalette, enabled bool, text *qtcore.QString, textRole int) {
 	var convArg0 = r.GetCthis()
 	var convArg2 = pal.GetCthis()

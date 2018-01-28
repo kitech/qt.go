@@ -177,10 +177,10 @@ func (this *QLineF) P2() *QPointF /*123*/ {
 // Public inline
 // qreal x1()
 func (this *QLineF) X1() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2x1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2x1Ev", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qline.h:232
@@ -188,10 +188,10 @@ func (this *QLineF) X1() float64 {
 // Public inline
 // qreal y1()
 func (this *QLineF) Y1() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2y1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2y1Ev", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qline.h:234
@@ -199,10 +199,10 @@ func (this *QLineF) Y1() float64 {
 // Public inline
 // qreal x2()
 func (this *QLineF) X2() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2x2Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2x2Ev", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qline.h:235
@@ -210,10 +210,10 @@ func (this *QLineF) X2() float64 {
 // Public inline
 // qreal y2()
 func (this *QLineF) Y2() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2y2Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2y2Ev", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qline.h:237
@@ -221,10 +221,10 @@ func (this *QLineF) Y2() float64 {
 // Public inline
 // qreal dx()
 func (this *QLineF) Dx() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2dxEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2dxEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qline.h:238
@@ -232,10 +232,10 @@ func (this *QLineF) Dx() float64 {
 // Public inline
 // qreal dy()
 func (this *QLineF) Dy() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2dyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2dyEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qline.h:240
@@ -243,10 +243,10 @@ func (this *QLineF) Dy() float64 {
 // Public
 // qreal length()
 func (this *QLineF) Length() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF6lengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF6lengthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qline.h:241
@@ -263,10 +263,10 @@ func (this *QLineF) SetLength(len float64) {
 // Public
 // qreal angle()
 func (this *QLineF) Angle() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF5angleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF5angleEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qline.h:254
@@ -275,10 +275,10 @@ func (this *QLineF) Angle() float64 {
 // qreal angle(const QLineF &)
 func (this *QLineF) Angle_1(l *QLineF) float64 {
 	var convArg0 = l.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF5angleERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF5angleERKS_", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qline.h:244
@@ -296,10 +296,10 @@ func (this *QLineF) SetAngle(angle float64) {
 // qreal angleTo(const QLineF &)
 func (this *QLineF) AngleTo(l *QLineF) float64 {
 	var convArg0 = l.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF7angleToERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF7angleToERKS_", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qline.h:248
@@ -381,8 +381,8 @@ func (this *QLineF) Translate_1(dx float64, dy float64) {
 // Public inline
 // QLineF translated(const QPointF &)
 func (this *QLineF) Translated(p *QPointF) *QLineF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = p.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF10translatedERK7QPointF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

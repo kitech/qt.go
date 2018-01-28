@@ -95,7 +95,7 @@ func (this *QGradient) Type() int {
 // /usr/include/qt/QtGui/qbrush.h:210
 // index:0
 // Public inline
-// void setSpread(QGradient::Spread)
+// void setSpread(enum QGradient::Spread)
 func (this *QGradient) SetSpread(spread int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient9setSpreadENS_6SpreadE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), spread)
 	gopp.ErrPrint(err, rv)
@@ -136,7 +136,7 @@ func (this *QGradient) CoordinateMode() int {
 // /usr/include/qt/QtGui/qbrush.h:219
 // index:0
 // Public
-// void setCoordinateMode(QGradient::CoordinateMode)
+// void setCoordinateMode(enum QGradient::CoordinateMode)
 func (this *QGradient) SetCoordinateMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient17setCoordinateModeENS_14CoordinateModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -156,7 +156,7 @@ func (this *QGradient) InterpolationMode() int {
 // /usr/include/qt/QtGui/qbrush.h:222
 // index:0
 // Public
-// void setInterpolationMode(QGradient::InterpolationMode)
+// void setInterpolationMode(enum QGradient::InterpolationMode)
 func (this *QGradient) SetInterpolationMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient20setInterpolationModeENS_17InterpolationModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)

@@ -70,7 +70,10 @@ func (*QAbstractConcatenable) NewFromPointer(cthis unsafe.Pointer) *QAbstractCon
 // Protected static
 // void convertFromAscii(const char *, int, QChar *&)
 func (this *QAbstractConcatenable) ConvertFromAscii(a string, len int, out *QChar) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractConcatenable16convertFromAsciiEPKciRP5QChar", ffiqt.FFI_TYPE_POINTER, a, len, out)
+	var convArg0 = qtrt.CString(a)
+	defer qtrt.FreeMem(convArg0)
+	var convArg2 = out.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractConcatenable16convertFromAsciiEPKciRP5QChar", ffiqt.FFI_TYPE_POINTER, convArg0, len, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 func QAbstractConcatenable_ConvertFromAscii(a string, len int, out *QChar) {
@@ -83,7 +86,8 @@ func QAbstractConcatenable_ConvertFromAscii(a string, len int, out *QChar) {
 // Protected static inline
 // void convertFromAscii(char, QChar *&)
 func (this *QAbstractConcatenable) ConvertFromAscii_1(a byte, out *QChar) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractConcatenable16convertFromAsciiEcRP5QChar", ffiqt.FFI_TYPE_POINTER, a, out)
+	var convArg1 = out.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractConcatenable16convertFromAsciiEcRP5QChar", ffiqt.FFI_TYPE_POINTER, a, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 func QAbstractConcatenable_ConvertFromAscii_1(a byte, out *QChar) {
@@ -96,7 +100,10 @@ func QAbstractConcatenable_ConvertFromAscii_1(a byte, out *QChar) {
 // Protected static
 // void appendLatin1To(const char *, int, QChar *)
 func (this *QAbstractConcatenable) AppendLatin1To(a string, len int, out *QChar /*777 QChar **/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractConcatenable14appendLatin1ToEPKciP5QChar", ffiqt.FFI_TYPE_POINTER, a, len, out)
+	var convArg0 = qtrt.CString(a)
+	defer qtrt.FreeMem(convArg0)
+	var convArg2 = out.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractConcatenable14appendLatin1ToEPKciP5QChar", ffiqt.FFI_TYPE_POINTER, convArg0, len, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 func QAbstractConcatenable_AppendLatin1To(a string, len int, out *QChar /*777 QChar **/) {

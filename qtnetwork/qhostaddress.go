@@ -133,7 +133,7 @@ func NewQHostAddress_4(address *qtcore.QString) *QHostAddress {
 // /usr/include/qt/QtNetwork/qhostaddress.h:102
 // index:5
 // Public
-// void QHostAddress(QHostAddress::SpecialAddress)
+// void QHostAddress(enum QHostAddress::SpecialAddress)
 func NewQHostAddress_5(address int) *QHostAddress {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddressC2ENS_14SpecialAddressE", ffiqt.FFI_TYPE_VOID, cthis, address)
@@ -203,7 +203,7 @@ func (this *QHostAddress) SetAddress_3(address *qtcore.QString) bool {
 // /usr/include/qt/QtNetwork/qhostaddress.h:125
 // index:4
 // Public
-// void setAddress(QHostAddress::SpecialAddress)
+// void setAddress(enum QHostAddress::SpecialAddress)
 func (this *QHostAddress) SetAddress_4(address int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddress10setAddressENS_14SpecialAddressE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), address)
 	gopp.ErrPrint(err, rv)
@@ -234,7 +234,7 @@ func (this *QHostAddress) ToIPv4Address() uint {
 // /usr/include/qt/QtNetwork/qhostaddress.h:129
 // index:1
 // Public
-// quint32 toIPv4Address(bool *)
+// quint32 toIPv4Address(_Bool *)
 func (this *QHostAddress) ToIPv4Address_1(ok unsafe.Pointer /*666*/) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QHostAddress13toIPv4AddressEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)

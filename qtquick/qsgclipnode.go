@@ -106,7 +106,7 @@ func DeleteQSGClipNode(*QSGClipNode) {
 // /usr/include/qt/QtQuick/qsgnode.h:267
 // index:0
 // Public
-// void setIsRectangular(bool)
+// void setIsRectangular(_Bool)
 func (this *QSGClipNode) SetIsRectangular(rectHint bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGClipNode16setIsRectangularEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), rectHint)
 	gopp.ErrPrint(err, rv)

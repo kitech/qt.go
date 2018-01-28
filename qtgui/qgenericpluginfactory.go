@@ -74,7 +74,9 @@ func (*QGenericPluginFactory) NewFromPointer(cthis unsafe.Pointer) *QGenericPlug
 // Public static
 // QObject * create(const QString &, const QString &)
 func (this *QGenericPluginFactory) Create(arg0 *qtcore.QString, arg1 *qtcore.QString) *qtcore.QObject /*777 QObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGenericPluginFactory6createERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, arg0, arg1)
+	var convArg0 = arg0.GetCthis()
+	var convArg1 = arg1.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGenericPluginFactory6createERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444

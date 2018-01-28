@@ -131,7 +131,7 @@ func (this *QLayout) Margin() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLayout6marginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlayout.h:85
@@ -142,7 +142,7 @@ func (this *QLayout) Spacing() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLayout7spacingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlayout.h:87
@@ -222,7 +222,7 @@ func (this *QLayout) ContentsRect() *qtcore.QRect /*123*/ {
 // /usr/include/qt/QtWidgets/qlayout.h:100
 // index:0
 // Public
-// void setSizeConstraint(QLayout::SizeConstraint)
+// void setSizeConstraint(enum QLayout::SizeConstraint)
 func (this *QLayout) SetSizeConstraint(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout17setSizeConstraintENS_14SizeConstraintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -373,7 +373,7 @@ func (this *QLayout) ExpandingDirections() int {
 // QSize minimumSize()
 func (this *QLayout) MinimumSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLayout11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QLayout11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -387,7 +387,7 @@ func (this *QLayout) MinimumSize() *qtcore.QSize /*123*/ {
 // QSize maximumSize()
 func (this *QLayout) MaximumSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLayout11maximumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QLayout11maximumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -438,7 +438,7 @@ func (this *QLayout) IndexOf(arg0 *QWidget /*777 QWidget **/) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLayout7indexOfEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlayout.h:125
@@ -449,7 +449,7 @@ func (this *QLayout) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLayout5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlayout.h:126
@@ -482,7 +482,7 @@ func (this *QLayout) TotalHeightForWidth(w int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLayout19totalHeightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlayout.h:133
@@ -491,7 +491,7 @@ func (this *QLayout) TotalHeightForWidth(w int) int {
 // QSize totalMinimumSize()
 func (this *QLayout) TotalMinimumSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLayout16totalMinimumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QLayout16totalMinimumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -505,7 +505,7 @@ func (this *QLayout) TotalMinimumSize() *qtcore.QSize /*123*/ {
 // QSize totalMaximumSize()
 func (this *QLayout) TotalMaximumSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLayout16totalMaximumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QLayout16totalMaximumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -519,7 +519,7 @@ func (this *QLayout) TotalMaximumSize() *qtcore.QSize /*123*/ {
 // QSize totalSizeHint()
 func (this *QLayout) TotalSizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLayout13totalSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QLayout13totalSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -542,7 +542,7 @@ func (this *QLayout) Layout() *QLayout /*777 QLayout **/ {
 // /usr/include/qt/QtWidgets/qlayout.h:138
 // index:0
 // Public
-// void setEnabled(bool)
+// void setEnabled(_Bool)
 func (this *QLayout) SetEnabled(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -564,7 +564,9 @@ func (this *QLayout) IsEnabled() bool {
 // Public static
 // QSize closestAcceptableSize(const QWidget *, const QSize &)
 func (this *QLayout) ClosestAcceptableSize(w *QWidget /*777 const QWidget **/, s *qtcore.QSize) *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout21closestAcceptableSizeEPK7QWidgetRK5QSize", ffiqt.FFI_TYPE_POINTER, w, s)
+	var convArg0 = w.GetCthis()
+	var convArg1 = s.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout21closestAcceptableSizeEPK7QWidgetRK5QSize", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -633,8 +635,8 @@ func (this *QLayout) AdoptLayout(layout *QLayout /*777 QLayout **/) bool {
 // Protected
 // QRect alignmentRect(const QRect &)
 func (this *QLayout) AlignmentRect(arg0 *qtcore.QRect) *qtcore.QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLayout13alignmentRectERK5QRect", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

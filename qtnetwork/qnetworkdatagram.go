@@ -201,7 +201,7 @@ func (this *QNetworkDatagram) SenderPort() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QNetworkDatagram10senderPortEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtNetwork/qnetworkdatagram.h:84
@@ -212,7 +212,7 @@ func (this *QNetworkDatagram) DestinationPort() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QNetworkDatagram15destinationPortEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtNetwork/qnetworkdatagram.h:85
@@ -243,7 +243,7 @@ func (this *QNetworkDatagram) HopLimit() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QNetworkDatagram8hopLimitEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtNetwork/qnetworkdatagram.h:89
@@ -284,8 +284,8 @@ func (this *QNetworkDatagram) SetData(data *qtcore.QByteArray) {
 // Public inline
 // QNetworkDatagram makeReply(const QByteArray &)
 func (this *QNetworkDatagram) MakeReply(payload *qtcore.QByteArray) *QNetworkDatagram /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = payload.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNKR16QNetworkDatagram9makeReplyERK10QByteArray", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -299,8 +299,8 @@ func (this *QNetworkDatagram) MakeReply(payload *qtcore.QByteArray) *QNetworkDat
 // Public inline
 // QNetworkDatagram makeReply(const QByteArray &)
 func (this *QNetworkDatagram) MakeReply_1(payload *qtcore.QByteArray) *QNetworkDatagram /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = payload.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNO16QNetworkDatagram9makeReplyERK10QByteArray", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

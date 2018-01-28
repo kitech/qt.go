@@ -86,7 +86,8 @@ func NewQSslEllipticCurve() *QSslEllipticCurve {
 // Public static
 // QSslEllipticCurve fromShortName(const QString &)
 func (this *QSslEllipticCurve) FromShortName(name *qtcore.QString) *QSslEllipticCurve /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslEllipticCurve13fromShortNameERK7QString", ffiqt.FFI_TYPE_POINTER, name)
+	var convArg0 = name.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslEllipticCurve13fromShortNameERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQSslEllipticCurveFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -103,7 +104,8 @@ func QSslEllipticCurve_FromShortName(name *qtcore.QString) *QSslEllipticCurve /*
 // Public static
 // QSslEllipticCurve fromLongName(const QString &)
 func (this *QSslEllipticCurve) FromLongName(name *qtcore.QString) *QSslEllipticCurve /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslEllipticCurve12fromLongNameERK7QString", ffiqt.FFI_TYPE_POINTER, name)
+	var convArg0 = name.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslEllipticCurve12fromLongNameERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQSslEllipticCurveFromPointer(unsafe.Pointer(uintptr(rv))) // 333

@@ -159,7 +159,7 @@ func (this *QSslConfiguration) PeerVerifyDepth() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSslConfiguration15peerVerifyDepthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:104
@@ -261,7 +261,7 @@ func (this *QSslConfiguration) SetPrivateKey(key *QSslKey) {
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:132
 // index:0
 // Public
-// void setSslOption(QSsl::SslOption, bool)
+// void setSslOption(QSsl::SslOption, _Bool)
 func (this *QSslConfiguration) SetSslOption(option int, on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslConfiguration12setSslOptionEN4QSsl9SslOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	gopp.ErrPrint(err, rv)
@@ -310,7 +310,7 @@ func (this *QSslConfiguration) SessionTicketLifeTimeHint() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSslConfiguration25sessionTicketLifeTimeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtNetwork/qsslconfiguration.h:139
@@ -397,7 +397,8 @@ func QSslConfiguration_DefaultConfiguration() *QSslConfiguration /*123*/ {
 // Public static
 // void setDefaultConfiguration(const QSslConfiguration &)
 func (this *QSslConfiguration) SetDefaultConfiguration(configuration *QSslConfiguration) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslConfiguration23setDefaultConfigurationERKS_", ffiqt.FFI_TYPE_POINTER, configuration)
+	var convArg0 = configuration.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslConfiguration23setDefaultConfigurationERKS_", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QSslConfiguration_SetDefaultConfiguration(configuration *QSslConfiguration) {

@@ -153,7 +153,8 @@ func QItemEditorFactory_DefaultFactory() *QItemEditorFactory /*777 const QItemEd
 // Public static
 // void setDefaultFactory(QItemEditorFactory *)
 func (this *QItemEditorFactory) SetDefaultFactory(factory *QItemEditorFactory /*777 QItemEditorFactory **/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactory17setDefaultFactoryEPS_", ffiqt.FFI_TYPE_POINTER, factory)
+	var convArg0 = factory.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactory17setDefaultFactoryEPS_", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QItemEditorFactory_SetDefaultFactory(factory *QItemEditorFactory /*777 QItemEditorFactory **/) {

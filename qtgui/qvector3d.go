@@ -186,10 +186,10 @@ func (this *QVector3D) IsNull() bool {
 // Public inline
 // float x()
 func (this *QVector3D) X() float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D1xEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtGui/qvector3d.h:77
@@ -197,10 +197,10 @@ func (this *QVector3D) X() float32 {
 // Public inline
 // float y()
 func (this *QVector3D) Y() float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D1yEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtGui/qvector3d.h:78
@@ -208,10 +208,10 @@ func (this *QVector3D) Y() float32 {
 // Public inline
 // float z()
 func (this *QVector3D) Z() float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D1zEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D1zEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtGui/qvector3d.h:80
@@ -246,10 +246,10 @@ func (this *QVector3D) SetZ(z float32) {
 // Public
 // float length()
 func (this *QVector3D) Length() float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D6lengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D6lengthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtGui/qvector3d.h:88
@@ -257,10 +257,10 @@ func (this *QVector3D) Length() float32 {
 // Public
 // float lengthSquared()
 func (this *QVector3D) LengthSquared() float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D13lengthSquaredEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D13lengthSquaredEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtGui/qvector3d.h:90
@@ -291,10 +291,12 @@ func (this *QVector3D) Normalize() {
 // Public static
 // float dotProduct(const QVector3D &, const QVector3D &)
 func (this *QVector3D) DotProduct(v1 *QVector3D, v2 *QVector3D) float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector3D10dotProductERKS_S1_", ffiqt.FFI_TYPE_POINTER, v1, v2)
+	var convArg0 = v1.GetCthis()
+	var convArg1 = v2.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector3D10dotProductERKS_S1_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 func QVector3D_DotProduct(v1 *QVector3D, v2 *QVector3D) float32 {
 	var nilthis *QVector3D
@@ -307,7 +309,9 @@ func QVector3D_DotProduct(v1 *QVector3D, v2 *QVector3D) float32 {
 // Public static
 // QVector3D crossProduct(const QVector3D &, const QVector3D &)
 func (this *QVector3D) CrossProduct(v1 *QVector3D, v2 *QVector3D) *QVector3D /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector3D12crossProductERKS_S1_", ffiqt.FFI_TYPE_POINTER, v1, v2)
+	var convArg0 = v1.GetCthis()
+	var convArg1 = v2.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector3D12crossProductERKS_S1_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -324,7 +328,9 @@ func QVector3D_CrossProduct(v1 *QVector3D, v2 *QVector3D) *QVector3D /*123*/ {
 // Public static
 // QVector3D normal(const QVector3D &, const QVector3D &)
 func (this *QVector3D) Normal(v1 *QVector3D, v2 *QVector3D) *QVector3D /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector3D6normalERKS_S1_", ffiqt.FFI_TYPE_POINTER, v1, v2)
+	var convArg0 = v1.GetCthis()
+	var convArg1 = v2.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector3D6normalERKS_S1_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -341,7 +347,10 @@ func QVector3D_Normal(v1 *QVector3D, v2 *QVector3D) *QVector3D /*123*/ {
 // Public static
 // QVector3D normal(const QVector3D &, const QVector3D &, const QVector3D &)
 func (this *QVector3D) Normal_1(v1 *QVector3D, v2 *QVector3D, v3 *QVector3D) *QVector3D /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector3D6normalERKS_S1_S1_", ffiqt.FFI_TYPE_POINTER, v1, v2, v3)
+	var convArg0 = v1.GetCthis()
+	var convArg1 = v2.GetCthis()
+	var convArg2 = v3.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector3D6normalERKS_S1_S1_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -358,10 +367,10 @@ func QVector3D_Normal_1(v1 *QVector3D, v2 *QVector3D, v3 *QVector3D) *QVector3D 
 // Public
 // QVector3D project(const QMatrix4x4 &, const QMatrix4x4 &, const QRect &)
 func (this *QVector3D) Project(modelView *QMatrix4x4, projection *QMatrix4x4, viewport *qtcore.QRect) *QVector3D /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = modelView.GetCthis()
 	var convArg1 = projection.GetCthis()
 	var convArg2 = viewport.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D7projectERK10QMatrix4x4S2_RK5QRect", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -375,10 +384,10 @@ func (this *QVector3D) Project(modelView *QMatrix4x4, projection *QMatrix4x4, vi
 // Public
 // QVector3D unproject(const QMatrix4x4 &, const QMatrix4x4 &, const QRect &)
 func (this *QVector3D) Unproject(modelView *QMatrix4x4, projection *QMatrix4x4, viewport *qtcore.QRect) *QVector3D /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = modelView.GetCthis()
 	var convArg1 = projection.GetCthis()
 	var convArg2 = viewport.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D9unprojectERK10QMatrix4x4S2_RK5QRect", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -393,10 +402,10 @@ func (this *QVector3D) Unproject(modelView *QMatrix4x4, projection *QMatrix4x4, 
 // float distanceToPoint(const QVector3D &)
 func (this *QVector3D) DistanceToPoint(point *QVector3D) float32 {
 	var convArg0 = point.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D15distanceToPointERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D15distanceToPointERKS_", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtGui/qvector3d.h:111
@@ -406,10 +415,10 @@ func (this *QVector3D) DistanceToPoint(point *QVector3D) float32 {
 func (this *QVector3D) DistanceToPlane(plane *QVector3D, normal *QVector3D) float32 {
 	var convArg0 = plane.GetCthis()
 	var convArg1 = normal.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D15distanceToPlaneERKS_S1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D15distanceToPlaneERKS_S1_", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtGui/qvector3d.h:112
@@ -420,10 +429,10 @@ func (this *QVector3D) DistanceToPlane_1(plane1 *QVector3D, plane2 *QVector3D, p
 	var convArg0 = plane1.GetCthis()
 	var convArg1 = plane2.GetCthis()
 	var convArg2 = plane3.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D15distanceToPlaneERKS_S1_S1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D15distanceToPlaneERKS_S1_S1_", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtGui/qvector3d.h:113
@@ -433,10 +442,10 @@ func (this *QVector3D) DistanceToPlane_1(plane1 *QVector3D, plane2 *QVector3D, p
 func (this *QVector3D) DistanceToLine(point *QVector3D, direction *QVector3D) float32 {
 	var convArg0 = point.GetCthis()
 	var convArg1 = direction.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D14distanceToLineERKS_S1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector3D14distanceToLineERKS_S1_", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtGui/qvector3d.h:129

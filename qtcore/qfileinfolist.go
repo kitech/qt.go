@@ -99,7 +99,7 @@ func (this *QFileInfoList) IsDetached_0() bool {
 	return 0 == 0
 }
 
-// void setSharable(bool)
+// void setSharable(_Bool)
 func (this *QFileInfoList) SetSharable_0() {
 	// QFileInfoList_setSharable_0()
 }
@@ -308,17 +308,17 @@ func (this *QFileInfoList) Crend_0() {
 	// QFileInfoList_crend_0()
 }
 
-// QList::iterator insert(QList::iterator, const T &)
+// QList::iterator insert(class QList::iterator, const T &)
 func (this *QFileInfoList) Insert_1() {
 	// QFileInfoList_insert_1()
 }
 
-// QList::iterator erase(QList::iterator)
+// QList::iterator erase(class QList::iterator)
 func (this *QFileInfoList) Erase_0() {
 	// QFileInfoList_erase_0()
 }
 
-// QList::iterator erase(QList::iterator, QList::iterator)
+// QList::iterator erase(class QList::iterator, class QList::iterator)
 func (this *QFileInfoList) Erase_1() {
 	// QFileInfoList_erase_1()
 }
@@ -539,68 +539,68 @@ func (this *QFileInfoList) Detach_helper_1() {
 	// QFileInfoList_detach_helper_1()
 }
 
-// void dealloc(QListData::Data *)
+// void dealloc(struct QListData::Data *)
 func (this *QFileInfoList) Dealloc_0() {
 	// QFileInfoList_dealloc_0()
 }
 
-// void node_construct(QList::Node *, const T &)
+// void node_construct(struct QList::Node *, const T &)
 func (this *QFileInfoList) Node_construct_0() {
 	// QFileInfoList_node_construct_0()
 }
 
-// void node_destruct(QList::Node *)
+// void node_destruct(struct QList::Node *)
 func (this *QFileInfoList) Node_destruct_0() {
 	// QFileInfoList_node_destruct_0()
 }
 
-// void node_copy(QList::Node *, QList::Node *, QList::Node *)
+// void node_copy(struct QList::Node *, struct QList::Node *, struct QList::Node *)
 func (this *QFileInfoList) Node_copy_0() {
 	// QFileInfoList_node_copy_0()
 }
 
-// void node_destruct(QList::Node *, QList::Node *)
+// void node_destruct(struct QList::Node *, struct QList::Node *)
 func (this *QFileInfoList) Node_destruct_1() {
 	// QFileInfoList_node_destruct_1()
 }
 
-// bool isValidIterator(const QList::iterator &)
+// bool isValidIterator(const class QList::iterator &)
 func (this *QFileInfoList) IsValidIterator_0() bool {
 	// QFileInfoList_isValidIterator_0()
 	return 0 == 0
 }
 
-// bool op_eq_impl(const QList<T> &, QListData::NotArrayCompatibleLayout)
+// bool op_eq_impl(const QList<T> &, struct QListData::NotArrayCompatibleLayout)
 func (this *QFileInfoList) Op_eq_impl_0() bool {
 	// QFileInfoList_op_eq_impl_0()
 	return 0 == 0
 }
 
-// bool op_eq_impl(const QList<T> &, QListData::ArrayCompatibleLayout)
+// bool op_eq_impl(const QList<T> &, struct QListData::ArrayCompatibleLayout)
 func (this *QFileInfoList) Op_eq_impl_1() bool {
 	// QFileInfoList_op_eq_impl_1()
 	return 0 == 0
 }
 
-// bool contains_impl(const T &, QListData::NotArrayCompatibleLayout)
+// bool contains_impl(const T &, struct QListData::NotArrayCompatibleLayout)
 func (this *QFileInfoList) Contains_impl_0() bool {
 	// QFileInfoList_contains_impl_0()
 	return 0 == 0
 }
 
-// bool contains_impl(const T &, QListData::ArrayCompatibleLayout)
+// bool contains_impl(const T &, struct QListData::ArrayCompatibleLayout)
 func (this *QFileInfoList) Contains_impl_1() bool {
 	// QFileInfoList_contains_impl_1()
 	return 0 == 0
 }
 
-// int count_impl(const T &, QListData::NotArrayCompatibleLayout)
+// int count_impl(const T &, struct QListData::NotArrayCompatibleLayout)
 func (this *QFileInfoList) Count_impl_0() int {
 	// QFileInfoList_count_impl_0()
 	return 0
 }
 
-// int count_impl(const T &, QListData::ArrayCompatibleLayout)
+// int count_impl(const T &, struct QListData::ArrayCompatibleLayout)
 func (this *QFileInfoList) Count_impl_1() int {
 	// QFileInfoList_count_impl_1()
 	return 0

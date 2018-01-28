@@ -96,8 +96,8 @@ func (this *QAssociativeIterable) End() unsafe.Pointer /*444*/ {
 // Public
 // QAssociativeIterable::const_iterator find(const QVariant &)
 func (this *QAssociativeIterable) Find(key *QVariant) unsafe.Pointer /*444*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable4findERK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -110,8 +110,8 @@ func (this *QAssociativeIterable) Find(key *QVariant) unsafe.Pointer /*444*/ {
 // Public
 // QVariant value(const QVariant &)
 func (this *QAssociativeIterable) Value(key *QVariant) *QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable5valueERK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -128,7 +128,7 @@ func (this *QAssociativeIterable) Size() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QAssociativeIterable4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 //  body block end

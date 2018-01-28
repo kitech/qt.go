@@ -173,7 +173,7 @@ func (this *QSaveFile) CancelWriting() {
 // /usr/include/qt/QtCore/qsavefile.h:83
 // index:0
 // Public
-// void setDirectWriteFallback(bool)
+// void setDirectWriteFallback(_Bool)
 func (this *QSaveFile) SetDirectWriteFallback(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFile22setDirectWriteFallbackEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)

@@ -132,7 +132,7 @@ func (this *QByteArrayMatcher) IndexIn(ba *QByteArray, from int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInERK10QByteArrayi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qbytearraymatcher.h:64
@@ -145,7 +145,7 @@ func (this *QByteArrayMatcher) IndexIn_1(str string, len int, from int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInEPKcii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qbytearraymatcher.h:65

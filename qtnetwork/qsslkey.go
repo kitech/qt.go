@@ -156,7 +156,7 @@ func (this *QSslKey) Length() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSslKey6lengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtNetwork/qsslkey.h:86
@@ -186,8 +186,8 @@ func (this *QSslKey) Algorithm() int {
 // Public
 // QByteArray toPem(const QByteArray &)
 func (this *QSslKey) ToPem(passPhrase *qtcore.QByteArray) *qtcore.QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = passPhrase.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSslKey5toPemERK10QByteArray", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -201,8 +201,8 @@ func (this *QSslKey) ToPem(passPhrase *qtcore.QByteArray) *qtcore.QByteArray /*1
 // Public
 // QByteArray toDer(const QByteArray &)
 func (this *QSslKey) ToDer(passPhrase *qtcore.QByteArray) *qtcore.QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = passPhrase.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSslKey5toDerERK10QByteArray", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

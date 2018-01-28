@@ -119,7 +119,7 @@ func (this *QThread) IdealThreadCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread16idealThreadCountEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QThread_IdealThreadCount() int {
 	var nilthis *QThread
@@ -165,7 +165,7 @@ func DeleteQThread(*QThread) {
 // /usr/include/qt/QtCore/qthread.h:96
 // index:0
 // Public
-// void setPriority(QThread::Priority)
+// void setPriority(enum QThread::Priority)
 func (this *QThread) SetPriority(priority int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread11setPriorityENS_8PriorityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), priority)
 	gopp.ErrPrint(err, rv)
@@ -295,13 +295,13 @@ func (this *QThread) LoopLevel() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QThread9loopLevelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qthread.h:134
 // index:0
 // Public
-// void start(QThread::Priority)
+// void start(enum QThread::Priority)
 func (this *QThread) Start(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread5startENS_8PriorityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -392,13 +392,13 @@ func (this *QThread) Exec() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread4execEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qthread.h:154
 // index:0
 // Protected static
-// void setTerminationEnabled(bool)
+// void setTerminationEnabled(_Bool)
 func (this *QThread) SetTerminationEnabled(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThread21setTerminationEnabledEb", ffiqt.FFI_TYPE_POINTER, enabled)
 	gopp.ErrPrint(err, rv)

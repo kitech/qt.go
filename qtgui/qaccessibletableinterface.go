@@ -122,7 +122,7 @@ func (this *QAccessibleTableInterface) SelectedCellCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface17selectedCellCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:604
@@ -161,7 +161,7 @@ func (this *QAccessibleTableInterface) SelectedColumnCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface19selectedColumnCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:607
@@ -172,7 +172,7 @@ func (this *QAccessibleTableInterface) SelectedRowCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface16selectedRowCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:608
@@ -183,7 +183,7 @@ func (this *QAccessibleTableInterface) ColumnCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface11columnCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:609
@@ -194,7 +194,7 @@ func (this *QAccessibleTableInterface) RowCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleTableInterface8rowCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:612

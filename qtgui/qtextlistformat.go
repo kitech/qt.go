@@ -109,7 +109,7 @@ func (this *QTextListFormat) IsValid() bool {
 // /usr/include/qt/QtGui/qtextformat.h:697
 // index:0
 // Public inline
-// void setStyle(QTextListFormat::Style)
+// void setStyle(enum QTextListFormat::Style)
 func (this *QTextListFormat) SetStyle(style int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextListFormat8setStyleENS_5StyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	gopp.ErrPrint(err, rv)
@@ -143,7 +143,7 @@ func (this *QTextListFormat) Indent() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTextListFormat6indentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:705

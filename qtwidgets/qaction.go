@@ -306,7 +306,7 @@ func (this *QAction) WhatsThis() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qaction.h:121
 // index:0
 // Public
-// void setPriority(QAction::Priority)
+// void setPriority(enum QAction::Priority)
 func (this *QAction) SetPriority(priority int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction11setPriorityENS_8PriorityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), priority)
 	gopp.ErrPrint(err, rv)
@@ -348,7 +348,7 @@ func (this *QAction) SetMenu(menu *QMenu /*777 QMenu **/) {
 // /usr/include/qt/QtWidgets/qaction.h:129
 // index:0
 // Public
-// void setSeparator(bool)
+// void setSeparator(_Bool)
 func (this *QAction) SetSeparator(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction12setSeparatorEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -421,7 +421,7 @@ func (this *QAction) ShortcutContext() int {
 // /usr/include/qt/QtWidgets/qaction.h:143
 // index:0
 // Public
-// void setAutoRepeat(bool)
+// void setAutoRepeat(_Bool)
 func (this *QAction) SetAutoRepeat(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction13setAutoRepeatEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -465,7 +465,7 @@ func (this *QAction) Font() *qtgui.QFont /*123*/ {
 // /usr/include/qt/QtWidgets/qaction.h:150
 // index:0
 // Public
-// void setCheckable(bool)
+// void setCheckable(_Bool)
 func (this *QAction) SetCheckable(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction12setCheckableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -542,7 +542,7 @@ func (this *QAction) IsVisible() bool {
 // /usr/include/qt/QtWidgets/qaction.h:163
 // index:0
 // Public
-// void activate(QAction::ActionEvent)
+// void activate(enum QAction::ActionEvent)
 func (this *QAction) Activate(event int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction8activateENS_11ActionEventE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), event)
 	gopp.ErrPrint(err, rv)
@@ -563,7 +563,7 @@ func (this *QAction) ShowStatusText(widget *QWidget /*777 QWidget **/) bool {
 // /usr/include/qt/QtWidgets/qaction.h:166
 // index:0
 // Public
-// void setMenuRole(QAction::MenuRole)
+// void setMenuRole(enum QAction::MenuRole)
 func (this *QAction) SetMenuRole(menuRole int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction11setMenuRoleENS_8MenuRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), menuRole)
 	gopp.ErrPrint(err, rv)
@@ -583,7 +583,7 @@ func (this *QAction) MenuRole() int {
 // /usr/include/qt/QtWidgets/qaction.h:169
 // index:0
 // Public
-// void setIconVisibleInMenu(bool)
+// void setIconVisibleInMenu(_Bool)
 func (this *QAction) SetIconVisibleInMenu(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction20setIconVisibleInMenuEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
@@ -603,7 +603,7 @@ func (this *QAction) IsIconVisibleInMenu() bool {
 // /usr/include/qt/QtWidgets/qaction.h:172
 // index:0
 // Public
-// void setShortcutVisibleInContextMenu(bool)
+// void setShortcutVisibleInContextMenu(_Bool)
 func (this *QAction) SetShortcutVisibleInContextMenu(show bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction31setShortcutVisibleInContextMenuEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), show)
 	gopp.ErrPrint(err, rv)
@@ -665,7 +665,7 @@ func (this *QAction) Hover() {
 // /usr/include/qt/QtWidgets/qaction.h:189
 // index:0
 // Public
-// void setChecked(bool)
+// void setChecked(_Bool)
 func (this *QAction) SetChecked(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction10setCheckedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -683,7 +683,7 @@ func (this *QAction) Toggle() {
 // /usr/include/qt/QtWidgets/qaction.h:191
 // index:0
 // Public
-// void setEnabled(bool)
+// void setEnabled(_Bool)
 func (this *QAction) SetEnabled(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -692,7 +692,7 @@ func (this *QAction) SetEnabled(arg0 bool) {
 // /usr/include/qt/QtWidgets/qaction.h:192
 // index:0
 // Public inline
-// void setDisabled(bool)
+// void setDisabled(_Bool)
 func (this *QAction) SetDisabled(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction11setDisabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -701,7 +701,7 @@ func (this *QAction) SetDisabled(b bool) {
 // /usr/include/qt/QtWidgets/qaction.h:193
 // index:0
 // Public
-// void setVisible(bool)
+// void setVisible(_Bool)
 func (this *QAction) SetVisible(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -719,7 +719,7 @@ func (this *QAction) Changed() {
 // /usr/include/qt/QtWidgets/qaction.h:197
 // index:0
 // Public
-// void triggered(bool)
+// void triggered(_Bool)
 func (this *QAction) Triggered(checked bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction9triggeredEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), checked)
 	gopp.ErrPrint(err, rv)
@@ -737,7 +737,7 @@ func (this *QAction) Hovered() {
 // /usr/include/qt/QtWidgets/qaction.h:199
 // index:0
 // Public
-// void toggled(bool)
+// void toggled(_Bool)
 func (this *QAction) Toggled(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QAction7toggledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

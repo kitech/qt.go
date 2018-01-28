@@ -153,7 +153,7 @@ func (this *QTcpServer) MaxPendingConnections() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTcpServer21maxPendingConnectionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtNetwork/qtcpserver.h:72
@@ -206,7 +206,7 @@ func (this *QTcpServer) SetSocketDescriptor(socketDescriptor int64) bool {
 // /usr/include/qt/QtNetwork/qtcpserver.h:78
 // index:0
 // Public
-// bool waitForNewConnection(int, bool *)
+// bool waitForNewConnection(int, _Bool *)
 func (this *QTcpServer) WaitForNewConnection(msec int, timedOut unsafe.Pointer /*666*/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTcpServer20waitForNewConnectionEiPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec, &timedOut)
 	gopp.ErrPrint(err, rv)

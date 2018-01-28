@@ -105,8 +105,8 @@ func DeleteQTextEncoder(*QTextEncoder) {
 // Public
 // QByteArray fromUnicode(const QString &)
 func (this *QTextEncoder) FromUnicode(str *QString) *QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = str.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextEncoder11fromUnicodeERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -120,8 +120,8 @@ func (this *QTextEncoder) FromUnicode(str *QString) *QByteArray /*123*/ {
 // Public
 // QByteArray fromUnicode(QStringView)
 func (this *QTextEncoder) FromUnicode_1(str *QStringView /*123*/) *QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = str.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextEncoder11fromUnicodeE11QStringView", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -135,8 +135,8 @@ func (this *QTextEncoder) FromUnicode_1(str *QStringView /*123*/) *QByteArray /*
 // Public
 // QByteArray fromUnicode(const QChar *, int)
 func (this *QTextEncoder) FromUnicode_2(uc *QChar /*777 const QChar **/, len int) *QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = uc.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextEncoder11fromUnicodeEPK5QChari", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, len)
 	gopp.ErrPrint(err, rv)
 	//  return rv

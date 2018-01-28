@@ -172,7 +172,7 @@ func (this *QGroupBox) SetAlignment(alignment int) {
 // QSize minimumSizeHint()
 func (this *QGroupBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGroupBox15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK9QGroupBox15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -194,7 +194,7 @@ func (this *QGroupBox) IsFlat() bool {
 // /usr/include/qt/QtWidgets/qgroupbox.h:75
 // index:0
 // Public
-// void setFlat(bool)
+// void setFlat(_Bool)
 func (this *QGroupBox) SetFlat(flat bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox7setFlatEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flat)
 	gopp.ErrPrint(err, rv)
@@ -214,7 +214,7 @@ func (this *QGroupBox) IsCheckable() bool {
 // /usr/include/qt/QtWidgets/qgroupbox.h:77
 // index:0
 // Public
-// void setCheckable(bool)
+// void setCheckable(_Bool)
 func (this *QGroupBox) SetCheckable(checkable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox12setCheckableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), checkable)
 	gopp.ErrPrint(err, rv)
@@ -234,7 +234,7 @@ func (this *QGroupBox) IsChecked() bool {
 // /usr/include/qt/QtWidgets/qgroupbox.h:81
 // index:0
 // Public
-// void setChecked(bool)
+// void setChecked(_Bool)
 func (this *QGroupBox) SetChecked(checked bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox10setCheckedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), checked)
 	gopp.ErrPrint(err, rv)
@@ -243,7 +243,7 @@ func (this *QGroupBox) SetChecked(checked bool) {
 // /usr/include/qt/QtWidgets/qgroupbox.h:84
 // index:0
 // Public
-// void clicked(bool)
+// void clicked(_Bool)
 func (this *QGroupBox) Clicked(checked bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox7clickedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), checked)
 	gopp.ErrPrint(err, rv)
@@ -252,7 +252,7 @@ func (this *QGroupBox) Clicked(checked bool) {
 // /usr/include/qt/QtWidgets/qgroupbox.h:85
 // index:0
 // Public
-// void toggled(bool)
+// void toggled(_Bool)
 func (this *QGroupBox) Toggled(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBox7toggledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

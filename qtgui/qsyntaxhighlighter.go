@@ -220,7 +220,7 @@ func (this *QSyntaxHighlighter) PreviousBlockState() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter18previousBlockStateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:85
@@ -231,7 +231,7 @@ func (this *QSyntaxHighlighter) CurrentBlockState() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter17currentBlockStateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:86

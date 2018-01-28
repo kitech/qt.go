@@ -215,7 +215,7 @@ func (this *QNetworkAccessManager) SetCookieJar(cookieJar *QNetworkCookieJar /*7
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:126
 // index:0
 // Public
-// void setStrictTransportSecurityEnabled(bool)
+// void setStrictTransportSecurityEnabled(_Bool)
 func (this *QNetworkAccessManager) SetStrictTransportSecurityEnabled(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager33setStrictTransportSecurityEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -235,7 +235,7 @@ func (this *QNetworkAccessManager) IsStrictTransportSecurityEnabled() bool {
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:128
 // index:0
 // Public
-// void enableStrictTransportSecurityStore(bool, const QString &)
+// void enableStrictTransportSecurityStore(_Bool, const QString &)
 func (this *QNetworkAccessManager) EnableStrictTransportSecurityStore(enabled bool, storeDir *qtcore.QString) {
 	var convArg1 = storeDir.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager34enableStrictTransportSecurityStoreEbRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled, convArg1)
@@ -462,7 +462,7 @@ func (this *QNetworkAccessManager) ActiveConfiguration() *QNetworkConfiguration 
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:151
 // index:0
 // Public
-// void setNetworkAccessible(QNetworkAccessManager::NetworkAccessibility)
+// void setNetworkAccessible(enum QNetworkAccessManager::NetworkAccessibility)
 func (this *QNetworkAccessManager) SetNetworkAccessible(accessible int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkAccessManager20setNetworkAccessibleENS_20NetworkAccessibilityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), accessible)
 	gopp.ErrPrint(err, rv)
@@ -594,7 +594,7 @@ func (this *QNetworkAccessManager) NetworkAccessibleChanged(accessible int) {
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:183
 // index:0
 // Protected virtual
-// QNetworkReply * createRequest(QNetworkAccessManager::Operation, const QNetworkRequest &, QIODevice *)
+// QNetworkReply * createRequest(enum QNetworkAccessManager::Operation, const QNetworkRequest &, QIODevice *)
 func (this *QNetworkAccessManager) CreateRequest(op int, request *QNetworkRequest, outgoingData *qtcore.QIODevice /*777 QIODevice **/) *QNetworkReply /*777 QNetworkReply **/ {
 	var convArg1 = request.GetCthis()
 	var convArg2 = outgoingData.GetCthis()

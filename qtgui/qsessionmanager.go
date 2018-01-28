@@ -153,7 +153,7 @@ func (this *QSessionManager) Cancel() {
 // /usr/include/qt/QtGui/qsessionmanager.h:80
 // index:0
 // Public
-// void setRestartHint(QSessionManager::RestartHint)
+// void setRestartHint(enum QSessionManager::RestartHint)
 func (this *QSessionManager) SetRestartHint(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager14setRestartHintENS_11RestartHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

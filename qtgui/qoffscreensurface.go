@@ -205,7 +205,7 @@ func (this *QOffscreenSurface) RequestedFormat() *QSurfaceFormat /*123*/ {
 // QSize size()
 func (this *QOffscreenSurface) Size() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QOffscreenSurface4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK17QOffscreenSurface4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))

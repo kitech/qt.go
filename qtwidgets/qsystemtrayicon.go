@@ -252,7 +252,7 @@ func (this *QSystemTrayIcon) IsVisible() bool {
 // /usr/include/qt/QtWidgets/qsystemtrayicon.h:101
 // index:0
 // Public
-// void setVisible(bool)
+// void setVisible(_Bool)
 func (this *QSystemTrayIcon) SetVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)

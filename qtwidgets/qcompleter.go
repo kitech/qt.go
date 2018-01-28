@@ -183,7 +183,7 @@ func (this *QCompleter) Model() *qtcore.QAbstractItemModel /*777 QAbstractItemMo
 // /usr/include/qt/QtWidgets/qcompleter.h:98
 // index:0
 // Public
-// void setCompletionMode(QCompleter::CompletionMode)
+// void setCompletionMode(enum QCompleter::CompletionMode)
 func (this *QCompleter) SetCompletionMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter17setCompletionModeENS_14CompletionModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -265,7 +265,7 @@ func (this *QCompleter) CaseSensitivity() int {
 // /usr/include/qt/QtWidgets/qcompleter.h:110
 // index:0
 // Public
-// void setModelSorting(QCompleter::ModelSorting)
+// void setModelSorting(enum QCompleter::ModelSorting)
 func (this *QCompleter) SetModelSorting(sorting int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter15setModelSortingENS_12ModelSortingE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), sorting)
 	gopp.ErrPrint(err, rv)
@@ -299,7 +299,7 @@ func (this *QCompleter) CompletionColumn() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter16completionColumnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:116
@@ -319,7 +319,7 @@ func (this *QCompleter) CompletionRole() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter14completionRoleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:119
@@ -341,7 +341,7 @@ func (this *QCompleter) MaxVisibleItems() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter15maxVisibleItemsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:122
@@ -361,7 +361,7 @@ func (this *QCompleter) CompletionCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter15completionCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:125
@@ -383,7 +383,7 @@ func (this *QCompleter) CurrentRow() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter10currentRowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:128
@@ -463,7 +463,7 @@ func (this *QCompleter) Complete(rect *qtcore.QRect) {
 // /usr/include/qt/QtWidgets/qcompleter.h:138
 // index:0
 // Public
-// void setWrapAround(bool)
+// void setWrapAround(_Bool)
 func (this *QCompleter) SetWrapAround(wrap bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleter13setWrapAroundEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), wrap)
 	gopp.ErrPrint(err, rv)
@@ -474,8 +474,8 @@ func (this *QCompleter) SetWrapAround(wrap bool) {
 // Public virtual
 // QString pathFromIndex(const QModelIndex &)
 func (this *QCompleter) PathFromIndex(index *qtcore.QModelIndex) *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QCompleter13pathFromIndexERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

@@ -68,7 +68,7 @@ func (*QFutureInterfaceBase) NewFromPointer(cthis unsafe.Pointer) *QFutureInterf
 // /usr/include/qt/QtCore/qfutureinterface.h:73
 // index:0
 // Public
-// void QFutureInterfaceBase(QFutureInterfaceBase::State)
+// void QFutureInterfaceBase(enum QFutureInterfaceBase::State)
 func NewQFutureInterfaceBase(initialState int) *QFutureInterfaceBase {
 	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBaseC2ENS_5StateE", ffiqt.FFI_TYPE_VOID, cthis, initialState)
@@ -145,7 +145,7 @@ func (this *QFutureInterfaceBase) SetThreadPool(pool *QThreadPool /*777 QThreadP
 // /usr/include/qt/QtCore/qfutureinterface.h:88
 // index:0
 // Public
-// void setFilterMode(bool)
+// void setFilterMode(_Bool)
 func (this *QFutureInterfaceBase) SetFilterMode(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase13setFilterModeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -168,7 +168,7 @@ func (this *QFutureInterfaceBase) ProgressMinimum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase15progressMinimumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qfutureinterface.h:91
@@ -179,7 +179,7 @@ func (this *QFutureInterfaceBase) ProgressMaximum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase15progressMaximumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qfutureinterface.h:92
@@ -210,7 +210,7 @@ func (this *QFutureInterfaceBase) ProgressValue() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase13progressValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qfutureinterface.h:95
@@ -254,7 +254,7 @@ func (this *QFutureInterfaceBase) ExpectedResultCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase19expectedResultCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qfutureinterface.h:100
@@ -265,13 +265,13 @@ func (this *QFutureInterfaceBase) ResultCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase11resultCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qfutureinterface.h:102
 // index:0
 // Public
-// bool queryState(QFutureInterfaceBase::State)
+// bool queryState(enum QFutureInterfaceBase::State)
 func (this *QFutureInterfaceBase) QueryState(state int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase10queryStateENS_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	gopp.ErrPrint(err, rv)
@@ -368,7 +368,7 @@ func (this *QFutureInterfaceBase) Cancel() {
 // /usr/include/qt/QtCore/qfutureinterface.h:112
 // index:0
 // Public
-// void setPaused(bool)
+// void setPaused(_Bool)
 func (this *QFutureInterfaceBase) SetPaused(paused bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase9setPausedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), paused)
 	gopp.ErrPrint(err, rv)
@@ -386,7 +386,7 @@ func (this *QFutureInterfaceBase) TogglePaused() {
 // /usr/include/qt/QtCore/qfutureinterface.h:114
 // index:0
 // Public
-// void setThrottled(bool)
+// void setThrottled(_Bool)
 func (this *QFutureInterfaceBase) SetThrottled(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase12setThrottledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -450,7 +450,7 @@ func (this *QFutureInterfaceBase) ExceptionStore() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase14exceptionStoreEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 3331
+	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
 // /usr/include/qt/QtCore/qfutureinterface.h:123
@@ -461,7 +461,7 @@ func (this *QFutureInterfaceBase) ResultStoreBase() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase15resultStoreBaseEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 3331
+	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
 // /usr/include/qt/QtCore/qfutureinterface.h:124
@@ -472,7 +472,7 @@ func (this *QFutureInterfaceBase) ResultStoreBase_1() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase15resultStoreBaseEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 3331
+	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
 // /usr/include/qt/QtCore/qfutureinterface.h:131

@@ -125,10 +125,10 @@ func (this *QAbstractItemDelegate) Paint(painter *qtgui.QPainter /*777 QPainter 
 // Public pure virtual
 // QSize sizeHint(const QStyleOptionViewItem &, const QModelIndex &)
 func (this *QAbstractItemDelegate) SizeHint(option *QStyleOptionViewItem, index *qtcore.QModelIndex) *qtcore.QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = option.GetCthis()
 	var convArg1 = index.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QAbstractItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK21QAbstractItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -217,7 +217,9 @@ func (this *QAbstractItemDelegate) EditorEvent(event *qtcore.QEvent /*777 QEvent
 // Public static
 // QString elidedText(const QFontMetrics &, int, Qt::TextElideMode, const QString &)
 func (this *QAbstractItemDelegate) ElidedText(fontMetrics *qtgui.QFontMetrics, width int, mode int, text *qtcore.QString) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractItemDelegate10elidedTextERK12QFontMetricsiN2Qt13TextElideModeERK7QString", ffiqt.FFI_TYPE_POINTER, fontMetrics, width, mode, text)
+	var convArg0 = fontMetrics.GetCthis()
+	var convArg3 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractItemDelegate10elidedTextERK12QFontMetricsiN2Qt13TextElideModeERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0, width, mode, convArg3)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333

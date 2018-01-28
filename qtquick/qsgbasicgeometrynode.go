@@ -172,7 +172,7 @@ func (this *QSGBasicGeometryNode) SetRendererClipList(c *QSGClipNode /*777 const
 // /usr/include/qt/QtQuick/qsgnode.h:211
 // index:0
 // Protected
-// void QSGBasicGeometryNode(QSGNode::NodeType)
+// void QSGBasicGeometryNode(enum QSGNode::NodeType)
 func NewQSGBasicGeometryNode(type_ int) *QSGBasicGeometryNode {
 	cthis := qtrt.Calloc(1, 256) // 112
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGBasicGeometryNodeC2EN7QSGNode8NodeTypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)

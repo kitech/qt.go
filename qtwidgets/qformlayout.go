@@ -111,7 +111,7 @@ func DeleteQFormLayout(*QFormLayout) {
 // /usr/include/qt/QtWidgets/qformlayout.h:94
 // index:0
 // Public
-// void setFieldGrowthPolicy(QFormLayout::FieldGrowthPolicy)
+// void setFieldGrowthPolicy(enum QFormLayout::FieldGrowthPolicy)
 func (this *QFormLayout) SetFieldGrowthPolicy(policy int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout20setFieldGrowthPolicyENS_17FieldGrowthPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)
@@ -131,7 +131,7 @@ func (this *QFormLayout) FieldGrowthPolicy() int {
 // /usr/include/qt/QtWidgets/qformlayout.h:96
 // index:0
 // Public
-// void setRowWrapPolicy(QFormLayout::RowWrapPolicy)
+// void setRowWrapPolicy(enum QFormLayout::RowWrapPolicy)
 func (this *QFormLayout) SetRowWrapPolicy(policy int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout16setRowWrapPolicyENS_13RowWrapPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)
@@ -187,7 +187,7 @@ func (this *QFormLayout) HorizontalSpacing() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout17horizontalSpacingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qformlayout.h:105
@@ -207,7 +207,7 @@ func (this *QFormLayout) VerticalSpacing() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout15verticalSpacingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qformlayout.h:108
@@ -218,7 +218,7 @@ func (this *QFormLayout) Spacing() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout7spacingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qformlayout.h:109
@@ -405,8 +405,8 @@ func (this *QFormLayout) TakeRow(row int) unsafe.Pointer /*444*/ {
 // Public
 // QFormLayout::TakeRowResult takeRow(QWidget *)
 func (this *QFormLayout) TakeRow_1(widget *QWidget /*777 QWidget **/) unsafe.Pointer /*444*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = widget.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout7takeRowEP7QWidget", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -419,8 +419,8 @@ func (this *QFormLayout) TakeRow_1(widget *QWidget /*777 QWidget **/) unsafe.Poi
 // Public
 // QFormLayout::TakeRowResult takeRow(QLayout *)
 func (this *QFormLayout) TakeRow_2(layout *QLayout /*777 QLayout **/) unsafe.Pointer /*444*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = layout.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout7takeRowEP7QLayout", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -431,7 +431,7 @@ func (this *QFormLayout) TakeRow_2(layout *QLayout /*777 QLayout **/) unsafe.Poi
 // /usr/include/qt/QtWidgets/qformlayout.h:133
 // index:0
 // Public
-// void setItem(int, QFormLayout::ItemRole, QLayoutItem *)
+// void setItem(int, enum QFormLayout::ItemRole, QLayoutItem *)
 func (this *QFormLayout) SetItem(row int, role int, item *QLayoutItem /*777 QLayoutItem **/) {
 	var convArg2 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout7setItemEiNS_8ItemRoleEP11QLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, role, convArg2)
@@ -441,7 +441,7 @@ func (this *QFormLayout) SetItem(row int, role int, item *QLayoutItem /*777 QLay
 // /usr/include/qt/QtWidgets/qformlayout.h:134
 // index:0
 // Public
-// void setWidget(int, QFormLayout::ItemRole, QWidget *)
+// void setWidget(int, enum QFormLayout::ItemRole, QWidget *)
 func (this *QFormLayout) SetWidget(row int, role int, widget *QWidget /*777 QWidget **/) {
 	var convArg2 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout9setWidgetEiNS_8ItemRoleEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, role, convArg2)
@@ -451,7 +451,7 @@ func (this *QFormLayout) SetWidget(row int, role int, widget *QWidget /*777 QWid
 // /usr/include/qt/QtWidgets/qformlayout.h:135
 // index:0
 // Public
-// void setLayout(int, QFormLayout::ItemRole, QLayout *)
+// void setLayout(int, enum QFormLayout::ItemRole, QLayout *)
 func (this *QFormLayout) SetLayout(row int, role int, layout *QLayout /*777 QLayout **/) {
 	var convArg2 = layout.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout9setLayoutEiNS_8ItemRoleEP7QLayout", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, role, convArg2)
@@ -461,7 +461,7 @@ func (this *QFormLayout) SetLayout(row int, role int, layout *QLayout /*777 QLay
 // /usr/include/qt/QtWidgets/qformlayout.h:137
 // index:0
 // Public
-// QLayoutItem * itemAt(int, QFormLayout::ItemRole)
+// QLayoutItem * itemAt(int, enum QFormLayout::ItemRole)
 func (this *QFormLayout) ItemAt(row int, role int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout6itemAtEiNS_8ItemRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, role)
 	gopp.ErrPrint(err, rv)
@@ -485,7 +485,7 @@ func (this *QFormLayout) ItemAt_1(index int) *QLayoutItem /*777 QLayoutItem **/ 
 // /usr/include/qt/QtWidgets/qformlayout.h:138
 // index:0
 // Public
-// void getItemPosition(int, int *, QFormLayout::ItemRole *)
+// void getItemPosition(int, int *, enum QFormLayout::ItemRole *)
 func (this *QFormLayout) GetItemPosition(index int, rowPtr unsafe.Pointer /*666*/, rolePtr unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout15getItemPositionEiPiPNS_8ItemRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, &rowPtr, &rolePtr)
 	gopp.ErrPrint(err, rv)
@@ -494,7 +494,7 @@ func (this *QFormLayout) GetItemPosition(index int, rowPtr unsafe.Pointer /*666*
 // /usr/include/qt/QtWidgets/qformlayout.h:139
 // index:0
 // Public
-// void getWidgetPosition(QWidget *, int *, QFormLayout::ItemRole *)
+// void getWidgetPosition(QWidget *, int *, enum QFormLayout::ItemRole *)
 func (this *QFormLayout) GetWidgetPosition(widget *QWidget /*777 QWidget **/, rowPtr unsafe.Pointer /*666*/, rolePtr unsafe.Pointer /*666*/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout17getWidgetPositionEP7QWidgetPiPNS_8ItemRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &rowPtr, &rolePtr)
@@ -504,7 +504,7 @@ func (this *QFormLayout) GetWidgetPosition(widget *QWidget /*777 QWidget **/, ro
 // /usr/include/qt/QtWidgets/qformlayout.h:140
 // index:0
 // Public
-// void getLayoutPosition(QLayout *, int *, QFormLayout::ItemRole *)
+// void getLayoutPosition(QLayout *, int *, enum QFormLayout::ItemRole *)
 func (this *QFormLayout) GetLayoutPosition(layout *QLayout /*777 QLayout **/, rowPtr unsafe.Pointer /*666*/, rolePtr unsafe.Pointer /*666*/) {
 	var convArg0 = layout.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout17getLayoutPositionEP7QLayoutPiPNS_8ItemRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &rowPtr, &rolePtr)
@@ -575,7 +575,7 @@ func (this *QFormLayout) SetGeometry(rect *qtcore.QRect) {
 // QSize minimumSize()
 func (this *QFormLayout) MinimumSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK11QFormLayout11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -589,7 +589,7 @@ func (this *QFormLayout) MinimumSize() *qtcore.QSize /*123*/ {
 // QSize sizeHint()
 func (this *QFormLayout) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK11QFormLayout8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -625,7 +625,7 @@ func (this *QFormLayout) HeightForWidth(width int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout14heightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qformlayout.h:156
@@ -647,7 +647,7 @@ func (this *QFormLayout) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qformlayout.h:159
@@ -658,7 +658,7 @@ func (this *QFormLayout) RowCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFormLayout8rowCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 type QFormLayout__FieldGrowthPolicy = int

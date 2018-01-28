@@ -229,7 +229,7 @@ func (this *QTextLayout) PreeditAreaPosition() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout19preeditAreaPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:129
@@ -267,7 +267,7 @@ func (this *QTextLayout) ClearFormats() {
 // /usr/include/qt/QtGui/qtextlayout.h:150
 // index:0
 // Public
-// void setCacheEnabled(bool)
+// void setCacheEnabled(_Bool)
 func (this *QTextLayout) SetCacheEnabled(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout15setCacheEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -353,7 +353,7 @@ func (this *QTextLayout) LineCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout9lineCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:163
@@ -398,23 +398,23 @@ func (this *QTextLayout) IsValidCursorPosition(pos int) bool {
 // /usr/include/qt/QtGui/qtextlayout.h:171
 // index:0
 // Public
-// int nextCursorPosition(int, QTextLayout::CursorMode)
+// int nextCursorPosition(int, enum QTextLayout::CursorMode)
 func (this *QTextLayout) NextCursorPosition(oldPos int, mode int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout18nextCursorPositionEiNS_10CursorModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), oldPos, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:172
 // index:0
 // Public
-// int previousCursorPosition(int, QTextLayout::CursorMode)
+// int previousCursorPosition(int, enum QTextLayout::CursorMode)
 func (this *QTextLayout) PreviousCursorPosition(oldPos int, mode int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout22previousCursorPositionEiNS_10CursorModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), oldPos, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:173
@@ -425,7 +425,7 @@ func (this *QTextLayout) LeftCursorPosition(oldPos int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout18leftCursorPositionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), oldPos)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:174
@@ -436,7 +436,7 @@ func (this *QTextLayout) RightCursorPosition(oldPos int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout19rightCursorPositionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), oldPos)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:178
@@ -504,10 +504,10 @@ func (this *QTextLayout) BoundingRect() *qtcore.QRectF /*123*/ {
 // Public
 // qreal minimumWidth()
 func (this *QTextLayout) MinimumWidth() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout12minimumWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout12minimumWidthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:187
@@ -515,10 +515,10 @@ func (this *QTextLayout) MinimumWidth() float64 {
 // Public
 // qreal maximumWidth()
 func (this *QTextLayout) MaximumWidth() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout12maximumWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout12maximumWidthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:194

@@ -185,7 +185,7 @@ func (this *QUndoStack) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoStack5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qundostack.h:107
@@ -196,7 +196,7 @@ func (this *QUndoStack) Index() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoStack5indexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qundostack.h:108
@@ -271,7 +271,7 @@ func (this *QUndoStack) CleanIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoStack10cleanIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qundostack.h:121
@@ -310,7 +310,7 @@ func (this *QUndoStack) UndoLimit() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QUndoStack9undoLimitEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qundostack.h:127
@@ -373,7 +373,7 @@ func (this *QUndoStack) Redo() {
 // /usr/include/qt/QtWidgets/qundostack.h:135
 // index:0
 // Public
-// void setActive(bool)
+// void setActive(_Bool)
 func (this *QUndoStack) SetActive(active bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack9setActiveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), active)
 	gopp.ErrPrint(err, rv)
@@ -391,7 +391,7 @@ func (this *QUndoStack) IndexChanged(idx int) {
 // /usr/include/qt/QtWidgets/qundostack.h:139
 // index:0
 // Public
-// void cleanChanged(bool)
+// void cleanChanged(_Bool)
 func (this *QUndoStack) CleanChanged(clean bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack12cleanChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), clean)
 	gopp.ErrPrint(err, rv)
@@ -400,7 +400,7 @@ func (this *QUndoStack) CleanChanged(clean bool) {
 // /usr/include/qt/QtWidgets/qundostack.h:140
 // index:0
 // Public
-// void canUndoChanged(bool)
+// void canUndoChanged(_Bool)
 func (this *QUndoStack) CanUndoChanged(canUndo bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack14canUndoChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), canUndo)
 	gopp.ErrPrint(err, rv)
@@ -409,7 +409,7 @@ func (this *QUndoStack) CanUndoChanged(canUndo bool) {
 // /usr/include/qt/QtWidgets/qundostack.h:141
 // index:0
 // Public
-// void canRedoChanged(bool)
+// void canRedoChanged(_Bool)
 func (this *QUndoStack) CanRedoChanged(canRedo bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStack14canRedoChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), canRedo)
 	gopp.ErrPrint(err, rv)

@@ -68,7 +68,7 @@ func (*QReadWriteLock) NewFromPointer(cthis unsafe.Pointer) *QReadWriteLock {
 // /usr/include/qt/QtCore/qreadwritelock.h:57
 // index:0
 // Public
-// void QReadWriteLock(QReadWriteLock::RecursionMode)
+// void QReadWriteLock(enum QReadWriteLock::RecursionMode)
 func NewQReadWriteLock(recursionMode int) *QReadWriteLock {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLockC2ENS_13RecursionModeE", ffiqt.FFI_TYPE_VOID, cthis, recursionMode)

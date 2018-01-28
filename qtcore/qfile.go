@@ -167,7 +167,8 @@ func (this *QFile) SetFileName(name *QString) {
 // Public static inline
 // QByteArray encodeName(const QString &)
 func (this *QFile) EncodeName(fileName *QString) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile10encodeNameERK7QString", ffiqt.FFI_TYPE_POINTER, fileName)
+	var convArg0 = fileName.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile10encodeNameERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -184,7 +185,8 @@ func QFile_EncodeName(fileName *QString) *QByteArray /*123*/ {
 // Public static inline
 // QString decodeName(const QByteArray &)
 func (this *QFile) DecodeName(localFileName *QByteArray) *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile10decodeNameERK10QByteArray", ffiqt.FFI_TYPE_POINTER, localFileName)
+	var convArg0 = localFileName.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile10decodeNameERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -201,7 +203,9 @@ func QFile_DecodeName(localFileName *QByteArray) *QString /*123*/ {
 // Public static inline
 // QString decodeName(const char *)
 func (this *QFile) DecodeName_1(localFileName string) *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile10decodeNameEPKc", ffiqt.FFI_TYPE_POINTER, localFileName)
+	var convArg0 = qtrt.CString(localFileName)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile10decodeNameEPKc", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -229,7 +233,8 @@ func (this *QFile) Exists() bool {
 // Public static
 // bool exists(const QString &)
 func (this *QFile) Exists_1(fileName *QString) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile6existsERK7QString", ffiqt.FFI_TYPE_POINTER, fileName)
+	var convArg0 = fileName.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile6existsERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -259,7 +264,8 @@ func (this *QFile) ReadLink() *QString /*123*/ {
 // Public static
 // QString readLink(const QString &)
 func (this *QFile) ReadLink_1(fileName *QString) *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile8readLinkERK7QString", ffiqt.FFI_TYPE_POINTER, fileName)
+	var convArg0 = fileName.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile8readLinkERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -290,7 +296,8 @@ func (this *QFile) SymLinkTarget() *QString /*123*/ {
 // Public static inline
 // QString symLinkTarget(const QString &)
 func (this *QFile) SymLinkTarget_1(fileName *QString) *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile13symLinkTargetERK7QString", ffiqt.FFI_TYPE_POINTER, fileName)
+	var convArg0 = fileName.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile13symLinkTargetERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -318,7 +325,8 @@ func (this *QFile) Remove() bool {
 // Public static
 // bool remove(const QString &)
 func (this *QFile) Remove_1(fileName *QString) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile6removeERK7QString", ffiqt.FFI_TYPE_POINTER, fileName)
+	var convArg0 = fileName.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile6removeERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -346,7 +354,9 @@ func (this *QFile) Rename(newName *QString) bool {
 // Public static
 // bool rename(const QString &, const QString &)
 func (this *QFile) Rename_1(oldName *QString, newName *QString) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile6renameERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, oldName, newName)
+	var convArg0 = oldName.GetCthis()
+	var convArg1 = newName.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile6renameERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -374,7 +384,9 @@ func (this *QFile) Link(newName *QString) bool {
 // Public static
 // bool link(const QString &, const QString &)
 func (this *QFile) Link_1(oldname *QString, newName *QString) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile4linkERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, oldname, newName)
+	var convArg0 = oldname.GetCthis()
+	var convArg1 = newName.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile4linkERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -402,7 +414,9 @@ func (this *QFile) Copy(newName *QString) bool {
 // Public static
 // bool copy(const QString &, const QString &)
 func (this *QFile) Copy_1(fileName *QString, newName *QString) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile4copyERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, fileName, newName)
+	var convArg0 = fileName.GetCthis()
+	var convArg1 = newName.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile4copyERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -440,7 +454,8 @@ func (this *QFile) Resize(sz int64) bool {
 // Public static
 // bool resize(const QString &, qint64)
 func (this *QFile) Resize_1(filename *QString, sz int64) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile6resizeERK7QStringx", ffiqt.FFI_TYPE_POINTER, filename, sz)
+	var convArg0 = filename.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile6resizeERK7QStringx", ffiqt.FFI_TYPE_POINTER, convArg0, sz)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -467,7 +482,8 @@ func (this *QFile) Permissions() int {
 // Public static
 // QFileDevice::Permissions permissions(const QString &)
 func (this *QFile) Permissions_1(filename *QString) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile11permissionsERK7QString", ffiqt.FFI_TYPE_POINTER, filename)
+	var convArg0 = filename.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile11permissionsERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv)

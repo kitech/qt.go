@@ -519,8 +519,8 @@ func (this *QPainterPath) Translated(dx float64, dy float64) *QPainterPath /*123
 // Public inline
 // QPainterPath translated(const QPointF &)
 func (this *QPainterPath) Translated_1(offset *qtcore.QPointF) *QPainterPath /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = offset.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath10translatedERK7QPointF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -607,8 +607,8 @@ func (this *QPainterPath) ToReversed() *QPainterPath /*123*/ {
 // Public
 // QPolygonF toFillPolygon(const QMatrix &)
 func (this *QPainterPath) ToFillPolygon(matrix *QMatrix) *QPolygonF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = matrix.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath13toFillPolygonERK7QMatrix", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -622,8 +622,8 @@ func (this *QPainterPath) ToFillPolygon(matrix *QMatrix) *QPolygonF /*123*/ {
 // Public
 // QPolygonF toFillPolygon(const QTransform &)
 func (this *QPainterPath) ToFillPolygon_1(matrix *QTransform) *QPolygonF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = matrix.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath13toFillPolygonERK10QTransform", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -640,7 +640,7 @@ func (this *QPainterPath) ElementCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath12elementCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:177
@@ -668,10 +668,10 @@ func (this *QPainterPath) SetElementPositionAt(i int, x float64, y float64) {
 // Public
 // qreal length()
 func (this *QPainterPath) Length() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath6lengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath6lengthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:181
@@ -679,10 +679,10 @@ func (this *QPainterPath) Length() float64 {
 // Public
 // qreal percentAtLength(qreal)
 func (this *QPainterPath) PercentAtLength(t float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath15percentAtLengthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath15percentAtLengthEd", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), t)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:182
@@ -704,10 +704,10 @@ func (this *QPainterPath) PointAtPercent(t float64) *qtcore.QPointF /*123*/ {
 // Public
 // qreal angleAtPercent(qreal)
 func (this *QPainterPath) AngleAtPercent(t float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath14angleAtPercentEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath14angleAtPercentEd", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), t)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:184
@@ -715,10 +715,10 @@ func (this *QPainterPath) AngleAtPercent(t float64) float64 {
 // Public
 // qreal slopeAtPercent(qreal)
 func (this *QPainterPath) SlopeAtPercent(t float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath14slopeAtPercentEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath14slopeAtPercentEd", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), t)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:188
@@ -726,8 +726,8 @@ func (this *QPainterPath) SlopeAtPercent(t float64) float64 {
 // Public
 // QPainterPath united(const QPainterPath &)
 func (this *QPainterPath) United(r *QPainterPath) *QPainterPath /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath6unitedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -741,8 +741,8 @@ func (this *QPainterPath) United(r *QPainterPath) *QPainterPath /*123*/ {
 // Public
 // QPainterPath intersected(const QPainterPath &)
 func (this *QPainterPath) Intersected(r *QPainterPath) *QPainterPath /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -756,8 +756,8 @@ func (this *QPainterPath) Intersected(r *QPainterPath) *QPainterPath /*123*/ {
 // Public
 // QPainterPath subtracted(const QPainterPath &)
 func (this *QPainterPath) Subtracted(r *QPainterPath) *QPainterPath /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath10subtractedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -771,8 +771,8 @@ func (this *QPainterPath) Subtracted(r *QPainterPath) *QPainterPath /*123*/ {
 // Public
 // QPainterPath subtractedInverted(const QPainterPath &)
 func (this *QPainterPath) SubtractedInverted(r *QPainterPath) *QPainterPath /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPainterPath18subtractedInvertedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

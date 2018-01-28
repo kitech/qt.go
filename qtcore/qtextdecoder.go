@@ -105,9 +105,9 @@ func DeleteQTextDecoder(*QTextDecoder) {
 // Public
 // QString toUnicode(const char *, int)
 func (this *QTextDecoder) ToUnicode(chars string, len int) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = qtrt.CString(chars)
 	defer qtrt.FreeMem(convArg0)
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeEPKci", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, len)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -121,8 +121,8 @@ func (this *QTextDecoder) ToUnicode(chars string, len int) *QString /*123*/ {
 // Public
 // QString toUnicode(const QByteArray &)
 func (this *QTextDecoder) ToUnicode_1(ba *QByteArray) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = ba.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeERK10QByteArray", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

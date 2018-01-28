@@ -35,7 +35,7 @@ func QRed(rgb uint) int {
 	rv, err := ffiqt.InvokeQtFunc6("_Z4qRedj", ffiqt.FFI_TYPE_POINTER, rgb)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qrgb.h:57
@@ -46,7 +46,7 @@ func QGreen(rgb uint) int {
 	rv, err := ffiqt.InvokeQtFunc6("_Z6qGreenj", ffiqt.FFI_TYPE_POINTER, rgb)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qrgb.h:60
@@ -57,7 +57,7 @@ func QBlue(rgb uint) int {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qBluej", ffiqt.FFI_TYPE_POINTER, rgb)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qrgb.h:63
@@ -68,7 +68,7 @@ func QAlpha(rgb uint) int {
 	rv, err := ffiqt.InvokeQtFunc6("_Z6qAlphaj", ffiqt.FFI_TYPE_POINTER, rgb)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qrgb.h:66
@@ -101,7 +101,7 @@ func QGray(r int, g int, b int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qGrayiii", ffiqt.FFI_TYPE_POINTER, r, g, b)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qrgb.h:75
@@ -112,7 +112,7 @@ func QGray_1(rgb uint) int {
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qGrayj", ffiqt.FFI_TYPE_POINTER, rgb)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qrgb.h:78

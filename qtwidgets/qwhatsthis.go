@@ -120,7 +120,10 @@ func QWhatsThis_LeaveWhatsThisMode() {
 // Public static
 // void showText(const QPoint &, const QString &, QWidget *)
 func (this *QWhatsThis) ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget", ffiqt.FFI_TYPE_POINTER, pos, text, w)
+	var convArg0 = pos.GetCthis()
+	var convArg1 = text.GetCthis()
+	var convArg2 = w.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 func QWhatsThis_ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/) {
@@ -146,7 +149,8 @@ func QWhatsThis_HideText() {
 // Public static
 // QAction * createAction(QObject *)
 func (this *QWhatsThis) CreateAction(parent *qtcore.QObject /*777 QObject **/) *QAction /*777 QAction **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThis12createActionEP7QObject", ffiqt.FFI_TYPE_POINTER, parent)
+	var convArg0 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThis12createActionEP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444

@@ -143,7 +143,7 @@ func DeleteQPushButton(*QPushButton) {
 // QSize sizeHint()
 func (this *QPushButton) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPushButton8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK11QPushButton8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -157,7 +157,7 @@ func (this *QPushButton) SizeHint() *qtcore.QSize /*123*/ {
 // QSize minimumSizeHint()
 func (this *QPushButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPushButton15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK11QPushButton15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -179,7 +179,7 @@ func (this *QPushButton) AutoDefault() bool {
 // /usr/include/qt/QtWidgets/qpushbutton.h:73
 // index:0
 // Public
-// void setAutoDefault(bool)
+// void setAutoDefault(_Bool)
 func (this *QPushButton) SetAutoDefault(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton14setAutoDefaultEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -199,7 +199,7 @@ func (this *QPushButton) IsDefault() bool {
 // /usr/include/qt/QtWidgets/qpushbutton.h:75
 // index:0
 // Public
-// void setDefault(bool)
+// void setDefault(_Bool)
 func (this *QPushButton) SetDefault(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton10setDefaultEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -230,7 +230,7 @@ func (this *QPushButton) Menu() *QMenu /*777 QMenu **/ {
 // /usr/include/qt/QtWidgets/qpushbutton.h:82
 // index:0
 // Public
-// void setFlat(bool)
+// void setFlat(_Bool)
 func (this *QPushButton) SetFlat(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButton7setFlatEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

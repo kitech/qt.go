@@ -68,7 +68,7 @@ func (*QJsonValue) NewFromPointer(cthis unsafe.Pointer) *QJsonValue {
 // /usr/include/qt/QtCore/qjsonvalue.h:76
 // index:0
 // Public
-// void QJsonValue(QJsonValue::Type)
+// void QJsonValue(enum QJsonValue::Type)
 func NewQJsonValue(arg0 int) *QJsonValue {
 	cthis := qtrt.Calloc(1, 256) // 24
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValueC2ENS_4TypeE", ffiqt.FFI_TYPE_VOID, cthis, arg0)
@@ -80,7 +80,7 @@ func NewQJsonValue(arg0 int) *QJsonValue {
 // /usr/include/qt/QtCore/qjsonvalue.h:77
 // index:1
 // Public
-// void QJsonValue(bool)
+// void QJsonValue(_Bool)
 func NewQJsonValue_1(b bool) *QJsonValue {
 	cthis := qtrt.Calloc(1, 256) // 24
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValueC2Eb", ffiqt.FFI_TYPE_VOID, cthis, b)
@@ -215,7 +215,8 @@ func (this *QJsonValue) Swap(other *QJsonValue) {
 // Public static
 // QJsonValue fromVariant(const QVariant &)
 func (this *QJsonValue) FromVariant(variant *QVariant) *QJsonValue /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValue11fromVariantERK8QVariant", ffiqt.FFI_TYPE_POINTER, variant)
+	var convArg0 = variant.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValue11fromVariantERK8QVariant", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -332,7 +333,7 @@ func (this *QJsonValue) IsUndefined() bool {
 // /usr/include/qt/QtCore/qjsonvalue.h:130
 // index:0
 // Public
-// bool toBool(bool)
+// bool toBool(_Bool)
 func (this *QJsonValue) ToBool(defaultValue bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue6toBoolEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
 	gopp.ErrPrint(err, rv)
@@ -348,7 +349,7 @@ func (this *QJsonValue) ToInt(defaultValue int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue5toIntEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:132
@@ -356,10 +357,10 @@ func (this *QJsonValue) ToInt(defaultValue int) int {
 // Public
 // double toDouble(double)
 func (this *QJsonValue) ToDouble(defaultValue float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8toDoubleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8toDoubleEd", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), defaultValue)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:133
@@ -381,8 +382,8 @@ func (this *QJsonValue) ToString() *QString /*123*/ {
 // Public
 // QString toString(const QString &)
 func (this *QJsonValue) ToString_1(defaultValue *QString) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = defaultValue.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8toStringERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -410,8 +411,8 @@ func (this *QJsonValue) ToArray() *QJsonArray /*123*/ {
 // Public
 // QJsonArray toArray(const QJsonArray &)
 func (this *QJsonValue) ToArray_1(defaultValue *QJsonArray) *QJsonArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = defaultValue.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue7toArrayERK10QJsonArray", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -439,8 +440,8 @@ func (this *QJsonValue) ToObject() *QJsonObject /*123*/ {
 // Public
 // QJsonObject toObject(const QJsonObject &)
 func (this *QJsonValue) ToObject_1(defaultValue *QJsonObject) *QJsonObject /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = defaultValue.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QJsonValue8toObjectERK11QJsonObject", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

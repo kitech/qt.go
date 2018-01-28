@@ -336,7 +336,7 @@ func (this *QMovie) LoopCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QMovie9loopCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qmovie.h:113
@@ -347,7 +347,7 @@ func (this *QMovie) FrameCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QMovie10frameCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qmovie.h:114
@@ -358,7 +358,7 @@ func (this *QMovie) NextFrameDelay() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QMovie14nextFrameDelayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qmovie.h:115
@@ -369,7 +369,7 @@ func (this *QMovie) CurrentFrameNumber() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QMovie18currentFrameNumberEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qmovie.h:117
@@ -380,7 +380,7 @@ func (this *QMovie) Speed() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QMovie5speedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qmovie.h:119
@@ -389,7 +389,7 @@ func (this *QMovie) Speed() int {
 // QSize scaledSize()
 func (this *QMovie) ScaledSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMovie10scaledSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZN6QMovie10scaledSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -421,7 +421,7 @@ func (this *QMovie) CacheMode() int {
 // /usr/include/qt/QtGui/qmovie.h:123
 // index:0
 // Public
-// void setCacheMode(QMovie::CacheMode)
+// void setCacheMode(enum QMovie::CacheMode)
 func (this *QMovie) SetCacheMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMovie12setCacheModeENS_9CacheModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -515,7 +515,7 @@ func (this *QMovie) JumpToNextFrame() bool {
 // /usr/include/qt/QtGui/qmovie.h:137
 // index:0
 // Public
-// void setPaused(bool)
+// void setPaused(_Bool)
 func (this *QMovie) SetPaused(paused bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMovie9setPausedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), paused)
 	gopp.ErrPrint(err, rv)

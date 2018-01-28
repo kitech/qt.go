@@ -189,7 +189,7 @@ func (this *QLocalServer) MaxPendingConnections() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QLocalServer21maxPendingConnectionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtNetwork/qlocalserver.h:84
@@ -237,7 +237,8 @@ func (this *QLocalServer) FullServerName() *qtcore.QString /*123*/ {
 // Public static
 // bool removeServer(const QString &)
 func (this *QLocalServer) RemoveServer(name *qtcore.QString) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalServer12removeServerERK7QString", ffiqt.FFI_TYPE_POINTER, name)
+	var convArg0 = name.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalServer12removeServerERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -271,7 +272,7 @@ func (this *QLocalServer) SetMaxPendingConnections(numConnections int) {
 // /usr/include/qt/QtNetwork/qlocalserver.h:90
 // index:0
 // Public
-// bool waitForNewConnection(int, bool *)
+// bool waitForNewConnection(int, _Bool *)
 func (this *QLocalServer) WaitForNewConnection(msec int, timedOut unsafe.Pointer /*666*/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalServer20waitForNewConnectionEiPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec, &timedOut)
 	gopp.ErrPrint(err, rv)

@@ -163,7 +163,7 @@ func (this *QXmlStreamStringRef) Position() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef8positionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:93
@@ -174,7 +174,7 @@ func (this *QXmlStreamStringRef) Size() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 //  body block end

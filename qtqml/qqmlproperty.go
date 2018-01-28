@@ -231,7 +231,7 @@ func (this *QQmlProperty) PropertyType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QQmlProperty12propertyTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQml/qqmlproperty.h:93
@@ -289,7 +289,9 @@ func (this *QQmlProperty) Read() *qtcore.QVariant /*123*/ {
 // Public static
 // QVariant read(const QObject *, const QString &)
 func (this *QQmlProperty) Read_1(arg0 *qtcore.QObject /*777 const QObject **/, arg1 *qtcore.QString) *qtcore.QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQmlProperty4readEPK7QObjectRK7QString", ffiqt.FFI_TYPE_POINTER, arg0, arg1)
+	var convArg0 = arg0.GetCthis()
+	var convArg1 = arg1.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQmlProperty4readEPK7QObjectRK7QString", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -306,7 +308,10 @@ func QQmlProperty_Read_1(arg0 *qtcore.QObject /*777 const QObject **/, arg1 *qtc
 // Public static
 // QVariant read(const QObject *, const QString &, QQmlContext *)
 func (this *QQmlProperty) Read_2(arg0 *qtcore.QObject /*777 const QObject **/, arg1 *qtcore.QString, arg2 *QQmlContext /*777 QQmlContext **/) *qtcore.QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQmlProperty4readEPK7QObjectRK7QStringP11QQmlContext", ffiqt.FFI_TYPE_POINTER, arg0, arg1, arg2)
+	var convArg0 = arg0.GetCthis()
+	var convArg1 = arg1.GetCthis()
+	var convArg2 = arg2.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQmlProperty4readEPK7QObjectRK7QStringP11QQmlContext", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -323,7 +328,10 @@ func QQmlProperty_Read_2(arg0 *qtcore.QObject /*777 const QObject **/, arg1 *qtc
 // Public static
 // QVariant read(const QObject *, const QString &, QQmlEngine *)
 func (this *QQmlProperty) Read_3(arg0 *qtcore.QObject /*777 const QObject **/, arg1 *qtcore.QString, arg2 *QQmlEngine /*777 QQmlEngine **/) *qtcore.QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQmlProperty4readEPK7QObjectRK7QStringP10QQmlEngine", ffiqt.FFI_TYPE_POINTER, arg0, arg1, arg2)
+	var convArg0 = arg0.GetCthis()
+	var convArg1 = arg1.GetCthis()
+	var convArg2 = arg2.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQmlProperty4readEPK7QObjectRK7QStringP10QQmlEngine", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -352,7 +360,10 @@ func (this *QQmlProperty) Write(arg0 *qtcore.QVariant) bool {
 // Public static
 // bool write(QObject *, const QString &, const QVariant &)
 func (this *QQmlProperty) Write_1(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QString, arg2 *qtcore.QVariant) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQmlProperty5writeEP7QObjectRK7QStringRK8QVariant", ffiqt.FFI_TYPE_POINTER, arg0, arg1, arg2)
+	var convArg0 = arg0.GetCthis()
+	var convArg1 = arg1.GetCthis()
+	var convArg2 = arg2.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQmlProperty5writeEP7QObjectRK7QStringRK8QVariant", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -368,7 +379,11 @@ func QQmlProperty_Write_1(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.Q
 // Public static
 // bool write(QObject *, const QString &, const QVariant &, QQmlContext *)
 func (this *QQmlProperty) Write_2(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QString, arg2 *qtcore.QVariant, arg3 *QQmlContext /*777 QQmlContext **/) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQmlProperty5writeEP7QObjectRK7QStringRK8QVariantP11QQmlContext", ffiqt.FFI_TYPE_POINTER, arg0, arg1, arg2, arg3)
+	var convArg0 = arg0.GetCthis()
+	var convArg1 = arg1.GetCthis()
+	var convArg2 = arg2.GetCthis()
+	var convArg3 = arg3.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQmlProperty5writeEP7QObjectRK7QStringRK8QVariantP11QQmlContext", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -384,7 +399,11 @@ func QQmlProperty_Write_2(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.Q
 // Public static
 // bool write(QObject *, const QString &, const QVariant &, QQmlEngine *)
 func (this *QQmlProperty) Write_3(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QString, arg2 *qtcore.QVariant, arg3 *QQmlEngine /*777 QQmlEngine **/) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQmlProperty5writeEP7QObjectRK7QStringRK8QVariantP10QQmlEngine", ffiqt.FFI_TYPE_POINTER, arg0, arg1, arg2, arg3)
+	var convArg0 = arg0.GetCthis()
+	var convArg1 = arg1.GetCthis()
+	var convArg2 = arg2.GetCthis()
+	var convArg3 = arg3.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQmlProperty5writeEP7QObjectRK7QStringRK8QVariantP10QQmlEngine", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -507,7 +526,7 @@ func (this *QQmlProperty) Index() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QQmlProperty5indexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQml/qqmlproperty.h:121

@@ -73,7 +73,7 @@ func (*QContextMenuEvent) NewFromPointer(cthis unsafe.Pointer) *QContextMenuEven
 // /usr/include/qt/QtGui/qevent.h:513
 // index:0
 // Public
-// void QContextMenuEvent(QContextMenuEvent::Reason, const QPoint &, const QPoint &)
+// void QContextMenuEvent(enum QContextMenuEvent::Reason, const QPoint &, const QPoint &)
 func NewQContextMenuEvent(reason int, pos *qtcore.QPoint, globalPos *qtcore.QPoint) *QContextMenuEvent {
 	cthis := qtrt.Calloc(1, 256) // 56
 	var convArg1 = pos.GetCthis()
@@ -87,7 +87,7 @@ func NewQContextMenuEvent(reason int, pos *qtcore.QPoint, globalPos *qtcore.QPoi
 // /usr/include/qt/QtGui/qevent.h:514
 // index:1
 // Public
-// void QContextMenuEvent(QContextMenuEvent::Reason, const QPoint &)
+// void QContextMenuEvent(enum QContextMenuEvent::Reason, const QPoint &)
 func NewQContextMenuEvent_1(reason int, pos *qtcore.QPoint) *QContextMenuEvent {
 	cthis := qtrt.Calloc(1, 256) // 56
 	var convArg1 = pos.GetCthis()
@@ -114,7 +114,7 @@ func (this *QContextMenuEvent) X() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:518
@@ -125,7 +125,7 @@ func (this *QContextMenuEvent) Y() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:519
@@ -136,7 +136,7 @@ func (this *QContextMenuEvent) GlobalX() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent7globalXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:520
@@ -147,7 +147,7 @@ func (this *QContextMenuEvent) GlobalY() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent7globalYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:522

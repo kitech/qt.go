@@ -117,7 +117,7 @@ func (this *QPersistentModelIndex) Row() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex3rowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:128
@@ -128,7 +128,7 @@ func (this *QPersistentModelIndex) Column() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPersistentModelIndex6columnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:129

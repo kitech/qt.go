@@ -155,10 +155,10 @@ func (this *QPanGesture) Delta() *qtcore.QPointF /*123*/ {
 // Public
 // qreal acceleration()
 func (this *QPanGesture) Acceleration() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPanGesture12accelerationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPanGesture12accelerationEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:125

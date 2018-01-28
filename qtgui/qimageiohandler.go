@@ -198,7 +198,7 @@ func (this *QImageIOHandler) Write(image *QImage) bool {
 // /usr/include/qt/QtGui/qimageiohandler.h:115
 // index:0
 // Public virtual
-// QVariant option(QImageIOHandler::ImageOption)
+// QVariant option(enum QImageIOHandler::ImageOption)
 func (this *QImageIOHandler) Option(option int) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler6optionENS_11ImageOptionE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), option)
@@ -212,7 +212,7 @@ func (this *QImageIOHandler) Option(option int) *qtcore.QVariant /*123*/ {
 // /usr/include/qt/QtGui/qimageiohandler.h:116
 // index:0
 // Public virtual
-// void setOption(QImageIOHandler::ImageOption, const QVariant &)
+// void setOption(enum QImageIOHandler::ImageOption, const QVariant &)
 func (this *QImageIOHandler) SetOption(option int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler9setOptionENS_11ImageOptionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, convArg1)
@@ -222,7 +222,7 @@ func (this *QImageIOHandler) SetOption(option int, value *qtcore.QVariant) {
 // /usr/include/qt/QtGui/qimageiohandler.h:117
 // index:0
 // Public virtual
-// bool supportsOption(QImageIOHandler::ImageOption)
+// bool supportsOption(enum QImageIOHandler::ImageOption)
 func (this *QImageIOHandler) SupportsOption(option int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler14supportsOptionENS_11ImageOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
@@ -260,7 +260,7 @@ func (this *QImageIOHandler) LoopCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler9loopCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:123
@@ -271,7 +271,7 @@ func (this *QImageIOHandler) ImageCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler10imageCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:124
@@ -282,7 +282,7 @@ func (this *QImageIOHandler) NextImageDelay() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler14nextImageDelayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:125
@@ -293,7 +293,7 @@ func (this *QImageIOHandler) CurrentImageNumber() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler18currentImageNumberEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:126

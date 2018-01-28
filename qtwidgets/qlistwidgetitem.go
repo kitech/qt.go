@@ -151,7 +151,7 @@ func (this *QListWidgetItem) ListWidget() *QListWidget /*777 QListWidget **/ {
 // /usr/include/qt/QtWidgets/qlistwidget.h:75
 // index:0
 // Public inline
-// void setSelected(bool)
+// void setSelected(_Bool)
 func (this *QListWidgetItem) SetSelected(select_ bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem11setSelectedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), select_)
 	gopp.ErrPrint(err, rv)
@@ -171,7 +171,7 @@ func (this *QListWidgetItem) IsSelected() bool {
 // /usr/include/qt/QtWidgets/qlistwidget.h:78
 // index:0
 // Public inline
-// void setHidden(bool)
+// void setHidden(_Bool)
 func (this *QListWidgetItem) SetHidden(hide bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItem9setHiddenEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hide)
 	gopp.ErrPrint(err, rv)
@@ -360,7 +360,7 @@ func (this *QListWidgetItem) TextAlignment() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem13textAlignmentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:114
@@ -494,7 +494,7 @@ func (this *QListWidgetItem) SetCheckState(state int) {
 // QSize sizeHint()
 func (this *QListWidgetItem) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK15QListWidgetItem8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -564,7 +564,7 @@ func (this *QListWidgetItem) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QListWidgetItem4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 type QListWidgetItem__ItemType = int

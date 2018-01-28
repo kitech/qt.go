@@ -177,7 +177,7 @@ func (this *QSplitter) Orientation() int {
 // /usr/include/qt/QtWidgets/qsplitter.h:78
 // index:0
 // Public
-// void setChildrenCollapsible(bool)
+// void setChildrenCollapsible(_Bool)
 func (this *QSplitter) SetChildrenCollapsible(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSplitter22setChildrenCollapsibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -197,7 +197,7 @@ func (this *QSplitter) ChildrenCollapsible() bool {
 // /usr/include/qt/QtWidgets/qsplitter.h:81
 // index:0
 // Public
-// void setCollapsible(int, bool)
+// void setCollapsible(int, _Bool)
 func (this *QSplitter) SetCollapsible(index int, arg1 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSplitter14setCollapsibleEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, arg1)
 	gopp.ErrPrint(err, rv)
@@ -217,7 +217,7 @@ func (this *QSplitter) IsCollapsible(index int) bool {
 // /usr/include/qt/QtWidgets/qsplitter.h:83
 // index:0
 // Public
-// void setOpaqueResize(bool)
+// void setOpaqueResize(_Bool)
 func (this *QSplitter) SetOpaqueResize(opaque bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSplitter15setOpaqueResizeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), opaque)
 	gopp.ErrPrint(err, rv)
@@ -249,7 +249,7 @@ func (this *QSplitter) Refresh() {
 // QSize sizeHint()
 func (this *QSplitter) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSplitter8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK9QSplitter8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -263,7 +263,7 @@ func (this *QSplitter) SizeHint() *qtcore.QSize /*123*/ {
 // QSize minimumSizeHint()
 func (this *QSplitter) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSplitter15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK9QSplitter15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -305,7 +305,7 @@ func (this *QSplitter) HandleWidth() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSplitter11handleWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qsplitter.h:97
@@ -326,7 +326,7 @@ func (this *QSplitter) IndexOf(w *QWidget /*777 QWidget **/) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSplitter7indexOfEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qsplitter.h:100
@@ -349,7 +349,7 @@ func (this *QSplitter) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSplitter5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qsplitter.h:103
@@ -471,7 +471,7 @@ func (this *QSplitter) ClosestLegalPosition(arg0 int, arg1 int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSplitter20closestLegalPositionEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 //  body block end

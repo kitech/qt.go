@@ -84,7 +84,7 @@ func NewQTextLength() *QTextLength {
 // /usr/include/qt/QtGui/qtextformat.h:91
 // index:1
 // Public inline
-// void QTextLength(QTextLength::Type, qreal)
+// void QTextLength(enum QTextLength::Type, qreal)
 func NewQTextLength_1(type_ int, value float64) *QTextLength {
 	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLengthC2ENS_4TypeEd", ffiqt.FFI_TYPE_VOID, cthis, type_, value)
@@ -109,10 +109,10 @@ func (this *QTextLength) Type() int {
 // Public inline
 // qreal value(qreal)
 func (this *QTextLength) Value(maximumLength float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLength5valueEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), maximumLength)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLength5valueEd", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), maximumLength)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:104
@@ -120,10 +120,10 @@ func (this *QTextLength) Value(maximumLength float64) float64 {
 // Public inline
 // qreal rawValue()
 func (this *QTextLength) RawValue() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLength8rawValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLength8rawValueEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 type QTextLength__Type = int

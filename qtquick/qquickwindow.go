@@ -231,7 +231,7 @@ func (this *QQuickWindow) RenderTargetId() uint {
 // QSize renderTargetSize()
 func (this *QQuickWindow) RenderTargetSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QQuickWindow16renderTargetSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK12QQuickWindow16renderTargetSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -288,7 +288,7 @@ func (this *QQuickWindow) CreateTextureFromImage(image *qtgui.QImage) *QSGTextur
 // /usr/include/qt/QtQuick/qquickwindow.h:147
 // index:0
 // Public
-// void setClearBeforeRendering(bool)
+// void setClearBeforeRendering(_Bool)
 func (this *QQuickWindow) SetClearBeforeRendering(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQuickWindow23setClearBeforeRenderingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -348,7 +348,7 @@ func QQuickWindow_HasDefaultAlphaBuffer() bool {
 // /usr/include/qt/QtQuick/qquickwindow.h:154
 // index:0
 // Public static
-// void setDefaultAlphaBuffer(bool)
+// void setDefaultAlphaBuffer(_Bool)
 func (this *QQuickWindow) SetDefaultAlphaBuffer(useAlpha bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQuickWindow21setDefaultAlphaBufferEb", ffiqt.FFI_TYPE_POINTER, useAlpha)
 	gopp.ErrPrint(err, rv)
@@ -361,7 +361,7 @@ func QQuickWindow_SetDefaultAlphaBuffer(useAlpha bool) {
 // /usr/include/qt/QtQuick/qquickwindow.h:156
 // index:0
 // Public
-// void setPersistentOpenGLContext(bool)
+// void setPersistentOpenGLContext(_Bool)
 func (this *QQuickWindow) SetPersistentOpenGLContext(persistent bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQuickWindow26setPersistentOpenGLContextEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), persistent)
 	gopp.ErrPrint(err, rv)
@@ -381,7 +381,7 @@ func (this *QQuickWindow) IsPersistentOpenGLContext() bool {
 // /usr/include/qt/QtQuick/qquickwindow.h:159
 // index:0
 // Public
-// void setPersistentSceneGraph(bool)
+// void setPersistentSceneGraph(_Bool)
 func (this *QQuickWindow) SetPersistentSceneGraph(persistent bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQuickWindow23setPersistentSceneGraphEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), persistent)
 	gopp.ErrPrint(err, rv)
@@ -412,7 +412,7 @@ func (this *QQuickWindow) IsSceneGraphInitialized() bool {
 // /usr/include/qt/QtQuick/qquickwindow.h:165
 // index:0
 // Public
-// void scheduleRenderJob(QRunnable *, QQuickWindow::RenderStage)
+// void scheduleRenderJob(QRunnable *, enum QQuickWindow::RenderStage)
 func (this *QQuickWindow) ScheduleRenderJob(job *qtcore.QRunnable /*777 QRunnable **/, schedule int) {
 	var convArg0 = job.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQuickWindow17scheduleRenderJobEP9QRunnableNS_11RenderStageE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, schedule)
@@ -424,10 +424,10 @@ func (this *QQuickWindow) ScheduleRenderJob(job *qtcore.QRunnable /*777 QRunnabl
 // Public
 // qreal effectiveDevicePixelRatio()
 func (this *QQuickWindow) EffectiveDevicePixelRatio() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QQuickWindow25effectiveDevicePixelRatioEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QQuickWindow25effectiveDevicePixelRatioEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtQuick/qquickwindow.h:169
@@ -460,7 +460,8 @@ func QQuickWindow_SetSceneGraphBackend(api int) {
 // Public static
 // void setSceneGraphBackend(const QString &)
 func (this *QQuickWindow) SetSceneGraphBackend_1(backend *qtcore.QString) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQuickWindow20setSceneGraphBackendERK7QString", ffiqt.FFI_TYPE_POINTER, backend)
+	var convArg0 = backend.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQuickWindow20setSceneGraphBackendERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QQuickWindow_SetSceneGraphBackend_1(backend *qtcore.QString) {
@@ -540,7 +541,7 @@ func QQuickWindow_TextRenderType() int {
 // /usr/include/qt/QtQuick/qquickwindow.h:180
 // index:0
 // Public static
-// void setTextRenderType(QQuickWindow::TextRenderType)
+// void setTextRenderType(enum QQuickWindow::TextRenderType)
 func (this *QQuickWindow) SetTextRenderType(renderType int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QQuickWindow17setTextRenderTypeENS_14TextRenderTypeE", ffiqt.FFI_TYPE_POINTER, renderType)
 	gopp.ErrPrint(err, rv)

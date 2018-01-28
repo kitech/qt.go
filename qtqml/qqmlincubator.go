@@ -76,7 +76,7 @@ func (*QQmlIncubator) NewFromPointer(cthis unsafe.Pointer) *QQmlIncubator {
 // /usr/include/qt/QtQml/qqmlincubator.h:68
 // index:0
 // Public
-// void QQmlIncubator(QQmlIncubator::IncubationMode)
+// void QQmlIncubator(enum QQmlIncubator::IncubationMode)
 func NewQQmlIncubator(arg0 int) *QQmlIncubator {
 	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QQmlIncubatorC2ENS_14IncubationModeE", ffiqt.FFI_TYPE_VOID, cthis, arg0)
@@ -193,7 +193,7 @@ func (this *QQmlIncubator) Object() *qtcore.QObject /*777 QObject **/ {
 // /usr/include/qt/QtQml/qqmlincubator.h:88
 // index:0
 // Protected virtual
-// void statusChanged(QQmlIncubator::Status)
+// void statusChanged(enum QQmlIncubator::Status)
 func (this *QQmlIncubator) StatusChanged(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QQmlIncubator13statusChangedENS_6StatusE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

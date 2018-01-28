@@ -111,7 +111,7 @@ func DeleteQButtonGroup(*QButtonGroup) {
 // /usr/include/qt/QtWidgets/qbuttongroup.h:63
 // index:0
 // Public
-// void setExclusive(bool)
+// void setExclusive(_Bool)
 func (this *QButtonGroup) SetExclusive(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup12setExclusiveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -191,7 +191,7 @@ func (this *QButtonGroup) Id(button *QAbstractButton /*777 QAbstractButton **/) 
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QButtonGroup2idEP15QAbstractButton", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qbuttongroup.h:77
@@ -202,7 +202,7 @@ func (this *QButtonGroup) CheckedId() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QButtonGroup9checkedIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qbuttongroup.h:80
@@ -265,7 +265,7 @@ func (this *QButtonGroup) ButtonReleased_1(arg0 int) {
 // /usr/include/qt/QtWidgets/qbuttongroup.h:86
 // index:0
 // Public
-// void buttonToggled(QAbstractButton *, bool)
+// void buttonToggled(QAbstractButton *, _Bool)
 func (this *QButtonGroup) ButtonToggled(arg0 *QAbstractButton /*777 QAbstractButton **/, arg1 bool) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup13buttonToggledEP15QAbstractButtonb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
@@ -275,7 +275,7 @@ func (this *QButtonGroup) ButtonToggled(arg0 *QAbstractButton /*777 QAbstractBut
 // /usr/include/qt/QtWidgets/qbuttongroup.h:87
 // index:1
 // Public
-// void buttonToggled(int, bool)
+// void buttonToggled(int, _Bool)
 func (this *QButtonGroup) ButtonToggled_1(arg0 int, arg1 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroup13buttonToggledEib", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
 	gopp.ErrPrint(err, rv)

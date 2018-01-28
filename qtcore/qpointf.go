@@ -107,10 +107,10 @@ func NewQPointF_2(xpos float64, ypos float64) *QPointF {
 // Public inline
 // qreal manhattanLength()
 func (this *QPointF) ManhattanLength() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF15manhattanLengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF15manhattanLengthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qpoint.h:228
@@ -129,10 +129,10 @@ func (this *QPointF) IsNull() bool {
 // Public inline
 // qreal x()
 func (this *QPointF) X() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF1xEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qpoint.h:231
@@ -140,10 +140,10 @@ func (this *QPointF) X() float64 {
 // Public inline
 // qreal y()
 func (this *QPointF) Y() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF1yEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qpoint.h:232
@@ -172,7 +172,7 @@ func (this *QPointF) Rx() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointF2rxEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 3331
+	return qtrt.Cpretval2go("float64", rv).(float64) // 3331
 }
 
 // /usr/include/qt/QtCore/qpoint.h:236
@@ -183,7 +183,7 @@ func (this *QPointF) Ry() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointF2ryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 3331
+	return qtrt.Cpretval2go("float64", rv).(float64) // 3331
 }
 
 // /usr/include/qt/QtCore/qpoint.h:243
@@ -191,10 +191,12 @@ func (this *QPointF) Ry() float64 {
 // Public static inline
 // qreal dotProduct(const QPointF &, const QPointF &)
 func (this *QPointF) DotProduct(p1 *QPointF, p2 *QPointF) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointF10dotProductERKS_S1_", ffiqt.FFI_TYPE_POINTER, p1, p2)
+	var convArg0 = p1.GetCthis()
+	var convArg1 = p2.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointF10dotProductERKS_S1_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 func QPointF_DotProduct(p1 *QPointF, p2 *QPointF) float64 {
 	var nilthis *QPointF

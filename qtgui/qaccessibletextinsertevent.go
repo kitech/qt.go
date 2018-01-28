@@ -129,7 +129,7 @@ func (this *QAccessibleTextInsertEvent) ChangePosition() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAccessibleTextInsertEvent14changePositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 //  body block end

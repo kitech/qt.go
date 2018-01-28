@@ -205,7 +205,7 @@ func (this *QFileDialog) SelectUrl(url *qtcore.QUrl) {
 // /usr/include/qt/QtWidgets/qfiledialog.h:120
 // index:0
 // Public
-// void setNameFilterDetailsVisible(bool)
+// void setNameFilterDetailsVisible(_Bool)
 func (this *QFileDialog) SetNameFilterDetailsVisible(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog27setNameFilterDetailsVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -314,7 +314,7 @@ func (this *QFileDialog) Filter() int {
 // /usr/include/qt/QtWidgets/qfiledialog.h:139
 // index:0
 // Public
-// void setViewMode(QFileDialog::ViewMode)
+// void setViewMode(enum QFileDialog::ViewMode)
 func (this *QFileDialog) SetViewMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog11setViewModeENS_8ViewModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -334,7 +334,7 @@ func (this *QFileDialog) ViewMode() int {
 // /usr/include/qt/QtWidgets/qfiledialog.h:142
 // index:0
 // Public
-// void setFileMode(QFileDialog::FileMode)
+// void setFileMode(enum QFileDialog::FileMode)
 func (this *QFileDialog) SetFileMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog11setFileModeENS_8FileModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -354,7 +354,7 @@ func (this *QFileDialog) FileMode() int {
 // /usr/include/qt/QtWidgets/qfiledialog.h:145
 // index:0
 // Public
-// void setAcceptMode(QFileDialog::AcceptMode)
+// void setAcceptMode(enum QFileDialog::AcceptMode)
 func (this *QFileDialog) SetAcceptMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog13setAcceptModeENS_10AcceptModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -374,7 +374,7 @@ func (this *QFileDialog) AcceptMode() int {
 // /usr/include/qt/QtWidgets/qfiledialog.h:148
 // index:0
 // Public
-// void setReadOnly(bool)
+// void setReadOnly(_Bool)
 func (this *QFileDialog) SetReadOnly(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog11setReadOnlyEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -394,7 +394,7 @@ func (this *QFileDialog) IsReadOnly() bool {
 // /usr/include/qt/QtWidgets/qfiledialog.h:151
 // index:0
 // Public
-// void setResolveSymlinks(bool)
+// void setResolveSymlinks(_Bool)
 func (this *QFileDialog) SetResolveSymlinks(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog18setResolveSymlinksEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -440,7 +440,7 @@ func (this *QFileDialog) RestoreState(state *qtcore.QByteArray) bool {
 // /usr/include/qt/QtWidgets/qfiledialog.h:160
 // index:0
 // Public
-// void setConfirmOverwrite(bool)
+// void setConfirmOverwrite(_Bool)
 func (this *QFileDialog) SetConfirmOverwrite(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog19setConfirmOverwriteEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -538,7 +538,7 @@ func (this *QFileDialog) IconProvider() *QFileIconProvider /*777 QFileIconProvid
 // /usr/include/qt/QtWidgets/qfiledialog.h:175
 // index:0
 // Public
-// void setLabelText(QFileDialog::DialogLabel, const QString &)
+// void setLabelText(enum QFileDialog::DialogLabel, const QString &)
 func (this *QFileDialog) SetLabelText(label int, text *qtcore.QString) {
 	var convArg1 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog12setLabelTextENS_11DialogLabelERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), label, convArg1)
@@ -548,7 +548,7 @@ func (this *QFileDialog) SetLabelText(label int, text *qtcore.QString) {
 // /usr/include/qt/QtWidgets/qfiledialog.h:176
 // index:0
 // Public
-// QString labelText(QFileDialog::DialogLabel)
+// QString labelText(enum QFileDialog::DialogLabel)
 func (this *QFileDialog) LabelText(label int) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog9labelTextENS_11DialogLabelE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), label)
@@ -594,7 +594,7 @@ func (this *QFileDialog) ProxyModel() *qtcore.QAbstractProxyModel /*777 QAbstrac
 // /usr/include/qt/QtWidgets/qfiledialog.h:186
 // index:0
 // Public
-// void setOption(QFileDialog::Option, bool)
+// void setOption(enum QFileDialog::Option, _Bool)
 func (this *QFileDialog) SetOption(option int, on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog9setOptionENS_6OptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	gopp.ErrPrint(err, rv)
@@ -603,7 +603,7 @@ func (this *QFileDialog) SetOption(option int, on bool) {
 // /usr/include/qt/QtWidgets/qfiledialog.h:187
 // index:0
 // Public
-// bool testOption(QFileDialog::Option)
+// bool testOption(enum QFileDialog::Option)
 func (this *QFileDialog) TestOption(option int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFileDialog10testOptionENS_6OptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
@@ -637,7 +637,7 @@ func (this *QFileDialog) Open(receiver *qtcore.QObject /*777 QObject **/, member
 // /usr/include/qt/QtWidgets/qfiledialog.h:193
 // index:0
 // Public virtual
-// void setVisible(bool)
+// void setVisible(_Bool)
 func (this *QFileDialog) SetVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialog10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)

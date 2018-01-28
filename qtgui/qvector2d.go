@@ -173,10 +173,10 @@ func (this *QVector2D) IsNull() bool {
 // Public inline
 // float x()
 func (this *QVector2D) X() float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D1xEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtGui/qvector2d.h:74
@@ -184,10 +184,10 @@ func (this *QVector2D) X() float32 {
 // Public inline
 // float y()
 func (this *QVector2D) Y() float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D1yEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtGui/qvector2d.h:76
@@ -213,10 +213,10 @@ func (this *QVector2D) SetY(y float32) {
 // Public
 // float length()
 func (this *QVector2D) Length() float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D6lengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D6lengthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtGui/qvector2d.h:83
@@ -224,10 +224,10 @@ func (this *QVector2D) Length() float32 {
 // Public
 // float lengthSquared()
 func (this *QVector2D) LengthSquared() float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D13lengthSquaredEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D13lengthSquaredEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtGui/qvector2d.h:85
@@ -259,10 +259,10 @@ func (this *QVector2D) Normalize() {
 // float distanceToPoint(const QVector2D &)
 func (this *QVector2D) DistanceToPoint(point *QVector2D) float32 {
 	var convArg0 = point.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D15distanceToPointERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D15distanceToPointERKS_", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtGui/qvector2d.h:89
@@ -272,10 +272,10 @@ func (this *QVector2D) DistanceToPoint(point *QVector2D) float32 {
 func (this *QVector2D) DistanceToLine(point *QVector2D, direction *QVector2D) float32 {
 	var convArg0 = point.GetCthis()
 	var convArg1 = direction.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D14distanceToLineERKS_S1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QVector2D14distanceToLineERKS_S1_", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtGui/qvector2d.h:98
@@ -283,10 +283,12 @@ func (this *QVector2D) DistanceToLine(point *QVector2D, direction *QVector2D) fl
 // Public static
 // float dotProduct(const QVector2D &, const QVector2D &)
 func (this *QVector2D) DotProduct(v1 *QVector2D, v2 *QVector2D) float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector2D10dotProductERKS_S1_", ffiqt.FFI_TYPE_POINTER, v1, v2)
+	var convArg0 = v1.GetCthis()
+	var convArg1 = v2.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector2D10dotProductERKS_S1_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 func QVector2D_DotProduct(v1 *QVector2D, v2 *QVector2D) float32 {
 	var nilthis *QVector2D

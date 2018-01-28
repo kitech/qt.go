@@ -106,9 +106,9 @@ func (this *QIconEngine) Paint(painter *QPainter /*777 QPainter **/, rect *qtcor
 // Public virtual
 // QSize actualSize(const QSize &, QIcon::Mode, QIcon::State)
 func (this *QIconEngine) ActualSize(size *qtcore.QSize, mode int, state int) *qtcore.QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = size.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QIconEngine10actualSizeERK5QSizeN5QIcon4ModeENS3_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, mode, state)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc7("_ZN11QIconEngine10actualSizeERK5QSizeN5QIcon4ModeENS3_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, mode, state)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -121,8 +121,8 @@ func (this *QIconEngine) ActualSize(size *qtcore.QSize, mode int, state int) *qt
 // Public virtual
 // QPixmap pixmap(const QSize &, QIcon::Mode, QIcon::State)
 func (this *QIconEngine) Pixmap(size *qtcore.QSize, mode int, state int) *QPixmap /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = size.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QIconEngine6pixmapERK5QSizeN5QIcon4ModeENS3_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, mode, state)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -232,8 +232,8 @@ func (this *QIconEngine) IsNull() bool {
 // Public
 // QPixmap scaledPixmap(const QSize &, QIcon::Mode, QIcon::State, qreal)
 func (this *QIconEngine) ScaledPixmap(size *qtcore.QSize, mode int, state int, scale float64) *QPixmap /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = size.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QIconEngine12scaledPixmapERK5QSizeN5QIcon4ModeENS3_5StateEd", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, mode, state, scale)
 	gopp.ErrPrint(err, rv)
 	//  return rv

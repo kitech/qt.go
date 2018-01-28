@@ -134,7 +134,7 @@ func (this *QTouchDevice) MaximumTouchPoints() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice18maximumTouchPointsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtouchdevice.h:83
@@ -150,7 +150,7 @@ func (this *QTouchDevice) SetName(name *qtcore.QString) {
 // /usr/include/qt/QtGui/qtouchdevice.h:84
 // index:0
 // Public
-// void setType(QTouchDevice::DeviceType)
+// void setType(enum QTouchDevice::DeviceType)
 func (this *QTouchDevice) SetType(devType int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice7setTypeENS_10DeviceTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), devType)
 	gopp.ErrPrint(err, rv)

@@ -186,7 +186,7 @@ func NewQColor_8(name *qtcore.QLatin1String /*123*/) *QColor {
 // /usr/include/qt/QtGui/qcolor.h:81
 // index:9
 // Public
-// void QColor(QColor::Spec)
+// void QColor(enum QColor::Spec)
 func NewQColor_9(spec int) *QColor {
 	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2ENS_4SpecE", ffiqt.FFI_TYPE_VOID, cthis, spec)
@@ -223,7 +223,7 @@ func (this *QColor) Name() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qcolor.h:99
 // index:1
 // Public
-// QString name(QColor::NameFormat)
+// QString name(enum QColor::NameFormat)
 func (this *QColor) Name_1(format int) *qtcore.QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4nameENS_10NameFormatE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), format)
@@ -283,7 +283,7 @@ func (this *QColor) Alpha() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5alphaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:113
@@ -300,10 +300,10 @@ func (this *QColor) SetAlpha(alpha int) {
 // Public
 // qreal alphaF()
 func (this *QColor) AlphaF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6alphaFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6alphaFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:116
@@ -323,7 +323,7 @@ func (this *QColor) Red() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor3redEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:119
@@ -334,7 +334,7 @@ func (this *QColor) Green() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5greenEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:120
@@ -345,7 +345,7 @@ func (this *QColor) Blue() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4blueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:121
@@ -380,10 +380,10 @@ func (this *QColor) SetBlue(blue int) {
 // Public
 // qreal redF()
 func (this *QColor) RedF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4redFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4redFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:126
@@ -391,10 +391,10 @@ func (this *QColor) RedF() float64 {
 // Public
 // qreal greenF()
 func (this *QColor) GreenF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6greenFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6greenFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:127
@@ -402,10 +402,10 @@ func (this *QColor) GreenF() float64 {
 // Public
 // qreal blueF()
 func (this *QColor) BlueF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5blueFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5blueFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:128
@@ -543,7 +543,7 @@ func (this *QColor) Hue() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor3hueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:148
@@ -554,7 +554,7 @@ func (this *QColor) Saturation() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor10saturationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:149
@@ -565,7 +565,7 @@ func (this *QColor) HsvHue() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6hsvHueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:150
@@ -576,7 +576,7 @@ func (this *QColor) HsvSaturation() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor13hsvSaturationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:151
@@ -587,7 +587,7 @@ func (this *QColor) Value() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:153
@@ -595,10 +595,10 @@ func (this *QColor) Value() int {
 // Public
 // qreal hueF()
 func (this *QColor) HueF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4hueFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4hueFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:154
@@ -606,10 +606,10 @@ func (this *QColor) HueF() float64 {
 // Public
 // qreal saturationF()
 func (this *QColor) SaturationF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor11saturationFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor11saturationFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:155
@@ -617,10 +617,10 @@ func (this *QColor) SaturationF() float64 {
 // Public
 // qreal hsvHueF()
 func (this *QColor) HsvHueF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7hsvHueFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7hsvHueFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:156
@@ -628,10 +628,10 @@ func (this *QColor) HsvHueF() float64 {
 // Public
 // qreal hsvSaturationF()
 func (this *QColor) HsvSaturationF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor14hsvSaturationFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor14hsvSaturationFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:157
@@ -639,10 +639,10 @@ func (this *QColor) HsvSaturationF() float64 {
 // Public
 // qreal valueF()
 func (this *QColor) ValueF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6valueFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6valueFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:159
@@ -689,7 +689,7 @@ func (this *QColor) Cyan() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4cyanEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:166
@@ -700,7 +700,7 @@ func (this *QColor) Magenta() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7magentaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:167
@@ -711,7 +711,7 @@ func (this *QColor) Yellow() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6yellowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:168
@@ -722,7 +722,7 @@ func (this *QColor) Black() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5blackEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:170
@@ -730,10 +730,10 @@ func (this *QColor) Black() int {
 // Public
 // qreal cyanF()
 func (this *QColor) CyanF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5cyanFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5cyanFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:171
@@ -741,10 +741,10 @@ func (this *QColor) CyanF() float64 {
 // Public
 // qreal magentaF()
 func (this *QColor) MagentaF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor8magentaFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor8magentaFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:172
@@ -752,10 +752,10 @@ func (this *QColor) MagentaF() float64 {
 // Public
 // qreal yellowF()
 func (this *QColor) YellowF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7yellowFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7yellowFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:173
@@ -763,10 +763,10 @@ func (this *QColor) YellowF() float64 {
 // Public
 // qreal blackF()
 func (this *QColor) BlackF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6blackFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6blackFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:175
@@ -813,7 +813,7 @@ func (this *QColor) HslHue() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6hslHueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:182
@@ -824,7 +824,7 @@ func (this *QColor) HslSaturation() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor13hslSaturationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:183
@@ -835,7 +835,7 @@ func (this *QColor) Lightness() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor9lightnessEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:185
@@ -843,10 +843,10 @@ func (this *QColor) Lightness() int {
 // Public
 // qreal hslHueF()
 func (this *QColor) HslHueF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7hslHueFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7hslHueFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:186
@@ -854,10 +854,10 @@ func (this *QColor) HslHueF() float64 {
 // Public
 // qreal hslSaturationF()
 func (this *QColor) HslSaturationF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor14hslSaturationFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor14hslSaturationFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:187
@@ -865,10 +865,10 @@ func (this *QColor) HslSaturationF() float64 {
 // Public
 // qreal lightnessF()
 func (this *QColor) LightnessF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor10lightnessFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor10lightnessFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qcolor.h:189
@@ -966,7 +966,7 @@ func (this *QColor) ToHsl() *QColor /*123*/ {
 // /usr/include/qt/QtGui/qcolor.h:200
 // index:0
 // Public
-// QColor convertTo(QColor::Spec)
+// QColor convertTo(enum QColor::Spec)
 func (this *QColor) ConvertTo(colorSpec int) *QColor /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor9convertToENS_4SpecE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), colorSpec)
@@ -1067,7 +1067,8 @@ func QColor_FromRgba64(r uint16, g uint16, b uint16, a uint16) *QColor /*123*/ {
 // Public static
 // QColor fromRgba64(QRgba64)
 func (this *QColor) FromRgba64_1(rgba *QRgba64 /*123*/) *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor10fromRgba64E7QRgba64", ffiqt.FFI_TYPE_POINTER, rgba)
+	var convArg0 = rgba.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor10fromRgba64E7QRgba64", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1242,7 +1243,8 @@ func (this *QColor) Darker(f int) *QColor /*123*/ {
 // Public static
 // bool isValidColor(const QString &)
 func (this *QColor) IsValidColor(name *qtcore.QString) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor12isValidColorERK7QString", ffiqt.FFI_TYPE_POINTER, name)
+	var convArg0 = name.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor12isValidColorERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -1258,7 +1260,8 @@ func QColor_IsValidColor(name *qtcore.QString) bool {
 // Public static
 // bool isValidColor(QStringView)
 func (this *QColor) IsValidColor_1(arg0 *qtcore.QStringView /*123*/) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor12isValidColorE11QStringView", ffiqt.FFI_TYPE_POINTER, arg0)
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor12isValidColorE11QStringView", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -1274,7 +1277,8 @@ func QColor_IsValidColor_1(arg0 *qtcore.QStringView /*123*/) bool {
 // Public static
 // bool isValidColor(QLatin1String)
 func (this *QColor) IsValidColor_2(arg0 *qtcore.QLatin1String /*123*/) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor12isValidColorE13QLatin1String", ffiqt.FFI_TYPE_POINTER, arg0)
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor12isValidColorE13QLatin1String", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0

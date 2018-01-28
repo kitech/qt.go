@@ -155,7 +155,11 @@ func onSetupUi(line string) {
 		reg6 := regexp.MustCompile(`(Q[A-Z][iconfont]+) ([iconfont0-9]+);`)
 		reg7 := regexp.MustCompile(`QSizePolicy (.+)\((.+), (.+)\);`)
 		reg8 := regexp.MustCompile(`(.+) = new (QSpacerItem)\(([0-9]+), ([0-9]+), (.+), (.+)\);`)
-		if reg1.MatchString(line) {
+		reg100 := regexp.MustCompile(`QMetaObject::connectSlotsByName\((.+)\);`)
+		if reg100.MatchString(line) {
+			mats := reg100.FindAllStringSubmatch(line, -1)
+			cp.APf("setupUi", "qtcore.QMetaObject_ConnectSlotsByName(qtcore.NewQObjectFromPointer(%s.GetCthis())) // 100111", mats[0][1])
+		} else if reg1.MatchString(line) {
 			mats := reg1.FindAllStringSubmatch(line, -1)
 			refmtval := strings.Title(mats[0][3])
 			refmtsuf := ""

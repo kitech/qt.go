@@ -160,7 +160,7 @@ func (this *QListData) Size() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QListData4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qlist.h:114

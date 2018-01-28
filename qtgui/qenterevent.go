@@ -130,7 +130,7 @@ func (this *QEnterEvent) X() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:92
@@ -141,7 +141,7 @@ func (this *QEnterEvent) Y() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:93
@@ -152,7 +152,7 @@ func (this *QEnterEvent) GlobalX() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent7globalXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:94
@@ -163,7 +163,7 @@ func (this *QEnterEvent) GlobalY() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QEnterEvent7globalYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:96

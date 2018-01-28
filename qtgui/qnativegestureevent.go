@@ -126,10 +126,10 @@ func (this *QNativeGestureEvent) GestureType() int {
 // Public inline
 // qreal value()
 func (this *QNativeGestureEvent) Value() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QNativeGestureEvent5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QNativeGestureEvent5valueEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:315

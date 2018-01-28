@@ -152,7 +152,7 @@ func (this *QTextFormat) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextFormat4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:306
@@ -163,7 +163,7 @@ func (this *QTextFormat) ObjectIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextFormat11objectIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:307
@@ -238,7 +238,7 @@ func (this *QTextFormat) IntProperty(propertyId int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextFormat11intPropertyEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), propertyId)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:316
@@ -246,10 +246,10 @@ func (this *QTextFormat) IntProperty(propertyId int) int {
 // Public
 // qreal doubleProperty(int)
 func (this *QTextFormat) DoubleProperty(propertyId int) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextFormat14doublePropertyEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), propertyId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextFormat14doublePropertyEi", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), propertyId)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:317
@@ -330,7 +330,7 @@ func (this *QTextFormat) PropertyCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextFormat13propertyCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:329
@@ -350,7 +350,7 @@ func (this *QTextFormat) ObjectType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextFormat10objectTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:333

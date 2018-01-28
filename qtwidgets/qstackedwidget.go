@@ -117,7 +117,7 @@ func (this *QStackedWidget) AddWidget(w *QWidget /*777 QWidget **/) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget9addWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:63
@@ -129,7 +129,7 @@ func (this *QStackedWidget) InsertWidget(index int, w *QWidget /*777 QWidget **/
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget12insertWidgetEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:64
@@ -162,7 +162,7 @@ func (this *QStackedWidget) CurrentIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget12currentIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:69
@@ -174,7 +174,7 @@ func (this *QStackedWidget) IndexOf(arg0 *QWidget /*777 QWidget **/) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget7indexOfEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:70
@@ -197,7 +197,7 @@ func (this *QStackedWidget) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:74

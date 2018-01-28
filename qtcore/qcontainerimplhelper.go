@@ -70,7 +70,7 @@ func (*QContainerImplHelper) NewFromPointer(cthis unsafe.Pointer) *QContainerImp
 // Public static
 // QtPrivate::QContainerImplHelper::CutResult mid(int, int *, int *)
 func (this *QContainerImplHelper) Mid(originalLength int, position unsafe.Pointer /*666*/, length unsafe.Pointer /*666*/) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QtPrivate20QContainerImplHelper3midEiPiS1_", ffiqt.FFI_TYPE_POINTER, originalLength, position, length)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QtPrivate20QContainerImplHelper3midEiPiS1_", ffiqt.FFI_TYPE_POINTER, originalLength, &position, &length)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv)

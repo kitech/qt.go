@@ -122,7 +122,7 @@ func (this *QItemDelegate) HasClipping() bool {
 // /usr/include/qt/QtWidgets/qitemdelegate.h:66
 // index:0
 // Public
-// void setClipping(bool)
+// void setClipping(_Bool)
 func (this *QItemDelegate) SetClipping(clip bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QItemDelegate11setClippingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), clip)
 	gopp.ErrPrint(err, rv)
@@ -145,10 +145,10 @@ func (this *QItemDelegate) Paint(painter *qtgui.QPainter /*777 QPainter **/, opt
 // Public virtual
 // QSize sizeHint(const QStyleOptionViewItem &, const QModelIndex &)
 func (this *QItemDelegate) SizeHint(option *QStyleOptionViewItem, index *qtcore.QModelIndex) *qtcore.QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = option.GetCthis()
 	var convArg1 = index.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK13QItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -293,7 +293,7 @@ func (this *QItemDelegate) DrawBackground(painter *qtgui.QPainter /*777 QPainter
 // /usr/include/qt/QtWidgets/qitemdelegate.h:103
 // index:0
 // Protected
-// void doLayout(const QStyleOptionViewItem &, QRect *, QRect *, QRect *, bool)
+// void doLayout(const QStyleOptionViewItem &, QRect *, QRect *, QRect *, _Bool)
 func (this *QItemDelegate) DoLayout(option *QStyleOptionViewItem, checkRect *qtcore.QRect /*777 QRect **/, iconRect *qtcore.QRect /*777 QRect **/, textRect *qtcore.QRect /*777 QRect **/, hint bool) {
 	var convArg0 = option.GetCthis()
 	var convArg1 = checkRect.GetCthis()
@@ -308,9 +308,9 @@ func (this *QItemDelegate) DoLayout(option *QStyleOptionViewItem, checkRect *qtc
 // Protected
 // QRect rect(const QStyleOptionViewItem &, const QModelIndex &, int)
 func (this *QItemDelegate) Rect(option *QStyleOptionViewItem, index *qtcore.QModelIndex, role int) *qtcore.QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = option.GetCthis()
 	var convArg1 = index.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QItemDelegate4rectERK20QStyleOptionViewItemRK11QModelIndexi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, role)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -352,9 +352,9 @@ func (this *QItemDelegate) EditorEvent(event *qtcore.QEvent /*777 QEvent **/, mo
 // Protected
 // QStyleOptionViewItem setOptions(const QModelIndex &, const QStyleOptionViewItem &)
 func (this *QItemDelegate) SetOptions(index *qtcore.QModelIndex, option *QStyleOptionViewItem) *QStyleOptionViewItem /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
 	var convArg1 = option.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QItemDelegate10setOptionsERK11QModelIndexRK20QStyleOptionViewItem", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -368,9 +368,9 @@ func (this *QItemDelegate) SetOptions(index *qtcore.QModelIndex, option *QStyleO
 // Protected
 // QPixmap decoration(const QStyleOptionViewItem &, const QVariant &)
 func (this *QItemDelegate) Decoration(option *QStyleOptionViewItem, variant *qtcore.QVariant) *qtgui.QPixmap /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = option.GetCthis()
 	var convArg1 = variant.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QItemDelegate10decorationERK20QStyleOptionViewItemRK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -382,7 +382,7 @@ func (this *QItemDelegate) Decoration(option *QStyleOptionViewItem, variant *qtc
 // /usr/include/qt/QtWidgets/qitemdelegate.h:116
 // index:0
 // Protected
-// QPixmap * selected(const QPixmap &, const QPalette &, bool)
+// QPixmap * selected(const QPixmap &, const QPalette &, _Bool)
 func (this *QItemDelegate) Selected(pixmap *qtgui.QPixmap, palette *qtgui.QPalette, enabled bool) *qtgui.QPixmap /*777 QPixmap **/ {
 	var convArg0 = pixmap.GetCthis()
 	var convArg1 = palette.GetCthis()
@@ -398,10 +398,10 @@ func (this *QItemDelegate) Selected(pixmap *qtgui.QPixmap, palette *qtgui.QPalet
 // Protected
 // QRect doCheck(const QStyleOptionViewItem &, const QRect &, const QVariant &)
 func (this *QItemDelegate) DoCheck(option *QStyleOptionViewItem, bounding *qtcore.QRect, variant *qtcore.QVariant) *qtcore.QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = option.GetCthis()
 	var convArg1 = bounding.GetCthis()
 	var convArg2 = variant.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QItemDelegate7doCheckERK20QStyleOptionViewItemRK5QRectRK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -415,11 +415,11 @@ func (this *QItemDelegate) DoCheck(option *QStyleOptionViewItem, bounding *qtcor
 // Protected
 // QRect textRectangle(QPainter *, const QRect &, const QFont &, const QString &)
 func (this *QItemDelegate) TextRectangle(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, font *qtgui.QFont, text *qtcore.QString) *qtcore.QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = painter.GetCthis()
 	var convArg1 = rect.GetCthis()
 	var convArg2 = font.GetCthis()
 	var convArg3 = text.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QItemDelegate13textRectangleEP8QPainterRK5QRectRK5QFontRK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	//  return rv

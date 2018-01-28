@@ -85,7 +85,7 @@ func (this *QAbstractSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // /usr/include/qt/QtNetwork/qabstractsocket.h:139
 // index:0
 // Public
-// void QAbstractSocket(QAbstractSocket::SocketType, QObject *)
+// void QAbstractSocket(enum QAbstractSocket::SocketType, QObject *)
 func NewQAbstractSocket(socketType int, parent *qtcore.QObject /*777 QObject **/) *QAbstractSocket {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = parent.GetCthis()
@@ -546,7 +546,7 @@ func (this *QAbstractSocket) WriteData(data string, len int64) int64 {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:216
 // index:0
 // Protected
-// void setSocketState(QAbstractSocket::SocketState)
+// void setSocketState(enum QAbstractSocket::SocketState)
 func (this *QAbstractSocket) SetSocketState(state int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSocket14setSocketStateENS_11SocketStateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	gopp.ErrPrint(err, rv)
@@ -555,7 +555,7 @@ func (this *QAbstractSocket) SetSocketState(state int) {
 // /usr/include/qt/QtNetwork/qabstractsocket.h:217
 // index:0
 // Protected
-// void setSocketError(QAbstractSocket::SocketError)
+// void setSocketError(enum QAbstractSocket::SocketError)
 func (this *QAbstractSocket) SetSocketError(socketError int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSocket14setSocketErrorENS_11SocketErrorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), socketError)
 	gopp.ErrPrint(err, rv)

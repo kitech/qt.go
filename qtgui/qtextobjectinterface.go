@@ -83,10 +83,10 @@ func DeleteQTextObjectInterface(*QTextObjectInterface) {
 // Public pure virtual
 // QSizeF intrinsicSize(QTextDocument *, int, const QTextFormat &)
 func (this *QTextObjectInterface) IntrinsicSize(doc *QTextDocument /*777 QTextDocument **/, posInDocument int, format *QTextFormat) *qtcore.QSizeF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = doc.GetCthis()
 	var convArg2 = format.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, posInDocument, convArg2)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc7("_ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, posInDocument, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))

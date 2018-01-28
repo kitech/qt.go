@@ -147,7 +147,7 @@ func (this *QThreadPool) ExpiryTimeout() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QThreadPool13expiryTimeoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qthreadpool.h:74
@@ -167,7 +167,7 @@ func (this *QThreadPool) MaxThreadCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QThreadPool14maxThreadCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qthreadpool.h:77
@@ -187,7 +187,7 @@ func (this *QThreadPool) ActiveThreadCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QThreadPool17activeThreadCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qthreadpool.h:81

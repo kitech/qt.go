@@ -126,7 +126,7 @@ func (this *QIODevice) OpenMode() int {
 // /usr/include/qt/QtCore/qiodevice.h:91
 // index:0
 // Public
-// void setTextModeEnabled(bool)
+// void setTextModeEnabled(_Bool)
 func (this *QIODevice) SetTextModeEnabled(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice18setTextModeEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -195,7 +195,7 @@ func (this *QIODevice) ReadChannelCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice16readChannelCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:100
@@ -206,7 +206,7 @@ func (this *QIODevice) WriteChannelCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice17writeChannelCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:101
@@ -217,7 +217,7 @@ func (this *QIODevice) CurrentReadChannel() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice18currentReadChannelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:102
@@ -237,7 +237,7 @@ func (this *QIODevice) CurrentWriteChannel() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QIODevice19currentWriteChannelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:104

@@ -68,7 +68,7 @@ func (*QEvent) NewFromPointer(cthis unsafe.Pointer) *QEvent {
 // /usr/include/qt/QtCore/qcoreevent.h:297
 // index:0
 // Public
-// void QEvent(QEvent::Type)
+// void QEvent(enum QEvent::Type)
 func NewQEvent(type_ int) *QEvent {
 	cthis := qtrt.Calloc(1, 256) // 24
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEventC2ENS_4TypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)
@@ -111,7 +111,7 @@ func (this *QEvent) Spontaneous() bool {
 // /usr/include/qt/QtCore/qcoreevent.h:304
 // index:0
 // Public inline
-// void setAccepted(bool)
+// void setAccepted(_Bool)
 func (this *QEvent) SetAccepted(accepted bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent11setAcceptedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), accepted)
 	gopp.ErrPrint(err, rv)
@@ -154,7 +154,7 @@ func (this *QEvent) RegisterEventType(hint int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent17registerEventTypeEi", ffiqt.FFI_TYPE_POINTER, hint)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QEvent_RegisterEventType(hint int) int {
 	var nilthis *QEvent

@@ -233,7 +233,7 @@ func (this *QCommandLineOption) SetFlags(aflags int) {
 // /usr/include/qt/QtCore/qcommandlineoption.h:98
 // index:0
 // Public
-// void setHidden(bool)
+// void setHidden(_Bool)
 func (this *QCommandLineOption) SetHidden(hidden bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOption9setHiddenEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hidden)
 	gopp.ErrPrint(err, rv)

@@ -162,7 +162,7 @@ func (this *QAbstractButton) Icon() *qtgui.QIcon /*123*/ {
 // QSize iconSize()
 func (this *QAbstractButton) IconSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAbstractButton8iconSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK15QAbstractButton8iconSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -197,7 +197,7 @@ func (this *QAbstractButton) Shortcut() *qtgui.QKeySequence /*123*/ {
 // /usr/include/qt/QtWidgets/qabstractbutton.h:91
 // index:0
 // Public
-// void setCheckable(bool)
+// void setCheckable(_Bool)
 func (this *QAbstractButton) SetCheckable(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton12setCheckableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -228,7 +228,7 @@ func (this *QAbstractButton) IsChecked() bool {
 // /usr/include/qt/QtWidgets/qabstractbutton.h:96
 // index:0
 // Public
-// void setDown(bool)
+// void setDown(_Bool)
 func (this *QAbstractButton) SetDown(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton7setDownEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -248,7 +248,7 @@ func (this *QAbstractButton) IsDown() bool {
 // /usr/include/qt/QtWidgets/qabstractbutton.h:99
 // index:0
 // Public
-// void setAutoRepeat(bool)
+// void setAutoRepeat(_Bool)
 func (this *QAbstractButton) SetAutoRepeat(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton13setAutoRepeatEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -282,7 +282,7 @@ func (this *QAbstractButton) AutoRepeatDelay() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAbstractButton15autoRepeatDelayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:105
@@ -302,13 +302,13 @@ func (this *QAbstractButton) AutoRepeatInterval() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAbstractButton18autoRepeatIntervalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:108
 // index:0
 // Public
-// void setAutoExclusive(bool)
+// void setAutoExclusive(_Bool)
 func (this *QAbstractButton) SetAutoExclusive(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton16setAutoExclusiveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -377,7 +377,7 @@ func (this *QAbstractButton) Toggle() {
 // /usr/include/qt/QtWidgets/qabstractbutton.h:120
 // index:0
 // Public
-// void setChecked(bool)
+// void setChecked(_Bool)
 func (this *QAbstractButton) SetChecked(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton10setCheckedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -404,7 +404,7 @@ func (this *QAbstractButton) Released() {
 // /usr/include/qt/QtWidgets/qabstractbutton.h:125
 // index:0
 // Public
-// void clicked(bool)
+// void clicked(_Bool)
 func (this *QAbstractButton) Clicked(checked bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton7clickedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), checked)
 	gopp.ErrPrint(err, rv)
@@ -413,7 +413,7 @@ func (this *QAbstractButton) Clicked(checked bool) {
 // /usr/include/qt/QtWidgets/qabstractbutton.h:126
 // index:0
 // Public
-// void toggled(bool)
+// void toggled(_Bool)
 func (this *QAbstractButton) Toggled(checked bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButton7toggledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), checked)
 	gopp.ErrPrint(err, rv)

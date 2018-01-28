@@ -227,7 +227,7 @@ func (this *QNetworkConfiguration) ConnectTimeout() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkConfiguration14connectTimeoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:124

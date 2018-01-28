@@ -173,7 +173,7 @@ func (this *QRegularExpressionMatch) LastCapturedIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch17lastCapturedIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:200
@@ -195,8 +195,8 @@ func (this *QRegularExpressionMatch) Captured(nth int) *QString /*123*/ {
 // Public
 // QString captured(const QString &)
 func (this *QRegularExpressionMatch) Captured_1(name *QString) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = name.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch8capturedERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -210,8 +210,8 @@ func (this *QRegularExpressionMatch) Captured_1(name *QString) *QString /*123*/ 
 // Public
 // QString captured(QStringView)
 func (this *QRegularExpressionMatch) Captured_2(name *QStringView /*123*/) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = name.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch8capturedE11QStringView", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -239,8 +239,8 @@ func (this *QRegularExpressionMatch) CapturedRef(nth int) *QStringRef /*123*/ {
 // Public
 // QStringRef capturedRef(const QString &)
 func (this *QRegularExpressionMatch) CapturedRef_1(name *QString) *QStringRef /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = name.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedRefERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -254,8 +254,8 @@ func (this *QRegularExpressionMatch) CapturedRef_1(name *QString) *QStringRef /*
 // Public
 // QStringRef capturedRef(QStringView)
 func (this *QRegularExpressionMatch) CapturedRef_2(name *QStringView /*123*/) *QStringRef /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = name.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedRefE11QStringView", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -283,8 +283,8 @@ func (this *QRegularExpressionMatch) CapturedView(nth int) *QStringView /*123*/ 
 // Public
 // QStringView capturedView(QStringView)
 func (this *QRegularExpressionMatch) CapturedView_1(name *QStringView /*123*/) *QStringView /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = name.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch12capturedViewE11QStringView", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -301,7 +301,7 @@ func (this *QRegularExpressionMatch) CapturedStart(nth int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch13capturedStartEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:220
@@ -313,7 +313,7 @@ func (this *QRegularExpressionMatch) CapturedStart_1(name *QString) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch13capturedStartERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:225
@@ -325,7 +325,7 @@ func (this *QRegularExpressionMatch) CapturedStart_2(name *QStringView /*123*/) 
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch13capturedStartE11QStringView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:216
@@ -336,7 +336,7 @@ func (this *QRegularExpressionMatch) CapturedLength(nth int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch14capturedLengthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:221
@@ -348,7 +348,7 @@ func (this *QRegularExpressionMatch) CapturedLength_1(name *QString) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch14capturedLengthERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:226
@@ -360,7 +360,7 @@ func (this *QRegularExpressionMatch) CapturedLength_2(name *QStringView /*123*/)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch14capturedLengthE11QStringView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:217
@@ -371,7 +371,7 @@ func (this *QRegularExpressionMatch) CapturedEnd(nth int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedEndEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:222
@@ -383,7 +383,7 @@ func (this *QRegularExpressionMatch) CapturedEnd_1(name *QString) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedEndERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:227
@@ -395,7 +395,7 @@ func (this *QRegularExpressionMatch) CapturedEnd_2(name *QStringView /*123*/) in
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedEndE11QStringView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 //  body block end

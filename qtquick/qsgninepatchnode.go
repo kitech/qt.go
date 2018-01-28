@@ -143,7 +143,11 @@ func (this *QSGNinePatchNode) Update() {
 // Public static
 // void rebuildGeometry(QSGTexture *, QSGGeometry *, const QVector4D &, const QRectF &, qreal)
 func (this *QSGNinePatchNode) RebuildGeometry(texture *QSGTexture /*777 QSGTexture **/, geometry *QSGGeometry /*777 QSGGeometry **/, padding *qtgui.QVector4D, bounds *qtcore.QRectF, dpr float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSGNinePatchNode15rebuildGeometryEP10QSGTextureP11QSGGeometryRK9QVector4DRK6QRectFd", ffiqt.FFI_TYPE_POINTER, texture, geometry, padding, bounds, dpr)
+	var convArg0 = texture.GetCthis()
+	var convArg1 = geometry.GetCthis()
+	var convArg2 = padding.GetCthis()
+	var convArg3 = bounds.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSGNinePatchNode15rebuildGeometryEP10QSGTextureP11QSGGeometryRK9QVector4DRK6QRectFd", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, dpr)
 	gopp.ErrPrint(err, rv)
 }
 func QSGNinePatchNode_RebuildGeometry(texture *QSGTexture /*777 QSGTexture **/, geometry *QSGGeometry /*777 QSGGeometry **/, padding *qtgui.QVector4D, bounds *qtcore.QRectF, dpr float64) {

@@ -80,7 +80,7 @@ func NewQVariant() *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:201
 // index:1
 // Public
-// void QVariant(QVariant::Type)
+// void QVariant(enum QVariant::Type)
 func NewQVariant_1(type_ int) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ENS_4TypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)
@@ -177,7 +177,7 @@ func NewQVariant_8(ull uint64) *QVariant {
 // /usr/include/qt/QtCore/qvariant.h:214
 // index:9
 // Public
-// void QVariant(bool)
+// void QVariant(_Bool)
 func NewQVariant_9(b bool) *QVariant {
 	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Eb", ffiqt.FFI_TYPE_VOID, cthis, b)
@@ -639,7 +639,7 @@ func (this *QVariant) UserType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8userTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qvariant.h:274
@@ -740,18 +740,18 @@ func (this *QVariant) IsDetached() bool {
 // /usr/include/qt/QtCore/qvariant.h:287
 // index:0
 // Public
-// int toInt(bool *)
+// int toInt(_Bool *)
 func (this *QVariant) ToInt(ok unsafe.Pointer /*666*/) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant5toIntEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qvariant.h:288
 // index:0
 // Public
-// uint toUInt(bool *)
+// uint toUInt(_Bool *)
 func (this *QVariant) ToUInt(ok unsafe.Pointer /*666*/) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toUIntEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -762,7 +762,7 @@ func (this *QVariant) ToUInt(ok unsafe.Pointer /*666*/) uint {
 // /usr/include/qt/QtCore/qvariant.h:289
 // index:0
 // Public
-// qlonglong toLongLong(bool *)
+// qlonglong toLongLong(_Bool *)
 func (this *QVariant) ToLongLong(ok unsafe.Pointer /*666*/) int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant10toLongLongEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -773,7 +773,7 @@ func (this *QVariant) ToLongLong(ok unsafe.Pointer /*666*/) int64 {
 // /usr/include/qt/QtCore/qvariant.h:290
 // index:0
 // Public
-// qulonglong toULongLong(bool *)
+// qulonglong toULongLong(_Bool *)
 func (this *QVariant) ToULongLong(ok unsafe.Pointer /*666*/) uint64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant11toULongLongEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -795,34 +795,34 @@ func (this *QVariant) ToBool() bool {
 // /usr/include/qt/QtCore/qvariant.h:292
 // index:0
 // Public
-// double toDouble(bool *)
+// double toDouble(_Bool *)
 func (this *QVariant) ToDouble(ok unsafe.Pointer /*666*/) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toDoubleEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toDoubleEPb", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qvariant.h:293
 // index:0
 // Public
-// float toFloat(bool *)
+// float toFloat(_Bool *)
 func (this *QVariant) ToFloat(ok unsafe.Pointer /*666*/) float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toFloatEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toFloatEPb", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtCore/qvariant.h:294
 // index:0
 // Public
-// qreal toReal(bool *)
+// qreal toReal(_Bool *)
 func (this *QVariant) ToReal(ok unsafe.Pointer /*666*/) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toRealEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toRealEPb", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qvariant.h:295
@@ -971,7 +971,7 @@ func (this *QVariant) ToRect() *QRect /*123*/ {
 // QSize toSize()
 func (this *QVariant) ToSize() *QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK8QVariant6toSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -985,7 +985,7 @@ func (this *QVariant) ToSize() *QSize /*123*/ {
 // QSizeF toSizeF()
 func (this *QVariant) ToSizeF() *QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toSizeFEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK8QVariant7toSizeFEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -1244,7 +1244,9 @@ func QVariant_TypeToName(typeId int) string {
 // Public static
 // QVariant::Type nameToType(const char *)
 func (this *QVariant) NameToType(name string) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariant10nameToTypeEPKc", ffiqt.FFI_TYPE_POINTER, name)
+	var convArg0 = qtrt.CString(name)
+	defer qtrt.FreeMem(convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariant10nameToTypeEPKc", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv)
@@ -1318,7 +1320,7 @@ func (this *QVariant) Compare(other *QVariant) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7compareERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 type QVariant__Type = int

@@ -153,7 +153,7 @@ func (this *QTextCursor) IsNull() bool {
 // /usr/include/qt/QtGui/qtextcursor.h:91
 // index:0
 // Public
-// void setPosition(int, QTextCursor::MoveMode)
+// void setPosition(int, enum QTextCursor::MoveMode)
 func (this *QTextCursor) SetPosition(pos int, mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor11setPositionEiNS_8MoveModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pos, mode)
 	gopp.ErrPrint(err, rv)
@@ -167,7 +167,7 @@ func (this *QTextCursor) Position() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor8positionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextcursor.h:93
@@ -178,7 +178,7 @@ func (this *QTextCursor) PositionInBlock() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor15positionInBlockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextcursor.h:95
@@ -189,7 +189,7 @@ func (this *QTextCursor) Anchor() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor6anchorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextcursor.h:97
@@ -216,7 +216,7 @@ func (this *QTextCursor) InsertText_1(text *qtcore.QString, format *QTextCharFor
 // /usr/include/qt/QtGui/qtextcursor.h:131
 // index:0
 // Public
-// bool movePosition(QTextCursor::MoveOperation, QTextCursor::MoveMode, int)
+// bool movePosition(enum QTextCursor::MoveOperation, enum QTextCursor::MoveMode, int)
 func (this *QTextCursor) MovePosition(op int, arg1 int, n int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor12movePositionENS_13MoveOperationENS_8MoveModeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), op, arg1, n)
 	gopp.ErrPrint(err, rv)
@@ -238,7 +238,7 @@ func (this *QTextCursor) VisualNavigation() bool {
 // /usr/include/qt/QtGui/qtextcursor.h:134
 // index:0
 // Public
-// void setVisualNavigation(bool)
+// void setVisualNavigation(_Bool)
 func (this *QTextCursor) SetVisualNavigation(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor19setVisualNavigationEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -261,13 +261,13 @@ func (this *QTextCursor) VerticalMovementX() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor17verticalMovementXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextcursor.h:139
 // index:0
 // Public
-// void setKeepPositionOnInsert(bool)
+// void setKeepPositionOnInsert(_Bool)
 func (this *QTextCursor) SetKeepPositionOnInsert(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor23setKeepPositionOnInsertEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -305,7 +305,7 @@ func (this *QTextCursor) DeletePreviousChar() {
 // /usr/include/qt/QtGui/qtextcursor.h:151
 // index:0
 // Public
-// void select(QTextCursor::SelectionType)
+// void select(enum QTextCursor::SelectionType)
 func (this *QTextCursor) Select(selection int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursor6selectENS_13SelectionTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), selection)
 	gopp.ErrPrint(err, rv)
@@ -359,7 +359,7 @@ func (this *QTextCursor) SelectionStart() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor14selectionStartEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextcursor.h:158
@@ -370,7 +370,7 @@ func (this *QTextCursor) SelectionEnd() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor12selectionEndEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextcursor.h:160
@@ -832,7 +832,7 @@ func (this *QTextCursor) BlockNumber() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor11blockNumberEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextcursor.h:226
@@ -843,7 +843,7 @@ func (this *QTextCursor) ColumnNumber() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextCursor12columnNumberEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextcursor.h:228

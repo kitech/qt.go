@@ -163,10 +163,10 @@ func (this *QPen) SetStyle(arg0 int) {
 // Public
 // qreal dashOffset()
 func (this *QPen) DashOffset() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen10dashOffsetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen10dashOffsetEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qpen.h:88
@@ -183,10 +183,10 @@ func (this *QPen) SetDashOffset(doffset float64) {
 // Public
 // qreal miterLimit()
 func (this *QPen) MiterLimit() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen10miterLimitEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen10miterLimitEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qpen.h:91
@@ -203,10 +203,10 @@ func (this *QPen) SetMiterLimit(limit float64) {
 // Public
 // qreal widthF()
 func (this *QPen) WidthF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen6widthFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen6widthFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qpen.h:94
@@ -226,7 +226,7 @@ func (this *QPen) Width() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qpen.h:97
@@ -351,7 +351,7 @@ func (this *QPen) IsCosmetic() bool {
 // /usr/include/qt/QtGui/qpen.h:114
 // index:0
 // Public
-// void setCosmetic(bool)
+// void setCosmetic(_Bool)
 func (this *QPen) SetCosmetic(cosmetic bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPen11setCosmeticEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cosmetic)
 	gopp.ErrPrint(err, rv)

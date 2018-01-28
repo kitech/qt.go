@@ -142,7 +142,7 @@ func (this *QStackedLayout) AddWidget(w *QWidget /*777 QWidget **/) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout9addWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:72
@@ -154,7 +154,7 @@ func (this *QStackedLayout) InsertWidget(index int, w *QWidget /*777 QWidget **/
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout12insertWidgetEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:74
@@ -177,7 +177,7 @@ func (this *QStackedLayout) CurrentIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout12currentIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:77
@@ -200,7 +200,7 @@ func (this *QStackedLayout) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:80
@@ -217,7 +217,7 @@ func (this *QStackedLayout) StackingMode() int {
 // /usr/include/qt/QtWidgets/qstackedlayout.h:81
 // index:0
 // Public
-// void setStackingMode(QStackedLayout::StackingMode)
+// void setStackingMode(enum QStackedLayout::StackingMode)
 func (this *QStackedLayout) SetStackingMode(stackingMode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout15setStackingModeENS_12StackingModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), stackingMode)
 	gopp.ErrPrint(err, rv)
@@ -239,7 +239,7 @@ func (this *QStackedLayout) AddItem(item *QLayoutItem /*777 QLayoutItem **/) {
 // QSize sizeHint()
 func (this *QStackedLayout) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK14QStackedLayout8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -253,7 +253,7 @@ func (this *QStackedLayout) SizeHint() *qtcore.QSize /*123*/ {
 // QSize minimumSize()
 func (this *QStackedLayout) MinimumSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK14QStackedLayout11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -314,7 +314,7 @@ func (this *QStackedLayout) HeightForWidth(width int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout14heightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:94

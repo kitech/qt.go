@@ -136,7 +136,8 @@ func (this *QGestureRecognizer) Reset(state *QGesture /*777 QGesture **/) {
 // Public static
 // Qt::GestureType registerRecognizer(QGestureRecognizer *)
 func (this *QGestureRecognizer) RegisterRecognizer(recognizer *QGestureRecognizer /*777 QGestureRecognizer **/) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGestureRecognizer18registerRecognizerEPS_", ffiqt.FFI_TYPE_POINTER, recognizer)
+	var convArg0 = recognizer.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGestureRecognizer18registerRecognizerEPS_", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv)

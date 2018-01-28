@@ -248,16 +248,16 @@ func (this *QMatrix4x4) Fill(value float32) {
 // Public
 // double determinant()
 func (this *QMatrix4x4) Determinant() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x411determinantEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x411determinantEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qmatrix4x4.h:96
 // index:0
 // Public
-// QMatrix4x4 inverted(bool *)
+// QMatrix4x4 inverted(_Bool *)
 func (this *QMatrix4x4) Inverted(invertible unsafe.Pointer /*666*/) *QMatrix4x4 /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x48invertedEPb", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), &invertible)
@@ -519,8 +519,8 @@ func (this *QMatrix4x4) ToTransform_1(distanceToPlane float32) *QTransform /*123
 // Public
 // QPoint map(const QPoint &)
 func (this *QMatrix4x4) Map(point *qtcore.QPoint) *qtcore.QPoint /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = point.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x43mapERK6QPoint", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -534,8 +534,8 @@ func (this *QMatrix4x4) Map(point *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 // Public
 // QPointF map(const QPointF &)
 func (this *QMatrix4x4) Map_1(point *qtcore.QPointF) *qtcore.QPointF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = point.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x43mapERK7QPointF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -549,8 +549,8 @@ func (this *QMatrix4x4) Map_1(point *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 // Public
 // QVector3D map(const QVector3D &)
 func (this *QMatrix4x4) Map_2(point *QVector3D) *QVector3D /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = point.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x43mapERK9QVector3D", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -564,8 +564,8 @@ func (this *QMatrix4x4) Map_2(point *QVector3D) *QVector3D /*123*/ {
 // Public
 // QVector4D map(const QVector4D &)
 func (this *QMatrix4x4) Map_3(point *QVector4D) *QVector4D /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = point.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x43mapERK9QVector4D", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -579,8 +579,8 @@ func (this *QMatrix4x4) Map_3(point *QVector4D) *QVector4D /*123*/ {
 // Public
 // QVector3D mapVector(const QVector3D &)
 func (this *QMatrix4x4) MapVector(vector *QVector3D) *QVector3D /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = vector.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x49mapVectorERK9QVector3D", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -594,8 +594,8 @@ func (this *QMatrix4x4) MapVector(vector *QVector3D) *QVector3D /*123*/ {
 // Public
 // QRect mapRect(const QRect &)
 func (this *QMatrix4x4) MapRect(rect *qtcore.QRect) *qtcore.QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = rect.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x47mapRectERK5QRect", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -609,8 +609,8 @@ func (this *QMatrix4x4) MapRect(rect *qtcore.QRect) *qtcore.QRect /*123*/ {
 // Public
 // QRectF mapRect(const QRectF &)
 func (this *QMatrix4x4) MapRect_1(rect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = rect.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMatrix4x47mapRectERK6QRectF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

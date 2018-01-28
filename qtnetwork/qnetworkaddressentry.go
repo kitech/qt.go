@@ -156,7 +156,7 @@ func (this *QNetworkAddressEntry) PrefixLength() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QNetworkAddressEntry12prefixLengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:79

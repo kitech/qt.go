@@ -114,7 +114,7 @@ func (this *QQmlIncubationController) IncubatingObjectCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QQmlIncubationController21incubatingObjectCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQml/qqmlincubator.h:109
@@ -129,7 +129,7 @@ func (this *QQmlIncubationController) IncubateFor(msecs int) {
 // /usr/include/qt/QtQml/qqmlincubator.h:110
 // index:0
 // Public
-// void incubateWhile(volatile bool *, int)
+// void incubateWhile(volatile _Bool *, int)
 func (this *QQmlIncubationController) IncubateWhile(flag unsafe.Pointer /*666*/, msecs int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QQmlIncubationController13incubateWhileEPVbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &flag, msecs)
 	gopp.ErrPrint(err, rv)

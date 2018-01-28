@@ -97,7 +97,7 @@ func DeleteQFileIconProvider(*QFileIconProvider) {
 // /usr/include/qt/QtWidgets/qfileiconprovider.h:65
 // index:0
 // Public virtual
-// QIcon icon(QFileIconProvider::IconType)
+// QIcon icon(enum QFileIconProvider::IconType)
 func (this *QFileIconProvider) Icon(type_ int) *qtgui.QIcon /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider4iconENS_8IconTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), type_)
@@ -113,8 +113,8 @@ func (this *QFileIconProvider) Icon(type_ int) *qtgui.QIcon /*123*/ {
 // Public virtual
 // QIcon icon(const QFileInfo &)
 func (this *QFileIconProvider) Icon_1(info *qtcore.QFileInfo) *qtgui.QIcon /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = info.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider4iconERK9QFileInfo", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -128,8 +128,8 @@ func (this *QFileIconProvider) Icon_1(info *qtcore.QFileInfo) *qtgui.QIcon /*123
 // Public virtual
 // QString type(const QFileInfo &)
 func (this *QFileIconProvider) Type(info *qtcore.QFileInfo) *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = info.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QFileIconProvider4typeERK9QFileInfo", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

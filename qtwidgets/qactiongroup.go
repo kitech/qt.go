@@ -206,7 +206,7 @@ func (this *QActionGroup) IsVisible() bool {
 // /usr/include/qt/QtWidgets/qactiongroup.h:79
 // index:0
 // Public
-// void setEnabled(bool)
+// void setEnabled(_Bool)
 func (this *QActionGroup) SetEnabled(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -215,7 +215,7 @@ func (this *QActionGroup) SetEnabled(arg0 bool) {
 // /usr/include/qt/QtWidgets/qactiongroup.h:80
 // index:0
 // Public inline
-// void setDisabled(bool)
+// void setDisabled(_Bool)
 func (this *QActionGroup) SetDisabled(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup11setDisabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -224,7 +224,7 @@ func (this *QActionGroup) SetDisabled(b bool) {
 // /usr/include/qt/QtWidgets/qactiongroup.h:81
 // index:0
 // Public
-// void setVisible(bool)
+// void setVisible(_Bool)
 func (this *QActionGroup) SetVisible(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -233,7 +233,7 @@ func (this *QActionGroup) SetVisible(arg0 bool) {
 // /usr/include/qt/QtWidgets/qactiongroup.h:82
 // index:0
 // Public
-// void setExclusive(bool)
+// void setExclusive(_Bool)
 func (this *QActionGroup) SetExclusive(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroup12setExclusiveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

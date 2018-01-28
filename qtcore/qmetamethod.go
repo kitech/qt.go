@@ -124,7 +124,7 @@ func (this *QMetaMethod) ReturnType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod10returnTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:63
@@ -135,7 +135,7 @@ func (this *QMetaMethod) ParameterCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod14parameterCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:64
@@ -146,7 +146,7 @@ func (this *QMetaMethod) ParameterType(index int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod13parameterTypeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:65
@@ -199,7 +199,7 @@ func (this *QMetaMethod) Attributes() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod10attributesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:75
@@ -210,7 +210,7 @@ func (this *QMetaMethod) MethodIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod11methodIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:76
@@ -221,7 +221,7 @@ func (this *QMetaMethod) Revision() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod8revisionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:78

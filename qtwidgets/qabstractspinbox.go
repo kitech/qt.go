@@ -122,7 +122,7 @@ func (this *QAbstractSpinBox) ButtonSymbols() int {
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:84
 // index:0
 // Public
-// void setButtonSymbols(QAbstractSpinBox::ButtonSymbols)
+// void setButtonSymbols(enum QAbstractSpinBox::ButtonSymbols)
 func (this *QAbstractSpinBox) SetButtonSymbols(bs int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox16setButtonSymbolsENS_13ButtonSymbolsE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), bs)
 	gopp.ErrPrint(err, rv)
@@ -131,7 +131,7 @@ func (this *QAbstractSpinBox) SetButtonSymbols(bs int) {
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:89
 // index:0
 // Public
-// void setCorrectionMode(QAbstractSpinBox::CorrectionMode)
+// void setCorrectionMode(enum QAbstractSpinBox::CorrectionMode)
 func (this *QAbstractSpinBox) SetCorrectionMode(cm int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox17setCorrectionModeENS_14CorrectionModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cm)
 	gopp.ErrPrint(err, rv)
@@ -211,7 +211,7 @@ func (this *QAbstractSpinBox) Wrapping() bool {
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:99
 // index:0
 // Public
-// void setWrapping(bool)
+// void setWrapping(_Bool)
 func (this *QAbstractSpinBox) SetWrapping(w bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox11setWrappingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w)
 	gopp.ErrPrint(err, rv)
@@ -220,7 +220,7 @@ func (this *QAbstractSpinBox) SetWrapping(w bool) {
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:101
 // index:0
 // Public
-// void setReadOnly(bool)
+// void setReadOnly(_Bool)
 func (this *QAbstractSpinBox) SetReadOnly(r bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox11setReadOnlyEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), r)
 	gopp.ErrPrint(err, rv)
@@ -240,7 +240,7 @@ func (this *QAbstractSpinBox) IsReadOnly() bool {
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:104
 // index:0
 // Public
-// void setKeyboardTracking(bool)
+// void setKeyboardTracking(_Bool)
 func (this *QAbstractSpinBox) SetKeyboardTracking(kt bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox19setKeyboardTrackingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), kt)
 	gopp.ErrPrint(err, rv)
@@ -271,7 +271,7 @@ func (this *QAbstractSpinBox) Alignment() int {
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:110
 // index:0
 // Public
-// void setFrame(bool)
+// void setFrame(_Bool)
 func (this *QAbstractSpinBox) SetFrame(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox8setFrameEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -291,7 +291,7 @@ func (this *QAbstractSpinBox) HasFrame() bool {
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:113
 // index:0
 // Public
-// void setAccelerated(bool)
+// void setAccelerated(_Bool)
 func (this *QAbstractSpinBox) SetAccelerated(on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox14setAcceleratedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
@@ -311,7 +311,7 @@ func (this *QAbstractSpinBox) IsAccelerated() bool {
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:116
 // index:0
 // Public
-// void setGroupSeparatorShown(bool)
+// void setGroupSeparatorShown(_Bool)
 func (this *QAbstractSpinBox) SetGroupSeparatorShown(shown bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox22setGroupSeparatorShownEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), shown)
 	gopp.ErrPrint(err, rv)
@@ -334,7 +334,7 @@ func (this *QAbstractSpinBox) IsGroupSeparatorShown() bool {
 // QSize sizeHint()
 func (this *QAbstractSpinBox) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK16QAbstractSpinBox8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -348,7 +348,7 @@ func (this *QAbstractSpinBox) SizeHint() *qtcore.QSize /*123*/ {
 // QSize minimumSizeHint()
 func (this *QAbstractSpinBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAbstractSpinBox15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK16QAbstractSpinBox15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))

@@ -105,8 +105,8 @@ func DeleteQAbstractListModel(*QAbstractListModel) {
 // Public virtual
 // QModelIndex index(int, int, const QModelIndex &)
 func (this *QAbstractListModel) Index(row int, column int, parent *QModelIndex) *QModelIndex /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg2 = parent.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractListModel5indexEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), row, column, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -120,8 +120,8 @@ func (this *QAbstractListModel) Index(row int, column int, parent *QModelIndex) 
 // Public virtual
 // QModelIndex sibling(int, int, const QModelIndex &)
 func (this *QAbstractListModel) Sibling(row int, column int, idx *QModelIndex) *QModelIndex /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg2 = idx.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractListModel7siblingEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), row, column, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv

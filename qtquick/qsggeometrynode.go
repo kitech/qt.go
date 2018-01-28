@@ -176,7 +176,7 @@ func (this *QSGGeometryNode) RenderOrder() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSGGeometryNode11renderOrderEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:245
@@ -193,10 +193,10 @@ func (this *QSGGeometryNode) SetInheritedOpacity(opacity float64) {
 // Public inline
 // qreal inheritedOpacity()
 func (this *QSGGeometryNode) InheritedOpacity() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSGGeometryNode16inheritedOpacityEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSGGeometryNode16inheritedOpacityEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 //  body block end

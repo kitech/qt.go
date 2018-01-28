@@ -32,3 +32,17 @@ func TestQclsName(t *testing.T) {
 	}
 	t.Error(reg.FindAllStringSubmatch("qtcore.QString", -1))
 }
+
+func TestQSize0(t *testing.T) {
+	szo := NewQSize()
+	log.Println(szo)
+	log.Println(szo.Height())
+	log.Println(szo.RHeight())
+}
+
+func TestQSizeF0(t *testing.T) {
+	szo := NewQSizeF()
+	log.Println(szo)
+	log.Println(szo.Height())
+	log.Println(szo.RHeight())
+}

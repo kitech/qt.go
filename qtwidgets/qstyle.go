@@ -160,12 +160,12 @@ func (this *QStyle) Unpolish_1(application *QApplication /*777 QApplication **/)
 // /usr/include/qt/QtWidgets/qstyle.h:84
 // index:0
 // Public virtual
-// QRect itemTextRect(const QFontMetrics &, const QRect &, int, bool, const QString &)
+// QRect itemTextRect(const QFontMetrics &, const QRect &, int, _Bool, const QString &)
 func (this *QStyle) ItemTextRect(fm *qtgui.QFontMetrics, r *qtcore.QRect, flags int, enabled bool, text *qtcore.QString) *qtcore.QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fm.GetCthis()
 	var convArg1 = r.GetCthis()
 	var convArg4 = text.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, flags, enabled, convArg4)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -179,9 +179,9 @@ func (this *QStyle) ItemTextRect(fm *qtgui.QFontMetrics, r *qtcore.QRect, flags 
 // Public virtual
 // QRect itemPixmapRect(const QRect &, int, const QPixmap &)
 func (this *QStyle) ItemPixmapRect(r *qtcore.QRect, flags int, pixmap *qtgui.QPixmap) *qtcore.QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
 	var convArg2 = pixmap.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QStyle14itemPixmapRectERK5QRectiRK7QPixmap", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, flags, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -193,7 +193,7 @@ func (this *QStyle) ItemPixmapRect(r *qtcore.QRect, flags int, pixmap *qtgui.QPi
 // /usr/include/qt/QtWidgets/qstyle.h:90
 // index:0
 // Public virtual
-// void drawItemText(QPainter *, const QRect &, int, const QPalette &, bool, const QString &, QPalette::ColorRole)
+// void drawItemText(QPainter *, const QRect &, int, const QPalette &, _Bool, const QString &, QPalette::ColorRole)
 func (this *QStyle) DrawItemText(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, flags int, pal *qtgui.QPalette, enabled bool, text *qtcore.QString, textRole int) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = rect.GetCthis()
@@ -232,7 +232,7 @@ func (this *QStyle) StandardPalette() *qtgui.QPalette /*123*/ {
 // /usr/include/qt/QtWidgets/qstyle.h:204
 // index:0
 // Public pure virtual
-// void drawPrimitive(QStyle::PrimitiveElement, const QStyleOption *, QPainter *, const QWidget *)
+// void drawPrimitive(enum QStyle::PrimitiveElement, const QStyleOption *, QPainter *, const QWidget *)
 func (this *QStyle) DrawPrimitive(pe int, opt *QStyleOption /*777 const QStyleOption **/, p *qtgui.QPainter /*777 QPainter **/, w *QWidget /*777 const QWidget **/) {
 	var convArg1 = opt.GetCthis()
 	var convArg2 = p.GetCthis()
@@ -244,7 +244,7 @@ func (this *QStyle) DrawPrimitive(pe int, opt *QStyleOption /*777 const QStyleOp
 // /usr/include/qt/QtWidgets/qstyle.h:275
 // index:0
 // Public pure virtual
-// void drawControl(QStyle::ControlElement, const QStyleOption *, QPainter *, const QWidget *)
+// void drawControl(enum QStyle::ControlElement, const QStyleOption *, QPainter *, const QWidget *)
 func (this *QStyle) DrawControl(element int, opt *QStyleOption /*777 const QStyleOption **/, p *qtgui.QPainter /*777 QPainter **/, w *QWidget /*777 const QWidget **/) {
 	var convArg1 = opt.GetCthis()
 	var convArg2 = p.GetCthis()
@@ -256,11 +256,11 @@ func (this *QStyle) DrawControl(element int, opt *QStyleOption /*777 const QStyl
 // /usr/include/qt/QtWidgets/qstyle.h:364
 // index:0
 // Public pure virtual
-// QRect subElementRect(QStyle::SubElement, const QStyleOption *, const QWidget *)
+// QRect subElementRect(enum QStyle::SubElement, const QStyleOption *, const QWidget *)
 func (this *QStyle) SubElementRect(subElement int, option *QStyleOption /*777 const QStyleOption **/, widget *QWidget /*777 const QWidget **/) *qtcore.QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg1 = option.GetCthis()
 	var convArg2 = widget.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QStyle14subElementRectENS_10SubElementEPK12QStyleOptionPK7QWidget", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), subElement, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -272,7 +272,7 @@ func (this *QStyle) SubElementRect(subElement int, option *QStyleOption /*777 co
 // /usr/include/qt/QtWidgets/qstyle.h:443
 // index:0
 // Public pure virtual
-// void drawComplexControl(QStyle::ComplexControl, const QStyleOptionComplex *, QPainter *, const QWidget *)
+// void drawComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, QPainter *, const QWidget *)
 func (this *QStyle) DrawComplexControl(cc int, opt *QStyleOptionComplex /*777 const QStyleOptionComplex **/, p *qtgui.QPainter /*777 QPainter **/, widget *QWidget /*777 const QWidget **/) {
 	var convArg1 = opt.GetCthis()
 	var convArg2 = p.GetCthis()
@@ -284,7 +284,7 @@ func (this *QStyle) DrawComplexControl(cc int, opt *QStyleOptionComplex /*777 co
 // /usr/include/qt/QtWidgets/qstyle.h:445
 // index:0
 // Public pure virtual
-// QStyle::SubControl hitTestComplexControl(QStyle::ComplexControl, const QStyleOptionComplex *, const QPoint &, const QWidget *)
+// QStyle::SubControl hitTestComplexControl(enum QStyle::ComplexControl, const QStyleOptionComplex *, const QPoint &, const QWidget *)
 func (this *QStyle) HitTestComplexControl(cc int, opt *QStyleOptionComplex /*777 const QStyleOptionComplex **/, pt *qtcore.QPoint, widget *QWidget /*777 const QWidget **/) int {
 	var convArg1 = opt.GetCthis()
 	var convArg2 = pt.GetCthis()
@@ -298,11 +298,11 @@ func (this *QStyle) HitTestComplexControl(cc int, opt *QStyleOptionComplex /*777
 // /usr/include/qt/QtWidgets/qstyle.h:447
 // index:0
 // Public pure virtual
-// QRect subControlRect(QStyle::ComplexControl, const QStyleOptionComplex *, QStyle::SubControl, const QWidget *)
+// QRect subControlRect(enum QStyle::ComplexControl, const QStyleOptionComplex *, enum QStyle::SubControl, const QWidget *)
 func (this *QStyle) SubControlRect(cc int, opt *QStyleOptionComplex /*777 const QStyleOptionComplex **/, sc int, widget *QWidget /*777 const QWidget **/) *qtcore.QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg1 = opt.GetCthis()
 	var convArg3 = widget.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QStyle14subControlRectENS_14ComplexControlEPK19QStyleOptionComplexNS_10SubControlEPK7QWidget", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), cc, convArg1, sc, convArg3)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -314,26 +314,26 @@ func (this *QStyle) SubControlRect(cc int, opt *QStyleOptionComplex /*777 const 
 // /usr/include/qt/QtWidgets/qstyle.h:582
 // index:0
 // Public pure virtual
-// int pixelMetric(QStyle::PixelMetric, const QStyleOption *, const QWidget *)
+// int pixelMetric(enum QStyle::PixelMetric, const QStyleOption *, const QWidget *)
 func (this *QStyle) PixelMetric(metric int, option *QStyleOption /*777 const QStyleOption **/, widget *QWidget /*777 const QWidget **/) int {
 	var convArg1 = option.GetCthis()
 	var convArg2 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QStyle11pixelMetricENS_11PixelMetricEPK12QStyleOptionPK7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), metric, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstyle.h:614
 // index:0
 // Public pure virtual
-// QSize sizeFromContents(QStyle::ContentsType, const QStyleOption *, const QSize &, const QWidget *)
+// QSize sizeFromContents(enum QStyle::ContentsType, const QStyleOption *, const QSize &, const QWidget *)
 func (this *QStyle) SizeFromContents(ct int, opt *QStyleOption /*777 const QStyleOption **/, contentsSize *qtcore.QSize, w *QWidget /*777 const QWidget **/) *qtcore.QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg1 = opt.GetCthis()
 	var convArg2 = contentsSize.GetCthis()
 	var convArg3 = w.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QStyle16sizeFromContentsENS_12ContentsTypeEPK12QStyleOptionRK5QSizePK7QWidget", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), ct, convArg1, convArg2, convArg3)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK6QStyle16sizeFromContentsENS_12ContentsTypeEPK12QStyleOptionRK5QSizePK7QWidget", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), ct, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -344,7 +344,7 @@ func (this *QStyle) SizeFromContents(ct int, opt *QStyleOption /*777 const QStyl
 // /usr/include/qt/QtWidgets/qstyle.h:748
 // index:0
 // Public pure virtual
-// int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *)
+// int styleHint(enum QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *)
 func (this *QStyle) StyleHint(stylehint int, opt *QStyleOption /*777 const QStyleOption **/, widget *QWidget /*777 const QWidget **/, returnData *QStyleHintReturn /*777 QStyleHintReturn **/) int {
 	var convArg1 = opt.GetCthis()
 	var convArg2 = widget.GetCthis()
@@ -352,17 +352,17 @@ func (this *QStyle) StyleHint(stylehint int, opt *QStyleOption /*777 const QStyl
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QStyle9styleHintENS_9StyleHintEPK12QStyleOptionPK7QWidgetP16QStyleHintReturn", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), stylehint, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstyle.h:828
 // index:0
 // Public pure virtual
-// QPixmap standardPixmap(QStyle::StandardPixmap, const QStyleOption *, const QWidget *)
+// QPixmap standardPixmap(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *)
 func (this *QStyle) StandardPixmap(standardPixmap int, opt *QStyleOption /*777 const QStyleOption **/, widget *QWidget /*777 const QWidget **/) *qtgui.QPixmap /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg1 = opt.GetCthis()
 	var convArg2 = widget.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QStyle14standardPixmapENS_14StandardPixmapEPK12QStyleOptionPK7QWidget", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), standardPixmap, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -374,11 +374,11 @@ func (this *QStyle) StandardPixmap(standardPixmap int, opt *QStyleOption /*777 c
 // /usr/include/qt/QtWidgets/qstyle.h:831
 // index:0
 // Public pure virtual
-// QIcon standardIcon(QStyle::StandardPixmap, const QStyleOption *, const QWidget *)
+// QIcon standardIcon(enum QStyle::StandardPixmap, const QStyleOption *, const QWidget *)
 func (this *QStyle) StandardIcon(standardIcon int, option *QStyleOption /*777 const QStyleOption **/, widget *QWidget /*777 const QWidget **/) *qtgui.QIcon /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg1 = option.GetCthis()
 	var convArg2 = widget.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QStyle12standardIconENS_14StandardPixmapEPK12QStyleOptionPK7QWidget", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), standardIcon, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -392,9 +392,9 @@ func (this *QStyle) StandardIcon(standardIcon int, option *QStyleOption /*777 co
 // Public pure virtual
 // QPixmap generatedIconPixmap(QIcon::Mode, const QPixmap &, const QStyleOption *)
 func (this *QStyle) GeneratedIconPixmap(iconMode int, pixmap *qtgui.QPixmap, opt *QStyleOption /*777 const QStyleOption **/) *qtgui.QPixmap /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg1 = pixmap.GetCthis()
 	var convArg2 = opt.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QStyle19generatedIconPixmapEN5QIcon4ModeERK7QPixmapPK12QStyleOption", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), iconMode, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -408,7 +408,9 @@ func (this *QStyle) GeneratedIconPixmap(iconMode int, pixmap *qtgui.QPixmap, opt
 // Public static
 // QRect visualRect(Qt::LayoutDirection, const QRect &, const QRect &)
 func (this *QStyle) VisualRect(direction int, boundingRect *qtcore.QRect, logicalRect *qtcore.QRect) *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QStyle10visualRectEN2Qt15LayoutDirectionERK5QRectS4_", ffiqt.FFI_TYPE_POINTER, direction, boundingRect, logicalRect)
+	var convArg1 = boundingRect.GetCthis()
+	var convArg2 = logicalRect.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QStyle10visualRectEN2Qt15LayoutDirectionERK5QRectS4_", ffiqt.FFI_TYPE_POINTER, direction, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -425,7 +427,9 @@ func QStyle_VisualRect(direction int, boundingRect *qtcore.QRect, logicalRect *q
 // Public static
 // QPoint visualPos(Qt::LayoutDirection, const QRect &, const QPoint &)
 func (this *QStyle) VisualPos(direction int, boundingRect *qtcore.QRect, logicalPos *qtcore.QPoint) *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QStyle9visualPosEN2Qt15LayoutDirectionERK5QRectRK6QPoint", ffiqt.FFI_TYPE_POINTER, direction, boundingRect, logicalPos)
+	var convArg1 = boundingRect.GetCthis()
+	var convArg2 = logicalPos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QStyle9visualPosEN2Qt15LayoutDirectionERK5QRectRK6QPoint", ffiqt.FFI_TYPE_POINTER, direction, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -440,12 +444,12 @@ func QStyle_VisualPos(direction int, boundingRect *qtcore.QRect, logicalPos *qtc
 // /usr/include/qt/QtWidgets/qstyle.h:841
 // index:0
 // Public static
-// int sliderPositionFromValue(int, int, int, int, bool)
+// int sliderPositionFromValue(int, int, int, int, _Bool)
 func (this *QStyle) SliderPositionFromValue(min int, max int, val int, space int, upsideDown bool) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QStyle23sliderPositionFromValueEiiiib", ffiqt.FFI_TYPE_POINTER, min, max, val, space, upsideDown)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QStyle_SliderPositionFromValue(min int, max int, val int, space int, upsideDown bool) int {
 	var nilthis *QStyle
@@ -456,12 +460,12 @@ func QStyle_SliderPositionFromValue(min int, max int, val int, space int, upside
 // /usr/include/qt/QtWidgets/qstyle.h:843
 // index:0
 // Public static
-// int sliderValueFromPosition(int, int, int, int, bool)
+// int sliderValueFromPosition(int, int, int, int, _Bool)
 func (this *QStyle) SliderValueFromPosition(min int, max int, pos int, space int, upsideDown bool) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QStyle23sliderValueFromPositionEiiiib", ffiqt.FFI_TYPE_POINTER, min, max, pos, space, upsideDown)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QStyle_SliderValueFromPosition(min int, max int, pos int, space int, upsideDown bool) int {
 	var nilthis *QStyle
@@ -479,7 +483,7 @@ func (this *QStyle) LayoutSpacing(control1 int, control2 int, orientation int, o
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QStyle13layoutSpacingEN11QSizePolicy11ControlTypeES1_N2Qt11OrientationEPK12QStyleOptionPK7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), control1, control2, orientation, convArg3, convArg4)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstyle.h:856

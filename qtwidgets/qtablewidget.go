@@ -138,7 +138,7 @@ func (this *QTableWidget) RowCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget8rowCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:229
@@ -158,7 +158,7 @@ func (this *QTableWidget) ColumnCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget11columnCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:232
@@ -170,7 +170,7 @@ func (this *QTableWidget) Row(item *QTableWidgetItem /*777 const QTableWidgetIte
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget3rowEPK16QTableWidgetItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:233
@@ -182,7 +182,7 @@ func (this *QTableWidget) Column(item *QTableWidgetItem /*777 const QTableWidget
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget6columnEPK16QTableWidgetItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:235
@@ -315,7 +315,7 @@ func (this *QTableWidget) CurrentRow() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget10currentRowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:250
@@ -326,7 +326,7 @@ func (this *QTableWidget) CurrentColumn() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget13currentColumnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:251
@@ -391,7 +391,7 @@ func (this *QTableWidget) SortItems(column int, order int) {
 // /usr/include/qt/QtWidgets/qtablewidget.h:258
 // index:0
 // Public
-// void setSortingEnabled(bool)
+// void setSortingEnabled(_Bool)
 func (this *QTableWidget) SetSortingEnabled(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget17setSortingEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -496,7 +496,7 @@ func (this *QTableWidget) IsItemSelected(item *QTableWidgetItem /*777 const QTab
 // /usr/include/qt/QtWidgets/qtablewidget.h:272
 // index:0
 // Public
-// void setItemSelected(const QTableWidgetItem *, bool)
+// void setItemSelected(const QTableWidgetItem *, _Bool)
 func (this *QTableWidget) SetItemSelected(item *QTableWidgetItem /*777 const QTableWidgetItem **/, select_ bool) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget15setItemSelectedEPK16QTableWidgetItemb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, select_)
@@ -506,7 +506,7 @@ func (this *QTableWidget) SetItemSelected(item *QTableWidgetItem /*777 const QTa
 // /usr/include/qt/QtWidgets/qtablewidget.h:273
 // index:0
 // Public
-// void setRangeSelected(const QTableWidgetSelectionRange &, bool)
+// void setRangeSelected(const QTableWidgetSelectionRange &, _Bool)
 func (this *QTableWidget) SetRangeSelected(range_ *QTableWidgetSelectionRange, select_ bool) {
 	var convArg0 = range_.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidget16setRangeSelectedERK26QTableWidgetSelectionRangeb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, select_)
@@ -521,7 +521,7 @@ func (this *QTableWidget) VisualRow(logicalRow int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget9visualRowEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), logicalRow)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:280
@@ -532,7 +532,7 @@ func (this *QTableWidget) VisualColumn(logicalColumn int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget12visualColumnEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), logicalColumn)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:282
@@ -565,8 +565,8 @@ func (this *QTableWidget) ItemAt_1(x int, y int) *QTableWidgetItem /*777 QTableW
 // Public
 // QRect visualItemRect(const QTableWidgetItem *)
 func (this *QTableWidget) VisualItemRect(item *QTableWidgetItem /*777 const QTableWidgetItem **/) *qtcore.QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = item.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget14visualItemRectEPK16QTableWidgetItem", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -844,8 +844,8 @@ func (this *QTableWidget) SupportedDropActions() int {
 // Protected
 // QModelIndex indexFromItem(QTableWidgetItem *)
 func (this *QTableWidget) IndexFromItem(item *QTableWidgetItem /*777 QTableWidgetItem **/) *qtcore.QModelIndex /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = item.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTableWidget13indexFromItemEP16QTableWidgetItem", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

@@ -176,7 +176,7 @@ func (this *QGraphicsItemGroup) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 type QGraphicsItemGroup__ = int

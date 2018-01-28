@@ -81,7 +81,7 @@ func (this *QSocketNotifier) MetaObject() *QMetaObject /*777 const QMetaObject *
 // /usr/include/qt/QtCore/qsocketnotifier.h:56
 // index:0
 // Public
-// void QSocketNotifier(qintptr, QSocketNotifier::Type, QObject *)
+// void QSocketNotifier(qintptr, enum QSocketNotifier::Type, QObject *)
 func NewQSocketNotifier(socket int64, arg1 int, parent *QObject /*777 QObject **/) *QSocketNotifier {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg2 = parent.GetCthis()
@@ -136,7 +136,7 @@ func (this *QSocketNotifier) IsEnabled() bool {
 // /usr/include/qt/QtCore/qsocketnotifier.h:65
 // index:0
 // Public
-// void setEnabled(bool)
+// void setEnabled(_Bool)
 func (this *QSocketNotifier) SetEnabled(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifier10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

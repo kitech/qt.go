@@ -122,7 +122,7 @@ func (this *QQuickTextureFactory) CreateTexture(window *QQuickWindow /*777 QQuic
 // QSize textureSize()
 func (this *QQuickTextureFactory) TextureSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickTextureFactory11textureSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK20QQuickTextureFactory11textureSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -138,7 +138,7 @@ func (this *QQuickTextureFactory) TextureByteCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickTextureFactory16textureByteCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQuick/qquickimageprovider.h:66
@@ -160,7 +160,8 @@ func (this *QQuickTextureFactory) Image() *qtgui.QImage /*123*/ {
 // Public static
 // QQuickTextureFactory * textureFactoryForImage(const QImage &)
 func (this *QQuickTextureFactory) TextureFactoryForImage(image *qtgui.QImage) *QQuickTextureFactory /*777 QQuickTextureFactory **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQuickTextureFactory22textureFactoryForImageERK6QImage", ffiqt.FFI_TYPE_POINTER, image)
+	var convArg0 = image.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQuickTextureFactory22textureFactoryForImageERK6QImage", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQQuickTextureFactoryFromPointer(unsafe.Pointer(uintptr(rv))) // 444

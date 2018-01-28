@@ -271,7 +271,7 @@ func (this *QXmlStreamReader) TokenString() *QString /*123*/ {
 // /usr/include/qt/QtCore/qxmlstream.h:384
 // index:0
 // Public
-// void setNamespaceProcessing(bool)
+// void setNamespaceProcessing(_Bool)
 func (this *QXmlStreamReader) SetNamespaceProcessing(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader22setNamespaceProcessingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -498,7 +498,7 @@ func (this *QXmlStreamReader) Attributes() *QXmlStreamAttributes /*123*/ {
 // /usr/include/qt/QtCore/qxmlstream.h:414
 // index:0
 // Public
-// QString readElementText(QXmlStreamReader::ReadElementTextBehaviour)
+// QString readElementText(enum QXmlStreamReader::ReadElementTextBehaviour)
 func (this *QXmlStreamReader) ReadElementText(behaviour int) *QString /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReader15readElementTextENS_24ReadElementTextBehaviourE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), behaviour)

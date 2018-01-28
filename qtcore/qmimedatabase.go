@@ -91,8 +91,8 @@ func DeleteQMimeDatabase(*QMimeDatabase) {
 // Public
 // QMimeType mimeTypeForName(const QString &)
 func (this *QMimeDatabase) MimeTypeForName(nameOrAlias *QString) *QMimeType /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = nameOrAlias.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMimeDatabase15mimeTypeForNameERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -104,10 +104,10 @@ func (this *QMimeDatabase) MimeTypeForName(nameOrAlias *QString) *QMimeType /*12
 // /usr/include/qt/QtCore/qmimedatabase.h:74
 // index:0
 // Public
-// QMimeType mimeTypeForFile(const QString &, QMimeDatabase::MatchMode)
+// QMimeType mimeTypeForFile(const QString &, enum QMimeDatabase::MatchMode)
 func (this *QMimeDatabase) MimeTypeForFile(fileName *QString, mode int) *QMimeType /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fileName.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMimeDatabase15mimeTypeForFileERK7QStringNS_9MatchModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -119,10 +119,10 @@ func (this *QMimeDatabase) MimeTypeForFile(fileName *QString, mode int) *QMimeTy
 // /usr/include/qt/QtCore/qmimedatabase.h:75
 // index:1
 // Public
-// QMimeType mimeTypeForFile(const QFileInfo &, QMimeDatabase::MatchMode)
+// QMimeType mimeTypeForFile(const QFileInfo &, enum QMimeDatabase::MatchMode)
 func (this *QMimeDatabase) MimeTypeForFile_1(fileInfo *QFileInfo, mode int) *QMimeType /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fileInfo.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMimeDatabase15mimeTypeForFileERK9QFileInfoNS_9MatchModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -136,8 +136,8 @@ func (this *QMimeDatabase) MimeTypeForFile_1(fileInfo *QFileInfo, mode int) *QMi
 // Public
 // QMimeType mimeTypeForData(const QByteArray &)
 func (this *QMimeDatabase) MimeTypeForData(data *QByteArray) *QMimeType /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = data.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -151,8 +151,8 @@ func (this *QMimeDatabase) MimeTypeForData(data *QByteArray) *QMimeType /*123*/ 
 // Public
 // QMimeType mimeTypeForData(QIODevice *)
 func (this *QMimeDatabase) MimeTypeForData_1(device *QIODevice /*777 QIODevice **/) *QMimeType /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = device.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -166,8 +166,8 @@ func (this *QMimeDatabase) MimeTypeForData_1(device *QIODevice /*777 QIODevice *
 // Public
 // QMimeType mimeTypeForUrl(const QUrl &)
 func (this *QMimeDatabase) MimeTypeForUrl(url *QUrl) *QMimeType /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = url.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -181,9 +181,9 @@ func (this *QMimeDatabase) MimeTypeForUrl(url *QUrl) *QMimeType /*123*/ {
 // Public
 // QMimeType mimeTypeForFileNameAndData(const QString &, QIODevice *)
 func (this *QMimeDatabase) MimeTypeForFileNameAndData(fileName *QString, device *QIODevice /*777 QIODevice **/) *QMimeType /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fileName.GetCthis()
 	var convArg1 = device.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringP9QIODevice", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -197,9 +197,9 @@ func (this *QMimeDatabase) MimeTypeForFileNameAndData(fileName *QString, device 
 // Public
 // QMimeType mimeTypeForFileNameAndData(const QString &, const QByteArray &)
 func (this *QMimeDatabase) MimeTypeForFileNameAndData_1(fileName *QString, data *QByteArray) *QMimeType /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fileName.GetCthis()
 	var convArg1 = data.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -213,8 +213,8 @@ func (this *QMimeDatabase) MimeTypeForFileNameAndData_1(fileName *QString, data 
 // Public
 // QString suffixForFileName(const QString &)
 func (this *QMimeDatabase) SuffixForFileName(fileName *QString) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fileName.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMimeDatabase17suffixForFileNameERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

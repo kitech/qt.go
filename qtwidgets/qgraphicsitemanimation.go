@@ -195,10 +195,10 @@ func (this *QGraphicsItemAnimation) MatrixAt(step float64) *qtgui.QMatrix /*123*
 // Public
 // qreal rotationAt(qreal)
 func (this *QGraphicsItemAnimation) RotationAt(step float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation10rotationAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation10rotationAtEd", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:78
@@ -215,10 +215,10 @@ func (this *QGraphicsItemAnimation) SetRotationAt(step float64, angle float64) {
 // Public
 // qreal xTranslationAt(qreal)
 func (this *QGraphicsItemAnimation) XTranslationAt(step float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation14xTranslationAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation14xTranslationAtEd", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:81
@@ -226,10 +226,10 @@ func (this *QGraphicsItemAnimation) XTranslationAt(step float64) float64 {
 // Public
 // qreal yTranslationAt(qreal)
 func (this *QGraphicsItemAnimation) YTranslationAt(step float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation14yTranslationAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation14yTranslationAtEd", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:83
@@ -246,10 +246,10 @@ func (this *QGraphicsItemAnimation) SetTranslationAt(step float64, dx float64, d
 // Public
 // qreal verticalScaleAt(qreal)
 func (this *QGraphicsItemAnimation) VerticalScaleAt(step float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation15verticalScaleAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation15verticalScaleAtEd", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:86
@@ -257,10 +257,10 @@ func (this *QGraphicsItemAnimation) VerticalScaleAt(step float64) float64 {
 // Public
 // qreal horizontalScaleAt(qreal)
 func (this *QGraphicsItemAnimation) HorizontalScaleAt(step float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation17horizontalScaleAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation17horizontalScaleAtEd", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:88
@@ -277,10 +277,10 @@ func (this *QGraphicsItemAnimation) SetScaleAt(step float64, sx float64, sy floa
 // Public
 // qreal verticalShearAt(qreal)
 func (this *QGraphicsItemAnimation) VerticalShearAt(step float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation15verticalShearAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation15verticalShearAtEd", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:91
@@ -288,10 +288,10 @@ func (this *QGraphicsItemAnimation) VerticalShearAt(step float64) float64 {
 // Public
 // qreal horizontalShearAt(qreal)
 func (this *QGraphicsItemAnimation) HorizontalShearAt(step float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation17horizontalShearAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), step)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QGraphicsItemAnimation17horizontalShearAtEd", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), step)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:93

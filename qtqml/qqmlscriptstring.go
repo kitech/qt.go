@@ -144,18 +144,18 @@ func (this *QQmlScriptString) StringLiteral() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtQml/qqmlscriptstring.h:75
 // index:0
 // Public
-// qreal numberLiteral(bool *)
+// qreal numberLiteral(_Bool *)
 func (this *QQmlScriptString) NumberLiteral(ok unsafe.Pointer /*666*/) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QQmlScriptString13numberLiteralEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QQmlScriptString13numberLiteralEPb", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtQml/qqmlscriptstring.h:76
 // index:0
 // Public
-// bool booleanLiteral(bool *)
+// bool booleanLiteral(_Bool *)
 func (this *QQmlScriptString) BooleanLiteral(ok unsafe.Pointer /*666*/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QQmlScriptString14booleanLiteralEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)

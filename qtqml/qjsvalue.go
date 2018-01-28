@@ -76,7 +76,7 @@ func (*QJSValue) NewFromPointer(cthis unsafe.Pointer) *QJSValue {
 // /usr/include/qt/QtQml/qjsvalue.h:72
 // index:0
 // Public
-// void QJSValue(QJSValue::SpecialValue)
+// void QJSValue(enum QJSValue::SpecialValue)
 func NewQJSValue(value int) *QJSValue {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValueC2ENS_12SpecialValueE", ffiqt.FFI_TYPE_VOID, cthis, value)
@@ -88,7 +88,7 @@ func NewQJSValue(value int) *QJSValue {
 // /usr/include/qt/QtQml/qjsvalue.h:82
 // index:1
 // Public
-// void QJSValue(bool)
+// void QJSValue(_Bool)
 func NewQJSValue_1(value bool) *QJSValue {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValueC2Eb", ffiqt.FFI_TYPE_VOID, cthis, value)
@@ -344,10 +344,10 @@ func (this *QJSValue) ToString() *qtcore.QString /*123*/ {
 // Public
 // double toNumber()
 func (this *QJSValue) ToNumber() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue8toNumberEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue8toNumberEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtQml/qjsvalue.h:110
@@ -488,8 +488,8 @@ func (this *QJSValue) SetPrototype(prototype *QJSValue) {
 // Public
 // QJSValue property(const QString &)
 func (this *QJSValue) Property(name *qtcore.QString) *QJSValue /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = name.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue8propertyERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

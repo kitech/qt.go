@@ -165,7 +165,7 @@ func (this *QSharedMemory) NativeKey() *QString /*123*/ {
 // /usr/include/qt/QtCore/qsharedmemory.h:86
 // index:0
 // Public
-// bool create(int, QSharedMemory::AccessMode)
+// bool create(int, enum QSharedMemory::AccessMode)
 func (this *QSharedMemory) Create(size int, mode int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6createEiNS_10AccessModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size, mode)
 	gopp.ErrPrint(err, rv)
@@ -181,13 +181,13 @@ func (this *QSharedMemory) Size() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSharedMemory4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:89
 // index:0
 // Public
-// bool attach(QSharedMemory::AccessMode)
+// bool attach(enum QSharedMemory::AccessMode)
 func (this *QSharedMemory) Attach(mode int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemory6attachENS_10AccessModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)

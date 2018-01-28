@@ -148,7 +148,7 @@ func (this *QAbstractTransition) TransitionType() int {
 // /usr/include/qt/QtCore/qabstracttransition.h:85
 // index:0
 // Public
-// void setTransitionType(QAbstractTransition::TransitionType)
+// void setTransitionType(enum QAbstractTransition::TransitionType)
 func (this *QAbstractTransition) SetTransitionType(type_ int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransition17setTransitionTypeENS_14TransitionTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)

@@ -156,7 +156,7 @@ func (this *QScrollArea) WidgetResizable() bool {
 // /usr/include/qt/QtWidgets/qscrollarea.h:67
 // index:0
 // Public
-// void setWidgetResizable(bool)
+// void setWidgetResizable(_Bool)
 func (this *QScrollArea) SetWidgetResizable(resizable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QScrollArea18setWidgetResizableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), resizable)
 	gopp.ErrPrint(err, rv)
@@ -168,7 +168,7 @@ func (this *QScrollArea) SetWidgetResizable(resizable bool) {
 // QSize sizeHint()
 func (this *QScrollArea) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QScrollArea8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK11QScrollArea8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -179,7 +179,7 @@ func (this *QScrollArea) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qscrollarea.h:71
 // index:0
 // Public virtual
-// bool focusNextPrevChild(bool)
+// bool focusNextPrevChild(_Bool)
 func (this *QScrollArea) FocusNextPrevChild(next bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QScrollArea18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), next)
 	gopp.ErrPrint(err, rv)
@@ -267,7 +267,7 @@ func (this *QScrollArea) ScrollContentsBy(dx int, dy int) {
 // QSize viewportSizeHint()
 func (this *QScrollArea) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QScrollArea16viewportSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK11QScrollArea16viewportSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))

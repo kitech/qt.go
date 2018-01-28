@@ -73,7 +73,7 @@ func (*QHelpEvent) NewFromPointer(cthis unsafe.Pointer) *QHelpEvent {
 // /usr/include/qt/QtGui/qevent.h:680
 // index:0
 // Public
-// void QHelpEvent(QEvent::Type, const QPoint &, const QPoint &)
+// void QHelpEvent(enum QEvent::Type, const QPoint &, const QPoint &)
 func NewQHelpEvent(type_ int, pos *qtcore.QPoint, globalPos *qtcore.QPoint) *QHelpEvent {
 	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg1 = pos.GetCthis()
@@ -101,7 +101,7 @@ func (this *QHelpEvent) X() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:684
@@ -112,7 +112,7 @@ func (this *QHelpEvent) Y() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:685
@@ -123,7 +123,7 @@ func (this *QHelpEvent) GlobalX() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent7globalXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:686
@@ -134,7 +134,7 @@ func (this *QHelpEvent) GlobalY() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent7globalYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:688

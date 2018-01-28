@@ -119,10 +119,10 @@ func (this *QMatrix) SetMatrix(m11 float64, m12 float64, m21 float64, m22 float6
 // Public inline
 // qreal m11()
 func (this *QMatrix) M11() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix3m11Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix3m11Ev", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qmatrix.h:79
@@ -130,10 +130,10 @@ func (this *QMatrix) M11() float64 {
 // Public inline
 // qreal m12()
 func (this *QMatrix) M12() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix3m12Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix3m12Ev", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qmatrix.h:80
@@ -141,10 +141,10 @@ func (this *QMatrix) M12() float64 {
 // Public inline
 // qreal m21()
 func (this *QMatrix) M21() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix3m21Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix3m21Ev", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qmatrix.h:81
@@ -152,10 +152,10 @@ func (this *QMatrix) M21() float64 {
 // Public inline
 // qreal m22()
 func (this *QMatrix) M22() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix3m22Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix3m22Ev", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qmatrix.h:82
@@ -163,10 +163,10 @@ func (this *QMatrix) M22() float64 {
 // Public inline
 // qreal dx()
 func (this *QMatrix) Dx() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix2dxEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix2dxEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qmatrix.h:83
@@ -174,10 +174,10 @@ func (this *QMatrix) Dx() float64 {
 // Public inline
 // qreal dy()
 func (this *QMatrix) Dy() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix2dyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix2dyEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qmatrix.h:85
@@ -203,8 +203,8 @@ func (this *QMatrix) Map_1(x float64, y float64, tx unsafe.Pointer /*666*/, ty u
 // Public
 // QPoint map(const QPoint &)
 func (this *QMatrix) Map_2(p *qtcore.QPoint) *qtcore.QPoint /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = p.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix3mapERK6QPoint", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -218,8 +218,8 @@ func (this *QMatrix) Map_2(p *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 // Public
 // QPointF map(const QPointF &)
 func (this *QMatrix) Map_3(p *qtcore.QPointF) *qtcore.QPointF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = p.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix3mapERK7QPointF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -233,8 +233,8 @@ func (this *QMatrix) Map_3(p *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 // Public
 // QLine map(const QLine &)
 func (this *QMatrix) Map_4(l *qtcore.QLine) *qtcore.QLine /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = l.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix3mapERK5QLine", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -248,8 +248,8 @@ func (this *QMatrix) Map_4(l *qtcore.QLine) *qtcore.QLine /*123*/ {
 // Public
 // QLineF map(const QLineF &)
 func (this *QMatrix) Map_5(l *qtcore.QLineF) *qtcore.QLineF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = l.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix3mapERK6QLineF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -263,8 +263,8 @@ func (this *QMatrix) Map_5(l *qtcore.QLineF) *qtcore.QLineF /*123*/ {
 // Public
 // QPolygonF map(const QPolygonF &)
 func (this *QMatrix) Map_6(a *QPolygonF) *QPolygonF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = a.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix3mapERK9QPolygonF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -278,8 +278,8 @@ func (this *QMatrix) Map_6(a *QPolygonF) *QPolygonF /*123*/ {
 // Public
 // QPolygon map(const QPolygon &)
 func (this *QMatrix) Map_7(a *QPolygon) *QPolygon /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = a.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix3mapERK8QPolygon", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -293,8 +293,8 @@ func (this *QMatrix) Map_7(a *QPolygon) *QPolygon /*123*/ {
 // Public
 // QRegion map(const QRegion &)
 func (this *QMatrix) Map_8(r *QRegion) *QRegion /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix3mapERK7QRegion", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -308,8 +308,8 @@ func (this *QMatrix) Map_8(r *QRegion) *QRegion /*123*/ {
 // Public
 // QPainterPath map(const QPainterPath &)
 func (this *QMatrix) Map_9(p *QPainterPath) *QPainterPath /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = p.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix3mapERK12QPainterPath", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -323,8 +323,8 @@ func (this *QMatrix) Map_9(p *QPainterPath) *QPainterPath /*123*/ {
 // Public
 // QRect mapRect(const QRect &)
 func (this *QMatrix) MapRect(arg0 *qtcore.QRect) *qtcore.QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix7mapRectERK5QRect", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -338,8 +338,8 @@ func (this *QMatrix) MapRect(arg0 *qtcore.QRect) *qtcore.QRect /*123*/ {
 // Public
 // QRectF mapRect(const QRectF &)
 func (this *QMatrix) MapRect_1(arg0 *qtcore.QRectF) *qtcore.QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix7mapRectERK6QRectF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -353,8 +353,8 @@ func (this *QMatrix) MapRect_1(arg0 *qtcore.QRectF) *qtcore.QRectF /*123*/ {
 // Public
 // QPolygon mapToPolygon(const QRect &)
 func (this *QMatrix) MapToPolygon(r *qtcore.QRect) *QPolygon /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix12mapToPolygonERK5QRect", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -447,16 +447,16 @@ func (this *QMatrix) IsInvertible() bool {
 // Public inline
 // qreal determinant()
 func (this *QMatrix) Determinant() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix11determinantEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix11determinantEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qmatrix.h:111
 // index:0
 // Public
-// QMatrix inverted(bool *)
+// QMatrix inverted(_Bool *)
 func (this *QMatrix) Inverted(invertible unsafe.Pointer /*666*/) *QMatrix /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QMatrix8invertedEPb", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), &invertible)

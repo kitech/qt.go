@@ -109,7 +109,7 @@ func QNetworkProxyFactory_UsesSystemConfiguration() bool {
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:225
 // index:0
 // Public static
-// void setUseSystemConfiguration(bool)
+// void setUseSystemConfiguration(_Bool)
 func (this *QNetworkProxyFactory) SetUseSystemConfiguration(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkProxyFactory25setUseSystemConfigurationEb", ffiqt.FFI_TYPE_POINTER, enable)
 	gopp.ErrPrint(err, rv)
@@ -124,7 +124,8 @@ func QNetworkProxyFactory_SetUseSystemConfiguration(enable bool) {
 // Public static
 // void setApplicationProxyFactory(QNetworkProxyFactory *)
 func (this *QNetworkProxyFactory) SetApplicationProxyFactory(factory *QNetworkProxyFactory /*777 QNetworkProxyFactory **/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkProxyFactory26setApplicationProxyFactoryEPS_", ffiqt.FFI_TYPE_POINTER, factory)
+	var convArg0 = factory.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkProxyFactory26setApplicationProxyFactoryEPS_", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QNetworkProxyFactory_SetApplicationProxyFactory(factory *QNetworkProxyFactory /*777 QNetworkProxyFactory **/) {

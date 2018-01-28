@@ -113,8 +113,8 @@ func DeleteQGraphicsEffect(*QGraphicsEffect) {
 // Public virtual
 // QRectF boundingRectFor(const QRectF &)
 func (this *QGraphicsEffect) BoundingRectFor(sourceRect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = sourceRect.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsEffect15boundingRectForERK6QRectF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -151,7 +151,7 @@ func (this *QGraphicsEffect) IsEnabled() bool {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:91
 // index:0
 // Public
-// void setEnabled(bool)
+// void setEnabled(_Bool)
 func (this *QGraphicsEffect) SetEnabled(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsEffect10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -169,7 +169,7 @@ func (this *QGraphicsEffect) Update() {
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:95
 // index:0
 // Public
-// void enabledChanged(bool)
+// void enabledChanged(_Bool)
 func (this *QGraphicsEffect) EnabledChanged(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsEffect14enabledChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -241,10 +241,10 @@ func (this *QGraphicsEffect) DrawSource(painter *qtgui.QPainter /*777 QPainter *
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:106
 // index:0
 // Protected
-// QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, QGraphicsEffect::PixmapPadMode)
+// QPixmap sourcePixmap(Qt::CoordinateSystem, QPoint *, enum QGraphicsEffect::PixmapPadMode)
 func (this *QGraphicsEffect) SourcePixmap(system int, offset *qtcore.QPoint /*777 QPoint **/, mode int) *qtgui.QPixmap /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg1 = offset.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsEffect12sourcePixmapEN2Qt16CoordinateSystemEP6QPointNS_13PixmapPadModeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), system, convArg1, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv

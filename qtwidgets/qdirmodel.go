@@ -113,8 +113,8 @@ func DeleteQDirModel(*QDirModel) {
 // Public virtual
 // QModelIndex index(int, int, const QModelIndex &)
 func (this *QDirModel) Index(row int, column int, parent *qtcore.QModelIndex) *qtcore.QModelIndex /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg2 = parent.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel5indexEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), row, column, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -128,8 +128,8 @@ func (this *QDirModel) Index(row int, column int, parent *qtcore.QModelIndex) *q
 // Public
 // QModelIndex index(const QString &, int)
 func (this *QDirModel) Index_1(path *qtcore.QString, column int) *qtcore.QModelIndex /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = path.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel5indexERK7QStringi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -143,8 +143,8 @@ func (this *QDirModel) Index_1(path *qtcore.QString, column int) *qtcore.QModelI
 // Public virtual
 // QModelIndex parent(const QModelIndex &)
 func (this *QDirModel) Parent(child *qtcore.QModelIndex) *qtcore.QModelIndex /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = child.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel6parentERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -162,7 +162,7 @@ func (this *QDirModel) RowCount(parent *qtcore.QModelIndex) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8rowCountERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qdirmodel.h:77
@@ -174,7 +174,7 @@ func (this *QDirModel) ColumnCount(parent *qtcore.QModelIndex) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel11columnCountERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qdirmodel.h:79
@@ -182,8 +182,8 @@ func (this *QDirModel) ColumnCount(parent *qtcore.QModelIndex) int {
 // Public virtual
 // QVariant data(const QModelIndex &, int)
 func (this *QDirModel) Data(index *qtcore.QModelIndex, role int) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel4dataERK11QModelIndexi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, role)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -342,7 +342,7 @@ func (this *QDirModel) Sorting() int {
 // /usr/include/qt/QtWidgets/qdirmodel.h:109
 // index:0
 // Public
-// void setResolveSymlinks(bool)
+// void setResolveSymlinks(_Bool)
 func (this *QDirModel) SetResolveSymlinks(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel18setResolveSymlinksEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -362,7 +362,7 @@ func (this *QDirModel) ResolveSymlinks() bool {
 // /usr/include/qt/QtWidgets/qdirmodel.h:112
 // index:0
 // Public
-// void setReadOnly(bool)
+// void setReadOnly(_Bool)
 func (this *QDirModel) SetReadOnly(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel11setReadOnlyEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -382,7 +382,7 @@ func (this *QDirModel) IsReadOnly() bool {
 // /usr/include/qt/QtWidgets/qdirmodel.h:115
 // index:0
 // Public
-// void setLazyChildCount(bool)
+// void setLazyChildCount(_Bool)
 func (this *QDirModel) SetLazyChildCount(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel17setLazyChildCountEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -416,9 +416,9 @@ func (this *QDirModel) IsDir(index *qtcore.QModelIndex) bool {
 // Public
 // QModelIndex mkdir(const QModelIndex &, const QString &)
 func (this *QDirModel) Mkdir(parent *qtcore.QModelIndex, name *qtcore.QString) *qtcore.QModelIndex /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = parent.GetCthis()
 	var convArg1 = name.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel5mkdirERK11QModelIndexRK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -456,8 +456,8 @@ func (this *QDirModel) Remove(index *qtcore.QModelIndex) bool {
 // Public
 // QString filePath(const QModelIndex &)
 func (this *QDirModel) FilePath(index *qtcore.QModelIndex) *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8filePathERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -471,8 +471,8 @@ func (this *QDirModel) FilePath(index *qtcore.QModelIndex) *qtcore.QString /*123
 // Public
 // QString fileName(const QModelIndex &)
 func (this *QDirModel) FileName(index *qtcore.QModelIndex) *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8fileNameERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -486,8 +486,8 @@ func (this *QDirModel) FileName(index *qtcore.QModelIndex) *qtcore.QString /*123
 // Public
 // QIcon fileIcon(const QModelIndex &)
 func (this *QDirModel) FileIcon(index *qtcore.QModelIndex) *qtgui.QIcon /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8fileIconERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -501,8 +501,8 @@ func (this *QDirModel) FileIcon(index *qtcore.QModelIndex) *qtgui.QIcon /*123*/ 
 // Public
 // QFileInfo fileInfo(const QModelIndex &)
 func (this *QDirModel) FileInfo(index *qtcore.QModelIndex) *qtcore.QFileInfo /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QDirModel8fileInfoERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

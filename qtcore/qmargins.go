@@ -108,7 +108,7 @@ func (this *QMargins) Left() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins4leftEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmargins.h:60
@@ -119,7 +119,7 @@ func (this *QMargins) Top() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins3topEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmargins.h:61
@@ -130,7 +130,7 @@ func (this *QMargins) Right() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins5rightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmargins.h:62
@@ -141,7 +141,7 @@ func (this *QMargins) Bottom() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins6bottomEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmargins.h:64

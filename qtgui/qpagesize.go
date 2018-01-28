@@ -84,7 +84,7 @@ func NewQPageSize() *QPageSize {
 // /usr/include/qt/QtGui/qpagesize.h:231
 // index:1
 // Public
-// void QPageSize(QPageSize::PageSizeId)
+// void QPageSize(enum QPageSize::PageSizeId)
 func NewQPageSize_1(pageSizeId int) *QPageSize {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeC2ENS_10PageSizeIdE", ffiqt.FFI_TYPE_VOID, cthis, pageSizeId)
@@ -96,7 +96,7 @@ func NewQPageSize_1(pageSizeId int) *QPageSize {
 // /usr/include/qt/QtGui/qpagesize.h:232
 // index:2
 // Public
-// void QPageSize(const QSize &, const QString &, QPageSize::SizeMatchPolicy)
+// void QPageSize(const QSize &, const QString &, enum QPageSize::SizeMatchPolicy)
 func NewQPageSize_2(pointSize *qtcore.QSize, name *qtcore.QString, matchPolicy int) *QPageSize {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = pointSize.GetCthis()
@@ -110,7 +110,7 @@ func NewQPageSize_2(pointSize *qtcore.QSize, name *qtcore.QString, matchPolicy i
 // /usr/include/qt/QtGui/qpagesize.h:235
 // index:3
 // Public
-// void QPageSize(const QSizeF &, QPageSize::Unit, const QString &, QPageSize::SizeMatchPolicy)
+// void QPageSize(const QSizeF &, enum QPageSize::Unit, const QString &, enum QPageSize::SizeMatchPolicy)
 func NewQPageSize_3(size *qtcore.QSizeF, units int, name *qtcore.QString, matchPolicy int) *QPageSize {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = size.GetCthis()
@@ -180,7 +180,7 @@ func (this *QPageSize) Key() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qpagesize.h:271
 // index:1
 // Public static
-// QString key(QPageSize::PageSizeId)
+// QString key(enum QPageSize::PageSizeId)
 func (this *QPageSize) Key_1(pageSizeId int) *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize3keyENS_10PageSizeIdE", ffiqt.FFI_TYPE_POINTER, pageSizeId)
 	gopp.ErrPrint(err, rv)
@@ -211,7 +211,7 @@ func (this *QPageSize) Name() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtGui/qpagesize.h:272
 // index:1
 // Public static
-// QString name(QPageSize::PageSizeId)
+// QString name(enum QPageSize::PageSizeId)
 func (this *QPageSize) Name_1(pageSizeId int) *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize4nameENS_10PageSizeIdE", ffiqt.FFI_TYPE_POINTER, pageSizeId)
 	gopp.ErrPrint(err, rv)
@@ -239,9 +239,10 @@ func (this *QPageSize) Id() int {
 // /usr/include/qt/QtGui/qpagesize.h:274
 // index:1
 // Public static
-// QPageSize::PageSizeId id(const QSize &, QPageSize::SizeMatchPolicy)
+// QPageSize::PageSizeId id(const QSize &, enum QPageSize::SizeMatchPolicy)
 func (this *QPageSize) Id_1(pointSize *qtcore.QSize, matchPolicy int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize2idERK5QSizeNS_15SizeMatchPolicyE", ffiqt.FFI_TYPE_POINTER, pointSize, matchPolicy)
+	var convArg0 = pointSize.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize2idERK5QSizeNS_15SizeMatchPolicyE", ffiqt.FFI_TYPE_POINTER, convArg0, matchPolicy)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv)
@@ -255,9 +256,10 @@ func QPageSize_Id_1(pointSize *qtcore.QSize, matchPolicy int) int {
 // /usr/include/qt/QtGui/qpagesize.h:276
 // index:2
 // Public static
-// QPageSize::PageSizeId id(const QSizeF &, QPageSize::Unit, QPageSize::SizeMatchPolicy)
+// QPageSize::PageSizeId id(const QSizeF &, enum QPageSize::Unit, enum QPageSize::SizeMatchPolicy)
 func (this *QPageSize) Id_2(size *qtcore.QSizeF, units int, matchPolicy int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize2idERK6QSizeFNS_4UnitENS_15SizeMatchPolicyE", ffiqt.FFI_TYPE_POINTER, size, units, matchPolicy)
+	var convArg0 = size.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize2idERK6QSizeFNS_4UnitENS_15SizeMatchPolicyE", ffiqt.FFI_TYPE_POINTER, convArg0, units, matchPolicy)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv)
@@ -292,18 +294,18 @@ func (this *QPageSize) WindowsId() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize9windowsIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qpagesize.h:280
 // index:1
 // Public static
-// int windowsId(QPageSize::PageSizeId)
+// int windowsId(enum QPageSize::PageSizeId)
 func (this *QPageSize) WindowsId_1(pageSizeId int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize9windowsIdENS_10PageSizeIdE", ffiqt.FFI_TYPE_POINTER, pageSizeId)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QPageSize_WindowsId_1(pageSizeId int) int {
 	var nilthis *QPageSize
@@ -317,7 +319,7 @@ func QPageSize_WindowsId_1(pageSizeId int) int {
 // QSizeF definitionSize()
 func (this *QPageSize) DefinitionSize() *qtcore.QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize14definitionSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK9QPageSize14definitionSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -328,7 +330,7 @@ func (this *QPageSize) DefinitionSize() *qtcore.QSizeF /*123*/ {
 // /usr/include/qt/QtGui/qpagesize.h:282
 // index:1
 // Public static
-// QSizeF definitionSize(QPageSize::PageSizeId)
+// QSizeF definitionSize(enum QPageSize::PageSizeId)
 func (this *QPageSize) DefinitionSize_1(pageSizeId int) *qtcore.QSizeF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize14definitionSizeENS_10PageSizeIdE", ffiqt.FFI_TYPE_POINTER, pageSizeId)
 	gopp.ErrPrint(err, rv)
@@ -356,7 +358,7 @@ func (this *QPageSize) DefinitionUnits() int {
 // /usr/include/qt/QtGui/qpagesize.h:283
 // index:1
 // Public static
-// QPageSize::Unit definitionUnits(QPageSize::PageSizeId)
+// QPageSize::Unit definitionUnits(enum QPageSize::PageSizeId)
 func (this *QPageSize) DefinitionUnits_1(pageSizeId int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize15definitionUnitsENS_10PageSizeIdE", ffiqt.FFI_TYPE_POINTER, pageSizeId)
 	gopp.ErrPrint(err, rv)
@@ -372,10 +374,10 @@ func QPageSize_DefinitionUnits_1(pageSizeId int) int {
 // /usr/include/qt/QtGui/qpagesize.h:263
 // index:0
 // Public
-// QSizeF size(QPageSize::Unit)
+// QSizeF size(enum QPageSize::Unit)
 func (this *QPageSize) Size(units int) *qtcore.QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize4sizeENS_4UnitE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), units)
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK9QPageSize4sizeENS_4UnitE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), units)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -386,7 +388,7 @@ func (this *QPageSize) Size(units int) *qtcore.QSizeF /*123*/ {
 // /usr/include/qt/QtGui/qpagesize.h:285
 // index:1
 // Public static
-// QSizeF size(QPageSize::PageSizeId, QPageSize::Unit)
+// QSizeF size(enum QPageSize::PageSizeId, enum QPageSize::Unit)
 func (this *QPageSize) Size_1(pageSizeId int, units int) *qtcore.QSizeF /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize4sizeENS_10PageSizeIdENS_4UnitE", ffiqt.FFI_TYPE_POINTER, pageSizeId, units)
 	gopp.ErrPrint(err, rv)
@@ -406,7 +408,7 @@ func QPageSize_Size_1(pageSizeId int, units int) *qtcore.QSizeF /*123*/ {
 // QSize sizePoints()
 func (this *QPageSize) SizePoints() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize10sizePointsEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK9QPageSize10sizePointsEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -417,7 +419,7 @@ func (this *QPageSize) SizePoints() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtGui/qpagesize.h:286
 // index:1
 // Public static
-// QSize sizePoints(QPageSize::PageSizeId)
+// QSize sizePoints(enum QPageSize::PageSizeId)
 func (this *QPageSize) SizePoints_1(pageSizeId int) *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize10sizePointsENS_10PageSizeIdE", ffiqt.FFI_TYPE_POINTER, pageSizeId)
 	gopp.ErrPrint(err, rv)
@@ -437,7 +439,7 @@ func QPageSize_SizePoints_1(pageSizeId int) *qtcore.QSize /*123*/ {
 // QSize sizePixels(int)
 func (this *QPageSize) SizePixels(resolution int) *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize10sizePixelsEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), resolution)
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK9QPageSize10sizePixelsEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), resolution)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -448,7 +450,7 @@ func (this *QPageSize) SizePixels(resolution int) *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtGui/qpagesize.h:287
 // index:1
 // Public static
-// QSize sizePixels(QPageSize::PageSizeId, int)
+// QSize sizePixels(enum QPageSize::PageSizeId, int)
 func (this *QPageSize) SizePixels_1(pageSizeId int, resolution int) *qtcore.QSize /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSize10sizePixelsENS_10PageSizeIdEi", ffiqt.FFI_TYPE_POINTER, pageSizeId, resolution)
 	gopp.ErrPrint(err, rv)
@@ -465,7 +467,7 @@ func QPageSize_SizePixels_1(pageSizeId int, resolution int) *qtcore.QSize /*123*
 // /usr/include/qt/QtGui/qpagesize.h:267
 // index:0
 // Public
-// QRectF rect(QPageSize::Unit)
+// QRectF rect(enum QPageSize::Unit)
 func (this *QPageSize) Rect(units int) *qtcore.QRectF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPageSize4rectENS_4UnitE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), units)

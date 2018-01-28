@@ -68,7 +68,7 @@ func (*QCryptographicHash) NewFromPointer(cthis unsafe.Pointer) *QCryptographicH
 // /usr/include/qt/QtCore/qcryptographichash.h:92
 // index:0
 // Public
-// void QCryptographicHash(QCryptographicHash::Algorithm)
+// void QCryptographicHash(enum QCryptographicHash::Algorithm)
 func NewQCryptographicHash(method int) *QCryptographicHash {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHashC2ENS_9AlgorithmE", ffiqt.FFI_TYPE_VOID, cthis, method)
@@ -145,9 +145,10 @@ func (this *QCryptographicHash) Result() *QByteArray /*123*/ {
 // /usr/include/qt/QtCore/qcryptographichash.h:103
 // index:0
 // Public static
-// QByteArray hash(const QByteArray &, QCryptographicHash::Algorithm)
+// QByteArray hash(const QByteArray &, enum QCryptographicHash::Algorithm)
 func (this *QCryptographicHash) Hash(data *QByteArray, method int) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash4hashERK10QByteArrayNS_9AlgorithmE", ffiqt.FFI_TYPE_POINTER, data, method)
+	var convArg0 = data.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash4hashERK10QByteArrayNS_9AlgorithmE", ffiqt.FFI_TYPE_POINTER, convArg0, method)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333

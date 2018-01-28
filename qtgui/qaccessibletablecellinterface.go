@@ -97,7 +97,7 @@ func (this *QAccessibleTableCellInterface) ColumnIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface11columnIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:585
@@ -108,7 +108,7 @@ func (this *QAccessibleTableCellInterface) RowIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface8rowIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:586
@@ -119,7 +119,7 @@ func (this *QAccessibleTableCellInterface) ColumnExtent() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface12columnExtentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:587
@@ -130,7 +130,7 @@ func (this *QAccessibleTableCellInterface) RowExtent() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface9rowExtentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:589

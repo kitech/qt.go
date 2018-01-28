@@ -84,7 +84,7 @@ func NewQRegion() *QRegion {
 // /usr/include/qt/QtGui/qregion.h:68
 // index:1
 // Public
-// void QRegion(int, int, int, int, QRegion::RegionType)
+// void QRegion(int, int, int, int, enum QRegion::RegionType)
 func NewQRegion_1(x int, y int, w int, h int, t int) *QRegion {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2EiiiiNS_10RegionTypeE", ffiqt.FFI_TYPE_VOID, cthis, x, y, w, h, t)
@@ -96,7 +96,7 @@ func NewQRegion_1(x int, y int, w int, h int, t int) *QRegion {
 // /usr/include/qt/QtGui/qregion.h:69
 // index:2
 // Public
-// void QRegion(const QRect &, QRegion::RegionType)
+// void QRegion(const QRect &, enum QRegion::RegionType)
 func NewQRegion_2(r *qtcore.QRect, t int) *QRegion {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = r.GetCthis()
@@ -283,8 +283,8 @@ func (this *QRegion) Translated(dx int, dy int) *QRegion /*123*/ {
 // Public inline
 // QRegion translated(const QPoint &)
 func (this *QRegion) Translated_1(p *qtcore.QPoint) *QRegion /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = p.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10translatedERK6QPoint", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -298,8 +298,8 @@ func (this *QRegion) Translated_1(p *qtcore.QPoint) *QRegion /*123*/ {
 // Public
 // QRegion united(const QRegion &)
 func (this *QRegion) United(r *QRegion) *QRegion /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion6unitedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -313,8 +313,8 @@ func (this *QRegion) United(r *QRegion) *QRegion /*123*/ {
 // Public
 // QRegion united(const QRect &)
 func (this *QRegion) United_1(r *qtcore.QRect) *QRegion /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion6unitedERK5QRect", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -328,8 +328,8 @@ func (this *QRegion) United_1(r *qtcore.QRect) *QRegion /*123*/ {
 // Public
 // QRegion intersected(const QRegion &)
 func (this *QRegion) Intersected(r *QRegion) *QRegion /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -343,8 +343,8 @@ func (this *QRegion) Intersected(r *QRegion) *QRegion /*123*/ {
 // Public
 // QRegion intersected(const QRect &)
 func (this *QRegion) Intersected_1(r *qtcore.QRect) *QRegion /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion11intersectedERK5QRect", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -358,8 +358,8 @@ func (this *QRegion) Intersected_1(r *qtcore.QRect) *QRegion /*123*/ {
 // Public
 // QRegion subtracted(const QRegion &)
 func (this *QRegion) Subtracted(r *QRegion) *QRegion /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10subtractedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -373,8 +373,8 @@ func (this *QRegion) Subtracted(r *QRegion) *QRegion /*123*/ {
 // Public
 // QRegion xored(const QRegion &)
 func (this *QRegion) Xored(r *QRegion) *QRegion /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion5xoredERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -439,7 +439,7 @@ func (this *QRegion) RectCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion9rectCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 type QRegion__RegionType = int

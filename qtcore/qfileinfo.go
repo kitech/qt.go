@@ -183,7 +183,8 @@ func (this *QFileInfo) Exists() bool {
 // Public static
 // bool exists(const QString &)
 func (this *QFileInfo) Exists_1(file *QString) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfo6existsERK7QString", ffiqt.FFI_TYPE_POINTER, file)
+	var convArg0 = file.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfo6existsERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -740,7 +741,7 @@ func (this *QFileInfo) Caching() bool {
 // /usr/include/qt/QtCore/qfileinfo.h:144
 // index:0
 // Public
-// void setCaching(bool)
+// void setCaching(_Bool)
 func (this *QFileInfo) SetCaching(on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfo10setCachingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)

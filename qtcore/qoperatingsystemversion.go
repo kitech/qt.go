@@ -68,7 +68,7 @@ func (*QOperatingSystemVersion) NewFromPointer(cthis unsafe.Pointer) *QOperating
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:85
 // index:0
 // Public inline
-// void QOperatingSystemVersion(QOperatingSystemVersion::OSType, int, int, int)
+// void QOperatingSystemVersion(enum QOperatingSystemVersion::OSType, int, int, int)
 func NewQOperatingSystemVersion(osType int, vmajor int, vminor int, vmicro int) *QOperatingSystemVersion {
 	cthis := qtrt.Calloc(1, 256) // 16
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QOperatingSystemVersionC2ENS_6OSTypeEiii", ffiqt.FFI_TYPE_VOID, cthis, osType, vmajor, vminor, vmicro)
@@ -118,7 +118,7 @@ func (this *QOperatingSystemVersion) MajorVersion() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12majorVersionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:115
@@ -129,7 +129,7 @@ func (this *QOperatingSystemVersion) MinorVersion() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12minorVersionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:116
@@ -140,7 +140,7 @@ func (this *QOperatingSystemVersion) MicroVersion() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12microVersionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:118
@@ -151,7 +151,7 @@ func (this *QOperatingSystemVersion) SegmentCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QOperatingSystemVersion12segmentCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:124

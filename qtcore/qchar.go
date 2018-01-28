@@ -140,7 +140,7 @@ func NewQChar_5(rc int) *QChar {
 // /usr/include/qt/QtCore/qchar.h:87
 // index:6
 // Public inline
-// void QChar(QChar::SpecialCharacter)
+// void QChar(enum QChar::SpecialCharacter)
 func NewQChar_6(s int) *QChar {
 	cthis := qtrt.Calloc(1, 256) // 2
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QCharC2ENS_16SpecialCharacterE", ffiqt.FFI_TYPE_VOID, cthis, s)
@@ -301,7 +301,7 @@ func (this *QChar) CombiningClass() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar14combiningClassEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return byte(rv) // 111
+	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
 
 // /usr/include/qt/QtCore/qchar.h:510
@@ -312,7 +312,7 @@ func (this *QChar) CombiningClass_1(ucs4 uint) byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar14combiningClassEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return byte(rv) // 111
+	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
 func QChar_CombiningClass_1(ucs4 uint) byte {
 	var nilthis *QChar
@@ -443,7 +443,7 @@ func (this *QChar) DigitValue() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar10digitValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qchar.h:518
@@ -454,7 +454,7 @@ func (this *QChar) DigitValue_1(ucs4 uint) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar10digitValueEj", ffiqt.FFI_TYPE_POINTER, ucs4)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QChar_DigitValue_1(ucs4 uint) int {
 	var nilthis *QChar
@@ -644,7 +644,7 @@ func (this *QChar) ToLatin1() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QChar8toLatin1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return byte(rv) // 111
+	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
 
 // /usr/include/qt/QtCore/qchar.h:433
@@ -1206,7 +1206,9 @@ func QChar_SurrogateToUcs4(high uint16, low uint16) uint {
 // Public static inline
 // uint surrogateToUcs4(QChar, QChar)
 func (this *QChar) SurrogateToUcs4_1(high *QChar /*123*/, low *QChar /*123*/) uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar15surrogateToUcs4ES_S_", ffiqt.FFI_TYPE_POINTER, high, low)
+	var convArg0 = high.GetCthis()
+	var convArg1 = low.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QChar15surrogateToUcs4ES_S_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return uint(rv) // 222

@@ -137,7 +137,7 @@ func (this *QAbstractAnimation) Direction() int {
 // /usr/include/qt/QtCore/qabstractanimation.h:93
 // index:0
 // Public
-// void setDirection(QAbstractAnimation::Direction)
+// void setDirection(enum QAbstractAnimation::Direction)
 func (this *QAbstractAnimation) SetDirection(direction int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation12setDirectionENS_9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), direction)
 	gopp.ErrPrint(err, rv)
@@ -151,7 +151,7 @@ func (this *QAbstractAnimation) CurrentTime() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation11currentTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:96
@@ -162,7 +162,7 @@ func (this *QAbstractAnimation) CurrentLoopTime() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation15currentLoopTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:98
@@ -173,7 +173,7 @@ func (this *QAbstractAnimation) LoopCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation9loopCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:99
@@ -193,7 +193,7 @@ func (this *QAbstractAnimation) CurrentLoop() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation11currentLoopEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:102
@@ -204,7 +204,7 @@ func (this *QAbstractAnimation) Duration() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation8durationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:103
@@ -215,7 +215,7 @@ func (this *QAbstractAnimation) TotalDuration() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation13totalDurationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:106
@@ -284,7 +284,7 @@ func (this *QAbstractAnimation) Resume() {
 // /usr/include/qt/QtCore/qabstractanimation.h:115
 // index:0
 // Public
-// void setPaused(bool)
+// void setPaused(_Bool)
 func (this *QAbstractAnimation) SetPaused(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation9setPausedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

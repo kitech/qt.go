@@ -100,7 +100,8 @@ func (this *ExternalRefCountData) Destroy() {
 // Public static
 // QtSharedPointer::ExternalRefCountData * getAndRef(const QObject *)
 func (this *ExternalRefCountData) GetAndRef(arg0 *QObject /*777 const QObject **/) unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountData9getAndRefEPK7QObject", ffiqt.FFI_TYPE_POINTER, arg0)
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountData9getAndRefEPK7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -114,7 +115,7 @@ func ExternalRefCountData_GetAndRef(arg0 *QObject /*777 const QObject **/) unsaf
 // /usr/include/qt/QtCore/qsharedpointer_impl.h:161
 // index:0
 // Public
-// void setQObjectShared(const QObject *, bool)
+// void setQObjectShared(const QObject *, _Bool)
 func (this *ExternalRefCountData) SetQObjectShared(arg0 *QObject /*777 const QObject **/, enable bool) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountData16setQObjectSharedEPK7QObjectb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, enable)

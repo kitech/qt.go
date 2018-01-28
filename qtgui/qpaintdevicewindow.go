@@ -127,12 +127,12 @@ func (this *QPaintDeviceWindow) PaintEvent(event *QPaintEvent /*777 QPaintEvent 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:71
 // index:0
 // Protected virtual
-// int metric(QPaintDevice::PaintDeviceMetric)
+// int metric(enum QPaintDevice::PaintDeviceMetric)
 func (this *QPaintDeviceWindow) Metric(metric int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QPaintDeviceWindow6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), metric)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:72

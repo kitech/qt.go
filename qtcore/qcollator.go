@@ -144,7 +144,7 @@ func (this *QCollator) SetCaseSensitivity(cs int) {
 // /usr/include/qt/QtCore/qcollator.h:106
 // index:0
 // Public
-// void setNumericMode(bool)
+// void setNumericMode(_Bool)
 func (this *QCollator) SetNumericMode(on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollator14setNumericModeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
@@ -164,7 +164,7 @@ func (this *QCollator) NumericMode() bool {
 // /usr/include/qt/QtCore/qcollator.h:109
 // index:0
 // Public
-// void setIgnorePunctuation(bool)
+// void setIgnorePunctuation(_Bool)
 func (this *QCollator) SetIgnorePunctuation(on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollator20setIgnorePunctuationEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
@@ -191,7 +191,7 @@ func (this *QCollator) Compare(s1 *QString, s2 *QString) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator7compareERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qcollator.h:113
@@ -204,7 +204,7 @@ func (this *QCollator) Compare_1(s1 *QStringRef, s2 *QStringRef) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator7compareERK10QStringRefS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qcollator.h:114
@@ -217,7 +217,7 @@ func (this *QCollator) Compare_2(s1 *QChar /*777 const QChar **/, len1 int, s2 *
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator7compareEPK5QChariS2_i", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len1, convArg2, len2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qcollator.h:119
@@ -225,8 +225,8 @@ func (this *QCollator) Compare_2(s1 *QChar /*777 const QChar **/, len1 int, s2 *
 // Public
 // QCollatorSortKey sortKey(const QString &)
 func (this *QCollator) SortKey(string *QString) *QCollatorSortKey /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = string.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QCollator7sortKeyERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

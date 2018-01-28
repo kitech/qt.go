@@ -171,10 +171,10 @@ func (this *QStaticText) SetTextWidth(textWidth float64) {
 // Public
 // qreal textWidth()
 func (this *QStaticText) TextWidth() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText9textWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText9textWidthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:84
@@ -207,7 +207,7 @@ func (this *QStaticText) TextOption() *QTextOption /*123*/ {
 // QSizeF size()
 func (this *QStaticText) Size() *qtcore.QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStaticText4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK11QStaticText4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -229,7 +229,7 @@ func (this *QStaticText) Prepare(matrix *QTransform, font *QFont) {
 // /usr/include/qt/QtGui/qstatictext.h:91
 // index:0
 // Public
-// void setPerformanceHint(QStaticText::PerformanceHint)
+// void setPerformanceHint(enum QStaticText::PerformanceHint)
 func (this *QStaticText) SetPerformanceHint(performanceHint int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticText18setPerformanceHintENS_15PerformanceHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), performanceHint)
 	gopp.ErrPrint(err, rv)

@@ -140,7 +140,7 @@ func (this *QStringMatcher) IndexIn(str *QString, from int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStringMatcher7indexInERK7QStringi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qstringmatcher.h:67
@@ -152,7 +152,7 @@ func (this *QStringMatcher) IndexIn_1(str *QChar /*777 const QChar **/, length i
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStringMatcher7indexInEPK5QCharii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, length, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qstringmatcher.h:68

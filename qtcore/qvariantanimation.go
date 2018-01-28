@@ -194,7 +194,7 @@ func (this *QVariantAnimation) Duration() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation8durationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qvariantanimation.h:86
@@ -285,9 +285,9 @@ func (this *QVariantAnimation) UpdateCurrentValue(value *QVariant) {
 // Protected virtual
 // QVariant interpolated(const QVariant &, const QVariant &, qreal)
 func (this *QVariantAnimation) Interpolated(from *QVariant, to *QVariant, progress float64) *QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = from.GetCthis()
 	var convArg1 = to.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QVariantAnimation12interpolatedERK8QVariantS2_d", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, progress)
 	gopp.ErrPrint(err, rv)
 	//  return rv

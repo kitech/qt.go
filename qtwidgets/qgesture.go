@@ -177,7 +177,7 @@ func (this *QGesture) UnsetHotSpot() {
 // /usr/include/qt/QtWidgets/qgesture.h:90
 // index:0
 // Public
-// void setGestureCancelPolicy(QGesture::GestureCancelPolicy)
+// void setGestureCancelPolicy(enum QGesture::GestureCancelPolicy)
 func (this *QGesture) SetGestureCancelPolicy(policy int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGesture22setGestureCancelPolicyENS_19GestureCancelPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)

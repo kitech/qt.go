@@ -96,7 +96,7 @@ func NewQPolygon_1(size int) *QPolygon {
 // /usr/include/qt/QtGui/qpolygon.h:66
 // index:2
 // Public
-// void QPolygon(const QRect &, bool)
+// void QPolygon(const QRect &, _Bool)
 func NewQPolygon_2(r *qtcore.QRect, closed bool) *QPolygon {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = r.GetCthis()
@@ -175,8 +175,8 @@ func (this *QPolygon) Translated(dx int, dy int) *QPolygon /*123*/ {
 // Public inline
 // QPolygon translated(const QPoint &)
 func (this *QPolygon) Translated_1(offset *qtcore.QPoint) *QPolygon /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = offset.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon10translatedERK6QPoint", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -286,8 +286,8 @@ func (this *QPolygon) ContainsPoint(pt *qtcore.QPoint, fillRule int) bool {
 // Public
 // QPolygon united(const QPolygon &)
 func (this *QPolygon) United(r *QPolygon) *QPolygon /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon6unitedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -301,8 +301,8 @@ func (this *QPolygon) United(r *QPolygon) *QPolygon /*123*/ {
 // Public
 // QPolygon intersected(const QPolygon &)
 func (this *QPolygon) Intersected(r *QPolygon) *QPolygon /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -316,8 +316,8 @@ func (this *QPolygon) Intersected(r *QPolygon) *QPolygon /*123*/ {
 // Public
 // QPolygon subtracted(const QPolygon &)
 func (this *QPolygon) Subtracted(r *QPolygon) *QPolygon /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPolygon10subtractedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

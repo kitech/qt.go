@@ -208,7 +208,7 @@ func (this *QQuickView) ResizeMode() int {
 // /usr/include/qt/QtQuick/qquickview.h:78
 // index:0
 // Public
-// void setResizeMode(QQuickView::ResizeMode)
+// void setResizeMode(enum QQuickView::ResizeMode)
 func (this *QQuickView) SetResizeMode(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQuickView13setResizeModeENS_10ResizeModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -231,7 +231,7 @@ func (this *QQuickView) Status() int {
 // QSize sizeHint()
 func (this *QQuickView) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QQuickView8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK10QQuickView8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -245,7 +245,7 @@ func (this *QQuickView) SizeHint() *qtcore.QSize /*123*/ {
 // QSize initialSize()
 func (this *QQuickView) InitialSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QQuickView11initialSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK10QQuickView11initialSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))

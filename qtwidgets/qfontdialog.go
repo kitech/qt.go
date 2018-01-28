@@ -163,7 +163,7 @@ func (this *QFontDialog) SelectedFont() *qtgui.QFont /*123*/ {
 // /usr/include/qt/QtWidgets/qfontdialog.h:84
 // index:0
 // Public
-// void setOption(QFontDialog::FontDialogOption, bool)
+// void setOption(enum QFontDialog::FontDialogOption, _Bool)
 func (this *QFontDialog) SetOption(option int, on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog9setOptionENS_16FontDialogOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	gopp.ErrPrint(err, rv)
@@ -172,7 +172,7 @@ func (this *QFontDialog) SetOption(option int, on bool) {
 // /usr/include/qt/QtWidgets/qfontdialog.h:85
 // index:0
 // Public
-// bool testOption(QFontDialog::FontDialogOption)
+// bool testOption(enum QFontDialog::FontDialogOption)
 func (this *QFontDialog) TestOption(option int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFontDialog10testOptionENS_16FontDialogOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
@@ -206,7 +206,7 @@ func (this *QFontDialog) Open(receiver *qtcore.QObject /*777 QObject **/, member
 // /usr/include/qt/QtWidgets/qfontdialog.h:92
 // index:0
 // Public virtual
-// void setVisible(bool)
+// void setVisible(_Bool)
 func (this *QFontDialog) SetVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
@@ -215,9 +215,10 @@ func (this *QFontDialog) SetVisible(visible bool) {
 // /usr/include/qt/QtWidgets/qfontdialog.h:94
 // index:0
 // Public static
-// QFont getFont(bool *, QWidget *)
+// QFont getFont(_Bool *, QWidget *)
 func (this *QFontDialog) GetFont(ok unsafe.Pointer /*666*/, parent *QWidget /*777 QWidget **/) *qtgui.QFont /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog7getFontEPbP7QWidget", ffiqt.FFI_TYPE_POINTER, ok, parent)
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog7getFontEPbP7QWidget", ffiqt.FFI_TYPE_POINTER, &ok, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333

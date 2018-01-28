@@ -216,3 +216,67 @@ func (ba *QByteArray5) Length() int {
 	gopp.ErrPrint(err)
 	return (convRetval(FFI_TYPE_INT, l).(int))
 }
+
+type QSize struct {
+	cptr unsafe.Pointer
+}
+
+func NewQSize() *QSize {
+	o := &QSize{}
+
+	t := C.calloc(1, 256)
+
+	InvokeQtFunc6("_ZN5QSizeC2Ev", FFI_TYPE_VOID, t)
+
+	o.cptr = t
+	return o
+}
+
+func (this *QSize) Height() int {
+	rv, err := InvokeQtFunc6("_ZNK5QSize6heightEv", FFI_TYPE_POINTER, this.cptr)
+	gopp.ErrPrint(err, rv)
+	log.Println(rv)
+	return int((C.int)(rv))
+}
+func (this *QSize) RHeight() int {
+	rv, err := InvokeQtFunc6("_ZN5QSize7rheightEv", FFI_TYPE_POINTER, this.cptr)
+	gopp.ErrPrint(err, rv)
+	return int(*(*C.int)(unsafe.Pointer(uintptr(rv))))
+}
+
+type QSizeF struct {
+	cptr unsafe.Pointer
+}
+
+func NewQSizeF() *QSizeF {
+	o := &QSizeF{}
+
+	t := C.calloc(1, 256)
+
+	InvokeQtFunc6("_ZN6QSizeFC2Ev", FFI_TYPE_VOID, t)
+
+	o.cptr = t
+	return o
+}
+
+func (this *QSizeF) Height() float64 {
+	// var r C.uint64_t
+	// var rp *C.double
+
+	rv, err := InvokeQtFunc6("_ZNK6QSizeF6heightEv", FFI_TYPE_DOUBLE, this.cptr)
+	gopp.ErrPrint(err, rv)
+
+	// log.Println(r, uint64(r), uintptr(unsafe.Pointer(&r)))
+	log.Println(rv, float64(rv), &rv, (C.double)(rv), (C.float)(rv))
+	log.Println(*(*C.double)(unsafe.Pointer(&rv)))
+	var rvx interface{} = float64(*(*C.double)(unsafe.Pointer(&rv)))
+	log.Println(rvx.(float64))
+	// log.Println(*(*C.double)(unsafe.Pointer(uintptr(rv))))
+	// log.Println(float64(*(*C.double)(unsafe.Pointer(uintptr(rv)))))
+	return float64((C.double)(rv))
+}
+func (this *QSizeF) RHeight() float64 {
+	rv, err := InvokeQtFunc6("_ZN6QSizeF7rheightEv", FFI_TYPE_POINTER, this.cptr)
+	gopp.ErrPrint(err, rv)
+	return float64(*(*C.double)(unsafe.Pointer(uintptr(rv))))
+}

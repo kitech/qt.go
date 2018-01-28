@@ -144,7 +144,7 @@ func (this *QDialogButtonBox) Orientation() int {
 // /usr/include/qt/QtWidgets/qdialogbuttonbox.h:130
 // index:0
 // Public
-// void addButton(QAbstractButton *, QDialogButtonBox::ButtonRole)
+// void addButton(QAbstractButton *, enum QDialogButtonBox::ButtonRole)
 func (this *QDialogButtonBox) AddButton(button *QAbstractButton /*777 QAbstractButton **/, role int) {
 	var convArg0 = button.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox9addButtonEP15QAbstractButtonNS_10ButtonRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
@@ -154,7 +154,7 @@ func (this *QDialogButtonBox) AddButton(button *QAbstractButton /*777 QAbstractB
 // /usr/include/qt/QtWidgets/qdialogbuttonbox.h:131
 // index:1
 // Public
-// QPushButton * addButton(const QString &, QDialogButtonBox::ButtonRole)
+// QPushButton * addButton(const QString &, enum QDialogButtonBox::ButtonRole)
 func (this *QDialogButtonBox) AddButton_1(text *qtcore.QString, role int) *QPushButton /*777 QPushButton **/ {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox9addButtonERK7QStringNS_10ButtonRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role)
@@ -167,7 +167,7 @@ func (this *QDialogButtonBox) AddButton_1(text *qtcore.QString, role int) *QPush
 // /usr/include/qt/QtWidgets/qdialogbuttonbox.h:132
 // index:2
 // Public
-// QPushButton * addButton(QDialogButtonBox::StandardButton)
+// QPushButton * addButton(enum QDialogButtonBox::StandardButton)
 func (this *QDialogButtonBox) AddButton_2(button int) *QPushButton /*777 QPushButton **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox9addButtonENS_14StandardButtonE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), button)
 	gopp.ErrPrint(err, rv)
@@ -233,7 +233,7 @@ func (this *QDialogButtonBox) StandardButton(button *QAbstractButton /*777 QAbst
 // /usr/include/qt/QtWidgets/qdialogbuttonbox.h:142
 // index:0
 // Public
-// QPushButton * button(QDialogButtonBox::StandardButton)
+// QPushButton * button(enum QDialogButtonBox::StandardButton)
 func (this *QDialogButtonBox) Button(which int) *QPushButton /*777 QPushButton **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QDialogButtonBox6buttonENS_14StandardButtonE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), which)
 	gopp.ErrPrint(err, rv)
@@ -245,7 +245,7 @@ func (this *QDialogButtonBox) Button(which int) *QPushButton /*777 QPushButton *
 // /usr/include/qt/QtWidgets/qdialogbuttonbox.h:144
 // index:0
 // Public
-// void setCenterButtons(bool)
+// void setCenterButtons(_Bool)
 func (this *QDialogButtonBox) SetCenterButtons(center bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox16setCenterButtonsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), center)
 	gopp.ErrPrint(err, rv)

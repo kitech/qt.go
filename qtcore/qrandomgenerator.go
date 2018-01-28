@@ -104,7 +104,7 @@ func NewQRandomGenerator_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*66
 // /usr/include/qt/QtCore/qrandom.h:172
 // index:3
 // Protected
-// void QRandomGenerator(QRandomGenerator::System)
+// void QRandomGenerator(enum QRandomGenerator::System)
 func NewQRandomGenerator_3(arg0 int) *QRandomGenerator {
 	cthis := qtrt.Calloc(1, 256) // 2512
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGeneratorC2ENS_6SystemE", ffiqt.FFI_TYPE_VOID, cthis, arg0)
@@ -149,10 +149,10 @@ func (this *QRandomGenerator) Generate64() uint64 {
 // Public inline
 // double generateDouble()
 func (this *QRandomGenerator) GenerateDouble() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator14generateDoubleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator14generateDoubleEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qrandom.h:105
@@ -160,10 +160,10 @@ func (this *QRandomGenerator) GenerateDouble() float64 {
 // Public inline
 // double bounded(double)
 func (this *QRandomGenerator) Bounded(highest float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), highest)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEd", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), highest)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qrandom.h:110
@@ -185,7 +185,7 @@ func (this *QRandomGenerator) Bounded_2(highest int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), highest)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qrandom.h:123
@@ -207,7 +207,7 @@ func (this *QRandomGenerator) Bounded_4(lowest int, highest int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRandomGenerator7boundedEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), lowest, highest)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qrandom.h:160

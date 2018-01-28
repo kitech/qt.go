@@ -164,8 +164,8 @@ func (this *QNetworkDiskCache) CacheSize() int64 {
 // Public virtual
 // QNetworkCacheMetaData metaData(const QUrl &)
 func (this *QNetworkDiskCache) MetaData(url *qtcore.QUrl) *QNetworkCacheMetaData /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = url.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QNetworkDiskCache8metaDataERK4QUrl", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -227,8 +227,8 @@ func (this *QNetworkDiskCache) Prepare(metaData *QNetworkCacheMetaData) *qtcore.
 // Public
 // QNetworkCacheMetaData fileMetaData(const QString &)
 func (this *QNetworkDiskCache) FileMetaData(fileName *qtcore.QString) *QNetworkCacheMetaData /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fileName.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QNetworkDiskCache12fileMetaDataERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

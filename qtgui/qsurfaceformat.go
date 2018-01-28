@@ -107,7 +107,7 @@ func (this *QSurfaceFormat) DepthBufferSize() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat15depthBufferSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qsurfaceformat.h:103
@@ -127,7 +127,7 @@ func (this *QSurfaceFormat) StencilBufferSize() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat17stencilBufferSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qsurfaceformat.h:106
@@ -147,7 +147,7 @@ func (this *QSurfaceFormat) RedBufferSize() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat13redBufferSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qsurfaceformat.h:108
@@ -167,7 +167,7 @@ func (this *QSurfaceFormat) GreenBufferSize() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat15greenBufferSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qsurfaceformat.h:110
@@ -187,7 +187,7 @@ func (this *QSurfaceFormat) BlueBufferSize() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat14blueBufferSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qsurfaceformat.h:112
@@ -207,7 +207,7 @@ func (this *QSurfaceFormat) AlphaBufferSize() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat15alphaBufferSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qsurfaceformat.h:115
@@ -227,13 +227,13 @@ func (this *QSurfaceFormat) Samples() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat7samplesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qsurfaceformat.h:118
 // index:0
 // Public
-// void setSwapBehavior(QSurfaceFormat::SwapBehavior)
+// void setSwapBehavior(enum QSurfaceFormat::SwapBehavior)
 func (this *QSurfaceFormat) SetSwapBehavior(behavior int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat15setSwapBehaviorENS_12SwapBehaviorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), behavior)
 	gopp.ErrPrint(err, rv)
@@ -264,7 +264,7 @@ func (this *QSurfaceFormat) HasAlpha() bool {
 // /usr/include/qt/QtGui/qsurfaceformat.h:123
 // index:0
 // Public
-// void setProfile(QSurfaceFormat::OpenGLContextProfile)
+// void setProfile(enum QSurfaceFormat::OpenGLContextProfile)
 func (this *QSurfaceFormat) SetProfile(profile int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat10setProfileENS_20OpenGLContextProfileE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), profile)
 	gopp.ErrPrint(err, rv)
@@ -284,7 +284,7 @@ func (this *QSurfaceFormat) Profile() int {
 // /usr/include/qt/QtGui/qsurfaceformat.h:126
 // index:0
 // Public
-// void setRenderableType(QSurfaceFormat::RenderableType)
+// void setRenderableType(enum QSurfaceFormat::RenderableType)
 func (this *QSurfaceFormat) SetRenderableType(type_ int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat17setRenderableTypeENS_14RenderableTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
@@ -318,7 +318,7 @@ func (this *QSurfaceFormat) MajorVersion() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat12majorVersionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qsurfaceformat.h:132
@@ -338,7 +338,7 @@ func (this *QSurfaceFormat) MinorVersion() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat12minorVersionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qsurfaceformat.h:136
@@ -364,7 +364,7 @@ func (this *QSurfaceFormat) Stereo() bool {
 // /usr/include/qt/QtGui/qsurfaceformat.h:139
 // index:0
 // Public
-// void setStereo(bool)
+// void setStereo(_Bool)
 func (this *QSurfaceFormat) SetStereo(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat9setStereoEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -373,7 +373,7 @@ func (this *QSurfaceFormat) SetStereo(enable bool) {
 // /usr/include/qt/QtGui/qsurfaceformat.h:147
 // index:0
 // Public
-// void setOption(QSurfaceFormat::FormatOption, bool)
+// void setOption(enum QSurfaceFormat::FormatOption, _Bool)
 func (this *QSurfaceFormat) SetOption(option int, on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat9setOptionENS_12FormatOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	gopp.ErrPrint(err, rv)
@@ -382,7 +382,7 @@ func (this *QSurfaceFormat) SetOption(option int, on bool) {
 // /usr/include/qt/QtGui/qsurfaceformat.h:148
 // index:0
 // Public
-// bool testOption(QSurfaceFormat::FormatOption)
+// bool testOption(enum QSurfaceFormat::FormatOption)
 func (this *QSurfaceFormat) TestOption(option int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat10testOptionENS_12FormatOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
@@ -409,7 +409,7 @@ func (this *QSurfaceFormat) SwapInterval() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat12swapIntervalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qsurfaceformat.h:152
@@ -435,7 +435,7 @@ func (this *QSurfaceFormat) ColorSpace() int {
 // /usr/include/qt/QtGui/qsurfaceformat.h:155
 // index:0
 // Public
-// void setColorSpace(QSurfaceFormat::ColorSpace)
+// void setColorSpace(enum QSurfaceFormat::ColorSpace)
 func (this *QSurfaceFormat) SetColorSpace(colorSpace int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat13setColorSpaceENS_10ColorSpaceE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), colorSpace)
 	gopp.ErrPrint(err, rv)
@@ -446,7 +446,8 @@ func (this *QSurfaceFormat) SetColorSpace(colorSpace int) {
 // Public static
 // void setDefaultFormat(const QSurfaceFormat &)
 func (this *QSurfaceFormat) SetDefaultFormat(format *QSurfaceFormat) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat16setDefaultFormatERKS_", ffiqt.FFI_TYPE_POINTER, format)
+	var convArg0 = format.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat16setDefaultFormatERKS_", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QSurfaceFormat_SetDefaultFormat(format *QSurfaceFormat) {

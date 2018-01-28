@@ -94,7 +94,7 @@ func NewQState(parent *QState /*777 QState **/) *QState {
 // /usr/include/qt/QtCore/qstate.h:75
 // index:1
 // Public
-// void QState(QState::ChildMode, QState *)
+// void QState(enum QState::ChildMode, QState *)
 func NewQState_1(childMode int, parent *QState /*777 QState **/) *QState {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = parent.GetCthis()
@@ -220,7 +220,7 @@ func (this *QState) ChildMode() int {
 // /usr/include/qt/QtCore/qstate.h:104
 // index:0
 // Public
-// void setChildMode(QState::ChildMode)
+// void setChildMode(enum QState::ChildMode)
 func (this *QState) SetChildMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QState12setChildModeENS_9ChildModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)

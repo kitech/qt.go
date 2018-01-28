@@ -92,7 +92,7 @@ func (this *QPaintEngine) IsActive() bool {
 // /usr/include/qt/QtGui/qpaintengine.h:151
 // index:0
 // Public inline
-// void setActive(bool)
+// void setActive(_Bool)
 func (this *QPaintEngine) SetActive(newState bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine9setActiveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), newState)
 	gopp.ErrPrint(err, rv)
@@ -224,7 +224,7 @@ func (this *QPaintEngine) DrawPoints_1(points *qtcore.QPoint /*777 const QPoint 
 // /usr/include/qt/QtGui/qpaintengine.h:172
 // index:0
 // Public virtual
-// void drawPolygon(const QPointF *, int, QPaintEngine::PolygonDrawMode)
+// void drawPolygon(const QPointF *, int, enum QPaintEngine::PolygonDrawMode)
 func (this *QPaintEngine) DrawPolygon(points *qtcore.QPointF /*777 const QPointF **/, pointCount int, mode int) {
 	var convArg0 = points.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine11drawPolygonEPK7QPointFiNS_15PolygonDrawModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pointCount, mode)
@@ -234,7 +234,7 @@ func (this *QPaintEngine) DrawPolygon(points *qtcore.QPointF /*777 const QPointF
 // /usr/include/qt/QtGui/qpaintengine.h:173
 // index:1
 // Public virtual
-// void drawPolygon(const QPoint *, int, QPaintEngine::PolygonDrawMode)
+// void drawPolygon(const QPoint *, int, enum QPaintEngine::PolygonDrawMode)
 func (this *QPaintEngine) DrawPolygon_1(points *qtcore.QPoint /*777 const QPoint **/, pointCount int, mode int) {
 	var convArg0 = points.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine11drawPolygonEPK6QPointiNS_15PolygonDrawModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, pointCount, mode)

@@ -225,7 +225,7 @@ func (this *QSGSimpleTextureNode) TextureCoordinatesTransform() int {
 // /usr/include/qt/QtQuick/qsgsimpletexturenode.h:81
 // index:0
 // Public
-// void setOwnsTexture(bool)
+// void setOwnsTexture(_Bool)
 func (this *QSGSimpleTextureNode) SetOwnsTexture(owns bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode14setOwnsTextureEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), owns)
 	gopp.ErrPrint(err, rv)

@@ -184,7 +184,7 @@ func (this *QObject) SignalsBlocked() bool {
 // /usr/include/qt/QtCore/qobject.h:151
 // index:0
 // Public
-// bool blockSignals(bool)
+// bool blockSignals(_Bool)
 func (this *QObject) BlockSignals(b bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject12blockSignalsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -222,7 +222,7 @@ func (this *QObject) StartTimer(interval int, timerType int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject10startTimerEiN2Qt9TimerTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), interval, timerType)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qobject.h:164
@@ -269,7 +269,13 @@ func (this *QObject) RemoveEventFilter(obj *QObject /*777 QObject **/) {
 // Public static
 // QMetaObject::Connection connect(const QObject *, const char *, const QObject *, const char *, Qt::ConnectionType)
 func (this *QObject) Connect(sender *QObject /*777 const QObject **/, signal string, receiver *QObject /*777 const QObject **/, member string, arg4 int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject7connectEPKS_PKcS1_S3_N2Qt14ConnectionTypeE", ffiqt.FFI_TYPE_POINTER, sender, signal, receiver, member, arg4)
+	var convArg0 = sender.GetCthis()
+	var convArg1 = qtrt.CString(signal)
+	defer qtrt.FreeMem(convArg1)
+	var convArg2 = receiver.GetCthis()
+	var convArg3 = qtrt.CString(member)
+	defer qtrt.FreeMem(convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject7connectEPKS_PKcS1_S3_N2Qt14ConnectionTypeE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, arg4)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv)
@@ -285,7 +291,11 @@ func QObject_Connect(sender *QObject /*777 const QObject **/, signal string, rec
 // Public static
 // QMetaObject::Connection connect(const QObject *, const QMetaMethod &, const QObject *, const QMetaMethod &, Qt::ConnectionType)
 func (this *QObject) Connect_1(sender *QObject /*777 const QObject **/, signal *QMetaMethod, receiver *QObject /*777 const QObject **/, method *QMetaMethod, type_ int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject7connectEPKS_RK11QMetaMethodS1_S4_N2Qt14ConnectionTypeE", ffiqt.FFI_TYPE_POINTER, sender, signal, receiver, method, type_)
+	var convArg0 = sender.GetCthis()
+	var convArg1 = signal.GetCthis()
+	var convArg2 = receiver.GetCthis()
+	var convArg3 = method.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject7connectEPKS_RK11QMetaMethodS1_S4_N2Qt14ConnectionTypeE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, type_)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv)
@@ -317,7 +327,13 @@ func (this *QObject) Connect_2(sender *QObject /*777 const QObject **/, signal s
 // Public static
 // bool disconnect(const QObject *, const char *, const QObject *, const char *)
 func (this *QObject) Disconnect(sender *QObject /*777 const QObject **/, signal string, receiver *QObject /*777 const QObject **/, member string) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject10disconnectEPKS_PKcS1_S3_", ffiqt.FFI_TYPE_POINTER, sender, signal, receiver, member)
+	var convArg0 = sender.GetCthis()
+	var convArg1 = qtrt.CString(signal)
+	defer qtrt.FreeMem(convArg1)
+	var convArg2 = receiver.GetCthis()
+	var convArg3 = qtrt.CString(member)
+	defer qtrt.FreeMem(convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject10disconnectEPKS_PKcS1_S3_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -333,7 +349,11 @@ func QObject_Disconnect(sender *QObject /*777 const QObject **/, signal string, 
 // Public static
 // bool disconnect(const QObject *, const QMetaMethod &, const QObject *, const QMetaMethod &)
 func (this *QObject) Disconnect_1(sender *QObject /*777 const QObject **/, signal *QMetaMethod, receiver *QObject /*777 const QObject **/, member *QMetaMethod) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_", ffiqt.FFI_TYPE_POINTER, sender, signal, receiver, member)
+	var convArg0 = sender.GetCthis()
+	var convArg1 = signal.GetCthis()
+	var convArg2 = receiver.GetCthis()
+	var convArg3 = member.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -429,9 +449,9 @@ func (this *QObject) SetProperty(name string, value *QVariant) bool {
 // Public
 // QVariant property(const char *)
 func (this *QObject) Property(name string) *QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = qtrt.CString(name)
 	defer qtrt.FreeMem(convArg0)
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QObject8propertyEPKc", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -542,7 +562,7 @@ func (this *QObject) SenderSignalIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QObject17senderSignalIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qobject.h:424
@@ -555,7 +575,7 @@ func (this *QObject) Receivers(signal string) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QObject9receiversEPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qobject.h:425

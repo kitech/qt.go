@@ -73,7 +73,7 @@ func (*QFocusEvent) NewFromPointer(cthis unsafe.Pointer) *QFocusEvent {
 // /usr/include/qt/QtGui/qevent.h:389
 // index:0
 // Public
-// void QFocusEvent(QEvent::Type, Qt::FocusReason)
+// void QFocusEvent(enum QEvent::Type, Qt::FocusReason)
 func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
 	cthis := qtrt.Calloc(1, 256) // 24
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFocusEventC2EN6QEvent4TypeEN2Qt11FocusReasonE", ffiqt.FFI_TYPE_VOID, cthis, type_, reason)

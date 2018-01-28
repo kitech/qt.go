@@ -182,10 +182,10 @@ func (this *QRectF) Normalized() *QRectF /*123*/ {
 // Public inline
 // qreal left()
 func (this *QRectF) Left() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF4leftEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF4leftEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qrect.h:526
@@ -193,10 +193,10 @@ func (this *QRectF) Left() float64 {
 // Public inline
 // qreal top()
 func (this *QRectF) Top() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF3topEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF3topEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qrect.h:527
@@ -204,10 +204,10 @@ func (this *QRectF) Top() float64 {
 // Public inline
 // qreal right()
 func (this *QRectF) Right() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF5rightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF5rightEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qrect.h:528
@@ -215,10 +215,10 @@ func (this *QRectF) Right() float64 {
 // Public inline
 // qreal bottom()
 func (this *QRectF) Bottom() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF6bottomEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF6bottomEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qrect.h:530
@@ -226,10 +226,10 @@ func (this *QRectF) Bottom() float64 {
 // Public inline
 // qreal x()
 func (this *QRectF) X() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF1xEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qrect.h:531
@@ -237,10 +237,10 @@ func (this *QRectF) X() float64 {
 // Public inline
 // qreal y()
 func (this *QRectF) Y() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF1yEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qrect.h:532
@@ -531,8 +531,8 @@ func (this *QRectF) Translated(dx float64, dy float64) *QRectF /*123*/ {
 // Public inline
 // QRectF translated(const QPointF &)
 func (this *QRectF) Translated_1(p *QPointF) *QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = p.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF10translatedERK7QPointF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -639,7 +639,7 @@ func (this *QRectF) Adjusted(x1 float64, y1 float64, x2 float64, y2 float64) *QR
 // QSizeF size()
 func (this *QRectF) Size() *QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK6QRectF4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -652,10 +652,10 @@ func (this *QRectF) Size() *QSizeF /*123*/ {
 // Public inline
 // qreal width()
 func (this *QRectF) Width() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF5widthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qrect.h:582
@@ -663,10 +663,10 @@ func (this *QRectF) Width() float64 {
 // Public inline
 // qreal height()
 func (this *QRectF) Height() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF6heightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF6heightEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qrect.h:583
@@ -737,8 +737,8 @@ func (this *QRectF) Contains_2(x float64, y float64) bool {
 // Public inline
 // QRectF united(const QRectF &)
 func (this *QRectF) United(other *QRectF) *QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = other.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF6unitedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -752,8 +752,8 @@ func (this *QRectF) United(other *QRectF) *QRectF /*123*/ {
 // Public inline
 // QRectF intersected(const QRectF &)
 func (this *QRectF) Intersected(other *QRectF) *QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = other.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -779,8 +779,8 @@ func (this *QRectF) Intersects(r *QRectF) bool {
 // Public inline
 // QRectF marginsAdded(const QMarginsF &)
 func (this *QRectF) MarginsAdded(margins *QMarginsF) *QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = margins.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF12marginsAddedERK9QMarginsF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -794,8 +794,8 @@ func (this *QRectF) MarginsAdded(margins *QMarginsF) *QRectF /*123*/ {
 // Public inline
 // QRectF marginsRemoved(const QMarginsF &)
 func (this *QRectF) MarginsRemoved(margins *QMarginsF) *QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = margins.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QRectF14marginsRemovedERK9QMarginsF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

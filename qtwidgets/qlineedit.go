@@ -182,7 +182,7 @@ func (this *QLineEdit) MaxLength() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLineEdit9maxLengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlineedit.h:105
@@ -197,7 +197,7 @@ func (this *QLineEdit) SetMaxLength(arg0 int) {
 // /usr/include/qt/QtWidgets/qlineedit.h:107
 // index:0
 // Public
-// void setFrame(bool)
+// void setFrame(_Bool)
 func (this *QLineEdit) SetFrame(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit8setFrameEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -217,7 +217,7 @@ func (this *QLineEdit) HasFrame() bool {
 // /usr/include/qt/QtWidgets/qlineedit.h:110
 // index:0
 // Public
-// void setClearButtonEnabled(bool)
+// void setClearButtonEnabled(_Bool)
 func (this *QLineEdit) SetClearButtonEnabled(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit21setClearButtonEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -248,7 +248,7 @@ func (this *QLineEdit) EchoMode() int {
 // /usr/include/qt/QtWidgets/qlineedit.h:116
 // index:0
 // Public
-// void setEchoMode(QLineEdit::EchoMode)
+// void setEchoMode(enum QLineEdit::EchoMode)
 func (this *QLineEdit) SetEchoMode(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit11setEchoModeENS_8EchoModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -268,7 +268,7 @@ func (this *QLineEdit) IsReadOnly() bool {
 // /usr/include/qt/QtWidgets/qlineedit.h:119
 // index:0
 // Public
-// void setReadOnly(bool)
+// void setReadOnly(_Bool)
 func (this *QLineEdit) SetReadOnly(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit11setReadOnlyEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -324,7 +324,7 @@ func (this *QLineEdit) Completer() *QCompleter /*777 QCompleter **/ {
 // QSize sizeHint()
 func (this *QLineEdit) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLineEdit8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK9QLineEdit8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -338,7 +338,7 @@ func (this *QLineEdit) SizeHint() *qtcore.QSize /*123*/ {
 // QSize minimumSizeHint()
 func (this *QLineEdit) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLineEdit15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK9QLineEdit15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -354,7 +354,7 @@ func (this *QLineEdit) CursorPosition() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLineEdit14cursorPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlineedit.h:135
@@ -375,7 +375,7 @@ func (this *QLineEdit) CursorPositionAt(pos *qtcore.QPoint) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit16cursorPositionAtERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlineedit.h:139
@@ -392,7 +392,7 @@ func (this *QLineEdit) Alignment() int {
 // /usr/include/qt/QtWidgets/qlineedit.h:141
 // index:0
 // Public
-// void cursorForward(bool, int)
+// void cursorForward(_Bool, int)
 func (this *QLineEdit) CursorForward(mark bool, steps int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit13cursorForwardEbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mark, steps)
 	gopp.ErrPrint(err, rv)
@@ -401,7 +401,7 @@ func (this *QLineEdit) CursorForward(mark bool, steps int) {
 // /usr/include/qt/QtWidgets/qlineedit.h:142
 // index:0
 // Public
-// void cursorBackward(bool, int)
+// void cursorBackward(_Bool, int)
 func (this *QLineEdit) CursorBackward(mark bool, steps int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit14cursorBackwardEbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mark, steps)
 	gopp.ErrPrint(err, rv)
@@ -410,7 +410,7 @@ func (this *QLineEdit) CursorBackward(mark bool, steps int) {
 // /usr/include/qt/QtWidgets/qlineedit.h:143
 // index:0
 // Public
-// void cursorWordForward(bool)
+// void cursorWordForward(_Bool)
 func (this *QLineEdit) CursorWordForward(mark bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit17cursorWordForwardEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mark)
 	gopp.ErrPrint(err, rv)
@@ -419,7 +419,7 @@ func (this *QLineEdit) CursorWordForward(mark bool) {
 // /usr/include/qt/QtWidgets/qlineedit.h:144
 // index:0
 // Public
-// void cursorWordBackward(bool)
+// void cursorWordBackward(_Bool)
 func (this *QLineEdit) CursorWordBackward(mark bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit18cursorWordBackwardEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mark)
 	gopp.ErrPrint(err, rv)
@@ -446,7 +446,7 @@ func (this *QLineEdit) Del() {
 // /usr/include/qt/QtWidgets/qlineedit.h:147
 // index:0
 // Public
-// void home(bool)
+// void home(_Bool)
 func (this *QLineEdit) Home(mark bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit4homeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mark)
 	gopp.ErrPrint(err, rv)
@@ -455,7 +455,7 @@ func (this *QLineEdit) Home(mark bool) {
 // /usr/include/qt/QtWidgets/qlineedit.h:148
 // index:0
 // Public
-// void end(bool)
+// void end(_Bool)
 func (this *QLineEdit) End(mark bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit3endEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mark)
 	gopp.ErrPrint(err, rv)
@@ -475,7 +475,7 @@ func (this *QLineEdit) IsModified() bool {
 // /usr/include/qt/QtWidgets/qlineedit.h:151
 // index:0
 // Public
-// void setModified(bool)
+// void setModified(_Bool)
 func (this *QLineEdit) SetModified(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit11setModifiedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -523,7 +523,7 @@ func (this *QLineEdit) SelectionStart() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLineEdit14selectionStartEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlineedit.h:157
@@ -534,7 +534,7 @@ func (this *QLineEdit) SelectionEnd() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLineEdit12selectionEndEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlineedit.h:158
@@ -545,7 +545,7 @@ func (this *QLineEdit) SelectionLength() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLineEdit15selectionLengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlineedit.h:160
@@ -573,7 +573,7 @@ func (this *QLineEdit) IsRedoAvailable() bool {
 // /usr/include/qt/QtWidgets/qlineedit.h:163
 // index:0
 // Public
-// void setDragEnabled(bool)
+// void setDragEnabled(_Bool)
 func (this *QLineEdit) SetDragEnabled(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit14setDragEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -690,7 +690,7 @@ func (this *QLineEdit) TextMargins() *qtcore.QMargins /*123*/ {
 // /usr/include/qt/QtWidgets/qlineedit.h:180
 // index:0
 // Public
-// void addAction(QAction *, QLineEdit::ActionPosition)
+// void addAction(QAction *, enum QLineEdit::ActionPosition)
 func (this *QLineEdit) AddAction(action *QAction /*777 QAction **/, position int) {
 	var convArg0 = action.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit9addActionEP7QActionNS_14ActionPositionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, position)
@@ -700,7 +700,7 @@ func (this *QLineEdit) AddAction(action *QAction /*777 QAction **/, position int
 // /usr/include/qt/QtWidgets/qlineedit.h:181
 // index:1
 // Public
-// QAction * addAction(const QIcon &, QLineEdit::ActionPosition)
+// QAction * addAction(const QIcon &, enum QLineEdit::ActionPosition)
 func (this *QLineEdit) AddAction_1(icon *qtgui.QIcon, position int) *QAction /*777 QAction **/ {
 	var convArg0 = icon.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit9addActionERK5QIconNS_14ActionPositionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, position)
@@ -1039,8 +1039,8 @@ func (this *QLineEdit) InputMethodQuery(arg0 int) *qtcore.QVariant /*123*/ {
 // Public
 // QVariant inputMethodQuery(Qt::InputMethodQuery, QVariant)
 func (this *QLineEdit) InputMethodQuery_1(property int, argument *qtcore.QVariant /*123*/) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg1 = argument.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLineEdit16inputMethodQueryEN2Qt16InputMethodQueryE8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), property, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv

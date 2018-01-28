@@ -127,7 +127,7 @@ func (this *QDial) NotchSize() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDial9notchSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qdial.h:72
@@ -144,10 +144,10 @@ func (this *QDial) SetNotchTarget(target float64) {
 // Public
 // qreal notchTarget()
 func (this *QDial) NotchTarget() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDial11notchTargetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDial11notchTargetEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qdial.h:74
@@ -167,7 +167,7 @@ func (this *QDial) NotchesVisible() bool {
 // QSize sizeHint()
 func (this *QDial) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDial8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK5QDial8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -181,7 +181,7 @@ func (this *QDial) SizeHint() *qtcore.QSize /*123*/ {
 // QSize minimumSizeHint()
 func (this *QDial) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDial15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK5QDial15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -192,7 +192,7 @@ func (this *QDial) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qdial.h:80
 // index:0
 // Public
-// void setNotchesVisible(bool)
+// void setNotchesVisible(_Bool)
 func (this *QDial) SetNotchesVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDial17setNotchesVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
@@ -201,7 +201,7 @@ func (this *QDial) SetNotchesVisible(visible bool) {
 // /usr/include/qt/QtWidgets/qdial.h:81
 // index:0
 // Public
-// void setWrapping(bool)
+// void setWrapping(_Bool)
 func (this *QDial) SetWrapping(on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDial11setWrappingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
@@ -272,7 +272,7 @@ func (this *QDial) MouseMoveEvent(me *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 // /usr/include/qt/QtWidgets/qdial.h:92
 // index:0
 // Protected virtual
-// void sliderChange(QAbstractSlider::SliderChange)
+// void sliderChange(enum QAbstractSlider::SliderChange)
 func (this *QDial) SliderChange(change int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDial12sliderChangeEN15QAbstractSlider12SliderChangeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), change)
 	gopp.ErrPrint(err, rv)

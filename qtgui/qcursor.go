@@ -233,7 +233,8 @@ func QCursor_Pos() *qtcore.QPoint /*123*/ {
 // Public static
 // QPoint pos(const QScreen *)
 func (this *QCursor) Pos_1(screen *QScreen /*777 const QScreen **/) *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QCursor3posEPK7QScreen", ffiqt.FFI_TYPE_POINTER, screen)
+	var convArg0 = screen.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QCursor3posEPK7QScreen", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -263,7 +264,8 @@ func QCursor_SetPos(x int, y int) {
 // Public static
 // void setPos(QScreen *, int, int)
 func (this *QCursor) SetPos_1(screen *QScreen /*777 QScreen **/, x int, y int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QCursor6setPosEP7QScreenii", ffiqt.FFI_TYPE_POINTER, screen, x, y)
+	var convArg0 = screen.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QCursor6setPosEP7QScreenii", ffiqt.FFI_TYPE_POINTER, convArg0, x, y)
 	gopp.ErrPrint(err, rv)
 }
 func QCursor_SetPos_1(screen *QScreen /*777 QScreen **/, x int, y int) {
@@ -276,7 +278,8 @@ func QCursor_SetPos_1(screen *QScreen /*777 QScreen **/, x int, y int) {
 // Public static inline
 // void setPos(const QPoint &)
 func (this *QCursor) SetPos_2(p *qtcore.QPoint) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QCursor6setPosERK6QPoint", ffiqt.FFI_TYPE_POINTER, p)
+	var convArg0 = p.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QCursor6setPosERK6QPoint", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QCursor_SetPos_2(p *qtcore.QPoint) {
@@ -289,7 +292,9 @@ func QCursor_SetPos_2(p *qtcore.QPoint) {
 // Public static inline
 // void setPos(QScreen *, const QPoint &)
 func (this *QCursor) SetPos_3(screen *QScreen /*777 QScreen **/, p *qtcore.QPoint) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QCursor6setPosEP7QScreenRK6QPoint", ffiqt.FFI_TYPE_POINTER, screen, p)
+	var convArg0 = screen.GetCthis()
+	var convArg1 = p.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QCursor6setPosEP7QScreenRK6QPoint", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 func QCursor_SetPos_3(screen *QScreen /*777 QScreen **/, p *qtcore.QPoint) {

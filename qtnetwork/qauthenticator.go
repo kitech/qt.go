@@ -167,8 +167,8 @@ func (this *QAuthenticator) SetRealm(realm *qtcore.QString) {
 // Public
 // QVariant option(const QString &)
 func (this *QAuthenticator) Option(opt *qtcore.QString) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = opt.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QAuthenticator6optionERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

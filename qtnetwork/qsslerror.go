@@ -84,7 +84,7 @@ func NewQSslError() *QSslError {
 // /usr/include/qt/QtNetwork/qsslerror.h:89
 // index:1
 // Public
-// void QSslError(QSslError::SslError)
+// void QSslError(enum QSslError::SslError)
 func NewQSslError_1(error int) *QSslError {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSslErrorC2ENS_8SslErrorE", ffiqt.FFI_TYPE_VOID, cthis, error)
@@ -96,7 +96,7 @@ func NewQSslError_1(error int) *QSslError {
 // /usr/include/qt/QtNetwork/qsslerror.h:90
 // index:2
 // Public
-// void QSslError(QSslError::SslError, const QSslCertificate &)
+// void QSslError(enum QSslError::SslError, const QSslCertificate &)
 func NewQSslError_2(error int, certificate *QSslCertificate) *QSslError {
 	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg1 = certificate.GetCthis()

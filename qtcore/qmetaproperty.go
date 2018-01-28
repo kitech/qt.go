@@ -118,7 +118,7 @@ func (this *QMetaProperty) UserType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty8userTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:254
@@ -129,7 +129,7 @@ func (this *QMetaProperty) PropertyIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty13propertyIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:256
@@ -316,7 +316,7 @@ func (this *QMetaProperty) NotifySignalIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty17notifySignalIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:275
@@ -327,7 +327,7 @@ func (this *QMetaProperty) Revision() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty8revisionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:277
@@ -335,8 +335,8 @@ func (this *QMetaProperty) Revision() int {
 // Public
 // QVariant read(const QObject *)
 func (this *QMetaProperty) Read(obj *QObject /*777 const QObject **/) *QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = obj.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QMetaProperty4readEPK7QObject", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

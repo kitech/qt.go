@@ -77,7 +77,7 @@ func (*QGraphicsSceneMouseEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphics
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:85
 // index:0
 // Public
-// void QGraphicsSceneMouseEvent(QEvent::Type)
+// void QGraphicsSceneMouseEvent(enum QEvent::Type)
 func NewQGraphicsSceneMouseEvent(type_ int) *QGraphicsSceneMouseEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)

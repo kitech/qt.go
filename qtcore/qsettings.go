@@ -96,7 +96,7 @@ func NewQSettings(organization *QString, application *QString, parent *QObject /
 // /usr/include/qt/QtCore/qsettings.h:129
 // index:1
 // Public
-// void QSettings(QSettings::Scope, const QString &, const QString &, QObject *)
+// void QSettings(enum QSettings::Scope, const QString &, const QString &, QObject *)
 func NewQSettings_1(scope int, organization *QString, application *QString, parent *QObject /*777 QObject **/) *QSettings {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = organization.GetCthis()
@@ -111,7 +111,7 @@ func NewQSettings_1(scope int, organization *QString, application *QString, pare
 // /usr/include/qt/QtCore/qsettings.h:131
 // index:2
 // Public
-// void QSettings(QSettings::Format, QSettings::Scope, const QString &, const QString &, QObject *)
+// void QSettings(enum QSettings::Format, enum QSettings::Scope, const QString &, const QString &, QObject *)
 func NewQSettings_2(format int, scope int, organization *QString, application *QString, parent *QObject /*777 QObject **/) *QSettings {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg2 = organization.GetCthis()
@@ -126,7 +126,7 @@ func NewQSettings_2(format int, scope int, organization *QString, application *Q
 // /usr/include/qt/QtCore/qsettings.h:133
 // index:3
 // Public
-// void QSettings(const QString &, QSettings::Format, QObject *)
+// void QSettings(const QString &, enum QSettings::Format, QObject *)
 func NewQSettings_3(fileName *QString, format int, parent *QObject /*777 QObject **/) *QSettings {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = fileName.GetCthis()
@@ -202,7 +202,7 @@ func (this *QSettings) IsAtomicSyncRequired() bool {
 // /usr/include/qt/QtCore/qsettings.h:150
 // index:0
 // Public
-// void setAtomicSyncRequired(bool)
+// void setAtomicSyncRequired(_Bool)
 func (this *QSettings) SetAtomicSyncRequired(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettings21setAtomicSyncRequiredEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -250,7 +250,7 @@ func (this *QSettings) BeginReadArray(prefix *QString) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettings14beginReadArrayERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qsettings.h:157
@@ -308,9 +308,9 @@ func (this *QSettings) SetValue(key *QString, value *QVariant) {
 // Public
 // QVariant value(const QString &, const QVariant &)
 func (this *QSettings) Value(key *QString, defaultValue *QVariant) *QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
 	var convArg1 = defaultValue.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSettings5valueERK7QStringRK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -344,7 +344,7 @@ func (this *QSettings) Contains(key *QString) bool {
 // /usr/include/qt/QtCore/qsettings.h:172
 // index:0
 // Public
-// void setFallbacksEnabled(bool)
+// void setFallbacksEnabled(_Bool)
 func (this *QSettings) SetFallbacksEnabled(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettings19setFallbacksEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -461,7 +461,7 @@ func (this *QSettings) IniCodec() *QTextCodec /*777 QTextCodec **/ {
 // /usr/include/qt/QtCore/qsettings.h:187
 // index:0
 // Public static
-// void setDefaultFormat(QSettings::Format)
+// void setDefaultFormat(enum QSettings::Format)
 func (this *QSettings) SetDefaultFormat(format int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettings16setDefaultFormatENS_6FormatE", ffiqt.FFI_TYPE_POINTER, format)
 	gopp.ErrPrint(err, rv)
@@ -492,7 +492,8 @@ func QSettings_DefaultFormat() int {
 // Public static
 // void setSystemIniPath(const QString &)
 func (this *QSettings) SetSystemIniPath(dir *QString) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettings16setSystemIniPathERK7QString", ffiqt.FFI_TYPE_POINTER, dir)
+	var convArg0 = dir.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettings16setSystemIniPathERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QSettings_SetSystemIniPath(dir *QString) {
@@ -505,7 +506,8 @@ func QSettings_SetSystemIniPath(dir *QString) {
 // Public static
 // void setUserIniPath(const QString &)
 func (this *QSettings) SetUserIniPath(dir *QString) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettings14setUserIniPathERK7QString", ffiqt.FFI_TYPE_POINTER, dir)
+	var convArg0 = dir.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettings14setUserIniPathERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QSettings_SetUserIniPath(dir *QString) {
@@ -516,9 +518,10 @@ func QSettings_SetUserIniPath(dir *QString) {
 // /usr/include/qt/QtCore/qsettings.h:191
 // index:0
 // Public static
-// void setPath(QSettings::Format, QSettings::Scope, const QString &)
+// void setPath(enum QSettings::Format, enum QSettings::Scope, const QString &)
 func (this *QSettings) SetPath(format int, scope int, path *QString) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettings7setPathENS_6FormatENS_5ScopeERK7QString", ffiqt.FFI_TYPE_POINTER, format, scope, path)
+	var convArg2 = path.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettings7setPathENS_6FormatENS_5ScopeERK7QString", ffiqt.FFI_TYPE_POINTER, format, scope, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 func QSettings_SetPath(format int, scope int, path *QString) {

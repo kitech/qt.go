@@ -85,7 +85,7 @@ func (this *QModelIndex) Row() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex3rowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:61
@@ -96,7 +96,7 @@ func (this *QModelIndex) Column() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex6columnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:62

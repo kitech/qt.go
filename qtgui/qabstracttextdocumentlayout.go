@@ -113,7 +113,7 @@ func (this *QAbstractTextDocumentLayout) HitTest(point *qtcore.QPointF, accuracy
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout7hitTestERK7QPointFN2Qt15HitTestAccuracyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, accuracy)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qabstracttextdocumentlayout.h:87
@@ -121,8 +121,8 @@ func (this *QAbstractTextDocumentLayout) HitTest(point *qtcore.QPointF, accuracy
 // Public
 // QString anchorAt(const QPointF &)
 func (this *QAbstractTextDocumentLayout) AnchorAt(pos *qtcore.QPointF) *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = pos.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -136,8 +136,8 @@ func (this *QAbstractTextDocumentLayout) AnchorAt(pos *qtcore.QPointF) *qtcore.Q
 // Public
 // QString imageAt(const QPointF &)
 func (this *QAbstractTextDocumentLayout) ImageAt(pos *qtcore.QPointF) *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = pos.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout7imageAtERK7QPointF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -151,8 +151,8 @@ func (this *QAbstractTextDocumentLayout) ImageAt(pos *qtcore.QPointF) *qtcore.QS
 // Public
 // QTextFormat formatAt(const QPointF &)
 func (this *QAbstractTextDocumentLayout) FormatAt(pos *qtcore.QPointF) *QTextFormat /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = pos.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout8formatAtERK7QPointF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -169,7 +169,7 @@ func (this *QAbstractTextDocumentLayout) PageCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout9pageCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qabstracttextdocumentlayout.h:92
@@ -178,7 +178,7 @@ func (this *QAbstractTextDocumentLayout) PageCount() int {
 // QSizeF documentSize()
 func (this *QAbstractTextDocumentLayout) DocumentSize() *qtcore.QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout12documentSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK27QAbstractTextDocumentLayout12documentSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -191,8 +191,8 @@ func (this *QAbstractTextDocumentLayout) DocumentSize() *qtcore.QSizeF /*123*/ {
 // Public pure virtual
 // QRectF frameBoundingRect(QTextFrame *)
 func (this *QAbstractTextDocumentLayout) FrameBoundingRect(frame *QTextFrame /*777 QTextFrame **/) *qtcore.QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = frame.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout17frameBoundingRectEP10QTextFrame", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -206,8 +206,8 @@ func (this *QAbstractTextDocumentLayout) FrameBoundingRect(frame *QTextFrame /*7
 // Public pure virtual
 // QRectF blockBoundingRect(const QTextBlock &)
 func (this *QAbstractTextDocumentLayout) BlockBoundingRect(block *QTextBlock) *qtcore.QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = block.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -373,7 +373,7 @@ func (this *QAbstractTextDocumentLayout) FormatIndex(pos int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAbstractTextDocumentLayout11formatIndexEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qabstracttextdocumentlayout.h:122

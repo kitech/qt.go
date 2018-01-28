@@ -134,7 +134,7 @@ func (this *QSemaphore) Available() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSemaphore9availableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 //  body block end

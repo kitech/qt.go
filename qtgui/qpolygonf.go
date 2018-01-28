@@ -176,8 +176,8 @@ func (this *QPolygonF) Translated(dx float64, dy float64) *QPolygonF /*123*/ {
 // Public
 // QPolygonF translated(const QPointF &)
 func (this *QPolygonF) Translated_1(offset *qtcore.QPointF) *QPolygonF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = offset.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF10translatedERK7QPointF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -242,8 +242,8 @@ func (this *QPolygonF) ContainsPoint(pt *qtcore.QPointF, fillRule int) bool {
 // Public
 // QPolygonF united(const QPolygonF &)
 func (this *QPolygonF) United(r *QPolygonF) *QPolygonF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF6unitedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -257,8 +257,8 @@ func (this *QPolygonF) United(r *QPolygonF) *QPolygonF /*123*/ {
 // Public
 // QPolygonF intersected(const QPolygonF &)
 func (this *QPolygonF) Intersected(r *QPolygonF) *QPolygonF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -272,8 +272,8 @@ func (this *QPolygonF) Intersected(r *QPolygonF) *QPolygonF /*123*/ {
 // Public
 // QPolygonF subtracted(const QPolygonF &)
 func (this *QPolygonF) Subtracted(r *QPolygonF) *QPolygonF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = r.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QPolygonF10subtractedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

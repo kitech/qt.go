@@ -114,7 +114,7 @@ func (this *QTableWidgetSelectionRange) TopRow() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange6topRowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:61
@@ -125,7 +125,7 @@ func (this *QTableWidgetSelectionRange) BottomRow() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange9bottomRowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:62
@@ -136,7 +136,7 @@ func (this *QTableWidgetSelectionRange) LeftColumn() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange10leftColumnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:63
@@ -147,7 +147,7 @@ func (this *QTableWidgetSelectionRange) RightColumn() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange11rightColumnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:64
@@ -158,7 +158,7 @@ func (this *QTableWidgetSelectionRange) RowCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange8rowCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:65
@@ -169,7 +169,7 @@ func (this *QTableWidgetSelectionRange) ColumnCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange11columnCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 //  body block end

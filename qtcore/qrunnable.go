@@ -109,7 +109,7 @@ func (this *QRunnable) AutoDelete() bool {
 // /usr/include/qt/QtCore/qrunnable.h:64
 // index:0
 // Public inline
-// void setAutoDelete(bool)
+// void setAutoDelete(_Bool)
 func (this *QRunnable) SetAutoDelete(_autoDelete bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QRunnable13setAutoDeleteEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), _autoDelete)
 	gopp.ErrPrint(err, rv)

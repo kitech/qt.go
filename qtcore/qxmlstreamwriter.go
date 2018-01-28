@@ -183,7 +183,7 @@ func (this *QXmlStreamWriter) Codec() *QTextCodec /*777 QTextCodec **/ {
 // /usr/include/qt/QtCore/qxmlstream.h:487
 // index:0
 // Public
-// void setAutoFormatting(bool)
+// void setAutoFormatting(_Bool)
 func (this *QXmlStreamWriter) SetAutoFormatting(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriter17setAutoFormattingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -217,7 +217,7 @@ func (this *QXmlStreamWriter) AutoFormattingIndent() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QXmlStreamWriter20autoFormattingIndentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:493
@@ -429,7 +429,7 @@ func (this *QXmlStreamWriter) WriteStartDocument_1(version *QString) {
 // /usr/include/qt/QtCore/qxmlstream.h:520
 // index:2
 // Public
-// void writeStartDocument(const QString &, bool)
+// void writeStartDocument(const QString &, _Bool)
 func (this *QXmlStreamWriter) WriteStartDocument_2(version *QString, standalone bool) {
 	var convArg0 = version.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriter18writeStartDocumentERK7QStringb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, standalone)

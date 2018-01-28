@@ -96,8 +96,8 @@ func DeleteQAbstractNetworkCache(*QAbstractNetworkCache) {
 // Public pure virtual
 // QNetworkCacheMetaData metaData(const QUrl &)
 func (this *QAbstractNetworkCache) MetaData(url *qtcore.QUrl) *QNetworkCacheMetaData /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = url.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractNetworkCache8metaDataERK4QUrl", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

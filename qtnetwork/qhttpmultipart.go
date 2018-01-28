@@ -98,7 +98,7 @@ func NewQHttpMultiPart(parent *qtcore.QObject /*777 QObject **/) *QHttpMultiPart
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:102
 // index:1
 // Public
-// void QHttpMultiPart(QHttpMultiPart::ContentType, QObject *)
+// void QHttpMultiPart(enum QHttpMultiPart::ContentType, QObject *)
 func NewQHttpMultiPart_1(contentType int, parent *qtcore.QObject /*777 QObject **/) *QHttpMultiPart {
 	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = parent.GetCthis()
@@ -120,7 +120,7 @@ func DeleteQHttpMultiPart(*QHttpMultiPart) {
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:107
 // index:0
 // Public
-// void setContentType(QHttpMultiPart::ContentType)
+// void setContentType(enum QHttpMultiPart::ContentType)
 func (this *QHttpMultiPart) SetContentType(contentType int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QHttpMultiPart14setContentTypeENS_11ContentTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), contentType)
 	gopp.ErrPrint(err, rv)

@@ -153,7 +153,7 @@ func (this *QTableWidgetItem) Row() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem3rowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:93
@@ -164,13 +164,13 @@ func (this *QTableWidgetItem) Column() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem6columnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:95
 // index:0
 // Public inline
-// void setSelected(bool)
+// void setSelected(_Bool)
 func (this *QTableWidgetItem) SetSelected(select_ bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItem11setSelectedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), select_)
 	gopp.ErrPrint(err, rv)
@@ -359,7 +359,7 @@ func (this *QTableWidgetItem) TextAlignment() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem13textAlignmentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:131
@@ -493,7 +493,7 @@ func (this *QTableWidgetItem) SetCheckState(state int) {
 // QSize sizeHint()
 func (this *QTableWidgetItem) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK16QTableWidgetItem8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -563,7 +563,7 @@ func (this *QTableWidgetItem) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTableWidgetItem4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 type QTableWidgetItem__ItemType = int

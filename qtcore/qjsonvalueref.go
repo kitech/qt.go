@@ -207,7 +207,7 @@ func (this *QJsonValueRef) ToBool() bool {
 // /usr/include/qt/QtCore/qjsonvalue.h:201
 // index:1
 // Public inline
-// bool toBool(bool)
+// bool toBool(_Bool)
 func (this *QJsonValueRef) ToBool_1(defaultValue bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef6toBoolEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
 	gopp.ErrPrint(err, rv)
@@ -223,7 +223,7 @@ func (this *QJsonValueRef) ToInt() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:202
@@ -234,7 +234,7 @@ func (this *QJsonValueRef) ToInt_1(defaultValue int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:195
@@ -242,10 +242,10 @@ func (this *QJsonValueRef) ToInt_1(defaultValue int) int {
 // Public inline
 // double toDouble()
 func (this *QJsonValueRef) ToDouble() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:203
@@ -253,10 +253,10 @@ func (this *QJsonValueRef) ToDouble() float64 {
 // Public inline
 // double toDouble(double)
 func (this *QJsonValueRef) ToDouble_1(defaultValue float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEd", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), defaultValue)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:196
@@ -278,8 +278,8 @@ func (this *QJsonValueRef) ToString() *QString /*123*/ {
 // Public inline
 // QString toString(const QString &)
 func (this *QJsonValueRef) ToString_1(defaultValue *QString) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = defaultValue.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonValueRef8toStringERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

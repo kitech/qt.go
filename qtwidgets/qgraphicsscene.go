@@ -154,10 +154,10 @@ func (this *QGraphicsScene) SceneRect() *qtcore.QRectF /*123*/ {
 // Public inline
 // qreal width()
 func (this *QGraphicsScene) Width() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene5widthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:131
@@ -165,10 +165,10 @@ func (this *QGraphicsScene) Width() float64 {
 // Public inline
 // qreal height()
 func (this *QGraphicsScene) Height() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene6heightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene6heightEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:132
@@ -216,7 +216,7 @@ func (this *QGraphicsScene) ItemIndexMethod() int {
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:141
 // index:0
 // Public
-// void setItemIndexMethod(QGraphicsScene::ItemIndexMethod)
+// void setItemIndexMethod(enum QGraphicsScene::ItemIndexMethod)
 func (this *QGraphicsScene) SetItemIndexMethod(method int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene18setItemIndexMethodENS_15ItemIndexMethodE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), method)
 	gopp.ErrPrint(err, rv)
@@ -236,7 +236,7 @@ func (this *QGraphicsScene) IsSortCacheEnabled() bool {
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:144
 // index:0
 // Public
-// void setSortCacheEnabled(bool)
+// void setSortCacheEnabled(_Bool)
 func (this *QGraphicsScene) SetSortCacheEnabled(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene19setSortCacheEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -250,7 +250,7 @@ func (this *QGraphicsScene) BspTreeDepth() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene12bspTreeDepthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:147
@@ -603,7 +603,7 @@ func (this *QGraphicsScene) ClearFocus() {
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:216
 // index:0
 // Public
-// void setStickyFocus(bool)
+// void setStickyFocus(_Bool)
 func (this *QGraphicsScene) SetStickyFocus(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene14setStickyFocusEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -856,10 +856,10 @@ func (this *QGraphicsScene) SendEvent(item *QGraphicsItem /*777 QGraphicsItem **
 // Public
 // qreal minimumRenderSize()
 func (this *QGraphicsScene) MinimumRenderSize() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene17minimumRenderSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene17minimumRenderSizeEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:254
@@ -1119,7 +1119,7 @@ func (this *QGraphicsScene) DrawItems(painter *qtgui.QPainter /*777 QPainter **/
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:295
 // index:0
 // Protected
-// bool focusNextPrevChild(bool)
+// bool focusNextPrevChild(_Bool)
 func (this *QGraphicsScene) FocusNextPrevChild(next bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), next)
 	gopp.ErrPrint(err, rv)

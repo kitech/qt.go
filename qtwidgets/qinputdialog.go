@@ -111,7 +111,7 @@ func DeleteQInputDialog(*QInputDialog) {
 // /usr/include/qt/QtWidgets/qinputdialog.h:97
 // index:0
 // Public
-// void setInputMode(QInputDialog::InputMode)
+// void setInputMode(enum QInputDialog::InputMode)
 func (this *QInputDialog) SetInputMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog12setInputModeENS_9InputModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -155,7 +155,7 @@ func (this *QInputDialog) LabelText() *qtcore.QString /*123*/ {
 // /usr/include/qt/QtWidgets/qinputdialog.h:103
 // index:0
 // Public
-// void setOption(QInputDialog::InputDialogOption, bool)
+// void setOption(enum QInputDialog::InputDialogOption, _Bool)
 func (this *QInputDialog) SetOption(option int, on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog9setOptionENS_17InputDialogOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	gopp.ErrPrint(err, rv)
@@ -164,7 +164,7 @@ func (this *QInputDialog) SetOption(option int, on bool) {
 // /usr/include/qt/QtWidgets/qinputdialog.h:104
 // index:0
 // Public
-// bool testOption(QInputDialog::InputDialogOption)
+// bool testOption(enum QInputDialog::InputDialogOption)
 func (this *QInputDialog) TestOption(option int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog10testOptionENS_17InputDialogOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
@@ -230,7 +230,7 @@ func (this *QInputDialog) TextEchoMode() int {
 // /usr/include/qt/QtWidgets/qinputdialog.h:114
 // index:0
 // Public
-// void setComboBoxEditable(bool)
+// void setComboBoxEditable(_Bool)
 func (this *QInputDialog) SetComboBoxEditable(editable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog19setComboBoxEditableEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), editable)
 	gopp.ErrPrint(err, rv)
@@ -274,7 +274,7 @@ func (this *QInputDialog) IntValue() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog8intValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qinputdialog.h:123
@@ -294,7 +294,7 @@ func (this *QInputDialog) IntMinimum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog10intMinimumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qinputdialog.h:126
@@ -314,7 +314,7 @@ func (this *QInputDialog) IntMaximum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog10intMaximumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qinputdialog.h:129
@@ -343,7 +343,7 @@ func (this *QInputDialog) IntStep() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog7intStepEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qinputdialog.h:134
@@ -360,10 +360,10 @@ func (this *QInputDialog) SetDoubleValue(value float64) {
 // Public
 // double doubleValue()
 func (this *QInputDialog) DoubleValue() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog11doubleValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog11doubleValueEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qinputdialog.h:137
@@ -380,10 +380,10 @@ func (this *QInputDialog) SetDoubleMinimum(min float64) {
 // Public
 // double doubleMinimum()
 func (this *QInputDialog) DoubleMinimum() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog13doubleMinimumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog13doubleMinimumEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qinputdialog.h:140
@@ -400,10 +400,10 @@ func (this *QInputDialog) SetDoubleMaximum(max float64) {
 // Public
 // double doubleMaximum()
 func (this *QInputDialog) DoubleMaximum() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog13doubleMaximumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog13doubleMaximumEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qinputdialog.h:143
@@ -432,7 +432,7 @@ func (this *QInputDialog) DoubleDecimals() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog14doubleDecimalsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qinputdialog.h:148
@@ -501,7 +501,7 @@ func (this *QInputDialog) Open(receiver *qtcore.QObject /*777 QObject **/, membe
 // QSize minimumSizeHint()
 func (this *QInputDialog) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK12QInputDialog15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -515,7 +515,7 @@ func (this *QInputDialog) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // QSize sizeHint()
 func (this *QInputDialog) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK12QInputDialog8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -526,7 +526,7 @@ func (this *QInputDialog) SizeHint() *qtcore.QSize /*123*/ {
 // /usr/include/qt/QtWidgets/qinputdialog.h:160
 // index:0
 // Public virtual
-// void setVisible(bool)
+// void setVisible(_Bool)
 func (this *QInputDialog) SetVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
@@ -535,12 +535,15 @@ func (this *QInputDialog) SetVisible(visible bool) {
 // /usr/include/qt/QtWidgets/qinputdialog.h:176
 // index:0
 // Public static
-// int getInt(QWidget *, const QString &, const QString &, int, int, int, int, bool *, Qt::WindowFlags)
+// int getInt(QWidget *, const QString &, const QString &, int, int, int, int, _Bool *, Qt::WindowFlags)
 func (this *QInputDialog) GetInt(parent *QWidget /*777 QWidget **/, title *qtcore.QString, label *qtcore.QString, value int, minValue int, maxValue int, step int, ok unsafe.Pointer /*666*/, flags int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog6getIntEP7QWidgetRK7QStringS4_iiiiPb6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, parent, title, label, value, minValue, maxValue, step, ok, flags)
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = label.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog6getIntEP7QWidgetRK7QStringS4_iiiiPb6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, step, &ok, flags)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QInputDialog_GetInt(parent *QWidget /*777 QWidget **/, title *qtcore.QString, label *qtcore.QString, value int, minValue int, maxValue int, step int, ok unsafe.Pointer /*666*/, flags int) int {
 	var nilthis *QInputDialog
@@ -551,12 +554,15 @@ func QInputDialog_GetInt(parent *QWidget /*777 QWidget **/, title *qtcore.QStrin
 // /usr/include/qt/QtWidgets/qinputdialog.h:179
 // index:0
 // Public static
-// double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, bool *, Qt::WindowFlags)
+// double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags)
 func (this *QInputDialog) GetDouble(parent *QWidget /*777 QWidget **/, title *qtcore.QString, label *qtcore.QString, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, parent, title, label, value, minValue, maxValue, decimals, ok, flags)
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = label.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, decimals, &ok, flags)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 func QInputDialog_GetDouble(parent *QWidget /*777 QWidget **/, title *qtcore.QString, label *qtcore.QString, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int) float64 {
 	var nilthis *QInputDialog
@@ -567,12 +573,15 @@ func QInputDialog_GetDouble(parent *QWidget /*777 QWidget **/, title *qtcore.QSt
 // /usr/include/qt/QtWidgets/qinputdialog.h:183
 // index:1
 // Public static
-// double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, bool *, Qt::WindowFlags, double)
+// double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, _Bool *, Qt::WindowFlags, double)
 func (this *QInputDialog) GetDouble_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, label *qtcore.QString, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int, step float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEEd", ffiqt.FFI_TYPE_POINTER, parent, title, label, value, minValue, maxValue, decimals, ok, flags, step)
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = label.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEEd", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, decimals, &ok, flags, step)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 func QInputDialog_GetDouble_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, label *qtcore.QString, value float64, minValue float64, maxValue float64, decimals int, ok unsafe.Pointer /*666*/, flags int, step float64) float64 {
 	var nilthis *QInputDialog
@@ -594,10 +603,10 @@ func (this *QInputDialog) SetDoubleStep(step float64) {
 // Public
 // double doubleStep()
 func (this *QInputDialog) DoubleStep() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog10doubleStepEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QInputDialog10doubleStepEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qinputdialog.h:201

@@ -135,7 +135,7 @@ func (this *QSGMaterial) Compare(other *QSGMaterial /*777 const QSGMaterial **/)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGMaterial7compareEPKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQuick/qsgmaterial.h:153
@@ -152,7 +152,7 @@ func (this *QSGMaterial) Flags() int {
 // /usr/include/qt/QtQuick/qsgmaterial.h:154
 // index:0
 // Public
-// void setFlag(QSGMaterial::Flags, bool)
+// void setFlag(QSGMaterial::Flags, _Bool)
 func (this *QSGMaterial) SetFlag(flags int, on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGMaterial7setFlagE6QFlagsINS_4FlagEEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags, on)
 	gopp.ErrPrint(err, rv)

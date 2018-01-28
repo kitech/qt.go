@@ -139,9 +139,9 @@ func (this *QJSEngine) GlobalObject() *QJSValue /*123*/ {
 // Public
 // QJSValue evaluate(const QString &, const QString &, int)
 func (this *QJSEngine) Evaluate(program *qtcore.QString, fileName *qtcore.QString, lineNumber int) *QJSValue /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = program.GetCthis()
 	var convArg1 = fileName.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QJSEngine8evaluateERK7QStringS2_i", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, lineNumber)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -183,8 +183,8 @@ func (this *QJSEngine) NewArray(length uint) *QJSValue /*123*/ {
 // Public
 // QJSValue newQObject(QObject *)
 func (this *QJSEngine) NewQObject(object *qtcore.QObject /*777 QObject **/) *QJSValue /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = object.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QJSEngine10newQObjectEP7QObject", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

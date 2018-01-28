@@ -145,7 +145,7 @@ func (this *QImageReader) Format() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtGui/qimagereader.h:79
 // index:0
 // Public
-// void setAutoDetectImageFormat(bool)
+// void setAutoDetectImageFormat(_Bool)
 func (this *QImageReader) SetAutoDetectImageFormat(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader24setAutoDetectImageFormatEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -165,7 +165,7 @@ func (this *QImageReader) AutoDetectImageFormat() bool {
 // /usr/include/qt/QtGui/qimagereader.h:82
 // index:0
 // Public
-// void setDecideFormatFromContent(bool)
+// void setDecideFormatFromContent(_Bool)
 func (this *QImageReader) SetDecideFormatFromContent(ignored bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader26setDecideFormatFromContentEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ignored)
 	gopp.ErrPrint(err, rv)
@@ -234,7 +234,7 @@ func (this *QImageReader) FileName() *qtcore.QString /*123*/ {
 // QSize size()
 func (this *QImageReader) Size() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK12QImageReader4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -258,7 +258,8 @@ func (this *QImageReader) ImageFormat() int {
 // Public static
 // QByteArray imageFormat(const QString &)
 func (this *QImageReader) ImageFormat_1(fileName *qtcore.QString) *qtcore.QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader11imageFormatERK7QString", ffiqt.FFI_TYPE_POINTER, fileName)
+	var convArg0 = fileName.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader11imageFormatERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -275,7 +276,8 @@ func QImageReader_ImageFormat_1(fileName *qtcore.QString) *qtcore.QByteArray /*1
 // Public static
 // QByteArray imageFormat(QIODevice *)
 func (this *QImageReader) ImageFormat_2(device *qtcore.QIODevice /*777 QIODevice **/) *qtcore.QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader11imageFormatEP9QIODevice", ffiqt.FFI_TYPE_POINTER, device)
+	var convArg0 = device.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader11imageFormatEP9QIODevice", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -292,8 +294,8 @@ func QImageReader_ImageFormat_2(device *qtcore.QIODevice /*777 QIODevice **/) *q
 // Public
 // QString text(const QString &)
 func (this *QImageReader) Text(key *qtcore.QString) *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = key.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader4textERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -342,7 +344,7 @@ func (this *QImageReader) SetScaledSize(size *qtcore.QSize) {
 // QSize scaledSize()
 func (this *QImageReader) ScaledSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader10scaledSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK12QImageReader10scaledSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -367,7 +369,7 @@ func (this *QImageReader) Quality() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader7qualityEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qimagereader.h:107
@@ -443,7 +445,7 @@ func (this *QImageReader) Transformation() int {
 // /usr/include/qt/QtGui/qimagereader.h:117
 // index:0
 // Public
-// void setAutoTransform(bool)
+// void setAutoTransform(_Bool)
 func (this *QImageReader) SetAutoTransform(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageReader16setAutoTransformEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -474,10 +476,10 @@ func (this *QImageReader) SetGamma(gamma float32) {
 // Public
 // float gamma()
 func (this *QImageReader) Gamma() float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader5gammaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader5gammaEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtGui/qimagereader.h:123
@@ -561,7 +563,7 @@ func (this *QImageReader) LoopCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader9loopCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qimagereader.h:133
@@ -572,7 +574,7 @@ func (this *QImageReader) ImageCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader10imageCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qimagereader.h:134
@@ -583,7 +585,7 @@ func (this *QImageReader) NextImageDelay() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader14nextImageDelayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qimagereader.h:135
@@ -594,7 +596,7 @@ func (this *QImageReader) CurrentImageNumber() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageReader18currentImageNumberEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qimagereader.h:136

@@ -330,8 +330,8 @@ func (this *QQmlEngine) OfflineStoragePath() *qtcore.QString /*123*/ {
 // Public
 // QString offlineStorageDatabaseFilePath(const QString &)
 func (this *QQmlEngine) OfflineStorageDatabaseFilePath(databaseName *qtcore.QString) *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = databaseName.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QQmlEngine30offlineStorageDatabaseFilePathERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -378,7 +378,7 @@ func (this *QQmlEngine) OutputWarningsToStandardError() bool {
 // /usr/include/qt/QtQml/qqmlengine.h:145
 // index:0
 // Public
-// void setOutputWarningsToStandardError(bool)
+// void setOutputWarningsToStandardError(_Bool)
 func (this *QQmlEngine) SetOutputWarningsToStandardError(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine32setOutputWarningsToStandardErrorEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -398,7 +398,8 @@ func (this *QQmlEngine) Retranslate() {
 // Public static
 // QQmlContext * contextForObject(const QObject *)
 func (this *QQmlEngine) ContextForObject(arg0 *qtcore.QObject /*777 const QObject **/) *QQmlContext /*777 QQmlContext **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine16contextForObjectEPK7QObject", ffiqt.FFI_TYPE_POINTER, arg0)
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine16contextForObjectEPK7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -415,7 +416,9 @@ func QQmlEngine_ContextForObject(arg0 *qtcore.QObject /*777 const QObject **/) *
 // Public static
 // void setContextForObject(QObject *, QQmlContext *)
 func (this *QQmlEngine) SetContextForObject(arg0 *qtcore.QObject /*777 QObject **/, arg1 *QQmlContext /*777 QQmlContext **/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine19setContextForObjectEP7QObjectP11QQmlContext", ffiqt.FFI_TYPE_POINTER, arg0, arg1)
+	var convArg0 = arg0.GetCthis()
+	var convArg1 = arg1.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine19setContextForObjectEP7QObjectP11QQmlContext", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 func QQmlEngine_SetContextForObject(arg0 *qtcore.QObject /*777 QObject **/, arg1 *QQmlContext /*777 QQmlContext **/) {
@@ -426,9 +429,10 @@ func QQmlEngine_SetContextForObject(arg0 *qtcore.QObject /*777 QObject **/, arg1
 // /usr/include/qt/QtQml/qqmlengine.h:155
 // index:0
 // Public static
-// void setObjectOwnership(QObject *, QQmlEngine::ObjectOwnership)
+// void setObjectOwnership(QObject *, enum QQmlEngine::ObjectOwnership)
 func (this *QQmlEngine) SetObjectOwnership(arg0 *qtcore.QObject /*777 QObject **/, arg1 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine18setObjectOwnershipEP7QObjectNS_15ObjectOwnershipE", ffiqt.FFI_TYPE_POINTER, arg0, arg1)
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine18setObjectOwnershipEP7QObjectNS_15ObjectOwnershipE", ffiqt.FFI_TYPE_POINTER, convArg0, arg1)
 	gopp.ErrPrint(err, rv)
 }
 func QQmlEngine_SetObjectOwnership(arg0 *qtcore.QObject /*777 QObject **/, arg1 int) {
@@ -441,7 +445,8 @@ func QQmlEngine_SetObjectOwnership(arg0 *qtcore.QObject /*777 QObject **/, arg1 
 // Public static
 // QQmlEngine::ObjectOwnership objectOwnership(QObject *)
 func (this *QQmlEngine) ObjectOwnership(arg0 *qtcore.QObject /*777 QObject **/) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine15objectOwnershipEP7QObject", ffiqt.FFI_TYPE_POINTER, arg0)
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QQmlEngine15objectOwnershipEP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv)

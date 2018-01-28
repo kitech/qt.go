@@ -206,7 +206,7 @@ func (this *QLabel) Alignment() int {
 // /usr/include/qt/QtWidgets/qlabel.h:89
 // index:0
 // Public
-// void setWordWrap(bool)
+// void setWordWrap(_Bool)
 func (this *QLabel) SetWordWrap(on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel11setWordWrapEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
@@ -231,7 +231,7 @@ func (this *QLabel) Indent() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLabel6indentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlabel.h:93
@@ -251,7 +251,7 @@ func (this *QLabel) Margin() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLabel6marginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlabel.h:96
@@ -277,7 +277,7 @@ func (this *QLabel) HasScaledContents() bool {
 // /usr/include/qt/QtWidgets/qlabel.h:99
 // index:0
 // Public
-// void setScaledContents(bool)
+// void setScaledContents(_Bool)
 func (this *QLabel) SetScaledContents(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel17setScaledContentsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -289,7 +289,7 @@ func (this *QLabel) SetScaledContents(arg0 bool) {
 // QSize sizeHint()
 func (this *QLabel) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLabel8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK6QLabel8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -303,7 +303,7 @@ func (this *QLabel) SizeHint() *qtcore.QSize /*123*/ {
 // QSize minimumSizeHint()
 func (this *QLabel) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLabel15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK6QLabel15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -341,7 +341,7 @@ func (this *QLabel) HeightForWidth(arg0 int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLabel14heightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlabel.h:108
@@ -358,7 +358,7 @@ func (this *QLabel) OpenExternalLinks() bool {
 // /usr/include/qt/QtWidgets/qlabel.h:109
 // index:0
 // Public
-// void setOpenExternalLinks(bool)
+// void setOpenExternalLinks(_Bool)
 func (this *QLabel) SetOpenExternalLinks(open bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel20setOpenExternalLinksEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), open)
 	gopp.ErrPrint(err, rv)
@@ -426,7 +426,7 @@ func (this *QLabel) SelectionStart() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLabel14selectionStartEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlabel.h:120
@@ -621,7 +621,7 @@ func (this *QLabel) FocusOutEvent(ev *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 // /usr/include/qt/QtWidgets/qlabel.h:149
 // index:0
 // Protected virtual
-// bool focusNextPrevChild(bool)
+// bool focusNextPrevChild(_Bool)
 func (this *QLabel) FocusNextPrevChild(next bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), next)
 	gopp.ErrPrint(err, rv)

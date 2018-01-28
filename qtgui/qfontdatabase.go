@@ -86,8 +86,8 @@ func NewQFontDatabase() *QFontDatabase {
 // Public
 // QString styleString(const QFont &)
 func (this *QFontDatabase) StyleString(font *QFont) *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = font.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase11styleStringERK5QFont", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -101,8 +101,8 @@ func (this *QFontDatabase) StyleString(font *QFont) *qtcore.QString /*123*/ {
 // Public
 // QString styleString(const QFontInfo &)
 func (this *QFontDatabase) StyleString_1(fontInfo *QFontInfo) *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = fontInfo.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase11styleStringERK9QFontInfo", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -116,9 +116,9 @@ func (this *QFontDatabase) StyleString_1(fontInfo *QFontInfo) *qtcore.QString /*
 // Public
 // QFont font(const QString &, const QString &, int)
 func (this *QFontDatabase) Font(family *qtcore.QString, style *qtcore.QString, pointSize int) *QFont /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = family.GetCthis()
 	var convArg1 = style.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontDatabase4fontERK7QStringS2_i", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, pointSize)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -215,7 +215,7 @@ func (this *QFontDatabase) Weight(family *qtcore.QString, style *qtcore.QString)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFontDatabase6weightERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qfontdatabase.h:141
@@ -245,7 +245,7 @@ func (this *QFontDatabase) IsPrivateFamily(family *qtcore.QString) bool {
 // /usr/include/qt/QtGui/qfontdatabase.h:144
 // index:0
 // Public static
-// QString writingSystemName(QFontDatabase::WritingSystem)
+// QString writingSystemName(enum QFontDatabase::WritingSystem)
 func (this *QFontDatabase) WritingSystemName(writingSystem int) *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase17writingSystemNameENS_13WritingSystemE", ffiqt.FFI_TYPE_POINTER, writingSystem)
 	gopp.ErrPrint(err, rv)
@@ -262,7 +262,7 @@ func QFontDatabase_WritingSystemName(writingSystem int) *qtcore.QString /*123*/ 
 // /usr/include/qt/QtGui/qfontdatabase.h:145
 // index:0
 // Public static
-// QString writingSystemSample(QFontDatabase::WritingSystem)
+// QString writingSystemSample(enum QFontDatabase::WritingSystem)
 func (this *QFontDatabase) WritingSystemSample(writingSystem int) *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase19writingSystemSampleENS_13WritingSystemE", ffiqt.FFI_TYPE_POINTER, writingSystem)
 	gopp.ErrPrint(err, rv)
@@ -281,10 +281,11 @@ func QFontDatabase_WritingSystemSample(writingSystem int) *qtcore.QString /*123*
 // Public static
 // int addApplicationFont(const QString &)
 func (this *QFontDatabase) AddApplicationFont(fileName *qtcore.QString) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase18addApplicationFontERK7QString", ffiqt.FFI_TYPE_POINTER, fileName)
+	var convArg0 = fileName.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase18addApplicationFontERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QFontDatabase_AddApplicationFont(fileName *qtcore.QString) int {
 	var nilthis *QFontDatabase
@@ -297,10 +298,11 @@ func QFontDatabase_AddApplicationFont(fileName *qtcore.QString) int {
 // Public static
 // int addApplicationFontFromData(const QByteArray &)
 func (this *QFontDatabase) AddApplicationFontFromData(fontData *qtcore.QByteArray) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase26addApplicationFontFromDataERK10QByteArray", ffiqt.FFI_TYPE_POINTER, fontData)
+	var convArg0 = fontData.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase26addApplicationFontFromDataERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QFontDatabase_AddApplicationFontFromData(fontData *qtcore.QByteArray) int {
 	var nilthis *QFontDatabase
@@ -359,7 +361,7 @@ func QFontDatabase_SupportsThreadedFontRendering() bool {
 // /usr/include/qt/QtGui/qfontdatabase.h:157
 // index:0
 // Public static
-// QFont systemFont(QFontDatabase::SystemFont)
+// QFont systemFont(enum QFontDatabase::SystemFont)
 func (this *QFontDatabase) SystemFont(type_ int) *QFont /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabase10systemFontENS_10SystemFontE", ffiqt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)

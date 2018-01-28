@@ -129,7 +129,10 @@ func (this *QItemSelection) Merge(other *QItemSelection, command int) {
 // Public static
 // void split(const QItemSelectionRange &, const QItemSelectionRange &, QItemSelection *)
 func (this *QItemSelection) Split(range_ *QItemSelectionRange, other *QItemSelectionRange, result *QItemSelection /*777 QItemSelection **/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelection5splitERK19QItemSelectionRangeS2_PS_", ffiqt.FFI_TYPE_POINTER, range_, other, result)
+	var convArg0 = range_.GetCthis()
+	var convArg1 = other.GetCthis()
+	var convArg2 = result.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelection5splitERK19QItemSelectionRangeS2_PS_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 func QItemSelection_Split(range_ *QItemSelectionRange, other *QItemSelectionRange, result *QItemSelection /*777 QItemSelection **/) {

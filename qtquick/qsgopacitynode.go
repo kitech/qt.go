@@ -117,10 +117,10 @@ func (this *QSGOpacityNode) SetOpacity(opacity float64) {
 // Public inline
 // qreal opacity()
 func (this *QSGOpacityNode) Opacity() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSGOpacityNode7opacityEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSGOpacityNode7opacityEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:325
@@ -137,10 +137,10 @@ func (this *QSGOpacityNode) SetCombinedOpacity(opacity float64) {
 // Public inline
 // qreal combinedOpacity()
 func (this *QSGOpacityNode) CombinedOpacity() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSGOpacityNode15combinedOpacityEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSGOpacityNode15combinedOpacityEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:328

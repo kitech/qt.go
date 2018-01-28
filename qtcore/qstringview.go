@@ -496,7 +496,7 @@ func (this *QStringView) Length() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView6lengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qstringview.h:291

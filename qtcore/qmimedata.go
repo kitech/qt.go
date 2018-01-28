@@ -255,8 +255,8 @@ func (this *QMimeData) HasColor() bool {
 // Public
 // QByteArray data(const QString &)
 func (this *QMimeData) Data(mimetype *QString) *QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = mimetype.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData4dataERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -312,8 +312,8 @@ func (this *QMimeData) Clear() {
 // Protected virtual
 // QVariant retrieveData(const QString &, QVariant::Type)
 func (this *QMimeData) RetrieveData(mimetype *QString, preferredType int) *QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = mimetype.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeData12retrieveDataERK7QStringN8QVariant4TypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, preferredType)
 	gopp.ErrPrint(err, rv)
 	//  return rv

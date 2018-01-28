@@ -213,7 +213,8 @@ func (this *QResource) LastModified() *QDateTime /*123*/ {
 // Public static
 // void addSearchPath(const QString &)
 func (this *QResource) AddSearchPath(path *QString) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResource13addSearchPathERK7QString", ffiqt.FFI_TYPE_POINTER, path)
+	var convArg0 = path.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResource13addSearchPathERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QResource_AddSearchPath(path *QString) {
@@ -226,7 +227,9 @@ func QResource_AddSearchPath(path *QString) {
 // Public static
 // bool registerResource(const QString &, const QString &)
 func (this *QResource) RegisterResource(rccFilename *QString, resourceRoot *QString) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResource16registerResourceERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, rccFilename, resourceRoot)
+	var convArg0 = rccFilename.GetCthis()
+	var convArg1 = resourceRoot.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResource16registerResourceERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -242,7 +245,8 @@ func QResource_RegisterResource(rccFilename *QString, resourceRoot *QString) boo
 // Public static
 // bool registerResource(const uchar *, const QString &)
 func (this *QResource) RegisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot *QString) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResource16registerResourceEPKhRK7QString", ffiqt.FFI_TYPE_POINTER, rccData, resourceRoot)
+	var convArg1 = resourceRoot.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResource16registerResourceEPKhRK7QString", ffiqt.FFI_TYPE_POINTER, &rccData, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -258,7 +262,9 @@ func QResource_RegisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot *
 // Public static
 // bool unregisterResource(const QString &, const QString &)
 func (this *QResource) UnregisterResource(rccFilename *QString, resourceRoot *QString) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResource18unregisterResourceERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, rccFilename, resourceRoot)
+	var convArg0 = rccFilename.GetCthis()
+	var convArg1 = resourceRoot.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResource18unregisterResourceERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -274,7 +280,8 @@ func QResource_UnregisterResource(rccFilename *QString, resourceRoot *QString) b
 // Public static
 // bool unregisterResource(const uchar *, const QString &)
 func (this *QResource) UnregisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot *QString) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResource18unregisterResourceEPKhRK7QString", ffiqt.FFI_TYPE_POINTER, rccData, resourceRoot)
+	var convArg1 = resourceRoot.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResource18unregisterResourceEPKhRK7QString", ffiqt.FFI_TYPE_POINTER, &rccData, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0

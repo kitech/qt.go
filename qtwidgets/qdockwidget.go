@@ -158,7 +158,7 @@ func (this *QDockWidget) Features() int {
 // /usr/include/qt/QtWidgets/qdockwidget.h:92
 // index:0
 // Public
-// void setFloating(bool)
+// void setFloating(_Bool)
 func (this *QDockWidget) SetFloating(floating bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget11setFloatingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), floating)
 	gopp.ErrPrint(err, rv)
@@ -234,7 +234,7 @@ func (this *QDockWidget) ToggleViewAction() *QAction /*777 QAction **/ {
 // /usr/include/qt/QtWidgets/qdockwidget.h:110
 // index:0
 // Public
-// void topLevelChanged(bool)
+// void topLevelChanged(_Bool)
 func (this *QDockWidget) TopLevelChanged(topLevel bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget15topLevelChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), topLevel)
 	gopp.ErrPrint(err, rv)
@@ -243,7 +243,7 @@ func (this *QDockWidget) TopLevelChanged(topLevel bool) {
 // /usr/include/qt/QtWidgets/qdockwidget.h:112
 // index:0
 // Public
-// void visibilityChanged(bool)
+// void visibilityChanged(_Bool)
 func (this *QDockWidget) VisibilityChanged(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget17visibilityChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)

@@ -201,7 +201,7 @@ func (this *QQmlExpression) NotifyOnValueChanged() bool {
 // /usr/include/qt/QtQml/qqmlexpression.h:74
 // index:0
 // Public
-// void setNotifyOnValueChanged(bool)
+// void setNotifyOnValueChanged(_Bool)
 func (this *QQmlExpression) SetNotifyOnValueChanged(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QQmlExpression23setNotifyOnValueChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -229,7 +229,7 @@ func (this *QQmlExpression) LineNumber() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QQmlExpression10lineNumberEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQml/qqmlexpression.h:78
@@ -240,7 +240,7 @@ func (this *QQmlExpression) ColumnNumber() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QQmlExpression12columnNumberEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQml/qqmlexpression.h:79
@@ -302,7 +302,7 @@ func (this *QQmlExpression) Error() *QQmlError /*123*/ {
 // /usr/include/qt/QtQml/qqmlexpression.h:87
 // index:0
 // Public
-// QVariant evaluate(bool *)
+// QVariant evaluate(_Bool *)
 func (this *QQmlExpression) Evaluate(valueIsUndefined unsafe.Pointer /*666*/) *qtcore.QVariant /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QQmlExpression8evaluateEPb", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), &valueIsUndefined)

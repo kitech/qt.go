@@ -114,7 +114,7 @@ func DeleteQMainWindow(*QMainWindow) {
 // QSize iconSize()
 func (this *QMainWindow) IconSize() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMainWindow8iconSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK11QMainWindow8iconSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -188,7 +188,7 @@ func (this *QMainWindow) DocumentMode() bool {
 // /usr/include/qt/QtWidgets/qmainwindow.h:110
 // index:0
 // Public
-// void setDocumentMode(bool)
+// void setDocumentMode(_Bool)
 func (this *QMainWindow) SetDocumentMode(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow15setDocumentModeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -603,7 +603,7 @@ func (this *QMainWindow) CreatePopupMenu() *QMenu /*777 QMenu **/ {
 // /usr/include/qt/QtWidgets/qmainwindow.h:190
 // index:0
 // Public
-// void setAnimated(bool)
+// void setAnimated(_Bool)
 func (this *QMainWindow) SetAnimated(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow11setAnimatedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -612,7 +612,7 @@ func (this *QMainWindow) SetAnimated(enabled bool) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:191
 // index:0
 // Public
-// void setDockNestingEnabled(bool)
+// void setDockNestingEnabled(_Bool)
 func (this *QMainWindow) SetDockNestingEnabled(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow21setDockNestingEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -621,7 +621,7 @@ func (this *QMainWindow) SetDockNestingEnabled(enabled bool) {
 // /usr/include/qt/QtWidgets/qmainwindow.h:194
 // index:0
 // Public
-// void setUnifiedTitleAndToolBarOnMac(bool)
+// void setUnifiedTitleAndToolBarOnMac(_Bool)
 func (this *QMainWindow) SetUnifiedTitleAndToolBarOnMac(set bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), set)
 	gopp.ErrPrint(err, rv)

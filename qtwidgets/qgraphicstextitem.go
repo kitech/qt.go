@@ -303,7 +303,7 @@ func (this *QGraphicsTextItem) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:905
@@ -320,10 +320,10 @@ func (this *QGraphicsTextItem) SetTextWidth(width float64) {
 // Public
 // qreal textWidth()
 func (this *QGraphicsTextItem) TextWidth() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem9textWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem9textWidthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:908
@@ -380,7 +380,7 @@ func (this *QGraphicsTextItem) TextInteractionFlags() int {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:916
 // index:0
 // Public
-// void setTabChangesFocus(bool)
+// void setTabChangesFocus(_Bool)
 func (this *QGraphicsTextItem) SetTabChangesFocus(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem18setTabChangesFocusEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -400,7 +400,7 @@ func (this *QGraphicsTextItem) TabChangesFocus() bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:919
 // index:0
 // Public
-// void setOpenExternalLinks(bool)
+// void setOpenExternalLinks(_Bool)
 func (this *QGraphicsTextItem) SetOpenExternalLinks(open bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem20setOpenExternalLinksEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), open)
 	gopp.ErrPrint(err, rv)
@@ -660,7 +660,7 @@ func (this *QGraphicsTextItem) InputMethodQuery(query int) *qtcore.QVariant /*12
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:951
 // index:0
 // Protected virtual
-// bool supportsExtension(QGraphicsItem::Extension)
+// bool supportsExtension(enum QGraphicsItem::Extension)
 func (this *QGraphicsTextItem) SupportsExtension(extension int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	gopp.ErrPrint(err, rv)
@@ -671,7 +671,7 @@ func (this *QGraphicsTextItem) SupportsExtension(extension int) bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:952
 // index:0
 // Protected virtual
-// void setExtension(QGraphicsItem::Extension, const QVariant &)
+// void setExtension(enum QGraphicsItem::Extension, const QVariant &)
 func (this *QGraphicsTextItem) SetExtension(extension int, variant *qtcore.QVariant) {
 	var convArg1 = variant.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension, convArg1)
@@ -683,8 +683,8 @@ func (this *QGraphicsTextItem) SetExtension(extension int, variant *qtcore.QVari
 // Protected virtual
 // QVariant extension(const QVariant &)
 func (this *QGraphicsTextItem) Extension(variant *qtcore.QVariant) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = variant.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsTextItem9extensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

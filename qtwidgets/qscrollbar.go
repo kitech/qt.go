@@ -127,7 +127,7 @@ func DeleteQScrollBar(*QScrollBar) {
 // QSize sizeHint()
 func (this *QScrollBar) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QScrollBar8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK10QScrollBar8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -210,7 +210,7 @@ func (this *QScrollBar) HideEvent(arg0 *qtgui.QHideEvent /*777 QHideEvent **/) {
 // /usr/include/qt/QtWidgets/qscrollbar.h:75
 // index:0
 // Protected virtual
-// void sliderChange(QAbstractSlider::SliderChange)
+// void sliderChange(enum QAbstractSlider::SliderChange)
 func (this *QScrollBar) SliderChange(change int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QScrollBar12sliderChangeEN15QAbstractSlider12SliderChangeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), change)
 	gopp.ErrPrint(err, rv)

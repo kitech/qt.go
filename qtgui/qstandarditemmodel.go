@@ -122,8 +122,8 @@ func DeleteQStandardItemModel(*QStandardItemModel) {
 // Public virtual
 // QModelIndex index(int, int, const QModelIndex &)
 func (this *QStandardItemModel) Index(row int, column int, parent *qtcore.QModelIndex) *qtcore.QModelIndex /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg2 = parent.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QStandardItemModel5indexEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), row, column, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -137,8 +137,8 @@ func (this *QStandardItemModel) Index(row int, column int, parent *qtcore.QModel
 // Public virtual
 // QModelIndex parent(const QModelIndex &)
 func (this *QStandardItemModel) Parent(child *qtcore.QModelIndex) *qtcore.QModelIndex /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = child.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QStandardItemModel6parentERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -156,7 +156,7 @@ func (this *QStandardItemModel) RowCount(parent *qtcore.QModelIndex) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QStandardItemModel8rowCountERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qstandarditemmodel.h:340
@@ -168,7 +168,7 @@ func (this *QStandardItemModel) ColumnCount(parent *qtcore.QModelIndex) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QStandardItemModel11columnCountERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qstandarditemmodel.h:341
@@ -188,8 +188,8 @@ func (this *QStandardItemModel) HasChildren(parent *qtcore.QModelIndex) bool {
 // Public virtual
 // QModelIndex sibling(int, int, const QModelIndex &)
 func (this *QStandardItemModel) Sibling(row int, column int, idx *qtcore.QModelIndex) *qtcore.QModelIndex /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg2 = idx.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QStandardItemModel7siblingEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), row, column, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -203,8 +203,8 @@ func (this *QStandardItemModel) Sibling(row int, column int, idx *qtcore.QModelI
 // Public virtual
 // QVariant data(const QModelIndex &, int)
 func (this *QStandardItemModel) Data(index *qtcore.QModelIndex, role int) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = index.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QStandardItemModel4dataERK11QModelIndexi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, role)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -359,8 +359,8 @@ func (this *QStandardItemModel) ItemFromIndex(index *qtcore.QModelIndex) *QStand
 // Public
 // QModelIndex indexFromItem(const QStandardItem *)
 func (this *QStandardItemModel) IndexFromItem(item *QStandardItem /*777 const QStandardItem **/) *qtcore.QModelIndex /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = item.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QStandardItemModel13indexFromItemEPK13QStandardItem", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -605,7 +605,7 @@ func (this *QStandardItemModel) SortRole() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QStandardItemModel8sortRoleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qstandarditemmodel.h:415

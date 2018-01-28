@@ -117,7 +117,7 @@ func (this *QPlainTextDocumentLayout) HitTest(arg0 *qtcore.QPointF, arg1 int) in
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout7hitTestERK7QPointFN2Qt15HitTestAccuracyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:308
@@ -128,7 +128,7 @@ func (this *QPlainTextDocumentLayout) PageCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout9pageCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:309
@@ -137,7 +137,7 @@ func (this *QPlainTextDocumentLayout) PageCount() int {
 // QSizeF documentSize()
 func (this *QPlainTextDocumentLayout) DocumentSize() *qtcore.QSizeF /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout12documentSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK24QPlainTextDocumentLayout12documentSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -150,8 +150,8 @@ func (this *QPlainTextDocumentLayout) DocumentSize() *qtcore.QSizeF /*123*/ {
 // Public virtual
 // QRectF frameBoundingRect(QTextFrame *)
 func (this *QPlainTextDocumentLayout) FrameBoundingRect(arg0 *qtgui.QTextFrame /*777 QTextFrame **/) *qtcore.QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17frameBoundingRectEP10QTextFrame", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -165,8 +165,8 @@ func (this *QPlainTextDocumentLayout) FrameBoundingRect(arg0 *qtgui.QTextFrame /
 // Public virtual
 // QRectF blockBoundingRect(const QTextBlock &)
 func (this *QPlainTextDocumentLayout) BlockBoundingRect(block *qtgui.QTextBlock) *qtcore.QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = block.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17blockBoundingRectERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -202,7 +202,7 @@ func (this *QPlainTextDocumentLayout) CursorWidth() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout11cursorWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:319

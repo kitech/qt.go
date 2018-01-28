@@ -127,7 +127,7 @@ func (this *QMapNodeBase) Color() int {
 // /usr/include/qt/QtCore/qmap.h:97
 // index:0
 // Public inline
-// void setColor(QMapNodeBase::Color)
+// void setColor(enum QMapNodeBase::Color)
 func (this *QMapNodeBase) SetColor(c int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapNodeBase8setColorENS_5ColorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	gopp.ErrPrint(err, rv)

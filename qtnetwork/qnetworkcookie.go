@@ -116,7 +116,7 @@ func (this *QNetworkCookie) IsSecure() bool {
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:81
 // index:0
 // Public
-// void setSecure(bool)
+// void setSecure(_Bool)
 func (this *QNetworkCookie) SetSecure(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QNetworkCookie9setSecureEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -136,7 +136,7 @@ func (this *QNetworkCookie) IsHttpOnly() bool {
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:83
 // index:0
 // Public
-// void setHttpOnly(bool)
+// void setHttpOnly(_Bool)
 func (this *QNetworkCookie) SetHttpOnly(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QNetworkCookie11setHttpOnlyEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -276,7 +276,7 @@ func (this *QNetworkCookie) SetValue(value *qtcore.QByteArray) {
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:101
 // index:0
 // Public
-// QByteArray toRawForm(QNetworkCookie::RawForm)
+// QByteArray toRawForm(enum QNetworkCookie::RawForm)
 func (this *QNetworkCookie) ToRawForm(form int) *qtcore.QByteArray /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QNetworkCookie9toRawFormENS_7RawFormE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), form)

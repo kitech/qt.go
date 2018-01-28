@@ -137,7 +137,7 @@ func (this *QFontInfo) PixelSize() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFontInfo9pixelSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qfontinfo.h:64
@@ -148,7 +148,7 @@ func (this *QFontInfo) PointSize() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFontInfo9pointSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qfontinfo.h:65
@@ -156,10 +156,10 @@ func (this *QFontInfo) PointSize() int {
 // Public
 // qreal pointSizeF()
 func (this *QFontInfo) PointSizeF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFontInfo10pointSizeFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFontInfo10pointSizeFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qfontinfo.h:66
@@ -192,7 +192,7 @@ func (this *QFontInfo) Weight() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFontInfo6weightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qfontinfo.h:69

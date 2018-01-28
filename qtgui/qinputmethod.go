@@ -200,7 +200,7 @@ func (this *QInputMethod) IsVisible() bool {
 // /usr/include/qt/QtGui/qinputmethod.h:90
 // index:0
 // Public
-// void setVisible(bool)
+// void setVisible(_Bool)
 func (this *QInputMethod) SetVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
@@ -247,7 +247,8 @@ func (this *QInputMethod) InputDirection() int {
 // Public static
 // QVariant queryFocusObject(Qt::InputMethodQuery, QVariant)
 func (this *QInputMethod) QueryFocusObject(query int, argument *qtcore.QVariant /*123*/) *qtcore.QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod16queryFocusObjectEN2Qt16InputMethodQueryE8QVariant", ffiqt.FFI_TYPE_POINTER, query, argument)
+	var convArg1 = argument.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod16queryFocusObjectEN2Qt16InputMethodQueryE8QVariant", ffiqt.FFI_TYPE_POINTER, query, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -298,7 +299,7 @@ func (this *QInputMethod) Commit() {
 // /usr/include/qt/QtGui/qinputmethod.h:107
 // index:0
 // Public
-// void invokeAction(QInputMethod::Action, int)
+// void invokeAction(enum QInputMethod::Action, int)
 func (this *QInputMethod) InvokeAction(a int, cursorPosition int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod12invokeActionENS_6ActionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), a, cursorPosition)
 	gopp.ErrPrint(err, rv)

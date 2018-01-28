@@ -168,7 +168,8 @@ func (this *QBitmap) Clear() {
 // Public static
 // QBitmap fromImage(const QImage &, Qt::ImageConversionFlags)
 func (this *QBitmap) FromImage(image *QImage, flags int) *QBitmap /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmap9fromImageERK6QImage6QFlagsIN2Qt19ImageConversionFlagEE", ffiqt.FFI_TYPE_POINTER, image, flags)
+	var convArg0 = image.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmap9fromImageERK6QImage6QFlagsIN2Qt19ImageConversionFlagEE", ffiqt.FFI_TYPE_POINTER, convArg0, flags)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -185,7 +186,8 @@ func QBitmap_FromImage(image *QImage, flags int) *QBitmap /*123*/ {
 // Public static
 // QBitmap fromData(const QSize &, const uchar *, QImage::Format)
 func (this *QBitmap) FromData(size *qtcore.QSize, bits unsafe.Pointer /*666*/, monoFormat int) *QBitmap /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmap8fromDataERK5QSizePKhN6QImage6FormatE", ffiqt.FFI_TYPE_POINTER, size, bits, monoFormat)
+	var convArg0 = size.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmap8fromDataERK5QSizePKhN6QImage6FormatE", ffiqt.FFI_TYPE_POINTER, convArg0, &bits, monoFormat)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -202,8 +204,8 @@ func QBitmap_FromData(size *qtcore.QSize, bits unsafe.Pointer /*666*/, monoForma
 // Public
 // QBitmap transformed(const QMatrix &)
 func (this *QBitmap) Transformed(arg0 *QMatrix) *QBitmap /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = arg0.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QBitmap11transformedERK7QMatrix", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -217,8 +219,8 @@ func (this *QBitmap) Transformed(arg0 *QMatrix) *QBitmap /*123*/ {
 // Public
 // QBitmap transformed(const QTransform &)
 func (this *QBitmap) Transformed_1(matrix *QTransform) *QBitmap /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = matrix.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QBitmap11transformedERK10QTransform", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

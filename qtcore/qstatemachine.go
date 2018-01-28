@@ -192,7 +192,7 @@ func (this *QStateMachine) IsAnimated() bool {
 // /usr/include/qt/QtCore/qstatemachine.h:127
 // index:0
 // Public
-// void setAnimated(bool)
+// void setAnimated(_Bool)
 func (this *QStateMachine) SetAnimated(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine11setAnimatedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -241,7 +241,7 @@ func (this *QStateMachine) SetGlobalRestorePolicy(restorePolicy int) {
 // /usr/include/qt/QtCore/qstatemachine.h:137
 // index:0
 // Public
-// void postEvent(QEvent *, QStateMachine::EventPriority)
+// void postEvent(QEvent *, enum QStateMachine::EventPriority)
 func (this *QStateMachine) PostEvent(event *QEvent /*777 QEvent **/, priority int) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine9postEventEP6QEventNS_13EventPriorityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, priority)
@@ -257,7 +257,7 @@ func (this *QStateMachine) PostDelayedEvent(event *QEvent /*777 QEvent **/, dela
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine16postDelayedEventEP6QEventi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, delay)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qstatemachine.h:139
@@ -305,7 +305,7 @@ func (this *QStateMachine) Stop() {
 // /usr/include/qt/QtCore/qstatemachine.h:150
 // index:0
 // Public
-// void setRunning(bool)
+// void setRunning(_Bool)
 func (this *QStateMachine) SetRunning(running bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine10setRunningEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), running)
 	gopp.ErrPrint(err, rv)
@@ -314,7 +314,7 @@ func (this *QStateMachine) SetRunning(running bool) {
 // /usr/include/qt/QtCore/qstatemachine.h:155
 // index:0
 // Public
-// void runningChanged(bool)
+// void runningChanged(_Bool)
 func (this *QStateMachine) RunningChanged(running bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachine14runningChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), running)
 	gopp.ErrPrint(err, rv)

@@ -118,7 +118,7 @@ func (this *QMetaEnum) KeyCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMetaEnum8keyCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:216
@@ -140,7 +140,7 @@ func (this *QMetaEnum) Value(index int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMetaEnum5valueEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:219
@@ -157,14 +157,14 @@ func (this *QMetaEnum) Scope() string {
 // /usr/include/qt/QtCore/qmetaobject.h:221
 // index:0
 // Public
-// int keyToValue(const char *, bool *)
+// int keyToValue(const char *, _Bool *)
 func (this *QMetaEnum) KeyToValue(key string, ok unsafe.Pointer /*666*/) int {
 	var convArg0 = qtrt.CString(key)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMetaEnum10keyToValueEPKcPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:222
@@ -181,14 +181,14 @@ func (this *QMetaEnum) ValueToKey(value int) string {
 // /usr/include/qt/QtCore/qmetaobject.h:223
 // index:0
 // Public
-// int keysToValue(const char *, bool *)
+// int keysToValue(const char *, _Bool *)
 func (this *QMetaEnum) KeysToValue(keys string, ok unsafe.Pointer /*666*/) int {
 	var convArg0 = qtrt.CString(keys)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMetaEnum11keysToValueEPKcPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:224

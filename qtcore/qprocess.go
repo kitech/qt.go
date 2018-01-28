@@ -116,7 +116,10 @@ func (this *QProcess) StartDetached(pid unsafe.Pointer /*666*/) bool {
 // Public static
 // bool startDetached(const QString &, const QStringList &, const QString &, qint64 *)
 func (this *QProcess) StartDetached_1(program *QString, arguments *QStringList, workingDirectory *QString, pid unsafe.Pointer /*666*/) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess13startDetachedERK7QStringRK11QStringListS2_Px", ffiqt.FFI_TYPE_POINTER, program, arguments, workingDirectory, pid)
+	var convArg0 = program.GetCthis()
+	var convArg1 = arguments.GetCthis()
+	var convArg2 = workingDirectory.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess13startDetachedERK7QStringRK11QStringListS2_Px", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, &pid)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -132,7 +135,9 @@ func QProcess_StartDetached_1(program *QString, arguments *QStringList, workingD
 // Public static
 // bool startDetached(const QString &, const QStringList &)
 func (this *QProcess) StartDetached_2(program *QString, arguments *QStringList) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess13startDetachedERK7QStringRK11QStringList", ffiqt.FFI_TYPE_POINTER, program, arguments)
+	var convArg0 = program.GetCthis()
+	var convArg1 = arguments.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess13startDetachedERK7QStringRK11QStringList", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -148,7 +153,8 @@ func QProcess_StartDetached_2(program *QString, arguments *QStringList) bool {
 // Public static
 // bool startDetached(const QString &)
 func (this *QProcess) StartDetached_3(command *QString) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess13startDetachedERK7QString", ffiqt.FFI_TYPE_POINTER, command)
+	var convArg0 = command.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess13startDetachedERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -207,7 +213,7 @@ func (this *QProcess) ReadChannelMode() int {
 // /usr/include/qt/QtCore/qprocess.h:176
 // index:0
 // Public
-// void setReadChannelMode(QProcess::ProcessChannelMode)
+// void setReadChannelMode(enum QProcess::ProcessChannelMode)
 func (this *QProcess) SetReadChannelMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess18setReadChannelModeENS_18ProcessChannelModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -227,7 +233,7 @@ func (this *QProcess) ProcessChannelMode() int {
 // /usr/include/qt/QtCore/qprocess.h:178
 // index:0
 // Public
-// void setProcessChannelMode(QProcess::ProcessChannelMode)
+// void setProcessChannelMode(enum QProcess::ProcessChannelMode)
 func (this *QProcess) SetProcessChannelMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess21setProcessChannelModeENS_18ProcessChannelModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -247,7 +253,7 @@ func (this *QProcess) InputChannelMode() int {
 // /usr/include/qt/QtCore/qprocess.h:180
 // index:0
 // Public
-// void setInputChannelMode(QProcess::InputChannelMode)
+// void setInputChannelMode(enum QProcess::InputChannelMode)
 func (this *QProcess) SetInputChannelMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess19setInputChannelModeENS_16InputChannelModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -267,7 +273,7 @@ func (this *QProcess) ReadChannel() int {
 // /usr/include/qt/QtCore/qprocess.h:183
 // index:0
 // Public
-// void setReadChannel(QProcess::ProcessChannel)
+// void setReadChannel(enum QProcess::ProcessChannel)
 func (this *QProcess) SetReadChannel(channel int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess14setReadChannelENS_14ProcessChannelE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), channel)
 	gopp.ErrPrint(err, rv)
@@ -276,7 +282,7 @@ func (this *QProcess) SetReadChannel(channel int) {
 // /usr/include/qt/QtCore/qprocess.h:185
 // index:0
 // Public
-// void closeReadChannel(QProcess::ProcessChannel)
+// void closeReadChannel(enum QProcess::ProcessChannel)
 func (this *QProcess) CloseReadChannel(channel int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess16closeReadChannelENS_14ProcessChannelE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), channel)
 	gopp.ErrPrint(err, rv)
@@ -502,7 +508,7 @@ func (this *QProcess) ExitCode() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QProcess8exitCodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qprocess.h:238
@@ -585,10 +591,12 @@ func (this *QProcess) AtEnd() bool {
 // Public static
 // int execute(const QString &, const QStringList &)
 func (this *QProcess) Execute(program *QString, arguments *QStringList) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess7executeERK7QStringRK11QStringList", ffiqt.FFI_TYPE_POINTER, program, arguments)
+	var convArg0 = program.GetCthis()
+	var convArg1 = arguments.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess7executeERK7QStringRK11QStringList", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QProcess_Execute(program *QString, arguments *QStringList) int {
 	var nilthis *QProcess
@@ -601,10 +609,11 @@ func QProcess_Execute(program *QString, arguments *QStringList) int {
 // Public static
 // int execute(const QString &)
 func (this *QProcess) Execute_1(command *QString) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess7executeERK7QString", ffiqt.FFI_TYPE_POINTER, command)
+	var convArg0 = command.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess7executeERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QProcess_Execute_1(command *QString) int {
 	var nilthis *QProcess
@@ -677,7 +686,7 @@ func (this *QProcess) ErrorOccurred(error int) {
 // /usr/include/qt/QtCore/qprocess.h:284
 // index:0
 // Protected
-// void setProcessState(QProcess::ProcessState)
+// void setProcessState(enum QProcess::ProcessState)
 func (this *QProcess) SetProcessState(state int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess15setProcessStateENS_12ProcessStateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	gopp.ErrPrint(err, rv)

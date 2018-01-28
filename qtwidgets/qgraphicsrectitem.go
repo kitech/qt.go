@@ -242,13 +242,13 @@ func (this *QGraphicsRectItem) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRectItem4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:683
 // index:0
 // Protected virtual
-// bool supportsExtension(QGraphicsItem::Extension)
+// bool supportsExtension(enum QGraphicsItem::Extension)
 func (this *QGraphicsRectItem) SupportsExtension(extension int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRectItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	gopp.ErrPrint(err, rv)
@@ -259,7 +259,7 @@ func (this *QGraphicsRectItem) SupportsExtension(extension int) bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:684
 // index:0
 // Protected virtual
-// void setExtension(QGraphicsItem::Extension, const QVariant &)
+// void setExtension(enum QGraphicsItem::Extension, const QVariant &)
 func (this *QGraphicsRectItem) SetExtension(extension int, variant *qtcore.QVariant) {
 	var convArg1 = variant.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRectItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension, convArg1)
@@ -271,8 +271,8 @@ func (this *QGraphicsRectItem) SetExtension(extension int, variant *qtcore.QVari
 // Protected virtual
 // QVariant extension(const QVariant &)
 func (this *QGraphicsRectItem) Extension(variant *qtcore.QVariant) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = variant.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsRectItem9extensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

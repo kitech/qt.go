@@ -107,7 +107,7 @@ func (this *QSGGeometry) DrawingMode() uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry11drawingModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return uint(rv) // 111
+	return qtrt.Cretval2go("uint", rv).(uint) // 1111
 }
 
 // /usr/include/qt/QtQuick/qsggeometry.h:152
@@ -127,7 +127,7 @@ func (this *QSGGeometry) VertexCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry11vertexCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQuick/qsggeometry.h:156
@@ -226,7 +226,7 @@ func (this *QSGGeometry) IndexType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry9indexTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQuick/qsggeometry.h:168
@@ -237,7 +237,7 @@ func (this *QSGGeometry) IndexCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry10indexCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQuick/qsggeometry.h:170
@@ -314,7 +314,7 @@ func (this *QSGGeometry) SizeOfIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry11sizeOfIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQuick/qsggeometry.h:180
@@ -325,7 +325,7 @@ func (this *QSGGeometry) AttributeCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry14attributeCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQuick/qsggeometry.h:181
@@ -347,7 +347,7 @@ func (this *QSGGeometry) SizeOfVertex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry12sizeOfVertexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQuick/qsggeometry.h:184
@@ -355,7 +355,9 @@ func (this *QSGGeometry) SizeOfVertex() int {
 // Public static
 // void updateRectGeometry(QSGGeometry *, const QRectF &)
 func (this *QSGGeometry) UpdateRectGeometry(g *QSGGeometry /*777 QSGGeometry **/, rect *qtcore.QRectF) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry18updateRectGeometryEPS_RK6QRectF", ffiqt.FFI_TYPE_POINTER, g, rect)
+	var convArg0 = g.GetCthis()
+	var convArg1 = rect.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry18updateRectGeometryEPS_RK6QRectF", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 func QSGGeometry_UpdateRectGeometry(g *QSGGeometry /*777 QSGGeometry **/, rect *qtcore.QRectF) {
@@ -368,7 +370,10 @@ func QSGGeometry_UpdateRectGeometry(g *QSGGeometry /*777 QSGGeometry **/, rect *
 // Public static
 // void updateTexturedRectGeometry(QSGGeometry *, const QRectF &, const QRectF &)
 func (this *QSGGeometry) UpdateTexturedRectGeometry(g *QSGGeometry /*777 QSGGeometry **/, rect *qtcore.QRectF, sourceRect *qtcore.QRectF) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry26updateTexturedRectGeometryEPS_RK6QRectFS3_", ffiqt.FFI_TYPE_POINTER, g, rect, sourceRect)
+	var convArg0 = g.GetCthis()
+	var convArg1 = rect.GetCthis()
+	var convArg2 = sourceRect.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry26updateTexturedRectGeometryEPS_RK6QRectFS3_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 func QSGGeometry_UpdateTexturedRectGeometry(g *QSGGeometry /*777 QSGGeometry **/, rect *qtcore.QRectF, sourceRect *qtcore.QRectF) {
@@ -381,7 +386,9 @@ func QSGGeometry_UpdateTexturedRectGeometry(g *QSGGeometry /*777 QSGGeometry **/
 // Public static
 // void updateColoredRectGeometry(QSGGeometry *, const QRectF &)
 func (this *QSGGeometry) UpdateColoredRectGeometry(g *QSGGeometry /*777 QSGGeometry **/, rect *qtcore.QRectF) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry25updateColoredRectGeometryEPS_RK6QRectF", ffiqt.FFI_TYPE_POINTER, g, rect)
+	var convArg0 = g.GetCthis()
+	var convArg1 = rect.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry25updateColoredRectGeometryEPS_RK6QRectF", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 func QSGGeometry_UpdateColoredRectGeometry(g *QSGGeometry /*777 QSGGeometry **/, rect *qtcore.QRectF) {
@@ -392,7 +399,7 @@ func QSGGeometry_UpdateColoredRectGeometry(g *QSGGeometry /*777 QSGGeometry **/,
 // /usr/include/qt/QtQuick/qsggeometry.h:188
 // index:0
 // Public
-// void setIndexDataPattern(QSGGeometry::DataPattern)
+// void setIndexDataPattern(enum QSGGeometry::DataPattern)
 func (this *QSGGeometry) SetIndexDataPattern(p int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry19setIndexDataPatternENS_11DataPatternE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), p)
 	gopp.ErrPrint(err, rv)
@@ -412,7 +419,7 @@ func (this *QSGGeometry) IndexDataPattern() int {
 // /usr/include/qt/QtQuick/qsggeometry.h:191
 // index:0
 // Public
-// void setVertexDataPattern(QSGGeometry::DataPattern)
+// void setVertexDataPattern(enum QSGGeometry::DataPattern)
 func (this *QSGGeometry) SetVertexDataPattern(p int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry20setVertexDataPatternENS_11DataPatternE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), p)
 	gopp.ErrPrint(err, rv)
@@ -452,10 +459,10 @@ func (this *QSGGeometry) MarkVertexDataDirty() {
 // Public
 // float lineWidth()
 func (this *QSGGeometry) LineWidth() float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry9lineWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry9lineWidthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtQuick/qsggeometry.h:198

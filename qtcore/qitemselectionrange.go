@@ -122,7 +122,7 @@ func (this *QItemSelectionRange) Top() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange3topEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:80
@@ -133,7 +133,7 @@ func (this *QItemSelectionRange) Left() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange4leftEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:81
@@ -144,7 +144,7 @@ func (this *QItemSelectionRange) Bottom() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange6bottomEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:82
@@ -155,7 +155,7 @@ func (this *QItemSelectionRange) Right() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange5rightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:83
@@ -166,7 +166,7 @@ func (this *QItemSelectionRange) Width() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:84
@@ -177,7 +177,7 @@ func (this *QItemSelectionRange) Height() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange6heightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:86
@@ -271,8 +271,8 @@ func (this *QItemSelectionRange) Intersects(other *QItemSelectionRange) bool {
 // Public
 // QItemSelectionRange intersected(const QItemSelectionRange &)
 func (this *QItemSelectionRange) Intersected(other *QItemSelectionRange) *QItemSelectionRange /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = other.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QItemSelectionRange11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

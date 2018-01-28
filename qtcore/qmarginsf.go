@@ -118,10 +118,10 @@ func (this *QMarginsF) IsNull() bool {
 // Public inline
 // qreal left()
 func (this *QMarginsF) Left() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMarginsF4leftEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMarginsF4leftEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmargins.h:295
@@ -129,10 +129,10 @@ func (this *QMarginsF) Left() float64 {
 // Public inline
 // qreal top()
 func (this *QMarginsF) Top() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMarginsF3topEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMarginsF3topEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmargins.h:296
@@ -140,10 +140,10 @@ func (this *QMarginsF) Top() float64 {
 // Public inline
 // qreal right()
 func (this *QMarginsF) Right() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMarginsF5rightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMarginsF5rightEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmargins.h:297
@@ -151,10 +151,10 @@ func (this *QMarginsF) Right() float64 {
 // Public inline
 // qreal bottom()
 func (this *QMarginsF) Bottom() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMarginsF6bottomEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMarginsF6bottomEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qmargins.h:299

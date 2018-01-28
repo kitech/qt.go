@@ -205,7 +205,7 @@ func (this *QImageWriter) Quality() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageWriter7qualityEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qimagewriter.h:84
@@ -225,7 +225,7 @@ func (this *QImageWriter) Compression() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageWriter11compressionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qimagewriter.h:87
@@ -242,10 +242,10 @@ func (this *QImageWriter) SetGamma(gamma float32) {
 // Public
 // float gamma()
 func (this *QImageWriter) Gamma() float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageWriter5gammaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QImageWriter5gammaEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float32(rv) // 111
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
 // /usr/include/qt/QtGui/qimagewriter.h:90
@@ -275,7 +275,7 @@ func (this *QImageWriter) SubType() *qtcore.QByteArray /*123*/ {
 // /usr/include/qt/QtGui/qimagewriter.h:94
 // index:0
 // Public
-// void setOptimizedWrite(bool)
+// void setOptimizedWrite(_Bool)
 func (this *QImageWriter) SetOptimizedWrite(optimize bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageWriter17setOptimizedWriteEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), optimize)
 	gopp.ErrPrint(err, rv)
@@ -295,7 +295,7 @@ func (this *QImageWriter) OptimizedWrite() bool {
 // /usr/include/qt/QtGui/qimagewriter.h:97
 // index:0
 // Public
-// void setProgressiveScanWrite(bool)
+// void setProgressiveScanWrite(_Bool)
 func (this *QImageWriter) SetProgressiveScanWrite(progressive bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageWriter23setProgressiveScanWriteEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), progressive)
 	gopp.ErrPrint(err, rv)

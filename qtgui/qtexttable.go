@@ -203,7 +203,7 @@ func (this *QTextTable) Rows() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable4rowsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:118
@@ -214,7 +214,7 @@ func (this *QTextTable) Columns() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable7columnsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:120
@@ -250,8 +250,8 @@ func (this *QTextTable) CellAt_1(position int) *QTextTableCell /*123*/ {
 // Public
 // QTextTableCell cellAt(const QTextCursor &)
 func (this *QTextTable) CellAt_2(c *QTextCursor) *QTextTableCell /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = c.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable6cellAtERK11QTextCursor", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -265,8 +265,8 @@ func (this *QTextTable) CellAt_2(c *QTextCursor) *QTextTableCell /*123*/ {
 // Public
 // QTextCursor rowStart(const QTextCursor &)
 func (this *QTextTable) RowStart(c *QTextCursor) *QTextCursor /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = c.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable8rowStartERK11QTextCursor", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -280,8 +280,8 @@ func (this *QTextTable) RowStart(c *QTextCursor) *QTextCursor /*123*/ {
 // Public
 // QTextCursor rowEnd(const QTextCursor &)
 func (this *QTextTable) RowEnd(c *QTextCursor) *QTextCursor /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = c.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextTable6rowEndERK11QTextCursor", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

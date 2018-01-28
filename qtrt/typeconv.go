@@ -114,3 +114,29 @@ func CCharPPToStringSlice(charpp unsafe.Pointer) []string {
 	}
 	return ss
 }
+
+func Cretval2go(ty string, rv uint64) interface{} {
+	switch ty {
+	case "int":
+		return int((C.int)(rv))
+	case "float64":
+		log.Println(rv)
+		return float64(*(*C.double)(unsafe.Pointer(&rv)))
+	default:
+		log.Println("Unknown type:", ty)
+	}
+	return rv
+}
+
+func Cpretval2go(ty string, rv uint64) interface{} {
+	switch ty {
+	case "int":
+		return int(*(*C.int)(unsafe.Pointer(uintptr(rv))))
+	case "float64":
+		log.Println(rv)
+		return float64(*(*C.double)(unsafe.Pointer(uintptr(rv))))
+	default:
+		log.Println("Unknown type:", ty)
+	}
+	return rv
+}

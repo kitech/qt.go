@@ -216,7 +216,7 @@ func (this *QTreeWidgetItem) TreeWidget() *QTreeWidget /*777 QTreeWidget **/ {
 // /usr/include/qt/QtWidgets/qtreewidget.h:82
 // index:0
 // Public inline
-// void setSelected(bool)
+// void setSelected(_Bool)
 func (this *QTreeWidgetItem) SetSelected(select_ bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem11setSelectedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), select_)
 	gopp.ErrPrint(err, rv)
@@ -236,7 +236,7 @@ func (this *QTreeWidgetItem) IsSelected() bool {
 // /usr/include/qt/QtWidgets/qtreewidget.h:85
 // index:0
 // Public inline
-// void setHidden(bool)
+// void setHidden(_Bool)
 func (this *QTreeWidgetItem) SetHidden(hide bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem9setHiddenEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hide)
 	gopp.ErrPrint(err, rv)
@@ -256,7 +256,7 @@ func (this *QTreeWidgetItem) IsHidden() bool {
 // /usr/include/qt/QtWidgets/qtreewidget.h:88
 // index:0
 // Public inline
-// void setExpanded(bool)
+// void setExpanded(_Bool)
 func (this *QTreeWidgetItem) SetExpanded(expand bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem11setExpandedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), expand)
 	gopp.ErrPrint(err, rv)
@@ -276,7 +276,7 @@ func (this *QTreeWidgetItem) IsExpanded() bool {
 // /usr/include/qt/QtWidgets/qtreewidget.h:91
 // index:0
 // Public inline
-// void setFirstColumnSpanned(bool)
+// void setFirstColumnSpanned(_Bool)
 func (this *QTreeWidgetItem) SetFirstColumnSpanned(span bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem21setFirstColumnSpannedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), span)
 	gopp.ErrPrint(err, rv)
@@ -296,7 +296,7 @@ func (this *QTreeWidgetItem) IsFirstColumnSpanned() bool {
 // /usr/include/qt/QtWidgets/qtreewidget.h:94
 // index:0
 // Public inline
-// void setDisabled(bool)
+// void setDisabled(_Bool)
 func (this *QTreeWidgetItem) SetDisabled(disabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItem11setDisabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), disabled)
 	gopp.ErrPrint(err, rv)
@@ -505,7 +505,7 @@ func (this *QTreeWidgetItem) TextAlignment(column int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem13textAlignmentEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtreewidget.h:134
@@ -639,7 +639,7 @@ func (this *QTreeWidgetItem) SetCheckState(column int, state int) {
 // QSize sizeHint(int)
 func (this *QTreeWidgetItem) SizeHint(column int) *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem8sizeHintEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), column)
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK15QTreeWidgetItem8sizeHintEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -733,7 +733,7 @@ func (this *QTreeWidgetItem) ChildCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem10childCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtreewidget.h:186
@@ -744,7 +744,7 @@ func (this *QTreeWidgetItem) ColumnCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem11columnCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtreewidget.h:187
@@ -756,7 +756,7 @@ func (this *QTreeWidgetItem) IndexOfChild(child *QTreeWidgetItem /*777 QTreeWidg
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem12indexOfChildEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtreewidget.h:189
@@ -809,7 +809,7 @@ func (this *QTreeWidgetItem) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTreeWidgetItem4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qtreewidget.h:199

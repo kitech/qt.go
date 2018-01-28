@@ -114,7 +114,7 @@ func (this *QTextTableFormat) Columns() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat7columnsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:893
@@ -140,10 +140,10 @@ func (this *QTextTableFormat) ClearColumnWidthConstraints() {
 // Public inline
 // qreal cellSpacing()
 func (this *QTextTableFormat) CellSpacing() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat11cellSpacingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat11cellSpacingEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:906
@@ -160,10 +160,10 @@ func (this *QTextTableFormat) SetCellSpacing(spacing float64) {
 // Public inline
 // qreal cellPadding()
 func (this *QTextTableFormat) CellPadding() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat11cellPaddingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat11cellPaddingEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:911
@@ -203,7 +203,7 @@ func (this *QTextTableFormat) HeaderRowCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextTableFormat14headerRowCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 //  body block end

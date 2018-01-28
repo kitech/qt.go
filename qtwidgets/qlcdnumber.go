@@ -140,7 +140,7 @@ func (this *QLCDNumber) DigitCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber10digitCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlcdnumber.h:77
@@ -188,7 +188,7 @@ func (this *QLCDNumber) Mode() int {
 // /usr/include/qt/QtWidgets/qlcdnumber.h:83
 // index:0
 // Public
-// void setMode(QLCDNumber::Mode)
+// void setMode(enum QLCDNumber::Mode)
 func (this *QLCDNumber) SetMode(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber7setModeENS_4ModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -208,7 +208,7 @@ func (this *QLCDNumber) SegmentStyle() int {
 // /usr/include/qt/QtWidgets/qlcdnumber.h:86
 // index:0
 // Public
-// void setSegmentStyle(QLCDNumber::SegmentStyle)
+// void setSegmentStyle(enum QLCDNumber::SegmentStyle)
 func (this *QLCDNumber) SetSegmentStyle(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber15setSegmentStyleENS_12SegmentStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -219,10 +219,10 @@ func (this *QLCDNumber) SetSegmentStyle(arg0 int) {
 // Public
 // double value()
 func (this *QLCDNumber) Value() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber5valueEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 111
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlcdnumber.h:89
@@ -233,7 +233,7 @@ func (this *QLCDNumber) IntValue() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber8intValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qlcdnumber.h:91
@@ -242,7 +242,7 @@ func (this *QLCDNumber) IntValue() int {
 // QSize sizeHint()
 func (this *QLCDNumber) SizeHint() *qtcore.QSize /*123*/ {
 	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QLCDNumber8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK10QLCDNumber8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -317,7 +317,7 @@ func (this *QLCDNumber) SetBinMode() {
 // /usr/include/qt/QtWidgets/qlcdnumber.h:101
 // index:0
 // Public
-// void setSmallDecimalPoint(bool)
+// void setSmallDecimalPoint(_Bool)
 func (this *QLCDNumber) SetSmallDecimalPoint(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumber20setSmallDecimalPointEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

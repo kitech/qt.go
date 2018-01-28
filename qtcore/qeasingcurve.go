@@ -68,7 +68,7 @@ func (*QEasingCurve) NewFromPointer(cthis unsafe.Pointer) *QEasingCurve {
 // /usr/include/qt/QtCore/qeasingcurve.h:77
 // index:0
 // Public
-// void QEasingCurve(QEasingCurve::Type)
+// void QEasingCurve(enum QEasingCurve::Type)
 func NewQEasingCurve(type_ int) *QEasingCurve {
 	cthis := qtrt.Calloc(1, 256) // 8
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurveC2ENS_4TypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)
@@ -101,10 +101,10 @@ func (this *QEasingCurve) Swap(other *QEasingCurve) {
 // Public
 // qreal amplitude()
 func (this *QEasingCurve) Amplitude() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve9amplitudeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve9amplitudeEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qeasingcurve.h:96
@@ -121,10 +121,10 @@ func (this *QEasingCurve) SetAmplitude(amplitude float64) {
 // Public
 // qreal period()
 func (this *QEasingCurve) Period() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve6periodEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve6periodEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qeasingcurve.h:99
@@ -141,10 +141,10 @@ func (this *QEasingCurve) SetPeriod(period float64) {
 // Public
 // qreal overshoot()
 func (this *QEasingCurve) Overshoot() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve9overshootEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve9overshootEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 // /usr/include/qt/QtCore/qeasingcurve.h:102
@@ -192,7 +192,7 @@ func (this *QEasingCurve) Type() int {
 // /usr/include/qt/QtCore/qeasingcurve.h:112
 // index:0
 // Public
-// void setType(QEasingCurve::Type)
+// void setType(enum QEasingCurve::Type)
 func (this *QEasingCurve) SetType(type_ int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurve7setTypeENS_4TypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
@@ -214,10 +214,10 @@ func (this *QEasingCurve) CustomType() unsafe.Pointer /*666*/ {
 // Public
 // qreal valueForProgress(qreal)
 func (this *QEasingCurve) ValueForProgress(progress float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve16valueForProgressEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), progress)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QEasingCurve16valueForProgressEd", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), progress)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return float64(rv) // 222
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 type QEasingCurve__Type = int

@@ -89,7 +89,7 @@ func DeleteQCommandLineParser(*QCommandLineParser) {
 // /usr/include/qt/QtCore/qcommandlineparser.h:66
 // index:0
 // Public
-// void setSingleDashWordOptionMode(QCommandLineParser::SingleDashWordOptionMode)
+// void setSingleDashWordOptionMode(enum QCommandLineParser::SingleDashWordOptionMode)
 func (this *QCommandLineParser) SetSingleDashWordOptionMode(parsingMode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser27setSingleDashWordOptionModeENS_24SingleDashWordOptionModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), parsingMode)
 	gopp.ErrPrint(err, rv)
@@ -98,7 +98,7 @@ func (this *QCommandLineParser) SetSingleDashWordOptionMode(parsingMode int) {
 // /usr/include/qt/QtCore/qcommandlineparser.h:72
 // index:0
 // Public
-// void setOptionsAfterPositionalArgumentsMode(QCommandLineParser::OptionsAfterPositionalArgumentsMode)
+// void setOptionsAfterPositionalArgumentsMode(enum QCommandLineParser::OptionsAfterPositionalArgumentsMode)
 func (this *QCommandLineParser) SetOptionsAfterPositionalArgumentsMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParser38setOptionsAfterPositionalArgumentsModeENS_35OptionsAfterPositionalArgumentsModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -264,8 +264,8 @@ func (this *QCommandLineParser) IsSet_1(option *QCommandLineOption) bool {
 // Public
 // QString value(const QString &)
 func (this *QCommandLineParser) Value(name *QString) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = name.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser5valueERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -279,8 +279,8 @@ func (this *QCommandLineParser) Value(name *QString) *QString /*123*/ {
 // Public
 // QString value(const QCommandLineOption &)
 func (this *QCommandLineParser) Value_1(option *QCommandLineOption) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = option.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLineParser5valueERK18QCommandLineOption", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

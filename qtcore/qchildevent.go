@@ -69,7 +69,7 @@ func (*QChildEvent) NewFromPointer(cthis unsafe.Pointer) *QChildEvent {
 // /usr/include/qt/QtCore/qcoreevent.h:352
 // index:0
 // Public
-// void QChildEvent(QEvent::Type, QObject *)
+// void QChildEvent(enum QEvent::Type, QObject *)
 func NewQChildEvent(type_ int, child *QObject /*777 QObject **/) *QChildEvent {
 	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg1 = child.GetCthis()

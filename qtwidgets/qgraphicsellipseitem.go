@@ -164,7 +164,7 @@ func (this *QGraphicsEllipseItem) StartAngle() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem10startAngleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:709
@@ -184,7 +184,7 @@ func (this *QGraphicsEllipseItem) SpanAngle() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem9spanAngleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:712
@@ -282,13 +282,13 @@ func (this *QGraphicsEllipseItem) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:727
 // index:0
 // Protected virtual
-// bool supportsExtension(QGraphicsItem::Extension)
+// bool supportsExtension(enum QGraphicsItem::Extension)
 func (this *QGraphicsEllipseItem) SupportsExtension(extension int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	gopp.ErrPrint(err, rv)
@@ -299,7 +299,7 @@ func (this *QGraphicsEllipseItem) SupportsExtension(extension int) bool {
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:728
 // index:0
 // Protected virtual
-// void setExtension(QGraphicsItem::Extension, const QVariant &)
+// void setExtension(enum QGraphicsItem::Extension, const QVariant &)
 func (this *QGraphicsEllipseItem) SetExtension(extension int, variant *qtcore.QVariant) {
 	var convArg1 = variant.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsEllipseItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension, convArg1)
@@ -311,8 +311,8 @@ func (this *QGraphicsEllipseItem) SetExtension(extension int, variant *qtcore.QV
 // Protected virtual
 // QVariant extension(const QVariant &)
 func (this *QGraphicsEllipseItem) Extension(variant *qtcore.QVariant) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = variant.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem9extensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv

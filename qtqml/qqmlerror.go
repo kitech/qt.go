@@ -161,7 +161,7 @@ func (this *QQmlError) Line() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QQmlError4lineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQml/qqmlerror.h:68
@@ -181,7 +181,7 @@ func (this *QQmlError) Column() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QQmlError6columnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	return int(rv) // 111
+	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 // /usr/include/qt/QtQml/qqmlerror.h:70
@@ -229,7 +229,7 @@ func (this *QQmlError) MessageType() int {
 // /usr/include/qt/QtQml/qqmlerror.h:74
 // index:0
 // Public
-// void setMessageType(QtMsgType)
+// void setMessageType(enum QtMsgType)
 func (this *QQmlError) SetMessageType(messageType int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QQmlError14setMessageTypeE9QtMsgType", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), messageType)
 	gopp.ErrPrint(err, rv)

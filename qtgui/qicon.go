@@ -142,10 +142,10 @@ func (this *QIcon) Swap(other *QIcon) {
 // /usr/include/qt/QtGui/qicon.h:81
 // index:0
 // Public
-// QPixmap pixmap(const QSize &, QIcon::Mode, QIcon::State)
+// QPixmap pixmap(const QSize &, enum QIcon::Mode, enum QIcon::State)
 func (this *QIcon) Pixmap(size *qtcore.QSize, mode int, state int) *QPixmap /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = size.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6pixmapERK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, mode, state)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -157,7 +157,7 @@ func (this *QIcon) Pixmap(size *qtcore.QSize, mode int, state int) *QPixmap /*12
 // /usr/include/qt/QtGui/qicon.h:82
 // index:1
 // Public inline
-// QPixmap pixmap(int, int, QIcon::Mode, QIcon::State)
+// QPixmap pixmap(int, int, enum QIcon::Mode, enum QIcon::State)
 func (this *QIcon) Pixmap_1(w int, h int, mode int, state int) *QPixmap /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiiNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), w, h, mode, state)
@@ -171,7 +171,7 @@ func (this *QIcon) Pixmap_1(w int, h int, mode int, state int) *QPixmap /*123*/ 
 // /usr/include/qt/QtGui/qicon.h:84
 // index:2
 // Public inline
-// QPixmap pixmap(int, QIcon::Mode, QIcon::State)
+// QPixmap pixmap(int, enum QIcon::Mode, enum QIcon::State)
 func (this *QIcon) Pixmap_2(extent int, mode int, state int) *QPixmap /*123*/ {
 	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), extent, mode, state)
@@ -185,11 +185,11 @@ func (this *QIcon) Pixmap_2(extent int, mode int, state int) *QPixmap /*123*/ {
 // /usr/include/qt/QtGui/qicon.h:86
 // index:3
 // Public
-// QPixmap pixmap(QWindow *, const QSize &, QIcon::Mode, QIcon::State)
+// QPixmap pixmap(QWindow *, const QSize &, enum QIcon::Mode, enum QIcon::State)
 func (this *QIcon) Pixmap_3(window *QWindow /*777 QWindow **/, size *qtcore.QSize, mode int, state int) *QPixmap /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = window.GetCthis()
 	var convArg1 = size.GetCthis()
+	mv := qtrt.Calloc(1, 256)
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6pixmapEP7QWindowRK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, mode, state)
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -201,11 +201,11 @@ func (this *QIcon) Pixmap_3(window *QWindow /*777 QWindow **/, size *qtcore.QSiz
 // /usr/include/qt/QtGui/qicon.h:88
 // index:0
 // Public
-// QSize actualSize(const QSize &, QIcon::Mode, QIcon::State)
+// QSize actualSize(const QSize &, enum QIcon::Mode, enum QIcon::State)
 func (this *QIcon) ActualSize(size *qtcore.QSize, mode int, state int) *qtcore.QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = size.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon10actualSizeERK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, mode, state)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK5QIcon10actualSizeERK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, mode, state)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -216,12 +216,12 @@ func (this *QIcon) ActualSize(size *qtcore.QSize, mode int, state int) *qtcore.Q
 // /usr/include/qt/QtGui/qicon.h:89
 // index:1
 // Public
-// QSize actualSize(QWindow *, const QSize &, QIcon::Mode, QIcon::State)
+// QSize actualSize(QWindow *, const QSize &, enum QIcon::Mode, enum QIcon::State)
 func (this *QIcon) ActualSize_1(window *QWindow /*777 QWindow **/, size *qtcore.QSize, mode int, state int) *qtcore.QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
 	var convArg0 = window.GetCthis()
 	var convArg1 = size.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon10actualSizeEP7QWindowRK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, mode, state)
+	mv := qtrt.Calloc(1, 256)
+	rv, err := ffiqt.InvokeQtFunc7("_ZNK5QIcon10actualSizeEP7QWindowRK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, mode, state)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv = uint64(uintptr(mv))
@@ -288,7 +288,7 @@ func (this *QIcon) CacheKey() int64 {
 // /usr/include/qt/QtGui/qicon.h:106
 // index:0
 // Public
-// void addPixmap(const QPixmap &, QIcon::Mode, QIcon::State)
+// void addPixmap(const QPixmap &, enum QIcon::Mode, enum QIcon::State)
 func (this *QIcon) AddPixmap(pixmap *QPixmap, mode int, state int) {
 	var convArg0 = pixmap.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9addPixmapERK7QPixmapNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, state)
@@ -298,7 +298,7 @@ func (this *QIcon) AddPixmap(pixmap *QPixmap, mode int, state int) {
 // /usr/include/qt/QtGui/qicon.h:107
 // index:0
 // Public
-// void addFile(const QString &, const QSize &, QIcon::Mode, QIcon::State)
+// void addFile(const QString &, const QSize &, enum QIcon::Mode, enum QIcon::State)
 func (this *QIcon) AddFile(fileName *qtcore.QString, size *qtcore.QSize, mode int, state int) {
 	var convArg0 = fileName.GetCthis()
 	var convArg1 = size.GetCthis()
@@ -309,7 +309,7 @@ func (this *QIcon) AddFile(fileName *qtcore.QString, size *qtcore.QSize, mode in
 // /usr/include/qt/QtGui/qicon.h:111
 // index:0
 // Public
-// void setIsMask(bool)
+// void setIsMask(_Bool)
 func (this *QIcon) SetIsMask(isMask bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9setIsMaskEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), isMask)
 	gopp.ErrPrint(err, rv)
@@ -331,7 +331,8 @@ func (this *QIcon) IsMask() bool {
 // Public static
 // QIcon fromTheme(const QString &)
 func (this *QIcon) FromTheme(name *qtcore.QString) *QIcon /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9fromThemeERK7QString", ffiqt.FFI_TYPE_POINTER, name)
+	var convArg0 = name.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9fromThemeERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -348,7 +349,9 @@ func QIcon_FromTheme(name *qtcore.QString) *QIcon /*123*/ {
 // Public static
 // QIcon fromTheme(const QString &, const QIcon &)
 func (this *QIcon) FromTheme_1(name *qtcore.QString, fallback *QIcon) *QIcon /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9fromThemeERK7QStringRKS_", ffiqt.FFI_TYPE_POINTER, name, fallback)
+	var convArg0 = name.GetCthis()
+	var convArg1 = fallback.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9fromThemeERK7QStringRKS_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -365,7 +368,8 @@ func QIcon_FromTheme_1(name *qtcore.QString, fallback *QIcon) *QIcon /*123*/ {
 // Public static
 // bool hasThemeIcon(const QString &)
 func (this *QIcon) HasThemeIcon(name *qtcore.QString) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon12hasThemeIconERK7QString", ffiqt.FFI_TYPE_POINTER, name)
+	var convArg0 = name.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon12hasThemeIconERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -381,7 +385,8 @@ func QIcon_HasThemeIcon(name *qtcore.QString) bool {
 // Public static
 // void setThemeSearchPaths(const QStringList &)
 func (this *QIcon) SetThemeSearchPaths(searchpath *qtcore.QStringList) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon19setThemeSearchPathsERK11QStringList", ffiqt.FFI_TYPE_POINTER, searchpath)
+	var convArg0 = searchpath.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon19setThemeSearchPathsERK11QStringList", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QIcon_SetThemeSearchPaths(searchpath *qtcore.QStringList) {
@@ -411,7 +416,8 @@ func QIcon_ThemeName() *qtcore.QString /*123*/ {
 // Public static
 // void setThemeName(const QString &)
 func (this *QIcon) SetThemeName(path *qtcore.QString) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon12setThemeNameERK7QString", ffiqt.FFI_TYPE_POINTER, path)
+	var convArg0 = path.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon12setThemeNameERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QIcon_SetThemeName(path *qtcore.QString) {
