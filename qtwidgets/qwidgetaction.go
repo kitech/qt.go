@@ -76,8 +76,8 @@ func (*QWidgetAction) NewFromPointer(cthis unsafe.Pointer) *QWidgetAction {
 
 // /usr/include/qt/QtWidgets/qwidgetaction.h:55
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QWidgetAction) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QWidgetAction10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,21 +88,20 @@ func (this *QWidgetAction) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 
 // /usr/include/qt/QtWidgets/qwidgetaction.h:59
 // index:0
-// Public
-// void QWidgetAction(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QWidgetAction(QObject *)
 func NewQWidgetAction(parent *qtcore.QObject /*777 QObject **/) *QWidgetAction {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QWidgetActionC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QWidgetActionC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQWidgetActionFromPointer(cthis)
+	gothis := NewQWidgetActionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qwidgetaction.h:60
 // index:0
-// Public virtual
-// void ~QWidgetAction()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QWidgetAction()
 func DeleteQWidgetAction(*QWidgetAction) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QWidgetActionD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -110,8 +109,8 @@ func DeleteQWidgetAction(*QWidgetAction) {
 
 // /usr/include/qt/QtWidgets/qwidgetaction.h:62
 // index:0
-// Public
-// void setDefaultWidget(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void setDefaultWidget(QWidget *)
 func (this *QWidgetAction) SetDefaultWidget(w *QWidget /*777 QWidget **/) {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QWidgetAction16setDefaultWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -120,8 +119,8 @@ func (this *QWidgetAction) SetDefaultWidget(w *QWidget /*777 QWidget **/) {
 
 // /usr/include/qt/QtWidgets/qwidgetaction.h:63
 // index:0
-// Public
-// QWidget * defaultWidget()
+// Public Visibility=Default Availability=Available
+// [8] QWidget * defaultWidget()
 func (this *QWidgetAction) DefaultWidget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QWidgetAction13defaultWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -132,8 +131,8 @@ func (this *QWidgetAction) DefaultWidget() *QWidget /*777 QWidget **/ {
 
 // /usr/include/qt/QtWidgets/qwidgetaction.h:65
 // index:0
-// Public
-// QWidget * requestWidget(QWidget *)
+// Public Visibility=Default Availability=Available
+// [8] QWidget * requestWidget(QWidget *)
 func (this *QWidgetAction) RequestWidget(parent *QWidget /*777 QWidget **/) *QWidget /*777 QWidget **/ {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QWidgetAction13requestWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -145,8 +144,8 @@ func (this *QWidgetAction) RequestWidget(parent *QWidget /*777 QWidget **/) *QWi
 
 // /usr/include/qt/QtWidgets/qwidgetaction.h:66
 // index:0
-// Public
-// void releaseWidget(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void releaseWidget(QWidget *)
 func (this *QWidgetAction) ReleaseWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QWidgetAction13releaseWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -155,8 +154,8 @@ func (this *QWidgetAction) ReleaseWidget(widget *QWidget /*777 QWidget **/) {
 
 // /usr/include/qt/QtWidgets/qwidgetaction.h:69
 // index:0
-// Protected virtual
-// bool event(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 func (this *QWidgetAction) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QWidgetAction5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -167,8 +166,8 @@ func (this *QWidgetAction) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 
 // /usr/include/qt/QtWidgets/qwidgetaction.h:70
 // index:0
-// Protected virtual
-// bool eventFilter(QObject *, QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool eventFilter(QObject *, QEvent *)
 func (this *QWidgetAction) EventFilter(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
@@ -180,8 +179,8 @@ func (this *QWidgetAction) EventFilter(arg0 *qtcore.QObject /*777 QObject **/, a
 
 // /usr/include/qt/QtWidgets/qwidgetaction.h:71
 // index:0
-// Protected virtual
-// QWidget * createWidget(QWidget *)
+// Protected virtual Visibility=Default Availability=Available
+// [8] QWidget * createWidget(QWidget *)
 func (this *QWidgetAction) CreateWidget(parent *QWidget /*777 QWidget **/) *QWidget /*777 QWidget **/ {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QWidgetAction12createWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -193,8 +192,8 @@ func (this *QWidgetAction) CreateWidget(parent *QWidget /*777 QWidget **/) *QWid
 
 // /usr/include/qt/QtWidgets/qwidgetaction.h:72
 // index:0
-// Protected virtual
-// void deleteWidget(QWidget *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void deleteWidget(QWidget *)
 func (this *QWidgetAction) DeleteWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QWidgetAction12deleteWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

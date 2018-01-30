@@ -120,7 +120,6 @@ func Cretval2go(ty string, rv uint64) interface{} {
 	case "int":
 		return int((C.int)(rv))
 	case "float64":
-		log.Println(rv)
 		return float64(*(*C.double)(unsafe.Pointer(&rv)))
 	default:
 		log.Println("Unknown type:", ty)
@@ -133,7 +132,6 @@ func Cpretval2go(ty string, rv uint64) interface{} {
 	case "int":
 		return int(*(*C.int)(unsafe.Pointer(uintptr(rv))))
 	case "float64":
-		log.Println(rv)
 		return float64(*(*C.double)(unsafe.Pointer(uintptr(rv))))
 	default:
 		log.Println("Unknown type:", ty)

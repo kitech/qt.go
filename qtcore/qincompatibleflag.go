@@ -67,13 +67,12 @@ func (*QIncompatibleFlag) NewFromPointer(cthis unsafe.Pointer) *QIncompatibleFla
 
 // /usr/include/qt/QtCore/qflags.h:80
 // index:0
-// Public inline
-// void QIncompatibleFlag(int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QIncompatibleFlag(int)
 func NewQIncompatibleFlag(i int) *QIncompatibleFlag {
-	cthis := qtrt.Calloc(1, 256) // 4
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIncompatibleFlagC2Ei", ffiqt.FFI_TYPE_VOID, cthis, i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIncompatibleFlagC2Ei", ffiqt.FFI_TYPE_POINTER, i)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQIncompatibleFlagFromPointer(cthis)
+	gothis := NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

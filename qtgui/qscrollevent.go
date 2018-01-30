@@ -72,22 +72,21 @@ func (*QScrollEvent) NewFromPointer(cthis unsafe.Pointer) *QScrollEvent {
 
 // /usr/include/qt/QtGui/qevent.h:1022
 // index:0
-// Public
-// void QScrollEvent(const QPointF &, const QPointF &, enum QScrollEvent::ScrollState)
+// Public Visibility=Default Availability=Available
+// [-2] void QScrollEvent(const QPointF &, const QPointF &, enum QScrollEvent::ScrollState)
 func NewQScrollEvent(contentPos *qtcore.QPointF, overshoot *qtcore.QPointF, scrollState int) *QScrollEvent {
-	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = contentPos.GetCthis()
 	var convArg1 = overshoot.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QScrollEventC2ERK7QPointFS2_NS_11ScrollStateE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, scrollState)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QScrollEventC2ERK7QPointFS2_NS_11ScrollStateE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, scrollState)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQScrollEventFromPointer(cthis)
+	gothis := NewQScrollEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:1023
 // index:0
-// Public virtual
-// void ~QScrollEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QScrollEvent()
 func DeleteQScrollEvent(*QScrollEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QScrollEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -95,36 +94,32 @@ func DeleteQScrollEvent(*QScrollEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:1025
 // index:0
-// Public
-// QPointF contentPos()
+// Public Visibility=Default Availability=Available
+// [16] QPointF contentPos()
 func (this *QScrollEvent) ContentPos() *qtcore.QPointF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QScrollEvent10contentPosEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QScrollEvent10contentPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:1026
 // index:0
-// Public
-// QPointF overshootDistance()
+// Public Visibility=Default Availability=Available
+// [16] QPointF overshootDistance()
 func (this *QScrollEvent) OvershootDistance() *qtcore.QPointF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QScrollEvent17overshootDistanceEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QScrollEvent17overshootDistanceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:1027
 // index:0
-// Public
-// QScrollEvent::ScrollState scrollState()
+// Public Visibility=Default Availability=Available
+// [4] QScrollEvent::ScrollState scrollState()
 func (this *QScrollEvent) ScrollState() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QScrollEvent11scrollStateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

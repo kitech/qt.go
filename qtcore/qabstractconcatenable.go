@@ -67,8 +67,8 @@ func (*QAbstractConcatenable) NewFromPointer(cthis unsafe.Pointer) *QAbstractCon
 
 // /usr/include/qt/QtCore/qstringbuilder.h:61
 // index:0
-// Protected static
-// void convertFromAscii(const char *, int, QChar *&)
+// Protected static Visibility=Default Availability=Available
+// [-2] void convertFromAscii(const char *, int, QChar *&)
 func (this *QAbstractConcatenable) ConvertFromAscii(a string, len int, out *QChar) {
 	var convArg0 = qtrt.CString(a)
 	defer qtrt.FreeMem(convArg0)
@@ -83,8 +83,8 @@ func QAbstractConcatenable_ConvertFromAscii(a string, len int, out *QChar) {
 
 // /usr/include/qt/QtCore/qstringbuilder.h:62
 // index:1
-// Protected static inline
-// void convertFromAscii(char, QChar *&)
+// Protected static inline Visibility=Default Availability=Available
+// [-2] void convertFromAscii(char, QChar *&)
 func (this *QAbstractConcatenable) ConvertFromAscii_1(a byte, out *QChar) {
 	var convArg1 = out.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractConcatenable16convertFromAsciiEcRP5QChar", ffiqt.FFI_TYPE_POINTER, a, convArg1)
@@ -97,8 +97,8 @@ func QAbstractConcatenable_ConvertFromAscii_1(a byte, out *QChar) {
 
 // /usr/include/qt/QtCore/qstringbuilder.h:66
 // index:0
-// Protected static
-// void appendLatin1To(const char *, int, QChar *)
+// Protected static Visibility=Default Availability=Available
+// [-2] void appendLatin1To(const char *, int, QChar *)
 func (this *QAbstractConcatenable) AppendLatin1To(a string, len int, out *QChar /*777 QChar **/) {
 	var convArg0 = qtrt.CString(a)
 	defer qtrt.FreeMem(convArg0)

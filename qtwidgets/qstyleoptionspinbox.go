@@ -76,25 +76,23 @@ func (*QStyleOptionSpinBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionSp
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:552
 // index:0
-// Public
-// void QStyleOptionSpinBox()
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleOptionSpinBox()
 func NewQStyleOptionSpinBox() *QStyleOptionSpinBox {
-	cthis := qtrt.Calloc(1, 256) // 88
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionSpinBoxFromPointer(cthis)
+	gothis := NewQStyleOptionSpinBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:556
 // index:1
-// Protected
-// void QStyleOptionSpinBox(int)
+// Protected Visibility=Default Availability=Available
+// [-2] void QStyleOptionSpinBox(int)
 func NewQStyleOptionSpinBox_1(version int) *QStyleOptionSpinBox {
-	cthis := qtrt.Calloc(1, 256) // 88
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionSpinBoxFromPointer(cthis)
+	gothis := NewQStyleOptionSpinBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

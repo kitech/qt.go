@@ -71,20 +71,19 @@ func (*QNetworkConfiguration) NewFromPointer(cthis unsafe.Pointer) *QNetworkConf
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:56
 // index:0
-// Public
-// void QNetworkConfiguration()
+// Public Visibility=Default Availability=Available
+// [-2] void QNetworkConfiguration()
 func NewQNetworkConfiguration() *QNetworkConfiguration {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkConfigurationC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkConfigurationC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQNetworkConfigurationFromPointer(cthis)
+	gothis := NewQNetworkConfigurationFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:62
 // index:0
-// Public
-// void ~QNetworkConfiguration()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QNetworkConfiguration()
 func DeleteQNetworkConfiguration(*QNetworkConfiguration) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkConfigurationD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -92,8 +91,8 @@ func DeleteQNetworkConfiguration(*QNetworkConfiguration) {
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:64
 // index:0
-// Public inline
-// void swap(QNetworkConfiguration &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QNetworkConfiguration &)
 func (this *QNetworkConfiguration) Swap(other *QNetworkConfiguration) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkConfiguration4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -102,8 +101,8 @@ func (this *QNetworkConfiguration) Swap(other *QNetworkConfiguration) {
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:108
 // index:0
-// Public
-// QNetworkConfiguration::StateFlags state()
+// Public Visibility=Default Availability=Available
+// [4] QNetworkConfiguration::StateFlags state()
 func (this *QNetworkConfiguration) State() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkConfiguration5stateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -113,8 +112,8 @@ func (this *QNetworkConfiguration) State() int {
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:109
 // index:0
-// Public
-// QNetworkConfiguration::Type type()
+// Public Visibility=Default Availability=Available
+// [4] QNetworkConfiguration::Type type()
 func (this *QNetworkConfiguration) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkConfiguration4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -124,8 +123,8 @@ func (this *QNetworkConfiguration) Type() int {
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:110
 // index:0
-// Public
-// QNetworkConfiguration::Purpose purpose()
+// Public Visibility=Default Availability=Available
+// [4] QNetworkConfiguration::Purpose purpose()
 func (this *QNetworkConfiguration) Purpose() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkConfiguration7purposeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -135,8 +134,8 @@ func (this *QNetworkConfiguration) Purpose() int {
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:112
 // index:0
-// Public
-// QNetworkConfiguration::BearerType bearerType()
+// Public Visibility=Default Availability=Available
+// [4] QNetworkConfiguration::BearerType bearerType()
 func (this *QNetworkConfiguration) BearerType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkConfiguration10bearerTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -146,8 +145,8 @@ func (this *QNetworkConfiguration) BearerType() int {
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:113
 // index:0
-// Public
-// QNetworkConfiguration::BearerType bearerTypeFamily()
+// Public Visibility=Default Availability=Available
+// [4] QNetworkConfiguration::BearerType bearerTypeFamily()
 func (this *QNetworkConfiguration) BearerTypeFamily() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkConfiguration16bearerTypeFamilyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -157,36 +156,32 @@ func (this *QNetworkConfiguration) BearerTypeFamily() int {
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:114
 // index:0
-// Public
-// QString bearerTypeName()
+// Public Visibility=Default Availability=Available
+// [8] QString bearerTypeName()
 func (this *QNetworkConfiguration) BearerTypeName() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkConfiguration14bearerTypeNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkConfiguration14bearerTypeNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:116
 // index:0
-// Public
-// QString identifier()
+// Public Visibility=Default Availability=Available
+// [8] QString identifier()
 func (this *QNetworkConfiguration) Identifier() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkConfiguration10identifierEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkConfiguration10identifierEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:117
 // index:0
-// Public
-// bool isRoamingAvailable()
+// Public Visibility=Default Availability=Available
+// [1] bool isRoamingAvailable()
 func (this *QNetworkConfiguration) IsRoamingAvailable() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkConfiguration18isRoamingAvailableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -196,22 +191,20 @@ func (this *QNetworkConfiguration) IsRoamingAvailable() bool {
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:120
 // index:0
-// Public
-// QString name()
+// Public Visibility=Default Availability=Available
+// [8] QString name()
 func (this *QNetworkConfiguration) Name() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkConfiguration4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkConfiguration4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:121
 // index:0
-// Public
-// bool isValid()
+// Public Visibility=Default Availability=Available
+// [1] bool isValid()
 func (this *QNetworkConfiguration) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkConfiguration7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -221,8 +214,8 @@ func (this *QNetworkConfiguration) IsValid() bool {
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:123
 // index:0
-// Public
-// int connectTimeout()
+// Public Visibility=Default Availability=Available
+// [4] int connectTimeout()
 func (this *QNetworkConfiguration) ConnectTimeout() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkConfiguration14connectTimeoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -232,8 +225,8 @@ func (this *QNetworkConfiguration) ConnectTimeout() int {
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:124
 // index:0
-// Public
-// bool setConnectTimeout(int)
+// Public Visibility=Default Availability=Available
+// [1] bool setConnectTimeout(int)
 func (this *QNetworkConfiguration) SetConnectTimeout(timeout int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkConfiguration17setConnectTimeoutEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	gopp.ErrPrint(err, rv)

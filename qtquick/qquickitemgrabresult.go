@@ -84,8 +84,8 @@ func (*QQuickItemGrabResult) NewFromPointer(cthis unsafe.Pointer) *QQuickItemGra
 
 // /usr/include/qt/QtQuick/qquickitemgrabresult.h:58
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QQuickItemGrabResult) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -96,36 +96,32 @@ func (this *QQuickItemGrabResult) MetaObject() *qtcore.QMetaObject /*777 const Q
 
 // /usr/include/qt/QtQuick/qquickitemgrabresult.h:64
 // index:0
-// Public
-// QImage image()
+// Public Visibility=Default Availability=Available
+// [32] QImage image()
 func (this *QQuickItemGrabResult) Image() *qtgui.QImage /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult5imageEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult5imageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtQuick/qquickitemgrabresult.h:65
 // index:0
-// Public
-// QUrl url()
+// Public Visibility=Default Availability=Available
+// [8] QUrl url()
 func (this *QQuickItemGrabResult) Url() *qtcore.QUrl /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult3urlEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult3urlEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtQuick/qquickitemgrabresult.h:68
 // index:0
-// Public
-// bool saveToFile(const QString &)
+// Public Visibility=Default Availability=Available
+// [1] bool saveToFile(const QString &)
 func (this *QQuickItemGrabResult) SaveToFile(fileName *qtcore.QString) bool {
 	var convArg0 = fileName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQuickItemGrabResult10saveToFileERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -136,8 +132,8 @@ func (this *QQuickItemGrabResult) SaveToFile(fileName *qtcore.QString) bool {
 
 // /usr/include/qt/QtQuick/qquickitemgrabresult.h:70
 // index:1
-// Public
-// bool saveToFile(const QString &)
+// Public Visibility=Default Availability=Available
+// [1] bool saveToFile(const QString &)
 func (this *QQuickItemGrabResult) SaveToFile_1(fileName *qtcore.QString) bool {
 	var convArg0 = fileName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult10saveToFileERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -148,8 +144,8 @@ func (this *QQuickItemGrabResult) SaveToFile_1(fileName *qtcore.QString) bool {
 
 // /usr/include/qt/QtQuick/qquickitemgrabresult.h:73
 // index:0
-// Protected virtual
-// bool event(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 func (this *QQuickItemGrabResult) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQuickItemGrabResult5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -160,8 +156,8 @@ func (this *QQuickItemGrabResult) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bo
 
 // /usr/include/qt/QtQuick/qquickitemgrabresult.h:76
 // index:0
-// Public
-// void ready()
+// Public Visibility=Default Availability=Available
+// [-2] void ready()
 func (this *QQuickItemGrabResult) Ready() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQuickItemGrabResult5readyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

@@ -76,8 +76,8 @@ func (*QGestureEvent) NewFromPointer(cthis unsafe.Pointer) *QGestureEvent {
 
 // /usr/include/qt/QtWidgets/qgesture.h:278
 // index:0
-// Public virtual
-// void ~QGestureEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QGestureEvent()
 func DeleteQGestureEvent(*QGestureEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -85,8 +85,8 @@ func DeleteQGestureEvent(*QGestureEvent) {
 
 // /usr/include/qt/QtWidgets/qgesture.h:281
 // index:0
-// Public
-// QGesture * gesture(Qt::GestureType)
+// Public Visibility=Default Availability=Available
+// [8] QGesture * gesture(Qt::GestureType)
 func (this *QGestureEvent) Gesture(type_ int) *QGesture /*777 QGesture **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent7gestureEN2Qt11GestureTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
@@ -97,8 +97,8 @@ func (this *QGestureEvent) Gesture(type_ int) *QGesture /*777 QGesture **/ {
 
 // /usr/include/qt/QtWidgets/qgesture.h:291
 // index:0
-// Public
-// void setAccepted(QGesture *, _Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setAccepted(QGesture *, _Bool)
 func (this *QGestureEvent) SetAccepted(arg0 *QGesture /*777 QGesture **/, arg1 bool) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent11setAcceptedEP8QGestureb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
@@ -107,8 +107,8 @@ func (this *QGestureEvent) SetAccepted(arg0 *QGesture /*777 QGesture **/, arg1 b
 
 // /usr/include/qt/QtWidgets/qgesture.h:296
 // index:1
-// Public
-// void setAccepted(Qt::GestureType, _Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setAccepted(Qt::GestureType, _Bool)
 func (this *QGestureEvent) SetAccepted_1(arg0 int, arg1 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent11setAcceptedEN2Qt11GestureTypeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
 	gopp.ErrPrint(err, rv)
@@ -116,8 +116,8 @@ func (this *QGestureEvent) SetAccepted_1(arg0 int, arg1 bool) {
 
 // /usr/include/qt/QtWidgets/qgesture.h:292
 // index:0
-// Public
-// void accept(QGesture *)
+// Public Visibility=Default Availability=Available
+// [-2] void accept(QGesture *)
 func (this *QGestureEvent) Accept(arg0 *QGesture /*777 QGesture **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent6acceptEP8QGesture", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -126,8 +126,8 @@ func (this *QGestureEvent) Accept(arg0 *QGesture /*777 QGesture **/) {
 
 // /usr/include/qt/QtWidgets/qgesture.h:297
 // index:1
-// Public
-// void accept(Qt::GestureType)
+// Public Visibility=Default Availability=Available
+// [-2] void accept(Qt::GestureType)
 func (this *QGestureEvent) Accept_1(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent6acceptEN2Qt11GestureTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -135,8 +135,8 @@ func (this *QGestureEvent) Accept_1(arg0 int) {
 
 // /usr/include/qt/QtWidgets/qgesture.h:293
 // index:0
-// Public
-// void ignore(QGesture *)
+// Public Visibility=Default Availability=Available
+// [-2] void ignore(QGesture *)
 func (this *QGestureEvent) Ignore(arg0 *QGesture /*777 QGesture **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent6ignoreEP8QGesture", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -145,8 +145,8 @@ func (this *QGestureEvent) Ignore(arg0 *QGesture /*777 QGesture **/) {
 
 // /usr/include/qt/QtWidgets/qgesture.h:298
 // index:1
-// Public
-// void ignore(Qt::GestureType)
+// Public Visibility=Default Availability=Available
+// [-2] void ignore(Qt::GestureType)
 func (this *QGestureEvent) Ignore_1(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent6ignoreEN2Qt11GestureTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -154,8 +154,8 @@ func (this *QGestureEvent) Ignore_1(arg0 int) {
 
 // /usr/include/qt/QtWidgets/qgesture.h:294
 // index:0
-// Public
-// bool isAccepted(QGesture *)
+// Public Visibility=Default Availability=Available
+// [1] bool isAccepted(QGesture *)
 func (this *QGestureEvent) IsAccepted(arg0 *QGesture /*777 QGesture **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent10isAcceptedEP8QGesture", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -166,8 +166,8 @@ func (this *QGestureEvent) IsAccepted(arg0 *QGesture /*777 QGesture **/) bool {
 
 // /usr/include/qt/QtWidgets/qgesture.h:299
 // index:1
-// Public
-// bool isAccepted(Qt::GestureType)
+// Public Visibility=Default Availability=Available
+// [1] bool isAccepted(Qt::GestureType)
 func (this *QGestureEvent) IsAccepted_1(arg0 int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent10isAcceptedEN2Qt11GestureTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -177,8 +177,8 @@ func (this *QGestureEvent) IsAccepted_1(arg0 int) bool {
 
 // /usr/include/qt/QtWidgets/qgesture.h:301
 // index:0
-// Public
-// void setWidget(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void setWidget(QWidget *)
 func (this *QGestureEvent) SetWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEvent9setWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -187,8 +187,8 @@ func (this *QGestureEvent) SetWidget(widget *QWidget /*777 QWidget **/) {
 
 // /usr/include/qt/QtWidgets/qgesture.h:302
 // index:0
-// Public
-// QWidget * widget()
+// Public Visibility=Default Availability=Available
+// [8] QWidget * widget()
 func (this *QGestureEvent) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent6widgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -199,15 +199,13 @@ func (this *QGestureEvent) Widget() *QWidget /*777 QWidget **/ {
 
 // /usr/include/qt/QtWidgets/qgesture.h:305
 // index:0
-// Public
-// QPointF mapToGraphicsScene(const QPointF &)
+// Public Visibility=Default Availability=Available
+// [16] QPointF mapToGraphicsScene(const QPointF &)
 func (this *QGestureEvent) MapToGraphicsScene(gesturePoint *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 	var convArg0 = gesturePoint.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent18mapToGraphicsSceneERK7QPointF", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QGestureEvent18mapToGraphicsSceneERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

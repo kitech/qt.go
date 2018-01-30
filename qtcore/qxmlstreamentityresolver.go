@@ -67,8 +67,8 @@ func (*QXmlStreamEntityResolver) NewFromPointer(cthis unsafe.Pointer) *QXmlStrea
 
 // /usr/include/qt/QtCore/qxmlstream.h:336
 // index:0
-// Public virtual
-// void ~QXmlStreamEntityResolver()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QXmlStreamEntityResolver()
 func DeleteQXmlStreamEntityResolver(*QXmlStreamEntityResolver) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolverD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -76,31 +76,27 @@ func DeleteQXmlStreamEntityResolver(*QXmlStreamEntityResolver) {
 
 // /usr/include/qt/QtCore/qxmlstream.h:337
 // index:0
-// Public virtual
-// QString resolveEntity(const QString &, const QString &)
+// Public virtual Visibility=Default Availability=Available
+// [8] QString resolveEntity(const QString &, const QString &)
 func (this *QXmlStreamEntityResolver) ResolveEntity(publicId *QString, systemId *QString) *QString /*123*/ {
 	var convArg0 = publicId.GetCthis()
 	var convArg1 = systemId.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:338
 // index:0
-// Public virtual
-// QString resolveUndeclaredEntity(const QString &)
+// Public virtual Visibility=Default Availability=Available
+// [8] QString resolveUndeclaredEntity(const QString &)
 func (this *QXmlStreamEntityResolver) ResolveUndeclaredEntity(name *QString) *QString /*123*/ {
 	var convArg0 = name.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

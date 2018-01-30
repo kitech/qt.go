@@ -67,72 +67,67 @@ func (*QUuid) NewFromPointer(cthis unsafe.Pointer) *QUuid {
 
 // /usr/include/qt/QtCore/quuid.h:89
 // index:0
-// Public inline
-// void QUuid()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QUuid()
 func NewQUuid() *QUuid {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuidC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuidC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQUuidFromPointer(cthis)
+	gothis := NewQUuidFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/quuid.h:91
 // index:1
-// Public inline
-// void QUuid(uint, ushort, ushort, uchar, uchar, uchar, uchar, uchar, uchar, uchar, uchar)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QUuid(uint, ushort, ushort, uchar, uchar, uchar, uchar, uchar, uchar, uchar, uchar)
 func NewQUuid_1(l uint, w1 uint16, w2 uint16, b1 byte, b2 byte, b3 byte, b4 byte, b5 byte, b6 byte, b7 byte, b8 byte) *QUuid {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuidC2Ejtthhhhhhhh", ffiqt.FFI_TYPE_VOID, cthis, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuidC2Ejtthhhhhhhh", ffiqt.FFI_TYPE_POINTER, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQUuidFromPointer(cthis)
+	gothis := NewQUuidFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/quuid.h:119
 // index:2
-// Public
-// void QUuid(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void QUuid(const QString &)
 func NewQUuid_2(arg0 *QString) *QUuid {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuidC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuidC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQUuidFromPointer(cthis)
+	gothis := NewQUuidFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/quuid.h:122
 // index:3
-// Public
-// void QUuid(const char *)
+// Public Visibility=Default Availability=Available
+// [-2] void QUuid(const char *)
 func NewQUuid_3(arg0 string) *QUuid {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuidC2EPKc", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuidC2EPKc", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQUuidFromPointer(cthis)
+	gothis := NewQUuidFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/quuid.h:124
 // index:4
-// Public
-// void QUuid(const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void QUuid(const QByteArray &)
 func NewQUuid_4(arg0 *QByteArray) *QUuid {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuidC2ERK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuidC2ERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQUuidFromPointer(cthis)
+	gothis := NewQUuidFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/quuid.h:120
 // index:0
-// Public static
-// QUuid fromString(QStringView)
+// Public static Visibility=Default Availability=Available
+// [16] QUuid fromString(QStringView)
 func (this *QUuid) FromString(string *QStringView /*123*/) *QUuid /*123*/ {
 	var convArg0 = string.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuid10fromStringE11QStringView", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -149,8 +144,8 @@ func QUuid_FromString(string *QStringView /*123*/) *QUuid /*123*/ {
 
 // /usr/include/qt/QtCore/quuid.h:121
 // index:1
-// Public static
-// QUuid fromString(QLatin1String)
+// Public static Visibility=Default Availability=Available
+// [16] QUuid fromString(QLatin1String)
 func (this *QUuid) FromString_1(string *QLatin1String /*123*/) *QUuid /*123*/ {
 	var convArg0 = string.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuid10fromStringE13QLatin1String", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -167,50 +162,44 @@ func QUuid_FromString_1(string *QLatin1String /*123*/) *QUuid /*123*/ {
 
 // /usr/include/qt/QtCore/quuid.h:123
 // index:0
-// Public
-// QString toString()
+// Public Visibility=Default Availability=Available
+// [8] QString toString()
 func (this *QUuid) ToString() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QUuid8toStringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QUuid8toStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/quuid.h:125
 // index:0
-// Public
-// QByteArray toByteArray()
+// Public Visibility=Default Availability=Available
+// [8] QByteArray toByteArray()
 func (this *QUuid) ToByteArray() *QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QUuid11toByteArrayEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QUuid11toByteArrayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/quuid.h:126
 // index:0
-// Public
-// QByteArray toRfc4122()
+// Public Visibility=Default Availability=Available
+// [8] QByteArray toRfc4122()
 func (this *QUuid) ToRfc4122() *QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QUuid9toRfc4122Ev", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QUuid9toRfc4122Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/quuid.h:127
 // index:0
-// Public static
-// QUuid fromRfc4122(const QByteArray &)
+// Public static Visibility=Default Availability=Available
+// [16] QUuid fromRfc4122(const QByteArray &)
 func (this *QUuid) FromRfc4122(arg0 *QByteArray) *QUuid /*123*/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuid11fromRfc4122ERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -227,8 +216,8 @@ func QUuid_FromRfc4122(arg0 *QByteArray) *QUuid /*123*/ {
 
 // /usr/include/qt/QtCore/quuid.h:128
 // index:0
-// Public
-// bool isNull()
+// Public Visibility=Default Availability=Available
+// [1] bool isNull()
 func (this *QUuid) IsNull() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QUuid6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -238,8 +227,8 @@ func (this *QUuid) IsNull() bool {
 
 // /usr/include/qt/QtCore/quuid.h:192
 // index:0
-// Public static
-// QUuid createUuid()
+// Public static Visibility=Default Availability=Available
+// [16] QUuid createUuid()
 func (this *QUuid) CreateUuid() *QUuid /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuid10createUuidEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -255,8 +244,8 @@ func QUuid_CreateUuid() *QUuid /*123*/ {
 
 // /usr/include/qt/QtCore/quuid.h:194
 // index:0
-// Public static
-// QUuid createUuidV3(const QUuid &, const QByteArray &)
+// Public static Visibility=Default Availability=Available
+// [16] QUuid createUuidV3(const QUuid &, const QByteArray &)
 func (this *QUuid) CreateUuidV3(ns *QUuid, baseData *QByteArray) *QUuid /*123*/ {
 	var convArg0 = ns.GetCthis()
 	var convArg1 = baseData.GetCthis()
@@ -274,8 +263,8 @@ func QUuid_CreateUuidV3(ns *QUuid, baseData *QByteArray) *QUuid /*123*/ {
 
 // /usr/include/qt/QtCore/quuid.h:196
 // index:1
-// Public static inline
-// QUuid createUuidV3(const QUuid &, const QString &)
+// Public static inline Visibility=Default Availability=Available
+// [16] QUuid createUuidV3(const QUuid &, const QString &)
 func (this *QUuid) CreateUuidV3_1(ns *QUuid, baseData *QString) *QUuid /*123*/ {
 	var convArg0 = ns.GetCthis()
 	var convArg1 = baseData.GetCthis()
@@ -293,8 +282,8 @@ func QUuid_CreateUuidV3_1(ns *QUuid, baseData *QString) *QUuid /*123*/ {
 
 // /usr/include/qt/QtCore/quuid.h:195
 // index:0
-// Public static
-// QUuid createUuidV5(const QUuid &, const QByteArray &)
+// Public static Visibility=Default Availability=Available
+// [16] QUuid createUuidV5(const QUuid &, const QByteArray &)
 func (this *QUuid) CreateUuidV5(ns *QUuid, baseData *QByteArray) *QUuid /*123*/ {
 	var convArg0 = ns.GetCthis()
 	var convArg1 = baseData.GetCthis()
@@ -312,8 +301,8 @@ func QUuid_CreateUuidV5(ns *QUuid, baseData *QByteArray) *QUuid /*123*/ {
 
 // /usr/include/qt/QtCore/quuid.h:201
 // index:1
-// Public static inline
-// QUuid createUuidV5(const QUuid &, const QString &)
+// Public static inline Visibility=Default Availability=Available
+// [16] QUuid createUuidV5(const QUuid &, const QString &)
 func (this *QUuid) CreateUuidV5_1(ns *QUuid, baseData *QString) *QUuid /*123*/ {
 	var convArg0 = ns.GetCthis()
 	var convArg1 = baseData.GetCthis()
@@ -331,8 +320,8 @@ func QUuid_CreateUuidV5_1(ns *QUuid, baseData *QString) *QUuid /*123*/ {
 
 // /usr/include/qt/QtCore/quuid.h:208
 // index:0
-// Public
-// QUuid::Variant variant()
+// Public Visibility=Default Availability=Available
+// [4] QUuid::Variant variant()
 func (this *QUuid) Variant() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QUuid7variantEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -342,8 +331,8 @@ func (this *QUuid) Variant() int {
 
 // /usr/include/qt/QtCore/quuid.h:209
 // index:0
-// Public
-// QUuid::Version version()
+// Public Visibility=Default Availability=Available
+// [4] QUuid::Version version()
 func (this *QUuid) Version() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QUuid7versionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

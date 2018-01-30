@@ -75,8 +75,8 @@ func (*QItemEditorCreatorBase) NewFromPointer(cthis unsafe.Pointer) *QItemEditor
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:58
 // index:0
-// Public virtual
-// void ~QItemEditorCreatorBase()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QItemEditorCreatorBase()
 func DeleteQItemEditorCreatorBase(*QItemEditorCreatorBase) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QItemEditorCreatorBaseD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -84,8 +84,8 @@ func DeleteQItemEditorCreatorBase(*QItemEditorCreatorBase) {
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:60
 // index:0
-// Public pure virtual
-// QWidget * createWidget(QWidget *)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QWidget * createWidget(QWidget *)
 func (this *QItemEditorCreatorBase) CreateWidget(parent *QWidget /*777 QWidget **/) *QWidget /*777 QWidget **/ {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -97,14 +97,12 @@ func (this *QItemEditorCreatorBase) CreateWidget(parent *QWidget /*777 QWidget *
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:61
 // index:0
-// Public pure virtual
-// QByteArray valuePropertyName()
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QByteArray valuePropertyName()
 func (this *QItemEditorCreatorBase) ValuePropertyName() *qtcore.QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QItemEditorCreatorBase17valuePropertyNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QItemEditorCreatorBase17valuePropertyNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

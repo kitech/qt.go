@@ -67,14 +67,12 @@ func (*QJsonParseError) NewFromPointer(cthis unsafe.Pointer) *QJsonParseError {
 
 // /usr/include/qt/QtCore/qjsondocument.h:73
 // index:0
-// Public
-// QString errorString()
+// Public Visibility=Default Availability=Available
+// [8] QString errorString()
 func (this *QJsonParseError) ErrorString() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QJsonParseError11errorStringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QJsonParseError11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

@@ -67,8 +67,8 @@ func (*QTextCodec) NewFromPointer(cthis unsafe.Pointer) *QTextCodec {
 
 // /usr/include/qt/QtCore/qtextcodec.h:61
 // index:0
-// Public static
-// QTextCodec * codecForName(const QByteArray &)
+// Public static Visibility=Default Availability=Available
+// [8] QTextCodec * codecForName(const QByteArray &)
 func (this *QTextCodec) CodecForName(name *QByteArray) *QTextCodec /*777 QTextCodec **/ {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextCodec12codecForNameERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -85,8 +85,8 @@ func QTextCodec_CodecForName(name *QByteArray) *QTextCodec /*777 QTextCodec **/ 
 
 // /usr/include/qt/QtCore/qtextcodec.h:62
 // index:1
-// Public static inline
-// QTextCodec * codecForName(const char *)
+// Public static inline Visibility=Default Availability=Available
+// [8] QTextCodec * codecForName(const char *)
 func (this *QTextCodec) CodecForName_1(name string) *QTextCodec /*777 QTextCodec **/ {
 	var convArg0 = qtrt.CString(name)
 	defer qtrt.FreeMem(convArg0)
@@ -104,8 +104,8 @@ func QTextCodec_CodecForName_1(name string) *QTextCodec /*777 QTextCodec **/ {
 
 // /usr/include/qt/QtCore/qtextcodec.h:63
 // index:0
-// Public static
-// QTextCodec * codecForMib(int)
+// Public static Visibility=Default Availability=Available
+// [8] QTextCodec * codecForMib(int)
 func (this *QTextCodec) CodecForMib(mib int) *QTextCodec /*777 QTextCodec **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextCodec11codecForMibEi", ffiqt.FFI_TYPE_POINTER, mib)
 	gopp.ErrPrint(err, rv)
@@ -121,8 +121,8 @@ func QTextCodec_CodecForMib(mib int) *QTextCodec /*777 QTextCodec **/ {
 
 // /usr/include/qt/QtCore/qtextcodec.h:68
 // index:0
-// Public static
-// QTextCodec * codecForLocale()
+// Public static Visibility=Default Availability=Available
+// [8] QTextCodec * codecForLocale()
 func (this *QTextCodec) CodecForLocale() *QTextCodec /*777 QTextCodec **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextCodec14codecForLocaleEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -138,8 +138,8 @@ func QTextCodec_CodecForLocale() *QTextCodec /*777 QTextCodec **/ {
 
 // /usr/include/qt/QtCore/qtextcodec.h:69
 // index:0
-// Public static
-// void setCodecForLocale(QTextCodec *)
+// Public static Visibility=Default Availability=Available
+// [-2] void setCodecForLocale(QTextCodec *)
 func (this *QTextCodec) SetCodecForLocale(c *QTextCodec /*777 QTextCodec **/) {
 	var convArg0 = c.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextCodec17setCodecForLocaleEPS_", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -152,8 +152,8 @@ func QTextCodec_SetCodecForLocale(c *QTextCodec /*777 QTextCodec **/) {
 
 // /usr/include/qt/QtCore/qtextcodec.h:75
 // index:0
-// Public static
-// QTextCodec * codecForHtml(const QByteArray &)
+// Public static Visibility=Default Availability=Available
+// [8] QTextCodec * codecForHtml(const QByteArray &)
 func (this *QTextCodec) CodecForHtml(ba *QByteArray) *QTextCodec /*777 QTextCodec **/ {
 	var convArg0 = ba.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextCodec12codecForHtmlERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -170,8 +170,8 @@ func QTextCodec_CodecForHtml(ba *QByteArray) *QTextCodec /*777 QTextCodec **/ {
 
 // /usr/include/qt/QtCore/qtextcodec.h:76
 // index:1
-// Public static
-// QTextCodec * codecForHtml(const QByteArray &, QTextCodec *)
+// Public static Visibility=Default Availability=Available
+// [8] QTextCodec * codecForHtml(const QByteArray &, QTextCodec *)
 func (this *QTextCodec) CodecForHtml_1(ba *QByteArray, defaultCodec *QTextCodec /*777 QTextCodec **/) *QTextCodec /*777 QTextCodec **/ {
 	var convArg0 = ba.GetCthis()
 	var convArg1 = defaultCodec.GetCthis()
@@ -189,8 +189,8 @@ func QTextCodec_CodecForHtml_1(ba *QByteArray, defaultCodec *QTextCodec /*777 QT
 
 // /usr/include/qt/QtCore/qtextcodec.h:78
 // index:0
-// Public static
-// QTextCodec * codecForUtfText(const QByteArray &)
+// Public static Visibility=Default Availability=Available
+// [8] QTextCodec * codecForUtfText(const QByteArray &)
 func (this *QTextCodec) CodecForUtfText(ba *QByteArray) *QTextCodec /*777 QTextCodec **/ {
 	var convArg0 = ba.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextCodec15codecForUtfTextERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -207,8 +207,8 @@ func QTextCodec_CodecForUtfText(ba *QByteArray) *QTextCodec /*777 QTextCodec **/
 
 // /usr/include/qt/QtCore/qtextcodec.h:79
 // index:1
-// Public static
-// QTextCodec * codecForUtfText(const QByteArray &, QTextCodec *)
+// Public static Visibility=Default Availability=Available
+// [8] QTextCodec * codecForUtfText(const QByteArray &, QTextCodec *)
 func (this *QTextCodec) CodecForUtfText_1(ba *QByteArray, defaultCodec *QTextCodec /*777 QTextCodec **/) *QTextCodec /*777 QTextCodec **/ {
 	var convArg0 = ba.GetCthis()
 	var convArg1 = defaultCodec.GetCthis()
@@ -226,8 +226,8 @@ func QTextCodec_CodecForUtfText_1(ba *QByteArray, defaultCodec *QTextCodec /*777
 
 // /usr/include/qt/QtCore/qtextcodec.h:81
 // index:0
-// Public
-// bool canEncode(QChar)
+// Public Visibility=Default Availability=Available
+// [1] bool canEncode(QChar)
 func (this *QTextCodec) CanEncode(arg0 *QChar /*123*/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextCodec9canEncodeE5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -238,8 +238,8 @@ func (this *QTextCodec) CanEncode(arg0 *QChar /*123*/) bool {
 
 // /usr/include/qt/QtCore/qtextcodec.h:83
 // index:1
-// Public
-// bool canEncode(const QString &)
+// Public Visibility=Default Availability=Available
+// [1] bool canEncode(const QString &)
 func (this *QTextCodec) CanEncode_1(arg0 *QString) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextCodec9canEncodeERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -250,8 +250,8 @@ func (this *QTextCodec) CanEncode_1(arg0 *QString) bool {
 
 // /usr/include/qt/QtCore/qtextcodec.h:85
 // index:2
-// Public
-// bool canEncode(QStringView)
+// Public Visibility=Default Availability=Available
+// [1] bool canEncode(QStringView)
 func (this *QTextCodec) CanEncode_2(arg0 *QStringView /*123*/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextCodec9canEncodeE11QStringView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -262,69 +262,61 @@ func (this *QTextCodec) CanEncode_2(arg0 *QStringView /*123*/) bool {
 
 // /usr/include/qt/QtCore/qtextcodec.h:87
 // index:0
-// Public
-// QString toUnicode(const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [8] QString toUnicode(const QByteArray &)
 func (this *QTextCodec) ToUnicode(arg0 *QByteArray) *QString /*123*/ {
 	var convArg0 = arg0.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextCodec9toUnicodeERK10QByteArray", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextCodec9toUnicodeERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qtextcodec.h:88
 // index:1
-// Public
-// QString toUnicode(const char *)
+// Public Visibility=Default Availability=Available
+// [8] QString toUnicode(const char *)
 func (this *QTextCodec) ToUnicode_1(chars string) *QString /*123*/ {
 	var convArg0 = qtrt.CString(chars)
 	defer qtrt.FreeMem(convArg0)
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextCodec9toUnicodeEPKc", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextCodec9toUnicodeEPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qtextcodec.h:90
 // index:0
-// Public
-// QByteArray fromUnicode(const QString &)
+// Public Visibility=Default Availability=Available
+// [8] QByteArray fromUnicode(const QString &)
 func (this *QTextCodec) FromUnicode(uc *QString) *QByteArray /*123*/ {
 	var convArg0 = uc.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextCodec11fromUnicodeERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextCodec11fromUnicodeERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qtextcodec.h:92
 // index:1
-// Public
-// QByteArray fromUnicode(QStringView)
+// Public Visibility=Default Availability=Available
+// [8] QByteArray fromUnicode(QStringView)
 func (this *QTextCodec) FromUnicode_1(uc *QStringView /*123*/) *QByteArray /*123*/ {
 	var convArg0 = uc.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextCodec11fromUnicodeE11QStringView", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextCodec11fromUnicodeE11QStringView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qtextcodec.h:119
 // index:0
-// Public
-// QTextDecoder * makeDecoder(QTextCodec::ConversionFlags)
+// Public Visibility=Default Availability=Available
+// [8] QTextDecoder * makeDecoder(QTextCodec::ConversionFlags)
 func (this *QTextCodec) MakeDecoder(flags int) *QTextDecoder /*777 QTextDecoder **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextCodec11makeDecoderE6QFlagsINS_14ConversionFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	gopp.ErrPrint(err, rv)
@@ -335,8 +327,8 @@ func (this *QTextCodec) MakeDecoder(flags int) *QTextDecoder /*777 QTextDecoder 
 
 // /usr/include/qt/QtCore/qtextcodec.h:120
 // index:0
-// Public
-// QTextEncoder * makeEncoder(QTextCodec::ConversionFlags)
+// Public Visibility=Default Availability=Available
+// [8] QTextEncoder * makeEncoder(QTextCodec::ConversionFlags)
 func (this *QTextCodec) MakeEncoder(flags int) *QTextEncoder /*777 QTextEncoder **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextCodec11makeEncoderE6QFlagsINS_14ConversionFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	gopp.ErrPrint(err, rv)
@@ -347,22 +339,20 @@ func (this *QTextCodec) MakeEncoder(flags int) *QTextEncoder /*777 QTextEncoder 
 
 // /usr/include/qt/QtCore/qtextcodec.h:122
 // index:0
-// Public pure virtual
-// QByteArray name()
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QByteArray name()
 func (this *QTextCodec) Name() *QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextCodec4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextCodec4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qtextcodec.h:124
 // index:0
-// Public pure virtual
-// int mibEnum()
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [4] int mibEnum()
 func (this *QTextCodec) MibEnum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QTextCodec7mibEnumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -372,20 +362,19 @@ func (this *QTextCodec) MibEnum() int {
 
 // /usr/include/qt/QtCore/qtextcodec.h:130
 // index:0
-// Protected
-// void QTextCodec()
+// Protected Visibility=Default Availability=Available
+// [-2] void QTextCodec()
 func NewQTextCodec() *QTextCodec {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextCodecC1Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextCodecC1Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQTextCodecFromPointer(cthis)
+	gothis := NewQTextCodecFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qtextcodec.h:131
 // index:0
-// Protected virtual
-// void ~QTextCodec()
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void ~QTextCodec()
 func DeleteQTextCodec(*QTextCodec) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextCodecD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)

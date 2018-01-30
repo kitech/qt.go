@@ -67,46 +67,43 @@ func (*QJsonDocument) NewFromPointer(cthis unsafe.Pointer) *QJsonDocument {
 
 // /usr/include/qt/QtCore/qjsondocument.h:88
 // index:0
-// Public
-// void QJsonDocument()
+// Public Visibility=Default Availability=Available
+// [-2] void QJsonDocument()
 func NewQJsonDocument() *QJsonDocument {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonDocumentC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonDocumentC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQJsonDocumentFromPointer(cthis)
+	gothis := NewQJsonDocumentFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qjsondocument.h:89
 // index:1
-// Public
-// void QJsonDocument(const QJsonObject &)
+// Public Visibility=Default Availability=Available
+// [-2] void QJsonDocument(const QJsonObject &)
 func NewQJsonDocument_1(object *QJsonObject) *QJsonDocument {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = object.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonDocumentC2ERK11QJsonObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonDocumentC2ERK11QJsonObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQJsonDocumentFromPointer(cthis)
+	gothis := NewQJsonDocumentFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qjsondocument.h:90
 // index:2
-// Public
-// void QJsonDocument(const QJsonArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void QJsonDocument(const QJsonArray &)
 func NewQJsonDocument_2(array *QJsonArray) *QJsonDocument {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = array.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonDocumentC2ERK10QJsonArray", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonDocumentC2ERK10QJsonArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQJsonDocumentFromPointer(cthis)
+	gothis := NewQJsonDocumentFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qjsondocument.h:91
 // index:0
-// Public
-// void ~QJsonDocument()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QJsonDocument()
 func DeleteQJsonDocument(*QJsonDocument) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonDocumentD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -114,8 +111,8 @@ func DeleteQJsonDocument(*QJsonDocument) {
 
 // /usr/include/qt/QtCore/qjsondocument.h:108
 // index:0
-// Public inline
-// void swap(QJsonDocument &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QJsonDocument &)
 func (this *QJsonDocument) Swap(other *QJsonDocument) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonDocument4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -124,8 +121,8 @@ func (this *QJsonDocument) Swap(other *QJsonDocument) {
 
 // /usr/include/qt/QtCore/qjsondocument.h:118
 // index:0
-// Public static
-// QJsonDocument fromRawData(const char *, int, enum QJsonDocument::DataValidation)
+// Public static Visibility=Default Availability=Available
+// [8] QJsonDocument fromRawData(const char *, int, enum QJsonDocument::DataValidation)
 func (this *QJsonDocument) FromRawData(data string, size int, validation int) *QJsonDocument /*123*/ {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
@@ -143,8 +140,8 @@ func QJsonDocument_FromRawData(data string, size int, validation int) *QJsonDocu
 
 // /usr/include/qt/QtCore/qjsondocument.h:119
 // index:0
-// Public
-// const char * rawData(int *)
+// Public Visibility=Default Availability=Available
+// [8] const char * rawData(int *)
 func (this *QJsonDocument) RawData(size unsafe.Pointer /*666*/) string {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonDocument7rawDataEPi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &size)
 	gopp.ErrPrint(err, rv)
@@ -154,8 +151,8 @@ func (this *QJsonDocument) RawData(size unsafe.Pointer /*666*/) string {
 
 // /usr/include/qt/QtCore/qjsondocument.h:121
 // index:0
-// Public static
-// QJsonDocument fromBinaryData(const QByteArray &, enum QJsonDocument::DataValidation)
+// Public static Visibility=Default Availability=Available
+// [8] QJsonDocument fromBinaryData(const QByteArray &, enum QJsonDocument::DataValidation)
 func (this *QJsonDocument) FromBinaryData(data *QByteArray, validation int) *QJsonDocument /*123*/ {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonDocument14fromBinaryDataERK10QByteArrayNS_14DataValidationE", ffiqt.FFI_TYPE_POINTER, convArg0, validation)
@@ -172,22 +169,20 @@ func QJsonDocument_FromBinaryData(data *QByteArray, validation int) *QJsonDocume
 
 // /usr/include/qt/QtCore/qjsondocument.h:122
 // index:0
-// Public
-// QByteArray toBinaryData()
+// Public Visibility=Default Availability=Available
+// [8] QByteArray toBinaryData()
 func (this *QJsonDocument) ToBinaryData() *QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonDocument12toBinaryDataEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonDocument12toBinaryDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qjsondocument.h:124
 // index:0
-// Public static
-// QJsonDocument fromVariant(const QVariant &)
+// Public static Visibility=Default Availability=Available
+// [8] QJsonDocument fromVariant(const QVariant &)
 func (this *QJsonDocument) FromVariant(variant *QVariant) *QJsonDocument /*123*/ {
 	var convArg0 = variant.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonDocument11fromVariantERK8QVariant", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -204,50 +199,44 @@ func QJsonDocument_FromVariant(variant *QVariant) *QJsonDocument /*123*/ {
 
 // /usr/include/qt/QtCore/qjsondocument.h:125
 // index:0
-// Public
-// QVariant toVariant()
+// Public Visibility=Default Availability=Available
+// [16] QVariant toVariant()
 func (this *QJsonDocument) ToVariant() *QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonDocument9toVariantEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonDocument9toVariantEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qjsondocument.h:137
 // index:0
-// Public
-// QByteArray toJson()
+// Public Visibility=Default Availability=Available
+// [8] QByteArray toJson()
 func (this *QJsonDocument) ToJson() *QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonDocument6toJsonEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonDocument6toJsonEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qjsondocument.h:138
 // index:1
-// Public
-// QByteArray toJson(enum QJsonDocument::JsonFormat)
+// Public Visibility=Default Availability=Available
+// [8] QByteArray toJson(enum QJsonDocument::JsonFormat)
 func (this *QJsonDocument) ToJson_1(format int) *QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonDocument6toJsonENS_10JsonFormatE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonDocument6toJsonENS_10JsonFormatE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qjsondocument.h:141
 // index:0
-// Public
-// bool isEmpty()
+// Public Visibility=Default Availability=Available
+// [1] bool isEmpty()
 func (this *QJsonDocument) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonDocument7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -257,8 +246,8 @@ func (this *QJsonDocument) IsEmpty() bool {
 
 // /usr/include/qt/QtCore/qjsondocument.h:142
 // index:0
-// Public
-// bool isArray()
+// Public Visibility=Default Availability=Available
+// [1] bool isArray()
 func (this *QJsonDocument) IsArray() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonDocument7isArrayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -268,8 +257,8 @@ func (this *QJsonDocument) IsArray() bool {
 
 // /usr/include/qt/QtCore/qjsondocument.h:143
 // index:0
-// Public
-// bool isObject()
+// Public Visibility=Default Availability=Available
+// [1] bool isObject()
 func (this *QJsonDocument) IsObject() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonDocument8isObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -279,36 +268,32 @@ func (this *QJsonDocument) IsObject() bool {
 
 // /usr/include/qt/QtCore/qjsondocument.h:145
 // index:0
-// Public
-// QJsonObject object()
+// Public Visibility=Default Availability=Available
+// [16] QJsonObject object()
 func (this *QJsonDocument) Object() *QJsonObject /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonDocument6objectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonDocument6objectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQJsonObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qjsondocument.h:146
 // index:0
-// Public
-// QJsonArray array()
+// Public Visibility=Default Availability=Available
+// [16] QJsonArray array()
 func (this *QJsonDocument) Array() *QJsonArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonDocument5arrayEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonDocument5arrayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQJsonArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qjsondocument.h:148
 // index:0
-// Public
-// void setObject(const QJsonObject &)
+// Public Visibility=Default Availability=Available
+// [-2] void setObject(const QJsonObject &)
 func (this *QJsonDocument) SetObject(object *QJsonObject) {
 	var convArg0 = object.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonDocument9setObjectERK11QJsonObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -317,8 +302,8 @@ func (this *QJsonDocument) SetObject(object *QJsonObject) {
 
 // /usr/include/qt/QtCore/qjsondocument.h:149
 // index:0
-// Public
-// void setArray(const QJsonArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void setArray(const QJsonArray &)
 func (this *QJsonDocument) SetArray(array *QJsonArray) {
 	var convArg0 = array.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonDocument8setArrayERK10QJsonArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -327,8 +312,8 @@ func (this *QJsonDocument) SetArray(array *QJsonArray) {
 
 // /usr/include/qt/QtCore/qjsondocument.h:158
 // index:0
-// Public
-// bool isNull()
+// Public Visibility=Default Availability=Available
+// [1] bool isNull()
 func (this *QJsonDocument) IsNull() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QJsonDocument6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

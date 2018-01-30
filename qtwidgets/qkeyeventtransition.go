@@ -76,8 +76,8 @@ func (*QKeyEventTransition) NewFromPointer(cthis unsafe.Pointer) *QKeyEventTrans
 
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:53
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QKeyEventTransition) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QKeyEventTransition10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,35 +88,33 @@ func (this *QKeyEventTransition) MetaObject() *qtcore.QMetaObject /*777 const QM
 
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:57
 // index:0
-// Public
-// void QKeyEventTransition(QState *)
+// Public Visibility=Default Availability=Available
+// [-2] void QKeyEventTransition(QState *)
 func NewQKeyEventTransition(sourceState *qtcore.QState /*777 QState **/) *QKeyEventTransition {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = sourceState.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransitionC2EP6QState", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransitionC2EP6QState", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQKeyEventTransitionFromPointer(cthis)
+	gothis := NewQKeyEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:58
 // index:1
-// Public
-// void QKeyEventTransition(QObject *, QEvent::Type, int, QState *)
+// Public Visibility=Default Availability=Available
+// [-2] void QKeyEventTransition(QObject *, QEvent::Type, int, QState *)
 func NewQKeyEventTransition_1(object *qtcore.QObject /*777 QObject **/, type_ int, key int, sourceState *qtcore.QState /*777 QState **/) *QKeyEventTransition {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = object.GetCthis()
 	var convArg3 = sourceState.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransitionC2EP7QObjectN6QEvent4TypeEiP6QState", ffiqt.FFI_TYPE_VOID, cthis, convArg0, type_, key, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransitionC2EP7QObjectN6QEvent4TypeEiP6QState", ffiqt.FFI_TYPE_POINTER, convArg0, type_, key, convArg3)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQKeyEventTransitionFromPointer(cthis)
+	gothis := NewQKeyEventTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:60
 // index:0
-// Public virtual
-// void ~QKeyEventTransition()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QKeyEventTransition()
 func DeleteQKeyEventTransition(*QKeyEventTransition) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransitionD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -124,8 +122,8 @@ func DeleteQKeyEventTransition(*QKeyEventTransition) {
 
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:62
 // index:0
-// Public
-// int key()
+// Public Visibility=Default Availability=Available
+// [4] int key()
 func (this *QKeyEventTransition) Key() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QKeyEventTransition3keyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -135,8 +133,8 @@ func (this *QKeyEventTransition) Key() int {
 
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:63
 // index:0
-// Public
-// void setKey(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setKey(int)
 func (this *QKeyEventTransition) SetKey(key int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransition6setKeyEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), key)
 	gopp.ErrPrint(err, rv)
@@ -144,8 +142,8 @@ func (this *QKeyEventTransition) SetKey(key int) {
 
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:65
 // index:0
-// Public
-// Qt::KeyboardModifiers modifierMask()
+// Public Visibility=Default Availability=Available
+// [4] Qt::KeyboardModifiers modifierMask()
 func (this *QKeyEventTransition) ModifierMask() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QKeyEventTransition12modifierMaskEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -155,8 +153,8 @@ func (this *QKeyEventTransition) ModifierMask() int {
 
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:69
 // index:0
-// Protected virtual
-// void onTransition(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void onTransition(QEvent *)
 func (this *QKeyEventTransition) OnTransition(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransition12onTransitionEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -165,8 +163,8 @@ func (this *QKeyEventTransition) OnTransition(event *qtcore.QEvent /*777 QEvent 
 
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:70
 // index:0
-// Protected virtual
-// bool eventTest(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool eventTest(QEvent *)
 func (this *QKeyEventTransition) EventTest(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransition9eventTestEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -75,20 +75,19 @@ func (*QItemEditorFactory) NewFromPointer(cthis unsafe.Pointer) *QItemEditorFact
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:98
 // index:0
-// Public inline
-// void QItemEditorFactory()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QItemEditorFactory()
 func NewQItemEditorFactory() *QItemEditorFactory {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactoryC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactoryC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQItemEditorFactoryFromPointer(cthis)
+	gothis := NewQItemEditorFactoryFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:99
 // index:0
-// Public virtual
-// void ~QItemEditorFactory()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QItemEditorFactory()
 func DeleteQItemEditorFactory(*QItemEditorFactory) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactoryD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -96,8 +95,8 @@ func DeleteQItemEditorFactory(*QItemEditorFactory) {
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:101
 // index:0
-// Public virtual
-// QWidget * createEditor(int, QWidget *)
+// Public virtual Visibility=Default Availability=Available
+// [8] QWidget * createEditor(int, QWidget *)
 func (this *QItemEditorFactory) CreateEditor(userType int, parent *QWidget /*777 QWidget **/) *QWidget /*777 QWidget **/ {
 	var convArg1 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QItemEditorFactory12createEditorEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), userType, convArg1)
@@ -109,22 +108,20 @@ func (this *QItemEditorFactory) CreateEditor(userType int, parent *QWidget /*777
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:102
 // index:0
-// Public virtual
-// QByteArray valuePropertyName(int)
+// Public virtual Visibility=Default Availability=Available
+// [8] QByteArray valuePropertyName(int)
 func (this *QItemEditorFactory) ValuePropertyName(userType int) *qtcore.QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QItemEditorFactory17valuePropertyNameEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), userType)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QItemEditorFactory17valuePropertyNameEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), userType)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:104
 // index:0
-// Public
-// void registerEditor(int, QItemEditorCreatorBase *)
+// Public Visibility=Default Availability=Available
+// [-2] void registerEditor(int, QItemEditorCreatorBase *)
 func (this *QItemEditorFactory) RegisterEditor(userType int, creator *QItemEditorCreatorBase /*777 QItemEditorCreatorBase **/) {
 	var convArg1 = creator.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), userType, convArg1)
@@ -133,8 +130,8 @@ func (this *QItemEditorFactory) RegisterEditor(userType int, creator *QItemEdito
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:106
 // index:0
-// Public static
-// const QItemEditorFactory * defaultFactory()
+// Public static Visibility=Default Availability=Available
+// [8] const QItemEditorFactory * defaultFactory()
 func (this *QItemEditorFactory) DefaultFactory() *QItemEditorFactory /*777 const QItemEditorFactory **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactory14defaultFactoryEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -150,8 +147,8 @@ func QItemEditorFactory_DefaultFactory() *QItemEditorFactory /*777 const QItemEd
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:107
 // index:0
-// Public static
-// void setDefaultFactory(QItemEditorFactory *)
+// Public static Visibility=Default Availability=Available
+// [-2] void setDefaultFactory(QItemEditorFactory *)
 func (this *QItemEditorFactory) SetDefaultFactory(factory *QItemEditorFactory /*777 QItemEditorFactory **/) {
 	var convArg0 = factory.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactory17setDefaultFactoryEPS_", ffiqt.FFI_TYPE_POINTER, convArg0)

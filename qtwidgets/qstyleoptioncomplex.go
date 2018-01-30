@@ -76,13 +76,12 @@ func (*QStyleOptionComplex) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionCo
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:509
 // index:0
-// Public
-// void QStyleOptionComplex(int, int)
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleOptionComplex(int, int)
 func NewQStyleOptionComplex(version int, type_ int) *QStyleOptionComplex {
-	cthis := qtrt.Calloc(1, 256) // 72
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionComplexC2Eii", ffiqt.FFI_TYPE_VOID, cthis, version, type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionComplexC2Eii", ffiqt.FFI_TYPE_POINTER, version, type_)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionComplexFromPointer(cthis)
+	gothis := NewQStyleOptionComplexFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

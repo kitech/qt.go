@@ -76,25 +76,23 @@ func (*QStyleOptionHeader) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionHea
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:226
 // index:0
-// Public
-// void QStyleOptionHeader()
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleOptionHeader()
 func NewQStyleOptionHeader() *QStyleOptionHeader {
-	cthis := qtrt.Calloc(1, 256) // 120
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionHeaderFromPointer(cthis)
+	gothis := NewQStyleOptionHeaderFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:230
 // index:1
-// Protected
-// void QStyleOptionHeader(int)
+// Protected Visibility=Default Availability=Available
+// [-2] void QStyleOptionHeader(int)
 func NewQStyleOptionHeader_1(version int) *QStyleOptionHeader {
-	cthis := qtrt.Calloc(1, 256) // 120
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionHeaderFromPointer(cthis)
+	gothis := NewQStyleOptionHeaderFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

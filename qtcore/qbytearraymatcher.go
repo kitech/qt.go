@@ -67,47 +67,44 @@ func (*QByteArrayMatcher) NewFromPointer(cthis unsafe.Pointer) *QByteArrayMatche
 
 // /usr/include/qt/QtCore/qbytearraymatcher.h:53
 // index:0
-// Public
-// void QByteArrayMatcher()
+// Public Visibility=Default Availability=Available
+// [-2] void QByteArrayMatcher()
 func NewQByteArrayMatcher() *QByteArrayMatcher {
-	cthis := qtrt.Calloc(1, 256) // 1040
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQByteArrayMatcherFromPointer(cthis)
+	gothis := NewQByteArrayMatcherFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qbytearraymatcher.h:54
 // index:1
-// Public
-// void QByteArrayMatcher(const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void QByteArrayMatcher(const QByteArray &)
 func NewQByteArrayMatcher_1(pattern *QByteArray) *QByteArrayMatcher {
-	cthis := qtrt.Calloc(1, 256) // 1040
 	var convArg0 = pattern.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherC2ERK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherC2ERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQByteArrayMatcherFromPointer(cthis)
+	gothis := NewQByteArrayMatcherFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qbytearraymatcher.h:55
 // index:2
-// Public
-// void QByteArrayMatcher(const char *, int)
+// Public Visibility=Default Availability=Available
+// [-2] void QByteArrayMatcher(const char *, int)
 func NewQByteArrayMatcher_2(pattern string, length int) *QByteArrayMatcher {
-	cthis := qtrt.Calloc(1, 256) // 1040
 	var convArg0 = qtrt.CString(pattern)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherC2EPKci", ffiqt.FFI_TYPE_VOID, cthis, convArg0, length)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherC2EPKci", ffiqt.FFI_TYPE_POINTER, convArg0, length)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQByteArrayMatcherFromPointer(cthis)
+	gothis := NewQByteArrayMatcherFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qbytearraymatcher.h:57
 // index:0
-// Public
-// void ~QByteArrayMatcher()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QByteArrayMatcher()
 func DeleteQByteArrayMatcher(*QByteArrayMatcher) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -115,8 +112,8 @@ func DeleteQByteArrayMatcher(*QByteArrayMatcher) {
 
 // /usr/include/qt/QtCore/qbytearraymatcher.h:61
 // index:0
-// Public
-// void setPattern(const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void setPattern(const QByteArray &)
 func (this *QByteArrayMatcher) SetPattern(pattern *QByteArray) {
 	var convArg0 = pattern.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcher10setPatternERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -125,8 +122,8 @@ func (this *QByteArrayMatcher) SetPattern(pattern *QByteArray) {
 
 // /usr/include/qt/QtCore/qbytearraymatcher.h:63
 // index:0
-// Public
-// int indexIn(const QByteArray &, int)
+// Public Visibility=Default Availability=Available
+// [4] int indexIn(const QByteArray &, int)
 func (this *QByteArrayMatcher) IndexIn(ba *QByteArray, from int) int {
 	var convArg0 = ba.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7indexInERK10QByteArrayi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
@@ -137,8 +134,8 @@ func (this *QByteArrayMatcher) IndexIn(ba *QByteArray, from int) int {
 
 // /usr/include/qt/QtCore/qbytearraymatcher.h:64
 // index:1
-// Public
-// int indexIn(const char *, int, int)
+// Public Visibility=Default Availability=Available
+// [4] int indexIn(const char *, int, int)
 func (this *QByteArrayMatcher) IndexIn_1(str string, len int, from int) int {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
@@ -150,14 +147,12 @@ func (this *QByteArrayMatcher) IndexIn_1(str string, len int, from int) int {
 
 // /usr/include/qt/QtCore/qbytearraymatcher.h:65
 // index:0
-// Public inline
-// QByteArray pattern()
+// Public inline Visibility=Default Availability=Available
+// [8] QByteArray pattern()
 func (this *QByteArrayMatcher) Pattern() *QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7patternEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QByteArrayMatcher7patternEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

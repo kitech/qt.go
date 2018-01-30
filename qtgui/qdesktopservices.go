@@ -71,8 +71,8 @@ func (*QDesktopServices) NewFromPointer(cthis unsafe.Pointer) *QDesktopServices 
 
 // /usr/include/qt/QtGui/qdesktopservices.h:59
 // index:0
-// Public static
-// bool openUrl(const QUrl &)
+// Public static Visibility=Default Availability=Available
+// [1] bool openUrl(const QUrl &)
 func (this *QDesktopServices) OpenUrl(url *qtcore.QUrl) bool {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDesktopServices7openUrlERK4QUrl", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -88,8 +88,8 @@ func QDesktopServices_OpenUrl(url *qtcore.QUrl) bool {
 
 // /usr/include/qt/QtGui/qdesktopservices.h:60
 // index:0
-// Public static
-// void setUrlHandler(const QString &, QObject *, const char *)
+// Public static Visibility=Default Availability=Available
+// [-2] void setUrlHandler(const QString &, QObject *, const char *)
 func (this *QDesktopServices) SetUrlHandler(scheme *qtcore.QString, receiver *qtcore.QObject /*777 QObject **/, method string) {
 	var convArg0 = scheme.GetCthis()
 	var convArg1 = receiver.GetCthis()
@@ -105,8 +105,8 @@ func QDesktopServices_SetUrlHandler(scheme *qtcore.QString, receiver *qtcore.QOb
 
 // /usr/include/qt/QtGui/qdesktopservices.h:61
 // index:0
-// Public static
-// void unsetUrlHandler(const QString &)
+// Public static Visibility=Default Availability=Available
+// [-2] void unsetUrlHandler(const QString &)
 func (this *QDesktopServices) UnsetUrlHandler(scheme *qtcore.QString) {
 	var convArg0 = scheme.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDesktopServices15unsetUrlHandlerERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)

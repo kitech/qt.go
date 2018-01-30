@@ -71,21 +71,20 @@ func (*QBackingStore) NewFromPointer(cthis unsafe.Pointer) *QBackingStore {
 
 // /usr/include/qt/QtGui/qbackingstore.h:62
 // index:0
-// Public
-// void QBackingStore(QWindow *)
+// Public Visibility=Default Availability=Available
+// [-2] void QBackingStore(QWindow *)
 func NewQBackingStore(window *QWindow /*777 QWindow **/) *QBackingStore {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = window.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStoreC2EP7QWindow", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStoreC2EP7QWindow", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQBackingStoreFromPointer(cthis)
+	gothis := NewQBackingStoreFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qbackingstore.h:63
 // index:0
-// Public
-// void ~QBackingStore()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QBackingStore()
 func DeleteQBackingStore(*QBackingStore) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStoreD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -93,8 +92,8 @@ func DeleteQBackingStore(*QBackingStore) {
 
 // /usr/include/qt/QtGui/qbackingstore.h:65
 // index:0
-// Public
-// QWindow * window()
+// Public Visibility=Default Availability=Available
+// [8] QWindow * window()
 func (this *QBackingStore) Window() *QWindow /*777 QWindow **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QBackingStore6windowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -105,8 +104,8 @@ func (this *QBackingStore) Window() *QWindow /*777 QWindow **/ {
 
 // /usr/include/qt/QtGui/qbackingstore.h:67
 // index:0
-// Public
-// QPaintDevice * paintDevice()
+// Public Visibility=Default Availability=Available
+// [8] QPaintDevice * paintDevice()
 func (this *QBackingStore) PaintDevice() *QPaintDevice /*777 QPaintDevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStore11paintDeviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -117,8 +116,8 @@ func (this *QBackingStore) PaintDevice() *QPaintDevice /*777 QPaintDevice **/ {
 
 // /usr/include/qt/QtGui/qbackingstore.h:69
 // index:0
-// Public
-// void flush(const QRegion &, QWindow *, const QPoint &)
+// Public Visibility=Default Availability=Available
+// [-2] void flush(const QRegion &, QWindow *, const QPoint &)
 func (this *QBackingStore) Flush(region *QRegion, window *QWindow /*777 QWindow **/, offset *qtcore.QPoint) {
 	var convArg0 = region.GetCthis()
 	var convArg1 = window.GetCthis()
@@ -129,8 +128,8 @@ func (this *QBackingStore) Flush(region *QRegion, window *QWindow /*777 QWindow 
 
 // /usr/include/qt/QtGui/qbackingstore.h:71
 // index:0
-// Public
-// void resize(const QSize &)
+// Public Visibility=Default Availability=Available
+// [-2] void resize(const QSize &)
 func (this *QBackingStore) Resize(size *qtcore.QSize) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStore6resizeERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -139,22 +138,20 @@ func (this *QBackingStore) Resize(size *qtcore.QSize) {
 
 // /usr/include/qt/QtGui/qbackingstore.h:72
 // index:0
-// Public
-// QSize size()
+// Public Visibility=Default Availability=Available
+// [8] QSize size()
 func (this *QBackingStore) Size() *qtcore.QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK13QBackingStore4sizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QBackingStore4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qbackingstore.h:74
 // index:0
-// Public
-// bool scroll(const QRegion &, int, int)
+// Public Visibility=Default Availability=Available
+// [1] bool scroll(const QRegion &, int, int)
 func (this *QBackingStore) Scroll(area *QRegion, dx int, dy int) bool {
 	var convArg0 = area.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStore6scrollERK7QRegionii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, dx, dy)
@@ -165,8 +162,8 @@ func (this *QBackingStore) Scroll(area *QRegion, dx int, dy int) bool {
 
 // /usr/include/qt/QtGui/qbackingstore.h:76
 // index:0
-// Public
-// void beginPaint(const QRegion &)
+// Public Visibility=Default Availability=Available
+// [-2] void beginPaint(const QRegion &)
 func (this *QBackingStore) BeginPaint(arg0 *QRegion) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStore10beginPaintERK7QRegion", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -175,8 +172,8 @@ func (this *QBackingStore) BeginPaint(arg0 *QRegion) {
 
 // /usr/include/qt/QtGui/qbackingstore.h:77
 // index:0
-// Public
-// void endPaint()
+// Public Visibility=Default Availability=Available
+// [-2] void endPaint()
 func (this *QBackingStore) EndPaint() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStore8endPaintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -184,8 +181,8 @@ func (this *QBackingStore) EndPaint() {
 
 // /usr/include/qt/QtGui/qbackingstore.h:79
 // index:0
-// Public
-// void setStaticContents(const QRegion &)
+// Public Visibility=Default Availability=Available
+// [-2] void setStaticContents(const QRegion &)
 func (this *QBackingStore) SetStaticContents(region *QRegion) {
 	var convArg0 = region.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStore17setStaticContentsERK7QRegion", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -194,22 +191,20 @@ func (this *QBackingStore) SetStaticContents(region *QRegion) {
 
 // /usr/include/qt/QtGui/qbackingstore.h:80
 // index:0
-// Public
-// QRegion staticContents()
+// Public Visibility=Default Availability=Available
+// [8] QRegion staticContents()
 func (this *QBackingStore) StaticContents() *QRegion /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QBackingStore14staticContentsEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QBackingStore14staticContentsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qbackingstore.h:81
 // index:0
-// Public
-// bool hasStaticContents()
+// Public Visibility=Default Availability=Available
+// [1] bool hasStaticContents()
 func (this *QBackingStore) HasStaticContents() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QBackingStore17hasStaticContentsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

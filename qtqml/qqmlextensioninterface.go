@@ -76,8 +76,8 @@ func (*QQmlExtensionInterface) NewFromPointer(cthis unsafe.Pointer) *QQmlExtensi
 
 // /usr/include/qt/QtQml/qqmlextensioninterface.h:61
 // index:0
-// Public inline virtual
-// void ~QQmlExtensionInterface()
+// Public inline virtual Visibility=Default Availability=Available
+// [-2] void ~QQmlExtensionInterface()
 func DeleteQQmlExtensionInterface(*QQmlExtensionInterface) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QQmlExtensionInterfaceD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -85,8 +85,8 @@ func DeleteQQmlExtensionInterface(*QQmlExtensionInterface) {
 
 // /usr/include/qt/QtQml/qqmlextensioninterface.h:62
 // index:0
-// Public pure virtual
-// void initializeEngine(QQmlEngine *, const char *)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [-2] void initializeEngine(QQmlEngine *, const char *)
 func (this *QQmlExtensionInterface) InitializeEngine(engine *QQmlEngine /*777 QQmlEngine **/, uri string) {
 	var convArg0 = engine.GetCthis()
 	var convArg1 = qtrt.CString(uri)

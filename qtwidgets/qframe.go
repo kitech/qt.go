@@ -76,8 +76,8 @@ func (*QFrame) NewFromPointer(cthis unsafe.Pointer) *QFrame {
 
 // /usr/include/qt/QtWidgets/qframe.h:54
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,21 +88,20 @@ func (this *QFrame) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/
 
 // /usr/include/qt/QtWidgets/qframe.h:64
 // index:0
-// Public
-// void QFrame(QWidget *, Qt::WindowFlags)
+// Public Visibility=Default Availability=Available
+// [-2] void QFrame(QWidget *, Qt::WindowFlags)
 func NewQFrame(parent *QWidget /*777 QWidget **/, f int) *QFrame {
-	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrameC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, f)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrameC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, convArg0, f)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQFrameFromPointer(cthis)
+	gothis := NewQFrameFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:65
 // index:0
-// Public virtual
-// void ~QFrame()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QFrame()
 func DeleteQFrame(*QFrame) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrameD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -110,8 +109,8 @@ func DeleteQFrame(*QFrame) {
 
 // /usr/include/qt/QtWidgets/qframe.h:67
 // index:0
-// Public
-// int frameStyle()
+// Public Visibility=Default Availability=Available
+// [4] int frameStyle()
 func (this *QFrame) FrameStyle() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame10frameStyleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -121,8 +120,8 @@ func (this *QFrame) FrameStyle() int {
 
 // /usr/include/qt/QtWidgets/qframe.h:68
 // index:0
-// Public
-// void setFrameStyle(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setFrameStyle(int)
 func (this *QFrame) SetFrameStyle(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame13setFrameStyleEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -130,8 +129,8 @@ func (this *QFrame) SetFrameStyle(arg0 int) {
 
 // /usr/include/qt/QtWidgets/qframe.h:70
 // index:0
-// Public
-// int frameWidth()
+// Public Visibility=Default Availability=Available
+// [4] int frameWidth()
 func (this *QFrame) FrameWidth() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame10frameWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -141,22 +140,20 @@ func (this *QFrame) FrameWidth() int {
 
 // /usr/include/qt/QtWidgets/qframe.h:72
 // index:0
-// Public virtual
-// QSize sizeHint()
+// Public virtual Visibility=Default Availability=Available
+// [8] QSize sizeHint()
 func (this *QFrame) SizeHint() *qtcore.QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK6QFrame8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:96
 // index:0
-// Public
-// QFrame::Shape frameShape()
+// Public Visibility=Default Availability=Available
+// [4] QFrame::Shape frameShape()
 func (this *QFrame) FrameShape() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame10frameShapeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -166,8 +163,8 @@ func (this *QFrame) FrameShape() int {
 
 // /usr/include/qt/QtWidgets/qframe.h:97
 // index:0
-// Public
-// void setFrameShape(enum QFrame::Shape)
+// Public Visibility=Default Availability=Available
+// [-2] void setFrameShape(enum QFrame::Shape)
 func (this *QFrame) SetFrameShape(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame13setFrameShapeENS_5ShapeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -175,8 +172,8 @@ func (this *QFrame) SetFrameShape(arg0 int) {
 
 // /usr/include/qt/QtWidgets/qframe.h:98
 // index:0
-// Public
-// QFrame::Shadow frameShadow()
+// Public Visibility=Default Availability=Available
+// [4] QFrame::Shadow frameShadow()
 func (this *QFrame) FrameShadow() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame11frameShadowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -186,8 +183,8 @@ func (this *QFrame) FrameShadow() int {
 
 // /usr/include/qt/QtWidgets/qframe.h:99
 // index:0
-// Public
-// void setFrameShadow(enum QFrame::Shadow)
+// Public Visibility=Default Availability=Available
+// [-2] void setFrameShadow(enum QFrame::Shadow)
 func (this *QFrame) SetFrameShadow(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame14setFrameShadowENS_6ShadowE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -195,8 +192,8 @@ func (this *QFrame) SetFrameShadow(arg0 int) {
 
 // /usr/include/qt/QtWidgets/qframe.h:101
 // index:0
-// Public
-// int lineWidth()
+// Public Visibility=Default Availability=Available
+// [4] int lineWidth()
 func (this *QFrame) LineWidth() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame9lineWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -206,8 +203,8 @@ func (this *QFrame) LineWidth() int {
 
 // /usr/include/qt/QtWidgets/qframe.h:102
 // index:0
-// Public
-// void setLineWidth(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setLineWidth(int)
 func (this *QFrame) SetLineWidth(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame12setLineWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -215,8 +212,8 @@ func (this *QFrame) SetLineWidth(arg0 int) {
 
 // /usr/include/qt/QtWidgets/qframe.h:104
 // index:0
-// Public
-// int midLineWidth()
+// Public Visibility=Default Availability=Available
+// [4] int midLineWidth()
 func (this *QFrame) MidLineWidth() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame12midLineWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -226,8 +223,8 @@ func (this *QFrame) MidLineWidth() int {
 
 // /usr/include/qt/QtWidgets/qframe.h:105
 // index:0
-// Public
-// void setMidLineWidth(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setMidLineWidth(int)
 func (this *QFrame) SetMidLineWidth(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame15setMidLineWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -235,22 +232,20 @@ func (this *QFrame) SetMidLineWidth(arg0 int) {
 
 // /usr/include/qt/QtWidgets/qframe.h:107
 // index:0
-// Public
-// QRect frameRect()
+// Public Visibility=Default Availability=Available
+// [16] QRect frameRect()
 func (this *QFrame) FrameRect() *qtcore.QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame9frameRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame9frameRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:108
 // index:0
-// Public
-// void setFrameRect(const QRect &)
+// Public Visibility=Default Availability=Available
+// [-2] void setFrameRect(const QRect &)
 func (this *QFrame) SetFrameRect(arg0 *qtcore.QRect) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame12setFrameRectERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -259,8 +254,8 @@ func (this *QFrame) SetFrameRect(arg0 *qtcore.QRect) {
 
 // /usr/include/qt/QtWidgets/qframe.h:111
 // index:0
-// Protected virtual
-// bool event(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 func (this *QFrame) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -271,8 +266,8 @@ func (this *QFrame) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 
 // /usr/include/qt/QtWidgets/qframe.h:112
 // index:0
-// Protected virtual
-// void paintEvent(QPaintEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void paintEvent(QPaintEvent *)
 func (this *QFrame) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -281,8 +276,8 @@ func (this *QFrame) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 
 // /usr/include/qt/QtWidgets/qframe.h:113
 // index:0
-// Protected virtual
-// void changeEvent(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void changeEvent(QEvent *)
 func (this *QFrame) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -291,8 +286,8 @@ func (this *QFrame) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 
 // /usr/include/qt/QtWidgets/qframe.h:114
 // index:0
-// Protected
-// void drawFrame(QPainter *)
+// Protected Visibility=Default Availability=Available
+// [-2] void drawFrame(QPainter *)
 func (this *QFrame) DrawFrame(arg0 *qtgui.QPainter /*777 QPainter **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrame9drawFrameEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -301,8 +296,8 @@ func (this *QFrame) DrawFrame(arg0 *qtgui.QPainter /*777 QPainter **/) {
 
 // /usr/include/qt/QtWidgets/qframe.h:119
 // index:0
-// Protected
-// void initStyleOption(QStyleOptionFrame *)
+// Protected Visibility=Default Availability=Available
+// [-2] void initStyleOption(QStyleOptionFrame *)
 func (this *QFrame) InitStyleOption(option *QStyleOptionFrame /*777 QStyleOptionFrame **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QFrame15initStyleOptionEP17QStyleOptionFrame", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

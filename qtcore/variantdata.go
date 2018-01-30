@@ -67,13 +67,12 @@ func (*VariantData) NewFromPointer(cthis unsafe.Pointer) *VariantData {
 
 // /usr/include/qt/QtCore/qmetatype.h:798
 // index:0
-// Public inline
-// void VariantData(const int, const void *, const uint)
+// Public inline Visibility=Default Availability=Available
+// [-2] void VariantData(const int, const void *, const uint)
 func NewVariantData(metaTypeId_ int, data_ unsafe.Pointer /*666*/, flags_ uint) *VariantData {
-	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QtMetaTypePrivate11VariantDataC2EiPKvj", ffiqt.FFI_TYPE_VOID, cthis, metaTypeId_, data_, flags_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QtMetaTypePrivate11VariantDataC2EiPKvj", ffiqt.FFI_TYPE_POINTER, metaTypeId_, data_, flags_)
 	gopp.ErrPrint(err, rv)
-	gothis := NewVariantDataFromPointer(cthis)
+	gothis := NewVariantDataFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

@@ -67,8 +67,8 @@ func (*QFactoryInterface) NewFromPointer(cthis unsafe.Pointer) *QFactoryInterfac
 
 // /usr/include/qt/QtCore/qfactoryinterface.h:51
 // index:0
-// Public virtual
-// void ~QFactoryInterface()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QFactoryInterface()
 func DeleteQFactoryInterface(*QFactoryInterface) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QFactoryInterfaceD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)

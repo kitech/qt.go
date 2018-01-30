@@ -76,8 +76,8 @@ func (*QGraphicsScene) NewFromPointer(cthis unsafe.Pointer) *QGraphicsScene {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:98
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QGraphicsScene) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,48 +88,45 @@ func (this *QGraphicsScene) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:124
 // index:0
-// Public
-// void QGraphicsScene(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsScene(QObject *)
 func NewQGraphicsScene(parent *qtcore.QObject /*777 QObject **/) *QGraphicsScene {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsSceneC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsSceneC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQGraphicsSceneFromPointer(cthis)
+	gothis := NewQGraphicsSceneFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:125
 // index:1
-// Public
-// void QGraphicsScene(const QRectF &, QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsScene(const QRectF &, QObject *)
 func NewQGraphicsScene_1(sceneRect *qtcore.QRectF, parent *qtcore.QObject /*777 QObject **/) *QGraphicsScene {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = sceneRect.GetCthis()
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsSceneC2ERK6QRectFP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsSceneC2ERK6QRectFP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQGraphicsSceneFromPointer(cthis)
+	gothis := NewQGraphicsSceneFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:126
 // index:2
-// Public
-// void QGraphicsScene(qreal, qreal, qreal, qreal, QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsScene(qreal, qreal, qreal, qreal, QObject *)
 func NewQGraphicsScene_2(x float64, y float64, width float64, height float64, parent *qtcore.QObject /*777 QObject **/) *QGraphicsScene {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg4 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsSceneC2EddddP7QObject", ffiqt.FFI_TYPE_VOID, cthis, x, y, width, height, convArg4)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsSceneC2EddddP7QObject", ffiqt.FFI_TYPE_POINTER, x, y, width, height, convArg4)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQGraphicsSceneFromPointer(cthis)
+	gothis := NewQGraphicsSceneFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:127
 // index:0
-// Public virtual
-// void ~QGraphicsScene()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QGraphicsScene()
 func DeleteQGraphicsScene(*QGraphicsScene) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsSceneD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -137,22 +134,20 @@ func DeleteQGraphicsScene(*QGraphicsScene) {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:129
 // index:0
-// Public
-// QRectF sceneRect()
+// Public Visibility=Default Availability=Available
+// [32] QRectF sceneRect()
 func (this *QGraphicsScene) SceneRect() *qtcore.QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene9sceneRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene9sceneRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:130
 // index:0
-// Public inline
-// qreal width()
+// Public inline Visibility=Default Availability=Available
+// [8] qreal width()
 func (this *QGraphicsScene) Width() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene5widthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -162,8 +157,8 @@ func (this *QGraphicsScene) Width() float64 {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:131
 // index:0
-// Public inline
-// qreal height()
+// Public inline Visibility=Default Availability=Available
+// [8] qreal height()
 func (this *QGraphicsScene) Height() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene6heightEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -173,8 +168,8 @@ func (this *QGraphicsScene) Height() float64 {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:132
 // index:0
-// Public
-// void setSceneRect(const QRectF &)
+// Public Visibility=Default Availability=Available
+// [-2] void setSceneRect(const QRectF &)
 func (this *QGraphicsScene) SetSceneRect(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene12setSceneRectERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -183,8 +178,8 @@ func (this *QGraphicsScene) SetSceneRect(rect *qtcore.QRectF) {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:133
 // index:1
-// Public inline
-// void setSceneRect(qreal, qreal, qreal, qreal)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setSceneRect(qreal, qreal, qreal, qreal)
 func (this *QGraphicsScene) SetSceneRect_1(x float64, y float64, w float64, h float64) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene12setSceneRectEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	gopp.ErrPrint(err, rv)
@@ -192,8 +187,8 @@ func (this *QGraphicsScene) SetSceneRect_1(x float64, y float64, w float64, h fl
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:136
 // index:0
-// Public
-// void render(QPainter *, const QRectF &, const QRectF &, Qt::AspectRatioMode)
+// Public Visibility=Default Availability=Available
+// [-2] void render(QPainter *, const QRectF &, const QRectF &, Qt::AspectRatioMode)
 func (this *QGraphicsScene) Render(painter *qtgui.QPainter /*777 QPainter **/, target *qtcore.QRectF, source *qtcore.QRectF, aspectRatioMode int) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = target.GetCthis()
@@ -204,8 +199,8 @@ func (this *QGraphicsScene) Render(painter *qtgui.QPainter /*777 QPainter **/, t
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:140
 // index:0
-// Public
-// QGraphicsScene::ItemIndexMethod itemIndexMethod()
+// Public Visibility=Default Availability=Available
+// [4] QGraphicsScene::ItemIndexMethod itemIndexMethod()
 func (this *QGraphicsScene) ItemIndexMethod() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene15itemIndexMethodEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -215,8 +210,8 @@ func (this *QGraphicsScene) ItemIndexMethod() int {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:141
 // index:0
-// Public
-// void setItemIndexMethod(enum QGraphicsScene::ItemIndexMethod)
+// Public Visibility=Default Availability=Available
+// [-2] void setItemIndexMethod(enum QGraphicsScene::ItemIndexMethod)
 func (this *QGraphicsScene) SetItemIndexMethod(method int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene18setItemIndexMethodENS_15ItemIndexMethodE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), method)
 	gopp.ErrPrint(err, rv)
@@ -224,8 +219,8 @@ func (this *QGraphicsScene) SetItemIndexMethod(method int) {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:143
 // index:0
-// Public
-// bool isSortCacheEnabled()
+// Public Visibility=Default Availability=Available
+// [1] bool isSortCacheEnabled()
 func (this *QGraphicsScene) IsSortCacheEnabled() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene18isSortCacheEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -235,8 +230,8 @@ func (this *QGraphicsScene) IsSortCacheEnabled() bool {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:144
 // index:0
-// Public
-// void setSortCacheEnabled(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setSortCacheEnabled(_Bool)
 func (this *QGraphicsScene) SetSortCacheEnabled(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene19setSortCacheEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -244,8 +239,8 @@ func (this *QGraphicsScene) SetSortCacheEnabled(enabled bool) {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:146
 // index:0
-// Public
-// int bspTreeDepth()
+// Public Visibility=Default Availability=Available
+// [4] int bspTreeDepth()
 func (this *QGraphicsScene) BspTreeDepth() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene12bspTreeDepthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -255,8 +250,8 @@ func (this *QGraphicsScene) BspTreeDepth() int {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:147
 // index:0
-// Public
-// void setBspTreeDepth(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setBspTreeDepth(int)
 func (this *QGraphicsScene) SetBspTreeDepth(depth int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene15setBspTreeDepthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), depth)
 	gopp.ErrPrint(err, rv)
@@ -264,22 +259,20 @@ func (this *QGraphicsScene) SetBspTreeDepth(depth int) {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:149
 // index:0
-// Public
-// QRectF itemsBoundingRect()
+// Public Visibility=Default Availability=Available
+// [32] QRectF itemsBoundingRect()
 func (this *QGraphicsScene) ItemsBoundingRect() *qtcore.QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene17itemsBoundingRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene17itemsBoundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:165
 // index:0
-// Public
-// QGraphicsItem * itemAt(const QPointF &, const QTransform &)
+// Public Visibility=Default Availability=Available
+// [8] QGraphicsItem * itemAt(const QPointF &, const QTransform &)
 func (this *QGraphicsScene) ItemAt(pos *qtcore.QPointF, deviceTransform *qtgui.QTransform) *QGraphicsItem /*777 QGraphicsItem **/ {
 	var convArg0 = pos.GetCthis()
 	var convArg1 = deviceTransform.GetCthis()
@@ -292,8 +285,8 @@ func (this *QGraphicsScene) ItemAt(pos *qtcore.QPointF, deviceTransform *qtgui.Q
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:179
 // index:1
-// Public inline
-// QGraphicsItem * itemAt(qreal, qreal, const QTransform &)
+// Public inline Visibility=Default Availability=Available
+// [8] QGraphicsItem * itemAt(qreal, qreal, const QTransform &)
 func (this *QGraphicsScene) ItemAt_1(x float64, y float64, deviceTransform *qtgui.QTransform) *QGraphicsItem /*777 QGraphicsItem **/ {
 	var convArg2 = deviceTransform.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene6itemAtEddRK10QTransform", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, convArg2)
@@ -305,22 +298,20 @@ func (this *QGraphicsScene) ItemAt_1(x float64, y float64, deviceTransform *qtgu
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:183
 // index:0
-// Public
-// QPainterPath selectionArea()
+// Public Visibility=Default Availability=Available
+// [8] QPainterPath selectionArea()
 func (this *QGraphicsScene) SelectionArea() *qtgui.QPainterPath /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene13selectionAreaEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene13selectionAreaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:184
 // index:0
-// Public
-// void setSelectionArea(const QPainterPath &, const QTransform &)
+// Public Visibility=Default Availability=Available
+// [-2] void setSelectionArea(const QPainterPath &, const QTransform &)
 func (this *QGraphicsScene) SetSelectionArea(path *qtgui.QPainterPath, deviceTransform *qtgui.QTransform) {
 	var convArg0 = path.GetCthis()
 	var convArg1 = deviceTransform.GetCthis()
@@ -330,8 +321,8 @@ func (this *QGraphicsScene) SetSelectionArea(path *qtgui.QPainterPath, deviceTra
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:185
 // index:1
-// Public
-// void setSelectionArea(const QPainterPath &, Qt::ItemSelectionMode, const QTransform &)
+// Public Visibility=Default Availability=Available
+// [-2] void setSelectionArea(const QPainterPath &, Qt::ItemSelectionMode, const QTransform &)
 func (this *QGraphicsScene) SetSelectionArea_1(path *qtgui.QPainterPath, mode int, deviceTransform *qtgui.QTransform) {
 	var convArg0 = path.GetCthis()
 	var convArg2 = deviceTransform.GetCthis()
@@ -341,8 +332,8 @@ func (this *QGraphicsScene) SetSelectionArea_1(path *qtgui.QPainterPath, mode in
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:186
 // index:2
-// Public
-// void setSelectionArea(const QPainterPath &, Qt::ItemSelectionOperation, Qt::ItemSelectionMode, const QTransform &)
+// Public Visibility=Default Availability=Available
+// [-2] void setSelectionArea(const QPainterPath &, Qt::ItemSelectionOperation, Qt::ItemSelectionMode, const QTransform &)
 func (this *QGraphicsScene) SetSelectionArea_2(path *qtgui.QPainterPath, selectionOperation int, mode int, deviceTransform *qtgui.QTransform) {
 	var convArg0 = path.GetCthis()
 	var convArg3 = deviceTransform.GetCthis()
@@ -352,8 +343,8 @@ func (this *QGraphicsScene) SetSelectionArea_2(path *qtgui.QPainterPath, selecti
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:190
 // index:0
-// Public
-// void destroyItemGroup(QGraphicsItemGroup *)
+// Public Visibility=Default Availability=Available
+// [-2] void destroyItemGroup(QGraphicsItemGroup *)
 func (this *QGraphicsScene) DestroyItemGroup(group *QGraphicsItemGroup /*777 QGraphicsItemGroup **/) {
 	var convArg0 = group.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene16destroyItemGroupEP18QGraphicsItemGroup", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -362,8 +353,8 @@ func (this *QGraphicsScene) DestroyItemGroup(group *QGraphicsItemGroup /*777 QGr
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:192
 // index:0
-// Public
-// void addItem(QGraphicsItem *)
+// Public Visibility=Default Availability=Available
+// [-2] void addItem(QGraphicsItem *)
 func (this *QGraphicsScene) AddItem(item *QGraphicsItem /*777 QGraphicsItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene7addItemEP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -372,8 +363,8 @@ func (this *QGraphicsScene) AddItem(item *QGraphicsItem /*777 QGraphicsItem **/)
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:193
 // index:0
-// Public
-// QGraphicsEllipseItem * addEllipse(const QRectF &, const QPen &, const QBrush &)
+// Public Visibility=Default Availability=Available
+// [8] QGraphicsEllipseItem * addEllipse(const QRectF &, const QPen &, const QBrush &)
 func (this *QGraphicsScene) AddEllipse(rect *qtcore.QRectF, pen *qtgui.QPen, brush *qtgui.QBrush) *QGraphicsEllipseItem /*777 QGraphicsEllipseItem **/ {
 	var convArg0 = rect.GetCthis()
 	var convArg1 = pen.GetCthis()
@@ -387,8 +378,8 @@ func (this *QGraphicsScene) AddEllipse(rect *qtcore.QRectF, pen *qtgui.QPen, bru
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:202
 // index:1
-// Public inline
-// QGraphicsEllipseItem * addEllipse(qreal, qreal, qreal, qreal, const QPen &, const QBrush &)
+// Public inline Visibility=Default Availability=Available
+// [8] QGraphicsEllipseItem * addEllipse(qreal, qreal, qreal, qreal, const QPen &, const QBrush &)
 func (this *QGraphicsScene) AddEllipse_1(x float64, y float64, w float64, h float64, pen *qtgui.QPen, brush *qtgui.QBrush) *QGraphicsEllipseItem /*777 QGraphicsEllipseItem **/ {
 	var convArg4 = pen.GetCthis()
 	var convArg5 = brush.GetCthis()
@@ -401,8 +392,8 @@ func (this *QGraphicsScene) AddEllipse_1(x float64, y float64, w float64, h floa
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:194
 // index:0
-// Public
-// QGraphicsLineItem * addLine(const QLineF &, const QPen &)
+// Public Visibility=Default Availability=Available
+// [8] QGraphicsLineItem * addLine(const QLineF &, const QPen &)
 func (this *QGraphicsScene) AddLine(line *qtcore.QLineF, pen *qtgui.QPen) *QGraphicsLineItem /*777 QGraphicsLineItem **/ {
 	var convArg0 = line.GetCthis()
 	var convArg1 = pen.GetCthis()
@@ -415,8 +406,8 @@ func (this *QGraphicsScene) AddLine(line *qtcore.QLineF, pen *qtgui.QPen) *QGrap
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:204
 // index:1
-// Public inline
-// QGraphicsLineItem * addLine(qreal, qreal, qreal, qreal, const QPen &)
+// Public inline Visibility=Default Availability=Available
+// [8] QGraphicsLineItem * addLine(qreal, qreal, qreal, qreal, const QPen &)
 func (this *QGraphicsScene) AddLine_1(x1 float64, y1 float64, x2 float64, y2 float64, pen *qtgui.QPen) *QGraphicsLineItem /*777 QGraphicsLineItem **/ {
 	var convArg4 = pen.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene7addLineEddddRK4QPen", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, x2, y2, convArg4)
@@ -428,8 +419,8 @@ func (this *QGraphicsScene) AddLine_1(x1 float64, y1 float64, x2 float64, y2 flo
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:195
 // index:0
-// Public
-// QGraphicsPathItem * addPath(const QPainterPath &, const QPen &, const QBrush &)
+// Public Visibility=Default Availability=Available
+// [8] QGraphicsPathItem * addPath(const QPainterPath &, const QPen &, const QBrush &)
 func (this *QGraphicsScene) AddPath(path *qtgui.QPainterPath, pen *qtgui.QPen, brush *qtgui.QBrush) *QGraphicsPathItem /*777 QGraphicsPathItem **/ {
 	var convArg0 = path.GetCthis()
 	var convArg1 = pen.GetCthis()
@@ -443,8 +434,8 @@ func (this *QGraphicsScene) AddPath(path *qtgui.QPainterPath, pen *qtgui.QPen, b
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:196
 // index:0
-// Public
-// QGraphicsPixmapItem * addPixmap(const QPixmap &)
+// Public Visibility=Default Availability=Available
+// [8] QGraphicsPixmapItem * addPixmap(const QPixmap &)
 func (this *QGraphicsScene) AddPixmap(pixmap *qtgui.QPixmap) *QGraphicsPixmapItem /*777 QGraphicsPixmapItem **/ {
 	var convArg0 = pixmap.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene9addPixmapERK7QPixmap", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -456,8 +447,8 @@ func (this *QGraphicsScene) AddPixmap(pixmap *qtgui.QPixmap) *QGraphicsPixmapIte
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:197
 // index:0
-// Public
-// QGraphicsPolygonItem * addPolygon(const QPolygonF &, const QPen &, const QBrush &)
+// Public Visibility=Default Availability=Available
+// [8] QGraphicsPolygonItem * addPolygon(const QPolygonF &, const QPen &, const QBrush &)
 func (this *QGraphicsScene) AddPolygon(polygon *qtgui.QPolygonF, pen *qtgui.QPen, brush *qtgui.QBrush) *QGraphicsPolygonItem /*777 QGraphicsPolygonItem **/ {
 	var convArg0 = polygon.GetCthis()
 	var convArg1 = pen.GetCthis()
@@ -471,8 +462,8 @@ func (this *QGraphicsScene) AddPolygon(polygon *qtgui.QPolygonF, pen *qtgui.QPen
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:198
 // index:0
-// Public
-// QGraphicsRectItem * addRect(const QRectF &, const QPen &, const QBrush &)
+// Public Visibility=Default Availability=Available
+// [8] QGraphicsRectItem * addRect(const QRectF &, const QPen &, const QBrush &)
 func (this *QGraphicsScene) AddRect(rect *qtcore.QRectF, pen *qtgui.QPen, brush *qtgui.QBrush) *QGraphicsRectItem /*777 QGraphicsRectItem **/ {
 	var convArg0 = rect.GetCthis()
 	var convArg1 = pen.GetCthis()
@@ -486,8 +477,8 @@ func (this *QGraphicsScene) AddRect(rect *qtcore.QRectF, pen *qtgui.QPen, brush 
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:206
 // index:1
-// Public inline
-// QGraphicsRectItem * addRect(qreal, qreal, qreal, qreal, const QPen &, const QBrush &)
+// Public inline Visibility=Default Availability=Available
+// [8] QGraphicsRectItem * addRect(qreal, qreal, qreal, qreal, const QPen &, const QBrush &)
 func (this *QGraphicsScene) AddRect_1(x float64, y float64, w float64, h float64, pen *qtgui.QPen, brush *qtgui.QBrush) *QGraphicsRectItem /*777 QGraphicsRectItem **/ {
 	var convArg4 = pen.GetCthis()
 	var convArg5 = brush.GetCthis()
@@ -500,8 +491,8 @@ func (this *QGraphicsScene) AddRect_1(x float64, y float64, w float64, h float64
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:199
 // index:0
-// Public
-// QGraphicsTextItem * addText(const QString &, const QFont &)
+// Public Visibility=Default Availability=Available
+// [8] QGraphicsTextItem * addText(const QString &, const QFont &)
 func (this *QGraphicsScene) AddText(text *qtcore.QString, font *qtgui.QFont) *QGraphicsTextItem /*777 QGraphicsTextItem **/ {
 	var convArg0 = text.GetCthis()
 	var convArg1 = font.GetCthis()
@@ -514,8 +505,8 @@ func (this *QGraphicsScene) AddText(text *qtcore.QString, font *qtgui.QFont) *QG
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:200
 // index:0
-// Public
-// QGraphicsSimpleTextItem * addSimpleText(const QString &, const QFont &)
+// Public Visibility=Default Availability=Available
+// [8] QGraphicsSimpleTextItem * addSimpleText(const QString &, const QFont &)
 func (this *QGraphicsScene) AddSimpleText(text *qtcore.QString, font *qtgui.QFont) *QGraphicsSimpleTextItem /*777 QGraphicsSimpleTextItem **/ {
 	var convArg0 = text.GetCthis()
 	var convArg1 = font.GetCthis()
@@ -528,8 +519,8 @@ func (this *QGraphicsScene) AddSimpleText(text *qtcore.QString, font *qtgui.QFon
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:201
 // index:0
-// Public
-// QGraphicsProxyWidget * addWidget(QWidget *, Qt::WindowFlags)
+// Public Visibility=Default Availability=Available
+// [8] QGraphicsProxyWidget * addWidget(QWidget *, Qt::WindowFlags)
 func (this *QGraphicsScene) AddWidget(widget *QWidget /*777 QWidget **/, wFlags int) *QGraphicsProxyWidget /*777 QGraphicsProxyWidget **/ {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene9addWidgetEP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, wFlags)
@@ -541,8 +532,8 @@ func (this *QGraphicsScene) AddWidget(widget *QWidget /*777 QWidget **/, wFlags 
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:208
 // index:0
-// Public
-// void removeItem(QGraphicsItem *)
+// Public Visibility=Default Availability=Available
+// [-2] void removeItem(QGraphicsItem *)
 func (this *QGraphicsScene) RemoveItem(item *QGraphicsItem /*777 QGraphicsItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene10removeItemEP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -551,8 +542,8 @@ func (this *QGraphicsScene) RemoveItem(item *QGraphicsItem /*777 QGraphicsItem *
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:210
 // index:0
-// Public
-// QGraphicsItem * focusItem()
+// Public Visibility=Default Availability=Available
+// [8] QGraphicsItem * focusItem()
 func (this *QGraphicsScene) FocusItem() *QGraphicsItem /*777 QGraphicsItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene9focusItemEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -563,8 +554,8 @@ func (this *QGraphicsScene) FocusItem() *QGraphicsItem /*777 QGraphicsItem **/ {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:211
 // index:0
-// Public
-// void setFocusItem(QGraphicsItem *, Qt::FocusReason)
+// Public Visibility=Default Availability=Available
+// [-2] void setFocusItem(QGraphicsItem *, Qt::FocusReason)
 func (this *QGraphicsScene) SetFocusItem(item *QGraphicsItem /*777 QGraphicsItem **/, focusReason int) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene12setFocusItemEP13QGraphicsItemN2Qt11FocusReasonE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, focusReason)
@@ -573,8 +564,8 @@ func (this *QGraphicsScene) SetFocusItem(item *QGraphicsItem /*777 QGraphicsItem
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:212
 // index:0
-// Public
-// bool hasFocus()
+// Public Visibility=Default Availability=Available
+// [1] bool hasFocus()
 func (this *QGraphicsScene) HasFocus() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene8hasFocusEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -584,8 +575,8 @@ func (this *QGraphicsScene) HasFocus() bool {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:213
 // index:0
-// Public
-// void setFocus(Qt::FocusReason)
+// Public Visibility=Default Availability=Available
+// [-2] void setFocus(Qt::FocusReason)
 func (this *QGraphicsScene) SetFocus(focusReason int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene8setFocusEN2Qt11FocusReasonE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), focusReason)
 	gopp.ErrPrint(err, rv)
@@ -593,8 +584,8 @@ func (this *QGraphicsScene) SetFocus(focusReason int) {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:214
 // index:0
-// Public
-// void clearFocus()
+// Public Visibility=Default Availability=Available
+// [-2] void clearFocus()
 func (this *QGraphicsScene) ClearFocus() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene10clearFocusEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -602,8 +593,8 @@ func (this *QGraphicsScene) ClearFocus() {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:216
 // index:0
-// Public
-// void setStickyFocus(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setStickyFocus(_Bool)
 func (this *QGraphicsScene) SetStickyFocus(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene14setStickyFocusEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -611,8 +602,8 @@ func (this *QGraphicsScene) SetStickyFocus(enabled bool) {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:217
 // index:0
-// Public
-// bool stickyFocus()
+// Public Visibility=Default Availability=Available
+// [1] bool stickyFocus()
 func (this *QGraphicsScene) StickyFocus() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene11stickyFocusEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -622,8 +613,8 @@ func (this *QGraphicsScene) StickyFocus() bool {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:219
 // index:0
-// Public
-// QGraphicsItem * mouseGrabberItem()
+// Public Visibility=Default Availability=Available
+// [8] QGraphicsItem * mouseGrabberItem()
 func (this *QGraphicsScene) MouseGrabberItem() *QGraphicsItem /*777 QGraphicsItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene16mouseGrabberItemEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -634,22 +625,20 @@ func (this *QGraphicsScene) MouseGrabberItem() *QGraphicsItem /*777 QGraphicsIte
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:221
 // index:0
-// Public
-// QBrush backgroundBrush()
+// Public Visibility=Default Availability=Available
+// [8] QBrush backgroundBrush()
 func (this *QGraphicsScene) BackgroundBrush() *qtgui.QBrush /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene15backgroundBrushEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene15backgroundBrushEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:222
 // index:0
-// Public
-// void setBackgroundBrush(const QBrush &)
+// Public Visibility=Default Availability=Available
+// [-2] void setBackgroundBrush(const QBrush &)
 func (this *QGraphicsScene) SetBackgroundBrush(brush *qtgui.QBrush) {
 	var convArg0 = brush.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene18setBackgroundBrushERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -658,22 +647,20 @@ func (this *QGraphicsScene) SetBackgroundBrush(brush *qtgui.QBrush) {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:224
 // index:0
-// Public
-// QBrush foregroundBrush()
+// Public Visibility=Default Availability=Available
+// [8] QBrush foregroundBrush()
 func (this *QGraphicsScene) ForegroundBrush() *qtgui.QBrush /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene15foregroundBrushEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene15foregroundBrushEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:225
 // index:0
-// Public
-// void setForegroundBrush(const QBrush &)
+// Public Visibility=Default Availability=Available
+// [-2] void setForegroundBrush(const QBrush &)
 func (this *QGraphicsScene) SetForegroundBrush(brush *qtgui.QBrush) {
 	var convArg0 = brush.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene18setForegroundBrushERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -682,22 +669,20 @@ func (this *QGraphicsScene) SetForegroundBrush(brush *qtgui.QBrush) {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:227
 // index:0
-// Public virtual
-// QVariant inputMethodQuery(Qt::InputMethodQuery)
+// Public virtual Visibility=Default Availability=Available
+// [16] QVariant inputMethodQuery(Qt::InputMethodQuery)
 func (this *QGraphicsScene) InputMethodQuery(query int) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene16inputMethodQueryEN2Qt16InputMethodQueryE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), query)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene16inputMethodQueryEN2Qt16InputMethodQueryE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), query)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:231
 // index:0
-// Public inline
-// void update(qreal, qreal, qreal, qreal)
+// Public inline Visibility=Default Availability=Available
+// [-2] void update(qreal, qreal, qreal, qreal)
 func (this *QGraphicsScene) Update(x float64, y float64, w float64, h float64) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene6updateEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	gopp.ErrPrint(err, rv)
@@ -705,8 +690,8 @@ func (this *QGraphicsScene) Update(x float64, y float64, w float64, h float64) {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:257
 // index:1
-// Public
-// void update(const QRectF &)
+// Public Visibility=Default Availability=Available
+// [-2] void update(const QRectF &)
 func (this *QGraphicsScene) Update_1(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene6updateERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -715,8 +700,8 @@ func (this *QGraphicsScene) Update_1(rect *qtcore.QRectF) {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:236
 // index:0
-// Public
-// QStyle * style()
+// Public Visibility=Default Availability=Available
+// [8] QStyle * style()
 func (this *QGraphicsScene) Style() *QStyle /*777 QStyle **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene5styleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -727,8 +712,8 @@ func (this *QGraphicsScene) Style() *QStyle /*777 QStyle **/ {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:237
 // index:0
-// Public
-// void setStyle(QStyle *)
+// Public Visibility=Default Availability=Available
+// [-2] void setStyle(QStyle *)
 func (this *QGraphicsScene) SetStyle(style *QStyle /*777 QStyle **/) {
 	var convArg0 = style.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene8setStyleEP6QStyle", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -737,22 +722,20 @@ func (this *QGraphicsScene) SetStyle(style *QStyle /*777 QStyle **/) {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:239
 // index:0
-// Public
-// QFont font()
+// Public Visibility=Default Availability=Available
+// [16] QFont font()
 func (this *QGraphicsScene) Font() *qtgui.QFont /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene4fontEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene4fontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:240
 // index:0
-// Public
-// void setFont(const QFont &)
+// Public Visibility=Default Availability=Available
+// [-2] void setFont(const QFont &)
 func (this *QGraphicsScene) SetFont(font *qtgui.QFont) {
 	var convArg0 = font.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene7setFontERK5QFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -761,22 +744,20 @@ func (this *QGraphicsScene) SetFont(font *qtgui.QFont) {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:242
 // index:0
-// Public
-// QPalette palette()
+// Public Visibility=Default Availability=Available
+// [16] QPalette palette()
 func (this *QGraphicsScene) Palette() *qtgui.QPalette /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene7paletteEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene7paletteEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:243
 // index:0
-// Public
-// void setPalette(const QPalette &)
+// Public Visibility=Default Availability=Available
+// [-2] void setPalette(const QPalette &)
 func (this *QGraphicsScene) SetPalette(palette *qtgui.QPalette) {
 	var convArg0 = palette.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene10setPaletteERK8QPalette", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -785,8 +766,8 @@ func (this *QGraphicsScene) SetPalette(palette *qtgui.QPalette) {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:245
 // index:0
-// Public
-// bool isActive()
+// Public Visibility=Default Availability=Available
+// [1] bool isActive()
 func (this *QGraphicsScene) IsActive() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene8isActiveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -796,8 +777,8 @@ func (this *QGraphicsScene) IsActive() bool {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:246
 // index:0
-// Public
-// QGraphicsItem * activePanel()
+// Public Visibility=Default Availability=Available
+// [8] QGraphicsItem * activePanel()
 func (this *QGraphicsScene) ActivePanel() *QGraphicsItem /*777 QGraphicsItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene11activePanelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -808,8 +789,8 @@ func (this *QGraphicsScene) ActivePanel() *QGraphicsItem /*777 QGraphicsItem **/
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:247
 // index:0
-// Public
-// void setActivePanel(QGraphicsItem *)
+// Public Visibility=Default Availability=Available
+// [-2] void setActivePanel(QGraphicsItem *)
 func (this *QGraphicsScene) SetActivePanel(item *QGraphicsItem /*777 QGraphicsItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene14setActivePanelEP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -818,8 +799,8 @@ func (this *QGraphicsScene) SetActivePanel(item *QGraphicsItem /*777 QGraphicsIt
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:248
 // index:0
-// Public
-// QGraphicsWidget * activeWindow()
+// Public Visibility=Default Availability=Available
+// [8] QGraphicsWidget * activeWindow()
 func (this *QGraphicsScene) ActiveWindow() *QGraphicsWidget /*777 QGraphicsWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene12activeWindowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -830,8 +811,8 @@ func (this *QGraphicsScene) ActiveWindow() *QGraphicsWidget /*777 QGraphicsWidge
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:249
 // index:0
-// Public
-// void setActiveWindow(QGraphicsWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void setActiveWindow(QGraphicsWidget *)
 func (this *QGraphicsScene) SetActiveWindow(widget *QGraphicsWidget /*777 QGraphicsWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene15setActiveWindowEP15QGraphicsWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -840,8 +821,8 @@ func (this *QGraphicsScene) SetActiveWindow(widget *QGraphicsWidget /*777 QGraph
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:251
 // index:0
-// Public
-// bool sendEvent(QGraphicsItem *, QEvent *)
+// Public Visibility=Default Availability=Available
+// [1] bool sendEvent(QGraphicsItem *, QEvent *)
 func (this *QGraphicsScene) SendEvent(item *QGraphicsItem /*777 QGraphicsItem **/, event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = item.GetCthis()
 	var convArg1 = event.GetCthis()
@@ -853,8 +834,8 @@ func (this *QGraphicsScene) SendEvent(item *QGraphicsItem /*777 QGraphicsItem **
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:253
 // index:0
-// Public
-// qreal minimumRenderSize()
+// Public Visibility=Default Availability=Available
+// [8] qreal minimumRenderSize()
 func (this *QGraphicsScene) MinimumRenderSize() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScene17minimumRenderSizeEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -864,8 +845,8 @@ func (this *QGraphicsScene) MinimumRenderSize() float64 {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:254
 // index:0
-// Public
-// void setMinimumRenderSize(qreal)
+// Public Visibility=Default Availability=Available
+// [-2] void setMinimumRenderSize(qreal)
 func (this *QGraphicsScene) SetMinimumRenderSize(minSize float64) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene20setMinimumRenderSizeEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), minSize)
 	gopp.ErrPrint(err, rv)
@@ -873,8 +854,8 @@ func (this *QGraphicsScene) SetMinimumRenderSize(minSize float64) {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:259
 // index:0
-// Public
-// void advance()
+// Public Visibility=Default Availability=Available
+// [-2] void advance()
 func (this *QGraphicsScene) Advance() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene7advanceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -882,8 +863,8 @@ func (this *QGraphicsScene) Advance() {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:260
 // index:0
-// Public
-// void clearSelection()
+// Public Visibility=Default Availability=Available
+// [-2] void clearSelection()
 func (this *QGraphicsScene) ClearSelection() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene14clearSelectionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -891,8 +872,8 @@ func (this *QGraphicsScene) ClearSelection() {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:261
 // index:0
-// Public
-// void clear()
+// Public Visibility=Default Availability=Available
+// [-2] void clear()
 func (this *QGraphicsScene) Clear() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -900,8 +881,8 @@ func (this *QGraphicsScene) Clear() {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:264
 // index:0
-// Protected virtual
-// bool event(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 func (this *QGraphicsScene) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -912,8 +893,8 @@ func (this *QGraphicsScene) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:265
 // index:0
-// Protected virtual
-// bool eventFilter(QObject *, QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool eventFilter(QObject *, QEvent *)
 func (this *QGraphicsScene) EventFilter(watched *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = watched.GetCthis()
 	var convArg1 = event.GetCthis()
@@ -925,8 +906,8 @@ func (this *QGraphicsScene) EventFilter(watched *qtcore.QObject /*777 QObject **
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:266
 // index:0
-// Protected virtual
-// void contextMenuEvent(QGraphicsSceneContextMenuEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void contextMenuEvent(QGraphicsSceneContextMenuEvent *)
 func (this *QGraphicsScene) ContextMenuEvent(event *QGraphicsSceneContextMenuEvent /*777 QGraphicsSceneContextMenuEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene16contextMenuEventEP30QGraphicsSceneContextMenuEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -935,8 +916,8 @@ func (this *QGraphicsScene) ContextMenuEvent(event *QGraphicsSceneContextMenuEve
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:267
 // index:0
-// Protected virtual
-// void dragEnterEvent(QGraphicsSceneDragDropEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void dragEnterEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsScene) DragEnterEvent(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene14dragEnterEventEP27QGraphicsSceneDragDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -945,8 +926,8 @@ func (this *QGraphicsScene) DragEnterEvent(event *QGraphicsSceneDragDropEvent /*
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:268
 // index:0
-// Protected virtual
-// void dragMoveEvent(QGraphicsSceneDragDropEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void dragMoveEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsScene) DragMoveEvent(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene13dragMoveEventEP27QGraphicsSceneDragDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -955,8 +936,8 @@ func (this *QGraphicsScene) DragMoveEvent(event *QGraphicsSceneDragDropEvent /*7
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:269
 // index:0
-// Protected virtual
-// void dragLeaveEvent(QGraphicsSceneDragDropEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void dragLeaveEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsScene) DragLeaveEvent(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene14dragLeaveEventEP27QGraphicsSceneDragDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -965,8 +946,8 @@ func (this *QGraphicsScene) DragLeaveEvent(event *QGraphicsSceneDragDropEvent /*
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:270
 // index:0
-// Protected virtual
-// void dropEvent(QGraphicsSceneDragDropEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void dropEvent(QGraphicsSceneDragDropEvent *)
 func (this *QGraphicsScene) DropEvent(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene9dropEventEP27QGraphicsSceneDragDropEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -975,8 +956,8 @@ func (this *QGraphicsScene) DropEvent(event *QGraphicsSceneDragDropEvent /*777 Q
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:271
 // index:0
-// Protected virtual
-// void focusInEvent(QFocusEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void focusInEvent(QFocusEvent *)
 func (this *QGraphicsScene) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -985,8 +966,8 @@ func (this *QGraphicsScene) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEv
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:272
 // index:0
-// Protected virtual
-// void focusOutEvent(QFocusEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void focusOutEvent(QFocusEvent *)
 func (this *QGraphicsScene) FocusOutEvent(event *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -995,8 +976,8 @@ func (this *QGraphicsScene) FocusOutEvent(event *qtgui.QFocusEvent /*777 QFocusE
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:273
 // index:0
-// Protected virtual
-// void helpEvent(QGraphicsSceneHelpEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void helpEvent(QGraphicsSceneHelpEvent *)
 func (this *QGraphicsScene) HelpEvent(event *QGraphicsSceneHelpEvent /*777 QGraphicsSceneHelpEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene9helpEventEP23QGraphicsSceneHelpEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1005,8 +986,8 @@ func (this *QGraphicsScene) HelpEvent(event *QGraphicsSceneHelpEvent /*777 QGrap
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:274
 // index:0
-// Protected virtual
-// void keyPressEvent(QKeyEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void keyPressEvent(QKeyEvent *)
 func (this *QGraphicsScene) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1015,8 +996,8 @@ func (this *QGraphicsScene) KeyPressEvent(event *qtgui.QKeyEvent /*777 QKeyEvent
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:275
 // index:0
-// Protected virtual
-// void keyReleaseEvent(QKeyEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void keyReleaseEvent(QKeyEvent *)
 func (this *QGraphicsScene) KeyReleaseEvent(event *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene15keyReleaseEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1025,8 +1006,8 @@ func (this *QGraphicsScene) KeyReleaseEvent(event *qtgui.QKeyEvent /*777 QKeyEve
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:276
 // index:0
-// Protected virtual
-// void mousePressEvent(QGraphicsSceneMouseEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void mousePressEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsScene) MousePressEvent(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene15mousePressEventEP24QGraphicsSceneMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1035,8 +1016,8 @@ func (this *QGraphicsScene) MousePressEvent(event *QGraphicsSceneMouseEvent /*77
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:277
 // index:0
-// Protected virtual
-// void mouseMoveEvent(QGraphicsSceneMouseEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void mouseMoveEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsScene) MouseMoveEvent(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene14mouseMoveEventEP24QGraphicsSceneMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1045,8 +1026,8 @@ func (this *QGraphicsScene) MouseMoveEvent(event *QGraphicsSceneMouseEvent /*777
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:278
 // index:0
-// Protected virtual
-// void mouseReleaseEvent(QGraphicsSceneMouseEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void mouseReleaseEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsScene) MouseReleaseEvent(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene17mouseReleaseEventEP24QGraphicsSceneMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1055,8 +1036,8 @@ func (this *QGraphicsScene) MouseReleaseEvent(event *QGraphicsSceneMouseEvent /*
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:279
 // index:0
-// Protected virtual
-// void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *)
 func (this *QGraphicsScene) MouseDoubleClickEvent(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1065,8 +1046,8 @@ func (this *QGraphicsScene) MouseDoubleClickEvent(event *QGraphicsSceneMouseEven
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:280
 // index:0
-// Protected virtual
-// void wheelEvent(QGraphicsSceneWheelEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void wheelEvent(QGraphicsSceneWheelEvent *)
 func (this *QGraphicsScene) WheelEvent(event *QGraphicsSceneWheelEvent /*777 QGraphicsSceneWheelEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene10wheelEventEP24QGraphicsSceneWheelEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1075,8 +1056,8 @@ func (this *QGraphicsScene) WheelEvent(event *QGraphicsSceneWheelEvent /*777 QGr
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:281
 // index:0
-// Protected virtual
-// void inputMethodEvent(QInputMethodEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void inputMethodEvent(QInputMethodEvent *)
 func (this *QGraphicsScene) InputMethodEvent(event *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene16inputMethodEventEP17QInputMethodEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1085,8 +1066,8 @@ func (this *QGraphicsScene) InputMethodEvent(event *qtgui.QInputMethodEvent /*77
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:283
 // index:0
-// Protected virtual
-// void drawBackground(QPainter *, const QRectF &)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void drawBackground(QPainter *, const QRectF &)
 func (this *QGraphicsScene) DrawBackground(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRectF) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = rect.GetCthis()
@@ -1096,8 +1077,8 @@ func (this *QGraphicsScene) DrawBackground(painter *qtgui.QPainter /*777 QPainte
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:284
 // index:0
-// Protected virtual
-// void drawForeground(QPainter *, const QRectF &)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void drawForeground(QPainter *, const QRectF &)
 func (this *QGraphicsScene) DrawForeground(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRectF) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = rect.GetCthis()
@@ -1107,8 +1088,8 @@ func (this *QGraphicsScene) DrawForeground(painter *qtgui.QPainter /*777 QPainte
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:285
 // index:0
-// Protected virtual
-// void drawItems(QPainter *, int, QGraphicsItem **, const QStyleOptionGraphicsItem *, QWidget *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void drawItems(QPainter *, int, QGraphicsItem **, const QStyleOptionGraphicsItem *, QWidget *)
 func (this *QGraphicsScene) DrawItems(painter *qtgui.QPainter /*777 QPainter **/, numItems int, items []interface{}, options []interface{}, widget *QWidget /*777 QWidget **/) {
 	var convArg0 = painter.GetCthis()
 	var convArg4 = widget.GetCthis()
@@ -1118,8 +1099,8 @@ func (this *QGraphicsScene) DrawItems(painter *qtgui.QPainter /*777 QPainter **/
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:295
 // index:0
-// Protected
-// bool focusNextPrevChild(_Bool)
+// Protected Visibility=Default Availability=Available
+// [1] bool focusNextPrevChild(_Bool)
 func (this *QGraphicsScene) FocusNextPrevChild(next bool) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene18focusNextPrevChildEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), next)
 	gopp.ErrPrint(err, rv)
@@ -1129,8 +1110,8 @@ func (this *QGraphicsScene) FocusNextPrevChild(next bool) bool {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:299
 // index:0
-// Public
-// void sceneRectChanged(const QRectF &)
+// Public Visibility=Default Availability=Available
+// [-2] void sceneRectChanged(const QRectF &)
 func (this *QGraphicsScene) SceneRectChanged(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene16sceneRectChangedERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1139,8 +1120,8 @@ func (this *QGraphicsScene) SceneRectChanged(rect *qtcore.QRectF) {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:300
 // index:0
-// Public
-// void selectionChanged()
+// Public Visibility=Default Availability=Available
+// [-2] void selectionChanged()
 func (this *QGraphicsScene) SelectionChanged() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene16selectionChangedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -1148,8 +1129,8 @@ func (this *QGraphicsScene) SelectionChanged() {
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:301
 // index:0
-// Public
-// void focusItemChanged(QGraphicsItem *, QGraphicsItem *, Qt::FocusReason)
+// Public Visibility=Default Availability=Available
+// [-2] void focusItemChanged(QGraphicsItem *, QGraphicsItem *, Qt::FocusReason)
 func (this *QGraphicsScene) FocusItemChanged(newFocus *QGraphicsItem /*777 QGraphicsItem **/, oldFocus *QGraphicsItem /*777 QGraphicsItem **/, reason int) {
 	var convArg0 = newFocus.GetCthis()
 	var convArg1 = oldFocus.GetCthis()

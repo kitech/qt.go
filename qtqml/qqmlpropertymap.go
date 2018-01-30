@@ -76,8 +76,8 @@ func (*QQmlPropertyMap) NewFromPointer(cthis unsafe.Pointer) *QQmlPropertyMap {
 
 // /usr/include/qt/QtQml/qqmlpropertymap.h:56
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QQmlPropertyMap) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QQmlPropertyMap10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,21 +88,20 @@ func (this *QQmlPropertyMap) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 
 // /usr/include/qt/QtQml/qqmlpropertymap.h:58
 // index:0
-// Public
-// void QQmlPropertyMap(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QQmlPropertyMap(QObject *)
 func NewQQmlPropertyMap(parent *qtcore.QObject /*777 QObject **/) *QQmlPropertyMap {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QQmlPropertyMapC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QQmlPropertyMapC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQQmlPropertyMapFromPointer(cthis)
+	gothis := NewQQmlPropertyMapFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtQml/qqmlpropertymap.h:59
 // index:0
-// Public virtual
-// void ~QQmlPropertyMap()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QQmlPropertyMap()
 func DeleteQQmlPropertyMap(*QQmlPropertyMap) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QQmlPropertyMapD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -110,23 +109,21 @@ func DeleteQQmlPropertyMap(*QQmlPropertyMap) {
 
 // /usr/include/qt/QtQml/qqmlpropertymap.h:61
 // index:0
-// Public
-// QVariant value(const QString &)
+// Public Visibility=Default Availability=Available
+// [16] QVariant value(const QString &)
 func (this *QQmlPropertyMap) Value(key *qtcore.QString) *qtcore.QVariant /*123*/ {
 	var convArg0 = key.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QQmlPropertyMap5valueERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QQmlPropertyMap5valueERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtQml/qqmlpropertymap.h:63
 // index:0
-// Public
-// void clear(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void clear(const QString &)
 func (this *QQmlPropertyMap) Clear(key *qtcore.QString) {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QQmlPropertyMap5clearERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -135,8 +132,8 @@ func (this *QQmlPropertyMap) Clear(key *qtcore.QString) {
 
 // /usr/include/qt/QtQml/qqmlpropertymap.h:67
 // index:0
-// Public
-// int count()
+// Public Visibility=Default Availability=Available
+// [4] int count()
 func (this *QQmlPropertyMap) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QQmlPropertyMap5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -146,8 +143,8 @@ func (this *QQmlPropertyMap) Count() int {
 
 // /usr/include/qt/QtQml/qqmlpropertymap.h:68
 // index:0
-// Public
-// int size()
+// Public Visibility=Default Availability=Available
+// [4] int size()
 func (this *QQmlPropertyMap) Size() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QQmlPropertyMap4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -157,8 +154,8 @@ func (this *QQmlPropertyMap) Size() int {
 
 // /usr/include/qt/QtQml/qqmlpropertymap.h:69
 // index:0
-// Public
-// bool isEmpty()
+// Public Visibility=Default Availability=Available
+// [1] bool isEmpty()
 func (this *QQmlPropertyMap) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QQmlPropertyMap7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -168,8 +165,8 @@ func (this *QQmlPropertyMap) IsEmpty() bool {
 
 // /usr/include/qt/QtQml/qqmlpropertymap.h:70
 // index:0
-// Public
-// bool contains(const QString &)
+// Public Visibility=Default Availability=Available
+// [1] bool contains(const QString &)
 func (this *QQmlPropertyMap) Contains(key *qtcore.QString) bool {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QQmlPropertyMap8containsERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -180,8 +177,8 @@ func (this *QQmlPropertyMap) Contains(key *qtcore.QString) bool {
 
 // /usr/include/qt/QtQml/qqmlpropertymap.h:76
 // index:0
-// Public
-// void valueChanged(const QString &, const QVariant &)
+// Public Visibility=Default Availability=Available
+// [-2] void valueChanged(const QString &, const QVariant &)
 func (this *QQmlPropertyMap) ValueChanged(key *qtcore.QString, value *qtcore.QVariant) {
 	var convArg0 = key.GetCthis()
 	var convArg1 = value.GetCthis()
@@ -191,16 +188,14 @@ func (this *QQmlPropertyMap) ValueChanged(key *qtcore.QString, value *qtcore.QVa
 
 // /usr/include/qt/QtQml/qqmlpropertymap.h:79
 // index:0
-// Protected virtual
-// QVariant updateValue(const QString &, const QVariant &)
+// Protected virtual Visibility=Default Availability=Available
+// [16] QVariant updateValue(const QString &, const QVariant &)
 func (this *QQmlPropertyMap) UpdateValue(key *qtcore.QString, input *qtcore.QVariant) *qtcore.QVariant /*123*/ {
 	var convArg0 = key.GetCthis()
 	var convArg1 = input.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QQmlPropertyMap11updateValueERK7QStringRK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QQmlPropertyMap11updateValueERK7QStringRK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

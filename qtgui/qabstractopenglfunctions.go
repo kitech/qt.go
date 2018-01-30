@@ -71,8 +71,8 @@ func (*QAbstractOpenGLFunctions) NewFromPointer(cthis unsafe.Pointer) *QAbstract
 
 // /usr/include/qt/QtGui/qopenglversionfunctions.h:213
 // index:0
-// Public virtual
-// void ~QAbstractOpenGLFunctions()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QAbstractOpenGLFunctions()
 func DeleteQAbstractOpenGLFunctions(*QAbstractOpenGLFunctions) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctionsD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -80,8 +80,8 @@ func DeleteQAbstractOpenGLFunctions(*QAbstractOpenGLFunctions) {
 
 // /usr/include/qt/QtGui/qopenglversionfunctions.h:215
 // index:0
-// Public virtual
-// bool initializeOpenGLFunctions()
+// Public virtual Visibility=Default Availability=Available
+// [1] bool initializeOpenGLFunctions()
 func (this *QAbstractOpenGLFunctions) InitializeOpenGLFunctions() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -91,20 +91,19 @@ func (this *QAbstractOpenGLFunctions) InitializeOpenGLFunctions() bool {
 
 // /usr/include/qt/QtGui/qopenglversionfunctions.h:220
 // index:0
-// Protected
-// void QAbstractOpenGLFunctions()
+// Protected Visibility=Default Availability=Available
+// [-2] void QAbstractOpenGLFunctions()
 func NewQAbstractOpenGLFunctions() *QAbstractOpenGLFunctions {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctionsC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctionsC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQAbstractOpenGLFunctionsFromPointer(cthis)
+	gothis := NewQAbstractOpenGLFunctionsFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qopenglversionfunctions.h:223
 // index:0
-// Protected
-// bool isInitialized()
+// Protected Visibility=Default Availability=Available
+// [1] bool isInitialized()
 func (this *QAbstractOpenGLFunctions) IsInitialized() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QAbstractOpenGLFunctions13isInitializedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

@@ -76,8 +76,8 @@ func (*QRubberBand) NewFromPointer(cthis unsafe.Pointer) *QRubberBand {
 
 // /usr/include/qt/QtWidgets/qrubberband.h:55
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QRubberBand) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QRubberBand10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,21 +88,20 @@ func (this *QRubberBand) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 
 // /usr/include/qt/QtWidgets/qrubberband.h:59
 // index:0
-// Public
-// void QRubberBand(enum QRubberBand::Shape, QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void QRubberBand(enum QRubberBand::Shape, QWidget *)
 func NewQRubberBand(arg0 int, arg1 *QWidget /*777 QWidget **/) *QRubberBand {
-	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg1 = arg1.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBandC2ENS_5ShapeEP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, arg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBandC2ENS_5ShapeEP7QWidget", ffiqt.FFI_TYPE_POINTER, arg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQRubberBandFromPointer(cthis)
+	gothis := NewQRubberBandFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qrubberband.h:60
 // index:0
-// Public virtual
-// void ~QRubberBand()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QRubberBand()
 func DeleteQRubberBand(*QRubberBand) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBandD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -110,8 +109,8 @@ func DeleteQRubberBand(*QRubberBand) {
 
 // /usr/include/qt/QtWidgets/qrubberband.h:62
 // index:0
-// Public
-// QRubberBand::Shape shape()
+// Public Visibility=Default Availability=Available
+// [4] QRubberBand::Shape shape()
 func (this *QRubberBand) Shape() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QRubberBand5shapeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -121,8 +120,8 @@ func (this *QRubberBand) Shape() int {
 
 // /usr/include/qt/QtWidgets/qrubberband.h:64
 // index:0
-// Public
-// void setGeometry(const QRect &)
+// Public Visibility=Default Availability=Available
+// [-2] void setGeometry(const QRect &)
 func (this *QRubberBand) SetGeometry(r *qtcore.QRect) {
 	var convArg0 = r.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBand11setGeometryERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -131,8 +130,8 @@ func (this *QRubberBand) SetGeometry(r *qtcore.QRect) {
 
 // /usr/include/qt/QtWidgets/qrubberband.h:66
 // index:1
-// Public inline
-// void setGeometry(int, int, int, int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setGeometry(int, int, int, int)
 func (this *QRubberBand) SetGeometry_1(x int, y int, w int, h int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBand11setGeometryEiiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	gopp.ErrPrint(err, rv)
@@ -140,8 +139,8 @@ func (this *QRubberBand) SetGeometry_1(x int, y int, w int, h int) {
 
 // /usr/include/qt/QtWidgets/qrubberband.h:67
 // index:0
-// Public inline
-// void move(int, int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void move(int, int)
 func (this *QRubberBand) Move(x int, y int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBand4moveEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
@@ -149,8 +148,8 @@ func (this *QRubberBand) Move(x int, y int) {
 
 // /usr/include/qt/QtWidgets/qrubberband.h:68
 // index:1
-// Public inline
-// void move(const QPoint &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void move(const QPoint &)
 func (this *QRubberBand) Move_1(p *qtcore.QPoint) {
 	var convArg0 = p.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBand4moveERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -159,8 +158,8 @@ func (this *QRubberBand) Move_1(p *qtcore.QPoint) {
 
 // /usr/include/qt/QtWidgets/qrubberband.h:70
 // index:0
-// Public inline
-// void resize(int, int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void resize(int, int)
 func (this *QRubberBand) Resize(w int, h int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBand6resizeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w, h)
 	gopp.ErrPrint(err, rv)
@@ -168,8 +167,8 @@ func (this *QRubberBand) Resize(w int, h int) {
 
 // /usr/include/qt/QtWidgets/qrubberband.h:72
 // index:1
-// Public inline
-// void resize(const QSize &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void resize(const QSize &)
 func (this *QRubberBand) Resize_1(s *qtcore.QSize) {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBand6resizeERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -178,8 +177,8 @@ func (this *QRubberBand) Resize_1(s *qtcore.QSize) {
 
 // /usr/include/qt/QtWidgets/qrubberband.h:76
 // index:0
-// Protected virtual
-// bool event(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 func (this *QRubberBand) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBand5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -190,8 +189,8 @@ func (this *QRubberBand) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 
 // /usr/include/qt/QtWidgets/qrubberband.h:77
 // index:0
-// Protected virtual
-// void paintEvent(QPaintEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void paintEvent(QPaintEvent *)
 func (this *QRubberBand) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBand10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -200,8 +199,8 @@ func (this *QRubberBand) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **
 
 // /usr/include/qt/QtWidgets/qrubberband.h:78
 // index:0
-// Protected virtual
-// void changeEvent(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void changeEvent(QEvent *)
 func (this *QRubberBand) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBand11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -210,8 +209,8 @@ func (this *QRubberBand) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 
 // /usr/include/qt/QtWidgets/qrubberband.h:79
 // index:0
-// Protected virtual
-// void showEvent(QShowEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void showEvent(QShowEvent *)
 func (this *QRubberBand) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBand9showEventEP10QShowEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -220,8 +219,8 @@ func (this *QRubberBand) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) 
 
 // /usr/include/qt/QtWidgets/qrubberband.h:80
 // index:0
-// Protected virtual
-// void resizeEvent(QResizeEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void resizeEvent(QResizeEvent *)
 func (this *QRubberBand) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBand11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -230,8 +229,8 @@ func (this *QRubberBand) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent
 
 // /usr/include/qt/QtWidgets/qrubberband.h:81
 // index:0
-// Protected virtual
-// void moveEvent(QMoveEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void moveEvent(QMoveEvent *)
 func (this *QRubberBand) MoveEvent(arg0 *qtgui.QMoveEvent /*777 QMoveEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBand9moveEventEP10QMoveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -240,8 +239,8 @@ func (this *QRubberBand) MoveEvent(arg0 *qtgui.QMoveEvent /*777 QMoveEvent **/) 
 
 // /usr/include/qt/QtWidgets/qrubberband.h:82
 // index:0
-// Protected
-// void initStyleOption(QStyleOptionRubberBand *)
+// Protected Visibility=Default Availability=Available
+// [-2] void initStyleOption(QStyleOptionRubberBand *)
 func (this *QRubberBand) InitStyleOption(option *QStyleOptionRubberBand /*777 QStyleOptionRubberBand **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QRubberBand15initStyleOptionEP22QStyleOptionRubberBand", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

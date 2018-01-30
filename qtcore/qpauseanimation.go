@@ -68,8 +68,8 @@ func (*QPauseAnimation) NewFromPointer(cthis unsafe.Pointer) *QPauseAnimation {
 
 // /usr/include/qt/QtCore/qpauseanimation.h:54
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QPauseAnimation) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QPauseAnimation10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -80,34 +80,32 @@ func (this *QPauseAnimation) MetaObject() *QMetaObject /*777 const QMetaObject *
 
 // /usr/include/qt/QtCore/qpauseanimation.h:57
 // index:0
-// Public
-// void QPauseAnimation(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QPauseAnimation(QObject *)
 func NewQPauseAnimation(parent *QObject /*777 QObject **/) *QPauseAnimation {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimationC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimationC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQPauseAnimationFromPointer(cthis)
+	gothis := NewQPauseAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qpauseanimation.h:58
 // index:1
-// Public
-// void QPauseAnimation(int, QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QPauseAnimation(int, QObject *)
 func NewQPauseAnimation_1(msecs int, parent *QObject /*777 QObject **/) *QPauseAnimation {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimationC2EiP7QObject", ffiqt.FFI_TYPE_VOID, cthis, msecs, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimationC2EiP7QObject", ffiqt.FFI_TYPE_POINTER, msecs, convArg1)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQPauseAnimationFromPointer(cthis)
+	gothis := NewQPauseAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qpauseanimation.h:59
 // index:0
-// Public virtual
-// void ~QPauseAnimation()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QPauseAnimation()
 func DeleteQPauseAnimation(*QPauseAnimation) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimationD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -115,8 +113,8 @@ func DeleteQPauseAnimation(*QPauseAnimation) {
 
 // /usr/include/qt/QtCore/qpauseanimation.h:61
 // index:0
-// Public virtual
-// int duration()
+// Public virtual Visibility=Default Availability=Available
+// [4] int duration()
 func (this *QPauseAnimation) Duration() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QPauseAnimation8durationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -126,8 +124,8 @@ func (this *QPauseAnimation) Duration() int {
 
 // /usr/include/qt/QtCore/qpauseanimation.h:62
 // index:0
-// Public
-// void setDuration(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setDuration(int)
 func (this *QPauseAnimation) SetDuration(msecs int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimation11setDurationEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
@@ -135,8 +133,8 @@ func (this *QPauseAnimation) SetDuration(msecs int) {
 
 // /usr/include/qt/QtCore/qpauseanimation.h:65
 // index:0
-// Protected virtual
-// bool event(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 func (this *QPauseAnimation) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimation5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -147,8 +145,8 @@ func (this *QPauseAnimation) Event(e *QEvent /*777 QEvent **/) bool {
 
 // /usr/include/qt/QtCore/qpauseanimation.h:66
 // index:0
-// Protected virtual
-// void updateCurrentTime(int)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void updateCurrentTime(int)
 func (this *QPauseAnimation) UpdateCurrentTime(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimation17updateCurrentTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

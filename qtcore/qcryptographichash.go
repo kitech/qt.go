@@ -67,20 +67,19 @@ func (*QCryptographicHash) NewFromPointer(cthis unsafe.Pointer) *QCryptographicH
 
 // /usr/include/qt/QtCore/qcryptographichash.h:92
 // index:0
-// Public
-// void QCryptographicHash(enum QCryptographicHash::Algorithm)
+// Public Visibility=Default Availability=Available
+// [-2] void QCryptographicHash(enum QCryptographicHash::Algorithm)
 func NewQCryptographicHash(method int) *QCryptographicHash {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHashC2ENS_9AlgorithmE", ffiqt.FFI_TYPE_VOID, cthis, method)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHashC2ENS_9AlgorithmE", ffiqt.FFI_TYPE_POINTER, method)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQCryptographicHashFromPointer(cthis)
+	gothis := NewQCryptographicHashFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qcryptographichash.h:93
 // index:0
-// Public
-// void ~QCryptographicHash()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QCryptographicHash()
 func DeleteQCryptographicHash(*QCryptographicHash) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHashD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -88,8 +87,8 @@ func DeleteQCryptographicHash(*QCryptographicHash) {
 
 // /usr/include/qt/QtCore/qcryptographichash.h:95
 // index:0
-// Public
-// void reset()
+// Public Visibility=Default Availability=Available
+// [-2] void reset()
 func (this *QCryptographicHash) Reset() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash5resetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -97,8 +96,8 @@ func (this *QCryptographicHash) Reset() {
 
 // /usr/include/qt/QtCore/qcryptographichash.h:97
 // index:0
-// Public
-// void addData(const char *, int)
+// Public Visibility=Default Availability=Available
+// [-2] void addData(const char *, int)
 func (this *QCryptographicHash) AddData(data string, length int) {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
@@ -108,8 +107,8 @@ func (this *QCryptographicHash) AddData(data string, length int) {
 
 // /usr/include/qt/QtCore/qcryptographichash.h:98
 // index:1
-// Public
-// void addData(const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void addData(const QByteArray &)
 func (this *QCryptographicHash) AddData_1(data *QByteArray) {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash7addDataERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -118,8 +117,8 @@ func (this *QCryptographicHash) AddData_1(data *QByteArray) {
 
 // /usr/include/qt/QtCore/qcryptographichash.h:99
 // index:2
-// Public
-// bool addData(QIODevice *)
+// Public Visibility=Default Availability=Available
+// [1] bool addData(QIODevice *)
 func (this *QCryptographicHash) AddData_2(device *QIODevice /*777 QIODevice **/) bool {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash7addDataEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -130,22 +129,20 @@ func (this *QCryptographicHash) AddData_2(device *QIODevice /*777 QIODevice **/)
 
 // /usr/include/qt/QtCore/qcryptographichash.h:101
 // index:0
-// Public
-// QByteArray result()
+// Public Visibility=Default Availability=Available
+// [8] QByteArray result()
 func (this *QCryptographicHash) Result() *QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCryptographicHash6resultEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCryptographicHash6resultEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qcryptographichash.h:103
 // index:0
-// Public static
-// QByteArray hash(const QByteArray &, enum QCryptographicHash::Algorithm)
+// Public static Visibility=Default Availability=Available
+// [8] QByteArray hash(const QByteArray &, enum QCryptographicHash::Algorithm)
 func (this *QCryptographicHash) Hash(data *QByteArray, method int) *QByteArray /*123*/ {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHash4hashERK10QByteArrayNS_9AlgorithmE", ffiqt.FFI_TYPE_POINTER, convArg0, method)

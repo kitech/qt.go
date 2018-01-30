@@ -72,20 +72,19 @@ func (*QDragLeaveEvent) NewFromPointer(cthis unsafe.Pointer) *QDragLeaveEvent {
 
 // /usr/include/qt/QtGui/qevent.h:671
 // index:0
-// Public
-// void QDragLeaveEvent()
+// Public Visibility=Default Availability=Available
+// [-2] void QDragLeaveEvent()
 func NewQDragLeaveEvent() *QDragLeaveEvent {
-	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QDragLeaveEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QDragLeaveEventC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQDragLeaveEventFromPointer(cthis)
+	gothis := NewQDragLeaveEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:672
 // index:0
-// Public virtual
-// void ~QDragLeaveEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QDragLeaveEvent()
 func DeleteQDragLeaveEvent(*QDragLeaveEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QDragLeaveEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)

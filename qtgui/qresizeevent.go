@@ -72,22 +72,21 @@ func (*QResizeEvent) NewFromPointer(cthis unsafe.Pointer) *QResizeEvent {
 
 // /usr/include/qt/QtGui/qevent.h:463
 // index:0
-// Public
-// void QResizeEvent(const QSize &, const QSize &)
+// Public Visibility=Default Availability=Available
+// [-2] void QResizeEvent(const QSize &, const QSize &)
 func NewQResizeEvent(size *qtcore.QSize, oldSize *qtcore.QSize) *QResizeEvent {
-	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = size.GetCthis()
 	var convArg1 = oldSize.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QResizeEventC2ERK5QSizeS2_", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QResizeEventC2ERK5QSizeS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQResizeEventFromPointer(cthis)
+	gothis := NewQResizeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:464
 // index:0
-// Public virtual
-// void ~QResizeEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QResizeEvent()
 func DeleteQResizeEvent(*QResizeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QResizeEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -95,8 +94,8 @@ func DeleteQResizeEvent(*QResizeEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:466
 // index:0
-// Public inline
-// const QSize & size()
+// Public inline Visibility=Default Availability=Available
+// [8] const QSize & size()
 func (this *QResizeEvent) Size() *qtcore.QSize {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QResizeEvent4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -107,8 +106,8 @@ func (this *QResizeEvent) Size() *qtcore.QSize {
 
 // /usr/include/qt/QtGui/qevent.h:467
 // index:0
-// Public inline
-// const QSize & oldSize()
+// Public inline Visibility=Default Availability=Available
+// [8] const QSize & oldSize()
 func (this *QResizeEvent) OldSize() *qtcore.QSize {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QResizeEvent7oldSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

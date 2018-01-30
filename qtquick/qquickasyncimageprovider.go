@@ -84,20 +84,19 @@ func (*QQuickAsyncImageProvider) NewFromPointer(cthis unsafe.Pointer) *QQuickAsy
 
 // /usr/include/qt/QtQuick/qquickimageprovider.h:115
 // index:0
-// Public
-// void QQuickAsyncImageProvider()
+// Public Visibility=Default Availability=Available
+// [-2] void QQuickAsyncImageProvider()
 func NewQQuickAsyncImageProvider() *QQuickAsyncImageProvider {
-	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QQuickAsyncImageProviderC1Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QQuickAsyncImageProviderC1Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQQuickAsyncImageProviderFromPointer(cthis)
+	gothis := NewQQuickAsyncImageProviderFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtQuick/qquickimageprovider.h:116
 // index:0
-// Public virtual
-// void ~QQuickAsyncImageProvider()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QQuickAsyncImageProvider()
 func DeleteQQuickAsyncImageProvider(*QQuickAsyncImageProvider) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QQuickAsyncImageProviderD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -105,8 +104,8 @@ func DeleteQQuickAsyncImageProvider(*QQuickAsyncImageProvider) {
 
 // /usr/include/qt/QtQuick/qquickimageprovider.h:121
 // index:0
-// Public pure virtual
-// QQuickImageResponse * requestImageResponse(const QString &, const QSize &)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QQuickImageResponse * requestImageResponse(const QString &, const QSize &)
 func (this *QQuickAsyncImageProvider) RequestImageResponse(id *qtcore.QString, requestedSize *qtcore.QSize) *QQuickImageResponse /*777 QQuickImageResponse **/ {
 	var convArg0 = id.GetCthis()
 	var convArg1 = requestedSize.GetCthis()

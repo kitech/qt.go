@@ -67,45 +67,42 @@ func (*QPointF) NewFromPointer(cthis unsafe.Pointer) *QPointF {
 
 // /usr/include/qt/QtCore/qpoint.h:222
 // index:0
-// Public inline
-// void QPointF()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QPointF()
 func NewQPointF() *QPointF {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointFC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointFC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQPointFFromPointer(cthis)
+	gothis := NewQPointFFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qpoint.h:223
 // index:1
-// Public inline
-// void QPointF(const QPoint &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QPointF(const QPoint &)
 func NewQPointF_1(p *QPoint) *QPointF {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = p.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointFC2ERK6QPoint", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointFC2ERK6QPoint", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQPointFFromPointer(cthis)
+	gothis := NewQPointFFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qpoint.h:224
 // index:2
-// Public inline
-// void QPointF(qreal, qreal)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QPointF(qreal, qreal)
 func NewQPointF_2(xpos float64, ypos float64) *QPointF {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointFC2Edd", ffiqt.FFI_TYPE_VOID, cthis, xpos, ypos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointFC2Edd", ffiqt.FFI_TYPE_POINTER, xpos, ypos)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQPointFFromPointer(cthis)
+	gothis := NewQPointFFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qpoint.h:226
 // index:0
-// Public inline
-// qreal manhattanLength()
+// Public inline Visibility=Default Availability=Available
+// [8] qreal manhattanLength()
 func (this *QPointF) ManhattanLength() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF15manhattanLengthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -115,8 +112,8 @@ func (this *QPointF) ManhattanLength() float64 {
 
 // /usr/include/qt/QtCore/qpoint.h:228
 // index:0
-// Public inline
-// bool isNull()
+// Public inline Visibility=Default Availability=Available
+// [1] bool isNull()
 func (this *QPointF) IsNull() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -126,8 +123,8 @@ func (this *QPointF) IsNull() bool {
 
 // /usr/include/qt/QtCore/qpoint.h:230
 // index:0
-// Public inline
-// qreal x()
+// Public inline Visibility=Default Availability=Available
+// [8] qreal x()
 func (this *QPointF) X() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF1xEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -137,8 +134,8 @@ func (this *QPointF) X() float64 {
 
 // /usr/include/qt/QtCore/qpoint.h:231
 // index:0
-// Public inline
-// qreal y()
+// Public inline Visibility=Default Availability=Available
+// [8] qreal y()
 func (this *QPointF) Y() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF1yEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -148,8 +145,8 @@ func (this *QPointF) Y() float64 {
 
 // /usr/include/qt/QtCore/qpoint.h:232
 // index:0
-// Public inline
-// void setX(qreal)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setX(qreal)
 func (this *QPointF) SetX(x float64) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointF4setXEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x)
 	gopp.ErrPrint(err, rv)
@@ -157,8 +154,8 @@ func (this *QPointF) SetX(x float64) {
 
 // /usr/include/qt/QtCore/qpoint.h:233
 // index:0
-// Public inline
-// void setY(qreal)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setY(qreal)
 func (this *QPointF) SetY(y float64) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointF4setYEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), y)
 	gopp.ErrPrint(err, rv)
@@ -166,8 +163,8 @@ func (this *QPointF) SetY(y float64) {
 
 // /usr/include/qt/QtCore/qpoint.h:235
 // index:0
-// Public inline
-// qreal & rx()
+// Public inline Visibility=Default Availability=Available
+// [8] qreal & rx()
 func (this *QPointF) Rx() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointF2rxEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -177,8 +174,8 @@ func (this *QPointF) Rx() float64 {
 
 // /usr/include/qt/QtCore/qpoint.h:236
 // index:0
-// Public inline
-// qreal & ry()
+// Public inline Visibility=Default Availability=Available
+// [8] qreal & ry()
 func (this *QPointF) Ry() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointF2ryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -188,8 +185,8 @@ func (this *QPointF) Ry() float64 {
 
 // /usr/include/qt/QtCore/qpoint.h:243
 // index:0
-// Public static inline
-// qreal dotProduct(const QPointF &, const QPointF &)
+// Public static inline Visibility=Default Availability=Available
+// [8] qreal dotProduct(const QPointF &, const QPointF &)
 func (this *QPointF) DotProduct(p1 *QPointF, p2 *QPointF) float64 {
 	var convArg0 = p1.GetCthis()
 	var convArg1 = p2.GetCthis()
@@ -206,14 +203,12 @@ func QPointF_DotProduct(p1 *QPointF, p2 *QPointF) float64 {
 
 // /usr/include/qt/QtCore/qpoint.h:256
 // index:0
-// Public inline
-// QPoint toPoint()
+// Public inline Visibility=Default Availability=Available
+// [8] QPoint toPoint()
 func (this *QPointF) ToPoint() *QPoint /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF7toPointEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QPointF7toPointEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

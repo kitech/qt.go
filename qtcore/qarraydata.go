@@ -67,8 +67,8 @@ func (*QArrayData) NewFromPointer(cthis unsafe.Pointer) *QArrayData {
 
 // /usr/include/qt/QtCore/qarraydata.h:57
 // index:0
-// Public inline
-// void * data()
+// Public inline Visibility=Default Availability=Available
+// [8] void * data()
 func (this *QArrayData) Data() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QArrayData4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -78,8 +78,8 @@ func (this *QArrayData) Data() unsafe.Pointer /*666*/ {
 
 // /usr/include/qt/QtCore/qarraydata.h:64
 // index:1
-// Public inline
-// const void * data()
+// Public inline Visibility=Default Availability=Available
+// [8] const void * data()
 func (this *QArrayData) Data_1() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QArrayData4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -89,8 +89,8 @@ func (this *QArrayData) Data_1() unsafe.Pointer /*666*/ {
 
 // /usr/include/qt/QtCore/qarraydata.h:74
 // index:0
-// Public inline
-// bool isMutable()
+// Public inline Visibility=Default Availability=Available
+// [1] bool isMutable()
 func (this *QArrayData) IsMutable() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QArrayData9isMutableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -100,8 +100,8 @@ func (this *QArrayData) IsMutable() bool {
 
 // /usr/include/qt/QtCore/qarraydata.h:92
 // index:0
-// Public inline
-// size_t detachCapacity(size_t)
+// Public inline Visibility=Default Availability=Available
+// [8] size_t detachCapacity(size_t)
 func (this *QArrayData) DetachCapacity(newSize uint) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QArrayData14detachCapacityEm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), newSize)
 	gopp.ErrPrint(err, rv)
@@ -111,8 +111,8 @@ func (this *QArrayData) DetachCapacity(newSize uint) uint {
 
 // /usr/include/qt/QtCore/qarraydata.h:99
 // index:0
-// Public inline
-// QArrayData::AllocationOptions detachFlags()
+// Public inline Visibility=Default Availability=Available
+// [4] QArrayData::AllocationOptions detachFlags()
 func (this *QArrayData) DetachFlags() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QArrayData11detachFlagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -122,8 +122,8 @@ func (this *QArrayData) DetachFlags() int {
 
 // /usr/include/qt/QtCore/qarraydata.h:107
 // index:0
-// Public inline
-// QArrayData::AllocationOptions cloneFlags()
+// Public inline Visibility=Default Availability=Available
+// [4] QArrayData::AllocationOptions cloneFlags()
 func (this *QArrayData) CloneFlags() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QArrayData10cloneFlagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -133,8 +133,8 @@ func (this *QArrayData) CloneFlags() int {
 
 // /usr/include/qt/QtCore/qarraydata.h:123
 // index:0
-// Public static inline
-// QArrayData * sharedNull()
+// Public static inline Visibility=Default Availability=Available
+// [8] QArrayData * sharedNull()
 func (this *QArrayData) SharedNull() *QArrayData /*777 QArrayData **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QArrayData10sharedNullEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)

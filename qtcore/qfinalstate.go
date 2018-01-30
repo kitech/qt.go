@@ -68,8 +68,8 @@ func (*QFinalState) NewFromPointer(cthis unsafe.Pointer) *QFinalState {
 
 // /usr/include/qt/QtCore/qfinalstate.h:52
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QFinalState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFinalState10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -80,21 +80,20 @@ func (this *QFinalState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 
 // /usr/include/qt/QtCore/qfinalstate.h:54
 // index:0
-// Public
-// void QFinalState(QState *)
+// Public Visibility=Default Availability=Available
+// [-2] void QFinalState(QState *)
 func NewQFinalState(parent *QState /*777 QState **/) *QFinalState {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalStateC2EP6QState", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalStateC2EP6QState", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQFinalStateFromPointer(cthis)
+	gothis := NewQFinalStateFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qfinalstate.h:55
 // index:0
-// Public virtual
-// void ~QFinalState()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QFinalState()
 func DeleteQFinalState(*QFinalState) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalStateD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -102,8 +101,8 @@ func DeleteQFinalState(*QFinalState) {
 
 // /usr/include/qt/QtCore/qfinalstate.h:58
 // index:0
-// Protected virtual
-// void onEntry(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void onEntry(QEvent *)
 func (this *QFinalState) OnEntry(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState7onEntryEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -112,8 +111,8 @@ func (this *QFinalState) OnEntry(event *QEvent /*777 QEvent **/) {
 
 // /usr/include/qt/QtCore/qfinalstate.h:59
 // index:0
-// Protected virtual
-// void onExit(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void onExit(QEvent *)
 func (this *QFinalState) OnExit(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState6onExitEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -122,8 +121,8 @@ func (this *QFinalState) OnExit(event *QEvent /*777 QEvent **/) {
 
 // /usr/include/qt/QtCore/qfinalstate.h:61
 // index:0
-// Protected virtual
-// bool event(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 func (this *QFinalState) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

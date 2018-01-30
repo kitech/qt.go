@@ -71,46 +71,43 @@ func (*QTextDocumentFragment) NewFromPointer(cthis unsafe.Pointer) *QTextDocumen
 
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:57
 // index:0
-// Public
-// void QTextDocumentFragment()
+// Public Visibility=Default Availability=Available
+// [-2] void QTextDocumentFragment()
 func NewQTextDocumentFragment() *QTextDocumentFragment {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQTextDocumentFragmentFromPointer(cthis)
+	gothis := NewQTextDocumentFragmentFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:58
 // index:1
-// Public
-// void QTextDocumentFragment(const QTextDocument *)
+// Public Visibility=Default Availability=Available
+// [-2] void QTextDocumentFragment(const QTextDocument *)
 func NewQTextDocumentFragment_1(document *QTextDocument /*777 const QTextDocument **/) *QTextDocumentFragment {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = document.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2EPK13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2EPK13QTextDocument", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQTextDocumentFragmentFromPointer(cthis)
+	gothis := NewQTextDocumentFragmentFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:59
 // index:2
-// Public
-// void QTextDocumentFragment(const QTextCursor &)
+// Public Visibility=Default Availability=Available
+// [-2] void QTextDocumentFragment(const QTextCursor &)
 func NewQTextDocumentFragment_2(range_ *QTextCursor) *QTextDocumentFragment {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = range_.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2ERK11QTextCursor", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2ERK11QTextCursor", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQTextDocumentFragmentFromPointer(cthis)
+	gothis := NewQTextDocumentFragmentFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:62
 // index:0
-// Public
-// void ~QTextDocumentFragment()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QTextDocumentFragment()
 func DeleteQTextDocumentFragment(*QTextDocumentFragment) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -118,8 +115,8 @@ func DeleteQTextDocumentFragment(*QTextDocumentFragment) {
 
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:64
 // index:0
-// Public
-// bool isEmpty()
+// Public Visibility=Default Availability=Available
+// [1] bool isEmpty()
 func (this *QTextDocumentFragment) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -129,37 +126,33 @@ func (this *QTextDocumentFragment) IsEmpty() bool {
 
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:66
 // index:0
-// Public
-// QString toPlainText()
+// Public Visibility=Default Availability=Available
+// [8] QString toPlainText()
 func (this *QTextDocumentFragment) ToPlainText() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment11toPlainTextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment11toPlainTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:68
 // index:0
-// Public
-// QString toHtml(const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [8] QString toHtml(const QByteArray &)
 func (this *QTextDocumentFragment) ToHtml(encoding *qtcore.QByteArray) *qtcore.QString /*123*/ {
 	var convArg0 = encoding.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:71
 // index:0
-// Public static
-// QTextDocumentFragment fromPlainText(const QString &)
+// Public static Visibility=Default Availability=Available
+// [8] QTextDocumentFragment fromPlainText(const QString &)
 func (this *QTextDocumentFragment) FromPlainText(plainText *qtcore.QString) *QTextDocumentFragment /*123*/ {
 	var convArg0 = plainText.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragment13fromPlainTextERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -176,8 +169,8 @@ func QTextDocumentFragment_FromPlainText(plainText *qtcore.QString) *QTextDocume
 
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:73
 // index:0
-// Public static
-// QTextDocumentFragment fromHtml(const QString &)
+// Public static Visibility=Default Availability=Available
+// [8] QTextDocumentFragment fromHtml(const QString &)
 func (this *QTextDocumentFragment) FromHtml(html *qtcore.QString) *QTextDocumentFragment /*123*/ {
 	var convArg0 = html.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragment8fromHtmlERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -194,8 +187,8 @@ func QTextDocumentFragment_FromHtml(html *qtcore.QString) *QTextDocumentFragment
 
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:74
 // index:1
-// Public static
-// QTextDocumentFragment fromHtml(const QString &, const QTextDocument *)
+// Public static Visibility=Default Availability=Available
+// [8] QTextDocumentFragment fromHtml(const QString &, const QTextDocument *)
 func (this *QTextDocumentFragment) FromHtml_1(html *qtcore.QString, resourceProvider *QTextDocument /*777 const QTextDocument **/) *QTextDocumentFragment /*123*/ {
 	var convArg0 = html.GetCthis()
 	var convArg1 = resourceProvider.GetCthis()

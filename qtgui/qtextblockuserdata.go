@@ -71,8 +71,8 @@ func (*QTextBlockUserData) NewFromPointer(cthis unsafe.Pointer) *QTextBlockUserD
 
 // /usr/include/qt/QtGui/qtextobject.h:198
 // index:0
-// Public virtual
-// void ~QTextBlockUserData()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QTextBlockUserData()
 func DeleteQTextBlockUserData(*QTextBlockUserData) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QTextBlockUserDataD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)

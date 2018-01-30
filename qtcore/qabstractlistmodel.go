@@ -68,8 +68,8 @@ func (*QAbstractListModel) NewFromPointer(cthis unsafe.Pointer) *QAbstractListMo
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:393
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QAbstractListModel) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractListModel10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -80,21 +80,20 @@ func (this *QAbstractListModel) MetaObject() *QMetaObject /*777 const QMetaObjec
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:396
 // index:0
-// Public
-// void QAbstractListModel(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QAbstractListModel(QObject *)
 func NewQAbstractListModel(parent *QObject /*777 QObject **/) *QAbstractListModel {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractListModelC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractListModelC1EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQAbstractListModelFromPointer(cthis)
+	gothis := NewQAbstractListModelFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:397
 // index:0
-// Public virtual
-// void ~QAbstractListModel()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QAbstractListModel()
 func DeleteQAbstractListModel(*QAbstractListModel) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractListModelD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -102,38 +101,34 @@ func DeleteQAbstractListModel(*QAbstractListModel) {
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:399
 // index:0
-// Public virtual
-// QModelIndex index(int, int, const QModelIndex &)
+// Public virtual Visibility=Default Availability=Available
+// [24] QModelIndex index(int, int, const QModelIndex &)
 func (this *QAbstractListModel) Index(row int, column int, parent *QModelIndex) *QModelIndex /*123*/ {
 	var convArg2 = parent.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractListModel5indexEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), row, column, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractListModel5indexEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:400
 // index:0
-// Public virtual
-// QModelIndex sibling(int, int, const QModelIndex &)
+// Public virtual Visibility=Default Availability=Available
+// [24] QModelIndex sibling(int, int, const QModelIndex &)
 func (this *QAbstractListModel) Sibling(row int, column int, idx *QModelIndex) *QModelIndex /*123*/ {
 	var convArg2 = idx.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractListModel7siblingEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), row, column, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractListModel7siblingEiiRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:401
 // index:0
-// Public virtual
-// bool dropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &)
+// Public virtual Visibility=Default Availability=Available
+// [1] bool dropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &)
 func (this *QAbstractListModel) DropMimeData(data *QMimeData /*777 const QMimeData **/, action int, row int, column int, parent *QModelIndex) bool {
 	var convArg0 = data.GetCthis()
 	var convArg4 = parent.GetCthis()
@@ -145,8 +140,8 @@ func (this *QAbstractListModel) DropMimeData(data *QMimeData /*777 const QMimeDa
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:404
 // index:0
-// Public virtual
-// Qt::ItemFlags flags(const QModelIndex &)
+// Public virtual Visibility=Default Availability=Available
+// [4] Qt::ItemFlags flags(const QModelIndex &)
 func (this *QAbstractListModel) Flags(index *QModelIndex) int {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractListModel5flagsERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

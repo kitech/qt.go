@@ -72,20 +72,19 @@ func (*QInputMethodEvent) NewFromPointer(cthis unsafe.Pointer) *QInputMethodEven
 
 // /usr/include/qt/QtGui/qevent.h:555
 // index:0
-// Public
-// void QInputMethodEvent()
+// Public Visibility=Default Availability=Available
+// [-2] void QInputMethodEvent()
 func NewQInputMethodEvent() *QInputMethodEvent {
-	cthis := qtrt.Calloc(1, 256) // 56
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QInputMethodEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QInputMethodEventC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQInputMethodEventFromPointer(cthis)
+	gothis := NewQInputMethodEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:557
 // index:0
-// Public virtual
-// void ~QInputMethodEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QInputMethodEvent()
 func DeleteQInputMethodEvent(*QInputMethodEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QInputMethodEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -93,8 +92,8 @@ func DeleteQInputMethodEvent(*QInputMethodEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:559
 // index:0
-// Public
-// void setCommitString(const QString &, int, int)
+// Public Visibility=Default Availability=Available
+// [-2] void setCommitString(const QString &, int, int)
 func (this *QInputMethodEvent) SetCommitString(commitString *qtcore.QString, replaceFrom int, replaceLength int) {
 	var convArg0 = commitString.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QInputMethodEvent15setCommitStringERK7QStringii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, replaceFrom, replaceLength)
@@ -103,8 +102,8 @@ func (this *QInputMethodEvent) SetCommitString(commitString *qtcore.QString, rep
 
 // /usr/include/qt/QtGui/qevent.h:560
 // index:0
-// Public inline
-// const QList<QInputMethodEvent::Attribute> & attributes()
+// Public inline Visibility=Default Availability=Available
+// [8] const QList<QInputMethodEvent::Attribute> & attributes()
 func (this *QInputMethodEvent) Attributes() unsafe.Pointer /*555*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent10attributesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -114,8 +113,8 @@ func (this *QInputMethodEvent) Attributes() unsafe.Pointer /*555*/ {
 
 // /usr/include/qt/QtGui/qevent.h:561
 // index:0
-// Public inline
-// const QString & preeditString()
+// Public inline Visibility=Default Availability=Available
+// [8] const QString & preeditString()
 func (this *QInputMethodEvent) PreeditString() *qtcore.QString {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent13preeditStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -126,8 +125,8 @@ func (this *QInputMethodEvent) PreeditString() *qtcore.QString {
 
 // /usr/include/qt/QtGui/qevent.h:563
 // index:0
-// Public inline
-// const QString & commitString()
+// Public inline Visibility=Default Availability=Available
+// [8] const QString & commitString()
 func (this *QInputMethodEvent) CommitString() *qtcore.QString {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent12commitStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -138,8 +137,8 @@ func (this *QInputMethodEvent) CommitString() *qtcore.QString {
 
 // /usr/include/qt/QtGui/qevent.h:564
 // index:0
-// Public inline
-// int replacementStart()
+// Public inline Visibility=Default Availability=Available
+// [4] int replacementStart()
 func (this *QInputMethodEvent) ReplacementStart() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent16replacementStartEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -149,8 +148,8 @@ func (this *QInputMethodEvent) ReplacementStart() int {
 
 // /usr/include/qt/QtGui/qevent.h:565
 // index:0
-// Public inline
-// int replacementLength()
+// Public inline Visibility=Default Availability=Available
+// [4] int replacementLength()
 func (this *QInputMethodEvent) ReplacementLength() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QInputMethodEvent17replacementLengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

@@ -84,20 +84,19 @@ func (*QSGClipNode) NewFromPointer(cthis unsafe.Pointer) *QSGClipNode {
 
 // /usr/include/qt/QtQuick/qsgnode.h:264
 // index:0
-// Public
-// void QSGClipNode()
+// Public Visibility=Default Availability=Available
+// [-2] void QSGClipNode()
 func NewQSGClipNode() *QSGClipNode {
-	cthis := qtrt.Calloc(1, 256) // 152
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGClipNodeC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGClipNodeC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSGClipNodeFromPointer(cthis)
+	gothis := NewQSGClipNodeFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:265
 // index:0
-// Public virtual
-// void ~QSGClipNode()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QSGClipNode()
 func DeleteQSGClipNode(*QSGClipNode) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGClipNodeD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -105,8 +104,8 @@ func DeleteQSGClipNode(*QSGClipNode) {
 
 // /usr/include/qt/QtQuick/qsgnode.h:267
 // index:0
-// Public
-// void setIsRectangular(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setIsRectangular(_Bool)
 func (this *QSGClipNode) SetIsRectangular(rectHint bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGClipNode16setIsRectangularEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), rectHint)
 	gopp.ErrPrint(err, rv)
@@ -114,8 +113,8 @@ func (this *QSGClipNode) SetIsRectangular(rectHint bool) {
 
 // /usr/include/qt/QtQuick/qsgnode.h:268
 // index:0
-// Public inline
-// bool isRectangular()
+// Public inline Visibility=Default Availability=Available
+// [1] bool isRectangular()
 func (this *QSGClipNode) IsRectangular() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGClipNode13isRectangularEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -125,8 +124,8 @@ func (this *QSGClipNode) IsRectangular() bool {
 
 // /usr/include/qt/QtQuick/qsgnode.h:270
 // index:0
-// Public
-// void setClipRect(const QRectF &)
+// Public Visibility=Default Availability=Available
+// [-2] void setClipRect(const QRectF &)
 func (this *QSGClipNode) SetClipRect(arg0 *qtcore.QRectF) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGClipNode11setClipRectERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -135,14 +134,12 @@ func (this *QSGClipNode) SetClipRect(arg0 *qtcore.QRectF) {
 
 // /usr/include/qt/QtQuick/qsgnode.h:271
 // index:0
-// Public inline
-// QRectF clipRect()
+// Public inline Visibility=Default Availability=Available
+// [32] QRectF clipRect()
 func (this *QSGClipNode) ClipRect() *qtcore.QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGClipNode8clipRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGClipNode8clipRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

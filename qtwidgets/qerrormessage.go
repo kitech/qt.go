@@ -76,8 +76,8 @@ func (*QErrorMessage) NewFromPointer(cthis unsafe.Pointer) *QErrorMessage {
 
 // /usr/include/qt/QtWidgets/qerrormessage.h:55
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QErrorMessage) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QErrorMessage10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,21 +88,20 @@ func (this *QErrorMessage) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 
 // /usr/include/qt/QtWidgets/qerrormessage.h:58
 // index:0
-// Public
-// void QErrorMessage(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void QErrorMessage(QWidget *)
 func NewQErrorMessage(parent *QWidget /*777 QWidget **/) *QErrorMessage {
-	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessageC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessageC2EP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQErrorMessageFromPointer(cthis)
+	gothis := NewQErrorMessageFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qerrormessage.h:59
 // index:0
-// Public virtual
-// void ~QErrorMessage()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QErrorMessage()
 func DeleteQErrorMessage(*QErrorMessage) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessageD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -110,8 +109,8 @@ func DeleteQErrorMessage(*QErrorMessage) {
 
 // /usr/include/qt/QtWidgets/qerrormessage.h:61
 // index:0
-// Public static
-// QErrorMessage * qtHandler()
+// Public static Visibility=Default Availability=Available
+// [8] QErrorMessage * qtHandler()
 func (this *QErrorMessage) QtHandler() *QErrorMessage /*777 QErrorMessage **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage9qtHandlerEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -127,8 +126,8 @@ func QErrorMessage_QtHandler() *QErrorMessage /*777 QErrorMessage **/ {
 
 // /usr/include/qt/QtWidgets/qerrormessage.h:64
 // index:0
-// Public
-// void showMessage(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void showMessage(const QString &)
 func (this *QErrorMessage) ShowMessage(message *qtcore.QString) {
 	var convArg0 = message.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage11showMessageERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -137,8 +136,8 @@ func (this *QErrorMessage) ShowMessage(message *qtcore.QString) {
 
 // /usr/include/qt/QtWidgets/qerrormessage.h:65
 // index:1
-// Public
-// void showMessage(const QString &, const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void showMessage(const QString &, const QString &)
 func (this *QErrorMessage) ShowMessage_1(message *qtcore.QString, type_ *qtcore.QString) {
 	var convArg0 = message.GetCthis()
 	var convArg1 = type_.GetCthis()
@@ -148,8 +147,8 @@ func (this *QErrorMessage) ShowMessage_1(message *qtcore.QString, type_ *qtcore.
 
 // /usr/include/qt/QtWidgets/qerrormessage.h:68
 // index:0
-// Protected virtual
-// void done(int)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void done(int)
 func (this *QErrorMessage) Done(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage4doneEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -157,8 +156,8 @@ func (this *QErrorMessage) Done(arg0 int) {
 
 // /usr/include/qt/QtWidgets/qerrormessage.h:69
 // index:0
-// Protected virtual
-// void changeEvent(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void changeEvent(QEvent *)
 func (this *QErrorMessage) ChangeEvent(e *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

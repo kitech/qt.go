@@ -71,59 +71,55 @@ func (*QIcon) NewFromPointer(cthis unsafe.Pointer) *QIcon {
 
 // /usr/include/qt/QtGui/qicon.h:60
 // index:0
-// Public
-// void QIcon()
+// Public Visibility=Default Availability=Available
+// [-2] void QIcon()
 func NewQIcon() *QIcon {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIconC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIconC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQIconFromPointer(cthis)
+	gothis := NewQIconFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qicon.h:61
 // index:1
-// Public
-// void QIcon(const QPixmap &)
+// Public Visibility=Default Availability=Available
+// [-2] void QIcon(const QPixmap &)
 func NewQIcon_1(pixmap *QPixmap) *QIcon {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = pixmap.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIconC2ERK7QPixmap", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIconC2ERK7QPixmap", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQIconFromPointer(cthis)
+	gothis := NewQIconFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qicon.h:68
 // index:2
-// Public
-// void QIcon(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void QIcon(const QString &)
 func NewQIcon_2(fileName *qtcore.QString) *QIcon {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = fileName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIconC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIconC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQIconFromPointer(cthis)
+	gothis := NewQIconFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qicon.h:69
 // index:3
-// Public
-// void QIcon(QIconEngine *)
+// Public Visibility=Default Availability=Available
+// [-2] void QIcon(QIconEngine *)
 func NewQIcon_3(engine *QIconEngine /*777 QIconEngine **/) *QIcon {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = engine.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIconC2EP11QIconEngine", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIconC2EP11QIconEngine", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQIconFromPointer(cthis)
+	gothis := NewQIconFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qicon.h:70
 // index:0
-// Public
-// void ~QIcon()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QIcon()
 func DeleteQIcon(*QIcon) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIconD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -131,8 +127,8 @@ func DeleteQIcon(*QIcon) {
 
 // /usr/include/qt/QtGui/qicon.h:76
 // index:0
-// Public inline
-// void swap(QIcon &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QIcon &)
 func (this *QIcon) Swap(other *QIcon) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -141,112 +137,98 @@ func (this *QIcon) Swap(other *QIcon) {
 
 // /usr/include/qt/QtGui/qicon.h:81
 // index:0
-// Public
-// QPixmap pixmap(const QSize &, enum QIcon::Mode, enum QIcon::State)
+// Public Visibility=Default Availability=Available
+// [32] QPixmap pixmap(const QSize &, enum QIcon::Mode, enum QIcon::State)
 func (this *QIcon) Pixmap(size *qtcore.QSize, mode int, state int) *QPixmap /*123*/ {
 	var convArg0 = size.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6pixmapERK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, mode, state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6pixmapERK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, state)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qicon.h:82
 // index:1
-// Public inline
-// QPixmap pixmap(int, int, enum QIcon::Mode, enum QIcon::State)
+// Public inline Visibility=Default Availability=Available
+// [32] QPixmap pixmap(int, int, enum QIcon::Mode, enum QIcon::State)
 func (this *QIcon) Pixmap_1(w int, h int, mode int, state int) *QPixmap /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiiNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), w, h, mode, state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiiNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w, h, mode, state)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qicon.h:84
 // index:2
-// Public inline
-// QPixmap pixmap(int, enum QIcon::Mode, enum QIcon::State)
+// Public inline Visibility=Default Availability=Available
+// [32] QPixmap pixmap(int, enum QIcon::Mode, enum QIcon::State)
 func (this *QIcon) Pixmap_2(extent int, mode int, state int) *QPixmap /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), extent, mode, state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6pixmapEiNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extent, mode, state)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qicon.h:86
 // index:3
-// Public
-// QPixmap pixmap(QWindow *, const QSize &, enum QIcon::Mode, enum QIcon::State)
+// Public Visibility=Default Availability=Available
+// [32] QPixmap pixmap(QWindow *, const QSize &, enum QIcon::Mode, enum QIcon::State)
 func (this *QIcon) Pixmap_3(window *QWindow /*777 QWindow **/, size *qtcore.QSize, mode int, state int) *QPixmap /*123*/ {
 	var convArg0 = window.GetCthis()
 	var convArg1 = size.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6pixmapEP7QWindowRK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, mode, state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6pixmapEP7QWindowRK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, mode, state)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qicon.h:88
 // index:0
-// Public
-// QSize actualSize(const QSize &, enum QIcon::Mode, enum QIcon::State)
+// Public Visibility=Default Availability=Available
+// [8] QSize actualSize(const QSize &, enum QIcon::Mode, enum QIcon::State)
 func (this *QIcon) ActualSize(size *qtcore.QSize, mode int, state int) *qtcore.QSize /*123*/ {
 	var convArg0 = size.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK5QIcon10actualSizeERK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, mode, state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon10actualSizeERK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, state)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qicon.h:89
 // index:1
-// Public
-// QSize actualSize(QWindow *, const QSize &, enum QIcon::Mode, enum QIcon::State)
+// Public Visibility=Default Availability=Available
+// [8] QSize actualSize(QWindow *, const QSize &, enum QIcon::Mode, enum QIcon::State)
 func (this *QIcon) ActualSize_1(window *QWindow /*777 QWindow **/, size *qtcore.QSize, mode int, state int) *qtcore.QSize /*123*/ {
 	var convArg0 = window.GetCthis()
 	var convArg1 = size.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK5QIcon10actualSizeEP7QWindowRK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1, mode, state)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon10actualSizeEP7QWindowRK5QSizeNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, mode, state)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qicon.h:91
 // index:0
-// Public
-// QString name()
+// Public Visibility=Default Availability=Available
+// [8] QString name()
 func (this *QIcon) Name() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qicon.h:97
 // index:0
-// Public
-// bool isNull()
+// Public Visibility=Default Availability=Available
+// [1] bool isNull()
 func (this *QIcon) IsNull() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -256,8 +238,8 @@ func (this *QIcon) IsNull() bool {
 
 // /usr/include/qt/QtGui/qicon.h:98
 // index:0
-// Public
-// bool isDetached()
+// Public Visibility=Default Availability=Available
+// [1] bool isDetached()
 func (this *QIcon) IsDetached() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon10isDetachedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -267,8 +249,8 @@ func (this *QIcon) IsDetached() bool {
 
 // /usr/include/qt/QtGui/qicon.h:99
 // index:0
-// Public
-// void detach()
+// Public Visibility=Default Availability=Available
+// [-2] void detach()
 func (this *QIcon) Detach() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon6detachEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -276,8 +258,8 @@ func (this *QIcon) Detach() {
 
 // /usr/include/qt/QtGui/qicon.h:104
 // index:0
-// Public
-// qint64 cacheKey()
+// Public Visibility=Default Availability=Available
+// [8] qint64 cacheKey()
 func (this *QIcon) CacheKey() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon8cacheKeyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -287,8 +269,8 @@ func (this *QIcon) CacheKey() int64 {
 
 // /usr/include/qt/QtGui/qicon.h:106
 // index:0
-// Public
-// void addPixmap(const QPixmap &, enum QIcon::Mode, enum QIcon::State)
+// Public Visibility=Default Availability=Available
+// [-2] void addPixmap(const QPixmap &, enum QIcon::Mode, enum QIcon::State)
 func (this *QIcon) AddPixmap(pixmap *QPixmap, mode int, state int) {
 	var convArg0 = pixmap.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9addPixmapERK7QPixmapNS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode, state)
@@ -297,8 +279,8 @@ func (this *QIcon) AddPixmap(pixmap *QPixmap, mode int, state int) {
 
 // /usr/include/qt/QtGui/qicon.h:107
 // index:0
-// Public
-// void addFile(const QString &, const QSize &, enum QIcon::Mode, enum QIcon::State)
+// Public Visibility=Default Availability=Available
+// [-2] void addFile(const QString &, const QSize &, enum QIcon::Mode, enum QIcon::State)
 func (this *QIcon) AddFile(fileName *qtcore.QString, size *qtcore.QSize, mode int, state int) {
 	var convArg0 = fileName.GetCthis()
 	var convArg1 = size.GetCthis()
@@ -308,8 +290,8 @@ func (this *QIcon) AddFile(fileName *qtcore.QString, size *qtcore.QSize, mode in
 
 // /usr/include/qt/QtGui/qicon.h:111
 // index:0
-// Public
-// void setIsMask(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setIsMask(_Bool)
 func (this *QIcon) SetIsMask(isMask bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9setIsMaskEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), isMask)
 	gopp.ErrPrint(err, rv)
@@ -317,8 +299,8 @@ func (this *QIcon) SetIsMask(isMask bool) {
 
 // /usr/include/qt/QtGui/qicon.h:112
 // index:0
-// Public
-// bool isMask()
+// Public Visibility=Default Availability=Available
+// [1] bool isMask()
 func (this *QIcon) IsMask() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon6isMaskEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -328,8 +310,8 @@ func (this *QIcon) IsMask() bool {
 
 // /usr/include/qt/QtGui/qicon.h:114
 // index:0
-// Public static
-// QIcon fromTheme(const QString &)
+// Public static Visibility=Default Availability=Available
+// [8] QIcon fromTheme(const QString &)
 func (this *QIcon) FromTheme(name *qtcore.QString) *QIcon /*123*/ {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9fromThemeERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -346,8 +328,8 @@ func QIcon_FromTheme(name *qtcore.QString) *QIcon /*123*/ {
 
 // /usr/include/qt/QtGui/qicon.h:115
 // index:1
-// Public static
-// QIcon fromTheme(const QString &, const QIcon &)
+// Public static Visibility=Default Availability=Available
+// [8] QIcon fromTheme(const QString &, const QIcon &)
 func (this *QIcon) FromTheme_1(name *qtcore.QString, fallback *QIcon) *QIcon /*123*/ {
 	var convArg0 = name.GetCthis()
 	var convArg1 = fallback.GetCthis()
@@ -365,8 +347,8 @@ func QIcon_FromTheme_1(name *qtcore.QString, fallback *QIcon) *QIcon /*123*/ {
 
 // /usr/include/qt/QtGui/qicon.h:116
 // index:0
-// Public static
-// bool hasThemeIcon(const QString &)
+// Public static Visibility=Default Availability=Available
+// [1] bool hasThemeIcon(const QString &)
 func (this *QIcon) HasThemeIcon(name *qtcore.QString) bool {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon12hasThemeIconERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -382,8 +364,8 @@ func QIcon_HasThemeIcon(name *qtcore.QString) bool {
 
 // /usr/include/qt/QtGui/qicon.h:119
 // index:0
-// Public static
-// void setThemeSearchPaths(const QStringList &)
+// Public static Visibility=Default Availability=Available
+// [-2] void setThemeSearchPaths(const QStringList &)
 func (this *QIcon) SetThemeSearchPaths(searchpath *qtcore.QStringList) {
 	var convArg0 = searchpath.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon19setThemeSearchPathsERK11QStringList", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -396,8 +378,8 @@ func QIcon_SetThemeSearchPaths(searchpath *qtcore.QStringList) {
 
 // /usr/include/qt/QtGui/qicon.h:121
 // index:0
-// Public static
-// QString themeName()
+// Public static Visibility=Default Availability=Available
+// [8] QString themeName()
 func (this *QIcon) ThemeName() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon9themeNameEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -413,8 +395,8 @@ func QIcon_ThemeName() *qtcore.QString /*123*/ {
 
 // /usr/include/qt/QtGui/qicon.h:122
 // index:0
-// Public static
-// void setThemeName(const QString &)
+// Public static Visibility=Default Availability=Available
+// [-2] void setThemeName(const QString &)
 func (this *QIcon) SetThemeName(path *qtcore.QString) {
 	var convArg0 = path.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIcon12setThemeNameERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)

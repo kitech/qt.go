@@ -72,35 +72,33 @@ func (*QContextMenuEvent) NewFromPointer(cthis unsafe.Pointer) *QContextMenuEven
 
 // /usr/include/qt/QtGui/qevent.h:513
 // index:0
-// Public
-// void QContextMenuEvent(enum QContextMenuEvent::Reason, const QPoint &, const QPoint &)
+// Public Visibility=Default Availability=Available
+// [-2] void QContextMenuEvent(enum QContextMenuEvent::Reason, const QPoint &, const QPoint &)
 func NewQContextMenuEvent(reason int, pos *qtcore.QPoint, globalPos *qtcore.QPoint) *QContextMenuEvent {
-	cthis := qtrt.Calloc(1, 256) // 56
 	var convArg1 = pos.GetCthis()
 	var convArg2 = globalPos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPointS3_", ffiqt.FFI_TYPE_VOID, cthis, reason, convArg1, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPointS3_", ffiqt.FFI_TYPE_POINTER, reason, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQContextMenuEventFromPointer(cthis)
+	gothis := NewQContextMenuEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:514
 // index:1
-// Public
-// void QContextMenuEvent(enum QContextMenuEvent::Reason, const QPoint &)
+// Public Visibility=Default Availability=Available
+// [-2] void QContextMenuEvent(enum QContextMenuEvent::Reason, const QPoint &)
 func NewQContextMenuEvent_1(reason int, pos *qtcore.QPoint) *QContextMenuEvent {
-	cthis := qtrt.Calloc(1, 256) // 56
 	var convArg1 = pos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPoint", ffiqt.FFI_TYPE_VOID, cthis, reason, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPoint", ffiqt.FFI_TYPE_POINTER, reason, convArg1)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQContextMenuEventFromPointer(cthis)
+	gothis := NewQContextMenuEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:515
 // index:0
-// Public virtual
-// void ~QContextMenuEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QContextMenuEvent()
 func DeleteQContextMenuEvent(*QContextMenuEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -108,8 +106,8 @@ func DeleteQContextMenuEvent(*QContextMenuEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:517
 // index:0
-// Public inline
-// int x()
+// Public inline Visibility=Default Availability=Available
+// [4] int x()
 func (this *QContextMenuEvent) X() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -119,8 +117,8 @@ func (this *QContextMenuEvent) X() int {
 
 // /usr/include/qt/QtGui/qevent.h:518
 // index:0
-// Public inline
-// int y()
+// Public inline Visibility=Default Availability=Available
+// [4] int y()
 func (this *QContextMenuEvent) Y() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -130,8 +128,8 @@ func (this *QContextMenuEvent) Y() int {
 
 // /usr/include/qt/QtGui/qevent.h:519
 // index:0
-// Public inline
-// int globalX()
+// Public inline Visibility=Default Availability=Available
+// [4] int globalX()
 func (this *QContextMenuEvent) GlobalX() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent7globalXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -141,8 +139,8 @@ func (this *QContextMenuEvent) GlobalX() int {
 
 // /usr/include/qt/QtGui/qevent.h:520
 // index:0
-// Public inline
-// int globalY()
+// Public inline Visibility=Default Availability=Available
+// [4] int globalY()
 func (this *QContextMenuEvent) GlobalY() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent7globalYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -152,8 +150,8 @@ func (this *QContextMenuEvent) GlobalY() int {
 
 // /usr/include/qt/QtGui/qevent.h:522
 // index:0
-// Public inline
-// const QPoint & pos()
+// Public inline Visibility=Default Availability=Available
+// [8] const QPoint & pos()
 func (this *QContextMenuEvent) Pos() *qtcore.QPoint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -164,8 +162,8 @@ func (this *QContextMenuEvent) Pos() *qtcore.QPoint {
 
 // /usr/include/qt/QtGui/qevent.h:523
 // index:0
-// Public inline
-// const QPoint & globalPos()
+// Public inline Visibility=Default Availability=Available
+// [8] const QPoint & globalPos()
 func (this *QContextMenuEvent) GlobalPos() *qtcore.QPoint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -176,8 +174,8 @@ func (this *QContextMenuEvent) GlobalPos() *qtcore.QPoint {
 
 // /usr/include/qt/QtGui/qevent.h:525
 // index:0
-// Public inline
-// QContextMenuEvent::Reason reason()
+// Public inline Visibility=Default Availability=Available
+// [4] QContextMenuEvent::Reason reason()
 func (this *QContextMenuEvent) Reason() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QContextMenuEvent6reasonEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

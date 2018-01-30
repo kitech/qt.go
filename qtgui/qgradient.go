@@ -71,20 +71,19 @@ func (*QGradient) NewFromPointer(cthis unsafe.Pointer) *QGradient {
 
 // /usr/include/qt/QtGui/qbrush.h:206
 // index:0
-// Public
-// void QGradient()
+// Public Visibility=Default Availability=Available
+// [-2] void QGradient()
 func NewQGradient() *QGradient {
-	cthis := qtrt.Calloc(1, 256) // 64
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradientC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradientC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQGradientFromPointer(cthis)
+	gothis := NewQGradientFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qbrush.h:208
 // index:0
-// Public inline
-// QGradient::Type type()
+// Public inline Visibility=Default Availability=Available
+// [4] QGradient::Type type()
 func (this *QGradient) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -94,8 +93,8 @@ func (this *QGradient) Type() int {
 
 // /usr/include/qt/QtGui/qbrush.h:210
 // index:0
-// Public inline
-// void setSpread(enum QGradient::Spread)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setSpread(enum QGradient::Spread)
 func (this *QGradient) SetSpread(spread int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient9setSpreadENS_6SpreadE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), spread)
 	gopp.ErrPrint(err, rv)
@@ -103,8 +102,8 @@ func (this *QGradient) SetSpread(spread int) {
 
 // /usr/include/qt/QtGui/qbrush.h:211
 // index:0
-// Public inline
-// QGradient::Spread spread()
+// Public inline Visibility=Default Availability=Available
+// [4] QGradient::Spread spread()
 func (this *QGradient) Spread() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient6spreadEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -114,8 +113,8 @@ func (this *QGradient) Spread() int {
 
 // /usr/include/qt/QtGui/qbrush.h:213
 // index:0
-// Public
-// void setColorAt(qreal, const QColor &)
+// Public Visibility=Default Availability=Available
+// [-2] void setColorAt(qreal, const QColor &)
 func (this *QGradient) SetColorAt(pos float64, color *QColor) {
 	var convArg1 = color.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient10setColorAtEdRK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pos, convArg1)
@@ -124,8 +123,8 @@ func (this *QGradient) SetColorAt(pos float64, color *QColor) {
 
 // /usr/include/qt/QtGui/qbrush.h:218
 // index:0
-// Public
-// QGradient::CoordinateMode coordinateMode()
+// Public Visibility=Default Availability=Available
+// [4] QGradient::CoordinateMode coordinateMode()
 func (this *QGradient) CoordinateMode() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient14coordinateModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -135,8 +134,8 @@ func (this *QGradient) CoordinateMode() int {
 
 // /usr/include/qt/QtGui/qbrush.h:219
 // index:0
-// Public
-// void setCoordinateMode(enum QGradient::CoordinateMode)
+// Public Visibility=Default Availability=Available
+// [-2] void setCoordinateMode(enum QGradient::CoordinateMode)
 func (this *QGradient) SetCoordinateMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient17setCoordinateModeENS_14CoordinateModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
@@ -144,8 +143,8 @@ func (this *QGradient) SetCoordinateMode(mode int) {
 
 // /usr/include/qt/QtGui/qbrush.h:221
 // index:0
-// Public
-// QGradient::InterpolationMode interpolationMode()
+// Public Visibility=Default Availability=Available
+// [4] QGradient::InterpolationMode interpolationMode()
 func (this *QGradient) InterpolationMode() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient17interpolationModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -155,8 +154,8 @@ func (this *QGradient) InterpolationMode() int {
 
 // /usr/include/qt/QtGui/qbrush.h:222
 // index:0
-// Public
-// void setInterpolationMode(enum QGradient::InterpolationMode)
+// Public Visibility=Default Availability=Available
+// [-2] void setInterpolationMode(enum QGradient::InterpolationMode)
 func (this *QGradient) SetInterpolationMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient20setInterpolationModeENS_17InterpolationModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)

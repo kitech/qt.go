@@ -76,8 +76,8 @@ func (*QGraphicsScale) NewFromPointer(cthis unsafe.Pointer) *QGraphicsScale {
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:81
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QGraphicsScale) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,21 +88,20 @@ func (this *QGraphicsScale) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:88
 // index:0
-// Public
-// void QGraphicsScale(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsScale(QObject *)
 func NewQGraphicsScale(parent *qtcore.QObject /*777 QObject **/) *QGraphicsScale {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScaleC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScaleC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQGraphicsScaleFromPointer(cthis)
+	gothis := NewQGraphicsScaleFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:89
 // index:0
-// Public virtual
-// void ~QGraphicsScale()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QGraphicsScale()
 func DeleteQGraphicsScale(*QGraphicsScale) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScaleD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -110,22 +109,20 @@ func DeleteQGraphicsScale(*QGraphicsScale) {
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:91
 // index:0
-// Public
-// QVector3D origin()
+// Public Visibility=Default Availability=Available
+// [12] QVector3D origin()
 func (this *QGraphicsScale) Origin() *qtgui.QVector3D /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale6originEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale6originEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:92
 // index:0
-// Public
-// void setOrigin(const QVector3D &)
+// Public Visibility=Default Availability=Available
+// [-2] void setOrigin(const QVector3D &)
 func (this *QGraphicsScale) SetOrigin(point *qtgui.QVector3D) {
 	var convArg0 = point.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScale9setOriginERK9QVector3D", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -134,8 +131,8 @@ func (this *QGraphicsScale) SetOrigin(point *qtgui.QVector3D) {
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:94
 // index:0
-// Public
-// qreal xScale()
+// Public Visibility=Default Availability=Available
+// [8] qreal xScale()
 func (this *QGraphicsScale) XScale() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale6xScaleEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -145,8 +142,8 @@ func (this *QGraphicsScale) XScale() float64 {
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:95
 // index:0
-// Public
-// void setXScale(qreal)
+// Public Visibility=Default Availability=Available
+// [-2] void setXScale(qreal)
 func (this *QGraphicsScale) SetXScale(arg0 float64) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScale9setXScaleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -154,8 +151,8 @@ func (this *QGraphicsScale) SetXScale(arg0 float64) {
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:97
 // index:0
-// Public
-// qreal yScale()
+// Public Visibility=Default Availability=Available
+// [8] qreal yScale()
 func (this *QGraphicsScale) YScale() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale6yScaleEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -165,8 +162,8 @@ func (this *QGraphicsScale) YScale() float64 {
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:98
 // index:0
-// Public
-// void setYScale(qreal)
+// Public Visibility=Default Availability=Available
+// [-2] void setYScale(qreal)
 func (this *QGraphicsScale) SetYScale(arg0 float64) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScale9setYScaleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -174,8 +171,8 @@ func (this *QGraphicsScale) SetYScale(arg0 float64) {
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:100
 // index:0
-// Public
-// qreal zScale()
+// Public Visibility=Default Availability=Available
+// [8] qreal zScale()
 func (this *QGraphicsScale) ZScale() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale6zScaleEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -185,8 +182,8 @@ func (this *QGraphicsScale) ZScale() float64 {
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:101
 // index:0
-// Public
-// void setZScale(qreal)
+// Public Visibility=Default Availability=Available
+// [-2] void setZScale(qreal)
 func (this *QGraphicsScale) SetZScale(arg0 float64) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScale9setZScaleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -194,8 +191,8 @@ func (this *QGraphicsScale) SetZScale(arg0 float64) {
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:103
 // index:0
-// Public virtual
-// void applyTo(QMatrix4x4 *)
+// Public virtual Visibility=Default Availability=Available
+// [-2] void applyTo(QMatrix4x4 *)
 func (this *QGraphicsScale) ApplyTo(matrix *qtgui.QMatrix4x4 /*777 QMatrix4x4 **/) {
 	var convArg0 = matrix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGraphicsScale7applyToEP10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -204,8 +201,8 @@ func (this *QGraphicsScale) ApplyTo(matrix *qtgui.QMatrix4x4 /*777 QMatrix4x4 **
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:106
 // index:0
-// Public
-// void originChanged()
+// Public Visibility=Default Availability=Available
+// [-2] void originChanged()
 func (this *QGraphicsScale) OriginChanged() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScale13originChangedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -213,8 +210,8 @@ func (this *QGraphicsScale) OriginChanged() {
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:107
 // index:0
-// Public
-// void xScaleChanged()
+// Public Visibility=Default Availability=Available
+// [-2] void xScaleChanged()
 func (this *QGraphicsScale) XScaleChanged() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScale13xScaleChangedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -222,8 +219,8 @@ func (this *QGraphicsScale) XScaleChanged() {
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:108
 // index:0
-// Public
-// void yScaleChanged()
+// Public Visibility=Default Availability=Available
+// [-2] void yScaleChanged()
 func (this *QGraphicsScale) YScaleChanged() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScale13yScaleChangedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -231,8 +228,8 @@ func (this *QGraphicsScale) YScaleChanged() {
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:109
 // index:0
-// Public
-// void zScaleChanged()
+// Public Visibility=Default Availability=Available
+// [-2] void zScaleChanged()
 func (this *QGraphicsScale) ZScaleChanged() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScale13zScaleChangedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -240,8 +237,8 @@ func (this *QGraphicsScale) ZScaleChanged() {
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:110
 // index:0
-// Public
-// void scaleChanged()
+// Public Visibility=Default Availability=Available
+// [-2] void scaleChanged()
 func (this *QGraphicsScale) ScaleChanged() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScale12scaleChangedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

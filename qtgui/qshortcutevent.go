@@ -72,21 +72,20 @@ func (*QShortcutEvent) NewFromPointer(cthis unsafe.Pointer) *QShortcutEvent {
 
 // /usr/include/qt/QtGui/qevent.h:767
 // index:0
-// Public
-// void QShortcutEvent(const QKeySequence &, int, _Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void QShortcutEvent(const QKeySequence &, int, _Bool)
 func NewQShortcutEvent(key *QKeySequence, id int, ambiguous bool) *QShortcutEvent {
-	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = key.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QShortcutEventC2ERK12QKeySequenceib", ffiqt.FFI_TYPE_VOID, cthis, convArg0, id, ambiguous)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QShortcutEventC2ERK12QKeySequenceib", ffiqt.FFI_TYPE_POINTER, convArg0, id, ambiguous)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQShortcutEventFromPointer(cthis)
+	gothis := NewQShortcutEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:768
 // index:0
-// Public virtual
-// void ~QShortcutEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QShortcutEvent()
 func DeleteQShortcutEvent(*QShortcutEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QShortcutEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -94,8 +93,8 @@ func DeleteQShortcutEvent(*QShortcutEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:770
 // index:0
-// Public inline
-// const QKeySequence & key()
+// Public inline Visibility=Default Availability=Available
+// [8] const QKeySequence & key()
 func (this *QShortcutEvent) Key() *QKeySequence {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QShortcutEvent3keyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -106,8 +105,8 @@ func (this *QShortcutEvent) Key() *QKeySequence {
 
 // /usr/include/qt/QtGui/qevent.h:771
 // index:0
-// Public inline
-// int shortcutId()
+// Public inline Visibility=Default Availability=Available
+// [4] int shortcutId()
 func (this *QShortcutEvent) ShortcutId() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QShortcutEvent10shortcutIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -117,8 +116,8 @@ func (this *QShortcutEvent) ShortcutId() int {
 
 // /usr/include/qt/QtGui/qevent.h:772
 // index:0
-// Public inline
-// bool isAmbiguous()
+// Public inline Visibility=Default Availability=Available
+// [1] bool isAmbiguous()
 func (this *QShortcutEvent) IsAmbiguous() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QShortcutEvent11isAmbiguousEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

@@ -67,8 +67,8 @@ func (*QHashData) NewFromPointer(cthis unsafe.Pointer) *QHashData {
 
 // /usr/include/qt/QtCore/qhash.h:84
 // index:0
-// Public
-// void * allocateNode(int)
+// Public Visibility=Default Availability=Available
+// [8] void * allocateNode(int)
 func (this *QHashData) AllocateNode(nodeAlign int) unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHashData12allocateNodeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), nodeAlign)
 	gopp.ErrPrint(err, rv)
@@ -78,8 +78,8 @@ func (this *QHashData) AllocateNode(nodeAlign int) unsafe.Pointer /*666*/ {
 
 // /usr/include/qt/QtCore/qhash.h:85
 // index:0
-// Public
-// void freeNode(void *)
+// Public Visibility=Default Availability=Available
+// [-2] void freeNode(void *)
 func (this *QHashData) FreeNode(node unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHashData8freeNodeEPv", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), node)
 	gopp.ErrPrint(err, rv)
@@ -87,8 +87,8 @@ func (this *QHashData) FreeNode(node unsafe.Pointer /*666*/) {
 
 // /usr/include/qt/QtCore/qhash.h:86
 // index:0
-// Public
-// QHashData * detach_helper(void (*)(struct QHashData::Node *, void *), void (*)(struct QHashData::Node *), int, int)
+// Public Visibility=Default Availability=Available
+// [8] QHashData * detach_helper(void (*)(struct QHashData::Node *, void *), void (*)(struct QHashData::Node *), int, int)
 func (this *QHashData) Detach_helper(node_duplicate unsafe.Pointer /*666*/, node_delete unsafe.Pointer /*666*/, nodeSize int, nodeAlign int) *QHashData /*777 QHashData **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHashData13detach_helperEPFvPNS_4NodeEPvEPFvS1_Eii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), node_duplicate, node_delete, nodeSize, nodeAlign)
 	gopp.ErrPrint(err, rv)
@@ -99,8 +99,8 @@ func (this *QHashData) Detach_helper(node_duplicate unsafe.Pointer /*666*/, node
 
 // /usr/include/qt/QtCore/qhash.h:88
 // index:0
-// Public
-// bool willGrow()
+// Public Visibility=Default Availability=Available
+// [1] bool willGrow()
 func (this *QHashData) WillGrow() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHashData8willGrowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -110,8 +110,8 @@ func (this *QHashData) WillGrow() bool {
 
 // /usr/include/qt/QtCore/qhash.h:89
 // index:0
-// Public
-// void hasShrunk()
+// Public Visibility=Default Availability=Available
+// [-2] void hasShrunk()
 func (this *QHashData) HasShrunk() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHashData9hasShrunkEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -119,8 +119,8 @@ func (this *QHashData) HasShrunk() {
 
 // /usr/include/qt/QtCore/qhash.h:90
 // index:0
-// Public
-// void rehash(int)
+// Public Visibility=Default Availability=Available
+// [-2] void rehash(int)
 func (this *QHashData) Rehash(hint int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHashData6rehashEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hint)
 	gopp.ErrPrint(err, rv)
@@ -128,8 +128,8 @@ func (this *QHashData) Rehash(hint int) {
 
 // /usr/include/qt/QtCore/qhash.h:91
 // index:0
-// Public
-// void free_helper(void (*)(struct QHashData::Node *))
+// Public Visibility=Default Availability=Available
+// [-2] void free_helper(void (*)(struct QHashData::Node *))
 func (this *QHashData) Free_helper(node_delete unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHashData11free_helperEPFvPNS_4NodeEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), node_delete)
 	gopp.ErrPrint(err, rv)
@@ -137,8 +137,8 @@ func (this *QHashData) Free_helper(node_delete unsafe.Pointer /*666*/) {
 
 // /usr/include/qt/QtCore/qhash.h:92
 // index:0
-// Public
-// QHashData::Node * firstNode()
+// Public Visibility=Default Availability=Available
+// [8] QHashData::Node * firstNode()
 func (this *QHashData) FirstNode() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHashData9firstNodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

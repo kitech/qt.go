@@ -71,8 +71,8 @@ func (*QPixmapCache) NewFromPointer(cthis unsafe.Pointer) *QPixmapCache {
 
 // /usr/include/qt/QtGui/qpixmapcache.h:77
 // index:0
-// Public static
-// int cacheLimit()
+// Public static Visibility=Default Availability=Available
+// [4] int cacheLimit()
 func (this *QPixmapCache) CacheLimit() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache10cacheLimitEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -87,8 +87,8 @@ func QPixmapCache_CacheLimit() int {
 
 // /usr/include/qt/QtGui/qpixmapcache.h:78
 // index:0
-// Public static
-// void setCacheLimit(int)
+// Public static Visibility=Default Availability=Available
+// [-2] void setCacheLimit(int)
 func (this *QPixmapCache) SetCacheLimit(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache13setCacheLimitEi", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
@@ -100,8 +100,8 @@ func QPixmapCache_SetCacheLimit(arg0 int) {
 
 // /usr/include/qt/QtGui/qpixmapcache.h:79
 // index:0
-// Public static
-// QPixmap * find(const QString &)
+// Public static Visibility=Default Availability=Available
+// [8] QPixmap * find(const QString &)
 func (this *QPixmapCache) Find(key *qtcore.QString) *QPixmap /*777 QPixmap **/ {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -118,8 +118,8 @@ func QPixmapCache_Find(key *qtcore.QString) *QPixmap /*777 QPixmap **/ {
 
 // /usr/include/qt/QtGui/qpixmapcache.h:80
 // index:1
-// Public static
-// bool find(const QString &, QPixmap &)
+// Public static Visibility=Default Availability=Available
+// [1] bool find(const QString &, QPixmap &)
 func (this *QPixmapCache) Find_1(key *qtcore.QString, pixmap *QPixmap) bool {
 	var convArg0 = key.GetCthis()
 	var convArg1 = pixmap.GetCthis()
@@ -136,8 +136,8 @@ func QPixmapCache_Find_1(key *qtcore.QString, pixmap *QPixmap) bool {
 
 // /usr/include/qt/QtGui/qpixmapcache.h:81
 // index:2
-// Public static
-// bool find(const QString &, QPixmap *)
+// Public static Visibility=Default Availability=Available
+// [1] bool find(const QString &, QPixmap *)
 func (this *QPixmapCache) Find_2(key *qtcore.QString, pixmap *QPixmap /*777 QPixmap **/) bool {
 	var convArg0 = key.GetCthis()
 	var convArg1 = pixmap.GetCthis()
@@ -154,8 +154,8 @@ func QPixmapCache_Find_2(key *qtcore.QString, pixmap *QPixmap /*777 QPixmap **/)
 
 // /usr/include/qt/QtGui/qpixmapcache.h:86
 // index:0
-// Public static
-// void remove(const QString &)
+// Public static Visibility=Default Availability=Available
+// [-2] void remove(const QString &)
 func (this *QPixmapCache) Remove(key *qtcore.QString) {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache6removeERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -168,8 +168,8 @@ func QPixmapCache_Remove(key *qtcore.QString) {
 
 // /usr/include/qt/QtGui/qpixmapcache.h:88
 // index:0
-// Public static
-// void clear()
+// Public static Visibility=Default Availability=Available
+// [-2] void clear()
 func (this *QPixmapCache) Clear() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache5clearEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)

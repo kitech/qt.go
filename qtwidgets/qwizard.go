@@ -76,8 +76,8 @@ func (*QWizard) NewFromPointer(cthis unsafe.Pointer) *QWizard {
 
 // /usr/include/qt/QtWidgets/qwizard.h:56
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QWizard) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,21 +88,20 @@ func (this *QWizard) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 
 // /usr/include/qt/QtWidgets/qwizard.h:123
 // index:0
-// Public
-// void QWizard(QWidget *, Qt::WindowFlags)
+// Public Visibility=Default Availability=Available
+// [-2] void QWizard(QWidget *, Qt::WindowFlags)
 func NewQWizard(parent *QWidget /*777 QWidget **/, flags int) *QWizard {
-	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizardC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, flags)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizardC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, convArg0, flags)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQWizardFromPointer(cthis)
+	gothis := NewQWizardFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:124
 // index:0
-// Public virtual
-// void ~QWizard()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QWizard()
 func DeleteQWizard(*QWizard) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizardD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -110,8 +109,8 @@ func DeleteQWizard(*QWizard) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:126
 // index:0
-// Public
-// int addPage(QWizardPage *)
+// Public Visibility=Default Availability=Available
+// [4] int addPage(QWizardPage *)
 func (this *QWizard) AddPage(page *QWizardPage /*777 QWizardPage **/) int {
 	var convArg0 = page.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard7addPageEP11QWizardPage", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -122,8 +121,8 @@ func (this *QWizard) AddPage(page *QWizardPage /*777 QWizardPage **/) int {
 
 // /usr/include/qt/QtWidgets/qwizard.h:127
 // index:0
-// Public
-// void setPage(int, QWizardPage *)
+// Public Visibility=Default Availability=Available
+// [-2] void setPage(int, QWizardPage *)
 func (this *QWizard) SetPage(id int, page *QWizardPage /*777 QWizardPage **/) {
 	var convArg1 = page.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard7setPageEiP11QWizardPage", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id, convArg1)
@@ -132,8 +131,8 @@ func (this *QWizard) SetPage(id int, page *QWizardPage /*777 QWizardPage **/) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:128
 // index:0
-// Public
-// void removePage(int)
+// Public Visibility=Default Availability=Available
+// [-2] void removePage(int)
 func (this *QWizard) RemovePage(id int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard10removePageEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)
@@ -141,8 +140,8 @@ func (this *QWizard) RemovePage(id int) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:129
 // index:0
-// Public
-// QWizardPage * page(int)
+// Public Visibility=Default Availability=Available
+// [8] QWizardPage * page(int)
 func (this *QWizard) Page(id int) *QWizardPage /*777 QWizardPage **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard4pageEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)
@@ -153,8 +152,8 @@ func (this *QWizard) Page(id int) *QWizardPage /*777 QWizardPage **/ {
 
 // /usr/include/qt/QtWidgets/qwizard.h:130
 // index:0
-// Public
-// bool hasVisitedPage(int)
+// Public Visibility=Default Availability=Available
+// [1] bool hasVisitedPage(int)
 func (this *QWizard) HasVisitedPage(id int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard14hasVisitedPageEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)
@@ -164,8 +163,8 @@ func (this *QWizard) HasVisitedPage(id int) bool {
 
 // /usr/include/qt/QtWidgets/qwizard.h:133
 // index:0
-// Public
-// void setStartId(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setStartId(int)
 func (this *QWizard) SetStartId(id int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard10setStartIdEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)
@@ -173,8 +172,8 @@ func (this *QWizard) SetStartId(id int) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:134
 // index:0
-// Public
-// int startId()
+// Public Visibility=Default Availability=Available
+// [4] int startId()
 func (this *QWizard) StartId() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard7startIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -184,8 +183,8 @@ func (this *QWizard) StartId() int {
 
 // /usr/include/qt/QtWidgets/qwizard.h:135
 // index:0
-// Public
-// QWizardPage * currentPage()
+// Public Visibility=Default Availability=Available
+// [8] QWizardPage * currentPage()
 func (this *QWizard) CurrentPage() *QWizardPage /*777 QWizardPage **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard11currentPageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -196,8 +195,8 @@ func (this *QWizard) CurrentPage() *QWizardPage /*777 QWizardPage **/ {
 
 // /usr/include/qt/QtWidgets/qwizard.h:136
 // index:0
-// Public
-// int currentId()
+// Public Visibility=Default Availability=Available
+// [4] int currentId()
 func (this *QWizard) CurrentId() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard9currentIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -207,8 +206,8 @@ func (this *QWizard) CurrentId() int {
 
 // /usr/include/qt/QtWidgets/qwizard.h:138
 // index:0
-// Public virtual
-// bool validateCurrentPage()
+// Public virtual Visibility=Default Availability=Available
+// [1] bool validateCurrentPage()
 func (this *QWizard) ValidateCurrentPage() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard19validateCurrentPageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -218,8 +217,8 @@ func (this *QWizard) ValidateCurrentPage() bool {
 
 // /usr/include/qt/QtWidgets/qwizard.h:139
 // index:0
-// Public virtual
-// int nextId()
+// Public virtual Visibility=Default Availability=Available
+// [4] int nextId()
 func (this *QWizard) NextId() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard6nextIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -229,8 +228,8 @@ func (this *QWizard) NextId() int {
 
 // /usr/include/qt/QtWidgets/qwizard.h:141
 // index:0
-// Public
-// void setField(const QString &, const QVariant &)
+// Public Visibility=Default Availability=Available
+// [-2] void setField(const QString &, const QVariant &)
 func (this *QWizard) SetField(name *qtcore.QString, value *qtcore.QVariant) {
 	var convArg0 = name.GetCthis()
 	var convArg1 = value.GetCthis()
@@ -240,23 +239,21 @@ func (this *QWizard) SetField(name *qtcore.QString, value *qtcore.QVariant) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:142
 // index:0
-// Public
-// QVariant field(const QString &)
+// Public Visibility=Default Availability=Available
+// [16] QVariant field(const QString &)
 func (this *QWizard) Field(name *qtcore.QString) *qtcore.QVariant /*123*/ {
 	var convArg0 = name.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard5fieldERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard5fieldERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:144
 // index:0
-// Public
-// void setWizardStyle(enum QWizard::WizardStyle)
+// Public Visibility=Default Availability=Available
+// [-2] void setWizardStyle(enum QWizard::WizardStyle)
 func (this *QWizard) SetWizardStyle(style int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard14setWizardStyleENS_11WizardStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	gopp.ErrPrint(err, rv)
@@ -264,8 +261,8 @@ func (this *QWizard) SetWizardStyle(style int) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:145
 // index:0
-// Public
-// QWizard::WizardStyle wizardStyle()
+// Public Visibility=Default Availability=Available
+// [4] QWizard::WizardStyle wizardStyle()
 func (this *QWizard) WizardStyle() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard11wizardStyleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -275,8 +272,8 @@ func (this *QWizard) WizardStyle() int {
 
 // /usr/include/qt/QtWidgets/qwizard.h:147
 // index:0
-// Public
-// void setOption(enum QWizard::WizardOption, _Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setOption(enum QWizard::WizardOption, _Bool)
 func (this *QWizard) SetOption(option int, on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard9setOptionENS_12WizardOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	gopp.ErrPrint(err, rv)
@@ -284,8 +281,8 @@ func (this *QWizard) SetOption(option int, on bool) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:148
 // index:0
-// Public
-// bool testOption(enum QWizard::WizardOption)
+// Public Visibility=Default Availability=Available
+// [1] bool testOption(enum QWizard::WizardOption)
 func (this *QWizard) TestOption(option int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard10testOptionENS_12WizardOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
@@ -295,8 +292,8 @@ func (this *QWizard) TestOption(option int) bool {
 
 // /usr/include/qt/QtWidgets/qwizard.h:150
 // index:0
-// Public
-// QWizard::WizardOptions options()
+// Public Visibility=Default Availability=Available
+// [4] QWizard::WizardOptions options()
 func (this *QWizard) Options() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard7optionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -306,8 +303,8 @@ func (this *QWizard) Options() int {
 
 // /usr/include/qt/QtWidgets/qwizard.h:152
 // index:0
-// Public
-// void setButtonText(enum QWizard::WizardButton, const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void setButtonText(enum QWizard::WizardButton, const QString &)
 func (this *QWizard) SetButtonText(which int, text *qtcore.QString) {
 	var convArg1 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard13setButtonTextENS_12WizardButtonERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
@@ -316,22 +313,20 @@ func (this *QWizard) SetButtonText(which int, text *qtcore.QString) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:153
 // index:0
-// Public
-// QString buttonText(enum QWizard::WizardButton)
+// Public Visibility=Default Availability=Available
+// [8] QString buttonText(enum QWizard::WizardButton)
 func (this *QWizard) ButtonText(which int) *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard10buttonTextENS_12WizardButtonE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), which)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard10buttonTextENS_12WizardButtonE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), which)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:155
 // index:0
-// Public
-// void setButton(enum QWizard::WizardButton, QAbstractButton *)
+// Public Visibility=Default Availability=Available
+// [-2] void setButton(enum QWizard::WizardButton, QAbstractButton *)
 func (this *QWizard) SetButton(which int, button *QAbstractButton /*777 QAbstractButton **/) {
 	var convArg1 = button.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard9setButtonENS_12WizardButtonEP15QAbstractButton", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
@@ -340,8 +335,8 @@ func (this *QWizard) SetButton(which int, button *QAbstractButton /*777 QAbstrac
 
 // /usr/include/qt/QtWidgets/qwizard.h:156
 // index:0
-// Public
-// QAbstractButton * button(enum QWizard::WizardButton)
+// Public Visibility=Default Availability=Available
+// [8] QAbstractButton * button(enum QWizard::WizardButton)
 func (this *QWizard) Button(which int) *QAbstractButton /*777 QAbstractButton **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard6buttonENS_12WizardButtonE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), which)
 	gopp.ErrPrint(err, rv)
@@ -352,8 +347,8 @@ func (this *QWizard) Button(which int) *QAbstractButton /*777 QAbstractButton **
 
 // /usr/include/qt/QtWidgets/qwizard.h:158
 // index:0
-// Public
-// void setTitleFormat(Qt::TextFormat)
+// Public Visibility=Default Availability=Available
+// [-2] void setTitleFormat(Qt::TextFormat)
 func (this *QWizard) SetTitleFormat(format int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard14setTitleFormatEN2Qt10TextFormatE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	gopp.ErrPrint(err, rv)
@@ -361,8 +356,8 @@ func (this *QWizard) SetTitleFormat(format int) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:159
 // index:0
-// Public
-// Qt::TextFormat titleFormat()
+// Public Visibility=Default Availability=Available
+// [4] Qt::TextFormat titleFormat()
 func (this *QWizard) TitleFormat() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard11titleFormatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -372,8 +367,8 @@ func (this *QWizard) TitleFormat() int {
 
 // /usr/include/qt/QtWidgets/qwizard.h:160
 // index:0
-// Public
-// void setSubTitleFormat(Qt::TextFormat)
+// Public Visibility=Default Availability=Available
+// [-2] void setSubTitleFormat(Qt::TextFormat)
 func (this *QWizard) SetSubTitleFormat(format int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard17setSubTitleFormatEN2Qt10TextFormatE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	gopp.ErrPrint(err, rv)
@@ -381,8 +376,8 @@ func (this *QWizard) SetSubTitleFormat(format int) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:161
 // index:0
-// Public
-// Qt::TextFormat subTitleFormat()
+// Public Visibility=Default Availability=Available
+// [4] Qt::TextFormat subTitleFormat()
 func (this *QWizard) SubTitleFormat() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard14subTitleFormatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -392,8 +387,8 @@ func (this *QWizard) SubTitleFormat() int {
 
 // /usr/include/qt/QtWidgets/qwizard.h:162
 // index:0
-// Public
-// void setPixmap(enum QWizard::WizardPixmap, const QPixmap &)
+// Public Visibility=Default Availability=Available
+// [-2] void setPixmap(enum QWizard::WizardPixmap, const QPixmap &)
 func (this *QWizard) SetPixmap(which int, pixmap *qtgui.QPixmap) {
 	var convArg1 = pixmap.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard9setPixmapENS_12WizardPixmapERK7QPixmap", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), which, convArg1)
@@ -402,22 +397,20 @@ func (this *QWizard) SetPixmap(which int, pixmap *qtgui.QPixmap) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:163
 // index:0
-// Public
-// QPixmap pixmap(enum QWizard::WizardPixmap)
+// Public Visibility=Default Availability=Available
+// [32] QPixmap pixmap(enum QWizard::WizardPixmap)
 func (this *QWizard) Pixmap(which int) *qtgui.QPixmap /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard6pixmapENS_12WizardPixmapE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), which)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard6pixmapENS_12WizardPixmapE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), which)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:165
 // index:0
-// Public
-// void setSideWidget(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void setSideWidget(QWidget *)
 func (this *QWizard) SetSideWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard13setSideWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -426,8 +419,8 @@ func (this *QWizard) SetSideWidget(widget *QWidget /*777 QWidget **/) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:166
 // index:0
-// Public
-// QWidget * sideWidget()
+// Public Visibility=Default Availability=Available
+// [8] QWidget * sideWidget()
 func (this *QWizard) SideWidget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard10sideWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -438,8 +431,8 @@ func (this *QWizard) SideWidget() *QWidget /*777 QWidget **/ {
 
 // /usr/include/qt/QtWidgets/qwizard.h:168
 // index:0
-// Public
-// void setDefaultProperty(const char *, const char *, const char *)
+// Public Visibility=Default Availability=Available
+// [-2] void setDefaultProperty(const char *, const char *, const char *)
 func (this *QWizard) SetDefaultProperty(className string, property string, changedSignal string) {
 	var convArg0 = qtrt.CString(className)
 	defer qtrt.FreeMem(convArg0)
@@ -453,8 +446,8 @@ func (this *QWizard) SetDefaultProperty(className string, property string, chang
 
 // /usr/include/qt/QtWidgets/qwizard.h:171
 // index:0
-// Public virtual
-// void setVisible(_Bool)
+// Public virtual Visibility=Default Availability=Available
+// [-2] void setVisible(_Bool)
 func (this *QWizard) SetVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
@@ -462,22 +455,20 @@ func (this *QWizard) SetVisible(visible bool) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:172
 // index:0
-// Public virtual
-// QSize sizeHint()
+// Public virtual Visibility=Default Availability=Available
+// [8] QSize sizeHint()
 func (this *QWizard) SizeHint() *qtcore.QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK7QWizard8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWizard8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:175
 // index:0
-// Public
-// void currentIdChanged(int)
+// Public Visibility=Default Availability=Available
+// [-2] void currentIdChanged(int)
 func (this *QWizard) CurrentIdChanged(id int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard16currentIdChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)
@@ -485,8 +476,8 @@ func (this *QWizard) CurrentIdChanged(id int) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:176
 // index:0
-// Public
-// void helpRequested()
+// Public Visibility=Default Availability=Available
+// [-2] void helpRequested()
 func (this *QWizard) HelpRequested() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard13helpRequestedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -494,8 +485,8 @@ func (this *QWizard) HelpRequested() {
 
 // /usr/include/qt/QtWidgets/qwizard.h:177
 // index:0
-// Public
-// void customButtonClicked(int)
+// Public Visibility=Default Availability=Available
+// [-2] void customButtonClicked(int)
 func (this *QWizard) CustomButtonClicked(which int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard19customButtonClickedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), which)
 	gopp.ErrPrint(err, rv)
@@ -503,8 +494,8 @@ func (this *QWizard) CustomButtonClicked(which int) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:178
 // index:0
-// Public
-// void pageAdded(int)
+// Public Visibility=Default Availability=Available
+// [-2] void pageAdded(int)
 func (this *QWizard) PageAdded(id int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard9pageAddedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)
@@ -512,8 +503,8 @@ func (this *QWizard) PageAdded(id int) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:179
 // index:0
-// Public
-// void pageRemoved(int)
+// Public Visibility=Default Availability=Available
+// [-2] void pageRemoved(int)
 func (this *QWizard) PageRemoved(id int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard11pageRemovedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)
@@ -521,8 +512,8 @@ func (this *QWizard) PageRemoved(id int) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:182
 // index:0
-// Public
-// void back()
+// Public Visibility=Default Availability=Available
+// [-2] void back()
 func (this *QWizard) Back() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard4backEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -530,8 +521,8 @@ func (this *QWizard) Back() {
 
 // /usr/include/qt/QtWidgets/qwizard.h:183
 // index:0
-// Public
-// void next()
+// Public Visibility=Default Availability=Available
+// [-2] void next()
 func (this *QWizard) Next() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard4nextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -539,8 +530,8 @@ func (this *QWizard) Next() {
 
 // /usr/include/qt/QtWidgets/qwizard.h:184
 // index:0
-// Public
-// void restart()
+// Public Visibility=Default Availability=Available
+// [-2] void restart()
 func (this *QWizard) Restart() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard7restartEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -548,8 +539,8 @@ func (this *QWizard) Restart() {
 
 // /usr/include/qt/QtWidgets/qwizard.h:187
 // index:0
-// Protected virtual
-// bool event(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 func (this *QWizard) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -560,8 +551,8 @@ func (this *QWizard) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 
 // /usr/include/qt/QtWidgets/qwizard.h:188
 // index:0
-// Protected virtual
-// void resizeEvent(QResizeEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void resizeEvent(QResizeEvent *)
 func (this *QWizard) ResizeEvent(event *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -570,8 +561,8 @@ func (this *QWizard) ResizeEvent(event *qtgui.QResizeEvent /*777 QResizeEvent **
 
 // /usr/include/qt/QtWidgets/qwizard.h:189
 // index:0
-// Protected virtual
-// void paintEvent(QPaintEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void paintEvent(QPaintEvent *)
 func (this *QWizard) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -580,8 +571,8 @@ func (this *QWizard) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent **/) 
 
 // /usr/include/qt/QtWidgets/qwizard.h:193
 // index:0
-// Protected virtual
-// void done(int)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void done(int)
 func (this *QWizard) Done(result int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard4doneEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), result)
 	gopp.ErrPrint(err, rv)
@@ -589,8 +580,8 @@ func (this *QWizard) Done(result int) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:194
 // index:0
-// Protected virtual
-// void initializePage(int)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void initializePage(int)
 func (this *QWizard) InitializePage(id int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard14initializePageEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)
@@ -598,8 +589,8 @@ func (this *QWizard) InitializePage(id int) {
 
 // /usr/include/qt/QtWidgets/qwizard.h:195
 // index:0
-// Protected virtual
-// void cleanupPage(int)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void cleanupPage(int)
 func (this *QWizard) CleanupPage(id int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard11cleanupPageEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)

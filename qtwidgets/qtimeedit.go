@@ -76,8 +76,8 @@ func (*QTimeEdit) NewFromPointer(cthis unsafe.Pointer) *QTimeEdit {
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:204
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QTimeEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeEdit10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,35 +88,33 @@ func (this *QTimeEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:207
 // index:0
-// Public
-// void QTimeEdit(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void QTimeEdit(QWidget *)
 func NewQTimeEdit(parent *QWidget /*777 QWidget **/) *QTimeEdit {
-	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeEditC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeEditC2EP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQTimeEditFromPointer(cthis)
+	gothis := NewQTimeEditFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:208
 // index:1
-// Public
-// void QTimeEdit(const QTime &, QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void QTimeEdit(const QTime &, QWidget *)
 func NewQTimeEdit_1(time *qtcore.QTime, parent *QWidget /*777 QWidget **/) *QTimeEdit {
-	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = time.GetCthis()
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeEditC2ERK5QTimeP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeEditC2ERK5QTimeP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQTimeEditFromPointer(cthis)
+	gothis := NewQTimeEditFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:209
 // index:0
-// Public virtual
-// void ~QTimeEdit()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QTimeEdit()
 func DeleteQTimeEdit(*QTimeEdit) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeEditD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -124,8 +122,8 @@ func DeleteQTimeEdit(*QTimeEdit) {
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:212
 // index:0
-// Public
-// void userTimeChanged(const QTime &)
+// Public Visibility=Default Availability=Available
+// [-2] void userTimeChanged(const QTime &)
 func (this *QTimeEdit) UserTimeChanged(time *qtcore.QTime) {
 	var convArg0 = time.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeEdit15userTimeChangedERK5QTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -76,8 +76,8 @@ func (*QAbstractItemDelegate) NewFromPointer(cthis unsafe.Pointer) *QAbstractIte
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:60
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QAbstractItemDelegate) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QAbstractItemDelegate10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,21 +88,20 @@ func (this *QAbstractItemDelegate) MetaObject() *qtcore.QMetaObject /*777 const 
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:72
 // index:0
-// Public
-// void QAbstractItemDelegate(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QAbstractItemDelegate(QObject *)
 func NewQAbstractItemDelegate(parent *qtcore.QObject /*777 QObject **/) *QAbstractItemDelegate {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractItemDelegateC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractItemDelegateC1EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQAbstractItemDelegateFromPointer(cthis)
+	gothis := NewQAbstractItemDelegateFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:73
 // index:0
-// Public virtual
-// void ~QAbstractItemDelegate()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QAbstractItemDelegate()
 func DeleteQAbstractItemDelegate(*QAbstractItemDelegate) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractItemDelegateD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -110,8 +109,8 @@ func DeleteQAbstractItemDelegate(*QAbstractItemDelegate) {
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:76
 // index:0
-// Public pure virtual
-// void paint(QPainter *, const QStyleOptionViewItem &, const QModelIndex &)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [-2] void paint(QPainter *, const QStyleOptionViewItem &, const QModelIndex &)
 func (this *QAbstractItemDelegate) Paint(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, index *qtcore.QModelIndex) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = option.GetCthis()
@@ -122,24 +121,22 @@ func (this *QAbstractItemDelegate) Paint(painter *qtgui.QPainter /*777 QPainter 
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:80
 // index:0
-// Public pure virtual
-// QSize sizeHint(const QStyleOptionViewItem &, const QModelIndex &)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QSize sizeHint(const QStyleOptionViewItem &, const QModelIndex &)
 func (this *QAbstractItemDelegate) SizeHint(option *QStyleOptionViewItem, index *qtcore.QModelIndex) *qtcore.QSize /*123*/ {
 	var convArg0 = option.GetCthis()
 	var convArg1 = index.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK21QAbstractItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QAbstractItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:84
 // index:0
-// Public virtual
-// QWidget * createEditor(QWidget *, const QStyleOptionViewItem &, const QModelIndex &)
+// Public virtual Visibility=Default Availability=Available
+// [8] QWidget * createEditor(QWidget *, const QStyleOptionViewItem &, const QModelIndex &)
 func (this *QAbstractItemDelegate) CreateEditor(parent *QWidget /*777 QWidget **/, option *QStyleOptionViewItem, index *qtcore.QModelIndex) *QWidget /*777 QWidget **/ {
 	var convArg0 = parent.GetCthis()
 	var convArg1 = option.GetCthis()
@@ -153,8 +150,8 @@ func (this *QAbstractItemDelegate) CreateEditor(parent *QWidget /*777 QWidget **
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:88
 // index:0
-// Public virtual
-// void destroyEditor(QWidget *, const QModelIndex &)
+// Public virtual Visibility=Default Availability=Available
+// [-2] void destroyEditor(QWidget *, const QModelIndex &)
 func (this *QAbstractItemDelegate) DestroyEditor(editor *QWidget /*777 QWidget **/, index *qtcore.QModelIndex) {
 	var convArg0 = editor.GetCthis()
 	var convArg1 = index.GetCthis()
@@ -164,8 +161,8 @@ func (this *QAbstractItemDelegate) DestroyEditor(editor *QWidget /*777 QWidget *
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:90
 // index:0
-// Public virtual
-// void setEditorData(QWidget *, const QModelIndex &)
+// Public virtual Visibility=Default Availability=Available
+// [-2] void setEditorData(QWidget *, const QModelIndex &)
 func (this *QAbstractItemDelegate) SetEditorData(editor *QWidget /*777 QWidget **/, index *qtcore.QModelIndex) {
 	var convArg0 = editor.GetCthis()
 	var convArg1 = index.GetCthis()
@@ -175,8 +172,8 @@ func (this *QAbstractItemDelegate) SetEditorData(editor *QWidget /*777 QWidget *
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:92
 // index:0
-// Public virtual
-// void setModelData(QWidget *, QAbstractItemModel *, const QModelIndex &)
+// Public virtual Visibility=Default Availability=Available
+// [-2] void setModelData(QWidget *, QAbstractItemModel *, const QModelIndex &)
 func (this *QAbstractItemDelegate) SetModelData(editor *QWidget /*777 QWidget **/, model *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/, index *qtcore.QModelIndex) {
 	var convArg0 = editor.GetCthis()
 	var convArg1 = model.GetCthis()
@@ -187,8 +184,8 @@ func (this *QAbstractItemDelegate) SetModelData(editor *QWidget /*777 QWidget **
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:96
 // index:0
-// Public virtual
-// void updateEditorGeometry(QWidget *, const QStyleOptionViewItem &, const QModelIndex &)
+// Public virtual Visibility=Default Availability=Available
+// [-2] void updateEditorGeometry(QWidget *, const QStyleOptionViewItem &, const QModelIndex &)
 func (this *QAbstractItemDelegate) UpdateEditorGeometry(editor *QWidget /*777 QWidget **/, option *QStyleOptionViewItem, index *qtcore.QModelIndex) {
 	var convArg0 = editor.GetCthis()
 	var convArg1 = option.GetCthis()
@@ -199,8 +196,8 @@ func (this *QAbstractItemDelegate) UpdateEditorGeometry(editor *QWidget /*777 QW
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:101
 // index:0
-// Public virtual
-// bool editorEvent(QEvent *, QAbstractItemModel *, const QStyleOptionViewItem &, const QModelIndex &)
+// Public virtual Visibility=Default Availability=Available
+// [1] bool editorEvent(QEvent *, QAbstractItemModel *, const QStyleOptionViewItem &, const QModelIndex &)
 func (this *QAbstractItemDelegate) EditorEvent(event *qtcore.QEvent /*777 QEvent **/, model *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/, option *QStyleOptionViewItem, index *qtcore.QModelIndex) bool {
 	var convArg0 = event.GetCthis()
 	var convArg1 = model.GetCthis()
@@ -214,8 +211,8 @@ func (this *QAbstractItemDelegate) EditorEvent(event *qtcore.QEvent /*777 QEvent
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:106
 // index:0
-// Public static
-// QString elidedText(const QFontMetrics &, int, Qt::TextElideMode, const QString &)
+// Public static Visibility=Default Availability=Available
+// [8] QString elidedText(const QFontMetrics &, int, Qt::TextElideMode, const QString &)
 func (this *QAbstractItemDelegate) ElidedText(fontMetrics *qtgui.QFontMetrics, width int, mode int, text *qtcore.QString) *qtcore.QString /*123*/ {
 	var convArg0 = fontMetrics.GetCthis()
 	var convArg3 = text.GetCthis()
@@ -233,8 +230,8 @@ func QAbstractItemDelegate_ElidedText(fontMetrics *qtgui.QFontMetrics, width int
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:109
 // index:0
-// Public virtual
-// bool helpEvent(QHelpEvent *, QAbstractItemView *, const QStyleOptionViewItem &, const QModelIndex &)
+// Public virtual Visibility=Default Availability=Available
+// [1] bool helpEvent(QHelpEvent *, QAbstractItemView *, const QStyleOptionViewItem &, const QModelIndex &)
 func (this *QAbstractItemDelegate) HelpEvent(event *qtgui.QHelpEvent /*777 QHelpEvent **/, view *QAbstractItemView /*777 QAbstractItemView **/, option *QStyleOptionViewItem, index *qtcore.QModelIndex) bool {
 	var convArg0 = event.GetCthis()
 	var convArg1 = view.GetCthis()
@@ -248,8 +245,8 @@ func (this *QAbstractItemDelegate) HelpEvent(event *qtgui.QHelpEvent /*777 QHelp
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:117
 // index:0
-// Public
-// void commitData(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void commitData(QWidget *)
 func (this *QAbstractItemDelegate) CommitData(editor *QWidget /*777 QWidget **/) {
 	var convArg0 = editor.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractItemDelegate10commitDataEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -258,8 +255,8 @@ func (this *QAbstractItemDelegate) CommitData(editor *QWidget /*777 QWidget **/)
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:118
 // index:0
-// Public
-// void closeEditor(QWidget *, QAbstractItemDelegate::EndEditHint)
+// Public Visibility=Default Availability=Available
+// [-2] void closeEditor(QWidget *, QAbstractItemDelegate::EndEditHint)
 func (this *QAbstractItemDelegate) CloseEditor(editor *QWidget /*777 QWidget **/, hint int) {
 	var convArg0 = editor.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractItemDelegate11closeEditorEP7QWidgetNS_11EndEditHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, hint)
@@ -268,8 +265,8 @@ func (this *QAbstractItemDelegate) CloseEditor(editor *QWidget /*777 QWidget **/
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:119
 // index:0
-// Public
-// void sizeHintChanged(const QModelIndex &)
+// Public Visibility=Default Availability=Available
+// [-2] void sizeHintChanged(const QModelIndex &)
 func (this *QAbstractItemDelegate) SizeHintChanged(arg0 *qtcore.QModelIndex) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractItemDelegate15sizeHintChangedERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

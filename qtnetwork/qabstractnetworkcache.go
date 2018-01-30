@@ -72,8 +72,8 @@ func (*QAbstractNetworkCache) NewFromPointer(cthis unsafe.Pointer) *QAbstractNet
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:116
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QAbstractNetworkCache) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QAbstractNetworkCache10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -84,8 +84,8 @@ func (this *QAbstractNetworkCache) MetaObject() *qtcore.QMetaObject /*777 const 
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:119
 // index:0
-// Public virtual
-// void ~QAbstractNetworkCache()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QAbstractNetworkCache()
 func DeleteQAbstractNetworkCache(*QAbstractNetworkCache) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractNetworkCacheD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -93,23 +93,21 @@ func DeleteQAbstractNetworkCache(*QAbstractNetworkCache) {
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:121
 // index:0
-// Public pure virtual
-// QNetworkCacheMetaData metaData(const QUrl &)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QNetworkCacheMetaData metaData(const QUrl &)
 func (this *QAbstractNetworkCache) MetaData(url *qtcore.QUrl) *QNetworkCacheMetaData /*123*/ {
 	var convArg0 = url.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractNetworkCache8metaDataERK4QUrl", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractNetworkCache8metaDataERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQNetworkCacheMetaDataFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:122
 // index:0
-// Public pure virtual
-// void updateMetaData(const QNetworkCacheMetaData &)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [-2] void updateMetaData(const QNetworkCacheMetaData &)
 func (this *QAbstractNetworkCache) UpdateMetaData(metaData *QNetworkCacheMetaData) {
 	var convArg0 = metaData.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractNetworkCache14updateMetaDataERK21QNetworkCacheMetaData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -118,8 +116,8 @@ func (this *QAbstractNetworkCache) UpdateMetaData(metaData *QNetworkCacheMetaDat
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:123
 // index:0
-// Public pure virtual
-// QIODevice * data(const QUrl &)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QIODevice * data(const QUrl &)
 func (this *QAbstractNetworkCache) Data(url *qtcore.QUrl) *qtcore.QIODevice /*777 QIODevice **/ {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractNetworkCache4dataERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -131,8 +129,8 @@ func (this *QAbstractNetworkCache) Data(url *qtcore.QUrl) *qtcore.QIODevice /*77
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:124
 // index:0
-// Public pure virtual
-// bool remove(const QUrl &)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [1] bool remove(const QUrl &)
 func (this *QAbstractNetworkCache) Remove(url *qtcore.QUrl) bool {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractNetworkCache6removeERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -143,8 +141,8 @@ func (this *QAbstractNetworkCache) Remove(url *qtcore.QUrl) bool {
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:125
 // index:0
-// Public pure virtual
-// qint64 cacheSize()
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] qint64 cacheSize()
 func (this *QAbstractNetworkCache) CacheSize() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QAbstractNetworkCache9cacheSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -154,8 +152,8 @@ func (this *QAbstractNetworkCache) CacheSize() int64 {
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:127
 // index:0
-// Public pure virtual
-// QIODevice * prepare(const QNetworkCacheMetaData &)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QIODevice * prepare(const QNetworkCacheMetaData &)
 func (this *QAbstractNetworkCache) Prepare(metaData *QNetworkCacheMetaData) *qtcore.QIODevice /*777 QIODevice **/ {
 	var convArg0 = metaData.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractNetworkCache7prepareERK21QNetworkCacheMetaData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -167,8 +165,8 @@ func (this *QAbstractNetworkCache) Prepare(metaData *QNetworkCacheMetaData) *qtc
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:131
 // index:0
-// Public pure virtual
-// void clear()
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [-2] void clear()
 func (this *QAbstractNetworkCache) Clear() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractNetworkCache5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -176,14 +174,13 @@ func (this *QAbstractNetworkCache) Clear() {
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:134
 // index:0
-// Protected
-// void QAbstractNetworkCache(QObject *)
+// Protected Visibility=Default Availability=Available
+// [-2] void QAbstractNetworkCache(QObject *)
 func NewQAbstractNetworkCache(parent *qtcore.QObject /*777 QObject **/) *QAbstractNetworkCache {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractNetworkCacheC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractNetworkCacheC1EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQAbstractNetworkCacheFromPointer(cthis)
+	gothis := NewQAbstractNetworkCacheFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

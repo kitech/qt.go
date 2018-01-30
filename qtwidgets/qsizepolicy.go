@@ -75,32 +75,30 @@ func (*QSizePolicy) NewFromPointer(cthis unsafe.Pointer) *QSizePolicy {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:113
 // index:0
-// Public inline
-// void QSizePolicy()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QSizePolicy()
 func NewQSizePolicy() *QSizePolicy {
-	cthis := qtrt.Calloc(1, 256) // 4
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicyC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicyC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSizePolicyFromPointer(cthis)
+	gothis := NewQSizePolicyFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:116
 // index:1
-// Public inline
-// void QSizePolicy(enum QSizePolicy::Policy, enum QSizePolicy::Policy, enum QSizePolicy::ControlType)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QSizePolicy(enum QSizePolicy::Policy, enum QSizePolicy::Policy, enum QSizePolicy::ControlType)
 func NewQSizePolicy_1(horizontal int, vertical int, type_ int) *QSizePolicy {
-	cthis := qtrt.Calloc(1, 256) // 4
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicyC2ENS_6PolicyES0_NS_11ControlTypeE", ffiqt.FFI_TYPE_VOID, cthis, horizontal, vertical, type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicyC2ENS_6PolicyES0_NS_11ControlTypeE", ffiqt.FFI_TYPE_POINTER, horizontal, vertical, type_)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSizePolicyFromPointer(cthis)
+	gothis := NewQSizePolicyFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:128
 // index:0
-// Public inline
-// QSizePolicy::Policy horizontalPolicy()
+// Public inline Visibility=Default Availability=Available
+// [4] QSizePolicy::Policy horizontalPolicy()
 func (this *QSizePolicy) HorizontalPolicy() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy16horizontalPolicyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -110,8 +108,8 @@ func (this *QSizePolicy) HorizontalPolicy() int {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:129
 // index:0
-// Public inline
-// QSizePolicy::Policy verticalPolicy()
+// Public inline Visibility=Default Availability=Available
+// [4] QSizePolicy::Policy verticalPolicy()
 func (this *QSizePolicy) VerticalPolicy() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy14verticalPolicyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -121,8 +119,8 @@ func (this *QSizePolicy) VerticalPolicy() int {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:130
 // index:0
-// Public
-// QSizePolicy::ControlType controlType()
+// Public Visibility=Default Availability=Available
+// [4] QSizePolicy::ControlType controlType()
 func (this *QSizePolicy) ControlType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy11controlTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -132,8 +130,8 @@ func (this *QSizePolicy) ControlType() int {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:132
 // index:0
-// Public inline
-// void setHorizontalPolicy(enum QSizePolicy::Policy)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setHorizontalPolicy(enum QSizePolicy::Policy)
 func (this *QSizePolicy) SetHorizontalPolicy(d int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy19setHorizontalPolicyENS_6PolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), d)
 	gopp.ErrPrint(err, rv)
@@ -141,8 +139,8 @@ func (this *QSizePolicy) SetHorizontalPolicy(d int) {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:133
 // index:0
-// Public inline
-// void setVerticalPolicy(enum QSizePolicy::Policy)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setVerticalPolicy(enum QSizePolicy::Policy)
 func (this *QSizePolicy) SetVerticalPolicy(d int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy17setVerticalPolicyENS_6PolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), d)
 	gopp.ErrPrint(err, rv)
@@ -150,8 +148,8 @@ func (this *QSizePolicy) SetVerticalPolicy(d int) {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:134
 // index:0
-// Public
-// void setControlType(enum QSizePolicy::ControlType)
+// Public Visibility=Default Availability=Available
+// [-2] void setControlType(enum QSizePolicy::ControlType)
 func (this *QSizePolicy) SetControlType(type_ int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy14setControlTypeENS_11ControlTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
@@ -159,8 +157,8 @@ func (this *QSizePolicy) SetControlType(type_ int) {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:136
 // index:0
-// Public inline
-// Qt::Orientations expandingDirections()
+// Public inline Visibility=Default Availability=Available
+// [4] Qt::Orientations expandingDirections()
 func (this *QSizePolicy) ExpandingDirections() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy19expandingDirectionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -170,8 +168,8 @@ func (this *QSizePolicy) ExpandingDirections() int {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:141
 // index:0
-// Public inline
-// void setHeightForWidth(_Bool)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setHeightForWidth(_Bool)
 func (this *QSizePolicy) SetHeightForWidth(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy17setHeightForWidthEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -179,8 +177,8 @@ func (this *QSizePolicy) SetHeightForWidth(b bool) {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:142
 // index:0
-// Public inline
-// bool hasHeightForWidth()
+// Public inline Visibility=Default Availability=Available
+// [1] bool hasHeightForWidth()
 func (this *QSizePolicy) HasHeightForWidth() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy17hasHeightForWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -190,8 +188,8 @@ func (this *QSizePolicy) HasHeightForWidth() bool {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:143
 // index:0
-// Public inline
-// void setWidthForHeight(_Bool)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setWidthForHeight(_Bool)
 func (this *QSizePolicy) SetWidthForHeight(b bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy17setWidthForHeightEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
@@ -199,8 +197,8 @@ func (this *QSizePolicy) SetWidthForHeight(b bool) {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:144
 // index:0
-// Public inline
-// bool hasWidthForHeight()
+// Public inline Visibility=Default Availability=Available
+// [1] bool hasWidthForHeight()
 func (this *QSizePolicy) HasWidthForHeight() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy17hasWidthForHeightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -210,8 +208,8 @@ func (this *QSizePolicy) HasWidthForHeight() bool {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:153
 // index:0
-// Public inline
-// int horizontalStretch()
+// Public inline Visibility=Default Availability=Available
+// [4] int horizontalStretch()
 func (this *QSizePolicy) HorizontalStretch() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy17horizontalStretchEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -221,8 +219,8 @@ func (this *QSizePolicy) HorizontalStretch() int {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:154
 // index:0
-// Public inline
-// int verticalStretch()
+// Public inline Visibility=Default Availability=Available
+// [4] int verticalStretch()
 func (this *QSizePolicy) VerticalStretch() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy15verticalStretchEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -232,8 +230,8 @@ func (this *QSizePolicy) VerticalStretch() int {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:155
 // index:0
-// Public inline
-// void setHorizontalStretch(int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setHorizontalStretch(int)
 func (this *QSizePolicy) SetHorizontalStretch(stretchFactor int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy20setHorizontalStretchEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), stretchFactor)
 	gopp.ErrPrint(err, rv)
@@ -241,8 +239,8 @@ func (this *QSizePolicy) SetHorizontalStretch(stretchFactor int) {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:156
 // index:0
-// Public inline
-// void setVerticalStretch(int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setVerticalStretch(int)
 func (this *QSizePolicy) SetVerticalStretch(stretchFactor int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy18setVerticalStretchEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), stretchFactor)
 	gopp.ErrPrint(err, rv)
@@ -250,8 +248,8 @@ func (this *QSizePolicy) SetVerticalStretch(stretchFactor int) {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:158
 // index:0
-// Public inline
-// bool retainSizeWhenHidden()
+// Public inline Visibility=Default Availability=Available
+// [1] bool retainSizeWhenHidden()
 func (this *QSizePolicy) RetainSizeWhenHidden() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy20retainSizeWhenHiddenEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -261,8 +259,8 @@ func (this *QSizePolicy) RetainSizeWhenHidden() bool {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:159
 // index:0
-// Public inline
-// void setRetainSizeWhenHidden(_Bool)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setRetainSizeWhenHidden(_Bool)
 func (this *QSizePolicy) SetRetainSizeWhenHidden(retainSize bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy23setRetainSizeWhenHiddenEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), retainSize)
 	gopp.ErrPrint(err, rv)
@@ -270,8 +268,8 @@ func (this *QSizePolicy) SetRetainSizeWhenHidden(retainSize bool) {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:161
 // index:0
-// Public inline
-// void transpose()
+// Public inline Visibility=Default Availability=Available
+// [-2] void transpose()
 func (this *QSizePolicy) Transpose() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicy9transposeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -279,14 +277,12 @@ func (this *QSizePolicy) Transpose() {
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:166
 // index:0
-// Public inline
-// QSizePolicy transposed()
+// Public inline Visibility=Default Availability=Available
+// [4] QSizePolicy transposed()
 func (this *QSizePolicy) Transposed() *QSizePolicy /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy10transposedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSizePolicy10transposedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQSizePolicyFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

@@ -75,8 +75,8 @@ func (*QPaintDeviceWindow) NewFromPointer(cthis unsafe.Pointer) *QPaintDeviceWin
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:54
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QPaintDeviceWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QPaintDeviceWindow10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -87,8 +87,8 @@ func (this *QPaintDeviceWindow) MetaObject() *qtcore.QMetaObject /*777 const QMe
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:58
 // index:0
-// Public
-// void update(const QRect &)
+// Public Visibility=Default Availability=Available
+// [-2] void update(const QRect &)
 func (this *QPaintDeviceWindow) Update(rect *qtcore.QRect) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow6updateERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -97,8 +97,8 @@ func (this *QPaintDeviceWindow) Update(rect *qtcore.QRect) {
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:59
 // index:1
-// Public
-// void update(const QRegion &)
+// Public Visibility=Default Availability=Available
+// [-2] void update(const QRegion &)
 func (this *QPaintDeviceWindow) Update_1(region *QRegion) {
 	var convArg0 = region.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow6updateERK7QRegion", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -107,8 +107,8 @@ func (this *QPaintDeviceWindow) Update_1(region *QRegion) {
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:66
 // index:2
-// Public
-// void update()
+// Public Visibility=Default Availability=Available
+// [-2] void update()
 func (this *QPaintDeviceWindow) Update_2() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow6updateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -116,8 +116,8 @@ func (this *QPaintDeviceWindow) Update_2() {
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:69
 // index:0
-// Protected virtual
-// void paintEvent(QPaintEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void paintEvent(QPaintEvent *)
 func (this *QPaintDeviceWindow) PaintEvent(event *QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -126,8 +126,8 @@ func (this *QPaintDeviceWindow) PaintEvent(event *QPaintEvent /*777 QPaintEvent 
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:71
 // index:0
-// Protected virtual
-// int metric(enum QPaintDevice::PaintDeviceMetric)
+// Protected virtual Visibility=Default Availability=Available
+// [4] int metric(enum QPaintDevice::PaintDeviceMetric)
 func (this *QPaintDeviceWindow) Metric(metric int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QPaintDeviceWindow6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), metric)
 	gopp.ErrPrint(err, rv)
@@ -137,8 +137,8 @@ func (this *QPaintDeviceWindow) Metric(metric int) int {
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:72
 // index:0
-// Protected virtual
-// void exposeEvent(QExposeEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void exposeEvent(QExposeEvent *)
 func (this *QPaintDeviceWindow) ExposeEvent(arg0 *QExposeEvent /*777 QExposeEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow11exposeEventEP12QExposeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -147,8 +147,8 @@ func (this *QPaintDeviceWindow) ExposeEvent(arg0 *QExposeEvent /*777 QExposeEven
 
 // /usr/include/qt/QtGui/qpaintdevicewindow.h:73
 // index:0
-// Protected virtual
-// bool event(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 func (this *QPaintDeviceWindow) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindow5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

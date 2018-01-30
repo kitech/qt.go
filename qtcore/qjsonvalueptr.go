@@ -67,14 +67,13 @@ func (*QJsonValuePtr) NewFromPointer(cthis unsafe.Pointer) *QJsonValuePtr {
 
 // /usr/include/qt/QtCore/qjsonvalue.h:226
 // index:0
-// Public inline
-// void QJsonValuePtr(const QJsonValue &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QJsonValuePtr(const QJsonValue &)
 func NewQJsonValuePtr(val *QJsonValue) *QJsonValuePtr {
-	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = val.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonValuePtrC2ERK10QJsonValue", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonValuePtrC2ERK10QJsonValue", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQJsonValuePtrFromPointer(cthis)
+	gothis := NewQJsonValuePtrFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

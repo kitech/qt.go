@@ -75,8 +75,8 @@ func (*QQmlTypesExtensionInterface) NewFromPointer(cthis unsafe.Pointer) *QQmlTy
 
 // /usr/include/qt/QtQml/qqmlextensioninterface.h:54
 // index:0
-// Public inline virtual
-// void ~QQmlTypesExtensionInterface()
+// Public inline virtual Visibility=Default Availability=Available
+// [-2] void ~QQmlTypesExtensionInterface()
 func DeleteQQmlTypesExtensionInterface(*QQmlTypesExtensionInterface) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QQmlTypesExtensionInterfaceD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -84,8 +84,8 @@ func DeleteQQmlTypesExtensionInterface(*QQmlTypesExtensionInterface) {
 
 // /usr/include/qt/QtQml/qqmlextensioninterface.h:55
 // index:0
-// Public pure virtual
-// void registerTypes(const char *)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [-2] void registerTypes(const char *)
 func (this *QQmlTypesExtensionInterface) RegisterTypes(uri string) {
 	var convArg0 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg0)

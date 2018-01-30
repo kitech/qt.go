@@ -67,98 +67,87 @@ func (*QXmlStreamAttributes) NewFromPointer(cthis unsafe.Pointer) *QXmlStreamAtt
 
 // /usr/include/qt/QtCore/qxmlstream.h:164
 // index:0
-// Public inline
-// void QXmlStreamAttributes()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QXmlStreamAttributes()
 func NewQXmlStreamAttributes() *QXmlStreamAttributes {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QXmlStreamAttributesC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QXmlStreamAttributesC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQXmlStreamAttributesFromPointer(cthis)
+	gothis := NewQXmlStreamAttributesFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:165
 // index:0
-// Public
-// QStringRef value(const QString &, const QString &)
+// Public Visibility=Default Availability=Available
+// [16] QStringRef value(const QString &, const QString &)
 func (this *QXmlStreamAttributes) Value(namespaceUri *QString, name *QString) *QStringRef /*123*/ {
 	var convArg0 = namespaceUri.GetCthis()
 	var convArg1 = name.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes5valueERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes5valueERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:166
 // index:1
-// Public
-// QStringRef value(const QString &, QLatin1String)
+// Public Visibility=Default Availability=Available
+// [16] QStringRef value(const QString &, QLatin1String)
 func (this *QXmlStreamAttributes) Value_1(namespaceUri *QString, name *QLatin1String /*123*/) *QStringRef /*123*/ {
 	var convArg0 = namespaceUri.GetCthis()
 	var convArg1 = name.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes5valueERK7QString13QLatin1String", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes5valueERK7QString13QLatin1String", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:167
 // index:2
-// Public
-// QStringRef value(QLatin1String, QLatin1String)
+// Public Visibility=Default Availability=Available
+// [16] QStringRef value(QLatin1String, QLatin1String)
 func (this *QXmlStreamAttributes) Value_2(namespaceUri *QLatin1String /*123*/, name *QLatin1String /*123*/) *QStringRef /*123*/ {
 	var convArg0 = namespaceUri.GetCthis()
 	var convArg1 = name.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes5valueE13QLatin1StringS0_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes5valueE13QLatin1StringS0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:168
 // index:3
-// Public
-// QStringRef value(const QString &)
+// Public Visibility=Default Availability=Available
+// [16] QStringRef value(const QString &)
 func (this *QXmlStreamAttributes) Value_3(qualifiedName *QString) *QStringRef /*123*/ {
 	var convArg0 = qualifiedName.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes5valueERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes5valueERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:169
 // index:4
-// Public
-// QStringRef value(QLatin1String)
+// Public Visibility=Default Availability=Available
+// [16] QStringRef value(QLatin1String)
 func (this *QXmlStreamAttributes) Value_4(qualifiedName *QLatin1String /*123*/) *QStringRef /*123*/ {
 	var convArg0 = qualifiedName.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes5valueE13QLatin1String", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes5valueE13QLatin1String", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:173
 // index:0
-// Public inline
-// bool hasAttribute(const QString &)
+// Public inline Visibility=Default Availability=Available
+// [1] bool hasAttribute(const QString &)
 func (this *QXmlStreamAttributes) HasAttribute(qualifiedName *QString) bool {
 	var convArg0 = qualifiedName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes12hasAttributeERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -169,8 +158,8 @@ func (this *QXmlStreamAttributes) HasAttribute(qualifiedName *QString) bool {
 
 // /usr/include/qt/QtCore/qxmlstream.h:178
 // index:1
-// Public inline
-// bool hasAttribute(QLatin1String)
+// Public inline Visibility=Default Availability=Available
+// [1] bool hasAttribute(QLatin1String)
 func (this *QXmlStreamAttributes) HasAttribute_1(qualifiedName *QLatin1String /*123*/) bool {
 	var convArg0 = qualifiedName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes12hasAttributeE13QLatin1String", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -181,8 +170,8 @@ func (this *QXmlStreamAttributes) HasAttribute_1(qualifiedName *QLatin1String /*
 
 // /usr/include/qt/QtCore/qxmlstream.h:183
 // index:2
-// Public inline
-// bool hasAttribute(const QString &, const QString &)
+// Public inline Visibility=Default Availability=Available
+// [1] bool hasAttribute(const QString &, const QString &)
 func (this *QXmlStreamAttributes) HasAttribute_2(namespaceUri *QString, name *QString) bool {
 	var convArg0 = namespaceUri.GetCthis()
 	var convArg1 = name.GetCthis()

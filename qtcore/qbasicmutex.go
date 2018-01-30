@@ -67,20 +67,19 @@ func (*QBasicMutex) NewFromPointer(cthis unsafe.Pointer) *QBasicMutex {
 
 // /usr/include/qt/QtCore/qmutex.h:71
 // index:0
-// Public inline
-// void QBasicMutex()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QBasicMutex()
 func NewQBasicMutex() *QBasicMutex {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutexC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutexC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQBasicMutexFromPointer(cthis)
+	gothis := NewQBasicMutexFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qmutex.h:77
 // index:0
-// Public inline
-// void lock()
+// Public inline Visibility=Default Availability=Available
+// [-2] void lock()
 func (this *QBasicMutex) Lock() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutex4lockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,8 +87,8 @@ func (this *QBasicMutex) Lock() {
 
 // /usr/include/qt/QtCore/qmutex.h:83
 // index:0
-// Public inline
-// void unlock()
+// Public inline Visibility=Default Availability=Available
+// [-2] void unlock()
 func (this *QBasicMutex) Unlock() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutex6unlockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -97,8 +96,8 @@ func (this *QBasicMutex) Unlock() {
 
 // /usr/include/qt/QtCore/qmutex.h:89
 // index:0
-// Public inline
-// bool tryLock()
+// Public inline Visibility=Default Availability=Available
+// [1] bool tryLock()
 func (this *QBasicMutex) TryLock() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutex7tryLockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -108,8 +107,8 @@ func (this *QBasicMutex) TryLock() bool {
 
 // /usr/include/qt/QtCore/qmutex.h:94
 // index:0
-// Public inline
-// bool try_lock()
+// Public inline Visibility=Default Availability=Available
+// [1] bool try_lock()
 func (this *QBasicMutex) Try_lock() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutex8try_lockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -119,8 +118,8 @@ func (this *QBasicMutex) Try_lock() bool {
 
 // /usr/include/qt/QtCore/qmutex.h:96
 // index:0
-// Public
-// bool isRecursive()
+// Public Visibility=Default Availability=Available
+// [1] bool isRecursive()
 func (this *QBasicMutex) IsRecursive() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutex11isRecursiveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -130,8 +129,8 @@ func (this *QBasicMutex) IsRecursive() bool {
 
 // /usr/include/qt/QtCore/qmutex.h:97
 // index:1
-// Public
-// bool isRecursive()
+// Public Visibility=Default Availability=Available
+// [1] bool isRecursive()
 func (this *QBasicMutex) IsRecursive_1() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QBasicMutex11isRecursiveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

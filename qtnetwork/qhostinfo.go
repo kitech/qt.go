@@ -71,20 +71,19 @@ func (*QHostInfo) NewFromPointer(cthis unsafe.Pointer) *QHostInfo {
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:63
 // index:0
-// Public
-// void QHostInfo(int)
+// Public Visibility=Default Availability=Available
+// [-2] void QHostInfo(int)
 func NewQHostInfo(lookupId int) *QHostInfo {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfoC2Ei", ffiqt.FFI_TYPE_VOID, cthis, lookupId)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfoC2Ei", ffiqt.FFI_TYPE_POINTER, lookupId)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQHostInfoFromPointer(cthis)
+	gothis := NewQHostInfoFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:67
 // index:0
-// Public
-// void ~QHostInfo()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QHostInfo()
 func DeleteQHostInfo(*QHostInfo) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfoD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -92,8 +91,8 @@ func DeleteQHostInfo(*QHostInfo) {
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:69
 // index:0
-// Public inline
-// void swap(QHostInfo &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QHostInfo &)
 func (this *QHostInfo) Swap(other *QHostInfo) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -102,22 +101,20 @@ func (this *QHostInfo) Swap(other *QHostInfo) {
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:71
 // index:0
-// Public
-// QString hostName()
+// Public Visibility=Default Availability=Available
+// [8] QString hostName()
 func (this *QHostInfo) HostName() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QHostInfo8hostNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QHostInfo8hostNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:72
 // index:0
-// Public
-// void setHostName(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void setHostName(const QString &)
 func (this *QHostInfo) SetHostName(name *qtcore.QString) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo11setHostNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -126,8 +123,8 @@ func (this *QHostInfo) SetHostName(name *qtcore.QString) {
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:77
 // index:0
-// Public
-// QHostInfo::HostInfoError error()
+// Public Visibility=Default Availability=Available
+// [4] QHostInfo::HostInfoError error()
 func (this *QHostInfo) Error() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QHostInfo5errorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -137,8 +134,8 @@ func (this *QHostInfo) Error() int {
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:78
 // index:0
-// Public
-// void setError(enum QHostInfo::HostInfoError)
+// Public Visibility=Default Availability=Available
+// [-2] void setError(enum QHostInfo::HostInfoError)
 func (this *QHostInfo) SetError(error int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo8setErrorENS_13HostInfoErrorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), error)
 	gopp.ErrPrint(err, rv)
@@ -146,22 +143,20 @@ func (this *QHostInfo) SetError(error int) {
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:80
 // index:0
-// Public
-// QString errorString()
+// Public Visibility=Default Availability=Available
+// [8] QString errorString()
 func (this *QHostInfo) ErrorString() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QHostInfo11errorStringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QHostInfo11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:81
 // index:0
-// Public
-// void setErrorString(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void setErrorString(const QString &)
 func (this *QHostInfo) SetErrorString(errorString *qtcore.QString) {
 	var convArg0 = errorString.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo14setErrorStringERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -170,8 +165,8 @@ func (this *QHostInfo) SetErrorString(errorString *qtcore.QString) {
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:83
 // index:0
-// Public
-// void setLookupId(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setLookupId(int)
 func (this *QHostInfo) SetLookupId(id int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo11setLookupIdEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)
@@ -179,8 +174,8 @@ func (this *QHostInfo) SetLookupId(id int) {
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:84
 // index:0
-// Public
-// int lookupId()
+// Public Visibility=Default Availability=Available
+// [4] int lookupId()
 func (this *QHostInfo) LookupId() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QHostInfo8lookupIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -190,8 +185,8 @@ func (this *QHostInfo) LookupId() int {
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:86
 // index:0
-// Public static
-// int lookupHost(const QString &, QObject *, const char *)
+// Public static Visibility=Default Availability=Available
+// [4] int lookupHost(const QString &, QObject *, const char *)
 func (this *QHostInfo) LookupHost(name *qtcore.QString, receiver *qtcore.QObject /*777 QObject **/, member string) int {
 	var convArg0 = name.GetCthis()
 	var convArg1 = receiver.GetCthis()
@@ -210,8 +205,8 @@ func QHostInfo_LookupHost(name *qtcore.QString, receiver *qtcore.QObject /*777 Q
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:87
 // index:0
-// Public static
-// void abortHostLookup(int)
+// Public static Visibility=Default Availability=Available
+// [-2] void abortHostLookup(int)
 func (this *QHostInfo) AbortHostLookup(lookupId int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo15abortHostLookupEi", ffiqt.FFI_TYPE_POINTER, lookupId)
 	gopp.ErrPrint(err, rv)
@@ -223,8 +218,8 @@ func QHostInfo_AbortHostLookup(lookupId int) {
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:89
 // index:0
-// Public static
-// QHostInfo fromName(const QString &)
+// Public static Visibility=Default Availability=Available
+// [8] QHostInfo fromName(const QString &)
 func (this *QHostInfo) FromName(name *qtcore.QString) *QHostInfo /*123*/ {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo8fromNameERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -241,8 +236,8 @@ func QHostInfo_FromName(name *qtcore.QString) *QHostInfo /*123*/ {
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:90
 // index:0
-// Public static
-// QString localHostName()
+// Public static Visibility=Default Availability=Available
+// [8] QString localHostName()
 func (this *QHostInfo) LocalHostName() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo13localHostNameEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -258,8 +253,8 @@ func QHostInfo_LocalHostName() *qtcore.QString /*123*/ {
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:91
 // index:0
-// Public static
-// QString localDomainName()
+// Public static Visibility=Default Availability=Available
+// [8] QString localDomainName()
 func (this *QHostInfo) LocalDomainName() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHostInfo15localDomainNameEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)

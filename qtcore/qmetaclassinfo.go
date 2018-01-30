@@ -67,20 +67,19 @@ func (*QMetaClassInfo) NewFromPointer(cthis unsafe.Pointer) *QMetaClassInfo {
 
 // /usr/include/qt/QtCore/qmetaobject.h:303
 // index:0
-// Public inline
-// void QMetaClassInfo()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QMetaClassInfo()
 func NewQMetaClassInfo() *QMetaClassInfo {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMetaClassInfoC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMetaClassInfoC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQMetaClassInfoFromPointer(cthis)
+	gothis := NewQMetaClassInfoFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:304
 // index:0
-// Public
-// const char * name()
+// Public Visibility=Default Availability=Available
+// [8] const char * name()
 func (this *QMetaClassInfo) Name() string {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -90,8 +89,8 @@ func (this *QMetaClassInfo) Name() string {
 
 // /usr/include/qt/QtCore/qmetaobject.h:305
 // index:0
-// Public
-// const char * value()
+// Public Visibility=Default Availability=Available
+// [8] const char * value()
 func (this *QMetaClassInfo) Value() string {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -101,8 +100,8 @@ func (this *QMetaClassInfo) Value() string {
 
 // /usr/include/qt/QtCore/qmetaobject.h:306
 // index:0
-// Public inline
-// const QMetaObject * enclosingMetaObject()
+// Public inline Visibility=Default Availability=Available
+// [8] const QMetaObject * enclosingMetaObject()
 func (this *QMetaClassInfo) EnclosingMetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QMetaClassInfo19enclosingMetaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

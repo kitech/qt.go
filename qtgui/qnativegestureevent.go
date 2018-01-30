@@ -72,39 +72,37 @@ func (*QNativeGestureEvent) NewFromPointer(cthis unsafe.Pointer) *QNativeGesture
 
 // /usr/include/qt/QtGui/qevent.h:305
 // index:0
-// Public
-// void QNativeGestureEvent(Qt::NativeGestureType, const QPointF &, const QPointF &, const QPointF &, qreal, ulong, quint64)
+// Public Visibility=Default Availability=Available
+// [-2] void QNativeGestureEvent(Qt::NativeGestureType, const QPointF &, const QPointF &, const QPointF &, qreal, ulong, quint64)
 func NewQNativeGestureEvent(type_ int, localPos *qtcore.QPointF, windowPos *qtcore.QPointF, screenPos *qtcore.QPointF, value float64, sequenceId uint, intArgument uint64) *QNativeGestureEvent {
-	cthis := qtrt.Calloc(1, 256) // 112
 	var convArg1 = localPos.GetCthis()
 	var convArg2 = windowPos.GetCthis()
 	var convArg3 = screenPos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QNativeGestureEventC2EN2Qt17NativeGestureTypeERK7QPointFS4_S4_dmy", ffiqt.FFI_TYPE_VOID, cthis, type_, convArg1, convArg2, convArg3, value, sequenceId, intArgument)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QNativeGestureEventC2EN2Qt17NativeGestureTypeERK7QPointFS4_S4_dmy", ffiqt.FFI_TYPE_POINTER, type_, convArg1, convArg2, convArg3, value, sequenceId, intArgument)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQNativeGestureEventFromPointer(cthis)
+	gothis := NewQNativeGestureEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:308
 // index:1
-// Public
-// void QNativeGestureEvent(Qt::NativeGestureType, const QTouchDevice *, const QPointF &, const QPointF &, const QPointF &, qreal, ulong, quint64)
+// Public Visibility=Default Availability=Available
+// [-2] void QNativeGestureEvent(Qt::NativeGestureType, const QTouchDevice *, const QPointF &, const QPointF &, const QPointF &, qreal, ulong, quint64)
 func NewQNativeGestureEvent_1(type_ int, dev *QTouchDevice /*777 const QTouchDevice **/, localPos *qtcore.QPointF, windowPos *qtcore.QPointF, screenPos *qtcore.QPointF, value float64, sequenceId uint, intArgument uint64) *QNativeGestureEvent {
-	cthis := qtrt.Calloc(1, 256) // 112
 	var convArg1 = dev.GetCthis()
 	var convArg2 = localPos.GetCthis()
 	var convArg3 = windowPos.GetCthis()
 	var convArg4 = screenPos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QNativeGestureEventC2EN2Qt17NativeGestureTypeEPK12QTouchDeviceRK7QPointFS7_S7_dmy", ffiqt.FFI_TYPE_VOID, cthis, type_, convArg1, convArg2, convArg3, convArg4, value, sequenceId, intArgument)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QNativeGestureEventC2EN2Qt17NativeGestureTypeEPK12QTouchDeviceRK7QPointFS7_S7_dmy", ffiqt.FFI_TYPE_POINTER, type_, convArg1, convArg2, convArg3, convArg4, value, sequenceId, intArgument)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQNativeGestureEventFromPointer(cthis)
+	gothis := NewQNativeGestureEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:310
 // index:0
-// Public virtual
-// void ~QNativeGestureEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QNativeGestureEvent()
 func DeleteQNativeGestureEvent(*QNativeGestureEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QNativeGestureEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -112,8 +110,8 @@ func DeleteQNativeGestureEvent(*QNativeGestureEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:311
 // index:0
-// Public inline
-// Qt::NativeGestureType gestureType()
+// Public inline Visibility=Default Availability=Available
+// [4] Qt::NativeGestureType gestureType()
 func (this *QNativeGestureEvent) GestureType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QNativeGestureEvent11gestureTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -123,8 +121,8 @@ func (this *QNativeGestureEvent) GestureType() int {
 
 // /usr/include/qt/QtGui/qevent.h:312
 // index:0
-// Public inline
-// qreal value()
+// Public inline Visibility=Default Availability=Available
+// [8] qreal value()
 func (this *QNativeGestureEvent) Value() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QNativeGestureEvent5valueEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -134,36 +132,32 @@ func (this *QNativeGestureEvent) Value() float64 {
 
 // /usr/include/qt/QtGui/qevent.h:315
 // index:0
-// Public inline
-// const QPoint pos()
+// Public inline Visibility=Default Availability=Available
+// [8] const QPoint pos()
 func (this *QNativeGestureEvent) Pos() *qtcore.QPoint /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QNativeGestureEvent3posEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QNativeGestureEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:316
 // index:0
-// Public inline
-// const QPoint globalPos()
+// Public inline Visibility=Default Availability=Available
+// [8] const QPoint globalPos()
 func (this *QNativeGestureEvent) GlobalPos() *qtcore.QPoint /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QNativeGestureEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QNativeGestureEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:318
 // index:0
-// Public inline
-// const QPointF & localPos()
+// Public inline Visibility=Default Availability=Available
+// [16] const QPointF & localPos()
 func (this *QNativeGestureEvent) LocalPos() *qtcore.QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QNativeGestureEvent8localPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -174,8 +168,8 @@ func (this *QNativeGestureEvent) LocalPos() *qtcore.QPointF {
 
 // /usr/include/qt/QtGui/qevent.h:319
 // index:0
-// Public inline
-// const QPointF & windowPos()
+// Public inline Visibility=Default Availability=Available
+// [16] const QPointF & windowPos()
 func (this *QNativeGestureEvent) WindowPos() *qtcore.QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QNativeGestureEvent9windowPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -186,8 +180,8 @@ func (this *QNativeGestureEvent) WindowPos() *qtcore.QPointF {
 
 // /usr/include/qt/QtGui/qevent.h:320
 // index:0
-// Public inline
-// const QPointF & screenPos()
+// Public inline Visibility=Default Availability=Available
+// [16] const QPointF & screenPos()
 func (this *QNativeGestureEvent) ScreenPos() *qtcore.QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QNativeGestureEvent9screenPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -198,8 +192,8 @@ func (this *QNativeGestureEvent) ScreenPos() *qtcore.QPointF {
 
 // /usr/include/qt/QtGui/qevent.h:322
 // index:0
-// Public
-// const QTouchDevice * device()
+// Public Visibility=Default Availability=Available
+// [8] const QTouchDevice * device()
 func (this *QNativeGestureEvent) Device() *QTouchDevice /*777 const QTouchDevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QNativeGestureEvent6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

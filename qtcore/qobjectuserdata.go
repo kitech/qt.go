@@ -67,8 +67,8 @@ func (*QObjectUserData) NewFromPointer(cthis unsafe.Pointer) *QObjectUserData {
 
 // /usr/include/qt/QtCore/qobject.h:478
 // index:0
-// Public virtual
-// void ~QObjectUserData()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QObjectUserData()
 func DeleteQObjectUserData(*QObjectUserData) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QObjectUserDataD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)

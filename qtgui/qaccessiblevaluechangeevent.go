@@ -72,36 +72,34 @@ func (*QAccessibleValueChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QAcces
 
 // /usr/include/qt/QtGui/qaccessible.h:898
 // index:0
-// Public inline
-// void QAccessibleValueChangeEvent(QObject *, const QVariant &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QAccessibleValueChangeEvent(QObject *, const QVariant &)
 func NewQAccessibleValueChangeEvent(obj *qtcore.QObject /*777 QObject **/, val *qtcore.QVariant) *QAccessibleValueChangeEvent {
-	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = obj.GetCthis()
 	var convArg1 = val.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventC2EP7QObjectRK8QVariant", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventC2EP7QObjectRK8QVariant", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQAccessibleValueChangeEventFromPointer(cthis)
+	gothis := NewQAccessibleValueChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:904
 // index:1
-// Public inline
-// void QAccessibleValueChangeEvent(QAccessibleInterface *, const QVariant &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QAccessibleValueChangeEvent(QAccessibleInterface *, const QVariant &)
 func NewQAccessibleValueChangeEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, val *qtcore.QVariant) *QAccessibleValueChangeEvent {
-	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = iface.GetCthis()
 	var convArg1 = val.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventC2EP20QAccessibleInterfaceRK8QVariant", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventC2EP20QAccessibleInterfaceRK8QVariant", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQAccessibleValueChangeEventFromPointer(cthis)
+	gothis := NewQAccessibleValueChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:911
 // index:0
-// Public virtual
-// void ~QAccessibleValueChangeEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QAccessibleValueChangeEvent()
 func DeleteQAccessibleValueChangeEvent(*QAccessibleValueChangeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -109,8 +107,8 @@ func DeleteQAccessibleValueChangeEvent(*QAccessibleValueChangeEvent) {
 
 // /usr/include/qt/QtGui/qaccessible.h:913
 // index:0
-// Public inline
-// void setValue(const QVariant &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setValue(const QVariant &)
 func (this *QAccessibleValueChangeEvent) SetValue(val *qtcore.QVariant) {
 	var convArg0 = val.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEvent8setValueERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -119,14 +117,12 @@ func (this *QAccessibleValueChangeEvent) SetValue(val *qtcore.QVariant) {
 
 // /usr/include/qt/QtGui/qaccessible.h:914
 // index:0
-// Public inline
-// QVariant value()
+// Public inline Visibility=Default Availability=Available
+// [16] QVariant value()
 func (this *QAccessibleValueChangeEvent) Value() *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAccessibleValueChangeEvent5valueEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAccessibleValueChangeEvent5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

@@ -84,8 +84,8 @@ func (*QSGEngine) NewFromPointer(cthis unsafe.Pointer) *QSGEngine {
 
 // /usr/include/qt/QtQuick/qsgengine.h:59
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QSGEngine) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSGEngine10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -96,21 +96,20 @@ func (this *QSGEngine) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 
 // /usr/include/qt/QtQuick/qsgengine.h:70
 // index:0
-// Public
-// void QSGEngine(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QSGEngine(QObject *)
 func NewQSGEngine(parent *qtcore.QObject /*777 QObject **/) *QSGEngine {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSGEngineC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSGEngineC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSGEngineFromPointer(cthis)
+	gothis := NewQSGEngineFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtQuick/qsgengine.h:71
 // index:0
-// Public virtual
-// void ~QSGEngine()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QSGEngine()
 func DeleteQSGEngine(*QSGEngine) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSGEngineD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -118,8 +117,8 @@ func DeleteQSGEngine(*QSGEngine) {
 
 // /usr/include/qt/QtQuick/qsgengine.h:74
 // index:0
-// Public
-// void invalidate()
+// Public Visibility=Default Availability=Available
+// [-2] void invalidate()
 func (this *QSGEngine) Invalidate() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSGEngine10invalidateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -127,8 +126,8 @@ func (this *QSGEngine) Invalidate() {
 
 // /usr/include/qt/QtQuick/qsgengine.h:76
 // index:0
-// Public
-// QSGAbstractRenderer * createRenderer()
+// Public Visibility=Default Availability=Available
+// [8] QSGAbstractRenderer * createRenderer()
 func (this *QSGEngine) CreateRenderer() *QSGAbstractRenderer /*777 QSGAbstractRenderer **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSGEngine14createRendererEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -139,8 +138,8 @@ func (this *QSGEngine) CreateRenderer() *QSGAbstractRenderer /*777 QSGAbstractRe
 
 // /usr/include/qt/QtQuick/qsgengine.h:79
 // index:0
-// Public
-// QSGRendererInterface * rendererInterface()
+// Public Visibility=Default Availability=Available
+// [8] QSGRendererInterface * rendererInterface()
 func (this *QSGEngine) RendererInterface() *QSGRendererInterface /*777 QSGRendererInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSGEngine17rendererInterfaceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -151,8 +150,8 @@ func (this *QSGEngine) RendererInterface() *QSGRendererInterface /*777 QSGRender
 
 // /usr/include/qt/QtQuick/qsgengine.h:80
 // index:0
-// Public
-// QSGRectangleNode * createRectangleNode()
+// Public Visibility=Default Availability=Available
+// [8] QSGRectangleNode * createRectangleNode()
 func (this *QSGEngine) CreateRectangleNode() *QSGRectangleNode /*777 QSGRectangleNode **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSGEngine19createRectangleNodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -163,8 +162,8 @@ func (this *QSGEngine) CreateRectangleNode() *QSGRectangleNode /*777 QSGRectangl
 
 // /usr/include/qt/QtQuick/qsgengine.h:81
 // index:0
-// Public
-// QSGImageNode * createImageNode()
+// Public Visibility=Default Availability=Available
+// [8] QSGImageNode * createImageNode()
 func (this *QSGEngine) CreateImageNode() *QSGImageNode /*777 QSGImageNode **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSGEngine15createImageNodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -175,8 +174,8 @@ func (this *QSGEngine) CreateImageNode() *QSGImageNode /*777 QSGImageNode **/ {
 
 // /usr/include/qt/QtQuick/qsgengine.h:82
 // index:0
-// Public
-// QSGNinePatchNode * createNinePatchNode()
+// Public Visibility=Default Availability=Available
+// [8] QSGNinePatchNode * createNinePatchNode()
 func (this *QSGEngine) CreateNinePatchNode() *QSGNinePatchNode /*777 QSGNinePatchNode **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSGEngine19createNinePatchNodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

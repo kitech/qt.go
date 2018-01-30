@@ -75,20 +75,19 @@ func (*QScrollerProperties) NewFromPointer(cthis unsafe.Pointer) *QScrollerPrope
 
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:60
 // index:0
-// Public
-// void QScrollerProperties()
+// Public Visibility=Default Availability=Available
+// [-2] void QScrollerProperties()
 func NewQScrollerProperties() *QScrollerProperties {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerPropertiesC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerPropertiesC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQScrollerPropertiesFromPointer(cthis)
+	gothis := NewQScrollerPropertiesFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:63
 // index:0
-// Public virtual
-// void ~QScrollerProperties()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QScrollerProperties()
 func DeleteQScrollerProperties(*QScrollerProperties) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerPropertiesD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -96,8 +95,8 @@ func DeleteQScrollerProperties(*QScrollerProperties) {
 
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:68
 // index:0
-// Public static
-// void setDefaultScrollerProperties(const QScrollerProperties &)
+// Public static Visibility=Default Availability=Available
+// [-2] void setDefaultScrollerProperties(const QScrollerProperties &)
 func (this *QScrollerProperties) SetDefaultScrollerProperties(sp *QScrollerProperties) {
 	var convArg0 = sp.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerProperties28setDefaultScrollerPropertiesERKS_", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -110,8 +109,8 @@ func QScrollerProperties_SetDefaultScrollerProperties(sp *QScrollerProperties) {
 
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:69
 // index:0
-// Public static
-// void unsetDefaultScrollerProperties()
+// Public static Visibility=Default Availability=Available
+// [-2] void unsetDefaultScrollerProperties()
 func (this *QScrollerProperties) UnsetDefaultScrollerProperties() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerProperties30unsetDefaultScrollerPropertiesEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -123,22 +122,20 @@ func QScrollerProperties_UnsetDefaultScrollerProperties() {
 
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:117
 // index:0
-// Public
-// QVariant scrollMetric(enum QScrollerProperties::ScrollMetric)
+// Public Visibility=Default Availability=Available
+// [16] QVariant scrollMetric(enum QScrollerProperties::ScrollMetric)
 func (this *QScrollerProperties) ScrollMetric(metric int) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollerProperties12scrollMetricENS_12ScrollMetricE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), metric)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QScrollerProperties12scrollMetricENS_12ScrollMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), metric)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qscrollerproperties.h:118
 // index:0
-// Public
-// void setScrollMetric(enum QScrollerProperties::ScrollMetric, const QVariant &)
+// Public Visibility=Default Availability=Available
+// [-2] void setScrollMetric(enum QScrollerProperties::ScrollMetric, const QVariant &)
 func (this *QScrollerProperties) SetScrollMetric(metric int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerProperties15setScrollMetricENS_12ScrollMetricERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), metric, convArg1)

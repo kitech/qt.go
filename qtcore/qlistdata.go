@@ -67,8 +67,8 @@ func (*QListData) NewFromPointer(cthis unsafe.Pointer) *QListData {
 
 // /usr/include/qt/QtCore/qlist.h:96
 // index:0
-// Public
-// QListData::Data * detach(int)
+// Public Visibility=Default Availability=Available
+// [8] QListData::Data * detach(int)
 func (this *QListData) Detach(alloc int) unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData6detachEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), alloc)
 	gopp.ErrPrint(err, rv)
@@ -78,8 +78,8 @@ func (this *QListData) Detach(alloc int) unsafe.Pointer /*666*/ {
 
 // /usr/include/qt/QtCore/qlist.h:97
 // index:0
-// Public
-// QListData::Data * detach_grow(int *, int)
+// Public Visibility=Default Availability=Available
+// [8] QListData::Data * detach_grow(int *, int)
 func (this *QListData) Detach_grow(i unsafe.Pointer /*666*/, n int) unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData11detach_growEPii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &i, n)
 	gopp.ErrPrint(err, rv)
@@ -89,8 +89,8 @@ func (this *QListData) Detach_grow(i unsafe.Pointer /*666*/, n int) unsafe.Point
 
 // /usr/include/qt/QtCore/qlist.h:98
 // index:0
-// Public
-// void realloc(int)
+// Public Visibility=Default Availability=Available
+// [-2] void realloc(int)
 func (this *QListData) Realloc(alloc int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData7reallocEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), alloc)
 	gopp.ErrPrint(err, rv)
@@ -98,8 +98,8 @@ func (this *QListData) Realloc(alloc int) {
 
 // /usr/include/qt/QtCore/qlist.h:99
 // index:0
-// Public
-// void realloc_grow(int)
+// Public Visibility=Default Availability=Available
+// [-2] void realloc_grow(int)
 func (this *QListData) Realloc_grow(growth int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData12realloc_growEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), growth)
 	gopp.ErrPrint(err, rv)
@@ -107,8 +107,8 @@ func (this *QListData) Realloc_grow(growth int) {
 
 // /usr/include/qt/QtCore/qlist.h:100
 // index:0
-// Public inline
-// void dispose()
+// Public inline Visibility=Default Availability=Available
+// [-2] void dispose()
 func (this *QListData) Dispose() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData7disposeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -116,8 +116,8 @@ func (this *QListData) Dispose() {
 
 // /usr/include/qt/QtCore/qlist.h:104
 // index:0
-// Public
-// void ** erase(void **)
+// Public Visibility=Default Availability=Available
+// [8] void ** erase(void **)
 func (this *QListData) Erase(xi unsafe.Pointer /*666*/) unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData5eraseEPPv", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), xi)
 	gopp.ErrPrint(err, rv)
@@ -127,8 +127,8 @@ func (this *QListData) Erase(xi unsafe.Pointer /*666*/) unsafe.Pointer /*666*/ {
 
 // /usr/include/qt/QtCore/qlist.h:110
 // index:0
-// Public
-// void remove(int)
+// Public Visibility=Default Availability=Available
+// [-2] void remove(int)
 func (this *QListData) Remove(i int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData6removeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
@@ -136,8 +136,8 @@ func (this *QListData) Remove(i int) {
 
 // /usr/include/qt/QtCore/qlist.h:111
 // index:1
-// Public
-// void remove(int, int)
+// Public Visibility=Default Availability=Available
+// [-2] void remove(int, int)
 func (this *QListData) Remove_1(i int, n int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData6removeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i, n)
 	gopp.ErrPrint(err, rv)
@@ -145,8 +145,8 @@ func (this *QListData) Remove_1(i int, n int) {
 
 // /usr/include/qt/QtCore/qlist.h:112
 // index:0
-// Public
-// void move(int, int)
+// Public Visibility=Default Availability=Available
+// [-2] void move(int, int)
 func (this *QListData) Move(from int, to int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListData4moveEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), from, to)
 	gopp.ErrPrint(err, rv)
@@ -154,8 +154,8 @@ func (this *QListData) Move(from int, to int) {
 
 // /usr/include/qt/QtCore/qlist.h:113
 // index:0
-// Public inline
-// int size()
+// Public inline Visibility=Default Availability=Available
+// [4] int size()
 func (this *QListData) Size() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QListData4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -165,8 +165,8 @@ func (this *QListData) Size() int {
 
 // /usr/include/qt/QtCore/qlist.h:114
 // index:0
-// Public inline
-// bool isEmpty()
+// Public inline Visibility=Default Availability=Available
+// [1] bool isEmpty()
 func (this *QListData) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QListData7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -176,8 +176,8 @@ func (this *QListData) IsEmpty() bool {
 
 // /usr/include/qt/QtCore/qlist.h:115
 // index:0
-// Public inline
-// void ** at(int)
+// Public inline Visibility=Default Availability=Available
+// [8] void ** at(int)
 func (this *QListData) At(i int) unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QListData2atEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
@@ -187,8 +187,8 @@ func (this *QListData) At(i int) unsafe.Pointer /*666*/ {
 
 // /usr/include/qt/QtCore/qlist.h:116
 // index:0
-// Public inline
-// void ** begin()
+// Public inline Visibility=Default Availability=Available
+// [8] void ** begin()
 func (this *QListData) Begin() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QListData5beginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -198,8 +198,8 @@ func (this *QListData) Begin() unsafe.Pointer /*666*/ {
 
 // /usr/include/qt/QtCore/qlist.h:117
 // index:0
-// Public inline
-// void ** end()
+// Public inline Visibility=Default Availability=Available
+// [8] void ** end()
 func (this *QListData) End() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QListData3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

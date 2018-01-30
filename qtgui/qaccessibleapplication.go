@@ -71,20 +71,19 @@ func (*QAccessibleApplication) NewFromPointer(cthis unsafe.Pointer) *QAccessible
 
 // /usr/include/qt/QtGui/qaccessibleobject.h:78
 // index:0
-// Public
-// void QAccessibleApplication()
+// Public Visibility=Default Availability=Available
+// [-2] void QAccessibleApplication()
 func NewQAccessibleApplication() *QAccessibleApplication {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QAccessibleApplicationC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QAccessibleApplicationC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQAccessibleApplicationFromPointer(cthis)
+	gothis := NewQAccessibleApplicationFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qaccessibleobject.h:80
 // index:0
-// Public virtual
-// QWindow * window()
+// Public virtual Visibility=Default Availability=Available
+// [8] QWindow * window()
 func (this *QAccessibleApplication) Window() *QWindow /*777 QWindow **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication6windowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -95,8 +94,8 @@ func (this *QAccessibleApplication) Window() *QWindow /*777 QWindow **/ {
 
 // /usr/include/qt/QtGui/qaccessibleobject.h:82
 // index:0
-// Public virtual
-// int childCount()
+// Public virtual Visibility=Default Availability=Available
+// [4] int childCount()
 func (this *QAccessibleApplication) ChildCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication10childCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -106,8 +105,8 @@ func (this *QAccessibleApplication) ChildCount() int {
 
 // /usr/include/qt/QtGui/qaccessibleobject.h:83
 // index:0
-// Public virtual
-// int indexOfChild(const QAccessibleInterface *)
+// Public virtual Visibility=Default Availability=Available
+// [4] int indexOfChild(const QAccessibleInterface *)
 func (this *QAccessibleApplication) IndexOfChild(arg0 *QAccessibleInterface /*777 const QAccessibleInterface **/) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -118,8 +117,8 @@ func (this *QAccessibleApplication) IndexOfChild(arg0 *QAccessibleInterface /*77
 
 // /usr/include/qt/QtGui/qaccessibleobject.h:84
 // index:0
-// Public virtual
-// QAccessibleInterface * focusChild()
+// Public virtual Visibility=Default Availability=Available
+// [8] QAccessibleInterface * focusChild()
 func (this *QAccessibleApplication) FocusChild() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication10focusChildEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -130,8 +129,8 @@ func (this *QAccessibleApplication) FocusChild() *QAccessibleInterface /*777 QAc
 
 // /usr/include/qt/QtGui/qaccessibleobject.h:87
 // index:0
-// Public virtual
-// QAccessibleInterface * parent()
+// Public virtual Visibility=Default Availability=Available
+// [8] QAccessibleInterface * parent()
 func (this *QAccessibleApplication) Parent() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication6parentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -142,8 +141,8 @@ func (this *QAccessibleApplication) Parent() *QAccessibleInterface /*777 QAccess
 
 // /usr/include/qt/QtGui/qaccessibleobject.h:88
 // index:0
-// Public virtual
-// QAccessibleInterface * child(int)
+// Public virtual Visibility=Default Availability=Available
+// [8] QAccessibleInterface * child(int)
 func (this *QAccessibleApplication) Child(index int) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication5childEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
@@ -154,22 +153,20 @@ func (this *QAccessibleApplication) Child(index int) *QAccessibleInterface /*777
 
 // /usr/include/qt/QtGui/qaccessibleobject.h:91
 // index:0
-// Public virtual
-// QString text(QAccessible::Text)
+// Public virtual Visibility=Default Availability=Available
+// [8] QString text(QAccessible::Text)
 func (this *QAccessibleApplication) Text(t int) *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication4textEN11QAccessible4TextE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication4textEN11QAccessible4TextE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qaccessibleobject.h:92
 // index:0
-// Public virtual
-// QAccessible::Role role()
+// Public virtual Visibility=Default Availability=Available
+// [4] QAccessible::Role role()
 func (this *QAccessibleApplication) Role() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication4roleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -179,8 +176,8 @@ func (this *QAccessibleApplication) Role() int {
 
 // /usr/include/qt/QtGui/qaccessibleobject.h:93
 // index:0
-// Public virtual
-// QAccessible::State state()
+// Public virtual Visibility=Default Availability=Available
+// [8] QAccessible::State state()
 func (this *QAccessibleApplication) State() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QAccessibleApplication5stateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

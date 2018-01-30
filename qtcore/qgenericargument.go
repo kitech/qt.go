@@ -67,22 +67,21 @@ func (*QGenericArgument) NewFromPointer(cthis unsafe.Pointer) *QGenericArgument 
 
 // /usr/include/qt/QtCore/qobjectdefs.h:297
 // index:0
-// Public inline
-// void QGenericArgument(const char *, const void *)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QGenericArgument(const char *, const void *)
 func NewQGenericArgument(aName string, aData unsafe.Pointer /*666*/) *QGenericArgument {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = qtrt.CString(aName)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QGenericArgumentC2EPKcPKv", ffiqt.FFI_TYPE_VOID, cthis, convArg0, aData)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QGenericArgumentC2EPKcPKv", ffiqt.FFI_TYPE_POINTER, convArg0, aData)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQGenericArgumentFromPointer(cthis)
+	gothis := NewQGenericArgumentFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qobjectdefs.h:299
 // index:0
-// Public inline
-// void * data()
+// Public inline Visibility=Default Availability=Available
+// [8] void * data()
 func (this *QGenericArgument) Data() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QGenericArgument4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -92,8 +91,8 @@ func (this *QGenericArgument) Data() unsafe.Pointer /*666*/ {
 
 // /usr/include/qt/QtCore/qobjectdefs.h:300
 // index:0
-// Public inline
-// const char * name()
+// Public inline Visibility=Default Availability=Available
+// [8] const char * name()
 func (this *QGenericArgument) Name() string {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QGenericArgument4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

@@ -76,25 +76,23 @@ func (*QStyleOptionProgressBar) NewFromPointer(cthis unsafe.Pointer) *QStyleOpti
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:342
 // index:0
-// Public
-// void QStyleOptionProgressBar()
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleOptionProgressBar()
 func NewQStyleOptionProgressBar() *QStyleOptionProgressBar {
-	cthis := qtrt.Calloc(1, 256) // 104
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QStyleOptionProgressBarC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QStyleOptionProgressBarC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionProgressBarFromPointer(cthis)
+	gothis := NewQStyleOptionProgressBarFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:346
 // index:1
-// Protected
-// void QStyleOptionProgressBar(int)
+// Protected Visibility=Default Availability=Available
+// [-2] void QStyleOptionProgressBar(int)
 func NewQStyleOptionProgressBar_1(version int) *QStyleOptionProgressBar {
-	cthis := qtrt.Calloc(1, 256) // 104
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QStyleOptionProgressBarC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QStyleOptionProgressBarC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionProgressBarFromPointer(cthis)
+	gothis := NewQStyleOptionProgressBarFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

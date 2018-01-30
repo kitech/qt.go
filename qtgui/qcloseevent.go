@@ -72,20 +72,19 @@ func (*QCloseEvent) NewFromPointer(cthis unsafe.Pointer) *QCloseEvent {
 
 // /usr/include/qt/QtGui/qevent.h:477
 // index:0
-// Public
-// void QCloseEvent()
+// Public Visibility=Default Availability=Available
+// [-2] void QCloseEvent()
 func NewQCloseEvent() *QCloseEvent {
-	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QCloseEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QCloseEventC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQCloseEventFromPointer(cthis)
+	gothis := NewQCloseEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:478
 // index:0
-// Public virtual
-// void ~QCloseEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QCloseEvent()
 func DeleteQCloseEvent(*QCloseEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QCloseEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)

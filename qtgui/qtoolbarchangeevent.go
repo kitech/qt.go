@@ -72,20 +72,19 @@ func (*QToolBarChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QToolBarChange
 
 // /usr/include/qt/QtGui/qevent.h:754
 // index:0
-// Public
-// void QToolBarChangeEvent(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void QToolBarChangeEvent(_Bool)
 func NewQToolBarChangeEvent(t bool) *QToolBarChangeEvent {
-	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QToolBarChangeEventC2Eb", ffiqt.FFI_TYPE_VOID, cthis, t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QToolBarChangeEventC2Eb", ffiqt.FFI_TYPE_POINTER, t)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQToolBarChangeEventFromPointer(cthis)
+	gothis := NewQToolBarChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:755
 // index:0
-// Public virtual
-// void ~QToolBarChangeEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QToolBarChangeEvent()
 func DeleteQToolBarChangeEvent(*QToolBarChangeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QToolBarChangeEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -93,8 +92,8 @@ func DeleteQToolBarChangeEvent(*QToolBarChangeEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:757
 // index:0
-// Public inline
-// bool toggle()
+// Public inline Visibility=Default Availability=Available
+// [1] bool toggle()
 func (this *QToolBarChangeEvent) Toggle() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QToolBarChangeEvent6toggleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

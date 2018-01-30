@@ -67,8 +67,8 @@ func (*QScopedPointerPodDeleter) NewFromPointer(cthis unsafe.Pointer) *QScopedPo
 
 // /usr/include/qt/QtCore/qscopedpointer.h:81
 // index:0
-// Public static inline
-// void cleanup(void *)
+// Public static inline Visibility=Default Availability=Available
+// [-2] void cleanup(void *)
 func (this *QScopedPointerPodDeleter) Cleanup(pointer unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QScopedPointerPodDeleter7cleanupEPv", ffiqt.FFI_TYPE_POINTER, pointer)
 	gopp.ErrPrint(err, rv)

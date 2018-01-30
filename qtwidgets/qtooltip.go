@@ -75,8 +75,8 @@ func (*QToolTip) NewFromPointer(cthis unsafe.Pointer) *QToolTip {
 
 // /usr/include/qt/QtWidgets/qtooltip.h:56
 // index:0
-// Public static
-// void showText(const QPoint &, const QString &, QWidget *)
+// Public static Visibility=Default Availability=Available
+// [-2] void showText(const QPoint &, const QString &, QWidget *)
 func (this *QToolTip) ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/) {
 	var convArg0 = pos.GetCthis()
 	var convArg1 = text.GetCthis()
@@ -91,8 +91,8 @@ func QToolTip_ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*77
 
 // /usr/include/qt/QtWidgets/qtooltip.h:57
 // index:1
-// Public static
-// void showText(const QPoint &, const QString &, QWidget *, const QRect &)
+// Public static Visibility=Default Availability=Available
+// [-2] void showText(const QPoint &, const QString &, QWidget *, const QRect &)
 func (this *QToolTip) ShowText_1(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/, rect *qtcore.QRect) {
 	var convArg0 = pos.GetCthis()
 	var convArg1 = text.GetCthis()
@@ -108,8 +108,8 @@ func QToolTip_ShowText_1(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*
 
 // /usr/include/qt/QtWidgets/qtooltip.h:58
 // index:2
-// Public static
-// void showText(const QPoint &, const QString &, QWidget *, const QRect &, int)
+// Public static Visibility=Default Availability=Available
+// [-2] void showText(const QPoint &, const QString &, QWidget *, const QRect &, int)
 func (this *QToolTip) ShowText_2(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/, rect *qtcore.QRect, msecShowTime int) {
 	var convArg0 = pos.GetCthis()
 	var convArg1 = text.GetCthis()
@@ -125,8 +125,8 @@ func QToolTip_ShowText_2(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*
 
 // /usr/include/qt/QtWidgets/qtooltip.h:59
 // index:0
-// Public static inline
-// void hideText()
+// Public static inline Visibility=Default Availability=Available
+// [-2] void hideText()
 func (this *QToolTip) HideText() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip8hideTextEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -138,8 +138,8 @@ func QToolTip_HideText() {
 
 // /usr/include/qt/QtWidgets/qtooltip.h:61
 // index:0
-// Public static
-// bool isVisible()
+// Public static Visibility=Default Availability=Available
+// [1] bool isVisible()
 func (this *QToolTip) IsVisible() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip9isVisibleEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -154,8 +154,8 @@ func QToolTip_IsVisible() bool {
 
 // /usr/include/qt/QtWidgets/qtooltip.h:62
 // index:0
-// Public static
-// QString text()
+// Public static Visibility=Default Availability=Available
+// [8] QString text()
 func (this *QToolTip) Text() *qtcore.QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip4textEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -171,8 +171,8 @@ func QToolTip_Text() *qtcore.QString /*123*/ {
 
 // /usr/include/qt/QtWidgets/qtooltip.h:64
 // index:0
-// Public static
-// QPalette palette()
+// Public static Visibility=Default Availability=Available
+// [16] QPalette palette()
 func (this *QToolTip) Palette() *qtgui.QPalette /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip7paletteEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -188,8 +188,8 @@ func QToolTip_Palette() *qtgui.QPalette /*123*/ {
 
 // /usr/include/qt/QtWidgets/qtooltip.h:65
 // index:0
-// Public static
-// void setPalette(const QPalette &)
+// Public static Visibility=Default Availability=Available
+// [-2] void setPalette(const QPalette &)
 func (this *QToolTip) SetPalette(arg0 *qtgui.QPalette) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip10setPaletteERK8QPalette", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -202,8 +202,8 @@ func QToolTip_SetPalette(arg0 *qtgui.QPalette) {
 
 // /usr/include/qt/QtWidgets/qtooltip.h:66
 // index:0
-// Public static
-// QFont font()
+// Public static Visibility=Default Availability=Available
+// [16] QFont font()
 func (this *QToolTip) Font() *qtgui.QFont /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip4fontEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -219,8 +219,8 @@ func QToolTip_Font() *qtgui.QFont /*123*/ {
 
 // /usr/include/qt/QtWidgets/qtooltip.h:67
 // index:0
-// Public static
-// void setFont(const QFont &)
+// Public static Visibility=Default Availability=Available
+// [-2] void setFont(const QFont &)
 func (this *QToolTip) SetFont(arg0 *qtgui.QFont) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip7setFontERK5QFont", ffiqt.FFI_TYPE_POINTER, convArg0)

@@ -67,49 +67,45 @@ func (*QFlag) NewFromPointer(cthis unsafe.Pointer) *QFlag {
 
 // /usr/include/qt/QtCore/qflags.h:57
 // index:0
-// Public inline
-// void QFlag(int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QFlag(int)
 func NewQFlag(ai int) *QFlag {
-	cthis := qtrt.Calloc(1, 256) // 4
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Ei", ffiqt.FFI_TYPE_VOID, cthis, ai)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Ei", ffiqt.FFI_TYPE_POINTER, ai)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQFlagFromPointer(cthis)
+	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qflags.h:68
 // index:1
-// Public inline
-// void QFlag(uint)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QFlag(uint)
 func NewQFlag_1(ai uint) *QFlag {
-	cthis := qtrt.Calloc(1, 256) // 4
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Ej", ffiqt.FFI_TYPE_VOID, cthis, ai)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Ej", ffiqt.FFI_TYPE_POINTER, ai)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQFlagFromPointer(cthis)
+	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qflags.h:69
 // index:2
-// Public inline
-// void QFlag(short)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QFlag(short)
 func NewQFlag_2(ai int16) *QFlag {
-	cthis := qtrt.Calloc(1, 256) // 4
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Es", ffiqt.FFI_TYPE_VOID, cthis, ai)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Es", ffiqt.FFI_TYPE_POINTER, ai)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQFlagFromPointer(cthis)
+	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qflags.h:70
 // index:3
-// Public inline
-// void QFlag(ushort)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QFlag(ushort)
 func NewQFlag_3(ai uint16) *QFlag {
-	cthis := qtrt.Calloc(1, 256) // 4
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Et", ffiqt.FFI_TYPE_VOID, cthis, ai)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Et", ffiqt.FFI_TYPE_POINTER, ai)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQFlagFromPointer(cthis)
+	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

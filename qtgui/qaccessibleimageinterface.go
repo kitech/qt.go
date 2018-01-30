@@ -71,8 +71,8 @@ func (*QAccessibleImageInterface) NewFromPointer(cthis unsafe.Pointer) *QAccessi
 
 // /usr/include/qt/QtGui/qaccessible.h:655
 // index:0
-// Public virtual
-// void ~QAccessibleImageInterface()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QAccessibleImageInterface()
 func DeleteQAccessibleImageInterface(*QAccessibleImageInterface) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QAccessibleImageInterfaceD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -80,42 +80,36 @@ func DeleteQAccessibleImageInterface(*QAccessibleImageInterface) {
 
 // /usr/include/qt/QtGui/qaccessible.h:657
 // index:0
-// Public pure virtual
-// QString imageDescription()
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QString imageDescription()
 func (this *QAccessibleImageInterface) ImageDescription() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface16imageDescriptionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface16imageDescriptionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:658
 // index:0
-// Public pure virtual
-// QSize imageSize()
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QSize imageSize()
 func (this *QAccessibleImageInterface) ImageSize() *qtcore.QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK25QAccessibleImageInterface9imageSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface9imageSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:659
 // index:0
-// Public pure virtual
-// QPoint imagePosition()
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QPoint imagePosition()
 func (this *QAccessibleImageInterface) ImagePosition() *qtcore.QPoint /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface13imagePositionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QAccessibleImageInterface13imagePositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

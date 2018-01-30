@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"os/exec"
 	"regexp"
 	"strings"
 )
@@ -239,7 +240,9 @@ func onSetupUi(line string) {
 				refmtval = fmt.Sprintf("qtgui.NewQPixmap_3(qtcore.NewQString_5(\"%s\"), \"dummy123\", 0)", strings.Split(refmtval, "\"")[1])
 			case "HeightForWidth":
 				refmtval = "this." + strings.Replace(refmtval, "->", ".", -1)
-				refmtval = "false" // TODO label_x.SizePolicy().HasHeightForWidth() crash
+				// refmtval = "false" // TODO label_x.SizePolicy().HasHeightForWidth() crash
+			// case "SizePolicy": // TODO 可能值有点问题，过滤掉设置setSizePolicy
+			// break
 			default:
 				log.Println(line, refmtname)
 				refmtval = "this." + refmtval
@@ -324,7 +327,13 @@ func saveCode() {
 	log.Printf("saving... %s.go...\n", filep)
 	code = "package main\n"
 	code += cp.ExportAll()
-	ioutil.WriteFile(fmt.Sprintf("%s.go", filep), []byte(code), mod)
+	savefile := fmt.Sprintf("%s.go", filep)
+	ioutil.WriteFile(savefile, []byte(code), mod)
+
+	// gofmt the code
+	cmd := exec.Command("/usr/bin/gofmt", []string{"-w", savefile}...)
+	err := cmd.Run()
+	gopp.ErrPrint(err, cmd)
 }
 
 func colon2uline(s string) string { return strings.Replace(s, ":", "_", -1) }

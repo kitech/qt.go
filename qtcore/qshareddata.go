@@ -67,13 +67,12 @@ func (*QSharedData) NewFromPointer(cthis unsafe.Pointer) *QSharedData {
 
 // /usr/include/qt/QtCore/qshareddata.h:60
 // index:0
-// Public inline
-// void QSharedData()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QSharedData()
 func NewQSharedData() *QSharedData {
-	cthis := qtrt.Calloc(1, 256) // 4
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSharedDataC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSharedDataC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSharedDataFromPointer(cthis)
+	gothis := NewQSharedDataFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

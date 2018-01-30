@@ -76,8 +76,8 @@ func (*QTapGesture) NewFromPointer(cthis unsafe.Pointer) *QTapGesture {
 
 // /usr/include/qt/QtWidgets/qgesture.h:236
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QTapGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTapGesture10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,21 +88,20 @@ func (this *QTapGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 
 // /usr/include/qt/QtWidgets/qgesture.h:242
 // index:0
-// Public
-// void QTapGesture(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QTapGesture(QObject *)
 func NewQTapGesture(parent *qtcore.QObject /*777 QObject **/) *QTapGesture {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTapGestureC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTapGestureC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQTapGestureFromPointer(cthis)
+	gothis := NewQTapGestureFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:243
 // index:0
-// Public virtual
-// void ~QTapGesture()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QTapGesture()
 func DeleteQTapGesture(*QTapGesture) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTapGestureD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -110,22 +109,20 @@ func DeleteQTapGesture(*QTapGesture) {
 
 // /usr/include/qt/QtWidgets/qgesture.h:245
 // index:0
-// Public
-// QPointF position()
+// Public Visibility=Default Availability=Available
+// [16] QPointF position()
 func (this *QTapGesture) Position() *qtcore.QPointF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTapGesture8positionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTapGesture8positionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:246
 // index:0
-// Public
-// void setPosition(const QPointF &)
+// Public Visibility=Default Availability=Available
+// [-2] void setPosition(const QPointF &)
 func (this *QTapGesture) SetPosition(pos *qtcore.QPointF) {
 	var convArg0 = pos.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTapGesture11setPositionERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

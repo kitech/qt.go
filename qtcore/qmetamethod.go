@@ -67,48 +67,43 @@ func (*QMetaMethod) NewFromPointer(cthis unsafe.Pointer) *QMetaMethod {
 
 // /usr/include/qt/QtCore/qmetaobject.h:57
 // index:0
-// Public inline
-// void QMetaMethod()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QMetaMethod()
 func NewQMetaMethod() *QMetaMethod {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMetaMethodC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMetaMethodC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQMetaMethodFromPointer(cthis)
+	gothis := NewQMetaMethodFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:59
 // index:0
-// Public
-// QByteArray methodSignature()
+// Public Visibility=Default Availability=Available
+// [8] QByteArray methodSignature()
 func (this *QMetaMethod) MethodSignature() *QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod15methodSignatureEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod15methodSignatureEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:60
 // index:0
-// Public
-// QByteArray name()
+// Public Visibility=Default Availability=Available
+// [8] QByteArray name()
 func (this *QMetaMethod) Name() *QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:61
 // index:0
-// Public
-// const char * typeName()
+// Public Visibility=Default Availability=Available
+// [8] const char * typeName()
 func (this *QMetaMethod) TypeName() string {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod8typeNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -118,8 +113,8 @@ func (this *QMetaMethod) TypeName() string {
 
 // /usr/include/qt/QtCore/qmetaobject.h:62
 // index:0
-// Public
-// int returnType()
+// Public Visibility=Default Availability=Available
+// [4] int returnType()
 func (this *QMetaMethod) ReturnType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod10returnTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -129,8 +124,8 @@ func (this *QMetaMethod) ReturnType() int {
 
 // /usr/include/qt/QtCore/qmetaobject.h:63
 // index:0
-// Public
-// int parameterCount()
+// Public Visibility=Default Availability=Available
+// [4] int parameterCount()
 func (this *QMetaMethod) ParameterCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod14parameterCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -140,8 +135,8 @@ func (this *QMetaMethod) ParameterCount() int {
 
 // /usr/include/qt/QtCore/qmetaobject.h:64
 // index:0
-// Public
-// int parameterType(int)
+// Public Visibility=Default Availability=Available
+// [4] int parameterType(int)
 func (this *QMetaMethod) ParameterType(index int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod13parameterTypeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
@@ -151,8 +146,8 @@ func (this *QMetaMethod) ParameterType(index int) int {
 
 // /usr/include/qt/QtCore/qmetaobject.h:65
 // index:0
-// Public
-// void getParameterTypes(int *)
+// Public Visibility=Default Availability=Available
+// [-2] void getParameterTypes(int *)
 func (this *QMetaMethod) GetParameterTypes(types unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod17getParameterTypesEPi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &types)
 	gopp.ErrPrint(err, rv)
@@ -160,8 +155,8 @@ func (this *QMetaMethod) GetParameterTypes(types unsafe.Pointer /*666*/) {
 
 // /usr/include/qt/QtCore/qmetaobject.h:68
 // index:0
-// Public
-// const char * tag()
+// Public Visibility=Default Availability=Available
+// [8] const char * tag()
 func (this *QMetaMethod) Tag() string {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod3tagEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -171,8 +166,8 @@ func (this *QMetaMethod) Tag() string {
 
 // /usr/include/qt/QtCore/qmetaobject.h:70
 // index:0
-// Public
-// QMetaMethod::Access access()
+// Public Visibility=Default Availability=Available
+// [4] QMetaMethod::Access access()
 func (this *QMetaMethod) Access() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod6accessEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -182,8 +177,8 @@ func (this *QMetaMethod) Access() int {
 
 // /usr/include/qt/QtCore/qmetaobject.h:72
 // index:0
-// Public
-// QMetaMethod::MethodType methodType()
+// Public Visibility=Default Availability=Available
+// [4] QMetaMethod::MethodType methodType()
 func (this *QMetaMethod) MethodType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod10methodTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -193,8 +188,8 @@ func (this *QMetaMethod) MethodType() int {
 
 // /usr/include/qt/QtCore/qmetaobject.h:74
 // index:0
-// Public
-// int attributes()
+// Public Visibility=Default Availability=Available
+// [4] int attributes()
 func (this *QMetaMethod) Attributes() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod10attributesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -204,8 +199,8 @@ func (this *QMetaMethod) Attributes() int {
 
 // /usr/include/qt/QtCore/qmetaobject.h:75
 // index:0
-// Public
-// int methodIndex()
+// Public Visibility=Default Availability=Available
+// [4] int methodIndex()
 func (this *QMetaMethod) MethodIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod11methodIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -215,8 +210,8 @@ func (this *QMetaMethod) MethodIndex() int {
 
 // /usr/include/qt/QtCore/qmetaobject.h:76
 // index:0
-// Public
-// int revision()
+// Public Visibility=Default Availability=Available
+// [4] int revision()
 func (this *QMetaMethod) Revision() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod8revisionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -226,8 +221,8 @@ func (this *QMetaMethod) Revision() int {
 
 // /usr/include/qt/QtCore/qmetaobject.h:78
 // index:0
-// Public inline
-// const QMetaObject * enclosingMetaObject()
+// Public inline Visibility=Default Availability=Available
+// [8] const QMetaObject * enclosingMetaObject()
 func (this *QMetaMethod) EnclosingMetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod19enclosingMetaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -238,8 +233,8 @@ func (this *QMetaMethod) EnclosingMetaObject() *QMetaObject /*777 const QMetaObj
 
 // /usr/include/qt/QtCore/qmetaobject.h:80
 // index:0
-// Public
-// bool invoke(QObject *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+// Public Visibility=Default Availability=Available
+// [1] bool invoke(QObject *, Qt::ConnectionType, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
 func (this *QMetaMethod) Invoke(object *QObject /*777 QObject **/, connectionType int, returnValue *QGenericReturnArgument /*123*/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
 	var convArg0 = object.GetCthis()
 	var convArg2 = returnValue.GetCthis()
@@ -261,8 +256,8 @@ func (this *QMetaMethod) Invoke(object *QObject /*777 QObject **/, connectionTyp
 
 // /usr/include/qt/QtCore/qmetaobject.h:93
 // index:1
-// Public inline
-// bool invoke(QObject *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+// Public inline Visibility=Default Availability=Available
+// [1] bool invoke(QObject *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
 func (this *QMetaMethod) Invoke_1(object *QObject /*777 QObject **/, returnValue *QGenericReturnArgument /*123*/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
 	var convArg0 = object.GetCthis()
 	var convArg1 = returnValue.GetCthis()
@@ -284,8 +279,8 @@ func (this *QMetaMethod) Invoke_1(object *QObject /*777 QObject **/, returnValue
 
 // /usr/include/qt/QtCore/qmetaobject.h:109
 // index:2
-// Public inline
-// bool invoke(QObject *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+// Public inline Visibility=Default Availability=Available
+// [1] bool invoke(QObject *, Qt::ConnectionType, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
 func (this *QMetaMethod) Invoke_2(object *QObject /*777 QObject **/, connectionType int, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
 	var convArg0 = object.GetCthis()
 	var convArg2 = val0.GetCthis()
@@ -306,8 +301,8 @@ func (this *QMetaMethod) Invoke_2(object *QObject /*777 QObject **/, connectionT
 
 // /usr/include/qt/QtCore/qmetaobject.h:125
 // index:3
-// Public inline
-// bool invoke(QObject *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+// Public inline Visibility=Default Availability=Available
+// [1] bool invoke(QObject *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
 func (this *QMetaMethod) Invoke_3(object *QObject /*777 QObject **/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
 	var convArg0 = object.GetCthis()
 	var convArg1 = val0.GetCthis()
@@ -328,8 +323,8 @@ func (this *QMetaMethod) Invoke_3(object *QObject /*777 QObject **/, val0 *QGene
 
 // /usr/include/qt/QtCore/qmetaobject.h:141
 // index:0
-// Public
-// bool invokeOnGadget(void *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+// Public Visibility=Default Availability=Available
+// [1] bool invokeOnGadget(void *, QGenericReturnArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
 func (this *QMetaMethod) InvokeOnGadget(gadget unsafe.Pointer /*666*/, returnValue *QGenericReturnArgument /*123*/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
 	var convArg1 = returnValue.GetCthis()
 	var convArg2 = val0.GetCthis()
@@ -350,8 +345,8 @@ func (this *QMetaMethod) InvokeOnGadget(gadget unsafe.Pointer /*666*/, returnVal
 
 // /usr/include/qt/QtCore/qmetaobject.h:153
 // index:1
-// Public inline
-// bool invokeOnGadget(void *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
+// Public inline Visibility=Default Availability=Available
+// [1] bool invokeOnGadget(void *, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument)
 func (this *QMetaMethod) InvokeOnGadget_1(gadget unsafe.Pointer /*666*/, val0 *QGenericArgument /*123*/, val1 *QGenericArgument /*123*/, val2 *QGenericArgument /*123*/, val3 *QGenericArgument /*123*/, val4 *QGenericArgument /*123*/, val5 *QGenericArgument /*123*/, val6 *QGenericArgument /*123*/, val7 *QGenericArgument /*123*/, val8 *QGenericArgument /*123*/, val9 *QGenericArgument /*123*/) bool {
 	var convArg1 = val0.GetCthis()
 	var convArg2 = val1.GetCthis()
@@ -371,8 +366,8 @@ func (this *QMetaMethod) InvokeOnGadget_1(gadget unsafe.Pointer /*666*/, val0 *Q
 
 // /usr/include/qt/QtCore/qmetaobject.h:169
 // index:0
-// Public inline
-// bool isValid()
+// Public inline Visibility=Default Availability=Available
+// [1] bool isValid()
 func (this *QMetaMethod) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QMetaMethod7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

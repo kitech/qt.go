@@ -72,8 +72,8 @@ func (*QLocalSocket) NewFromPointer(cthis unsafe.Pointer) *QLocalSocket {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:55
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QLocalSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QLocalSocket10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -84,21 +84,20 @@ func (this *QLocalSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:82
 // index:0
-// Public
-// void QLocalSocket(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QLocalSocket(QObject *)
 func NewQLocalSocket(parent *qtcore.QObject /*777 QObject **/) *QLocalSocket {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocketC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocketC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQLocalSocketFromPointer(cthis)
+	gothis := NewQLocalSocketFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:83
 // index:0
-// Public virtual
-// void ~QLocalSocket()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QLocalSocket()
 func DeleteQLocalSocket(*QLocalSocket) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocketD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -106,8 +105,8 @@ func DeleteQLocalSocket(*QLocalSocket) {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:87
 // index:0
-// Public
-// void disconnectFromServer()
+// Public Visibility=Default Availability=Available
+// [-2] void disconnectFromServer()
 func (this *QLocalSocket) DisconnectFromServer() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocket20disconnectFromServerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -115,8 +114,8 @@ func (this *QLocalSocket) DisconnectFromServer() {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:89
 // index:0
-// Public
-// void setServerName(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void setServerName(const QString &)
 func (this *QLocalSocket) SetServerName(name *qtcore.QString) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocket13setServerNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -125,36 +124,32 @@ func (this *QLocalSocket) SetServerName(name *qtcore.QString) {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:90
 // index:0
-// Public
-// QString serverName()
+// Public Visibility=Default Availability=Available
+// [8] QString serverName()
 func (this *QLocalSocket) ServerName() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QLocalSocket10serverNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QLocalSocket10serverNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:91
 // index:0
-// Public
-// QString fullServerName()
+// Public Visibility=Default Availability=Available
+// [8] QString fullServerName()
 func (this *QLocalSocket) FullServerName() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QLocalSocket14fullServerNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QLocalSocket14fullServerNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:93
 // index:0
-// Public
-// void abort()
+// Public Visibility=Default Availability=Available
+// [-2] void abort()
 func (this *QLocalSocket) Abort() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocket5abortEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -162,8 +157,8 @@ func (this *QLocalSocket) Abort() {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:94
 // index:0
-// Public virtual
-// bool isSequential()
+// Public virtual Visibility=Default Availability=Available
+// [1] bool isSequential()
 func (this *QLocalSocket) IsSequential() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QLocalSocket12isSequentialEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -173,8 +168,8 @@ func (this *QLocalSocket) IsSequential() bool {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:95
 // index:0
-// Public virtual
-// qint64 bytesAvailable()
+// Public virtual Visibility=Default Availability=Available
+// [8] qint64 bytesAvailable()
 func (this *QLocalSocket) BytesAvailable() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QLocalSocket14bytesAvailableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -184,8 +179,8 @@ func (this *QLocalSocket) BytesAvailable() int64 {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:96
 // index:0
-// Public virtual
-// qint64 bytesToWrite()
+// Public virtual Visibility=Default Availability=Available
+// [8] qint64 bytesToWrite()
 func (this *QLocalSocket) BytesToWrite() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QLocalSocket12bytesToWriteEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -195,8 +190,8 @@ func (this *QLocalSocket) BytesToWrite() int64 {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:97
 // index:0
-// Public virtual
-// bool canReadLine()
+// Public virtual Visibility=Default Availability=Available
+// [1] bool canReadLine()
 func (this *QLocalSocket) CanReadLine() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QLocalSocket11canReadLineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -206,8 +201,8 @@ func (this *QLocalSocket) CanReadLine() bool {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:99
 // index:0
-// Public virtual
-// void close()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void close()
 func (this *QLocalSocket) Close() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocket5closeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -215,8 +210,8 @@ func (this *QLocalSocket) Close() {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:100
 // index:0
-// Public
-// QLocalSocket::LocalSocketError error()
+// Public Visibility=Default Availability=Available
+// [4] QLocalSocket::LocalSocketError error()
 func (this *QLocalSocket) Error() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QLocalSocket5errorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -226,8 +221,8 @@ func (this *QLocalSocket) Error() int {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:120
 // index:1
-// Public
-// void error(QLocalSocket::LocalSocketError)
+// Public Visibility=Default Availability=Available
+// [-2] void error(QLocalSocket::LocalSocketError)
 func (this *QLocalSocket) Error_1(socketError int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocket5errorENS_16LocalSocketErrorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), socketError)
 	gopp.ErrPrint(err, rv)
@@ -235,8 +230,8 @@ func (this *QLocalSocket) Error_1(socketError int) {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:101
 // index:0
-// Public
-// bool flush()
+// Public Visibility=Default Availability=Available
+// [1] bool flush()
 func (this *QLocalSocket) Flush() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocket5flushEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -246,8 +241,8 @@ func (this *QLocalSocket) Flush() bool {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:102
 // index:0
-// Public
-// bool isValid()
+// Public Visibility=Default Availability=Available
+// [1] bool isValid()
 func (this *QLocalSocket) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QLocalSocket7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -257,8 +252,8 @@ func (this *QLocalSocket) IsValid() bool {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:103
 // index:0
-// Public
-// qint64 readBufferSize()
+// Public Visibility=Default Availability=Available
+// [8] qint64 readBufferSize()
 func (this *QLocalSocket) ReadBufferSize() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QLocalSocket14readBufferSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -268,8 +263,8 @@ func (this *QLocalSocket) ReadBufferSize() int64 {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:104
 // index:0
-// Public
-// void setReadBufferSize(qint64)
+// Public Visibility=Default Availability=Available
+// [-2] void setReadBufferSize(qint64)
 func (this *QLocalSocket) SetReadBufferSize(size int64) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocket17setReadBufferSizeEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
@@ -277,8 +272,8 @@ func (this *QLocalSocket) SetReadBufferSize(size int64) {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:109
 // index:0
-// Public
-// qintptr socketDescriptor()
+// Public Visibility=Default Availability=Available
+// [8] qintptr socketDescriptor()
 func (this *QLocalSocket) SocketDescriptor() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QLocalSocket16socketDescriptorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -288,8 +283,8 @@ func (this *QLocalSocket) SocketDescriptor() int64 {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:111
 // index:0
-// Public
-// QLocalSocket::LocalSocketState state()
+// Public Visibility=Default Availability=Available
+// [4] QLocalSocket::LocalSocketState state()
 func (this *QLocalSocket) State() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QLocalSocket5stateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -299,8 +294,8 @@ func (this *QLocalSocket) State() int {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:112
 // index:0
-// Public virtual
-// bool waitForBytesWritten(int)
+// Public virtual Visibility=Default Availability=Available
+// [1] bool waitForBytesWritten(int)
 func (this *QLocalSocket) WaitForBytesWritten(msecs int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocket19waitForBytesWrittenEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
@@ -310,8 +305,8 @@ func (this *QLocalSocket) WaitForBytesWritten(msecs int) bool {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:113
 // index:0
-// Public
-// bool waitForConnected(int)
+// Public Visibility=Default Availability=Available
+// [1] bool waitForConnected(int)
 func (this *QLocalSocket) WaitForConnected(msecs int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocket16waitForConnectedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
@@ -321,8 +316,8 @@ func (this *QLocalSocket) WaitForConnected(msecs int) bool {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:114
 // index:0
-// Public
-// bool waitForDisconnected(int)
+// Public Visibility=Default Availability=Available
+// [1] bool waitForDisconnected(int)
 func (this *QLocalSocket) WaitForDisconnected(msecs int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocket19waitForDisconnectedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
@@ -332,8 +327,8 @@ func (this *QLocalSocket) WaitForDisconnected(msecs int) bool {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:115
 // index:0
-// Public virtual
-// bool waitForReadyRead(int)
+// Public virtual Visibility=Default Availability=Available
+// [1] bool waitForReadyRead(int)
 func (this *QLocalSocket) WaitForReadyRead(msecs int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocket16waitForReadyReadEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
@@ -343,8 +338,8 @@ func (this *QLocalSocket) WaitForReadyRead(msecs int) bool {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:118
 // index:0
-// Public
-// void connected()
+// Public Visibility=Default Availability=Available
+// [-2] void connected()
 func (this *QLocalSocket) Connected() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocket9connectedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -352,8 +347,8 @@ func (this *QLocalSocket) Connected() {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:119
 // index:0
-// Public
-// void disconnected()
+// Public Visibility=Default Availability=Available
+// [-2] void disconnected()
 func (this *QLocalSocket) Disconnected() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocket12disconnectedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -361,8 +356,8 @@ func (this *QLocalSocket) Disconnected() {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:121
 // index:0
-// Public
-// void stateChanged(QLocalSocket::LocalSocketState)
+// Public Visibility=Default Availability=Available
+// [-2] void stateChanged(QLocalSocket::LocalSocketState)
 func (this *QLocalSocket) StateChanged(socketState int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QLocalSocket12stateChangedENS_16LocalSocketStateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), socketState)
 	gopp.ErrPrint(err, rv)
@@ -370,8 +365,8 @@ func (this *QLocalSocket) StateChanged(socketState int) {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:124
 // index:0
-// Protected virtual
-// qint64 readData(char *, qint64)
+// Protected virtual Visibility=Default Availability=Available
+// [8] qint64 readData(char *, qint64)
 func (this *QLocalSocket) ReadData(arg0 string, arg1 int64) int64 {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
@@ -383,8 +378,8 @@ func (this *QLocalSocket) ReadData(arg0 string, arg1 int64) int64 {
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h:125
 // index:0
-// Protected virtual
-// qint64 writeData(const char *, qint64)
+// Protected virtual Visibility=Default Availability=Available
+// [8] qint64 writeData(const char *, qint64)
 func (this *QLocalSocket) WriteData(arg0 string, arg1 int64) int64 {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)

@@ -84,20 +84,19 @@ func (*QSGRenderNode) NewFromPointer(cthis unsafe.Pointer) *QSGRenderNode {
 
 // /usr/include/qt/QtQuick/qsgrendernode.h:82
 // index:0
-// Public
-// void QSGRenderNode()
+// Public Visibility=Default Availability=Available
+// [-2] void QSGRenderNode()
 func NewQSGRenderNode() *QSGRenderNode {
-	cthis := qtrt.Calloc(1, 256) // 88
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSGRenderNodeC1Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSGRenderNodeC1Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSGRenderNodeFromPointer(cthis)
+	gothis := NewQSGRenderNodeFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtQuick/qsgrendernode.h:83
 // index:0
-// Public virtual
-// void ~QSGRenderNode()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QSGRenderNode()
 func DeleteQSGRenderNode(*QSGRenderNode) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSGRenderNodeD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -105,8 +104,8 @@ func DeleteQSGRenderNode(*QSGRenderNode) {
 
 // /usr/include/qt/QtQuick/qsgrendernode.h:85
 // index:0
-// Public virtual
-// QSGRenderNode::StateFlags changedStates()
+// Public virtual Visibility=Default Availability=Available
+// [4] QSGRenderNode::StateFlags changedStates()
 func (this *QSGRenderNode) ChangedStates() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSGRenderNode13changedStatesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -116,8 +115,8 @@ func (this *QSGRenderNode) ChangedStates() int {
 
 // /usr/include/qt/QtQuick/qsgrendernode.h:87
 // index:0
-// Public virtual
-// void releaseResources()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void releaseResources()
 func (this *QSGRenderNode) ReleaseResources() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSGRenderNode16releaseResourcesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -125,8 +124,8 @@ func (this *QSGRenderNode) ReleaseResources() {
 
 // /usr/include/qt/QtQuick/qsgrendernode.h:88
 // index:0
-// Public virtual
-// QSGRenderNode::RenderingFlags flags()
+// Public virtual Visibility=Default Availability=Available
+// [4] QSGRenderNode::RenderingFlags flags()
 func (this *QSGRenderNode) Flags() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSGRenderNode5flagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -136,22 +135,20 @@ func (this *QSGRenderNode) Flags() int {
 
 // /usr/include/qt/QtQuick/qsgrendernode.h:89
 // index:0
-// Public virtual
-// QRectF rect()
+// Public virtual Visibility=Default Availability=Available
+// [32] QRectF rect()
 func (this *QSGRenderNode) Rect() *qtcore.QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSGRenderNode4rectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSGRenderNode4rectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtQuick/qsgrendernode.h:91
 // index:0
-// Public
-// const QMatrix4x4 * matrix()
+// Public Visibility=Default Availability=Available
+// [8] const QMatrix4x4 * matrix()
 func (this *QSGRenderNode) Matrix() *qtgui.QMatrix4x4 /*777 const QMatrix4x4 **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSGRenderNode6matrixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -162,8 +159,8 @@ func (this *QSGRenderNode) Matrix() *qtgui.QMatrix4x4 /*777 const QMatrix4x4 **/
 
 // /usr/include/qt/QtQuick/qsgrendernode.h:92
 // index:0
-// Public
-// const QSGClipNode * clipList()
+// Public Visibility=Default Availability=Available
+// [8] const QSGClipNode * clipList()
 func (this *QSGRenderNode) ClipList() *QSGClipNode /*777 const QSGClipNode **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSGRenderNode8clipListEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -174,8 +171,8 @@ func (this *QSGRenderNode) ClipList() *QSGClipNode /*777 const QSGClipNode **/ {
 
 // /usr/include/qt/QtQuick/qsgrendernode.h:93
 // index:0
-// Public
-// qreal inheritedOpacity()
+// Public Visibility=Default Availability=Available
+// [8] qreal inheritedOpacity()
 func (this *QSGRenderNode) InheritedOpacity() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSGRenderNode16inheritedOpacityEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)

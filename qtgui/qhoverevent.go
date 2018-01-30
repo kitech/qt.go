@@ -72,8 +72,8 @@ func (*QHoverEvent) NewFromPointer(cthis unsafe.Pointer) *QHoverEvent {
 
 // /usr/include/qt/QtGui/qevent.h:158
 // index:0
-// Public virtual
-// void ~QHoverEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QHoverEvent()
 func DeleteQHoverEvent(*QHoverEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHoverEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -81,36 +81,32 @@ func DeleteQHoverEvent(*QHoverEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:161
 // index:0
-// Public inline
-// QPoint pos()
+// Public inline Visibility=Default Availability=Available
+// [8] QPoint pos()
 func (this *QHoverEvent) Pos() *qtcore.QPoint /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHoverEvent3posEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHoverEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:162
 // index:0
-// Public inline
-// QPoint oldPos()
+// Public inline Visibility=Default Availability=Available
+// [8] QPoint oldPos()
 func (this *QHoverEvent) OldPos() *qtcore.QPoint /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHoverEvent6oldPosEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHoverEvent6oldPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:165
 // index:0
-// Public inline
-// const QPointF & posF()
+// Public inline Visibility=Default Availability=Available
+// [16] const QPointF & posF()
 func (this *QHoverEvent) PosF() *qtcore.QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHoverEvent4posFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -121,8 +117,8 @@ func (this *QHoverEvent) PosF() *qtcore.QPointF {
 
 // /usr/include/qt/QtGui/qevent.h:166
 // index:0
-// Public inline
-// const QPointF & oldPosF()
+// Public inline Visibility=Default Availability=Available
+// [16] const QPointF & oldPosF()
 func (this *QHoverEvent) OldPosF() *qtcore.QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHoverEvent7oldPosFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

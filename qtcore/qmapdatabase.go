@@ -67,8 +67,8 @@ func (*QMapDataBase) NewFromPointer(cthis unsafe.Pointer) *QMapDataBase {
 
 // /usr/include/qt/QtCore/qmap.h:194
 // index:0
-// Public
-// void recalcMostLeftNode()
+// Public Visibility=Default Availability=Available
+// [-2] void recalcMostLeftNode()
 func (this *QMapDataBase) RecalcMostLeftNode() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapDataBase18recalcMostLeftNodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -76,8 +76,8 @@ func (this *QMapDataBase) RecalcMostLeftNode() {
 
 // /usr/include/qt/QtCore/qmap.h:201
 // index:0
-// Public static
-// QMapDataBase * createData()
+// Public static Visibility=Default Availability=Available
+// [8] QMapDataBase * createData()
 func (this *QMapDataBase) CreateData() *QMapDataBase /*777 QMapDataBase **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapDataBase10createDataEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)

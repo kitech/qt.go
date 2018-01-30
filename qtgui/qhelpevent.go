@@ -72,22 +72,21 @@ func (*QHelpEvent) NewFromPointer(cthis unsafe.Pointer) *QHelpEvent {
 
 // /usr/include/qt/QtGui/qevent.h:680
 // index:0
-// Public
-// void QHelpEvent(enum QEvent::Type, const QPoint &, const QPoint &)
+// Public Visibility=Default Availability=Available
+// [-2] void QHelpEvent(enum QEvent::Type, const QPoint &, const QPoint &)
 func NewQHelpEvent(type_ int, pos *qtcore.QPoint, globalPos *qtcore.QPoint) *QHelpEvent {
-	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg1 = pos.GetCthis()
 	var convArg2 = globalPos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHelpEventC2EN6QEvent4TypeERK6QPointS4_", ffiqt.FFI_TYPE_VOID, cthis, type_, convArg1, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHelpEventC2EN6QEvent4TypeERK6QPointS4_", ffiqt.FFI_TYPE_POINTER, type_, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQHelpEventFromPointer(cthis)
+	gothis := NewQHelpEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:681
 // index:0
-// Public virtual
-// void ~QHelpEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QHelpEvent()
 func DeleteQHelpEvent(*QHelpEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHelpEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -95,8 +94,8 @@ func DeleteQHelpEvent(*QHelpEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:683
 // index:0
-// Public inline
-// int x()
+// Public inline Visibility=Default Availability=Available
+// [4] int x()
 func (this *QHelpEvent) X() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -106,8 +105,8 @@ func (this *QHelpEvent) X() int {
 
 // /usr/include/qt/QtGui/qevent.h:684
 // index:0
-// Public inline
-// int y()
+// Public inline Visibility=Default Availability=Available
+// [4] int y()
 func (this *QHelpEvent) Y() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -117,8 +116,8 @@ func (this *QHelpEvent) Y() int {
 
 // /usr/include/qt/QtGui/qevent.h:685
 // index:0
-// Public inline
-// int globalX()
+// Public inline Visibility=Default Availability=Available
+// [4] int globalX()
 func (this *QHelpEvent) GlobalX() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent7globalXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -128,8 +127,8 @@ func (this *QHelpEvent) GlobalX() int {
 
 // /usr/include/qt/QtGui/qevent.h:686
 // index:0
-// Public inline
-// int globalY()
+// Public inline Visibility=Default Availability=Available
+// [4] int globalY()
 func (this *QHelpEvent) GlobalY() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent7globalYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -139,8 +138,8 @@ func (this *QHelpEvent) GlobalY() int {
 
 // /usr/include/qt/QtGui/qevent.h:688
 // index:0
-// Public inline
-// const QPoint & pos()
+// Public inline Visibility=Default Availability=Available
+// [8] const QPoint & pos()
 func (this *QHelpEvent) Pos() *qtcore.QPoint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -151,8 +150,8 @@ func (this *QHelpEvent) Pos() *qtcore.QPoint {
 
 // /usr/include/qt/QtGui/qevent.h:689
 // index:0
-// Public inline
-// const QPoint & globalPos()
+// Public inline Visibility=Default Availability=Available
+// [8] const QPoint & globalPos()
 func (this *QHelpEvent) GlobalPos() *qtcore.QPoint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

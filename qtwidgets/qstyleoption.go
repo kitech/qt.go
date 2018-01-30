@@ -75,20 +75,19 @@ func (*QStyleOption) NewFromPointer(cthis unsafe.Pointer) *QStyleOption {
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:102
 // index:0
-// Public
-// void QStyleOption(int, int)
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleOption(int, int)
 func NewQStyleOption(version int, type_ int) *QStyleOption {
-	cthis := qtrt.Calloc(1, 256) // 64
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOptionC2Eii", ffiqt.FFI_TYPE_VOID, cthis, version, type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOptionC2Eii", ffiqt.FFI_TYPE_POINTER, version, type_)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionFromPointer(cthis)
+	gothis := NewQStyleOptionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:104
 // index:0
-// Public
-// void ~QStyleOption()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QStyleOption()
 func DeleteQStyleOption(*QStyleOption) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOptionD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -96,8 +95,8 @@ func DeleteQStyleOption(*QStyleOption) {
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:106
 // index:0
-// Public
-// void init(const QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void init(const QWidget *)
 func (this *QStyleOption) Init(w *QWidget /*777 const QWidget **/) {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOption4initEPK7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -106,8 +105,8 @@ func (this *QStyleOption) Init(w *QWidget /*777 const QWidget **/) {
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:107
 // index:0
-// Public inline
-// void initFrom(const QWidget *)
+// Public inline Visibility=Default Availability=Available
+// [-2] void initFrom(const QWidget *)
 func (this *QStyleOption) InitFrom(w *QWidget /*777 const QWidget **/) {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOption8initFromEPK7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

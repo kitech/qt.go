@@ -71,20 +71,19 @@ func (*QPointingDeviceUniqueId) NewFromPointer(cthis unsafe.Pointer) *QPointingD
 
 // /usr/include/qt/QtGui/qevent.h:809
 // index:0
-// Public inline
-// void QPointingDeviceUniqueId()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QPointingDeviceUniqueId()
 func NewQPointingDeviceUniqueId() *QPointingDeviceUniqueId {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QPointingDeviceUniqueIdC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QPointingDeviceUniqueIdC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQPointingDeviceUniqueIdFromPointer(cthis)
+	gothis := NewQPointingDeviceUniqueIdFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:813
 // index:0
-// Public static
-// QPointingDeviceUniqueId fromNumericId(qint64)
+// Public static Visibility=Default Availability=Available
+// [8] QPointingDeviceUniqueId fromNumericId(qint64)
 func (this *QPointingDeviceUniqueId) FromNumericId(id int64) *QPointingDeviceUniqueId /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QPointingDeviceUniqueId13fromNumericIdEx", ffiqt.FFI_TYPE_POINTER, id)
 	gopp.ErrPrint(err, rv)
@@ -100,8 +99,8 @@ func QPointingDeviceUniqueId_FromNumericId(id int64) *QPointingDeviceUniqueId /*
 
 // /usr/include/qt/QtGui/qevent.h:815
 // index:0
-// Public inline
-// bool isValid()
+// Public inline Visibility=Default Availability=Available
+// [1] bool isValid()
 func (this *QPointingDeviceUniqueId) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -111,8 +110,8 @@ func (this *QPointingDeviceUniqueId) IsValid() bool {
 
 // /usr/include/qt/QtGui/qevent.h:816
 // index:0
-// Public
-// qint64 numericId()
+// Public Visibility=Default Availability=Available
+// [8] qint64 numericId()
 func (this *QPointingDeviceUniqueId) NumericId() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId9numericIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

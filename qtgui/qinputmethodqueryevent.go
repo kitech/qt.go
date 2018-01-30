@@ -72,8 +72,8 @@ func (*QInputMethodQueryEvent) NewFromPointer(cthis unsafe.Pointer) *QInputMetho
 
 // /usr/include/qt/QtGui/qevent.h:582
 // index:0
-// Public virtual
-// void ~QInputMethodQueryEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QInputMethodQueryEvent()
 func DeleteQInputMethodQueryEvent(*QInputMethodQueryEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QInputMethodQueryEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -81,8 +81,8 @@ func DeleteQInputMethodQueryEvent(*QInputMethodQueryEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:584
 // index:0
-// Public inline
-// Qt::InputMethodQueries queries()
+// Public inline Visibility=Default Availability=Available
+// [4] Qt::InputMethodQueries queries()
 func (this *QInputMethodQueryEvent) Queries() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QInputMethodQueryEvent7queriesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -92,8 +92,8 @@ func (this *QInputMethodQueryEvent) Queries() int {
 
 // /usr/include/qt/QtGui/qevent.h:586
 // index:0
-// Public
-// void setValue(Qt::InputMethodQuery, const QVariant &)
+// Public Visibility=Default Availability=Available
+// [-2] void setValue(Qt::InputMethodQuery, const QVariant &)
 func (this *QInputMethodQueryEvent) SetValue(query int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QInputMethodQueryEvent8setValueEN2Qt16InputMethodQueryERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), query, convArg1)
@@ -102,14 +102,12 @@ func (this *QInputMethodQueryEvent) SetValue(query int, value *qtcore.QVariant) 
 
 // /usr/include/qt/QtGui/qevent.h:587
 // index:0
-// Public
-// QVariant value(Qt::InputMethodQuery)
+// Public Visibility=Default Availability=Available
+// [16] QVariant value(Qt::InputMethodQuery)
 func (this *QInputMethodQueryEvent) Value(query int) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QInputMethodQueryEvent5valueEN2Qt16InputMethodQueryE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), query)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QInputMethodQueryEvent5valueEN2Qt16InputMethodQueryE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), query)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

@@ -72,21 +72,20 @@ func (*QWhatsThisClickedEvent) NewFromPointer(cthis unsafe.Pointer) *QWhatsThisC
 
 // /usr/include/qt/QtGui/qevent.h:713
 // index:0
-// Public
-// void QWhatsThisClickedEvent(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void QWhatsThisClickedEvent(const QString &)
 func NewQWhatsThisClickedEvent(href *qtcore.QString) *QWhatsThisClickedEvent {
-	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = href.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QWhatsThisClickedEventC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QWhatsThisClickedEventC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQWhatsThisClickedEventFromPointer(cthis)
+	gothis := NewQWhatsThisClickedEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:714
 // index:0
-// Public virtual
-// void ~QWhatsThisClickedEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QWhatsThisClickedEvent()
 func DeleteQWhatsThisClickedEvent(*QWhatsThisClickedEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QWhatsThisClickedEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -94,14 +93,12 @@ func DeleteQWhatsThisClickedEvent(*QWhatsThisClickedEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:716
 // index:0
-// Public inline
-// QString href()
+// Public inline Visibility=Default Availability=Available
+// [8] QString href()
 func (this *QWhatsThisClickedEvent) Href() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QWhatsThisClickedEvent4hrefEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QWhatsThisClickedEvent4hrefEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

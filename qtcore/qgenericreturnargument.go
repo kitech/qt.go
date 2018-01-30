@@ -68,15 +68,14 @@ func (*QGenericReturnArgument) NewFromPointer(cthis unsafe.Pointer) *QGenericRet
 
 // /usr/include/qt/QtCore/qobjectdefs.h:310
 // index:0
-// Public inline
-// void QGenericReturnArgument(const char *, void *)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QGenericReturnArgument(const char *, void *)
 func NewQGenericReturnArgument(aName string, aData unsafe.Pointer /*666*/) *QGenericReturnArgument {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = qtrt.CString(aName)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGenericReturnArgumentC2EPKcPv", ffiqt.FFI_TYPE_VOID, cthis, convArg0, aData)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGenericReturnArgumentC2EPKcPv", ffiqt.FFI_TYPE_POINTER, convArg0, aData)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQGenericReturnArgumentFromPointer(cthis)
+	gothis := NewQGenericReturnArgumentFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

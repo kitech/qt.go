@@ -76,47 +76,44 @@ func (*QStylePainter) NewFromPointer(cthis unsafe.Pointer) *QStylePainter {
 
 // /usr/include/qt/QtWidgets/qstylepainter.h:54
 // index:0
-// Public inline
-// void QStylePainter()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QStylePainter()
 func NewQStylePainter() *QStylePainter {
-	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainterC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainterC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStylePainterFromPointer(cthis)
+	gothis := NewQStylePainterFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstylepainter.h:55
 // index:1
-// Public inline
-// void QStylePainter(QWidget *)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QStylePainter(QWidget *)
 func NewQStylePainter_1(w *QWidget /*777 QWidget **/) *QStylePainter {
-	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = w.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainterC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainterC2EP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStylePainterFromPointer(cthis)
+	gothis := NewQStylePainterFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstylepainter.h:56
 // index:2
-// Public inline
-// void QStylePainter(QPaintDevice *, QWidget *)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QStylePainter(QPaintDevice *, QWidget *)
 func NewQStylePainter_2(pd *qtgui.QPaintDevice /*777 QPaintDevice **/, w *QWidget /*777 QWidget **/) *QStylePainter {
-	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = pd.GetCthis()
 	var convArg1 = w.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainterC2EP12QPaintDeviceP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainterC2EP12QPaintDeviceP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStylePainterFromPointer(cthis)
+	gothis := NewQStylePainterFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstylepainter.h:57
 // index:0
-// Public inline
-// bool begin(QWidget *)
+// Public inline Visibility=Default Availability=Available
+// [1] bool begin(QWidget *)
 func (this *QStylePainter) Begin(w *QWidget /*777 QWidget **/) bool {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainter5beginEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -127,8 +124,8 @@ func (this *QStylePainter) Begin(w *QWidget /*777 QWidget **/) bool {
 
 // /usr/include/qt/QtWidgets/qstylepainter.h:58
 // index:1
-// Public inline
-// bool begin(QPaintDevice *, QWidget *)
+// Public inline Visibility=Default Availability=Available
+// [1] bool begin(QPaintDevice *, QWidget *)
 func (this *QStylePainter) Begin_1(pd *qtgui.QPaintDevice /*777 QPaintDevice **/, w *QWidget /*777 QWidget **/) bool {
 	var convArg0 = pd.GetCthis()
 	var convArg1 = w.GetCthis()
@@ -140,8 +137,8 @@ func (this *QStylePainter) Begin_1(pd *qtgui.QPaintDevice /*777 QPaintDevice **/
 
 // /usr/include/qt/QtWidgets/qstylepainter.h:64
 // index:0
-// Public inline
-// void drawPrimitive(QStyle::PrimitiveElement, const QStyleOption &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void drawPrimitive(QStyle::PrimitiveElement, const QStyleOption &)
 func (this *QStylePainter) DrawPrimitive(pe int, opt *QStyleOption) {
 	var convArg1 = opt.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainter13drawPrimitiveEN6QStyle16PrimitiveElementERK12QStyleOption", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pe, convArg1)
@@ -150,8 +147,8 @@ func (this *QStylePainter) DrawPrimitive(pe int, opt *QStyleOption) {
 
 // /usr/include/qt/QtWidgets/qstylepainter.h:65
 // index:0
-// Public inline
-// void drawControl(QStyle::ControlElement, const QStyleOption &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void drawControl(QStyle::ControlElement, const QStyleOption &)
 func (this *QStylePainter) DrawControl(ce int, opt *QStyleOption) {
 	var convArg1 = opt.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainter11drawControlEN6QStyle14ControlElementERK12QStyleOption", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ce, convArg1)
@@ -160,8 +157,8 @@ func (this *QStylePainter) DrawControl(ce int, opt *QStyleOption) {
 
 // /usr/include/qt/QtWidgets/qstylepainter.h:66
 // index:0
-// Public inline
-// void drawComplexControl(QStyle::ComplexControl, const QStyleOptionComplex &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void drawComplexControl(QStyle::ComplexControl, const QStyleOptionComplex &)
 func (this *QStylePainter) DrawComplexControl(cc int, opt *QStyleOptionComplex) {
 	var convArg1 = opt.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainter18drawComplexControlEN6QStyle14ComplexControlERK19QStyleOptionComplex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cc, convArg1)
@@ -170,8 +167,8 @@ func (this *QStylePainter) DrawComplexControl(cc int, opt *QStyleOptionComplex) 
 
 // /usr/include/qt/QtWidgets/qstylepainter.h:67
 // index:0
-// Public inline
-// void drawItemText(const QRect &, int, const QPalette &, _Bool, const QString &, QPalette::ColorRole)
+// Public inline Visibility=Default Availability=Available
+// [-2] void drawItemText(const QRect &, int, const QPalette &, _Bool, const QString &, QPalette::ColorRole)
 func (this *QStylePainter) DrawItemText(r *qtcore.QRect, flags int, pal *qtgui.QPalette, enabled bool, text *qtcore.QString, textRole int) {
 	var convArg0 = r.GetCthis()
 	var convArg2 = pal.GetCthis()
@@ -182,8 +179,8 @@ func (this *QStylePainter) DrawItemText(r *qtcore.QRect, flags int, pal *qtgui.Q
 
 // /usr/include/qt/QtWidgets/qstylepainter.h:69
 // index:0
-// Public inline
-// void drawItemPixmap(const QRect &, int, const QPixmap &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void drawItemPixmap(const QRect &, int, const QPixmap &)
 func (this *QStylePainter) DrawItemPixmap(r *qtcore.QRect, flags int, pixmap *qtgui.QPixmap) {
 	var convArg0 = r.GetCthis()
 	var convArg2 = pixmap.GetCthis()
@@ -193,8 +190,8 @@ func (this *QStylePainter) DrawItemPixmap(r *qtcore.QRect, flags int, pixmap *qt
 
 // /usr/include/qt/QtWidgets/qstylepainter.h:70
 // index:0
-// Public inline
-// QStyle * style()
+// Public inline Visibility=Default Availability=Available
+// [8] QStyle * style()
 func (this *QStylePainter) Style() *QStyle /*777 QStyle **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStylePainter5styleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

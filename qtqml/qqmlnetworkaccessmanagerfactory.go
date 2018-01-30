@@ -75,8 +75,8 @@ func (*QQmlNetworkAccessManagerFactory) NewFromPointer(cthis unsafe.Pointer) *QQ
 
 // /usr/include/qt/QtQml/qqmlnetworkaccessmanagerfactory.h:54
 // index:0
-// Public virtual
-// void ~QQmlNetworkAccessManagerFactory()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QQmlNetworkAccessManagerFactory()
 func DeleteQQmlNetworkAccessManagerFactory(*QQmlNetworkAccessManagerFactory) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN31QQmlNetworkAccessManagerFactoryD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -84,8 +84,8 @@ func DeleteQQmlNetworkAccessManagerFactory(*QQmlNetworkAccessManagerFactory) {
 
 // /usr/include/qt/QtQml/qqmlnetworkaccessmanagerfactory.h:55
 // index:0
-// Public pure virtual
-// QNetworkAccessManager * create(QObject *)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QNetworkAccessManager * create(QObject *)
 func (this *QQmlNetworkAccessManagerFactory) Create(parent *qtcore.QObject /*777 QObject **/) *qtnetwork.QNetworkAccessManager /*777 QNetworkAccessManager **/ {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN31QQmlNetworkAccessManagerFactory6createEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

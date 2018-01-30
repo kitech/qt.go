@@ -84,20 +84,19 @@ func (*QSGRootNode) NewFromPointer(cthis unsafe.Pointer) *QSGRootNode {
 
 // /usr/include/qt/QtQuick/qsgnode.h:302
 // index:0
-// Public
-// void QSGRootNode()
+// Public Visibility=Default Availability=Available
+// [-2] void QSGRootNode()
 func NewQSGRootNode() *QSGRootNode {
-	cthis := qtrt.Calloc(1, 256) // 88
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGRootNodeC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGRootNodeC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSGRootNodeFromPointer(cthis)
+	gothis := NewQSGRootNodeFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:303
 // index:0
-// Public virtual
-// void ~QSGRootNode()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QSGRootNode()
 func DeleteQSGRootNode(*QSGRootNode) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGRootNodeD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)

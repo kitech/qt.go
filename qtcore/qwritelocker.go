@@ -67,21 +67,20 @@ func (*QWriteLocker) NewFromPointer(cthis unsafe.Pointer) *QWriteLocker {
 
 // /usr/include/qt/QtCore/qreadwritelock.h:131
 // index:0
-// Public inline
-// void QWriteLocker(QReadWriteLock *)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QWriteLocker(QReadWriteLock *)
 func NewQWriteLocker(readWriteLock *QReadWriteLock /*777 QReadWriteLock **/) *QWriteLocker {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = readWriteLock.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLockerC2EP14QReadWriteLock", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLockerC2EP14QReadWriteLock", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQWriteLockerFromPointer(cthis)
+	gothis := NewQWriteLockerFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qreadwritelock.h:133
 // index:0
-// Public inline
-// void ~QWriteLocker()
+// Public inline Visibility=Default Availability=Available
+// [-2] void ~QWriteLocker()
 func DeleteQWriteLocker(*QWriteLocker) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLockerD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -89,8 +88,8 @@ func DeleteQWriteLocker(*QWriteLocker) {
 
 // /usr/include/qt/QtCore/qreadwritelock.h:136
 // index:0
-// Public inline
-// void unlock()
+// Public inline Visibility=Default Availability=Available
+// [-2] void unlock()
 func (this *QWriteLocker) Unlock() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLocker6unlockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -98,8 +97,8 @@ func (this *QWriteLocker) Unlock() {
 
 // /usr/include/qt/QtCore/qreadwritelock.h:146
 // index:0
-// Public inline
-// void relock()
+// Public inline Visibility=Default Availability=Available
+// [-2] void relock()
 func (this *QWriteLocker) Relock() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLocker6relockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -107,8 +106,8 @@ func (this *QWriteLocker) Relock() {
 
 // /usr/include/qt/QtCore/qreadwritelock.h:156
 // index:0
-// Public inline
-// QReadWriteLock * readWriteLock()
+// Public inline Visibility=Default Availability=Available
+// [8] QReadWriteLock * readWriteLock()
 func (this *QWriteLocker) ReadWriteLock() *QReadWriteLock /*777 QReadWriteLock **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QWriteLocker13readWriteLockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

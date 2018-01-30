@@ -71,20 +71,19 @@ func (*QSslCertificateExtension) NewFromPointer(cthis unsafe.Pointer) *QSslCerti
 
 // /usr/include/qt/QtNetwork/qsslcertificateextension.h:59
 // index:0
-// Public
-// void QSslCertificateExtension()
+// Public Visibility=Default Availability=Available
+// [-2] void QSslCertificateExtension()
 func NewQSslCertificateExtension() *QSslCertificateExtension {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QSslCertificateExtensionC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QSslCertificateExtensionC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSslCertificateExtensionFromPointer(cthis)
+	gothis := NewQSslCertificateExtensionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtNetwork/qsslcertificateextension.h:65
 // index:0
-// Public
-// void ~QSslCertificateExtension()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QSslCertificateExtension()
 func DeleteQSslCertificateExtension(*QSslCertificateExtension) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QSslCertificateExtensionD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -92,8 +91,8 @@ func DeleteQSslCertificateExtension(*QSslCertificateExtension) {
 
 // /usr/include/qt/QtNetwork/qsslcertificateextension.h:67
 // index:0
-// Public inline
-// void swap(QSslCertificateExtension &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QSslCertificateExtension &)
 func (this *QSslCertificateExtension) Swap(other *QSslCertificateExtension) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QSslCertificateExtension4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -102,50 +101,44 @@ func (this *QSslCertificateExtension) Swap(other *QSslCertificateExtension) {
 
 // /usr/include/qt/QtNetwork/qsslcertificateextension.h:69
 // index:0
-// Public
-// QString oid()
+// Public Visibility=Default Availability=Available
+// [8] QString oid()
 func (this *QSslCertificateExtension) Oid() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QSslCertificateExtension3oidEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QSslCertificateExtension3oidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qsslcertificateextension.h:70
 // index:0
-// Public
-// QString name()
+// Public Visibility=Default Availability=Available
+// [8] QString name()
 func (this *QSslCertificateExtension) Name() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QSslCertificateExtension4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QSslCertificateExtension4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qsslcertificateextension.h:71
 // index:0
-// Public
-// QVariant value()
+// Public Visibility=Default Availability=Available
+// [16] QVariant value()
 func (this *QSslCertificateExtension) Value() *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QSslCertificateExtension5valueEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QSslCertificateExtension5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qsslcertificateextension.h:72
 // index:0
-// Public
-// bool isCritical()
+// Public Visibility=Default Availability=Available
+// [1] bool isCritical()
 func (this *QSslCertificateExtension) IsCritical() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QSslCertificateExtension10isCriticalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -155,8 +148,8 @@ func (this *QSslCertificateExtension) IsCritical() bool {
 
 // /usr/include/qt/QtNetwork/qsslcertificateextension.h:74
 // index:0
-// Public
-// bool isSupported()
+// Public Visibility=Default Availability=Available
+// [1] bool isSupported()
 func (this *QSslCertificateExtension) IsSupported() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QSslCertificateExtension11isSupportedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

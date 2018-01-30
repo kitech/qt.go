@@ -71,20 +71,19 @@ func (*QSslEllipticCurve) NewFromPointer(cthis unsafe.Pointer) *QSslEllipticCurv
 
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:59
 // index:0
-// Public inline
-// void QSslEllipticCurve()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QSslEllipticCurve()
 func NewQSslEllipticCurve() *QSslEllipticCurve {
-	cthis := qtrt.Calloc(1, 256) // 4
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslEllipticCurveC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslEllipticCurveC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSslEllipticCurveFromPointer(cthis)
+	gothis := NewQSslEllipticCurveFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:64
 // index:0
-// Public static
-// QSslEllipticCurve fromShortName(const QString &)
+// Public static Visibility=Default Availability=Available
+// [4] QSslEllipticCurve fromShortName(const QString &)
 func (this *QSslEllipticCurve) FromShortName(name *qtcore.QString) *QSslEllipticCurve /*123*/ {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslEllipticCurve13fromShortNameERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -101,8 +100,8 @@ func QSslEllipticCurve_FromShortName(name *qtcore.QString) *QSslEllipticCurve /*
 
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:65
 // index:0
-// Public static
-// QSslEllipticCurve fromLongName(const QString &)
+// Public static Visibility=Default Availability=Available
+// [4] QSslEllipticCurve fromLongName(const QString &)
 func (this *QSslEllipticCurve) FromLongName(name *qtcore.QString) *QSslEllipticCurve /*123*/ {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslEllipticCurve12fromLongNameERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -119,36 +118,32 @@ func QSslEllipticCurve_FromLongName(name *qtcore.QString) *QSslEllipticCurve /*1
 
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:67
 // index:0
-// Public
-// QString shortName()
+// Public Visibility=Default Availability=Available
+// [8] QString shortName()
 func (this *QSslEllipticCurve) ShortName() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSslEllipticCurve9shortNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSslEllipticCurve9shortNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:68
 // index:0
-// Public
-// QString longName()
+// Public Visibility=Default Availability=Available
+// [8] QString longName()
 func (this *QSslEllipticCurve) LongName() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSslEllipticCurve8longNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSslEllipticCurve8longNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:70
 // index:0
-// Public inline
-// bool isValid()
+// Public inline Visibility=Default Availability=Available
+// [1] bool isValid()
 func (this *QSslEllipticCurve) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSslEllipticCurve7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -158,8 +153,8 @@ func (this *QSslEllipticCurve) IsValid() bool {
 
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:75
 // index:0
-// Public
-// bool isTlsNamedCurve()
+// Public Visibility=Default Availability=Available
+// [1] bool isTlsNamedCurve()
 func (this *QSslEllipticCurve) IsTlsNamedCurve() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSslEllipticCurve15isTlsNamedCurveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

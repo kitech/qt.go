@@ -75,8 +75,8 @@ func (*QQmlInfo) NewFromPointer(cthis unsafe.Pointer) *QQmlInfo {
 
 // /usr/include/qt/QtQml/qqmlinfo.h:76
 // index:0
-// Public
-// void ~QQmlInfo()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QQmlInfo()
 func DeleteQQmlInfo(*QQmlInfo) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlInfoD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)

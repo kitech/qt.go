@@ -76,32 +76,30 @@ func (*QStyleOptionGraphicsItem) NewFromPointer(cthis unsafe.Pointer) *QStyleOpt
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:669
 // index:0
-// Public
-// void QStyleOptionGraphicsItem()
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleOptionGraphicsItem()
 func NewQStyleOptionGraphicsItem() *QStyleOptionGraphicsItem {
-	cthis := qtrt.Calloc(1, 256) // 152
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItemC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItemC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionGraphicsItemFromPointer(cthis)
+	gothis := NewQStyleOptionGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:673
 // index:1
-// Protected
-// void QStyleOptionGraphicsItem(int)
+// Protected Visibility=Default Availability=Available
+// [-2] void QStyleOptionGraphicsItem(int)
 func NewQStyleOptionGraphicsItem_1(version int) *QStyleOptionGraphicsItem {
-	cthis := qtrt.Calloc(1, 256) // 152
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItemC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItemC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionGraphicsItemFromPointer(cthis)
+	gothis := NewQStyleOptionGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:671
 // index:0
-// Public static
-// qreal levelOfDetailFromTransform(const QTransform &)
+// Public static Visibility=Default Availability=Available
+// [8] qreal levelOfDetailFromTransform(const QTransform &)
 func (this *QStyleOptionGraphicsItem) LevelOfDetailFromTransform(worldTransform *qtgui.QTransform) float64 {
 	var convArg0 = worldTransform.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform", ffiqt.FFI_TYPE_POINTER, convArg0)

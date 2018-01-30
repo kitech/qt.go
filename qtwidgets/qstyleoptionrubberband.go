@@ -76,25 +76,23 @@ func (*QStyleOptionRubberBand) NewFromPointer(cthis unsafe.Pointer) *QStyleOptio
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:491
 // index:0
-// Public
-// void QStyleOptionRubberBand()
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleOptionRubberBand()
 func NewQStyleOptionRubberBand() *QStyleOptionRubberBand {
-	cthis := qtrt.Calloc(1, 256) // 72
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionRubberBandC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionRubberBandC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionRubberBandFromPointer(cthis)
+	gothis := NewQStyleOptionRubberBandFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:495
 // index:1
-// Protected
-// void QStyleOptionRubberBand(int)
+// Protected Visibility=Default Availability=Available
+// [-2] void QStyleOptionRubberBand(int)
 func NewQStyleOptionRubberBand_1(version int) *QStyleOptionRubberBand {
-	cthis := qtrt.Calloc(1, 256) // 72
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionRubberBandC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionRubberBandC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionRubberBandFromPointer(cthis)
+	gothis := NewQStyleOptionRubberBandFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

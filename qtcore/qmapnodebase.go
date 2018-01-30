@@ -67,8 +67,8 @@ func (*QMapNodeBase) NewFromPointer(cthis unsafe.Pointer) *QMapNodeBase {
 
 // /usr/include/qt/QtCore/qmap.h:91
 // index:0
-// Public
-// const QMapNodeBase * nextNode()
+// Public Visibility=Default Availability=Available
+// [8] const QMapNodeBase * nextNode()
 func (this *QMapNodeBase) NextNode() *QMapNodeBase /*777 const QMapNodeBase **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QMapNodeBase8nextNodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -79,8 +79,8 @@ func (this *QMapNodeBase) NextNode() *QMapNodeBase /*777 const QMapNodeBase **/ 
 
 // /usr/include/qt/QtCore/qmap.h:92
 // index:1
-// Public inline
-// QMapNodeBase * nextNode()
+// Public inline Visibility=Default Availability=Available
+// [8] QMapNodeBase * nextNode()
 func (this *QMapNodeBase) NextNode_1() *QMapNodeBase /*777 QMapNodeBase **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapNodeBase8nextNodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -91,8 +91,8 @@ func (this *QMapNodeBase) NextNode_1() *QMapNodeBase /*777 QMapNodeBase **/ {
 
 // /usr/include/qt/QtCore/qmap.h:93
 // index:0
-// Public
-// const QMapNodeBase * previousNode()
+// Public Visibility=Default Availability=Available
+// [8] const QMapNodeBase * previousNode()
 func (this *QMapNodeBase) PreviousNode() *QMapNodeBase /*777 const QMapNodeBase **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QMapNodeBase12previousNodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -103,8 +103,8 @@ func (this *QMapNodeBase) PreviousNode() *QMapNodeBase /*777 const QMapNodeBase 
 
 // /usr/include/qt/QtCore/qmap.h:94
 // index:1
-// Public inline
-// QMapNodeBase * previousNode()
+// Public inline Visibility=Default Availability=Available
+// [8] QMapNodeBase * previousNode()
 func (this *QMapNodeBase) PreviousNode_1() *QMapNodeBase /*777 QMapNodeBase **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapNodeBase12previousNodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -115,8 +115,8 @@ func (this *QMapNodeBase) PreviousNode_1() *QMapNodeBase /*777 QMapNodeBase **/ 
 
 // /usr/include/qt/QtCore/qmap.h:96
 // index:0
-// Public inline
-// QMapNodeBase::Color color()
+// Public inline Visibility=Default Availability=Available
+// [4] QMapNodeBase::Color color()
 func (this *QMapNodeBase) Color() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QMapNodeBase5colorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -126,8 +126,8 @@ func (this *QMapNodeBase) Color() int {
 
 // /usr/include/qt/QtCore/qmap.h:97
 // index:0
-// Public inline
-// void setColor(enum QMapNodeBase::Color)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setColor(enum QMapNodeBase::Color)
 func (this *QMapNodeBase) SetColor(c int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapNodeBase8setColorENS_5ColorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	gopp.ErrPrint(err, rv)
@@ -135,8 +135,8 @@ func (this *QMapNodeBase) SetColor(c int) {
 
 // /usr/include/qt/QtCore/qmap.h:98
 // index:0
-// Public inline
-// QMapNodeBase * parent()
+// Public inline Visibility=Default Availability=Available
+// [8] QMapNodeBase * parent()
 func (this *QMapNodeBase) Parent() *QMapNodeBase /*777 QMapNodeBase **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QMapNodeBase6parentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

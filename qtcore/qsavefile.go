@@ -67,8 +67,8 @@ func (*QSaveFile) NewFromPointer(cthis unsafe.Pointer) *QSaveFile {
 
 // /usr/include/qt/QtCore/qsavefile.h:62
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QSaveFile) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSaveFile10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -79,48 +79,45 @@ func (this *QSaveFile) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 
 // /usr/include/qt/QtCore/qsavefile.h:68
 // index:0
-// Public
-// void QSaveFile(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void QSaveFile(const QString &)
 func NewQSaveFile(name *QString) *QSaveFile {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFileC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFileC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSaveFileFromPointer(cthis)
+	gothis := NewQSaveFileFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qsavefile.h:70
 // index:1
-// Public
-// void QSaveFile(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QSaveFile(QObject *)
 func NewQSaveFile_1(parent *QObject /*777 QObject **/) *QSaveFile {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFileC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFileC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSaveFileFromPointer(cthis)
+	gothis := NewQSaveFileFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qsavefile.h:71
 // index:2
-// Public
-// void QSaveFile(const QString &, QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QSaveFile(const QString &, QObject *)
 func NewQSaveFile_2(name *QString, parent *QObject /*777 QObject **/) *QSaveFile {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = name.GetCthis()
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFileC2ERK7QStringP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFileC2ERK7QStringP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSaveFileFromPointer(cthis)
+	gothis := NewQSaveFileFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qsavefile.h:73
 // index:0
-// Public virtual
-// void ~QSaveFile()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QSaveFile()
 func DeleteQSaveFile(*QSaveFile) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFileD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -128,22 +125,20 @@ func DeleteQSaveFile(*QSaveFile) {
 
 // /usr/include/qt/QtCore/qsavefile.h:75
 // index:0
-// Public virtual
-// QString fileName()
+// Public virtual Visibility=Default Availability=Available
+// [8] QString fileName()
 func (this *QSaveFile) FileName() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSaveFile8fileNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSaveFile8fileNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qsavefile.h:76
 // index:0
-// Public
-// void setFileName(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void setFileName(const QString &)
 func (this *QSaveFile) SetFileName(name *QString) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFile11setFileNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -152,8 +147,8 @@ func (this *QSaveFile) SetFileName(name *QString) {
 
 // /usr/include/qt/QtCore/qsavefile.h:79
 // index:0
-// Public
-// bool commit()
+// Public Visibility=Default Availability=Available
+// [1] bool commit()
 func (this *QSaveFile) Commit() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFile6commitEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -163,8 +158,8 @@ func (this *QSaveFile) Commit() bool {
 
 // /usr/include/qt/QtCore/qsavefile.h:81
 // index:0
-// Public
-// void cancelWriting()
+// Public Visibility=Default Availability=Available
+// [-2] void cancelWriting()
 func (this *QSaveFile) CancelWriting() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFile13cancelWritingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -172,8 +167,8 @@ func (this *QSaveFile) CancelWriting() {
 
 // /usr/include/qt/QtCore/qsavefile.h:83
 // index:0
-// Public
-// void setDirectWriteFallback(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setDirectWriteFallback(_Bool)
 func (this *QSaveFile) SetDirectWriteFallback(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFile22setDirectWriteFallbackEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
 	gopp.ErrPrint(err, rv)
@@ -181,8 +176,8 @@ func (this *QSaveFile) SetDirectWriteFallback(enabled bool) {
 
 // /usr/include/qt/QtCore/qsavefile.h:84
 // index:0
-// Public
-// bool directWriteFallback()
+// Public Visibility=Default Availability=Available
+// [1] bool directWriteFallback()
 func (this *QSaveFile) DirectWriteFallback() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSaveFile19directWriteFallbackEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -192,8 +187,8 @@ func (this *QSaveFile) DirectWriteFallback() bool {
 
 // /usr/include/qt/QtCore/qsavefile.h:87
 // index:0
-// Protected virtual
-// qint64 writeData(const char *, qint64)
+// Protected virtual Visibility=Default Availability=Available
+// [8] qint64 writeData(const char *, qint64)
 func (this *QSaveFile) WriteData(data string, len int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)

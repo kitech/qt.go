@@ -1,6 +1,7 @@
 package qtmock
 
 import (
+	"gopp"
 	"unsafe"
 
 	"qt.go/cffiqt"
@@ -20,11 +21,15 @@ func QCoreApplication_Translate(a string, b string, c string, d int) *qtcore.QSt
 }
 
 // bool qRegisterResourceData(int, unsigned char const*, unsigned char const*, unsigned char const*)
-func QRegisterResourceData(version int, struct_ unsafe.Pointer, name_ unsafe.Pointer, data_ unsafe.Pointer) {
-	ffiqt.InvokeQtFunc6("_Z21qRegisterResourceDataiPKhS0_S0_", ffiqt.FFI_TYPE_POINTER, version, struct_, name_, data_)
+func QRegisterResourceData(version int, struct_ unsafe.Pointer, name_ unsafe.Pointer, data_ unsafe.Pointer) bool {
+	rv, err := ffiqt.InvokeQtFunc6("_Z21qRegisterResourceDataiPKhS0_S0_", ffiqt.FFI_TYPE_POINTER, version, struct_, name_, data_)
+	gopp.ErrPrint(err, rv)
+	return rv != 0
 }
 
 // bool qUnregisterResourceData(int, unsigned char const*, unsigned char const*, unsigned char const*)
-func QUnregisterResourceData(version int, struct_ unsafe.Pointer, name_ unsafe.Pointer, data_ unsafe.Pointer) {
-	ffiqt.InvokeQtFunc6("_Z23qUnregisterResourceDataiPKhS0_S0_", ffiqt.FFI_TYPE_POINTER, version, struct_, name_, data_)
+func QUnregisterResourceData(version int, struct_ unsafe.Pointer, name_ unsafe.Pointer, data_ unsafe.Pointer) bool {
+	rv, err := ffiqt.InvokeQtFunc6("_Z23qUnregisterResourceDataiPKhS0_S0_", ffiqt.FFI_TYPE_POINTER, version, struct_, name_, data_)
+	gopp.ErrPrint(err, rv)
+	return rv != 0
 }

@@ -67,8 +67,8 @@ func (*QTextStreamManipulator) NewFromPointer(cthis unsafe.Pointer) *QTextStream
 
 // /usr/include/qt/QtCore/qtextstream.h:217
 // index:0
-// Public inline
-// void exec(QTextStream &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void exec(QTextStream &)
 func (this *QTextStreamManipulator) Exec(s *QTextStream) {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QTextStreamManipulator4execER11QTextStream", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

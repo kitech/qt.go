@@ -67,8 +67,8 @@ func (*QContainerImplHelper) NewFromPointer(cthis unsafe.Pointer) *QContainerImp
 
 // /usr/include/qt/QtCore/qarraydata.h:373
 // index:0
-// Public static
-// QtPrivate::QContainerImplHelper::CutResult mid(int, int *, int *)
+// Public static Visibility=Default Availability=Available
+// [4] QtPrivate::QContainerImplHelper::CutResult mid(int, int *, int *)
 func (this *QContainerImplHelper) Mid(originalLength int, position unsafe.Pointer /*666*/, length unsafe.Pointer /*666*/) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QtPrivate20QContainerImplHelper3midEiPiS1_", ffiqt.FFI_TYPE_POINTER, originalLength, &position, &length)
 	gopp.ErrPrint(err, rv)

@@ -84,20 +84,19 @@ func (*QSGOpacityNode) NewFromPointer(cthis unsafe.Pointer) *QSGOpacityNode {
 
 // /usr/include/qt/QtQuick/qsgnode.h:319
 // index:0
-// Public
-// void QSGOpacityNode()
+// Public Visibility=Default Availability=Available
+// [-2] void QSGOpacityNode()
 func NewQSGOpacityNode() *QSGOpacityNode {
-	cthis := qtrt.Calloc(1, 256) // 96
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGOpacityNodeC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGOpacityNodeC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSGOpacityNodeFromPointer(cthis)
+	gothis := NewQSGOpacityNodeFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:320
 // index:0
-// Public virtual
-// void ~QSGOpacityNode()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QSGOpacityNode()
 func DeleteQSGOpacityNode(*QSGOpacityNode) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGOpacityNodeD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -105,8 +104,8 @@ func DeleteQSGOpacityNode(*QSGOpacityNode) {
 
 // /usr/include/qt/QtQuick/qsgnode.h:322
 // index:0
-// Public
-// void setOpacity(qreal)
+// Public Visibility=Default Availability=Available
+// [-2] void setOpacity(qreal)
 func (this *QSGOpacityNode) SetOpacity(opacity float64) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGOpacityNode10setOpacityEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), opacity)
 	gopp.ErrPrint(err, rv)
@@ -114,8 +113,8 @@ func (this *QSGOpacityNode) SetOpacity(opacity float64) {
 
 // /usr/include/qt/QtQuick/qsgnode.h:323
 // index:0
-// Public inline
-// qreal opacity()
+// Public inline Visibility=Default Availability=Available
+// [8] qreal opacity()
 func (this *QSGOpacityNode) Opacity() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSGOpacityNode7opacityEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -125,8 +124,8 @@ func (this *QSGOpacityNode) Opacity() float64 {
 
 // /usr/include/qt/QtQuick/qsgnode.h:325
 // index:0
-// Public
-// void setCombinedOpacity(qreal)
+// Public Visibility=Default Availability=Available
+// [-2] void setCombinedOpacity(qreal)
 func (this *QSGOpacityNode) SetCombinedOpacity(opacity float64) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGOpacityNode18setCombinedOpacityEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), opacity)
 	gopp.ErrPrint(err, rv)
@@ -134,8 +133,8 @@ func (this *QSGOpacityNode) SetCombinedOpacity(opacity float64) {
 
 // /usr/include/qt/QtQuick/qsgnode.h:326
 // index:0
-// Public inline
-// qreal combinedOpacity()
+// Public inline Visibility=Default Availability=Available
+// [8] qreal combinedOpacity()
 func (this *QSGOpacityNode) CombinedOpacity() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSGOpacityNode15combinedOpacityEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -145,8 +144,8 @@ func (this *QSGOpacityNode) CombinedOpacity() float64 {
 
 // /usr/include/qt/QtQuick/qsgnode.h:328
 // index:0
-// Public virtual
-// bool isSubtreeBlocked()
+// Public virtual Visibility=Default Availability=Available
+// [1] bool isSubtreeBlocked()
 func (this *QSGOpacityNode) IsSubtreeBlocked() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSGOpacityNode16isSubtreeBlockedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

@@ -75,8 +75,8 @@ func (*QWhatsThis) NewFromPointer(cthis unsafe.Pointer) *QWhatsThis {
 
 // /usr/include/qt/QtWidgets/qwhatsthis.h:58
 // index:0
-// Public static
-// void enterWhatsThisMode()
+// Public static Visibility=Default Availability=Available
+// [-2] void enterWhatsThisMode()
 func (this *QWhatsThis) EnterWhatsThisMode() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThis18enterWhatsThisModeEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -88,8 +88,8 @@ func QWhatsThis_EnterWhatsThisMode() {
 
 // /usr/include/qt/QtWidgets/qwhatsthis.h:59
 // index:0
-// Public static
-// bool inWhatsThisMode()
+// Public static Visibility=Default Availability=Available
+// [1] bool inWhatsThisMode()
 func (this *QWhatsThis) InWhatsThisMode() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThis15inWhatsThisModeEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -104,8 +104,8 @@ func QWhatsThis_InWhatsThisMode() bool {
 
 // /usr/include/qt/QtWidgets/qwhatsthis.h:60
 // index:0
-// Public static
-// void leaveWhatsThisMode()
+// Public static Visibility=Default Availability=Available
+// [-2] void leaveWhatsThisMode()
 func (this *QWhatsThis) LeaveWhatsThisMode() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThis18leaveWhatsThisModeEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -117,8 +117,8 @@ func QWhatsThis_LeaveWhatsThisMode() {
 
 // /usr/include/qt/QtWidgets/qwhatsthis.h:62
 // index:0
-// Public static
-// void showText(const QPoint &, const QString &, QWidget *)
+// Public static Visibility=Default Availability=Available
+// [-2] void showText(const QPoint &, const QString &, QWidget *)
 func (this *QWhatsThis) ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/) {
 	var convArg0 = pos.GetCthis()
 	var convArg1 = text.GetCthis()
@@ -133,8 +133,8 @@ func QWhatsThis_ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*
 
 // /usr/include/qt/QtWidgets/qwhatsthis.h:63
 // index:0
-// Public static
-// void hideText()
+// Public static Visibility=Default Availability=Available
+// [-2] void hideText()
 func (this *QWhatsThis) HideText() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThis8hideTextEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -146,8 +146,8 @@ func QWhatsThis_HideText() {
 
 // /usr/include/qt/QtWidgets/qwhatsthis.h:65
 // index:0
-// Public static
-// QAction * createAction(QObject *)
+// Public static Visibility=Default Availability=Available
+// [8] QAction * createAction(QObject *)
 func (this *QWhatsThis) CreateAction(parent *qtcore.QObject /*777 QObject **/) *QAction /*777 QAction **/ {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThis12createActionEP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)

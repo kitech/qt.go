@@ -68,8 +68,8 @@ func (*QObjectCleanupHandler) NewFromPointer(cthis unsafe.Pointer) *QObjectClean
 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:50
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QObjectCleanupHandler) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -80,20 +80,19 @@ func (this *QObjectCleanupHandler) MetaObject() *QMetaObject /*777 const QMetaOb
 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:53
 // index:0
-// Public
-// void QObjectCleanupHandler()
+// Public Visibility=Default Availability=Available
+// [-2] void QObjectCleanupHandler()
 func NewQObjectCleanupHandler() *QObjectCleanupHandler {
-	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQObjectCleanupHandlerFromPointer(cthis)
+	gothis := NewQObjectCleanupHandlerFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:54
 // index:0
-// Public virtual
-// void ~QObjectCleanupHandler()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QObjectCleanupHandler()
 func DeleteQObjectCleanupHandler(*QObjectCleanupHandler) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -101,8 +100,8 @@ func DeleteQObjectCleanupHandler(*QObjectCleanupHandler) {
 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:56
 // index:0
-// Public
-// QObject * add(QObject *)
+// Public Visibility=Default Availability=Available
+// [8] QObject * add(QObject *)
 func (this *QObjectCleanupHandler) Add(object *QObject /*777 QObject **/) *QObject /*777 QObject **/ {
 	var convArg0 = object.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler3addEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -114,8 +113,8 @@ func (this *QObjectCleanupHandler) Add(object *QObject /*777 QObject **/) *QObje
 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:57
 // index:0
-// Public
-// void remove(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void remove(QObject *)
 func (this *QObjectCleanupHandler) Remove(object *QObject /*777 QObject **/) {
 	var convArg0 = object.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler6removeEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -124,8 +123,8 @@ func (this *QObjectCleanupHandler) Remove(object *QObject /*777 QObject **/) {
 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:58
 // index:0
-// Public
-// bool isEmpty()
+// Public Visibility=Default Availability=Available
+// [1] bool isEmpty()
 func (this *QObjectCleanupHandler) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -135,8 +134,8 @@ func (this *QObjectCleanupHandler) IsEmpty() bool {
 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:59
 // index:0
-// Public
-// void clear()
+// Public Visibility=Default Availability=Available
+// [-2] void clear()
 func (this *QObjectCleanupHandler) Clear() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

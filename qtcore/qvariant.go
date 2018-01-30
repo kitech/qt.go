@@ -67,544 +67,502 @@ func (*QVariant) NewFromPointer(cthis unsafe.Pointer) *QVariant {
 
 // /usr/include/qt/QtCore/qvariant.h:199
 // index:0
-// Public inline
-// void QVariant()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QVariant()
 func NewQVariant() *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:201
 // index:1
-// Public
-// void QVariant(enum QVariant::Type)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(enum QVariant::Type)
 func NewQVariant_1(type_ int) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ENS_4TypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ENS_4TypeE", ffiqt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:202
 // index:2
-// Public
-// void QVariant(int, const void *)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(int, const void *)
 func NewQVariant_2(typeId int, copy unsafe.Pointer /*666*/) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2EiPKv", ffiqt.FFI_TYPE_VOID, cthis, typeId, copy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2EiPKv", ffiqt.FFI_TYPE_POINTER, typeId, copy)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:203
 // index:3
-// Public
-// void QVariant(int, const void *, uint)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(int, const void *, uint)
 func NewQVariant_3(typeId int, copy unsafe.Pointer /*666*/, flags uint) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2EiPKvj", ffiqt.FFI_TYPE_VOID, cthis, typeId, copy, flags)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2EiPKvj", ffiqt.FFI_TYPE_POINTER, typeId, copy, flags)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:207
 // index:4
-// Public
-// void QVariant(QDataStream &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(QDataStream &)
 func NewQVariant_4(s *QDataStream) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ER11QDataStream", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ER11QDataStream", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:210
 // index:5
-// Public
-// void QVariant(int)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(int)
 func NewQVariant_5(i int) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ei", ffiqt.FFI_TYPE_VOID, cthis, i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ei", ffiqt.FFI_TYPE_POINTER, i)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:211
 // index:6
-// Public
-// void QVariant(uint)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(uint)
 func NewQVariant_6(ui uint) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ej", ffiqt.FFI_TYPE_VOID, cthis, ui)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ej", ffiqt.FFI_TYPE_POINTER, ui)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:212
 // index:7
-// Public
-// void QVariant(qlonglong)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(qlonglong)
 func NewQVariant_7(ll int64) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ex", ffiqt.FFI_TYPE_VOID, cthis, ll)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ex", ffiqt.FFI_TYPE_POINTER, ll)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:213
 // index:8
-// Public
-// void QVariant(qulonglong)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(qulonglong)
 func NewQVariant_8(ull uint64) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ey", ffiqt.FFI_TYPE_VOID, cthis, ull)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ey", ffiqt.FFI_TYPE_POINTER, ull)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:214
 // index:9
-// Public
-// void QVariant(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(_Bool)
 func NewQVariant_9(b bool) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Eb", ffiqt.FFI_TYPE_VOID, cthis, b)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Eb", ffiqt.FFI_TYPE_POINTER, b)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:215
 // index:10
-// Public
-// void QVariant(double)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(double)
 func NewQVariant_10(d float64) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ed", ffiqt.FFI_TYPE_VOID, cthis, d)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ed", ffiqt.FFI_TYPE_POINTER, d)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:216
 // index:11
-// Public
-// void QVariant(float)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(float)
 func NewQVariant_11(f float32) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ef", ffiqt.FFI_TYPE_VOID, cthis, f)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2Ef", ffiqt.FFI_TYPE_POINTER, f)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:218
 // index:12
-// Public
-// void QVariant(const char *)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const char *)
 func NewQVariant_12(str string) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2EPKc", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2EPKc", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:221
 // index:13
-// Public
-// void QVariant(const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QByteArray &)
 func NewQVariant_13(bytearray *QByteArray) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = bytearray.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:222
 // index:14
-// Public
-// void QVariant(const QBitArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QBitArray &)
 func NewQVariant_14(bitarray *QBitArray) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = bitarray.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK9QBitArray", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK9QBitArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:223
 // index:15
-// Public
-// void QVariant(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QString &)
 func NewQVariant_15(string *QString) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = string.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:224
 // index:16
-// Public
-// void QVariant(QLatin1String)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(QLatin1String)
 func NewQVariant_16(string *QLatin1String /*123*/) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = string.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2E13QLatin1String", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2E13QLatin1String", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:225
 // index:17
-// Public
-// void QVariant(const QStringList &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QStringList &)
 func NewQVariant_17(stringlist *QStringList) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = stringlist.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK11QStringList", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK11QStringList", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:226
 // index:18
-// Public
-// void QVariant(QChar)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(QChar)
 func NewQVariant_18(qchar *QChar /*123*/) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = qchar.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2E5QChar", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2E5QChar", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:227
 // index:19
-// Public
-// void QVariant(const QDate &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QDate &)
 func NewQVariant_19(date *QDate) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = date.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK5QDate", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK5QDate", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:228
 // index:20
-// Public
-// void QVariant(const QTime &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QTime &)
 func NewQVariant_20(time *QTime) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = time.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK5QTime", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK5QTime", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:229
 // index:21
-// Public
-// void QVariant(const QDateTime &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QDateTime &)
 func NewQVariant_21(datetime *QDateTime) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = datetime.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK9QDateTime", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK9QDateTime", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:234
 // index:22
-// Public
-// void QVariant(const QSize &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QSize &)
 func NewQVariant_22(size *QSize) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = size.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK5QSize", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK5QSize", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:235
 // index:23
-// Public
-// void QVariant(const QSizeF &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QSizeF &)
 func NewQVariant_23(size *QSizeF) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = size.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK6QSizeF", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK6QSizeF", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:236
 // index:24
-// Public
-// void QVariant(const QPoint &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QPoint &)
 func NewQVariant_24(pt *QPoint) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = pt.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK6QPoint", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK6QPoint", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:237
 // index:25
-// Public
-// void QVariant(const QPointF &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QPointF &)
 func NewQVariant_25(pt *QPointF) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = pt.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK7QPointF", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK7QPointF", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:238
 // index:26
-// Public
-// void QVariant(const QLine &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QLine &)
 func NewQVariant_26(line *QLine) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = line.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK5QLine", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK5QLine", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:239
 // index:27
-// Public
-// void QVariant(const QLineF &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QLineF &)
 func NewQVariant_27(line *QLineF) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = line.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK6QLineF", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK6QLineF", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:240
 // index:28
-// Public
-// void QVariant(const QRect &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QRect &)
 func NewQVariant_28(rect *QRect) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = rect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK5QRect", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK5QRect", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:241
 // index:29
-// Public
-// void QVariant(const QRectF &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QRectF &)
 func NewQVariant_29(rect *QRectF) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = rect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK6QRectF", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK6QRectF", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:243
 // index:30
-// Public
-// void QVariant(const QLocale &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QLocale &)
 func NewQVariant_30(locale *QLocale) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = locale.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK7QLocale", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK7QLocale", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:245
 // index:31
-// Public
-// void QVariant(const QRegExp &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QRegExp &)
 func NewQVariant_31(regExp *QRegExp) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = regExp.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK7QRegExp", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK7QRegExp", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:249
 // index:32
-// Public
-// void QVariant(const QRegularExpression &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QRegularExpression &)
 func NewQVariant_32(re *QRegularExpression) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = re.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK18QRegularExpression", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK18QRegularExpression", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:251
 // index:33
-// Public
-// void QVariant(const QUrl &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QUrl &)
 func NewQVariant_33(url *QUrl) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = url.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK4QUrl", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK4QUrl", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:252
 // index:34
-// Public
-// void QVariant(const QEasingCurve &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QEasingCurve &)
 func NewQVariant_34(easing *QEasingCurve) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = easing.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK12QEasingCurve", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK12QEasingCurve", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:253
 // index:35
-// Public
-// void QVariant(const QUuid &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QUuid &)
 func NewQVariant_35(uuid *QUuid) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = uuid.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK5QUuid", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK5QUuid", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:254
 // index:36
-// Public
-// void QVariant(const QModelIndex &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QModelIndex &)
 func NewQVariant_36(modelIndex *QModelIndex) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = modelIndex.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK11QModelIndex", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:255
 // index:37
-// Public
-// void QVariant(const QPersistentModelIndex &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QPersistentModelIndex &)
 func NewQVariant_37(modelIndex *QPersistentModelIndex) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = modelIndex.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK21QPersistentModelIndex", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK21QPersistentModelIndex", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:256
 // index:38
-// Public
-// void QVariant(const QJsonValue &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QJsonValue &)
 func NewQVariant_38(jsonValue *QJsonValue) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = jsonValue.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK10QJsonValue", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK10QJsonValue", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:257
 // index:39
-// Public
-// void QVariant(const QJsonObject &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QJsonObject &)
 func NewQVariant_39(jsonObject *QJsonObject) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = jsonObject.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK11QJsonObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK11QJsonObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:258
 // index:40
-// Public
-// void QVariant(const QJsonArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QJsonArray &)
 func NewQVariant_40(jsonArray *QJsonArray) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = jsonArray.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK10QJsonArray", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK10QJsonArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:259
 // index:41
-// Public
-// void QVariant(const QJsonDocument &)
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QJsonDocument &)
 func NewQVariant_41(jsonDocument *QJsonDocument) *QVariant {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = jsonDocument.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK13QJsonDocument", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantC2ERK13QJsonDocument", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVariantFromPointer(cthis)
+	gothis := NewQVariantFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qvariant.h:200
 // index:0
-// Public
-// void ~QVariant()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QVariant()
 func DeleteQVariant(*QVariant) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -612,8 +570,8 @@ func DeleteQVariant(*QVariant) {
 
 // /usr/include/qt/QtCore/qvariant.h:270
 // index:0
-// Public inline
-// void swap(QVariant &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QVariant &)
 func (this *QVariant) Swap(other *QVariant) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariant4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -622,8 +580,8 @@ func (this *QVariant) Swap(other *QVariant) {
 
 // /usr/include/qt/QtCore/qvariant.h:272
 // index:0
-// Public
-// QVariant::Type type()
+// Public Visibility=Default Availability=Available
+// [4] QVariant::Type type()
 func (this *QVariant) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -633,8 +591,8 @@ func (this *QVariant) Type() int {
 
 // /usr/include/qt/QtCore/qvariant.h:273
 // index:0
-// Public
-// int userType()
+// Public Visibility=Default Availability=Available
+// [4] int userType()
 func (this *QVariant) UserType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8userTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -644,8 +602,8 @@ func (this *QVariant) UserType() int {
 
 // /usr/include/qt/QtCore/qvariant.h:274
 // index:0
-// Public
-// const char * typeName()
+// Public Visibility=Default Availability=Available
+// [8] const char * typeName()
 func (this *QVariant) TypeName() string {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8typeNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -655,8 +613,8 @@ func (this *QVariant) TypeName() string {
 
 // /usr/include/qt/QtCore/qvariant.h:276
 // index:0
-// Public
-// bool canConvert(int)
+// Public Visibility=Default Availability=Available
+// [1] bool canConvert(int)
 func (this *QVariant) CanConvert(targetTypeId int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant10canConvertEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), targetTypeId)
 	gopp.ErrPrint(err, rv)
@@ -666,8 +624,8 @@ func (this *QVariant) CanConvert(targetTypeId int) bool {
 
 // /usr/include/qt/QtCore/qvariant.h:277
 // index:0
-// Public
-// bool convert(int)
+// Public Visibility=Default Availability=Available
+// [1] bool convert(int)
 func (this *QVariant) Convert(targetTypeId int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariant7convertEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), targetTypeId)
 	gopp.ErrPrint(err, rv)
@@ -677,8 +635,8 @@ func (this *QVariant) Convert(targetTypeId int) bool {
 
 // /usr/include/qt/QtCore/qvariant.h:467
 // index:1
-// Protected
-// bool convert(const int, void *)
+// Protected Visibility=Default Availability=Available
+// [1] bool convert(const int, void *)
 func (this *QVariant) Convert_1(t int, ptr unsafe.Pointer /*666*/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7convertEiPv", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), t, ptr)
 	gopp.ErrPrint(err, rv)
@@ -688,8 +646,8 @@ func (this *QVariant) Convert_1(t int, ptr unsafe.Pointer /*666*/) bool {
 
 // /usr/include/qt/QtCore/qvariant.h:279
 // index:0
-// Public inline
-// bool isValid()
+// Public inline Visibility=Default Availability=Available
+// [1] bool isValid()
 func (this *QVariant) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -699,8 +657,8 @@ func (this *QVariant) IsValid() bool {
 
 // /usr/include/qt/QtCore/qvariant.h:280
 // index:0
-// Public
-// bool isNull()
+// Public Visibility=Default Availability=Available
+// [1] bool isNull()
 func (this *QVariant) IsNull() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -710,8 +668,8 @@ func (this *QVariant) IsNull() bool {
 
 // /usr/include/qt/QtCore/qvariant.h:282
 // index:0
-// Public
-// void clear()
+// Public Visibility=Default Availability=Available
+// [-2] void clear()
 func (this *QVariant) Clear() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariant5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -719,8 +677,8 @@ func (this *QVariant) Clear() {
 
 // /usr/include/qt/QtCore/qvariant.h:284
 // index:0
-// Public
-// void detach()
+// Public Visibility=Default Availability=Available
+// [-2] void detach()
 func (this *QVariant) Detach() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariant6detachEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -728,8 +686,8 @@ func (this *QVariant) Detach() {
 
 // /usr/include/qt/QtCore/qvariant.h:285
 // index:0
-// Public inline
-// bool isDetached()
+// Public inline Visibility=Default Availability=Available
+// [1] bool isDetached()
 func (this *QVariant) IsDetached() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant10isDetachedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -739,8 +697,8 @@ func (this *QVariant) IsDetached() bool {
 
 // /usr/include/qt/QtCore/qvariant.h:287
 // index:0
-// Public
-// int toInt(_Bool *)
+// Public Visibility=Default Availability=Available
+// [4] int toInt(_Bool *)
 func (this *QVariant) ToInt(ok unsafe.Pointer /*666*/) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant5toIntEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -750,8 +708,8 @@ func (this *QVariant) ToInt(ok unsafe.Pointer /*666*/) int {
 
 // /usr/include/qt/QtCore/qvariant.h:288
 // index:0
-// Public
-// uint toUInt(_Bool *)
+// Public Visibility=Default Availability=Available
+// [4] uint toUInt(_Bool *)
 func (this *QVariant) ToUInt(ok unsafe.Pointer /*666*/) uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toUIntEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -761,8 +719,8 @@ func (this *QVariant) ToUInt(ok unsafe.Pointer /*666*/) uint {
 
 // /usr/include/qt/QtCore/qvariant.h:289
 // index:0
-// Public
-// qlonglong toLongLong(_Bool *)
+// Public Visibility=Default Availability=Available
+// [8] qlonglong toLongLong(_Bool *)
 func (this *QVariant) ToLongLong(ok unsafe.Pointer /*666*/) int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant10toLongLongEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -772,8 +730,8 @@ func (this *QVariant) ToLongLong(ok unsafe.Pointer /*666*/) int64 {
 
 // /usr/include/qt/QtCore/qvariant.h:290
 // index:0
-// Public
-// qulonglong toULongLong(_Bool *)
+// Public Visibility=Default Availability=Available
+// [8] qulonglong toULongLong(_Bool *)
 func (this *QVariant) ToULongLong(ok unsafe.Pointer /*666*/) uint64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant11toULongLongEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -783,8 +741,8 @@ func (this *QVariant) ToULongLong(ok unsafe.Pointer /*666*/) uint64 {
 
 // /usr/include/qt/QtCore/qvariant.h:291
 // index:0
-// Public
-// bool toBool()
+// Public Visibility=Default Availability=Available
+// [1] bool toBool()
 func (this *QVariant) ToBool() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toBoolEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -794,8 +752,8 @@ func (this *QVariant) ToBool() bool {
 
 // /usr/include/qt/QtCore/qvariant.h:292
 // index:0
-// Public
-// double toDouble(_Bool *)
+// Public Visibility=Default Availability=Available
+// [8] double toDouble(_Bool *)
 func (this *QVariant) ToDouble(ok unsafe.Pointer /*666*/) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toDoubleEPb", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -805,8 +763,8 @@ func (this *QVariant) ToDouble(ok unsafe.Pointer /*666*/) float64 {
 
 // /usr/include/qt/QtCore/qvariant.h:293
 // index:0
-// Public
-// float toFloat(_Bool *)
+// Public Visibility=Default Availability=Available
+// [4] float toFloat(_Bool *)
 func (this *QVariant) ToFloat(ok unsafe.Pointer /*666*/) float32 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toFloatEPb", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -816,8 +774,8 @@ func (this *QVariant) ToFloat(ok unsafe.Pointer /*666*/) float32 {
 
 // /usr/include/qt/QtCore/qvariant.h:294
 // index:0
-// Public
-// qreal toReal(_Bool *)
+// Public Visibility=Default Availability=Available
+// [8] qreal toReal(_Bool *)
 func (this *QVariant) ToReal(ok unsafe.Pointer /*666*/) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toRealEPb", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -827,386 +785,332 @@ func (this *QVariant) ToReal(ok unsafe.Pointer /*666*/) float64 {
 
 // /usr/include/qt/QtCore/qvariant.h:295
 // index:0
-// Public
-// QByteArray toByteArray()
+// Public Visibility=Default Availability=Available
+// [8] QByteArray toByteArray()
 func (this *QVariant) ToByteArray() *QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant11toByteArrayEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant11toByteArrayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:296
 // index:0
-// Public
-// QBitArray toBitArray()
+// Public Visibility=Default Availability=Available
+// [8] QBitArray toBitArray()
 func (this *QVariant) ToBitArray() *QBitArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant10toBitArrayEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant10toBitArrayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQBitArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:297
 // index:0
-// Public
-// QString toString()
+// Public Visibility=Default Availability=Available
+// [8] QString toString()
 func (this *QVariant) ToString() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toStringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:299
 // index:0
-// Public
-// QChar toChar()
+// Public Visibility=Default Availability=Available
+// [2] QChar toChar()
 func (this *QVariant) ToChar() *QChar /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toCharEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toCharEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:300
 // index:0
-// Public
-// QDate toDate()
+// Public Visibility=Default Availability=Available
+// [8] QDate toDate()
 func (this *QVariant) ToDate() *QDate /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toDateEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toDateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:301
 // index:0
-// Public
-// QTime toTime()
+// Public Visibility=Default Availability=Available
+// [4] QTime toTime()
 func (this *QVariant) ToTime() *QTime /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toTimeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:302
 // index:0
-// Public
-// QDateTime toDateTime()
+// Public Visibility=Default Availability=Available
+// [8] QDateTime toDateTime()
 func (this *QVariant) ToDateTime() *QDateTime /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant10toDateTimeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant10toDateTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:308
 // index:0
-// Public
-// QPoint toPoint()
+// Public Visibility=Default Availability=Available
+// [8] QPoint toPoint()
 func (this *QVariant) ToPoint() *QPoint /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toPointEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toPointEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:309
 // index:0
-// Public
-// QPointF toPointF()
+// Public Visibility=Default Availability=Available
+// [16] QPointF toPointF()
 func (this *QVariant) ToPointF() *QPointF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toPointFEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toPointFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:310
 // index:0
-// Public
-// QRect toRect()
+// Public Visibility=Default Availability=Available
+// [16] QRect toRect()
 func (this *QVariant) ToRect() *QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:311
 // index:0
-// Public
-// QSize toSize()
+// Public Visibility=Default Availability=Available
+// [8] QSize toSize()
 func (this *QVariant) ToSize() *QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK8QVariant6toSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:312
 // index:0
-// Public
-// QSizeF toSizeF()
+// Public Visibility=Default Availability=Available
+// [16] QSizeF toSizeF()
 func (this *QVariant) ToSizeF() *QSizeF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK8QVariant7toSizeFEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toSizeFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:313
 // index:0
-// Public
-// QLine toLine()
+// Public Visibility=Default Availability=Available
+// [16] QLine toLine()
 func (this *QVariant) ToLine() *QLine /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toLineEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toLineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:314
 // index:0
-// Public
-// QLineF toLineF()
+// Public Visibility=Default Availability=Available
+// [32] QLineF toLineF()
 func (this *QVariant) ToLineF() *QLineF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toLineFEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toLineFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLineFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:315
 // index:0
-// Public
-// QRectF toRectF()
+// Public Visibility=Default Availability=Available
+// [32] QRectF toRectF()
 func (this *QVariant) ToRectF() *QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toRectFEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7toRectFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:317
 // index:0
-// Public
-// QLocale toLocale()
+// Public Visibility=Default Availability=Available
+// [8] QLocale toLocale()
 func (this *QVariant) ToLocale() *QLocale /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toLocaleEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toLocaleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:319
 // index:0
-// Public
-// QRegExp toRegExp()
+// Public Visibility=Default Availability=Available
+// [8] QRegExp toRegExp()
 func (this *QVariant) ToRegExp() *QRegExp /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toRegExpEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant8toRegExpEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegExpFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:323
 // index:0
-// Public
-// QRegularExpression toRegularExpression()
+// Public Visibility=Default Availability=Available
+// [8] QRegularExpression toRegularExpression()
 func (this *QVariant) ToRegularExpression() *QRegularExpression /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant19toRegularExpressionEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant19toRegularExpressionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegularExpressionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:325
 // index:0
-// Public
-// QUrl toUrl()
+// Public Visibility=Default Availability=Available
+// [8] QUrl toUrl()
 func (this *QVariant) ToUrl() *QUrl /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant5toUrlEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant5toUrlEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:326
 // index:0
-// Public
-// QEasingCurve toEasingCurve()
+// Public Visibility=Default Availability=Available
+// [8] QEasingCurve toEasingCurve()
 func (this *QVariant) ToEasingCurve() *QEasingCurve /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant13toEasingCurveEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant13toEasingCurveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQEasingCurveFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:327
 // index:0
-// Public
-// QUuid toUuid()
+// Public Visibility=Default Availability=Available
+// [16] QUuid toUuid()
 func (this *QVariant) ToUuid() *QUuid /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toUuidEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant6toUuidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:328
 // index:0
-// Public
-// QModelIndex toModelIndex()
+// Public Visibility=Default Availability=Available
+// [24] QModelIndex toModelIndex()
 func (this *QVariant) ToModelIndex() *QModelIndex /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant12toModelIndexEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant12toModelIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:329
 // index:0
-// Public
-// QPersistentModelIndex toPersistentModelIndex()
+// Public Visibility=Default Availability=Available
+// [8] QPersistentModelIndex toPersistentModelIndex()
 func (this *QVariant) ToPersistentModelIndex() *QPersistentModelIndex /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant22toPersistentModelIndexEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant22toPersistentModelIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQPersistentModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:330
 // index:0
-// Public
-// QJsonValue toJsonValue()
+// Public Visibility=Default Availability=Available
+// [24] QJsonValue toJsonValue()
 func (this *QVariant) ToJsonValue() *QJsonValue /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant11toJsonValueEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant11toJsonValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:331
 // index:0
-// Public
-// QJsonObject toJsonObject()
+// Public Visibility=Default Availability=Available
+// [16] QJsonObject toJsonObject()
 func (this *QVariant) ToJsonObject() *QJsonObject /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant12toJsonObjectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant12toJsonObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQJsonObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:332
 // index:0
-// Public
-// QJsonArray toJsonArray()
+// Public Visibility=Default Availability=Available
+// [16] QJsonArray toJsonArray()
 func (this *QVariant) ToJsonArray() *QJsonArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant11toJsonArrayEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant11toJsonArrayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQJsonArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:333
 // index:0
-// Public
-// QJsonDocument toJsonDocument()
+// Public Visibility=Default Availability=Available
+// [8] QJsonDocument toJsonDocument()
 func (this *QVariant) ToJsonDocument() *QJsonDocument /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant14toJsonDocumentEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant14toJsonDocumentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQJsonDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qvariant.h:337
 // index:0
-// Public
-// void load(QDataStream &)
+// Public Visibility=Default Availability=Available
+// [-2] void load(QDataStream &)
 func (this *QVariant) Load(ds *QDataStream) {
 	var convArg0 = ds.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariant4loadER11QDataStream", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1215,8 +1119,8 @@ func (this *QVariant) Load(ds *QDataStream) {
 
 // /usr/include/qt/QtCore/qvariant.h:338
 // index:0
-// Public
-// void save(QDataStream &)
+// Public Visibility=Default Availability=Available
+// [-2] void save(QDataStream &)
 func (this *QVariant) Save(ds *QDataStream) {
 	var convArg0 = ds.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant4saveER11QDataStream", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1225,8 +1129,8 @@ func (this *QVariant) Save(ds *QDataStream) {
 
 // /usr/include/qt/QtCore/qvariant.h:340
 // index:0
-// Public static
-// const char * typeToName(int)
+// Public static Visibility=Default Availability=Available
+// [8] const char * typeToName(int)
 func (this *QVariant) TypeToName(typeId int) string {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariant10typeToNameEi", ffiqt.FFI_TYPE_POINTER, typeId)
 	gopp.ErrPrint(err, rv)
@@ -1241,8 +1145,8 @@ func QVariant_TypeToName(typeId int) string {
 
 // /usr/include/qt/QtCore/qvariant.h:341
 // index:0
-// Public static
-// QVariant::Type nameToType(const char *)
+// Public static Visibility=Default Availability=Available
+// [4] QVariant::Type nameToType(const char *)
 func (this *QVariant) NameToType(name string) int {
 	var convArg0 = qtrt.CString(name)
 	defer qtrt.FreeMem(convArg0)
@@ -1259,8 +1163,8 @@ func QVariant_NameToType(name string) int {
 
 // /usr/include/qt/QtCore/qvariant.h:343
 // index:0
-// Public
-// void * data()
+// Public Visibility=Default Availability=Available
+// [8] void * data()
 func (this *QVariant) Data() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariant4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -1270,8 +1174,8 @@ func (this *QVariant) Data() unsafe.Pointer /*666*/ {
 
 // /usr/include/qt/QtCore/qvariant.h:345
 // index:1
-// Public inline
-// const void * data()
+// Public inline Visibility=Default Availability=Available
+// [8] const void * data()
 func (this *QVariant) Data_1() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -1281,8 +1185,8 @@ func (this *QVariant) Data_1() unsafe.Pointer /*666*/ {
 
 // /usr/include/qt/QtCore/qvariant.h:344
 // index:0
-// Public
-// const void * constData()
+// Public Visibility=Default Availability=Available
+// [8] const void * constData()
 func (this *QVariant) ConstData() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant9constDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -1292,8 +1196,8 @@ func (this *QVariant) ConstData() unsafe.Pointer /*666*/ {
 
 // /usr/include/qt/QtCore/qvariant.h:464
 // index:0
-// Protected
-// void create(int, const void *)
+// Protected Visibility=Default Availability=Available
+// [-2] void create(int, const void *)
 func (this *QVariant) Create(type_ int, copy unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariant6createEiPKv", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_, copy)
 	gopp.ErrPrint(err, rv)
@@ -1301,8 +1205,8 @@ func (this *QVariant) Create(type_ int, copy unsafe.Pointer /*666*/) {
 
 // /usr/include/qt/QtCore/qvariant.h:465
 // index:0
-// Protected
-// bool cmp(const QVariant &)
+// Protected Visibility=Default Availability=Available
+// [1] bool cmp(const QVariant &)
 func (this *QVariant) Cmp(other *QVariant) bool {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant3cmpERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -1313,8 +1217,8 @@ func (this *QVariant) Cmp(other *QVariant) bool {
 
 // /usr/include/qt/QtCore/qvariant.h:466
 // index:0
-// Protected
-// int compare(const QVariant &)
+// Protected Visibility=Default Availability=Available
+// [4] int compare(const QVariant &)
 func (this *QVariant) Compare(other *QVariant) int {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QVariant7compareERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

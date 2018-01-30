@@ -84,8 +84,8 @@ func (*QSGTextureMaterial) NewFromPointer(cthis unsafe.Pointer) *QSGTextureMater
 
 // /usr/include/qt/QtQuick/qsgtexturematerial.h:90
 // index:0
-// Public virtual
-// QSGMaterialType * type()
+// Public virtual Visibility=Default Availability=Available
+// [8] QSGMaterialType * type()
 func (this *QSGTextureMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSGTextureMaterial4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -96,8 +96,8 @@ func (this *QSGTextureMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **
 
 // /usr/include/qt/QtQuick/qsgtexturematerial.h:91
 // index:0
-// Public virtual
-// QSGMaterialShader * createShader()
+// Public virtual Visibility=Default Availability=Available
+// [8] QSGMaterialShader * createShader()
 func (this *QSGTextureMaterial) CreateShader() *QSGMaterialShader /*777 QSGMaterialShader **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSGTextureMaterial12createShaderEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

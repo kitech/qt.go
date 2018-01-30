@@ -76,21 +76,20 @@ func (*QGraphicsItemGroup) NewFromPointer(cthis unsafe.Pointer) *QGraphicsItemGr
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:1004
 // index:0
-// Public
-// void QGraphicsItemGroup(QGraphicsItem *)
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsItemGroup(QGraphicsItem *)
 func NewQGraphicsItemGroup(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsItemGroup {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsItemGroupC2EP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsItemGroupC2EP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQGraphicsItemGroupFromPointer(cthis)
+	gothis := NewQGraphicsItemGroupFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:1005
 // index:0
-// Public virtual
-// void ~QGraphicsItemGroup()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QGraphicsItemGroup()
 func DeleteQGraphicsItemGroup(*QGraphicsItemGroup) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsItemGroupD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -98,8 +97,8 @@ func DeleteQGraphicsItemGroup(*QGraphicsItemGroup) {
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:1007
 // index:0
-// Public
-// void addToGroup(QGraphicsItem *)
+// Public Visibility=Default Availability=Available
+// [-2] void addToGroup(QGraphicsItem *)
 func (this *QGraphicsItemGroup) AddToGroup(item *QGraphicsItem /*777 QGraphicsItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsItemGroup10addToGroupEP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -108,8 +107,8 @@ func (this *QGraphicsItemGroup) AddToGroup(item *QGraphicsItem /*777 QGraphicsIt
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:1008
 // index:0
-// Public
-// void removeFromGroup(QGraphicsItem *)
+// Public Visibility=Default Availability=Available
+// [-2] void removeFromGroup(QGraphicsItem *)
 func (this *QGraphicsItemGroup) RemoveFromGroup(item *QGraphicsItem /*777 QGraphicsItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsItemGroup15removeFromGroupEP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -118,22 +117,20 @@ func (this *QGraphicsItemGroup) RemoveFromGroup(item *QGraphicsItem /*777 QGraph
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:1010
 // index:0
-// Public virtual
-// QRectF boundingRect()
+// Public virtual Visibility=Default Availability=Available
+// [32] QRectF boundingRect()
 func (this *QGraphicsItemGroup) BoundingRect() *qtcore.QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup12boundingRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup12boundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:1011
 // index:0
-// Public virtual
-// void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
+// Public virtual Visibility=Default Availability=Available
+// [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
 func (this *QGraphicsItemGroup) Paint(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionGraphicsItem /*777 const QStyleOptionGraphicsItem **/, widget *QWidget /*777 QWidget **/) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = option.GetCthis()
@@ -144,8 +141,8 @@ func (this *QGraphicsItemGroup) Paint(painter *qtgui.QPainter /*777 QPainter **/
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:1013
 // index:0
-// Public virtual
-// bool isObscuredBy(const QGraphicsItem *)
+// Public virtual Visibility=Default Availability=Available
+// [1] bool isObscuredBy(const QGraphicsItem *)
 func (this *QGraphicsItemGroup) IsObscuredBy(item *QGraphicsItem /*777 const QGraphicsItem **/) bool {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -156,22 +153,20 @@ func (this *QGraphicsItemGroup) IsObscuredBy(item *QGraphicsItem /*777 const QGr
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:1014
 // index:0
-// Public virtual
-// QPainterPath opaqueArea()
+// Public virtual Visibility=Default Availability=Available
+// [8] QPainterPath opaqueArea()
 func (this *QGraphicsItemGroup) OpaqueArea() *qtgui.QPainterPath /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:1017
 // index:0
-// Public virtual
-// int type()
+// Public virtual Visibility=Default Availability=Available
+// [4] int type()
 func (this *QGraphicsItemGroup) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

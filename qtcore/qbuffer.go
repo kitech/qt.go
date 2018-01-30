@@ -68,8 +68,8 @@ func (*QBuffer) NewFromPointer(cthis unsafe.Pointer) *QBuffer {
 
 // /usr/include/qt/QtCore/qbuffer.h:55
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QBuffer) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QBuffer10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -80,35 +80,33 @@ func (this *QBuffer) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 
 // /usr/include/qt/QtCore/qbuffer.h:60
 // index:0
-// Public
-// void QBuffer(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QBuffer(QObject *)
 func NewQBuffer(parent *QObject /*777 QObject **/) *QBuffer {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBufferC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBufferC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQBufferFromPointer(cthis)
+	gothis := NewQBufferFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qbuffer.h:61
 // index:1
-// Public
-// void QBuffer(QByteArray *, QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QBuffer(QByteArray *, QObject *)
 func NewQBuffer_1(buf *QByteArray /*777 QByteArray **/, parent *QObject /*777 QObject **/) *QBuffer {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = buf.GetCthis()
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBufferC2EP10QByteArrayP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBufferC2EP10QByteArrayP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQBufferFromPointer(cthis)
+	gothis := NewQBufferFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qbuffer.h:66
 // index:0
-// Public virtual
-// void ~QBuffer()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QBuffer()
 func DeleteQBuffer(*QBuffer) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBufferD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -116,8 +114,8 @@ func DeleteQBuffer(*QBuffer) {
 
 // /usr/include/qt/QtCore/qbuffer.h:68
 // index:0
-// Public
-// QByteArray & buffer()
+// Public Visibility=Default Availability=Available
+// [8] QByteArray & buffer()
 func (this *QBuffer) Buffer() *QByteArray {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer6bufferEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -128,8 +126,8 @@ func (this *QBuffer) Buffer() *QByteArray {
 
 // /usr/include/qt/QtCore/qbuffer.h:69
 // index:1
-// Public
-// const QByteArray & buffer()
+// Public Visibility=Default Availability=Available
+// [8] const QByteArray & buffer()
 func (this *QBuffer) Buffer_1() *QByteArray {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QBuffer6bufferEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -140,8 +138,8 @@ func (this *QBuffer) Buffer_1() *QByteArray {
 
 // /usr/include/qt/QtCore/qbuffer.h:70
 // index:0
-// Public
-// void setBuffer(QByteArray *)
+// Public Visibility=Default Availability=Available
+// [-2] void setBuffer(QByteArray *)
 func (this *QBuffer) SetBuffer(a *QByteArray /*777 QByteArray **/) {
 	var convArg0 = a.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer9setBufferEP10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -150,8 +148,8 @@ func (this *QBuffer) SetBuffer(a *QByteArray /*777 QByteArray **/) {
 
 // /usr/include/qt/QtCore/qbuffer.h:72
 // index:0
-// Public
-// void setData(const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void setData(const QByteArray &)
 func (this *QBuffer) SetData(data *QByteArray) {
 	var convArg0 = data.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer7setDataERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -160,8 +158,8 @@ func (this *QBuffer) SetData(data *QByteArray) {
 
 // /usr/include/qt/QtCore/qbuffer.h:73
 // index:1
-// Public inline
-// void setData(const char *, int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setData(const char *, int)
 func (this *QBuffer) SetData_1(data string, len int) {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
@@ -171,8 +169,8 @@ func (this *QBuffer) SetData_1(data string, len int) {
 
 // /usr/include/qt/QtCore/qbuffer.h:74
 // index:0
-// Public
-// const QByteArray & data()
+// Public Visibility=Default Availability=Available
+// [8] const QByteArray & data()
 func (this *QBuffer) Data() *QByteArray {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QBuffer4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -183,8 +181,8 @@ func (this *QBuffer) Data() *QByteArray {
 
 // /usr/include/qt/QtCore/qbuffer.h:78
 // index:0
-// Public virtual
-// void close()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void close()
 func (this *QBuffer) Close() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer5closeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -192,8 +190,8 @@ func (this *QBuffer) Close() {
 
 // /usr/include/qt/QtCore/qbuffer.h:79
 // index:0
-// Public virtual
-// qint64 size()
+// Public virtual Visibility=Default Availability=Available
+// [8] qint64 size()
 func (this *QBuffer) Size() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QBuffer4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -203,8 +201,8 @@ func (this *QBuffer) Size() int64 {
 
 // /usr/include/qt/QtCore/qbuffer.h:80
 // index:0
-// Public virtual
-// qint64 pos()
+// Public virtual Visibility=Default Availability=Available
+// [8] qint64 pos()
 func (this *QBuffer) Pos() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QBuffer3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -214,8 +212,8 @@ func (this *QBuffer) Pos() int64 {
 
 // /usr/include/qt/QtCore/qbuffer.h:81
 // index:0
-// Public virtual
-// bool seek(qint64)
+// Public virtual Visibility=Default Availability=Available
+// [1] bool seek(qint64)
 func (this *QBuffer) Seek(off int64) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer4seekEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), off)
 	gopp.ErrPrint(err, rv)
@@ -225,8 +223,8 @@ func (this *QBuffer) Seek(off int64) bool {
 
 // /usr/include/qt/QtCore/qbuffer.h:82
 // index:0
-// Public virtual
-// bool atEnd()
+// Public virtual Visibility=Default Availability=Available
+// [1] bool atEnd()
 func (this *QBuffer) AtEnd() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QBuffer5atEndEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -236,8 +234,8 @@ func (this *QBuffer) AtEnd() bool {
 
 // /usr/include/qt/QtCore/qbuffer.h:83
 // index:0
-// Public virtual
-// bool canReadLine()
+// Public virtual Visibility=Default Availability=Available
+// [1] bool canReadLine()
 func (this *QBuffer) CanReadLine() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QBuffer11canReadLineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -247,8 +245,8 @@ func (this *QBuffer) CanReadLine() bool {
 
 // /usr/include/qt/QtCore/qbuffer.h:87
 // index:0
-// Protected virtual
-// void connectNotify(const QMetaMethod &)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void connectNotify(const QMetaMethod &)
 func (this *QBuffer) ConnectNotify(arg0 *QMetaMethod) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer13connectNotifyERK11QMetaMethod", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -257,8 +255,8 @@ func (this *QBuffer) ConnectNotify(arg0 *QMetaMethod) {
 
 // /usr/include/qt/QtCore/qbuffer.h:88
 // index:0
-// Protected virtual
-// void disconnectNotify(const QMetaMethod &)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void disconnectNotify(const QMetaMethod &)
 func (this *QBuffer) DisconnectNotify(arg0 *QMetaMethod) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer16disconnectNotifyERK11QMetaMethod", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -267,8 +265,8 @@ func (this *QBuffer) DisconnectNotify(arg0 *QMetaMethod) {
 
 // /usr/include/qt/QtCore/qbuffer.h:90
 // index:0
-// Protected virtual
-// qint64 readData(char *, qint64)
+// Protected virtual Visibility=Default Availability=Available
+// [8] qint64 readData(char *, qint64)
 func (this *QBuffer) ReadData(data string, maxlen int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)
@@ -280,8 +278,8 @@ func (this *QBuffer) ReadData(data string, maxlen int64) int64 {
 
 // /usr/include/qt/QtCore/qbuffer.h:91
 // index:0
-// Protected virtual
-// qint64 writeData(const char *, qint64)
+// Protected virtual Visibility=Default Availability=Available
+// [8] qint64 writeData(const char *, qint64)
 func (this *QBuffer) WriteData(data string, len int64) int64 {
 	var convArg0 = qtrt.CString(data)
 	defer qtrt.FreeMem(convArg0)

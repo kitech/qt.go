@@ -76,21 +76,20 @@ func (*QWidgetItemV2) NewFromPointer(cthis unsafe.Pointer) *QWidgetItemV2 {
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:148
 // index:0
-// Public
-// void QWidgetItemV2(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void QWidgetItemV2(QWidget *)
 func NewQWidgetItemV2(widget *QWidget /*777 QWidget **/) *QWidgetItemV2 {
-	cthis := qtrt.Calloc(1, 256) // 88
 	var convArg0 = widget.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QWidgetItemV2C2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QWidgetItemV2C2EP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQWidgetItemV2FromPointer(cthis)
+	gothis := NewQWidgetItemV2FromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:149
 // index:0
-// Public virtual
-// void ~QWidgetItemV2()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QWidgetItemV2()
 func DeleteQWidgetItemV2(*QWidgetItemV2) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QWidgetItemV2D2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -98,50 +97,44 @@ func DeleteQWidgetItemV2(*QWidgetItemV2) {
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:151
 // index:0
-// Public virtual
-// QSize sizeHint()
+// Public virtual Visibility=Default Availability=Available
+// [8] QSize sizeHint()
 func (this *QWidgetItemV2) SizeHint() *qtcore.QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK13QWidgetItemV28sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QWidgetItemV28sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:152
 // index:0
-// Public virtual
-// QSize minimumSize()
+// Public virtual Visibility=Default Availability=Available
+// [8] QSize minimumSize()
 func (this *QWidgetItemV2) MinimumSize() *qtcore.QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK13QWidgetItemV211minimumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QWidgetItemV211minimumSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:153
 // index:0
-// Public virtual
-// QSize maximumSize()
+// Public virtual Visibility=Default Availability=Available
+// [8] QSize maximumSize()
 func (this *QWidgetItemV2) MaximumSize() *qtcore.QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK13QWidgetItemV211maximumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QWidgetItemV211maximumSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:154
 // index:0
-// Public virtual
-// int heightForWidth(int)
+// Public virtual Visibility=Default Availability=Available
+// [4] int heightForWidth(int)
 func (this *QWidgetItemV2) HeightForWidth(width int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QWidgetItemV214heightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	gopp.ErrPrint(err, rv)

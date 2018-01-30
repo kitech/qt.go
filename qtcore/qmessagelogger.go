@@ -67,47 +67,44 @@ func (*QMessageLogger) NewFromPointer(cthis unsafe.Pointer) *QMessageLogger {
 
 // /usr/include/qt/QtCore/qlogging.h:90
 // index:0
-// Public inline
-// void QMessageLogger()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QMessageLogger()
 func NewQMessageLogger() *QMessageLogger {
-	cthis := qtrt.Calloc(1, 256) // 32
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMessageLoggerC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMessageLoggerC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQMessageLoggerFromPointer(cthis)
+	gothis := NewQMessageLoggerFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qlogging.h:91
 // index:1
-// Public inline
-// void QMessageLogger(const char *, int, const char *)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QMessageLogger(const char *, int, const char *)
 func NewQMessageLogger_1(file string, line int, function string) *QMessageLogger {
-	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = qtrt.CString(file)
 	defer qtrt.FreeMem(convArg0)
 	var convArg2 = qtrt.CString(function)
 	defer qtrt.FreeMem(convArg2)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMessageLoggerC2EPKciS1_", ffiqt.FFI_TYPE_VOID, cthis, convArg0, line, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMessageLoggerC2EPKciS1_", ffiqt.FFI_TYPE_POINTER, convArg0, line, convArg2)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQMessageLoggerFromPointer(cthis)
+	gothis := NewQMessageLoggerFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qlogging.h:93
 // index:2
-// Public inline
-// void QMessageLogger(const char *, int, const char *, const char *)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QMessageLogger(const char *, int, const char *, const char *)
 func NewQMessageLogger_2(file string, line int, function string, category string) *QMessageLogger {
-	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = qtrt.CString(file)
 	defer qtrt.FreeMem(convArg0)
 	var convArg2 = qtrt.CString(function)
 	defer qtrt.FreeMem(convArg2)
 	var convArg3 = qtrt.CString(category)
 	defer qtrt.FreeMem(convArg3)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMessageLoggerC2EPKciS1_S1_", ffiqt.FFI_TYPE_VOID, cthis, convArg0, line, convArg2, convArg3)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMessageLoggerC2EPKciS1_S1_", ffiqt.FFI_TYPE_POINTER, convArg0, line, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQMessageLoggerFromPointer(cthis)
+	gothis := NewQMessageLoggerFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

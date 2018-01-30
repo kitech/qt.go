@@ -68,8 +68,8 @@ func (*QParallelAnimationGroup) NewFromPointer(cthis unsafe.Pointer) *QParallelA
 
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:53
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QParallelAnimationGroup) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QParallelAnimationGroup10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -80,21 +80,20 @@ func (this *QParallelAnimationGroup) MetaObject() *QMetaObject /*777 const QMeta
 
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:56
 // index:0
-// Public
-// void QParallelAnimationGroup(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QParallelAnimationGroup(QObject *)
 func NewQParallelAnimationGroup(parent *QObject /*777 QObject **/) *QParallelAnimationGroup {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroupC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroupC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQParallelAnimationGroupFromPointer(cthis)
+	gothis := NewQParallelAnimationGroupFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:57
 // index:0
-// Public virtual
-// void ~QParallelAnimationGroup()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QParallelAnimationGroup()
 func DeleteQParallelAnimationGroup(*QParallelAnimationGroup) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroupD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -102,8 +101,8 @@ func DeleteQParallelAnimationGroup(*QParallelAnimationGroup) {
 
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:59
 // index:0
-// Public virtual
-// int duration()
+// Public virtual Visibility=Default Availability=Available
+// [4] int duration()
 func (this *QParallelAnimationGroup) Duration() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QParallelAnimationGroup8durationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -113,8 +112,8 @@ func (this *QParallelAnimationGroup) Duration() int {
 
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:63
 // index:0
-// Protected virtual
-// bool event(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 func (this *QParallelAnimationGroup) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroup5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -125,8 +124,8 @@ func (this *QParallelAnimationGroup) Event(event *QEvent /*777 QEvent **/) bool 
 
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:65
 // index:0
-// Protected virtual
-// void updateCurrentTime(int)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void updateCurrentTime(int)
 func (this *QParallelAnimationGroup) UpdateCurrentTime(currentTime int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroup17updateCurrentTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), currentTime)
 	gopp.ErrPrint(err, rv)
@@ -134,8 +133,8 @@ func (this *QParallelAnimationGroup) UpdateCurrentTime(currentTime int) {
 
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:66
 // index:0
-// Protected virtual
-// void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
 func (this *QParallelAnimationGroup) UpdateState(newState int, oldState int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroup11updateStateEN18QAbstractAnimation5StateES1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
 	gopp.ErrPrint(err, rv)
@@ -143,8 +142,8 @@ func (this *QParallelAnimationGroup) UpdateState(newState int, oldState int) {
 
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:67
 // index:0
-// Protected virtual
-// void updateDirection(QAbstractAnimation::Direction)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void updateDirection(QAbstractAnimation::Direction)
 func (this *QParallelAnimationGroup) UpdateDirection(direction int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroup15updateDirectionEN18QAbstractAnimation9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), direction)
 	gopp.ErrPrint(err, rv)

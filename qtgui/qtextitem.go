@@ -71,8 +71,8 @@ func (*QTextItem) NewFromPointer(cthis unsafe.Pointer) *QTextItem {
 
 // /usr/include/qt/QtGui/qpaintengine.h:75
 // index:0
-// Public
-// qreal descent()
+// Public Visibility=Default Availability=Available
+// [8] qreal descent()
 func (this *QTextItem) Descent() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem7descentEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -82,8 +82,8 @@ func (this *QTextItem) Descent() float64 {
 
 // /usr/include/qt/QtGui/qpaintengine.h:76
 // index:0
-// Public
-// qreal ascent()
+// Public Visibility=Default Availability=Available
+// [8] qreal ascent()
 func (this *QTextItem) Ascent() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem6ascentEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -93,8 +93,8 @@ func (this *QTextItem) Ascent() float64 {
 
 // /usr/include/qt/QtGui/qpaintengine.h:77
 // index:0
-// Public
-// qreal width()
+// Public Visibility=Default Availability=Available
+// [8] qreal width()
 func (this *QTextItem) Width() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem5widthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -104,8 +104,8 @@ func (this *QTextItem) Width() float64 {
 
 // /usr/include/qt/QtGui/qpaintengine.h:79
 // index:0
-// Public
-// QTextItem::RenderFlags renderFlags()
+// Public Visibility=Default Availability=Available
+// [4] QTextItem::RenderFlags renderFlags()
 func (this *QTextItem) RenderFlags() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem11renderFlagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -115,28 +115,24 @@ func (this *QTextItem) RenderFlags() int {
 
 // /usr/include/qt/QtGui/qpaintengine.h:80
 // index:0
-// Public
-// QString text()
+// Public Visibility=Default Availability=Available
+// [8] QString text()
 func (this *QTextItem) Text() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem4textEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qpaintengine.h:81
 // index:0
-// Public
-// QFont font()
+// Public Visibility=Default Availability=Available
+// [16] QFont font()
 func (this *QTextItem) Font() *QFont /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem4fontEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem4fontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

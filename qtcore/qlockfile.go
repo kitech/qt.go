@@ -67,21 +67,20 @@ func (*QLockFile) NewFromPointer(cthis unsafe.Pointer) *QLockFile {
 
 // /usr/include/qt/QtCore/qlockfile.h:53
 // index:0
-// Public
-// void QLockFile(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void QLockFile(const QString &)
 func NewQLockFile(fileName *QString) *QLockFile {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = fileName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFileC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFileC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQLockFileFromPointer(cthis)
+	gothis := NewQLockFileFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qlockfile.h:54
 // index:0
-// Public
-// void ~QLockFile()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QLockFile()
 func DeleteQLockFile(*QLockFile) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFileD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -89,8 +88,8 @@ func DeleteQLockFile(*QLockFile) {
 
 // /usr/include/qt/QtCore/qlockfile.h:56
 // index:0
-// Public
-// bool lock()
+// Public Visibility=Default Availability=Available
+// [1] bool lock()
 func (this *QLockFile) Lock() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFile4lockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -100,8 +99,8 @@ func (this *QLockFile) Lock() bool {
 
 // /usr/include/qt/QtCore/qlockfile.h:57
 // index:0
-// Public
-// bool tryLock(int)
+// Public Visibility=Default Availability=Available
+// [1] bool tryLock(int)
 func (this *QLockFile) TryLock(timeout int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFile7tryLockEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	gopp.ErrPrint(err, rv)
@@ -111,8 +110,8 @@ func (this *QLockFile) TryLock(timeout int) bool {
 
 // /usr/include/qt/QtCore/qlockfile.h:58
 // index:0
-// Public
-// void unlock()
+// Public Visibility=Default Availability=Available
+// [-2] void unlock()
 func (this *QLockFile) Unlock() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFile6unlockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -120,8 +119,8 @@ func (this *QLockFile) Unlock() {
 
 // /usr/include/qt/QtCore/qlockfile.h:60
 // index:0
-// Public
-// void setStaleLockTime(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setStaleLockTime(int)
 func (this *QLockFile) SetStaleLockTime(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFile16setStaleLockTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -129,8 +128,8 @@ func (this *QLockFile) SetStaleLockTime(arg0 int) {
 
 // /usr/include/qt/QtCore/qlockfile.h:61
 // index:0
-// Public
-// int staleLockTime()
+// Public Visibility=Default Availability=Available
+// [4] int staleLockTime()
 func (this *QLockFile) StaleLockTime() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLockFile13staleLockTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -140,8 +139,8 @@ func (this *QLockFile) StaleLockTime() int {
 
 // /usr/include/qt/QtCore/qlockfile.h:63
 // index:0
-// Public
-// bool isLocked()
+// Public Visibility=Default Availability=Available
+// [1] bool isLocked()
 func (this *QLockFile) IsLocked() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLockFile8isLockedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -151,8 +150,8 @@ func (this *QLockFile) IsLocked() bool {
 
 // /usr/include/qt/QtCore/qlockfile.h:64
 // index:0
-// Public
-// bool getLockInfo(qint64 *, QString *, QString *)
+// Public Visibility=Default Availability=Available
+// [1] bool getLockInfo(qint64 *, QString *, QString *)
 func (this *QLockFile) GetLockInfo(pid unsafe.Pointer /*666*/, hostname *QString /*777 QString **/, appname *QString /*777 QString **/) bool {
 	var convArg1 = hostname.GetCthis()
 	var convArg2 = appname.GetCthis()
@@ -164,8 +163,8 @@ func (this *QLockFile) GetLockInfo(pid unsafe.Pointer /*666*/, hostname *QString
 
 // /usr/include/qt/QtCore/qlockfile.h:65
 // index:0
-// Public
-// bool removeStaleLockFile()
+// Public Visibility=Default Availability=Available
+// [1] bool removeStaleLockFile()
 func (this *QLockFile) RemoveStaleLockFile() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFile19removeStaleLockFileEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -175,8 +174,8 @@ func (this *QLockFile) RemoveStaleLockFile() bool {
 
 // /usr/include/qt/QtCore/qlockfile.h:73
 // index:0
-// Public
-// QLockFile::LockError error()
+// Public Visibility=Default Availability=Available
+// [4] QLockFile::LockError error()
 func (this *QLockFile) Error() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLockFile5errorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

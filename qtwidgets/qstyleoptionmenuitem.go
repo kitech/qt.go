@@ -76,25 +76,23 @@ func (*QStyleOptionMenuItem) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionM
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:372
 // index:0
-// Public
-// void QStyleOptionMenuItem()
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleOptionMenuItem()
 func NewQStyleOptionMenuItem() *QStyleOptionMenuItem {
-	cthis := qtrt.Calloc(1, 256) // 136
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionMenuItemC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionMenuItemC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionMenuItemFromPointer(cthis)
+	gothis := NewQStyleOptionMenuItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:376
 // index:1
-// Protected
-// void QStyleOptionMenuItem(int)
+// Protected Visibility=Default Availability=Available
+// [-2] void QStyleOptionMenuItem(int)
 func NewQStyleOptionMenuItem_1(version int) *QStyleOptionMenuItem {
-	cthis := qtrt.Calloc(1, 256) // 136
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionMenuItemC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionMenuItemC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionMenuItemFromPointer(cthis)
+	gothis := NewQStyleOptionMenuItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

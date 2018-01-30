@@ -67,20 +67,19 @@ func (*QLatin1Char) NewFromPointer(cthis unsafe.Pointer) *QLatin1Char {
 
 // /usr/include/qt/QtCore/qchar.h:53
 // index:0
-// Public inline
-// void QLatin1Char(char)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QLatin1Char(char)
 func NewQLatin1Char(c byte) *QLatin1Char {
-	cthis := qtrt.Calloc(1, 256) // 1
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QLatin1CharC2Ec", ffiqt.FFI_TYPE_VOID, cthis, c)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QLatin1CharC2Ec", ffiqt.FFI_TYPE_POINTER, c)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQLatin1CharFromPointer(cthis)
+	gothis := NewQLatin1CharFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qchar.h:54
 // index:0
-// Public inline
-// char toLatin1()
+// Public inline Visibility=Default Availability=Available
+// [1] char toLatin1()
 func (this *QLatin1Char) ToLatin1() byte {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLatin1Char8toLatin1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -90,8 +89,8 @@ func (this *QLatin1Char) ToLatin1() byte {
 
 // /usr/include/qt/QtCore/qchar.h:55
 // index:0
-// Public inline
-// ushort unicode()
+// Public inline Visibility=Default Availability=Available
+// [2] ushort unicode()
 func (this *QLatin1Char) Unicode() uint16 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLatin1Char7unicodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

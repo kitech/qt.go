@@ -72,21 +72,20 @@ func (*QStatusTipEvent) NewFromPointer(cthis unsafe.Pointer) *QStatusTipEvent {
 
 // /usr/include/qt/QtGui/qevent.h:700
 // index:0
-// Public
-// void QStatusTipEvent(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void QStatusTipEvent(const QString &)
 func NewQStatusTipEvent(tip *qtcore.QString) *QStatusTipEvent {
-	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = tip.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStatusTipEventC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStatusTipEventC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStatusTipEventFromPointer(cthis)
+	gothis := NewQStatusTipEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:701
 // index:0
-// Public virtual
-// void ~QStatusTipEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QStatusTipEvent()
 func DeleteQStatusTipEvent(*QStatusTipEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStatusTipEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -94,14 +93,12 @@ func DeleteQStatusTipEvent(*QStatusTipEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:703
 // index:0
-// Public inline
-// QString tip()
+// Public inline Visibility=Default Availability=Available
+// [8] QString tip()
 func (this *QStatusTipEvent) Tip() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QStatusTipEvent3tipEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QStatusTipEvent3tipEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

@@ -21,6 +21,9 @@ type CObject struct {
 	Cthis unsafe.Pointer
 }
 
+// 直接使用C++ symbols
+var UseCppSymbols bool = false
+
 /////////
 
 func BoolTy(pointer bool) reflect.Type {

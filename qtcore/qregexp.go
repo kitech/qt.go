@@ -67,33 +67,31 @@ func (*QRegExp) NewFromPointer(cthis unsafe.Pointer) *QRegExp {
 
 // /usr/include/qt/QtCore/qregexp.h:70
 // index:0
-// Public
-// void QRegExp()
+// Public Visibility=Default Availability=Available
+// [-2] void QRegExp()
 func NewQRegExp() *QRegExp {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExpC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExpC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQRegExpFromPointer(cthis)
+	gothis := NewQRegExpFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qregexp.h:71
 // index:1
-// Public
-// void QRegExp(const QString &, Qt::CaseSensitivity, enum QRegExp::PatternSyntax)
+// Public Visibility=Default Availability=Available
+// [-2] void QRegExp(const QString &, Qt::CaseSensitivity, enum QRegExp::PatternSyntax)
 func NewQRegExp_1(pattern *QString, cs int, syntax int) *QRegExp {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = pattern.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExpC2ERK7QStringN2Qt15CaseSensitivityENS_13PatternSyntaxE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, cs, syntax)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExpC2ERK7QStringN2Qt15CaseSensitivityENS_13PatternSyntaxE", ffiqt.FFI_TYPE_POINTER, convArg0, cs, syntax)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQRegExpFromPointer(cthis)
+	gothis := NewQRegExpFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qregexp.h:74
 // index:0
-// Public
-// void ~QRegExp()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QRegExp()
 func DeleteQRegExp(*QRegExp) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExpD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -101,8 +99,8 @@ func DeleteQRegExp(*QRegExp) {
 
 // /usr/include/qt/QtCore/qregexp.h:79
 // index:0
-// Public inline
-// void swap(QRegExp &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QRegExp &)
 func (this *QRegExp) Swap(other *QRegExp) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -111,8 +109,8 @@ func (this *QRegExp) Swap(other *QRegExp) {
 
 // /usr/include/qt/QtCore/qregexp.h:84
 // index:0
-// Public
-// bool isEmpty()
+// Public Visibility=Default Availability=Available
+// [1] bool isEmpty()
 func (this *QRegExp) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -122,8 +120,8 @@ func (this *QRegExp) IsEmpty() bool {
 
 // /usr/include/qt/QtCore/qregexp.h:85
 // index:0
-// Public
-// bool isValid()
+// Public Visibility=Default Availability=Available
+// [1] bool isValid()
 func (this *QRegExp) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -133,22 +131,20 @@ func (this *QRegExp) IsValid() bool {
 
 // /usr/include/qt/QtCore/qregexp.h:86
 // index:0
-// Public
-// QString pattern()
+// Public Visibility=Default Availability=Available
+// [8] QString pattern()
 func (this *QRegExp) Pattern() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp7patternEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp7patternEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qregexp.h:87
 // index:0
-// Public
-// void setPattern(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void setPattern(const QString &)
 func (this *QRegExp) SetPattern(pattern *QString) {
 	var convArg0 = pattern.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp10setPatternERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -157,8 +153,8 @@ func (this *QRegExp) SetPattern(pattern *QString) {
 
 // /usr/include/qt/QtCore/qregexp.h:88
 // index:0
-// Public
-// Qt::CaseSensitivity caseSensitivity()
+// Public Visibility=Default Availability=Available
+// [4] Qt::CaseSensitivity caseSensitivity()
 func (this *QRegExp) CaseSensitivity() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp15caseSensitivityEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -168,8 +164,8 @@ func (this *QRegExp) CaseSensitivity() int {
 
 // /usr/include/qt/QtCore/qregexp.h:89
 // index:0
-// Public
-// void setCaseSensitivity(Qt::CaseSensitivity)
+// Public Visibility=Default Availability=Available
+// [-2] void setCaseSensitivity(Qt::CaseSensitivity)
 func (this *QRegExp) SetCaseSensitivity(cs int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp18setCaseSensitivityEN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cs)
 	gopp.ErrPrint(err, rv)
@@ -177,8 +173,8 @@ func (this *QRegExp) SetCaseSensitivity(cs int) {
 
 // /usr/include/qt/QtCore/qregexp.h:90
 // index:0
-// Public
-// QRegExp::PatternSyntax patternSyntax()
+// Public Visibility=Default Availability=Available
+// [4] QRegExp::PatternSyntax patternSyntax()
 func (this *QRegExp) PatternSyntax() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp13patternSyntaxEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -188,8 +184,8 @@ func (this *QRegExp) PatternSyntax() int {
 
 // /usr/include/qt/QtCore/qregexp.h:91
 // index:0
-// Public
-// void setPatternSyntax(enum QRegExp::PatternSyntax)
+// Public Visibility=Default Availability=Available
+// [-2] void setPatternSyntax(enum QRegExp::PatternSyntax)
 func (this *QRegExp) SetPatternSyntax(syntax int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp16setPatternSyntaxENS_13PatternSyntaxE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), syntax)
 	gopp.ErrPrint(err, rv)
@@ -197,8 +193,8 @@ func (this *QRegExp) SetPatternSyntax(syntax int) {
 
 // /usr/include/qt/QtCore/qregexp.h:93
 // index:0
-// Public
-// bool isMinimal()
+// Public Visibility=Default Availability=Available
+// [1] bool isMinimal()
 func (this *QRegExp) IsMinimal() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp9isMinimalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -208,8 +204,8 @@ func (this *QRegExp) IsMinimal() bool {
 
 // /usr/include/qt/QtCore/qregexp.h:94
 // index:0
-// Public
-// void setMinimal(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setMinimal(_Bool)
 func (this *QRegExp) SetMinimal(minimal bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp10setMinimalEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), minimal)
 	gopp.ErrPrint(err, rv)
@@ -217,8 +213,8 @@ func (this *QRegExp) SetMinimal(minimal bool) {
 
 // /usr/include/qt/QtCore/qregexp.h:96
 // index:0
-// Public
-// bool exactMatch(const QString &)
+// Public Visibility=Default Availability=Available
+// [1] bool exactMatch(const QString &)
 func (this *QRegExp) ExactMatch(str *QString) bool {
 	var convArg0 = str.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp10exactMatchERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -229,8 +225,8 @@ func (this *QRegExp) ExactMatch(str *QString) bool {
 
 // /usr/include/qt/QtCore/qregexp.h:98
 // index:0
-// Public
-// int indexIn(const QString &, int, enum QRegExp::CaretMode)
+// Public Visibility=Default Availability=Available
+// [4] int indexIn(const QString &, int, enum QRegExp::CaretMode)
 func (this *QRegExp) IndexIn(str *QString, offset int, caretMode int) int {
 	var convArg0 = str.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp7indexInERK7QStringiNS_9CaretModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, caretMode)
@@ -241,8 +237,8 @@ func (this *QRegExp) IndexIn(str *QString, offset int, caretMode int) int {
 
 // /usr/include/qt/QtCore/qregexp.h:99
 // index:0
-// Public
-// int lastIndexIn(const QString &, int, enum QRegExp::CaretMode)
+// Public Visibility=Default Availability=Available
+// [4] int lastIndexIn(const QString &, int, enum QRegExp::CaretMode)
 func (this *QRegExp) LastIndexIn(str *QString, offset int, caretMode int) int {
 	var convArg0 = str.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp11lastIndexInERK7QStringiNS_9CaretModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, offset, caretMode)
@@ -253,8 +249,8 @@ func (this *QRegExp) LastIndexIn(str *QString, offset int, caretMode int) int {
 
 // /usr/include/qt/QtCore/qregexp.h:100
 // index:0
-// Public
-// int matchedLength()
+// Public Visibility=Default Availability=Available
+// [4] int matchedLength()
 func (this *QRegExp) MatchedLength() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp13matchedLengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -264,8 +260,8 @@ func (this *QRegExp) MatchedLength() int {
 
 // /usr/include/qt/QtCore/qregexp.h:102
 // index:0
-// Public
-// int captureCount()
+// Public Visibility=Default Availability=Available
+// [4] int captureCount()
 func (this *QRegExp) CaptureCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp12captureCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -275,36 +271,32 @@ func (this *QRegExp) CaptureCount() int {
 
 // /usr/include/qt/QtCore/qregexp.h:105
 // index:0
-// Public
-// QString cap(int)
+// Public Visibility=Default Availability=Available
+// [8] QString cap(int)
 func (this *QRegExp) Cap(nth int) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp3capEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), nth)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp3capEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qregexp.h:106
 // index:1
-// Public
-// QString cap(int)
+// Public Visibility=Default Availability=Available
+// [8] QString cap(int)
 func (this *QRegExp) Cap_1(nth int) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp3capEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), nth)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp3capEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qregexp.h:107
 // index:0
-// Public
-// int pos(int)
+// Public Visibility=Default Availability=Available
+// [4] int pos(int)
 func (this *QRegExp) Pos(nth int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp3posEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	gopp.ErrPrint(err, rv)
@@ -314,8 +306,8 @@ func (this *QRegExp) Pos(nth int) int {
 
 // /usr/include/qt/QtCore/qregexp.h:108
 // index:1
-// Public
-// int pos(int)
+// Public Visibility=Default Availability=Available
+// [4] int pos(int)
 func (this *QRegExp) Pos_1(nth int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp3posEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), nth)
 	gopp.ErrPrint(err, rv)
@@ -325,36 +317,32 @@ func (this *QRegExp) Pos_1(nth int) int {
 
 // /usr/include/qt/QtCore/qregexp.h:109
 // index:0
-// Public
-// QString errorString()
+// Public Visibility=Default Availability=Available
+// [8] QString errorString()
 func (this *QRegExp) ErrorString() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp11errorStringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegExp11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qregexp.h:110
 // index:1
-// Public
-// QString errorString()
+// Public Visibility=Default Availability=Available
+// [8] QString errorString()
 func (this *QRegExp) ErrorString_1() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp11errorStringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qregexp.h:113
 // index:0
-// Public static
-// QString escape(const QString &)
+// Public static Visibility=Default Availability=Available
+// [8] QString escape(const QString &)
 func (this *QRegExp) Escape(str *QString) *QString /*123*/ {
 	var convArg0 = str.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExp6escapeERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)

@@ -72,22 +72,21 @@ func (*QMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QMoveEvent {
 
 // /usr/include/qt/QtGui/qevent.h:421
 // index:0
-// Public
-// void QMoveEvent(const QPoint &, const QPoint &)
+// Public Visibility=Default Availability=Available
+// [-2] void QMoveEvent(const QPoint &, const QPoint &)
 func NewQMoveEvent(pos *qtcore.QPoint, oldPos *qtcore.QPoint) *QMoveEvent {
-	cthis := qtrt.Calloc(1, 256) // 40
 	var convArg0 = pos.GetCthis()
 	var convArg1 = oldPos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMoveEventC2ERK6QPointS2_", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMoveEventC2ERK6QPointS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQMoveEventFromPointer(cthis)
+	gothis := NewQMoveEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:422
 // index:0
-// Public virtual
-// void ~QMoveEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QMoveEvent()
 func DeleteQMoveEvent(*QMoveEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMoveEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -95,8 +94,8 @@ func DeleteQMoveEvent(*QMoveEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:424
 // index:0
-// Public inline
-// const QPoint & pos()
+// Public inline Visibility=Default Availability=Available
+// [8] const QPoint & pos()
 func (this *QMoveEvent) Pos() *qtcore.QPoint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMoveEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -107,8 +106,8 @@ func (this *QMoveEvent) Pos() *qtcore.QPoint {
 
 // /usr/include/qt/QtGui/qevent.h:425
 // index:0
-// Public inline
-// const QPoint & oldPos()
+// Public inline Visibility=Default Availability=Available
+// [8] const QPoint & oldPos()
 func (this *QMoveEvent) OldPos() *qtcore.QPoint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMoveEvent6oldPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

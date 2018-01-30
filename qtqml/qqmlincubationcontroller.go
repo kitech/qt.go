@@ -75,20 +75,19 @@ func (*QQmlIncubationController) NewFromPointer(cthis unsafe.Pointer) *QQmlIncub
 
 // /usr/include/qt/QtQml/qqmlincubator.h:103
 // index:0
-// Public
-// void QQmlIncubationController()
+// Public Visibility=Default Availability=Available
+// [-2] void QQmlIncubationController()
 func NewQQmlIncubationController() *QQmlIncubationController {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QQmlIncubationControllerC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QQmlIncubationControllerC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQQmlIncubationControllerFromPointer(cthis)
+	gothis := NewQQmlIncubationControllerFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtQml/qqmlincubator.h:104
 // index:0
-// Public virtual
-// void ~QQmlIncubationController()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QQmlIncubationController()
 func DeleteQQmlIncubationController(*QQmlIncubationController) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QQmlIncubationControllerD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -96,8 +95,8 @@ func DeleteQQmlIncubationController(*QQmlIncubationController) {
 
 // /usr/include/qt/QtQml/qqmlincubator.h:106
 // index:0
-// Public
-// QQmlEngine * engine()
+// Public Visibility=Default Availability=Available
+// [8] QQmlEngine * engine()
 func (this *QQmlIncubationController) Engine() *QQmlEngine /*777 QQmlEngine **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QQmlIncubationController6engineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -108,8 +107,8 @@ func (this *QQmlIncubationController) Engine() *QQmlEngine /*777 QQmlEngine **/ 
 
 // /usr/include/qt/QtQml/qqmlincubator.h:107
 // index:0
-// Public
-// int incubatingObjectCount()
+// Public Visibility=Default Availability=Available
+// [4] int incubatingObjectCount()
 func (this *QQmlIncubationController) IncubatingObjectCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QQmlIncubationController21incubatingObjectCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -119,8 +118,8 @@ func (this *QQmlIncubationController) IncubatingObjectCount() int {
 
 // /usr/include/qt/QtQml/qqmlincubator.h:109
 // index:0
-// Public
-// void incubateFor(int)
+// Public Visibility=Default Availability=Available
+// [-2] void incubateFor(int)
 func (this *QQmlIncubationController) IncubateFor(msecs int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QQmlIncubationController11incubateForEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
@@ -128,8 +127,8 @@ func (this *QQmlIncubationController) IncubateFor(msecs int) {
 
 // /usr/include/qt/QtQml/qqmlincubator.h:110
 // index:0
-// Public
-// void incubateWhile(volatile _Bool *, int)
+// Public Visibility=Default Availability=Available
+// [-2] void incubateWhile(volatile _Bool *, int)
 func (this *QQmlIncubationController) IncubateWhile(flag unsafe.Pointer /*666*/, msecs int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QQmlIncubationController13incubateWhileEPVbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &flag, msecs)
 	gopp.ErrPrint(err, rv)
@@ -137,8 +136,8 @@ func (this *QQmlIncubationController) IncubateWhile(flag unsafe.Pointer /*666*/,
 
 // /usr/include/qt/QtQml/qqmlincubator.h:113
 // index:0
-// Protected virtual
-// void incubatingObjectCountChanged(int)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void incubatingObjectCountChanged(int)
 func (this *QQmlIncubationController) IncubatingObjectCountChanged(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QQmlIncubationController28incubatingObjectCountChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)

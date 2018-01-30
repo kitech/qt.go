@@ -68,8 +68,8 @@ func (*QCoreApplication) NewFromPointer(cthis unsafe.Pointer) *QCoreApplication 
 
 // /usr/include/qt/QtCore/qcoreapplication.h:78
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QCoreApplication) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QCoreApplication10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -80,21 +80,20 @@ func (this *QCoreApplication) MetaObject() *QMetaObject /*777 const QMetaObject 
 
 // /usr/include/qt/QtCore/qcoreapplication.h:91
 // index:0
-// Public
-// void QCoreApplication(int &, char **, int)
+// Public Visibility=Default Availability=Available
+// [-2] void QCoreApplication(int &, char **, int)
 func NewQCoreApplication(argc int, argv []string, arg2 int) *QCoreApplication {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg1 = qtrt.StringSliceToCCharPP(argv)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplicationC2ERiPPci", ffiqt.FFI_TYPE_VOID, cthis, &argc, convArg1, arg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplicationC2ERiPPci", ffiqt.FFI_TYPE_POINTER, &argc, convArg1, arg2)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQCoreApplicationFromPointer(cthis)
+	gothis := NewQCoreApplicationFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qcoreapplication.h:97
 // index:0
-// Public virtual
-// void ~QCoreApplication()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QCoreApplication()
 func DeleteQCoreApplication(*QCoreApplication) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplicationD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -102,8 +101,8 @@ func DeleteQCoreApplication(*QCoreApplication) {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:101
 // index:0
-// Public static
-// void setAttribute(Qt::ApplicationAttribute, _Bool)
+// Public static Visibility=Default Availability=Available
+// [-2] void setAttribute(Qt::ApplicationAttribute, _Bool)
 func (this *QCoreApplication) SetAttribute(attribute int, on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication12setAttributeEN2Qt20ApplicationAttributeEb", ffiqt.FFI_TYPE_POINTER, attribute, on)
 	gopp.ErrPrint(err, rv)
@@ -115,8 +114,8 @@ func QCoreApplication_SetAttribute(attribute int, on bool) {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:102
 // index:0
-// Public static
-// bool testAttribute(Qt::ApplicationAttribute)
+// Public static Visibility=Default Availability=Available
+// [1] bool testAttribute(Qt::ApplicationAttribute)
 func (this *QCoreApplication) TestAttribute(attribute int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication13testAttributeEN2Qt20ApplicationAttributeE", ffiqt.FFI_TYPE_POINTER, attribute)
 	gopp.ErrPrint(err, rv)
@@ -131,8 +130,8 @@ func QCoreApplication_TestAttribute(attribute int) bool {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:104
 // index:0
-// Public static
-// void setOrganizationDomain(const QString &)
+// Public static Visibility=Default Availability=Available
+// [-2] void setOrganizationDomain(const QString &)
 func (this *QCoreApplication) SetOrganizationDomain(orgDomain *QString) {
 	var convArg0 = orgDomain.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication21setOrganizationDomainERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -145,8 +144,8 @@ func QCoreApplication_SetOrganizationDomain(orgDomain *QString) {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:105
 // index:0
-// Public static
-// QString organizationDomain()
+// Public static Visibility=Default Availability=Available
+// [8] QString organizationDomain()
 func (this *QCoreApplication) OrganizationDomain() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication18organizationDomainEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -162,8 +161,8 @@ func QCoreApplication_OrganizationDomain() *QString /*123*/ {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:106
 // index:0
-// Public static
-// void setOrganizationName(const QString &)
+// Public static Visibility=Default Availability=Available
+// [-2] void setOrganizationName(const QString &)
 func (this *QCoreApplication) SetOrganizationName(orgName *QString) {
 	var convArg0 = orgName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication19setOrganizationNameERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -176,8 +175,8 @@ func QCoreApplication_SetOrganizationName(orgName *QString) {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:107
 // index:0
-// Public static
-// QString organizationName()
+// Public static Visibility=Default Availability=Available
+// [8] QString organizationName()
 func (this *QCoreApplication) OrganizationName() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication16organizationNameEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -193,8 +192,8 @@ func QCoreApplication_OrganizationName() *QString /*123*/ {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:108
 // index:0
-// Public static
-// void setApplicationName(const QString &)
+// Public static Visibility=Default Availability=Available
+// [-2] void setApplicationName(const QString &)
 func (this *QCoreApplication) SetApplicationName(application *QString) {
 	var convArg0 = application.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication18setApplicationNameERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -207,8 +206,8 @@ func QCoreApplication_SetApplicationName(application *QString) {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:109
 // index:0
-// Public static
-// QString applicationName()
+// Public static Visibility=Default Availability=Available
+// [8] QString applicationName()
 func (this *QCoreApplication) ApplicationName() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication15applicationNameEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -224,8 +223,8 @@ func QCoreApplication_ApplicationName() *QString /*123*/ {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:110
 // index:0
-// Public static
-// void setApplicationVersion(const QString &)
+// Public static Visibility=Default Availability=Available
+// [-2] void setApplicationVersion(const QString &)
 func (this *QCoreApplication) SetApplicationVersion(version *QString) {
 	var convArg0 = version.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication21setApplicationVersionERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -238,8 +237,8 @@ func QCoreApplication_SetApplicationVersion(version *QString) {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:111
 // index:0
-// Public static
-// QString applicationVersion()
+// Public static Visibility=Default Availability=Available
+// [8] QString applicationVersion()
 func (this *QCoreApplication) ApplicationVersion() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication18applicationVersionEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -255,8 +254,8 @@ func QCoreApplication_ApplicationVersion() *QString /*123*/ {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:113
 // index:0
-// Public static
-// void setSetuidAllowed(_Bool)
+// Public static Visibility=Default Availability=Available
+// [-2] void setSetuidAllowed(_Bool)
 func (this *QCoreApplication) SetSetuidAllowed(allow bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication16setSetuidAllowedEb", ffiqt.FFI_TYPE_POINTER, allow)
 	gopp.ErrPrint(err, rv)
@@ -268,8 +267,8 @@ func QCoreApplication_SetSetuidAllowed(allow bool) {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:114
 // index:0
-// Public static
-// bool isSetuidAllowed()
+// Public static Visibility=Default Availability=Available
+// [1] bool isSetuidAllowed()
 func (this *QCoreApplication) IsSetuidAllowed() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication15isSetuidAllowedEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -284,8 +283,8 @@ func QCoreApplication_IsSetuidAllowed() bool {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:116
 // index:0
-// Public static inline
-// QCoreApplication * instance()
+// Public static inline Visibility=Default Availability=Available
+// [8] QCoreApplication * instance()
 func (this *QCoreApplication) Instance() *QCoreApplication /*777 QCoreApplication **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication8instanceEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -301,8 +300,8 @@ func QCoreApplication_Instance() *QCoreApplication /*777 QCoreApplication **/ {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:119
 // index:0
-// Public static
-// int exec()
+// Public static Visibility=Default Availability=Available
+// [4] int exec()
 func (this *QCoreApplication) Exec() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication4execEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -317,8 +316,8 @@ func QCoreApplication_Exec() int {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:120
 // index:0
-// Public static
-// void processEvents(QEventLoop::ProcessEventsFlags)
+// Public static Visibility=Default Availability=Available
+// [-2] void processEvents(QEventLoop::ProcessEventsFlags)
 func (this *QCoreApplication) ProcessEvents(flags int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE", ffiqt.FFI_TYPE_POINTER, flags)
 	gopp.ErrPrint(err, rv)
@@ -330,8 +329,8 @@ func QCoreApplication_ProcessEvents(flags int) {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:121
 // index:1
-// Public static
-// void processEvents(QEventLoop::ProcessEventsFlags, int)
+// Public static Visibility=Default Availability=Available
+// [-2] void processEvents(QEventLoop::ProcessEventsFlags, int)
 func (this *QCoreApplication) ProcessEvents_1(flags int, maxtime int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEEi", ffiqt.FFI_TYPE_POINTER, flags, maxtime)
 	gopp.ErrPrint(err, rv)
@@ -343,8 +342,8 @@ func QCoreApplication_ProcessEvents_1(flags int, maxtime int) {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:122
 // index:0
-// Public static
-// void exit(int)
+// Public static Visibility=Default Availability=Available
+// [-2] void exit(int)
 func (this *QCoreApplication) Exit(retcode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication4exitEi", ffiqt.FFI_TYPE_POINTER, retcode)
 	gopp.ErrPrint(err, rv)
@@ -356,8 +355,8 @@ func QCoreApplication_Exit(retcode int) {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:124
 // index:0
-// Public static
-// bool sendEvent(QObject *, QEvent *)
+// Public static Visibility=Default Availability=Available
+// [1] bool sendEvent(QObject *, QEvent *)
 func (this *QCoreApplication) SendEvent(receiver *QObject /*777 QObject **/, event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = receiver.GetCthis()
 	var convArg1 = event.GetCthis()
@@ -374,8 +373,8 @@ func QCoreApplication_SendEvent(receiver *QObject /*777 QObject **/, event *QEve
 
 // /usr/include/qt/QtCore/qcoreapplication.h:125
 // index:0
-// Public static
-// void postEvent(QObject *, QEvent *, int)
+// Public static Visibility=Default Availability=Available
+// [-2] void postEvent(QObject *, QEvent *, int)
 func (this *QCoreApplication) PostEvent(receiver *QObject /*777 QObject **/, event *QEvent /*777 QEvent **/, priority int) {
 	var convArg0 = receiver.GetCthis()
 	var convArg1 = event.GetCthis()
@@ -389,8 +388,8 @@ func QCoreApplication_PostEvent(receiver *QObject /*777 QObject **/, event *QEve
 
 // /usr/include/qt/QtCore/qcoreapplication.h:126
 // index:0
-// Public static
-// void sendPostedEvents(QObject *, int)
+// Public static Visibility=Default Availability=Available
+// [-2] void sendPostedEvents(QObject *, int)
 func (this *QCoreApplication) SendPostedEvents(receiver *QObject /*777 QObject **/, event_type int) {
 	var convArg0 = receiver.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication16sendPostedEventsEP7QObjecti", ffiqt.FFI_TYPE_POINTER, convArg0, event_type)
@@ -403,8 +402,8 @@ func QCoreApplication_SendPostedEvents(receiver *QObject /*777 QObject **/, even
 
 // /usr/include/qt/QtCore/qcoreapplication.h:127
 // index:0
-// Public static
-// void removePostedEvents(QObject *, int)
+// Public static Visibility=Default Availability=Available
+// [-2] void removePostedEvents(QObject *, int)
 func (this *QCoreApplication) RemovePostedEvents(receiver *QObject /*777 QObject **/, eventType int) {
 	var convArg0 = receiver.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication18removePostedEventsEP7QObjecti", ffiqt.FFI_TYPE_POINTER, convArg0, eventType)
@@ -417,8 +416,8 @@ func QCoreApplication_RemovePostedEvents(receiver *QObject /*777 QObject **/, ev
 
 // /usr/include/qt/QtCore/qcoreapplication.h:129
 // index:0
-// Public static
-// bool hasPendingEvents()
+// Public static Visibility=Default Availability=Available
+// [1] bool hasPendingEvents()
 func (this *QCoreApplication) HasPendingEvents() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication16hasPendingEventsEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -433,8 +432,8 @@ func QCoreApplication_HasPendingEvents() bool {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:131
 // index:0
-// Public static
-// QAbstractEventDispatcher * eventDispatcher()
+// Public static Visibility=Default Availability=Available
+// [8] QAbstractEventDispatcher * eventDispatcher()
 func (this *QCoreApplication) EventDispatcher() *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication15eventDispatcherEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -450,8 +449,8 @@ func QCoreApplication_EventDispatcher() *QAbstractEventDispatcher /*777 QAbstrac
 
 // /usr/include/qt/QtCore/qcoreapplication.h:132
 // index:0
-// Public static
-// void setEventDispatcher(QAbstractEventDispatcher *)
+// Public static Visibility=Default Availability=Available
+// [-2] void setEventDispatcher(QAbstractEventDispatcher *)
 func (this *QCoreApplication) SetEventDispatcher(eventDispatcher *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/) {
 	var convArg0 = eventDispatcher.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication18setEventDispatcherEP24QAbstractEventDispatcher", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -464,8 +463,8 @@ func QCoreApplication_SetEventDispatcher(eventDispatcher *QAbstractEventDispatch
 
 // /usr/include/qt/QtCore/qcoreapplication.h:134
 // index:0
-// Public virtual
-// bool notify(QObject *, QEvent *)
+// Public virtual Visibility=Default Availability=Available
+// [1] bool notify(QObject *, QEvent *)
 func (this *QCoreApplication) Notify(arg0 *QObject /*777 QObject **/, arg1 *QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
@@ -477,8 +476,8 @@ func (this *QCoreApplication) Notify(arg0 *QObject /*777 QObject **/, arg1 *QEve
 
 // /usr/include/qt/QtCore/qcoreapplication.h:136
 // index:0
-// Public static
-// bool startingUp()
+// Public static Visibility=Default Availability=Available
+// [1] bool startingUp()
 func (this *QCoreApplication) StartingUp() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication10startingUpEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -493,8 +492,8 @@ func QCoreApplication_StartingUp() bool {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:137
 // index:0
-// Public static
-// bool closingDown()
+// Public static Visibility=Default Availability=Available
+// [1] bool closingDown()
 func (this *QCoreApplication) ClosingDown() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication11closingDownEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -509,8 +508,8 @@ func QCoreApplication_ClosingDown() bool {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:140
 // index:0
-// Public static
-// QString applicationDirPath()
+// Public static Visibility=Default Availability=Available
+// [8] QString applicationDirPath()
 func (this *QCoreApplication) ApplicationDirPath() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication18applicationDirPathEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -526,8 +525,8 @@ func QCoreApplication_ApplicationDirPath() *QString /*123*/ {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:141
 // index:0
-// Public static
-// QString applicationFilePath()
+// Public static Visibility=Default Availability=Available
+// [8] QString applicationFilePath()
 func (this *QCoreApplication) ApplicationFilePath() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication19applicationFilePathEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -543,8 +542,8 @@ func QCoreApplication_ApplicationFilePath() *QString /*123*/ {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:142
 // index:0
-// Public static
-// qint64 applicationPid()
+// Public static Visibility=Default Availability=Available
+// [8] qint64 applicationPid()
 func (this *QCoreApplication) ApplicationPid() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication14applicationPidEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -559,8 +558,8 @@ func QCoreApplication_ApplicationPid() int64 {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:145
 // index:0
-// Public static
-// void setLibraryPaths(const QStringList &)
+// Public static Visibility=Default Availability=Available
+// [-2] void setLibraryPaths(const QStringList &)
 func (this *QCoreApplication) SetLibraryPaths(arg0 *QStringList) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication15setLibraryPathsERK11QStringList", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -573,8 +572,8 @@ func QCoreApplication_SetLibraryPaths(arg0 *QStringList) {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:147
 // index:0
-// Public static
-// void addLibraryPath(const QString &)
+// Public static Visibility=Default Availability=Available
+// [-2] void addLibraryPath(const QString &)
 func (this *QCoreApplication) AddLibraryPath(arg0 *QString) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication14addLibraryPathERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -587,8 +586,8 @@ func QCoreApplication_AddLibraryPath(arg0 *QString) {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:148
 // index:0
-// Public static
-// void removeLibraryPath(const QString &)
+// Public static Visibility=Default Availability=Available
+// [-2] void removeLibraryPath(const QString &)
 func (this *QCoreApplication) RemoveLibraryPath(arg0 *QString) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication17removeLibraryPathERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -601,8 +600,8 @@ func QCoreApplication_RemoveLibraryPath(arg0 *QString) {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:152
 // index:0
-// Public static
-// bool installTranslator(QTranslator *)
+// Public static Visibility=Default Availability=Available
+// [1] bool installTranslator(QTranslator *)
 func (this *QCoreApplication) InstallTranslator(messageFile *QTranslator /*777 QTranslator **/) bool {
 	var convArg0 = messageFile.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication17installTranslatorEP11QTranslator", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -618,8 +617,8 @@ func QCoreApplication_InstallTranslator(messageFile *QTranslator /*777 QTranslat
 
 // /usr/include/qt/QtCore/qcoreapplication.h:153
 // index:0
-// Public static
-// bool removeTranslator(QTranslator *)
+// Public static Visibility=Default Availability=Available
+// [1] bool removeTranslator(QTranslator *)
 func (this *QCoreApplication) RemoveTranslator(messageFile *QTranslator /*777 QTranslator **/) bool {
 	var convArg0 = messageFile.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication16removeTranslatorEP11QTranslator", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -635,8 +634,8 @@ func QCoreApplication_RemoveTranslator(messageFile *QTranslator /*777 QTranslato
 
 // /usr/include/qt/QtCore/qcoreapplication.h:156
 // index:0
-// Public static
-// QString translate(const char *, const char *, const char *, int)
+// Public static Visibility=Default Availability=Available
+// [8] QString translate(const char *, const char *, const char *, int)
 func (this *QCoreApplication) Translate(context string, key string, disambiguation string, n int) *QString /*123*/ {
 	var convArg0 = qtrt.CString(context)
 	defer qtrt.FreeMem(convArg0)
@@ -658,8 +657,8 @@ func QCoreApplication_Translate(context string, key string, disambiguation strin
 
 // /usr/include/qt/QtCore/qcoreapplication.h:169
 // index:0
-// Public static
-// void flush()
+// Public static Visibility=Default Availability=Available
+// [-2] void flush()
 func (this *QCoreApplication) Flush() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication5flushEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -671,8 +670,8 @@ func QCoreApplication_Flush() {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:172
 // index:0
-// Public
-// void installNativeEventFilter(QAbstractNativeEventFilter *)
+// Public Visibility=Default Availability=Available
+// [-2] void installNativeEventFilter(QAbstractNativeEventFilter *)
 func (this *QCoreApplication) InstallNativeEventFilter(filterObj *QAbstractNativeEventFilter /*777 QAbstractNativeEventFilter **/) {
 	var convArg0 = filterObj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication24installNativeEventFilterEP26QAbstractNativeEventFilter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -681,8 +680,8 @@ func (this *QCoreApplication) InstallNativeEventFilter(filterObj *QAbstractNativ
 
 // /usr/include/qt/QtCore/qcoreapplication.h:173
 // index:0
-// Public
-// void removeNativeEventFilter(QAbstractNativeEventFilter *)
+// Public Visibility=Default Availability=Available
+// [-2] void removeNativeEventFilter(QAbstractNativeEventFilter *)
 func (this *QCoreApplication) RemoveNativeEventFilter(filterObj *QAbstractNativeEventFilter /*777 QAbstractNativeEventFilter **/) {
 	var convArg0 = filterObj.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication23removeNativeEventFilterEP26QAbstractNativeEventFilter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -691,8 +690,8 @@ func (this *QCoreApplication) RemoveNativeEventFilter(filterObj *QAbstractNative
 
 // /usr/include/qt/QtCore/qcoreapplication.h:175
 // index:0
-// Public static
-// bool isQuitLockEnabled()
+// Public static Visibility=Default Availability=Available
+// [1] bool isQuitLockEnabled()
 func (this *QCoreApplication) IsQuitLockEnabled() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication17isQuitLockEnabledEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -707,8 +706,8 @@ func QCoreApplication_IsQuitLockEnabled() bool {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:176
 // index:0
-// Public static
-// void setQuitLockEnabled(_Bool)
+// Public static Visibility=Default Availability=Available
+// [-2] void setQuitLockEnabled(_Bool)
 func (this *QCoreApplication) SetQuitLockEnabled(enabled bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication18setQuitLockEnabledEb", ffiqt.FFI_TYPE_POINTER, enabled)
 	gopp.ErrPrint(err, rv)
@@ -720,8 +719,8 @@ func QCoreApplication_SetQuitLockEnabled(enabled bool) {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:179
 // index:0
-// Public static
-// void quit()
+// Public static Visibility=Default Availability=Available
+// [-2] void quit()
 func (this *QCoreApplication) Quit() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication4quitEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -733,8 +732,8 @@ func QCoreApplication_Quit() {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:184
 // index:0
-// Public
-// void organizationNameChanged()
+// Public Visibility=Default Availability=Available
+// [-2] void organizationNameChanged()
 func (this *QCoreApplication) OrganizationNameChanged() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication23organizationNameChangedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -742,8 +741,8 @@ func (this *QCoreApplication) OrganizationNameChanged() {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:185
 // index:0
-// Public
-// void organizationDomainChanged()
+// Public Visibility=Default Availability=Available
+// [-2] void organizationDomainChanged()
 func (this *QCoreApplication) OrganizationDomainChanged() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication25organizationDomainChangedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -751,8 +750,8 @@ func (this *QCoreApplication) OrganizationDomainChanged() {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:186
 // index:0
-// Public
-// void applicationNameChanged()
+// Public Visibility=Default Availability=Available
+// [-2] void applicationNameChanged()
 func (this *QCoreApplication) ApplicationNameChanged() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication22applicationNameChangedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -760,8 +759,8 @@ func (this *QCoreApplication) ApplicationNameChanged() {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:187
 // index:0
-// Public
-// void applicationVersionChanged()
+// Public Visibility=Default Availability=Available
+// [-2] void applicationVersionChanged()
 func (this *QCoreApplication) ApplicationVersionChanged() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication25applicationVersionChangedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -769,8 +768,8 @@ func (this *QCoreApplication) ApplicationVersionChanged() {
 
 // /usr/include/qt/QtCore/qcoreapplication.h:190
 // index:0
-// Protected virtual
-// bool event(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 func (this *QCoreApplication) Event(arg0 *QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplication5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

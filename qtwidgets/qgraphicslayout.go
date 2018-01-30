@@ -76,21 +76,20 @@ func (*QGraphicsLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLayout {
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:57
 // index:0
-// Public
-// void QGraphicsLayout(QGraphicsLayoutItem *)
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsLayout(QGraphicsLayoutItem *)
 func NewQGraphicsLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) *QGraphicsLayout {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQGraphicsLayoutFromPointer(cthis)
+	gothis := NewQGraphicsLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:58
 // index:0
-// Public virtual
-// void ~QGraphicsLayout()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QGraphicsLayout()
 func DeleteQGraphicsLayout(*QGraphicsLayout) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayoutD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -98,8 +97,8 @@ func DeleteQGraphicsLayout(*QGraphicsLayout) {
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:60
 // index:0
-// Public
-// void setContentsMargins(qreal, qreal, qreal, qreal)
+// Public Visibility=Default Availability=Available
+// [-2] void setContentsMargins(qreal, qreal, qreal, qreal)
 func (this *QGraphicsLayout) SetContentsMargins(left float64, top float64, right float64, bottom float64) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout18setContentsMarginsEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), left, top, right, bottom)
 	gopp.ErrPrint(err, rv)
@@ -107,8 +106,8 @@ func (this *QGraphicsLayout) SetContentsMargins(left float64, top float64, right
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:61
 // index:0
-// Public virtual
-// void getContentsMargins(qreal *, qreal *, qreal *, qreal *)
+// Public virtual Visibility=Default Availability=Available
+// [-2] void getContentsMargins(qreal *, qreal *, qreal *, qreal *)
 func (this *QGraphicsLayout) GetContentsMargins(left unsafe.Pointer /*666*/, top unsafe.Pointer /*666*/, right unsafe.Pointer /*666*/, bottom unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &left, &top, &right, &bottom)
 	gopp.ErrPrint(err, rv)
@@ -116,8 +115,8 @@ func (this *QGraphicsLayout) GetContentsMargins(left unsafe.Pointer /*666*/, top
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:63
 // index:0
-// Public
-// void activate()
+// Public Visibility=Default Availability=Available
+// [-2] void activate()
 func (this *QGraphicsLayout) Activate() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout8activateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -125,8 +124,8 @@ func (this *QGraphicsLayout) Activate() {
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:64
 // index:0
-// Public
-// bool isActivated()
+// Public Visibility=Default Availability=Available
+// [1] bool isActivated()
 func (this *QGraphicsLayout) IsActivated() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsLayout11isActivatedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -136,8 +135,8 @@ func (this *QGraphicsLayout) IsActivated() bool {
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:65
 // index:0
-// Public virtual
-// void invalidate()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void invalidate()
 func (this *QGraphicsLayout) Invalidate() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout10invalidateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -145,8 +144,8 @@ func (this *QGraphicsLayout) Invalidate() {
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:66
 // index:0
-// Public virtual
-// void updateGeometry()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void updateGeometry()
 func (this *QGraphicsLayout) UpdateGeometry() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout14updateGeometryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -154,8 +153,8 @@ func (this *QGraphicsLayout) UpdateGeometry() {
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:68
 // index:0
-// Public virtual
-// void widgetEvent(QEvent *)
+// Public virtual Visibility=Default Availability=Available
+// [-2] void widgetEvent(QEvent *)
 func (this *QGraphicsLayout) WidgetEvent(e *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout11widgetEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -164,8 +163,8 @@ func (this *QGraphicsLayout) WidgetEvent(e *qtcore.QEvent /*777 QEvent **/) {
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:70
 // index:0
-// Public pure virtual
-// int count()
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [4] int count()
 func (this *QGraphicsLayout) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsLayout5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -175,8 +174,8 @@ func (this *QGraphicsLayout) Count() int {
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:71
 // index:0
-// Public pure virtual
-// QGraphicsLayoutItem * itemAt(int)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QGraphicsLayoutItem * itemAt(int)
 func (this *QGraphicsLayout) ItemAt(i int) *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsLayout6itemAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
@@ -187,8 +186,8 @@ func (this *QGraphicsLayout) ItemAt(i int) *QGraphicsLayoutItem /*777 QGraphicsL
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:72
 // index:0
-// Public pure virtual
-// void removeAt(int)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [-2] void removeAt(int)
 func (this *QGraphicsLayout) RemoveAt(index int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout8removeAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
@@ -196,8 +195,8 @@ func (this *QGraphicsLayout) RemoveAt(index int) {
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:74
 // index:0
-// Public static
-// void setInstantInvalidatePropagation(_Bool)
+// Public static Visibility=Default Availability=Available
+// [-2] void setInstantInvalidatePropagation(_Bool)
 func (this *QGraphicsLayout) SetInstantInvalidatePropagation(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout31setInstantInvalidatePropagationEb", ffiqt.FFI_TYPE_POINTER, enable)
 	gopp.ErrPrint(err, rv)
@@ -209,8 +208,8 @@ func QGraphicsLayout_SetInstantInvalidatePropagation(enable bool) {
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:75
 // index:0
-// Public static
-// bool instantInvalidatePropagation()
+// Public static Visibility=Default Availability=Available
+// [1] bool instantInvalidatePropagation()
 func (this *QGraphicsLayout) InstantInvalidatePropagation() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout28instantInvalidatePropagationEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -225,8 +224,8 @@ func QGraphicsLayout_InstantInvalidatePropagation() bool {
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:78
 // index:0
-// Protected
-// void addChildLayoutItem(QGraphicsLayoutItem *)
+// Protected Visibility=Default Availability=Available
+// [-2] void addChildLayoutItem(QGraphicsLayoutItem *)
 func (this *QGraphicsLayout) AddChildLayoutItem(layoutItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) {
 	var convArg0 = layoutItem.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayout18addChildLayoutItemEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

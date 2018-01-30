@@ -71,8 +71,8 @@ func (*QTextFrameLayoutData) NewFromPointer(cthis unsafe.Pointer) *QTextFrameLay
 
 // /usr/include/qt/QtGui/qtextobject.h:114
 // index:0
-// Public virtual
-// void ~QTextFrameLayoutData()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QTextFrameLayoutData()
 func DeleteQTextFrameLayoutData(*QTextFrameLayoutData) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextFrameLayoutDataD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)

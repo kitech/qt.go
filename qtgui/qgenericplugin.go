@@ -72,8 +72,8 @@ func (*QGenericPlugin) NewFromPointer(cthis unsafe.Pointer) *QGenericPlugin {
 
 // /usr/include/qt/QtGui/qgenericplugin.h:53
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QGenericPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QGenericPlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -84,21 +84,20 @@ func (this *QGenericPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 
 // /usr/include/qt/QtGui/qgenericplugin.h:55
 // index:0
-// Public
-// void QGenericPlugin(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QGenericPlugin(QObject *)
 func NewQGenericPlugin(parent *qtcore.QObject /*777 QObject **/) *QGenericPlugin {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGenericPluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGenericPluginC1EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQGenericPluginFromPointer(cthis)
+	gothis := NewQGenericPluginFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qgenericplugin.h:56
 // index:0
-// Public virtual
-// void ~QGenericPlugin()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QGenericPlugin()
 func DeleteQGenericPlugin(*QGenericPlugin) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGenericPluginD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -106,8 +105,8 @@ func DeleteQGenericPlugin(*QGenericPlugin) {
 
 // /usr/include/qt/QtGui/qgenericplugin.h:58
 // index:0
-// Public pure virtual
-// QObject * create(const QString &, const QString &)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QObject * create(const QString &, const QString &)
 func (this *QGenericPlugin) Create(name *qtcore.QString, spec *qtcore.QString) *qtcore.QObject /*777 QObject **/ {
 	var convArg0 = name.GetCthis()
 	var convArg1 = spec.GetCthis()

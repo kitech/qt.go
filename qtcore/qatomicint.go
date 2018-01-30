@@ -67,13 +67,12 @@ func (*QAtomicInt) NewFromPointer(cthis unsafe.Pointer) *QAtomicInt {
 
 // /usr/include/qt/QtCore/qatomic.h:162
 // index:0
-// Public inline
-// void QAtomicInt(int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QAtomicInt(int)
 func NewQAtomicInt(value int) *QAtomicInt {
-	cthis := qtrt.Calloc(1, 256) // 4
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QAtomicIntC2Ei", ffiqt.FFI_TYPE_VOID, cthis, value)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QAtomicIntC2Ei", ffiqt.FFI_TYPE_POINTER, value)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQAtomicIntFromPointer(cthis)
+	gothis := NewQAtomicIntFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

@@ -72,20 +72,19 @@ func (*QShowEvent) NewFromPointer(cthis unsafe.Pointer) *QShowEvent {
 
 // /usr/include/qt/QtGui/qevent.h:493
 // index:0
-// Public
-// void QShowEvent()
+// Public Visibility=Default Availability=Available
+// [-2] void QShowEvent()
 func NewQShowEvent() *QShowEvent {
-	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QShowEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QShowEventC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQShowEventFromPointer(cthis)
+	gothis := NewQShowEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:494
 // index:0
-// Public virtual
-// void ~QShowEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QShowEvent()
 func DeleteQShowEvent(*QShowEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QShowEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)

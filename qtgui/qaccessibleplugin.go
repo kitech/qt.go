@@ -72,8 +72,8 @@ func (*QAccessiblePlugin) NewFromPointer(cthis unsafe.Pointer) *QAccessiblePlugi
 
 // /usr/include/qt/QtGui/qaccessibleplugin.h:61
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QAccessiblePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QAccessiblePlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -84,21 +84,20 @@ func (this *QAccessiblePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMet
 
 // /usr/include/qt/QtGui/qaccessibleplugin.h:63
 // index:0
-// Public
-// void QAccessiblePlugin(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QAccessiblePlugin(QObject *)
 func NewQAccessiblePlugin(parent *qtcore.QObject /*777 QObject **/) *QAccessiblePlugin {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessiblePluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessiblePluginC1EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQAccessiblePluginFromPointer(cthis)
+	gothis := NewQAccessiblePluginFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qaccessibleplugin.h:64
 // index:0
-// Public virtual
-// void ~QAccessiblePlugin()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QAccessiblePlugin()
 func DeleteQAccessiblePlugin(*QAccessiblePlugin) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessiblePluginD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -106,8 +105,8 @@ func DeleteQAccessiblePlugin(*QAccessiblePlugin) {
 
 // /usr/include/qt/QtGui/qaccessibleplugin.h:66
 // index:0
-// Public pure virtual
-// QAccessibleInterface * create(const QString &, QObject *)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QAccessibleInterface * create(const QString &, QObject *)
 func (this *QAccessiblePlugin) Create(key *qtcore.QString, object *qtcore.QObject /*777 QObject **/) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	var convArg0 = key.GetCthis()
 	var convArg1 = object.GetCthis()

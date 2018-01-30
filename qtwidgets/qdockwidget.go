@@ -76,8 +76,8 @@ func (*QDockWidget) NewFromPointer(cthis unsafe.Pointer) *QDockWidget {
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:57
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QDockWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,35 +88,33 @@ func (this *QDockWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:66
 // index:0
-// Public
-// void QDockWidget(const QString &, QWidget *, Qt::WindowFlags)
+// Public Visibility=Default Availability=Available
+// [-2] void QDockWidget(const QString &, QWidget *, Qt::WindowFlags)
 func NewQDockWidget(title *qtcore.QString, parent *QWidget /*777 QWidget **/, flags int) *QDockWidget {
-	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = title.GetCthis()
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidgetC2ERK7QStringP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1, flags)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidgetC2ERK7QStringP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, flags)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQDockWidgetFromPointer(cthis)
+	gothis := NewQDockWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:68
 // index:1
-// Public
-// void QDockWidget(QWidget *, Qt::WindowFlags)
+// Public Visibility=Default Availability=Available
+// [-2] void QDockWidget(QWidget *, Qt::WindowFlags)
 func NewQDockWidget_1(parent *QWidget /*777 QWidget **/, flags int) *QDockWidget {
-	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidgetC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, flags)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidgetC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, convArg0, flags)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQDockWidgetFromPointer(cthis)
+	gothis := NewQDockWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:69
 // index:0
-// Public virtual
-// void ~QDockWidget()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QDockWidget()
 func DeleteQDockWidget(*QDockWidget) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidgetD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -124,8 +122,8 @@ func DeleteQDockWidget(*QDockWidget) {
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:71
 // index:0
-// Public
-// QWidget * widget()
+// Public Visibility=Default Availability=Available
+// [8] QWidget * widget()
 func (this *QDockWidget) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget6widgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -136,8 +134,8 @@ func (this *QDockWidget) Widget() *QWidget /*777 QWidget **/ {
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:72
 // index:0
-// Public
-// void setWidget(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void setWidget(QWidget *)
 func (this *QDockWidget) SetWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget9setWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -146,8 +144,8 @@ func (this *QDockWidget) SetWidget(widget *QWidget /*777 QWidget **/) {
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:90
 // index:0
-// Public
-// QDockWidget::DockWidgetFeatures features()
+// Public Visibility=Default Availability=Available
+// [4] QDockWidget::DockWidgetFeatures features()
 func (this *QDockWidget) Features() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget8featuresEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -157,8 +155,8 @@ func (this *QDockWidget) Features() int {
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:92
 // index:0
-// Public
-// void setFloating(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setFloating(_Bool)
 func (this *QDockWidget) SetFloating(floating bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget11setFloatingEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), floating)
 	gopp.ErrPrint(err, rv)
@@ -166,8 +164,8 @@ func (this *QDockWidget) SetFloating(floating bool) {
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:93
 // index:0
-// Public inline
-// bool isFloating()
+// Public inline Visibility=Default Availability=Available
+// [1] bool isFloating()
 func (this *QDockWidget) IsFloating() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget10isFloatingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -177,8 +175,8 @@ func (this *QDockWidget) IsFloating() bool {
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:96
 // index:0
-// Public
-// Qt::DockWidgetAreas allowedAreas()
+// Public Visibility=Default Availability=Available
+// [4] Qt::DockWidgetAreas allowedAreas()
 func (this *QDockWidget) AllowedAreas() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget12allowedAreasEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -188,8 +186,8 @@ func (this *QDockWidget) AllowedAreas() int {
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:98
 // index:0
-// Public
-// void setTitleBarWidget(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void setTitleBarWidget(QWidget *)
 func (this *QDockWidget) SetTitleBarWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget17setTitleBarWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -198,8 +196,8 @@ func (this *QDockWidget) SetTitleBarWidget(widget *QWidget /*777 QWidget **/) {
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:99
 // index:0
-// Public
-// QWidget * titleBarWidget()
+// Public Visibility=Default Availability=Available
+// [8] QWidget * titleBarWidget()
 func (this *QDockWidget) TitleBarWidget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget14titleBarWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -210,8 +208,8 @@ func (this *QDockWidget) TitleBarWidget() *QWidget /*777 QWidget **/ {
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:101
 // index:0
-// Public inline
-// bool isAreaAllowed(Qt::DockWidgetArea)
+// Public inline Visibility=Default Availability=Available
+// [1] bool isAreaAllowed(Qt::DockWidgetArea)
 func (this *QDockWidget) IsAreaAllowed(area int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget13isAreaAllowedEN2Qt14DockWidgetAreaE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), area)
 	gopp.ErrPrint(err, rv)
@@ -221,8 +219,8 @@ func (this *QDockWidget) IsAreaAllowed(area int) bool {
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:105
 // index:0
-// Public
-// QAction * toggleViewAction()
+// Public Visibility=Default Availability=Available
+// [8] QAction * toggleViewAction()
 func (this *QDockWidget) ToggleViewAction() *QAction /*777 QAction **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget16toggleViewActionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -233,8 +231,8 @@ func (this *QDockWidget) ToggleViewAction() *QAction /*777 QAction **/ {
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:110
 // index:0
-// Public
-// void topLevelChanged(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void topLevelChanged(_Bool)
 func (this *QDockWidget) TopLevelChanged(topLevel bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget15topLevelChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), topLevel)
 	gopp.ErrPrint(err, rv)
@@ -242,8 +240,8 @@ func (this *QDockWidget) TopLevelChanged(topLevel bool) {
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:112
 // index:0
-// Public
-// void visibilityChanged(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void visibilityChanged(_Bool)
 func (this *QDockWidget) VisibilityChanged(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget17visibilityChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
@@ -251,8 +249,8 @@ func (this *QDockWidget) VisibilityChanged(visible bool) {
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:113
 // index:0
-// Public
-// void dockLocationChanged(Qt::DockWidgetArea)
+// Public Visibility=Default Availability=Available
+// [-2] void dockLocationChanged(Qt::DockWidgetArea)
 func (this *QDockWidget) DockLocationChanged(area int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget19dockLocationChangedEN2Qt14DockWidgetAreaE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), area)
 	gopp.ErrPrint(err, rv)
@@ -260,8 +258,8 @@ func (this *QDockWidget) DockLocationChanged(area int) {
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:116
 // index:0
-// Protected virtual
-// void changeEvent(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void changeEvent(QEvent *)
 func (this *QDockWidget) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -270,8 +268,8 @@ func (this *QDockWidget) ChangeEvent(event *qtcore.QEvent /*777 QEvent **/) {
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:117
 // index:0
-// Protected virtual
-// void closeEvent(QCloseEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void closeEvent(QCloseEvent *)
 func (this *QDockWidget) CloseEvent(event *qtgui.QCloseEvent /*777 QCloseEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget10closeEventEP11QCloseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -280,8 +278,8 @@ func (this *QDockWidget) CloseEvent(event *qtgui.QCloseEvent /*777 QCloseEvent *
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:118
 // index:0
-// Protected virtual
-// void paintEvent(QPaintEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void paintEvent(QPaintEvent *)
 func (this *QDockWidget) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -290,8 +288,8 @@ func (this *QDockWidget) PaintEvent(event *qtgui.QPaintEvent /*777 QPaintEvent *
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:119
 // index:0
-// Protected virtual
-// bool event(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 func (this *QDockWidget) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -302,8 +300,8 @@ func (this *QDockWidget) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:120
 // index:0
-// Protected
-// void initStyleOption(QStyleOptionDockWidget *)
+// Protected Visibility=Default Availability=Available
+// [-2] void initStyleOption(QStyleOptionDockWidget *)
 func (this *QDockWidget) InitStyleOption(option *QStyleOptionDockWidget /*777 QStyleOptionDockWidget **/) {
 	var convArg0 = option.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDockWidget15initStyleOptionEP22QStyleOptionDockWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

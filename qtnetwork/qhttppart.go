@@ -71,20 +71,19 @@ func (*QHttpPart) NewFromPointer(cthis unsafe.Pointer) *QHttpPart {
 
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:58
 // index:0
-// Public
-// void QHttpPart()
+// Public Visibility=Default Availability=Available
+// [-2] void QHttpPart()
 func NewQHttpPart() *QHttpPart {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHttpPartC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHttpPartC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQHttpPartFromPointer(cthis)
+	gothis := NewQHttpPartFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:60
 // index:0
-// Public
-// void ~QHttpPart()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QHttpPart()
 func DeleteQHttpPart(*QHttpPart) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHttpPartD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -92,8 +91,8 @@ func DeleteQHttpPart(*QHttpPart) {
 
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:66
 // index:0
-// Public inline
-// void swap(QHttpPart &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QHttpPart &)
 func (this *QHttpPart) Swap(other *QHttpPart) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHttpPart4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -102,8 +101,8 @@ func (this *QHttpPart) Swap(other *QHttpPart) {
 
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:72
 // index:0
-// Public
-// void setHeader(QNetworkRequest::KnownHeaders, const QVariant &)
+// Public Visibility=Default Availability=Available
+// [-2] void setHeader(QNetworkRequest::KnownHeaders, const QVariant &)
 func (this *QHttpPart) SetHeader(header int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHttpPart9setHeaderEN15QNetworkRequest12KnownHeadersERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), header, convArg1)
@@ -112,8 +111,8 @@ func (this *QHttpPart) SetHeader(header int, value *qtcore.QVariant) {
 
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:73
 // index:0
-// Public
-// void setRawHeader(const QByteArray &, const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void setRawHeader(const QByteArray &, const QByteArray &)
 func (this *QHttpPart) SetRawHeader(headerName *qtcore.QByteArray, headerValue *qtcore.QByteArray) {
 	var convArg0 = headerName.GetCthis()
 	var convArg1 = headerValue.GetCthis()
@@ -123,8 +122,8 @@ func (this *QHttpPart) SetRawHeader(headerName *qtcore.QByteArray, headerValue *
 
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:75
 // index:0
-// Public
-// void setBody(const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void setBody(const QByteArray &)
 func (this *QHttpPart) SetBody(body *qtcore.QByteArray) {
 	var convArg0 = body.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHttpPart7setBodyERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -133,8 +132,8 @@ func (this *QHttpPart) SetBody(body *qtcore.QByteArray) {
 
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:76
 // index:0
-// Public
-// void setBodyDevice(QIODevice *)
+// Public Visibility=Default Availability=Available
+// [-2] void setBodyDevice(QIODevice *)
 func (this *QHttpPart) SetBodyDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHttpPart13setBodyDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

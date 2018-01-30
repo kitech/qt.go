@@ -67,20 +67,19 @@ func (*QFutureInterfaceBase) NewFromPointer(cthis unsafe.Pointer) *QFutureInterf
 
 // /usr/include/qt/QtCore/qfutureinterface.h:73
 // index:0
-// Public
-// void QFutureInterfaceBase(enum QFutureInterfaceBase::State)
+// Public Visibility=Default Availability=Available
+// [-2] void QFutureInterfaceBase(enum QFutureInterfaceBase::State)
 func NewQFutureInterfaceBase(initialState int) *QFutureInterfaceBase {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBaseC2ENS_5StateE", ffiqt.FFI_TYPE_VOID, cthis, initialState)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBaseC2ENS_5StateE", ffiqt.FFI_TYPE_POINTER, initialState)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQFutureInterfaceBaseFromPointer(cthis)
+	gothis := NewQFutureInterfaceBaseFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qfutureinterface.h:75
 // index:0
-// Public virtual
-// void ~QFutureInterfaceBase()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QFutureInterfaceBase()
 func DeleteQFutureInterfaceBase(*QFutureInterfaceBase) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBaseD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -88,8 +87,8 @@ func DeleteQFutureInterfaceBase(*QFutureInterfaceBase) {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:78
 // index:0
-// Public
-// void reportStarted()
+// Public Visibility=Default Availability=Available
+// [-2] void reportStarted()
 func (this *QFutureInterfaceBase) ReportStarted() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase13reportStartedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -97,8 +96,8 @@ func (this *QFutureInterfaceBase) ReportStarted() {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:79
 // index:0
-// Public
-// void reportFinished()
+// Public Visibility=Default Availability=Available
+// [-2] void reportFinished()
 func (this *QFutureInterfaceBase) ReportFinished() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase14reportFinishedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -106,8 +105,8 @@ func (this *QFutureInterfaceBase) ReportFinished() {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:80
 // index:0
-// Public
-// void reportCanceled()
+// Public Visibility=Default Availability=Available
+// [-2] void reportCanceled()
 func (this *QFutureInterfaceBase) ReportCanceled() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase14reportCanceledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -115,8 +114,8 @@ func (this *QFutureInterfaceBase) ReportCanceled() {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:84
 // index:0
-// Public
-// void reportResultsReady(int, int)
+// Public Visibility=Default Availability=Available
+// [-2] void reportResultsReady(int, int)
 func (this *QFutureInterfaceBase) ReportResultsReady(beginIndex int, endIndex int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase18reportResultsReadyEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), beginIndex, endIndex)
 	gopp.ErrPrint(err, rv)
@@ -124,8 +123,8 @@ func (this *QFutureInterfaceBase) ReportResultsReady(beginIndex int, endIndex in
 
 // /usr/include/qt/QtCore/qfutureinterface.h:86
 // index:0
-// Public
-// void setRunnable(QRunnable *)
+// Public Visibility=Default Availability=Available
+// [-2] void setRunnable(QRunnable *)
 func (this *QFutureInterfaceBase) SetRunnable(runnable *QRunnable /*777 QRunnable **/) {
 	var convArg0 = runnable.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase11setRunnableEP9QRunnable", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -134,8 +133,8 @@ func (this *QFutureInterfaceBase) SetRunnable(runnable *QRunnable /*777 QRunnabl
 
 // /usr/include/qt/QtCore/qfutureinterface.h:87
 // index:0
-// Public
-// void setThreadPool(QThreadPool *)
+// Public Visibility=Default Availability=Available
+// [-2] void setThreadPool(QThreadPool *)
 func (this *QFutureInterfaceBase) SetThreadPool(pool *QThreadPool /*777 QThreadPool **/) {
 	var convArg0 = pool.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase13setThreadPoolEP11QThreadPool", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -144,8 +143,8 @@ func (this *QFutureInterfaceBase) SetThreadPool(pool *QThreadPool /*777 QThreadP
 
 // /usr/include/qt/QtCore/qfutureinterface.h:88
 // index:0
-// Public
-// void setFilterMode(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setFilterMode(_Bool)
 func (this *QFutureInterfaceBase) SetFilterMode(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase13setFilterModeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -153,8 +152,8 @@ func (this *QFutureInterfaceBase) SetFilterMode(enable bool) {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:89
 // index:0
-// Public
-// void setProgressRange(int, int)
+// Public Visibility=Default Availability=Available
+// [-2] void setProgressRange(int, int)
 func (this *QFutureInterfaceBase) SetProgressRange(minimum int, maximum int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase16setProgressRangeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), minimum, maximum)
 	gopp.ErrPrint(err, rv)
@@ -162,8 +161,8 @@ func (this *QFutureInterfaceBase) SetProgressRange(minimum int, maximum int) {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:90
 // index:0
-// Public
-// int progressMinimum()
+// Public Visibility=Default Availability=Available
+// [4] int progressMinimum()
 func (this *QFutureInterfaceBase) ProgressMinimum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase15progressMinimumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -173,8 +172,8 @@ func (this *QFutureInterfaceBase) ProgressMinimum() int {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:91
 // index:0
-// Public
-// int progressMaximum()
+// Public Visibility=Default Availability=Available
+// [4] int progressMaximum()
 func (this *QFutureInterfaceBase) ProgressMaximum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase15progressMaximumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -184,8 +183,8 @@ func (this *QFutureInterfaceBase) ProgressMaximum() int {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:92
 // index:0
-// Public
-// bool isProgressUpdateNeeded()
+// Public Visibility=Default Availability=Available
+// [1] bool isProgressUpdateNeeded()
 func (this *QFutureInterfaceBase) IsProgressUpdateNeeded() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase22isProgressUpdateNeededEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -195,8 +194,8 @@ func (this *QFutureInterfaceBase) IsProgressUpdateNeeded() bool {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:93
 // index:0
-// Public
-// void setProgressValue(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setProgressValue(int)
 func (this *QFutureInterfaceBase) SetProgressValue(progressValue int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase16setProgressValueEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), progressValue)
 	gopp.ErrPrint(err, rv)
@@ -204,8 +203,8 @@ func (this *QFutureInterfaceBase) SetProgressValue(progressValue int) {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:94
 // index:0
-// Public
-// int progressValue()
+// Public Visibility=Default Availability=Available
+// [4] int progressValue()
 func (this *QFutureInterfaceBase) ProgressValue() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase13progressValueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -215,8 +214,8 @@ func (this *QFutureInterfaceBase) ProgressValue() int {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:95
 // index:0
-// Public
-// void setProgressValueAndText(int, const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void setProgressValueAndText(int, const QString &)
 func (this *QFutureInterfaceBase) SetProgressValueAndText(progressValue int, progressText *QString) {
 	var convArg1 = progressText.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase23setProgressValueAndTextEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), progressValue, convArg1)
@@ -225,22 +224,20 @@ func (this *QFutureInterfaceBase) SetProgressValueAndText(progressValue int, pro
 
 // /usr/include/qt/QtCore/qfutureinterface.h:96
 // index:0
-// Public
-// QString progressText()
+// Public Visibility=Default Availability=Available
+// [8] QString progressText()
 func (this *QFutureInterfaceBase) ProgressText() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase12progressTextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase12progressTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qfutureinterface.h:98
 // index:0
-// Public
-// void setExpectedResultCount(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setExpectedResultCount(int)
 func (this *QFutureInterfaceBase) SetExpectedResultCount(resultCount int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase22setExpectedResultCountEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), resultCount)
 	gopp.ErrPrint(err, rv)
@@ -248,8 +245,8 @@ func (this *QFutureInterfaceBase) SetExpectedResultCount(resultCount int) {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:99
 // index:0
-// Public
-// int expectedResultCount()
+// Public Visibility=Default Availability=Available
+// [4] int expectedResultCount()
 func (this *QFutureInterfaceBase) ExpectedResultCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase19expectedResultCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -259,8 +256,8 @@ func (this *QFutureInterfaceBase) ExpectedResultCount() int {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:100
 // index:0
-// Public
-// int resultCount()
+// Public Visibility=Default Availability=Available
+// [4] int resultCount()
 func (this *QFutureInterfaceBase) ResultCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase11resultCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -270,8 +267,8 @@ func (this *QFutureInterfaceBase) ResultCount() int {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:102
 // index:0
-// Public
-// bool queryState(enum QFutureInterfaceBase::State)
+// Public Visibility=Default Availability=Available
+// [1] bool queryState(enum QFutureInterfaceBase::State)
 func (this *QFutureInterfaceBase) QueryState(state int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase10queryStateENS_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	gopp.ErrPrint(err, rv)
@@ -281,8 +278,8 @@ func (this *QFutureInterfaceBase) QueryState(state int) bool {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:103
 // index:0
-// Public
-// bool isRunning()
+// Public Visibility=Default Availability=Available
+// [1] bool isRunning()
 func (this *QFutureInterfaceBase) IsRunning() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase9isRunningEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -292,8 +289,8 @@ func (this *QFutureInterfaceBase) IsRunning() bool {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:104
 // index:0
-// Public
-// bool isStarted()
+// Public Visibility=Default Availability=Available
+// [1] bool isStarted()
 func (this *QFutureInterfaceBase) IsStarted() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase9isStartedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -303,8 +300,8 @@ func (this *QFutureInterfaceBase) IsStarted() bool {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:105
 // index:0
-// Public
-// bool isCanceled()
+// Public Visibility=Default Availability=Available
+// [1] bool isCanceled()
 func (this *QFutureInterfaceBase) IsCanceled() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase10isCanceledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -314,8 +311,8 @@ func (this *QFutureInterfaceBase) IsCanceled() bool {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:106
 // index:0
-// Public
-// bool isFinished()
+// Public Visibility=Default Availability=Available
+// [1] bool isFinished()
 func (this *QFutureInterfaceBase) IsFinished() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase10isFinishedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -325,8 +322,8 @@ func (this *QFutureInterfaceBase) IsFinished() bool {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:107
 // index:0
-// Public
-// bool isPaused()
+// Public Visibility=Default Availability=Available
+// [1] bool isPaused()
 func (this *QFutureInterfaceBase) IsPaused() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase8isPausedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -336,8 +333,8 @@ func (this *QFutureInterfaceBase) IsPaused() bool {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:108
 // index:0
-// Public
-// bool isThrottled()
+// Public Visibility=Default Availability=Available
+// [1] bool isThrottled()
 func (this *QFutureInterfaceBase) IsThrottled() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase11isThrottledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -347,8 +344,8 @@ func (this *QFutureInterfaceBase) IsThrottled() bool {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:109
 // index:0
-// Public
-// bool isResultReadyAt(int)
+// Public Visibility=Default Availability=Available
+// [1] bool isResultReadyAt(int)
 func (this *QFutureInterfaceBase) IsResultReadyAt(index int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase15isResultReadyAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
@@ -358,8 +355,8 @@ func (this *QFutureInterfaceBase) IsResultReadyAt(index int) bool {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:111
 // index:0
-// Public
-// void cancel()
+// Public Visibility=Default Availability=Available
+// [-2] void cancel()
 func (this *QFutureInterfaceBase) Cancel() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase6cancelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -367,8 +364,8 @@ func (this *QFutureInterfaceBase) Cancel() {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:112
 // index:0
-// Public
-// void setPaused(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setPaused(_Bool)
 func (this *QFutureInterfaceBase) SetPaused(paused bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase9setPausedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), paused)
 	gopp.ErrPrint(err, rv)
@@ -376,8 +373,8 @@ func (this *QFutureInterfaceBase) SetPaused(paused bool) {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:113
 // index:0
-// Public
-// void togglePaused()
+// Public Visibility=Default Availability=Available
+// [-2] void togglePaused()
 func (this *QFutureInterfaceBase) TogglePaused() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase12togglePausedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -385,8 +382,8 @@ func (this *QFutureInterfaceBase) TogglePaused() {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:114
 // index:0
-// Public
-// void setThrottled(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setThrottled(_Bool)
 func (this *QFutureInterfaceBase) SetThrottled(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase12setThrottledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -394,8 +391,8 @@ func (this *QFutureInterfaceBase) SetThrottled(enable bool) {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:116
 // index:0
-// Public
-// void waitForFinished()
+// Public Visibility=Default Availability=Available
+// [-2] void waitForFinished()
 func (this *QFutureInterfaceBase) WaitForFinished() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase15waitForFinishedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -403,8 +400,8 @@ func (this *QFutureInterfaceBase) WaitForFinished() {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:117
 // index:0
-// Public
-// bool waitForNextResult()
+// Public Visibility=Default Availability=Available
+// [1] bool waitForNextResult()
 func (this *QFutureInterfaceBase) WaitForNextResult() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase17waitForNextResultEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -414,8 +411,8 @@ func (this *QFutureInterfaceBase) WaitForNextResult() bool {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:118
 // index:0
-// Public
-// void waitForResult(int)
+// Public Visibility=Default Availability=Available
+// [-2] void waitForResult(int)
 func (this *QFutureInterfaceBase) WaitForResult(resultIndex int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase13waitForResultEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), resultIndex)
 	gopp.ErrPrint(err, rv)
@@ -423,8 +420,8 @@ func (this *QFutureInterfaceBase) WaitForResult(resultIndex int) {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:119
 // index:0
-// Public
-// void waitForResume()
+// Public Visibility=Default Availability=Available
+// [-2] void waitForResume()
 func (this *QFutureInterfaceBase) WaitForResume() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase13waitForResumeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -432,8 +429,8 @@ func (this *QFutureInterfaceBase) WaitForResume() {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:121
 // index:0
-// Public
-// QMutex * mutex()
+// Public Visibility=Default Availability=Available
+// [8] QMutex * mutex()
 func (this *QFutureInterfaceBase) Mutex() *QMutex /*777 QMutex **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase5mutexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -444,8 +441,8 @@ func (this *QFutureInterfaceBase) Mutex() *QMutex /*777 QMutex **/ {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:122
 // index:0
-// Public
-// QtPrivate::ExceptionStore & exceptionStore()
+// Public Visibility=Default Availability=Available
+// [1] QtPrivate::ExceptionStore & exceptionStore()
 func (this *QFutureInterfaceBase) ExceptionStore() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase14exceptionStoreEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -455,8 +452,8 @@ func (this *QFutureInterfaceBase) ExceptionStore() int {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:123
 // index:0
-// Public
-// QtPrivate::ResultStoreBase & resultStoreBase()
+// Public Visibility=Default Availability=Available
+// [48] QtPrivate::ResultStoreBase & resultStoreBase()
 func (this *QFutureInterfaceBase) ResultStoreBase() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBase15resultStoreBaseEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -466,8 +463,8 @@ func (this *QFutureInterfaceBase) ResultStoreBase() int {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:124
 // index:1
-// Public
-// const QtPrivate::ResultStoreBase & resultStoreBase()
+// Public Visibility=Default Availability=Available
+// [48] const QtPrivate::ResultStoreBase & resultStoreBase()
 func (this *QFutureInterfaceBase) ResultStoreBase_1() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase15resultStoreBaseEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -477,8 +474,8 @@ func (this *QFutureInterfaceBase) ResultStoreBase_1() int {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:131
 // index:0
-// Protected
-// bool refT()
+// Protected Visibility=Default Availability=Available
+// [1] bool refT()
 func (this *QFutureInterfaceBase) RefT() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase4refTEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -488,8 +485,8 @@ func (this *QFutureInterfaceBase) RefT() bool {
 
 // /usr/include/qt/QtCore/qfutureinterface.h:132
 // index:0
-// Protected
-// bool derefT()
+// Protected Visibility=Default Availability=Available
+// [1] bool derefT()
 func (this *QFutureInterfaceBase) DerefT() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QFutureInterfaceBase6derefTEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

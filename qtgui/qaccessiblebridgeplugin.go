@@ -72,8 +72,8 @@ func (*QAccessibleBridgePlugin) NewFromPointer(cthis unsafe.Pointer) *QAccessibl
 
 // /usr/include/qt/QtGui/qaccessiblebridge.h:67
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QAccessibleBridgePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QAccessibleBridgePlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -84,21 +84,20 @@ func (this *QAccessibleBridgePlugin) MetaObject() *qtcore.QMetaObject /*777 cons
 
 // /usr/include/qt/QtGui/qaccessiblebridge.h:69
 // index:0
-// Public
-// void QAccessibleBridgePlugin(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QAccessibleBridgePlugin(QObject *)
 func NewQAccessibleBridgePlugin(parent *qtcore.QObject /*777 QObject **/) *QAccessibleBridgePlugin {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QAccessibleBridgePluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QAccessibleBridgePluginC1EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQAccessibleBridgePluginFromPointer(cthis)
+	gothis := NewQAccessibleBridgePluginFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qaccessiblebridge.h:70
 // index:0
-// Public virtual
-// void ~QAccessibleBridgePlugin()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QAccessibleBridgePlugin()
 func DeleteQAccessibleBridgePlugin(*QAccessibleBridgePlugin) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QAccessibleBridgePluginD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -106,8 +105,8 @@ func DeleteQAccessibleBridgePlugin(*QAccessibleBridgePlugin) {
 
 // /usr/include/qt/QtGui/qaccessiblebridge.h:72
 // index:0
-// Public pure virtual
-// QAccessibleBridge * create(const QString &)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QAccessibleBridge * create(const QString &)
 func (this *QAccessibleBridgePlugin) Create(key *qtcore.QString) *QAccessibleBridge /*777 QAccessibleBridge **/ {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QAccessibleBridgePlugin6createERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

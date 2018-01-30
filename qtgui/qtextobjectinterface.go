@@ -71,8 +71,8 @@ func (*QTextObjectInterface) NewFromPointer(cthis unsafe.Pointer) *QTextObjectIn
 
 // /usr/include/qt/QtGui/qabstracttextdocumentlayout.h:141
 // index:0
-// Public virtual
-// void ~QTextObjectInterface()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QTextObjectInterface()
 func DeleteQTextObjectInterface(*QTextObjectInterface) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextObjectInterfaceD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -80,24 +80,22 @@ func DeleteQTextObjectInterface(*QTextObjectInterface) {
 
 // /usr/include/qt/QtGui/qabstracttextdocumentlayout.h:142
 // index:0
-// Public pure virtual
-// QSizeF intrinsicSize(QTextDocument *, int, const QTextFormat &)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [16] QSizeF intrinsicSize(QTextDocument *, int, const QTextFormat &)
 func (this *QTextObjectInterface) IntrinsicSize(doc *QTextDocument /*777 QTextDocument **/, posInDocument int, format *QTextFormat) *qtcore.QSizeF /*123*/ {
 	var convArg0 = doc.GetCthis()
 	var convArg2 = format.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, posInDocument, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, posInDocument, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qabstracttextdocumentlayout.h:143
 // index:0
-// Public pure virtual
-// void drawObject(QPainter *, const QRectF &, QTextDocument *, int, const QTextFormat &)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [-2] void drawObject(QPainter *, const QRectF &, QTextDocument *, int, const QTextFormat &)
 func (this *QTextObjectInterface) DrawObject(painter *QPainter /*777 QPainter **/, rect *qtcore.QRectF, doc *QTextDocument /*777 QTextDocument **/, posInDocument int, format *QTextFormat) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = rect.GetCthis()

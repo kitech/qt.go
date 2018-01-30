@@ -67,8 +67,8 @@ func (*QCollatorSortKey) NewFromPointer(cthis unsafe.Pointer) *QCollatorSortKey 
 
 // /usr/include/qt/QtCore/qcollator.h:58
 // index:0
-// Public
-// void ~QCollatorSortKey()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QCollatorSortKey()
 func DeleteQCollatorSortKey(*QCollatorSortKey) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCollatorSortKeyD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -76,8 +76,8 @@ func DeleteQCollatorSortKey(*QCollatorSortKey) {
 
 // /usr/include/qt/QtCore/qcollator.h:64
 // index:0
-// Public inline
-// void swap(QCollatorSortKey &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QCollatorSortKey &)
 func (this *QCollatorSortKey) Swap(other *QCollatorSortKey) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCollatorSortKey4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -86,8 +86,8 @@ func (this *QCollatorSortKey) Swap(other *QCollatorSortKey) {
 
 // /usr/include/qt/QtCore/qcollator.h:67
 // index:0
-// Public
-// int compare(const QCollatorSortKey &)
+// Public Visibility=Default Availability=Available
+// [4] int compare(const QCollatorSortKey &)
 func (this *QCollatorSortKey) Compare(key *QCollatorSortKey) int {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QCollatorSortKey7compareERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

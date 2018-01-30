@@ -68,8 +68,8 @@ func (*QFileSelector) NewFromPointer(cthis unsafe.Pointer) *QFileSelector {
 
 // /usr/include/qt/QtCore/qfileselector.h:51
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QFileSelector) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFileSelector10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -80,21 +80,20 @@ func (this *QFileSelector) MetaObject() *QMetaObject /*777 const QMetaObject **/
 
 // /usr/include/qt/QtCore/qfileselector.h:53
 // index:0
-// Public
-// void QFileSelector(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QFileSelector(QObject *)
 func NewQFileSelector(parent *QObject /*777 QObject **/) *QFileSelector {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFileSelectorC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFileSelectorC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQFileSelectorFromPointer(cthis)
+	gothis := NewQFileSelectorFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qfileselector.h:54
 // index:0
-// Public virtual
-// void ~QFileSelector()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QFileSelector()
 func DeleteQFileSelector(*QFileSelector) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFileSelectorD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -102,38 +101,34 @@ func DeleteQFileSelector(*QFileSelector) {
 
 // /usr/include/qt/QtCore/qfileselector.h:56
 // index:0
-// Public
-// QString select(const QString &)
+// Public Visibility=Default Availability=Available
+// [8] QString select(const QString &)
 func (this *QFileSelector) Select(filePath *QString) *QString /*123*/ {
 	var convArg0 = filePath.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFileSelector6selectERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFileSelector6selectERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qfileselector.h:57
 // index:1
-// Public
-// QUrl select(const QUrl &)
+// Public Visibility=Default Availability=Available
+// [8] QUrl select(const QUrl &)
 func (this *QFileSelector) Select_1(filePath *QUrl) *QUrl /*123*/ {
 	var convArg0 = filePath.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFileSelector6selectERK4QUrl", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QFileSelector6selectERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qfileselector.h:60
 // index:0
-// Public
-// void setExtraSelectors(const QStringList &)
+// Public Visibility=Default Availability=Available
+// [-2] void setExtraSelectors(const QStringList &)
 func (this *QFileSelector) SetExtraSelectors(list *QStringList) {
 	var convArg0 = list.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFileSelector17setExtraSelectorsERK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

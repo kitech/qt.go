@@ -84,20 +84,19 @@ func (*QSGVertexColorMaterial) NewFromPointer(cthis unsafe.Pointer) *QSGVertexCo
 
 // /usr/include/qt/QtQuick/qsgvertexcolormaterial.h:50
 // index:0
-// Public
-// void QSGVertexColorMaterial()
+// Public Visibility=Default Availability=Available
+// [-2] void QSGVertexColorMaterial()
 func NewQSGVertexColorMaterial() *QSGVertexColorMaterial {
-	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QSGVertexColorMaterialC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QSGVertexColorMaterialC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSGVertexColorMaterialFromPointer(cthis)
+	gothis := NewQSGVertexColorMaterialFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtQuick/qsgvertexcolormaterial.h:52
 // index:0
-// Public virtual
-// int compare(const QSGMaterial *)
+// Public virtual Visibility=Default Availability=Available
+// [4] int compare(const QSGMaterial *)
 func (this *QSGVertexColorMaterial) Compare(other *QSGMaterial /*777 const QSGMaterial **/) int {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QSGVertexColorMaterial7compareEPK11QSGMaterial", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -108,8 +107,8 @@ func (this *QSGVertexColorMaterial) Compare(other *QSGMaterial /*777 const QSGMa
 
 // /usr/include/qt/QtQuick/qsgvertexcolormaterial.h:55
 // index:0
-// Protected virtual
-// QSGMaterialType * type()
+// Protected virtual Visibility=Default Availability=Available
+// [8] QSGMaterialType * type()
 func (this *QSGVertexColorMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QSGVertexColorMaterial4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -120,8 +119,8 @@ func (this *QSGVertexColorMaterial) Type() *QSGMaterialType /*777 QSGMaterialTyp
 
 // /usr/include/qt/QtQuick/qsgvertexcolormaterial.h:56
 // index:0
-// Protected virtual
-// QSGMaterialShader * createShader()
+// Protected virtual Visibility=Default Availability=Available
+// [8] QSGMaterialShader * createShader()
 func (this *QSGVertexColorMaterial) CreateShader() *QSGMaterialShader /*777 QSGMaterialShader **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QSGVertexColorMaterial12createShaderEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

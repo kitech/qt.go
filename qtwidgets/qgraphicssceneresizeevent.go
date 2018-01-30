@@ -76,20 +76,19 @@ func (*QGraphicsSceneResizeEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphic
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:297
 // index:0
-// Public
-// void QGraphicsSceneResizeEvent()
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsSceneResizeEvent()
 func NewQGraphicsSceneResizeEvent() *QGraphicsSceneResizeEvent {
-	cthis := qtrt.Calloc(1, 256) // 32
-	rv, err := ffiqt.InvokeQtFunc6("_ZN25QGraphicsSceneResizeEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN25QGraphicsSceneResizeEventC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQGraphicsSceneResizeEventFromPointer(cthis)
+	gothis := NewQGraphicsSceneResizeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:298
 // index:0
-// Public virtual
-// void ~QGraphicsSceneResizeEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QGraphicsSceneResizeEvent()
 func DeleteQGraphicsSceneResizeEvent(*QGraphicsSceneResizeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QGraphicsSceneResizeEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -97,22 +96,20 @@ func DeleteQGraphicsSceneResizeEvent(*QGraphicsSceneResizeEvent) {
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:300
 // index:0
-// Public
-// QSizeF oldSize()
+// Public Visibility=Default Availability=Available
+// [16] QSizeF oldSize()
 func (this *QGraphicsSceneResizeEvent) OldSize() *qtcore.QSizeF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK25QGraphicsSceneResizeEvent7oldSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QGraphicsSceneResizeEvent7oldSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:301
 // index:0
-// Public
-// void setOldSize(const QSizeF &)
+// Public Visibility=Default Availability=Available
+// [-2] void setOldSize(const QSizeF &)
 func (this *QGraphicsSceneResizeEvent) SetOldSize(size *qtcore.QSizeF) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -121,22 +118,20 @@ func (this *QGraphicsSceneResizeEvent) SetOldSize(size *qtcore.QSizeF) {
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:303
 // index:0
-// Public
-// QSizeF newSize()
+// Public Visibility=Default Availability=Available
+// [16] QSizeF newSize()
 func (this *QGraphicsSceneResizeEvent) NewSize() *qtcore.QSizeF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK25QGraphicsSceneResizeEvent7newSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK25QGraphicsSceneResizeEvent7newSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:304
 // index:0
-// Public
-// void setNewSize(const QSizeF &)
+// Public Visibility=Default Availability=Available
+// [-2] void setNewSize(const QSizeF &)
 func (this *QGraphicsSceneResizeEvent) SetNewSize(size *qtcore.QSizeF) {
 	var convArg0 = size.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

@@ -75,20 +75,19 @@ func (*QQmlAbstractUrlInterceptor) NewFromPointer(cthis unsafe.Pointer) *QQmlAbs
 
 // /usr/include/qt/QtQml/qqmlabstracturlinterceptor.h:58
 // index:0
-// Public inline
-// void QQmlAbstractUrlInterceptor()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QQmlAbstractUrlInterceptor()
 func NewQQmlAbstractUrlInterceptor() *QQmlAbstractUrlInterceptor {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptorC1Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptorC1Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQQmlAbstractUrlInterceptorFromPointer(cthis)
+	gothis := NewQQmlAbstractUrlInterceptorFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtQml/qqmlabstracturlinterceptor.h:59
 // index:0
-// Public inline virtual
-// void ~QQmlAbstractUrlInterceptor()
+// Public inline virtual Visibility=Default Availability=Available
+// [-2] void ~QQmlAbstractUrlInterceptor()
 func DeleteQQmlAbstractUrlInterceptor(*QQmlAbstractUrlInterceptor) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptorD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -96,15 +95,13 @@ func DeleteQQmlAbstractUrlInterceptor(*QQmlAbstractUrlInterceptor) {
 
 // /usr/include/qt/QtQml/qqmlabstracturlinterceptor.h:60
 // index:0
-// Public pure virtual
-// QUrl intercept(const QUrl &, enum QQmlAbstractUrlInterceptor::DataType)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QUrl intercept(const QUrl &, enum QQmlAbstractUrlInterceptor::DataType)
 func (this *QQmlAbstractUrlInterceptor) Intercept(path *qtcore.QUrl, type_ int) *qtcore.QUrl /*123*/ {
 	var convArg0 = path.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptor9interceptERK4QUrlNS_8DataTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptor9interceptERK4QUrlNS_8DataTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, type_)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

@@ -76,25 +76,23 @@ func (*QStyleOptionGroupBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionG
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:639
 // index:0
-// Public
-// void QStyleOptionGroupBox()
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleOptionGroupBox()
 func NewQStyleOptionGroupBox() *QStyleOptionGroupBox {
-	cthis := qtrt.Calloc(1, 256) // 120
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionGroupBoxC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionGroupBoxC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionGroupBoxFromPointer(cthis)
+	gothis := NewQStyleOptionGroupBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:642
 // index:1
-// Protected
-// void QStyleOptionGroupBox(int)
+// Protected Visibility=Default Availability=Available
+// [-2] void QStyleOptionGroupBox(int)
 func NewQStyleOptionGroupBox_1(version int) *QStyleOptionGroupBox {
-	cthis := qtrt.Calloc(1, 256) // 120
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionGroupBoxC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionGroupBoxC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionGroupBoxFromPointer(cthis)
+	gothis := NewQStyleOptionGroupBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

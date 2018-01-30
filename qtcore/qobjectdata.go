@@ -67,8 +67,8 @@ func (*QObjectData) NewFromPointer(cthis unsafe.Pointer) *QObjectData {
 
 // /usr/include/qt/QtCore/qobject.h:97
 // index:0
-// Public pure virtual
-// void ~QObjectData()
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [-2] void ~QObjectData()
 func DeleteQObjectData(*QObjectData) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QObjectDataD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -76,8 +76,8 @@ func DeleteQObjectData(*QObjectData) {
 
 // /usr/include/qt/QtCore/qobject.h:112
 // index:0
-// Public
-// QMetaObject * dynamicMetaObject()
+// Public Visibility=Default Availability=Available
+// [8] QMetaObject * dynamicMetaObject()
 func (this *QObjectData) DynamicMetaObject() *QMetaObject /*777 QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QObjectData17dynamicMetaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

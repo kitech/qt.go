@@ -68,8 +68,8 @@ func (*QAnimationGroup) NewFromPointer(cthis unsafe.Pointer) *QAnimationGroup {
 
 // /usr/include/qt/QtCore/qanimationgroup.h:53
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QAnimationGroup) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAnimationGroup10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -80,21 +80,20 @@ func (this *QAnimationGroup) MetaObject() *QMetaObject /*777 const QMetaObject *
 
 // /usr/include/qt/QtCore/qanimationgroup.h:56
 // index:0
-// Public
-// void QAnimationGroup(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QAnimationGroup(QObject *)
 func NewQAnimationGroup(parent *QObject /*777 QObject **/) *QAnimationGroup {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAnimationGroupC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAnimationGroupC1EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQAnimationGroupFromPointer(cthis)
+	gothis := NewQAnimationGroupFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qanimationgroup.h:57
 // index:0
-// Public virtual
-// void ~QAnimationGroup()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QAnimationGroup()
 func DeleteQAnimationGroup(*QAnimationGroup) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAnimationGroupD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -102,8 +101,8 @@ func DeleteQAnimationGroup(*QAnimationGroup) {
 
 // /usr/include/qt/QtCore/qanimationgroup.h:59
 // index:0
-// Public
-// QAbstractAnimation * animationAt(int)
+// Public Visibility=Default Availability=Available
+// [8] QAbstractAnimation * animationAt(int)
 func (this *QAnimationGroup) AnimationAt(index int) *QAbstractAnimation /*777 QAbstractAnimation **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAnimationGroup11animationAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
@@ -114,8 +113,8 @@ func (this *QAnimationGroup) AnimationAt(index int) *QAbstractAnimation /*777 QA
 
 // /usr/include/qt/QtCore/qanimationgroup.h:60
 // index:0
-// Public
-// int animationCount()
+// Public Visibility=Default Availability=Available
+// [4] int animationCount()
 func (this *QAnimationGroup) AnimationCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAnimationGroup14animationCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -125,8 +124,8 @@ func (this *QAnimationGroup) AnimationCount() int {
 
 // /usr/include/qt/QtCore/qanimationgroup.h:61
 // index:0
-// Public
-// int indexOfAnimation(QAbstractAnimation *)
+// Public Visibility=Default Availability=Available
+// [4] int indexOfAnimation(QAbstractAnimation *)
 func (this *QAnimationGroup) IndexOfAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) int {
 	var convArg0 = animation.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -137,8 +136,8 @@ func (this *QAnimationGroup) IndexOfAnimation(animation *QAbstractAnimation /*77
 
 // /usr/include/qt/QtCore/qanimationgroup.h:62
 // index:0
-// Public
-// void addAnimation(QAbstractAnimation *)
+// Public Visibility=Default Availability=Available
+// [-2] void addAnimation(QAbstractAnimation *)
 func (this *QAnimationGroup) AddAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
 	var convArg0 = animation.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -147,8 +146,8 @@ func (this *QAnimationGroup) AddAnimation(animation *QAbstractAnimation /*777 QA
 
 // /usr/include/qt/QtCore/qanimationgroup.h:63
 // index:0
-// Public
-// void insertAnimation(int, QAbstractAnimation *)
+// Public Visibility=Default Availability=Available
+// [-2] void insertAnimation(int, QAbstractAnimation *)
 func (this *QAnimationGroup) InsertAnimation(index int, animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
 	var convArg1 = animation.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
@@ -157,8 +156,8 @@ func (this *QAnimationGroup) InsertAnimation(index int, animation *QAbstractAnim
 
 // /usr/include/qt/QtCore/qanimationgroup.h:64
 // index:0
-// Public
-// void removeAnimation(QAbstractAnimation *)
+// Public Visibility=Default Availability=Available
+// [-2] void removeAnimation(QAbstractAnimation *)
 func (this *QAnimationGroup) RemoveAnimation(animation *QAbstractAnimation /*777 QAbstractAnimation **/) {
 	var convArg0 = animation.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -167,8 +166,8 @@ func (this *QAnimationGroup) RemoveAnimation(animation *QAbstractAnimation /*777
 
 // /usr/include/qt/QtCore/qanimationgroup.h:65
 // index:0
-// Public
-// QAbstractAnimation * takeAnimation(int)
+// Public Visibility=Default Availability=Available
+// [8] QAbstractAnimation * takeAnimation(int)
 func (this *QAnimationGroup) TakeAnimation(index int) *QAbstractAnimation /*777 QAbstractAnimation **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAnimationGroup13takeAnimationEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
@@ -179,8 +178,8 @@ func (this *QAnimationGroup) TakeAnimation(index int) *QAbstractAnimation /*777 
 
 // /usr/include/qt/QtCore/qanimationgroup.h:66
 // index:0
-// Public
-// void clear()
+// Public Visibility=Default Availability=Available
+// [-2] void clear()
 func (this *QAnimationGroup) Clear() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAnimationGroup5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -188,8 +187,8 @@ func (this *QAnimationGroup) Clear() {
 
 // /usr/include/qt/QtCore/qanimationgroup.h:70
 // index:0
-// Protected virtual
-// bool event(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 func (this *QAnimationGroup) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAnimationGroup5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

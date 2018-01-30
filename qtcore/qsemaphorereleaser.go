@@ -67,46 +67,43 @@ func (*QSemaphoreReleaser) NewFromPointer(cthis unsafe.Pointer) *QSemaphoreRelea
 
 // /usr/include/qt/QtCore/qsemaphore.h:75
 // index:0
-// Public inline
-// void QSemaphoreReleaser()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QSemaphoreReleaser()
 func NewQSemaphoreReleaser() *QSemaphoreReleaser {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSemaphoreReleaserFromPointer(cthis)
+	gothis := NewQSemaphoreReleaserFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qsemaphore.h:76
 // index:1
-// Public inline
-// void QSemaphoreReleaser(QSemaphore &, int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QSemaphoreReleaser(QSemaphore &, int)
 func NewQSemaphoreReleaser_1(sem *QSemaphore, n int) *QSemaphoreReleaser {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = sem.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2ER10QSemaphorei", ffiqt.FFI_TYPE_VOID, cthis, convArg0, n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2ER10QSemaphorei", ffiqt.FFI_TYPE_POINTER, convArg0, n)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSemaphoreReleaserFromPointer(cthis)
+	gothis := NewQSemaphoreReleaserFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qsemaphore.h:78
 // index:2
-// Public inline
-// void QSemaphoreReleaser(QSemaphore *, int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QSemaphoreReleaser(QSemaphore *, int)
 func NewQSemaphoreReleaser_2(sem *QSemaphore /*777 QSemaphore **/, n int) *QSemaphoreReleaser {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = sem.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2EP10QSemaphorei", ffiqt.FFI_TYPE_VOID, cthis, convArg0, n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserC2EP10QSemaphorei", ffiqt.FFI_TYPE_POINTER, convArg0, n)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSemaphoreReleaserFromPointer(cthis)
+	gothis := NewQSemaphoreReleaserFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qsemaphore.h:86
 // index:0
-// Public inline
-// void ~QSemaphoreReleaser()
+// Public inline Visibility=Default Availability=Available
+// [-2] void ~QSemaphoreReleaser()
 func DeleteQSemaphoreReleaser(*QSemaphoreReleaser) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -114,8 +111,8 @@ func DeleteQSemaphoreReleaser(*QSemaphoreReleaser) {
 
 // /usr/include/qt/QtCore/qsemaphore.h:92
 // index:0
-// Public inline
-// void swap(QSemaphoreReleaser &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QSemaphoreReleaser &)
 func (this *QSemaphoreReleaser) Swap(other *QSemaphoreReleaser) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaser4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -124,8 +121,8 @@ func (this *QSemaphoreReleaser) Swap(other *QSemaphoreReleaser) {
 
 // /usr/include/qt/QtCore/qsemaphore.h:98
 // index:0
-// Public inline
-// QSemaphore * semaphore()
+// Public inline Visibility=Default Availability=Available
+// [8] QSemaphore * semaphore()
 func (this *QSemaphoreReleaser) Semaphore() *QSemaphore /*777 QSemaphore **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSemaphoreReleaser9semaphoreEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -136,8 +133,8 @@ func (this *QSemaphoreReleaser) Semaphore() *QSemaphore /*777 QSemaphore **/ {
 
 // /usr/include/qt/QtCore/qsemaphore.h:101
 // index:0
-// Public inline
-// QSemaphore * cancel()
+// Public inline Visibility=Default Availability=Available
+// [8] QSemaphore * cancel()
 func (this *QSemaphoreReleaser) Cancel() *QSemaphore /*777 QSemaphore **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaser6cancelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

@@ -75,20 +75,19 @@ func (*QStyleHintReturn) NewFromPointer(cthis unsafe.Pointer) *QStyleHintReturn 
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:710
 // index:0
-// Public
-// void QStyleHintReturn(int, int)
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleHintReturn(int, int)
 func NewQStyleHintReturn(version int, type_ int) *QStyleHintReturn {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStyleHintReturnC2Eii", ffiqt.FFI_TYPE_VOID, cthis, version, type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStyleHintReturnC2Eii", ffiqt.FFI_TYPE_POINTER, version, type_)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleHintReturnFromPointer(cthis)
+	gothis := NewQStyleHintReturnFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:711
 // index:0
-// Public
-// void ~QStyleHintReturn()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QStyleHintReturn()
 func DeleteQStyleHintReturn(*QStyleHintReturn) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStyleHintReturnD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)

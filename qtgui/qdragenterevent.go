@@ -72,8 +72,8 @@ func (*QDragEnterEvent) NewFromPointer(cthis unsafe.Pointer) *QDragEnterEvent {
 
 // /usr/include/qt/QtGui/qevent.h:664
 // index:0
-// Public virtual
-// void ~QDragEnterEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QDragEnterEvent()
 func DeleteQDragEnterEvent(*QDragEnterEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QDragEnterEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)

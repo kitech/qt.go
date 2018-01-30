@@ -72,20 +72,19 @@ func (*QPlatformSurfaceEvent) NewFromPointer(cthis unsafe.Pointer) *QPlatformSur
 
 // /usr/include/qt/QtGui/qevent.h:451
 // index:0
-// Public
-// void QPlatformSurfaceEvent(enum QPlatformSurfaceEvent::SurfaceEventType)
+// Public Visibility=Default Availability=Available
+// [-2] void QPlatformSurfaceEvent(enum QPlatformSurfaceEvent::SurfaceEventType)
 func NewQPlatformSurfaceEvent(surfaceEventType int) *QPlatformSurfaceEvent {
-	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventC2ENS_16SurfaceEventTypeE", ffiqt.FFI_TYPE_VOID, cthis, surfaceEventType)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventC2ENS_16SurfaceEventTypeE", ffiqt.FFI_TYPE_POINTER, surfaceEventType)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQPlatformSurfaceEventFromPointer(cthis)
+	gothis := NewQPlatformSurfaceEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:452
 // index:0
-// Public virtual
-// void ~QPlatformSurfaceEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QPlatformSurfaceEvent()
 func DeleteQPlatformSurfaceEvent(*QPlatformSurfaceEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -93,8 +92,8 @@ func DeleteQPlatformSurfaceEvent(*QPlatformSurfaceEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:454
 // index:0
-// Public inline
-// QPlatformSurfaceEvent::SurfaceEventType surfaceEventType()
+// Public inline Visibility=Default Availability=Available
+// [4] QPlatformSurfaceEvent::SurfaceEventType surfaceEventType()
 func (this *QPlatformSurfaceEvent) SurfaceEventType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QPlatformSurfaceEvent16surfaceEventTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

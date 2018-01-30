@@ -76,25 +76,23 @@ func (*QStyleOptionTabWidgetFrame) NewFromPointer(cthis unsafe.Pointer) *QStyleO
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:171
 // index:0
-// Public
-// void QStyleOptionTabWidgetFrame()
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleOptionTabWidgetFrame()
 func NewQStyleOptionTabWidgetFrame() *QStyleOptionTabWidgetFrame {
-	cthis := qtrt.Calloc(1, 256) // 136
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QStyleOptionTabWidgetFrameC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QStyleOptionTabWidgetFrameC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionTabWidgetFrameFromPointer(cthis)
+	gothis := NewQStyleOptionTabWidgetFrameFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:176
 // index:1
-// Protected
-// void QStyleOptionTabWidgetFrame(int)
+// Protected Visibility=Default Availability=Available
+// [-2] void QStyleOptionTabWidgetFrame(int)
 func NewQStyleOptionTabWidgetFrame_1(version int) *QStyleOptionTabWidgetFrame {
-	cthis := qtrt.Calloc(1, 256) // 136
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QStyleOptionTabWidgetFrameC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QStyleOptionTabWidgetFrameC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionTabWidgetFrameFromPointer(cthis)
+	gothis := NewQStyleOptionTabWidgetFrameFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

@@ -71,20 +71,19 @@ func (*QDnsTextRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsTextRecord {
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:163
 // index:0
-// Public
-// void QDnsTextRecord()
+// Public Visibility=Default Availability=Available
+// [-2] void QDnsTextRecord()
 func NewQDnsTextRecord() *QDnsTextRecord {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDnsTextRecordC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDnsTextRecordC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQDnsTextRecordFromPointer(cthis)
+	gothis := NewQDnsTextRecordFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:169
 // index:0
-// Public
-// void ~QDnsTextRecord()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QDnsTextRecord()
 func DeleteQDnsTextRecord(*QDnsTextRecord) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDnsTextRecordD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -92,8 +91,8 @@ func DeleteQDnsTextRecord(*QDnsTextRecord) {
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:171
 // index:0
-// Public inline
-// void swap(QDnsTextRecord &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QDnsTextRecord &)
 func (this *QDnsTextRecord) Swap(other *QDnsTextRecord) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDnsTextRecord4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -102,22 +101,20 @@ func (this *QDnsTextRecord) Swap(other *QDnsTextRecord) {
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:173
 // index:0
-// Public
-// QString name()
+// Public Visibility=Default Availability=Available
+// [8] QString name()
 func (this *QDnsTextRecord) Name() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDnsTextRecord4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDnsTextRecord4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:174
 // index:0
-// Public
-// quint32 timeToLive()
+// Public Visibility=Default Availability=Available
+// [4] quint32 timeToLive()
 func (this *QDnsTextRecord) TimeToLive() uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDnsTextRecord10timeToLiveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

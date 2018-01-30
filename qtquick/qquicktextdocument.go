@@ -84,8 +84,8 @@ func (*QQuickTextDocument) NewFromPointer(cthis unsafe.Pointer) *QQuickTextDocum
 
 // /usr/include/qt/QtQuick/qquicktextdocument.h:51
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QQuickTextDocument) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QQuickTextDocument10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -96,21 +96,20 @@ func (this *QQuickTextDocument) MetaObject() *qtcore.QMetaObject /*777 const QMe
 
 // /usr/include/qt/QtQuick/qquicktextdocument.h:54
 // index:0
-// Public
-// void QQuickTextDocument(QQuickItem *)
+// Public Visibility=Default Availability=Available
+// [-2] void QQuickTextDocument(QQuickItem *)
 func NewQQuickTextDocument(parent *QQuickItem /*777 QQuickItem **/) *QQuickTextDocument {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QQuickTextDocumentC2EP10QQuickItem", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QQuickTextDocumentC2EP10QQuickItem", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQQuickTextDocumentFromPointer(cthis)
+	gothis := NewQQuickTextDocumentFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtQuick/qquicktextdocument.h:55
 // index:0
-// Public
-// QTextDocument * textDocument()
+// Public Visibility=Default Availability=Available
+// [8] QTextDocument * textDocument()
 func (this *QQuickTextDocument) TextDocument() *qtgui.QTextDocument /*777 QTextDocument **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QQuickTextDocument12textDocumentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

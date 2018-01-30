@@ -67,32 +67,30 @@ func (*QPoint) NewFromPointer(cthis unsafe.Pointer) *QPoint {
 
 // /usr/include/qt/QtCore/qpoint.h:55
 // index:0
-// Public inline
-// void QPoint()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QPoint()
 func NewQPoint() *QPoint {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPointC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPointC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQPointFromPointer(cthis)
+	gothis := NewQPointFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qpoint.h:56
 // index:1
-// Public inline
-// void QPoint(int, int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QPoint(int, int)
 func NewQPoint_1(xpos int, ypos int) *QPoint {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPointC2Eii", ffiqt.FFI_TYPE_VOID, cthis, xpos, ypos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPointC2Eii", ffiqt.FFI_TYPE_POINTER, xpos, ypos)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQPointFromPointer(cthis)
+	gothis := NewQPointFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qpoint.h:58
 // index:0
-// Public inline
-// bool isNull()
+// Public inline Visibility=Default Availability=Available
+// [1] bool isNull()
 func (this *QPoint) IsNull() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QPoint6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -102,8 +100,8 @@ func (this *QPoint) IsNull() bool {
 
 // /usr/include/qt/QtCore/qpoint.h:60
 // index:0
-// Public inline
-// int x()
+// Public inline Visibility=Default Availability=Available
+// [4] int x()
 func (this *QPoint) X() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QPoint1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -113,8 +111,8 @@ func (this *QPoint) X() int {
 
 // /usr/include/qt/QtCore/qpoint.h:61
 // index:0
-// Public inline
-// int y()
+// Public inline Visibility=Default Availability=Available
+// [4] int y()
 func (this *QPoint) Y() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QPoint1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -124,8 +122,8 @@ func (this *QPoint) Y() int {
 
 // /usr/include/qt/QtCore/qpoint.h:62
 // index:0
-// Public inline
-// void setX(int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setX(int)
 func (this *QPoint) SetX(x int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPoint4setXEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x)
 	gopp.ErrPrint(err, rv)
@@ -133,8 +131,8 @@ func (this *QPoint) SetX(x int) {
 
 // /usr/include/qt/QtCore/qpoint.h:63
 // index:0
-// Public inline
-// void setY(int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setY(int)
 func (this *QPoint) SetY(y int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPoint4setYEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), y)
 	gopp.ErrPrint(err, rv)
@@ -142,8 +140,8 @@ func (this *QPoint) SetY(y int) {
 
 // /usr/include/qt/QtCore/qpoint.h:65
 // index:0
-// Public inline
-// int manhattanLength()
+// Public inline Visibility=Default Availability=Available
+// [4] int manhattanLength()
 func (this *QPoint) ManhattanLength() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QPoint15manhattanLengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -153,8 +151,8 @@ func (this *QPoint) ManhattanLength() int {
 
 // /usr/include/qt/QtCore/qpoint.h:67
 // index:0
-// Public inline
-// int & rx()
+// Public inline Visibility=Default Availability=Available
+// [4] int & rx()
 func (this *QPoint) Rx() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPoint2rxEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -164,8 +162,8 @@ func (this *QPoint) Rx() int {
 
 // /usr/include/qt/QtCore/qpoint.h:68
 // index:0
-// Public inline
-// int & ry()
+// Public inline Visibility=Default Availability=Available
+// [4] int & ry()
 func (this *QPoint) Ry() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QPoint2ryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -175,8 +173,8 @@ func (this *QPoint) Ry() int {
 
 // /usr/include/qt/QtCore/qpoint.h:79
 // index:0
-// Public static inline
-// int dotProduct(const QPoint &, const QPoint &)
+// Public static inline Visibility=Default Availability=Available
+// [4] int dotProduct(const QPoint &, const QPoint &)
 func (this *QPoint) DotProduct(p1 *QPoint, p2 *QPoint) int {
 	var convArg0 = p1.GetCthis()
 	var convArg1 = p2.GetCthis()

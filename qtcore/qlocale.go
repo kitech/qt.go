@@ -67,57 +67,53 @@ func (*QLocale) NewFromPointer(cthis unsafe.Pointer) *QLocale {
 
 // /usr/include/qt/QtCore/qlocale.h:929
 // index:0
-// Public
-// void QLocale()
+// Public Visibility=Default Availability=Available
+// [-2] void QLocale()
 func NewQLocale() *QLocale {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocaleC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocaleC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQLocaleFromPointer(cthis)
+	gothis := NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qlocale.h:930
 // index:1
-// Public
-// void QLocale(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void QLocale(const QString &)
 func NewQLocale_1(name *QString) *QLocale {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocaleC2ERK7QString", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocaleC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQLocaleFromPointer(cthis)
+	gothis := NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qlocale.h:931
 // index:2
-// Public
-// void QLocale(enum QLocale::Language, enum QLocale::Country)
+// Public Visibility=Default Availability=Available
+// [-2] void QLocale(enum QLocale::Language, enum QLocale::Country)
 func NewQLocale_2(language int, country int) *QLocale {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_7CountryE", ffiqt.FFI_TYPE_VOID, cthis, language, country)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_7CountryE", ffiqt.FFI_TYPE_POINTER, language, country)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQLocaleFromPointer(cthis)
+	gothis := NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qlocale.h:932
 // index:3
-// Public
-// void QLocale(enum QLocale::Language, enum QLocale::Script, enum QLocale::Country)
+// Public Visibility=Default Availability=Available
+// [-2] void QLocale(enum QLocale::Language, enum QLocale::Script, enum QLocale::Country)
 func NewQLocale_3(language int, script int, country int) *QLocale {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_6ScriptENS_7CountryE", ffiqt.FFI_TYPE_VOID, cthis, language, script, country)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_6ScriptENS_7CountryE", ffiqt.FFI_TYPE_POINTER, language, script, country)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQLocaleFromPointer(cthis)
+	gothis := NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qlocale.h:938
 // index:0
-// Public
-// void ~QLocale()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QLocale()
 func DeleteQLocale(*QLocale) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocaleD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -125,8 +121,8 @@ func DeleteQLocale(*QLocale) {
 
 // /usr/include/qt/QtCore/qlocale.h:940
 // index:0
-// Public inline
-// void swap(QLocale &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QLocale &)
 func (this *QLocale) Swap(other *QLocale) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -135,8 +131,8 @@ func (this *QLocale) Swap(other *QLocale) {
 
 // /usr/include/qt/QtCore/qlocale.h:942
 // index:0
-// Public
-// QLocale::Language language()
+// Public Visibility=Default Availability=Available
+// [4] QLocale::Language language()
 func (this *QLocale) Language() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8languageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -146,8 +142,8 @@ func (this *QLocale) Language() int {
 
 // /usr/include/qt/QtCore/qlocale.h:943
 // index:0
-// Public
-// QLocale::Script script()
+// Public Visibility=Default Availability=Available
+// [4] QLocale::Script script()
 func (this *QLocale) Script() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6scriptEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -157,8 +153,8 @@ func (this *QLocale) Script() int {
 
 // /usr/include/qt/QtCore/qlocale.h:944
 // index:0
-// Public
-// QLocale::Country country()
+// Public Visibility=Default Availability=Available
+// [4] QLocale::Country country()
 func (this *QLocale) Country() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7countryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -168,64 +164,56 @@ func (this *QLocale) Country() int {
 
 // /usr/include/qt/QtCore/qlocale.h:945
 // index:0
-// Public
-// QString name()
+// Public Visibility=Default Availability=Available
+// [8] QString name()
 func (this *QLocale) Name() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:947
 // index:0
-// Public
-// QString bcp47Name()
+// Public Visibility=Default Availability=Available
+// [8] QString bcp47Name()
 func (this *QLocale) Bcp47Name() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale9bcp47NameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale9bcp47NameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:948
 // index:0
-// Public
-// QString nativeLanguageName()
+// Public Visibility=Default Availability=Available
+// [8] QString nativeLanguageName()
 func (this *QLocale) NativeLanguageName() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale18nativeLanguageNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale18nativeLanguageNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:949
 // index:0
-// Public
-// QString nativeCountryName()
+// Public Visibility=Default Availability=Available
+// [8] QString nativeCountryName()
 func (this *QLocale) NativeCountryName() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale17nativeCountryNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale17nativeCountryNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:952
 // index:0
-// Public
-// short toShort(const QString &, _Bool *)
+// Public Visibility=Default Availability=Available
+// [2] short toShort(const QString &, _Bool *)
 func (this *QLocale) ToShort(s *QString, ok unsafe.Pointer /*666*/) int16 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toShortERK7QStringPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -236,8 +224,8 @@ func (this *QLocale) ToShort(s *QString, ok unsafe.Pointer /*666*/) int16 {
 
 // /usr/include/qt/QtCore/qlocale.h:961
 // index:1
-// Public
-// short toShort(const QStringRef &, _Bool *)
+// Public Visibility=Default Availability=Available
+// [2] short toShort(const QStringRef &, _Bool *)
 func (this *QLocale) ToShort_1(s *QStringRef, ok unsafe.Pointer /*666*/) int16 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toShortERK10QStringRefPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -248,8 +236,8 @@ func (this *QLocale) ToShort_1(s *QStringRef, ok unsafe.Pointer /*666*/) int16 {
 
 // /usr/include/qt/QtCore/qlocale.h:971
 // index:2
-// Public
-// short toShort(QStringView, _Bool *)
+// Public Visibility=Default Availability=Available
+// [2] short toShort(QStringView, _Bool *)
 func (this *QLocale) ToShort_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) int16 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toShortE11QStringViewPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -260,8 +248,8 @@ func (this *QLocale) ToShort_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/
 
 // /usr/include/qt/QtCore/qlocale.h:953
 // index:0
-// Public
-// ushort toUShort(const QString &, _Bool *)
+// Public Visibility=Default Availability=Available
+// [2] ushort toUShort(const QString &, _Bool *)
 func (this *QLocale) ToUShort(s *QString, ok unsafe.Pointer /*666*/) uint16 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toUShortERK7QStringPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -272,8 +260,8 @@ func (this *QLocale) ToUShort(s *QString, ok unsafe.Pointer /*666*/) uint16 {
 
 // /usr/include/qt/QtCore/qlocale.h:962
 // index:1
-// Public
-// ushort toUShort(const QStringRef &, _Bool *)
+// Public Visibility=Default Availability=Available
+// [2] ushort toUShort(const QStringRef &, _Bool *)
 func (this *QLocale) ToUShort_1(s *QStringRef, ok unsafe.Pointer /*666*/) uint16 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toUShortERK10QStringRefPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -284,8 +272,8 @@ func (this *QLocale) ToUShort_1(s *QStringRef, ok unsafe.Pointer /*666*/) uint16
 
 // /usr/include/qt/QtCore/qlocale.h:972
 // index:2
-// Public
-// ushort toUShort(QStringView, _Bool *)
+// Public Visibility=Default Availability=Available
+// [2] ushort toUShort(QStringView, _Bool *)
 func (this *QLocale) ToUShort_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) uint16 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toUShortE11QStringViewPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -296,8 +284,8 @@ func (this *QLocale) ToUShort_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*
 
 // /usr/include/qt/QtCore/qlocale.h:954
 // index:0
-// Public
-// int toInt(const QString &, _Bool *)
+// Public Visibility=Default Availability=Available
+// [4] int toInt(const QString &, _Bool *)
 func (this *QLocale) ToInt(s *QString, ok unsafe.Pointer /*666*/) int {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale5toIntERK7QStringPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -308,8 +296,8 @@ func (this *QLocale) ToInt(s *QString, ok unsafe.Pointer /*666*/) int {
 
 // /usr/include/qt/QtCore/qlocale.h:963
 // index:1
-// Public
-// int toInt(const QStringRef &, _Bool *)
+// Public Visibility=Default Availability=Available
+// [4] int toInt(const QStringRef &, _Bool *)
 func (this *QLocale) ToInt_1(s *QStringRef, ok unsafe.Pointer /*666*/) int {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale5toIntERK10QStringRefPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -320,8 +308,8 @@ func (this *QLocale) ToInt_1(s *QStringRef, ok unsafe.Pointer /*666*/) int {
 
 // /usr/include/qt/QtCore/qlocale.h:973
 // index:2
-// Public
-// int toInt(QStringView, _Bool *)
+// Public Visibility=Default Availability=Available
+// [4] int toInt(QStringView, _Bool *)
 func (this *QLocale) ToInt_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) int {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale5toIntE11QStringViewPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -332,8 +320,8 @@ func (this *QLocale) ToInt_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) 
 
 // /usr/include/qt/QtCore/qlocale.h:955
 // index:0
-// Public
-// uint toUInt(const QString &, _Bool *)
+// Public Visibility=Default Availability=Available
+// [4] uint toUInt(const QString &, _Bool *)
 func (this *QLocale) ToUInt(s *QString, ok unsafe.Pointer /*666*/) uint {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toUIntERK7QStringPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -344,8 +332,8 @@ func (this *QLocale) ToUInt(s *QString, ok unsafe.Pointer /*666*/) uint {
 
 // /usr/include/qt/QtCore/qlocale.h:964
 // index:1
-// Public
-// uint toUInt(const QStringRef &, _Bool *)
+// Public Visibility=Default Availability=Available
+// [4] uint toUInt(const QStringRef &, _Bool *)
 func (this *QLocale) ToUInt_1(s *QStringRef, ok unsafe.Pointer /*666*/) uint {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toUIntERK10QStringRefPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -356,8 +344,8 @@ func (this *QLocale) ToUInt_1(s *QStringRef, ok unsafe.Pointer /*666*/) uint {
 
 // /usr/include/qt/QtCore/qlocale.h:974
 // index:2
-// Public
-// uint toUInt(QStringView, _Bool *)
+// Public Visibility=Default Availability=Available
+// [4] uint toUInt(QStringView, _Bool *)
 func (this *QLocale) ToUInt_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) uint {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toUIntE11QStringViewPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -368,8 +356,8 @@ func (this *QLocale) ToUInt_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/)
 
 // /usr/include/qt/QtCore/qlocale.h:956
 // index:0
-// Public
-// qlonglong toLongLong(const QString &, _Bool *)
+// Public Visibility=Default Availability=Available
+// [8] qlonglong toLongLong(const QString &, _Bool *)
 func (this *QLocale) ToLongLong(s *QString, ok unsafe.Pointer /*666*/) int64 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10toLongLongERK7QStringPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -380,8 +368,8 @@ func (this *QLocale) ToLongLong(s *QString, ok unsafe.Pointer /*666*/) int64 {
 
 // /usr/include/qt/QtCore/qlocale.h:965
 // index:1
-// Public
-// qlonglong toLongLong(const QStringRef &, _Bool *)
+// Public Visibility=Default Availability=Available
+// [8] qlonglong toLongLong(const QStringRef &, _Bool *)
 func (this *QLocale) ToLongLong_1(s *QStringRef, ok unsafe.Pointer /*666*/) int64 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10toLongLongERK10QStringRefPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -392,8 +380,8 @@ func (this *QLocale) ToLongLong_1(s *QStringRef, ok unsafe.Pointer /*666*/) int6
 
 // /usr/include/qt/QtCore/qlocale.h:975
 // index:2
-// Public
-// qlonglong toLongLong(QStringView, _Bool *)
+// Public Visibility=Default Availability=Available
+// [8] qlonglong toLongLong(QStringView, _Bool *)
 func (this *QLocale) ToLongLong_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) int64 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10toLongLongE11QStringViewPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -404,8 +392,8 @@ func (this *QLocale) ToLongLong_2(s *QStringView /*123*/, ok unsafe.Pointer /*66
 
 // /usr/include/qt/QtCore/qlocale.h:957
 // index:0
-// Public
-// qulonglong toULongLong(const QString &, _Bool *)
+// Public Visibility=Default Availability=Available
+// [8] qulonglong toULongLong(const QString &, _Bool *)
 func (this *QLocale) ToULongLong(s *QString, ok unsafe.Pointer /*666*/) uint64 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11toULongLongERK7QStringPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -416,8 +404,8 @@ func (this *QLocale) ToULongLong(s *QString, ok unsafe.Pointer /*666*/) uint64 {
 
 // /usr/include/qt/QtCore/qlocale.h:966
 // index:1
-// Public
-// qulonglong toULongLong(const QStringRef &, _Bool *)
+// Public Visibility=Default Availability=Available
+// [8] qulonglong toULongLong(const QStringRef &, _Bool *)
 func (this *QLocale) ToULongLong_1(s *QStringRef, ok unsafe.Pointer /*666*/) uint64 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11toULongLongERK10QStringRefPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -428,8 +416,8 @@ func (this *QLocale) ToULongLong_1(s *QStringRef, ok unsafe.Pointer /*666*/) uin
 
 // /usr/include/qt/QtCore/qlocale.h:976
 // index:2
-// Public
-// qulonglong toULongLong(QStringView, _Bool *)
+// Public Visibility=Default Availability=Available
+// [8] qulonglong toULongLong(QStringView, _Bool *)
 func (this *QLocale) ToULongLong_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) uint64 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11toULongLongE11QStringViewPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &ok)
@@ -440,8 +428,8 @@ func (this *QLocale) ToULongLong_2(s *QStringView /*123*/, ok unsafe.Pointer /*6
 
 // /usr/include/qt/QtCore/qlocale.h:958
 // index:0
-// Public
-// float toFloat(const QString &, _Bool *)
+// Public Visibility=Default Availability=Available
+// [4] float toFloat(const QString &, _Bool *)
 func (this *QLocale) ToFloat(s *QString, ok unsafe.Pointer /*666*/) float32 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toFloatERK7QStringPb", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, &ok)
@@ -452,8 +440,8 @@ func (this *QLocale) ToFloat(s *QString, ok unsafe.Pointer /*666*/) float32 {
 
 // /usr/include/qt/QtCore/qlocale.h:967
 // index:1
-// Public
-// float toFloat(const QStringRef &, _Bool *)
+// Public Visibility=Default Availability=Available
+// [4] float toFloat(const QStringRef &, _Bool *)
 func (this *QLocale) ToFloat_1(s *QStringRef, ok unsafe.Pointer /*666*/) float32 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toFloatERK10QStringRefPb", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, &ok)
@@ -464,8 +452,8 @@ func (this *QLocale) ToFloat_1(s *QStringRef, ok unsafe.Pointer /*666*/) float32
 
 // /usr/include/qt/QtCore/qlocale.h:977
 // index:2
-// Public
-// float toFloat(QStringView, _Bool *)
+// Public Visibility=Default Availability=Available
+// [4] float toFloat(QStringView, _Bool *)
 func (this *QLocale) ToFloat_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) float32 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toFloatE11QStringViewPb", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, &ok)
@@ -476,8 +464,8 @@ func (this *QLocale) ToFloat_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/
 
 // /usr/include/qt/QtCore/qlocale.h:959
 // index:0
-// Public
-// double toDouble(const QString &, _Bool *)
+// Public Visibility=Default Availability=Available
+// [8] double toDouble(const QString &, _Bool *)
 func (this *QLocale) ToDouble(s *QString, ok unsafe.Pointer /*666*/) float64 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toDoubleERK7QStringPb", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, &ok)
@@ -488,8 +476,8 @@ func (this *QLocale) ToDouble(s *QString, ok unsafe.Pointer /*666*/) float64 {
 
 // /usr/include/qt/QtCore/qlocale.h:968
 // index:1
-// Public
-// double toDouble(const QStringRef &, _Bool *)
+// Public Visibility=Default Availability=Available
+// [8] double toDouble(const QStringRef &, _Bool *)
 func (this *QLocale) ToDouble_1(s *QStringRef, ok unsafe.Pointer /*666*/) float64 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toDoubleERK10QStringRefPb", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, &ok)
@@ -500,8 +488,8 @@ func (this *QLocale) ToDouble_1(s *QStringRef, ok unsafe.Pointer /*666*/) float6
 
 // /usr/include/qt/QtCore/qlocale.h:978
 // index:2
-// Public
-// double toDouble(QStringView, _Bool *)
+// Public Visibility=Default Availability=Available
+// [8] double toDouble(QStringView, _Bool *)
 func (this *QLocale) ToDouble_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*/) float64 {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toDoubleE11QStringViewPb", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, &ok)
@@ -512,550 +500,476 @@ func (this *QLocale) ToDouble_2(s *QStringView /*123*/, ok unsafe.Pointer /*666*
 
 // /usr/include/qt/QtCore/qlocale.h:980
 // index:0
-// Public
-// QString toString(qlonglong)
+// Public Visibility=Default Availability=Available
+// [8] QString toString(qlonglong)
 func (this *QLocale) ToString(i int64) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEx", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:981
 // index:1
-// Public
-// QString toString(qulonglong)
+// Public Visibility=Default Availability=Available
+// [8] QString toString(qulonglong)
 func (this *QLocale) ToString_1(i uint64) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEy", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEy", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:982
 // index:2
-// Public inline
-// QString toString(short)
+// Public inline Visibility=Default Availability=Available
+// [8] QString toString(short)
 func (this *QLocale) ToString_2(i int16) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEs", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEs", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:983
 // index:3
-// Public inline
-// QString toString(ushort)
+// Public inline Visibility=Default Availability=Available
+// [8] QString toString(ushort)
 func (this *QLocale) ToString_3(i uint16) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEt", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEt", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:984
 // index:4
-// Public inline
-// QString toString(int)
+// Public inline Visibility=Default Availability=Available
+// [8] QString toString(int)
 func (this *QLocale) ToString_4(i int) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:985
 // index:5
-// Public inline
-// QString toString(uint)
+// Public inline Visibility=Default Availability=Available
+// [8] QString toString(uint)
 func (this *QLocale) ToString_5(i uint) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEj", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:986
 // index:6
-// Public
-// QString toString(double, char, int)
+// Public Visibility=Default Availability=Available
+// [8] QString toString(double, char, int)
 func (this *QLocale) ToString_6(i float64, f byte, prec int) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEdci", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), i, f, prec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEdci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i, f, prec)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:987
 // index:7
-// Public inline
-// QString toString(float, char, int)
+// Public inline Visibility=Default Availability=Available
+// [8] QString toString(float, char, int)
 func (this *QLocale) ToString_7(i float32, f byte, prec int) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEfci", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), i, f, prec)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringEfci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i, f, prec)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:990
 // index:8
-// Public
-// QString toString(const QDate &, const QString &)
+// Public Visibility=Default Availability=Available
+// [8] QString toString(const QDate &, const QString &)
 func (this *QLocale) ToString_8(date *QDate, formatStr *QString) *QString /*123*/ {
 	var convArg0 = date.GetCthis()
 	var convArg1 = formatStr.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDateRK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDateRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:991
 // index:9
-// Public
-// QString toString(const QTime &, const QString &)
+// Public Visibility=Default Availability=Available
+// [8] QString toString(const QTime &, const QString &)
 func (this *QLocale) ToString_9(time *QTime, formatStr *QString) *QString /*123*/ {
 	var convArg0 = time.GetCthis()
 	var convArg1 = formatStr.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTimeRK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTimeRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:992
 // index:10
-// Public
-// QString toString(const QDateTime &, const QString &)
+// Public Visibility=Default Availability=Available
+// [8] QString toString(const QDateTime &, const QString &)
 func (this *QLocale) ToString_10(dateTime *QDateTime, format *QString) *QString /*123*/ {
 	var convArg0 = dateTime.GetCthis()
 	var convArg1 = format.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTimeRK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTimeRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:994
 // index:11
-// Public
-// QString toString(const QDate &, QStringView)
+// Public Visibility=Default Availability=Available
+// [8] QString toString(const QDate &, QStringView)
 func (this *QLocale) ToString_11(date *QDate, formatStr *QStringView /*123*/) *QString /*123*/ {
 	var convArg0 = date.GetCthis()
 	var convArg1 = formatStr.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDate11QStringView", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDate11QStringView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:995
 // index:12
-// Public
-// QString toString(const QTime &, QStringView)
+// Public Visibility=Default Availability=Available
+// [8] QString toString(const QTime &, QStringView)
 func (this *QLocale) ToString_12(time *QTime, formatStr *QStringView /*123*/) *QString /*123*/ {
 	var convArg0 = time.GetCthis()
 	var convArg1 = formatStr.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTime11QStringView", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTime11QStringView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:996
 // index:13
-// Public
-// QString toString(const QDateTime &, QStringView)
+// Public Visibility=Default Availability=Available
+// [8] QString toString(const QDateTime &, QStringView)
 func (this *QLocale) ToString_13(dateTime *QDateTime, format *QStringView /*123*/) *QString /*123*/ {
 	var convArg0 = dateTime.GetCthis()
 	var convArg1 = format.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTime11QStringView", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTime11QStringView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:997
 // index:14
-// Public
-// QString toString(const QDate &, enum QLocale::FormatType)
+// Public Visibility=Default Availability=Available
+// [8] QString toString(const QDate &, enum QLocale::FormatType)
 func (this *QLocale) ToString_14(date *QDate, format int) *QString /*123*/ {
 	var convArg0 = date.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDateNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDateNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:998
 // index:15
-// Public
-// QString toString(const QTime &, enum QLocale::FormatType)
+// Public Visibility=Default Availability=Available
+// [8] QString toString(const QTime &, enum QLocale::FormatType)
 func (this *QLocale) ToString_15(time *QTime, format int) *QString /*123*/ {
 	var convArg0 = time.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTimeNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTimeNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:999
 // index:16
-// Public
-// QString toString(const QDateTime &, enum QLocale::FormatType)
+// Public Visibility=Default Availability=Available
+// [8] QString toString(const QDateTime &, enum QLocale::FormatType)
 func (this *QLocale) ToString_16(dateTime *QDateTime, format int) *QString /*123*/ {
 	var convArg0 = dateTime.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTimeNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTimeNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1001
 // index:0
-// Public
-// QString dateFormat(enum QLocale::FormatType)
+// Public Visibility=Default Availability=Available
+// [8] QString dateFormat(enum QLocale::FormatType)
 func (this *QLocale) DateFormat(format int) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10dateFormatENS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10dateFormatENS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1002
 // index:0
-// Public
-// QString timeFormat(enum QLocale::FormatType)
+// Public Visibility=Default Availability=Available
+// [8] QString timeFormat(enum QLocale::FormatType)
 func (this *QLocale) TimeFormat(format int) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10timeFormatENS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10timeFormatENS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1003
 // index:0
-// Public
-// QString dateTimeFormat(enum QLocale::FormatType)
+// Public Visibility=Default Availability=Available
+// [8] QString dateTimeFormat(enum QLocale::FormatType)
 func (this *QLocale) DateTimeFormat(format int) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale14dateTimeFormatENS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale14dateTimeFormatENS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1005
 // index:0
-// Public
-// QDate toDate(const QString &, enum QLocale::FormatType)
+// Public Visibility=Default Availability=Available
+// [8] QDate toDate(const QString &, enum QLocale::FormatType)
 func (this *QLocale) ToDate(string *QString, arg1 int) *QDate /*123*/ {
 	var convArg0 = string.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toDateERK7QStringNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toDateERK7QStringNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1008
 // index:1
-// Public
-// QDate toDate(const QString &, const QString &)
+// Public Visibility=Default Availability=Available
+// [8] QDate toDate(const QString &, const QString &)
 func (this *QLocale) ToDate_1(string *QString, format *QString) *QDate /*123*/ {
 	var convArg0 = string.GetCthis()
 	var convArg1 = format.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toDateERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toDateERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1006
 // index:0
-// Public
-// QTime toTime(const QString &, enum QLocale::FormatType)
+// Public Visibility=Default Availability=Available
+// [4] QTime toTime(const QString &, enum QLocale::FormatType)
 func (this *QLocale) ToTime(string *QString, arg1 int) *QTime /*123*/ {
 	var convArg0 = string.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toTimeERK7QStringNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, arg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toTimeERK7QStringNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1009
 // index:1
-// Public
-// QTime toTime(const QString &, const QString &)
+// Public Visibility=Default Availability=Available
+// [4] QTime toTime(const QString &, const QString &)
 func (this *QLocale) ToTime_1(string *QString, format *QString) *QTime /*123*/ {
 	var convArg0 = string.GetCthis()
 	var convArg1 = format.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toTimeERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6toTimeERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1007
 // index:0
-// Public
-// QDateTime toDateTime(const QString &, enum QLocale::FormatType)
+// Public Visibility=Default Availability=Available
+// [8] QDateTime toDateTime(const QString &, enum QLocale::FormatType)
 func (this *QLocale) ToDateTime(string *QString, format int) *QDateTime /*123*/ {
 	var convArg0 = string.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10toDateTimeERK7QStringNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10toDateTimeERK7QStringNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1010
 // index:1
-// Public
-// QDateTime toDateTime(const QString &, const QString &)
+// Public Visibility=Default Availability=Available
+// [8] QDateTime toDateTime(const QString &, const QString &)
 func (this *QLocale) ToDateTime_1(string *QString, format *QString) *QDateTime /*123*/ {
 	var convArg0 = string.GetCthis()
 	var convArg1 = format.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10toDateTimeERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale10toDateTimeERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1015
 // index:0
-// Public
-// QChar decimalPoint()
+// Public Visibility=Default Availability=Available
+// [2] QChar decimalPoint()
 func (this *QLocale) DecimalPoint() *QChar /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale12decimalPointEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale12decimalPointEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1016
 // index:0
-// Public
-// QChar groupSeparator()
+// Public Visibility=Default Availability=Available
+// [2] QChar groupSeparator()
 func (this *QLocale) GroupSeparator() *QChar /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale14groupSeparatorEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale14groupSeparatorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1017
 // index:0
-// Public
-// QChar percent()
+// Public Visibility=Default Availability=Available
+// [2] QChar percent()
 func (this *QLocale) Percent() *QChar /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7percentEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7percentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1018
 // index:0
-// Public
-// QChar zeroDigit()
+// Public Visibility=Default Availability=Available
+// [2] QChar zeroDigit()
 func (this *QLocale) ZeroDigit() *QChar /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale9zeroDigitEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale9zeroDigitEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1019
 // index:0
-// Public
-// QChar negativeSign()
+// Public Visibility=Default Availability=Available
+// [2] QChar negativeSign()
 func (this *QLocale) NegativeSign() *QChar /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale12negativeSignEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale12negativeSignEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1020
 // index:0
-// Public
-// QChar positiveSign()
+// Public Visibility=Default Availability=Available
+// [2] QChar positiveSign()
 func (this *QLocale) PositiveSign() *QChar /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale12positiveSignEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale12positiveSignEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1021
 // index:0
-// Public
-// QChar exponential()
+// Public Visibility=Default Availability=Available
+// [2] QChar exponential()
 func (this *QLocale) Exponential() *QChar /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11exponentialEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11exponentialEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1023
 // index:0
-// Public
-// QString monthName(int, enum QLocale::FormatType)
+// Public Visibility=Default Availability=Available
+// [8] QString monthName(int, enum QLocale::FormatType)
 func (this *QLocale) MonthName(arg0 int, format int) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale9monthNameEiNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale9monthNameEiNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, format)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1024
 // index:0
-// Public
-// QString standaloneMonthName(int, enum QLocale::FormatType)
+// Public Visibility=Default Availability=Available
+// [8] QString standaloneMonthName(int, enum QLocale::FormatType)
 func (this *QLocale) StandaloneMonthName(arg0 int, format int) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale19standaloneMonthNameEiNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale19standaloneMonthNameEiNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, format)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1025
 // index:0
-// Public
-// QString dayName(int, enum QLocale::FormatType)
+// Public Visibility=Default Availability=Available
+// [8] QString dayName(int, enum QLocale::FormatType)
 func (this *QLocale) DayName(arg0 int, format int) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7dayNameEiNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7dayNameEiNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, format)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1026
 // index:0
-// Public
-// QString standaloneDayName(int, enum QLocale::FormatType)
+// Public Visibility=Default Availability=Available
+// [8] QString standaloneDayName(int, enum QLocale::FormatType)
 func (this *QLocale) StandaloneDayName(arg0 int, format int) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale17standaloneDayNameEiNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0, format)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale17standaloneDayNameEiNS_10FormatTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, format)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1028
 // index:0
-// Public
-// Qt::DayOfWeek firstDayOfWeek()
+// Public Visibility=Default Availability=Available
+// [4] Qt::DayOfWeek firstDayOfWeek()
 func (this *QLocale) FirstDayOfWeek() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale14firstDayOfWeekEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -1065,36 +979,32 @@ func (this *QLocale) FirstDayOfWeek() int {
 
 // /usr/include/qt/QtCore/qlocale.h:1031
 // index:0
-// Public
-// QString amText()
+// Public Visibility=Default Availability=Available
+// [8] QString amText()
 func (this *QLocale) AmText() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6amTextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6amTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1032
 // index:0
-// Public
-// QString pmText()
+// Public Visibility=Default Availability=Available
+// [8] QString pmText()
 func (this *QLocale) PmText() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6pmTextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale6pmTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1034
 // index:0
-// Public
-// QLocale::MeasurementSystem measurementSystem()
+// Public Visibility=Default Availability=Available
+// [4] QLocale::MeasurementSystem measurementSystem()
 func (this *QLocale) MeasurementSystem() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale17measurementSystemEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -1104,8 +1014,8 @@ func (this *QLocale) MeasurementSystem() int {
 
 // /usr/include/qt/QtCore/qlocale.h:1036
 // index:0
-// Public
-// Qt::LayoutDirection textDirection()
+// Public Visibility=Default Availability=Available
+// [4] Qt::LayoutDirection textDirection()
 func (this *QLocale) TextDirection() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale13textDirectionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -1115,202 +1025,176 @@ func (this *QLocale) TextDirection() int {
 
 // /usr/include/qt/QtCore/qlocale.h:1038
 // index:0
-// Public
-// QString toUpper(const QString &)
+// Public Visibility=Default Availability=Available
+// [8] QString toUpper(const QString &)
 func (this *QLocale) ToUpper(str *QString) *QString /*123*/ {
 	var convArg0 = str.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toUpperERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toUpperERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1039
 // index:0
-// Public
-// QString toLower(const QString &)
+// Public Visibility=Default Availability=Available
+// [8] QString toLower(const QString &)
 func (this *QLocale) ToLower(str *QString) *QString /*123*/ {
 	var convArg0 = str.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toLowerERK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale7toLowerERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1041
 // index:0
-// Public
-// QString currencySymbol(enum QLocale::CurrencySymbolFormat)
+// Public Visibility=Default Availability=Available
+// [8] QString currencySymbol(enum QLocale::CurrencySymbolFormat)
 func (this *QLocale) CurrencySymbol(arg0 int) *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale14currencySymbolENS_20CurrencySymbolFormatE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale14currencySymbolENS_20CurrencySymbolFormatE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1042
 // index:0
-// Public
-// QString toCurrencyString(qlonglong, const QString &)
+// Public Visibility=Default Availability=Available
+// [8] QString toCurrencyString(qlonglong, const QString &)
 func (this *QLocale) ToCurrencyString(arg0 int64, symbol *QString) *QString /*123*/ {
 	var convArg1 = symbol.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringExRK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringExRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1043
 // index:1
-// Public
-// QString toCurrencyString(qulonglong, const QString &)
+// Public Visibility=Default Availability=Available
+// [8] QString toCurrencyString(qulonglong, const QString &)
 func (this *QLocale) ToCurrencyString_1(arg0 uint64, symbol *QString) *QString /*123*/ {
 	var convArg1 = symbol.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEyRK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEyRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1044
 // index:2
-// Public inline
-// QString toCurrencyString(short, const QString &)
+// Public inline Visibility=Default Availability=Available
+// [8] QString toCurrencyString(short, const QString &)
 func (this *QLocale) ToCurrencyString_2(arg0 int16, symbol *QString) *QString /*123*/ {
 	var convArg1 = symbol.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEsRK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEsRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1045
 // index:3
-// Public inline
-// QString toCurrencyString(ushort, const QString &)
+// Public inline Visibility=Default Availability=Available
+// [8] QString toCurrencyString(ushort, const QString &)
 func (this *QLocale) ToCurrencyString_3(arg0 uint16, symbol *QString) *QString /*123*/ {
 	var convArg1 = symbol.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEtRK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEtRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1046
 // index:4
-// Public inline
-// QString toCurrencyString(int, const QString &)
+// Public inline Visibility=Default Availability=Available
+// [8] QString toCurrencyString(int, const QString &)
 func (this *QLocale) ToCurrencyString_4(arg0 int, symbol *QString) *QString /*123*/ {
 	var convArg1 = symbol.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEiRK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1047
 // index:5
-// Public inline
-// QString toCurrencyString(uint, const QString &)
+// Public inline Visibility=Default Availability=Available
+// [8] QString toCurrencyString(uint, const QString &)
 func (this *QLocale) ToCurrencyString_5(arg0 uint, symbol *QString) *QString /*123*/ {
 	var convArg1 = symbol.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEjRK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEjRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1053
 // index:6
-// Public
-// QString toCurrencyString(double, const QString &)
+// Public Visibility=Default Availability=Available
+// [8] QString toCurrencyString(double, const QString &)
 func (this *QLocale) ToCurrencyString_6(arg0 float64, symbol *QString) *QString /*123*/ {
 	var convArg1 = symbol.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEdRK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEdRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1054
 // index:7
-// Public
-// QString toCurrencyString(double, const QString &, int)
+// Public Visibility=Default Availability=Available
+// [8] QString toCurrencyString(double, const QString &, int)
 func (this *QLocale) ToCurrencyString_7(arg0 float64, symbol *QString, precision int) *QString /*123*/ {
 	var convArg1 = symbol.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEdRK7QStringi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), arg0, convArg1, precision)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEdRK7QStringi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, convArg1, precision)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1055
 // index:8
-// Public inline
-// QString toCurrencyString(float, const QString &)
+// Public inline Visibility=Default Availability=Available
+// [8] QString toCurrencyString(float, const QString &)
 func (this *QLocale) ToCurrencyString_8(i float32, symbol *QString) *QString /*123*/ {
 	var convArg1 = symbol.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEfRK7QString", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), i, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEfRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1057
 // index:9
-// Public inline
-// QString toCurrencyString(float, const QString &, int)
+// Public inline Visibility=Default Availability=Available
+// [8] QString toCurrencyString(float, const QString &, int)
 func (this *QLocale) ToCurrencyString_9(i float32, symbol *QString, precision int) *QString /*123*/ {
 	var convArg1 = symbol.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEfRK7QStringi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), i, convArg1, precision)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEfRK7QStringi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i, convArg1, precision)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1068
 // index:0
-// Public static
-// QString languageToString(enum QLocale::Language)
+// Public static Visibility=Default Availability=Available
+// [8] QString languageToString(enum QLocale::Language)
 func (this *QLocale) LanguageToString(language int) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale16languageToStringENS_8LanguageE", ffiqt.FFI_TYPE_POINTER, language)
 	gopp.ErrPrint(err, rv)
@@ -1326,8 +1210,8 @@ func QLocale_LanguageToString(language int) *QString /*123*/ {
 
 // /usr/include/qt/QtCore/qlocale.h:1069
 // index:0
-// Public static
-// QString countryToString(enum QLocale::Country)
+// Public static Visibility=Default Availability=Available
+// [8] QString countryToString(enum QLocale::Country)
 func (this *QLocale) CountryToString(country int) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale15countryToStringENS_7CountryE", ffiqt.FFI_TYPE_POINTER, country)
 	gopp.ErrPrint(err, rv)
@@ -1343,8 +1227,8 @@ func QLocale_CountryToString(country int) *QString /*123*/ {
 
 // /usr/include/qt/QtCore/qlocale.h:1070
 // index:0
-// Public static
-// QString scriptToString(enum QLocale::Script)
+// Public static Visibility=Default Availability=Available
+// [8] QString scriptToString(enum QLocale::Script)
 func (this *QLocale) ScriptToString(script int) *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale14scriptToStringENS_6ScriptE", ffiqt.FFI_TYPE_POINTER, script)
 	gopp.ErrPrint(err, rv)
@@ -1360,8 +1244,8 @@ func QLocale_ScriptToString(script int) *QString /*123*/ {
 
 // /usr/include/qt/QtCore/qlocale.h:1071
 // index:0
-// Public static
-// void setDefault(const QLocale &)
+// Public static Visibility=Default Availability=Available
+// [-2] void setDefault(const QLocale &)
 func (this *QLocale) SetDefault(locale *QLocale) {
 	var convArg0 = locale.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale10setDefaultERKS_", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -1374,8 +1258,8 @@ func QLocale_SetDefault(locale *QLocale) {
 
 // /usr/include/qt/QtCore/qlocale.h:1073
 // index:0
-// Public static inline
-// QLocale c()
+// Public static inline Visibility=Default Availability=Available
+// [8] QLocale c()
 func (this *QLocale) C() *QLocale /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale1cEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -1391,8 +1275,8 @@ func QLocale_C() *QLocale /*123*/ {
 
 // /usr/include/qt/QtCore/qlocale.h:1074
 // index:0
-// Public static
-// QLocale system()
+// Public static Visibility=Default Availability=Available
+// [8] QLocale system()
 func (this *QLocale) System() *QLocale /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale6systemEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -1408,8 +1292,8 @@ func QLocale_System() *QLocale /*123*/ {
 
 // /usr/include/qt/QtCore/qlocale.h:1080
 // index:0
-// Public
-// QLocale::NumberOptions numberOptions()
+// Public Visibility=Default Availability=Available
+// [4] QLocale::NumberOptions numberOptions()
 func (this *QLocale) NumberOptions() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale13numberOptionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -1419,45 +1303,39 @@ func (this *QLocale) NumberOptions() int {
 
 // /usr/include/qt/QtCore/qlocale.h:1083
 // index:0
-// Public
-// QString quoteString(const QString &, enum QLocale::QuotationStyle)
+// Public Visibility=Default Availability=Available
+// [8] QString quoteString(const QString &, enum QLocale::QuotationStyle)
 func (this *QLocale) QuoteString(str *QString, style int) *QString /*123*/ {
 	var convArg0 = str.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11quoteStringERK7QStringNS_14QuotationStyleE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11quoteStringERK7QStringNS_14QuotationStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, style)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1084
 // index:1
-// Public
-// QString quoteString(const QStringRef &, enum QLocale::QuotationStyle)
+// Public Visibility=Default Availability=Available
+// [8] QString quoteString(const QStringRef &, enum QLocale::QuotationStyle)
 func (this *QLocale) QuoteString_1(str *QStringRef, style int) *QString /*123*/ {
 	var convArg0 = str.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11quoteStringERK10QStringRefNS_14QuotationStyleE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0, style)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale11quoteStringERK10QStringRefNS_14QuotationStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, style)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1086
 // index:0
-// Public
-// QString createSeparatedList(const QStringList &)
+// Public Visibility=Default Availability=Available
+// [8] QString createSeparatedList(const QStringList &)
 func (this *QLocale) CreateSeparatedList(strl *QStringList) *QString /*123*/ {
 	var convArg0 = strl.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale19createSeparatedListERK11QStringList", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QLocale19createSeparatedListERK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

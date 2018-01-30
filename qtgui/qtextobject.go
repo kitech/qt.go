@@ -72,8 +72,8 @@ func (*QTextObject) NewFromPointer(cthis unsafe.Pointer) *QTextObject {
 
 // /usr/include/qt/QtGui/qtextobject.h:62
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QTextObject) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -84,21 +84,20 @@ func (this *QTextObject) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 
 // /usr/include/qt/QtGui/qtextobject.h:65
 // index:0
-// Protected
-// void QTextObject(QTextDocument *)
+// Protected Visibility=Default Availability=Available
+// [-2] void QTextObject(QTextDocument *)
 func NewQTextObject(doc *QTextDocument /*777 QTextDocument **/) *QTextObject {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = doc.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextObjectC2EP13QTextDocument", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextObjectC2EP13QTextDocument", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQTextObjectFromPointer(cthis)
+	gothis := NewQTextObjectFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:66
 // index:0
-// Protected virtual
-// void ~QTextObject()
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void ~QTextObject()
 func DeleteQTextObject(*QTextObject) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextObjectD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -106,8 +105,8 @@ func DeleteQTextObject(*QTextObject) {
 
 // /usr/include/qt/QtGui/qtextobject.h:68
 // index:0
-// Protected
-// void setFormat(const QTextFormat &)
+// Protected Visibility=Default Availability=Available
+// [-2] void setFormat(const QTextFormat &)
 func (this *QTextObject) SetFormat(format *QTextFormat) {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextObject9setFormatERK11QTextFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -116,22 +115,20 @@ func (this *QTextObject) SetFormat(format *QTextFormat) {
 
 // /usr/include/qt/QtGui/qtextobject.h:71
 // index:0
-// Public
-// QTextFormat format()
+// Public Visibility=Default Availability=Available
+// [16] QTextFormat format()
 func (this *QTextObject) Format() *QTextFormat /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject6formatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQTextFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:72
 // index:0
-// Public
-// int formatIndex()
+// Public Visibility=Default Availability=Available
+// [4] int formatIndex()
 func (this *QTextObject) FormatIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject11formatIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -141,8 +138,8 @@ func (this *QTextObject) FormatIndex() int {
 
 // /usr/include/qt/QtGui/qtextobject.h:74
 // index:0
-// Public
-// QTextDocument * document()
+// Public Visibility=Default Availability=Available
+// [8] QTextDocument * document()
 func (this *QTextObject) Document() *QTextDocument /*777 QTextDocument **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject8documentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -153,8 +150,8 @@ func (this *QTextObject) Document() *QTextDocument /*777 QTextDocument **/ {
 
 // /usr/include/qt/QtGui/qtextobject.h:76
 // index:0
-// Public
-// int objectIndex()
+// Public Visibility=Default Availability=Available
+// [4] int objectIndex()
 func (this *QTextObject) ObjectIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextObject11objectIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

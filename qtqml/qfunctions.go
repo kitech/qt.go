@@ -33,8 +33,8 @@ func init() {
 //  body block begin
 // /usr/include/qt/QtQml/qqmlproperty.h:130
 // index:6
-// Invalid inline
-// uint qHash(const QQmlProperty &)
+// Invalid inline Visibility=Default Availability=Available
+// [4] uint qHash(const QQmlProperty &)
 func QHash_6(key *QQmlProperty) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK12QQmlProperty", ffiqt.FFI_TYPE_POINTER, convArg0)

@@ -76,8 +76,8 @@ func (*QStackedWidget) NewFromPointer(cthis unsafe.Pointer) *QStackedWidget {
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:54
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QStackedWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,21 +88,20 @@ func (this *QStackedWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:59
 // index:0
-// Public
-// void QStackedWidget(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void QStackedWidget(QWidget *)
 func NewQStackedWidget(parent *QWidget /*777 QWidget **/) *QStackedWidget {
-	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidgetC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidgetC2EP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStackedWidgetFromPointer(cthis)
+	gothis := NewQStackedWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:60
 // index:0
-// Public virtual
-// void ~QStackedWidget()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QStackedWidget()
 func DeleteQStackedWidget(*QStackedWidget) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidgetD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -110,8 +109,8 @@ func DeleteQStackedWidget(*QStackedWidget) {
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:62
 // index:0
-// Public
-// int addWidget(QWidget *)
+// Public Visibility=Default Availability=Available
+// [4] int addWidget(QWidget *)
 func (this *QStackedWidget) AddWidget(w *QWidget /*777 QWidget **/) int {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget9addWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -122,8 +121,8 @@ func (this *QStackedWidget) AddWidget(w *QWidget /*777 QWidget **/) int {
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:63
 // index:0
-// Public
-// int insertWidget(int, QWidget *)
+// Public Visibility=Default Availability=Available
+// [4] int insertWidget(int, QWidget *)
 func (this *QStackedWidget) InsertWidget(index int, w *QWidget /*777 QWidget **/) int {
 	var convArg1 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget12insertWidgetEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
@@ -134,8 +133,8 @@ func (this *QStackedWidget) InsertWidget(index int, w *QWidget /*777 QWidget **/
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:64
 // index:0
-// Public
-// void removeWidget(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void removeWidget(QWidget *)
 func (this *QStackedWidget) RemoveWidget(w *QWidget /*777 QWidget **/) {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget12removeWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -144,8 +143,8 @@ func (this *QStackedWidget) RemoveWidget(w *QWidget /*777 QWidget **/) {
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:66
 // index:0
-// Public
-// QWidget * currentWidget()
+// Public Visibility=Default Availability=Available
+// [8] QWidget * currentWidget()
 func (this *QStackedWidget) CurrentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget13currentWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -156,8 +155,8 @@ func (this *QStackedWidget) CurrentWidget() *QWidget /*777 QWidget **/ {
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:67
 // index:0
-// Public
-// int currentIndex()
+// Public Visibility=Default Availability=Available
+// [4] int currentIndex()
 func (this *QStackedWidget) CurrentIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget12currentIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -167,8 +166,8 @@ func (this *QStackedWidget) CurrentIndex() int {
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:69
 // index:0
-// Public
-// int indexOf(QWidget *)
+// Public Visibility=Default Availability=Available
+// [4] int indexOf(QWidget *)
 func (this *QStackedWidget) IndexOf(arg0 *QWidget /*777 QWidget **/) int {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget7indexOfEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -179,8 +178,8 @@ func (this *QStackedWidget) IndexOf(arg0 *QWidget /*777 QWidget **/) int {
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:70
 // index:0
-// Public
-// QWidget * widget(int)
+// Public Visibility=Default Availability=Available
+// [8] QWidget * widget(int)
 func (this *QStackedWidget) Widget(arg0 int) *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget6widgetEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -191,8 +190,8 @@ func (this *QStackedWidget) Widget(arg0 int) *QWidget /*777 QWidget **/ {
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:71
 // index:0
-// Public
-// int count()
+// Public Visibility=Default Availability=Available
+// [4] int count()
 func (this *QStackedWidget) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedWidget5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -202,8 +201,8 @@ func (this *QStackedWidget) Count() int {
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:74
 // index:0
-// Public
-// void setCurrentIndex(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setCurrentIndex(int)
 func (this *QStackedWidget) SetCurrentIndex(index int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget15setCurrentIndexEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
@@ -211,8 +210,8 @@ func (this *QStackedWidget) SetCurrentIndex(index int) {
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:75
 // index:0
-// Public
-// void setCurrentWidget(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void setCurrentWidget(QWidget *)
 func (this *QStackedWidget) SetCurrentWidget(w *QWidget /*777 QWidget **/) {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget16setCurrentWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -221,8 +220,8 @@ func (this *QStackedWidget) SetCurrentWidget(w *QWidget /*777 QWidget **/) {
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:78
 // index:0
-// Public
-// void currentChanged(int)
+// Public Visibility=Default Availability=Available
+// [-2] void currentChanged(int)
 func (this *QStackedWidget) CurrentChanged(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget14currentChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -230,8 +229,8 @@ func (this *QStackedWidget) CurrentChanged(arg0 int) {
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:79
 // index:0
-// Public
-// void widgetRemoved(int)
+// Public Visibility=Default Availability=Available
+// [-2] void widgetRemoved(int)
 func (this *QStackedWidget) WidgetRemoved(index int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget13widgetRemovedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
@@ -239,8 +238,8 @@ func (this *QStackedWidget) WidgetRemoved(index int) {
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:82
 // index:0
-// Protected virtual
-// bool event(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 func (this *QStackedWidget) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidget5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

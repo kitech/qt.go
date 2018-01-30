@@ -67,32 +67,30 @@ func (*QMargins) NewFromPointer(cthis unsafe.Pointer) *QMargins {
 
 // /usr/include/qt/QtCore/qmargins.h:54
 // index:0
-// Public inline
-// void QMargins()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QMargins()
 func NewQMargins() *QMargins {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMarginsC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMarginsC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQMarginsFromPointer(cthis)
+	gothis := NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qmargins.h:55
 // index:1
-// Public inline
-// void QMargins(int, int, int, int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QMargins(int, int, int, int)
 func NewQMargins_1(left int, top int, right int, bottom int) *QMargins {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMarginsC2Eiiii", ffiqt.FFI_TYPE_VOID, cthis, left, top, right, bottom)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMarginsC2Eiiii", ffiqt.FFI_TYPE_POINTER, left, top, right, bottom)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQMarginsFromPointer(cthis)
+	gothis := NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qmargins.h:57
 // index:0
-// Public inline
-// bool isNull()
+// Public inline Visibility=Default Availability=Available
+// [1] bool isNull()
 func (this *QMargins) IsNull() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -102,8 +100,8 @@ func (this *QMargins) IsNull() bool {
 
 // /usr/include/qt/QtCore/qmargins.h:59
 // index:0
-// Public inline
-// int left()
+// Public inline Visibility=Default Availability=Available
+// [4] int left()
 func (this *QMargins) Left() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins4leftEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -113,8 +111,8 @@ func (this *QMargins) Left() int {
 
 // /usr/include/qt/QtCore/qmargins.h:60
 // index:0
-// Public inline
-// int top()
+// Public inline Visibility=Default Availability=Available
+// [4] int top()
 func (this *QMargins) Top() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins3topEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -124,8 +122,8 @@ func (this *QMargins) Top() int {
 
 // /usr/include/qt/QtCore/qmargins.h:61
 // index:0
-// Public inline
-// int right()
+// Public inline Visibility=Default Availability=Available
+// [4] int right()
 func (this *QMargins) Right() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins5rightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -135,8 +133,8 @@ func (this *QMargins) Right() int {
 
 // /usr/include/qt/QtCore/qmargins.h:62
 // index:0
-// Public inline
-// int bottom()
+// Public inline Visibility=Default Availability=Available
+// [4] int bottom()
 func (this *QMargins) Bottom() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins6bottomEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -146,8 +144,8 @@ func (this *QMargins) Bottom() int {
 
 // /usr/include/qt/QtCore/qmargins.h:64
 // index:0
-// Public
-// void setLeft(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setLeft(int)
 func (this *QMargins) SetLeft(left int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins7setLeftEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), left)
 	gopp.ErrPrint(err, rv)
@@ -155,8 +153,8 @@ func (this *QMargins) SetLeft(left int) {
 
 // /usr/include/qt/QtCore/qmargins.h:65
 // index:0
-// Public
-// void setTop(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setTop(int)
 func (this *QMargins) SetTop(top int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins6setTopEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), top)
 	gopp.ErrPrint(err, rv)
@@ -164,8 +162,8 @@ func (this *QMargins) SetTop(top int) {
 
 // /usr/include/qt/QtCore/qmargins.h:66
 // index:0
-// Public
-// void setRight(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setRight(int)
 func (this *QMargins) SetRight(right int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins8setRightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), right)
 	gopp.ErrPrint(err, rv)
@@ -173,8 +171,8 @@ func (this *QMargins) SetRight(right int) {
 
 // /usr/include/qt/QtCore/qmargins.h:67
 // index:0
-// Public
-// void setBottom(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setBottom(int)
 func (this *QMargins) SetBottom(bottom int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins9setBottomEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), bottom)
 	gopp.ErrPrint(err, rv)

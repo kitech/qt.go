@@ -72,8 +72,8 @@ func (*QDragMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QDragMoveEvent {
 
 // /usr/include/qt/QtGui/qevent.h:644
 // index:0
-// Public virtual
-// void ~QDragMoveEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QDragMoveEvent()
 func DeleteQDragMoveEvent(*QDragMoveEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -81,22 +81,20 @@ func DeleteQDragMoveEvent(*QDragMoveEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:646
 // index:0
-// Public inline
-// QRect answerRect()
+// Public inline Visibility=Default Availability=Available
+// [16] QRect answerRect()
 func (this *QDragMoveEvent) AnswerRect() *qtcore.QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDragMoveEvent10answerRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDragMoveEvent10answerRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:648
 // index:0
-// Public inline
-// void accept()
+// Public inline Visibility=Default Availability=Available
+// [-2] void accept()
 func (this *QDragMoveEvent) Accept() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEvent6acceptEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -104,8 +102,8 @@ func (this *QDragMoveEvent) Accept() {
 
 // /usr/include/qt/QtGui/qevent.h:651
 // index:1
-// Public inline
-// void accept(const QRect &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void accept(const QRect &)
 func (this *QDragMoveEvent) Accept_1(r *qtcore.QRect) {
 	var convArg0 = r.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEvent6acceptERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -114,8 +112,8 @@ func (this *QDragMoveEvent) Accept_1(r *qtcore.QRect) {
 
 // /usr/include/qt/QtGui/qevent.h:649
 // index:0
-// Public inline
-// void ignore()
+// Public inline Visibility=Default Availability=Available
+// [-2] void ignore()
 func (this *QDragMoveEvent) Ignore() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEvent6ignoreEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -123,8 +121,8 @@ func (this *QDragMoveEvent) Ignore() {
 
 // /usr/include/qt/QtGui/qevent.h:652
 // index:1
-// Public inline
-// void ignore(const QRect &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void ignore(const QRect &)
 func (this *QDragMoveEvent) Ignore_1(r *qtcore.QRect) {
 	var convArg0 = r.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEvent6ignoreERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

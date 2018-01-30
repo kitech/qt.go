@@ -76,25 +76,23 @@ func (*QStyleOptionComboBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionC
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:601
 // index:0
-// Public
-// void QStyleOptionComboBox()
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleOptionComboBox()
 func NewQStyleOptionComboBox() *QStyleOptionComboBox {
-	cthis := qtrt.Calloc(1, 256) // 120
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionComboBoxC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionComboBoxC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionComboBoxFromPointer(cthis)
+	gothis := NewQStyleOptionComboBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:605
 // index:1
-// Protected
-// void QStyleOptionComboBox(int)
+// Protected Visibility=Default Availability=Available
+// [-2] void QStyleOptionComboBox(int)
 func NewQStyleOptionComboBox_1(version int) *QStyleOptionComboBox {
-	cthis := qtrt.Calloc(1, 256) // 120
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionComboBoxC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionComboBoxC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionComboBoxFromPointer(cthis)
+	gothis := NewQStyleOptionComboBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

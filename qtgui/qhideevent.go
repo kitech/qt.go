@@ -72,20 +72,19 @@ func (*QHideEvent) NewFromPointer(cthis unsafe.Pointer) *QHideEvent {
 
 // /usr/include/qt/QtGui/qevent.h:501
 // index:0
-// Public
-// void QHideEvent()
+// Public Visibility=Default Availability=Available
+// [-2] void QHideEvent()
 func NewQHideEvent() *QHideEvent {
-	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHideEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHideEventC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQHideEventFromPointer(cthis)
+	gothis := NewQHideEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:502
 // index:0
-// Public virtual
-// void ~QHideEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QHideEvent()
 func DeleteQHideEvent(*QHideEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHideEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)

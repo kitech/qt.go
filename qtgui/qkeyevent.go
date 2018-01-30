@@ -72,8 +72,8 @@ func (*QKeyEvent) NewFromPointer(cthis unsafe.Pointer) *QKeyEvent {
 
 // /usr/include/qt/QtGui/qevent.h:343
 // index:0
-// Public virtual
-// void ~QKeyEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QKeyEvent()
 func DeleteQKeyEvent(*QKeyEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QKeyEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -81,8 +81,8 @@ func DeleteQKeyEvent(*QKeyEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:345
 // index:0
-// Public inline
-// int key()
+// Public inline Visibility=Default Availability=Available
+// [4] int key()
 func (this *QKeyEvent) Key() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent3keyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -92,8 +92,8 @@ func (this *QKeyEvent) Key() int {
 
 // /usr/include/qt/QtGui/qevent.h:347
 // index:0
-// Public
-// bool matches(QKeySequence::StandardKey)
+// Public Visibility=Default Availability=Available
+// [1] bool matches(QKeySequence::StandardKey)
 func (this *QKeyEvent) Matches(key int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent7matchesEN12QKeySequence11StandardKeyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), key)
 	gopp.ErrPrint(err, rv)
@@ -103,8 +103,8 @@ func (this *QKeyEvent) Matches(key int) bool {
 
 // /usr/include/qt/QtGui/qevent.h:349
 // index:0
-// Public
-// Qt::KeyboardModifiers modifiers()
+// Public Visibility=Default Availability=Available
+// [4] Qt::KeyboardModifiers modifiers()
 func (this *QKeyEvent) Modifiers() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent9modifiersEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -114,22 +114,20 @@ func (this *QKeyEvent) Modifiers() int {
 
 // /usr/include/qt/QtGui/qevent.h:350
 // index:0
-// Public inline
-// QString text()
+// Public inline Visibility=Default Availability=Available
+// [8] QString text()
 func (this *QKeyEvent) Text() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent4textEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:351
 // index:0
-// Public inline
-// bool isAutoRepeat()
+// Public inline Visibility=Default Availability=Available
+// [1] bool isAutoRepeat()
 func (this *QKeyEvent) IsAutoRepeat() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent12isAutoRepeatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -139,8 +137,8 @@ func (this *QKeyEvent) IsAutoRepeat() bool {
 
 // /usr/include/qt/QtGui/qevent.h:352
 // index:0
-// Public inline
-// int count()
+// Public inline Visibility=Default Availability=Available
+// [4] int count()
 func (this *QKeyEvent) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -150,8 +148,8 @@ func (this *QKeyEvent) Count() int {
 
 // /usr/include/qt/QtGui/qevent.h:354
 // index:0
-// Public inline
-// quint32 nativeScanCode()
+// Public inline Visibility=Default Availability=Available
+// [4] quint32 nativeScanCode()
 func (this *QKeyEvent) NativeScanCode() uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent14nativeScanCodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -161,8 +159,8 @@ func (this *QKeyEvent) NativeScanCode() uint {
 
 // /usr/include/qt/QtGui/qevent.h:355
 // index:0
-// Public inline
-// quint32 nativeVirtualKey()
+// Public inline Visibility=Default Availability=Available
+// [4] quint32 nativeVirtualKey()
 func (this *QKeyEvent) NativeVirtualKey() uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent16nativeVirtualKeyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -172,8 +170,8 @@ func (this *QKeyEvent) NativeVirtualKey() uint {
 
 // /usr/include/qt/QtGui/qevent.h:356
 // index:0
-// Public inline
-// quint32 nativeModifiers()
+// Public inline Visibility=Default Availability=Available
+// [4] quint32 nativeModifiers()
 func (this *QKeyEvent) NativeModifiers() uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QKeyEvent15nativeModifiersEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

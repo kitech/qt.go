@@ -68,21 +68,20 @@ func (*QChildEvent) NewFromPointer(cthis unsafe.Pointer) *QChildEvent {
 
 // /usr/include/qt/QtCore/qcoreevent.h:352
 // index:0
-// Public
-// void QChildEvent(enum QEvent::Type, QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QChildEvent(enum QEvent::Type, QObject *)
 func NewQChildEvent(type_ int, child *QObject /*777 QObject **/) *QChildEvent {
-	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg1 = child.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QChildEventC2EN6QEvent4TypeEP7QObject", ffiqt.FFI_TYPE_VOID, cthis, type_, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QChildEventC2EN6QEvent4TypeEP7QObject", ffiqt.FFI_TYPE_POINTER, type_, convArg1)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQChildEventFromPointer(cthis)
+	gothis := NewQChildEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:353
 // index:0
-// Public virtual
-// void ~QChildEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QChildEvent()
 func DeleteQChildEvent(*QChildEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QChildEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -90,8 +89,8 @@ func DeleteQChildEvent(*QChildEvent) {
 
 // /usr/include/qt/QtCore/qcoreevent.h:354
 // index:0
-// Public inline
-// QObject * child()
+// Public inline Visibility=Default Availability=Available
+// [8] QObject * child()
 func (this *QChildEvent) Child() *QObject /*777 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent5childEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -102,8 +101,8 @@ func (this *QChildEvent) Child() *QObject /*777 QObject **/ {
 
 // /usr/include/qt/QtCore/qcoreevent.h:355
 // index:0
-// Public inline
-// bool added()
+// Public inline Visibility=Default Availability=Available
+// [1] bool added()
 func (this *QChildEvent) Added() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent5addedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -113,8 +112,8 @@ func (this *QChildEvent) Added() bool {
 
 // /usr/include/qt/QtCore/qcoreevent.h:356
 // index:0
-// Public inline
-// bool polished()
+// Public inline Visibility=Default Availability=Available
+// [1] bool polished()
 func (this *QChildEvent) Polished() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent8polishedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -124,8 +123,8 @@ func (this *QChildEvent) Polished() bool {
 
 // /usr/include/qt/QtCore/qcoreevent.h:357
 // index:0
-// Public inline
-// bool removed()
+// Public inline Visibility=Default Availability=Available
+// [1] bool removed()
 func (this *QChildEvent) Removed() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent7removedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

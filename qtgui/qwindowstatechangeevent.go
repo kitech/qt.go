@@ -72,8 +72,8 @@ func (*QWindowStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QWindowSta
 
 // /usr/include/qt/QtGui/qevent.h:784
 // index:0
-// Public virtual
-// void ~QWindowStateChangeEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QWindowStateChangeEvent()
 func DeleteQWindowStateChangeEvent(*QWindowStateChangeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QWindowStateChangeEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -81,8 +81,8 @@ func DeleteQWindowStateChangeEvent(*QWindowStateChangeEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:786
 // index:0
-// Public inline
-// Qt::WindowStates oldState()
+// Public inline Visibility=Default Availability=Available
+// [4] Qt::WindowStates oldState()
 func (this *QWindowStateChangeEvent) OldState() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QWindowStateChangeEvent8oldStateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -92,8 +92,8 @@ func (this *QWindowStateChangeEvent) OldState() int {
 
 // /usr/include/qt/QtGui/qevent.h:787
 // index:0
-// Public
-// bool isOverride()
+// Public Visibility=Default Availability=Available
+// [1] bool isOverride()
 func (this *QWindowStateChangeEvent) IsOverride() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QWindowStateChangeEvent10isOverrideEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

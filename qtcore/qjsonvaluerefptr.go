@@ -67,27 +67,25 @@ func (*QJsonValueRefPtr) NewFromPointer(cthis unsafe.Pointer) *QJsonValueRefPtr 
 
 // /usr/include/qt/QtCore/qjsonvalue.h:237
 // index:0
-// Public inline
-// void QJsonValueRefPtr(QJsonArray *, int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QJsonValueRefPtr(QJsonArray *, int)
 func NewQJsonValueRefPtr(array *QJsonArray /*777 QJsonArray **/, idx int) *QJsonValueRefPtr {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = array.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QJsonValueRefPtrC2EP10QJsonArrayi", ffiqt.FFI_TYPE_VOID, cthis, convArg0, idx)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QJsonValueRefPtrC2EP10QJsonArrayi", ffiqt.FFI_TYPE_POINTER, convArg0, idx)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQJsonValueRefPtrFromPointer(cthis)
+	gothis := NewQJsonValueRefPtrFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:239
 // index:1
-// Public inline
-// void QJsonValueRefPtr(QJsonObject *, int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QJsonValueRefPtr(QJsonObject *, int)
 func NewQJsonValueRefPtr_1(object *QJsonObject /*777 QJsonObject **/, idx int) *QJsonValueRefPtr {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = object.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QJsonValueRefPtrC2EP11QJsonObjecti", ffiqt.FFI_TYPE_VOID, cthis, convArg0, idx)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QJsonValueRefPtrC2EP11QJsonObjecti", ffiqt.FFI_TYPE_POINTER, convArg0, idx)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQJsonValueRefPtrFromPointer(cthis)
+	gothis := NewQJsonValueRefPtrFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

@@ -84,8 +84,8 @@ func (*QSGBasicGeometryNode) NewFromPointer(cthis unsafe.Pointer) *QSGBasicGeome
 
 // /usr/include/qt/QtQuick/qsgnode.h:198
 // index:0
-// Public virtual
-// void ~QSGBasicGeometryNode()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QSGBasicGeometryNode()
 func DeleteQSGBasicGeometryNode(*QSGBasicGeometryNode) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGBasicGeometryNodeD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -93,8 +93,8 @@ func DeleteQSGBasicGeometryNode(*QSGBasicGeometryNode) {
 
 // /usr/include/qt/QtQuick/qsgnode.h:200
 // index:0
-// Public
-// void setGeometry(QSGGeometry *)
+// Public Visibility=Default Availability=Available
+// [-2] void setGeometry(QSGGeometry *)
 func (this *QSGBasicGeometryNode) SetGeometry(geometry *QSGGeometry /*777 QSGGeometry **/) {
 	var convArg0 = geometry.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGBasicGeometryNode11setGeometryEP11QSGGeometry", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -103,8 +103,8 @@ func (this *QSGBasicGeometryNode) SetGeometry(geometry *QSGGeometry /*777 QSGGeo
 
 // /usr/include/qt/QtQuick/qsgnode.h:201
 // index:0
-// Public inline
-// const QSGGeometry * geometry()
+// Public inline Visibility=Default Availability=Available
+// [8] const QSGGeometry * geometry()
 func (this *QSGBasicGeometryNode) Geometry() *QSGGeometry /*777 const QSGGeometry **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGBasicGeometryNode8geometryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -115,8 +115,8 @@ func (this *QSGBasicGeometryNode) Geometry() *QSGGeometry /*777 const QSGGeometr
 
 // /usr/include/qt/QtQuick/qsgnode.h:202
 // index:1
-// Public inline
-// QSGGeometry * geometry()
+// Public inline Visibility=Default Availability=Available
+// [8] QSGGeometry * geometry()
 func (this *QSGBasicGeometryNode) Geometry_1() *QSGGeometry /*777 QSGGeometry **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGBasicGeometryNode8geometryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -127,8 +127,8 @@ func (this *QSGBasicGeometryNode) Geometry_1() *QSGGeometry /*777 QSGGeometry **
 
 // /usr/include/qt/QtQuick/qsgnode.h:204
 // index:0
-// Public inline
-// const QMatrix4x4 * matrix()
+// Public inline Visibility=Default Availability=Available
+// [8] const QMatrix4x4 * matrix()
 func (this *QSGBasicGeometryNode) Matrix() *qtgui.QMatrix4x4 /*777 const QMatrix4x4 **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGBasicGeometryNode6matrixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -139,8 +139,8 @@ func (this *QSGBasicGeometryNode) Matrix() *qtgui.QMatrix4x4 /*777 const QMatrix
 
 // /usr/include/qt/QtQuick/qsgnode.h:205
 // index:0
-// Public inline
-// const QSGClipNode * clipList()
+// Public inline Visibility=Default Availability=Available
+// [8] const QSGClipNode * clipList()
 func (this *QSGBasicGeometryNode) ClipList() *QSGClipNode /*777 const QSGClipNode **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGBasicGeometryNode8clipListEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -151,8 +151,8 @@ func (this *QSGBasicGeometryNode) ClipList() *QSGClipNode /*777 const QSGClipNod
 
 // /usr/include/qt/QtQuick/qsgnode.h:207
 // index:0
-// Public inline
-// void setRendererMatrix(const QMatrix4x4 *)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setRendererMatrix(const QMatrix4x4 *)
 func (this *QSGBasicGeometryNode) SetRendererMatrix(m *qtgui.QMatrix4x4 /*777 const QMatrix4x4 **/) {
 	var convArg0 = m.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGBasicGeometryNode17setRendererMatrixEPK10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -161,8 +161,8 @@ func (this *QSGBasicGeometryNode) SetRendererMatrix(m *qtgui.QMatrix4x4 /*777 co
 
 // /usr/include/qt/QtQuick/qsgnode.h:208
 // index:0
-// Public inline
-// void setRendererClipList(const QSGClipNode *)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setRendererClipList(const QSGClipNode *)
 func (this *QSGBasicGeometryNode) SetRendererClipList(c *QSGClipNode /*777 const QSGClipNode **/) {
 	var convArg0 = c.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGBasicGeometryNode19setRendererClipListEPK11QSGClipNode", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -171,13 +171,12 @@ func (this *QSGBasicGeometryNode) SetRendererClipList(c *QSGClipNode /*777 const
 
 // /usr/include/qt/QtQuick/qsgnode.h:211
 // index:0
-// Protected
-// void QSGBasicGeometryNode(enum QSGNode::NodeType)
+// Protected Visibility=Default Availability=Available
+// [-2] void QSGBasicGeometryNode(enum QSGNode::NodeType)
 func NewQSGBasicGeometryNode(type_ int) *QSGBasicGeometryNode {
-	cthis := qtrt.Calloc(1, 256) // 112
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGBasicGeometryNodeC2EN7QSGNode8NodeTypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGBasicGeometryNodeC2EN7QSGNode8NodeTypeE", ffiqt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSGBasicGeometryNodeFromPointer(cthis)
+	gothis := NewQSGBasicGeometryNodeFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

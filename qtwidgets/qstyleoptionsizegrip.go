@@ -76,25 +76,23 @@ func (*QStyleOptionSizeGrip) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionS
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:653
 // index:0
-// Public
-// void QStyleOptionSizeGrip()
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleOptionSizeGrip()
 func NewQStyleOptionSizeGrip() *QStyleOptionSizeGrip {
-	cthis := qtrt.Calloc(1, 256) // 80
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionSizeGripFromPointer(cthis)
+	gothis := NewQStyleOptionSizeGripFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:656
 // index:1
-// Protected
-// void QStyleOptionSizeGrip(int)
+// Protected Visibility=Default Availability=Available
+// [-2] void QStyleOptionSizeGrip(int)
 func NewQStyleOptionSizeGrip_1(version int) *QStyleOptionSizeGrip {
-	cthis := qtrt.Calloc(1, 256) // 80
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionSizeGripFromPointer(cthis)
+	gothis := NewQStyleOptionSizeGripFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

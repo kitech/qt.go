@@ -67,20 +67,19 @@ func (*ExternalRefCountData) NewFromPointer(cthis unsafe.Pointer) *ExternalRefCo
 
 // /usr/include/qt/QtCore/qsharedpointer_impl.h:154
 // index:0
-// Public inline
-// void ExternalRefCountData(Qt::Initialization)
+// Public inline Visibility=Default Availability=Available
+// [-2] void ExternalRefCountData(Qt::Initialization)
 func NewExternalRefCountData(arg0 int) *ExternalRefCountData {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountDataC2EN2Qt14InitializationE", ffiqt.FFI_TYPE_VOID, cthis, arg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountDataC2EN2Qt14InitializationE", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewExternalRefCountDataFromPointer(cthis)
+	gothis := NewExternalRefCountDataFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qsharedpointer_impl.h:155
 // index:0
-// Public inline
-// void ~ExternalRefCountData()
+// Public inline Visibility=Default Availability=Available
+// [-2] void ~ExternalRefCountData()
 func DeleteExternalRefCountData(*ExternalRefCountData) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountDataD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -88,8 +87,8 @@ func DeleteExternalRefCountData(*ExternalRefCountData) {
 
 // /usr/include/qt/QtCore/qsharedpointer_impl.h:157
 // index:0
-// Public inline
-// void destroy()
+// Public inline Visibility=Default Availability=Available
+// [-2] void destroy()
 func (this *ExternalRefCountData) Destroy() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountData7destroyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -97,8 +96,8 @@ func (this *ExternalRefCountData) Destroy() {
 
 // /usr/include/qt/QtCore/qsharedpointer_impl.h:160
 // index:0
-// Public static
-// QtSharedPointer::ExternalRefCountData * getAndRef(const QObject *)
+// Public static Visibility=Default Availability=Available
+// [8] QtSharedPointer::ExternalRefCountData * getAndRef(const QObject *)
 func (this *ExternalRefCountData) GetAndRef(arg0 *QObject /*777 const QObject **/) unsafe.Pointer /*666*/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountData9getAndRefEPK7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
@@ -114,8 +113,8 @@ func ExternalRefCountData_GetAndRef(arg0 *QObject /*777 const QObject **/) unsaf
 
 // /usr/include/qt/QtCore/qsharedpointer_impl.h:161
 // index:0
-// Public
-// void setQObjectShared(const QObject *, _Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setQObjectShared(const QObject *, _Bool)
 func (this *ExternalRefCountData) SetQObjectShared(arg0 *QObject /*777 const QObject **/, enable bool) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountData16setQObjectSharedEPK7QObjectb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, enable)
@@ -124,8 +123,8 @@ func (this *ExternalRefCountData) SetQObjectShared(arg0 *QObject /*777 const QOb
 
 // /usr/include/qt/QtCore/qsharedpointer_impl.h:162
 // index:0
-// Public
-// void checkQObjectShared(const QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void checkQObjectShared(const QObject *)
 func (this *ExternalRefCountData) CheckQObjectShared(arg0 *QObject /*777 const QObject **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountData18checkQObjectSharedEPK7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

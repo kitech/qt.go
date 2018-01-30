@@ -68,8 +68,8 @@ func (*QSocketNotifier) NewFromPointer(cthis unsafe.Pointer) *QSocketNotifier {
 
 // /usr/include/qt/QtCore/qsocketnotifier.h:50
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QSocketNotifier) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSocketNotifier10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -80,21 +80,20 @@ func (this *QSocketNotifier) MetaObject() *QMetaObject /*777 const QMetaObject *
 
 // /usr/include/qt/QtCore/qsocketnotifier.h:56
 // index:0
-// Public
-// void QSocketNotifier(qintptr, enum QSocketNotifier::Type, QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QSocketNotifier(qintptr, enum QSocketNotifier::Type, QObject *)
 func NewQSocketNotifier(socket int64, arg1 int, parent *QObject /*777 QObject **/) *QSocketNotifier {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg2 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifierC2ExNS_4TypeEP7QObject", ffiqt.FFI_TYPE_VOID, cthis, socket, arg1, convArg2)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifierC2ExNS_4TypeEP7QObject", ffiqt.FFI_TYPE_POINTER, socket, arg1, convArg2)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSocketNotifierFromPointer(cthis)
+	gothis := NewQSocketNotifierFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qsocketnotifier.h:57
 // index:0
-// Public virtual
-// void ~QSocketNotifier()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QSocketNotifier()
 func DeleteQSocketNotifier(*QSocketNotifier) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifierD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -102,8 +101,8 @@ func DeleteQSocketNotifier(*QSocketNotifier) {
 
 // /usr/include/qt/QtCore/qsocketnotifier.h:59
 // index:0
-// Public
-// qintptr socket()
+// Public Visibility=Default Availability=Available
+// [8] qintptr socket()
 func (this *QSocketNotifier) Socket() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSocketNotifier6socketEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -113,8 +112,8 @@ func (this *QSocketNotifier) Socket() int64 {
 
 // /usr/include/qt/QtCore/qsocketnotifier.h:60
 // index:0
-// Public
-// QSocketNotifier::Type type()
+// Public Visibility=Default Availability=Available
+// [4] QSocketNotifier::Type type()
 func (this *QSocketNotifier) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSocketNotifier4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -124,8 +123,8 @@ func (this *QSocketNotifier) Type() int {
 
 // /usr/include/qt/QtCore/qsocketnotifier.h:62
 // index:0
-// Public
-// bool isEnabled()
+// Public Visibility=Default Availability=Available
+// [1] bool isEnabled()
 func (this *QSocketNotifier) IsEnabled() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSocketNotifier9isEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -135,8 +134,8 @@ func (this *QSocketNotifier) IsEnabled() bool {
 
 // /usr/include/qt/QtCore/qsocketnotifier.h:65
 // index:0
-// Public
-// void setEnabled(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setEnabled(_Bool)
 func (this *QSocketNotifier) SetEnabled(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifier10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -144,8 +143,8 @@ func (this *QSocketNotifier) SetEnabled(arg0 bool) {
 
 // /usr/include/qt/QtCore/qsocketnotifier.h:71
 // index:0
-// Protected virtual
-// bool event(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 func (this *QSocketNotifier) Event(arg0 *QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifier5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

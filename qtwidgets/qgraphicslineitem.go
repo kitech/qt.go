@@ -76,48 +76,45 @@ func (*QGraphicsLineItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLineIte
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:780
 // index:0
-// Public
-// void QGraphicsLineItem(QGraphicsItem *)
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsLineItem(QGraphicsItem *)
 func NewQGraphicsLineItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsLineItem {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsLineItemC2EP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsLineItemC2EP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQGraphicsLineItemFromPointer(cthis)
+	gothis := NewQGraphicsLineItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:781
 // index:1
-// Public
-// void QGraphicsLineItem(const QLineF &, QGraphicsItem *)
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsLineItem(const QLineF &, QGraphicsItem *)
 func NewQGraphicsLineItem_1(line *qtcore.QLineF, parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsLineItem {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = line.GetCthis()
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsLineItemC2ERK6QLineFP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsLineItemC2ERK6QLineFP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQGraphicsLineItemFromPointer(cthis)
+	gothis := NewQGraphicsLineItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:782
 // index:2
-// Public
-// void QGraphicsLineItem(qreal, qreal, qreal, qreal, QGraphicsItem *)
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsLineItem(qreal, qreal, qreal, qreal, QGraphicsItem *)
 func NewQGraphicsLineItem_2(x1 float64, y1 float64, x2 float64, y2 float64, parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsLineItem {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg4 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsLineItemC2EddddP13QGraphicsItem", ffiqt.FFI_TYPE_VOID, cthis, x1, y1, x2, y2, convArg4)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsLineItemC2EddddP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, x1, y1, x2, y2, convArg4)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQGraphicsLineItemFromPointer(cthis)
+	gothis := NewQGraphicsLineItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:783
 // index:0
-// Public virtual
-// void ~QGraphicsLineItem()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QGraphicsLineItem()
 func DeleteQGraphicsLineItem(*QGraphicsLineItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsLineItemD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -125,22 +122,20 @@ func DeleteQGraphicsLineItem(*QGraphicsLineItem) {
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:785
 // index:0
-// Public
-// QPen pen()
+// Public Visibility=Default Availability=Available
+// [8] QPen pen()
 func (this *QGraphicsLineItem) Pen() *qtgui.QPen /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsLineItem3penEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsLineItem3penEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPenFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:786
 // index:0
-// Public
-// void setPen(const QPen &)
+// Public Visibility=Default Availability=Available
+// [-2] void setPen(const QPen &)
 func (this *QGraphicsLineItem) SetPen(pen *qtgui.QPen) {
 	var convArg0 = pen.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsLineItem6setPenERK4QPen", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -149,22 +144,20 @@ func (this *QGraphicsLineItem) SetPen(pen *qtgui.QPen) {
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:788
 // index:0
-// Public
-// QLineF line()
+// Public Visibility=Default Availability=Available
+// [32] QLineF line()
 func (this *QGraphicsLineItem) Line() *qtcore.QLineF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsLineItem4lineEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsLineItem4lineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQLineFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:789
 // index:0
-// Public
-// void setLine(const QLineF &)
+// Public Visibility=Default Availability=Available
+// [-2] void setLine(const QLineF &)
 func (this *QGraphicsLineItem) SetLine(line *qtcore.QLineF) {
 	var convArg0 = line.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsLineItem7setLineERK6QLineF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -173,8 +166,8 @@ func (this *QGraphicsLineItem) SetLine(line *qtcore.QLineF) {
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:790
 // index:1
-// Public inline
-// void setLine(qreal, qreal, qreal, qreal)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setLine(qreal, qreal, qreal, qreal)
 func (this *QGraphicsLineItem) SetLine_1(x1 float64, y1 float64, x2 float64, y2 float64) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsLineItem7setLineEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, x2, y2)
 	gopp.ErrPrint(err, rv)
@@ -182,36 +175,32 @@ func (this *QGraphicsLineItem) SetLine_1(x1 float64, y1 float64, x2 float64, y2 
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:793
 // index:0
-// Public virtual
-// QRectF boundingRect()
+// Public virtual Visibility=Default Availability=Available
+// [32] QRectF boundingRect()
 func (this *QGraphicsLineItem) BoundingRect() *qtcore.QRectF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsLineItem12boundingRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsLineItem12boundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:794
 // index:0
-// Public virtual
-// QPainterPath shape()
+// Public virtual Visibility=Default Availability=Available
+// [8] QPainterPath shape()
 func (this *QGraphicsLineItem) Shape() *qtgui.QPainterPath /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsLineItem5shapeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsLineItem5shapeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:795
 // index:0
-// Public virtual
-// bool contains(const QPointF &)
+// Public virtual Visibility=Default Availability=Available
+// [1] bool contains(const QPointF &)
 func (this *QGraphicsLineItem) Contains(point *qtcore.QPointF) bool {
 	var convArg0 = point.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsLineItem8containsERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -222,8 +211,8 @@ func (this *QGraphicsLineItem) Contains(point *qtcore.QPointF) bool {
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:797
 // index:0
-// Public virtual
-// void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
+// Public virtual Visibility=Default Availability=Available
+// [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
 func (this *QGraphicsLineItem) Paint(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionGraphicsItem /*777 const QStyleOptionGraphicsItem **/, widget *QWidget /*777 QWidget **/) {
 	var convArg0 = painter.GetCthis()
 	var convArg1 = option.GetCthis()
@@ -234,8 +223,8 @@ func (this *QGraphicsLineItem) Paint(painter *qtgui.QPainter /*777 QPainter **/,
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:799
 // index:0
-// Public virtual
-// bool isObscuredBy(const QGraphicsItem *)
+// Public virtual Visibility=Default Availability=Available
+// [1] bool isObscuredBy(const QGraphicsItem *)
 func (this *QGraphicsLineItem) IsObscuredBy(item *QGraphicsItem /*777 const QGraphicsItem **/) bool {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -246,22 +235,20 @@ func (this *QGraphicsLineItem) IsObscuredBy(item *QGraphicsItem /*777 const QGra
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:800
 // index:0
-// Public virtual
-// QPainterPath opaqueArea()
+// Public virtual Visibility=Default Availability=Available
+// [8] QPainterPath opaqueArea()
 func (this *QGraphicsLineItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsLineItem10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsLineItem10opaqueAreaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:803
 // index:0
-// Public virtual
-// int type()
+// Public virtual Visibility=Default Availability=Available
+// [4] int type()
 func (this *QGraphicsLineItem) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsLineItem4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -271,8 +258,8 @@ func (this *QGraphicsLineItem) Type() int {
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:806
 // index:0
-// Protected virtual
-// bool supportsExtension(enum QGraphicsItem::Extension)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool supportsExtension(enum QGraphicsItem::Extension)
 func (this *QGraphicsLineItem) SupportsExtension(extension int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsLineItem17supportsExtensionEN13QGraphicsItem9ExtensionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	gopp.ErrPrint(err, rv)
@@ -282,8 +269,8 @@ func (this *QGraphicsLineItem) SupportsExtension(extension int) bool {
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:807
 // index:0
-// Protected virtual
-// void setExtension(enum QGraphicsItem::Extension, const QVariant &)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void setExtension(enum QGraphicsItem::Extension, const QVariant &)
 func (this *QGraphicsLineItem) SetExtension(extension int, variant *qtcore.QVariant) {
 	var convArg1 = variant.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsLineItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), extension, convArg1)
@@ -292,15 +279,13 @@ func (this *QGraphicsLineItem) SetExtension(extension int, variant *qtcore.QVari
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:808
 // index:0
-// Protected virtual
-// QVariant extension(const QVariant &)
+// Protected virtual Visibility=Default Availability=Available
+// [16] QVariant extension(const QVariant &)
 func (this *QGraphicsLineItem) Extension(variant *qtcore.QVariant) *qtcore.QVariant /*123*/ {
 	var convArg0 = variant.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsLineItem9extensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QGraphicsLineItem9extensionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

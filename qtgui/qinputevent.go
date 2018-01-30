@@ -72,8 +72,8 @@ func (*QInputEvent) NewFromPointer(cthis unsafe.Pointer) *QInputEvent {
 
 // /usr/include/qt/QtGui/qevent.h:72
 // index:0
-// Public virtual
-// void ~QInputEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QInputEvent()
 func DeleteQInputEvent(*QInputEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QInputEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -81,8 +81,8 @@ func DeleteQInputEvent(*QInputEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:73
 // index:0
-// Public inline
-// Qt::KeyboardModifiers modifiers()
+// Public inline Visibility=Default Availability=Available
+// [4] Qt::KeyboardModifiers modifiers()
 func (this *QInputEvent) Modifiers() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QInputEvent9modifiersEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -92,8 +92,8 @@ func (this *QInputEvent) Modifiers() int {
 
 // /usr/include/qt/QtGui/qevent.h:75
 // index:0
-// Public inline
-// ulong timestamp()
+// Public inline Visibility=Default Availability=Available
+// [8] ulong timestamp()
 func (this *QInputEvent) Timestamp() uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QInputEvent9timestampEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -103,8 +103,8 @@ func (this *QInputEvent) Timestamp() uint {
 
 // /usr/include/qt/QtGui/qevent.h:76
 // index:0
-// Public inline
-// void setTimestamp(ulong)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setTimestamp(ulong)
 func (this *QInputEvent) SetTimestamp(atimestamp uint) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QInputEvent12setTimestampEm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), atimestamp)
 	gopp.ErrPrint(err, rv)

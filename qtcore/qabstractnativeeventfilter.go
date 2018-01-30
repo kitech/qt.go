@@ -67,20 +67,19 @@ func (*QAbstractNativeEventFilter) NewFromPointer(cthis unsafe.Pointer) *QAbstra
 
 // /usr/include/qt/QtCore/qabstractnativeeventfilter.h:52
 // index:0
-// Public
-// void QAbstractNativeEventFilter()
+// Public Visibility=Default Availability=Available
+// [-2] void QAbstractNativeEventFilter()
 func NewQAbstractNativeEventFilter() *QAbstractNativeEventFilter {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAbstractNativeEventFilterC1Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAbstractNativeEventFilterC1Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQAbstractNativeEventFilterFromPointer(cthis)
+	gothis := NewQAbstractNativeEventFilterFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qabstractnativeeventfilter.h:53
 // index:0
-// Public virtual
-// void ~QAbstractNativeEventFilter()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QAbstractNativeEventFilter()
 func DeleteQAbstractNativeEventFilter(*QAbstractNativeEventFilter) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAbstractNativeEventFilterD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -88,8 +87,8 @@ func DeleteQAbstractNativeEventFilter(*QAbstractNativeEventFilter) {
 
 // /usr/include/qt/QtCore/qabstractnativeeventfilter.h:55
 // index:0
-// Public pure virtual
-// bool nativeEventFilter(const QByteArray &, void *, long *)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [1] bool nativeEventFilter(const QByteArray &, void *, long *)
 func (this *QAbstractNativeEventFilter) NativeEventFilter(eventType *QByteArray, message unsafe.Pointer /*666*/, result unsafe.Pointer /*666*/) bool {
 	var convArg0 = eventType.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAbstractNativeEventFilter17nativeEventFilterERK10QByteArrayPvPl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, message, &result)

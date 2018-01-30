@@ -76,20 +76,19 @@ func (*QGraphicsSceneMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphicsS
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:313
 // index:0
-// Public
-// void QGraphicsSceneMoveEvent()
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsSceneMoveEvent()
 func NewQGraphicsSceneMoveEvent() *QGraphicsSceneMoveEvent {
-	cthis := qtrt.Calloc(1, 256) // 32
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsSceneMoveEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsSceneMoveEventC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQGraphicsSceneMoveEventFromPointer(cthis)
+	gothis := NewQGraphicsSceneMoveEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:314
 // index:0
-// Public virtual
-// void ~QGraphicsSceneMoveEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QGraphicsSceneMoveEvent()
 func DeleteQGraphicsSceneMoveEvent(*QGraphicsSceneMoveEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsSceneMoveEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -97,22 +96,20 @@ func DeleteQGraphicsSceneMoveEvent(*QGraphicsSceneMoveEvent) {
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:316
 // index:0
-// Public
-// QPointF oldPos()
+// Public Visibility=Default Availability=Available
+// [16] QPointF oldPos()
 func (this *QGraphicsSceneMoveEvent) OldPos() *qtcore.QPointF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsSceneMoveEvent6oldPosEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsSceneMoveEvent6oldPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:317
 // index:0
-// Public
-// void setOldPos(const QPointF &)
+// Public Visibility=Default Availability=Available
+// [-2] void setOldPos(const QPointF &)
 func (this *QGraphicsSceneMoveEvent) SetOldPos(pos *qtcore.QPointF) {
 	var convArg0 = pos.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -121,22 +118,20 @@ func (this *QGraphicsSceneMoveEvent) SetOldPos(pos *qtcore.QPointF) {
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:319
 // index:0
-// Public
-// QPointF newPos()
+// Public Visibility=Default Availability=Available
+// [16] QPointF newPos()
 func (this *QGraphicsSceneMoveEvent) NewPos() *qtcore.QPointF /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsSceneMoveEvent6newPosEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QGraphicsSceneMoveEvent6newPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:320
 // index:0
-// Public
-// void setNewPos(const QPointF &)
+// Public Visibility=Default Availability=Available
+// [-2] void setNewPos(const QPointF &)
 func (this *QGraphicsSceneMoveEvent) SetNewPos(pos *qtcore.QPointF) {
 	var convArg0 = pos.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

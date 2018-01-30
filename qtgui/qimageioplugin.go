@@ -72,8 +72,8 @@ func (*QImageIOPlugin) NewFromPointer(cthis unsafe.Pointer) *QImageIOPlugin {
 
 // /usr/include/qt/QtGui/qimageiohandler.h:141
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QImageIOPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QImageIOPlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -84,21 +84,20 @@ func (this *QImageIOPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 
 // /usr/include/qt/QtGui/qimageiohandler.h:143
 // index:0
-// Public
-// void QImageIOPlugin(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QImageIOPlugin(QObject *)
 func NewQImageIOPlugin(parent *qtcore.QObject /*777 QObject **/) *QImageIOPlugin {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QImageIOPluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QImageIOPluginC1EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQImageIOPluginFromPointer(cthis)
+	gothis := NewQImageIOPluginFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:144
 // index:0
-// Public virtual
-// void ~QImageIOPlugin()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QImageIOPlugin()
 func DeleteQImageIOPlugin(*QImageIOPlugin) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QImageIOPluginD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -106,8 +105,8 @@ func DeleteQImageIOPlugin(*QImageIOPlugin) {
 
 // /usr/include/qt/QtGui/qimageiohandler.h:153
 // index:0
-// Public pure virtual
-// QImageIOPlugin::Capabilities capabilities(QIODevice *, const QByteArray &)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [4] QImageIOPlugin::Capabilities capabilities(QIODevice *, const QByteArray &)
 func (this *QImageIOPlugin) Capabilities(device *qtcore.QIODevice /*777 QIODevice **/, format *qtcore.QByteArray) int {
 	var convArg0 = device.GetCthis()
 	var convArg1 = format.GetCthis()
@@ -119,8 +118,8 @@ func (this *QImageIOPlugin) Capabilities(device *qtcore.QIODevice /*777 QIODevic
 
 // /usr/include/qt/QtGui/qimageiohandler.h:154
 // index:0
-// Public pure virtual
-// QImageIOHandler * create(QIODevice *, const QByteArray &)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QImageIOHandler * create(QIODevice *, const QByteArray &)
 func (this *QImageIOPlugin) Create(device *qtcore.QIODevice /*777 QIODevice **/, format *qtcore.QByteArray) *QImageIOHandler /*777 QImageIOHandler **/ {
 	var convArg0 = device.GetCthis()
 	var convArg1 = format.GetCthis()

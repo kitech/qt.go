@@ -71,8 +71,8 @@ func (*QAccessibleEditableTextInterface) NewFromPointer(cthis unsafe.Pointer) *Q
 
 // /usr/include/qt/QtGui/qaccessible.h:556
 // index:0
-// Public virtual
-// void ~QAccessibleEditableTextInterface()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QAccessibleEditableTextInterface()
 func DeleteQAccessibleEditableTextInterface(*QAccessibleEditableTextInterface) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN32QAccessibleEditableTextInterfaceD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -80,8 +80,8 @@ func DeleteQAccessibleEditableTextInterface(*QAccessibleEditableTextInterface) {
 
 // /usr/include/qt/QtGui/qaccessible.h:558
 // index:0
-// Public pure virtual
-// void deleteText(int, int)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [-2] void deleteText(int, int)
 func (this *QAccessibleEditableTextInterface) DeleteText(startOffset int, endOffset int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN32QAccessibleEditableTextInterface10deleteTextEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), startOffset, endOffset)
 	gopp.ErrPrint(err, rv)
@@ -89,8 +89,8 @@ func (this *QAccessibleEditableTextInterface) DeleteText(startOffset int, endOff
 
 // /usr/include/qt/QtGui/qaccessible.h:559
 // index:0
-// Public pure virtual
-// void insertText(int, const QString &)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [-2] void insertText(int, const QString &)
 func (this *QAccessibleEditableTextInterface) InsertText(offset int, text *qtcore.QString) {
 	var convArg1 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN32QAccessibleEditableTextInterface10insertTextEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), offset, convArg1)
@@ -99,8 +99,8 @@ func (this *QAccessibleEditableTextInterface) InsertText(offset int, text *qtcor
 
 // /usr/include/qt/QtGui/qaccessible.h:560
 // index:0
-// Public pure virtual
-// void replaceText(int, int, const QString &)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [-2] void replaceText(int, int, const QString &)
 func (this *QAccessibleEditableTextInterface) ReplaceText(startOffset int, endOffset int, text *qtcore.QString) {
 	var convArg2 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN32QAccessibleEditableTextInterface11replaceTextEiiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), startOffset, endOffset, convArg2)

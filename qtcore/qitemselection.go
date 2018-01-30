@@ -67,34 +67,32 @@ func (*QItemSelection) NewFromPointer(cthis unsafe.Pointer) *QItemSelection {
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:250
 // index:0
-// Public inline
-// void QItemSelection()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QItemSelection()
 func NewQItemSelection() *QItemSelection {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelectionC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelectionC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQItemSelectionFromPointer(cthis)
+	gothis := NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:251
 // index:1
-// Public
-// void QItemSelection(const QModelIndex &, const QModelIndex &)
+// Public Visibility=Default Availability=Available
+// [-2] void QItemSelection(const QModelIndex &, const QModelIndex &)
 func NewQItemSelection_1(topLeft *QModelIndex, bottomRight *QModelIndex) *QItemSelection {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = topLeft.GetCthis()
 	var convArg1 = bottomRight.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelectionC2ERK11QModelIndexS2_", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelectionC2ERK11QModelIndexS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQItemSelectionFromPointer(cthis)
+	gothis := NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:255
 // index:0
-// Public
-// void select(const QModelIndex &, const QModelIndex &)
+// Public Visibility=Default Availability=Available
+// [-2] void select(const QModelIndex &, const QModelIndex &)
 func (this *QItemSelection) Select(topLeft *QModelIndex, bottomRight *QModelIndex) {
 	var convArg0 = topLeft.GetCthis()
 	var convArg1 = bottomRight.GetCthis()
@@ -104,8 +102,8 @@ func (this *QItemSelection) Select(topLeft *QModelIndex, bottomRight *QModelInde
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:256
 // index:0
-// Public
-// bool contains(const QModelIndex &)
+// Public Visibility=Default Availability=Available
+// [1] bool contains(const QModelIndex &)
 func (this *QItemSelection) Contains(index *QModelIndex) bool {
 	var convArg0 = index.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QItemSelection8containsERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -116,8 +114,8 @@ func (this *QItemSelection) Contains(index *QModelIndex) bool {
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:258
 // index:0
-// Public
-// void merge(const QItemSelection &, QItemSelectionModel::SelectionFlags)
+// Public Visibility=Default Availability=Available
+// [-2] void merge(const QItemSelection &, QItemSelectionModel::SelectionFlags)
 func (this *QItemSelection) Merge(other *QItemSelection, command int) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelection5mergeERKS_6QFlagsIN19QItemSelectionModel13SelectionFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
@@ -126,8 +124,8 @@ func (this *QItemSelection) Merge(other *QItemSelection, command int) {
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:259
 // index:0
-// Public static
-// void split(const QItemSelectionRange &, const QItemSelectionRange &, QItemSelection *)
+// Public static Visibility=Default Availability=Available
+// [-2] void split(const QItemSelectionRange &, const QItemSelectionRange &, QItemSelection *)
 func (this *QItemSelection) Split(range_ *QItemSelectionRange, other *QItemSelectionRange, result *QItemSelection /*777 QItemSelection **/) {
 	var convArg0 = range_.GetCthis()
 	var convArg1 = other.GetCthis()

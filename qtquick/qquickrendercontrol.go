@@ -84,8 +84,8 @@ func (*QQuickRenderControl) NewFromPointer(cthis unsafe.Pointer) *QQuickRenderCo
 
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:55
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QQuickRenderControl) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QQuickRenderControl10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -96,21 +96,20 @@ func (this *QQuickRenderControl) MetaObject() *qtcore.QMetaObject /*777 const QM
 
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:58
 // index:0
-// Public
-// void QQuickRenderControl(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QQuickRenderControl(QObject *)
 func NewQQuickRenderControl(parent *qtcore.QObject /*777 QObject **/) *QQuickRenderControl {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickRenderControlC2EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickRenderControlC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQQuickRenderControlFromPointer(cthis)
+	gothis := NewQQuickRenderControlFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:59
 // index:0
-// Public virtual
-// void ~QQuickRenderControl()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QQuickRenderControl()
 func DeleteQQuickRenderControl(*QQuickRenderControl) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickRenderControlD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -118,8 +117,8 @@ func DeleteQQuickRenderControl(*QQuickRenderControl) {
 
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:61
 // index:0
-// Public
-// void prepareThread(QThread *)
+// Public Visibility=Default Availability=Available
+// [-2] void prepareThread(QThread *)
 func (this *QQuickRenderControl) PrepareThread(targetThread *qtcore.QThread /*777 QThread **/) {
 	var convArg0 = targetThread.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickRenderControl13prepareThreadEP7QThread", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -128,8 +127,8 @@ func (this *QQuickRenderControl) PrepareThread(targetThread *qtcore.QThread /*77
 
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:63
 // index:0
-// Public
-// void invalidate()
+// Public Visibility=Default Availability=Available
+// [-2] void invalidate()
 func (this *QQuickRenderControl) Invalidate() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickRenderControl10invalidateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -137,8 +136,8 @@ func (this *QQuickRenderControl) Invalidate() {
 
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:65
 // index:0
-// Public
-// void polishItems()
+// Public Visibility=Default Availability=Available
+// [-2] void polishItems()
 func (this *QQuickRenderControl) PolishItems() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickRenderControl11polishItemsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -146,8 +145,8 @@ func (this *QQuickRenderControl) PolishItems() {
 
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:66
 // index:0
-// Public
-// void render()
+// Public Visibility=Default Availability=Available
+// [-2] void render()
 func (this *QQuickRenderControl) Render() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickRenderControl6renderEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -155,8 +154,8 @@ func (this *QQuickRenderControl) Render() {
 
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:67
 // index:0
-// Public
-// bool sync()
+// Public Visibility=Default Availability=Available
+// [1] bool sync()
 func (this *QQuickRenderControl) Sync() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickRenderControl4syncEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -166,22 +165,20 @@ func (this *QQuickRenderControl) Sync() bool {
 
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:69
 // index:0
-// Public
-// QImage grab()
+// Public Visibility=Default Availability=Available
+// [32] QImage grab()
 func (this *QQuickRenderControl) Grab() *qtgui.QImage /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickRenderControl4grabEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickRenderControl4grabEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:71
 // index:0
-// Public static
-// QWindow * renderWindowFor(QQuickWindow *, QPoint *)
+// Public static Visibility=Default Availability=Available
+// [8] QWindow * renderWindowFor(QQuickWindow *, QPoint *)
 func (this *QQuickRenderControl) RenderWindowFor(win *QQuickWindow /*777 QQuickWindow **/, offset *qtcore.QPoint /*777 QPoint **/) *qtgui.QWindow /*777 QWindow **/ {
 	var convArg0 = win.GetCthis()
 	var convArg1 = offset.GetCthis()
@@ -199,8 +196,8 @@ func QQuickRenderControl_RenderWindowFor(win *QQuickWindow /*777 QQuickWindow **
 
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:72
 // index:0
-// Public inline virtual
-// QWindow * renderWindow(QPoint *)
+// Public inline virtual Visibility=Default Availability=Available
+// [8] QWindow * renderWindow(QPoint *)
 func (this *QQuickRenderControl) RenderWindow(offset *qtcore.QPoint /*777 QPoint **/) *qtgui.QWindow /*777 QWindow **/ {
 	var convArg0 = offset.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickRenderControl12renderWindowEP6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -212,8 +209,8 @@ func (this *QQuickRenderControl) RenderWindow(offset *qtcore.QPoint /*777 QPoint
 
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:75
 // index:0
-// Public
-// void renderRequested()
+// Public Visibility=Default Availability=Available
+// [-2] void renderRequested()
 func (this *QQuickRenderControl) RenderRequested() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickRenderControl15renderRequestedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -221,8 +218,8 @@ func (this *QQuickRenderControl) RenderRequested() {
 
 // /usr/include/qt/QtQuick/qquickrendercontrol.h:76
 // index:0
-// Public
-// void sceneChanged()
+// Public Visibility=Default Availability=Available
+// [-2] void sceneChanged()
 func (this *QQuickRenderControl) SceneChanged() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickRenderControl12sceneChangedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

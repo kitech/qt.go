@@ -67,14 +67,12 @@ func (*QStaticPlugin) NewFromPointer(cthis unsafe.Pointer) *QStaticPlugin {
 
 // /usr/include/qt/QtCore/qplugin.h:74
 // index:0
-// Public
-// QJsonObject metaData()
+// Public Visibility=Default Availability=Available
+// [16] QJsonObject metaData()
 func (this *QStaticPlugin) MetaData() *QJsonObject /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStaticPlugin8metaDataEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStaticPlugin8metaDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQJsonObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

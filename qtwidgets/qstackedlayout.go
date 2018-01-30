@@ -76,8 +76,8 @@ func (*QStackedLayout) NewFromPointer(cthis unsafe.Pointer) *QStackedLayout {
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:53
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QStackedLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,46 +88,43 @@ func (this *QStackedLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:66
 // index:0
-// Public
-// void QStackedLayout()
+// Public Visibility=Default Availability=Available
+// [-2] void QStackedLayout()
 func NewQStackedLayout() *QStackedLayout {
-	cthis := qtrt.Calloc(1, 256) // 32
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayoutC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayoutC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStackedLayoutFromPointer(cthis)
+	gothis := NewQStackedLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:67
 // index:1
-// Public
-// void QStackedLayout(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void QStackedLayout(QWidget *)
 func NewQStackedLayout_1(parent *QWidget /*777 QWidget **/) *QStackedLayout {
-	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayoutC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayoutC2EP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStackedLayoutFromPointer(cthis)
+	gothis := NewQStackedLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:68
 // index:2
-// Public
-// void QStackedLayout(QLayout *)
+// Public Visibility=Default Availability=Available
+// [-2] void QStackedLayout(QLayout *)
 func NewQStackedLayout_2(parentLayout *QLayout /*777 QLayout **/) *QStackedLayout {
-	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = parentLayout.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayoutC2EP7QLayout", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayoutC2EP7QLayout", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStackedLayoutFromPointer(cthis)
+	gothis := NewQStackedLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:69
 // index:0
-// Public virtual
-// void ~QStackedLayout()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QStackedLayout()
 func DeleteQStackedLayout(*QStackedLayout) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayoutD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -135,8 +132,8 @@ func DeleteQStackedLayout(*QStackedLayout) {
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:71
 // index:0
-// Public
-// int addWidget(QWidget *)
+// Public Visibility=Default Availability=Available
+// [4] int addWidget(QWidget *)
 func (this *QStackedLayout) AddWidget(w *QWidget /*777 QWidget **/) int {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout9addWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -147,8 +144,8 @@ func (this *QStackedLayout) AddWidget(w *QWidget /*777 QWidget **/) int {
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:72
 // index:0
-// Public
-// int insertWidget(int, QWidget *)
+// Public Visibility=Default Availability=Available
+// [4] int insertWidget(int, QWidget *)
 func (this *QStackedLayout) InsertWidget(index int, w *QWidget /*777 QWidget **/) int {
 	var convArg1 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout12insertWidgetEiP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
@@ -159,8 +156,8 @@ func (this *QStackedLayout) InsertWidget(index int, w *QWidget /*777 QWidget **/
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:74
 // index:0
-// Public
-// QWidget * currentWidget()
+// Public Visibility=Default Availability=Available
+// [8] QWidget * currentWidget()
 func (this *QStackedLayout) CurrentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout13currentWidgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -171,8 +168,8 @@ func (this *QStackedLayout) CurrentWidget() *QWidget /*777 QWidget **/ {
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:75
 // index:0
-// Public
-// int currentIndex()
+// Public Visibility=Default Availability=Available
+// [4] int currentIndex()
 func (this *QStackedLayout) CurrentIndex() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout12currentIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -182,8 +179,8 @@ func (this *QStackedLayout) CurrentIndex() int {
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:77
 // index:0
-// Public
-// QWidget * widget(int)
+// Public Visibility=Default Availability=Available
+// [8] QWidget * widget(int)
 func (this *QStackedLayout) Widget(arg0 int) *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout6widgetEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -194,8 +191,8 @@ func (this *QStackedLayout) Widget(arg0 int) *QWidget /*777 QWidget **/ {
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:78
 // index:0
-// Public virtual
-// int count()
+// Public virtual Visibility=Default Availability=Available
+// [4] int count()
 func (this *QStackedLayout) Count() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -205,8 +202,8 @@ func (this *QStackedLayout) Count() int {
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:80
 // index:0
-// Public
-// QStackedLayout::StackingMode stackingMode()
+// Public Visibility=Default Availability=Available
+// [4] QStackedLayout::StackingMode stackingMode()
 func (this *QStackedLayout) StackingMode() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout12stackingModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -216,8 +213,8 @@ func (this *QStackedLayout) StackingMode() int {
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:81
 // index:0
-// Public
-// void setStackingMode(enum QStackedLayout::StackingMode)
+// Public Visibility=Default Availability=Available
+// [-2] void setStackingMode(enum QStackedLayout::StackingMode)
 func (this *QStackedLayout) SetStackingMode(stackingMode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout15setStackingModeENS_12StackingModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), stackingMode)
 	gopp.ErrPrint(err, rv)
@@ -225,8 +222,8 @@ func (this *QStackedLayout) SetStackingMode(stackingMode int) {
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:84
 // index:0
-// Public virtual
-// void addItem(QLayoutItem *)
+// Public virtual Visibility=Default Availability=Available
+// [-2] void addItem(QLayoutItem *)
 func (this *QStackedLayout) AddItem(item *QLayoutItem /*777 QLayoutItem **/) {
 	var convArg0 = item.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout7addItemEP11QLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -235,36 +232,32 @@ func (this *QStackedLayout) AddItem(item *QLayoutItem /*777 QLayoutItem **/) {
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:85
 // index:0
-// Public virtual
-// QSize sizeHint()
+// Public virtual Visibility=Default Availability=Available
+// [8] QSize sizeHint()
 func (this *QStackedLayout) SizeHint() *qtcore.QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK14QStackedLayout8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:86
 // index:0
-// Public virtual
-// QSize minimumSize()
+// Public virtual Visibility=Default Availability=Available
+// [8] QSize minimumSize()
 func (this *QStackedLayout) MinimumSize() *qtcore.QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK14QStackedLayout11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:87
 // index:0
-// Public virtual
-// QLayoutItem * itemAt(int)
+// Public virtual Visibility=Default Availability=Available
+// [8] QLayoutItem * itemAt(int)
 func (this *QStackedLayout) ItemAt(arg0 int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout6itemAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -275,8 +268,8 @@ func (this *QStackedLayout) ItemAt(arg0 int) *QLayoutItem /*777 QLayoutItem **/ 
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:88
 // index:0
-// Public virtual
-// QLayoutItem * takeAt(int)
+// Public virtual Visibility=Default Availability=Available
+// [8] QLayoutItem * takeAt(int)
 func (this *QStackedLayout) TakeAt(arg0 int) *QLayoutItem /*777 QLayoutItem **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout6takeAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -287,8 +280,8 @@ func (this *QStackedLayout) TakeAt(arg0 int) *QLayoutItem /*777 QLayoutItem **/ 
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:89
 // index:0
-// Public virtual
-// void setGeometry(const QRect &)
+// Public virtual Visibility=Default Availability=Available
+// [-2] void setGeometry(const QRect &)
 func (this *QStackedLayout) SetGeometry(rect *qtcore.QRect) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout11setGeometryERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -297,8 +290,8 @@ func (this *QStackedLayout) SetGeometry(rect *qtcore.QRect) {
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:90
 // index:0
-// Public virtual
-// bool hasHeightForWidth()
+// Public virtual Visibility=Default Availability=Available
+// [1] bool hasHeightForWidth()
 func (this *QStackedLayout) HasHeightForWidth() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout17hasHeightForWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -308,8 +301,8 @@ func (this *QStackedLayout) HasHeightForWidth() bool {
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:91
 // index:0
-// Public virtual
-// int heightForWidth(int)
+// Public virtual Visibility=Default Availability=Available
+// [4] int heightForWidth(int)
 func (this *QStackedLayout) HeightForWidth(width int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStackedLayout14heightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	gopp.ErrPrint(err, rv)
@@ -319,8 +312,8 @@ func (this *QStackedLayout) HeightForWidth(width int) int {
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:94
 // index:0
-// Public
-// void widgetRemoved(int)
+// Public Visibility=Default Availability=Available
+// [-2] void widgetRemoved(int)
 func (this *QStackedLayout) WidgetRemoved(index int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout13widgetRemovedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
@@ -328,8 +321,8 @@ func (this *QStackedLayout) WidgetRemoved(index int) {
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:95
 // index:0
-// Public
-// void currentChanged(int)
+// Public Visibility=Default Availability=Available
+// [-2] void currentChanged(int)
 func (this *QStackedLayout) CurrentChanged(index int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout14currentChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
@@ -337,8 +330,8 @@ func (this *QStackedLayout) CurrentChanged(index int) {
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:98
 // index:0
-// Public
-// void setCurrentIndex(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setCurrentIndex(int)
 func (this *QStackedLayout) SetCurrentIndex(index int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout15setCurrentIndexEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
@@ -346,8 +339,8 @@ func (this *QStackedLayout) SetCurrentIndex(index int) {
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:99
 // index:0
-// Public
-// void setCurrentWidget(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void setCurrentWidget(QWidget *)
 func (this *QStackedLayout) SetCurrentWidget(w *QWidget /*777 QWidget **/) {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayout16setCurrentWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

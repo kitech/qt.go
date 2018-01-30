@@ -71,8 +71,8 @@ func (*QGenericPluginFactory) NewFromPointer(cthis unsafe.Pointer) *QGenericPlug
 
 // /usr/include/qt/QtGui/qgenericpluginfactory.h:56
 // index:0
-// Public static
-// QObject * create(const QString &, const QString &)
+// Public static Visibility=Default Availability=Available
+// [8] QObject * create(const QString &, const QString &)
 func (this *QGenericPluginFactory) Create(arg0 *qtcore.QString, arg1 *qtcore.QString) *qtcore.QObject /*777 QObject **/ {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()

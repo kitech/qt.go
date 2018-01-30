@@ -71,20 +71,19 @@ func (*QDnsDomainNameRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsDomainNam
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:63
 // index:0
-// Public
-// void QDnsDomainNameRecord()
+// Public Visibility=Default Availability=Available
+// [-2] void QDnsDomainNameRecord()
 func NewQDnsDomainNameRecord() *QDnsDomainNameRecord {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QDnsDomainNameRecordC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QDnsDomainNameRecordC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQDnsDomainNameRecordFromPointer(cthis)
+	gothis := NewQDnsDomainNameRecordFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:69
 // index:0
-// Public
-// void ~QDnsDomainNameRecord()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QDnsDomainNameRecord()
 func DeleteQDnsDomainNameRecord(*QDnsDomainNameRecord) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QDnsDomainNameRecordD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -92,8 +91,8 @@ func DeleteQDnsDomainNameRecord(*QDnsDomainNameRecord) {
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:71
 // index:0
-// Public inline
-// void swap(QDnsDomainNameRecord &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QDnsDomainNameRecord &)
 func (this *QDnsDomainNameRecord) Swap(other *QDnsDomainNameRecord) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QDnsDomainNameRecord4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -102,22 +101,20 @@ func (this *QDnsDomainNameRecord) Swap(other *QDnsDomainNameRecord) {
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:73
 // index:0
-// Public
-// QString name()
+// Public Visibility=Default Availability=Available
+// [8] QString name()
 func (this *QDnsDomainNameRecord) Name() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QDnsDomainNameRecord4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QDnsDomainNameRecord4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:74
 // index:0
-// Public
-// quint32 timeToLive()
+// Public Visibility=Default Availability=Available
+// [4] quint32 timeToLive()
 func (this *QDnsDomainNameRecord) TimeToLive() uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QDnsDomainNameRecord10timeToLiveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -127,14 +124,12 @@ func (this *QDnsDomainNameRecord) TimeToLive() uint {
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:75
 // index:0
-// Public
-// QString value()
+// Public Visibility=Default Availability=Available
+// [8] QString value()
 func (this *QDnsDomainNameRecord) Value() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QDnsDomainNameRecord5valueEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QDnsDomainNameRecord5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

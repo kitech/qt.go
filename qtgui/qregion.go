@@ -71,71 +71,66 @@ func (*QRegion) NewFromPointer(cthis unsafe.Pointer) *QRegion {
 
 // /usr/include/qt/QtGui/qregion.h:67
 // index:0
-// Public
-// void QRegion()
+// Public Visibility=Default Availability=Available
+// [-2] void QRegion()
 func NewQRegion() *QRegion {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQRegionFromPointer(cthis)
+	gothis := NewQRegionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qregion.h:68
 // index:1
-// Public
-// void QRegion(int, int, int, int, enum QRegion::RegionType)
+// Public Visibility=Default Availability=Available
+// [-2] void QRegion(int, int, int, int, enum QRegion::RegionType)
 func NewQRegion_1(x int, y int, w int, h int, t int) *QRegion {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2EiiiiNS_10RegionTypeE", ffiqt.FFI_TYPE_VOID, cthis, x, y, w, h, t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2EiiiiNS_10RegionTypeE", ffiqt.FFI_TYPE_POINTER, x, y, w, h, t)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQRegionFromPointer(cthis)
+	gothis := NewQRegionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qregion.h:69
 // index:2
-// Public
-// void QRegion(const QRect &, enum QRegion::RegionType)
+// Public Visibility=Default Availability=Available
+// [-2] void QRegion(const QRect &, enum QRegion::RegionType)
 func NewQRegion_2(r *qtcore.QRect, t int) *QRegion {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2ERK5QRectNS_10RegionTypeE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, t)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2ERK5QRectNS_10RegionTypeE", ffiqt.FFI_TYPE_POINTER, convArg0, t)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQRegionFromPointer(cthis)
+	gothis := NewQRegionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qregion.h:70
 // index:3
-// Public
-// void QRegion(const QPolygon &, Qt::FillRule)
+// Public Visibility=Default Availability=Available
+// [-2] void QRegion(const QPolygon &, Qt::FillRule)
 func NewQRegion_3(pa *QPolygon, fillRule int) *QRegion {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = pa.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2ERK8QPolygonN2Qt8FillRuleE", ffiqt.FFI_TYPE_VOID, cthis, convArg0, fillRule)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2ERK8QPolygonN2Qt8FillRuleE", ffiqt.FFI_TYPE_POINTER, convArg0, fillRule)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQRegionFromPointer(cthis)
+	gothis := NewQRegionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qregion.h:74
 // index:4
-// Public
-// void QRegion(const QBitmap &)
+// Public Visibility=Default Availability=Available
+// [-2] void QRegion(const QBitmap &)
 func NewQRegion_4(bitmap *QBitmap) *QRegion {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = bitmap.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2ERK7QBitmap", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2ERK7QBitmap", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQRegionFromPointer(cthis)
+	gothis := NewQRegionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qregion.h:75
 // index:0
-// Public
-// void ~QRegion()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QRegion()
 func DeleteQRegion(*QRegion) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -143,8 +138,8 @@ func DeleteQRegion(*QRegion) {
 
 // /usr/include/qt/QtGui/qregion.h:81
 // index:0
-// Public inline
-// void swap(QRegion &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QRegion &)
 func (this *QRegion) Swap(other *QRegion) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegion4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -153,8 +148,8 @@ func (this *QRegion) Swap(other *QRegion) {
 
 // /usr/include/qt/QtGui/qregion.h:82
 // index:0
-// Public
-// bool isEmpty()
+// Public Visibility=Default Availability=Available
+// [1] bool isEmpty()
 func (this *QRegion) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -164,8 +159,8 @@ func (this *QRegion) IsEmpty() bool {
 
 // /usr/include/qt/QtGui/qregion.h:83
 // index:0
-// Public
-// bool isNull()
+// Public Visibility=Default Availability=Available
+// [1] bool isNull()
 func (this *QRegion) IsNull() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -175,8 +170,8 @@ func (this *QRegion) IsNull() bool {
 
 // /usr/include/qt/QtGui/qregion.h:88
 // index:0
-// Public
-// QRegion::const_iterator begin()
+// Public Visibility=Default Availability=Available
+// [8] QRegion::const_iterator begin()
 func (this *QRegion) Begin() *qtcore.QRect /*777 const QRect **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion5beginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -187,8 +182,8 @@ func (this *QRegion) Begin() *qtcore.QRect /*777 const QRect **/ {
 
 // /usr/include/qt/QtGui/qregion.h:89
 // index:0
-// Public inline
-// QRegion::const_iterator cbegin()
+// Public inline Visibility=Default Availability=Available
+// [8] QRegion::const_iterator cbegin()
 func (this *QRegion) Cbegin() *qtcore.QRect /*777 const QRect **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion6cbeginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -199,8 +194,8 @@ func (this *QRegion) Cbegin() *qtcore.QRect /*777 const QRect **/ {
 
 // /usr/include/qt/QtGui/qregion.h:90
 // index:0
-// Public
-// QRegion::const_iterator end()
+// Public Visibility=Default Availability=Available
+// [8] QRegion::const_iterator end()
 func (this *QRegion) End() *qtcore.QRect /*777 const QRect **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -211,8 +206,8 @@ func (this *QRegion) End() *qtcore.QRect /*777 const QRect **/ {
 
 // /usr/include/qt/QtGui/qregion.h:91
 // index:0
-// Public inline
-// QRegion::const_iterator cend()
+// Public inline Visibility=Default Availability=Available
+// [8] QRegion::const_iterator cend()
 func (this *QRegion) Cend() *qtcore.QRect /*777 const QRect **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion4cendEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -223,8 +218,8 @@ func (this *QRegion) Cend() *qtcore.QRect /*777 const QRect **/ {
 
 // /usr/include/qt/QtGui/qregion.h:97
 // index:0
-// Public
-// bool contains(const QPoint &)
+// Public Visibility=Default Availability=Available
+// [1] bool contains(const QPoint &)
 func (this *QRegion) Contains(p *qtcore.QPoint) bool {
 	var convArg0 = p.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion8containsERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -235,8 +230,8 @@ func (this *QRegion) Contains(p *qtcore.QPoint) bool {
 
 // /usr/include/qt/QtGui/qregion.h:98
 // index:1
-// Public
-// bool contains(const QRect &)
+// Public Visibility=Default Availability=Available
+// [1] bool contains(const QRect &)
 func (this *QRegion) Contains_1(r *qtcore.QRect) bool {
 	var convArg0 = r.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion8containsERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -247,8 +242,8 @@ func (this *QRegion) Contains_1(r *qtcore.QRect) bool {
 
 // /usr/include/qt/QtGui/qregion.h:100
 // index:0
-// Public
-// void translate(int, int)
+// Public Visibility=Default Availability=Available
+// [-2] void translate(int, int)
 func (this *QRegion) Translate(dx int, dy int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegion9translateEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
@@ -256,8 +251,8 @@ func (this *QRegion) Translate(dx int, dy int) {
 
 // /usr/include/qt/QtGui/qregion.h:101
 // index:1
-// Public inline
-// void translate(const QPoint &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void translate(const QPoint &)
 func (this *QRegion) Translate_1(p *qtcore.QPoint) {
 	var convArg0 = p.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegion9translateERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -266,127 +261,111 @@ func (this *QRegion) Translate_1(p *qtcore.QPoint) {
 
 // /usr/include/qt/QtGui/qregion.h:102
 // index:0
-// Public
-// QRegion translated(int, int)
+// Public Visibility=Default Availability=Available
+// [8] QRegion translated(int, int)
 func (this *QRegion) Translated(dx int, dy int) *QRegion /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10translatedEii", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), dx, dy)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10translatedEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qregion.h:103
 // index:1
-// Public inline
-// QRegion translated(const QPoint &)
+// Public inline Visibility=Default Availability=Available
+// [8] QRegion translated(const QPoint &)
 func (this *QRegion) Translated_1(p *qtcore.QPoint) *QRegion /*123*/ {
 	var convArg0 = p.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10translatedERK6QPoint", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10translatedERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qregion.h:105
 // index:0
-// Public
-// QRegion united(const QRegion &)
+// Public Visibility=Default Availability=Available
+// [8] QRegion united(const QRegion &)
 func (this *QRegion) United(r *QRegion) *QRegion /*123*/ {
 	var convArg0 = r.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion6unitedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion6unitedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qregion.h:106
 // index:1
-// Public
-// QRegion united(const QRect &)
+// Public Visibility=Default Availability=Available
+// [8] QRegion united(const QRect &)
 func (this *QRegion) United_1(r *qtcore.QRect) *QRegion /*123*/ {
 	var convArg0 = r.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion6unitedERK5QRect", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion6unitedERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qregion.h:107
 // index:0
-// Public
-// QRegion intersected(const QRegion &)
+// Public Visibility=Default Availability=Available
+// [8] QRegion intersected(const QRegion &)
 func (this *QRegion) Intersected(r *QRegion) *QRegion /*123*/ {
 	var convArg0 = r.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion11intersectedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qregion.h:108
 // index:1
-// Public
-// QRegion intersected(const QRect &)
+// Public Visibility=Default Availability=Available
+// [8] QRegion intersected(const QRect &)
 func (this *QRegion) Intersected_1(r *qtcore.QRect) *QRegion /*123*/ {
 	var convArg0 = r.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion11intersectedERK5QRect", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion11intersectedERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qregion.h:109
 // index:0
-// Public
-// QRegion subtracted(const QRegion &)
+// Public Visibility=Default Availability=Available
+// [8] QRegion subtracted(const QRegion &)
 func (this *QRegion) Subtracted(r *QRegion) *QRegion /*123*/ {
 	var convArg0 = r.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10subtractedERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10subtractedERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qregion.h:110
 // index:0
-// Public
-// QRegion xored(const QRegion &)
+// Public Visibility=Default Availability=Available
+// [8] QRegion xored(const QRegion &)
 func (this *QRegion) Xored(r *QRegion) *QRegion /*123*/ {
 	var convArg0 = r.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion5xoredERKS_", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion5xoredERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qregion.h:121
 // index:0
-// Public
-// bool intersects(const QRegion &)
+// Public Visibility=Default Availability=Available
+// [1] bool intersects(const QRegion &)
 func (this *QRegion) Intersects(r *QRegion) bool {
 	var convArg0 = r.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10intersectsERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -397,8 +376,8 @@ func (this *QRegion) Intersects(r *QRegion) bool {
 
 // /usr/include/qt/QtGui/qregion.h:122
 // index:1
-// Public
-// bool intersects(const QRect &)
+// Public Visibility=Default Availability=Available
+// [1] bool intersects(const QRect &)
 func (this *QRegion) Intersects_1(r *qtcore.QRect) bool {
 	var convArg0 = r.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion10intersectsERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -409,22 +388,20 @@ func (this *QRegion) Intersects_1(r *qtcore.QRect) bool {
 
 // /usr/include/qt/QtGui/qregion.h:124
 // index:0
-// Public
-// QRect boundingRect()
+// Public Visibility=Default Availability=Available
+// [16] QRect boundingRect()
 func (this *QRegion) BoundingRect() *qtcore.QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion12boundingRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion12boundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qregion.h:126
 // index:0
-// Public
-// void setRects(const QRect *, int)
+// Public Visibility=Default Availability=Available
+// [-2] void setRects(const QRect *, int)
 func (this *QRegion) SetRects(rect *qtcore.QRect /*777 const QRect **/, num int) {
 	var convArg0 = rect.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegion8setRectsEPK5QRecti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, num)
@@ -433,8 +410,8 @@ func (this *QRegion) SetRects(rect *qtcore.QRect /*777 const QRect **/, num int)
 
 // /usr/include/qt/QtGui/qregion.h:127
 // index:0
-// Public
-// int rectCount()
+// Public Visibility=Default Availability=Available
+// [4] int rectCount()
 func (this *QRegion) RectCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QRegion9rectCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

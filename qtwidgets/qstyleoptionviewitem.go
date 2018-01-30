@@ -76,25 +76,23 @@ func (*QStyleOptionViewItem) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionV
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:442
 // index:0
-// Public
-// void QStyleOptionViewItem()
+// Public Visibility=Default Availability=Available
+// [-2] void QStyleOptionViewItem()
 func NewQStyleOptionViewItem() *QStyleOptionViewItem {
-	cthis := qtrt.Calloc(1, 256) // 192
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionViewItemC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionViewItemC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionViewItemFromPointer(cthis)
+	gothis := NewQStyleOptionViewItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:446
 // index:1
-// Protected
-// void QStyleOptionViewItem(int)
+// Protected Visibility=Default Availability=Available
+// [-2] void QStyleOptionViewItem(int)
 func NewQStyleOptionViewItem_1(version int) *QStyleOptionViewItem {
-	cthis := qtrt.Calloc(1, 256) // 192
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionViewItemC2Ei", ffiqt.FFI_TYPE_VOID, cthis, version)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionViewItemC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStyleOptionViewItemFromPointer(cthis)
+	gothis := NewQStyleOptionViewItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 

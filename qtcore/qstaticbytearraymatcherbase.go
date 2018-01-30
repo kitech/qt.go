@@ -67,22 +67,21 @@ func (*QStaticByteArrayMatcherBase) NewFromPointer(cthis unsafe.Pointer) *QStati
 
 // /usr/include/qt/QtCore/qbytearraymatcher.h:93
 // index:0
-// Protected inline
-// void QStaticByteArrayMatcherBase(const char *, uint)
+// Protected inline Visibility=Default Availability=Available
+// [-2] void QStaticByteArrayMatcherBase(const char *, uint)
 func NewQStaticByteArrayMatcherBase(pattern string, n uint) *QStaticByteArrayMatcherBase {
-	cthis := qtrt.Calloc(1, 256) // 256
 	var convArg0 = qtrt.CString(pattern)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QStaticByteArrayMatcherBaseC2EPKcj", ffiqt.FFI_TYPE_VOID, cthis, convArg0, n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QStaticByteArrayMatcherBaseC2EPKcj", ffiqt.FFI_TYPE_POINTER, convArg0, n)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStaticByteArrayMatcherBaseFromPointer(cthis)
+	gothis := NewQStaticByteArrayMatcherBaseFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qbytearraymatcher.h:98
 // index:0
-// Protected
-// int indexOfIn(const char *, uint, const char *, int, int)
+// Protected Visibility=Default Availability=Available
+// [4] int indexOfIn(const char *, uint, const char *, int, int)
 func (this *QStaticByteArrayMatcherBase) IndexOfIn(needle string, nlen uint, haystack string, hlen int, from int) int {
 	var convArg0 = qtrt.CString(needle)
 	defer qtrt.FreeMem(convArg0)

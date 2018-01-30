@@ -67,21 +67,20 @@ func (*QMutexLocker) NewFromPointer(cthis unsafe.Pointer) *QMutexLocker {
 
 // /usr/include/qt/QtCore/qmutex.h:199
 // index:0
-// Public inline
-// void QMutexLocker(QBasicMutex *)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QMutexLocker(QBasicMutex *)
 func NewQMutexLocker(m *QBasicMutex /*777 QBasicMutex **/) *QMutexLocker {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = m.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMutexLockerC2EP11QBasicMutex", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMutexLockerC2EP11QBasicMutex", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQMutexLockerFromPointer(cthis)
+	gothis := NewQMutexLockerFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qmutex.h:213
 // index:0
-// Public inline
-// void ~QMutexLocker()
+// Public inline Visibility=Default Availability=Available
+// [-2] void ~QMutexLocker()
 func DeleteQMutexLocker(*QMutexLocker) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMutexLockerD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -89,8 +88,8 @@ func DeleteQMutexLocker(*QMutexLocker) {
 
 // /usr/include/qt/QtCore/qmutex.h:215
 // index:0
-// Public inline
-// void unlock()
+// Public inline Visibility=Default Availability=Available
+// [-2] void unlock()
 func (this *QMutexLocker) Unlock() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMutexLocker6unlockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -98,8 +97,8 @@ func (this *QMutexLocker) Unlock() {
 
 // /usr/include/qt/QtCore/qmutex.h:223
 // index:0
-// Public inline
-// void relock()
+// Public inline Visibility=Default Availability=Available
+// [-2] void relock()
 func (this *QMutexLocker) Relock() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMutexLocker6relockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -107,8 +106,8 @@ func (this *QMutexLocker) Relock() {
 
 // /usr/include/qt/QtCore/qmutex.h:238
 // index:0
-// Public inline
-// QMutex * mutex()
+// Public inline Visibility=Default Availability=Available
+// [8] QMutex * mutex()
 func (this *QMutexLocker) Mutex() *QMutex /*777 QMutex **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QMutexLocker5mutexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

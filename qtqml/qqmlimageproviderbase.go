@@ -75,8 +75,8 @@ func (*QQmlImageProviderBase) NewFromPointer(cthis unsafe.Pointer) *QQmlImagePro
 
 // /usr/include/qt/QtQml/qqmlengine.h:72
 // index:0
-// Public virtual
-// void ~QQmlImageProviderBase()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QQmlImageProviderBase()
 func DeleteQQmlImageProviderBase(*QQmlImageProviderBase) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QQmlImageProviderBaseD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -84,8 +84,8 @@ func DeleteQQmlImageProviderBase(*QQmlImageProviderBase) {
 
 // /usr/include/qt/QtQml/qqmlengine.h:74
 // index:0
-// Public pure virtual
-// QQmlImageProviderBase::ImageType imageType()
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [4] QQmlImageProviderBase::ImageType imageType()
 func (this *QQmlImageProviderBase) ImageType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QQmlImageProviderBase9imageTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -95,8 +95,8 @@ func (this *QQmlImageProviderBase) ImageType() int {
 
 // /usr/include/qt/QtQml/qqmlengine.h:75
 // index:0
-// Public pure virtual
-// QQmlImageProviderBase::Flags flags()
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [4] QQmlImageProviderBase::Flags flags()
 func (this *QQmlImageProviderBase) Flags() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QQmlImageProviderBase5flagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

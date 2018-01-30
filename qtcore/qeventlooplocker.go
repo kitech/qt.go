@@ -67,46 +67,43 @@ func (*QEventLoopLocker) NewFromPointer(cthis unsafe.Pointer) *QEventLoopLocker 
 
 // /usr/include/qt/QtCore/qeventloop.h:93
 // index:0
-// Public
-// void QEventLoopLocker()
+// Public Visibility=Default Availability=Available
+// [-2] void QEventLoopLocker()
 func NewQEventLoopLocker() *QEventLoopLocker {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQEventLoopLockerFromPointer(cthis)
+	gothis := NewQEventLoopLockerFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qeventloop.h:94
 // index:1
-// Public
-// void QEventLoopLocker(QEventLoop *)
+// Public Visibility=Default Availability=Available
+// [-2] void QEventLoopLocker(QEventLoop *)
 func NewQEventLoopLocker_1(loop *QEventLoop /*777 QEventLoop **/) *QEventLoopLocker {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = loop.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP10QEventLoop", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP10QEventLoop", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQEventLoopLockerFromPointer(cthis)
+	gothis := NewQEventLoopLockerFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qeventloop.h:95
 // index:2
-// Public
-// void QEventLoopLocker(QThread *)
+// Public Visibility=Default Availability=Available
+// [-2] void QEventLoopLocker(QThread *)
 func NewQEventLoopLocker_2(thread *QThread /*777 QThread **/) *QEventLoopLocker {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = thread.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP7QThread", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP7QThread", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQEventLoopLockerFromPointer(cthis)
+	gothis := NewQEventLoopLockerFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qeventloop.h:96
 // index:0
-// Public
-// void ~QEventLoopLocker()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QEventLoopLocker()
 func DeleteQEventLoopLocker(*QEventLoopLocker) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)

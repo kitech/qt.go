@@ -76,8 +76,8 @@ func (*QVBoxLayout) NewFromPointer(cthis unsafe.Pointer) *QVBoxLayout {
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:128
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QVBoxLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QVBoxLayout10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,33 +88,31 @@ func (this *QVBoxLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:130
 // index:0
-// Public
-// void QVBoxLayout()
+// Public Visibility=Default Availability=Available
+// [-2] void QVBoxLayout()
 func NewQVBoxLayout() *QVBoxLayout {
-	cthis := qtrt.Calloc(1, 256) // 32
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QVBoxLayoutC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QVBoxLayoutC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVBoxLayoutFromPointer(cthis)
+	gothis := NewQVBoxLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:131
 // index:1
-// Public
-// void QVBoxLayout(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void QVBoxLayout(QWidget *)
 func NewQVBoxLayout_1(parent *QWidget /*777 QWidget **/) *QVBoxLayout {
-	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QVBoxLayoutC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QVBoxLayoutC2EP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQVBoxLayoutFromPointer(cthis)
+	gothis := NewQVBoxLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:132
 // index:0
-// Public virtual
-// void ~QVBoxLayout()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QVBoxLayout()
 func DeleteQVBoxLayout(*QVBoxLayout) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QVBoxLayoutD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)

@@ -71,20 +71,19 @@ func (*QImageIOHandler) NewFromPointer(cthis unsafe.Pointer) *QImageIOHandler {
 
 // /usr/include/qt/QtGui/qimageiohandler.h:62
 // index:0
-// Public
-// void QImageIOHandler()
+// Public Visibility=Default Availability=Available
+// [-2] void QImageIOHandler()
 func NewQImageIOHandler() *QImageIOHandler {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandlerC1Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandlerC1Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQImageIOHandlerFromPointer(cthis)
+	gothis := NewQImageIOHandlerFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:63
 // index:0
-// Public virtual
-// void ~QImageIOHandler()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QImageIOHandler()
 func DeleteQImageIOHandler(*QImageIOHandler) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandlerD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -92,8 +91,8 @@ func DeleteQImageIOHandler(*QImageIOHandler) {
 
 // /usr/include/qt/QtGui/qimageiohandler.h:65
 // index:0
-// Public
-// void setDevice(QIODevice *)
+// Public Visibility=Default Availability=Available
+// [-2] void setDevice(QIODevice *)
 func (this *QImageIOHandler) SetDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -102,8 +101,8 @@ func (this *QImageIOHandler) SetDevice(device *qtcore.QIODevice /*777 QIODevice 
 
 // /usr/include/qt/QtGui/qimageiohandler.h:66
 // index:0
-// Public
-// QIODevice * device()
+// Public Visibility=Default Availability=Available
+// [8] QIODevice * device()
 func (this *QImageIOHandler) Device() *qtcore.QIODevice /*777 QIODevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -114,8 +113,8 @@ func (this *QImageIOHandler) Device() *qtcore.QIODevice /*777 QIODevice **/ {
 
 // /usr/include/qt/QtGui/qimageiohandler.h:68
 // index:0
-// Public
-// void setFormat(const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void setFormat(const QByteArray &)
 func (this *QImageIOHandler) SetFormat(format *qtcore.QByteArray) {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler9setFormatERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -124,8 +123,8 @@ func (this *QImageIOHandler) SetFormat(format *qtcore.QByteArray) {
 
 // /usr/include/qt/QtGui/qimageiohandler.h:69
 // index:1
-// Public
-// void setFormat(const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void setFormat(const QByteArray &)
 func (this *QImageIOHandler) SetFormat_1(format *qtcore.QByteArray) {
 	var convArg0 = format.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler9setFormatERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -134,36 +133,32 @@ func (this *QImageIOHandler) SetFormat_1(format *qtcore.QByteArray) {
 
 // /usr/include/qt/QtGui/qimageiohandler.h:70
 // index:0
-// Public
-// QByteArray format()
+// Public Visibility=Default Availability=Available
+// [8] QByteArray format()
 func (this *QImageIOHandler) Format() *qtcore.QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler6formatEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:72
 // index:0
-// Public virtual
-// QByteArray name()
+// Public virtual Visibility=Default Availability=Available
+// [8] QByteArray name()
 func (this *QImageIOHandler) Name() *qtcore.QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:74
 // index:0
-// Public pure virtual
-// bool canRead()
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [1] bool canRead()
 func (this *QImageIOHandler) CanRead() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler7canReadEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -173,8 +168,8 @@ func (this *QImageIOHandler) CanRead() bool {
 
 // /usr/include/qt/QtGui/qimageiohandler.h:75
 // index:0
-// Public pure virtual
-// bool read(QImage *)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [1] bool read(QImage *)
 func (this *QImageIOHandler) Read(image *QImage /*777 QImage **/) bool {
 	var convArg0 = image.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler4readEP6QImage", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -185,8 +180,8 @@ func (this *QImageIOHandler) Read(image *QImage /*777 QImage **/) bool {
 
 // /usr/include/qt/QtGui/qimageiohandler.h:76
 // index:0
-// Public virtual
-// bool write(const QImage &)
+// Public virtual Visibility=Default Availability=Available
+// [1] bool write(const QImage &)
 func (this *QImageIOHandler) Write(image *QImage) bool {
 	var convArg0 = image.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler5writeERK6QImage", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -197,22 +192,20 @@ func (this *QImageIOHandler) Write(image *QImage) bool {
 
 // /usr/include/qt/QtGui/qimageiohandler.h:115
 // index:0
-// Public virtual
-// QVariant option(enum QImageIOHandler::ImageOption)
+// Public virtual Visibility=Default Availability=Available
+// [16] QVariant option(enum QImageIOHandler::ImageOption)
 func (this *QImageIOHandler) Option(option int) *qtcore.QVariant /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler6optionENS_11ImageOptionE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), option)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler6optionENS_11ImageOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:116
 // index:0
-// Public virtual
-// void setOption(enum QImageIOHandler::ImageOption, const QVariant &)
+// Public virtual Visibility=Default Availability=Available
+// [-2] void setOption(enum QImageIOHandler::ImageOption, const QVariant &)
 func (this *QImageIOHandler) SetOption(option int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler9setOptionENS_11ImageOptionERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, convArg1)
@@ -221,8 +214,8 @@ func (this *QImageIOHandler) SetOption(option int, value *qtcore.QVariant) {
 
 // /usr/include/qt/QtGui/qimageiohandler.h:117
 // index:0
-// Public virtual
-// bool supportsOption(enum QImageIOHandler::ImageOption)
+// Public virtual Visibility=Default Availability=Available
+// [1] bool supportsOption(enum QImageIOHandler::ImageOption)
 func (this *QImageIOHandler) SupportsOption(option int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler14supportsOptionENS_11ImageOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
@@ -232,8 +225,8 @@ func (this *QImageIOHandler) SupportsOption(option int) bool {
 
 // /usr/include/qt/QtGui/qimageiohandler.h:120
 // index:0
-// Public virtual
-// bool jumpToNextImage()
+// Public virtual Visibility=Default Availability=Available
+// [1] bool jumpToNextImage()
 func (this *QImageIOHandler) JumpToNextImage() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler15jumpToNextImageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -243,8 +236,8 @@ func (this *QImageIOHandler) JumpToNextImage() bool {
 
 // /usr/include/qt/QtGui/qimageiohandler.h:121
 // index:0
-// Public virtual
-// bool jumpToImage(int)
+// Public virtual Visibility=Default Availability=Available
+// [1] bool jumpToImage(int)
 func (this *QImageIOHandler) JumpToImage(imageNumber int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandler11jumpToImageEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), imageNumber)
 	gopp.ErrPrint(err, rv)
@@ -254,8 +247,8 @@ func (this *QImageIOHandler) JumpToImage(imageNumber int) bool {
 
 // /usr/include/qt/QtGui/qimageiohandler.h:122
 // index:0
-// Public virtual
-// int loopCount()
+// Public virtual Visibility=Default Availability=Available
+// [4] int loopCount()
 func (this *QImageIOHandler) LoopCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler9loopCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -265,8 +258,8 @@ func (this *QImageIOHandler) LoopCount() int {
 
 // /usr/include/qt/QtGui/qimageiohandler.h:123
 // index:0
-// Public virtual
-// int imageCount()
+// Public virtual Visibility=Default Availability=Available
+// [4] int imageCount()
 func (this *QImageIOHandler) ImageCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler10imageCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -276,8 +269,8 @@ func (this *QImageIOHandler) ImageCount() int {
 
 // /usr/include/qt/QtGui/qimageiohandler.h:124
 // index:0
-// Public virtual
-// int nextImageDelay()
+// Public virtual Visibility=Default Availability=Available
+// [4] int nextImageDelay()
 func (this *QImageIOHandler) NextImageDelay() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler14nextImageDelayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -287,8 +280,8 @@ func (this *QImageIOHandler) NextImageDelay() int {
 
 // /usr/include/qt/QtGui/qimageiohandler.h:125
 // index:0
-// Public virtual
-// int currentImageNumber()
+// Public virtual Visibility=Default Availability=Available
+// [4] int currentImageNumber()
 func (this *QImageIOHandler) CurrentImageNumber() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler18currentImageNumberEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -298,14 +291,12 @@ func (this *QImageIOHandler) CurrentImageNumber() int {
 
 // /usr/include/qt/QtGui/qimageiohandler.h:126
 // index:0
-// Public virtual
-// QRect currentImageRect()
+// Public virtual Visibility=Default Availability=Available
+// [16] QRect currentImageRect()
 func (this *QImageIOHandler) CurrentImageRect() *qtcore.QRect /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler16currentImageRectEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QImageIOHandler16currentImageRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

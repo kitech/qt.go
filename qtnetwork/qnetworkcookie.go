@@ -71,22 +71,21 @@ func (*QNetworkCookie) NewFromPointer(cthis unsafe.Pointer) *QNetworkCookie {
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:66
 // index:0
-// Public
-// void QNetworkCookie(const QByteArray &, const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void QNetworkCookie(const QByteArray &, const QByteArray &)
 func NewQNetworkCookie(name *qtcore.QByteArray, value *qtcore.QByteArray) *QNetworkCookie {
-	cthis := qtrt.Calloc(1, 256) // 8
 	var convArg0 = name.GetCthis()
 	var convArg1 = value.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QNetworkCookieC2ERK10QByteArrayS2_", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QNetworkCookieC2ERK10QByteArrayS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQNetworkCookieFromPointer(cthis)
+	gothis := NewQNetworkCookieFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:68
 // index:0
-// Public
-// void ~QNetworkCookie()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QNetworkCookie()
 func DeleteQNetworkCookie(*QNetworkCookie) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QNetworkCookieD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -94,8 +93,8 @@ func DeleteQNetworkCookie(*QNetworkCookie) {
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:74
 // index:0
-// Public inline
-// void swap(QNetworkCookie &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QNetworkCookie &)
 func (this *QNetworkCookie) Swap(other *QNetworkCookie) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QNetworkCookie4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -104,8 +103,8 @@ func (this *QNetworkCookie) Swap(other *QNetworkCookie) {
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:80
 // index:0
-// Public
-// bool isSecure()
+// Public Visibility=Default Availability=Available
+// [1] bool isSecure()
 func (this *QNetworkCookie) IsSecure() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QNetworkCookie8isSecureEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -115,8 +114,8 @@ func (this *QNetworkCookie) IsSecure() bool {
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:81
 // index:0
-// Public
-// void setSecure(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setSecure(_Bool)
 func (this *QNetworkCookie) SetSecure(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QNetworkCookie9setSecureEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -124,8 +123,8 @@ func (this *QNetworkCookie) SetSecure(enable bool) {
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:82
 // index:0
-// Public
-// bool isHttpOnly()
+// Public Visibility=Default Availability=Available
+// [1] bool isHttpOnly()
 func (this *QNetworkCookie) IsHttpOnly() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QNetworkCookie10isHttpOnlyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -135,8 +134,8 @@ func (this *QNetworkCookie) IsHttpOnly() bool {
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:83
 // index:0
-// Public
-// void setHttpOnly(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setHttpOnly(_Bool)
 func (this *QNetworkCookie) SetHttpOnly(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QNetworkCookie11setHttpOnlyEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
@@ -144,8 +143,8 @@ func (this *QNetworkCookie) SetHttpOnly(enable bool) {
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:85
 // index:0
-// Public
-// bool isSessionCookie()
+// Public Visibility=Default Availability=Available
+// [1] bool isSessionCookie()
 func (this *QNetworkCookie) IsSessionCookie() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QNetworkCookie15isSessionCookieEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -155,22 +154,20 @@ func (this *QNetworkCookie) IsSessionCookie() bool {
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:86
 // index:0
-// Public
-// QDateTime expirationDate()
+// Public Visibility=Default Availability=Available
+// [8] QDateTime expirationDate()
 func (this *QNetworkCookie) ExpirationDate() *qtcore.QDateTime /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QNetworkCookie14expirationDateEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QNetworkCookie14expirationDateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:87
 // index:0
-// Public
-// void setExpirationDate(const QDateTime &)
+// Public Visibility=Default Availability=Available
+// [-2] void setExpirationDate(const QDateTime &)
 func (this *QNetworkCookie) SetExpirationDate(date *qtcore.QDateTime) {
 	var convArg0 = date.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QNetworkCookie17setExpirationDateERK9QDateTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -179,22 +176,20 @@ func (this *QNetworkCookie) SetExpirationDate(date *qtcore.QDateTime) {
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:89
 // index:0
-// Public
-// QString domain()
+// Public Visibility=Default Availability=Available
+// [8] QString domain()
 func (this *QNetworkCookie) Domain() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QNetworkCookie6domainEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QNetworkCookie6domainEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:90
 // index:0
-// Public
-// void setDomain(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void setDomain(const QString &)
 func (this *QNetworkCookie) SetDomain(domain *qtcore.QString) {
 	var convArg0 = domain.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QNetworkCookie9setDomainERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -203,22 +198,20 @@ func (this *QNetworkCookie) SetDomain(domain *qtcore.QString) {
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:92
 // index:0
-// Public
-// QString path()
+// Public Visibility=Default Availability=Available
+// [8] QString path()
 func (this *QNetworkCookie) Path() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QNetworkCookie4pathEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QNetworkCookie4pathEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:93
 // index:0
-// Public
-// void setPath(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void setPath(const QString &)
 func (this *QNetworkCookie) SetPath(path *qtcore.QString) {
 	var convArg0 = path.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QNetworkCookie7setPathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -227,22 +220,20 @@ func (this *QNetworkCookie) SetPath(path *qtcore.QString) {
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:95
 // index:0
-// Public
-// QByteArray name()
+// Public Visibility=Default Availability=Available
+// [8] QByteArray name()
 func (this *QNetworkCookie) Name() *qtcore.QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QNetworkCookie4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QNetworkCookie4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:96
 // index:0
-// Public
-// void setName(const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void setName(const QByteArray &)
 func (this *QNetworkCookie) SetName(cookieName *qtcore.QByteArray) {
 	var convArg0 = cookieName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QNetworkCookie7setNameERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -251,22 +242,20 @@ func (this *QNetworkCookie) SetName(cookieName *qtcore.QByteArray) {
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:98
 // index:0
-// Public
-// QByteArray value()
+// Public Visibility=Default Availability=Available
+// [8] QByteArray value()
 func (this *QNetworkCookie) Value() *qtcore.QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QNetworkCookie5valueEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QNetworkCookie5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:99
 // index:0
-// Public
-// void setValue(const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void setValue(const QByteArray &)
 func (this *QNetworkCookie) SetValue(value *qtcore.QByteArray) {
 	var convArg0 = value.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QNetworkCookie8setValueERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -275,22 +264,20 @@ func (this *QNetworkCookie) SetValue(value *qtcore.QByteArray) {
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:101
 // index:0
-// Public
-// QByteArray toRawForm(enum QNetworkCookie::RawForm)
+// Public Visibility=Default Availability=Available
+// [8] QByteArray toRawForm(enum QNetworkCookie::RawForm)
 func (this *QNetworkCookie) ToRawForm(form int) *qtcore.QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QNetworkCookie9toRawFormENS_7RawFormE", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), form)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QNetworkCookie9toRawFormENS_7RawFormE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), form)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:103
 // index:0
-// Public
-// bool hasSameIdentifier(const QNetworkCookie &)
+// Public Visibility=Default Availability=Available
+// [1] bool hasSameIdentifier(const QNetworkCookie &)
 func (this *QNetworkCookie) HasSameIdentifier(other *QNetworkCookie) bool {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QNetworkCookie17hasSameIdentifierERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -301,8 +288,8 @@ func (this *QNetworkCookie) HasSameIdentifier(other *QNetworkCookie) bool {
 
 // /usr/include/qt/QtNetwork/qnetworkcookie.h:104
 // index:0
-// Public
-// void normalize(const QUrl &)
+// Public Visibility=Default Availability=Available
+// [-2] void normalize(const QUrl &)
 func (this *QNetworkCookie) Normalize(url *qtcore.QUrl) {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QNetworkCookie9normalizeERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

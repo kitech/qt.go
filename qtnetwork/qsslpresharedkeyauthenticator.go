@@ -71,20 +71,19 @@ func (*QSslPreSharedKeyAuthenticator) NewFromPointer(cthis unsafe.Pointer) *QSsl
 
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:55
 // index:0
-// Public
-// void QSslPreSharedKeyAuthenticator()
+// Public Visibility=Default Availability=Available
+// [-2] void QSslPreSharedKeyAuthenticator()
 func NewQSslPreSharedKeyAuthenticator() *QSslPreSharedKeyAuthenticator {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticatorC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticatorC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSslPreSharedKeyAuthenticatorFromPointer(cthis)
+	gothis := NewQSslPreSharedKeyAuthenticatorFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:56
 // index:0
-// Public
-// void ~QSslPreSharedKeyAuthenticator()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QSslPreSharedKeyAuthenticator()
 func DeleteQSslPreSharedKeyAuthenticator(*QSslPreSharedKeyAuthenticator) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticatorD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -92,8 +91,8 @@ func DeleteQSslPreSharedKeyAuthenticator(*QSslPreSharedKeyAuthenticator) {
 
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:64
 // index:0
-// Public inline
-// void swap(QSslPreSharedKeyAuthenticator &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QSslPreSharedKeyAuthenticator &)
 func (this *QSslPreSharedKeyAuthenticator) Swap(other *QSslPreSharedKeyAuthenticator) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticator4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -102,22 +101,20 @@ func (this *QSslPreSharedKeyAuthenticator) Swap(other *QSslPreSharedKeyAuthentic
 
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:66
 // index:0
-// Public
-// QByteArray identityHint()
+// Public Visibility=Default Availability=Available
+// [8] QByteArray identityHint()
 func (this *QSslPreSharedKeyAuthenticator) IdentityHint() *qtcore.QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator12identityHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator12identityHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:68
 // index:0
-// Public
-// void setIdentity(const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void setIdentity(const QByteArray &)
 func (this *QSslPreSharedKeyAuthenticator) SetIdentity(identity *qtcore.QByteArray) {
 	var convArg0 = identity.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticator11setIdentityERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -126,22 +123,20 @@ func (this *QSslPreSharedKeyAuthenticator) SetIdentity(identity *qtcore.QByteArr
 
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:69
 // index:0
-// Public
-// QByteArray identity()
+// Public Visibility=Default Availability=Available
+// [8] QByteArray identity()
 func (this *QSslPreSharedKeyAuthenticator) Identity() *qtcore.QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator8identityEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator8identityEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:70
 // index:0
-// Public
-// int maximumIdentityLength()
+// Public Visibility=Default Availability=Available
+// [4] int maximumIdentityLength()
 func (this *QSslPreSharedKeyAuthenticator) MaximumIdentityLength() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator21maximumIdentityLengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -151,8 +146,8 @@ func (this *QSslPreSharedKeyAuthenticator) MaximumIdentityLength() int {
 
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:72
 // index:0
-// Public
-// void setPreSharedKey(const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void setPreSharedKey(const QByteArray &)
 func (this *QSslPreSharedKeyAuthenticator) SetPreSharedKey(preSharedKey *qtcore.QByteArray) {
 	var convArg0 = preSharedKey.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QSslPreSharedKeyAuthenticator15setPreSharedKeyERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -161,22 +156,20 @@ func (this *QSslPreSharedKeyAuthenticator) SetPreSharedKey(preSharedKey *qtcore.
 
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:73
 // index:0
-// Public
-// QByteArray preSharedKey()
+// Public Visibility=Default Availability=Available
+// [8] QByteArray preSharedKey()
 func (this *QSslPreSharedKeyAuthenticator) PreSharedKey() *qtcore.QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator12preSharedKeyEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator12preSharedKeyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:74
 // index:0
-// Public
-// int maximumPreSharedKeyLength()
+// Public Visibility=Default Availability=Available
+// [4] int maximumPreSharedKeyLength()
 func (this *QSslPreSharedKeyAuthenticator) MaximumPreSharedKeyLength() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QSslPreSharedKeyAuthenticator25maximumPreSharedKeyLengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

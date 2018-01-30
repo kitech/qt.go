@@ -76,20 +76,19 @@ func (*QGraphicsSceneEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphicsScene
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:67
 // index:0
-// Public
-// void QGraphicsSceneEvent(enum QEvent::Type)
+// Public Visibility=Default Availability=Available
+// [-2] void QGraphicsSceneEvent(enum QEvent::Type)
 func NewQGraphicsSceneEvent(type_ int) *QGraphicsSceneEvent {
-	cthis := qtrt.Calloc(1, 256) // 32
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQGraphicsSceneEventFromPointer(cthis)
+	gothis := NewQGraphicsSceneEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:68
 // index:0
-// Public virtual
-// void ~QGraphicsSceneEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QGraphicsSceneEvent()
 func DeleteQGraphicsSceneEvent(*QGraphicsSceneEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -97,8 +96,8 @@ func DeleteQGraphicsSceneEvent(*QGraphicsSceneEvent) {
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:70
 // index:0
-// Public
-// QWidget * widget()
+// Public Visibility=Default Availability=Available
+// [8] QWidget * widget()
 func (this *QGraphicsSceneEvent) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsSceneEvent6widgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -109,8 +108,8 @@ func (this *QGraphicsSceneEvent) Widget() *QWidget /*777 QWidget **/ {
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:71
 // index:0
-// Public
-// void setWidget(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void setWidget(QWidget *)
 func (this *QGraphicsSceneEvent) SetWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEvent9setWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

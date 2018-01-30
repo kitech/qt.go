@@ -71,20 +71,19 @@ func (*QNetworkCacheMetaData) NewFromPointer(cthis unsafe.Pointer) *QNetworkCach
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:66
 // index:0
-// Public
-// void QNetworkCacheMetaData()
+// Public Visibility=Default Availability=Available
+// [-2] void QNetworkCacheMetaData()
 func NewQNetworkCacheMetaData() *QNetworkCacheMetaData {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkCacheMetaDataC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkCacheMetaDataC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQNetworkCacheMetaDataFromPointer(cthis)
+	gothis := NewQNetworkCacheMetaDataFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:68
 // index:0
-// Public
-// void ~QNetworkCacheMetaData()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QNetworkCacheMetaData()
 func DeleteQNetworkCacheMetaData(*QNetworkCacheMetaData) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkCacheMetaDataD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -92,8 +91,8 @@ func DeleteQNetworkCacheMetaData(*QNetworkCacheMetaData) {
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:75
 // index:0
-// Public inline
-// void swap(QNetworkCacheMetaData &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QNetworkCacheMetaData &)
 func (this *QNetworkCacheMetaData) Swap(other *QNetworkCacheMetaData) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkCacheMetaData4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -102,8 +101,8 @@ func (this *QNetworkCacheMetaData) Swap(other *QNetworkCacheMetaData) {
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:82
 // index:0
-// Public
-// bool isValid()
+// Public Visibility=Default Availability=Available
+// [1] bool isValid()
 func (this *QNetworkCacheMetaData) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkCacheMetaData7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -113,22 +112,20 @@ func (this *QNetworkCacheMetaData) IsValid() bool {
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:84
 // index:0
-// Public
-// QUrl url()
+// Public Visibility=Default Availability=Available
+// [8] QUrl url()
 func (this *QNetworkCacheMetaData) Url() *qtcore.QUrl /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkCacheMetaData3urlEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkCacheMetaData3urlEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:85
 // index:0
-// Public
-// void setUrl(const QUrl &)
+// Public Visibility=Default Availability=Available
+// [-2] void setUrl(const QUrl &)
 func (this *QNetworkCacheMetaData) SetUrl(url *qtcore.QUrl) {
 	var convArg0 = url.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkCacheMetaData6setUrlERK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -137,22 +134,20 @@ func (this *QNetworkCacheMetaData) SetUrl(url *qtcore.QUrl) {
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:90
 // index:0
-// Public
-// QDateTime lastModified()
+// Public Visibility=Default Availability=Available
+// [8] QDateTime lastModified()
 func (this *QNetworkCacheMetaData) LastModified() *qtcore.QDateTime /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkCacheMetaData12lastModifiedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkCacheMetaData12lastModifiedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:91
 // index:0
-// Public
-// void setLastModified(const QDateTime &)
+// Public Visibility=Default Availability=Available
+// [-2] void setLastModified(const QDateTime &)
 func (this *QNetworkCacheMetaData) SetLastModified(dateTime *qtcore.QDateTime) {
 	var convArg0 = dateTime.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkCacheMetaData15setLastModifiedERK9QDateTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -161,22 +156,20 @@ func (this *QNetworkCacheMetaData) SetLastModified(dateTime *qtcore.QDateTime) {
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:93
 // index:0
-// Public
-// QDateTime expirationDate()
+// Public Visibility=Default Availability=Available
+// [8] QDateTime expirationDate()
 func (this *QNetworkCacheMetaData) ExpirationDate() *qtcore.QDateTime /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkCacheMetaData14expirationDateEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkCacheMetaData14expirationDateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:94
 // index:0
-// Public
-// void setExpirationDate(const QDateTime &)
+// Public Visibility=Default Availability=Available
+// [-2] void setExpirationDate(const QDateTime &)
 func (this *QNetworkCacheMetaData) SetExpirationDate(dateTime *qtcore.QDateTime) {
 	var convArg0 = dateTime.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkCacheMetaData17setExpirationDateERK9QDateTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -185,8 +178,8 @@ func (this *QNetworkCacheMetaData) SetExpirationDate(dateTime *qtcore.QDateTime)
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:96
 // index:0
-// Public
-// bool saveToDisk()
+// Public Visibility=Default Availability=Available
+// [1] bool saveToDisk()
 func (this *QNetworkCacheMetaData) SaveToDisk() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QNetworkCacheMetaData10saveToDiskEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -196,8 +189,8 @@ func (this *QNetworkCacheMetaData) SaveToDisk() bool {
 
 // /usr/include/qt/QtNetwork/qabstractnetworkcache.h:97
 // index:0
-// Public
-// void setSaveToDisk(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setSaveToDisk(_Bool)
 func (this *QNetworkCacheMetaData) SetSaveToDisk(allow bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QNetworkCacheMetaData13setSaveToDiskEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), allow)
 	gopp.ErrPrint(err, rv)

@@ -67,46 +67,43 @@ func (*QDataStream) NewFromPointer(cthis unsafe.Pointer) *QDataStream {
 
 // /usr/include/qt/QtCore/qdatastream.h:123
 // index:0
-// Public
-// void QDataStream()
+// Public Visibility=Default Availability=Available
+// [-2] void QDataStream()
 func NewQDataStream() *QDataStream {
-	cthis := qtrt.Calloc(1, 256) // 32
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQDataStreamFromPointer(cthis)
+	gothis := NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:124
 // index:1
-// Public
-// void QDataStream(QIODevice *)
+// Public Visibility=Default Availability=Available
+// [-2] void QDataStream(QIODevice *)
 func NewQDataStream_1(arg0 *QIODevice /*777 QIODevice **/) *QDataStream {
-	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamC2EP9QIODevice", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamC2EP9QIODevice", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQDataStreamFromPointer(cthis)
+	gothis := NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:126
 // index:2
-// Public
-// void QDataStream(const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void QDataStream(const QByteArray &)
 func NewQDataStream_2(arg0 *QByteArray) *QDataStream {
-	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamC2ERK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamC2ERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQDataStreamFromPointer(cthis)
+	gothis := NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:127
 // index:0
-// Public
-// void ~QDataStream()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QDataStream()
 func DeleteQDataStream(*QDataStream) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -114,8 +111,8 @@ func DeleteQDataStream(*QDataStream) {
 
 // /usr/include/qt/QtCore/qdatastream.h:129
 // index:0
-// Public
-// QIODevice * device()
+// Public Visibility=Default Availability=Available
+// [8] QIODevice * device()
 func (this *QDataStream) Device() *QIODevice /*777 QIODevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -126,8 +123,8 @@ func (this *QDataStream) Device() *QIODevice /*777 QIODevice **/ {
 
 // /usr/include/qt/QtCore/qdatastream.h:130
 // index:0
-// Public
-// void setDevice(QIODevice *)
+// Public Visibility=Default Availability=Available
+// [-2] void setDevice(QIODevice *)
 func (this *QDataStream) SetDevice(arg0 *QIODevice /*777 QIODevice **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream9setDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -136,8 +133,8 @@ func (this *QDataStream) SetDevice(arg0 *QIODevice /*777 QIODevice **/) {
 
 // /usr/include/qt/QtCore/qdatastream.h:131
 // index:0
-// Public
-// void unsetDevice()
+// Public Visibility=Default Availability=Available
+// [-2] void unsetDevice()
 func (this *QDataStream) UnsetDevice() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream11unsetDeviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -145,8 +142,8 @@ func (this *QDataStream) UnsetDevice() {
 
 // /usr/include/qt/QtCore/qdatastream.h:133
 // index:0
-// Public
-// bool atEnd()
+// Public Visibility=Default Availability=Available
+// [1] bool atEnd()
 func (this *QDataStream) AtEnd() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream5atEndEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -156,8 +153,8 @@ func (this *QDataStream) AtEnd() bool {
 
 // /usr/include/qt/QtCore/qdatastream.h:135
 // index:0
-// Public
-// QDataStream::Status status()
+// Public Visibility=Default Availability=Available
+// [4] QDataStream::Status status()
 func (this *QDataStream) Status() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream6statusEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -167,8 +164,8 @@ func (this *QDataStream) Status() int {
 
 // /usr/include/qt/QtCore/qdatastream.h:136
 // index:0
-// Public
-// void setStatus(enum QDataStream::Status)
+// Public Visibility=Default Availability=Available
+// [-2] void setStatus(enum QDataStream::Status)
 func (this *QDataStream) SetStatus(status int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream9setStatusENS_6StatusE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), status)
 	gopp.ErrPrint(err, rv)
@@ -176,8 +173,8 @@ func (this *QDataStream) SetStatus(status int) {
 
 // /usr/include/qt/QtCore/qdatastream.h:137
 // index:0
-// Public
-// void resetStatus()
+// Public Visibility=Default Availability=Available
+// [-2] void resetStatus()
 func (this *QDataStream) ResetStatus() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream11resetStatusEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -185,8 +182,8 @@ func (this *QDataStream) ResetStatus() {
 
 // /usr/include/qt/QtCore/qdatastream.h:139
 // index:0
-// Public
-// QDataStream::FloatingPointPrecision floatingPointPrecision()
+// Public Visibility=Default Availability=Available
+// [4] QDataStream::FloatingPointPrecision floatingPointPrecision()
 func (this *QDataStream) FloatingPointPrecision() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream22floatingPointPrecisionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -196,8 +193,8 @@ func (this *QDataStream) FloatingPointPrecision() int {
 
 // /usr/include/qt/QtCore/qdatastream.h:140
 // index:0
-// Public
-// void setFloatingPointPrecision(enum QDataStream::FloatingPointPrecision)
+// Public Visibility=Default Availability=Available
+// [-2] void setFloatingPointPrecision(enum QDataStream::FloatingPointPrecision)
 func (this *QDataStream) SetFloatingPointPrecision(precision int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream25setFloatingPointPrecisionENS_22FloatingPointPrecisionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), precision)
 	gopp.ErrPrint(err, rv)
@@ -205,8 +202,8 @@ func (this *QDataStream) SetFloatingPointPrecision(precision int) {
 
 // /usr/include/qt/QtCore/qdatastream.h:142
 // index:0
-// Public
-// QDataStream::ByteOrder byteOrder()
+// Public Visibility=Default Availability=Available
+// [4] QDataStream::ByteOrder byteOrder()
 func (this *QDataStream) ByteOrder() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream9byteOrderEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -216,8 +213,8 @@ func (this *QDataStream) ByteOrder() int {
 
 // /usr/include/qt/QtCore/qdatastream.h:143
 // index:0
-// Public
-// void setByteOrder(enum QDataStream::ByteOrder)
+// Public Visibility=Default Availability=Available
+// [-2] void setByteOrder(enum QDataStream::ByteOrder)
 func (this *QDataStream) SetByteOrder(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream12setByteOrderENS_9ByteOrderE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -225,8 +222,8 @@ func (this *QDataStream) SetByteOrder(arg0 int) {
 
 // /usr/include/qt/QtCore/qdatastream.h:145
 // index:0
-// Public
-// int version()
+// Public Visibility=Default Availability=Available
+// [4] int version()
 func (this *QDataStream) Version() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QDataStream7versionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -236,8 +233,8 @@ func (this *QDataStream) Version() int {
 
 // /usr/include/qt/QtCore/qdatastream.h:146
 // index:0
-// Public
-// void setVersion(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setVersion(int)
 func (this *QDataStream) SetVersion(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream10setVersionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -245,8 +242,8 @@ func (this *QDataStream) SetVersion(arg0 int) {
 
 // /usr/include/qt/QtCore/qdatastream.h:179
 // index:0
-// Public
-// QDataStream & readBytes(char *&, uint &)
+// Public Visibility=Default Availability=Available
+// [32] QDataStream & readBytes(char *&, uint &)
 func (this *QDataStream) ReadBytes(arg0 unsafe.Pointer /*555*/, len uint) *QDataStream {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream9readBytesERPcRj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, &len)
 	gopp.ErrPrint(err, rv)
@@ -257,8 +254,8 @@ func (this *QDataStream) ReadBytes(arg0 unsafe.Pointer /*555*/, len uint) *QData
 
 // /usr/include/qt/QtCore/qdatastream.h:180
 // index:0
-// Public
-// int readRawData(char *, int)
+// Public Visibility=Default Availability=Available
+// [4] int readRawData(char *, int)
 func (this *QDataStream) ReadRawData(arg0 string, len int) int {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
@@ -270,8 +267,8 @@ func (this *QDataStream) ReadRawData(arg0 string, len int) int {
 
 // /usr/include/qt/QtCore/qdatastream.h:182
 // index:0
-// Public
-// QDataStream & writeBytes(const char *, uint)
+// Public Visibility=Default Availability=Available
+// [32] QDataStream & writeBytes(const char *, uint)
 func (this *QDataStream) WriteBytes(arg0 string, len uint) *QDataStream {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
@@ -284,8 +281,8 @@ func (this *QDataStream) WriteBytes(arg0 string, len uint) *QDataStream {
 
 // /usr/include/qt/QtCore/qdatastream.h:183
 // index:0
-// Public
-// int writeRawData(const char *, int)
+// Public Visibility=Default Availability=Available
+// [4] int writeRawData(const char *, int)
 func (this *QDataStream) WriteRawData(arg0 string, len int) int {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
@@ -297,8 +294,8 @@ func (this *QDataStream) WriteRawData(arg0 string, len int) int {
 
 // /usr/include/qt/QtCore/qdatastream.h:185
 // index:0
-// Public
-// int skipRawData(int)
+// Public Visibility=Default Availability=Available
+// [4] int skipRawData(int)
 func (this *QDataStream) SkipRawData(len int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream11skipRawDataEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), len)
 	gopp.ErrPrint(err, rv)
@@ -308,8 +305,8 @@ func (this *QDataStream) SkipRawData(len int) int {
 
 // /usr/include/qt/QtCore/qdatastream.h:187
 // index:0
-// Public
-// void startTransaction()
+// Public Visibility=Default Availability=Available
+// [-2] void startTransaction()
 func (this *QDataStream) StartTransaction() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream16startTransactionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -317,8 +314,8 @@ func (this *QDataStream) StartTransaction() {
 
 // /usr/include/qt/QtCore/qdatastream.h:188
 // index:0
-// Public
-// bool commitTransaction()
+// Public Visibility=Default Availability=Available
+// [1] bool commitTransaction()
 func (this *QDataStream) CommitTransaction() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream17commitTransactionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -328,8 +325,8 @@ func (this *QDataStream) CommitTransaction() bool {
 
 // /usr/include/qt/QtCore/qdatastream.h:189
 // index:0
-// Public
-// void rollbackTransaction()
+// Public Visibility=Default Availability=Available
+// [-2] void rollbackTransaction()
 func (this *QDataStream) RollbackTransaction() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream19rollbackTransactionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -337,8 +334,8 @@ func (this *QDataStream) RollbackTransaction() {
 
 // /usr/include/qt/QtCore/qdatastream.h:190
 // index:0
-// Public
-// void abortTransaction()
+// Public Visibility=Default Availability=Available
+// [-2] void abortTransaction()
 func (this *QDataStream) AbortTransaction() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStream16abortTransactionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

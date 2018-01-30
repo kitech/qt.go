@@ -67,8 +67,8 @@ func (*QSysInfo) NewFromPointer(cthis unsafe.Pointer) *QSysInfo {
 
 // /usr/include/qt/QtCore/qsysinfo.h:220
 // index:0
-// Public static inline
-// QSysInfo::WinVersion windowsVersion()
+// Public static inline Visibility=Default Availability=Available
+// [4] QSysInfo::WinVersion windowsVersion()
 func (this *QSysInfo) WindowsVersion() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo14windowsVersionEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -83,8 +83,8 @@ func QSysInfo_WindowsVersion() int {
 
 // /usr/include/qt/QtCore/qsysinfo.h:227
 // index:0
-// Public static inline
-// QSysInfo::MacVersion macVersion()
+// Public static inline Visibility=Default Availability=Available
+// [4] QSysInfo::MacVersion macVersion()
 func (this *QSysInfo) MacVersion() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo10macVersionEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -99,8 +99,8 @@ func QSysInfo_MacVersion() int {
 
 // /usr/include/qt/QtCore/qsysinfo.h:232
 // index:0
-// Public static
-// QString buildCpuArchitecture()
+// Public static Visibility=Default Availability=Available
+// [8] QString buildCpuArchitecture()
 func (this *QSysInfo) BuildCpuArchitecture() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo20buildCpuArchitectureEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -116,8 +116,8 @@ func QSysInfo_BuildCpuArchitecture() *QString /*123*/ {
 
 // /usr/include/qt/QtCore/qsysinfo.h:233
 // index:0
-// Public static
-// QString currentCpuArchitecture()
+// Public static Visibility=Default Availability=Available
+// [8] QString currentCpuArchitecture()
 func (this *QSysInfo) CurrentCpuArchitecture() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo22currentCpuArchitectureEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -133,8 +133,8 @@ func QSysInfo_CurrentCpuArchitecture() *QString /*123*/ {
 
 // /usr/include/qt/QtCore/qsysinfo.h:234
 // index:0
-// Public static
-// QString buildAbi()
+// Public static Visibility=Default Availability=Available
+// [8] QString buildAbi()
 func (this *QSysInfo) BuildAbi() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo8buildAbiEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -150,8 +150,8 @@ func QSysInfo_BuildAbi() *QString /*123*/ {
 
 // /usr/include/qt/QtCore/qsysinfo.h:236
 // index:0
-// Public static
-// QString kernelType()
+// Public static Visibility=Default Availability=Available
+// [8] QString kernelType()
 func (this *QSysInfo) KernelType() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo10kernelTypeEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -167,8 +167,8 @@ func QSysInfo_KernelType() *QString /*123*/ {
 
 // /usr/include/qt/QtCore/qsysinfo.h:237
 // index:0
-// Public static
-// QString kernelVersion()
+// Public static Visibility=Default Availability=Available
+// [8] QString kernelVersion()
 func (this *QSysInfo) KernelVersion() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo13kernelVersionEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -184,8 +184,8 @@ func QSysInfo_KernelVersion() *QString /*123*/ {
 
 // /usr/include/qt/QtCore/qsysinfo.h:238
 // index:0
-// Public static
-// QString productType()
+// Public static Visibility=Default Availability=Available
+// [8] QString productType()
 func (this *QSysInfo) ProductType() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo11productTypeEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -201,8 +201,8 @@ func QSysInfo_ProductType() *QString /*123*/ {
 
 // /usr/include/qt/QtCore/qsysinfo.h:239
 // index:0
-// Public static
-// QString productVersion()
+// Public static Visibility=Default Availability=Available
+// [8] QString productVersion()
 func (this *QSysInfo) ProductVersion() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo14productVersionEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -218,8 +218,8 @@ func QSysInfo_ProductVersion() *QString /*123*/ {
 
 // /usr/include/qt/QtCore/qsysinfo.h:240
 // index:0
-// Public static
-// QString prettyProductName()
+// Public static Visibility=Default Availability=Available
+// [8] QString prettyProductName()
 func (this *QSysInfo) PrettyProductName() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo17prettyProductNameEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -235,8 +235,8 @@ func QSysInfo_PrettyProductName() *QString /*123*/ {
 
 // /usr/include/qt/QtCore/qsysinfo.h:242
 // index:0
-// Public static
-// QString machineHostName()
+// Public static Visibility=Default Availability=Available
+// [8] QString machineHostName()
 func (this *QSysInfo) MachineHostName() *QString /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo15machineHostNameEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)

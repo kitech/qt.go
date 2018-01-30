@@ -72,8 +72,8 @@ func (*QTabletEvent) NewFromPointer(cthis unsafe.Pointer) *QTabletEvent {
 
 // /usr/include/qt/QtGui/qevent.h:259
 // index:0
-// Public virtual
-// void ~QTabletEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QTabletEvent()
 func DeleteQTabletEvent(*QTabletEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTabletEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -81,36 +81,32 @@ func DeleteQTabletEvent(*QTabletEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:261
 // index:0
-// Public inline
-// QPoint pos()
+// Public inline Visibility=Default Availability=Available
+// [8] QPoint pos()
 func (this *QTabletEvent) Pos() *qtcore.QPoint /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent3posEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:262
 // index:0
-// Public inline
-// QPoint globalPos()
+// Public inline Visibility=Default Availability=Available
+// [8] QPoint globalPos()
 func (this *QTabletEvent) GlobalPos() *qtcore.QPoint /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qevent.h:267
 // index:0
-// Public inline
-// const QPointF & posF()
+// Public inline Visibility=Default Availability=Available
+// [16] const QPointF & posF()
 func (this *QTabletEvent) PosF() *qtcore.QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent4posFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -121,8 +117,8 @@ func (this *QTabletEvent) PosF() *qtcore.QPointF {
 
 // /usr/include/qt/QtGui/qevent.h:268
 // index:0
-// Public inline
-// const QPointF & globalPosF()
+// Public inline Visibility=Default Availability=Available
+// [16] const QPointF & globalPosF()
 func (this *QTabletEvent) GlobalPosF() *qtcore.QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent10globalPosFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -133,8 +129,8 @@ func (this *QTabletEvent) GlobalPosF() *qtcore.QPointF {
 
 // /usr/include/qt/QtGui/qevent.h:270
 // index:0
-// Public inline
-// int x()
+// Public inline Visibility=Default Availability=Available
+// [4] int x()
 func (this *QTabletEvent) X() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -144,8 +140,8 @@ func (this *QTabletEvent) X() int {
 
 // /usr/include/qt/QtGui/qevent.h:271
 // index:0
-// Public inline
-// int y()
+// Public inline Visibility=Default Availability=Available
+// [4] int y()
 func (this *QTabletEvent) Y() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -155,8 +151,8 @@ func (this *QTabletEvent) Y() int {
 
 // /usr/include/qt/QtGui/qevent.h:272
 // index:0
-// Public inline
-// int globalX()
+// Public inline Visibility=Default Availability=Available
+// [4] int globalX()
 func (this *QTabletEvent) GlobalX() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent7globalXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -166,8 +162,8 @@ func (this *QTabletEvent) GlobalX() int {
 
 // /usr/include/qt/QtGui/qevent.h:273
 // index:0
-// Public inline
-// int globalY()
+// Public inline Visibility=Default Availability=Available
+// [4] int globalY()
 func (this *QTabletEvent) GlobalY() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent7globalYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -177,8 +173,8 @@ func (this *QTabletEvent) GlobalY() int {
 
 // /usr/include/qt/QtGui/qevent.h:274
 // index:0
-// Public inline
-// qreal hiResGlobalX()
+// Public inline Visibility=Default Availability=Available
+// [8] qreal hiResGlobalX()
 func (this *QTabletEvent) HiResGlobalX() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent12hiResGlobalXEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -188,8 +184,8 @@ func (this *QTabletEvent) HiResGlobalX() float64 {
 
 // /usr/include/qt/QtGui/qevent.h:275
 // index:0
-// Public inline
-// qreal hiResGlobalY()
+// Public inline Visibility=Default Availability=Available
+// [8] qreal hiResGlobalY()
 func (this *QTabletEvent) HiResGlobalY() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent12hiResGlobalYEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -199,8 +195,8 @@ func (this *QTabletEvent) HiResGlobalY() float64 {
 
 // /usr/include/qt/QtGui/qevent.h:276
 // index:0
-// Public inline
-// QTabletEvent::TabletDevice device()
+// Public inline Visibility=Default Availability=Available
+// [4] QTabletEvent::TabletDevice device()
 func (this *QTabletEvent) Device() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -210,8 +206,8 @@ func (this *QTabletEvent) Device() int {
 
 // /usr/include/qt/QtGui/qevent.h:277
 // index:0
-// Public inline
-// QTabletEvent::PointerType pointerType()
+// Public inline Visibility=Default Availability=Available
+// [4] QTabletEvent::PointerType pointerType()
 func (this *QTabletEvent) PointerType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent11pointerTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -221,8 +217,8 @@ func (this *QTabletEvent) PointerType() int {
 
 // /usr/include/qt/QtGui/qevent.h:278
 // index:0
-// Public inline
-// qint64 uniqueId()
+// Public inline Visibility=Default Availability=Available
+// [8] qint64 uniqueId()
 func (this *QTabletEvent) UniqueId() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent8uniqueIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -232,8 +228,8 @@ func (this *QTabletEvent) UniqueId() int64 {
 
 // /usr/include/qt/QtGui/qevent.h:279
 // index:0
-// Public inline
-// qreal pressure()
+// Public inline Visibility=Default Availability=Available
+// [8] qreal pressure()
 func (this *QTabletEvent) Pressure() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent8pressureEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -243,8 +239,8 @@ func (this *QTabletEvent) Pressure() float64 {
 
 // /usr/include/qt/QtGui/qevent.h:280
 // index:0
-// Public inline
-// int z()
+// Public inline Visibility=Default Availability=Available
+// [4] int z()
 func (this *QTabletEvent) Z() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent1zEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -254,8 +250,8 @@ func (this *QTabletEvent) Z() int {
 
 // /usr/include/qt/QtGui/qevent.h:281
 // index:0
-// Public inline
-// qreal tangentialPressure()
+// Public inline Visibility=Default Availability=Available
+// [8] qreal tangentialPressure()
 func (this *QTabletEvent) TangentialPressure() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent18tangentialPressureEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -265,8 +261,8 @@ func (this *QTabletEvent) TangentialPressure() float64 {
 
 // /usr/include/qt/QtGui/qevent.h:282
 // index:0
-// Public inline
-// qreal rotation()
+// Public inline Visibility=Default Availability=Available
+// [8] qreal rotation()
 func (this *QTabletEvent) Rotation() float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent8rotationEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -276,8 +272,8 @@ func (this *QTabletEvent) Rotation() float64 {
 
 // /usr/include/qt/QtGui/qevent.h:283
 // index:0
-// Public inline
-// int xTilt()
+// Public inline Visibility=Default Availability=Available
+// [4] int xTilt()
 func (this *QTabletEvent) XTilt() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent5xTiltEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -287,8 +283,8 @@ func (this *QTabletEvent) XTilt() int {
 
 // /usr/include/qt/QtGui/qevent.h:284
 // index:0
-// Public inline
-// int yTilt()
+// Public inline Visibility=Default Availability=Available
+// [4] int yTilt()
 func (this *QTabletEvent) YTilt() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent5yTiltEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -298,8 +294,8 @@ func (this *QTabletEvent) YTilt() int {
 
 // /usr/include/qt/QtGui/qevent.h:285
 // index:0
-// Public
-// Qt::MouseButton button()
+// Public Visibility=Default Availability=Available
+// [4] Qt::MouseButton button()
 func (this *QTabletEvent) Button() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent6buttonEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -309,8 +305,8 @@ func (this *QTabletEvent) Button() int {
 
 // /usr/include/qt/QtGui/qevent.h:286
 // index:0
-// Public
-// Qt::MouseButtons buttons()
+// Public Visibility=Default Availability=Available
+// [4] Qt::MouseButtons buttons()
 func (this *QTabletEvent) Buttons() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent7buttonsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

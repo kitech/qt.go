@@ -67,20 +67,19 @@ func (*QMimeType) NewFromPointer(cthis unsafe.Pointer) *QMimeType {
 
 // /usr/include/qt/QtCore/qmimetype.h:78
 // index:0
-// Public
-// void QMimeType()
+// Public Visibility=Default Availability=Available
+// [-2] void QMimeType()
 func NewQMimeType() *QMimeType {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeTypeC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeTypeC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQMimeTypeFromPointer(cthis)
+	gothis := NewQMimeTypeFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:84
 // index:0
-// Public inline
-// void swap(QMimeType &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QMimeType &)
 func (this *QMimeType) Swap(other *QMimeType) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeType4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -89,8 +88,8 @@ func (this *QMimeType) Swap(other *QMimeType) {
 
 // /usr/include/qt/QtCore/qmimetype.h:89
 // index:0
-// Public
-// void ~QMimeType()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QMimeType()
 func DeleteQMimeType(*QMimeType) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeTypeD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -98,8 +97,8 @@ func DeleteQMimeType(*QMimeType) {
 
 // /usr/include/qt/QtCore/qmimetype.h:98
 // index:0
-// Public
-// bool isValid()
+// Public Visibility=Default Availability=Available
+// [1] bool isValid()
 func (this *QMimeType) IsValid() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -109,8 +108,8 @@ func (this *QMimeType) IsValid() bool {
 
 // /usr/include/qt/QtCore/qmimetype.h:100
 // index:0
-// Public
-// bool isDefault()
+// Public Visibility=Default Availability=Available
+// [1] bool isDefault()
 func (this *QMimeType) IsDefault() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType9isDefaultEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -120,78 +119,68 @@ func (this *QMimeType) IsDefault() bool {
 
 // /usr/include/qt/QtCore/qmimetype.h:102
 // index:0
-// Public
-// QString name()
+// Public Visibility=Default Availability=Available
+// [8] QString name()
 func (this *QMimeType) Name() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:103
 // index:0
-// Public
-// QString comment()
+// Public Visibility=Default Availability=Available
+// [8] QString comment()
 func (this *QMimeType) Comment() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType7commentEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType7commentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:104
 // index:0
-// Public
-// QString genericIconName()
+// Public Visibility=Default Availability=Available
+// [8] QString genericIconName()
 func (this *QMimeType) GenericIconName() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType15genericIconNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType15genericIconNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:105
 // index:0
-// Public
-// QString iconName()
+// Public Visibility=Default Availability=Available
+// [8] QString iconName()
 func (this *QMimeType) IconName() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType8iconNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType8iconNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:111
 // index:0
-// Public
-// QString preferredSuffix()
+// Public Visibility=Default Availability=Available
+// [8] QString preferredSuffix()
 func (this *QMimeType) PreferredSuffix() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType15preferredSuffixEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType15preferredSuffixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:113
 // index:0
-// Public
-// bool inherits(const QString &)
+// Public Visibility=Default Availability=Available
+// [1] bool inherits(const QString &)
 func (this *QMimeType) Inherits(mimeTypeName *QString) bool {
 	var convArg0 = mimeTypeName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType8inheritsERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -202,14 +191,12 @@ func (this *QMimeType) Inherits(mimeTypeName *QString) bool {
 
 // /usr/include/qt/QtCore/qmimetype.h:115
 // index:0
-// Public
-// QString filterString()
+// Public Visibility=Default Availability=Available
+// [8] QString filterString()
 func (this *QMimeType) FilterString() *QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType12filterStringEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType12filterStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

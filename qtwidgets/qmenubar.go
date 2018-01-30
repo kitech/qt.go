@@ -76,8 +76,8 @@ func (*QMenuBar) NewFromPointer(cthis unsafe.Pointer) *QMenuBar {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:57
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QMenuBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,21 +88,20 @@ func (this *QMenuBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject *
 
 // /usr/include/qt/QtWidgets/qmenubar.h:63
 // index:0
-// Public
-// void QMenuBar(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void QMenuBar(QWidget *)
 func NewQMenuBar(parent *QWidget /*777 QWidget **/) *QMenuBar {
-	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBarC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBarC2EP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQMenuBarFromPointer(cthis)
+	gothis := NewQMenuBarFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:64
 // index:0
-// Public virtual
-// void ~QMenuBar()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QMenuBar()
 func DeleteQMenuBar(*QMenuBar) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBarD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -110,8 +109,8 @@ func DeleteQMenuBar(*QMenuBar) {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:67
 // index:0
-// Public
-// QAction * addAction(const QString &)
+// Public Visibility=Default Availability=Available
+// [8] QAction * addAction(const QString &)
 func (this *QMenuBar) AddAction(text *qtcore.QString) *QAction /*777 QAction **/ {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar9addActionERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -123,8 +122,8 @@ func (this *QMenuBar) AddAction(text *qtcore.QString) *QAction /*777 QAction **/
 
 // /usr/include/qt/QtWidgets/qmenubar.h:68
 // index:1
-// Public
-// QAction * addAction(const QString &, const QObject *, const char *)
+// Public Visibility=Default Availability=Available
+// [8] QAction * addAction(const QString &, const QObject *, const char *)
 func (this *QMenuBar) AddAction_1(text *qtcore.QString, receiver *qtcore.QObject /*777 const QObject **/, member string) *QAction /*777 QAction **/ {
 	var convArg0 = text.GetCthis()
 	var convArg1 = receiver.GetCthis()
@@ -139,8 +138,8 @@ func (this *QMenuBar) AddAction_1(text *qtcore.QString, receiver *qtcore.QObject
 
 // /usr/include/qt/QtWidgets/qmenubar.h:70
 // index:0
-// Public
-// QAction * addMenu(QMenu *)
+// Public Visibility=Default Availability=Available
+// [8] QAction * addMenu(QMenu *)
 func (this *QMenuBar) AddMenu(menu *QMenu /*777 QMenu **/) *QAction /*777 QAction **/ {
 	var convArg0 = menu.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar7addMenuEP5QMenu", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -152,8 +151,8 @@ func (this *QMenuBar) AddMenu(menu *QMenu /*777 QMenu **/) *QAction /*777 QActio
 
 // /usr/include/qt/QtWidgets/qmenubar.h:71
 // index:1
-// Public
-// QMenu * addMenu(const QString &)
+// Public Visibility=Default Availability=Available
+// [8] QMenu * addMenu(const QString &)
 func (this *QMenuBar) AddMenu_1(title *qtcore.QString) *QMenu /*777 QMenu **/ {
 	var convArg0 = title.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar7addMenuERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -165,8 +164,8 @@ func (this *QMenuBar) AddMenu_1(title *qtcore.QString) *QMenu /*777 QMenu **/ {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:72
 // index:2
-// Public
-// QMenu * addMenu(const QIcon &, const QString &)
+// Public Visibility=Default Availability=Available
+// [8] QMenu * addMenu(const QIcon &, const QString &)
 func (this *QMenuBar) AddMenu_2(icon *qtgui.QIcon, title *qtcore.QString) *QMenu /*777 QMenu **/ {
 	var convArg0 = icon.GetCthis()
 	var convArg1 = title.GetCthis()
@@ -179,8 +178,8 @@ func (this *QMenuBar) AddMenu_2(icon *qtgui.QIcon, title *qtcore.QString) *QMenu
 
 // /usr/include/qt/QtWidgets/qmenubar.h:75
 // index:0
-// Public
-// QAction * addSeparator()
+// Public Visibility=Default Availability=Available
+// [8] QAction * addSeparator()
 func (this *QMenuBar) AddSeparator() *QAction /*777 QAction **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar12addSeparatorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -191,8 +190,8 @@ func (this *QMenuBar) AddSeparator() *QAction /*777 QAction **/ {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:76
 // index:0
-// Public
-// QAction * insertSeparator(QAction *)
+// Public Visibility=Default Availability=Available
+// [8] QAction * insertSeparator(QAction *)
 func (this *QMenuBar) InsertSeparator(before *QAction /*777 QAction **/) *QAction /*777 QAction **/ {
 	var convArg0 = before.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar15insertSeparatorEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -204,8 +203,8 @@ func (this *QMenuBar) InsertSeparator(before *QAction /*777 QAction **/) *QActio
 
 // /usr/include/qt/QtWidgets/qmenubar.h:78
 // index:0
-// Public
-// QAction * insertMenu(QAction *, QMenu *)
+// Public Visibility=Default Availability=Available
+// [8] QAction * insertMenu(QAction *, QMenu *)
 func (this *QMenuBar) InsertMenu(before *QAction /*777 QAction **/, menu *QMenu /*777 QMenu **/) *QAction /*777 QAction **/ {
 	var convArg0 = before.GetCthis()
 	var convArg1 = menu.GetCthis()
@@ -218,8 +217,8 @@ func (this *QMenuBar) InsertMenu(before *QAction /*777 QAction **/, menu *QMenu 
 
 // /usr/include/qt/QtWidgets/qmenubar.h:80
 // index:0
-// Public
-// void clear()
+// Public Visibility=Default Availability=Available
+// [-2] void clear()
 func (this *QMenuBar) Clear() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -227,8 +226,8 @@ func (this *QMenuBar) Clear() {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:82
 // index:0
-// Public
-// QAction * activeAction()
+// Public Visibility=Default Availability=Available
+// [8] QAction * activeAction()
 func (this *QMenuBar) ActiveAction() *QAction /*777 QAction **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar12activeActionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -239,8 +238,8 @@ func (this *QMenuBar) ActiveAction() *QAction /*777 QAction **/ {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:83
 // index:0
-// Public
-// void setActiveAction(QAction *)
+// Public Visibility=Default Availability=Available
+// [-2] void setActiveAction(QAction *)
 func (this *QMenuBar) SetActiveAction(action *QAction /*777 QAction **/) {
 	var convArg0 = action.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar15setActiveActionEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -249,8 +248,8 @@ func (this *QMenuBar) SetActiveAction(action *QAction /*777 QAction **/) {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:85
 // index:0
-// Public
-// void setDefaultUp(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setDefaultUp(_Bool)
 func (this *QMenuBar) SetDefaultUp(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar12setDefaultUpEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -258,8 +257,8 @@ func (this *QMenuBar) SetDefaultUp(arg0 bool) {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:86
 // index:0
-// Public
-// bool isDefaultUp()
+// Public Visibility=Default Availability=Available
+// [1] bool isDefaultUp()
 func (this *QMenuBar) IsDefaultUp() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar11isDefaultUpEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -269,36 +268,32 @@ func (this *QMenuBar) IsDefaultUp() bool {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:88
 // index:0
-// Public virtual
-// QSize sizeHint()
+// Public virtual Visibility=Default Availability=Available
+// [8] QSize sizeHint()
 func (this *QMenuBar) SizeHint() *qtcore.QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK8QMenuBar8sizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:89
 // index:0
-// Public virtual
-// QSize minimumSizeHint()
+// Public virtual Visibility=Default Availability=Available
+// [8] QSize minimumSizeHint()
 func (this *QMenuBar) MinimumSizeHint() *qtcore.QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK8QMenuBar15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:90
 // index:0
-// Public virtual
-// int heightForWidth(int)
+// Public virtual Visibility=Default Availability=Available
+// [4] int heightForWidth(int)
 func (this *QMenuBar) HeightForWidth(arg0 int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar14heightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -308,23 +303,21 @@ func (this *QMenuBar) HeightForWidth(arg0 int) int {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:92
 // index:0
-// Public
-// QRect actionGeometry(QAction *)
+// Public Visibility=Default Availability=Available
+// [16] QRect actionGeometry(QAction *)
 func (this *QMenuBar) ActionGeometry(arg0 *QAction /*777 QAction **/) *qtcore.QRect /*123*/ {
 	var convArg0 = arg0.GetCthis()
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar14actionGeometryEP7QAction", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar14actionGeometryEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:93
 // index:0
-// Public
-// QAction * actionAt(const QPoint &)
+// Public Visibility=Default Availability=Available
+// [8] QAction * actionAt(const QPoint &)
 func (this *QMenuBar) ActionAt(arg0 *qtcore.QPoint) *QAction /*777 QAction **/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar8actionAtERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -336,8 +329,8 @@ func (this *QMenuBar) ActionAt(arg0 *qtcore.QPoint) *QAction /*777 QAction **/ {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:95
 // index:0
-// Public
-// void setCornerWidget(QWidget *, Qt::Corner)
+// Public Visibility=Default Availability=Available
+// [-2] void setCornerWidget(QWidget *, Qt::Corner)
 func (this *QMenuBar) SetCornerWidget(w *QWidget /*777 QWidget **/, corner int) {
 	var convArg0 = w.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar15setCornerWidgetEP7QWidgetN2Qt6CornerE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, corner)
@@ -346,8 +339,8 @@ func (this *QMenuBar) SetCornerWidget(w *QWidget /*777 QWidget **/, corner int) 
 
 // /usr/include/qt/QtWidgets/qmenubar.h:96
 // index:0
-// Public
-// QWidget * cornerWidget(Qt::Corner)
+// Public Visibility=Default Availability=Available
+// [8] QWidget * cornerWidget(Qt::Corner)
 func (this *QMenuBar) CornerWidget(corner int) *QWidget /*777 QWidget **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar12cornerWidgetEN2Qt6CornerE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), corner)
 	gopp.ErrPrint(err, rv)
@@ -358,8 +351,8 @@ func (this *QMenuBar) CornerWidget(corner int) *QWidget /*777 QWidget **/ {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:102
 // index:0
-// Public
-// bool isNativeMenuBar()
+// Public Visibility=Default Availability=Available
+// [1] bool isNativeMenuBar()
 func (this *QMenuBar) IsNativeMenuBar() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMenuBar15isNativeMenuBarEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -369,8 +362,8 @@ func (this *QMenuBar) IsNativeMenuBar() bool {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:103
 // index:0
-// Public
-// void setNativeMenuBar(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setNativeMenuBar(_Bool)
 func (this *QMenuBar) SetNativeMenuBar(nativeMenuBar bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar16setNativeMenuBarEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), nativeMenuBar)
 	gopp.ErrPrint(err, rv)
@@ -378,8 +371,8 @@ func (this *QMenuBar) SetNativeMenuBar(nativeMenuBar bool) {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:106
 // index:0
-// Public virtual
-// void setVisible(_Bool)
+// Public virtual Visibility=Default Availability=Available
+// [-2] void setVisible(_Bool)
 func (this *QMenuBar) SetVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
@@ -387,8 +380,8 @@ func (this *QMenuBar) SetVisible(visible bool) {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:109
 // index:0
-// Public
-// void triggered(QAction *)
+// Public Visibility=Default Availability=Available
+// [-2] void triggered(QAction *)
 func (this *QMenuBar) Triggered(action *QAction /*777 QAction **/) {
 	var convArg0 = action.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar9triggeredEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -397,8 +390,8 @@ func (this *QMenuBar) Triggered(action *QAction /*777 QAction **/) {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:110
 // index:0
-// Public
-// void hovered(QAction *)
+// Public Visibility=Default Availability=Available
+// [-2] void hovered(QAction *)
 func (this *QMenuBar) Hovered(action *QAction /*777 QAction **/) {
 	var convArg0 = action.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar7hoveredEP7QAction", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -407,8 +400,8 @@ func (this *QMenuBar) Hovered(action *QAction /*777 QAction **/) {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:113
 // index:0
-// Protected virtual
-// void changeEvent(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void changeEvent(QEvent *)
 func (this *QMenuBar) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -417,8 +410,8 @@ func (this *QMenuBar) ChangeEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:114
 // index:0
-// Protected virtual
-// void keyPressEvent(QKeyEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void keyPressEvent(QKeyEvent *)
 func (this *QMenuBar) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -427,8 +420,8 @@ func (this *QMenuBar) KeyPressEvent(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:115
 // index:0
-// Protected virtual
-// void mouseReleaseEvent(QMouseEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void mouseReleaseEvent(QMouseEvent *)
 func (this *QMenuBar) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -437,8 +430,8 @@ func (this *QMenuBar) MouseReleaseEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEven
 
 // /usr/include/qt/QtWidgets/qmenubar.h:116
 // index:0
-// Protected virtual
-// void mousePressEvent(QMouseEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void mousePressEvent(QMouseEvent *)
 func (this *QMenuBar) MousePressEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -447,8 +440,8 @@ func (this *QMenuBar) MousePressEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent 
 
 // /usr/include/qt/QtWidgets/qmenubar.h:117
 // index:0
-// Protected virtual
-// void mouseMoveEvent(QMouseEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void mouseMoveEvent(QMouseEvent *)
 func (this *QMenuBar) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -457,8 +450,8 @@ func (this *QMenuBar) MouseMoveEvent(arg0 *qtgui.QMouseEvent /*777 QMouseEvent *
 
 // /usr/include/qt/QtWidgets/qmenubar.h:118
 // index:0
-// Protected virtual
-// void leaveEvent(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void leaveEvent(QEvent *)
 func (this *QMenuBar) LeaveEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar10leaveEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -467,8 +460,8 @@ func (this *QMenuBar) LeaveEvent(arg0 *qtcore.QEvent /*777 QEvent **/) {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:119
 // index:0
-// Protected virtual
-// void paintEvent(QPaintEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void paintEvent(QPaintEvent *)
 func (this *QMenuBar) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -477,8 +470,8 @@ func (this *QMenuBar) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) 
 
 // /usr/include/qt/QtWidgets/qmenubar.h:120
 // index:0
-// Protected virtual
-// void resizeEvent(QResizeEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void resizeEvent(QResizeEvent *)
 func (this *QMenuBar) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -487,8 +480,8 @@ func (this *QMenuBar) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **
 
 // /usr/include/qt/QtWidgets/qmenubar.h:121
 // index:0
-// Protected virtual
-// void actionEvent(QActionEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void actionEvent(QActionEvent *)
 func (this *QMenuBar) ActionEvent(arg0 *qtgui.QActionEvent /*777 QActionEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar11actionEventEP12QActionEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -497,8 +490,8 @@ func (this *QMenuBar) ActionEvent(arg0 *qtgui.QActionEvent /*777 QActionEvent **
 
 // /usr/include/qt/QtWidgets/qmenubar.h:122
 // index:0
-// Protected virtual
-// void focusOutEvent(QFocusEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void focusOutEvent(QFocusEvent *)
 func (this *QMenuBar) FocusOutEvent(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -507,8 +500,8 @@ func (this *QMenuBar) FocusOutEvent(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **
 
 // /usr/include/qt/QtWidgets/qmenubar.h:123
 // index:0
-// Protected virtual
-// void focusInEvent(QFocusEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void focusInEvent(QFocusEvent *)
 func (this *QMenuBar) FocusInEvent(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -517,8 +510,8 @@ func (this *QMenuBar) FocusInEvent(arg0 *qtgui.QFocusEvent /*777 QFocusEvent **/
 
 // /usr/include/qt/QtWidgets/qmenubar.h:124
 // index:0
-// Protected virtual
-// void timerEvent(QTimerEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void timerEvent(QTimerEvent *)
 func (this *QMenuBar) TimerEvent(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -527,8 +520,8 @@ func (this *QMenuBar) TimerEvent(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/)
 
 // /usr/include/qt/QtWidgets/qmenubar.h:125
 // index:0
-// Protected virtual
-// bool eventFilter(QObject *, QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool eventFilter(QObject *, QEvent *)
 func (this *QMenuBar) EventFilter(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
@@ -540,8 +533,8 @@ func (this *QMenuBar) EventFilter(arg0 *qtcore.QObject /*777 QObject **/, arg1 *
 
 // /usr/include/qt/QtWidgets/qmenubar.h:126
 // index:0
-// Protected virtual
-// bool event(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 func (this *QMenuBar) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBar5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -552,8 +545,8 @@ func (this *QMenuBar) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 
 // /usr/include/qt/QtWidgets/qmenubar.h:127
 // index:0
-// Protected
-// void initStyleOption(QStyleOptionMenuItem *, const QAction *)
+// Protected Visibility=Default Availability=Available
+// [-2] void initStyleOption(QStyleOptionMenuItem *, const QAction *)
 func (this *QMenuBar) InitStyleOption(option *QStyleOptionMenuItem /*777 QStyleOptionMenuItem **/, action *QAction /*777 const QAction **/) {
 	var convArg0 = option.GetCthis()
 	var convArg1 = action.GetCthis()

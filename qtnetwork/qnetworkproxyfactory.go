@@ -71,20 +71,19 @@ func (*QNetworkProxyFactory) NewFromPointer(cthis unsafe.Pointer) *QNetworkProxy
 
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:219
 // index:0
-// Public
-// void QNetworkProxyFactory()
+// Public Visibility=Default Availability=Available
+// [-2] void QNetworkProxyFactory()
 func NewQNetworkProxyFactory() *QNetworkProxyFactory {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkProxyFactoryC1Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkProxyFactoryC1Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQNetworkProxyFactoryFromPointer(cthis)
+	gothis := NewQNetworkProxyFactoryFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:220
 // index:0
-// Public virtual
-// void ~QNetworkProxyFactory()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QNetworkProxyFactory()
 func DeleteQNetworkProxyFactory(*QNetworkProxyFactory) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkProxyFactoryD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -92,8 +91,8 @@ func DeleteQNetworkProxyFactory(*QNetworkProxyFactory) {
 
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:224
 // index:0
-// Public static
-// bool usesSystemConfiguration()
+// Public static Visibility=Default Availability=Available
+// [1] bool usesSystemConfiguration()
 func (this *QNetworkProxyFactory) UsesSystemConfiguration() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkProxyFactory23usesSystemConfigurationEv", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
@@ -108,8 +107,8 @@ func QNetworkProxyFactory_UsesSystemConfiguration() bool {
 
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:225
 // index:0
-// Public static
-// void setUseSystemConfiguration(_Bool)
+// Public static Visibility=Default Availability=Available
+// [-2] void setUseSystemConfiguration(_Bool)
 func (this *QNetworkProxyFactory) SetUseSystemConfiguration(enable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkProxyFactory25setUseSystemConfigurationEb", ffiqt.FFI_TYPE_POINTER, enable)
 	gopp.ErrPrint(err, rv)
@@ -121,8 +120,8 @@ func QNetworkProxyFactory_SetUseSystemConfiguration(enable bool) {
 
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:226
 // index:0
-// Public static
-// void setApplicationProxyFactory(QNetworkProxyFactory *)
+// Public static Visibility=Default Availability=Available
+// [-2] void setApplicationProxyFactory(QNetworkProxyFactory *)
 func (this *QNetworkProxyFactory) SetApplicationProxyFactory(factory *QNetworkProxyFactory /*777 QNetworkProxyFactory **/) {
 	var convArg0 = factory.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkProxyFactory26setApplicationProxyFactoryEPS_", ffiqt.FFI_TYPE_POINTER, convArg0)

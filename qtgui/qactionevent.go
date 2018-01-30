@@ -72,20 +72,19 @@ func (*QActionEvent) NewFromPointer(cthis unsafe.Pointer) *QActionEvent {
 
 // /usr/include/qt/QtGui/qevent.h:727
 // index:0
-// Public
-// void QActionEvent(int, QAction *, QAction *)
+// Public Visibility=Default Availability=Available
+// [-2] void QActionEvent(int, QAction *, QAction *)
 func NewQActionEvent(type_ int, action unsafe.Pointer /*666*/, before unsafe.Pointer /*666*/) *QActionEvent {
-	cthis := qtrt.Calloc(1, 256) // 40
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionEventC2EiP7QActionS1_", ffiqt.FFI_TYPE_VOID, cthis, type_, action, before)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionEventC2EiP7QActionS1_", ffiqt.FFI_TYPE_POINTER, type_, action, before)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQActionEventFromPointer(cthis)
+	gothis := NewQActionEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:728
 // index:0
-// Public virtual
-// void ~QActionEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QActionEvent()
 func DeleteQActionEvent(*QActionEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -93,8 +92,8 @@ func DeleteQActionEvent(*QActionEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:730
 // index:0
-// Public inline
-// QAction * action()
+// Public inline Visibility=Default Availability=Available
+// [8] QAction * action()
 func (this *QActionEvent) Action() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionEvent6actionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -104,8 +103,8 @@ func (this *QActionEvent) Action() unsafe.Pointer /*666*/ {
 
 // /usr/include/qt/QtGui/qevent.h:731
 // index:0
-// Public inline
-// QAction * before()
+// Public inline Visibility=Default Availability=Available
+// [8] QAction * before()
 func (this *QActionEvent) Before() unsafe.Pointer /*666*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionEvent6beforeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

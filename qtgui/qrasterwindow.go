@@ -72,8 +72,8 @@ func (*QRasterWindow) NewFromPointer(cthis unsafe.Pointer) *QRasterWindow {
 
 // /usr/include/qt/QtGui/qrasterwindow.h:52
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QRasterWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QRasterWindow10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -84,21 +84,20 @@ func (this *QRasterWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 
 // /usr/include/qt/QtGui/qrasterwindow.h:56
 // index:0
-// Public
-// void QRasterWindow(QWindow *)
+// Public Visibility=Default Availability=Available
+// [-2] void QRasterWindow(QWindow *)
 func NewQRasterWindow(parent *QWindow /*777 QWindow **/) *QRasterWindow {
-	cthis := qtrt.Calloc(1, 256) // 64
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QRasterWindowC2EP7QWindow", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QRasterWindowC2EP7QWindow", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQRasterWindowFromPointer(cthis)
+	gothis := NewQRasterWindowFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qrasterwindow.h:57
 // index:0
-// Public virtual
-// void ~QRasterWindow()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QRasterWindow()
 func DeleteQRasterWindow(*QRasterWindow) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QRasterWindowD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -106,8 +105,8 @@ func DeleteQRasterWindow(*QRasterWindow) {
 
 // /usr/include/qt/QtGui/qrasterwindow.h:60
 // index:0
-// Protected virtual
-// int metric(enum QPaintDevice::PaintDeviceMetric)
+// Protected virtual Visibility=Default Availability=Available
+// [4] int metric(enum QPaintDevice::PaintDeviceMetric)
 func (this *QRasterWindow) Metric(metric int) int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QRasterWindow6metricEN12QPaintDevice17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), metric)
 	gopp.ErrPrint(err, rv)
@@ -117,8 +116,8 @@ func (this *QRasterWindow) Metric(metric int) int {
 
 // /usr/include/qt/QtGui/qrasterwindow.h:61
 // index:0
-// Protected virtual
-// QPaintDevice * redirected(QPoint *)
+// Protected virtual Visibility=Default Availability=Available
+// [8] QPaintDevice * redirected(QPoint *)
 func (this *QRasterWindow) Redirected(arg0 *qtcore.QPoint /*777 QPoint **/) *QPaintDevice /*777 QPaintDevice **/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QRasterWindow10redirectedEP6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

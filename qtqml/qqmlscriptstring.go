@@ -75,20 +75,19 @@ func (*QQmlScriptString) NewFromPointer(cthis unsafe.Pointer) *QQmlScriptString 
 
 // /usr/include/qt/QtQml/qqmlscriptstring.h:61
 // index:0
-// Public
-// void QQmlScriptString()
+// Public Visibility=Default Availability=Available
+// [-2] void QQmlScriptString()
 func NewQQmlScriptString() *QQmlScriptString {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QQmlScriptStringC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QQmlScriptStringC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQQmlScriptStringFromPointer(cthis)
+	gothis := NewQQmlScriptStringFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtQml/qqmlscriptstring.h:63
 // index:0
-// Public
-// void ~QQmlScriptString()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QQmlScriptString()
 func DeleteQQmlScriptString(*QQmlScriptString) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QQmlScriptStringD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -96,8 +95,8 @@ func DeleteQQmlScriptString(*QQmlScriptString) {
 
 // /usr/include/qt/QtQml/qqmlscriptstring.h:70
 // index:0
-// Public
-// bool isEmpty()
+// Public Visibility=Default Availability=Available
+// [1] bool isEmpty()
 func (this *QQmlScriptString) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QQmlScriptString7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -107,8 +106,8 @@ func (this *QQmlScriptString) IsEmpty() bool {
 
 // /usr/include/qt/QtQml/qqmlscriptstring.h:72
 // index:0
-// Public
-// bool isUndefinedLiteral()
+// Public Visibility=Default Availability=Available
+// [1] bool isUndefinedLiteral()
 func (this *QQmlScriptString) IsUndefinedLiteral() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QQmlScriptString18isUndefinedLiteralEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -118,8 +117,8 @@ func (this *QQmlScriptString) IsUndefinedLiteral() bool {
 
 // /usr/include/qt/QtQml/qqmlscriptstring.h:73
 // index:0
-// Public
-// bool isNullLiteral()
+// Public Visibility=Default Availability=Available
+// [1] bool isNullLiteral()
 func (this *QQmlScriptString) IsNullLiteral() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QQmlScriptString13isNullLiteralEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -129,22 +128,20 @@ func (this *QQmlScriptString) IsNullLiteral() bool {
 
 // /usr/include/qt/QtQml/qqmlscriptstring.h:74
 // index:0
-// Public
-// QString stringLiteral()
+// Public Visibility=Default Availability=Available
+// [8] QString stringLiteral()
 func (this *QQmlScriptString) StringLiteral() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QQmlScriptString13stringLiteralEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QQmlScriptString13stringLiteralEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtQml/qqmlscriptstring.h:75
 // index:0
-// Public
-// qreal numberLiteral(_Bool *)
+// Public Visibility=Default Availability=Available
+// [8] qreal numberLiteral(_Bool *)
 func (this *QQmlScriptString) NumberLiteral(ok unsafe.Pointer /*666*/) float64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QQmlScriptString13numberLiteralEPb", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
@@ -154,8 +151,8 @@ func (this *QQmlScriptString) NumberLiteral(ok unsafe.Pointer /*666*/) float64 {
 
 // /usr/include/qt/QtQml/qqmlscriptstring.h:76
 // index:0
-// Public
-// bool booleanLiteral(_Bool *)
+// Public Visibility=Default Availability=Available
+// [1] bool booleanLiteral(_Bool *)
 func (this *QQmlScriptString) BooleanLiteral(ok unsafe.Pointer /*666*/) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QQmlScriptString14booleanLiteralEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)

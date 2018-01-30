@@ -67,77 +67,72 @@ func (*QLatin1String) NewFromPointer(cthis unsafe.Pointer) *QLatin1String {
 
 // /usr/include/qt/QtCore/qstring.h:94
 // index:0
-// Public inline
-// void QLatin1String()
+// Public inline Visibility=Default Availability=Available
+// [-2] void QLatin1String()
 func NewQLatin1String() *QLatin1String {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QLatin1StringC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QLatin1StringC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQLatin1StringFromPointer(cthis)
+	gothis := NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qstring.h:95
 // index:1
-// Public inline
-// void QLatin1String(const char *)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QLatin1String(const char *)
 func NewQLatin1String_1(s string) *QLatin1String {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QLatin1StringC2EPKc", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QLatin1StringC2EPKc", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQLatin1StringFromPointer(cthis)
+	gothis := NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qstring.h:96
 // index:2
-// Public inline
-// void QLatin1String(const char *, const char *)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QLatin1String(const char *, const char *)
 func NewQLatin1String_2(f string, l string) *QLatin1String {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = qtrt.CString(f)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(l)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QLatin1StringC2EPKcS1_", ffiqt.FFI_TYPE_VOID, cthis, convArg0, convArg1)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QLatin1StringC2EPKcS1_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQLatin1StringFromPointer(cthis)
+	gothis := NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qstring.h:98
 // index:3
-// Public inline
-// void QLatin1String(const char *, int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QLatin1String(const char *, int)
 func NewQLatin1String_3(s string, sz int) *QLatin1String {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QLatin1StringC2EPKci", ffiqt.FFI_TYPE_VOID, cthis, convArg0, sz)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QLatin1StringC2EPKci", ffiqt.FFI_TYPE_POINTER, convArg0, sz)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQLatin1StringFromPointer(cthis)
+	gothis := NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qstring.h:99
 // index:4
-// Public inline
-// void QLatin1String(const QByteArray &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QLatin1String(const QByteArray &)
 func NewQLatin1String_4(s *QByteArray) *QLatin1String {
-	cthis := qtrt.Calloc(1, 256) // 16
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QLatin1StringC2ERK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QLatin1StringC2ERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQLatin1StringFromPointer(cthis)
+	gothis := NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qstring.h:101
 // index:0
-// Public inline
-// const char * latin1()
+// Public inline Visibility=Default Availability=Available
+// [8] const char * latin1()
 func (this *QLatin1String) Latin1() string {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String6latin1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -147,8 +142,8 @@ func (this *QLatin1String) Latin1() string {
 
 // /usr/include/qt/QtCore/qstring.h:102
 // index:0
-// Public inline
-// int size()
+// Public inline Visibility=Default Availability=Available
+// [4] int size()
 func (this *QLatin1String) Size() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -158,8 +153,8 @@ func (this *QLatin1String) Size() int {
 
 // /usr/include/qt/QtCore/qstring.h:103
 // index:0
-// Public inline
-// const char * data()
+// Public inline Visibility=Default Availability=Available
+// [8] const char * data()
 func (this *QLatin1String) Data() string {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -169,8 +164,8 @@ func (this *QLatin1String) Data() string {
 
 // /usr/include/qt/QtCore/qstring.h:105
 // index:0
-// Public inline
-// bool isNull()
+// Public inline Visibility=Default Availability=Available
+// [1] bool isNull()
 func (this *QLatin1String) IsNull() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -180,8 +175,8 @@ func (this *QLatin1String) IsNull() bool {
 
 // /usr/include/qt/QtCore/qstring.h:106
 // index:0
-// Public inline
-// bool isEmpty()
+// Public inline Visibility=Default Availability=Available
+// [1] bool isEmpty()
 func (this *QLatin1String) IsEmpty() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -191,50 +186,44 @@ func (this *QLatin1String) IsEmpty() bool {
 
 // /usr/include/qt/QtCore/qstring.h:108
 // index:0
-// Public inline
-// QLatin1Char at(int)
+// Public inline Visibility=Default Availability=Available
+// [1] QLatin1Char at(int)
 func (this *QLatin1String) At(i int) *QLatin1Char /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String2atEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), i)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String2atEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLatin1CharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qstring.h:112
 // index:0
-// Public inline
-// QLatin1Char front()
+// Public inline Visibility=Default Availability=Available
+// [1] QLatin1Char front()
 func (this *QLatin1String) Front() *QLatin1Char /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String5frontEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String5frontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLatin1CharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qstring.h:113
 // index:0
-// Public inline
-// QLatin1Char back()
+// Public inline Visibility=Default Availability=Available
+// [1] QLatin1Char back()
 func (this *QLatin1String) Back() *QLatin1Char /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String4backEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String4backEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLatin1CharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qstring.h:115
 // index:0
-// Public inline
-// bool startsWith(QStringView, Qt::CaseSensitivity)
+// Public inline Visibility=Default Availability=Available
+// [1] bool startsWith(QStringView, Qt::CaseSensitivity)
 func (this *QLatin1String) StartsWith(s *QStringView /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String10startsWithE11QStringViewN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
@@ -245,8 +234,8 @@ func (this *QLatin1String) StartsWith(s *QStringView /*123*/, cs int) bool {
 
 // /usr/include/qt/QtCore/qstring.h:117
 // index:1
-// Public inline
-// bool startsWith(QLatin1String, Qt::CaseSensitivity)
+// Public inline Visibility=Default Availability=Available
+// [1] bool startsWith(QLatin1String, Qt::CaseSensitivity)
 func (this *QLatin1String) StartsWith_1(s *QLatin1String /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String10startsWithES_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
@@ -257,8 +246,8 @@ func (this *QLatin1String) StartsWith_1(s *QLatin1String /*123*/, cs int) bool {
 
 // /usr/include/qt/QtCore/qstring.h:119
 // index:2
-// Public inline
-// bool startsWith(QChar)
+// Public inline Visibility=Default Availability=Available
+// [1] bool startsWith(QChar)
 func (this *QLatin1String) StartsWith_2(c *QChar /*123*/) bool {
 	var convArg0 = c.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String10startsWithE5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -269,8 +258,8 @@ func (this *QLatin1String) StartsWith_2(c *QChar /*123*/) bool {
 
 // /usr/include/qt/QtCore/qstring.h:121
 // index:3
-// Public inline
-// bool startsWith(QChar, Qt::CaseSensitivity)
+// Public inline Visibility=Default Availability=Available
+// [1] bool startsWith(QChar, Qt::CaseSensitivity)
 func (this *QLatin1String) StartsWith_3(c *QChar /*123*/, cs int) bool {
 	var convArg0 = c.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String10startsWithE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
@@ -281,8 +270,8 @@ func (this *QLatin1String) StartsWith_3(c *QChar /*123*/, cs int) bool {
 
 // /usr/include/qt/QtCore/qstring.h:124
 // index:0
-// Public inline
-// bool endsWith(QStringView, Qt::CaseSensitivity)
+// Public inline Visibility=Default Availability=Available
+// [1] bool endsWith(QStringView, Qt::CaseSensitivity)
 func (this *QLatin1String) EndsWith(s *QStringView /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String8endsWithE11QStringViewN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
@@ -293,8 +282,8 @@ func (this *QLatin1String) EndsWith(s *QStringView /*123*/, cs int) bool {
 
 // /usr/include/qt/QtCore/qstring.h:126
 // index:1
-// Public inline
-// bool endsWith(QLatin1String, Qt::CaseSensitivity)
+// Public inline Visibility=Default Availability=Available
+// [1] bool endsWith(QLatin1String, Qt::CaseSensitivity)
 func (this *QLatin1String) EndsWith_1(s *QLatin1String /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String8endsWithES_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
@@ -305,8 +294,8 @@ func (this *QLatin1String) EndsWith_1(s *QLatin1String /*123*/, cs int) bool {
 
 // /usr/include/qt/QtCore/qstring.h:128
 // index:2
-// Public inline
-// bool endsWith(QChar)
+// Public inline Visibility=Default Availability=Available
+// [1] bool endsWith(QChar)
 func (this *QLatin1String) EndsWith_2(c *QChar /*123*/) bool {
 	var convArg0 = c.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String8endsWithE5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -317,8 +306,8 @@ func (this *QLatin1String) EndsWith_2(c *QChar /*123*/) bool {
 
 // /usr/include/qt/QtCore/qstring.h:130
 // index:3
-// Public inline
-// bool endsWith(QChar, Qt::CaseSensitivity)
+// Public inline Visibility=Default Availability=Available
+// [1] bool endsWith(QChar, Qt::CaseSensitivity)
 func (this *QLatin1String) EndsWith_3(c *QChar /*123*/, cs int) bool {
 	var convArg0 = c.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String8endsWithE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
@@ -329,8 +318,8 @@ func (this *QLatin1String) EndsWith_3(c *QChar /*123*/, cs int) bool {
 
 // /usr/include/qt/QtCore/qstring.h:141
 // index:0
-// Public inline
-// QLatin1String::const_iterator begin()
+// Public inline Visibility=Default Availability=Available
+// [8] QLatin1String::const_iterator begin()
 func (this *QLatin1String) Begin() string {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String5beginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -340,8 +329,8 @@ func (this *QLatin1String) Begin() string {
 
 // /usr/include/qt/QtCore/qstring.h:142
 // index:0
-// Public inline
-// QLatin1String::const_iterator cbegin()
+// Public inline Visibility=Default Availability=Available
+// [8] QLatin1String::const_iterator cbegin()
 func (this *QLatin1String) Cbegin() string {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String6cbeginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -351,8 +340,8 @@ func (this *QLatin1String) Cbegin() string {
 
 // /usr/include/qt/QtCore/qstring.h:143
 // index:0
-// Public inline
-// QLatin1String::const_iterator end()
+// Public inline Visibility=Default Availability=Available
+// [8] QLatin1String::const_iterator end()
 func (this *QLatin1String) End() string {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -362,8 +351,8 @@ func (this *QLatin1String) End() string {
 
 // /usr/include/qt/QtCore/qstring.h:144
 // index:0
-// Public inline
-// QLatin1String::const_iterator cend()
+// Public inline Visibility=Default Availability=Available
+// [8] QLatin1String::const_iterator cend()
 func (this *QLatin1String) Cend() string {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String4cendEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -373,78 +362,68 @@ func (this *QLatin1String) Cend() string {
 
 // /usr/include/qt/QtCore/qstring.h:154
 // index:0
-// Public inline
-// QLatin1String mid(int)
+// Public inline Visibility=Default Availability=Available
+// [16] QLatin1String mid(int)
 func (this *QLatin1String) Mid(pos int) *QLatin1String /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String3midEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), pos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String3midEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qstring.h:156
 // index:1
-// Public inline
-// QLatin1String mid(int, int)
+// Public inline Visibility=Default Availability=Available
+// [16] QLatin1String mid(int, int)
 func (this *QLatin1String) Mid_1(pos int, n int) *QLatin1String /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String3midEii", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), pos, n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String3midEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pos, n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qstring.h:158
 // index:0
-// Public inline
-// QLatin1String left(int)
+// Public inline Visibility=Default Availability=Available
+// [16] QLatin1String left(int)
 func (this *QLatin1String) Left(n int) *QLatin1String /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String4leftEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String4leftEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qstring.h:160
 // index:0
-// Public inline
-// QLatin1String right(int)
+// Public inline Visibility=Default Availability=Available
+// [16] QLatin1String right(int)
 func (this *QLatin1String) Right(n int) *QLatin1String /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String5rightEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String5rightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qstring.h:162
 // index:0
-// Public inline
-// QLatin1String chopped(int)
+// Public inline Visibility=Default Availability=Available
+// [16] QLatin1String chopped(int)
 func (this *QLatin1String) Chopped(n int) *QLatin1String /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String7choppedEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), n)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String7choppedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qstring.h:165
 // index:0
-// Public inline
-// void chop(int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void chop(int)
 func (this *QLatin1String) Chop(n int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QLatin1String4chopEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
@@ -452,8 +431,8 @@ func (this *QLatin1String) Chop(n int) {
 
 // /usr/include/qt/QtCore/qstring.h:167
 // index:0
-// Public inline
-// void truncate(int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void truncate(int)
 func (this *QLatin1String) Truncate(n int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QLatin1String8truncateEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
@@ -461,14 +440,12 @@ func (this *QLatin1String) Truncate(n int) {
 
 // /usr/include/qt/QtCore/qstring.h:170
 // index:0
-// Public inline
-// QLatin1String trimmed()
+// Public inline Visibility=Default Availability=Available
+// [16] QLatin1String trimmed()
 func (this *QLatin1String) Trimmed() *QLatin1String /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String7trimmedEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QLatin1String7trimmedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

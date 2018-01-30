@@ -75,8 +75,8 @@ func (*QStyleFactory) NewFromPointer(cthis unsafe.Pointer) *QStyleFactory {
 
 // /usr/include/qt/QtWidgets/qstylefactory.h:55
 // index:0
-// Public static
-// QStyle * create(const QString &)
+// Public static Visibility=Default Availability=Available
+// [8] QStyle * create(const QString &)
 func (this *QStyleFactory) Create(arg0 *qtcore.QString) *QStyle /*777 QStyle **/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStyleFactory6createERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)

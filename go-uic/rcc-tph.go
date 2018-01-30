@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"os/exec"
 	"strings"
 )
 
@@ -114,7 +115,13 @@ func saveCode() {
 	log.Printf("saving... %s_rc.go...\n", filep)
 	code = "package main\n"
 	code += cp.ExportAll()
-	ioutil.WriteFile(fmt.Sprintf("%s_rc.go", filep), []byte(code), mod)
+	savefile := fmt.Sprintf("%s_rc.go", filep)
+	ioutil.WriteFile(savefile, []byte(code), mod)
+
+	// gofmt the code
+	cmd := exec.Command("/usr/bin/gofmt", []string{"-w", savefile}...)
+	err := cmd.Run()
+	gopp.ErrPrint(err, cmd)
 }
 
 func colon2uline(s string) string { return strings.Replace(s, ":", "_", -1) }

@@ -72,20 +72,19 @@ func (*QIconDragEvent) NewFromPointer(cthis unsafe.Pointer) *QIconDragEvent {
 
 // /usr/include/qt/QtGui/qevent.h:485
 // index:0
-// Public
-// void QIconDragEvent()
+// Public Visibility=Default Availability=Available
+// [-2] void QIconDragEvent()
 func NewQIconDragEvent() *QIconDragEvent {
-	cthis := qtrt.Calloc(1, 256) // 24
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QIconDragEventC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QIconDragEventC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQIconDragEventFromPointer(cthis)
+	gothis := NewQIconDragEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:486
 // index:0
-// Public virtual
-// void ~QIconDragEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QIconDragEvent()
 func DeleteQIconDragEvent(*QIconDragEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QIconDragEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)

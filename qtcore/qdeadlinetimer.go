@@ -67,44 +67,41 @@ func (*QDeadlineTimer) NewFromPointer(cthis unsafe.Pointer) *QDeadlineTimer {
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:65
 // index:0
-// Public inline
-// void QDeadlineTimer(Qt::TimerType)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QDeadlineTimer(Qt::TimerType)
 func NewQDeadlineTimer(type_ int) *QDeadlineTimer {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimerC2EN2Qt9TimerTypeE", ffiqt.FFI_TYPE_VOID, cthis, type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimerC2EN2Qt9TimerTypeE", ffiqt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQDeadlineTimerFromPointer(cthis)
+	gothis := NewQDeadlineTimerFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:67
 // index:1
-// Public inline
-// void QDeadlineTimer(enum QDeadlineTimer::ForeverConstant, Qt::TimerType)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QDeadlineTimer(enum QDeadlineTimer::ForeverConstant, Qt::TimerType)
 func NewQDeadlineTimer_1(arg0 int, type_ int) *QDeadlineTimer {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimerC2ENS_15ForeverConstantEN2Qt9TimerTypeE", ffiqt.FFI_TYPE_VOID, cthis, arg0, type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimerC2ENS_15ForeverConstantEN2Qt9TimerTypeE", ffiqt.FFI_TYPE_POINTER, arg0, type_)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQDeadlineTimerFromPointer(cthis)
+	gothis := NewQDeadlineTimerFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:69
 // index:2
-// Public
-// void QDeadlineTimer(qint64, Qt::TimerType)
+// Public Visibility=Default Availability=Available
+// [-2] void QDeadlineTimer(qint64, Qt::TimerType)
 func NewQDeadlineTimer_2(msecs int64, type_ int) *QDeadlineTimer {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimerC2ExN2Qt9TimerTypeE", ffiqt.FFI_TYPE_VOID, cthis, msecs, type_)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimerC2ExN2Qt9TimerTypeE", ffiqt.FFI_TYPE_POINTER, msecs, type_)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQDeadlineTimerFromPointer(cthis)
+	gothis := NewQDeadlineTimerFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:71
 // index:0
-// Public inline
-// void swap(QDeadlineTimer &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QDeadlineTimer &)
 func (this *QDeadlineTimer) Swap(other *QDeadlineTimer) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimer4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -113,8 +110,8 @@ func (this *QDeadlineTimer) Swap(other *QDeadlineTimer) {
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:74
 // index:0
-// Public inline
-// bool isForever()
+// Public inline Visibility=Default Availability=Available
+// [1] bool isForever()
 func (this *QDeadlineTimer) IsForever() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDeadlineTimer9isForeverEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -124,8 +121,8 @@ func (this *QDeadlineTimer) IsForever() bool {
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:76
 // index:0
-// Public
-// bool hasExpired()
+// Public Visibility=Default Availability=Available
+// [1] bool hasExpired()
 func (this *QDeadlineTimer) HasExpired() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDeadlineTimer10hasExpiredEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -135,8 +132,8 @@ func (this *QDeadlineTimer) HasExpired() bool {
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:78
 // index:0
-// Public inline
-// Qt::TimerType timerType()
+// Public inline Visibility=Default Availability=Available
+// [4] Qt::TimerType timerType()
 func (this *QDeadlineTimer) TimerType() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDeadlineTimer9timerTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -146,8 +143,8 @@ func (this *QDeadlineTimer) TimerType() int {
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:80
 // index:0
-// Public
-// void setTimerType(Qt::TimerType)
+// Public Visibility=Default Availability=Available
+// [-2] void setTimerType(Qt::TimerType)
 func (this *QDeadlineTimer) SetTimerType(type_ int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimer12setTimerTypeEN2Qt9TimerTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
@@ -155,8 +152,8 @@ func (this *QDeadlineTimer) SetTimerType(type_ int) {
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:82
 // index:0
-// Public
-// qint64 remainingTime()
+// Public Visibility=Default Availability=Available
+// [8] qint64 remainingTime()
 func (this *QDeadlineTimer) RemainingTime() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDeadlineTimer13remainingTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -166,8 +163,8 @@ func (this *QDeadlineTimer) RemainingTime() int64 {
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:83
 // index:0
-// Public
-// qint64 remainingTimeNSecs()
+// Public Visibility=Default Availability=Available
+// [8] qint64 remainingTimeNSecs()
 func (this *QDeadlineTimer) RemainingTimeNSecs() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDeadlineTimer18remainingTimeNSecsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -177,8 +174,8 @@ func (this *QDeadlineTimer) RemainingTimeNSecs() int64 {
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:84
 // index:0
-// Public
-// void setRemainingTime(qint64, Qt::TimerType)
+// Public Visibility=Default Availability=Available
+// [-2] void setRemainingTime(qint64, Qt::TimerType)
 func (this *QDeadlineTimer) SetRemainingTime(msecs int64, type_ int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimer16setRemainingTimeExN2Qt9TimerTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msecs, type_)
 	gopp.ErrPrint(err, rv)
@@ -186,8 +183,8 @@ func (this *QDeadlineTimer) SetRemainingTime(msecs int64, type_ int) {
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:85
 // index:0
-// Public
-// void setPreciseRemainingTime(qint64, qint64, Qt::TimerType)
+// Public Visibility=Default Availability=Available
+// [-2] void setPreciseRemainingTime(qint64, qint64, Qt::TimerType)
 func (this *QDeadlineTimer) SetPreciseRemainingTime(secs int64, nsecs int64, type_ int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimer23setPreciseRemainingTimeExxN2Qt9TimerTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), secs, nsecs, type_)
 	gopp.ErrPrint(err, rv)
@@ -195,8 +192,8 @@ func (this *QDeadlineTimer) SetPreciseRemainingTime(secs int64, nsecs int64, typ
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:88
 // index:0
-// Public
-// qint64 deadline()
+// Public Visibility=Default Availability=Available
+// [8] qint64 deadline()
 func (this *QDeadlineTimer) Deadline() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDeadlineTimer8deadlineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -206,8 +203,8 @@ func (this *QDeadlineTimer) Deadline() int64 {
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:89
 // index:0
-// Public
-// qint64 deadlineNSecs()
+// Public Visibility=Default Availability=Available
+// [8] qint64 deadlineNSecs()
 func (this *QDeadlineTimer) DeadlineNSecs() int64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDeadlineTimer13deadlineNSecsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -217,8 +214,8 @@ func (this *QDeadlineTimer) DeadlineNSecs() int64 {
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:90
 // index:0
-// Public
-// void setDeadline(qint64, Qt::TimerType)
+// Public Visibility=Default Availability=Available
+// [-2] void setDeadline(qint64, Qt::TimerType)
 func (this *QDeadlineTimer) SetDeadline(msecs int64, timerType int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimer11setDeadlineExN2Qt9TimerTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msecs, timerType)
 	gopp.ErrPrint(err, rv)
@@ -226,8 +223,8 @@ func (this *QDeadlineTimer) SetDeadline(msecs int64, timerType int) {
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:91
 // index:0
-// Public
-// void setPreciseDeadline(qint64, qint64, Qt::TimerType)
+// Public Visibility=Default Availability=Available
+// [-2] void setPreciseDeadline(qint64, qint64, Qt::TimerType)
 func (this *QDeadlineTimer) SetPreciseDeadline(secs int64, nsecs int64, type_ int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimer18setPreciseDeadlineExxN2Qt9TimerTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), secs, nsecs, type_)
 	gopp.ErrPrint(err, rv)
@@ -235,8 +232,8 @@ func (this *QDeadlineTimer) SetPreciseDeadline(secs int64, nsecs int64, type_ in
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:94
 // index:0
-// Public static
-// QDeadlineTimer addNSecs(QDeadlineTimer, qint64)
+// Public static Visibility=Default Availability=Available
+// [16] QDeadlineTimer addNSecs(QDeadlineTimer, qint64)
 func (this *QDeadlineTimer) AddNSecs(dt *QDeadlineTimer /*123*/, nsecs int64) *QDeadlineTimer /*123*/ {
 	var convArg0 = dt.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimer8addNSecsES_x", ffiqt.FFI_TYPE_POINTER, convArg0, nsecs)
@@ -253,8 +250,8 @@ func QDeadlineTimer_AddNSecs(dt *QDeadlineTimer /*123*/, nsecs int64) *QDeadline
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:95
 // index:0
-// Public static
-// QDeadlineTimer current(Qt::TimerType)
+// Public static Visibility=Default Availability=Available
+// [16] QDeadlineTimer current(Qt::TimerType)
 func (this *QDeadlineTimer) Current(timerType int) *QDeadlineTimer /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDeadlineTimer7currentEN2Qt9TimerTypeE", ffiqt.FFI_TYPE_POINTER, timerType)
 	gopp.ErrPrint(err, rv)
@@ -270,8 +267,8 @@ func QDeadlineTimer_Current(timerType int) *QDeadlineTimer /*123*/ {
 
 // /usr/include/qt/QtCore/qdeadlinetimer.h:162
 // index:0
-// Public inline
-// std::chrono::nanoseconds remainingTimeAsDuration()
+// Public inline Visibility=Default Availability=Available
+// [8] std::chrono::nanoseconds remainingTimeAsDuration()
 func (this *QDeadlineTimer) RemainingTimeAsDuration() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDeadlineTimer23remainingTimeAsDurationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

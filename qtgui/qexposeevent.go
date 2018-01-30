@@ -72,21 +72,20 @@ func (*QExposeEvent) NewFromPointer(cthis unsafe.Pointer) *QExposeEvent {
 
 // /usr/include/qt/QtGui/qevent.h:434
 // index:0
-// Public
-// void QExposeEvent(const QRegion &)
+// Public Visibility=Default Availability=Available
+// [-2] void QExposeEvent(const QRegion &)
 func NewQExposeEvent(rgn *QRegion) *QExposeEvent {
-	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = rgn.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QExposeEventC2ERK7QRegion", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QExposeEventC2ERK7QRegion", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQExposeEventFromPointer(cthis)
+	gothis := NewQExposeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:435
 // index:0
-// Public virtual
-// void ~QExposeEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QExposeEvent()
 func DeleteQExposeEvent(*QExposeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QExposeEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -94,8 +93,8 @@ func DeleteQExposeEvent(*QExposeEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:437
 // index:0
-// Public inline
-// const QRegion & region()
+// Public inline Visibility=Default Availability=Available
+// [8] const QRegion & region()
 func (this *QExposeEvent) Region() *QRegion {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QExposeEvent6regionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

@@ -76,8 +76,8 @@ func (*QStatusBar) NewFromPointer(cthis unsafe.Pointer) *QStatusBar {
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:54
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QStatusBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QStatusBar10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,21 +88,20 @@ func (this *QStatusBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:59
 // index:0
-// Public
-// void QStatusBar(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void QStatusBar(QWidget *)
 func NewQStatusBar(parent *QWidget /*777 QWidget **/) *QStatusBar {
-	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBarC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBarC2EP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQStatusBarFromPointer(cthis)
+	gothis := NewQStatusBarFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:60
 // index:0
-// Public virtual
-// void ~QStatusBar()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QStatusBar()
 func DeleteQStatusBar(*QStatusBar) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBarD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -110,8 +109,8 @@ func DeleteQStatusBar(*QStatusBar) {
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:62
 // index:0
-// Public
-// void addWidget(QWidget *, int)
+// Public Visibility=Default Availability=Available
+// [-2] void addWidget(QWidget *, int)
 func (this *QStatusBar) AddWidget(widget *QWidget /*777 QWidget **/, stretch int) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar9addWidgetEP7QWidgeti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
@@ -120,8 +119,8 @@ func (this *QStatusBar) AddWidget(widget *QWidget /*777 QWidget **/, stretch int
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:63
 // index:0
-// Public
-// int insertWidget(int, QWidget *, int)
+// Public Visibility=Default Availability=Available
+// [4] int insertWidget(int, QWidget *, int)
 func (this *QStatusBar) InsertWidget(index int, widget *QWidget /*777 QWidget **/, stretch int) int {
 	var convArg1 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar12insertWidgetEiP7QWidgeti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
@@ -132,8 +131,8 @@ func (this *QStatusBar) InsertWidget(index int, widget *QWidget /*777 QWidget **
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:64
 // index:0
-// Public
-// void addPermanentWidget(QWidget *, int)
+// Public Visibility=Default Availability=Available
+// [-2] void addPermanentWidget(QWidget *, int)
 func (this *QStatusBar) AddPermanentWidget(widget *QWidget /*777 QWidget **/, stretch int) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar18addPermanentWidgetEP7QWidgeti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
@@ -142,8 +141,8 @@ func (this *QStatusBar) AddPermanentWidget(widget *QWidget /*777 QWidget **/, st
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:65
 // index:0
-// Public
-// int insertPermanentWidget(int, QWidget *, int)
+// Public Visibility=Default Availability=Available
+// [4] int insertPermanentWidget(int, QWidget *, int)
 func (this *QStatusBar) InsertPermanentWidget(index int, widget *QWidget /*777 QWidget **/, stretch int) int {
 	var convArg1 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
@@ -154,8 +153,8 @@ func (this *QStatusBar) InsertPermanentWidget(index int, widget *QWidget /*777 Q
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:66
 // index:0
-// Public
-// void removeWidget(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void removeWidget(QWidget *)
 func (this *QStatusBar) RemoveWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar12removeWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -164,8 +163,8 @@ func (this *QStatusBar) RemoveWidget(widget *QWidget /*777 QWidget **/) {
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:68
 // index:0
-// Public
-// void setSizeGripEnabled(_Bool)
+// Public Visibility=Default Availability=Available
+// [-2] void setSizeGripEnabled(_Bool)
 func (this *QStatusBar) SetSizeGripEnabled(arg0 bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar18setSizeGripEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -173,8 +172,8 @@ func (this *QStatusBar) SetSizeGripEnabled(arg0 bool) {
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:69
 // index:0
-// Public
-// bool isSizeGripEnabled()
+// Public Visibility=Default Availability=Available
+// [1] bool isSizeGripEnabled()
 func (this *QStatusBar) IsSizeGripEnabled() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QStatusBar17isSizeGripEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -184,22 +183,20 @@ func (this *QStatusBar) IsSizeGripEnabled() bool {
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:71
 // index:0
-// Public
-// QString currentMessage()
+// Public Visibility=Default Availability=Available
+// [8] QString currentMessage()
 func (this *QStatusBar) CurrentMessage() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QStatusBar14currentMessageEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QStatusBar14currentMessageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:74
 // index:0
-// Public
-// void showMessage(const QString &, int)
+// Public Visibility=Default Availability=Available
+// [-2] void showMessage(const QString &, int)
 func (this *QStatusBar) ShowMessage(text *qtcore.QString, timeout int) {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar11showMessageERK7QStringi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, timeout)
@@ -208,8 +205,8 @@ func (this *QStatusBar) ShowMessage(text *qtcore.QString, timeout int) {
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:75
 // index:0
-// Public
-// void clearMessage()
+// Public Visibility=Default Availability=Available
+// [-2] void clearMessage()
 func (this *QStatusBar) ClearMessage() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar12clearMessageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -217,8 +214,8 @@ func (this *QStatusBar) ClearMessage() {
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:79
 // index:0
-// Public
-// void messageChanged(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void messageChanged(const QString &)
 func (this *QStatusBar) MessageChanged(text *qtcore.QString) {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar14messageChangedERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -227,8 +224,8 @@ func (this *QStatusBar) MessageChanged(text *qtcore.QString) {
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:82
 // index:0
-// Protected virtual
-// void showEvent(QShowEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void showEvent(QShowEvent *)
 func (this *QStatusBar) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar9showEventEP10QShowEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -237,8 +234,8 @@ func (this *QStatusBar) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) {
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:83
 // index:0
-// Protected virtual
-// void paintEvent(QPaintEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void paintEvent(QPaintEvent *)
 func (this *QStatusBar) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -247,8 +244,8 @@ func (this *QStatusBar) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:84
 // index:0
-// Protected virtual
-// void resizeEvent(QResizeEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void resizeEvent(QResizeEvent *)
 func (this *QStatusBar) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -257,8 +254,8 @@ func (this *QStatusBar) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent 
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:87
 // index:0
-// Protected
-// void reformat()
+// Protected Visibility=Default Availability=Available
+// [-2] void reformat()
 func (this *QStatusBar) Reformat() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar8reformatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -266,8 +263,8 @@ func (this *QStatusBar) Reformat() {
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:88
 // index:0
-// Protected
-// void hideOrShow()
+// Protected Visibility=Default Availability=Available
+// [-2] void hideOrShow()
 func (this *QStatusBar) HideOrShow() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar10hideOrShowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -275,8 +272,8 @@ func (this *QStatusBar) HideOrShow() {
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:89
 // index:0
-// Protected virtual
-// bool event(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 func (this *QStatusBar) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

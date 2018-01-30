@@ -174,6 +174,7 @@ func init() {
 func deinit() {}
 
 func InvokeQtFunc(symname string, retype byte, types []byte, args ...interface{}) (VRetype, error) {
+
 	for modname, lib := range libs {
 		addr, err := lib.Symbol(symname)
 		gopp.ErrPrint(err)
@@ -212,11 +213,13 @@ func InvokeQtFunc6(symname string, retype byte, args ...interface{}) (VRetype, e
 	return uint64(retval), nil
 }
 
-// fix return QSize like pure record
-func InvokeQtFunc7(symname string, retype byte, retval unsafe.Pointer, args ...interface{}) (VRetype, error) {
+// fix return QSize like pure record, RVO
+func InvokeQtFunc7(symname string, args ...interface{}) (VRetype, error) {
 	addr := GetQtSymAddr(symname)
+	var retype byte = FFI_TYPE_POINTER
 	log.Println("FFI Call:", symname, addr, "retype=", retype, "argc=", len(args))
 
+	var retval unsafe.Pointer = C.calloc(1, 256)
 	argtys, argvals := convArgs(args...)
 	// var retval C.uint64_t = 0
 	C.ffi_call_ex(addr, C.int(retype), (*C.uint64_t)(retval), C.int(len(argtys)),
@@ -228,7 +231,16 @@ func InvokeQtFunc7(symname string, retype byte, retval unsafe.Pointer, args ...i
 func isUndefinedSymbolErr(err error) bool {
 	return err != nil && strings.Contains(err.Error(), ": undefined symbol: ")
 }
+
+// 直接使用封装的C++ symbols。好像在这设置没有用啊，符号不同，因为参数表的处理也不同，还是要改生成的调用代码。
+var UseWrapSymbols bool = true // see also qtrt.UseCppSymbols TODO merge
+
+func refmtSymbolName(symname string) string {
+	return gopp.IfElseStr(UseWrapSymbols && strings.HasPrefix(symname, "_Z"), "C"+symname, symname)
+}
+
 func GetQtSymAddr(symname string) unsafe.Pointer {
+	symname = refmtSymbolName(symname)
 	for _, lib := range libs {
 		addr, err := lib.Symbol(symname)
 		if !isUndefinedSymbolErr(err) {

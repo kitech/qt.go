@@ -68,21 +68,20 @@ func (*QDynamicPropertyChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QDynam
 
 // /usr/include/qt/QtCore/qcoreevent.h:365
 // index:0
-// Public
-// void QDynamicPropertyChangeEvent(const QByteArray &)
+// Public Visibility=Default Availability=Available
+// [-2] void QDynamicPropertyChangeEvent(const QByteArray &)
 func NewQDynamicPropertyChangeEvent(name *QByteArray) *QDynamicPropertyChangeEvent {
-	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQDynamicPropertyChangeEventFromPointer(cthis)
+	gothis := NewQDynamicPropertyChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:366
 // index:0
-// Public virtual
-// void ~QDynamicPropertyChangeEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QDynamicPropertyChangeEvent()
 func DeleteQDynamicPropertyChangeEvent(*QDynamicPropertyChangeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -90,14 +89,12 @@ func DeleteQDynamicPropertyChangeEvent(*QDynamicPropertyChangeEvent) {
 
 // /usr/include/qt/QtCore/qcoreevent.h:368
 // index:0
-// Public inline
-// QByteArray propertyName()
+// Public inline Visibility=Default Availability=Available
+// [8] QByteArray propertyName()
 func (this *QDynamicPropertyChangeEvent) PropertyName() *QByteArray /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QDynamicPropertyChangeEvent12propertyNameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QDynamicPropertyChangeEvent12propertyNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }

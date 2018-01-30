@@ -72,8 +72,8 @@ func (*QTouchEvent) NewFromPointer(cthis unsafe.Pointer) *QTouchEvent {
 
 // /usr/include/qt/QtGui/qevent.h:947
 // index:0
-// Public virtual
-// void ~QTouchEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QTouchEvent()
 func DeleteQTouchEvent(*QTouchEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -81,8 +81,8 @@ func DeleteQTouchEvent(*QTouchEvent) {
 
 // /usr/include/qt/QtGui/qevent.h:949
 // index:0
-// Public inline
-// QWindow * window()
+// Public inline Visibility=Default Availability=Available
+// [8] QWindow * window()
 func (this *QTouchEvent) Window() *QWindow /*777 QWindow **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent6windowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -93,8 +93,8 @@ func (this *QTouchEvent) Window() *QWindow /*777 QWindow **/ {
 
 // /usr/include/qt/QtGui/qevent.h:950
 // index:0
-// Public inline
-// QObject * target()
+// Public inline Visibility=Default Availability=Available
+// [8] QObject * target()
 func (this *QTouchEvent) Target() *qtcore.QObject /*777 QObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent6targetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -105,8 +105,8 @@ func (this *QTouchEvent) Target() *qtcore.QObject /*777 QObject **/ {
 
 // /usr/include/qt/QtGui/qevent.h:954
 // index:0
-// Public inline
-// Qt::TouchPointStates touchPointStates()
+// Public inline Visibility=Default Availability=Available
+// [4] Qt::TouchPointStates touchPointStates()
 func (this *QTouchEvent) TouchPointStates() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent16touchPointStatesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -116,8 +116,8 @@ func (this *QTouchEvent) TouchPointStates() int {
 
 // /usr/include/qt/QtGui/qevent.h:955
 // index:0
-// Public inline
-// const QList<QTouchEvent::TouchPoint> & touchPoints()
+// Public inline Visibility=Default Availability=Available
+// [8] const QList<QTouchEvent::TouchPoint> & touchPoints()
 func (this *QTouchEvent) TouchPoints() unsafe.Pointer /*555*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent11touchPointsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -127,8 +127,8 @@ func (this *QTouchEvent) TouchPoints() unsafe.Pointer /*555*/ {
 
 // /usr/include/qt/QtGui/qevent.h:956
 // index:0
-// Public inline
-// QTouchDevice * device()
+// Public inline Visibility=Default Availability=Available
+// [8] QTouchDevice * device()
 func (this *QTouchEvent) Device() *QTouchDevice /*777 QTouchDevice **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -139,8 +139,8 @@ func (this *QTouchEvent) Device() *QTouchDevice /*777 QTouchDevice **/ {
 
 // /usr/include/qt/QtGui/qevent.h:959
 // index:0
-// Public inline
-// void setWindow(QWindow *)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setWindow(QWindow *)
 func (this *QTouchEvent) SetWindow(awindow *QWindow /*777 QWindow **/) {
 	var convArg0 = awindow.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent9setWindowEP7QWindow", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -149,8 +149,8 @@ func (this *QTouchEvent) SetWindow(awindow *QWindow /*777 QWindow **/) {
 
 // /usr/include/qt/QtGui/qevent.h:960
 // index:0
-// Public inline
-// void setTarget(QObject *)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setTarget(QObject *)
 func (this *QTouchEvent) SetTarget(atarget *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = atarget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent9setTargetEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -159,8 +159,8 @@ func (this *QTouchEvent) SetTarget(atarget *qtcore.QObject /*777 QObject **/) {
 
 // /usr/include/qt/QtGui/qevent.h:963
 // index:0
-// Public inline
-// void setDevice(QTouchDevice *)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setDevice(QTouchDevice *)
 func (this *QTouchEvent) SetDevice(adevice *QTouchDevice /*777 QTouchDevice **/) {
 	var convArg0 = adevice.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent9setDeviceEP12QTouchDevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

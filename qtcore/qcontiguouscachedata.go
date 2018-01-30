@@ -67,8 +67,8 @@ func (*QContiguousCacheData) NewFromPointer(cthis unsafe.Pointer) *QContiguousCa
 
 // /usr/include/qt/QtCore/qcontiguouscache.h:67
 // index:0
-// Public static
-// QContiguousCacheData * allocateData(int, int)
+// Public static Visibility=Default Availability=Available
+// [8] QContiguousCacheData * allocateData(int, int)
 func (this *QContiguousCacheData) AllocateData(size int, alignment int) *QContiguousCacheData /*777 QContiguousCacheData **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QContiguousCacheData12allocateDataEii", ffiqt.FFI_TYPE_POINTER, size, alignment)
 	gopp.ErrPrint(err, rv)

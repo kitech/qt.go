@@ -71,20 +71,19 @@ func (*QDnsMailExchangeRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsMailExc
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:111
 // index:0
-// Public
-// void QDnsMailExchangeRecord()
+// Public Visibility=Default Availability=Available
+// [-2] void QDnsMailExchangeRecord()
 func NewQDnsMailExchangeRecord() *QDnsMailExchangeRecord {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QDnsMailExchangeRecordC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QDnsMailExchangeRecordC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQDnsMailExchangeRecordFromPointer(cthis)
+	gothis := NewQDnsMailExchangeRecordFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:117
 // index:0
-// Public
-// void ~QDnsMailExchangeRecord()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QDnsMailExchangeRecord()
 func DeleteQDnsMailExchangeRecord(*QDnsMailExchangeRecord) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QDnsMailExchangeRecordD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -92,8 +91,8 @@ func DeleteQDnsMailExchangeRecord(*QDnsMailExchangeRecord) {
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:119
 // index:0
-// Public inline
-// void swap(QDnsMailExchangeRecord &)
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QDnsMailExchangeRecord &)
 func (this *QDnsMailExchangeRecord) Swap(other *QDnsMailExchangeRecord) {
 	var convArg0 = other.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QDnsMailExchangeRecord4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -102,36 +101,32 @@ func (this *QDnsMailExchangeRecord) Swap(other *QDnsMailExchangeRecord) {
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:121
 // index:0
-// Public
-// QString exchange()
+// Public Visibility=Default Availability=Available
+// [8] QString exchange()
 func (this *QDnsMailExchangeRecord) Exchange() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QDnsMailExchangeRecord8exchangeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QDnsMailExchangeRecord8exchangeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:122
 // index:0
-// Public
-// QString name()
+// Public Visibility=Default Availability=Available
+// [8] QString name()
 func (this *QDnsMailExchangeRecord) Name() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QDnsMailExchangeRecord4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QDnsMailExchangeRecord4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:123
 // index:0
-// Public
-// quint16 preference()
+// Public Visibility=Default Availability=Available
+// [2] quint16 preference()
 func (this *QDnsMailExchangeRecord) Preference() uint16 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QDnsMailExchangeRecord10preferenceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -141,8 +136,8 @@ func (this *QDnsMailExchangeRecord) Preference() uint16 {
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:124
 // index:0
-// Public
-// quint32 timeToLive()
+// Public Visibility=Default Availability=Available
+// [4] quint32 timeToLive()
 func (this *QDnsMailExchangeRecord) TimeToLive() uint {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QDnsMailExchangeRecord10timeToLiveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

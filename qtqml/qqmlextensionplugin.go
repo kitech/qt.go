@@ -79,8 +79,8 @@ func (*QQmlExtensionPlugin) NewFromPointer(cthis unsafe.Pointer) *QQmlExtensionP
 
 // /usr/include/qt/QtQml/qqmlextensionplugin.h:56
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QQmlExtensionPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QQmlExtensionPlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -91,21 +91,20 @@ func (this *QQmlExtensionPlugin) MetaObject() *qtcore.QMetaObject /*777 const QM
 
 // /usr/include/qt/QtQml/qqmlextensionplugin.h:61
 // index:0
-// Public
-// void QQmlExtensionPlugin(QObject *)
+// Public Visibility=Default Availability=Available
+// [-2] void QQmlExtensionPlugin(QObject *)
 func NewQQmlExtensionPlugin(parent *qtcore.QObject /*777 QObject **/) *QQmlExtensionPlugin {
-	cthis := qtrt.Calloc(1, 256) // 24
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQmlExtensionPluginC1EP7QObject", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQmlExtensionPluginC1EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQQmlExtensionPluginFromPointer(cthis)
+	gothis := NewQQmlExtensionPluginFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtQml/qqmlextensionplugin.h:62
 // index:0
-// Public virtual
-// void ~QQmlExtensionPlugin()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QQmlExtensionPlugin()
 func DeleteQQmlExtensionPlugin(*QQmlExtensionPlugin) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQmlExtensionPluginD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -113,22 +112,20 @@ func DeleteQQmlExtensionPlugin(*QQmlExtensionPlugin) {
 
 // /usr/include/qt/QtQml/qqmlextensionplugin.h:64
 // index:0
-// Public
-// QUrl baseUrl()
+// Public Visibility=Default Availability=Available
+// [8] QUrl baseUrl()
 func (this *QQmlExtensionPlugin) BaseUrl() *qtcore.QUrl /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QQmlExtensionPlugin7baseUrlEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QQmlExtensionPlugin7baseUrlEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtQml/qqmlextensionplugin.h:66
 // index:0
-// Public pure virtual
-// void registerTypes(const char *)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [-2] void registerTypes(const char *)
 func (this *QQmlExtensionPlugin) RegisterTypes(uri string) {
 	var convArg0 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg0)
@@ -138,8 +135,8 @@ func (this *QQmlExtensionPlugin) RegisterTypes(uri string) {
 
 // /usr/include/qt/QtQml/qqmlextensionplugin.h:67
 // index:0
-// Public virtual
-// void initializeEngine(QQmlEngine *, const char *)
+// Public virtual Visibility=Default Availability=Available
+// [-2] void initializeEngine(QQmlEngine *, const char *)
 func (this *QQmlExtensionPlugin) InitializeEngine(engine *QQmlEngine /*777 QQmlEngine **/, uri string) {
 	var convArg0 = engine.GetCthis()
 	var convArg1 = qtrt.CString(uri)

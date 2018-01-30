@@ -84,20 +84,19 @@ func (*QQuickTextureFactory) NewFromPointer(cthis unsafe.Pointer) *QQuickTexture
 
 // /usr/include/qt/QtQuick/qquickimageprovider.h:60
 // index:0
-// Public
-// void QQuickTextureFactory()
+// Public Visibility=Default Availability=Available
+// [-2] void QQuickTextureFactory()
 func NewQQuickTextureFactory() *QQuickTextureFactory {
-	cthis := qtrt.Calloc(1, 256) // 16
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQuickTextureFactoryC1Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQuickTextureFactoryC1Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQQuickTextureFactoryFromPointer(cthis)
+	gothis := NewQQuickTextureFactoryFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtQuick/qquickimageprovider.h:61
 // index:0
-// Public virtual
-// void ~QQuickTextureFactory()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QQuickTextureFactory()
 func DeleteQQuickTextureFactory(*QQuickTextureFactory) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQuickTextureFactoryD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -105,8 +104,8 @@ func DeleteQQuickTextureFactory(*QQuickTextureFactory) {
 
 // /usr/include/qt/QtQuick/qquickimageprovider.h:63
 // index:0
-// Public pure virtual
-// QSGTexture * createTexture(QQuickWindow *)
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QSGTexture * createTexture(QQuickWindow *)
 func (this *QQuickTextureFactory) CreateTexture(window *QQuickWindow /*777 QQuickWindow **/) *QSGTexture /*777 QSGTexture **/ {
 	var convArg0 = window.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickTextureFactory13createTextureEP12QQuickWindow", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -118,22 +117,20 @@ func (this *QQuickTextureFactory) CreateTexture(window *QQuickWindow /*777 QQuic
 
 // /usr/include/qt/QtQuick/qquickimageprovider.h:64
 // index:0
-// Public pure virtual
-// QSize textureSize()
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QSize textureSize()
 func (this *QQuickTextureFactory) TextureSize() *qtcore.QSize /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc7("_ZNK20QQuickTextureFactory11textureSizeEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickTextureFactory11textureSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtQuick/qquickimageprovider.h:65
 // index:0
-// Public pure virtual
-// int textureByteCount()
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [4] int textureByteCount()
 func (this *QQuickTextureFactory) TextureByteCount() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickTextureFactory16textureByteCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -143,22 +140,20 @@ func (this *QQuickTextureFactory) TextureByteCount() int {
 
 // /usr/include/qt/QtQuick/qquickimageprovider.h:66
 // index:0
-// Public virtual
-// QImage image()
+// Public virtual Visibility=Default Availability=Available
+// [32] QImage image()
 func (this *QQuickTextureFactory) Image() *qtgui.QImage /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickTextureFactory5imageEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickTextureFactory5imageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtgui.NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtQuick/qquickimageprovider.h:68
 // index:0
-// Public static
-// QQuickTextureFactory * textureFactoryForImage(const QImage &)
+// Public static Visibility=Default Availability=Available
+// [8] QQuickTextureFactory * textureFactoryForImage(const QImage &)
 func (this *QQuickTextureFactory) TextureFactoryForImage(image *qtgui.QImage) *QQuickTextureFactory /*777 QQuickTextureFactory **/ {
 	var convArg0 = image.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQuickTextureFactory22textureFactoryForImageERK6QImage", ffiqt.FFI_TYPE_POINTER, convArg0)

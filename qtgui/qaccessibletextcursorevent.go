@@ -72,34 +72,32 @@ func (*QAccessibleTextCursorEvent) NewFromPointer(cthis unsafe.Pointer) *QAccess
 
 // /usr/include/qt/QtGui/qaccessible.h:747
 // index:0
-// Public inline
-// void QAccessibleTextCursorEvent(QObject *, int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QAccessibleTextCursorEvent(QObject *, int)
 func NewQAccessibleTextCursorEvent(obj *qtcore.QObject /*777 QObject **/, cursorPos int) *QAccessibleTextCursorEvent {
-	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = obj.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEventC2EP7QObjecti", ffiqt.FFI_TYPE_VOID, cthis, convArg0, cursorPos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEventC2EP7QObjecti", ffiqt.FFI_TYPE_POINTER, convArg0, cursorPos)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQAccessibleTextCursorEventFromPointer(cthis)
+	gothis := NewQAccessibleTextCursorEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:753
 // index:1
-// Public inline
-// void QAccessibleTextCursorEvent(QAccessibleInterface *, int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void QAccessibleTextCursorEvent(QAccessibleInterface *, int)
 func NewQAccessibleTextCursorEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, cursorPos int) *QAccessibleTextCursorEvent {
-	cthis := qtrt.Calloc(1, 256) // 32
 	var convArg0 = iface.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEventC2EP20QAccessibleInterfacei", ffiqt.FFI_TYPE_VOID, cthis, convArg0, cursorPos)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEventC2EP20QAccessibleInterfacei", ffiqt.FFI_TYPE_POINTER, convArg0, cursorPos)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQAccessibleTextCursorEventFromPointer(cthis)
+	gothis := NewQAccessibleTextCursorEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:760
 // index:0
-// Public virtual
-// void ~QAccessibleTextCursorEvent()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QAccessibleTextCursorEvent()
 func DeleteQAccessibleTextCursorEvent(*QAccessibleTextCursorEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEventD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -107,8 +105,8 @@ func DeleteQAccessibleTextCursorEvent(*QAccessibleTextCursorEvent) {
 
 // /usr/include/qt/QtGui/qaccessible.h:762
 // index:0
-// Public inline
-// void setCursorPosition(int)
+// Public inline Visibility=Default Availability=Available
+// [-2] void setCursorPosition(int)
 func (this *QAccessibleTextCursorEvent) SetCursorPosition(position int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEvent17setCursorPositionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), position)
 	gopp.ErrPrint(err, rv)
@@ -116,8 +114,8 @@ func (this *QAccessibleTextCursorEvent) SetCursorPosition(position int) {
 
 // /usr/include/qt/QtGui/qaccessible.h:763
 // index:0
-// Public inline
-// int cursorPosition()
+// Public inline Visibility=Default Availability=Available
+// [4] int cursorPosition()
 func (this *QAccessibleTextCursorEvent) CursorPosition() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAccessibleTextCursorEvent14cursorPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)

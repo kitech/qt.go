@@ -76,8 +76,8 @@ func (*QSpinBox) NewFromPointer(cthis unsafe.Pointer) *QSpinBox {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:53
 // index:0
-// Public virtual
-// const QMetaObject * metaObject()
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject()
 func (this *QSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -88,21 +88,20 @@ func (this *QSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject *
 
 // /usr/include/qt/QtWidgets/qspinbox.h:65
 // index:0
-// Public
-// void QSpinBox(QWidget *)
+// Public Visibility=Default Availability=Available
+// [-2] void QSpinBox(QWidget *)
 func NewQSpinBox(parent *QWidget /*777 QWidget **/) *QSpinBox {
-	cthis := qtrt.Calloc(1, 256) // 48
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBoxC2EP7QWidget", ffiqt.FFI_TYPE_VOID, cthis, convArg0)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBoxC2EP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQSpinBoxFromPointer(cthis)
+	gothis := NewQSpinBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:66
 // index:0
-// Public virtual
-// void ~QSpinBox()
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QSpinBox()
 func DeleteQSpinBox(*QSpinBox) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBoxD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -110,8 +109,8 @@ func DeleteQSpinBox(*QSpinBox) {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:68
 // index:0
-// Public
-// int value()
+// Public Visibility=Default Availability=Available
+// [4] int value()
 func (this *QSpinBox) Value() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -121,22 +120,20 @@ func (this *QSpinBox) Value() int {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:70
 // index:0
-// Public
-// QString prefix()
+// Public Visibility=Default Availability=Available
+// [8] QString prefix()
 func (this *QSpinBox) Prefix() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox6prefixEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox6prefixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:71
 // index:0
-// Public
-// void setPrefix(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void setPrefix(const QString &)
 func (this *QSpinBox) SetPrefix(prefix *qtcore.QString) {
 	var convArg0 = prefix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox9setPrefixERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -145,22 +142,20 @@ func (this *QSpinBox) SetPrefix(prefix *qtcore.QString) {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:73
 // index:0
-// Public
-// QString suffix()
+// Public Visibility=Default Availability=Available
+// [8] QString suffix()
 func (this *QSpinBox) Suffix() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox6suffixEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox6suffixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:74
 // index:0
-// Public
-// void setSuffix(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void setSuffix(const QString &)
 func (this *QSpinBox) SetSuffix(suffix *qtcore.QString) {
 	var convArg0 = suffix.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox9setSuffixERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -169,22 +164,20 @@ func (this *QSpinBox) SetSuffix(suffix *qtcore.QString) {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:76
 // index:0
-// Public
-// QString cleanText()
+// Public Visibility=Default Availability=Available
+// [8] QString cleanText()
 func (this *QSpinBox) CleanText() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox9cleanTextEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox9cleanTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:78
 // index:0
-// Public
-// int singleStep()
+// Public Visibility=Default Availability=Available
+// [4] int singleStep()
 func (this *QSpinBox) SingleStep() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox10singleStepEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -194,8 +187,8 @@ func (this *QSpinBox) SingleStep() int {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:79
 // index:0
-// Public
-// void setSingleStep(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setSingleStep(int)
 func (this *QSpinBox) SetSingleStep(val int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox13setSingleStepEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), val)
 	gopp.ErrPrint(err, rv)
@@ -203,8 +196,8 @@ func (this *QSpinBox) SetSingleStep(val int) {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:81
 // index:0
-// Public
-// int minimum()
+// Public Visibility=Default Availability=Available
+// [4] int minimum()
 func (this *QSpinBox) Minimum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox7minimumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -214,8 +207,8 @@ func (this *QSpinBox) Minimum() int {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:82
 // index:0
-// Public
-// void setMinimum(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setMinimum(int)
 func (this *QSpinBox) SetMinimum(min int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox10setMinimumEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), min)
 	gopp.ErrPrint(err, rv)
@@ -223,8 +216,8 @@ func (this *QSpinBox) SetMinimum(min int) {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:84
 // index:0
-// Public
-// int maximum()
+// Public Visibility=Default Availability=Available
+// [4] int maximum()
 func (this *QSpinBox) Maximum() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox7maximumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -234,8 +227,8 @@ func (this *QSpinBox) Maximum() int {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:85
 // index:0
-// Public
-// void setMaximum(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setMaximum(int)
 func (this *QSpinBox) SetMaximum(max int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox10setMaximumEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), max)
 	gopp.ErrPrint(err, rv)
@@ -243,8 +236,8 @@ func (this *QSpinBox) SetMaximum(max int) {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:87
 // index:0
-// Public
-// void setRange(int, int)
+// Public Visibility=Default Availability=Available
+// [-2] void setRange(int, int)
 func (this *QSpinBox) SetRange(min int, max int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox8setRangeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), min, max)
 	gopp.ErrPrint(err, rv)
@@ -252,8 +245,8 @@ func (this *QSpinBox) SetRange(min int, max int) {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:89
 // index:0
-// Public
-// int displayIntegerBase()
+// Public Visibility=Default Availability=Available
+// [4] int displayIntegerBase()
 func (this *QSpinBox) DisplayIntegerBase() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox18displayIntegerBaseEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -263,8 +256,8 @@ func (this *QSpinBox) DisplayIntegerBase() int {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:90
 // index:0
-// Public
-// void setDisplayIntegerBase(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setDisplayIntegerBase(int)
 func (this *QSpinBox) SetDisplayIntegerBase(base int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox21setDisplayIntegerBaseEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), base)
 	gopp.ErrPrint(err, rv)
@@ -272,8 +265,8 @@ func (this *QSpinBox) SetDisplayIntegerBase(base int) {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:93
 // index:0
-// Protected virtual
-// bool event(QEvent *)
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 func (this *QSpinBox) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -284,8 +277,8 @@ func (this *QSpinBox) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:94
 // index:0
-// Protected virtual
-// QValidator::State validate(QString &, int &)
+// Protected virtual Visibility=Default Availability=Available
+// [4] QValidator::State validate(QString &, int &)
 func (this *QSpinBox) Validate(input *qtcore.QString, pos int) int {
 	var convArg0 = input.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox8validateER7QStringRi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
@@ -296,8 +289,8 @@ func (this *QSpinBox) Validate(input *qtcore.QString, pos int) int {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:95
 // index:0
-// Protected virtual
-// int valueFromText(const QString &)
+// Protected virtual Visibility=Default Availability=Available
+// [4] int valueFromText(const QString &)
 func (this *QSpinBox) ValueFromText(text *qtcore.QString) int {
 	var convArg0 = text.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox13valueFromTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -308,22 +301,20 @@ func (this *QSpinBox) ValueFromText(text *qtcore.QString) int {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:96
 // index:0
-// Protected virtual
-// QString textFromValue(int)
+// Protected virtual Visibility=Default Availability=Available
+// [8] QString textFromValue(int)
 func (this *QSpinBox) TextFromValue(val int) *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox13textFromValueEi", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis(), val)
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox13textFromValueEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), val)
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:97
 // index:0
-// Protected virtual
-// void fixup(QString &)
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void fixup(QString &)
 func (this *QSpinBox) Fixup(str *qtcore.QString) {
 	var convArg0 = str.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox5fixupER7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -332,8 +323,8 @@ func (this *QSpinBox) Fixup(str *qtcore.QString) {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:101
 // index:0
-// Public
-// void setValue(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setValue(int)
 func (this *QSpinBox) SetValue(val int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox8setValueEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), val)
 	gopp.ErrPrint(err, rv)
@@ -341,8 +332,8 @@ func (this *QSpinBox) SetValue(val int) {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:104
 // index:0
-// Public
-// void valueChanged(int)
+// Public Visibility=Default Availability=Available
+// [-2] void valueChanged(int)
 func (this *QSpinBox) ValueChanged(arg0 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox12valueChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
@@ -350,8 +341,8 @@ func (this *QSpinBox) ValueChanged(arg0 int) {
 
 // /usr/include/qt/QtWidgets/qspinbox.h:105
 // index:1
-// Public
-// void valueChanged(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void valueChanged(const QString &)
 func (this *QSpinBox) ValueChanged_1(arg0 *qtcore.QString) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox12valueChangedERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)

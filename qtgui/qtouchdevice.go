@@ -71,20 +71,19 @@ func (*QTouchDevice) NewFromPointer(cthis unsafe.Pointer) *QTouchDevice {
 
 // /usr/include/qt/QtGui/qtouchdevice.h:73
 // index:0
-// Public
-// void QTouchDevice()
+// Public Visibility=Default Availability=Available
+// [-2] void QTouchDevice()
 func NewQTouchDevice() *QTouchDevice {
-	cthis := qtrt.Calloc(1, 256) // 8
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDeviceC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDeviceC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQTouchDeviceFromPointer(cthis)
+	gothis := NewQTouchDeviceFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtGui/qtouchdevice.h:74
 // index:0
-// Public
-// void ~QTouchDevice()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QTouchDevice()
 func DeleteQTouchDevice(*QTouchDevice) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDeviceD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -92,22 +91,20 @@ func DeleteQTouchDevice(*QTouchDevice) {
 
 // /usr/include/qt/QtGui/qtouchdevice.h:78
 // index:0
-// Public
-// QString name()
+// Public Visibility=Default Availability=Available
+// [8] QString name()
 func (this *QTouchDevice) Name() *qtcore.QString /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtGui/qtouchdevice.h:79
 // index:0
-// Public
-// QTouchDevice::DeviceType type()
+// Public Visibility=Default Availability=Available
+// [4] QTouchDevice::DeviceType type()
 func (this *QTouchDevice) Type() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -117,8 +114,8 @@ func (this *QTouchDevice) Type() int {
 
 // /usr/include/qt/QtGui/qtouchdevice.h:80
 // index:0
-// Public
-// QTouchDevice::Capabilities capabilities()
+// Public Visibility=Default Availability=Available
+// [4] QTouchDevice::Capabilities capabilities()
 func (this *QTouchDevice) Capabilities() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice12capabilitiesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -128,8 +125,8 @@ func (this *QTouchDevice) Capabilities() int {
 
 // /usr/include/qt/QtGui/qtouchdevice.h:81
 // index:0
-// Public
-// int maximumTouchPoints()
+// Public Visibility=Default Availability=Available
+// [4] int maximumTouchPoints()
 func (this *QTouchDevice) MaximumTouchPoints() int {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTouchDevice18maximumTouchPointsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
@@ -139,8 +136,8 @@ func (this *QTouchDevice) MaximumTouchPoints() int {
 
 // /usr/include/qt/QtGui/qtouchdevice.h:83
 // index:0
-// Public
-// void setName(const QString &)
+// Public Visibility=Default Availability=Available
+// [-2] void setName(const QString &)
 func (this *QTouchDevice) SetName(name *qtcore.QString) {
 	var convArg0 = name.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice7setNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
@@ -149,8 +146,8 @@ func (this *QTouchDevice) SetName(name *qtcore.QString) {
 
 // /usr/include/qt/QtGui/qtouchdevice.h:84
 // index:0
-// Public
-// void setType(enum QTouchDevice::DeviceType)
+// Public Visibility=Default Availability=Available
+// [-2] void setType(enum QTouchDevice::DeviceType)
 func (this *QTouchDevice) SetType(devType int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice7setTypeENS_10DeviceTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), devType)
 	gopp.ErrPrint(err, rv)
@@ -158,8 +155,8 @@ func (this *QTouchDevice) SetType(devType int) {
 
 // /usr/include/qt/QtGui/qtouchdevice.h:86
 // index:0
-// Public
-// void setMaximumTouchPoints(int)
+// Public Visibility=Default Availability=Available
+// [-2] void setMaximumTouchPoints(int)
 func (this *QTouchDevice) SetMaximumTouchPoints(max int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice21setMaximumTouchPointsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), max)
 	gopp.ErrPrint(err, rv)

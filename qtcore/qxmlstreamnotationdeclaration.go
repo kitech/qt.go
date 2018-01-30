@@ -67,20 +67,19 @@ func (*QXmlStreamNotationDeclaration) NewFromPointer(cthis unsafe.Pointer) *QXml
 
 // /usr/include/qt/QtCore/qxmlstream.h:241
 // index:0
-// Public
-// void QXmlStreamNotationDeclaration()
+// Public Visibility=Default Availability=Available
+// [-2] void QXmlStreamNotationDeclaration()
 func NewQXmlStreamNotationDeclaration() *QXmlStreamNotationDeclaration {
-	cthis := qtrt.Calloc(1, 256) // 56
-	rv, err := ffiqt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationC2Ev", ffiqt.FFI_TYPE_VOID, cthis)
+	rv, err := ffiqt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	gothis := NewQXmlStreamNotationDeclarationFromPointer(cthis)
+	gothis := NewQXmlStreamNotationDeclarationFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:243
 // index:0
-// Public
-// void ~QXmlStreamNotationDeclaration()
+// Public Visibility=Default Availability=Available
+// [-2] void ~QXmlStreamNotationDeclaration()
 func DeleteQXmlStreamNotationDeclaration(*QXmlStreamNotationDeclaration) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationD2Ev", ffiqt.FFI_TYPE_VOID)
 	gopp.ErrPrint(err, rv)
@@ -88,42 +87,36 @@ func DeleteQXmlStreamNotationDeclaration(*QXmlStreamNotationDeclaration) {
 
 // /usr/include/qt/QtCore/qxmlstream.h:264
 // index:0
-// Public inline
-// QStringRef name()
+// Public inline Visibility=Default Availability=Available
+// [16] QStringRef name()
 func (this *QXmlStreamNotationDeclaration) Name() *QStringRef /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration4nameEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:265
 // index:0
-// Public inline
-// QStringRef systemId()
+// Public inline Visibility=Default Availability=Available
+// [16] QStringRef systemId()
 func (this *QXmlStreamNotationDeclaration) SystemId() *QStringRef /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8systemIdEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8systemIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:266
 // index:0
-// Public inline
-// QStringRef publicId()
+// Public inline Visibility=Default Availability=Available
+// [16] QStringRef publicId()
 func (this *QXmlStreamNotationDeclaration) PublicId() *QStringRef /*123*/ {
-	mv := qtrt.Calloc(1, 256)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8publicIdEv", ffiqt.FFI_TYPE_POINTER, mv, this.GetCthis())
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8publicIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
-	rv = uint64(uintptr(mv))
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	return rv2
 }
