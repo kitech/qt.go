@@ -6,8 +6,10 @@ package qtwidgets
 //  -lQt5Core -lQt5Gui -lQt5Widgets
 */
 import "C"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
+import (
+	"qt.go/qtcore"
+	"qt.go/qtgui"
+)
 
 func init() {
 	if false {

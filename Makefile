@@ -12,34 +12,34 @@ qtrt-:
 	CC=clang CXX=clang++ go install -v -x ./qtrt
 ffiqt:
 	CC=clang CXX=clang++ go install -v -x ./cffiqt
-mock:
+mock-:
 	CC=clang CXX=clang++ go install -v -x ./qtmock
 
-core:
+core-:
 	CC=clang CXX=clang++ go install -v -x ./qtcore
 
-gui:
+gui-:
 	CC=clang CXX=clang++ go install -v -x ./qtgui
 
-widgets:
+widgets-:
 	CC=clang CXX=clang++ go install -v -x ./qtwidgets
 
-network:
+network-:
 	CC=clang CXX=clang++ go install -v -x ./qtnetwork
 
-qml:
+qml-:
 	CC=clang CXX=clang++ go install -v -x ./qtqml
 
-quick:
+quick-:
 	CC=clang CXX=clang++ go install -v -x ./qtquick
 
-quicktmpl:
+quicktmpl-:
 	CC=clang CXX=clang++ go install -v -x ./qtquicktemplates2
 
-quickctrl:
+quickctrl-:
 	CC=clang CXX=clang++ go install -v -x ./qtquickcontrols2
 
-quickwgt:
+quickwgt-:
 	CC=clang CXX=clang++ go install -v -x ./qtquickwidgets
 
 eg-:

@@ -7,8 +7,7 @@ import (
 	"log"
 
 	"qt.go/cffiqt"
-	"qt.go/qtcore"
-	// "github.com/therecipe/qt/core"
+	"qt.go/core"
 )
 
 func main() {

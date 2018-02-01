@@ -44,6 +44,8 @@ func main() {
 	cp.APf("header", "import \"qt.go/qtgui\"")
 	cp.APf("header", "import \"qt.go/qtwidgets\"")
 	cp.APf("header", "import \"qt.go/qtmock\"")
+	cp.APf("header", "func init(){qtcore.KeepMe()}")
+	cp.APf("header", "func init(){qtmock.KeepMe()}")
 
 	insection := INSEC_NONE
 	for _, line := range lines {
@@ -314,8 +316,7 @@ func onRetranslateUi(line string) {
 		mats := reg1.FindAllStringSubmatch(line, -1)
 		log.Println(mats)
 		cp.APf("retranslateUi",
-			// TODO qtcore.QCoreApplication_Translate crash
-			"this.%s.%s(qtmock.QCoreApplication_Translate(\"%s\", \"%s\", \"dummy123\", 0))",
+			"this.%s.%s(qtcore.QCoreApplication_Translate(\"%s\", \"%s\", \"dummy123\", 0))",
 			strings.Title(mats[0][1]), strings.Title(mats[0][2]), mats[0][3], mats[0][4])
 	}
 }

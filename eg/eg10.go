@@ -1,9 +1,12 @@
 package main
 
-import "qtcore"
-import "log"
-import "reflect"
-import "qtrt"
+import (
+	"log"
+	"qtrt"
+	"reflect"
+
+	"qt.go/qtcore"
+)
 
 // 这和qtcore.QString并不冲突
 type QString struct{}
