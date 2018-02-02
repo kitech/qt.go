@@ -107,6 +107,15 @@ func (this *QTextBlockFormat) IsValid() bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtGui/qtextformat.h:594
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void setAlignment(Qt::Alignment)
+func (this *QTextBlockFormat) SetAlignment(alignment int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormat12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qtextformat.h:595
 // index:0
 // Public inline Visibility=Default Availability=Available

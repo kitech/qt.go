@@ -1145,11 +1145,24 @@ func (this *QByteArray) ToDouble(ok unsafe.Pointer /*666*/) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:354
+// /usr/include/qt/QtCore/qbytearray.h:353
 // index:0
 // Public Visibility=Default Availability=Available
+// [8] QByteArray toBase64(QByteArray::Base64Options)
+func (this *QByteArray) ToBase64(options int) *QByteArray /*123*/ {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8toBase64E6QFlagsINS_12Base64OptionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), options)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:354
+// index:1
+// Public Visibility=Default Availability=Available
 // [8] QByteArray toBase64()
-func (this *QByteArray) ToBase64() *QByteArray /*123*/ {
+func (this *QByteArray) ToBase64_1() *QByteArray /*123*/ {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8toBase64Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
@@ -1428,11 +1441,30 @@ func QByteArray_FromRawData(arg0 string, size int) *QByteArray /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qbytearray.h:378
+// /usr/include/qt/QtCore/qbytearray.h:377
 // index:0
 // Public static Visibility=Default Availability=Available
+// [8] QByteArray fromBase64(const QByteArray &, QByteArray::Base64Options)
+func (this *QByteArray) FromBase64(base64 *QByteArray, options int) *QByteArray /*123*/ {
+	var convArg0 = base64.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray10fromBase64ERKS_6QFlagsINS_12Base64OptionEE", ffiqt.FFI_TYPE_POINTER, convArg0, options)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
+	return rv2
+}
+func QByteArray_FromBase64(base64 *QByteArray, options int) *QByteArray /*123*/ {
+	var nilthis *QByteArray
+	rv := nilthis.FromBase64(base64, options)
+	return rv
+}
+
+// /usr/include/qt/QtCore/qbytearray.h:378
+// index:1
+// Public static Visibility=Default Availability=Available
 // [8] QByteArray fromBase64(const QByteArray &)
-func (this *QByteArray) FromBase64(base64 *QByteArray) *QByteArray /*123*/ {
+func (this *QByteArray) FromBase64_1(base64 *QByteArray) *QByteArray /*123*/ {
 	var convArg0 = base64.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray10fromBase64ERKS_", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
@@ -1441,9 +1473,9 @@ func (this *QByteArray) FromBase64(base64 *QByteArray) *QByteArray /*123*/ {
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
-func QByteArray_FromBase64(base64 *QByteArray) *QByteArray /*123*/ {
+func QByteArray_FromBase64_1(base64 *QByteArray) *QByteArray /*123*/ {
 	var nilthis *QByteArray
-	rv := nilthis.FromBase64(base64)
+	rv := nilthis.FromBase64_1(base64)
 	return rv
 }
 

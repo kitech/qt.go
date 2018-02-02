@@ -319,6 +319,15 @@ func (this *QLibrary) ErrorString() *QString /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qlibrary.h:92
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setLoadHints(QLibrary::LoadHints)
+func (this *QLibrary) SetLoadHints(hints int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibrary12setLoadHintsE6QFlagsINS_8LoadHintEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hints)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtCore/qlibrary.h:93
 // index:0
 // Public Visibility=Default Availability=Available

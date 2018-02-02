@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 11
+// extern C begin: 12
 */
 // import "C"
 import "unsafe"
@@ -520,6 +520,15 @@ func (this *QTextEdit) AutoFormatting() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtWidgets/qtextedit.h:140
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setAutoFormatting(QTextEdit::AutoFormatting)
+func (this *QTextEdit) SetAutoFormatting(features int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit17setAutoFormattingE6QFlagsINS_18AutoFormattingFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), features)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qtextedit.h:142
 // index:0
 // Public Visibility=Default Availability=Available
@@ -1026,6 +1035,15 @@ func (this *QTextEdit) SetTextBackgroundColor(c *qtgui.QColor) {
 func (this *QTextEdit) SetCurrentFont(f *qtgui.QFont) {
 	var convArg0 = f.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit14setCurrentFontERK5QFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtextedit.h:231
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setAlignment(Qt::Alignment)
+func (this *QTextEdit) SetAlignment(a int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEdit12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), a)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -2362,6 +2362,24 @@ func (this *QWidget) WindowState() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtWidgets/qwidget.h:508
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setWindowState(Qt::WindowStates)
+func (this *QWidget) SetWindowState(state int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget14setWindowStateE6QFlagsIN2Qt11WindowStateEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), state)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:509
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void overrideWindowState(Qt::WindowStates)
+func (this *QWidget) OverrideWindowState(state int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget19overrideWindowStateE6QFlagsIN2Qt11WindowStateEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), state)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qwidget.h:511
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -3277,6 +3295,15 @@ func (this *QWidget) InputMethodHints() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:663
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setInputMethodHints(Qt::InputMethodHints)
+func (this *QWidget) SetInputMethodHints(hints int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidget19setInputMethodHintsE6QFlagsIN2Qt15InputMethodHintEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hints)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qwidget.h:666

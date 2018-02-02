@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 30
+// extern C begin: 34
 */
 // import "C"
 import "unsafe"
@@ -607,6 +607,17 @@ func (this *QFileInfo) GroupId() uint {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:127
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool permission(QFile::Permissions)
+func (this *QFileInfo) Permission(permissions int) bool {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QFileInfo10permissionE6QFlagsIN11QFileDevice10PermissionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), permissions)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qfileinfo.h:128

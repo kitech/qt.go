@@ -273,6 +273,15 @@ func (this *QInputMethod) Hide() {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qinputmethod.h:103
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void update(Qt::InputMethodQueries)
+func (this *QInputMethod) Update(queries int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod6updateE6QFlagsIN2Qt16InputMethodQueryEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), queries)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qinputmethod.h:104
 // index:0
 // Public Visibility=Default Availability=Available

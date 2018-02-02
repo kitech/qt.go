@@ -163,6 +163,26 @@ func QUrl_FromUserInput(userInput *QString) *QUrl /*123*/ {
 	return rv
 }
 
+// /usr/include/qt/QtCore/qurl.h:212
+// index:1
+// Public static Visibility=Default Availability=Available
+// [8] QUrl fromUserInput(const QString &, const QString &, QUrl::UserInputResolutionOptions)
+func (this *QUrl) FromUserInput_1(userInput *QString, workingDirectory *QString, options int) *QUrl /*123*/ {
+	var convArg0 = userInput.GetCthis()
+	var convArg1 = workingDirectory.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrl13fromUserInputERK7QStringS2_6QFlagsINS_25UserInputResolutionOptionEE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, options)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	rv2 := /*==*/ NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUrl)
+	return rv2
+}
+func QUrl_FromUserInput_1(userInput *QString, workingDirectory *QString, options int) *QUrl /*123*/ {
+	var nilthis *QUrl
+	rv := nilthis.FromUserInput_1(userInput, workingDirectory, options)
+	return rv
+}
+
 // /usr/include/qt/QtCore/qurl.h:215
 // index:0
 // Public Visibility=Default Availability=Available

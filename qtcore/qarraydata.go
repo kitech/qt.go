@@ -136,6 +136,23 @@ func (this *QArrayData) CloneFlags() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtCore/qarraydata.h:115
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QArrayData * allocate(size_t, size_t, size_t, QArrayData::AllocationOptions)
+func (this *QArrayData) Allocate(objectSize uint, alignment uint, capacity uint, options int) *QArrayData /*777 QArrayData **/ {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QArrayData8allocateEmmm6QFlagsINS_16AllocationOptionEE", ffiqt.FFI_TYPE_POINTER, objectSize, alignment, capacity, options)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	rv2 := /*==*/ NewQArrayDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
+}
+func QArrayData_Allocate(objectSize uint, alignment uint, capacity uint, options int) *QArrayData /*777 QArrayData **/ {
+	var nilthis *QArrayData
+	rv := nilthis.Allocate(objectSize, alignment, capacity, options)
+	return rv
+}
+
 // /usr/include/qt/QtCore/qarraydata.h:123
 // index:0
 // Public static inline Visibility=Default Availability=Available

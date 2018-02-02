@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 6
+// extern C begin: 7
 */
 // import "C"
 import "unsafe"
@@ -87,11 +87,24 @@ func (this *QDirModel) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:70
+// /usr/include/qt/QtWidgets/qdirmodel.h:68
 // index:0
 // Public Visibility=Default Availability=Available
+// [-2] void QDirModel(const QStringList &, QDir::Filters, QDir::SortFlags, QObject *)
+func NewQDirModel(nameFilters *qtcore.QStringList, filters int, sort int, parent *qtcore.QObject /*777 QObject **/) *QDirModel {
+	var convArg0 = nameFilters.GetCthis()
+	var convArg3 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModelC2ERK11QStringList6QFlagsIN4QDir6FilterEES3_INS4_8SortFlagEEP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0, filters, sort, convArg3)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDirModelFromPointer(unsafe.Pointer(uintptr(rv)))
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qdirmodel.h:70
+// index:1
+// Public Visibility=Default Availability=Available
 // [-2] void QDirModel(QObject *)
-func NewQDirModel(parent *qtcore.QObject /*777 QObject **/) *QDirModel {
+func NewQDirModel_1(parent *qtcore.QObject /*777 QObject **/) *QDirModel {
 	var convArg0 = parent.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModelC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
@@ -301,6 +314,15 @@ func (this *QDirModel) IconProvider() *QFileIconProvider /*777 QFileIconProvider
 func (this *QDirModel) SetNameFilters(filters *qtcore.QStringList) {
 	var convArg0 = filters.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel14setNameFiltersERK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdirmodel.h:103
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setFilter(QDir::Filters)
+func (this *QDirModel) SetFilter(filters int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModel9setFilterE6QFlagsIN4QDir6FilterEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), filters)
 	gopp.ErrPrint(err, rv)
 }
 

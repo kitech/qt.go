@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 15
+// extern C begin: 19
 */
 // import "C"
 import "unsafe"
@@ -69,6 +69,20 @@ func NewQHoverEventFromPointer(cthis unsafe.Pointer) *QHoverEvent {
 }
 func (*QHoverEvent) NewFromPointer(cthis unsafe.Pointer) *QHoverEvent {
 	return NewQHoverEventFromPointer(cthis)
+}
+
+// /usr/include/qt/QtGui/qevent.h:157
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QHoverEvent(enum QEvent::Type, const QPointF &, const QPointF &, Qt::KeyboardModifiers)
+func NewQHoverEvent(type_ int, pos *qtcore.QPointF, oldPos *qtcore.QPointF, modifiers int) *QHoverEvent {
+	var convArg1 = pos.GetCthis()
+	var convArg2 = oldPos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHoverEventC2EN6QEvent4TypeERK7QPointFS4_6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_POINTER, type_, convArg1, convArg2, modifiers)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQHoverEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQHoverEvent)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:158

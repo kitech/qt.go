@@ -71,6 +71,32 @@ func (*QKeyEvent) NewFromPointer(cthis unsafe.Pointer) *QKeyEvent {
 	return NewQKeyEventFromPointer(cthis)
 }
 
+// /usr/include/qt/QtGui/qevent.h:338
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QKeyEvent(enum QEvent::Type, int, Qt::KeyboardModifiers, const QString &, _Bool, ushort)
+func NewQKeyEvent(type_ int, key int, modifiers int, text *qtcore.QString, autorep bool, count uint16) *QKeyEvent {
+	var convArg3 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QKeyEventC2EN6QEvent4TypeEi6QFlagsIN2Qt16KeyboardModifierEERK7QStringbt", ffiqt.FFI_TYPE_POINTER, type_, key, modifiers, convArg3, autorep, count)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQKeyEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQKeyEvent)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qevent.h:340
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QKeyEvent(enum QEvent::Type, int, Qt::KeyboardModifiers, quint32, quint32, quint32, const QString &, _Bool, ushort)
+func NewQKeyEvent_1(type_ int, key int, modifiers int, nativeScanCode uint, nativeVirtualKey uint, nativeModifiers uint, text *qtcore.QString, autorep bool, count uint16) *QKeyEvent {
+	var convArg6 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QKeyEventC2EN6QEvent4TypeEi6QFlagsIN2Qt16KeyboardModifierEEjjjRK7QStringbt", ffiqt.FFI_TYPE_POINTER, type_, key, modifiers, nativeScanCode, nativeVirtualKey, nativeModifiers, convArg6, autorep, count)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQKeyEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQKeyEvent)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:343
 // index:0
 // Public virtual Visibility=Default Availability=Available

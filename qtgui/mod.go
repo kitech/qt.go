@@ -5,7 +5,7 @@ package qtgui
 // #cgo LDFLAGS: -lQt5Inline
 //  -lQt5Core -lQt5Gui -lQt5Widgets
 */
-import "C"
+// import "C"
 import "qt.go/qtcore"
 
 func init() {

@@ -128,11 +128,25 @@ func NewQMessageBox(parent *QWidget /*777 QWidget **/) *QMessageBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:202
+// /usr/include/qt/QtWidgets/qmessagebox.h:136
 // index:1
 // Public Visibility=Default Availability=Available
+// [-2] void QMessageBox(enum QMessageBox::Icon, const QString &, const QString &, QMessageBox::StandardButtons, QWidget *, Qt::WindowFlags)
+func NewQMessageBox_1(icon int, title *qtcore.QString, text *qtcore.QString, buttons int, parent *QWidget /*777 QWidget **/, flags int) *QMessageBox {
+	var convArg1 = title.GetCthis()
+	var convArg2 = text.GetCthis()
+	var convArg4 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBoxC2ENS_4IconERK7QStringS3_6QFlagsINS_14StandardButtonEEP7QWidgetS4_IN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, icon, convArg1, convArg2, buttons, convArg4, flags)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQMessageBoxFromPointer(unsafe.Pointer(uintptr(rv)))
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:202
+// index:2
+// Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(const QString &, const QString &, enum QMessageBox::Icon, int, int, int, QWidget *, Qt::WindowFlags)
-func NewQMessageBox_1(title *qtcore.QString, text *qtcore.QString, icon int, button0 int, button1 int, button2 int, parent *QWidget /*777 QWidget **/, f int) *QMessageBox {
+func NewQMessageBox_2(title *qtcore.QString, text *qtcore.QString, icon int, button0 int, button1 int, button2 int, parent *QWidget /*777 QWidget **/, f int) *QMessageBox {
 	var convArg0 = title.GetCthis()
 	var convArg1 = text.GetCthis()
 	var convArg6 = parent.GetCthis()
@@ -219,6 +233,15 @@ func (this *QMessageBox) ButtonRole(button *QAbstractButton /*777 QAbstractButto
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:152
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setStandardButtons(QMessageBox::StandardButtons)
+func (this *QMessageBox) SetStandardButtons(buttons int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox18setStandardButtonsE6QFlagsINS_14StandardButtonEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), buttons)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:153
@@ -458,6 +481,322 @@ func (this *QMessageBox) CheckBox() *QCheckBox /*777 QCheckBox **/ {
 	return rv2
 }
 
+// /usr/include/qt/QtWidgets/qmessagebox.h:185
+// index:0
+// Public static Visibility=Default Availability=Available
+// [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+func (this *QMessageBox) Information(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, buttons int, defaultButton int) int {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return int(rv)
+}
+func QMessageBox_Information(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, buttons int, defaultButton int) int {
+	var nilthis *QMessageBox
+	rv := nilthis.Information(parent, title, text, buttons, defaultButton)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:207
+// index:1
+// Public static Visibility=Default Availability=Available
+// [4] int information(QWidget *, const QString &, const QString &, int, int, int)
+func (this *QMessageBox) Information_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int, button2 int) int {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+func QMessageBox_Information_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int, button2 int) int {
+	var nilthis *QMessageBox
+	rv := nilthis.Information_1(parent, title, text, button0, button1, button2)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:210
+// index:2
+// Public static Visibility=Default Availability=Available
+// [4] int information(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+func (this *QMessageBox) Information_2(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0Text *qtcore.QString, button1Text *qtcore.QString, button2Text *qtcore.QString, defaultButtonNumber int, escapeButtonNumber int) int {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = text.GetCthis()
+	var convArg3 = button0Text.GetCthis()
+	var convArg4 = button1Text.GetCthis()
+	var convArg5 = button2Text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+func QMessageBox_Information_2(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0Text *qtcore.QString, button1Text *qtcore.QString, button2Text *qtcore.QString, defaultButtonNumber int, escapeButtonNumber int) int {
+	var nilthis *QMessageBox
+	rv := nilthis.Information_2(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:217
+// index:3
+// Public static inline Visibility=Default Availability=Available
+// [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
+func (this *QMessageBox) Information_3(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int) int {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return int(rv)
+}
+func QMessageBox_Information_3(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int) int {
+	var nilthis *QMessageBox
+	rv := nilthis.Information_3(parent, title, text, button0, button1)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:188
+// index:0
+// Public static Visibility=Default Availability=Available
+// [4] QMessageBox::StandardButton question(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+func (this *QMessageBox) Question(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, buttons int, defaultButton int) int {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return int(rv)
+}
+func QMessageBox_Question(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, buttons int, defaultButton int) int {
+	var nilthis *QMessageBox
+	rv := nilthis.Question(parent, title, text, buttons, defaultButton)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:222
+// index:1
+// Public static Visibility=Default Availability=Available
+// [4] int question(QWidget *, const QString &, const QString &, int, int, int)
+func (this *QMessageBox) Question_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int, button2 int) int {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+func QMessageBox_Question_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int, button2 int) int {
+	var nilthis *QMessageBox
+	rv := nilthis.Question_1(parent, title, text, button0, button1, button2)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:225
+// index:2
+// Public static Visibility=Default Availability=Available
+// [4] int question(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+func (this *QMessageBox) Question_2(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0Text *qtcore.QString, button1Text *qtcore.QString, button2Text *qtcore.QString, defaultButtonNumber int, escapeButtonNumber int) int {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = text.GetCthis()
+	var convArg3 = button0Text.GetCthis()
+	var convArg4 = button1Text.GetCthis()
+	var convArg5 = button2Text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+func QMessageBox_Question_2(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0Text *qtcore.QString, button1Text *qtcore.QString, button2Text *qtcore.QString, defaultButtonNumber int, escapeButtonNumber int) int {
+	var nilthis *QMessageBox
+	rv := nilthis.Question_2(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:232
+// index:3
+// Public static inline Visibility=Default Availability=Available
+// [4] int question(QWidget *, const QString &, const QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
+func (this *QMessageBox) Question_3(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int) int {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+func QMessageBox_Question_3(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int) int {
+	var nilthis *QMessageBox
+	rv := nilthis.Question_3(parent, title, text, button0, button1)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:191
+// index:0
+// Public static Visibility=Default Availability=Available
+// [4] QMessageBox::StandardButton warning(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+func (this *QMessageBox) Warning(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, buttons int, defaultButton int) int {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return int(rv)
+}
+func QMessageBox_Warning(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, buttons int, defaultButton int) int {
+	var nilthis *QMessageBox
+	rv := nilthis.Warning(parent, title, text, buttons, defaultButton)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:237
+// index:1
+// Public static Visibility=Default Availability=Available
+// [4] int warning(QWidget *, const QString &, const QString &, int, int, int)
+func (this *QMessageBox) Warning_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int, button2 int) int {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+func QMessageBox_Warning_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int, button2 int) int {
+	var nilthis *QMessageBox
+	rv := nilthis.Warning_1(parent, title, text, button0, button1, button2)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:240
+// index:2
+// Public static Visibility=Default Availability=Available
+// [4] int warning(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+func (this *QMessageBox) Warning_2(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0Text *qtcore.QString, button1Text *qtcore.QString, button2Text *qtcore.QString, defaultButtonNumber int, escapeButtonNumber int) int {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = text.GetCthis()
+	var convArg3 = button0Text.GetCthis()
+	var convArg4 = button1Text.GetCthis()
+	var convArg5 = button2Text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+func QMessageBox_Warning_2(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0Text *qtcore.QString, button1Text *qtcore.QString, button2Text *qtcore.QString, defaultButtonNumber int, escapeButtonNumber int) int {
+	var nilthis *QMessageBox
+	rv := nilthis.Warning_2(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:247
+// index:3
+// Public static inline Visibility=Default Availability=Available
+// [4] int warning(QWidget *, const QString &, const QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
+func (this *QMessageBox) Warning_3(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int) int {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+func QMessageBox_Warning_3(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int) int {
+	var nilthis *QMessageBox
+	rv := nilthis.Warning_3(parent, title, text, button0, button1)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:194
+// index:0
+// Public static Visibility=Default Availability=Available
+// [4] QMessageBox::StandardButton critical(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, enum QMessageBox::StandardButton)
+func (this *QMessageBox) Critical(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, buttons int, defaultButton int) int {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, buttons, defaultButton)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return int(rv)
+}
+func QMessageBox_Critical(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, buttons int, defaultButton int) int {
+	var nilthis *QMessageBox
+	rv := nilthis.Critical(parent, title, text, buttons, defaultButton)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:252
+// index:1
+// Public static Visibility=Default Availability=Available
+// [4] int critical(QWidget *, const QString &, const QString &, int, int, int)
+func (this *QMessageBox) Critical_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int, button2 int) int {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+func QMessageBox_Critical_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int, button2 int) int {
+	var nilthis *QMessageBox
+	rv := nilthis.Critical_1(parent, title, text, button0, button1, button2)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:255
+// index:2
+// Public static Visibility=Default Availability=Available
+// [4] int critical(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
+func (this *QMessageBox) Critical_2(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0Text *qtcore.QString, button1Text *qtcore.QString, button2Text *qtcore.QString, defaultButtonNumber int, escapeButtonNumber int) int {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = text.GetCthis()
+	var convArg3 = button0Text.GetCthis()
+	var convArg4 = button1Text.GetCthis()
+	var convArg5 = button2Text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+func QMessageBox_Critical_2(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0Text *qtcore.QString, button1Text *qtcore.QString, button2Text *qtcore.QString, defaultButtonNumber int, escapeButtonNumber int) int {
+	var nilthis *QMessageBox
+	rv := nilthis.Critical_2(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qmessagebox.h:262
+// index:3
+// Public static inline Visibility=Default Availability=Available
+// [4] int critical(QWidget *, const QString &, const QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
+func (this *QMessageBox) Critical_3(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int) int {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+func QMessageBox_Critical_3(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int) int {
+	var nilthis *QMessageBox
+	rv := nilthis.Critical_3(parent, title, text, button0, button1)
+	return rv
+}
+
 // /usr/include/qt/QtWidgets/qmessagebox.h:197
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -487,246 +826,6 @@ func (this *QMessageBox) AboutQt(parent *QWidget /*777 QWidget **/, title *qtcor
 func QMessageBox_AboutQt(parent *QWidget /*777 QWidget **/, title *qtcore.QString) {
 	var nilthis *QMessageBox
 	nilthis.AboutQt(parent, title)
-}
-
-// /usr/include/qt/QtWidgets/qmessagebox.h:207
-// index:0
-// Public static Visibility=Default Availability=Available
-// [4] int information(QWidget *, const QString &, const QString &, int, int, int)
-func (this *QMessageBox) Information(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int, button2 int) int {
-	var convArg0 = parent.GetCthis()
-	var convArg1 = title.GetCthis()
-	var convArg2 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
-	gopp.ErrPrint(err, rv)
-	// return rv
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-func QMessageBox_Information(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int, button2 int) int {
-	var nilthis *QMessageBox
-	rv := nilthis.Information(parent, title, text, button0, button1, button2)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qmessagebox.h:210
-// index:1
-// Public static Visibility=Default Availability=Available
-// [4] int information(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
-func (this *QMessageBox) Information_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0Text *qtcore.QString, button1Text *qtcore.QString, button2Text *qtcore.QString, defaultButtonNumber int, escapeButtonNumber int) int {
-	var convArg0 = parent.GetCthis()
-	var convArg1 = title.GetCthis()
-	var convArg2 = text.GetCthis()
-	var convArg3 = button0Text.GetCthis()
-	var convArg4 = button1Text.GetCthis()
-	var convArg5 = button2Text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
-	gopp.ErrPrint(err, rv)
-	// return rv
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-func QMessageBox_Information_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0Text *qtcore.QString, button1Text *qtcore.QString, button2Text *qtcore.QString, defaultButtonNumber int, escapeButtonNumber int) int {
-	var nilthis *QMessageBox
-	rv := nilthis.Information_1(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qmessagebox.h:217
-// index:2
-// Public static inline Visibility=Default Availability=Available
-// [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
-func (this *QMessageBox) Information_2(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int) int {
-	var convArg0 = parent.GetCthis()
-	var convArg1 = title.GetCthis()
-	var convArg2 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1)
-	gopp.ErrPrint(err, rv)
-	// return rv
-	return int(rv)
-}
-func QMessageBox_Information_2(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int) int {
-	var nilthis *QMessageBox
-	rv := nilthis.Information_2(parent, title, text, button0, button1)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qmessagebox.h:222
-// index:0
-// Public static Visibility=Default Availability=Available
-// [4] int question(QWidget *, const QString &, const QString &, int, int, int)
-func (this *QMessageBox) Question(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int, button2 int) int {
-	var convArg0 = parent.GetCthis()
-	var convArg1 = title.GetCthis()
-	var convArg2 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
-	gopp.ErrPrint(err, rv)
-	// return rv
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-func QMessageBox_Question(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int, button2 int) int {
-	var nilthis *QMessageBox
-	rv := nilthis.Question(parent, title, text, button0, button1, button2)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qmessagebox.h:225
-// index:1
-// Public static Visibility=Default Availability=Available
-// [4] int question(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
-func (this *QMessageBox) Question_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0Text *qtcore.QString, button1Text *qtcore.QString, button2Text *qtcore.QString, defaultButtonNumber int, escapeButtonNumber int) int {
-	var convArg0 = parent.GetCthis()
-	var convArg1 = title.GetCthis()
-	var convArg2 = text.GetCthis()
-	var convArg3 = button0Text.GetCthis()
-	var convArg4 = button1Text.GetCthis()
-	var convArg5 = button2Text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
-	gopp.ErrPrint(err, rv)
-	// return rv
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-func QMessageBox_Question_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0Text *qtcore.QString, button1Text *qtcore.QString, button2Text *qtcore.QString, defaultButtonNumber int, escapeButtonNumber int) int {
-	var nilthis *QMessageBox
-	rv := nilthis.Question_1(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qmessagebox.h:232
-// index:2
-// Public static inline Visibility=Default Availability=Available
-// [4] int question(QWidget *, const QString &, const QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
-func (this *QMessageBox) Question_2(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int) int {
-	var convArg0 = parent.GetCthis()
-	var convArg1 = title.GetCthis()
-	var convArg2 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1)
-	gopp.ErrPrint(err, rv)
-	// return rv
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-func QMessageBox_Question_2(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int) int {
-	var nilthis *QMessageBox
-	rv := nilthis.Question_2(parent, title, text, button0, button1)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qmessagebox.h:237
-// index:0
-// Public static Visibility=Default Availability=Available
-// [4] int warning(QWidget *, const QString &, const QString &, int, int, int)
-func (this *QMessageBox) Warning(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int, button2 int) int {
-	var convArg0 = parent.GetCthis()
-	var convArg1 = title.GetCthis()
-	var convArg2 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
-	gopp.ErrPrint(err, rv)
-	// return rv
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-func QMessageBox_Warning(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int, button2 int) int {
-	var nilthis *QMessageBox
-	rv := nilthis.Warning(parent, title, text, button0, button1, button2)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qmessagebox.h:240
-// index:1
-// Public static Visibility=Default Availability=Available
-// [4] int warning(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
-func (this *QMessageBox) Warning_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0Text *qtcore.QString, button1Text *qtcore.QString, button2Text *qtcore.QString, defaultButtonNumber int, escapeButtonNumber int) int {
-	var convArg0 = parent.GetCthis()
-	var convArg1 = title.GetCthis()
-	var convArg2 = text.GetCthis()
-	var convArg3 = button0Text.GetCthis()
-	var convArg4 = button1Text.GetCthis()
-	var convArg5 = button2Text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
-	gopp.ErrPrint(err, rv)
-	// return rv
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-func QMessageBox_Warning_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0Text *qtcore.QString, button1Text *qtcore.QString, button2Text *qtcore.QString, defaultButtonNumber int, escapeButtonNumber int) int {
-	var nilthis *QMessageBox
-	rv := nilthis.Warning_1(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qmessagebox.h:247
-// index:2
-// Public static inline Visibility=Default Availability=Available
-// [4] int warning(QWidget *, const QString &, const QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
-func (this *QMessageBox) Warning_2(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int) int {
-	var convArg0 = parent.GetCthis()
-	var convArg1 = title.GetCthis()
-	var convArg2 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1)
-	gopp.ErrPrint(err, rv)
-	// return rv
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-func QMessageBox_Warning_2(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int) int {
-	var nilthis *QMessageBox
-	rv := nilthis.Warning_2(parent, title, text, button0, button1)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qmessagebox.h:252
-// index:0
-// Public static Visibility=Default Availability=Available
-// [4] int critical(QWidget *, const QString &, const QString &, int, int, int)
-func (this *QMessageBox) Critical(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int, button2 int) int {
-	var convArg0 = parent.GetCthis()
-	var convArg1 = title.GetCthis()
-	var convArg2 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1, button2)
-	gopp.ErrPrint(err, rv)
-	// return rv
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-func QMessageBox_Critical(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int, button2 int) int {
-	var nilthis *QMessageBox
-	rv := nilthis.Critical(parent, title, text, button0, button1, button2)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qmessagebox.h:255
-// index:1
-// Public static Visibility=Default Availability=Available
-// [4] int critical(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
-func (this *QMessageBox) Critical_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0Text *qtcore.QString, button1Text *qtcore.QString, button2Text *qtcore.QString, defaultButtonNumber int, escapeButtonNumber int) int {
-	var convArg0 = parent.GetCthis()
-	var convArg1 = title.GetCthis()
-	var convArg2 = text.GetCthis()
-	var convArg3 = button0Text.GetCthis()
-	var convArg4 = button1Text.GetCthis()
-	var convArg5 = button2Text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, defaultButtonNumber, escapeButtonNumber)
-	gopp.ErrPrint(err, rv)
-	// return rv
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-func QMessageBox_Critical_1(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0Text *qtcore.QString, button1Text *qtcore.QString, button2Text *qtcore.QString, defaultButtonNumber int, escapeButtonNumber int) int {
-	var nilthis *QMessageBox
-	rv := nilthis.Critical_1(parent, title, text, button0Text, button1Text, button2Text, defaultButtonNumber, escapeButtonNumber)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qmessagebox.h:262
-// index:2
-// Public static inline Visibility=Default Availability=Available
-// [4] int critical(QWidget *, const QString &, const QString &, enum QMessageBox::StandardButton, enum QMessageBox::StandardButton)
-func (this *QMessageBox) Critical_2(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int) int {
-	var convArg0 = parent.GetCthis()
-	var convArg1 = title.GetCthis()
-	var convArg2 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_NS_14StandardButtonES5_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, button0, button1)
-	gopp.ErrPrint(err, rv)
-	// return rv
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-func QMessageBox_Critical_2(parent *QWidget /*777 QWidget **/, title *qtcore.QString, text *qtcore.QString, button0 int, button1 int) int {
-	var nilthis *QMessageBox
-	rv := nilthis.Critical_2(parent, title, text, button0, button1)
-	return rv
 }
 
 // /usr/include/qt/QtWidgets/qmessagebox.h:267

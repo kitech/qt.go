@@ -12,6 +12,7 @@ import (
 )
 
 func main() {
+	ffiqt.SetDebugDynSlot(true)
 	// rs := qtrt.CString("hehehg呵呵")
 	txt := qtcore.NewQString_5("hehehg呵呵")
 	log.Println(txt.Length(), txt.IsEmpty())
@@ -48,6 +49,9 @@ func main() {
 		})
 	}
 
+	tmer.InheritTimerEvent(func(arg0 *qtcore.QTimerEvent) {
+		log.Println(arg0)
+	})
 	ffiqt.Connect(tmer, "objectNameChanged(const QString&)", func(s *qtcore.QString) {
 		log.Println("hehehhe333", s, s.Length(), s.ToLocal8Bit().Data())
 	})

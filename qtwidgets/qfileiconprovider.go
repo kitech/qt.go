@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 23
+// extern C begin: 26
 */
 // import "C"
 import "unsafe"
@@ -139,6 +139,15 @@ func (this *QFileIconProvider) Type(info *qtcore.QFileInfo) *qtcore.QString /*12
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qfileiconprovider.h:69
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setOptions(QFileIconProvider::Options)
+func (this *QFileIconProvider) SetOptions(options int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QFileIconProvider10setOptionsE6QFlagsINS_6OptionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), options)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfileiconprovider.h:70

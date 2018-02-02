@@ -44,6 +44,10 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool open(QIODevice::OpenMode)
+func (this *QTemporaryFile) InheritOpen(f func(flags int) bool) {
+	ffiqt.SetAllInheritCallback(this, "open", f)
+}
 
 type QTemporaryFile struct {
 	*QFile
@@ -163,6 +167,17 @@ func (this *QTemporaryFile) SetAutoRemove(b bool) {
 // [1] bool open()
 func (this *QTemporaryFile) Open() bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile4openEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qtemporaryfile.h:98
+// index:1
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool open(QIODevice::OpenMode)
+func (this *QTemporaryFile) Open_1(flags int) bool {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile4openE6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

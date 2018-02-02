@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 28
+// extern C begin: 30
 */
 // import "C"
 import "unsafe"
@@ -177,6 +177,15 @@ func (this *QGraphicsSceneWheelEvent) Buttons() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:152
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setButtons(Qt::MouseButtons)
+func (this *QGraphicsSceneWheelEvent) SetButtons(buttons int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneWheelEvent10setButtonsE6QFlagsIN2Qt11MouseButtonEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), buttons)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:154
 // index:0
 // Public Visibility=Default Availability=Available
@@ -186,6 +195,15 @@ func (this *QGraphicsSceneWheelEvent) Modifiers() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:155
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setModifiers(Qt::KeyboardModifiers)
+func (this *QGraphicsSceneWheelEvent) SetModifiers(modifiers int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneWheelEvent12setModifiersE6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), modifiers)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:157

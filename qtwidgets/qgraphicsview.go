@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 18
+// extern C begin: 19
 */
 // import "C"
 import "unsafe"
@@ -284,6 +284,15 @@ func (this *QGraphicsView) SetRenderHint(hint int, enabled bool) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsview.h:125
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setRenderHints(QPainter::RenderHints)
+func (this *QGraphicsView) SetRenderHints(hints int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView14setRenderHintsE6QFlagsIN8QPainter10RenderHintEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hints)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsview.h:127
 // index:0
 // Public Visibility=Default Availability=Available
@@ -293,6 +302,15 @@ func (this *QGraphicsView) Alignment() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:128
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setAlignment(Qt::Alignment)
+func (this *QGraphicsView) SetAlignment(alignment int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsview.h:130
@@ -446,6 +464,15 @@ func (this *QGraphicsView) CacheMode() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:153
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setCacheMode(QGraphicsView::CacheMode)
+func (this *QGraphicsView) SetCacheMode(mode int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView12setCacheModeE6QFlagsINS_13CacheModeFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsview.h:154
@@ -999,6 +1026,16 @@ func (this *QGraphicsView) ForegroundBrush() *qtgui.QBrush /*123*/ {
 func (this *QGraphicsView) SetForegroundBrush(brush *qtgui.QBrush) {
 	var convArg0 = brush.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView18setForegroundBrushERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsview.h:227
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void invalidateScene(const QRectF &, QGraphicsScene::SceneLayers)
+func (this *QGraphicsView) InvalidateScene(rect *qtcore.QRectF, layers int) {
+	var convArg0 = rect.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsView15invalidateSceneERK6QRectF6QFlagsIN14QGraphicsScene10SceneLayerEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, layers)
 	gopp.ErrPrint(err, rv)
 }
 

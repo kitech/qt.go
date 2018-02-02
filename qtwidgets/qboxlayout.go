@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 40
+// extern C begin: 45
 */
 // import "C"
 import "unsafe"
@@ -157,6 +157,16 @@ func (this *QBoxLayout) AddSpacerItem(spacerItem *QSpacerItem /*777 QSpacerItem 
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qboxlayout.h:74
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void addWidget(QWidget *, int, Qt::Alignment)
+func (this *QBoxLayout) AddWidget(arg0 *QWidget /*777 QWidget **/, stretch int, alignment int) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout9addWidgetEP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch, alignment)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qboxlayout.h:75
 // index:0
 // Public Visibility=Default Availability=Available
@@ -211,6 +221,16 @@ func (this *QBoxLayout) InsertStretch(index int, stretch int) {
 func (this *QBoxLayout) InsertSpacerItem(index int, spacerItem *QSpacerItem /*777 QSpacerItem **/) {
 	var convArg1 = spacerItem.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout16insertSpacerItemEiP11QSpacerItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qboxlayout.h:82
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void insertWidget(int, QWidget *, int, Qt::Alignment)
+func (this *QBoxLayout) InsertWidget(index int, widget *QWidget /*777 QWidget **/, stretch int, alignment int) {
+	var convArg1 = widget.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBoxLayout12insertWidgetEiP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch, alignment)
 	gopp.ErrPrint(err, rv)
 }
 

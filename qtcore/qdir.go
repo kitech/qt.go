@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 55
+// extern C begin: 56
 */
 // import "C"
 import "unsafe"
@@ -77,6 +77,20 @@ func (*QDir) NewFromPointer(cthis unsafe.Pointer) *QDir {
 func NewQDir(path *QString) *QDir {
 	var convArg0 = path.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDirC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDirFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDir)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qdir.h:103
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QDir(const QString &, const QString &, QDir::SortFlags, QDir::Filters)
+func NewQDir_1(path *QString, nameFilter *QString, sort int, filter int) *QDir {
+	var convArg0 = path.GetCthis()
+	var convArg1 = nameFilter.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDirC2ERK7QStringS2_6QFlagsINS_8SortFlagEES3_INS_6FilterEE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, sort, filter)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDirFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDir)
@@ -333,6 +347,15 @@ func (this *QDir) Filter() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtCore/qdir.h:142
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setFilter(QDir::Filters)
+func (this *QDir) SetFilter(filter int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDir9setFilterE6QFlagsINS_6FilterEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), filter)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtCore/qdir.h:143
 // index:0
 // Public Visibility=Default Availability=Available
@@ -362,6 +385,17 @@ func (this *QDir) Count() uint {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qdir.h:147
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isEmpty(QDir::Filters)
+func (this *QDir) IsEmpty(filters int) bool {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QDir7isEmptyE6QFlagsINS_6FilterEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), filters)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qdir.h:161

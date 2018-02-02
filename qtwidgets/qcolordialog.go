@@ -187,6 +187,15 @@ func (this *QColorDialog) TestOption(option int) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtWidgets/qcolordialog.h:82
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setOptions(QColorDialog::ColorDialogOptions)
+func (this *QColorDialog) SetOptions(options int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QColorDialog10setOptionsE6QFlagsINS_17ColorDialogOptionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), options)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qcolordialog.h:83
 // index:0
 // Public Visibility=Default Availability=Available
@@ -217,6 +226,27 @@ func (this *QColorDialog) Open(receiver *qtcore.QObject /*777 QObject **/, membe
 func (this *QColorDialog) SetVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QColorDialog10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qcolordialog.h:90
+// index:0
+// Public static Visibility=Default Availability=Available
+// [16] QColor getColor(const QColor &, QWidget *, const QString &, QColorDialog::ColorDialogOptions)
+func (this *QColorDialog) GetColor(initial *qtgui.QColor, parent *QWidget /*777 QWidget **/, title *qtcore.QString, options int) *qtgui.QColor /*123*/ {
+	var convArg0 = initial.GetCthis()
+	var convArg1 = parent.GetCthis()
+	var convArg2 = title.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QColorDialog8getColorERK6QColorP7QWidgetRK7QString6QFlagsINS_17ColorDialogOptionEE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
+	return rv2
+}
+func QColorDialog_GetColor(initial *qtgui.QColor, parent *QWidget /*777 QWidget **/, title *qtcore.QString, options int) *qtgui.QColor /*123*/ {
+	var nilthis *QColorDialog
+	rv := nilthis.GetColor(initial, parent, title, options)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qcolordialog.h:96

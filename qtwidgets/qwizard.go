@@ -322,6 +322,15 @@ func (this *QWizard) TestOption(option int) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtWidgets/qwizard.h:149
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setOptions(QWizard::WizardOptions)
+func (this *QWizard) SetOptions(options int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizard10setOptionsE6QFlagsINS_12WizardOptionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), options)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qwizard.h:150
 // index:0
 // Public Visibility=Default Availability=Available

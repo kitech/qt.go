@@ -95,6 +95,45 @@ func NewQTextStream_1(device *QIODevice /*777 QIODevice **/) *QTextStream {
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qtextstream.h:96
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QTextStream(QString *, QIODevice::OpenMode)
+func NewQTextStream_2(string *QString /*777 QString **/, openMode int) *QTextStream {
+	var convArg0 = string.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStreamC2EP7QString6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, convArg0, openMode)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextStream)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qtextstream.h:97
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QTextStream(QByteArray *, QIODevice::OpenMode)
+func NewQTextStream_3(array *QByteArray /*777 QByteArray **/, openMode int) *QTextStream {
+	var convArg0 = array.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStreamC2EP10QByteArray6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, convArg0, openMode)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextStream)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qtextstream.h:98
+// index:4
+// Public Visibility=Default Availability=Available
+// [-2] void QTextStream(const QByteArray &, QIODevice::OpenMode)
+func NewQTextStream_4(array *QByteArray, openMode int) *QTextStream {
+	var convArg0 = array.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStreamC2ERK10QByteArray6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, convArg0, openMode)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextStream)
+	return gothis
+}
+
 // /usr/include/qt/QtCore/qtextstream.h:99
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -221,6 +260,16 @@ func (this *QTextStream) Device() *QIODevice /*777 QIODevice **/ {
 	//  return rv
 	rv2 := /*==*/ NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
+}
+
+// /usr/include/qt/QtCore/qtextstream.h:117
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setString(QString *, QIODevice::OpenMode)
+func (this *QTextStream) SetString(string *QString /*777 QString **/, openMode int) {
+	var convArg0 = string.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStream9setStringEP7QString6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, openMode)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qtextstream.h:118

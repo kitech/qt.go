@@ -112,6 +112,11 @@ func (this *QTableView) InheritVerticalOffset(f func() int) {
 	ffiqt.SetAllInheritCallback(this, "verticalOffset", f)
 }
 
+// QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+func (this *QTableView) InheritMoveCursor(f func(cursorAction int, modifiers int) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "moveCursor", f)
+}
+
 // void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
 func (this *QTableView) InheritSetSelection(f func(rect *qtcore.QRect, command int)) {
 	ffiqt.SetAllInheritCallback(this, "setSelection", f)
@@ -832,6 +837,19 @@ func (this *QTableView) VerticalOffset() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtWidgets/qtableview.h:156
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [24] QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+func (this *QTableView) MoveCursor(cursorAction int, modifiers int) *qtcore.QModelIndex /*123*/ {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableView10moveCursorEN17QAbstractItemView12CursorActionE6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cursorAction, modifiers)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qtableview.h:158

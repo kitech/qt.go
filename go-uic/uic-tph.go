@@ -258,6 +258,9 @@ func onSetupUi(line string) {
 			refmtval := strings.Title(mats[0][3])
 			switch mats[0][2] {
 			case "addWidget":
+				if strings.Contains(mats[0][1], "Layout") {
+					refmtname = "Layout()." + refmtname
+				}
 				refmtval = fmt.Sprintf("qtwidgets.NewQWidgetFromPointer(this.%s.GetCthis())", refmtval)
 			case "addLayout":
 				refmtval = fmt.Sprintf("qtwidgets.NewQLayoutFromPointer(this.%s.GetCthis()), 0", refmtval)

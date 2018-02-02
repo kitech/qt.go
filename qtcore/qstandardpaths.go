@@ -88,6 +88,25 @@ func QStandardPaths_WritableLocation(type_ int) *QString /*123*/ {
 	return rv
 }
 
+// /usr/include/qt/QtCore/qstandardpaths.h:91
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString locate(enum QStandardPaths::StandardLocation, const QString &, QStandardPaths::LocateOptions)
+func (this *QStandardPaths) Locate(type_ int, fileName *QString, options int) *QString /*123*/ {
+	var convArg1 = fileName.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths6locateENS_16StandardLocationERK7QString6QFlagsINS_12LocateOptionEE", ffiqt.FFI_TYPE_POINTER, type_, convArg1, options)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
+	return rv2
+}
+func QStandardPaths_Locate(type_ int, fileName *QString, options int) *QString /*123*/ {
+	var nilthis *QStandardPaths
+	rv := nilthis.Locate(type_, fileName, options)
+	return rv
+}
+
 // /usr/include/qt/QtCore/qstandardpaths.h:94
 // index:0
 // Public static Visibility=Default Availability=Available

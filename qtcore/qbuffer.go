@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 57
+// extern C begin: 59
 */
 // import "C"
 import "unsafe"
@@ -201,6 +201,17 @@ func (this *QBuffer) Data() *QByteArray {
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
+}
+
+// /usr/include/qt/QtCore/qbuffer.h:76
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool open(QIODevice::OpenMode)
+func (this *QBuffer) Open(openMode int) bool {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBuffer4openE6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), openMode)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qbuffer.h:78

@@ -98,6 +98,26 @@ func DeleteQGraphicsGridLayout(this *QGraphicsGridLayout) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:59
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void addItem(QGraphicsLayoutItem *, int, int, int, int, Qt::Alignment)
+func (this *QGraphicsGridLayout) AddItem(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, row int, column int, rowSpan int, columnSpan int, alignment int) {
+	var convArg0 = item.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsGridLayout7addItemEP19QGraphicsLayoutItemiiii6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, row, column, rowSpan, columnSpan, alignment)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:61
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [-2] void addItem(QGraphicsLayoutItem *, int, int, Qt::Alignment)
+func (this *QGraphicsGridLayout) AddItem_1(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, row int, column int, alignment int) {
+	var convArg0 = item.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsGridLayout7addItemEP19QGraphicsLayoutItemii6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, row, column, alignment)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:63
 // index:0
 // Public Visibility=Default Availability=Available
@@ -365,6 +385,15 @@ func (this *QGraphicsGridLayout) SetColumnFixedWidth(column int, width float64) 
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:95
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setRowAlignment(int, Qt::Alignment)
+func (this *QGraphicsGridLayout) SetRowAlignment(row int, alignment int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsGridLayout15setRowAlignmentEi6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, alignment)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:96
 // index:0
 // Public Visibility=Default Availability=Available
@@ -376,6 +405,15 @@ func (this *QGraphicsGridLayout) RowAlignment(row int) int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:97
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setColumnAlignment(int, Qt::Alignment)
+func (this *QGraphicsGridLayout) SetColumnAlignment(column int, alignment int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsGridLayout18setColumnAlignmentEi6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), column, alignment)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:98
 // index:0
 // Public Visibility=Default Availability=Available
@@ -385,6 +423,16 @@ func (this *QGraphicsGridLayout) ColumnAlignment(column int) int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:100
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setAlignment(QGraphicsLayoutItem *, Qt::Alignment)
+func (this *QGraphicsGridLayout) SetAlignment(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, alignment int) {
+	var convArg0 = item.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsGridLayout12setAlignmentEP19QGraphicsLayoutItem6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:101

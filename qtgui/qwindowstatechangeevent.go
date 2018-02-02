@@ -71,6 +71,18 @@ func (*QWindowStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QWindowSta
 	return NewQWindowStateChangeEventFromPointer(cthis)
 }
 
+// /usr/include/qt/QtGui/qevent.h:783
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QWindowStateChangeEvent(Qt::WindowStates, _Bool)
+func NewQWindowStateChangeEvent(aOldState int, isOverride bool) *QWindowStateChangeEvent {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QWindowStateChangeEventC2E6QFlagsIN2Qt11WindowStateEEb", ffiqt.FFI_TYPE_POINTER, aOldState, isOverride)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQWindowStateChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQWindowStateChangeEvent)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:784
 // index:0
 // Public virtual Visibility=Default Availability=Available

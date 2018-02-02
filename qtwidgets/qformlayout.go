@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 18
+// extern C begin: 20
 */
 // import "C"
 import "unsafe"
@@ -149,6 +149,15 @@ func (this *QFormLayout) RowWrapPolicy() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtWidgets/qformlayout.h:98
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setLabelAlignment(Qt::Alignment)
+func (this *QFormLayout) SetLabelAlignment(alignment int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout17setLabelAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qformlayout.h:99
 // index:0
 // Public Visibility=Default Availability=Available
@@ -158,6 +167,15 @@ func (this *QFormLayout) LabelAlignment() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtWidgets/qformlayout.h:100
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setFormAlignment(Qt::Alignment)
+func (this *QFormLayout) SetFormAlignment(alignment int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayout16setFormAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qformlayout.h:101

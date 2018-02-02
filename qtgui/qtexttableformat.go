@@ -176,6 +176,15 @@ func (this *QTextTableFormat) SetCellPadding(padding float64) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qtextformat.h:913
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void setAlignment(Qt::Alignment)
+func (this *QTextTableFormat) SetAlignment(alignment int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormat12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qtextformat.h:914
 // index:0
 // Public inline Visibility=Default Availability=Available

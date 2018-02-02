@@ -59,6 +59,11 @@ func (this *QIODevice) InheritWriteData(f func(data string, len int64) int64) {
 	ffiqt.SetAllInheritCallback(this, "writeData", f)
 }
 
+// void setOpenMode(QIODevice::OpenMode)
+func (this *QIODevice) InheritSetOpenMode(f func(openMode int)) {
+	ffiqt.SetAllInheritCallback(this, "setOpenMode", f)
+}
+
 // void setErrorString(const class QString &)
 func (this *QIODevice) InheritSetErrorString(f func(errorString *QString)) {
 	ffiqt.SetAllInheritCallback(this, "setErrorString", f)
@@ -266,6 +271,17 @@ func (this *QIODevice) CurrentWriteChannel() int {
 func (this *QIODevice) SetCurrentWriteChannel(channel int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice22setCurrentWriteChannelEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), channel)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qiodevice.h:106
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool open(QIODevice::OpenMode)
+func (this *QIODevice) Open(mode int) bool {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice4openE6QFlagsINS_12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:107
@@ -702,6 +718,15 @@ func (this *QIODevice) WriteData(data string, len int64) int64 {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qiodevice.h:170
+// index:0
+// Protected Visibility=Default Availability=Available
+// [-2] void setOpenMode(QIODevice::OpenMode)
+func (this *QIODevice) SetOpenMode(openMode int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODevice11setOpenModeE6QFlagsINS_12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), openMode)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:172

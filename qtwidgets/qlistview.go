@@ -122,6 +122,11 @@ func (this *QListView) InheritDropEvent(f func(e *qtgui.QDropEvent /*777 QDropEv
 	ffiqt.SetAllInheritCallback(this, "dropEvent", f)
 }
 
+// void startDrag(Qt::DropActions)
+func (this *QListView) InheritStartDrag(f func(supportedActions int)) {
+	ffiqt.SetAllInheritCallback(this, "startDrag", f)
+}
+
 // QStyleOptionViewItem viewOptions()
 func (this *QListView) InheritViewOptions(f func() unsafe.Pointer) {
 	ffiqt.SetAllInheritCallback(this, "viewOptions", f)
@@ -140,6 +145,11 @@ func (this *QListView) InheritHorizontalOffset(f func() int) {
 // int verticalOffset()
 func (this *QListView) InheritVerticalOffset(f func() int) {
 	ffiqt.SetAllInheritCallback(this, "verticalOffset", f)
+}
+
+// QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+func (this *QListView) InheritMoveCursor(f func(cursorAction int, modifiers int) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "moveCursor", f)
 }
 
 // QRect rectForIndex(const class QModelIndex &)
@@ -744,6 +754,15 @@ func (this *QListView) DropEvent(e *qtgui.QDropEvent /*777 QDropEvent **/) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qlistview.h:165
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void startDrag(Qt::DropActions)
+func (this *QListView) StartDrag(supportedActions int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView9startDragE6QFlagsIN2Qt10DropActionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), supportedActions)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qlistview.h:168
 // index:0
 // Protected virtual Visibility=Default Availability=Available
@@ -787,6 +806,19 @@ func (this *QListView) VerticalOffset() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtWidgets/qlistview.h:173
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [24] QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+func (this *QListView) MoveCursor(cursorAction int, modifiers int) *qtcore.QModelIndex /*123*/ {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListView10moveCursorEN17QAbstractItemView12CursorActionE6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cursorAction, modifiers)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qlistview.h:174

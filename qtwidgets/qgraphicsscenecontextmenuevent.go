@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 14
+// extern C begin: 16
 */
 // import "C"
 import "unsafe"
@@ -175,6 +175,15 @@ func (this *QGraphicsSceneContextMenuEvent) Modifiers() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:187
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setModifiers(Qt::KeyboardModifiers)
+func (this *QGraphicsSceneContextMenuEvent) SetModifiers(modifiers int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEvent12setModifiersE6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), modifiers)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:189

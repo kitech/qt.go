@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 50
+// extern C begin: 53
 */
 // import "C"
 import "unsafe"
@@ -401,6 +401,46 @@ func (this *QGridLayout) AddWidget(w *QWidget /*777 QWidget **/) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qgridlayout.h:103
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void addWidget(QWidget *, int, int, Qt::Alignment)
+func (this *QGridLayout) AddWidget_1(arg0 *QWidget /*777 QWidget **/, row int, column int, arg3 int) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout9addWidgetEP7QWidgetii6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, row, column, arg3)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgridlayout.h:104
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void addWidget(QWidget *, int, int, int, int, Qt::Alignment)
+func (this *QGridLayout) AddWidget_2(arg0 *QWidget /*777 QWidget **/, row int, column int, rowSpan int, columnSpan int, arg5 int) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout9addWidgetEP7QWidgetiiii6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, row, column, rowSpan, columnSpan, arg5)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgridlayout.h:105
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void addLayout(QLayout *, int, int, Qt::Alignment)
+func (this *QGridLayout) AddLayout(arg0 *QLayout /*777 QLayout **/, row int, column int, arg3 int) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout9addLayoutEP7QLayoutii6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, row, column, arg3)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgridlayout.h:106
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void addLayout(QLayout *, int, int, int, int, Qt::Alignment)
+func (this *QGridLayout) AddLayout_1(arg0 *QLayout /*777 QLayout **/, row int, column int, rowSpan int, columnSpan int, arg5 int) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout9addLayoutEP7QLayoutiiii6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, row, column, rowSpan, columnSpan, arg5)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgridlayout.h:108
 // index:0
 // Public Visibility=Default Availability=Available
@@ -478,6 +518,26 @@ func (this *QGridLayout) SetGeometry(arg0 *qtcore.QRect) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qgridlayout.h:117
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void addItem(QLayoutItem *, int, int, int, int, Qt::Alignment)
+func (this *QGridLayout) AddItem(item *QLayoutItem /*777 QLayoutItem **/, row int, column int, rowSpan int, columnSpan int, arg5 int) {
+	var convArg0 = item.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout7addItemEP11QLayoutItemiiii6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, row, column, rowSpan, columnSpan, arg5)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgridlayout.h:123
+// index:1
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void addItem(QLayoutItem *)
+func (this *QGridLayout) AddItem_1(arg0 *QLayoutItem /*777 QLayoutItem **/) {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout7addItemEP11QLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgridlayout.h:119
 // index:0
 // Public Visibility=Default Availability=Available
@@ -493,16 +553,6 @@ func (this *QGridLayout) SetDefaultPositioning(n int, orient int) {
 // [-2] void getItemPosition(int, int *, int *, int *, int *)
 func (this *QGridLayout) GetItemPosition(idx int, row unsafe.Pointer /*666*/, column unsafe.Pointer /*666*/, rowSpan unsafe.Pointer /*666*/, columnSpan unsafe.Pointer /*666*/) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QGridLayout15getItemPositionEiPiS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), idx, &row, &column, &rowSpan, &columnSpan)
-	gopp.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qgridlayout.h:123
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void addItem(QLayoutItem *)
-func (this *QGridLayout) AddItem(arg0 *QLayoutItem /*777 QLayoutItem **/) {
-	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayout7addItemEP11QLayoutItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

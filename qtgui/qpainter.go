@@ -2130,6 +2130,15 @@ func (this *QPainter) SetRenderHint(hint int, on bool) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qpainter.h:456
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setRenderHints(QPainter::RenderHints, _Bool)
+func (this *QPainter) SetRenderHints(hints int, on bool) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainter14setRenderHintsE6QFlagsINS_10RenderHintEEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hints, on)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qpainter.h:457
 // index:0
 // Public Visibility=Default Availability=Available

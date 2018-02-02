@@ -166,6 +166,15 @@ func (this *QToolBar) IsMovable() bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtWidgets/qtoolbar.h:86
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setAllowedAreas(Qt::ToolBarAreas)
+func (this *QToolBar) SetAllowedAreas(areas int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar15setAllowedAreasE6QFlagsIN2Qt11ToolBarAreaEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), areas)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qtoolbar.h:87
 // index:0
 // Public Visibility=Default Availability=Available
@@ -483,6 +492,15 @@ func (this *QToolBar) ActionTriggered(action *QAction /*777 QAction **/) {
 // [-2] void movableChanged(_Bool)
 func (this *QToolBar) MovableChanged(movable bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar14movableChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), movable)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtoolbar.h:183
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void allowedAreasChanged(Qt::ToolBarAreas)
+func (this *QToolBar) AllowedAreasChanged(allowedAreas int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBar19allowedAreasChangedE6QFlagsIN2Qt11ToolBarAreaEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), allowedAreas)
 	gopp.ErrPrint(err, rv)
 }
 

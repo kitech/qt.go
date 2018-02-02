@@ -222,6 +222,15 @@ func (this *QScrollArea) Alignment() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtWidgets/qscrollarea.h:74
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setAlignment(Qt::Alignment)
+func (this *QScrollArea) SetAlignment(arg0 int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QScrollArea12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qscrollarea.h:76
 // index:0
 // Public Visibility=Default Availability=Available

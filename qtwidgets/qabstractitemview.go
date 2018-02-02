@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 42
+// extern C begin: 43
 */
 // import "C"
 import "unsafe"
@@ -142,6 +142,11 @@ func (this *QAbstractItemView) InheritVerticalStepsPerItem(f func() int) {
 	ffiqt.SetAllInheritCallback(this, "verticalStepsPerItem", f)
 }
 
+// QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+func (this *QAbstractItemView) InheritMoveCursor(f func(cursorAction int, modifiers int) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "moveCursor", f)
+}
+
 // int horizontalOffset()
 func (this *QAbstractItemView) InheritHorizontalOffset(f func() int) {
 	ffiqt.SetAllInheritCallback(this, "horizontalOffset", f)
@@ -175,6 +180,11 @@ func (this *QAbstractItemView) InheritEdit(f func(index *qtcore.QModelIndex, tri
 // QItemSelectionModel::SelectionFlags selectionCommand(const class QModelIndex &, const class QEvent *)
 func (this *QAbstractItemView) InheritSelectionCommand(f func(index *qtcore.QModelIndex, event *qtcore.QEvent /*777 const QEvent **/) int) {
 	ffiqt.SetAllInheritCallback(this, "selectionCommand", f)
+}
+
+// void startDrag(Qt::DropActions)
+func (this *QAbstractItemView) InheritStartDrag(f func(supportedActions int)) {
+	ffiqt.SetAllInheritCallback(this, "startDrag", f)
 }
 
 // QStyleOptionViewItem viewOptions()
@@ -526,6 +536,15 @@ func (this *QAbstractItemView) RootIndex() *qtcore.QModelIndex /*123*/ {
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qabstractitemview.h:148
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setEditTriggers(QAbstractItemView::EditTriggers)
+func (this *QAbstractItemView) SetEditTriggers(triggers int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView15setEditTriggersE6QFlagsINS_11EditTriggerEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), triggers)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractitemview.h:149
@@ -1368,6 +1387,19 @@ func (this *QAbstractItemView) VerticalStepsPerItem() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+// /usr/include/qt/QtWidgets/qabstractitemview.h:283
+// index:0
+// Protected purevirtual virtual Visibility=Default Availability=Available
+// [24] QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+func (this *QAbstractItemView) MoveCursor(cursorAction int, modifiers int) *qtcore.QModelIndex /*123*/ {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView10moveCursorENS_12CursorActionE6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cursorAction, modifiers)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qabstractitemview.h:286
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
@@ -1437,6 +1469,15 @@ func (this *QAbstractItemView) SelectionCommand(index *qtcore.QModelIndex, event
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtWidgets/qabstractitemview.h:301
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void startDrag(Qt::DropActions)
+func (this *QAbstractItemView) StartDrag(supportedActions int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemView9startDragE6QFlagsIN2Qt10DropActionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), supportedActions)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractitemview.h:304

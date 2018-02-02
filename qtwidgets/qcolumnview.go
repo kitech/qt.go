@@ -57,6 +57,11 @@ func (this *QColumnView) InheritIsIndexHidden(f func(index *qtcore.QModelIndex) 
 	ffiqt.SetAllInheritCallback(this, "isIndexHidden", f)
 }
 
+// QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+func (this *QColumnView) InheritMoveCursor(f func(cursorAction int, modifiers int) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "moveCursor", f)
+}
+
 // void resizeEvent(class QResizeEvent *)
 func (this *QColumnView) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
 	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
@@ -315,6 +320,19 @@ func (this *QColumnView) IsIndexHidden(index *qtcore.QModelIndex) bool {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qcolumnview.h:89
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [24] QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+func (this *QColumnView) MoveCursor(cursorAction int, modifiers int) *qtcore.QModelIndex /*123*/ {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnView10moveCursorEN17QAbstractItemView12CursorActionE6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cursorAction, modifiers)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qcolumnview.h:90

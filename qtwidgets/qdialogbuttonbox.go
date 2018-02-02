@@ -120,6 +120,30 @@ func NewQDialogButtonBox_1(orientation int, parent *QWidget /*777 QWidget **/) *
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:122
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QDialogButtonBox(QDialogButtonBox::StandardButtons, QWidget *)
+func NewQDialogButtonBox_2(buttons int, parent *QWidget /*777 QWidget **/) *QDialogButtonBox {
+	var convArg1 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBoxC2E6QFlagsINS_14StandardButtonEEP7QWidget", ffiqt.FFI_TYPE_POINTER, buttons, convArg1)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDialogButtonBoxFromPointer(unsafe.Pointer(uintptr(rv)))
+	return gothis
+}
+
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:123
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QDialogButtonBox(QDialogButtonBox::StandardButtons, Qt::Orientation, QWidget *)
+func NewQDialogButtonBox_3(buttons int, orientation int, parent *QWidget /*777 QWidget **/) *QDialogButtonBox {
+	var convArg2 = parent.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBoxC2E6QFlagsINS_14StandardButtonEEN2Qt11OrientationEP7QWidget", ffiqt.FFI_TYPE_POINTER, buttons, orientation, convArg2)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDialogButtonBoxFromPointer(unsafe.Pointer(uintptr(rv)))
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qdialogbuttonbox.h:125
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -214,6 +238,15 @@ func (this *QDialogButtonBox) ButtonRole(button *QAbstractButton /*777 QAbstract
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:139
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setStandardButtons(QDialogButtonBox::StandardButtons)
+func (this *QDialogButtonBox) SetStandardButtons(buttons int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBox18setStandardButtonsE6QFlagsINS_14StandardButtonEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), buttons)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdialogbuttonbox.h:140

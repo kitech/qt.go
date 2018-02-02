@@ -95,11 +95,24 @@ func NewQDataStream_1(arg0 *QIODevice /*777 QIODevice **/) *QDataStream {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdatastream.h:126
+// /usr/include/qt/QtCore/qdatastream.h:125
 // index:2
 // Public Visibility=Default Availability=Available
+// [-2] void QDataStream(QByteArray *, QIODevice::OpenMode)
+func NewQDataStream_2(arg0 *QByteArray /*777 QByteArray **/, flags int) *QDataStream {
+	var convArg0 = arg0.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamC2EP10QByteArray6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, convArg0, flags)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDataStream)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qdatastream.h:126
+// index:3
+// Public Visibility=Default Availability=Available
 // [-2] void QDataStream(const QByteArray &)
-func NewQDataStream_2(arg0 *QByteArray) *QDataStream {
+func NewQDataStream_3(arg0 *QByteArray) *QDataStream {
 	var convArg0 = arg0.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamC2ERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)

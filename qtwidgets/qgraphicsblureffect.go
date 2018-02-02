@@ -158,12 +158,30 @@ func (this *QGraphicsBlurEffect) SetBlurRadius(blurRadius float64) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicseffect.h:179
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setBlurHints(QGraphicsBlurEffect::BlurHints)
+func (this *QGraphicsBlurEffect) SetBlurHints(hints int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect12setBlurHintsE6QFlagsINS_8BlurHintEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hints)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:182
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void blurRadiusChanged(qreal)
 func (this *QGraphicsBlurEffect) BlurRadiusChanged(blurRadius float64) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect17blurRadiusChangedEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), blurRadius)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicseffect.h:183
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void blurHintsChanged(QGraphicsBlurEffect::BlurHints)
+func (this *QGraphicsBlurEffect) BlurHintsChanged(hints int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffect16blurHintsChangedE6QFlagsINS_8BlurHintEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hints)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 63
+// extern C begin: 71
 */
 // import "C"
 import "unsafe"
@@ -422,6 +422,15 @@ func (this *QFileSystemModel) IconProvider() *QFileIconProvider /*777 QFileIconP
 	//  return rv
 	rv2 := /*==*/ NewQFileIconProviderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:117
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setFilter(QDir::Filters)
+func (this *QFileSystemModel) SetFilter(filters int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModel9setFilterE6QFlagsIN4QDir6FilterEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), filters)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:118

@@ -208,6 +208,15 @@ func (this *QPluginLoader) ErrorString() *QString /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qpluginloader.h:81
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setLoadHints(QLibrary::LoadHints)
+func (this *QPluginLoader) SetLoadHints(loadHints int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoader12setLoadHintsE6QFlagsIN8QLibrary8LoadHintEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), loadHints)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtCore/qpluginloader.h:82
 // index:0
 // Public Visibility=Default Availability=Available

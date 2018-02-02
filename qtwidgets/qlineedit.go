@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 107
+// extern C begin: 109
 */
 // import "C"
 import "unsafe"
@@ -455,6 +455,15 @@ func (this *QLineEdit) CursorPositionAt(pos *qtcore.QPoint) int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtWidgets/qlineedit.h:138
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setAlignment(Qt::Alignment)
+func (this *QLineEdit) SetAlignment(flag int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEdit12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flag)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlineedit.h:139

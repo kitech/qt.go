@@ -314,6 +314,16 @@ func (this *QAbstractScrollArea) SetCornerWidget(widget *QWidget /*777 QWidget *
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qabstractscrollarea.h:87
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void addScrollBarWidget(QWidget *, Qt::Alignment)
+func (this *QAbstractScrollArea) AddScrollBarWidget(widget *QWidget /*777 QWidget **/, alignment int) {
+	var convArg0 = widget.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractScrollArea18addScrollBarWidgetEP7QWidget6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:90
 // index:0
 // Public Visibility=Default Availability=Available

@@ -355,6 +355,15 @@ func (this *QAbstractSpinBox) KeyboardTracking() bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:107
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setAlignment(Qt::Alignment)
+func (this *QAbstractSpinBox) SetAlignment(flag int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBox12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flag)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:108
 // index:0
 // Public Visibility=Default Availability=Available

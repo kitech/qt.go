@@ -385,6 +385,15 @@ func (this *QMdiSubWindow) MdiArea() *QMdiArea /*777 QMdiArea **/ {
 	return rv2
 }
 
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:100
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void windowStateChanged(Qt::WindowStates, Qt::WindowStates)
+func (this *QMdiSubWindow) WindowStateChanged(oldState int, newState int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMdiSubWindow18windowStateChangedE6QFlagsIN2Qt11WindowStateEES3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), oldState, newState)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qmdisubwindow.h:101
 // index:0
 // Public Visibility=Default Availability=Available

@@ -1257,6 +1257,19 @@ func (this *QLocale) ToCurrencyString_9(i float32, symbol *QString, precision in
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qlocale.h:1061
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString formattedDataSize(qint64, int, QLocale::DataSizeFormats)
+func (this *QLocale) FormattedDataSize(bytes int64, precision int, format int) *QString /*123*/ {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale17formattedDataSizeExi6QFlagsINS_14DataSizeFormatEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), bytes, precision, format)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qlocale.h:1068
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -1359,6 +1372,15 @@ func QLocale_System() *QLocale /*123*/ {
 	var nilthis *QLocale
 	rv := nilthis.System()
 	return rv
+}
+
+// /usr/include/qt/QtCore/qlocale.h:1079
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setNumberOptions(QLocale::NumberOptions)
+func (this *QLocale) SetNumberOptions(options int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocale16setNumberOptionsE6QFlagsINS_12NumberOptionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), options)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtCore/qlocale.h:1080

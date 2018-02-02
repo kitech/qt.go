@@ -561,6 +561,15 @@ func (this *QWindow) SetWindowState(state int) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qwindow.h:197
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setWindowStates(Qt::WindowStates)
+func (this *QWindow) SetWindowStates(states int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow15setWindowStatesE6QFlagsIN2Qt11WindowStateEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), states)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qwindow.h:199
 // index:0
 // Public Visibility=Default Availability=Available

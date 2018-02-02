@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 12
+// extern C begin: 13
 */
 // import "C"
 import "unsafe"
@@ -69,6 +69,20 @@ func NewQDragMoveEventFromPointer(cthis unsafe.Pointer) *QDragMoveEvent {
 }
 func (*QDragMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QDragMoveEvent {
 	return NewQDragMoveEventFromPointer(cthis)
+}
+
+// /usr/include/qt/QtGui/qevent.h:642
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QDragMoveEvent(const QPoint &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, enum QEvent::Type)
+func NewQDragMoveEvent(pos *qtcore.QPoint, actions int, data *qtcore.QMimeData /*777 const QMimeData **/, buttons int, modifiers int, type_ int) *QDragMoveEvent {
+	var convArg0 = pos.GetCthis()
+	var convArg2 = data.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEventC2ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE", ffiqt.FFI_TYPE_POINTER, convArg0, actions, convArg2, buttons, modifiers, type_)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDragMoveEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDragMoveEvent)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:644

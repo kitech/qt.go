@@ -71,6 +71,18 @@ func (*QInputMethodQueryEvent) NewFromPointer(cthis unsafe.Pointer) *QInputMetho
 	return NewQInputMethodQueryEventFromPointer(cthis)
 }
 
+// /usr/include/qt/QtGui/qevent.h:581
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QInputMethodQueryEvent(Qt::InputMethodQueries)
+func NewQInputMethodQueryEvent(queries int) *QInputMethodQueryEvent {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QInputMethodQueryEventC2E6QFlagsIN2Qt16InputMethodQueryEE", ffiqt.FFI_TYPE_POINTER, queries)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQInputMethodQueryEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQInputMethodQueryEvent)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:582
 // index:0
 // Public virtual Visibility=Default Availability=Available

@@ -177,6 +177,11 @@ func (this *QHeaderView) InheritIsIndexHidden(f func(index *qtcore.QModelIndex) 
 	ffiqt.SetAllInheritCallback(this, "isIndexHidden", f)
 }
 
+// QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+func (this *QHeaderView) InheritMoveCursor(f func(arg0 int, arg1 int) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "moveCursor", f)
+}
+
 // void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
 func (this *QHeaderView) InheritSetSelection(f func(rect *qtcore.QRect, flags int)) {
 	ffiqt.SetAllInheritCallback(this, "setSelection", f)
@@ -820,6 +825,15 @@ func (this *QHeaderView) DefaultAlignment() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtWidgets/qheaderview.h:173
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setDefaultAlignment(Qt::Alignment)
+func (this *QHeaderView) SetDefaultAlignment(alignment int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHeaderView19setDefaultAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qheaderview.h:175
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -1274,6 +1288,19 @@ func (this *QHeaderView) IsIndexHidden(index *qtcore.QModelIndex) bool {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qheaderview.h:243
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [24] QModelIndex moveCursor(enum QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
+func (this *QHeaderView) MoveCursor(arg0 int, arg1 int) *qtcore.QModelIndex /*123*/ {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHeaderView10moveCursorEN17QAbstractItemView12CursorActionE6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, arg1)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qheaderview.h:244

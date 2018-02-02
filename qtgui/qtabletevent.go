@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 17
+// extern C begin: 23
 */
 // import "C"
 import "unsafe"
@@ -69,6 +69,34 @@ func NewQTabletEventFromPointer(cthis unsafe.Pointer) *QTabletEvent {
 }
 func (*QTabletEvent) NewFromPointer(cthis unsafe.Pointer) *QTabletEvent {
 	return NewQTabletEventFromPointer(cthis)
+}
+
+// /usr/include/qt/QtGui/qevent.h:250
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QTabletEvent(enum QEvent::Type, const QPointF &, const QPointF &, int, int, qreal, int, int, qreal, qreal, int, Qt::KeyboardModifiers, qint64)
+func NewQTabletEvent(t int, pos *qtcore.QPointF, globalPos *qtcore.QPointF, device int, pointerType int, pressure float64, xTilt int, yTilt int, tangentialPressure float64, rotation float64, z int, keyState int, uniqueID int64) *QTabletEvent {
+	var convArg1 = pos.GetCthis()
+	var convArg2 = globalPos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTabletEventC2EN6QEvent4TypeERK7QPointFS4_iidiiddi6QFlagsIN2Qt16KeyboardModifierEEx", ffiqt.FFI_TYPE_POINTER, t, convArg1, convArg2, device, pointerType, pressure, xTilt, yTilt, tangentialPressure, rotation, z, keyState, uniqueID)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTabletEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTabletEvent)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qevent.h:254
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QTabletEvent(enum QEvent::Type, const QPointF &, const QPointF &, int, int, qreal, int, int, qreal, qreal, int, Qt::KeyboardModifiers, qint64, Qt::MouseButton, Qt::MouseButtons)
+func NewQTabletEvent_1(t int, pos *qtcore.QPointF, globalPos *qtcore.QPointF, device int, pointerType int, pressure float64, xTilt int, yTilt int, tangentialPressure float64, rotation float64, z int, keyState int, uniqueID int64, button int, buttons int) *QTabletEvent {
+	var convArg1 = pos.GetCthis()
+	var convArg2 = globalPos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTabletEventC2EN6QEvent4TypeERK7QPointFS4_iidiiddi6QFlagsIN2Qt16KeyboardModifierEExNS6_11MouseButtonES5_IS9_E", ffiqt.FFI_TYPE_POINTER, t, convArg1, convArg2, device, pointerType, pressure, xTilt, yTilt, tangentialPressure, rotation, z, keyState, uniqueID, button, buttons)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTabletEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTabletEvent)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:259

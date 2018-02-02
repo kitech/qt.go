@@ -159,6 +159,15 @@ func (this *QTouchEvent) SetTarget(atarget *qtcore.QObject /*777 QObject **/) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qevent.h:961
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void setTouchPointStates(Qt::TouchPointStates)
+func (this *QTouchEvent) SetTouchPointStates(aTouchPointStates int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent19setTouchPointStatesE6QFlagsIN2Qt15TouchPointStateEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), aTouchPointStates)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qevent.h:963
 // index:0
 // Public inline Visibility=Default Availability=Available

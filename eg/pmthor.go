@@ -23,7 +23,7 @@ func main() {
 	tmer.Start_1()
 
 	tmer.InheritTimerEvent(func(arg0 *qtcore.QTimerEvent) {
-		log.Println("protected method called:", arg0)
+		log.Println("protected method called:", arg0, arg0.Type(), arg0.TimerId())
 	})
 
 	app.Exec()

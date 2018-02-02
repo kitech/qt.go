@@ -326,6 +326,15 @@ func (this *QImageWriter) Transformation() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtGui/qimagewriter.h:101
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setTransformation(QImageIOHandler::Transformations)
+func (this *QImageWriter) SetTransformation(orientation int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageWriter17setTransformationE6QFlagsIN15QImageIOHandler14TransformationEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), orientation)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qimagewriter.h:104
 // index:0
 // Public Visibility=Default Availability=Available

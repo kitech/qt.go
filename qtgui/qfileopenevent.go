@@ -133,4 +133,16 @@ func (this *QFileOpenEvent) Url() *qtcore.QUrl /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtGui/qevent.h:744
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool openFile(QFile &, QIODevice::OpenMode)
+func (this *QFileOpenEvent) OpenFile(file *qtcore.QFile, flags int) bool {
+	var convArg0 = file.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QFileOpenEvent8openFileER5QFile6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
+}
+
 //  body block end

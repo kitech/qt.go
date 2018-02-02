@@ -86,6 +86,18 @@ func NewQSurfaceFormat() *QSurfaceFormat {
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qsurfaceformat.h:95
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QSurfaceFormat(QSurfaceFormat::FormatOptions)
+func NewQSurfaceFormat_1(options int) *QSurfaceFormat {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormatC2E6QFlagsINS_12FormatOptionEE", ffiqt.FFI_TYPE_POINTER, options)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSurfaceFormat)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qsurfaceformat.h:98
 // index:0
 // Public Visibility=Default Availability=Available
@@ -376,24 +388,53 @@ func (this *QSurfaceFormat) SetStereo(enable bool) {
 	gopp.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:147
+// /usr/include/qt/QtGui/qsurfaceformat.h:142
 // index:0
 // Public Visibility=Default Availability=Available
+// [-2] void setOption(QSurfaceFormat::FormatOptions)
+func (this *QSurfaceFormat) SetOption(opt int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat9setOptionE6QFlagsINS_12FormatOptionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), opt)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qsurfaceformat.h:147
+// index:1
+// Public Visibility=Default Availability=Available
 // [-2] void setOption(enum QSurfaceFormat::FormatOption, _Bool)
-func (this *QSurfaceFormat) SetOption(option int, on bool) {
+func (this *QSurfaceFormat) SetOption_1(option int, on bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat9setOptionENS_12FormatOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	gopp.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:148
+// /usr/include/qt/QtGui/qsurfaceformat.h:143
 // index:0
 // Public Visibility=Default Availability=Available
+// [1] bool testOption(QSurfaceFormat::FormatOptions)
+func (this *QSurfaceFormat) TestOption(opt int) bool {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat10testOptionE6QFlagsINS_12FormatOptionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), opt)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qsurfaceformat.h:148
+// index:1
+// Public Visibility=Default Availability=Available
 // [1] bool testOption(enum QSurfaceFormat::FormatOption)
-func (this *QSurfaceFormat) TestOption(option int) bool {
+func (this *QSurfaceFormat) TestOption_1(option int) bool {
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat10testOptionENS_12FormatOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
+}
+
+// /usr/include/qt/QtGui/qsurfaceformat.h:146
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setOptions(QSurfaceFormat::FormatOptions)
+func (this *QSurfaceFormat) SetOptions(options int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat10setOptionsE6QFlagsINS_12FormatOptionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), options)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qsurfaceformat.h:149

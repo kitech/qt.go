@@ -152,6 +152,11 @@ type VRetype = uint64 // interface{}
 var libs = map[string]ffi.Library{}
 
 func init() {
+	init_invoke()
+	init_callack_inherit()
+}
+
+func init_invoke() {
 	loadModule := func(libpath string, modname string) {
 		var err error
 		var lib ffi.Library
@@ -162,7 +167,6 @@ func init() {
 			libs[modname] = lib
 		}
 	}
-
 	for _, modname := range []string{"Core", "Gui", "Widgets", "Network", "Inline"} {
 		libpath := fmt.Sprintf("/usr/lib/libQt5%s.so", modname)
 		loadModule(libpath, modname)

@@ -815,6 +815,25 @@ func (this *QGraphicsScene) Update_1(rect *qtcore.QRectF) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:233
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void invalidate(qreal, qreal, qreal, qreal, QGraphicsScene::SceneLayers)
+func (this *QGraphicsScene) Invalidate(x float64, y float64, w float64, h float64, layers int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene10invalidateEdddd6QFlagsINS_10SceneLayerEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h, layers)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:258
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void invalidate(const QRectF &, QGraphicsScene::SceneLayers)
+func (this *QGraphicsScene) Invalidate_1(rect *qtcore.QRectF, layers int) {
+	var convArg0 = rect.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScene10invalidateERK6QRectF6QFlagsINS_10SceneLayerEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, layers)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:236
 // index:0
 // Public Visibility=Default Availability=Available

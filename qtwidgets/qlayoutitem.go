@@ -78,6 +78,18 @@ func (*QLayoutItem) NewFromPointer(cthis unsafe.Pointer) *QLayoutItem {
 	return NewQLayoutItemFromPointer(cthis)
 }
 
+// /usr/include/qt/QtWidgets/qlayoutitem.h:63
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QLayoutItem(Qt::Alignment)
+func NewQLayoutItem(alignment int) *QLayoutItem {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QLayoutItemC1E6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, alignment)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQLayoutItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQLayoutItem)
+	return gothis
+}
+
 // /usr/include/qt/QtWidgets/qlayoutitem.h:64
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -259,6 +271,15 @@ func (this *QLayoutItem) Alignment() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtWidgets/qlayoutitem.h:82
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setAlignment(Qt::Alignment)
+func (this *QLayoutItem) SetAlignment(a int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QLayoutItem12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), a)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:83

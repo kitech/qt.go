@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 4
+// extern C begin: 5
 */
 // import "C"
 import "unsafe"
@@ -69,6 +69,20 @@ func NewQDropEventFromPointer(cthis unsafe.Pointer) *QDropEvent {
 }
 func (*QDropEvent) NewFromPointer(cthis unsafe.Pointer) *QDropEvent {
 	return NewQDropEventFromPointer(cthis)
+}
+
+// /usr/include/qt/QtGui/qevent.h:608
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QDropEvent(const QPointF &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, enum QEvent::Type)
+func NewQDropEvent(pos *qtcore.QPointF, actions int, data *qtcore.QMimeData /*777 const QMimeData **/, buttons int, modifiers int, type_ int) *QDropEvent {
+	var convArg0 = pos.GetCthis()
+	var convArg2 = data.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDropEventC2ERK7QPointF6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE", ffiqt.FFI_TYPE_POINTER, convArg0, actions, convArg2, buttons, modifiers, type_)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDropEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDropEvent)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:610

@@ -161,6 +161,15 @@ func (this *QTouchDevice) SetType(devType int) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qtouchdevice.h:85
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setCapabilities(QTouchDevice::Capabilities)
+func (this *QTouchDevice) SetCapabilities(caps int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDevice15setCapabilitiesE6QFlagsINS_14CapabilityFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), caps)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qtouchdevice.h:86
 // index:0
 // Public Visibility=Default Availability=Available

@@ -431,6 +431,28 @@ func QFile_Copy_1(fileName *QString, newName *QString) bool {
 	return rv
 }
 
+// /usr/include/qt/QtCore/qfile.h:127
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool open(QIODevice::OpenMode)
+func (this *QFile) Open(flags int) bool {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile4openE6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfile.h:129
+// index:1
+// Public Visibility=Default Availability=Available
+// [1] bool open(int, QIODevice::OpenMode, QFileDevice::FileHandleFlags)
+func (this *QFile) Open_1(fd int, ioFlags int, handleFlags int) bool {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile4openEi6QFlagsIN9QIODevice12OpenModeFlagEES0_IN11QFileDevice14FileHandleFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), fd, ioFlags, handleFlags)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
+}
+
 // /usr/include/qt/QtCore/qfile.h:131
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -495,6 +517,34 @@ func (this *QFile) Permissions_1(filename *QString) int {
 func QFile_Permissions_1(filename *QString) int {
 	var nilthis *QFile
 	rv := nilthis.Permissions_1(filename)
+	return rv
+}
+
+// /usr/include/qt/QtCore/qfile.h:138
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool setPermissions(QFileDevice::Permissions)
+func (this *QFile) SetPermissions(permissionSpec int) bool {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile14setPermissionsE6QFlagsIN11QFileDevice10PermissionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), permissionSpec)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfile.h:139
+// index:1
+// Public static Visibility=Default Availability=Available
+// [1] bool setPermissions(const QString &, QFileDevice::Permissions)
+func (this *QFile) SetPermissions_1(filename *QString, permissionSpec int) bool {
+	var convArg0 = filename.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFile14setPermissionsERK7QString6QFlagsIN11QFileDevice10PermissionEE", ffiqt.FFI_TYPE_POINTER, convArg0, permissionSpec)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return rv != 0
+}
+func QFile_SetPermissions_1(filename *QString, permissionSpec int) bool {
+	var nilthis *QFile
+	rv := nilthis.SetPermissions_1(filename, permissionSpec)
 	return rv
 }
 

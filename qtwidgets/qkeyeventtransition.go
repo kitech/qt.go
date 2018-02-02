@@ -162,6 +162,15 @@ func (this *QKeyEventTransition) ModifierMask() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtWidgets/qkeyeventtransition.h:66
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setModifierMask(Qt::KeyboardModifiers)
+func (this *QKeyEventTransition) SetModifierMask(modifiers int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransition15setModifierMaskE6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), modifiers)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:69
 // index:0
 // Protected virtual Visibility=Default Availability=Available

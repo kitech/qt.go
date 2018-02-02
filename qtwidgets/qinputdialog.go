@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 95
+// extern C begin: 96
 */
 // import "C"
 import "unsafe"
@@ -170,6 +170,15 @@ func (this *QInputDialog) TestOption(option int) bool {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qinputdialog.h:105
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setOptions(QInputDialog::InputDialogOptions)
+func (this *QInputDialog) SetOptions(options int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog10setOptionsE6QFlagsINS_17InputDialogOptionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), options)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qinputdialog.h:106
@@ -525,6 +534,72 @@ func (this *QInputDialog) SizeHint() *qtcore.QSize /*123*/ {
 func (this *QInputDialog) SetVisible(visible bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qinputdialog.h:162
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString getText(QWidget *, const QString &, const QString &, QLineEdit::EchoMode, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+func (this *QInputDialog) GetText(parent *QWidget /*777 QWidget **/, title *qtcore.QString, label *qtcore.QString, echo int, text *qtcore.QString, ok unsafe.Pointer /*666*/, flags int, inputMethodHints int) *qtcore.QString /*123*/ {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = label.GetCthis()
+	var convArg4 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog7getTextEP7QWidgetRK7QStringS4_N9QLineEdit8EchoModeES4_Pb6QFlagsIN2Qt10WindowTypeEES8_INS9_15InputMethodHintEE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, echo, convArg4, &ok, flags, inputMethodHints)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
+	return rv2
+}
+func QInputDialog_GetText(parent *QWidget /*777 QWidget **/, title *qtcore.QString, label *qtcore.QString, echo int, text *qtcore.QString, ok unsafe.Pointer /*666*/, flags int, inputMethodHints int) *qtcore.QString /*123*/ {
+	var nilthis *QInputDialog
+	rv := nilthis.GetText(parent, title, label, echo, text, ok, flags, inputMethodHints)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qinputdialog.h:167
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString getMultiLineText(QWidget *, const QString &, const QString &, const QString &, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+func (this *QInputDialog) GetMultiLineText(parent *QWidget /*777 QWidget **/, title *qtcore.QString, label *qtcore.QString, text *qtcore.QString, ok unsafe.Pointer /*666*/, flags int, inputMethodHints int) *qtcore.QString /*123*/ {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = label.GetCthis()
+	var convArg3 = text.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog16getMultiLineTextEP7QWidgetRK7QStringS4_S4_Pb6QFlagsIN2Qt10WindowTypeEES6_INS7_15InputMethodHintEE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, &ok, flags, inputMethodHints)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
+	return rv2
+}
+func QInputDialog_GetMultiLineText(parent *QWidget /*777 QWidget **/, title *qtcore.QString, label *qtcore.QString, text *qtcore.QString, ok unsafe.Pointer /*666*/, flags int, inputMethodHints int) *qtcore.QString /*123*/ {
+	var nilthis *QInputDialog
+	rv := nilthis.GetMultiLineText(parent, title, label, text, ok, flags, inputMethodHints)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qinputdialog.h:171
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString getItem(QWidget *, const QString &, const QString &, const QStringList &, int, _Bool, _Bool *, Qt::WindowFlags, Qt::InputMethodHints)
+func (this *QInputDialog) GetItem(parent *QWidget /*777 QWidget **/, title *qtcore.QString, label *qtcore.QString, items *qtcore.QStringList, current int, editable bool, ok unsafe.Pointer /*666*/, flags int, inputMethodHints int) *qtcore.QString /*123*/ {
+	var convArg0 = parent.GetCthis()
+	var convArg1 = title.GetCthis()
+	var convArg2 = label.GetCthis()
+	var convArg3 = items.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialog7getItemEP7QWidgetRK7QStringS4_RK11QStringListibPb6QFlagsIN2Qt10WindowTypeEES9_INSA_15InputMethodHintEE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, current, editable, &ok, flags, inputMethodHints)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
+	return rv2
+}
+func QInputDialog_GetItem(parent *QWidget /*777 QWidget **/, title *qtcore.QString, label *qtcore.QString, items *qtcore.QStringList, current int, editable bool, ok unsafe.Pointer /*666*/, flags int, inputMethodHints int) *qtcore.QString /*123*/ {
+	var nilthis *QInputDialog
+	rv := nilthis.GetItem(parent, title, label, items, current, editable, ok, flags, inputMethodHints)
+	return rv
 }
 
 // /usr/include/qt/QtWidgets/qinputdialog.h:176

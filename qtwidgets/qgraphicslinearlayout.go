@@ -250,6 +250,16 @@ func (this *QGraphicsLinearLayout) StretchFactor(item *QGraphicsLayoutItem /*777
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:80
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setAlignment(QGraphicsLayoutItem *, Qt::Alignment)
+func (this *QGraphicsLinearLayout) SetAlignment(item *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, alignment int) {
+	var convArg0 = item.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsLinearLayout12setAlignmentEP19QGraphicsLayoutItem6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:81
 // index:0
 // Public Visibility=Default Availability=Available

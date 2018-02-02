@@ -177,6 +177,15 @@ func (this *QGraphicsSceneDragDropEvent) Buttons() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:265
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setButtons(Qt::MouseButtons)
+func (this *QGraphicsSceneDragDropEvent) SetButtons(buttons int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent10setButtonsE6QFlagsIN2Qt11MouseButtonEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), buttons)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:267
 // index:0
 // Public Visibility=Default Availability=Available
@@ -188,6 +197,15 @@ func (this *QGraphicsSceneDragDropEvent) Modifiers() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:268
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setModifiers(Qt::KeyboardModifiers)
+func (this *QGraphicsSceneDragDropEvent) SetModifiers(modifiers int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent12setModifiersE6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), modifiers)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:270
 // index:0
 // Public Visibility=Default Availability=Available
@@ -197,6 +215,15 @@ func (this *QGraphicsSceneDragDropEvent) PossibleActions() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:271
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setPossibleActions(Qt::DropActions)
+func (this *QGraphicsSceneDragDropEvent) SetPossibleActions(actions int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEvent18setPossibleActionsE6QFlagsIN2Qt10DropActionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), actions)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:273

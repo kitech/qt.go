@@ -71,11 +71,25 @@ func (*QContextMenuEvent) NewFromPointer(cthis unsafe.Pointer) *QContextMenuEven
 	return NewQContextMenuEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:513
+// /usr/include/qt/QtGui/qevent.h:511
 // index:0
 // Public Visibility=Default Availability=Available
+// [-2] void QContextMenuEvent(enum QContextMenuEvent::Reason, const QPoint &, const QPoint &, Qt::KeyboardModifiers)
+func NewQContextMenuEvent(reason int, pos *qtcore.QPoint, globalPos *qtcore.QPoint, modifiers int) *QContextMenuEvent {
+	var convArg1 = pos.GetCthis()
+	var convArg2 = globalPos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPointS3_6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_POINTER, reason, convArg1, convArg2, modifiers)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQContextMenuEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQContextMenuEvent)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qevent.h:513
+// index:1
+// Public Visibility=Default Availability=Available
 // [-2] void QContextMenuEvent(enum QContextMenuEvent::Reason, const QPoint &, const QPoint &)
-func NewQContextMenuEvent(reason int, pos *qtcore.QPoint, globalPos *qtcore.QPoint) *QContextMenuEvent {
+func NewQContextMenuEvent_1(reason int, pos *qtcore.QPoint, globalPos *qtcore.QPoint) *QContextMenuEvent {
 	var convArg1 = pos.GetCthis()
 	var convArg2 = globalPos.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPointS3_", ffiqt.FFI_TYPE_POINTER, reason, convArg1, convArg2)
@@ -86,10 +100,10 @@ func NewQContextMenuEvent(reason int, pos *qtcore.QPoint, globalPos *qtcore.QPoi
 }
 
 // /usr/include/qt/QtGui/qevent.h:514
-// index:1
+// index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QContextMenuEvent(enum QContextMenuEvent::Reason, const QPoint &)
-func NewQContextMenuEvent_1(reason int, pos *qtcore.QPoint) *QContextMenuEvent {
+func NewQContextMenuEvent_2(reason int, pos *qtcore.QPoint) *QContextMenuEvent {
 	var convArg1 = pos.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPoint", ffiqt.FFI_TYPE_POINTER, reason, convArg1)
 	gopp.ErrPrint(err, rv)

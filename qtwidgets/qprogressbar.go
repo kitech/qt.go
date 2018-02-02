@@ -200,6 +200,15 @@ func (this *QProgressBar) Alignment() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtWidgets/qprogressbar.h:84
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setAlignment(Qt::Alignment)
+func (this *QProgressBar) SetAlignment(alignment int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBar12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qprogressbar.h:86
 // index:0
 // Public virtual Visibility=Default Availability=Available

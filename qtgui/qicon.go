@@ -242,6 +242,27 @@ func (this *QIcon) Name() *qtcore.QString /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtGui/qicon.h:93
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void paint(QPainter *, const QRect &, Qt::Alignment, enum QIcon::Mode, enum QIcon::State)
+func (this *QIcon) Paint(painter *QPainter /*777 QPainter **/, rect *qtcore.QRect, alignment int, mode int, state int) {
+	var convArg0 = painter.GetCthis()
+	var convArg1 = rect.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon5paintEP8QPainterRK5QRect6QFlagsIN2Qt13AlignmentFlagEENS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, alignment, mode, state)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qicon.h:94
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [-2] void paint(QPainter *, int, int, int, int, Qt::Alignment, enum QIcon::Mode, enum QIcon::State)
+func (this *QIcon) Paint_1(painter *QPainter /*777 QPainter **/, x int, y int, w int, h int, alignment int, mode int, state int) {
+	var convArg0 = painter.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QIcon5paintEP8QPainteriiii6QFlagsIN2Qt13AlignmentFlagEENS_4ModeENS_5StateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, x, y, w, h, alignment, mode, state)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qicon.h:97
 // index:0
 // Public Visibility=Default Availability=Available

@@ -120,6 +120,36 @@ func DeleteQProcess(this *QProcess) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtCore/qprocess.h:161
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void start(const QString &, const QStringList &, QIODevice::OpenMode)
+func (this *QProcess) Start(program *QString, arguments *QStringList, mode int) {
+	var convArg0 = program.GetCthis()
+	var convArg1 = arguments.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess5startERK7QStringRK11QStringList6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qprocess.h:163
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void start(const QString &, QIODevice::OpenMode)
+func (this *QProcess) Start_1(command *QString, mode int) {
+	var convArg0 = command.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess5startERK7QString6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qprocess.h:165
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void start(QIODevice::OpenMode)
+func (this *QProcess) Start_2(mode int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess5startE6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtCore/qprocess.h:166
 // index:0
 // Public Visibility=Default Availability=Available
@@ -183,6 +213,17 @@ func QProcess_StartDetached_3(command *QString) bool {
 	var nilthis *QProcess
 	rv := nilthis.StartDetached_3(command)
 	return rv
+}
+
+// /usr/include/qt/QtCore/qprocess.h:167
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool open(QIODevice::OpenMode)
+func (this *QProcess) Open(mode int) bool {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess4openE6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtCore/qprocess.h:169
@@ -323,6 +364,26 @@ func (this *QProcess) CloseWriteChannel() {
 func (this *QProcess) SetStandardInputFile(fileName *QString) {
 	var convArg0 = fileName.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess20setStandardInputFileERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qprocess.h:189
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setStandardOutputFile(const QString &, QIODevice::OpenMode)
+func (this *QProcess) SetStandardOutputFile(fileName *QString, mode int) {
+	var convArg0 = fileName.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess21setStandardOutputFileERK7QString6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qprocess.h:190
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setStandardErrorFile(const QString &, QIODevice::OpenMode)
+func (this *QProcess) SetStandardErrorFile(fileName *QString, mode int) {
+	var convArg0 = fileName.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcess20setStandardErrorFileERK7QString6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)
 }
 

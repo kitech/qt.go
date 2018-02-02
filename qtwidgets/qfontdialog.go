@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 11
+// extern C begin: 12
 */
 // import "C"
 import "unsafe"
@@ -192,6 +192,15 @@ func (this *QFontDialog) TestOption(option int) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtWidgets/qfontdialog.h:86
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setOptions(QFontDialog::FontDialogOptions)
+func (this *QFontDialog) SetOptions(options int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog10setOptionsE6QFlagsINS_16FontDialogOptionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), options)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qfontdialog.h:87
 // index:0
 // Public Visibility=Default Availability=Available
@@ -240,6 +249,27 @@ func (this *QFontDialog) GetFont(ok unsafe.Pointer /*666*/, parent *QWidget /*77
 func QFontDialog_GetFont(ok unsafe.Pointer /*666*/, parent *QWidget /*777 QWidget **/) *qtgui.QFont /*123*/ {
 	var nilthis *QFontDialog
 	rv := nilthis.GetFont(ok, parent)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qfontdialog.h:95
+// index:1
+// Public static Visibility=Default Availability=Available
+// [16] QFont getFont(_Bool *, const QFont &, QWidget *, const QString &, QFontDialog::FontDialogOptions)
+func (this *QFontDialog) GetFont_1(ok unsafe.Pointer /*666*/, initial *qtgui.QFont, parent *QWidget /*777 QWidget **/, title *qtcore.QString, options int) *qtgui.QFont /*123*/ {
+	var convArg1 = initial.GetCthis()
+	var convArg2 = parent.GetCthis()
+	var convArg3 = title.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialog7getFontEPbRK5QFontP7QWidgetRK7QString6QFlagsINS_16FontDialogOptionEE", ffiqt.FFI_TYPE_POINTER, &ok, convArg1, convArg2, convArg3, options)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
+	return rv2
+}
+func QFontDialog_GetFont_1(ok unsafe.Pointer /*666*/, initial *qtgui.QFont, parent *QWidget /*777 QWidget **/, title *qtcore.QString, options int) *qtgui.QFont /*123*/ {
+	var nilthis *QFontDialog
+	rv := nilthis.GetFont_1(ok, initial, parent, title, options)
 	return rv
 }
 

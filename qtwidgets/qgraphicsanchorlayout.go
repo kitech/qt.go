@@ -141,6 +141,17 @@ func (this *QGraphicsAnchorLayout) AddCornerAnchors(firstItem *QGraphicsLayoutIt
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:90
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void addAnchors(QGraphicsLayoutItem *, QGraphicsLayoutItem *, Qt::Orientations)
+func (this *QGraphicsAnchorLayout) AddAnchors(firstItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, secondItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, orientations int) {
+	var convArg0 = firstItem.GetCthis()
+	var convArg1 = secondItem.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayout10addAnchorsEP19QGraphicsLayoutItemS1_6QFlagsIN2Qt11OrientationEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, orientations)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:94
 // index:0
 // Public Visibility=Default Availability=Available

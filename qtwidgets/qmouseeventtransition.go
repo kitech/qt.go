@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 62
+// extern C begin: 68
 */
 // import "C"
 import "unsafe"
@@ -160,6 +160,15 @@ func (this *QMouseEventTransition) ModifierMask() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtWidgets/qmouseeventtransition.h:67
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setModifierMask(Qt::KeyboardModifiers)
+func (this *QMouseEventTransition) SetModifierMask(modifiers int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QMouseEventTransition15setModifierMaskE6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), modifiers)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmouseeventtransition.h:69

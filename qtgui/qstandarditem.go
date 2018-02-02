@@ -334,6 +334,15 @@ func (this *QStandardItem) TextAlignment() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtGui/qstandarditemmodel.h:118
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void setTextAlignment(Qt::Alignment)
+func (this *QStandardItem) SetTextAlignment(textAlignment int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItem16setTextAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), textAlignment)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qstandarditemmodel.h:120
 // index:0
 // Public inline Visibility=Default Availability=Available

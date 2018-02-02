@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 37
+// extern C begin: 39
 */
 // import "C"
 import "unsafe"
@@ -168,6 +168,15 @@ func (this *QDockWidget) SetWidget(widget *QWidget /*777 QWidget **/) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qdockwidget.h:89
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setFeatures(QDockWidget::DockWidgetFeatures)
+func (this *QDockWidget) SetFeatures(features int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget11setFeaturesE6QFlagsINS_17DockWidgetFeatureEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), features)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qdockwidget.h:90
 // index:0
 // Public Visibility=Default Availability=Available
@@ -197,6 +206,15 @@ func (this *QDockWidget) IsFloating() bool {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qdockwidget.h:95
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setAllowedAreas(Qt::DockWidgetAreas)
+func (this *QDockWidget) SetAllowedAreas(areas int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget15setAllowedAreasE6QFlagsIN2Qt14DockWidgetAreaEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), areas)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:96
@@ -255,12 +273,30 @@ func (this *QDockWidget) ToggleViewAction() *QAction /*777 QAction **/ {
 	return rv2
 }
 
+// /usr/include/qt/QtWidgets/qdockwidget.h:109
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void featuresChanged(QDockWidget::DockWidgetFeatures)
+func (this *QDockWidget) FeaturesChanged(features int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget15featuresChangedE6QFlagsINS_17DockWidgetFeatureEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), features)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qdockwidget.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void topLevelChanged(_Bool)
 func (this *QDockWidget) TopLevelChanged(topLevel bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget15topLevelChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), topLevel)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdockwidget.h:111
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void allowedAreasChanged(Qt::DockWidgetAreas)
+func (this *QDockWidget) AllowedAreasChanged(allowedAreas int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidget19allowedAreasChangedE6QFlagsIN2Qt14DockWidgetAreaEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), allowedAreas)
 	gopp.ErrPrint(err, rv)
 }
 

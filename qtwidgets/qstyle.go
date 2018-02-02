@@ -467,6 +467,42 @@ func QStyle_SliderValueFromPosition(min int, max int, pos int, space int, upside
 	return rv
 }
 
+// /usr/include/qt/QtWidgets/qstyle.h:845
+// index:0
+// Public static Visibility=Default Availability=Available
+// [4] Qt::Alignment visualAlignment(Qt::LayoutDirection, Qt::Alignment)
+func (this *QStyle) VisualAlignment(direction int, alignment int) int {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QStyle15visualAlignmentEN2Qt15LayoutDirectionE6QFlagsINS0_13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, direction, alignment)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	return int(rv)
+}
+func QStyle_VisualAlignment(direction int, alignment int) int {
+	var nilthis *QStyle
+	rv := nilthis.VisualAlignment(direction, alignment)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qstyle.h:846
+// index:0
+// Public static Visibility=Default Availability=Available
+// [16] QRect alignedRect(Qt::LayoutDirection, Qt::Alignment, const QSize &, const QRect &)
+func (this *QStyle) AlignedRect(direction int, alignment int, size *qtcore.QSize, rectangle *qtcore.QRect) *qtcore.QRect /*123*/ {
+	var convArg2 = size.GetCthis()
+	var convArg3 = rectangle.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QStyle11alignedRectEN2Qt15LayoutDirectionE6QFlagsINS0_13AlignmentFlagEERK5QSizeRK5QRect", ffiqt.FFI_TYPE_POINTER, direction, alignment, convArg2, convArg3)
+	gopp.ErrPrint(err, rv)
+	// return rv
+	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
+	return rv2
+}
+func QStyle_AlignedRect(direction int, alignment int, size *qtcore.QSize, rectangle *qtcore.QRect) *qtcore.QRect /*123*/ {
+	var nilthis *QStyle
+	rv := nilthis.AlignedRect(direction, alignment, size, rectangle)
+	return rv
+}
+
 // /usr/include/qt/QtWidgets/qstyle.h:849
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
@@ -475,6 +511,19 @@ func (this *QStyle) LayoutSpacing(control1 int, control2 int, orientation int, o
 	var convArg3 = option.GetCthis()
 	var convArg4 = widget.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QStyle13layoutSpacingEN11QSizePolicy11ControlTypeES1_N2Qt11OrientationEPK12QStyleOptionPK7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), control1, control2, orientation, convArg3, convArg4)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtWidgets/qstyle.h:852
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int combinedLayoutSpacing(QSizePolicy::ControlTypes, QSizePolicy::ControlTypes, Qt::Orientation, QStyleOption *, QWidget *)
+func (this *QStyle) CombinedLayoutSpacing(controls1 int, controls2 int, orientation int, option *QStyleOption /*777 QStyleOption **/, widget *QWidget /*777 QWidget **/) int {
+	var convArg3 = option.GetCthis()
+	var convArg4 = widget.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QStyle21combinedLayoutSpacingE6QFlagsIN11QSizePolicy11ControlTypeEES3_N2Qt11OrientationEP12QStyleOptionP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), controls1, controls2, orientation, convArg3, convArg4)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111

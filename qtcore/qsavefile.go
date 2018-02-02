@@ -156,6 +156,17 @@ func (this *QSaveFile) SetFileName(name *QString) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtCore/qsavefile.h:78
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool open(QIODevice::OpenMode)
+func (this *QSaveFile) Open(flags int) bool {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFile4openE6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
+}
+
 // /usr/include/qt/QtCore/qsavefile.h:79
 // index:0
 // Public Visibility=Default Availability=Available

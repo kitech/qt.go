@@ -234,6 +234,24 @@ func (this *QMainWindow) TabPosition(area int) int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtWidgets/qmainwindow.h:117
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setTabPosition(Qt::DockWidgetAreas, QTabWidget::TabPosition)
+func (this *QMainWindow) SetTabPosition(areas int, tabPosition int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow14setTabPositionE6QFlagsIN2Qt14DockWidgetAreaEEN10QTabWidget11TabPositionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), areas, tabPosition)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmainwindow.h:120
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setDockOptions(QMainWindow::DockOptions)
+func (this *QMainWindow) SetDockOptions(options int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindow14setDockOptionsE6QFlagsINS_10DockOptionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), options)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qmainwindow.h:121
 // index:0
 // Public Visibility=Default Availability=Available

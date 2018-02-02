@@ -45,9 +45,22 @@ func SetFinalizer(obj interface{}, finalizer interface{}) {
 		objectFinalBefore(o)
 		ov := reflect.ValueOf(o)
 		fv := reflect.ValueOf(finalizer)
-		fv.Call([]reflect.Value{ov})
+		insure := false
+		if finalizerObjectFilterFn != nil {
+			insure = finalizerObjectFilterFn(ov)
+		}
+		if insure {
+			fv.Call([]reflect.Value{ov})
+		}
 		objectFinalAfter(o)
 	})
+}
+
+// 返回true表示确定
+var finalizerObjectFilterFn func(reflect.Value) bool
+
+func SetFinalizerObjectFilter(f func(reflect.Value) bool) {
+	finalizerObjectFilterFn = f
 }
 
 // 直接使用C++ symbols

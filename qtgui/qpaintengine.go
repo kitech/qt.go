@@ -74,6 +74,18 @@ func (*QPaintEngine) NewFromPointer(cthis unsafe.Pointer) *QPaintEngine {
 	return NewQPaintEngineFromPointer(cthis)
 }
 
+// /usr/include/qt/QtGui/qpaintengine.h:147
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QPaintEngine(QPaintEngine::PaintEngineFeatures)
+func NewQPaintEngine(features int) *QPaintEngine {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngineC1E6QFlagsINS_18PaintEngineFeatureEE", ffiqt.FFI_TYPE_POINTER, features)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQPaintEngineFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPaintEngine)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qpaintengine.h:148
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -422,6 +434,17 @@ func (this *QPaintEngine) SetDirty(df int) {
 func (this *QPaintEngine) ClearDirty(df int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngine10clearDirtyE6QFlagsINS_9DirtyFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), df)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpaintengine.h:222
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool hasFeature(QPaintEngine::PaintEngineFeatures)
+func (this *QPaintEngine) HasFeature(feature int) bool {
+	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintEngine10hasFeatureE6QFlagsINS_18PaintEngineFeatureEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), feature)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtGui/qpaintengine.h:224

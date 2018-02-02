@@ -197,6 +197,39 @@ func (this *QDrag) Target() *qtcore.QObject /*777 QObject **/ {
 	return rv2
 }
 
+// /usr/include/qt/QtGui/qdrag.h:77
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] Qt::DropAction start(Qt::DropActions)
+func (this *QDrag) Start(supportedActions int) int {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag5startE6QFlagsIN2Qt10DropActionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), supportedActions)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return int(rv)
+}
+
+// /usr/include/qt/QtGui/qdrag.h:78
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] Qt::DropAction exec(Qt::DropActions)
+func (this *QDrag) Exec(supportedActions int) int {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag4execE6QFlagsIN2Qt10DropActionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), supportedActions)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return int(rv)
+}
+
+// /usr/include/qt/QtGui/qdrag.h:79
+// index:1
+// Public Visibility=Default Availability=Available
+// [4] Qt::DropAction exec(Qt::DropActions, Qt::DropAction)
+func (this *QDrag) Exec_1(supportedActions int, defaultAction int) int {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag4execE6QFlagsIN2Qt10DropActionEES2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), supportedActions, defaultAction)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return int(rv)
+}
+
 // /usr/include/qt/QtGui/qdrag.h:81
 // index:0
 // Public Visibility=Default Availability=Available

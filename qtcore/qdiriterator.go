@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 54
+// extern C begin: 57
 */
 // import "C"
 import "unsafe"
@@ -90,6 +90,33 @@ func NewQDirIterator(dir *QDir, flags int) *QDirIterator {
 func NewQDirIterator_1(path *QString, flags int) *QDirIterator {
 	var convArg0 = path.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK7QString6QFlagsINS_12IteratorFlagEE", ffiqt.FFI_TYPE_POINTER, convArg0, flags)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDirIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDirIterator)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qdiriterator.h:61
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QDirIterator(const QString &, QDir::Filters, QDirIterator::IteratorFlags)
+func NewQDirIterator_2(path *QString, filter int, flags int) *QDirIterator {
+	var convArg0 = path.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK7QString6QFlagsIN4QDir6FilterEES3_INS_12IteratorFlagEE", ffiqt.FFI_TYPE_POINTER, convArg0, filter, flags)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQDirIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDirIterator)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qdiriterator.h:64
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QDirIterator(const QString &, const QStringList &, QDir::Filters, QDirIterator::IteratorFlags)
+func NewQDirIterator_3(path *QString, nameFilters *QStringList, filters int, flags int) *QDirIterator {
+	var convArg0 = path.GetCthis()
+	var convArg1 = nameFilters.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK7QStringRK11QStringList6QFlagsIN4QDir6FilterEES6_INS_12IteratorFlagEE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, filters, flags)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDirIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDirIterator)

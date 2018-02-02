@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 9
+// extern C begin: 10
 */
 // import "C"
 import "unsafe"
@@ -71,6 +71,18 @@ func (*QInputEvent) NewFromPointer(cthis unsafe.Pointer) *QInputEvent {
 	return NewQInputEventFromPointer(cthis)
 }
 
+// /usr/include/qt/QtGui/qevent.h:71
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QInputEvent(enum QEvent::Type, Qt::KeyboardModifiers)
+func NewQInputEvent(type_ int, modifiers int) *QInputEvent {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QInputEventC2EN6QEvent4TypeE6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_POINTER, type_, modifiers)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQInputEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQInputEvent)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qevent.h:72
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -90,6 +102,15 @@ func (this *QInputEvent) Modifiers() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtGui/qevent.h:74
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void setModifiers(Qt::KeyboardModifiers)
+func (this *QInputEvent) SetModifiers(amodifiers int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QInputEvent12setModifiersE6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), amodifiers)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qevent.h:75

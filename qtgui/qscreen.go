@@ -394,6 +394,15 @@ func (this *QScreen) OrientationUpdateMask() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtGui/qscreen.h:140
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setOrientationUpdateMask(Qt::ScreenOrientations)
+func (this *QScreen) SetOrientationUpdateMask(mask int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreen24setOrientationUpdateMaskE6QFlagsIN2Qt17ScreenOrientationEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mask)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtGui/qscreen.h:142
 // index:0
 // Public Visibility=Default Availability=Available

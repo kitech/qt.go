@@ -133,6 +133,15 @@ func (this *QFontComboBox) WritingSystem() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtWidgets/qfontcombobox.h:77
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setFontFilters(QFontComboBox::FontFilters)
+func (this *QFontComboBox) SetFontFilters(filters int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontComboBox14setFontFiltersE6QFlagsINS_10FontFilterEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), filters)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qfontcombobox.h:78
 // index:0
 // Public Visibility=Default Availability=Available

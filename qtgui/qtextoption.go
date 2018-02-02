@@ -86,6 +86,18 @@ func NewQTextOption() *QTextOption {
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qtextoption.h:86
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QTextOption(Qt::Alignment)
+func NewQTextOption_1(alignment int) *QTextOption {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOptionC2E6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, alignment)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQTextOptionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextOption)
+	return gothis
+}
+
 // /usr/include/qt/QtGui/qtextoption.h:87
 // index:0
 // Public Visibility=Default Availability=Available
@@ -94,6 +106,15 @@ func DeleteQTextOption(this *QTextOption) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOptionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
+}
+
+// /usr/include/qt/QtGui/qtextoption.h:92
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void setAlignment(Qt::Alignment)
+func (this *QTextOption) SetAlignment(alignment int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOption12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtGui/qtextoption.h:93

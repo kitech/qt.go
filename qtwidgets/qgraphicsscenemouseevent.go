@@ -315,6 +315,15 @@ func (this *QGraphicsSceneMouseEvent) Buttons() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:116
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setButtons(Qt::MouseButtons)
+func (this *QGraphicsSceneMouseEvent) SetButtons(buttons int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent10setButtonsE6QFlagsIN2Qt11MouseButtonEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), buttons)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:118
 // index:0
 // Public Visibility=Default Availability=Available
@@ -344,6 +353,15 @@ func (this *QGraphicsSceneMouseEvent) Modifiers() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:122
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setModifiers(Qt::KeyboardModifiers)
+func (this *QGraphicsSceneMouseEvent) SetModifiers(modifiers int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEvent12setModifiersE6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), modifiers)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:124

@@ -256,6 +256,15 @@ func (this *QLabel) Alignment() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtWidgets/qlabel.h:87
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setAlignment(Qt::Alignment)
+func (this *QLabel) SetAlignment(arg0 int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabel12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qlabel.h:89
 // index:0
 // Public Visibility=Default Availability=Available

@@ -246,6 +246,30 @@ func (this *QLayout) ContentsRect() *qtcore.QRect /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtWidgets/qlayout.h:96
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool setAlignment(QWidget *, Qt::Alignment)
+func (this *QLayout) SetAlignment(w *QWidget /*777 QWidget **/, alignment int) bool {
+	var convArg0 = w.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout12setAlignmentEP7QWidget6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qlayout.h:97
+// index:1
+// Public Visibility=Default Availability=Available
+// [1] bool setAlignment(QLayout *, Qt::Alignment)
+func (this *QLayout) SetAlignment_1(l *QLayout /*777 QLayout **/, alignment int) bool {
+	var convArg0 = l.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout12setAlignmentEPS_6QFlagsIN2Qt13AlignmentFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, alignment)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
+}
+
 // /usr/include/qt/QtWidgets/qlayout.h:100
 // index:0
 // Public Visibility=Default Availability=Available
@@ -496,6 +520,20 @@ func (this *QLayout) ControlTypes() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtWidgets/qlayout.h:130
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QLayoutItem * replaceWidget(QWidget *, QWidget *, Qt::FindChildOptions)
+func (this *QLayout) ReplaceWidget(from *QWidget /*777 QWidget **/, to *QWidget /*777 QWidget **/, options int) *QLayoutItem /*777 QLayoutItem **/ {
+	var convArg0 = from.GetCthis()
+	var convArg1 = to.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayout13replaceWidgetEP7QWidgetS1_6QFlagsIN2Qt15FindChildOptionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, options)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	rv2 := /*==*/ NewQLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qlayout.h:132

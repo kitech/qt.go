@@ -716,6 +716,15 @@ func (this *QGraphicsItem) AcceptedMouseButtons() int {
 	return int(rv)
 }
 
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:237
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setAcceptedMouseButtons(Qt::MouseButtons)
+func (this *QGraphicsItem) SetAcceptedMouseButtons(buttons int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsItem23setAcceptedMouseButtonsE6QFlagsIN2Qt11MouseButtonEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), buttons)
+	gopp.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:242
 // index:0
 // Public Visibility=Default Availability=Available
@@ -2242,6 +2251,15 @@ func (this *QGraphicsItem) InputMethodHints() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:409
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setInputMethodHints(Qt::InputMethodHints)
+func (this *QGraphicsItem) SetInputMethodHints(hints int) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsItem19setInputMethodHintsE6QFlagsIN2Qt15InputMethodHintEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hints)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:415

@@ -10,7 +10,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 5
+// extern C begin: 6
 */
 // import "C"
 import "unsafe"
@@ -69,6 +69,97 @@ func NewQWheelEventFromPointer(cthis unsafe.Pointer) *QWheelEvent {
 }
 func (*QWheelEvent) NewFromPointer(cthis unsafe.Pointer) *QWheelEvent {
 	return NewQWheelEventFromPointer(cthis)
+}
+
+// /usr/include/qt/QtGui/qevent.h:178
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QWheelEvent(const QPointF &, int, Qt::MouseButtons, Qt::KeyboardModifiers, Qt::Orientation)
+func NewQWheelEvent(pos *qtcore.QPointF, delta int, buttons int, modifiers int, orient int) *QWheelEvent {
+	var convArg0 = pos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWheelEventC2ERK7QPointFi6QFlagsIN2Qt11MouseButtonEES3_INS4_16KeyboardModifierEENS4_11OrientationE", ffiqt.FFI_TYPE_POINTER, convArg0, delta, buttons, modifiers, orient)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQWheelEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQWheelEvent)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qevent.h:181
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QWheelEvent(const QPointF &, const QPointF &, int, Qt::MouseButtons, Qt::KeyboardModifiers, Qt::Orientation)
+func NewQWheelEvent_1(pos *qtcore.QPointF, globalPos *qtcore.QPointF, delta int, buttons int, modifiers int, orient int) *QWheelEvent {
+	var convArg0 = pos.GetCthis()
+	var convArg1 = globalPos.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWheelEventC2ERK7QPointFS2_i6QFlagsIN2Qt11MouseButtonEES3_INS4_16KeyboardModifierEENS4_11OrientationE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, delta, buttons, modifiers, orient)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQWheelEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQWheelEvent)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qevent.h:184
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QWheelEvent(const QPointF &, const QPointF &, QPoint, QPoint, int, Qt::Orientation, Qt::MouseButtons, Qt::KeyboardModifiers)
+func NewQWheelEvent_2(pos *qtcore.QPointF, globalPos *qtcore.QPointF, pixelDelta *qtcore.QPoint /*123*/, angleDelta *qtcore.QPoint /*123*/, qt4Delta int, qt4Orientation int, buttons int, modifiers int) *QWheelEvent {
+	var convArg0 = pos.GetCthis()
+	var convArg1 = globalPos.GetCthis()
+	var convArg2 = pixelDelta.GetCthis()
+	var convArg3 = angleDelta.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWheelEventC2ERK7QPointFS2_6QPointS3_iN2Qt11OrientationE6QFlagsINS4_11MouseButtonEES6_INS4_16KeyboardModifierEE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, qt4Delta, qt4Orientation, buttons, modifiers)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQWheelEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQWheelEvent)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qevent.h:187
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QWheelEvent(const QPointF &, const QPointF &, QPoint, QPoint, int, Qt::Orientation, Qt::MouseButtons, Qt::KeyboardModifiers, Qt::ScrollPhase)
+func NewQWheelEvent_3(pos *qtcore.QPointF, globalPos *qtcore.QPointF, pixelDelta *qtcore.QPoint /*123*/, angleDelta *qtcore.QPoint /*123*/, qt4Delta int, qt4Orientation int, buttons int, modifiers int, phase int) *QWheelEvent {
+	var convArg0 = pos.GetCthis()
+	var convArg1 = globalPos.GetCthis()
+	var convArg2 = pixelDelta.GetCthis()
+	var convArg3 = angleDelta.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWheelEventC2ERK7QPointFS2_6QPointS3_iN2Qt11OrientationE6QFlagsINS4_11MouseButtonEES6_INS4_16KeyboardModifierEENS4_11ScrollPhaseE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, qt4Delta, qt4Orientation, buttons, modifiers, phase)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQWheelEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQWheelEvent)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qevent.h:190
+// index:4
+// Public Visibility=Default Availability=Available
+// [-2] void QWheelEvent(const QPointF &, const QPointF &, QPoint, QPoint, int, Qt::Orientation, Qt::MouseButtons, Qt::KeyboardModifiers, Qt::ScrollPhase, Qt::MouseEventSource)
+func NewQWheelEvent_4(pos *qtcore.QPointF, globalPos *qtcore.QPointF, pixelDelta *qtcore.QPoint /*123*/, angleDelta *qtcore.QPoint /*123*/, qt4Delta int, qt4Orientation int, buttons int, modifiers int, phase int, source int) *QWheelEvent {
+	var convArg0 = pos.GetCthis()
+	var convArg1 = globalPos.GetCthis()
+	var convArg2 = pixelDelta.GetCthis()
+	var convArg3 = angleDelta.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWheelEventC2ERK7QPointFS2_6QPointS3_iN2Qt11OrientationE6QFlagsINS4_11MouseButtonEES6_INS4_16KeyboardModifierEENS4_11ScrollPhaseENS4_16MouseEventSourceE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, qt4Delta, qt4Orientation, buttons, modifiers, phase, source)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQWheelEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQWheelEvent)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qevent.h:193
+// index:5
+// Public Visibility=Default Availability=Available
+// [-2] void QWheelEvent(const QPointF &, const QPointF &, QPoint, QPoint, int, Qt::Orientation, Qt::MouseButtons, Qt::KeyboardModifiers, Qt::ScrollPhase, Qt::MouseEventSource, _Bool)
+func NewQWheelEvent_5(pos *qtcore.QPointF, globalPos *qtcore.QPointF, pixelDelta *qtcore.QPoint /*123*/, angleDelta *qtcore.QPoint /*123*/, qt4Delta int, qt4Orientation int, buttons int, modifiers int, phase int, source int, inverted bool) *QWheelEvent {
+	var convArg0 = pos.GetCthis()
+	var convArg1 = globalPos.GetCthis()
+	var convArg2 = pixelDelta.GetCthis()
+	var convArg3 = angleDelta.GetCthis()
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWheelEventC2ERK7QPointFS2_6QPointS3_iN2Qt11OrientationE6QFlagsINS4_11MouseButtonEES6_INS4_16KeyboardModifierEENS4_11ScrollPhaseENS4_16MouseEventSourceEb", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, qt4Delta, qt4Orientation, buttons, modifiers, phase, source, inverted)
+	gopp.ErrPrint(err, rv)
+	gothis := NewQWheelEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQWheelEvent)
+	return gothis
 }
 
 // /usr/include/qt/QtGui/qevent.h:196
