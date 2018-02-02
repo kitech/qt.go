@@ -52,6 +52,21 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool supportsExtension(enum QGraphicsItem::Extension)
+func (this *QGraphicsPathItem) InheritSupportsExtension(f func(extension int) bool) {
+	ffiqt.SetAllInheritCallback(this, "supportsExtension", f)
+}
+
+// void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
+func (this *QGraphicsPathItem) InheritSetExtension(f func(extension int, variant *qtcore.QVariant)) {
+	ffiqt.SetAllInheritCallback(this, "setExtension", f)
+}
+
+// QVariant extension(const class QVariant &)
+func (this *QGraphicsPathItem) InheritExtension(f func(variant *qtcore.QVariant) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "extension", f)
+}
+
 type QGraphicsPathItem struct {
 	*QAbstractGraphicsShapeItem
 }
@@ -83,6 +98,7 @@ func NewQGraphicsPathItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraph
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsPathItemC2EP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsPathItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsPathItem)
 	return gothis
 }
 
@@ -96,6 +112,7 @@ func NewQGraphicsPathItem_1(path *qtgui.QPainterPath, parent *QGraphicsItem /*77
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsPathItemC2ERK12QPainterPathP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsPathItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsPathItem)
 	return gothis
 }
 
@@ -103,9 +120,10 @@ func NewQGraphicsPathItem_1(path *qtgui.QPainterPath, parent *QGraphicsItem /*77
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsPathItem()
-func DeleteQGraphicsPathItem(*QGraphicsPathItem) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsPathItemD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsPathItem(this *QGraphicsPathItem) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsPathItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:632
@@ -117,6 +135,7 @@ func (this *QGraphicsPathItem) Path() *qtgui.QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
 }
 
@@ -139,6 +158,7 @@ func (this *QGraphicsPathItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -151,6 +171,7 @@ func (this *QGraphicsPathItem) Shape() *qtgui.QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
 }
 
@@ -199,6 +220,7 @@ func (this *QGraphicsPathItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
 }
 
@@ -244,6 +266,7 @@ func (this *QGraphicsPathItem) Extension(variant *qtcore.QVariant) *qtcore.QVari
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 

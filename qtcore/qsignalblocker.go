@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSignalBlocker struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QSignalBlocker) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSignalBlocker) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSignalBlockerFromPointer(cthis unsafe.Pointer) *QSignalBlocker {
 	return &QSignalBlocker{&qtrt.CObject{cthis}}
@@ -74,6 +79,7 @@ func NewQSignalBlocker(o *QObject /*777 QObject **/) *QSignalBlocker {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlockerC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSignalBlockerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSignalBlocker)
 	return gothis
 }
 
@@ -86,6 +92,7 @@ func NewQSignalBlocker_1(o *QObject) *QSignalBlocker {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlockerC2ER7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSignalBlockerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSignalBlocker)
 	return gothis
 }
 
@@ -93,9 +100,10 @@ func NewQSignalBlocker_1(o *QObject) *QSignalBlocker {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QSignalBlocker()
-func DeleteQSignalBlocker(*QSignalBlocker) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlockerD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSignalBlocker(this *QSignalBlocker) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlockerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qobject.h:556

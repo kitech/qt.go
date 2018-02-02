@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QListData struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QListData) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QListData) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQListDataFromPointer(cthis unsafe.Pointer) *QListData {
 	return &QListData{&qtrt.CObject{cthis}}
@@ -205,6 +210,12 @@ func (this *QListData) End() unsafe.Pointer /*666*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
+}
+
+func DeleteQListData(this *QListData) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QListData__ = int

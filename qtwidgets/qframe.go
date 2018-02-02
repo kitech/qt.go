@@ -52,6 +52,31 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QFrame) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QFrame) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void changeEvent(class QEvent *)
+func (this *QFrame) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
+// void drawFrame(class QPainter *)
+func (this *QFrame) InheritDrawFrame(f func(arg0 *qtgui.QPainter /*777 QPainter **/)) {
+	ffiqt.SetAllInheritCallback(this, "drawFrame", f)
+}
+
+// void initStyleOption(class QStyleOptionFrame *)
+func (this *QFrame) InheritInitStyleOption(f func(option *QStyleOptionFrame /*777 QStyleOptionFrame **/)) {
+	ffiqt.SetAllInheritCallback(this, "initStyleOption", f)
+}
+
 type QFrame struct {
 	*QWidget
 }
@@ -102,9 +127,10 @@ func NewQFrame(parent *QWidget /*777 QWidget **/, f int) *QFrame {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFrame()
-func DeleteQFrame(*QFrame) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrameD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQFrame(this *QFrame) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrameD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:67
@@ -147,6 +173,7 @@ func (this *QFrame) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -239,6 +266,7 @@ func (this *QFrame) FrameRect() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 

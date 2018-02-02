@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QMessageLogContext struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QMessageLogContext) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QMessageLogContext) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQMessageLogContextFromPointer(cthis unsafe.Pointer) *QMessageLogContext {
 	return &QMessageLogContext{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQMessageLogContext() *QMessageLogContext {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QMessageLogContextC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMessageLogContextFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMessageLogContext)
 	return gothis
 }
 
@@ -90,6 +96,7 @@ func NewQMessageLogContext_1(fileName string, lineNumber int, functionName strin
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QMessageLogContextC2EPKciS1_S1_", ffiqt.FFI_TYPE_POINTER, convArg0, lineNumber, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMessageLogContextFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMessageLogContext)
 	return gothis
 }
 
@@ -101,6 +108,12 @@ func (this *QMessageLogContext) Copy(logContext *QMessageLogContext) {
 	var convArg0 = logContext.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QMessageLogContext4copyERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+}
+
+func DeleteQMessageLogContext(this *QMessageLogContext) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QMessageLogContextD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTapGesture struct {
 	*QGesture
 }
@@ -102,9 +103,10 @@ func NewQTapGesture(parent *qtcore.QObject /*777 QObject **/) *QTapGesture {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTapGesture()
-func DeleteQTapGesture(*QTapGesture) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTapGestureD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTapGesture(this *QTapGesture) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTapGestureD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:245
@@ -116,6 +118,7 @@ func (this *QTapGesture) Position() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 

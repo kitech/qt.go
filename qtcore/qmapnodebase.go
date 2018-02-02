@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QMapNodeBase struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QMapNodeBase) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QMapNodeBase) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQMapNodeBaseFromPointer(cthis unsafe.Pointer) *QMapNodeBase {
 	return &QMapNodeBase{&qtrt.CObject{cthis}}
@@ -143,6 +148,12 @@ func (this *QMapNodeBase) Parent() *QMapNodeBase /*777 QMapNodeBase **/ {
 	//  return rv
 	rv2 := /*==*/ NewQMapNodeBaseFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
+}
+
+func DeleteQMapNodeBase(this *QMapNodeBase) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapNodeBaseD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QMapNodeBase__Color = int

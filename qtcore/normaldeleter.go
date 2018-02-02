@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type NormalDeleter struct {
 	*qtrt.CObject
 }
@@ -56,13 +57,23 @@ func (this *NormalDeleter) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *NormalDeleter) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewNormalDeleterFromPointer(cthis unsafe.Pointer) *NormalDeleter {
 	return &NormalDeleter{&qtrt.CObject{cthis}}
 }
 func (*NormalDeleter) NewFromPointer(cthis unsafe.Pointer) *NormalDeleter {
 	return NewNormalDeleterFromPointer(cthis)
+}
+
+func DeleteNormalDeleter(this *NormalDeleter) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13NormalDeleterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

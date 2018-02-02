@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QLatin1Char struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QLatin1Char) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QLatin1Char) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQLatin1CharFromPointer(cthis unsafe.Pointer) *QLatin1Char {
 	return &QLatin1Char{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQLatin1Char(c byte) *QLatin1Char {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QLatin1CharC2Ec", ffiqt.FFI_TYPE_POINTER, c)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLatin1CharFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQLatin1Char)
 	return gothis
 }
 
@@ -96,6 +102,12 @@ func (this *QLatin1Char) Unicode() uint16 {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint16(rv) // 222
+}
+
+func DeleteQLatin1Char(this *QLatin1Char) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QLatin1CharD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

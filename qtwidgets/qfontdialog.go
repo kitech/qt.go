@@ -52,6 +52,21 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void changeEvent(class QEvent *)
+func (this *QFontDialog) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
+// void done(int)
+func (this *QFontDialog) InheritDone(f func(result int)) {
+	ffiqt.SetAllInheritCallback(this, "done", f)
+}
+
+// bool eventFilter(class QObject *, class QEvent *)
+func (this *QFontDialog) InheritEventFilter(f func(object *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "eventFilter", f)
+}
+
 type QFontDialog struct {
 	*QDialog
 }
@@ -115,9 +130,10 @@ func NewQFontDialog_1(initial *qtgui.QFont, parent *QWidget /*777 QWidget **/) *
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFontDialog()
-func DeleteQFontDialog(*QFontDialog) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialogD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQFontDialog(this *QFontDialog) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFontDialogD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qfontdialog.h:79
@@ -139,6 +155,7 @@ func (this *QFontDialog) CurrentFont() *qtgui.QFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
 }
 
@@ -151,6 +168,7 @@ func (this *QFontDialog) SelectedFont() *qtgui.QFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
 }
 
@@ -216,6 +234,7 @@ func (this *QFontDialog) GetFont(ok unsafe.Pointer /*666*/, parent *QWidget /*77
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
 }
 func QFontDialog_GetFont(ok unsafe.Pointer /*666*/, parent *QWidget /*777 QWidget **/) *qtgui.QFont /*123*/ {

@@ -52,6 +52,21 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool supportsExtension(enum QGraphicsItem::Extension)
+func (this *QGraphicsSimpleTextItem) InheritSupportsExtension(f func(extension int) bool) {
+	ffiqt.SetAllInheritCallback(this, "supportsExtension", f)
+}
+
+// void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
+func (this *QGraphicsSimpleTextItem) InheritSetExtension(f func(extension int, variant *qtcore.QVariant)) {
+	ffiqt.SetAllInheritCallback(this, "setExtension", f)
+}
+
+// QVariant extension(const class QVariant &)
+func (this *QGraphicsSimpleTextItem) InheritExtension(f func(variant *qtcore.QVariant) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "extension", f)
+}
+
 type QGraphicsSimpleTextItem struct {
 	*QAbstractGraphicsShapeItem
 }
@@ -83,6 +98,7 @@ func NewQGraphicsSimpleTextItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsSimpleTextItemC2EP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsSimpleTextItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsSimpleTextItem)
 	return gothis
 }
 
@@ -96,6 +112,7 @@ func NewQGraphicsSimpleTextItem_1(text *qtcore.QString, parent *QGraphicsItem /*
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsSimpleTextItemC2ERK7QStringP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsSimpleTextItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsSimpleTextItem)
 	return gothis
 }
 
@@ -103,9 +120,10 @@ func NewQGraphicsSimpleTextItem_1(text *qtcore.QString, parent *QGraphicsItem /*
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsSimpleTextItem()
-func DeleteQGraphicsSimpleTextItem(*QGraphicsSimpleTextItem) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsSimpleTextItemD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsSimpleTextItem(this *QGraphicsSimpleTextItem) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsSimpleTextItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:972
@@ -127,6 +145,7 @@ func (this *QGraphicsSimpleTextItem) Text() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -149,6 +168,7 @@ func (this *QGraphicsSimpleTextItem) Font() *qtgui.QFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
 }
 
@@ -161,6 +181,7 @@ func (this *QGraphicsSimpleTextItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -173,6 +194,7 @@ func (this *QGraphicsSimpleTextItem) Shape() *qtgui.QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
 }
 
@@ -221,6 +243,7 @@ func (this *QGraphicsSimpleTextItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
 }
 
@@ -266,6 +289,7 @@ func (this *QGraphicsSimpleTextItem) Extension(variant *qtcore.QVariant) *qtcore
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 

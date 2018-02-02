@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QInputMethod struct {
 	*qtcore.QObject
 }
@@ -91,6 +92,7 @@ func (this *QInputMethod) InputItemTransform() *QTransform /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
 	return rv2
 }
 
@@ -113,6 +115,7 @@ func (this *QInputMethod) InputItemRectangle() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -135,6 +138,7 @@ func (this *QInputMethod) CursorRectangle() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -147,6 +151,7 @@ func (this *QInputMethod) AnchorRectangle() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -159,6 +164,7 @@ func (this *QInputMethod) KeyboardRectangle() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -171,6 +177,7 @@ func (this *QInputMethod) InputItemClipRectangle() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -214,6 +221,7 @@ func (this *QInputMethod) Locale() *qtcore.QLocale /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQLocale)
 	return rv2
 }
 
@@ -238,6 +246,7 @@ func (this *QInputMethod) QueryFocusObject(query int, argument *qtcore.QVariant 
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 func QInputMethod_QueryFocusObject(query int, argument *qtcore.QVariant /*123*/) *qtcore.QVariant /*123*/ {
@@ -361,6 +370,12 @@ func (this *QInputMethod) LocaleChanged() {
 func (this *QInputMethod) InputDirectionChanged(newDirection int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethod21inputDirectionChangedEN2Qt15LayoutDirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), newDirection)
 	gopp.ErrPrint(err, rv)
+}
+
+func DeleteQInputMethod(this *QInputMethod) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputMethodD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QInputMethod__Action = int

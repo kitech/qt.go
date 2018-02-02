@@ -44,6 +44,26 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QParallelAnimationGroup) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void updateCurrentTime(int)
+func (this *QParallelAnimationGroup) InheritUpdateCurrentTime(f func(currentTime int)) {
+	ffiqt.SetAllInheritCallback(this, "updateCurrentTime", f)
+}
+
+// void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
+func (this *QParallelAnimationGroup) InheritUpdateState(f func(newState int, oldState int)) {
+	ffiqt.SetAllInheritCallback(this, "updateState", f)
+}
+
+// void updateDirection(class QAbstractAnimation::Direction)
+func (this *QParallelAnimationGroup) InheritUpdateDirection(f func(direction int)) {
+	ffiqt.SetAllInheritCallback(this, "updateDirection", f)
+}
+
 type QParallelAnimationGroup struct {
 	*QAnimationGroup
 }
@@ -94,9 +114,10 @@ func NewQParallelAnimationGroup(parent *QObject /*777 QObject **/) *QParallelAni
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QParallelAnimationGroup()
-func DeleteQParallelAnimationGroup(*QParallelAnimationGroup) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroupD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQParallelAnimationGroup(this *QParallelAnimationGroup) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroupD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qparallelanimationgroup.h:59

@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type AbstractComparatorFunction struct {
 	*qtrt.CObject
 }
@@ -56,13 +57,23 @@ func (this *AbstractComparatorFunction) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *AbstractComparatorFunction) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewAbstractComparatorFunctionFromPointer(cthis unsafe.Pointer) *AbstractComparatorFunction {
 	return &AbstractComparatorFunction{&qtrt.CObject{cthis}}
 }
 func (*AbstractComparatorFunction) NewFromPointer(cthis unsafe.Pointer) *AbstractComparatorFunction {
 	return NewAbstractComparatorFunctionFromPointer(cthis)
+}
+
+func DeleteAbstractComparatorFunction(this *AbstractComparatorFunction) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26AbstractComparatorFunctionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

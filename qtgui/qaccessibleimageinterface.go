@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAccessibleImageInterface struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QAccessibleImageInterface) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QAccessibleImageInterface) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQAccessibleImageInterfaceFromPointer(cthis unsafe.Pointer) *QAccessibleImageInterface {
 	return &QAccessibleImageInterface{&qtrt.CObject{cthis}}
@@ -73,9 +78,10 @@ func (*QAccessibleImageInterface) NewFromPointer(cthis unsafe.Pointer) *QAccessi
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleImageInterface()
-func DeleteQAccessibleImageInterface(*QAccessibleImageInterface) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN25QAccessibleImageInterfaceD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAccessibleImageInterface(this *QAccessibleImageInterface) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN25QAccessibleImageInterfaceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:657
@@ -87,6 +93,7 @@ func (this *QAccessibleImageInterface) ImageDescription() *qtcore.QString /*123*
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -99,6 +106,7 @@ func (this *QAccessibleImageInterface) ImageSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -111,6 +119,7 @@ func (this *QAccessibleImageInterface) ImagePosition() *qtcore.QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 

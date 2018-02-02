@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QBitArray struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QBitArray) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QBitArray) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQBitArrayFromPointer(cthis unsafe.Pointer) *QBitArray {
 	return &QBitArray{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQBitArray() *QBitArray {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArrayC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBitArrayFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQBitArray)
 	return gothis
 }
 
@@ -84,6 +90,7 @@ func NewQBitArray_1(size int, val bool) *QBitArray {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArrayC2Eib", ffiqt.FFI_TYPE_POINTER, size, val)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBitArrayFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQBitArray)
 	return gothis
 }
 
@@ -277,6 +284,12 @@ func (this *QBitArray) Fill_1(val bool, first int, last int) {
 func (this *QBitArray) Truncate(pos int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArray8truncateEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	gopp.ErrPrint(err, rv)
+}
+
+func DeleteQBitArray(this *QBitArray) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QBitArrayD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QXmlStreamStringRef struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QXmlStreamStringRef) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QXmlStreamStringRef) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQXmlStreamStringRefFromPointer(cthis unsafe.Pointer) *QXmlStreamStringRef {
 	return &QXmlStreamStringRef{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQXmlStreamStringRef() *QXmlStreamStringRef {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamStringRefFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamStringRef)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func NewQXmlStreamStringRef_1(aString *QStringRef) *QXmlStreamStringRef {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2ERK10QStringRef", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamStringRefFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamStringRef)
 	return gothis
 }
 
@@ -97,6 +104,7 @@ func NewQXmlStreamStringRef_2(aString *QString) *QXmlStreamStringRef {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamStringRefFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamStringRef)
 	return gothis
 }
 
@@ -108,6 +116,7 @@ func NewQXmlStreamStringRef_3(aString unsafe.Pointer /*333*/) *QXmlStreamStringR
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2EO7QString", ffiqt.FFI_TYPE_POINTER, aString)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamStringRefFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamStringRef)
 	return gothis
 }
 
@@ -115,9 +124,10 @@ func NewQXmlStreamStringRef_3(aString unsafe.Pointer /*333*/) *QXmlStreamStringR
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QXmlStreamStringRef()
-func DeleteQXmlStreamStringRef(*QXmlStreamStringRef) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQXmlStreamStringRef(this *QXmlStreamStringRef) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:82

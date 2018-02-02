@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QDate struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QDate) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QDate) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQDateFromPointer(cthis unsafe.Pointer) *QDate {
 	return &QDate{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQDate() *QDate {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDateC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDateFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDate)
 	return gothis
 }
 
@@ -84,6 +90,7 @@ func NewQDate_1(y int, m int, d int) *QDate {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDateC2Eiii", ffiqt.FFI_TYPE_POINTER, y, m, d)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDateFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDate)
 	return gothis
 }
 
@@ -222,6 +229,7 @@ func (this *QDate) ShortMonthName(month int, type_ int) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QDate_ShortMonthName(month int, type_ int) *QString /*123*/ {
@@ -239,6 +247,7 @@ func (this *QDate) ShortDayName(weekday int, type_ int) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QDate_ShortDayName(weekday int, type_ int) *QString /*123*/ {
@@ -256,6 +265,7 @@ func (this *QDate) LongMonthName(month int, type_ int) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QDate_LongMonthName(month int, type_ int) *QString /*123*/ {
@@ -273,6 +283,7 @@ func (this *QDate) LongDayName(weekday int, type_ int) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QDate_LongDayName(weekday int, type_ int) *QString /*123*/ {
@@ -290,6 +301,7 @@ func (this *QDate) ToString(f int) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -303,6 +315,7 @@ func (this *QDate) ToString_1(format *QString) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -316,6 +329,7 @@ func (this *QDate) ToString_2(format *QStringView /*123*/) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -357,6 +371,7 @@ func (this *QDate) AddDays(days int64) *QDate /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDate)
 	return rv2
 }
 
@@ -369,6 +384,7 @@ func (this *QDate) AddMonths(months int) *QDate /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDate)
 	return rv2
 }
 
@@ -381,6 +397,7 @@ func (this *QDate) AddYears(years int) *QDate /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDate)
 	return rv2
 }
 
@@ -405,6 +422,7 @@ func (this *QDate) CurrentDate() *QDate /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDate)
 	return rv2
 }
 func QDate_CurrentDate() *QDate /*123*/ {
@@ -423,6 +441,7 @@ func (this *QDate) FromString(s *QString, f int) *QDate /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDate)
 	return rv2
 }
 func QDate_FromString(s *QString, f int) *QDate /*123*/ {
@@ -442,6 +461,7 @@ func (this *QDate) FromString_1(s *QString, format *QString) *QDate /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDate)
 	return rv2
 }
 func QDate_FromString_1(s *QString, format *QString) *QDate /*123*/ {
@@ -475,6 +495,7 @@ func (this *QDate) FromJulianDay(jd_ int64) *QDate /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDate)
 	return rv2
 }
 func QDate_FromJulianDay(jd_ int64) *QDate /*123*/ {
@@ -492,6 +513,12 @@ func (this *QDate) ToJulianDay() int64 {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
+}
+
+func DeleteQDate(this *QDate) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDateD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QDate__MonthNameType = int

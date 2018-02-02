@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTileRules struct {
 	*qtrt.CObject
 }
@@ -64,7 +65,11 @@ func (this *QTileRules) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTileRules) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTileRulesFromPointer(cthis unsafe.Pointer) *QTileRules {
 	return &QTileRules{&qtrt.CObject{cthis}}
@@ -81,6 +86,7 @@ func NewQTileRules(horizontalRule int, verticalRule int) *QTileRules {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTileRulesC2EN2Qt8TileRuleES1_", ffiqt.FFI_TYPE_POINTER, horizontalRule, verticalRule)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTileRulesFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTileRules)
 	return gothis
 }
 
@@ -92,7 +98,14 @@ func NewQTileRules_1(rule int) *QTileRules {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTileRulesC2EN2Qt8TileRuleE", ffiqt.FFI_TYPE_POINTER, rule)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTileRulesFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTileRules)
 	return gothis
+}
+
+func DeleteQTileRules(this *QTileRules) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTileRulesD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

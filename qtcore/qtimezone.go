@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTimeZone struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QTimeZone) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTimeZone) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTimeZoneFromPointer(cthis unsafe.Pointer) *QTimeZone {
 	return &QTimeZone{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQTimeZone() *QTimeZone {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZoneC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTimeZoneFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTimeZone)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func NewQTimeZone_1(ianaId *QByteArray) *QTimeZone {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZoneC2ERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTimeZoneFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTimeZone)
 	return gothis
 }
 
@@ -96,6 +103,7 @@ func NewQTimeZone_2(offsetSeconds int) *QTimeZone {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZoneC2Ei", ffiqt.FFI_TYPE_POINTER, offsetSeconds)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTimeZoneFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTimeZone)
 	return gothis
 }
 
@@ -111,6 +119,7 @@ func NewQTimeZone_3(zoneId *QByteArray, offsetSeconds int, name *QString, abbrev
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZoneC2ERK10QByteArrayiRK7QStringS5_N7QLocale7CountryES5_", ffiqt.FFI_TYPE_POINTER, convArg0, offsetSeconds, convArg2, convArg3, country, convArg5)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTimeZoneFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTimeZone)
 	return gothis
 }
 
@@ -118,9 +127,10 @@ func NewQTimeZone_3(zoneId *QByteArray, offsetSeconds int, name *QString, abbrev
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTimeZone()
-func DeleteQTimeZone(*QTimeZone) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZoneD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTimeZone(this *QTimeZone) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZoneD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qtimezone.h:106
@@ -153,6 +163,7 @@ func (this *QTimeZone) Id() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -176,6 +187,7 @@ func (this *QTimeZone) Comment() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -190,6 +202,7 @@ func (this *QTimeZone) DisplayName(atDateTime *QDateTime, nameType int, locale *
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -203,6 +216,7 @@ func (this *QTimeZone) DisplayName_1(timeType int, nameType int, locale *QLocale
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -216,6 +230,7 @@ func (this *QTimeZone) Abbreviation(atDateTime *QDateTime) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -334,6 +349,7 @@ func (this *QTimeZone) SystemTimeZoneId() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 func QTimeZone_SystemTimeZoneId() *QByteArray /*123*/ {
@@ -351,6 +367,7 @@ func (this *QTimeZone) SystemTimeZone() *QTimeZone /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTimeZoneFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTimeZone)
 	return rv2
 }
 func QTimeZone_SystemTimeZone() *QTimeZone /*123*/ {
@@ -368,6 +385,7 @@ func (this *QTimeZone) Utc() *QTimeZone /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTimeZoneFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTimeZone)
 	return rv2
 }
 func QTimeZone_Utc() *QTimeZone /*123*/ {
@@ -403,6 +421,7 @@ func (this *QTimeZone) IanaIdToWindowsId(ianaId *QByteArray) *QByteArray /*123*/
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 func QTimeZone_IanaIdToWindowsId(ianaId *QByteArray) *QByteArray /*123*/ {
@@ -421,6 +440,7 @@ func (this *QTimeZone) WindowsIdToDefaultIanaId(windowsId *QByteArray) *QByteArr
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 func QTimeZone_WindowsIdToDefaultIanaId(windowsId *QByteArray) *QByteArray /*123*/ {
@@ -439,6 +459,7 @@ func (this *QTimeZone) WindowsIdToDefaultIanaId_1(windowsId *QByteArray, country
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 func QTimeZone_WindowsIdToDefaultIanaId_1(windowsId *QByteArray, country int) *QByteArray /*123*/ {

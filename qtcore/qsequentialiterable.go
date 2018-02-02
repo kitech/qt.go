@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSequentialIterable struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QSequentialIterable) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSequentialIterable) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSequentialIterableFromPointer(cthis unsafe.Pointer) *QSequentialIterable {
 	return &QSequentialIterable{&qtrt.CObject{cthis}}
@@ -96,6 +101,7 @@ func (this *QSequentialIterable) At(idx int) *QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -119,6 +125,12 @@ func (this *QSequentialIterable) CanReverseIterate() bool {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
+}
+
+func DeleteQSequentialIterable(this *QSequentialIterable) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QSequentialIterableD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

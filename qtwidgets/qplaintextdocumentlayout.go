@@ -52,6 +52,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void documentChanged(int, int, int)
+func (this *QPlainTextDocumentLayout) InheritDocumentChanged(f func(from int, arg1 int, charsAdded int)) {
+	ffiqt.SetAllInheritCallback(this, "documentChanged", f)
+}
+
 type QPlainTextDocumentLayout struct {
 	*qtgui.QAbstractTextDocumentLayout
 }
@@ -102,9 +107,10 @@ func NewQPlainTextDocumentLayout(document *qtgui.QTextDocument /*777 QTextDocume
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPlainTextDocumentLayout()
-func DeleteQPlainTextDocumentLayout(*QPlainTextDocumentLayout) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayoutD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPlainTextDocumentLayout(this *QPlainTextDocumentLayout) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:306
@@ -139,6 +145,7 @@ func (this *QPlainTextDocumentLayout) DocumentSize() *qtcore.QSizeF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
 
@@ -152,6 +159,7 @@ func (this *QPlainTextDocumentLayout) FrameBoundingRect(arg0 *qtgui.QTextFrame /
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -165,6 +173,7 @@ func (this *QPlainTextDocumentLayout) BlockBoundingRect(block *qtgui.QTextBlock)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 

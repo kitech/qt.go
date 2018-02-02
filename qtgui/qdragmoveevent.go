@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QDragMoveEvent struct {
 	*QDropEvent
 }
@@ -74,9 +75,10 @@ func (*QDragMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QDragMoveEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDragMoveEvent()
-func DeleteQDragMoveEvent(*QDragMoveEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDragMoveEvent(this *QDragMoveEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:646
@@ -88,6 +90,7 @@ func (this *QDragMoveEvent) AnswerRect() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 

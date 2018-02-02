@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QToolTip struct {
 	*qtrt.CObject
 }
@@ -64,7 +65,11 @@ func (this *QToolTip) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QToolTip) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQToolTipFromPointer(cthis unsafe.Pointer) *QToolTip {
 	return &QToolTip{&qtrt.CObject{cthis}}
@@ -161,6 +166,7 @@ func (this *QToolTip) Text() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 func QToolTip_Text() *qtcore.QString /*123*/ {
@@ -178,6 +184,7 @@ func (this *QToolTip) Palette() *qtgui.QPalette /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtgui.NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPalette)
 	return rv2
 }
 func QToolTip_Palette() *qtgui.QPalette /*123*/ {
@@ -209,6 +216,7 @@ func (this *QToolTip) Font() *qtgui.QFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
 }
 func QToolTip_Font() *qtgui.QFont /*123*/ {
@@ -229,6 +237,12 @@ func (this *QToolTip) SetFont(arg0 *qtgui.QFont) {
 func QToolTip_SetFont(arg0 *qtgui.QFont) {
 	var nilthis *QToolTip
 	nilthis.SetFont(arg0)
+}
+
+func DeleteQToolTip(this *QToolTip) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTipD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

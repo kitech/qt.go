@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QConicalGradient struct {
 	*QGradient
 }
@@ -78,6 +79,7 @@ func NewQConicalGradient() *QConicalGradient {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QConicalGradientC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQConicalGradientFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQConicalGradient)
 	return gothis
 }
 
@@ -90,6 +92,7 @@ func NewQConicalGradient_1(center *qtcore.QPointF, startAngle float64) *QConical
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QConicalGradientC2ERK7QPointFd", ffiqt.FFI_TYPE_POINTER, convArg0, startAngle)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQConicalGradientFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQConicalGradient)
 	return gothis
 }
 
@@ -101,6 +104,7 @@ func NewQConicalGradient_2(cx float64, cy float64, startAngle float64) *QConical
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QConicalGradientC2Eddd", ffiqt.FFI_TYPE_POINTER, cx, cy, startAngle)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQConicalGradientFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQConicalGradient)
 	return gothis
 }
 
@@ -113,6 +117,7 @@ func (this *QConicalGradient) Center() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -153,6 +158,12 @@ func (this *QConicalGradient) Angle() float64 {
 func (this *QConicalGradient) SetAngle(angle float64) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QConicalGradient8setAngleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), angle)
 	gopp.ErrPrint(err, rv)
+}
+
+func DeleteQConicalGradient(this *QConicalGradient) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QConicalGradientD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

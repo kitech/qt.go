@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleHints struct {
 	*qtcore.QObject
 }
@@ -277,6 +278,7 @@ func (this *QStyleHints) PasswordMaskCharacter() *qtcore.QChar /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQChar)
 	return rv2
 }
 
@@ -463,6 +465,12 @@ func (this *QStyleHints) UseHoverEffectsChanged(useHoverEffects bool) {
 func (this *QStyleHints) WheelScrollLinesChanged(scrollLines int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHints23wheelScrollLinesChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), scrollLines)
 	gopp.ErrPrint(err, rv)
+}
+
+func DeleteQStyleHints(this *QStyleHints) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStyleHintsD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

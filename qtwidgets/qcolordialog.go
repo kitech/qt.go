@@ -52,6 +52,16 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void changeEvent(class QEvent *)
+func (this *QColorDialog) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
+// void done(int)
+func (this *QColorDialog) InheritDone(f func(result int)) {
+	ffiqt.SetAllInheritCallback(this, "done", f)
+}
+
 type QColorDialog struct {
 	*QDialog
 }
@@ -115,9 +125,10 @@ func NewQColorDialog_1(initial *qtgui.QColor, parent *QWidget /*777 QWidget **/)
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QColorDialog()
-func DeleteQColorDialog(*QColorDialog) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QColorDialogD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQColorDialog(this *QColorDialog) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QColorDialogD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qcolordialog.h:75
@@ -139,6 +150,7 @@ func (this *QColorDialog) CurrentColor() *qtgui.QColor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
 }
 
@@ -151,6 +163,7 @@ func (this *QColorDialog) SelectedColor() *qtgui.QColor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
 }
 
@@ -248,6 +261,7 @@ func (this *QColorDialog) CustomColor(index int) *qtgui.QColor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
 }
 func QColorDialog_CustomColor(index int) *qtgui.QColor /*123*/ {
@@ -279,6 +293,7 @@ func (this *QColorDialog) StandardColor(index int) *qtgui.QColor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
 }
 func QColorDialog_StandardColor(index int) *qtgui.QColor /*123*/ {

@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTableWidgetSelectionRange struct {
 	*qtrt.CObject
 }
@@ -64,7 +65,11 @@ func (this *QTableWidgetSelectionRange) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTableWidgetSelectionRange) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTableWidgetSelectionRangeFromPointer(cthis unsafe.Pointer) *QTableWidgetSelectionRange {
 	return &QTableWidgetSelectionRange{&qtrt.CObject{cthis}}
@@ -81,6 +86,7 @@ func NewQTableWidgetSelectionRange() *QTableWidgetSelectionRange {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTableWidgetSelectionRangeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTableWidgetSelectionRange)
 	return gothis
 }
 
@@ -92,6 +98,7 @@ func NewQTableWidgetSelectionRange_1(top int, left int, bottom int, right int) *
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeC2Eiiii", ffiqt.FFI_TYPE_POINTER, top, left, bottom, right)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTableWidgetSelectionRangeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTableWidgetSelectionRange)
 	return gothis
 }
 
@@ -99,9 +106,10 @@ func NewQTableWidgetSelectionRange_1(top int, left int, bottom int, right int) *
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTableWidgetSelectionRange()
-func DeleteQTableWidgetSelectionRange(*QTableWidgetSelectionRange) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTableWidgetSelectionRange(this *QTableWidgetSelectionRange) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:60

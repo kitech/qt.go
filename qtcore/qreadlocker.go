@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QReadLocker struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QReadLocker) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QReadLocker) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQReadLockerFromPointer(cthis unsafe.Pointer) *QReadLocker {
 	return &QReadLocker{&qtrt.CObject{cthis}}
@@ -74,6 +79,7 @@ func NewQReadLocker(readWriteLock *QReadWriteLock /*777 QReadWriteLock **/) *QRe
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QReadLockerC2EP14QReadWriteLock", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQReadLockerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQReadLocker)
 	return gothis
 }
 
@@ -81,9 +87,10 @@ func NewQReadLocker(readWriteLock *QReadWriteLock /*777 QReadWriteLock **/) *QRe
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QReadLocker()
-func DeleteQReadLocker(*QReadLocker) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QReadLockerD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQReadLocker(this *QReadLocker) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QReadLockerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qreadwritelock.h:92

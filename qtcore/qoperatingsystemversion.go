@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QOperatingSystemVersion struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QOperatingSystemVersion) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QOperatingSystemVersion) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQOperatingSystemVersionFromPointer(cthis unsafe.Pointer) *QOperatingSystemVersion {
 	return &QOperatingSystemVersion{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQOperatingSystemVersion(osType int, vmajor int, vminor int, vmicro int) 
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QOperatingSystemVersionC2ENS_6OSTypeEiii", ffiqt.FFI_TYPE_POINTER, osType, vmajor, vminor, vmicro)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQOperatingSystemVersionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQOperatingSystemVersion)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func (this *QOperatingSystemVersion) Current() *QOperatingSystemVersion /*123*/ 
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQOperatingSystemVersionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQOperatingSystemVersion)
 	return rv2
 }
 func QOperatingSystemVersion_Current() *QOperatingSystemVersion /*123*/ {
@@ -173,7 +180,14 @@ func (this *QOperatingSystemVersion) Name() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
+}
+
+func DeleteQOperatingSystemVersion(this *QOperatingSystemVersion) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QOperatingSystemVersionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QOperatingSystemVersion__OSType = int

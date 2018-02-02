@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QButtonGroup struct {
 	*qtcore.QObject
 }
@@ -102,9 +103,10 @@ func NewQButtonGroup(parent *qtcore.QObject /*777 QObject **/) *QButtonGroup {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QButtonGroup()
-func DeleteQButtonGroup(*QButtonGroup) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroupD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQButtonGroup(this *QButtonGroup) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroupD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qbuttongroup.h:63

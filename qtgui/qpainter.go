@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QPainter struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QPainter) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QPainter) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQPainterFromPointer(cthis unsafe.Pointer) *QPainter {
 	return &QPainter{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQPainter() *QPainter {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainterC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPainterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPainter)
 	return gothis
 }
 
@@ -89,6 +95,7 @@ func NewQPainter_1(arg0 *QPaintDevice /*777 QPaintDevice **/) *QPainter {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainterC2EP12QPaintDevice", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPainterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPainter)
 	return gothis
 }
 
@@ -96,9 +103,10 @@ func NewQPainter_1(arg0 *QPaintDevice /*777 QPaintDevice **/) *QPainter {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QPainter()
-func DeleteQPainter(*QPainter) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainterD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPainter(this *QPainter) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qpainter.h:128
@@ -186,6 +194,7 @@ func (this *QPainter) Font() *QFont {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFont)
 	return rv2
 }
 
@@ -208,6 +217,7 @@ func (this *QPainter) FontMetrics() *QFontMetrics /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQFontMetricsFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFontMetrics)
 	return rv2
 }
 
@@ -220,6 +230,7 @@ func (this *QPainter) FontInfo() *QFontInfo /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQFontInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFontInfo)
 	return rv2
 }
 
@@ -261,6 +272,7 @@ func (this *QPainter) Pen() *QPen {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPenFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPen)
 	return rv2
 }
 
@@ -292,6 +304,7 @@ func (this *QPainter) Brush() *QBrush {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBrush)
 	return rv2
 }
 
@@ -324,6 +337,7 @@ func (this *QPainter) BrushOrigin() *qtcore.QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
@@ -375,6 +389,7 @@ func (this *QPainter) Background() *QBrush {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBrush)
 	return rv2
 }
 
@@ -407,6 +422,7 @@ func (this *QPainter) ClipRegion() *QRegion /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegion)
 	return rv2
 }
 
@@ -419,6 +435,7 @@ func (this *QPainter) ClipPath() *QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPainterPath)
 	return rv2
 }
 
@@ -500,6 +517,7 @@ func (this *QPainter) ClipBoundingRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -540,6 +558,7 @@ func (this *QPainter) Matrix() *QMatrix {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMatrix)
 	return rv2
 }
 
@@ -552,6 +571,7 @@ func (this *QPainter) DeviceMatrix() *QMatrix {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMatrix)
 	return rv2
 }
 
@@ -583,6 +603,7 @@ func (this *QPainter) Transform() *QTransform {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
 	return rv2
 }
 
@@ -595,6 +616,7 @@ func (this *QPainter) DeviceTransform() *QTransform {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
 	return rv2
 }
 
@@ -626,6 +648,7 @@ func (this *QPainter) WorldMatrix() *QMatrix {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMatrix)
 	return rv2
 }
 
@@ -648,6 +671,7 @@ func (this *QPainter) WorldTransform() *QTransform {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
 	return rv2
 }
 
@@ -660,6 +684,7 @@ func (this *QPainter) CombinedMatrix() *QMatrix /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMatrix)
 	return rv2
 }
 
@@ -672,6 +697,7 @@ func (this *QPainter) CombinedTransform() *QTransform /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
 	return rv2
 }
 
@@ -780,6 +806,7 @@ func (this *QPainter) Window() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -811,6 +838,7 @@ func (this *QPainter) Viewport() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -1861,6 +1889,7 @@ func (this *QPainter) BoundingRect(rect *qtcore.QRectF, flags int, text *qtcore.
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -1875,6 +1904,7 @@ func (this *QPainter) BoundingRect_1(rect *qtcore.QRect, flags int, text *qtcore
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -1888,6 +1918,7 @@ func (this *QPainter) BoundingRect_2(x int, y int, w int, h int, flags int, text
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -1903,6 +1934,7 @@ func (this *QPainter) BoundingRect_3(rect *qtcore.QRectF, text *qtcore.QString, 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 

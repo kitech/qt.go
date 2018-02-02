@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QInputEvent struct {
 	*qtcore.QEvent
 }
@@ -74,9 +75,10 @@ func (*QInputEvent) NewFromPointer(cthis unsafe.Pointer) *QInputEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QInputEvent()
-func DeleteQInputEvent(*QInputEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QInputEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQInputEvent(this *QInputEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QInputEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:73

@@ -44,6 +44,21 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QPropertyAnimation) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void updateCurrentValue(const class QVariant &)
+func (this *QPropertyAnimation) InheritUpdateCurrentValue(f func(value *QVariant)) {
+	ffiqt.SetAllInheritCallback(this, "updateCurrentValue", f)
+}
+
+// void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
+func (this *QPropertyAnimation) InheritUpdateState(f func(newState int, oldState int)) {
+	ffiqt.SetAllInheritCallback(this, "updateState", f)
+}
+
 type QPropertyAnimation struct {
 	*QVariantAnimation
 }
@@ -108,9 +123,10 @@ func NewQPropertyAnimation_1(target *QObject /*777 QObject **/, propertyName *QB
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPropertyAnimation()
-func DeleteQPropertyAnimation(*QPropertyAnimation) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPropertyAnimationD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPropertyAnimation(this *QPropertyAnimation) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPropertyAnimationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qpropertyanimation.h:62
@@ -144,6 +160,7 @@ func (this *QPropertyAnimation) PropertyName() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 

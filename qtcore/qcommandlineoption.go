@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QCommandLineOption struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QCommandLineOption) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QCommandLineOption) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQCommandLineOptionFromPointer(cthis unsafe.Pointer) *QCommandLineOption {
 	return &QCommandLineOption{&qtrt.CObject{cthis}}
@@ -74,6 +79,7 @@ func NewQCommandLineOption(name *QString) *QCommandLineOption {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCommandLineOptionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQCommandLineOption)
 	return gothis
 }
 
@@ -86,6 +92,7 @@ func NewQCommandLineOption_1(names *QStringList) *QCommandLineOption {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK11QStringList", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCommandLineOptionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQCommandLineOption)
 	return gothis
 }
 
@@ -101,6 +108,7 @@ func NewQCommandLineOption_2(name *QString, description *QString, valueName *QSt
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK7QStringS2_S2_S2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCommandLineOptionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQCommandLineOption)
 	return gothis
 }
 
@@ -116,6 +124,7 @@ func NewQCommandLineOption_3(names *QStringList, description *QString, valueName
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOptionC2ERK11QStringListRK7QStringS5_S5_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCommandLineOptionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQCommandLineOption)
 	return gothis
 }
 
@@ -123,9 +132,10 @@ func NewQCommandLineOption_3(names *QStringList, description *QString, valueName
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QCommandLineOption()
-func DeleteQCommandLineOption(*QCommandLineOption) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOptionD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQCommandLineOption(this *QCommandLineOption) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOptionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:78
@@ -157,6 +167,7 @@ func (this *QCommandLineOption) ValueName() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -179,6 +190,7 @@ func (this *QCommandLineOption) Description() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 

@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QApplicationStateChangeEvent struct {
 	*qtcore.QEvent
 }
@@ -78,6 +79,7 @@ func NewQApplicationStateChangeEvent(state int) *QApplicationStateChangeEvent {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN28QApplicationStateChangeEventC2EN2Qt16ApplicationStateE", ffiqt.FFI_TYPE_POINTER, state)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQApplicationStateChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQApplicationStateChangeEvent)
 	return gothis
 }
 
@@ -90,6 +92,12 @@ func (this *QApplicationStateChangeEvent) ApplicationState() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+func DeleteQApplicationStateChangeEvent(this *QApplicationStateChangeEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN28QApplicationStateChangeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

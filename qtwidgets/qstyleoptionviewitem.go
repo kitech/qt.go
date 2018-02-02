@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleOptionViewItem struct {
 	*QStyleOption
 }
@@ -82,6 +83,7 @@ func NewQStyleOptionViewItem() *QStyleOptionViewItem {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionViewItemC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionViewItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionViewItem)
 	return gothis
 }
 
@@ -93,7 +95,14 @@ func NewQStyleOptionViewItem_1(version int) *QStyleOptionViewItem {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionViewItemC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionViewItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionViewItem)
 	return gothis
+}
+
+func DeleteQStyleOptionViewItem(this *QStyleOptionViewItem) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionViewItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleOptionViewItem__StyleOptionType = int

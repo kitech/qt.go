@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextTable struct {
 	*QTextFrame
 }
@@ -98,9 +99,10 @@ func NewQTextTable(doc *QTextDocument /*777 QTextDocument **/) *QTextTable {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTextTable()
-func DeleteQTextTable(*QTextTable) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTableD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextTable(this *QTextTable) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTableD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:105
@@ -225,6 +227,7 @@ func (this *QTextTable) CellAt(row int, col int) *QTextTableCell /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextTableCellFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextTableCell)
 	return rv2
 }
 
@@ -237,6 +240,7 @@ func (this *QTextTable) CellAt_1(position int) *QTextTableCell /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextTableCellFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextTableCell)
 	return rv2
 }
 
@@ -250,6 +254,7 @@ func (this *QTextTable) CellAt_2(c *QTextCursor) *QTextTableCell /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextTableCellFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextTableCell)
 	return rv2
 }
 
@@ -263,6 +268,7 @@ func (this *QTextTable) RowStart(c *QTextCursor) *QTextCursor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCursor)
 	return rv2
 }
 
@@ -276,6 +282,7 @@ func (this *QTextTable) RowEnd(c *QTextCursor) *QTextCursor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCursor)
 	return rv2
 }
 
@@ -298,6 +305,7 @@ func (this *QTextTable) Format() *QTextTableFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextTableFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextTableFormat)
 	return rv2
 }
 

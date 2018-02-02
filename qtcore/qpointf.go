@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QPointF struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QPointF) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QPointF) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQPointFFromPointer(cthis unsafe.Pointer) *QPointF {
 	return &QPointF{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQPointF() *QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointFC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPointFFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPointF)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func NewQPointF_1(p *QPoint) *QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointFC2ERK6QPoint", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPointFFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPointF)
 	return gothis
 }
 
@@ -96,6 +103,7 @@ func NewQPointF_2(xpos float64, ypos float64) *QPointF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointFC2Edd", ffiqt.FFI_TYPE_POINTER, xpos, ypos)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPointFFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPointF)
 	return gothis
 }
 
@@ -210,7 +218,14 @@ func (this *QPointF) ToPoint() *QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPoint)
 	return rv2
+}
+
+func DeleteQPointF(this *QPointF) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPointFD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

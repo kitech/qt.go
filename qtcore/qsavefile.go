@@ -44,6 +44,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// qint64 writeData(const char *, qint64)
+func (this *QSaveFile) InheritWriteData(f func(data string, len int64) int64) {
+	ffiqt.SetAllInheritCallback(this, "writeData", f)
+}
+
 type QSaveFile struct {
 	*qtrt.CObject
 }
@@ -56,7 +61,11 @@ func (this *QSaveFile) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSaveFile) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSaveFileFromPointer(cthis unsafe.Pointer) *QSaveFile {
 	return &QSaveFile{&qtrt.CObject{cthis}}
@@ -118,9 +127,10 @@ func NewQSaveFile_2(name *QString, parent *QObject /*777 QObject **/) *QSaveFile
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSaveFile()
-func DeleteQSaveFile(*QSaveFile) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFileD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSaveFile(this *QSaveFile) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFileD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qsavefile.h:75
@@ -132,6 +142,7 @@ func (this *QSaveFile) FileName() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 

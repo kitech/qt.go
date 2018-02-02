@@ -48,6 +48,21 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void blockInserted(const class QTextBlock &)
+func (this *QTextBlockGroup) InheritBlockInserted(f func(block *QTextBlock)) {
+	ffiqt.SetAllInheritCallback(this, "blockInserted", f)
+}
+
+// void blockRemoved(const class QTextBlock &)
+func (this *QTextBlockGroup) InheritBlockRemoved(f func(block *QTextBlock)) {
+	ffiqt.SetAllInheritCallback(this, "blockRemoved", f)
+}
+
+// void blockFormatChanged(const class QTextBlock &)
+func (this *QTextBlockGroup) InheritBlockFormatChanged(f func(block *QTextBlock)) {
+	ffiqt.SetAllInheritCallback(this, "blockFormatChanged", f)
+}
+
 type QTextBlockGroup struct {
 	*QTextObject
 }
@@ -98,9 +113,10 @@ func NewQTextBlockGroup(doc *QTextDocument /*777 QTextDocument **/) *QTextBlockG
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void ~QTextBlockGroup()
-func DeleteQTextBlockGroup(*QTextBlockGroup) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextBlockGroupD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextBlockGroup(this *QTextBlockGroup) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextBlockGroupD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:98

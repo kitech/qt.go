@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleOptionTabWidgetFrame struct {
 	*QStyleOption
 }
@@ -82,6 +83,7 @@ func NewQStyleOptionTabWidgetFrame() *QStyleOptionTabWidgetFrame {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QStyleOptionTabWidgetFrameC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTabWidgetFrameFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionTabWidgetFrame)
 	return gothis
 }
 
@@ -93,7 +95,14 @@ func NewQStyleOptionTabWidgetFrame_1(version int) *QStyleOptionTabWidgetFrame {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QStyleOptionTabWidgetFrameC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTabWidgetFrameFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionTabWidgetFrame)
 	return gothis
+}
+
+func DeleteQStyleOptionTabWidgetFrame(this *QStyleOptionTabWidgetFrame) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QStyleOptionTabWidgetFrameD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleOptionTabWidgetFrame__StyleOptionType = int

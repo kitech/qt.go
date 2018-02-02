@@ -52,6 +52,21 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void initStyleOption(class QStyleOptionViewItem *, const class QModelIndex &)
+func (this *QStyledItemDelegate) InheritInitStyleOption(f func(option *QStyleOptionViewItem /*777 QStyleOptionViewItem **/, index *qtcore.QModelIndex)) {
+	ffiqt.SetAllInheritCallback(this, "initStyleOption", f)
+}
+
+// bool eventFilter(class QObject *, class QEvent *)
+func (this *QStyledItemDelegate) InheritEventFilter(f func(object *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "eventFilter", f)
+}
+
+// bool editorEvent(class QEvent *, class QAbstractItemModel *, const class QStyleOptionViewItem &, const class QModelIndex &)
+func (this *QStyledItemDelegate) InheritEditorEvent(f func(event *qtcore.QEvent /*777 QEvent **/, model *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/, option *QStyleOptionViewItem, index *qtcore.QModelIndex) bool) {
+	ffiqt.SetAllInheritCallback(this, "editorEvent", f)
+}
+
 type QStyledItemDelegate struct {
 	*QAbstractItemDelegate
 }
@@ -102,9 +117,10 @@ func NewQStyledItemDelegate(parent *qtcore.QObject /*777 QObject **/) *QStyledIt
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStyledItemDelegate()
-func DeleteQStyledItemDelegate(*QStyledItemDelegate) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyledItemDelegateD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQStyledItemDelegate(this *QStyledItemDelegate) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyledItemDelegateD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h:65
@@ -130,6 +146,7 @@ func (this *QStyledItemDelegate) SizeHint(option *QStyleOptionViewItem, index *q
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -216,6 +233,7 @@ func (this *QStyledItemDelegate) DisplayText(value *qtcore.QVariant, locale *qtc
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

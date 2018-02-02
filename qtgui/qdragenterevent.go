@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QDragEnterEvent struct {
 	*QDragMoveEvent
 }
@@ -74,9 +75,10 @@ func (*QDragEnterEvent) NewFromPointer(cthis unsafe.Pointer) *QDragEnterEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDragEnterEvent()
-func DeleteQDragEnterEvent(*QDragEnterEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QDragEnterEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDragEnterEvent(this *QDragEnterEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QDragEnterEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

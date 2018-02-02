@@ -52,6 +52,16 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void onTransition(class QEvent *)
+func (this *QMouseEventTransition) InheritOnTransition(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "onTransition", f)
+}
+
+// bool eventTest(class QEvent *)
+func (this *QMouseEventTransition) InheritEventTest(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "eventTest", f)
+}
+
 type QMouseEventTransition struct {
 	*qtcore.QEventTransition
 }
@@ -115,9 +125,10 @@ func NewQMouseEventTransition_1(object *qtcore.QObject /*777 QObject **/, type_ 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMouseEventTransition()
-func DeleteQMouseEventTransition(*QMouseEventTransition) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QMouseEventTransitionD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQMouseEventTransition(this *QMouseEventTransition) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QMouseEventTransitionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qmouseeventtransition.h:63
@@ -160,6 +171,7 @@ func (this *QMouseEventTransition) HitTestPath() *qtgui.QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
 }
 

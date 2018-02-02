@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QGesture struct {
 	*qtcore.QObject
 }
@@ -102,9 +103,10 @@ func NewQGesture(parent *qtcore.QObject /*777 QObject **/) *QGesture {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGesture()
-func DeleteQGesture(*QGesture) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGestureD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGesture(this *QGesture) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGestureD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:76
@@ -138,6 +140,7 @@ func (this *QGesture) HotSpot() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 

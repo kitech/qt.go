@@ -44,6 +44,16 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void convertFromAscii(const char *, int, class QChar *&)
+func (this *QAbstractConcatenable) InheritConvertFromAscii(f func(a string, len int, out *QChar)) {
+	ffiqt.SetAllInheritCallback(this, "convertFromAscii", f)
+}
+
+// void appendLatin1To(const char *, int, class QChar *)
+func (this *QAbstractConcatenable) InheritAppendLatin1To(f func(a string, len int, out *QChar /*777 QChar **/)) {
+	ffiqt.SetAllInheritCallback(this, "appendLatin1To", f)
+}
+
 type QAbstractConcatenable struct {
 	*qtrt.CObject
 }
@@ -56,7 +66,11 @@ func (this *QAbstractConcatenable) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QAbstractConcatenable) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQAbstractConcatenableFromPointer(cthis unsafe.Pointer) *QAbstractConcatenable {
 	return &QAbstractConcatenable{&qtrt.CObject{cthis}}
@@ -109,6 +123,12 @@ func (this *QAbstractConcatenable) AppendLatin1To(a string, len int, out *QChar 
 func QAbstractConcatenable_AppendLatin1To(a string, len int, out *QChar /*777 QChar **/) {
 	var nilthis *QAbstractConcatenable
 	nilthis.AppendLatin1To(a, len, out)
+}
+
+func DeleteQAbstractConcatenable(this *QAbstractConcatenable) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractConcatenableD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

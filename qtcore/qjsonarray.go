@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QJsonArray struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QJsonArray) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QJsonArray) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQJsonArrayFromPointer(cthis unsafe.Pointer) *QJsonArray {
 	return &QJsonArray{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQJsonArray() *QJsonArray {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArrayC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJsonArrayFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQJsonArray)
 	return gothis
 }
 
@@ -80,9 +86,10 @@ func NewQJsonArray() *QJsonArray {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QJsonArray()
-func DeleteQJsonArray(*QJsonArray) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArrayD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQJsonArray(this *QJsonArray) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArrayD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qjsonarray.h:89
@@ -95,6 +102,7 @@ func (this *QJsonArray) FromStringList(list *QStringList) *QJsonArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQJsonArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonArray)
 	return rv2
 }
 func QJsonArray_FromStringList(list *QStringList) *QJsonArray /*123*/ {
@@ -145,6 +153,7 @@ func (this *QJsonArray) At(i int) *QJsonValue /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonValue)
 	return rv2
 }
 
@@ -157,6 +166,7 @@ func (this *QJsonArray) First() *QJsonValue /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonValue)
 	return rv2
 }
 
@@ -169,6 +179,7 @@ func (this *QJsonArray) Last() *QJsonValue /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonValue)
 	return rv2
 }
 
@@ -190,6 +201,7 @@ func (this *QJsonArray) TakeAt(i int) *QJsonValue /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonValue)
 	return rv2
 }
 

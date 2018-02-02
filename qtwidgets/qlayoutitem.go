@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QLayoutItem struct {
 	*qtrt.CObject
 }
@@ -64,7 +65,11 @@ func (this *QLayoutItem) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QLayoutItem) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQLayoutItemFromPointer(cthis unsafe.Pointer) *QLayoutItem {
 	return &QLayoutItem{&qtrt.CObject{cthis}}
@@ -77,9 +82,10 @@ func (*QLayoutItem) NewFromPointer(cthis unsafe.Pointer) *QLayoutItem {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QLayoutItem()
-func DeleteQLayoutItem(*QLayoutItem) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QLayoutItemD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQLayoutItem(this *QLayoutItem) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QLayoutItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:65
@@ -91,6 +97,7 @@ func (this *QLayoutItem) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -103,6 +110,7 @@ func (this *QLayoutItem) MinimumSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -115,6 +123,7 @@ func (this *QLayoutItem) MaximumSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -148,6 +157,7 @@ func (this *QLayoutItem) Geometry() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 

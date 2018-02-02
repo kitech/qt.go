@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QJsonValueRefPtr struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QJsonValueRefPtr) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QJsonValueRefPtr) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQJsonValueRefPtrFromPointer(cthis unsafe.Pointer) *QJsonValueRefPtr {
 	return &QJsonValueRefPtr{&qtrt.CObject{cthis}}
@@ -74,6 +79,7 @@ func NewQJsonValueRefPtr(array *QJsonArray /*777 QJsonArray **/, idx int) *QJson
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QJsonValueRefPtrC2EP10QJsonArrayi", ffiqt.FFI_TYPE_POINTER, convArg0, idx)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJsonValueRefPtrFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQJsonValueRefPtr)
 	return gothis
 }
 
@@ -86,7 +92,14 @@ func NewQJsonValueRefPtr_1(object *QJsonObject /*777 QJsonObject **/, idx int) *
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QJsonValueRefPtrC2EP11QJsonObjecti", ffiqt.FFI_TYPE_POINTER, convArg0, idx)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJsonValueRefPtrFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQJsonValueRefPtr)
 	return gothis
+}
+
+func DeleteQJsonValueRefPtr(this *QJsonValueRefPtr) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QJsonValueRefPtrD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

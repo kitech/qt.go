@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAccessibleStateChangeEvent struct {
 	*QAccessibleEvent
 }
@@ -74,9 +75,10 @@ func (*QAccessibleStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QAcces
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleStateChangeEvent()
-func DeleteQAccessibleStateChangeEvent(*QAccessibleStateChangeEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleStateChangeEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAccessibleStateChangeEvent(this *QAccessibleStateChangeEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleStateChangeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:735

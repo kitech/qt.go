@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QBackingStore struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QBackingStore) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QBackingStore) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQBackingStoreFromPointer(cthis unsafe.Pointer) *QBackingStore {
 	return &QBackingStore{&qtrt.CObject{cthis}}
@@ -78,6 +83,7 @@ func NewQBackingStore(window *QWindow /*777 QWindow **/) *QBackingStore {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStoreC2EP7QWindow", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBackingStoreFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQBackingStore)
 	return gothis
 }
 
@@ -85,9 +91,10 @@ func NewQBackingStore(window *QWindow /*777 QWindow **/) *QBackingStore {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QBackingStore()
-func DeleteQBackingStore(*QBackingStore) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStoreD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQBackingStore(this *QBackingStore) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStoreD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qbackingstore.h:65
@@ -145,6 +152,7 @@ func (this *QBackingStore) Size() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -198,6 +206,7 @@ func (this *QBackingStore) StaticContents() *QRegion /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegion)
 	return rv2
 }
 

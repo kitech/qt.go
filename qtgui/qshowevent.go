@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QShowEvent struct {
 	*qtcore.QEvent
 }
@@ -78,6 +79,7 @@ func NewQShowEvent() *QShowEvent {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QShowEventC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQShowEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQShowEvent)
 	return gothis
 }
 
@@ -85,9 +87,10 @@ func NewQShowEvent() *QShowEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QShowEvent()
-func DeleteQShowEvent(*QShowEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QShowEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQShowEvent(this *QShowEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QShowEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

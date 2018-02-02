@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QValidator struct {
 	*qtcore.QObject
 }
@@ -98,9 +99,10 @@ func NewQValidator(parent *qtcore.QObject /*777 QObject **/) *QValidator {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QValidator()
-func DeleteQValidator(*QValidator) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QValidatorD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQValidator(this *QValidator) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QValidatorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:71
@@ -122,6 +124,7 @@ func (this *QValidator) Locale() *qtcore.QLocale /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQLocale)
 	return rv2
 }
 

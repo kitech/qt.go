@@ -44,6 +44,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// int indexOfIn(const char *, uint, const char *, int, int)
+func (this *QStaticByteArrayMatcherBase) InheritIndexOfIn(f func(needle string, nlen uint, haystack string, hlen int, from int) int) {
+	ffiqt.SetAllInheritCallback(this, "indexOfIn", f)
+}
+
 type QStaticByteArrayMatcherBase struct {
 	*qtrt.CObject
 }
@@ -56,7 +61,11 @@ func (this *QStaticByteArrayMatcherBase) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QStaticByteArrayMatcherBase) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQStaticByteArrayMatcherBaseFromPointer(cthis unsafe.Pointer) *QStaticByteArrayMatcherBase {
 	return &QStaticByteArrayMatcherBase{&qtrt.CObject{cthis}}
@@ -75,6 +84,7 @@ func NewQStaticByteArrayMatcherBase(pattern string, n uint) *QStaticByteArrayMat
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QStaticByteArrayMatcherBaseC2EPKcj", ffiqt.FFI_TYPE_POINTER, convArg0, n)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStaticByteArrayMatcherBaseFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStaticByteArrayMatcherBase)
 	return gothis
 }
 
@@ -91,6 +101,12 @@ func (this *QStaticByteArrayMatcherBase) IndexOfIn(needle string, nlen uint, hay
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+func DeleteQStaticByteArrayMatcherBase(this *QStaticByteArrayMatcherBase) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QStaticByteArrayMatcherBaseD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

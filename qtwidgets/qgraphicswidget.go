@@ -52,6 +52,131 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void initStyleOption(class QStyleOption *)
+func (this *QGraphicsWidget) InheritInitStyleOption(f func(option *QStyleOption /*777 QStyleOption **/)) {
+	ffiqt.SetAllInheritCallback(this, "initStyleOption", f)
+}
+
+// QSizeF sizeHint(Qt::SizeHint, const class QSizeF &)
+func (this *QGraphicsWidget) InheritSizeHint(f func(which int, constraint *qtcore.QSizeF) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "sizeHint", f)
+}
+
+// void updateGeometry()
+func (this *QGraphicsWidget) InheritUpdateGeometry(f func()) {
+	ffiqt.SetAllInheritCallback(this, "updateGeometry", f)
+}
+
+// QVariant itemChange(enum QGraphicsItem::GraphicsItemChange, const class QVariant &)
+func (this *QGraphicsWidget) InheritItemChange(f func(change int, value *qtcore.QVariant) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "itemChange", f)
+}
+
+// QVariant propertyChange(const class QString &, const class QVariant &)
+func (this *QGraphicsWidget) InheritPropertyChange(f func(propertyName *qtcore.QString, value *qtcore.QVariant) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "propertyChange", f)
+}
+
+// bool sceneEvent(class QEvent *)
+func (this *QGraphicsWidget) InheritSceneEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "sceneEvent", f)
+}
+
+// bool windowFrameEvent(class QEvent *)
+func (this *QGraphicsWidget) InheritWindowFrameEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "windowFrameEvent", f)
+}
+
+// Qt::WindowFrameSection windowFrameSectionAt(const class QPointF &)
+func (this *QGraphicsWidget) InheritWindowFrameSectionAt(f func(pos *qtcore.QPointF) int) {
+	ffiqt.SetAllInheritCallback(this, "windowFrameSectionAt", f)
+}
+
+// bool event(class QEvent *)
+func (this *QGraphicsWidget) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void changeEvent(class QEvent *)
+func (this *QGraphicsWidget) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
+// void closeEvent(class QCloseEvent *)
+func (this *QGraphicsWidget) InheritCloseEvent(f func(event *qtgui.QCloseEvent /*777 QCloseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "closeEvent", f)
+}
+
+// void focusInEvent(class QFocusEvent *)
+func (this *QGraphicsWidget) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusInEvent", f)
+}
+
+// bool focusNextPrevChild(_Bool)
+func (this *QGraphicsWidget) InheritFocusNextPrevChild(f func(next bool) bool) {
+	ffiqt.SetAllInheritCallback(this, "focusNextPrevChild", f)
+}
+
+// void focusOutEvent(class QFocusEvent *)
+func (this *QGraphicsWidget) InheritFocusOutEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusOutEvent", f)
+}
+
+// void hideEvent(class QHideEvent *)
+func (this *QGraphicsWidget) InheritHideEvent(f func(event *qtgui.QHideEvent /*777 QHideEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "hideEvent", f)
+}
+
+// void moveEvent(class QGraphicsSceneMoveEvent *)
+func (this *QGraphicsWidget) InheritMoveEvent(f func(event *QGraphicsSceneMoveEvent /*777 QGraphicsSceneMoveEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "moveEvent", f)
+}
+
+// void polishEvent()
+func (this *QGraphicsWidget) InheritPolishEvent(f func()) {
+	ffiqt.SetAllInheritCallback(this, "polishEvent", f)
+}
+
+// void resizeEvent(class QGraphicsSceneResizeEvent *)
+func (this *QGraphicsWidget) InheritResizeEvent(f func(event *QGraphicsSceneResizeEvent /*777 QGraphicsSceneResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void showEvent(class QShowEvent *)
+func (this *QGraphicsWidget) InheritShowEvent(f func(event *qtgui.QShowEvent /*777 QShowEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "showEvent", f)
+}
+
+// void hoverMoveEvent(class QGraphicsSceneHoverEvent *)
+func (this *QGraphicsWidget) InheritHoverMoveEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "hoverMoveEvent", f)
+}
+
+// void hoverLeaveEvent(class QGraphicsSceneHoverEvent *)
+func (this *QGraphicsWidget) InheritHoverLeaveEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "hoverLeaveEvent", f)
+}
+
+// void grabMouseEvent(class QEvent *)
+func (this *QGraphicsWidget) InheritGrabMouseEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "grabMouseEvent", f)
+}
+
+// void ungrabMouseEvent(class QEvent *)
+func (this *QGraphicsWidget) InheritUngrabMouseEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "ungrabMouseEvent", f)
+}
+
+// void grabKeyboardEvent(class QEvent *)
+func (this *QGraphicsWidget) InheritGrabKeyboardEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "grabKeyboardEvent", f)
+}
+
+// void ungrabKeyboardEvent(class QEvent *)
+func (this *QGraphicsWidget) InheritUngrabKeyboardEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "ungrabKeyboardEvent", f)
+}
+
 type QGraphicsWidget struct {
 	*QGraphicsLayoutItem
 }
@@ -102,9 +227,10 @@ func NewQGraphicsWidget(parent *QGraphicsItem /*777 QGraphicsItem **/, wFlags in
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsWidget()
-func DeleteQGraphicsWidget(*QGraphicsWidget) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsWidgetD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsWidget(this *QGraphicsWidget) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicswidget.h:85
@@ -198,6 +324,7 @@ func (this *QGraphicsWidget) Font() *qtgui.QFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
 }
 
@@ -220,6 +347,7 @@ func (this *QGraphicsWidget) Palette() *qtgui.QPalette /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPalette)
 	return rv2
 }
 
@@ -281,6 +409,7 @@ func (this *QGraphicsWidget) Size() *qtcore.QSizeF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
 
@@ -312,6 +441,7 @@ func (this *QGraphicsWidget) Rect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -369,6 +499,7 @@ func (this *QGraphicsWidget) WindowFrameGeometry() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -381,6 +512,7 @@ func (this *QGraphicsWidget) WindowFrameRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -445,6 +577,7 @@ func (this *QGraphicsWidget) WindowTitle() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -629,6 +762,7 @@ func (this *QGraphicsWidget) BoundingRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -641,6 +775,7 @@ func (this *QGraphicsWidget) Shape() *qtgui.QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
 }
 
@@ -693,6 +828,7 @@ func (this *QGraphicsWidget) SizeHint(which int, constraint *qtcore.QSizeF) *qtc
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
 
@@ -715,6 +851,7 @@ func (this *QGraphicsWidget) ItemChange(change int, value *qtcore.QVariant) *qtc
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -729,6 +866,7 @@ func (this *QGraphicsWidget) PropertyChange(propertyName *qtcore.QString, value 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 

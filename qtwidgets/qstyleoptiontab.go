@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleOptionTab struct {
 	*QStyleOption
 }
@@ -82,6 +83,7 @@ func NewQStyleOptionTab() *QStyleOptionTab {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStyleOptionTabC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTabFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionTab)
 	return gothis
 }
 
@@ -93,7 +95,14 @@ func NewQStyleOptionTab_1(version int) *QStyleOptionTab {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStyleOptionTabC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTabFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionTab)
 	return gothis
+}
+
+func DeleteQStyleOptionTab(this *QStyleOptionTab) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStyleOptionTabD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleOptionTab__StyleOptionType = int

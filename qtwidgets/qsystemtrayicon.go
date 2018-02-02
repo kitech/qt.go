@@ -52,6 +52,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QSystemTrayIcon) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QSystemTrayIcon struct {
 	*qtcore.QObject
 }
@@ -115,9 +120,10 @@ func NewQSystemTrayIcon_1(icon *qtgui.QIcon, parent *qtcore.QObject /*777 QObjec
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSystemTrayIcon()
-func DeleteQSystemTrayIcon(*QSystemTrayIcon) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIconD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSystemTrayIcon(this *QSystemTrayIcon) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIconD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qsystemtrayicon.h:82
@@ -151,6 +157,7 @@ func (this *QSystemTrayIcon) Icon() *qtgui.QIcon /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
 }
 
@@ -173,6 +180,7 @@ func (this *QSystemTrayIcon) ToolTip() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -227,6 +235,7 @@ func (this *QSystemTrayIcon) Geometry() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 

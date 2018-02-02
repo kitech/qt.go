@@ -52,6 +52,31 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void resizeEvent(class QResizeEvent *)
+func (this *QProgressDialog) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void closeEvent(class QCloseEvent *)
+func (this *QProgressDialog) InheritCloseEvent(f func(event *qtgui.QCloseEvent /*777 QCloseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "closeEvent", f)
+}
+
+// void changeEvent(class QEvent *)
+func (this *QProgressDialog) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
+// void showEvent(class QShowEvent *)
+func (this *QProgressDialog) InheritShowEvent(f func(event *qtgui.QShowEvent /*777 QShowEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "showEvent", f)
+}
+
+// void forceShow()
+func (this *QProgressDialog) InheritForceShow(f func()) {
+	ffiqt.SetAllInheritCallback(this, "forceShow", f)
+}
+
 type QProgressDialog struct {
 	*QDialog
 }
@@ -116,9 +141,10 @@ func NewQProgressDialog_1(labelText *qtcore.QString, cancelButtonText *qtcore.QS
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QProgressDialog()
-func DeleteQProgressDialog(*QProgressDialog) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialogD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQProgressDialog(this *QProgressDialog) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialogD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qprogressdialog.h:77
@@ -204,6 +230,7 @@ func (this *QProgressDialog) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -216,6 +243,7 @@ func (this *QProgressDialog) LabelText() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

@@ -52,6 +52,16 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void changeEvent(class QEvent *)
+func (this *QDialogButtonBox) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
+// bool event(class QEvent *)
+func (this *QDialogButtonBox) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QDialogButtonBox struct {
 	*QWidget
 }
@@ -114,9 +124,10 @@ func NewQDialogButtonBox_1(orientation int, parent *QWidget /*777 QWidget **/) *
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDialogButtonBox()
-func DeleteQDialogButtonBox(*QDialogButtonBox) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBoxD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDialogButtonBox(this *QDialogButtonBox) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qdialogbuttonbox.h:127

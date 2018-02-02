@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleOptionComboBox struct {
 	*QStyleOptionComplex
 }
@@ -82,6 +83,7 @@ func NewQStyleOptionComboBox() *QStyleOptionComboBox {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionComboBoxC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionComboBoxFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionComboBox)
 	return gothis
 }
 
@@ -93,7 +95,14 @@ func NewQStyleOptionComboBox_1(version int) *QStyleOptionComboBox {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionComboBoxC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionComboBoxFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionComboBox)
 	return gothis
+}
+
+func DeleteQStyleOptionComboBox(this *QStyleOptionComboBox) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionComboBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleOptionComboBox__StyleOptionType = int

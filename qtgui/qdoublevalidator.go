@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QDoubleValidator struct {
 	*QValidator
 }
@@ -110,9 +111,10 @@ func NewQDoubleValidator_1(bottom float64, top float64, decimals int, parent *qt
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDoubleValidator()
-func DeleteQDoubleValidator(*QDoubleValidator) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDoubleValidatorD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDoubleValidator(this *QDoubleValidator) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDoubleValidatorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:142

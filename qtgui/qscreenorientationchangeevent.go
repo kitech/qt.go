@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QScreenOrientationChangeEvent struct {
 	*qtcore.QEvent
 }
@@ -79,6 +80,7 @@ func NewQScreenOrientationChangeEvent(screen *QScreen /*777 QScreen **/, orienta
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventC2EP7QScreenN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_POINTER, convArg0, orientation)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQScreenOrientationChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQScreenOrientationChangeEvent)
 	return gothis
 }
 
@@ -86,9 +88,10 @@ func NewQScreenOrientationChangeEvent(screen *QScreen /*777 QScreen **/, orienta
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QScreenOrientationChangeEvent()
-func DeleteQScreenOrientationChangeEvent(*QScreenOrientationChangeEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQScreenOrientationChangeEvent(this *QScreenOrientationChangeEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:1041

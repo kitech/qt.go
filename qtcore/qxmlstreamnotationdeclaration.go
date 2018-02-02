@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QXmlStreamNotationDeclaration struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QXmlStreamNotationDeclaration) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QXmlStreamNotationDeclaration) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQXmlStreamNotationDeclarationFromPointer(cthis unsafe.Pointer) *QXmlStreamNotationDeclaration {
 	return &QXmlStreamNotationDeclaration{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQXmlStreamNotationDeclaration() *QXmlStreamNotationDeclaration {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamNotationDeclarationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamNotationDeclaration)
 	return gothis
 }
 
@@ -80,9 +86,10 @@ func NewQXmlStreamNotationDeclaration() *QXmlStreamNotationDeclaration {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QXmlStreamNotationDeclaration()
-func DeleteQXmlStreamNotationDeclaration(*QXmlStreamNotationDeclaration) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQXmlStreamNotationDeclaration(this *QXmlStreamNotationDeclaration) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:264
@@ -94,6 +101,7 @@ func (this *QXmlStreamNotationDeclaration) Name() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -106,6 +114,7 @@ func (this *QXmlStreamNotationDeclaration) SystemId() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -118,6 +127,7 @@ func (this *QXmlStreamNotationDeclaration) PublicId() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 

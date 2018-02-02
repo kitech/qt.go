@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QMetaProperty struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QMetaProperty) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QMetaProperty) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQMetaPropertyFromPointer(cthis unsafe.Pointer) *QMetaProperty {
 	return &QMetaProperty{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQMetaProperty() *QMetaProperty {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMetaPropertyC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMetaPropertyFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMetaProperty)
 	return gothis
 }
 
@@ -277,6 +283,7 @@ func (this *QMetaProperty) Enumerator() *QMetaEnum /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaEnumFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaEnum)
 	return rv2
 }
 
@@ -300,6 +307,7 @@ func (this *QMetaProperty) NotifySignal() *QMetaMethod /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaMethodFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaMethod)
 	return rv2
 }
 
@@ -335,6 +343,7 @@ func (this *QMetaProperty) Read(obj *QObject /*777 const QObject **/) *QVariant 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -372,6 +381,7 @@ func (this *QMetaProperty) ReadOnGadget(gadget unsafe.Pointer /*666*/) *QVariant
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -430,6 +440,12 @@ func (this *QMetaProperty) EnclosingMetaObject() *QMetaObject /*777 const QMetaO
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
+}
+
+func DeleteQMetaProperty(this *QMetaProperty) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMetaPropertyD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

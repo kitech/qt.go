@@ -52,6 +52,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void draw(class QPainter *)
+func (this *QGraphicsOpacityEffect) InheritDraw(f func(painter *qtgui.QPainter /*777 QPainter **/)) {
+	ffiqt.SetAllInheritCallback(this, "draw", f)
+}
+
 type QGraphicsOpacityEffect struct {
 	*QGraphicsEffect
 }
@@ -102,9 +107,10 @@ func NewQGraphicsOpacityEffect(parent *qtcore.QObject /*777 QObject **/) *QGraph
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsOpacityEffect()
-func DeleteQGraphicsOpacityEffect(*QGraphicsOpacityEffect) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffectD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsOpacityEffect(this *QGraphicsOpacityEffect) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:261
@@ -127,6 +133,7 @@ func (this *QGraphicsOpacityEffect) OpacityMask() *qtgui.QBrush /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQBrush)
 	return rv2
 }
 

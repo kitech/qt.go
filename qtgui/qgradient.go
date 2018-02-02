@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QGradient struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QGradient) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QGradient) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQGradientFromPointer(cthis unsafe.Pointer) *QGradient {
 	return &QGradient{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQGradient() *QGradient {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradientC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGradientFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGradient)
 	return gothis
 }
 
@@ -159,6 +165,12 @@ func (this *QGradient) InterpolationMode() int {
 func (this *QGradient) SetInterpolationMode(mode int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient20setInterpolationModeENS_17InterpolationModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
+}
+
+func DeleteQGradient(this *QGradient) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradientD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QGradient__Type = int

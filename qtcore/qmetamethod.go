@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QMetaMethod struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QMetaMethod) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QMetaMethod) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQMetaMethodFromPointer(cthis unsafe.Pointer) *QMetaMethod {
 	return &QMetaMethod{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQMetaMethod() *QMetaMethod {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMetaMethodC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMetaMethodFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMetaMethod)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func (this *QMetaMethod) MethodSignature() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -97,6 +104,7 @@ func (this *QMetaMethod) Name() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -373,6 +381,12 @@ func (this *QMetaMethod) IsValid() bool {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
+}
+
+func DeleteQMetaMethod(this *QMetaMethod) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMetaMethodD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QMetaMethod__Access = int

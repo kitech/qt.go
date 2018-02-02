@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QCharRef struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QCharRef) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QCharRef) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQCharRefFromPointer(cthis unsafe.Pointer) *QCharRef {
 	return &QCharRef{&qtrt.CObject{cthis}}
@@ -217,6 +222,7 @@ func (this *QCharRef) ToLower() *QChar /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
 }
 
@@ -229,6 +235,7 @@ func (this *QCharRef) ToUpper() *QChar /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
 }
 
@@ -241,6 +248,7 @@ func (this *QCharRef) ToTitleCase() *QChar /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
 }
 
@@ -308,6 +316,7 @@ func (this *QCharRef) MirroredChar() *QChar /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
 }
 
@@ -320,6 +329,7 @@ func (this *QCharRef) Decomposition() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -438,6 +448,12 @@ func (this *QCharRef) Unicode_1() uint16 {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint16(rv)
+}
+
+func DeleteQCharRef(this *QCharRef) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QCharRefD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

@@ -44,6 +44,26 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void connectNotify(const class QMetaMethod &)
+func (this *QBuffer) InheritConnectNotify(f func(arg0 *QMetaMethod)) {
+	ffiqt.SetAllInheritCallback(this, "connectNotify", f)
+}
+
+// void disconnectNotify(const class QMetaMethod &)
+func (this *QBuffer) InheritDisconnectNotify(f func(arg0 *QMetaMethod)) {
+	ffiqt.SetAllInheritCallback(this, "disconnectNotify", f)
+}
+
+// qint64 readData(char *, qint64)
+func (this *QBuffer) InheritReadData(f func(data string, maxlen int64) int64) {
+	ffiqt.SetAllInheritCallback(this, "readData", f)
+}
+
+// qint64 writeData(const char *, qint64)
+func (this *QBuffer) InheritWriteData(f func(data string, len int64) int64) {
+	ffiqt.SetAllInheritCallback(this, "writeData", f)
+}
+
 type QBuffer struct {
 	*QIODevice
 }
@@ -107,9 +127,10 @@ func NewQBuffer_1(buf *QByteArray /*777 QByteArray **/, parent *QObject /*777 QO
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QBuffer()
-func DeleteQBuffer(*QBuffer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBufferD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQBuffer(this *QBuffer) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBufferD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qbuffer.h:68
@@ -121,6 +142,7 @@ func (this *QBuffer) Buffer() *QByteArray {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -133,6 +155,7 @@ func (this *QBuffer) Buffer_1() *QByteArray {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -176,6 +199,7 @@ func (this *QBuffer) Data() *QByteArray {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 

@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QPanGesture struct {
 	*QGesture
 }
@@ -102,9 +103,10 @@ func NewQPanGesture(parent *qtcore.QObject /*777 QObject **/) *QPanGesture {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPanGesture()
-func DeleteQPanGesture(*QPanGesture) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPanGestureD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPanGesture(this *QPanGesture) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPanGestureD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:120
@@ -116,6 +118,7 @@ func (this *QPanGesture) LastOffset() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -128,6 +131,7 @@ func (this *QPanGesture) Offset() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -140,6 +144,7 @@ func (this *QPanGesture) Delta() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 

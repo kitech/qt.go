@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QEasingCurve struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QEasingCurve) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QEasingCurve) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQEasingCurveFromPointer(cthis unsafe.Pointer) *QEasingCurve {
 	return &QEasingCurve{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQEasingCurve(type_ int) *QEasingCurve {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurveC2ENS_4TypeE", ffiqt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQEasingCurveFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQEasingCurve)
 	return gothis
 }
 
@@ -80,9 +86,10 @@ func NewQEasingCurve(type_ int) *QEasingCurve {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QEasingCurve()
-func DeleteQEasingCurve(*QEasingCurve) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurveD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQEasingCurve(this *QEasingCurve) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QEasingCurveD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qeasingcurve.h:89

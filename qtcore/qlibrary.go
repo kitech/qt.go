@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QLibrary struct {
 	*QObject
 }
@@ -134,9 +135,10 @@ func NewQLibrary_3(fileName *QString, version *QString, parent *QObject /*777 QO
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QLibrary()
-func DeleteQLibrary(*QLibrary) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibraryD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQLibrary(this *QLibrary) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibraryD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qlibrary.h:74
@@ -279,6 +281,7 @@ func (this *QLibrary) FileName() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -312,6 +315,7 @@ func (this *QLibrary) ErrorString() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 

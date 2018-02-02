@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextLine struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QTextLine) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTextLine) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTextLineFromPointer(cthis unsafe.Pointer) *QTextLine {
 	return &QTextLine{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQTextLine() *QTextLine {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextLineC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextLineFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextLine)
 	return gothis
 }
 
@@ -100,6 +106,7 @@ func (this *QTextLine) Rect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -231,6 +238,7 @@ func (this *QTextLine) NaturalTextRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -313,6 +321,7 @@ func (this *QTextLine) Position() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -347,6 +356,12 @@ func (this *QTextLine) LineNumber() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+func DeleteQTextLine(this *QTextLine) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextLineD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QTextLine__Edge = int

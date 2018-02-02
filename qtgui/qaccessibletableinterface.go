@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAccessibleTableInterface struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QAccessibleTableInterface) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QAccessibleTableInterface) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQAccessibleTableInterfaceFromPointer(cthis unsafe.Pointer) *QAccessibleTableInterface {
 	return &QAccessibleTableInterface{&qtrt.CObject{cthis}}
@@ -73,9 +78,10 @@ func (*QAccessibleTableInterface) NewFromPointer(cthis unsafe.Pointer) *QAccessi
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleTableInterface()
-func DeleteQAccessibleTableInterface(*QAccessibleTableInterface) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN25QAccessibleTableInterfaceD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAccessibleTableInterface(this *QAccessibleTableInterface) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN25QAccessibleTableInterfaceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:597
@@ -134,6 +140,7 @@ func (this *QAccessibleTableInterface) ColumnDescription(column int) *qtcore.QSt
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -146,6 +153,7 @@ func (this *QAccessibleTableInterface) RowDescription(row int) *qtcore.QString /
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

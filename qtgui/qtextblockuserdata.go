@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextBlockUserData struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QTextBlockUserData) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTextBlockUserData) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTextBlockUserDataFromPointer(cthis unsafe.Pointer) *QTextBlockUserData {
 	return &QTextBlockUserData{&qtrt.CObject{cthis}}
@@ -73,9 +78,10 @@ func (*QTextBlockUserData) NewFromPointer(cthis unsafe.Pointer) *QTextBlockUserD
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTextBlockUserData()
-func DeleteQTextBlockUserData(*QTextBlockUserData) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QTextBlockUserDataD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextBlockUserData(this *QTextBlockUserData) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QTextBlockUserDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

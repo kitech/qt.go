@@ -52,6 +52,26 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QKeySequenceEdit) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void keyPressEvent(class QKeyEvent *)
+func (this *QKeySequenceEdit) InheritKeyPressEvent(f func(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyPressEvent", f)
+}
+
+// void keyReleaseEvent(class QKeyEvent *)
+func (this *QKeySequenceEdit) InheritKeyReleaseEvent(f func(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyReleaseEvent", f)
+}
+
+// void timerEvent(class QTimerEvent *)
+func (this *QKeySequenceEdit) InheritTimerEvent(f func(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "timerEvent", f)
+}
+
 type QKeySequenceEdit struct {
 	*QWidget
 }
@@ -115,9 +135,10 @@ func NewQKeySequenceEdit_1(keySequence *qtgui.QKeySequence, parent *QWidget /*77
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QKeySequenceEdit()
-func DeleteQKeySequenceEdit(*QKeySequenceEdit) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QKeySequenceEditD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQKeySequenceEdit(this *QKeySequenceEdit) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QKeySequenceEditD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qkeysequenceedit.h:62
@@ -129,6 +150,7 @@ func (this *QKeySequenceEdit) KeySequence() *qtgui.QKeySequence /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQKeySequence)
 	return rv2
 }
 

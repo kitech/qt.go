@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QWidgetData struct {
 	*qtrt.CObject
 }
@@ -64,13 +65,23 @@ func (this *QWidgetData) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QWidgetData) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQWidgetDataFromPointer(cthis unsafe.Pointer) *QWidgetData {
 	return &QWidgetData{&qtrt.CObject{cthis}}
 }
 func (*QWidgetData) NewFromPointer(cthis unsafe.Pointer) *QWidgetData {
 	return NewQWidgetDataFromPointer(cthis)
+}
+
+func DeleteQWidgetData(this *QWidgetData) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWidgetDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

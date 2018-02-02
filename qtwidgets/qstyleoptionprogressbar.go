@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleOptionProgressBar struct {
 	*QStyleOption
 }
@@ -82,6 +83,7 @@ func NewQStyleOptionProgressBar() *QStyleOptionProgressBar {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QStyleOptionProgressBarC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionProgressBarFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionProgressBar)
 	return gothis
 }
 
@@ -93,7 +95,14 @@ func NewQStyleOptionProgressBar_1(version int) *QStyleOptionProgressBar {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QStyleOptionProgressBarC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionProgressBarFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionProgressBar)
 	return gothis
+}
+
+func DeleteQStyleOptionProgressBar(this *QStyleOptionProgressBar) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QStyleOptionProgressBarD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleOptionProgressBar__StyleOptionType = int

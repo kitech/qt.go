@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSurface struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QSurface) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSurface) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSurfaceFromPointer(cthis unsafe.Pointer) *QSurface {
 	return &QSurface{&qtrt.CObject{cthis}}
@@ -73,9 +78,10 @@ func (*QSurface) NewFromPointer(cthis unsafe.Pointer) *QSurface {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSurface()
-func DeleteQSurface(*QSurface) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSurfaceD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSurface(this *QSurface) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSurfaceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qsurface.h:74
@@ -98,6 +104,7 @@ func (this *QSurface) Format() *QSurfaceFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSurfaceFormat)
 	return rv2
 }
 
@@ -132,6 +139,7 @@ func (this *QSurface) Size() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -143,6 +151,7 @@ func NewQSurface(type_ int) *QSurface {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSurfaceC1ENS_12SurfaceClassE", ffiqt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSurfaceFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSurface)
 	return gothis
 }
 

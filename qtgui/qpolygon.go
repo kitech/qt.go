@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QPolygon struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QPolygon) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QPolygon) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQPolygonFromPointer(cthis unsafe.Pointer) *QPolygon {
 	return &QPolygon{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQPolygon() *QPolygon {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygonC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPolygon)
 	return gothis
 }
 
@@ -88,6 +94,7 @@ func NewQPolygon_1(size int) *QPolygon {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygonC2Ei", ffiqt.FFI_TYPE_POINTER, size)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPolygon)
 	return gothis
 }
 
@@ -100,6 +107,7 @@ func NewQPolygon_2(r *qtcore.QRect, closed bool) *QPolygon {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygonC2ERK5QRectb", ffiqt.FFI_TYPE_POINTER, convArg0, closed)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPolygon)
 	return gothis
 }
 
@@ -111,6 +119,7 @@ func NewQPolygon_3(nPoints int, points unsafe.Pointer /*666*/) *QPolygon {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygonC2EiPKi", ffiqt.FFI_TYPE_POINTER, nPoints, &points)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPolygon)
 	return gothis
 }
 
@@ -118,9 +127,10 @@ func NewQPolygon_3(nPoints int, points unsafe.Pointer /*666*/) *QPolygon {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QPolygon()
-func DeleteQPolygon(*QPolygon) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygonD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPolygon(this *QPolygon) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygonD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:74
@@ -161,6 +171,7 @@ func (this *QPolygon) Translated(dx int, dy int) *QPolygon /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygon)
 	return rv2
 }
 
@@ -174,6 +185,7 @@ func (this *QPolygon) Translated_1(offset *qtcore.QPoint) *QPolygon /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygon)
 	return rv2
 }
 
@@ -186,6 +198,7 @@ func (this *QPolygon) BoundingRect() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -207,6 +220,7 @@ func (this *QPolygon) Point_1(i int) *qtcore.QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
@@ -279,6 +293,7 @@ func (this *QPolygon) United(r *QPolygon) *QPolygon /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygon)
 	return rv2
 }
 
@@ -292,6 +307,7 @@ func (this *QPolygon) Intersected(r *QPolygon) *QPolygon /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygon)
 	return rv2
 }
 
@@ -305,6 +321,7 @@ func (this *QPolygon) Subtracted(r *QPolygon) *QPolygon /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygon)
 	return rv2
 }
 

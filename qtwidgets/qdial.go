@@ -52,6 +52,46 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QDial) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void resizeEvent(class QResizeEvent *)
+func (this *QDial) InheritResizeEvent(f func(re *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QDial) InheritPaintEvent(f func(pe *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void mousePressEvent(class QMouseEvent *)
+func (this *QDial) InheritMousePressEvent(f func(me *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void mouseReleaseEvent(class QMouseEvent *)
+func (this *QDial) InheritMouseReleaseEvent(f func(me *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+}
+
+// void mouseMoveEvent(class QMouseEvent *)
+func (this *QDial) InheritMouseMoveEvent(f func(me *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void sliderChange(enum QAbstractSlider::SliderChange)
+func (this *QDial) InheritSliderChange(f func(change int)) {
+	ffiqt.SetAllInheritCallback(this, "sliderChange", f)
+}
+
+// void initStyleOption(class QStyleOptionSlider *)
+func (this *QDial) InheritInitStyleOption(f func(option *QStyleOptionSlider /*777 QStyleOptionSlider **/)) {
+	ffiqt.SetAllInheritCallback(this, "initStyleOption", f)
+}
+
 type QDial struct {
 	*QAbstractSlider
 }
@@ -102,9 +142,10 @@ func NewQDial(parent *QWidget /*777 QWidget **/) *QDial {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDial()
-func DeleteQDial(*QDial) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDialD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDial(this *QDial) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDialD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qdial.h:68
@@ -169,6 +210,7 @@ func (this *QDial) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -181,6 +223,7 @@ func (this *QDial) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

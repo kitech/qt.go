@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QRgba64 struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QRgba64) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QRgba64) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQRgba64FromPointer(cthis unsafe.Pointer) *QRgba64 {
 	return &QRgba64{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQRgba64() *QRgba64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRgba64C2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRgba64FromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRgba64)
 	return gothis
 }
 
@@ -89,6 +95,7 @@ func (this *QRgba64) FromRgba64(c uint64) *QRgba64 /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQRgba64FromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRgba64)
 	return rv2
 }
 func QRgba64_FromRgba64(c uint64) *QRgba64 /*123*/ {
@@ -106,6 +113,7 @@ func (this *QRgba64) FromRgba64_1(red uint16, green uint16, blue uint16, alpha u
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQRgba64FromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRgba64)
 	return rv2
 }
 func QRgba64_FromRgba64_1(red uint16, green uint16, blue uint16, alpha uint16) *QRgba64 /*123*/ {
@@ -123,6 +131,7 @@ func (this *QRgba64) FromRgba(red byte, green byte, blue byte, alpha byte) *QRgb
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQRgba64FromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRgba64)
 	return rv2
 }
 func QRgba64_FromRgba(red byte, green byte, blue byte, alpha byte) *QRgba64 /*123*/ {
@@ -140,6 +149,7 @@ func (this *QRgba64) FromArgb32(rgb uint) *QRgba64 /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQRgba64FromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRgba64)
 	return rv2
 }
 func QRgba64_FromArgb32(rgb uint) *QRgba64 /*123*/ {
@@ -325,6 +335,7 @@ func (this *QRgba64) Premultiplied() *QRgba64 /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRgba64FromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRgba64)
 	return rv2
 }
 
@@ -337,7 +348,14 @@ func (this *QRgba64) Unpremultiplied() *QRgba64 /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRgba64FromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRgba64)
 	return rv2
+}
+
+func DeleteQRgba64(this *QRgba64) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRgba64D2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QRgba64__Shifts = int

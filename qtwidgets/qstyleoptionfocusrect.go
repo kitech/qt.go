@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleOptionFocusRect struct {
 	*QStyleOption
 }
@@ -82,6 +83,7 @@ func NewQStyleOptionFocusRect() *QStyleOptionFocusRect {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QStyleOptionFocusRectC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionFocusRectFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionFocusRect)
 	return gothis
 }
 
@@ -93,7 +95,14 @@ func NewQStyleOptionFocusRect_1(version int) *QStyleOptionFocusRect {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QStyleOptionFocusRectC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionFocusRectFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionFocusRect)
 	return gothis
+}
+
+func DeleteQStyleOptionFocusRect(this *QStyleOptionFocusRect) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QStyleOptionFocusRectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleOptionFocusRect__StyleOptionType = int

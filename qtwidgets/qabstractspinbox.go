@@ -52,6 +52,106 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void resizeEvent(class QResizeEvent *)
+func (this *QAbstractSpinBox) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void keyPressEvent(class QKeyEvent *)
+func (this *QAbstractSpinBox) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyPressEvent", f)
+}
+
+// void keyReleaseEvent(class QKeyEvent *)
+func (this *QAbstractSpinBox) InheritKeyReleaseEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyReleaseEvent", f)
+}
+
+// void wheelEvent(class QWheelEvent *)
+func (this *QAbstractSpinBox) InheritWheelEvent(f func(event *qtgui.QWheelEvent /*777 QWheelEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "wheelEvent", f)
+}
+
+// void focusInEvent(class QFocusEvent *)
+func (this *QAbstractSpinBox) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusInEvent", f)
+}
+
+// void focusOutEvent(class QFocusEvent *)
+func (this *QAbstractSpinBox) InheritFocusOutEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusOutEvent", f)
+}
+
+// void contextMenuEvent(class QContextMenuEvent *)
+func (this *QAbstractSpinBox) InheritContextMenuEvent(f func(event *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "contextMenuEvent", f)
+}
+
+// void changeEvent(class QEvent *)
+func (this *QAbstractSpinBox) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
+// void closeEvent(class QCloseEvent *)
+func (this *QAbstractSpinBox) InheritCloseEvent(f func(event *qtgui.QCloseEvent /*777 QCloseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "closeEvent", f)
+}
+
+// void hideEvent(class QHideEvent *)
+func (this *QAbstractSpinBox) InheritHideEvent(f func(event *qtgui.QHideEvent /*777 QHideEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "hideEvent", f)
+}
+
+// void mousePressEvent(class QMouseEvent *)
+func (this *QAbstractSpinBox) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void mouseReleaseEvent(class QMouseEvent *)
+func (this *QAbstractSpinBox) InheritMouseReleaseEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+}
+
+// void mouseMoveEvent(class QMouseEvent *)
+func (this *QAbstractSpinBox) InheritMouseMoveEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void timerEvent(class QTimerEvent *)
+func (this *QAbstractSpinBox) InheritTimerEvent(f func(event *qtcore.QTimerEvent /*777 QTimerEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "timerEvent", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QAbstractSpinBox) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void showEvent(class QShowEvent *)
+func (this *QAbstractSpinBox) InheritShowEvent(f func(event *qtgui.QShowEvent /*777 QShowEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "showEvent", f)
+}
+
+// void initStyleOption(class QStyleOptionSpinBox *)
+func (this *QAbstractSpinBox) InheritInitStyleOption(f func(option *QStyleOptionSpinBox /*777 QStyleOptionSpinBox **/)) {
+	ffiqt.SetAllInheritCallback(this, "initStyleOption", f)
+}
+
+// QLineEdit * lineEdit()
+func (this *QAbstractSpinBox) InheritLineEdit(f func() unsafe.Pointer /*666*/) {
+	ffiqt.SetAllInheritCallback(this, "lineEdit", f)
+}
+
+// void setLineEdit(class QLineEdit *)
+func (this *QAbstractSpinBox) InheritSetLineEdit(f func(edit *QLineEdit /*777 QLineEdit **/)) {
+	ffiqt.SetAllInheritCallback(this, "setLineEdit", f)
+}
+
+// QAbstractSpinBox::StepEnabled stepEnabled()
+func (this *QAbstractSpinBox) InheritStepEnabled(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "stepEnabled", f)
+}
+
 type QAbstractSpinBox struct {
 	*QWidget
 }
@@ -102,9 +202,10 @@ func NewQAbstractSpinBox(parent *QWidget /*777 QWidget **/) *QAbstractSpinBox {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractSpinBox()
-func DeleteQAbstractSpinBox(*QAbstractSpinBox) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBoxD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAbstractSpinBox(this *QAbstractSpinBox) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:83
@@ -167,6 +268,7 @@ func (this *QAbstractSpinBox) Text() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -179,6 +281,7 @@ func (this *QAbstractSpinBox) SpecialValueText() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -332,6 +435,7 @@ func (this *QAbstractSpinBox) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -344,6 +448,7 @@ func (this *QAbstractSpinBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -377,6 +482,7 @@ func (this *QAbstractSpinBox) InputMethodQuery(arg0 int) *qtcore.QVariant /*123*
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 

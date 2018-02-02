@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QReadWriteLock struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QReadWriteLock) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QReadWriteLock) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQReadWriteLockFromPointer(cthis unsafe.Pointer) *QReadWriteLock {
 	return &QReadWriteLock{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQReadWriteLock(recursionMode int) *QReadWriteLock {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLockC2ENS_13RecursionModeE", ffiqt.FFI_TYPE_POINTER, recursionMode)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQReadWriteLockFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQReadWriteLock)
 	return gothis
 }
 
@@ -80,9 +86,10 @@ func NewQReadWriteLock(recursionMode int) *QReadWriteLock {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QReadWriteLock()
-func DeleteQReadWriteLock(*QReadWriteLock) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLockD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQReadWriteLock(this *QReadWriteLock) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QReadWriteLockD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qreadwritelock.h:60

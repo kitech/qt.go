@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAbstractTableModel struct {
 	*QAbstractItemModel
 }
@@ -94,9 +95,10 @@ func NewQAbstractTableModel(parent *QObject /*777 QObject **/) *QAbstractTableMo
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractTableModel()
-func DeleteQAbstractTableModel(*QAbstractTableModel) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTableModelD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAbstractTableModel(this *QAbstractTableModel) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTableModelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:373
@@ -109,6 +111,7 @@ func (this *QAbstractTableModel) Index(row int, column int, parent *QModelIndex)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -122,6 +125,7 @@ func (this *QAbstractTableModel) Sibling(row int, column int, idx *QModelIndex) 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 

@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QGraphicsScale struct {
 	*QGraphicsTransform
 }
@@ -102,9 +103,10 @@ func NewQGraphicsScale(parent *qtcore.QObject /*777 QObject **/) *QGraphicsScale
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsScale()
-func DeleteQGraphicsScale(*QGraphicsScale) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScaleD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsScale(this *QGraphicsScale) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScaleD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:91
@@ -116,6 +118,7 @@ func (this *QGraphicsScale) Origin() *qtgui.QVector3D /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQVector3D)
 	return rv2
 }
 

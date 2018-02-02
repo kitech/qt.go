@@ -44,6 +44,16 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool isDir()
+func (this *QResource) InheritIsDir(f func() bool) {
+	ffiqt.SetAllInheritCallback(this, "isDir", f)
+}
+
+// bool isFile()
+func (this *QResource) InheritIsFile(f func() bool) {
+	ffiqt.SetAllInheritCallback(this, "isFile", f)
+}
+
 type QResource struct {
 	*qtrt.CObject
 }
@@ -56,7 +66,11 @@ func (this *QResource) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QResource) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQResourceFromPointer(cthis unsafe.Pointer) *QResource {
 	return &QResource{&qtrt.CObject{cthis}}
@@ -75,6 +89,7 @@ func NewQResource(file *QString, locale *QLocale) *QResource {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResourceC2ERK7QStringRK7QLocale", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQResourceFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQResource)
 	return gothis
 }
 
@@ -82,9 +97,10 @@ func NewQResource(file *QString, locale *QLocale) *QResource {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QResource()
-func DeleteQResource(*QResource) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResourceD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQResource(this *QResource) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResourceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qresource.h:60
@@ -106,6 +122,7 @@ func (this *QResource) FileName() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -118,6 +135,7 @@ func (this *QResource) AbsoluteFilePath() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -140,6 +158,7 @@ func (this *QResource) Locale() *QLocale /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLocale)
 	return rv2
 }
 
@@ -196,6 +215,7 @@ func (this *QResource) LastModified() *QDateTime /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDateTime)
 	return rv2
 }
 

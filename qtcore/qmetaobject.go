@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QMetaObject struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QMetaObject) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QMetaObject) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQMetaObjectFromPointer(cthis unsafe.Pointer) *QMetaObject {
 	return &QMetaObject{&qtrt.CObject{cthis}}
@@ -313,6 +318,7 @@ func (this *QMetaObject) Constructor(index int) *QMetaMethod /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaMethodFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaMethod)
 	return rv2
 }
 
@@ -325,6 +331,7 @@ func (this *QMetaObject) Method(index int) *QMetaMethod /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaMethodFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaMethod)
 	return rv2
 }
 
@@ -337,6 +344,7 @@ func (this *QMetaObject) Enumerator(index int) *QMetaEnum /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaEnumFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaEnum)
 	return rv2
 }
 
@@ -349,6 +357,7 @@ func (this *QMetaObject) Property(index int) *QMetaProperty /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaPropertyFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaProperty)
 	return rv2
 }
 
@@ -361,6 +370,7 @@ func (this *QMetaObject) ClassInfo(index int) *QMetaClassInfo /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaClassInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaClassInfo)
 	return rv2
 }
 
@@ -373,6 +383,7 @@ func (this *QMetaObject) UserProperty() *QMetaProperty /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaPropertyFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaProperty)
 	return rv2
 }
 
@@ -425,6 +436,7 @@ func (this *QMetaObject) NormalizedSignature(method string) *QByteArray /*123*/ 
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 func QMetaObject_NormalizedSignature(method string) *QByteArray /*123*/ {
@@ -444,6 +456,7 @@ func (this *QMetaObject) NormalizedType(type_ string) *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 func QMetaObject_NormalizedType(type_ string) *QByteArray /*123*/ {
@@ -714,6 +727,12 @@ func QMetaObject_Metacall(arg0 *QObject /*777 QObject **/, arg1 int, arg2 int, a
 	var nilthis *QMetaObject
 	rv := nilthis.Metacall(arg0, arg1, arg2, arg3)
 	return rv
+}
+
+func DeleteQMetaObject(this *QMetaObject) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMetaObjectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QMetaObject__Call = int

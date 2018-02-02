@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QMutex struct {
 	*QBasicMutex
 }
@@ -74,6 +75,7 @@ func NewQMutex(mode int) *QMutex {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutexC2ENS_13RecursionModeE", ffiqt.FFI_TYPE_POINTER, mode)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMutexFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMutex)
 	return gothis
 }
 
@@ -81,9 +83,10 @@ func NewQMutex(mode int) *QMutex {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QMutex()
-func DeleteQMutex(*QMutex) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutexD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQMutex(this *QMutex) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutexD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qmutex.h:134

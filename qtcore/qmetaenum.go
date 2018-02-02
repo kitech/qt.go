@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QMetaEnum struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QMetaEnum) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QMetaEnum) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQMetaEnumFromPointer(cthis unsafe.Pointer) *QMetaEnum {
 	return &QMetaEnum{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQMetaEnum() *QMetaEnum {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMetaEnumC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMetaEnumFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMetaEnum)
 	return gothis
 }
 
@@ -199,6 +205,7 @@ func (this *QMetaEnum) ValueToKeys(value int) *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -223,6 +230,12 @@ func (this *QMetaEnum) IsValid() bool {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
+}
+
+func DeleteQMetaEnum(this *QMetaEnum) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMetaEnumD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

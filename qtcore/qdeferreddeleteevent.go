@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QDeferredDeleteEvent struct {
 	*QEvent
 }
@@ -74,6 +75,7 @@ func NewQDeferredDeleteEvent() *QDeferredDeleteEvent {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QDeferredDeleteEventC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDeferredDeleteEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDeferredDeleteEvent)
 	return gothis
 }
 
@@ -81,9 +83,10 @@ func NewQDeferredDeleteEvent() *QDeferredDeleteEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDeferredDeleteEvent()
-func DeleteQDeferredDeleteEvent(*QDeferredDeleteEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QDeferredDeleteEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDeferredDeleteEvent(this *QDeferredDeleteEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QDeferredDeleteEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:379

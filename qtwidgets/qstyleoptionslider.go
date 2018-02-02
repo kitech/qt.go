@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleOptionSlider struct {
 	*QStyleOptionComplex
 }
@@ -82,6 +83,7 @@ func NewQStyleOptionSlider() *QStyleOptionSlider {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionSliderC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionSliderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionSlider)
 	return gothis
 }
 
@@ -93,7 +95,14 @@ func NewQStyleOptionSlider_1(version int) *QStyleOptionSlider {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionSliderC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionSliderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionSlider)
 	return gothis
+}
+
+func DeleteQStyleOptionSlider(this *QStyleOptionSlider) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionSliderD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleOptionSlider__StyleOptionType = int

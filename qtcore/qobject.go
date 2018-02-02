@@ -44,6 +44,51 @@ func init() {
 //  ext block end
 
 //  body block begin
+// QObject * sender()
+func (this *QObject) InheritSender(f func() unsafe.Pointer /*666*/) {
+	ffiqt.SetAllInheritCallback(this, "sender", f)
+}
+
+// int senderSignalIndex()
+func (this *QObject) InheritSenderSignalIndex(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "senderSignalIndex", f)
+}
+
+// int receivers(const char *)
+func (this *QObject) InheritReceivers(f func(signal string) int) {
+	ffiqt.SetAllInheritCallback(this, "receivers", f)
+}
+
+// bool isSignalConnected(const class QMetaMethod &)
+func (this *QObject) InheritIsSignalConnected(f func(signal *QMetaMethod) bool) {
+	ffiqt.SetAllInheritCallback(this, "isSignalConnected", f)
+}
+
+// void timerEvent(class QTimerEvent *)
+func (this *QObject) InheritTimerEvent(f func(event *QTimerEvent /*777 QTimerEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "timerEvent", f)
+}
+
+// void childEvent(class QChildEvent *)
+func (this *QObject) InheritChildEvent(f func(event *QChildEvent /*777 QChildEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "childEvent", f)
+}
+
+// void customEvent(class QEvent *)
+func (this *QObject) InheritCustomEvent(f func(event *QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "customEvent", f)
+}
+
+// void connectNotify(const class QMetaMethod &)
+func (this *QObject) InheritConnectNotify(f func(signal *QMetaMethod)) {
+	ffiqt.SetAllInheritCallback(this, "connectNotify", f)
+}
+
+// void disconnectNotify(const class QMetaMethod &)
+func (this *QObject) InheritDisconnectNotify(f func(signal *QMetaMethod)) {
+	ffiqt.SetAllInheritCallback(this, "disconnectNotify", f)
+}
+
 type QObject struct {
 	*qtrt.CObject
 }
@@ -56,7 +101,11 @@ func (this *QObject) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QObject) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQObjectFromPointer(cthis unsafe.Pointer) *QObject {
 	return &QObject{&qtrt.CObject{cthis}}
@@ -86,6 +135,7 @@ func NewQObject(parent *QObject /*777 QObject **/) *QObject {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObjectC2EPS_", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQObjectFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQObject)
 	return gothis
 }
 
@@ -93,9 +143,10 @@ func NewQObject(parent *QObject /*777 QObject **/) *QObject {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QObject()
-func DeleteQObject(*QObject) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObjectD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQObject(this *QObject) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QObjectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qobject.h:126
@@ -132,6 +183,7 @@ func (this *QObject) ObjectName() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -452,6 +504,7 @@ func (this *QObject) Property(name string) *QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 

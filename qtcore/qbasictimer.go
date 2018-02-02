@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QBasicTimer struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QBasicTimer) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QBasicTimer) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQBasicTimerFromPointer(cthis unsafe.Pointer) *QBasicTimer {
 	return &QBasicTimer{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQBasicTimer() *QBasicTimer {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicTimerC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBasicTimerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQBasicTimer)
 	return gothis
 }
 
@@ -80,9 +86,10 @@ func NewQBasicTimer() *QBasicTimer {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QBasicTimer()
-func DeleteQBasicTimer(*QBasicTimer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicTimerD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQBasicTimer(this *QBasicTimer) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicTimerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qbasictimer.h:58

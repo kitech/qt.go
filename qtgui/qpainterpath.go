@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QPainterPath struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QPainterPath) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QPainterPath) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQPainterPathFromPointer(cthis unsafe.Pointer) *QPainterPath {
 	return &QPainterPath{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQPainterPath() *QPainterPath {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPathC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPainterPath)
 	return gothis
 }
 
@@ -89,6 +95,7 @@ func NewQPainterPath_1(startPoint *qtcore.QPointF) *QPainterPath {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPathC2ERK7QPointF", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPainterPath)
 	return gothis
 }
 
@@ -96,9 +103,10 @@ func NewQPainterPath_1(startPoint *qtcore.QPointF) *QPainterPath {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QPainterPath()
-func DeleteQPainterPath(*QPainterPath) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPathD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPainterPath(this *QPainterPath) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPainterPathD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:100
@@ -246,6 +254,7 @@ func (this *QPainterPath) CurrentPosition() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -505,6 +514,7 @@ func (this *QPainterPath) Translated(dx float64, dy float64) *QPainterPath /*123
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPainterPath)
 	return rv2
 }
 
@@ -518,6 +528,7 @@ func (this *QPainterPath) Translated_1(offset *qtcore.QPointF) *QPainterPath /*1
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPainterPath)
 	return rv2
 }
 
@@ -530,6 +541,7 @@ func (this *QPainterPath) BoundingRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -542,6 +554,7 @@ func (this *QPainterPath) ControlPointRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -585,6 +598,7 @@ func (this *QPainterPath) ToReversed() *QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPainterPath)
 	return rv2
 }
 
@@ -598,6 +612,7 @@ func (this *QPainterPath) ToFillPolygon(matrix *QMatrix) *QPolygonF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygonF)
 	return rv2
 }
 
@@ -611,6 +626,7 @@ func (this *QPainterPath) ToFillPolygon_1(matrix *QTransform) *QPolygonF /*123*/
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygonF)
 	return rv2
 }
 
@@ -676,6 +692,7 @@ func (this *QPainterPath) PointAtPercent(t float64) *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -711,6 +728,7 @@ func (this *QPainterPath) United(r *QPainterPath) *QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPainterPath)
 	return rv2
 }
 
@@ -724,6 +742,7 @@ func (this *QPainterPath) Intersected(r *QPainterPath) *QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPainterPath)
 	return rv2
 }
 
@@ -737,6 +756,7 @@ func (this *QPainterPath) Subtracted(r *QPainterPath) *QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPainterPath)
 	return rv2
 }
 
@@ -750,6 +770,7 @@ func (this *QPainterPath) SubtractedInverted(r *QPainterPath) *QPainterPath /*12
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPainterPath)
 	return rv2
 }
 
@@ -762,6 +783,7 @@ func (this *QPainterPath) Simplified() *QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPainterPath)
 	return rv2
 }
 

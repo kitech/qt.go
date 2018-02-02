@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QDataWidgetMapper struct {
 	*qtcore.QObject
 }
@@ -102,9 +103,10 @@ func NewQDataWidgetMapper(parent *qtcore.QObject /*777 QObject **/) *QDataWidget
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDataWidgetMapper()
-func DeleteQDataWidgetMapper(*QDataWidgetMapper) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapperD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDataWidgetMapper(this *QDataWidgetMapper) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapperD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h:67
@@ -170,6 +172,7 @@ func (this *QDataWidgetMapper) RootIndex() *qtcore.QModelIndex /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -266,6 +269,7 @@ func (this *QDataWidgetMapper) MappedPropertyName(widget *QWidget /*777 QWidget 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
 

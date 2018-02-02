@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type VariantData struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *VariantData) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *VariantData) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewVariantDataFromPointer(cthis unsafe.Pointer) *VariantData {
 	return &VariantData{&qtrt.CObject{cthis}}
@@ -73,7 +78,14 @@ func NewVariantData(metaTypeId_ int, data_ unsafe.Pointer /*666*/, flags_ uint) 
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QtMetaTypePrivate11VariantDataC2EiPKvj", ffiqt.FFI_TYPE_POINTER, metaTypeId_, data_, flags_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewVariantDataFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteVariantData)
 	return gothis
+}
+
+func DeleteVariantData(this *VariantData) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11VariantDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

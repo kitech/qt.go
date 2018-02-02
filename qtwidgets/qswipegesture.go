@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSwipeGesture struct {
 	*QGesture
 }
@@ -102,9 +103,10 @@ func NewQSwipeGesture(parent *qtcore.QObject /*777 QObject **/) *QSwipeGesture {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSwipeGesture()
-func DeleteQSwipeGesture(*QSwipeGesture) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSwipeGestureD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSwipeGesture(this *QSwipeGesture) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSwipeGestureD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:224

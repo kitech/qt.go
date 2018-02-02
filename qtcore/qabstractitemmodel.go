@@ -44,6 +44,96 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void resetInternalData()
+func (this *QAbstractItemModel) InheritResetInternalData(f func()) {
+	ffiqt.SetAllInheritCallback(this, "resetInternalData", f)
+}
+
+// QModelIndex createIndex(int, int, void *)
+func (this *QAbstractItemModel) InheritCreateIndex(f func(row int, column int, data unsafe.Pointer /*666*/) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "createIndex", f)
+}
+
+// bool decodeData(int, int, const class QModelIndex &, class QDataStream &)
+func (this *QAbstractItemModel) InheritDecodeData(f func(row int, column int, parent *QModelIndex, stream *QDataStream) bool) {
+	ffiqt.SetAllInheritCallback(this, "decodeData", f)
+}
+
+// void beginInsertRows(const class QModelIndex &, int, int)
+func (this *QAbstractItemModel) InheritBeginInsertRows(f func(parent *QModelIndex, first int, last int)) {
+	ffiqt.SetAllInheritCallback(this, "beginInsertRows", f)
+}
+
+// void endInsertRows()
+func (this *QAbstractItemModel) InheritEndInsertRows(f func()) {
+	ffiqt.SetAllInheritCallback(this, "endInsertRows", f)
+}
+
+// void beginRemoveRows(const class QModelIndex &, int, int)
+func (this *QAbstractItemModel) InheritBeginRemoveRows(f func(parent *QModelIndex, first int, last int)) {
+	ffiqt.SetAllInheritCallback(this, "beginRemoveRows", f)
+}
+
+// void endRemoveRows()
+func (this *QAbstractItemModel) InheritEndRemoveRows(f func()) {
+	ffiqt.SetAllInheritCallback(this, "endRemoveRows", f)
+}
+
+// bool beginMoveRows(const class QModelIndex &, int, int, const class QModelIndex &, int)
+func (this *QAbstractItemModel) InheritBeginMoveRows(f func(sourceParent *QModelIndex, sourceFirst int, sourceLast int, destinationParent *QModelIndex, destinationRow int) bool) {
+	ffiqt.SetAllInheritCallback(this, "beginMoveRows", f)
+}
+
+// void endMoveRows()
+func (this *QAbstractItemModel) InheritEndMoveRows(f func()) {
+	ffiqt.SetAllInheritCallback(this, "endMoveRows", f)
+}
+
+// void beginInsertColumns(const class QModelIndex &, int, int)
+func (this *QAbstractItemModel) InheritBeginInsertColumns(f func(parent *QModelIndex, first int, last int)) {
+	ffiqt.SetAllInheritCallback(this, "beginInsertColumns", f)
+}
+
+// void endInsertColumns()
+func (this *QAbstractItemModel) InheritEndInsertColumns(f func()) {
+	ffiqt.SetAllInheritCallback(this, "endInsertColumns", f)
+}
+
+// void beginRemoveColumns(const class QModelIndex &, int, int)
+func (this *QAbstractItemModel) InheritBeginRemoveColumns(f func(parent *QModelIndex, first int, last int)) {
+	ffiqt.SetAllInheritCallback(this, "beginRemoveColumns", f)
+}
+
+// void endRemoveColumns()
+func (this *QAbstractItemModel) InheritEndRemoveColumns(f func()) {
+	ffiqt.SetAllInheritCallback(this, "endRemoveColumns", f)
+}
+
+// bool beginMoveColumns(const class QModelIndex &, int, int, const class QModelIndex &, int)
+func (this *QAbstractItemModel) InheritBeginMoveColumns(f func(sourceParent *QModelIndex, sourceFirst int, sourceLast int, destinationParent *QModelIndex, destinationColumn int) bool) {
+	ffiqt.SetAllInheritCallback(this, "beginMoveColumns", f)
+}
+
+// void endMoveColumns()
+func (this *QAbstractItemModel) InheritEndMoveColumns(f func()) {
+	ffiqt.SetAllInheritCallback(this, "endMoveColumns", f)
+}
+
+// void beginResetModel()
+func (this *QAbstractItemModel) InheritBeginResetModel(f func()) {
+	ffiqt.SetAllInheritCallback(this, "beginResetModel", f)
+}
+
+// void endResetModel()
+func (this *QAbstractItemModel) InheritEndResetModel(f func()) {
+	ffiqt.SetAllInheritCallback(this, "endResetModel", f)
+}
+
+// void changePersistentIndex(const class QModelIndex &, const class QModelIndex &)
+func (this *QAbstractItemModel) InheritChangePersistentIndex(f func(from *QModelIndex, to *QModelIndex)) {
+	ffiqt.SetAllInheritCallback(this, "changePersistentIndex", f)
+}
+
 type QAbstractItemModel struct {
 	*QObject
 }
@@ -94,9 +184,10 @@ func NewQAbstractItemModel(parent *QObject /*777 QObject **/) *QAbstractItemMode
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractItemModel()
-func DeleteQAbstractItemModel(*QAbstractItemModel) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractItemModelD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAbstractItemModel(this *QAbstractItemModel) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractItemModelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:177
@@ -121,6 +212,7 @@ func (this *QAbstractItemModel) Index(row int, column int, parent *QModelIndex) 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -134,6 +226,7 @@ func (this *QAbstractItemModel) Parent(child *QModelIndex) *QModelIndex /*123*/ 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -147,6 +240,7 @@ func (this *QAbstractItemModel) Sibling(row int, column int, idx *QModelIndex) *
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -196,6 +290,7 @@ func (this *QAbstractItemModel) Data(index *QModelIndex, role int) *QVariant /*1
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -221,6 +316,7 @@ func (this *QAbstractItemModel) HeaderData(section int, orientation int, role in
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -485,6 +581,7 @@ func (this *QAbstractItemModel) Buddy(index *QModelIndex) *QModelIndex /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -498,6 +595,7 @@ func (this *QAbstractItemModel) Span(index *QModelIndex) *QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
 	return rv2
 }
 
@@ -548,6 +646,7 @@ func (this *QAbstractItemModel) CreateIndex(row int, column int, data unsafe.Poi
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -560,6 +659,7 @@ func (this *QAbstractItemModel) CreateIndex_1(row int, column int, id uint64) *Q
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 

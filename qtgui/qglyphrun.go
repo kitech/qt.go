@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QGlyphRun struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QGlyphRun) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QGlyphRun) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQGlyphRunFromPointer(cthis unsafe.Pointer) *QGlyphRun {
 	return &QGlyphRun{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQGlyphRun() *QGlyphRun {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRunC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGlyphRunFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGlyphRun)
 	return gothis
 }
 
@@ -84,9 +90,10 @@ func NewQGlyphRun() *QGlyphRun {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QGlyphRun()
-func DeleteQGlyphRun(*QGlyphRun) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRunD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGlyphRun(this *QGlyphRun) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRunD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qglyphrun.h:75
@@ -108,6 +115,7 @@ func (this *QGlyphRun) RawFont() *QRawFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRawFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRawFont)
 	return rv2
 }
 
@@ -268,6 +276,7 @@ func (this *QGlyphRun) BoundingRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 

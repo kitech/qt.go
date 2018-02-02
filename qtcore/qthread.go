@@ -44,6 +44,21 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void run()
+func (this *QThread) InheritRun(f func()) {
+	ffiqt.SetAllInheritCallback(this, "run", f)
+}
+
+// int exec()
+func (this *QThread) InheritExec(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "exec", f)
+}
+
+// void setTerminationEnabled(_Bool)
+func (this *QThread) InheritSetTerminationEnabled(f func(enabled bool)) {
+	ffiqt.SetAllInheritCallback(this, "setTerminationEnabled", f)
+}
+
 type QThread struct {
 	*QObject
 }
@@ -156,9 +171,10 @@ func NewQThread(parent *QObject /*777 QObject **/) *QThread {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QThread()
-func DeleteQThread(*QThread) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThreadD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQThread(this *QThread) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThreadD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qthread.h:96

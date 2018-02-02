@@ -9,9 +9,12 @@ import (
 	"log"
 	"unsafe"
 
+	"qt.go/qtrt"
+
 	"github.com/therecipe/qt"
 )
 
+// usage: ffiqt.Connect()
 // 也许放在qtrt包中更好，但在测试时放在了ffiqt包中，暂时放在这
 type QDynSlotObject struct {
 	cthis unsafe.Pointer
@@ -28,8 +31,6 @@ func (this *QDynSlotObject) GetCthis() unsafe.Pointer {
 	return this.cthis
 }
 
-var _QDynSlotObj *QDynSlotObject
-
 func NewQDynSlotObject(signalName string, argc int) *QDynSlotObject {
 	this := &QDynSlotObject{}
 	// void *fnptr, char* name, int argc, int*argtys, void* cbptr
@@ -44,7 +45,7 @@ func NewQDynSlotObject(signalName string, argc int) *QDynSlotObject {
 	gopp.ErrPrint(err, rv)
 
 	this.cthis = unsafe.Pointer(uintptr(rv))
-	_QDynSlotObj = this
+	qtrt.SetFinalizer(this, DeleteQDynSlotObject)
 	return this
 }
 
@@ -58,7 +59,11 @@ type CObjectIF interface {
 	SetCthis(unsafe.Pointer)
 }
 
-func (this *QDynSlotObject) Connect(cobj CObjectIF, signame string, f interface{}) {
+func Connect(cobj CObjectIF, signame string, f interface{}) {
+	((*QDynSlotObject)(nil))._Connect(cobj, signame, f)
+}
+
+func (*QDynSlotObject) _Connect(cobj CObjectIF, signame string, f interface{}) {
 	cptr := cobj.GetCthis()
 	gopp.NilPrint(cptr, "cptr nil")
 
@@ -66,13 +71,13 @@ func (this *QDynSlotObject) Connect(cobj CObjectIF, signame string, f interface{
 		// 相当于初始化信号开关
 		if !qt.ExistsSignal(cptr, signame) {
 			// C.QMessageBox_ConnectButtonClicked(ptr.Pointer())
-			this.ConnectSwitch(cptr, signame, true, cobj)
+			ConnectSwitch(cptr, signame, true, cobj)
 		}
 
 		if signal := qt.LendSignal(cptr, signame); signal != nil {
 			qt.ConnectSignal(cptr, signame, func(argvals /* **C.uchar*/ unsafe.Pointer, sigobj interface{}) {
 				signal.(func(unsafe.Pointer, interface{}))(argvals, sigobj)
-				callbackInvoke(f, argvals, sigobj)
+				callbackSlotInvoke(f, argvals, sigobj)
 				if false {
 					signal.(func())()
 					f.(func())()
@@ -80,16 +85,22 @@ func (this *QDynSlotObject) Connect(cobj CObjectIF, signame string, f interface{
 			})
 		} else {
 			qt.ConnectSignal(cptr, signame, func(argvals /* **C.uchar*/ unsafe.Pointer, sigobj interface{}) {
-				callbackInvoke(f, argvals, sigobj)
+				callbackSlotInvoke(f, argvals, sigobj)
 			})
 		}
 	}
 }
 
-func (this *QDynSlotObject) ConnectSwitch(src unsafe.Pointer, signame string, on bool, cobj CObjectIF) {
+func ConnectSwitch(src unsafe.Pointer, signame string, on bool, cobj CObjectIF) {
+	((*QDynSlotObject)(nil))._ConnectSwitch(src, signame, on, cobj)
+}
+
+func (*QDynSlotObject) _ConnectSwitch(src unsafe.Pointer, signame string, on bool, cobj CObjectIF) {
 	signamep := QSIGNAL(signame)
 	signame_ := C.CString(signamep)
-	log.Println(signame_, signamep, on)
+	if debugDynSlot {
+		log.Println(signame_, signamep, on)
+	}
 
 	// 相当于初始化信号开关
 	var subDynSlot *QDynSlotObject
@@ -115,6 +126,11 @@ func (this *QDynSlotObject) ConnectSwitch(src unsafe.Pointer, signame string, on
 	}
 }
 
+// TODO
+func Disconnect(cobj CObjectIF, signame string) {
+	qt.DisconnectAllSignals(cobj.GetCthis(), signame)
+}
+
 func (this *QDynSlotObject) Connect_test(to *QDynSlotObject) {
 	rv, err := InvokeQtFunc6("QDynSlotObject_connect_test", FFI_TYPE_VOID, this.cthis, to.cthis)
 	gopp.ErrPrint(err, rv)
@@ -123,4 +139,11 @@ func (this *QDynSlotObject) Connect_test(to *QDynSlotObject) {
 func (this *QDynSlotObject) Trigger_test() {
 	rv, err := InvokeQtFunc6("QDynSlotObject_trigger_test", FFI_TYPE_VOID, this.cthis)
 	gopp.ErrPrint(err, rv)
+}
+
+var debugDynSlot bool = false
+
+func SetDebugDynSlot(on bool) {
+	debugDynSlot = on
+	InvokeQtFunc6("QDynSlotObject_set_debug", FFI_TYPE_VOID, gopp.IfElseInt(on, 1, 0))
 }

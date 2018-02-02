@@ -48,6 +48,36 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void documentChanged(int, int, int)
+func (this *QAbstractTextDocumentLayout) InheritDocumentChanged(f func(from int, charsRemoved int, charsAdded int)) {
+	ffiqt.SetAllInheritCallback(this, "documentChanged", f)
+}
+
+// void resizeInlineObject(class QTextInlineObject, int, const class QTextFormat &)
+func (this *QAbstractTextDocumentLayout) InheritResizeInlineObject(f func(item *QTextInlineObject /*123*/, posInDocument int, format *QTextFormat)) {
+	ffiqt.SetAllInheritCallback(this, "resizeInlineObject", f)
+}
+
+// void positionInlineObject(class QTextInlineObject, int, const class QTextFormat &)
+func (this *QAbstractTextDocumentLayout) InheritPositionInlineObject(f func(item *QTextInlineObject /*123*/, posInDocument int, format *QTextFormat)) {
+	ffiqt.SetAllInheritCallback(this, "positionInlineObject", f)
+}
+
+// void drawInlineObject(class QPainter *, const class QRectF &, class QTextInlineObject, int, const class QTextFormat &)
+func (this *QAbstractTextDocumentLayout) InheritDrawInlineObject(f func(painter *QPainter /*777 QPainter **/, rect *qtcore.QRectF, object *QTextInlineObject /*123*/, posInDocument int, format *QTextFormat)) {
+	ffiqt.SetAllInheritCallback(this, "drawInlineObject", f)
+}
+
+// int formatIndex(int)
+func (this *QAbstractTextDocumentLayout) InheritFormatIndex(f func(pos int) int) {
+	ffiqt.SetAllInheritCallback(this, "formatIndex", f)
+}
+
+// QTextCharFormat format(int)
+func (this *QAbstractTextDocumentLayout) InheritFormat(f func(pos int) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "format", f)
+}
+
 type QAbstractTextDocumentLayout struct {
 	*qtcore.QObject
 }
@@ -98,9 +128,10 @@ func NewQAbstractTextDocumentLayout(doc *QTextDocument /*777 QTextDocument **/) 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractTextDocumentLayout()
-func DeleteQAbstractTextDocumentLayout(*QAbstractTextDocumentLayout) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAbstractTextDocumentLayoutD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAbstractTextDocumentLayout(this *QAbstractTextDocumentLayout) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAbstractTextDocumentLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qabstracttextdocumentlayout.h:85
@@ -125,6 +156,7 @@ func (this *QAbstractTextDocumentLayout) AnchorAt(pos *qtcore.QPointF) *qtcore.Q
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -138,6 +170,7 @@ func (this *QAbstractTextDocumentLayout) ImageAt(pos *qtcore.QPointF) *qtcore.QS
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -151,6 +184,7 @@ func (this *QAbstractTextDocumentLayout) FormatAt(pos *qtcore.QPointF) *QTextFor
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextFormat)
 	return rv2
 }
 
@@ -174,6 +208,7 @@ func (this *QAbstractTextDocumentLayout) DocumentSize() *qtcore.QSizeF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
 
@@ -187,6 +222,7 @@ func (this *QAbstractTextDocumentLayout) FrameBoundingRect(frame *QTextFrame /*7
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -200,6 +236,7 @@ func (this *QAbstractTextDocumentLayout) BlockBoundingRect(block *QTextBlock) *q
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -372,6 +409,7 @@ func (this *QAbstractTextDocumentLayout) Format(pos int) *QTextCharFormat /*123*
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCharFormat)
 	return rv2
 }
 

@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QInputMethodEvent struct {
 	*qtcore.QEvent
 }
@@ -78,6 +79,7 @@ func NewQInputMethodEvent() *QInputMethodEvent {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QInputMethodEventC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQInputMethodEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQInputMethodEvent)
 	return gothis
 }
 
@@ -85,9 +87,10 @@ func NewQInputMethodEvent() *QInputMethodEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QInputMethodEvent()
-func DeleteQInputMethodEvent(*QInputMethodEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QInputMethodEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQInputMethodEvent(this *QInputMethodEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QInputMethodEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:559
@@ -120,6 +123,7 @@ func (this *QInputMethodEvent) PreeditString() *qtcore.QString {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -132,6 +136,7 @@ func (this *QInputMethodEvent) CommitString() *qtcore.QString {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

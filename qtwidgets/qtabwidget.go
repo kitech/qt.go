@@ -52,6 +52,56 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void tabInserted(int)
+func (this *QTabWidget) InheritTabInserted(f func(index int)) {
+	ffiqt.SetAllInheritCallback(this, "tabInserted", f)
+}
+
+// void tabRemoved(int)
+func (this *QTabWidget) InheritTabRemoved(f func(index int)) {
+	ffiqt.SetAllInheritCallback(this, "tabRemoved", f)
+}
+
+// void showEvent(class QShowEvent *)
+func (this *QTabWidget) InheritShowEvent(f func(arg0 *qtgui.QShowEvent /*777 QShowEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "showEvent", f)
+}
+
+// void resizeEvent(class QResizeEvent *)
+func (this *QTabWidget) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void keyPressEvent(class QKeyEvent *)
+func (this *QTabWidget) InheritKeyPressEvent(f func(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyPressEvent", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QTabWidget) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void setTabBar(class QTabBar *)
+func (this *QTabWidget) InheritSetTabBar(f func(arg0 *QTabBar /*777 QTabBar **/)) {
+	ffiqt.SetAllInheritCallback(this, "setTabBar", f)
+}
+
+// void changeEvent(class QEvent *)
+func (this *QTabWidget) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
+// bool event(class QEvent *)
+func (this *QTabWidget) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void initStyleOption(class QStyleOptionTabWidgetFrame *)
+func (this *QTabWidget) InheritInitStyleOption(f func(option *QStyleOptionTabWidgetFrame /*777 QStyleOptionTabWidgetFrame **/)) {
+	ffiqt.SetAllInheritCallback(this, "initStyleOption", f)
+}
+
 type QTabWidget struct {
 	*QWidget
 }
@@ -102,9 +152,10 @@ func NewQTabWidget(parent *QWidget /*777 QWidget **/) *QTabWidget {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTabWidget()
-func DeleteQTabWidget(*QTabWidget) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidgetD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTabWidget(this *QTabWidget) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTabWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qtabwidget.h:74
@@ -199,6 +250,7 @@ func (this *QTabWidget) TabText(index int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -221,6 +273,7 @@ func (this *QTabWidget) TabIcon(index int) *qtgui.QIcon /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
 }
 
@@ -253,6 +306,7 @@ func (this *QTabWidget) TabToolTip(index int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -275,6 +329,7 @@ func (this *QTabWidget) TabWhatsThis(index int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -425,6 +480,7 @@ func (this *QTabWidget) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -437,6 +493,7 @@ func (this *QTabWidget) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -513,6 +570,7 @@ func (this *QTabWidget) IconSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

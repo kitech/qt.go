@@ -52,6 +52,116 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QGraphicsScene) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// bool eventFilter(class QObject *, class QEvent *)
+func (this *QGraphicsScene) InheritEventFilter(f func(watched *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "eventFilter", f)
+}
+
+// void contextMenuEvent(class QGraphicsSceneContextMenuEvent *)
+func (this *QGraphicsScene) InheritContextMenuEvent(f func(event *QGraphicsSceneContextMenuEvent /*777 QGraphicsSceneContextMenuEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "contextMenuEvent", f)
+}
+
+// void dragEnterEvent(class QGraphicsSceneDragDropEvent *)
+func (this *QGraphicsScene) InheritDragEnterEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dragEnterEvent", f)
+}
+
+// void dragMoveEvent(class QGraphicsSceneDragDropEvent *)
+func (this *QGraphicsScene) InheritDragMoveEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dragMoveEvent", f)
+}
+
+// void dragLeaveEvent(class QGraphicsSceneDragDropEvent *)
+func (this *QGraphicsScene) InheritDragLeaveEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dragLeaveEvent", f)
+}
+
+// void dropEvent(class QGraphicsSceneDragDropEvent *)
+func (this *QGraphicsScene) InheritDropEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dropEvent", f)
+}
+
+// void focusInEvent(class QFocusEvent *)
+func (this *QGraphicsScene) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusInEvent", f)
+}
+
+// void focusOutEvent(class QFocusEvent *)
+func (this *QGraphicsScene) InheritFocusOutEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusOutEvent", f)
+}
+
+// void helpEvent(class QGraphicsSceneHelpEvent *)
+func (this *QGraphicsScene) InheritHelpEvent(f func(event *QGraphicsSceneHelpEvent /*777 QGraphicsSceneHelpEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "helpEvent", f)
+}
+
+// void keyPressEvent(class QKeyEvent *)
+func (this *QGraphicsScene) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyPressEvent", f)
+}
+
+// void keyReleaseEvent(class QKeyEvent *)
+func (this *QGraphicsScene) InheritKeyReleaseEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyReleaseEvent", f)
+}
+
+// void mousePressEvent(class QGraphicsSceneMouseEvent *)
+func (this *QGraphicsScene) InheritMousePressEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void mouseMoveEvent(class QGraphicsSceneMouseEvent *)
+func (this *QGraphicsScene) InheritMouseMoveEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void mouseReleaseEvent(class QGraphicsSceneMouseEvent *)
+func (this *QGraphicsScene) InheritMouseReleaseEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+}
+
+// void mouseDoubleClickEvent(class QGraphicsSceneMouseEvent *)
+func (this *QGraphicsScene) InheritMouseDoubleClickEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
+}
+
+// void wheelEvent(class QGraphicsSceneWheelEvent *)
+func (this *QGraphicsScene) InheritWheelEvent(f func(event *QGraphicsSceneWheelEvent /*777 QGraphicsSceneWheelEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "wheelEvent", f)
+}
+
+// void inputMethodEvent(class QInputMethodEvent *)
+func (this *QGraphicsScene) InheritInputMethodEvent(f func(event *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "inputMethodEvent", f)
+}
+
+// void drawBackground(class QPainter *, const class QRectF &)
+func (this *QGraphicsScene) InheritDrawBackground(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRectF)) {
+	ffiqt.SetAllInheritCallback(this, "drawBackground", f)
+}
+
+// void drawForeground(class QPainter *, const class QRectF &)
+func (this *QGraphicsScene) InheritDrawForeground(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRectF)) {
+	ffiqt.SetAllInheritCallback(this, "drawForeground", f)
+}
+
+// void drawItems(class QPainter *, int, class QGraphicsItem **, const class QStyleOptionGraphicsItem *, class QWidget *)
+func (this *QGraphicsScene) InheritDrawItems(f func(painter *qtgui.QPainter /*777 QPainter **/, numItems int, items []interface{}, options []interface{}, widget *QWidget /*777 QWidget **/)) {
+	ffiqt.SetAllInheritCallback(this, "drawItems", f)
+}
+
+// bool focusNextPrevChild(_Bool)
+func (this *QGraphicsScene) InheritFocusNextPrevChild(f func(next bool) bool) {
+	ffiqt.SetAllInheritCallback(this, "focusNextPrevChild", f)
+}
+
 type QGraphicsScene struct {
 	*qtcore.QObject
 }
@@ -127,9 +237,10 @@ func NewQGraphicsScene_2(x float64, y float64, width float64, height float64, pa
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsScene()
-func DeleteQGraphicsScene(*QGraphicsScene) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsSceneD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsScene(this *QGraphicsScene) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsSceneD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsscene.h:129
@@ -141,6 +252,7 @@ func (this *QGraphicsScene) SceneRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -266,6 +378,7 @@ func (this *QGraphicsScene) ItemsBoundingRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -305,6 +418,7 @@ func (this *QGraphicsScene) SelectionArea() *qtgui.QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
 }
 
@@ -632,6 +746,7 @@ func (this *QGraphicsScene) BackgroundBrush() *qtgui.QBrush /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQBrush)
 	return rv2
 }
 
@@ -654,6 +769,7 @@ func (this *QGraphicsScene) ForegroundBrush() *qtgui.QBrush /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQBrush)
 	return rv2
 }
 
@@ -676,6 +792,7 @@ func (this *QGraphicsScene) InputMethodQuery(query int) *qtcore.QVariant /*123*/
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -729,6 +846,7 @@ func (this *QGraphicsScene) Font() *qtgui.QFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
 }
 
@@ -751,6 +869,7 @@ func (this *QGraphicsScene) Palette() *qtgui.QPalette /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPalette)
 	return rv2
 }
 

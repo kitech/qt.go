@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QRegularExpression struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QRegularExpression) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QRegularExpression) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQRegularExpressionFromPointer(cthis unsafe.Pointer) *QRegularExpression {
 	return &QRegularExpression{&qtrt.CObject{cthis}}
@@ -84,6 +89,7 @@ func NewQRegularExpression() *QRegularExpression {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRegularExpressionC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRegularExpressionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRegularExpression)
 	return gothis
 }
 
@@ -91,9 +97,10 @@ func NewQRegularExpression() *QRegularExpression {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QRegularExpression()
-func DeleteQRegularExpression(*QRegularExpression) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRegularExpressionD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQRegularExpression(this *QRegularExpression) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRegularExpressionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:95
@@ -115,6 +122,7 @@ func (this *QRegularExpression) Pattern() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -159,6 +167,7 @@ func (this *QRegularExpression) ErrorString() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -192,6 +201,7 @@ func (this *QRegularExpression) Escape(str *QString) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QRegularExpression_Escape(str *QString) *QString /*123*/ {

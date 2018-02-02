@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QEventLoopLocker struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QEventLoopLocker) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QEventLoopLocker) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQEventLoopLockerFromPointer(cthis unsafe.Pointer) *QEventLoopLocker {
 	return &QEventLoopLocker{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQEventLoopLocker() *QEventLoopLocker {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQEventLoopLockerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQEventLoopLocker)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func NewQEventLoopLocker_1(loop *QEventLoop /*777 QEventLoop **/) *QEventLoopLoc
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP10QEventLoop", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQEventLoopLockerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQEventLoopLocker)
 	return gothis
 }
 
@@ -97,6 +104,7 @@ func NewQEventLoopLocker_2(thread *QThread /*777 QThread **/) *QEventLoopLocker 
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP7QThread", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQEventLoopLockerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQEventLoopLocker)
 	return gothis
 }
 
@@ -104,9 +112,10 @@ func NewQEventLoopLocker_2(thread *QThread /*777 QThread **/) *QEventLoopLocker 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QEventLoopLocker()
-func DeleteQEventLoopLocker(*QEventLoopLocker) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQEventLoopLocker(this *QEventLoopLocker) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

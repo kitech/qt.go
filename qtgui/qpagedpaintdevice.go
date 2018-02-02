@@ -48,6 +48,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// QPageLayout devicePageLayout()
+func (this *QPagedPaintDevice) InheritDevicePageLayout(f func() unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "devicePageLayout", f)
+}
+
 type QPagedPaintDevice struct {
 	*QPaintDevice
 }
@@ -78,6 +83,7 @@ func NewQPagedPaintDevice() *QPagedPaintDevice {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDeviceC1Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPagedPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPagedPaintDevice)
 	return gothis
 }
 
@@ -85,9 +91,10 @@ func NewQPagedPaintDevice() *QPagedPaintDevice {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPagedPaintDevice()
-func DeleteQPagedPaintDevice(*QPagedPaintDevice) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDeviceD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPagedPaintDevice(this *QPagedPaintDevice) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDeviceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qpagedpaintdevice.h:61
@@ -178,6 +185,7 @@ func (this *QPagedPaintDevice) PageLayout() *QPageLayout /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPageLayoutFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPageLayout)
 	return rv2
 }
 
@@ -211,6 +219,7 @@ func (this *QPagedPaintDevice) PageSizeMM() *qtcore.QSizeF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
 
@@ -234,6 +243,7 @@ func (this *QPagedPaintDevice) DevicePageLayout() *QPageLayout /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPageLayoutFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPageLayout)
 	return rv2
 }
 
@@ -246,6 +256,7 @@ func (this *QPagedPaintDevice) DevicePageLayout_1() *QPageLayout {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPageLayoutFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPageLayout)
 	return rv2
 }
 

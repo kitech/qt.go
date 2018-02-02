@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextFrame struct {
 	*QTextObject
 }
@@ -98,9 +99,10 @@ func NewQTextFrame(doc *QTextDocument /*777 QTextDocument **/) *QTextFrame {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTextFrame()
-func DeleteQTextFrame(*QTextFrame) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextFrameD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextFrame(this *QTextFrame) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextFrameD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:126
@@ -122,6 +124,7 @@ func (this *QTextFrame) FrameFormat() *QTextFrameFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextFrameFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextFrameFormat)
 	return rv2
 }
 
@@ -134,6 +137,7 @@ func (this *QTextFrame) FirstCursorPosition() *QTextCursor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCursor)
 	return rv2
 }
 
@@ -146,6 +150,7 @@ func (this *QTextFrame) LastCursorPosition() *QTextCursor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCursor)
 	return rv2
 }
 

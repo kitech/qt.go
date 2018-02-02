@@ -48,6 +48,16 @@ func init() {
 //  ext block end
 
 //  body block begin
+// int metric(enum QPaintDevice::PaintDeviceMetric)
+func (this *QRasterWindow) InheritMetric(f func(metric int) int) {
+	ffiqt.SetAllInheritCallback(this, "metric", f)
+}
+
+// QPaintDevice * redirected(class QPoint *)
+func (this *QRasterWindow) InheritRedirected(f func(arg0 *qtcore.QPoint /*777 QPoint **/) unsafe.Pointer /*666*/) {
+	ffiqt.SetAllInheritCallback(this, "redirected", f)
+}
+
 type QRasterWindow struct {
 	*QPaintDeviceWindow
 }
@@ -98,9 +108,10 @@ func NewQRasterWindow(parent *QWindow /*777 QWindow **/) *QRasterWindow {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QRasterWindow()
-func DeleteQRasterWindow(*QRasterWindow) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QRasterWindowD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQRasterWindow(this *QRasterWindow) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QRasterWindowD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qrasterwindow.h:60

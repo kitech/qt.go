@@ -8,7 +8,10 @@ package qtrt
 import "C"
 
 import (
+	"fmt"
+	"log"
 	"reflect"
+	"runtime"
 	"unsafe"
 )
 
@@ -19,6 +22,32 @@ func GoStringI(p uint64) string        { return GoString(unsafe.Pointer(uintptr(
 // 所有的Qt绑定类必须继承自这个
 type CObject struct {
 	Cthis unsafe.Pointer
+}
+
+type GetCthiser interface {
+	GetCthis() unsafe.Pointer
+}
+
+var DebugFinal bool = false
+
+func objectFinalBefore(o interface{}) {
+	if DebugFinal {
+		log.Println(o, fmt.Sprintf("%#v", o), o.(GetCthiser).GetCthis())
+	}
+}
+func objectFinalAfter(o interface{}) {
+	if DebugFinal {
+		log.Println(o, fmt.Sprintf("%#v", o), o.(GetCthiser).GetCthis())
+	}
+}
+func SetFinalizer(obj interface{}, finalizer interface{}) {
+	runtime.SetFinalizer(obj, func(o interface{}) {
+		objectFinalBefore(o)
+		ov := reflect.ValueOf(o)
+		fv := reflect.ValueOf(finalizer)
+		fv.Call([]reflect.Value{ov})
+		objectFinalAfter(o)
+	})
 }
 
 // 直接使用C++ symbols

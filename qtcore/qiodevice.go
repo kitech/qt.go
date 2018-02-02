@@ -44,6 +44,26 @@ func init() {
 //  ext block end
 
 //  body block begin
+// qint64 readData(char *, qint64)
+func (this *QIODevice) InheritReadData(f func(data string, maxlen int64) int64) {
+	ffiqt.SetAllInheritCallback(this, "readData", f)
+}
+
+// qint64 readLineData(char *, qint64)
+func (this *QIODevice) InheritReadLineData(f func(data string, maxlen int64) int64) {
+	ffiqt.SetAllInheritCallback(this, "readLineData", f)
+}
+
+// qint64 writeData(const char *, qint64)
+func (this *QIODevice) InheritWriteData(f func(data string, len int64) int64) {
+	ffiqt.SetAllInheritCallback(this, "writeData", f)
+}
+
+// void setErrorString(const class QString &)
+func (this *QIODevice) InheritSetErrorString(f func(errorString *QString)) {
+	ffiqt.SetAllInheritCallback(this, "setErrorString", f)
+}
+
 type QIODevice struct {
 	*QObject
 }
@@ -105,9 +125,10 @@ func NewQIODevice_1(parent *QObject /*777 QObject **/) *QIODevice {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QIODevice()
-func DeleteQIODevice(*QIODevice) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODeviceD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQIODevice(this *QIODevice) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODeviceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qiodevice.h:89
@@ -355,6 +376,7 @@ func (this *QIODevice) Read_1(maxlen int64) *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -367,6 +389,7 @@ func (this *QIODevice) ReadAll() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -392,6 +415,7 @@ func (this *QIODevice) ReadLine_1(maxlen int64) *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -504,6 +528,7 @@ func (this *QIODevice) Peek_1(maxlen int64) *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -582,6 +607,7 @@ func (this *QIODevice) ErrorString() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 

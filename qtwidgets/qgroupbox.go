@@ -52,6 +52,56 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QGroupBox) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void childEvent(class QChildEvent *)
+func (this *QGroupBox) InheritChildEvent(f func(event *qtcore.QChildEvent /*777 QChildEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "childEvent", f)
+}
+
+// void resizeEvent(class QResizeEvent *)
+func (this *QGroupBox) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QGroupBox) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void focusInEvent(class QFocusEvent *)
+func (this *QGroupBox) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusInEvent", f)
+}
+
+// void changeEvent(class QEvent *)
+func (this *QGroupBox) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
+// void mousePressEvent(class QMouseEvent *)
+func (this *QGroupBox) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void mouseMoveEvent(class QMouseEvent *)
+func (this *QGroupBox) InheritMouseMoveEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void mouseReleaseEvent(class QMouseEvent *)
+func (this *QGroupBox) InheritMouseReleaseEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+}
+
+// void initStyleOption(class QStyleOptionGroupBox *)
+func (this *QGroupBox) InheritInitStyleOption(f func(option *QStyleOptionGroupBox /*777 QStyleOptionGroupBox **/)) {
+	ffiqt.SetAllInheritCallback(this, "initStyleOption", f)
+}
+
 type QGroupBox struct {
 	*QWidget
 }
@@ -115,9 +165,10 @@ func NewQGroupBox_1(title *qtcore.QString, parent *QWidget /*777 QWidget **/) *Q
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGroupBox()
-func DeleteQGroupBox(*QGroupBox) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBoxD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGroupBox(this *QGroupBox) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:66
@@ -129,6 +180,7 @@ func (this *QGroupBox) Title() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -171,6 +223,7 @@ func (this *QGroupBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

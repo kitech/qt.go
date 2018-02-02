@@ -44,6 +44,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void resetInternalData()
+func (this *QAbstractProxyModel) InheritResetInternalData(f func()) {
+	ffiqt.SetAllInheritCallback(this, "resetInternalData", f)
+}
+
 type QAbstractProxyModel struct {
 	*QAbstractItemModel
 }
@@ -94,9 +99,10 @@ func NewQAbstractProxyModel(parent *QObject /*777 QObject **/) *QAbstractProxyMo
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractProxyModel()
-func DeleteQAbstractProxyModel(*QAbstractProxyModel) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractProxyModelD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAbstractProxyModel(this *QAbstractProxyModel) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractProxyModelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qabstractproxymodel.h:62
@@ -131,6 +137,7 @@ func (this *QAbstractProxyModel) MapToSource(proxyIndex *QModelIndex) *QModelInd
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -144,6 +151,7 @@ func (this *QAbstractProxyModel) MapFromSource(sourceIndex *QModelIndex) *QModel
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -157,6 +165,7 @@ func (this *QAbstractProxyModel) MapSelectionToSource(selection *QItemSelection)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQItemSelection)
 	return rv2
 }
 
@@ -170,6 +179,7 @@ func (this *QAbstractProxyModel) MapSelectionFromSource(selection *QItemSelectio
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQItemSelection)
 	return rv2
 }
 
@@ -203,6 +213,7 @@ func (this *QAbstractProxyModel) Data(proxyIndex *QModelIndex, role int) *QVaria
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -215,6 +226,7 @@ func (this *QAbstractProxyModel) HeaderData(section int, orientation int, role i
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -265,6 +277,7 @@ func (this *QAbstractProxyModel) Buddy(index *QModelIndex) *QModelIndex /*123*/ 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -309,6 +322,7 @@ func (this *QAbstractProxyModel) Span(index *QModelIndex) *QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
 	return rv2
 }
 
@@ -334,6 +348,7 @@ func (this *QAbstractProxyModel) Sibling(row int, column int, idx *QModelIndex) 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 

@@ -52,6 +52,46 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void paintEvent(class QPaintEvent *)
+func (this *QSplitterHandle) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void mouseMoveEvent(class QMouseEvent *)
+func (this *QSplitterHandle) InheritMouseMoveEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void mousePressEvent(class QMouseEvent *)
+func (this *QSplitterHandle) InheritMousePressEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void mouseReleaseEvent(class QMouseEvent *)
+func (this *QSplitterHandle) InheritMouseReleaseEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+}
+
+// void resizeEvent(class QResizeEvent *)
+func (this *QSplitterHandle) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// bool event(class QEvent *)
+func (this *QSplitterHandle) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void moveSplitter(int)
+func (this *QSplitterHandle) InheritMoveSplitter(f func(p int)) {
+	ffiqt.SetAllInheritCallback(this, "moveSplitter", f)
+}
+
+// int closestLegalPosition(int)
+func (this *QSplitterHandle) InheritClosestLegalPosition(f func(p int) int) {
+	ffiqt.SetAllInheritCallback(this, "closestLegalPosition", f)
+}
+
 type QSplitterHandle struct {
 	*QWidget
 }
@@ -102,9 +142,10 @@ func NewQSplitterHandle(o int, parent *QSplitter /*777 QSplitter **/) *QSplitter
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSplitterHandle()
-func DeleteQSplitterHandle(*QSplitterHandle) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSplitterHandleD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSplitterHandle(this *QSplitterHandle) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSplitterHandleD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qsplitter.h:143
@@ -159,6 +200,7 @@ func (this *QSplitterHandle) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

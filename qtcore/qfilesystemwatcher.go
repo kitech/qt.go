@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QFileSystemWatcher struct {
 	*QObject
 }
@@ -107,9 +108,10 @@ func NewQFileSystemWatcher_1(paths *QStringList, parent *QObject /*777 QObject *
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFileSystemWatcher()
-func DeleteQFileSystemWatcher(*QFileSystemWatcher) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFileSystemWatcherD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQFileSystemWatcher(this *QFileSystemWatcher) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFileSystemWatcherD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qfilesystemwatcher.h:62

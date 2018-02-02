@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTemporaryDir struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QTemporaryDir) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTemporaryDir) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTemporaryDirFromPointer(cthis unsafe.Pointer) *QTemporaryDir {
 	return &QTemporaryDir{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQTemporaryDir() *QTemporaryDir {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTemporaryDirC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTemporaryDirFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTemporaryDir)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func NewQTemporaryDir_1(templateName *QString) *QTemporaryDir {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTemporaryDirC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTemporaryDirFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTemporaryDir)
 	return gothis
 }
 
@@ -92,9 +99,10 @@ func NewQTemporaryDir_1(templateName *QString) *QTemporaryDir {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTemporaryDir()
-func DeleteQTemporaryDir(*QTemporaryDir) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTemporaryDirD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTemporaryDir(this *QTemporaryDir) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTemporaryDirD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qtemporarydir.h:60
@@ -117,6 +125,7 @@ func (this *QTemporaryDir) ErrorString() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -160,6 +169,7 @@ func (this *QTemporaryDir) Path() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -173,6 +183,7 @@ func (this *QTemporaryDir) FilePath(fileName *QString) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 

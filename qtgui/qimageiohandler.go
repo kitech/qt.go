@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QImageIOHandler struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QImageIOHandler) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QImageIOHandler) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQImageIOHandlerFromPointer(cthis unsafe.Pointer) *QImageIOHandler {
 	return &QImageIOHandler{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQImageIOHandler() *QImageIOHandler {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandlerC1Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQImageIOHandlerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQImageIOHandler)
 	return gothis
 }
 
@@ -84,9 +90,10 @@ func NewQImageIOHandler() *QImageIOHandler {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QImageIOHandler()
-func DeleteQImageIOHandler(*QImageIOHandler) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandlerD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQImageIOHandler(this *QImageIOHandler) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandlerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:65
@@ -140,6 +147,7 @@ func (this *QImageIOHandler) Format() *qtcore.QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
 
@@ -152,6 +160,7 @@ func (this *QImageIOHandler) Name() *qtcore.QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
 
@@ -199,6 +208,7 @@ func (this *QImageIOHandler) Option(option int) *qtcore.QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -298,6 +308,7 @@ func (this *QImageIOHandler) CurrentImageRect() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 

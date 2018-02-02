@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAbstractItemDelegate struct {
 	*qtcore.QObject
 }
@@ -102,9 +103,10 @@ func NewQAbstractItemDelegate(parent *qtcore.QObject /*777 QObject **/) *QAbstra
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractItemDelegate()
-func DeleteQAbstractItemDelegate(*QAbstractItemDelegate) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractItemDelegateD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAbstractItemDelegate(this *QAbstractItemDelegate) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QAbstractItemDelegateD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h:76
@@ -130,6 +132,7 @@ func (this *QAbstractItemDelegate) SizeHint(option *QStyleOptionViewItem, index 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -220,6 +223,7 @@ func (this *QAbstractItemDelegate) ElidedText(fontMetrics *qtgui.QFontMetrics, w
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 func QAbstractItemDelegate_ElidedText(fontMetrics *qtgui.QFontMetrics, width int, mode int, text *qtcore.QString) *qtcore.QString /*123*/ {

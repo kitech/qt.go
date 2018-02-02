@@ -52,6 +52,66 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void keyPressEvent(class QKeyEvent *)
+func (this *QDateTimeEdit) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyPressEvent", f)
+}
+
+// void wheelEvent(class QWheelEvent *)
+func (this *QDateTimeEdit) InheritWheelEvent(f func(event *qtgui.QWheelEvent /*777 QWheelEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "wheelEvent", f)
+}
+
+// void focusInEvent(class QFocusEvent *)
+func (this *QDateTimeEdit) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusInEvent", f)
+}
+
+// bool focusNextPrevChild(_Bool)
+func (this *QDateTimeEdit) InheritFocusNextPrevChild(f func(next bool) bool) {
+	ffiqt.SetAllInheritCallback(this, "focusNextPrevChild", f)
+}
+
+// QValidator::State validate(class QString &, int &)
+func (this *QDateTimeEdit) InheritValidate(f func(input *qtcore.QString, pos int) int) {
+	ffiqt.SetAllInheritCallback(this, "validate", f)
+}
+
+// void fixup(class QString &)
+func (this *QDateTimeEdit) InheritFixup(f func(input *qtcore.QString)) {
+	ffiqt.SetAllInheritCallback(this, "fixup", f)
+}
+
+// QDateTime dateTimeFromText(const class QString &)
+func (this *QDateTimeEdit) InheritDateTimeFromText(f func(text *qtcore.QString) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "dateTimeFromText", f)
+}
+
+// QString textFromDateTime(const class QDateTime &)
+func (this *QDateTimeEdit) InheritTextFromDateTime(f func(dt *qtcore.QDateTime) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "textFromDateTime", f)
+}
+
+// QAbstractSpinBox::StepEnabled stepEnabled()
+func (this *QDateTimeEdit) InheritStepEnabled(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "stepEnabled", f)
+}
+
+// void mousePressEvent(class QMouseEvent *)
+func (this *QDateTimeEdit) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QDateTimeEdit) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void initStyleOption(class QStyleOptionSpinBox *)
+func (this *QDateTimeEdit) InheritInitStyleOption(f func(option *QStyleOptionSpinBox /*777 QStyleOptionSpinBox **/)) {
+	ffiqt.SetAllInheritCallback(this, "initStyleOption", f)
+}
+
 type QDateTimeEdit struct {
 	*QAbstractSpinBox
 }
@@ -154,9 +214,10 @@ func NewQDateTimeEdit_4(val *qtcore.QVariant, parserType int, parent *QWidget /*
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDateTimeEdit()
-func DeleteQDateTimeEdit(*QDateTimeEdit) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEditD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDateTimeEdit(this *QDateTimeEdit) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEditD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:101
@@ -168,6 +229,7 @@ func (this *QDateTimeEdit) DateTime() *qtcore.QDateTime /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQDateTime)
 	return rv2
 }
 
@@ -180,6 +242,7 @@ func (this *QDateTimeEdit) Date() *qtcore.QDate /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQDate)
 	return rv2
 }
 
@@ -192,6 +255,7 @@ func (this *QDateTimeEdit) Time() *qtcore.QTime /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQTime)
 	return rv2
 }
 
@@ -204,6 +268,7 @@ func (this *QDateTimeEdit) MinimumDateTime() *qtcore.QDateTime /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQDateTime)
 	return rv2
 }
 
@@ -235,6 +300,7 @@ func (this *QDateTimeEdit) MaximumDateTime() *qtcore.QDateTime /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQDateTime)
 	return rv2
 }
 
@@ -277,6 +343,7 @@ func (this *QDateTimeEdit) MinimumDate() *qtcore.QDate /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQDate)
 	return rv2
 }
 
@@ -308,6 +375,7 @@ func (this *QDateTimeEdit) MaximumDate() *qtcore.QDate /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQDate)
 	return rv2
 }
 
@@ -350,6 +418,7 @@ func (this *QDateTimeEdit) MinimumTime() *qtcore.QTime /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQTime)
 	return rv2
 }
 
@@ -381,6 +450,7 @@ func (this *QDateTimeEdit) MaximumTime() *qtcore.QTime /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQTime)
 	return rv2
 }
 
@@ -527,6 +597,7 @@ func (this *QDateTimeEdit) SectionText(section int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -539,6 +610,7 @@ func (this *QDateTimeEdit) DisplayFormat() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -601,6 +673,7 @@ func (this *QDateTimeEdit) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -767,6 +840,7 @@ func (this *QDateTimeEdit) DateTimeFromText(text *qtcore.QString) *qtcore.QDateT
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQDateTime)
 	return rv2
 }
 
@@ -780,6 +854,7 @@ func (this *QDateTimeEdit) TextFromDateTime(dt *qtcore.QDateTime) *qtcore.QStrin
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

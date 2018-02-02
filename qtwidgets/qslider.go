@@ -52,6 +52,31 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void paintEvent(class QPaintEvent *)
+func (this *QSlider) InheritPaintEvent(f func(ev *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void mousePressEvent(class QMouseEvent *)
+func (this *QSlider) InheritMousePressEvent(f func(ev *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void mouseReleaseEvent(class QMouseEvent *)
+func (this *QSlider) InheritMouseReleaseEvent(f func(ev *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+}
+
+// void mouseMoveEvent(class QMouseEvent *)
+func (this *QSlider) InheritMouseMoveEvent(f func(ev *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void initStyleOption(class QStyleOptionSlider *)
+func (this *QSlider) InheritInitStyleOption(f func(option *QStyleOptionSlider /*777 QStyleOptionSlider **/)) {
+	ffiqt.SetAllInheritCallback(this, "initStyleOption", f)
+}
+
 type QSlider struct {
 	*QAbstractSlider
 }
@@ -114,9 +139,10 @@ func NewQSlider_1(orientation int, parent *QWidget /*777 QWidget **/) *QSlider {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSlider()
-func DeleteQSlider(*QSlider) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSliderD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSlider(this *QSlider) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSliderD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qslider.h:76
@@ -128,6 +154,7 @@ func (this *QSlider) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -140,6 +167,7 @@ func (this *QSlider) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

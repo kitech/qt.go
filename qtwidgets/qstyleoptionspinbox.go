@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleOptionSpinBox struct {
 	*QStyleOptionComplex
 }
@@ -82,6 +83,7 @@ func NewQStyleOptionSpinBox() *QStyleOptionSpinBox {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionSpinBoxFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionSpinBox)
 	return gothis
 }
 
@@ -93,7 +95,14 @@ func NewQStyleOptionSpinBox_1(version int) *QStyleOptionSpinBox {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionSpinBoxFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionSpinBox)
 	return gothis
+}
+
+func DeleteQStyleOptionSpinBox(this *QStyleOptionSpinBox) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleOptionSpinBox__StyleOptionType = int

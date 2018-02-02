@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QScrollPrepareEvent struct {
 	*qtcore.QEvent
 }
@@ -79,6 +80,7 @@ func NewQScrollPrepareEvent(startPos *qtcore.QPointF) *QScrollPrepareEvent {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollPrepareEventC2ERK7QPointF", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQScrollPrepareEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQScrollPrepareEvent)
 	return gothis
 }
 
@@ -86,9 +88,10 @@ func NewQScrollPrepareEvent(startPos *qtcore.QPointF) *QScrollPrepareEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QScrollPrepareEvent()
-func DeleteQScrollPrepareEvent(*QScrollPrepareEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollPrepareEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQScrollPrepareEvent(this *QScrollPrepareEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollPrepareEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:993
@@ -100,6 +103,7 @@ func (this *QScrollPrepareEvent) StartPos() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -112,6 +116,7 @@ func (this *QScrollPrepareEvent) ViewportSize() *qtcore.QSizeF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
 
@@ -124,6 +129,7 @@ func (this *QScrollPrepareEvent) ContentPosRange() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -136,6 +142,7 @@ func (this *QScrollPrepareEvent) ContentPos() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 

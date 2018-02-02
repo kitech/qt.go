@@ -52,6 +52,16 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool eventFilter(class QObject *, class QEvent *)
+func (this *QCompleter) InheritEventFilter(f func(o *qtcore.QObject /*777 QObject **/, e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "eventFilter", f)
+}
+
+// bool event(class QEvent *)
+func (this *QCompleter) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QCompleter struct {
 	*qtcore.QObject
 }
@@ -128,9 +138,10 @@ func NewQCompleter_2(completions *qtcore.QStringList, parent *qtcore.QObject /*7
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QCompleter()
-func DeleteQCompleter(*QCompleter) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleterD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQCompleter(this *QCompleter) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qcompleter.h:92
@@ -392,6 +403,7 @@ func (this *QCompleter) CurrentIndex() *qtcore.QModelIndex /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -404,6 +416,7 @@ func (this *QCompleter) CurrentCompletion() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -428,6 +441,7 @@ func (this *QCompleter) CompletionPrefix() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -470,6 +484,7 @@ func (this *QCompleter) PathFromIndex(index *qtcore.QModelIndex) *qtcore.QString
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

@@ -48,6 +48,26 @@ func init() {
 //  ext block end
 
 //  body block begin
+// int metric(enum QPaintDevice::PaintDeviceMetric)
+func (this *QPaintDevice) InheritMetric(f func(metric int) int) {
+	ffiqt.SetAllInheritCallback(this, "metric", f)
+}
+
+// void initPainter(class QPainter *)
+func (this *QPaintDevice) InheritInitPainter(f func(painter *QPainter /*777 QPainter **/)) {
+	ffiqt.SetAllInheritCallback(this, "initPainter", f)
+}
+
+// QPaintDevice * redirected(class QPoint *)
+func (this *QPaintDevice) InheritRedirected(f func(offset *qtcore.QPoint /*777 QPoint **/) unsafe.Pointer /*666*/) {
+	ffiqt.SetAllInheritCallback(this, "redirected", f)
+}
+
+// QPainter * sharedPainter()
+func (this *QPaintDevice) InheritSharedPainter(f func() unsafe.Pointer /*666*/) {
+	ffiqt.SetAllInheritCallback(this, "sharedPainter", f)
+}
+
 type QPaintDevice struct {
 	*qtrt.CObject
 }
@@ -60,7 +80,11 @@ func (this *QPaintDevice) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QPaintDevice) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQPaintDeviceFromPointer(cthis unsafe.Pointer) *QPaintDevice {
 	return &QPaintDevice{&qtrt.CObject{cthis}}
@@ -73,9 +97,10 @@ func (*QPaintDevice) NewFromPointer(cthis unsafe.Pointer) *QPaintDevice {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPaintDevice()
-func DeleteQPaintDevice(*QPaintDevice) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintDeviceD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPaintDevice(this *QPaintDevice) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintDeviceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qpaintdevice.h:74
@@ -268,6 +293,7 @@ func NewQPaintDevice() *QPaintDevice {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintDeviceC1Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPaintDevice)
 	return gothis
 }
 
@@ -280,6 +306,7 @@ func NewQPaintDevice_1(arg0 *QPaintDevice) *QPaintDevice {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintDeviceC1ERKS_", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPaintDevice)
 	return gothis
 }
 

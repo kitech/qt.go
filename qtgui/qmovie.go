@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QMovie struct {
 	*qtcore.QObject
 }
@@ -126,9 +127,10 @@ func NewQMovie_2(fileName *qtcore.QString, format *qtcore.QByteArray, parent *qt
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMovie()
-func DeleteQMovie(*QMovie) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMovieD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQMovie(this *QMovie) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMovieD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qmovie.h:89
@@ -172,6 +174,7 @@ func (this *QMovie) FileName() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -194,6 +197,7 @@ func (this *QMovie) Format() *qtcore.QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
 
@@ -216,6 +220,7 @@ func (this *QMovie) BackgroundColor() *QColor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQColor)
 	return rv2
 }
 
@@ -239,6 +244,7 @@ func (this *QMovie) FrameRect() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -251,6 +257,7 @@ func (this *QMovie) CurrentImage() *QImage /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQImage)
 	return rv2
 }
 
@@ -263,6 +270,7 @@ func (this *QMovie) CurrentPixmap() *QPixmap /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPixmap)
 	return rv2
 }
 
@@ -297,6 +305,7 @@ func (this *QMovie) LastErrorString() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -375,6 +384,7 @@ func (this *QMovie) ScaledSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

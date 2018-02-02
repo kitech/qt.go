@@ -1,0 +1,30 @@
+package main
+
+/*
+ */
+import "C"
+import (
+	"log"
+
+	ffiqt "qt.go/cffiqt"
+	"qt.go/qtcore"
+)
+
+// protected method override demo
+func main() {
+	ffiqt.SetDebugDynSlot(true)
+	argv := []string{"./guiapp", "-v", "-x"}
+	app := qtcore.NewQCoreApplication(len(argv), argv, 0)
+	log.Println(app)
+
+	tmer := qtcore.NewQTimer(nil)
+	log.Println(tmer)
+	tmer.SetInterval(3000)
+	tmer.Start_1()
+
+	tmer.InheritTimerEvent(func(arg0 *qtcore.QTimerEvent) {
+		log.Println("protected method called:", arg0)
+	})
+
+	app.Exec()
+}

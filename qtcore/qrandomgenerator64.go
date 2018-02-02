@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QRandomGenerator64 struct {
 	*QRandomGenerator
 }
@@ -85,6 +86,7 @@ func NewQRandomGenerator64(seedValue uint) *QRandomGenerator64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRandomGenerator64C2Ej", ffiqt.FFI_TYPE_POINTER, seedValue)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRandomGenerator64)
 	return gothis
 }
 
@@ -96,6 +98,7 @@ func NewQRandomGenerator64_1(seedBuffer unsafe.Pointer /*666*/, len int64) *QRan
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjx", ffiqt.FFI_TYPE_POINTER, &seedBuffer, len)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRandomGenerator64)
 	return gothis
 }
 
@@ -107,6 +110,7 @@ func NewQRandomGenerator64_2(begin unsafe.Pointer /*666*/, end unsafe.Pointer /*
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjS1_", ffiqt.FFI_TYPE_POINTER, &begin, &end)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRandomGenerator64)
 	return gothis
 }
 
@@ -119,6 +123,7 @@ func NewQRandomGenerator64_3(other *QRandomGenerator) *QRandomGenerator64 {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRandomGenerator64C2ERK16QRandomGenerator", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRandomGenerator64)
 	return gothis
 }
 
@@ -206,12 +211,19 @@ func (this *QRandomGenerator64) SecurelySeeded() *QRandomGenerator64 /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRandomGenerator64)
 	return rv2
 }
 func QRandomGenerator64_SecurelySeeded() *QRandomGenerator64 /*123*/ {
 	var nilthis *QRandomGenerator64
 	rv := nilthis.SecurelySeeded()
 	return rv
+}
+
+func DeleteQRandomGenerator64(this *QRandomGenerator64) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRandomGenerator64D2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

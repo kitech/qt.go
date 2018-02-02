@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAccessibleBridge struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QAccessibleBridge) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QAccessibleBridge) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQAccessibleBridgeFromPointer(cthis unsafe.Pointer) *QAccessibleBridge {
 	return &QAccessibleBridge{&qtrt.CObject{cthis}}
@@ -73,9 +78,10 @@ func (*QAccessibleBridge) NewFromPointer(cthis unsafe.Pointer) *QAccessibleBridg
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleBridge()
-func DeleteQAccessibleBridge(*QAccessibleBridge) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleBridgeD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAccessibleBridge(this *QAccessibleBridge) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleBridgeD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qaccessiblebridge.h:59

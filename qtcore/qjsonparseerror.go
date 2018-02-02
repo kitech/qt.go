@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QJsonParseError struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QJsonParseError) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QJsonParseError) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQJsonParseErrorFromPointer(cthis unsafe.Pointer) *QJsonParseError {
 	return &QJsonParseError{&qtrt.CObject{cthis}}
@@ -74,7 +79,14 @@ func (this *QJsonParseError) ErrorString() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
+}
+
+func DeleteQJsonParseError(this *QJsonParseError) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QJsonParseErrorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QJsonParseError__ParseError = int

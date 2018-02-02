@@ -48,6 +48,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// int metric(enum QPaintDevice::PaintDeviceMetric)
+func (this *QPicture) InheritMetric(f func(m int) int) {
+	ffiqt.SetAllInheritCallback(this, "metric", f)
+}
+
 type QPicture struct {
 	*QPaintDevice
 }
@@ -78,6 +83,7 @@ func NewQPicture(formatVersion int) *QPicture {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPictureC2Ei", ffiqt.FFI_TYPE_POINTER, formatVersion)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPictureFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPicture)
 	return gothis
 }
 
@@ -85,9 +91,10 @@ func NewQPicture(formatVersion int) *QPicture {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPicture()
-func DeleteQPicture(*QPicture) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPictureD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPicture(this *QPicture) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPictureD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qpicture.h:63
@@ -222,6 +229,7 @@ func (this *QPicture) BoundingRect() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 

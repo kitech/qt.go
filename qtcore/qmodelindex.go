@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QModelIndex struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QModelIndex) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QModelIndex) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQModelIndexFromPointer(cthis unsafe.Pointer) *QModelIndex {
 	return &QModelIndex{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQModelIndex() *QModelIndex {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QModelIndexC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQModelIndex)
 	return gothis
 }
 
@@ -129,6 +135,7 @@ func (this *QModelIndex) Parent() *QModelIndex /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -141,6 +148,7 @@ func (this *QModelIndex) Sibling(row int, column int) *QModelIndex /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -153,6 +161,7 @@ func (this *QModelIndex) Child(row int, column int) *QModelIndex /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -165,6 +174,7 @@ func (this *QModelIndex) Data(role int) *QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -200,6 +210,12 @@ func (this *QModelIndex) IsValid() bool {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
+}
+
+func DeleteQModelIndex(this *QModelIndex) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QModelIndexD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

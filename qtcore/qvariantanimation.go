@@ -44,6 +44,31 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QVariantAnimation) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void updateCurrentTime(int)
+func (this *QVariantAnimation) InheritUpdateCurrentTime(f func(arg0 int)) {
+	ffiqt.SetAllInheritCallback(this, "updateCurrentTime", f)
+}
+
+// void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
+func (this *QVariantAnimation) InheritUpdateState(f func(newState int, oldState int)) {
+	ffiqt.SetAllInheritCallback(this, "updateState", f)
+}
+
+// void updateCurrentValue(const class QVariant &)
+func (this *QVariantAnimation) InheritUpdateCurrentValue(f func(value *QVariant)) {
+	ffiqt.SetAllInheritCallback(this, "updateCurrentValue", f)
+}
+
+// QVariant interpolated(const class QVariant &, const class QVariant &, qreal)
+func (this *QVariantAnimation) InheritInterpolated(f func(from *QVariant, to *QVariant, progress float64) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "interpolated", f)
+}
+
 type QVariantAnimation struct {
 	*QAbstractAnimation
 }
@@ -94,9 +119,10 @@ func NewQVariantAnimation(parent *QObject /*777 QObject **/) *QVariantAnimation 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QVariantAnimation()
-func DeleteQVariantAnimation(*QVariantAnimation) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimationD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQVariantAnimation(this *QVariantAnimation) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qvariantanimation.h:71
@@ -108,6 +134,7 @@ func (this *QVariantAnimation) StartValue() *QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -130,6 +157,7 @@ func (this *QVariantAnimation) EndValue() *QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -152,6 +180,7 @@ func (this *QVariantAnimation) KeyValueAt(step float64) *QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -174,6 +203,7 @@ func (this *QVariantAnimation) CurrentValue() *QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -206,6 +236,7 @@ func (this *QVariantAnimation) EasingCurve() *QEasingCurve /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQEasingCurveFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQEasingCurve)
 	return rv2
 }
 
@@ -280,6 +311,7 @@ func (this *QVariantAnimation) Interpolated(from *QVariant, to *QVariant, progre
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 

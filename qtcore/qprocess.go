@@ -44,6 +44,26 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void setProcessState(enum QProcess::ProcessState)
+func (this *QProcess) InheritSetProcessState(f func(state int)) {
+	ffiqt.SetAllInheritCallback(this, "setProcessState", f)
+}
+
+// void setupChildProcess()
+func (this *QProcess) InheritSetupChildProcess(f func()) {
+	ffiqt.SetAllInheritCallback(this, "setupChildProcess", f)
+}
+
+// qint64 readData(char *, qint64)
+func (this *QProcess) InheritReadData(f func(data string, maxlen int64) int64) {
+	ffiqt.SetAllInheritCallback(this, "readData", f)
+}
+
+// qint64 writeData(const char *, qint64)
+func (this *QProcess) InheritWriteData(f func(data string, len int64) int64) {
+	ffiqt.SetAllInheritCallback(this, "writeData", f)
+}
+
 type QProcess struct {
 	*QIODevice
 }
@@ -94,9 +114,10 @@ func NewQProcess(parent *QObject /*777 QObject **/) *QProcess {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QProcess()
-func DeleteQProcess(*QProcess) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcessD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQProcess(this *QProcess) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QProcessD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qprocess.h:166
@@ -173,6 +194,7 @@ func (this *QProcess) Program() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -323,6 +345,7 @@ func (this *QProcess) WorkingDirectory() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -365,6 +388,7 @@ func (this *QProcess) ProcessEnvironment() *QProcessEnvironment /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQProcessEnvironmentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQProcessEnvironment)
 	return rv2
 }
 
@@ -474,6 +498,7 @@ func (this *QProcess) ReadAllStandardOutput() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -486,6 +511,7 @@ func (this *QProcess) ReadAllStandardError() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -619,6 +645,7 @@ func (this *QProcess) NullDevice() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QProcess_NullDevice() *QString /*123*/ {

@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QPainterPathStroker struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QPainterPathStroker) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QPainterPathStroker) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQPainterPathStrokerFromPointer(cthis unsafe.Pointer) *QPainterPathStroker {
 	return &QPainterPathStroker{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQPainterPathStroker() *QPainterPathStroker {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStrokerC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPainterPathStrokerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPainterPathStroker)
 	return gothis
 }
 
@@ -89,6 +95,7 @@ func NewQPainterPathStroker_1(pen *QPen) *QPainterPathStroker {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStrokerC2ERK4QPen", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPainterPathStrokerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPainterPathStroker)
 	return gothis
 }
 
@@ -96,9 +103,10 @@ func NewQPainterPathStroker_1(pen *QPen) *QPainterPathStroker {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QPainterPathStroker()
-func DeleteQPainterPathStroker(*QPainterPathStroker) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStrokerD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPainterPathStroker(this *QPainterPathStroker) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QPainterPathStrokerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qpainterpath.h:250
@@ -240,6 +248,7 @@ func (this *QPainterPathStroker) CreateStroke(path *QPainterPath) *QPainterPath 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPainterPath)
 	return rv2
 }
 

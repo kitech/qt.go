@@ -48,6 +48,16 @@ func init() {
 //  ext block end
 
 //  body block begin
+// QTextObject * createObject(const class QTextFormat &)
+func (this *QTextDocument) InheritCreateObject(f func(f *QTextFormat) unsafe.Pointer /*666*/) {
+	ffiqt.SetAllInheritCallback(this, "createObject", f)
+}
+
+// QVariant loadResource(int, const class QUrl &)
+func (this *QTextDocument) InheritLoadResource(f func(type_ int, name *qtcore.QUrl) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "loadResource", f)
+}
+
 type QTextDocument struct {
 	*qtcore.QObject
 }
@@ -111,9 +121,10 @@ func NewQTextDocument_1(text *qtcore.QString, parent *qtcore.QObject /*777 QObje
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTextDocument()
-func DeleteQTextDocument(*QTextDocument) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocumentD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextDocument(this *QTextDocument) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocumentD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:123
@@ -265,6 +276,7 @@ func (this *QTextDocument) MetaInformation(info int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -278,6 +290,7 @@ func (this *QTextDocument) ToHtml(encoding *qtcore.QByteArray) *qtcore.QString /
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -300,6 +313,7 @@ func (this *QTextDocument) ToRawText() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -312,6 +326,7 @@ func (this *QTextDocument) ToPlainText() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -334,6 +349,7 @@ func (this *QTextDocument) CharacterAt(pos int) *qtcore.QChar /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQChar)
 	return rv2
 }
 
@@ -347,6 +363,7 @@ func (this *QTextDocument) Find(subString *qtcore.QString, from int, options int
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCursor)
 	return rv2
 }
 
@@ -361,6 +378,7 @@ func (this *QTextDocument) Find_1(subString *qtcore.QString, cursor *QTextCursor
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCursor)
 	return rv2
 }
 
@@ -374,6 +392,7 @@ func (this *QTextDocument) Find_2(expr *qtcore.QRegExp, from int, options int) *
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCursor)
 	return rv2
 }
 
@@ -388,6 +407,7 @@ func (this *QTextDocument) Find_3(expr *qtcore.QRegExp, cursor *QTextCursor, opt
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCursor)
 	return rv2
 }
 
@@ -401,6 +421,7 @@ func (this *QTextDocument) Find_4(expr *qtcore.QRegularExpression, from int, opt
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCursor)
 	return rv2
 }
 
@@ -415,6 +436,7 @@ func (this *QTextDocument) Find_5(expr *qtcore.QRegularExpression, cursor *QText
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCursor)
 	return rv2
 }
 
@@ -476,6 +498,7 @@ func (this *QTextDocument) FindBlock(pos int) *QTextBlock /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextBlock)
 	return rv2
 }
 
@@ -488,6 +511,7 @@ func (this *QTextDocument) FindBlockByNumber(blockNumber int) *QTextBlock /*123*
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextBlock)
 	return rv2
 }
 
@@ -500,6 +524,7 @@ func (this *QTextDocument) FindBlockByLineNumber(blockNumber int) *QTextBlock /*
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextBlock)
 	return rv2
 }
 
@@ -512,6 +537,7 @@ func (this *QTextDocument) Begin() *QTextBlock /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextBlock)
 	return rv2
 }
 
@@ -524,6 +550,7 @@ func (this *QTextDocument) End() *QTextBlock /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextBlock)
 	return rv2
 }
 
@@ -536,6 +563,7 @@ func (this *QTextDocument) FirstBlock() *QTextBlock /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextBlock)
 	return rv2
 }
 
@@ -548,6 +576,7 @@ func (this *QTextDocument) LastBlock() *QTextBlock /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextBlock)
 	return rv2
 }
 
@@ -570,6 +599,7 @@ func (this *QTextDocument) PageSize() *qtcore.QSizeF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
 
@@ -592,6 +622,7 @@ func (this *QTextDocument) DefaultFont() *QFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFont)
 	return rv2
 }
 
@@ -637,6 +668,7 @@ func (this *QTextDocument) Resource(type_ int, name *qtcore.QUrl) *qtcore.QVaria
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -780,6 +812,7 @@ func (this *QTextDocument) Size() *qtcore.QSizeF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
 
@@ -835,6 +868,7 @@ func (this *QTextDocument) DefaultStyleSheet() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -914,6 +948,7 @@ func (this *QTextDocument) DefaultTextOption() *QTextOption /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextOptionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextOption)
 	return rv2
 }
 
@@ -936,6 +971,7 @@ func (this *QTextDocument) BaseUrl() *qtcore.QUrl /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQUrl)
 	return rv2
 }
 
@@ -1103,6 +1139,7 @@ func (this *QTextDocument) LoadResource(type_ int, name *qtcore.QUrl) *qtcore.QV
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 

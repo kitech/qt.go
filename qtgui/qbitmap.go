@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QBitmap struct {
 	*QPixmap
 }
@@ -78,6 +79,7 @@ func NewQBitmap() *QBitmap {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmapC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQBitmap)
 	return gothis
 }
 
@@ -90,6 +92,7 @@ func NewQBitmap_1(arg0 *QPixmap) *QBitmap {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmapC2ERK7QPixmap", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQBitmap)
 	return gothis
 }
 
@@ -101,6 +104,7 @@ func NewQBitmap_2(w int, h int) *QBitmap {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmapC2Eii", ffiqt.FFI_TYPE_POINTER, w, h)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQBitmap)
 	return gothis
 }
 
@@ -113,6 +117,7 @@ func NewQBitmap_3(arg0 *qtcore.QSize) *QBitmap {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmapC2ERK5QSize", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQBitmap)
 	return gothis
 }
 
@@ -127,6 +132,7 @@ func NewQBitmap_4(fileName *qtcore.QString, format string) *QBitmap {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmapC2ERK7QStringPKc", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQBitmap)
 	return gothis
 }
 
@@ -134,9 +140,10 @@ func NewQBitmap_4(fileName *qtcore.QString, format string) *QBitmap {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QBitmap()
-func DeleteQBitmap(*QBitmap) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmapD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQBitmap(this *QBitmap) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmapD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qbitmap.h:69
@@ -168,6 +175,7 @@ func (this *QBitmap) FromImage(image *QImage, flags int) *QBitmap /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBitmap)
 	return rv2
 }
 func QBitmap_FromImage(image *QImage, flags int) *QBitmap /*123*/ {
@@ -186,6 +194,7 @@ func (this *QBitmap) FromData(size *qtcore.QSize, bits unsafe.Pointer /*666*/, m
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBitmap)
 	return rv2
 }
 func QBitmap_FromData(size *qtcore.QSize, bits unsafe.Pointer /*666*/, monoFormat int) *QBitmap /*123*/ {
@@ -204,6 +213,7 @@ func (this *QBitmap) Transformed(arg0 *QMatrix) *QBitmap /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBitmap)
 	return rv2
 }
 
@@ -217,6 +227,7 @@ func (this *QBitmap) Transformed_1(matrix *QTransform) *QBitmap /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBitmap)
 	return rv2
 }
 

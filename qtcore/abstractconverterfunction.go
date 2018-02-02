@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type AbstractConverterFunction struct {
 	*qtrt.CObject
 }
@@ -56,13 +57,23 @@ func (this *AbstractConverterFunction) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *AbstractConverterFunction) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewAbstractConverterFunctionFromPointer(cthis unsafe.Pointer) *AbstractConverterFunction {
 	return &AbstractConverterFunction{&qtrt.CObject{cthis}}
 }
 func (*AbstractConverterFunction) NewFromPointer(cthis unsafe.Pointer) *AbstractConverterFunction {
 	return NewAbstractConverterFunctionFromPointer(cthis)
+}
+
+func DeleteAbstractConverterFunction(this *AbstractConverterFunction) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN25AbstractConverterFunctionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

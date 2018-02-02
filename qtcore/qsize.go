@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSize struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QSize) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSize) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSizeFromPointer(cthis unsafe.Pointer) *QSize {
 	return &QSize{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQSize() *QSize {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QSizeC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSizeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSize)
 	return gothis
 }
 
@@ -84,6 +90,7 @@ func NewQSize_1(w int, h int) *QSize {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QSizeC2Eii", ffiqt.FFI_TYPE_POINTER, w, h)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSizeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSize)
 	return gothis
 }
 
@@ -178,6 +185,7 @@ func (this *QSize) Transposed() *QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
 	return rv2
 }
 
@@ -209,6 +217,7 @@ func (this *QSize) Scaled(w int, h int, mode int) *QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
 	return rv2
 }
 
@@ -222,6 +231,7 @@ func (this *QSize) Scaled_1(s *QSize, mode int) *QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
 	return rv2
 }
 
@@ -235,6 +245,7 @@ func (this *QSize) ExpandedTo(arg0 *QSize) *QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
 	return rv2
 }
 
@@ -248,6 +259,7 @@ func (this *QSize) BoundedTo(arg0 *QSize) *QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
 	return rv2
 }
 
@@ -271,6 +283,12 @@ func (this *QSize) Rheight() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cpretval2go("int", rv).(int) // 3331
+}
+
+func DeleteQSize(this *QSize) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QSizeD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

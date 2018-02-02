@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QHashCombine struct {
 	*qtrt.CObject
 }
@@ -56,13 +57,23 @@ func (this *QHashCombine) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QHashCombine) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQHashCombineFromPointer(cthis unsafe.Pointer) *QHashCombine {
 	return &QHashCombine{&qtrt.CObject{cthis}}
 }
 func (*QHashCombine) NewFromPointer(cthis unsafe.Pointer) *QHashCombine {
 	return NewQHashCombineFromPointer(cthis)
+}
+
+func DeleteQHashCombine(this *QHashCombine) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHashCombineD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

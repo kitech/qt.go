@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QGraphicsGridLayout struct {
 	*QGraphicsLayout
 }
@@ -83,6 +84,7 @@ func NewQGraphicsGridLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutIte
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsGridLayoutC2EP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsGridLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsGridLayout)
 	return gothis
 }
 
@@ -90,9 +92,10 @@ func NewQGraphicsGridLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutIte
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsGridLayout()
-func DeleteQGraphicsGridLayout(*QGraphicsGridLayout) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsGridLayoutD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsGridLayout(this *QGraphicsGridLayout) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsGridLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:63
@@ -501,6 +504,7 @@ func (this *QGraphicsGridLayout) SizeHint(which int, constraint *qtcore.QSizeF) 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
 

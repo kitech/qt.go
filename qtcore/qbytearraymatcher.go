@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QByteArrayMatcher struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QByteArrayMatcher) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QByteArrayMatcher) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQByteArrayMatcherFromPointer(cthis unsafe.Pointer) *QByteArrayMatcher {
 	return &QByteArrayMatcher{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQByteArrayMatcher() *QByteArrayMatcher {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQByteArrayMatcherFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQByteArrayMatcher)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func NewQByteArrayMatcher_1(pattern *QByteArray) *QByteArrayMatcher {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherC2ERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQByteArrayMatcherFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQByteArrayMatcher)
 	return gothis
 }
 
@@ -98,6 +105,7 @@ func NewQByteArrayMatcher_2(pattern string, length int) *QByteArrayMatcher {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherC2EPKci", ffiqt.FFI_TYPE_POINTER, convArg0, length)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQByteArrayMatcherFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQByteArrayMatcher)
 	return gothis
 }
 
@@ -105,9 +113,10 @@ func NewQByteArrayMatcher_2(pattern string, length int) *QByteArrayMatcher {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QByteArrayMatcher()
-func DeleteQByteArrayMatcher(*QByteArrayMatcher) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQByteArrayMatcher(this *QByteArrayMatcher) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qbytearraymatcher.h:61
@@ -154,6 +163,7 @@ func (this *QByteArrayMatcher) Pattern() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 

@@ -52,6 +52,66 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QToolButton) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void mousePressEvent(class QMouseEvent *)
+func (this *QToolButton) InheritMousePressEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void mouseReleaseEvent(class QMouseEvent *)
+func (this *QToolButton) InheritMouseReleaseEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QToolButton) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void actionEvent(class QActionEvent *)
+func (this *QToolButton) InheritActionEvent(f func(arg0 *qtgui.QActionEvent /*777 QActionEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "actionEvent", f)
+}
+
+// void enterEvent(class QEvent *)
+func (this *QToolButton) InheritEnterEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "enterEvent", f)
+}
+
+// void leaveEvent(class QEvent *)
+func (this *QToolButton) InheritLeaveEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "leaveEvent", f)
+}
+
+// void timerEvent(class QTimerEvent *)
+func (this *QToolButton) InheritTimerEvent(f func(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "timerEvent", f)
+}
+
+// void changeEvent(class QEvent *)
+func (this *QToolButton) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
+// bool hitButton(const class QPoint &)
+func (this *QToolButton) InheritHitButton(f func(pos *qtcore.QPoint) bool) {
+	ffiqt.SetAllInheritCallback(this, "hitButton", f)
+}
+
+// void nextCheckState()
+func (this *QToolButton) InheritNextCheckState(f func()) {
+	ffiqt.SetAllInheritCallback(this, "nextCheckState", f)
+}
+
+// void initStyleOption(class QStyleOptionToolButton *)
+func (this *QToolButton) InheritInitStyleOption(f func(option *QStyleOptionToolButton /*777 QStyleOptionToolButton **/)) {
+	ffiqt.SetAllInheritCallback(this, "initStyleOption", f)
+}
+
 type QToolButton struct {
 	*QAbstractButton
 }
@@ -102,9 +162,10 @@ func NewQToolButton(parent *QWidget /*777 QWidget **/) *QToolButton {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QToolButton()
-func DeleteQToolButton(*QToolButton) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButtonD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQToolButton(this *QToolButton) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButtonD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qtoolbutton.h:77
@@ -116,6 +177,7 @@ func (this *QToolButton) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -128,6 +190,7 @@ func (this *QToolButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

@@ -52,6 +52,146 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QTextEdit) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void timerEvent(class QTimerEvent *)
+func (this *QTextEdit) InheritTimerEvent(f func(e *qtcore.QTimerEvent /*777 QTimerEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "timerEvent", f)
+}
+
+// void keyPressEvent(class QKeyEvent *)
+func (this *QTextEdit) InheritKeyPressEvent(f func(e *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyPressEvent", f)
+}
+
+// void keyReleaseEvent(class QKeyEvent *)
+func (this *QTextEdit) InheritKeyReleaseEvent(f func(e *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyReleaseEvent", f)
+}
+
+// void resizeEvent(class QResizeEvent *)
+func (this *QTextEdit) InheritResizeEvent(f func(e *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QTextEdit) InheritPaintEvent(f func(e *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void mousePressEvent(class QMouseEvent *)
+func (this *QTextEdit) InheritMousePressEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void mouseMoveEvent(class QMouseEvent *)
+func (this *QTextEdit) InheritMouseMoveEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void mouseReleaseEvent(class QMouseEvent *)
+func (this *QTextEdit) InheritMouseReleaseEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+}
+
+// void mouseDoubleClickEvent(class QMouseEvent *)
+func (this *QTextEdit) InheritMouseDoubleClickEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
+}
+
+// bool focusNextPrevChild(_Bool)
+func (this *QTextEdit) InheritFocusNextPrevChild(f func(next bool) bool) {
+	ffiqt.SetAllInheritCallback(this, "focusNextPrevChild", f)
+}
+
+// void contextMenuEvent(class QContextMenuEvent *)
+func (this *QTextEdit) InheritContextMenuEvent(f func(e *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "contextMenuEvent", f)
+}
+
+// void dragEnterEvent(class QDragEnterEvent *)
+func (this *QTextEdit) InheritDragEnterEvent(f func(e *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dragEnterEvent", f)
+}
+
+// void dragLeaveEvent(class QDragLeaveEvent *)
+func (this *QTextEdit) InheritDragLeaveEvent(f func(e *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dragLeaveEvent", f)
+}
+
+// void dragMoveEvent(class QDragMoveEvent *)
+func (this *QTextEdit) InheritDragMoveEvent(f func(e *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dragMoveEvent", f)
+}
+
+// void dropEvent(class QDropEvent *)
+func (this *QTextEdit) InheritDropEvent(f func(e *qtgui.QDropEvent /*777 QDropEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dropEvent", f)
+}
+
+// void focusInEvent(class QFocusEvent *)
+func (this *QTextEdit) InheritFocusInEvent(f func(e *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusInEvent", f)
+}
+
+// void focusOutEvent(class QFocusEvent *)
+func (this *QTextEdit) InheritFocusOutEvent(f func(e *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusOutEvent", f)
+}
+
+// void showEvent(class QShowEvent *)
+func (this *QTextEdit) InheritShowEvent(f func(arg0 *qtgui.QShowEvent /*777 QShowEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "showEvent", f)
+}
+
+// void changeEvent(class QEvent *)
+func (this *QTextEdit) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
+// void wheelEvent(class QWheelEvent *)
+func (this *QTextEdit) InheritWheelEvent(f func(e *qtgui.QWheelEvent /*777 QWheelEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "wheelEvent", f)
+}
+
+// QMimeData * createMimeDataFromSelection()
+func (this *QTextEdit) InheritCreateMimeDataFromSelection(f func() unsafe.Pointer /*666*/) {
+	ffiqt.SetAllInheritCallback(this, "createMimeDataFromSelection", f)
+}
+
+// bool canInsertFromMimeData(const class QMimeData *)
+func (this *QTextEdit) InheritCanInsertFromMimeData(f func(source *qtcore.QMimeData /*777 const QMimeData **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "canInsertFromMimeData", f)
+}
+
+// void insertFromMimeData(const class QMimeData *)
+func (this *QTextEdit) InheritInsertFromMimeData(f func(source *qtcore.QMimeData /*777 const QMimeData **/)) {
+	ffiqt.SetAllInheritCallback(this, "insertFromMimeData", f)
+}
+
+// void inputMethodEvent(class QInputMethodEvent *)
+func (this *QTextEdit) InheritInputMethodEvent(f func(arg0 *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "inputMethodEvent", f)
+}
+
+// void scrollContentsBy(int, int)
+func (this *QTextEdit) InheritScrollContentsBy(f func(dx int, dy int)) {
+	ffiqt.SetAllInheritCallback(this, "scrollContentsBy", f)
+}
+
+// void doSetTextCursor(const class QTextCursor &)
+func (this *QTextEdit) InheritDoSetTextCursor(f func(cursor *qtgui.QTextCursor)) {
+	ffiqt.SetAllInheritCallback(this, "doSetTextCursor", f)
+}
+
+// void zoomInF(float)
+func (this *QTextEdit) InheritZoomInF(f func(range_ float32)) {
+	ffiqt.SetAllInheritCallback(this, "zoomInF", f)
+}
+
 type QTextEdit struct {
 	*QAbstractScrollArea
 }
@@ -115,9 +255,10 @@ func NewQTextEdit_1(text *qtcore.QString, parent *QWidget /*777 QWidget **/) *QT
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTextEdit()
-func DeleteQTextEdit(*QTextEdit) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEditD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextEdit(this *QTextEdit) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEditD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qtextedit.h:109
@@ -161,6 +302,7 @@ func (this *QTextEdit) PlaceholderText() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -183,6 +325,7 @@ func (this *QTextEdit) TextCursor() *qtgui.QTextCursor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQTextCursor)
 	return rv2
 }
 
@@ -246,6 +389,7 @@ func (this *QTextEdit) FontFamily() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -291,6 +435,7 @@ func (this *QTextEdit) TextColor() *qtgui.QColor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
 }
 
@@ -303,6 +448,7 @@ func (this *QTextEdit) TextBackgroundColor() *qtgui.QColor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
 }
 
@@ -315,6 +461,7 @@ func (this *QTextEdit) CurrentFont() *qtgui.QFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
 }
 
@@ -358,6 +505,7 @@ func (this *QTextEdit) CurrentCharFormat() *qtgui.QTextCharFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQTextCharFormat)
 	return rv2
 }
 
@@ -411,6 +559,7 @@ func (this *QTextEdit) DocumentTitle() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -527,6 +676,7 @@ func (this *QTextEdit) ToPlainText() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -539,6 +689,7 @@ func (this *QTextEdit) ToHtml() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -561,6 +712,7 @@ func (this *QTextEdit) LoadResource(type_ int, name *qtcore.QUrl) *qtcore.QVaria
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -599,6 +751,7 @@ func (this *QTextEdit) CursorForPosition(pos *qtcore.QPoint) *qtgui.QTextCursor 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQTextCursor)
 	return rv2
 }
 
@@ -612,6 +765,7 @@ func (this *QTextEdit) CursorRect(cursor *qtgui.QTextCursor) *qtcore.QRect /*123
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -624,6 +778,7 @@ func (this *QTextEdit) CursorRect_1() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -637,6 +792,7 @@ func (this *QTextEdit) AnchorAt(pos *qtcore.QPoint) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -779,6 +935,7 @@ func (this *QTextEdit) InputMethodQuery(property int) *qtcore.QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -792,6 +949,7 @@ func (this *QTextEdit) InputMethodQuery_1(query int, argument *qtcore.QVariant /
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 

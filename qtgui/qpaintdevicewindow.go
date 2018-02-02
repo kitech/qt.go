@@ -48,6 +48,26 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void paintEvent(class QPaintEvent *)
+func (this *QPaintDeviceWindow) InheritPaintEvent(f func(event *QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// int metric(enum QPaintDevice::PaintDeviceMetric)
+func (this *QPaintDeviceWindow) InheritMetric(f func(metric int) int) {
+	ffiqt.SetAllInheritCallback(this, "metric", f)
+}
+
+// void exposeEvent(class QExposeEvent *)
+func (this *QPaintDeviceWindow) InheritExposeEvent(f func(arg0 *QExposeEvent /*777 QExposeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "exposeEvent", f)
+}
+
+// bool event(class QEvent *)
+func (this *QPaintDeviceWindow) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QPaintDeviceWindow struct {
 	*QWindow
 	*QPaintDevice
@@ -155,6 +175,12 @@ func (this *QPaintDeviceWindow) Event(event *qtcore.QEvent /*777 QEvent **/) boo
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
+}
+
+func DeleteQPaintDeviceWindow(this *QPaintDeviceWindow) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPaintDeviceWindowD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

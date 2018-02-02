@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QBrushData struct {
 	*qtrt.CObject
 }
@@ -60,13 +61,23 @@ func (this *QBrushData) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QBrushData) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQBrushDataFromPointer(cthis unsafe.Pointer) *QBrushData {
 	return &QBrushData{&qtrt.CObject{cthis}}
 }
 func (*QBrushData) NewFromPointer(cthis unsafe.Pointer) *QBrushData {
 	return NewQBrushDataFromPointer(cthis)
+}
+
+func DeleteQBrushData(this *QBrushData) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QBrushDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

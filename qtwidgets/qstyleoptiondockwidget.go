@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleOptionDockWidget struct {
 	*QStyleOption
 }
@@ -82,6 +83,7 @@ func NewQStyleOptionDockWidget() *QStyleOptionDockWidget {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionDockWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionDockWidget)
 	return gothis
 }
 
@@ -93,7 +95,14 @@ func NewQStyleOptionDockWidget_1(version int) *QStyleOptionDockWidget {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionDockWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionDockWidget)
 	return gothis
+}
+
+func DeleteQStyleOptionDockWidget(this *QStyleOptionDockWidget) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleOptionDockWidget__StyleOptionType = int

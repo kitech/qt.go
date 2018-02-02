@@ -52,6 +52,51 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void paintEvent(class QPaintEvent *)
+func (this *QSizeGrip) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void mousePressEvent(class QMouseEvent *)
+func (this *QSizeGrip) InheritMousePressEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void mouseMoveEvent(class QMouseEvent *)
+func (this *QSizeGrip) InheritMouseMoveEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void mouseReleaseEvent(class QMouseEvent *)
+func (this *QSizeGrip) InheritMouseReleaseEvent(f func(mouseEvent *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+}
+
+// void moveEvent(class QMoveEvent *)
+func (this *QSizeGrip) InheritMoveEvent(f func(moveEvent *qtgui.QMoveEvent /*777 QMoveEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "moveEvent", f)
+}
+
+// void showEvent(class QShowEvent *)
+func (this *QSizeGrip) InheritShowEvent(f func(showEvent *qtgui.QShowEvent /*777 QShowEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "showEvent", f)
+}
+
+// void hideEvent(class QHideEvent *)
+func (this *QSizeGrip) InheritHideEvent(f func(hideEvent *qtgui.QHideEvent /*777 QHideEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "hideEvent", f)
+}
+
+// bool eventFilter(class QObject *, class QEvent *)
+func (this *QSizeGrip) InheritEventFilter(f func(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "eventFilter", f)
+}
+
+// bool event(class QEvent *)
+func (this *QSizeGrip) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QSizeGrip struct {
 	*QWidget
 }
@@ -102,9 +147,10 @@ func NewQSizeGrip(parent *QWidget /*777 QWidget **/) *QSizeGrip {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSizeGrip()
-func DeleteQSizeGrip(*QSizeGrip) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSizeGripD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSizeGrip(this *QSizeGrip) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSizeGripD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qsizegrip.h:58
@@ -116,6 +162,7 @@ func (this *QSizeGrip) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

@@ -52,6 +52,41 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QCheckBox) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// bool hitButton(const class QPoint &)
+func (this *QCheckBox) InheritHitButton(f func(pos *qtcore.QPoint) bool) {
+	ffiqt.SetAllInheritCallback(this, "hitButton", f)
+}
+
+// void checkStateSet()
+func (this *QCheckBox) InheritCheckStateSet(f func()) {
+	ffiqt.SetAllInheritCallback(this, "checkStateSet", f)
+}
+
+// void nextCheckState()
+func (this *QCheckBox) InheritNextCheckState(f func()) {
+	ffiqt.SetAllInheritCallback(this, "nextCheckState", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QCheckBox) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void mouseMoveEvent(class QMouseEvent *)
+func (this *QCheckBox) InheritMouseMoveEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void initStyleOption(class QStyleOptionButton *)
+func (this *QCheckBox) InheritInitStyleOption(f func(option *QStyleOptionButton /*777 QStyleOptionButton **/)) {
+	ffiqt.SetAllInheritCallback(this, "initStyleOption", f)
+}
+
 type QCheckBox struct {
 	*QAbstractButton
 }
@@ -115,9 +150,10 @@ func NewQCheckBox_1(text *qtcore.QString, parent *QWidget /*777 QWidget **/) *QC
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QCheckBox()
-func DeleteQCheckBox(*QCheckBox) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCheckBoxD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQCheckBox(this *QCheckBox) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCheckBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qcheckbox.h:65
@@ -129,6 +165,7 @@ func (this *QCheckBox) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -141,6 +178,7 @@ func (this *QCheckBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

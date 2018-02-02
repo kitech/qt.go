@@ -44,6 +44,21 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void onEntry(class QEvent *)
+func (this *QAbstractState) InheritOnEntry(f func(event *QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "onEntry", f)
+}
+
+// void onExit(class QEvent *)
+func (this *QAbstractState) InheritOnExit(f func(event *QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "onExit", f)
+}
+
+// bool event(class QEvent *)
+func (this *QAbstractState) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QAbstractState struct {
 	*QObject
 }
@@ -82,9 +97,10 @@ func (this *QAbstractState) MetaObject() *QMetaObject /*777 const QMetaObject **
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractState()
-func DeleteQAbstractState(*QAbstractState) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QAbstractStateD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAbstractState(this *QAbstractState) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QAbstractStateD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qabstractstate.h:60

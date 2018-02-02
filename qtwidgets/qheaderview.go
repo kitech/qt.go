@@ -52,6 +52,146 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void updateSection(int)
+func (this *QHeaderView) InheritUpdateSection(f func(logicalIndex int)) {
+	ffiqt.SetAllInheritCallback(this, "updateSection", f)
+}
+
+// void resizeSections()
+func (this *QHeaderView) InheritResizeSections(f func()) {
+	ffiqt.SetAllInheritCallback(this, "resizeSections", f)
+}
+
+// void sectionsInserted(const class QModelIndex &, int, int)
+func (this *QHeaderView) InheritSectionsInserted(f func(parent *qtcore.QModelIndex, logicalFirst int, logicalLast int)) {
+	ffiqt.SetAllInheritCallback(this, "sectionsInserted", f)
+}
+
+// void sectionsAboutToBeRemoved(const class QModelIndex &, int, int)
+func (this *QHeaderView) InheritSectionsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, logicalFirst int, logicalLast int)) {
+	ffiqt.SetAllInheritCallback(this, "sectionsAboutToBeRemoved", f)
+}
+
+// void initialize()
+func (this *QHeaderView) InheritInitialize(f func()) {
+	ffiqt.SetAllInheritCallback(this, "initialize", f)
+}
+
+// void initializeSections()
+func (this *QHeaderView) InheritInitializeSections(f func()) {
+	ffiqt.SetAllInheritCallback(this, "initializeSections", f)
+}
+
+// void currentChanged(const class QModelIndex &, const class QModelIndex &)
+func (this *QHeaderView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, old *qtcore.QModelIndex)) {
+	ffiqt.SetAllInheritCallback(this, "currentChanged", f)
+}
+
+// bool event(class QEvent *)
+func (this *QHeaderView) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QHeaderView) InheritPaintEvent(f func(e *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void mousePressEvent(class QMouseEvent *)
+func (this *QHeaderView) InheritMousePressEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void mouseMoveEvent(class QMouseEvent *)
+func (this *QHeaderView) InheritMouseMoveEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void mouseReleaseEvent(class QMouseEvent *)
+func (this *QHeaderView) InheritMouseReleaseEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+}
+
+// void mouseDoubleClickEvent(class QMouseEvent *)
+func (this *QHeaderView) InheritMouseDoubleClickEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
+}
+
+// bool viewportEvent(class QEvent *)
+func (this *QHeaderView) InheritViewportEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "viewportEvent", f)
+}
+
+// void paintSection(class QPainter *, const class QRect &, int)
+func (this *QHeaderView) InheritPaintSection(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, logicalIndex int)) {
+	ffiqt.SetAllInheritCallback(this, "paintSection", f)
+}
+
+// QSize sectionSizeFromContents(int)
+func (this *QHeaderView) InheritSectionSizeFromContents(f func(logicalIndex int) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "sectionSizeFromContents", f)
+}
+
+// int horizontalOffset()
+func (this *QHeaderView) InheritHorizontalOffset(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "horizontalOffset", f)
+}
+
+// int verticalOffset()
+func (this *QHeaderView) InheritVerticalOffset(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "verticalOffset", f)
+}
+
+// void updateGeometries()
+func (this *QHeaderView) InheritUpdateGeometries(f func()) {
+	ffiqt.SetAllInheritCallback(this, "updateGeometries", f)
+}
+
+// void scrollContentsBy(int, int)
+func (this *QHeaderView) InheritScrollContentsBy(f func(dx int, dy int)) {
+	ffiqt.SetAllInheritCallback(this, "scrollContentsBy", f)
+}
+
+// void rowsInserted(const class QModelIndex &, int, int)
+func (this *QHeaderView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int)) {
+	ffiqt.SetAllInheritCallback(this, "rowsInserted", f)
+}
+
+// QRect visualRect(const class QModelIndex &)
+func (this *QHeaderView) InheritVisualRect(f func(index *qtcore.QModelIndex) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "visualRect", f)
+}
+
+// void scrollTo(const class QModelIndex &, enum QAbstractItemView::ScrollHint)
+func (this *QHeaderView) InheritScrollTo(f func(index *qtcore.QModelIndex, hint int)) {
+	ffiqt.SetAllInheritCallback(this, "scrollTo", f)
+}
+
+// QModelIndex indexAt(const class QPoint &)
+func (this *QHeaderView) InheritIndexAt(f func(p *qtcore.QPoint) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "indexAt", f)
+}
+
+// bool isIndexHidden(const class QModelIndex &)
+func (this *QHeaderView) InheritIsIndexHidden(f func(index *qtcore.QModelIndex) bool) {
+	ffiqt.SetAllInheritCallback(this, "isIndexHidden", f)
+}
+
+// void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
+func (this *QHeaderView) InheritSetSelection(f func(rect *qtcore.QRect, flags int)) {
+	ffiqt.SetAllInheritCallback(this, "setSelection", f)
+}
+
+// QRegion visualRegionForSelection(const class QItemSelection &)
+func (this *QHeaderView) InheritVisualRegionForSelection(f func(selection *qtcore.QItemSelection) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "visualRegionForSelection", f)
+}
+
+// void initStyleOption(class QStyleOptionHeader *)
+func (this *QHeaderView) InheritInitStyleOption(f func(option *QStyleOptionHeader /*777 QStyleOptionHeader **/)) {
+	ffiqt.SetAllInheritCallback(this, "initStyleOption", f)
+}
+
 type QHeaderView struct {
 	*QAbstractItemView
 }
@@ -102,9 +242,10 @@ func NewQHeaderView(orientation int, parent *QWidget /*777 QWidget **/) *QHeader
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QHeaderView()
-func DeleteQHeaderView(*QHeaderView) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHeaderViewD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQHeaderView(this *QHeaderView) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHeaderViewD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qheaderview.h:80
@@ -159,6 +300,7 @@ func (this *QHeaderView) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -718,6 +860,7 @@ func (this *QHeaderView) SaveState() *qtcore.QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
 
@@ -1029,6 +1172,7 @@ func (this *QHeaderView) SectionSizeFromContents(logicalIndex int) *qtcore.QSize
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -1092,6 +1236,7 @@ func (this *QHeaderView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*1
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -1115,6 +1260,7 @@ func (this *QHeaderView) IndexAt(p *qtcore.QPoint) *qtcore.QModelIndex /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -1150,6 +1296,7 @@ func (this *QHeaderView) VisualRegionForSelection(selection *qtcore.QItemSelecti
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQRegion)
 	return rv2
 }
 

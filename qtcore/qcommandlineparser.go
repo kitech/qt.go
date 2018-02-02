@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QCommandLineParser struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QCommandLineParser) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QCommandLineParser) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQCommandLineParserFromPointer(cthis unsafe.Pointer) *QCommandLineParser {
 	return &QCommandLineParser{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQCommandLineParser() *QCommandLineParser {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParserC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCommandLineParserFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQCommandLineParser)
 	return gothis
 }
 
@@ -80,9 +86,10 @@ func NewQCommandLineParser() *QCommandLineParser {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QCommandLineParser()
-func DeleteQCommandLineParser(*QCommandLineParser) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParserD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQCommandLineParser(this *QCommandLineParser) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParserD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qcommandlineparser.h:66
@@ -124,6 +131,7 @@ func (this *QCommandLineParser) AddVersionOption() *QCommandLineOption /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCommandLineOptionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQCommandLineOption)
 	return rv2
 }
 
@@ -136,6 +144,7 @@ func (this *QCommandLineParser) AddHelpOption() *QCommandLineOption /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCommandLineOptionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQCommandLineOption)
 	return rv2
 }
 
@@ -158,6 +167,7 @@ func (this *QCommandLineParser) ApplicationDescription() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -223,6 +233,7 @@ func (this *QCommandLineParser) ErrorText() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -260,6 +271,7 @@ func (this *QCommandLineParser) Value(name *QString) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -273,6 +285,7 @@ func (this *QCommandLineParser) Value_1(option *QCommandLineOption) *QString /*1
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -303,6 +316,7 @@ func (this *QCommandLineParser) HelpText() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 

@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QUuid struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QUuid) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QUuid) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQUuidFromPointer(cthis unsafe.Pointer) *QUuid {
 	return &QUuid{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQUuid() *QUuid {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuidC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQUuidFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQUuid)
 	return gothis
 }
 
@@ -84,6 +90,7 @@ func NewQUuid_1(l uint, w1 uint16, w2 uint16, b1 byte, b2 byte, b3 byte, b4 byte
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuidC2Ejtthhhhhhhh", ffiqt.FFI_TYPE_POINTER, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQUuidFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQUuid)
 	return gothis
 }
 
@@ -96,6 +103,7 @@ func NewQUuid_2(arg0 *QString) *QUuid {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuidC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQUuidFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQUuid)
 	return gothis
 }
 
@@ -109,6 +117,7 @@ func NewQUuid_3(arg0 string) *QUuid {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuidC2EPKc", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQUuidFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQUuid)
 	return gothis
 }
 
@@ -121,6 +130,7 @@ func NewQUuid_4(arg0 *QByteArray) *QUuid {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuidC2ERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQUuidFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQUuid)
 	return gothis
 }
 
@@ -134,6 +144,7 @@ func (this *QUuid) FromString(string *QStringView /*123*/) *QUuid /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUuid)
 	return rv2
 }
 func QUuid_FromString(string *QStringView /*123*/) *QUuid /*123*/ {
@@ -152,6 +163,7 @@ func (this *QUuid) FromString_1(string *QLatin1String /*123*/) *QUuid /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUuid)
 	return rv2
 }
 func QUuid_FromString_1(string *QLatin1String /*123*/) *QUuid /*123*/ {
@@ -169,6 +181,7 @@ func (this *QUuid) ToString() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -181,6 +194,7 @@ func (this *QUuid) ToByteArray() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -193,6 +207,7 @@ func (this *QUuid) ToRfc4122() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -206,6 +221,7 @@ func (this *QUuid) FromRfc4122(arg0 *QByteArray) *QUuid /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUuid)
 	return rv2
 }
 func QUuid_FromRfc4122(arg0 *QByteArray) *QUuid /*123*/ {
@@ -234,6 +250,7 @@ func (this *QUuid) CreateUuid() *QUuid /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUuid)
 	return rv2
 }
 func QUuid_CreateUuid() *QUuid /*123*/ {
@@ -253,6 +270,7 @@ func (this *QUuid) CreateUuidV3(ns *QUuid, baseData *QByteArray) *QUuid /*123*/ 
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUuid)
 	return rv2
 }
 func QUuid_CreateUuidV3(ns *QUuid, baseData *QByteArray) *QUuid /*123*/ {
@@ -272,6 +290,7 @@ func (this *QUuid) CreateUuidV3_1(ns *QUuid, baseData *QString) *QUuid /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUuid)
 	return rv2
 }
 func QUuid_CreateUuidV3_1(ns *QUuid, baseData *QString) *QUuid /*123*/ {
@@ -291,6 +310,7 @@ func (this *QUuid) CreateUuidV5(ns *QUuid, baseData *QByteArray) *QUuid /*123*/ 
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUuid)
 	return rv2
 }
 func QUuid_CreateUuidV5(ns *QUuid, baseData *QByteArray) *QUuid /*123*/ {
@@ -310,6 +330,7 @@ func (this *QUuid) CreateUuidV5_1(ns *QUuid, baseData *QString) *QUuid /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQUuidFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUuid)
 	return rv2
 }
 func QUuid_CreateUuidV5_1(ns *QUuid, baseData *QString) *QUuid /*123*/ {
@@ -338,6 +359,12 @@ func (this *QUuid) Version() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+func DeleteQUuid(this *QUuid) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QUuidD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QUuid__Variant = int

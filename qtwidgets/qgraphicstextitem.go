@@ -52,6 +52,116 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool sceneEvent(class QEvent *)
+func (this *QGraphicsTextItem) InheritSceneEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "sceneEvent", f)
+}
+
+// void mousePressEvent(class QGraphicsSceneMouseEvent *)
+func (this *QGraphicsTextItem) InheritMousePressEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void mouseMoveEvent(class QGraphicsSceneMouseEvent *)
+func (this *QGraphicsTextItem) InheritMouseMoveEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void mouseReleaseEvent(class QGraphicsSceneMouseEvent *)
+func (this *QGraphicsTextItem) InheritMouseReleaseEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+}
+
+// void mouseDoubleClickEvent(class QGraphicsSceneMouseEvent *)
+func (this *QGraphicsTextItem) InheritMouseDoubleClickEvent(f func(event *QGraphicsSceneMouseEvent /*777 QGraphicsSceneMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
+}
+
+// void contextMenuEvent(class QGraphicsSceneContextMenuEvent *)
+func (this *QGraphicsTextItem) InheritContextMenuEvent(f func(event *QGraphicsSceneContextMenuEvent /*777 QGraphicsSceneContextMenuEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "contextMenuEvent", f)
+}
+
+// void keyPressEvent(class QKeyEvent *)
+func (this *QGraphicsTextItem) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyPressEvent", f)
+}
+
+// void keyReleaseEvent(class QKeyEvent *)
+func (this *QGraphicsTextItem) InheritKeyReleaseEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyReleaseEvent", f)
+}
+
+// void focusInEvent(class QFocusEvent *)
+func (this *QGraphicsTextItem) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusInEvent", f)
+}
+
+// void focusOutEvent(class QFocusEvent *)
+func (this *QGraphicsTextItem) InheritFocusOutEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusOutEvent", f)
+}
+
+// void dragEnterEvent(class QGraphicsSceneDragDropEvent *)
+func (this *QGraphicsTextItem) InheritDragEnterEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dragEnterEvent", f)
+}
+
+// void dragLeaveEvent(class QGraphicsSceneDragDropEvent *)
+func (this *QGraphicsTextItem) InheritDragLeaveEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dragLeaveEvent", f)
+}
+
+// void dragMoveEvent(class QGraphicsSceneDragDropEvent *)
+func (this *QGraphicsTextItem) InheritDragMoveEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dragMoveEvent", f)
+}
+
+// void dropEvent(class QGraphicsSceneDragDropEvent *)
+func (this *QGraphicsTextItem) InheritDropEvent(f func(event *QGraphicsSceneDragDropEvent /*777 QGraphicsSceneDragDropEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dropEvent", f)
+}
+
+// void inputMethodEvent(class QInputMethodEvent *)
+func (this *QGraphicsTextItem) InheritInputMethodEvent(f func(event *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "inputMethodEvent", f)
+}
+
+// void hoverEnterEvent(class QGraphicsSceneHoverEvent *)
+func (this *QGraphicsTextItem) InheritHoverEnterEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "hoverEnterEvent", f)
+}
+
+// void hoverMoveEvent(class QGraphicsSceneHoverEvent *)
+func (this *QGraphicsTextItem) InheritHoverMoveEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "hoverMoveEvent", f)
+}
+
+// void hoverLeaveEvent(class QGraphicsSceneHoverEvent *)
+func (this *QGraphicsTextItem) InheritHoverLeaveEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "hoverLeaveEvent", f)
+}
+
+// QVariant inputMethodQuery(Qt::InputMethodQuery)
+func (this *QGraphicsTextItem) InheritInputMethodQuery(f func(query int) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "inputMethodQuery", f)
+}
+
+// bool supportsExtension(enum QGraphicsItem::Extension)
+func (this *QGraphicsTextItem) InheritSupportsExtension(f func(extension int) bool) {
+	ffiqt.SetAllInheritCallback(this, "supportsExtension", f)
+}
+
+// void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
+func (this *QGraphicsTextItem) InheritSetExtension(f func(extension int, variant *qtcore.QVariant)) {
+	ffiqt.SetAllInheritCallback(this, "setExtension", f)
+}
+
+// QVariant extension(const class QVariant &)
+func (this *QGraphicsTextItem) InheritExtension(f func(variant *qtcore.QVariant) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "extension", f)
+}
+
 type QGraphicsTextItem struct {
 	*qtrt.CObject
 }
@@ -64,7 +174,11 @@ func (this *QGraphicsTextItem) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QGraphicsTextItem) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQGraphicsTextItemFromPointer(cthis unsafe.Pointer) *QGraphicsTextItem {
 	return &QGraphicsTextItem{&qtrt.CObject{cthis}}
@@ -114,9 +228,10 @@ func NewQGraphicsTextItem_1(text *qtcore.QString, parent *QGraphicsItem /*777 QG
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsTextItem()
-func DeleteQGraphicsTextItem(*QGraphicsTextItem) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItemD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsTextItem(this *QGraphicsTextItem) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:881
@@ -128,6 +243,7 @@ func (this *QGraphicsTextItem) ToHtml() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -150,6 +266,7 @@ func (this *QGraphicsTextItem) ToPlainText() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -172,6 +289,7 @@ func (this *QGraphicsTextItem) Font() *qtgui.QFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
 }
 
@@ -204,6 +322,7 @@ func (this *QGraphicsTextItem) DefaultTextColor() *qtgui.QColor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
 }
 
@@ -216,6 +335,7 @@ func (this *QGraphicsTextItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -228,6 +348,7 @@ func (this *QGraphicsTextItem) Shape() *qtgui.QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
 }
 
@@ -276,6 +397,7 @@ func (this *QGraphicsTextItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
 }
 
@@ -420,6 +542,7 @@ func (this *QGraphicsTextItem) TextCursor() *qtgui.QTextCursor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQTextCursor)
 	return rv2
 }
 
@@ -634,6 +757,7 @@ func (this *QGraphicsTextItem) InputMethodQuery(query int) *qtcore.QVariant /*12
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -668,6 +792,7 @@ func (this *QGraphicsTextItem) Extension(variant *qtcore.QVariant) *qtcore.QVari
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 

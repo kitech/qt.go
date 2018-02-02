@@ -52,6 +52,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QFontComboBox) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QFontComboBox struct {
 	*QComboBox
 }
@@ -102,9 +107,10 @@ func NewQFontComboBox(parent *QWidget /*777 QWidget **/) *QFontComboBox {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFontComboBox()
-func DeleteQFontComboBox(*QFontComboBox) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontComboBoxD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQFontComboBox(this *QFontComboBox) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontComboBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qfontcombobox.h:64
@@ -147,6 +153,7 @@ func (this *QFontComboBox) CurrentFont() *qtgui.QFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
 }
 
@@ -159,6 +166,7 @@ func (this *QFontComboBox) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QFontDatabase struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QFontDatabase) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QFontDatabase) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQFontDatabaseFromPointer(cthis unsafe.Pointer) *QFontDatabase {
 	return &QFontDatabase{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQFontDatabase() *QFontDatabase {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabaseC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFontDatabaseFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQFontDatabase)
 	return gothis
 }
 
@@ -90,6 +96,7 @@ func (this *QFontDatabase) StyleString(font *QFont) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -103,6 +110,7 @@ func (this *QFontDatabase) StyleString_1(fontInfo *QFontInfo) *qtcore.QString /*
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -117,6 +125,7 @@ func (this *QFontDatabase) Font(family *qtcore.QString, style *qtcore.QString, p
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFont)
 	return rv2
 }
 
@@ -244,6 +253,7 @@ func (this *QFontDatabase) WritingSystemName(writingSystem int) *qtcore.QString 
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 func QFontDatabase_WritingSystemName(writingSystem int) *qtcore.QString /*123*/ {
@@ -261,6 +271,7 @@ func (this *QFontDatabase) WritingSystemSample(writingSystem int) *qtcore.QStrin
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 func QFontDatabase_WritingSystemSample(writingSystem int) *qtcore.QString /*123*/ {
@@ -360,12 +371,19 @@ func (this *QFontDatabase) SystemFont(type_ int) *QFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFont)
 	return rv2
 }
 func QFontDatabase_SystemFont(type_ int) *QFont /*123*/ {
 	var nilthis *QFontDatabase
 	rv := nilthis.SystemFont(type_)
 	return rv
+}
+
+func DeleteQFontDatabase(this *QFontDatabase) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontDatabaseD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QFontDatabase__WritingSystem = int

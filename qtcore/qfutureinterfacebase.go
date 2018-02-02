@@ -44,6 +44,16 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool refT()
+func (this *QFutureInterfaceBase) InheritRefT(f func() bool) {
+	ffiqt.SetAllInheritCallback(this, "refT", f)
+}
+
+// bool derefT()
+func (this *QFutureInterfaceBase) InheritDerefT(f func() bool) {
+	ffiqt.SetAllInheritCallback(this, "derefT", f)
+}
+
 type QFutureInterfaceBase struct {
 	*qtrt.CObject
 }
@@ -56,7 +66,11 @@ func (this *QFutureInterfaceBase) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QFutureInterfaceBase) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQFutureInterfaceBaseFromPointer(cthis unsafe.Pointer) *QFutureInterfaceBase {
 	return &QFutureInterfaceBase{&qtrt.CObject{cthis}}
@@ -73,6 +87,7 @@ func NewQFutureInterfaceBase(initialState int) *QFutureInterfaceBase {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBaseC2ENS_5StateE", ffiqt.FFI_TYPE_POINTER, initialState)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFutureInterfaceBaseFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQFutureInterfaceBase)
 	return gothis
 }
 
@@ -80,9 +95,10 @@ func NewQFutureInterfaceBase(initialState int) *QFutureInterfaceBase {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFutureInterfaceBase()
-func DeleteQFutureInterfaceBase(*QFutureInterfaceBase) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBaseD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQFutureInterfaceBase(this *QFutureInterfaceBase) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBaseD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qfutureinterface.h:78
@@ -231,6 +247,7 @@ func (this *QFutureInterfaceBase) ProgressText() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 

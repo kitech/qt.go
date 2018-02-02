@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleOptionSizeGrip struct {
 	*QStyleOptionComplex
 }
@@ -82,6 +83,7 @@ func NewQStyleOptionSizeGrip() *QStyleOptionSizeGrip {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionSizeGripFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionSizeGrip)
 	return gothis
 }
 
@@ -93,7 +95,14 @@ func NewQStyleOptionSizeGrip_1(version int) *QStyleOptionSizeGrip {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionSizeGripFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionSizeGrip)
 	return gothis
+}
+
+func DeleteQStyleOptionSizeGrip(this *QStyleOptionSizeGrip) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleOptionSizeGrip__StyleOptionType = int

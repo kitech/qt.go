@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QThreadPool struct {
 	*QObject
 }
@@ -94,9 +95,10 @@ func NewQThreadPool(parent *QObject /*777 QObject **/) *QThreadPool {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QThreadPool()
-func DeleteQThreadPool(*QThreadPool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPoolD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQThreadPool(this *QThreadPool) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPoolD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qthreadpool.h:68

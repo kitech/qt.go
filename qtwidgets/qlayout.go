@@ -52,6 +52,36 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void widgetEvent(class QEvent *)
+func (this *QLayout) InheritWidgetEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "widgetEvent", f)
+}
+
+// void childEvent(class QChildEvent *)
+func (this *QLayout) InheritChildEvent(f func(e *qtcore.QChildEvent /*777 QChildEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "childEvent", f)
+}
+
+// void addChildLayout(class QLayout *)
+func (this *QLayout) InheritAddChildLayout(f func(l *QLayout /*777 QLayout **/)) {
+	ffiqt.SetAllInheritCallback(this, "addChildLayout", f)
+}
+
+// void addChildWidget(class QWidget *)
+func (this *QLayout) InheritAddChildWidget(f func(w *QWidget /*777 QWidget **/)) {
+	ffiqt.SetAllInheritCallback(this, "addChildWidget", f)
+}
+
+// bool adoptLayout(class QLayout *)
+func (this *QLayout) InheritAdoptLayout(f func(layout *QLayout /*777 QLayout **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "adoptLayout", f)
+}
+
+// QRect alignmentRect(const class QRect &)
+func (this *QLayout) InheritAlignmentRect(f func(arg0 *qtcore.QRect) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "alignmentRect", f)
+}
+
 type QLayout struct {
 	*qtcore.QObject
 	*QLayoutItem
@@ -116,9 +146,10 @@ func NewQLayout_1() *QLayout {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QLayout()
-func DeleteQLayout(*QLayout) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayoutD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQLayout(this *QLayout) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qlayout.h:84
@@ -198,6 +229,7 @@ func (this *QLayout) ContentsMargins() *qtcore.QMargins /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQMargins)
 	return rv2
 }
 
@@ -210,6 +242,7 @@ func (this *QLayout) ContentsRect() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -285,6 +318,7 @@ func (this *QLayout) Geometry() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -368,6 +402,7 @@ func (this *QLayout) MinimumSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -380,6 +415,7 @@ func (this *QLayout) MaximumSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -482,6 +518,7 @@ func (this *QLayout) TotalMinimumSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -494,6 +531,7 @@ func (this *QLayout) TotalMaximumSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -506,6 +544,7 @@ func (this *QLayout) TotalSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -552,6 +591,7 @@ func (this *QLayout) ClosestAcceptableSize(w *QWidget /*777 const QWidget **/, s
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 func QLayout_ClosestAcceptableSize(w *QWidget /*777 const QWidget **/, s *qtcore.QSize) *qtcore.QSize /*123*/ {
@@ -622,6 +662,7 @@ func (this *QLayout) AlignmentRect(arg0 *qtcore.QRect) *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 

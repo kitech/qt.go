@@ -52,6 +52,41 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QRubberBand) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QRubberBand) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void changeEvent(class QEvent *)
+func (this *QRubberBand) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
+// void showEvent(class QShowEvent *)
+func (this *QRubberBand) InheritShowEvent(f func(arg0 *qtgui.QShowEvent /*777 QShowEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "showEvent", f)
+}
+
+// void resizeEvent(class QResizeEvent *)
+func (this *QRubberBand) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void moveEvent(class QMoveEvent *)
+func (this *QRubberBand) InheritMoveEvent(f func(arg0 *qtgui.QMoveEvent /*777 QMoveEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "moveEvent", f)
+}
+
+// void initStyleOption(class QStyleOptionRubberBand *)
+func (this *QRubberBand) InheritInitStyleOption(f func(option *QStyleOptionRubberBand /*777 QStyleOptionRubberBand **/)) {
+	ffiqt.SetAllInheritCallback(this, "initStyleOption", f)
+}
+
 type QRubberBand struct {
 	*QWidget
 }
@@ -102,9 +137,10 @@ func NewQRubberBand(arg0 int, arg1 *QWidget /*777 QWidget **/) *QRubberBand {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QRubberBand()
-func DeleteQRubberBand(*QRubberBand) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBandD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQRubberBand(this *QRubberBand) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBandD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qrubberband.h:62

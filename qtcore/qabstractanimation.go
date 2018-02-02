@@ -44,6 +44,26 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QAbstractAnimation) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void updateCurrentTime(int)
+func (this *QAbstractAnimation) InheritUpdateCurrentTime(f func(currentTime int)) {
+	ffiqt.SetAllInheritCallback(this, "updateCurrentTime", f)
+}
+
+// void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
+func (this *QAbstractAnimation) InheritUpdateState(f func(newState int, oldState int)) {
+	ffiqt.SetAllInheritCallback(this, "updateState", f)
+}
+
+// void updateDirection(class QAbstractAnimation::Direction)
+func (this *QAbstractAnimation) InheritUpdateDirection(f func(direction int)) {
+	ffiqt.SetAllInheritCallback(this, "updateDirection", f)
+}
+
 type QAbstractAnimation struct {
 	*QObject
 }
@@ -94,9 +114,10 @@ func NewQAbstractAnimation(parent *QObject /*777 QObject **/) *QAbstractAnimatio
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractAnimation()
-func DeleteQAbstractAnimation(*QAbstractAnimation) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimationD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAbstractAnimation(this *QAbstractAnimation) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:88

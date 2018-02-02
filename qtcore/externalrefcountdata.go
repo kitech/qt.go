@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type ExternalRefCountData struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *ExternalRefCountData) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *ExternalRefCountData) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewExternalRefCountDataFromPointer(cthis unsafe.Pointer) *ExternalRefCountData {
 	return &ExternalRefCountData{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewExternalRefCountData(arg0 int) *ExternalRefCountData {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountDataC2EN2Qt14InitializationE", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewExternalRefCountDataFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteExternalRefCountData)
 	return gothis
 }
 
@@ -80,9 +86,10 @@ func NewExternalRefCountData(arg0 int) *ExternalRefCountData {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~ExternalRefCountData()
-func DeleteExternalRefCountData(*ExternalRefCountData) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountDataD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteExternalRefCountData(this *ExternalRefCountData) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qsharedpointer_impl.h:157

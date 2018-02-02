@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QRegExpValidator struct {
 	*QValidator
 }
@@ -111,9 +112,10 @@ func NewQRegExpValidator_1(rx *qtcore.QRegExp, parent *qtcore.QObject /*777 QObj
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QRegExpValidator()
-func DeleteQRegExpValidator(*QRegExpValidator) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRegExpValidatorD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQRegExpValidator(this *QRegExpValidator) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QRegExpValidatorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:181
@@ -147,6 +149,7 @@ func (this *QRegExpValidator) RegExp() *qtcore.QRegExp {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRegExpFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRegExp)
 	return rv2
 }
 

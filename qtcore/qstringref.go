@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStringRef struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QStringRef) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QStringRef) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQStringRefFromPointer(cthis unsafe.Pointer) *QStringRef {
 	return &QStringRef{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQStringRef() *QStringRef {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStringRefC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStringRef)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func NewQStringRef_1(string *QString /*777 const QString **/, position int, size
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStringRefC2EPK7QStringii", ffiqt.FFI_TYPE_POINTER, convArg0, position, size)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStringRef)
 	return gothis
 }
 
@@ -97,6 +104,7 @@ func NewQStringRef_2(string *QString /*777 const QString **/) *QStringRef {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStringRefC2EPK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStringRef)
 	return gothis
 }
 
@@ -104,9 +112,10 @@ func NewQStringRef_2(string *QString /*777 const QString **/) *QStringRef {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QStringRef()
-func DeleteQStringRef(*QStringRef) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStringRefD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQStringRef(this *QStringRef) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStringRefD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qstring.h:1441
@@ -354,6 +363,7 @@ func (this *QStringRef) Left(n int) *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -366,6 +376,7 @@ func (this *QStringRef) Right(n int) *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -378,6 +389,7 @@ func (this *QStringRef) Mid(pos int, n int) *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -390,6 +402,7 @@ func (this *QStringRef) Chopped(n int) *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -659,6 +672,7 @@ func (this *QStringRef) ToLatin1() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -671,6 +685,7 @@ func (this *QStringRef) ToUtf8() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -683,6 +698,7 @@ func (this *QStringRef) ToLocal8Bit() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -704,6 +720,7 @@ func (this *QStringRef) ToString() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -739,6 +756,7 @@ func (this *QStringRef) AppendTo(string *QString /*777 QString **/) *QStringRef 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -751,6 +769,7 @@ func (this *QStringRef) At(i int) *QChar /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
 }
 
@@ -763,6 +782,7 @@ func (this *QStringRef) Front() *QChar /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
 }
 
@@ -775,6 +795,7 @@ func (this *QStringRef) Back() *QChar /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
 }
 
@@ -949,6 +970,7 @@ func (this *QStringRef) Trimmed() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 

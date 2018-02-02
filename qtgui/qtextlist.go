@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextList struct {
 	*QTextBlockGroup
 }
@@ -98,9 +99,10 @@ func NewQTextList(doc *QTextDocument /*777 QTextDocument **/) *QTextList {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTextList()
-func DeleteQTextList(*QTextList) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextListD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextList(this *QTextList) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextListD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qtextlist.h:60
@@ -134,6 +136,7 @@ func (this *QTextList) Item(i int) *QTextBlock /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextBlock)
 	return rv2
 }
 
@@ -159,6 +162,7 @@ func (this *QTextList) ItemText(arg0 *QTextBlock) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -210,6 +214,7 @@ func (this *QTextList) Format() *QTextListFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextListFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextListFormat)
 	return rv2
 }
 

@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTouchDevice struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QTouchDevice) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTouchDevice) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTouchDeviceFromPointer(cthis unsafe.Pointer) *QTouchDevice {
 	return &QTouchDevice{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQTouchDevice() *QTouchDevice {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDeviceC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTouchDeviceFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTouchDevice)
 	return gothis
 }
 
@@ -84,9 +90,10 @@ func NewQTouchDevice() *QTouchDevice {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTouchDevice()
-func DeleteQTouchDevice(*QTouchDevice) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDeviceD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTouchDevice(this *QTouchDevice) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDeviceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qtouchdevice.h:78
@@ -98,6 +105,7 @@ func (this *QTouchDevice) Name() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

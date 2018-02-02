@@ -52,6 +52,46 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QCalendarWidget) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// bool eventFilter(class QObject *, class QEvent *)
+func (this *QCalendarWidget) InheritEventFilter(f func(watched *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "eventFilter", f)
+}
+
+// void mousePressEvent(class QMouseEvent *)
+func (this *QCalendarWidget) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void resizeEvent(class QResizeEvent *)
+func (this *QCalendarWidget) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void keyPressEvent(class QKeyEvent *)
+func (this *QCalendarWidget) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyPressEvent", f)
+}
+
+// void paintCell(class QPainter *, const class QRect &, const class QDate &)
+func (this *QCalendarWidget) InheritPaintCell(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, date *qtcore.QDate)) {
+	ffiqt.SetAllInheritCallback(this, "paintCell", f)
+}
+
+// void updateCell(const class QDate &)
+func (this *QCalendarWidget) InheritUpdateCell(f func(date *qtcore.QDate)) {
+	ffiqt.SetAllInheritCallback(this, "updateCell", f)
+}
+
+// void updateCells()
+func (this *QCalendarWidget) InheritUpdateCells(f func()) {
+	ffiqt.SetAllInheritCallback(this, "updateCells", f)
+}
+
 type QCalendarWidget struct {
 	*QWidget
 }
@@ -102,9 +142,10 @@ func NewQCalendarWidget(parent *QWidget /*777 QWidget **/) *QCalendarWidget {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QCalendarWidget()
-func DeleteQCalendarWidget(*QCalendarWidget) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QCalendarWidgetD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQCalendarWidget(this *QCalendarWidget) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QCalendarWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qcalendarwidget.h:95
@@ -116,6 +157,7 @@ func (this *QCalendarWidget) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -128,6 +170,7 @@ func (this *QCalendarWidget) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -140,6 +183,7 @@ func (this *QCalendarWidget) SelectedDate() *qtcore.QDate /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQDate)
 	return rv2
 }
 
@@ -174,6 +218,7 @@ func (this *QCalendarWidget) MinimumDate() *qtcore.QDate /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQDate)
 	return rv2
 }
 
@@ -196,6 +241,7 @@ func (this *QCalendarWidget) MaximumDate() *qtcore.QDate /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQDate)
 	return rv2
 }
 
@@ -320,6 +366,7 @@ func (this *QCalendarWidget) HeaderTextFormat() *qtgui.QTextCharFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQTextCharFormat)
 	return rv2
 }
 
@@ -342,6 +389,7 @@ func (this *QCalendarWidget) WeekdayTextFormat(dayOfWeek int) *qtgui.QTextCharFo
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQTextCharFormat)
 	return rv2
 }
 
@@ -365,6 +413,7 @@ func (this *QCalendarWidget) DateTextFormat(date *qtcore.QDate) *qtgui.QTextChar
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQTextCharFormat)
 	return rv2
 }
 

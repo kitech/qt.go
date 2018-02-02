@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleOptionToolBar struct {
 	*QStyleOption
 }
@@ -82,6 +83,7 @@ func NewQStyleOptionToolBar() *QStyleOptionToolBar {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionToolBarC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionToolBarFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionToolBar)
 	return gothis
 }
 
@@ -93,7 +95,14 @@ func NewQStyleOptionToolBar_1(version int) *QStyleOptionToolBar {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionToolBarC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionToolBarFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionToolBar)
 	return gothis
+}
+
+func DeleteQStyleOptionToolBar(this *QStyleOptionToolBar) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionToolBarD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleOptionToolBar__StyleOptionType = int

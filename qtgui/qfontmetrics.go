@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QFontMetrics struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QFontMetrics) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QFontMetrics) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQFontMetricsFromPointer(cthis unsafe.Pointer) *QFontMetrics {
 	return &QFontMetrics{&qtrt.CObject{cthis}}
@@ -78,6 +83,7 @@ func NewQFontMetrics(arg0 *QFont) *QFontMetrics {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QFontMetricsC2ERK5QFont", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFontMetricsFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQFontMetrics)
 	return gothis
 }
 
@@ -91,6 +97,7 @@ func NewQFontMetrics_1(arg0 *QFont, pd *QPaintDevice /*777 QPaintDevice **/) *QF
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QFontMetricsC2ERK5QFontP12QPaintDevice", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFontMetricsFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQFontMetrics)
 	return gothis
 }
 
@@ -98,9 +105,10 @@ func NewQFontMetrics_1(arg0 *QFont, pd *QPaintDevice /*777 QPaintDevice **/) *QF
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QFontMetrics()
-func DeleteQFontMetrics(*QFontMetrics) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QFontMetricsD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQFontMetrics(this *QFontMetrics) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QFontMetricsD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qfontmetrics.h:72
@@ -339,6 +347,7 @@ func (this *QFontMetrics) BoundingRect(arg0 *qtcore.QChar /*123*/) *qtcore.QRect
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -352,6 +361,7 @@ func (this *QFontMetrics) BoundingRect_1(text *qtcore.QString) *qtcore.QRect /*1
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -366,6 +376,7 @@ func (this *QFontMetrics) BoundingRect_2(r *qtcore.QRect, flags int, text *qtcor
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -379,6 +390,7 @@ func (this *QFontMetrics) BoundingRect_3(x int, y int, w int, h int, flags int, 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -392,6 +404,7 @@ func (this *QFontMetrics) Size(flags int, str *qtcore.QString, tabstops int, tab
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -405,6 +418,7 @@ func (this *QFontMetrics) TightBoundingRect(text *qtcore.QString) *qtcore.QRect 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -418,6 +432,7 @@ func (this *QFontMetrics) ElidedText(text *qtcore.QString, mode int, width int, 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

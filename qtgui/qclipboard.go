@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QClipboard struct {
 	*qtcore.QObject
 }
@@ -155,6 +156,7 @@ func (this *QClipboard) Text(mode int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -168,6 +170,7 @@ func (this *QClipboard) Text_1(subtype *qtcore.QString, mode int) *qtcore.QStrin
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -212,6 +215,7 @@ func (this *QClipboard) Image(mode int) *QImage /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQImage)
 	return rv2
 }
 
@@ -224,6 +228,7 @@ func (this *QClipboard) Pixmap(mode int) *QPixmap /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPixmap)
 	return rv2
 }
 
@@ -281,6 +286,12 @@ func (this *QClipboard) FindBufferChanged() {
 func (this *QClipboard) DataChanged() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboard11dataChangedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+}
+
+func DeleteQClipboard(this *QClipboard) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QClipboardD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QClipboard__Mode = int

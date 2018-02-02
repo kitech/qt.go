@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QIntValidator struct {
 	*QValidator
 }
@@ -110,9 +111,10 @@ func NewQIntValidator_1(bottom int, top int, parent *qtcore.QObject /*777 QObjec
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QIntValidator()
-func DeleteQIntValidator(*QIntValidator) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidatorD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQIntValidator(this *QIntValidator) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidatorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:100

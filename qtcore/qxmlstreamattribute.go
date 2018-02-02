@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QXmlStreamAttribute struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QXmlStreamAttribute) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QXmlStreamAttribute) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQXmlStreamAttributeFromPointer(cthis unsafe.Pointer) *QXmlStreamAttribute {
 	return &QXmlStreamAttribute{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQXmlStreamAttribute() *QXmlStreamAttribute {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamAttributeC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamAttributeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamAttribute)
 	return gothis
 }
 
@@ -86,6 +92,7 @@ func NewQXmlStreamAttribute_1(qualifiedName *QString, value *QString) *QXmlStrea
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamAttributeC2ERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamAttributeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamAttribute)
 	return gothis
 }
 
@@ -100,6 +107,7 @@ func NewQXmlStreamAttribute_2(namespaceUri *QString, name *QString, value *QStri
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamAttributeC2ERK7QStringS2_S2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamAttributeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamAttribute)
 	return gothis
 }
 
@@ -107,9 +115,10 @@ func NewQXmlStreamAttribute_2(namespaceUri *QString, name *QString, value *QStri
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QXmlStreamAttribute()
-func DeleteQXmlStreamAttribute(*QXmlStreamAttribute) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamAttributeD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQXmlStreamAttribute(this *QXmlStreamAttribute) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamAttributeD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:140
@@ -121,6 +130,7 @@ func (this *QXmlStreamAttribute) NamespaceUri() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -133,6 +143,7 @@ func (this *QXmlStreamAttribute) Name() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -145,6 +156,7 @@ func (this *QXmlStreamAttribute) QualifiedName() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -157,6 +169,7 @@ func (this *QXmlStreamAttribute) Prefix() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -169,6 +182,7 @@ func (this *QXmlStreamAttribute) Value() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 

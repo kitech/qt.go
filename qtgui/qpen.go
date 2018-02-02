@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QPen struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QPen) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QPen) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQPenFromPointer(cthis unsafe.Pointer) *QPen {
 	return &QPen{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQPen() *QPen {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPenC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPenFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPen)
 	return gothis
 }
 
@@ -88,6 +94,7 @@ func NewQPen_1(arg0 int) *QPen {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPenC2EN2Qt8PenStyleE", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPenFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPen)
 	return gothis
 }
 
@@ -100,6 +107,7 @@ func NewQPen_2(color *QColor) *QPen {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPenC2ERK6QColor", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPenFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPen)
 	return gothis
 }
 
@@ -112,6 +120,7 @@ func NewQPen_3(brush *QBrush, width float64, s int, c int, j int) *QPen {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPenC2ERK6QBrushdN2Qt8PenStyleENS3_11PenCapStyleENS3_12PenJoinStyleE", ffiqt.FFI_TYPE_POINTER, convArg0, width, s, c, j)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPenFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPen)
 	return gothis
 }
 
@@ -119,9 +128,10 @@ func NewQPen_3(brush *QBrush, width float64, s int, c int, j int) *QPen {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QPen()
-func DeleteQPen(*QPen) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPenD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPen(this *QPen) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPenD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qpen.h:79
@@ -243,6 +253,7 @@ func (this *QPen) Color() *QColor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQColor)
 	return rv2
 }
 
@@ -265,6 +276,7 @@ func (this *QPen) Brush() *QBrush /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBrush)
 	return rv2
 }
 

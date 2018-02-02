@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QJsonDocument struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QJsonDocument) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QJsonDocument) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQJsonDocumentFromPointer(cthis unsafe.Pointer) *QJsonDocument {
 	return &QJsonDocument{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQJsonDocument() *QJsonDocument {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonDocumentC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJsonDocumentFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQJsonDocument)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func NewQJsonDocument_1(object *QJsonObject) *QJsonDocument {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonDocumentC2ERK11QJsonObject", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJsonDocumentFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQJsonDocument)
 	return gothis
 }
 
@@ -97,6 +104,7 @@ func NewQJsonDocument_2(array *QJsonArray) *QJsonDocument {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonDocumentC2ERK10QJsonArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJsonDocumentFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQJsonDocument)
 	return gothis
 }
 
@@ -104,9 +112,10 @@ func NewQJsonDocument_2(array *QJsonArray) *QJsonDocument {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QJsonDocument()
-func DeleteQJsonDocument(*QJsonDocument) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonDocumentD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQJsonDocument(this *QJsonDocument) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonDocumentD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qjsondocument.h:108
@@ -130,6 +139,7 @@ func (this *QJsonDocument) FromRawData(data string, size int, validation int) *Q
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQJsonDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonDocument)
 	return rv2
 }
 func QJsonDocument_FromRawData(data string, size int, validation int) *QJsonDocument /*123*/ {
@@ -159,6 +169,7 @@ func (this *QJsonDocument) FromBinaryData(data *QByteArray, validation int) *QJs
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQJsonDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonDocument)
 	return rv2
 }
 func QJsonDocument_FromBinaryData(data *QByteArray, validation int) *QJsonDocument /*123*/ {
@@ -176,6 +187,7 @@ func (this *QJsonDocument) ToBinaryData() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -189,6 +201,7 @@ func (this *QJsonDocument) FromVariant(variant *QVariant) *QJsonDocument /*123*/
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQJsonDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonDocument)
 	return rv2
 }
 func QJsonDocument_FromVariant(variant *QVariant) *QJsonDocument /*123*/ {
@@ -206,6 +219,7 @@ func (this *QJsonDocument) ToVariant() *QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -218,6 +232,7 @@ func (this *QJsonDocument) ToJson() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -230,6 +245,7 @@ func (this *QJsonDocument) ToJson_1(format int) *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -275,6 +291,7 @@ func (this *QJsonDocument) Object() *QJsonObject /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQJsonObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonObject)
 	return rv2
 }
 
@@ -287,6 +304,7 @@ func (this *QJsonDocument) Array() *QJsonArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQJsonArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonArray)
 	return rv2
 }
 

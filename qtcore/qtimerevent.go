@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTimerEvent struct {
 	*QEvent
 }
@@ -74,6 +75,7 @@ func NewQTimerEvent(timerId int) *QTimerEvent {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTimerEventC2Ei", ffiqt.FFI_TYPE_POINTER, timerId)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTimerEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTimerEvent)
 	return gothis
 }
 
@@ -81,9 +83,10 @@ func NewQTimerEvent(timerId int) *QTimerEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTimerEvent()
-func DeleteQTimerEvent(*QTimerEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTimerEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTimerEvent(this *QTimerEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTimerEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:342

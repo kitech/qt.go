@@ -48,6 +48,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void emitDataChanged()
+func (this *QStandardItem) InheritEmitDataChanged(f func()) {
+	ffiqt.SetAllInheritCallback(this, "emitDataChanged", f)
+}
+
 type QStandardItem struct {
 	*qtrt.CObject
 }
@@ -60,7 +65,11 @@ func (this *QStandardItem) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QStandardItem) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQStandardItemFromPointer(cthis unsafe.Pointer) *QStandardItem {
 	return &QStandardItem{&qtrt.CObject{cthis}}
@@ -77,6 +86,7 @@ func NewQStandardItem() *QStandardItem {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItemC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStandardItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStandardItem)
 	return gothis
 }
 
@@ -89,6 +99,7 @@ func NewQStandardItem_1(text *qtcore.QString) *QStandardItem {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItemC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStandardItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStandardItem)
 	return gothis
 }
 
@@ -102,6 +113,7 @@ func NewQStandardItem_2(icon *QIcon, text *qtcore.QString) *QStandardItem {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItemC2ERK5QIconRK7QString", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStandardItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStandardItem)
 	return gothis
 }
 
@@ -113,6 +125,7 @@ func NewQStandardItem_3(rows int, columns int) *QStandardItem {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItemC2Eii", ffiqt.FFI_TYPE_POINTER, rows, columns)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStandardItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStandardItem)
 	return gothis
 }
 
@@ -120,9 +133,10 @@ func NewQStandardItem_3(rows int, columns int) *QStandardItem {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStandardItem()
-func DeleteQStandardItem(*QStandardItem) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItemD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQStandardItem(this *QStandardItem) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qstandarditemmodel.h:71
@@ -134,6 +148,7 @@ func (this *QStandardItem) Data(role int) *qtcore.QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -156,6 +171,7 @@ func (this *QStandardItem) Text() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -178,6 +194,7 @@ func (this *QStandardItem) Icon() *QIcon /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIcon)
 	return rv2
 }
 
@@ -200,6 +217,7 @@ func (this *QStandardItem) ToolTip() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -222,6 +240,7 @@ func (this *QStandardItem) StatusTip() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -244,6 +263,7 @@ func (this *QStandardItem) WhatsThis() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -266,6 +286,7 @@ func (this *QStandardItem) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -288,6 +309,7 @@ func (this *QStandardItem) Font() *QFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFont)
 	return rv2
 }
 
@@ -321,6 +343,7 @@ func (this *QStandardItem) Background() *QBrush /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBrush)
 	return rv2
 }
 
@@ -343,6 +366,7 @@ func (this *QStandardItem) Foreground() *QBrush /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBrush)
 	return rv2
 }
 
@@ -385,6 +409,7 @@ func (this *QStandardItem) AccessibleText() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -407,6 +432,7 @@ func (this *QStandardItem) AccessibleDescription() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -663,6 +689,7 @@ func (this *QStandardItem) Index() *qtcore.QModelIndex /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 

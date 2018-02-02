@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleOptionGraphicsItem struct {
 	*QStyleOption
 }
@@ -82,6 +83,7 @@ func NewQStyleOptionGraphicsItem() *QStyleOptionGraphicsItem {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItemC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionGraphicsItem)
 	return gothis
 }
 
@@ -93,6 +95,7 @@ func NewQStyleOptionGraphicsItem_1(version int) *QStyleOptionGraphicsItem {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItemC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionGraphicsItem)
 	return gothis
 }
 
@@ -111,6 +114,12 @@ func QStyleOptionGraphicsItem_LevelOfDetailFromTransform(worldTransform *qtgui.Q
 	var nilthis *QStyleOptionGraphicsItem
 	rv := nilthis.LevelOfDetailFromTransform(worldTransform)
 	return rv
+}
+
+func DeleteQStyleOptionGraphicsItem(this *QStyleOptionGraphicsItem) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleOptionGraphicsItem__StyleOptionType = int

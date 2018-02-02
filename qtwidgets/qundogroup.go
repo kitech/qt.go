@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QUndoGroup struct {
 	*qtcore.QObject
 }
@@ -102,9 +103,10 @@ func NewQUndoGroup(parent *qtcore.QObject /*777 QObject **/) *QUndoGroup {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QUndoGroup()
-func DeleteQUndoGroup(*QUndoGroup) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroupD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQUndoGroup(this *QUndoGroup) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroupD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qundogroup.h:64
@@ -198,6 +200,7 @@ func (this *QUndoGroup) UndoText() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -210,6 +213,7 @@ func (this *QUndoGroup) RedoText() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

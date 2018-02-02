@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextFormat struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QTextFormat) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTextFormat) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTextFormatFromPointer(cthis unsafe.Pointer) *QTextFormat {
 	return &QTextFormat{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQTextFormat() *QTextFormat {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextFormatC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextFormatFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextFormat)
 	return gothis
 }
 
@@ -88,6 +94,7 @@ func NewQTextFormat_1(type_ int) *QTextFormat {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextFormatC2Ei", ffiqt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextFormatFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextFormat)
 	return gothis
 }
 
@@ -95,9 +102,10 @@ func NewQTextFormat_1(type_ int) *QTextFormat {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTextFormat()
-func DeleteQTextFormat(*QTextFormat) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextFormatD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextFormat(this *QTextFormat) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextFormatD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:296
@@ -182,6 +190,7 @@ func (this *QTextFormat) Property(propertyId int) *qtcore.QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -257,6 +266,7 @@ func (this *QTextFormat) StringProperty(propertyId int) *qtcore.QString /*123*/ 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -269,6 +279,7 @@ func (this *QTextFormat) ColorProperty(propertyId int) *QColor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQColor)
 	return rv2
 }
 
@@ -281,6 +292,7 @@ func (this *QTextFormat) PenProperty(propertyId int) *QPen /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPenFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPen)
 	return rv2
 }
 
@@ -293,6 +305,7 @@ func (this *QTextFormat) BrushProperty(propertyId int) *QBrush /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBrush)
 	return rv2
 }
 
@@ -305,6 +318,7 @@ func (this *QTextFormat) LengthProperty(propertyId int) *QTextLength /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextLengthFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextLength)
 	return rv2
 }
 
@@ -425,6 +439,7 @@ func (this *QTextFormat) ToBlockFormat() *QTextBlockFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextBlockFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextBlockFormat)
 	return rv2
 }
 
@@ -437,6 +452,7 @@ func (this *QTextFormat) ToCharFormat() *QTextCharFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCharFormat)
 	return rv2
 }
 
@@ -449,6 +465,7 @@ func (this *QTextFormat) ToListFormat() *QTextListFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextListFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextListFormat)
 	return rv2
 }
 
@@ -461,6 +478,7 @@ func (this *QTextFormat) ToTableFormat() *QTextTableFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextTableFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextTableFormat)
 	return rv2
 }
 
@@ -473,6 +491,7 @@ func (this *QTextFormat) ToFrameFormat() *QTextFrameFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextFrameFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextFrameFormat)
 	return rv2
 }
 
@@ -485,6 +504,7 @@ func (this *QTextFormat) ToImageFormat() *QTextImageFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextImageFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextImageFormat)
 	return rv2
 }
 
@@ -497,6 +517,7 @@ func (this *QTextFormat) ToTableCellFormat() *QTextTableCellFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextTableCellFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextTableCellFormat)
 	return rv2
 }
 
@@ -539,6 +560,7 @@ func (this *QTextFormat) Background() *QBrush /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBrush)
 	return rv2
 }
 
@@ -570,6 +592,7 @@ func (this *QTextFormat) Foreground() *QBrush /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBrush)
 	return rv2
 }
 

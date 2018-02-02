@@ -44,6 +44,21 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool eventTest(class QEvent *)
+func (this *QSignalTransition) InheritEventTest(f func(event *QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "eventTest", f)
+}
+
+// void onTransition(class QEvent *)
+func (this *QSignalTransition) InheritOnTransition(f func(event *QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "onTransition", f)
+}
+
+// bool event(class QEvent *)
+func (this *QSignalTransition) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QSignalTransition struct {
 	*QAbstractTransition
 }
@@ -109,9 +124,10 @@ func NewQSignalTransition_1(sender *QObject /*777 const QObject **/, signal stri
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSignalTransition()
-func DeleteQSignalTransition(*QSignalTransition) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSignalTransitionD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSignalTransition(this *QSignalTransition) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSignalTransitionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qsignaltransition.h:76
@@ -145,6 +161,7 @@ func (this *QSignalTransition) Signal() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 

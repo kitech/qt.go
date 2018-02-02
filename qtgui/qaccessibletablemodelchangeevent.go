@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAccessibleTableModelChangeEvent struct {
 	*QAccessibleEvent
 }
@@ -79,6 +80,7 @@ func NewQAccessibleTableModelChangeEvent(obj *qtcore.QObject /*777 QObject **/, 
 	rv, err := ffiqt.InvokeQtFunc6("_ZN32QAccessibleTableModelChangeEventC2EP7QObjectNS_15ModelChangeTypeE", ffiqt.FFI_TYPE_POINTER, convArg0, changeType)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTableModelChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQAccessibleTableModelChangeEvent)
 	return gothis
 }
 
@@ -91,6 +93,7 @@ func NewQAccessibleTableModelChangeEvent_1(iface *QAccessibleInterface /*777 QAc
 	rv, err := ffiqt.InvokeQtFunc6("_ZN32QAccessibleTableModelChangeEventC2EP20QAccessibleInterfaceNS_15ModelChangeTypeE", ffiqt.FFI_TYPE_POINTER, convArg0, changeType)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTableModelChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQAccessibleTableModelChangeEvent)
 	return gothis
 }
 
@@ -98,9 +101,10 @@ func NewQAccessibleTableModelChangeEvent_1(iface *QAccessibleInterface /*777 QAc
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleTableModelChangeEvent()
-func DeleteQAccessibleTableModelChangeEvent(*QAccessibleTableModelChangeEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN32QAccessibleTableModelChangeEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAccessibleTableModelChangeEvent(this *QAccessibleTableModelChangeEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN32QAccessibleTableModelChangeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:949

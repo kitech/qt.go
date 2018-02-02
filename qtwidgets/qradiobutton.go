@@ -52,6 +52,31 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QRadioButton) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// bool hitButton(const class QPoint &)
+func (this *QRadioButton) InheritHitButton(f func(arg0 *qtcore.QPoint) bool) {
+	ffiqt.SetAllInheritCallback(this, "hitButton", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QRadioButton) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void mouseMoveEvent(class QMouseEvent *)
+func (this *QRadioButton) InheritMouseMoveEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void initStyleOption(class QStyleOptionButton *)
+func (this *QRadioButton) InheritInitStyleOption(f func(button *QStyleOptionButton /*777 QStyleOptionButton **/)) {
+	ffiqt.SetAllInheritCallback(this, "initStyleOption", f)
+}
+
 type QRadioButton struct {
 	*QAbstractButton
 }
@@ -115,9 +140,10 @@ func NewQRadioButton_1(text *qtcore.QString, parent *QWidget /*777 QWidget **/) 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QRadioButton()
-func DeleteQRadioButton(*QRadioButton) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QRadioButtonD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQRadioButton(this *QRadioButton) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QRadioButtonD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qradiobutton.h:63
@@ -129,6 +155,7 @@ func (this *QRadioButton) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -141,6 +168,7 @@ func (this *QRadioButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

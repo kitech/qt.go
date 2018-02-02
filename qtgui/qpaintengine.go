@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QPaintEngine struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QPaintEngine) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QPaintEngine) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQPaintEngineFromPointer(cthis unsafe.Pointer) *QPaintEngine {
 	return &QPaintEngine{&qtrt.CObject{cthis}}
@@ -73,9 +78,10 @@ func (*QPaintEngine) NewFromPointer(cthis unsafe.Pointer) *QPaintEngine {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPaintEngine()
-func DeleteQPaintEngine(*QPaintEngine) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngineD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPaintEngine(this *QPaintEngine) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintEngineD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qpaintengine.h:150
@@ -329,6 +335,7 @@ func (this *QPaintEngine) SystemClip() *QRegion /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegion)
 	return rv2
 }
 
@@ -351,6 +358,7 @@ func (this *QPaintEngine) SystemRect() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -363,6 +371,7 @@ func (this *QPaintEngine) CoordinateOffset() *qtcore.QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 

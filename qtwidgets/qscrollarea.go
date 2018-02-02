@@ -52,6 +52,31 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QScrollArea) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// bool eventFilter(class QObject *, class QEvent *)
+func (this *QScrollArea) InheritEventFilter(f func(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "eventFilter", f)
+}
+
+// void resizeEvent(class QResizeEvent *)
+func (this *QScrollArea) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void scrollContentsBy(int, int)
+func (this *QScrollArea) InheritScrollContentsBy(f func(dx int, dy int)) {
+	ffiqt.SetAllInheritCallback(this, "scrollContentsBy", f)
+}
+
+// QSize viewportSizeHint()
+func (this *QScrollArea) InheritViewportSizeHint(f func() unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "viewportSizeHint", f)
+}
+
 type QScrollArea struct {
 	*QAbstractScrollArea
 }
@@ -102,9 +127,10 @@ func NewQScrollArea(parent *QWidget /*777 QWidget **/) *QScrollArea {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QScrollArea()
-func DeleteQScrollArea(*QScrollArea) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QScrollAreaD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQScrollArea(this *QScrollArea) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QScrollAreaD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qscrollarea.h:62
@@ -170,6 +196,7 @@ func (this *QScrollArea) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -267,6 +294,7 @@ func (this *QScrollArea) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QDateEdit struct {
 	*QDateTimeEdit
 }
@@ -115,9 +116,10 @@ func NewQDateEdit_1(date *qtcore.QDate, parent *QWidget /*777 QWidget **/) *QDat
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDateEdit()
-func DeleteQDateEdit(*QDateEdit) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateEditD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDateEdit(this *QDateEdit) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateEditD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:225

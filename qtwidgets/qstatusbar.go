@@ -52,6 +52,36 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void showEvent(class QShowEvent *)
+func (this *QStatusBar) InheritShowEvent(f func(arg0 *qtgui.QShowEvent /*777 QShowEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "showEvent", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QStatusBar) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void resizeEvent(class QResizeEvent *)
+func (this *QStatusBar) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void reformat()
+func (this *QStatusBar) InheritReformat(f func()) {
+	ffiqt.SetAllInheritCallback(this, "reformat", f)
+}
+
+// void hideOrShow()
+func (this *QStatusBar) InheritHideOrShow(f func()) {
+	ffiqt.SetAllInheritCallback(this, "hideOrShow", f)
+}
+
+// bool event(class QEvent *)
+func (this *QStatusBar) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QStatusBar struct {
 	*QWidget
 }
@@ -102,9 +132,10 @@ func NewQStatusBar(parent *QWidget /*777 QWidget **/) *QStatusBar {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStatusBar()
-func DeleteQStatusBar(*QStatusBar) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBarD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQStatusBar(this *QStatusBar) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBarD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:62
@@ -190,6 +221,7 @@ func (this *QStatusBar) CurrentMessage() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

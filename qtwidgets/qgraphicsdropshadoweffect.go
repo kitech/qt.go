@@ -52,6 +52,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void draw(class QPainter *)
+func (this *QGraphicsDropShadowEffect) InheritDraw(f func(painter *qtgui.QPainter /*777 QPainter **/)) {
+	ffiqt.SetAllInheritCallback(this, "draw", f)
+}
+
 type QGraphicsDropShadowEffect struct {
 	*QGraphicsEffect
 }
@@ -102,9 +107,10 @@ func NewQGraphicsDropShadowEffect(parent *qtcore.QObject /*777 QObject **/) *QGr
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsDropShadowEffect()
-func DeleteQGraphicsDropShadowEffect(*QGraphicsDropShadowEffect) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffectD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsDropShadowEffect(this *QGraphicsDropShadowEffect) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:208
@@ -117,6 +123,7 @@ func (this *QGraphicsDropShadowEffect) BoundingRectFor(rect *qtcore.QRectF) *qtc
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -129,6 +136,7 @@ func (this *QGraphicsDropShadowEffect) Offset() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -174,6 +182,7 @@ func (this *QGraphicsDropShadowEffect) Color() *qtgui.QColor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
 }
 

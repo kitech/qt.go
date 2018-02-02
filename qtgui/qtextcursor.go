@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextCursor struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QTextCursor) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTextCursor) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTextCursorFromPointer(cthis unsafe.Pointer) *QTextCursor {
 	return &QTextCursor{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQTextCursor() *QTextCursor {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursorC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextCursor)
 	return gothis
 }
 
@@ -89,6 +95,7 @@ func NewQTextCursor_1(document *QTextDocument /*777 QTextDocument **/) *QTextCur
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursorC2EP13QTextDocument", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextCursor)
 	return gothis
 }
 
@@ -101,6 +108,7 @@ func NewQTextCursor_2(frame *QTextFrame /*777 QTextFrame **/) *QTextCursor {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursorC2EP10QTextFrame", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextCursor)
 	return gothis
 }
 
@@ -113,6 +121,7 @@ func NewQTextCursor_3(block *QTextBlock) *QTextCursor {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursorC2ERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextCursor)
 	return gothis
 }
 
@@ -120,9 +129,10 @@ func NewQTextCursor_3(block *QTextBlock) *QTextCursor {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTextCursor()
-func DeleteQTextCursor(*QTextCursor) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursorD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextCursor(this *QTextCursor) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qtextcursor.h:82
@@ -378,6 +388,7 @@ func (this *QTextCursor) SelectedText() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -390,6 +401,7 @@ func (this *QTextCursor) Selection() *QTextDocumentFragment /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextDocumentFragmentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextDocumentFragment)
 	return rv2
 }
 
@@ -411,6 +423,7 @@ func (this *QTextCursor) Block() *QTextBlock /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextBlock)
 	return rv2
 }
 
@@ -423,6 +436,7 @@ func (this *QTextCursor) CharFormat() *QTextCharFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCharFormat)
 	return rv2
 }
 
@@ -455,6 +469,7 @@ func (this *QTextCursor) BlockFormat() *QTextBlockFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextBlockFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextBlockFormat)
 	return rv2
 }
 
@@ -487,6 +502,7 @@ func (this *QTextCursor) BlockCharFormat() *QTextCharFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCharFormat)
 	return rv2
 }
 

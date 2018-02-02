@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QDropEvent struct {
 	*qtcore.QEvent
 }
@@ -74,9 +75,10 @@ func (*QDropEvent) NewFromPointer(cthis unsafe.Pointer) *QDropEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDropEvent()
-func DeleteQDropEvent(*QDropEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDropEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDropEvent(this *QDropEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDropEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:612
@@ -88,6 +90,7 @@ func (this *QDropEvent) Pos() *qtcore.QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
@@ -100,6 +103,7 @@ func (this *QDropEvent) PosF() *qtcore.QPointF {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 

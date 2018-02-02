@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAbstractGraphicsShapeItem struct {
 	*QGraphicsItem
 }
@@ -83,6 +84,7 @@ func NewQAbstractGraphicsShapeItem(parent *QGraphicsItem /*777 QGraphicsItem **/
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAbstractGraphicsShapeItemC1EP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractGraphicsShapeItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQAbstractGraphicsShapeItem)
 	return gothis
 }
 
@@ -90,9 +92,10 @@ func NewQAbstractGraphicsShapeItem(parent *QGraphicsItem /*777 QGraphicsItem **/
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractGraphicsShapeItem()
-func DeleteQAbstractGraphicsShapeItem(*QAbstractGraphicsShapeItem) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAbstractGraphicsShapeItemD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAbstractGraphicsShapeItem(this *QAbstractGraphicsShapeItem) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAbstractGraphicsShapeItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:606
@@ -104,6 +107,7 @@ func (this *QAbstractGraphicsShapeItem) Pen() *qtgui.QPen /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPenFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPen)
 	return rv2
 }
 
@@ -126,6 +130,7 @@ func (this *QAbstractGraphicsShapeItem) Brush() *qtgui.QBrush /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQBrush)
 	return rv2
 }
 
@@ -160,6 +165,7 @@ func (this *QAbstractGraphicsShapeItem) OpaqueArea() *qtgui.QPainterPath /*123*/
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
 }
 

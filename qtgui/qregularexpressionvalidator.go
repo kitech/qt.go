@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QRegularExpressionValidator struct {
 	*QValidator
 }
@@ -111,9 +112,10 @@ func NewQRegularExpressionValidator_1(re *qtcore.QRegularExpression, parent *qtc
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QRegularExpressionValidator()
-func DeleteQRegularExpressionValidator(*QRegularExpressionValidator) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QRegularExpressionValidatorD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQRegularExpressionValidator(this *QRegularExpressionValidator) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QRegularExpressionValidatorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:211
@@ -137,6 +139,7 @@ func (this *QRegularExpressionValidator) RegularExpression() *qtcore.QRegularExp
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRegularExpressionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRegularExpression)
 	return rv2
 }
 

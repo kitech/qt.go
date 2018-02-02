@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextDocumentWriter struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QTextDocumentWriter) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTextDocumentWriter) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTextDocumentWriterFromPointer(cthis unsafe.Pointer) *QTextDocumentWriter {
 	return &QTextDocumentWriter{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQTextDocumentWriter() *QTextDocumentWriter {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextDocumentWriterC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextDocumentWriterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextDocumentWriter)
 	return gothis
 }
 
@@ -90,6 +96,7 @@ func NewQTextDocumentWriter_1(device *qtcore.QIODevice /*777 QIODevice **/, form
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextDocumentWriterC2EP9QIODeviceRK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextDocumentWriterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextDocumentWriter)
 	return gothis
 }
 
@@ -103,6 +110,7 @@ func NewQTextDocumentWriter_2(fileName *qtcore.QString, format *qtcore.QByteArra
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextDocumentWriterC2ERK7QStringRK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextDocumentWriterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextDocumentWriter)
 	return gothis
 }
 
@@ -110,9 +118,10 @@ func NewQTextDocumentWriter_2(fileName *qtcore.QString, format *qtcore.QByteArra
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTextDocumentWriter()
-func DeleteQTextDocumentWriter(*QTextDocumentWriter) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextDocumentWriterD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextDocumentWriter(this *QTextDocumentWriter) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextDocumentWriterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qtextdocumentwriter.h:62
@@ -134,6 +143,7 @@ func (this *QTextDocumentWriter) Format() *qtcore.QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
 
@@ -178,6 +188,7 @@ func (this *QTextDocumentWriter) FileName() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

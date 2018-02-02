@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QIconEnginePlugin struct {
 	*qtcore.QObject
 }
@@ -98,9 +99,10 @@ func NewQIconEnginePlugin(parent *qtcore.QObject /*777 QObject **/) *QIconEngine
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QIconEnginePlugin()
-func DeleteQIconEnginePlugin(*QIconEnginePlugin) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIconEnginePluginD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQIconEnginePlugin(this *QIconEnginePlugin) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIconEnginePluginD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qiconengineplugin.h:61

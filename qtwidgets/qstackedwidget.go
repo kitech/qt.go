@@ -52,6 +52,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QStackedWidget) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QStackedWidget struct {
 	*QFrame
 }
@@ -102,9 +107,10 @@ func NewQStackedWidget(parent *QWidget /*777 QWidget **/) *QStackedWidget {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStackedWidget()
-func DeleteQStackedWidget(*QStackedWidget) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidgetD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQStackedWidget(this *QStackedWidget) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:62

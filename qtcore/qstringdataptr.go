@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStringDataPtr struct {
 	*qtrt.CObject
 }
@@ -56,13 +57,23 @@ func (this *QStringDataPtr) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QStringDataPtr) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQStringDataPtrFromPointer(cthis unsafe.Pointer) *QStringDataPtr {
 	return &QStringDataPtr{&qtrt.CObject{cthis}}
 }
 func (*QStringDataPtr) NewFromPointer(cthis unsafe.Pointer) *QStringDataPtr {
 	return NewQStringDataPtrFromPointer(cthis)
+}
+
+func DeleteQStringDataPtr(this *QStringDataPtr) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStringDataPtrD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

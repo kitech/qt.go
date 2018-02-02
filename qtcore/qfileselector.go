@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QFileSelector struct {
 	*QObject
 }
@@ -94,9 +95,10 @@ func NewQFileSelector(parent *QObject /*777 QObject **/) *QFileSelector {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFileSelector()
-func DeleteQFileSelector(*QFileSelector) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFileSelectorD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQFileSelector(this *QFileSelector) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFileSelectorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qfileselector.h:56
@@ -109,6 +111,7 @@ func (this *QFileSelector) Select(filePath *QString) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -122,6 +125,7 @@ func (this *QFileSelector) Select_1(filePath *QUrl) *QUrl /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUrl)
 	return rv2
 }
 

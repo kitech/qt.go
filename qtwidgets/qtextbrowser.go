@@ -52,6 +52,46 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QTextBrowser) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void keyPressEvent(class QKeyEvent *)
+func (this *QTextBrowser) InheritKeyPressEvent(f func(ev *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyPressEvent", f)
+}
+
+// void mouseMoveEvent(class QMouseEvent *)
+func (this *QTextBrowser) InheritMouseMoveEvent(f func(ev *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void mousePressEvent(class QMouseEvent *)
+func (this *QTextBrowser) InheritMousePressEvent(f func(ev *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void mouseReleaseEvent(class QMouseEvent *)
+func (this *QTextBrowser) InheritMouseReleaseEvent(f func(ev *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+}
+
+// void focusOutEvent(class QFocusEvent *)
+func (this *QTextBrowser) InheritFocusOutEvent(f func(ev *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusOutEvent", f)
+}
+
+// bool focusNextPrevChild(_Bool)
+func (this *QTextBrowser) InheritFocusNextPrevChild(f func(next bool) bool) {
+	ffiqt.SetAllInheritCallback(this, "focusNextPrevChild", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QTextBrowser) InheritPaintEvent(f func(e *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
 type QTextBrowser struct {
 	*QTextEdit
 }
@@ -102,9 +142,10 @@ func NewQTextBrowser(parent *QWidget /*777 QWidget **/) *QTextBrowser {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTextBrowser()
-func DeleteQTextBrowser(*QTextBrowser) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowserD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextBrowser(this *QTextBrowser) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowserD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qtextbrowser.h:69
@@ -116,6 +157,7 @@ func (this *QTextBrowser) Source() *qtcore.QUrl /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQUrl)
 	return rv2
 }
 
@@ -139,6 +181,7 @@ func (this *QTextBrowser) LoadResource(type_ int, name *qtcore.QUrl) *qtcore.QVa
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -182,6 +225,7 @@ func (this *QTextBrowser) HistoryTitle(arg0 int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -194,6 +238,7 @@ func (this *QTextBrowser) HistoryUrl(arg0 int) *qtcore.QUrl /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQUrl)
 	return rv2
 }
 

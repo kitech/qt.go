@@ -52,6 +52,171 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void columnResized(int, int, int)
+func (this *QTreeView) InheritColumnResized(f func(column int, oldSize int, newSize int)) {
+	ffiqt.SetAllInheritCallback(this, "columnResized", f)
+}
+
+// void columnCountChanged(int, int)
+func (this *QTreeView) InheritColumnCountChanged(f func(oldCount int, newCount int)) {
+	ffiqt.SetAllInheritCallback(this, "columnCountChanged", f)
+}
+
+// void columnMoved()
+func (this *QTreeView) InheritColumnMoved(f func()) {
+	ffiqt.SetAllInheritCallback(this, "columnMoved", f)
+}
+
+// void reexpand()
+func (this *QTreeView) InheritReexpand(f func()) {
+	ffiqt.SetAllInheritCallback(this, "reexpand", f)
+}
+
+// void rowsRemoved(const class QModelIndex &, int, int)
+func (this *QTreeView) InheritRowsRemoved(f func(parent *qtcore.QModelIndex, first int, last int)) {
+	ffiqt.SetAllInheritCallback(this, "rowsRemoved", f)
+}
+
+// void scrollContentsBy(int, int)
+func (this *QTreeView) InheritScrollContentsBy(f func(dx int, dy int)) {
+	ffiqt.SetAllInheritCallback(this, "scrollContentsBy", f)
+}
+
+// void rowsInserted(const class QModelIndex &, int, int)
+func (this *QTreeView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int)) {
+	ffiqt.SetAllInheritCallback(this, "rowsInserted", f)
+}
+
+// void rowsAboutToBeRemoved(const class QModelIndex &, int, int)
+func (this *QTreeView) InheritRowsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, start int, end int)) {
+	ffiqt.SetAllInheritCallback(this, "rowsAboutToBeRemoved", f)
+}
+
+// int horizontalOffset()
+func (this *QTreeView) InheritHorizontalOffset(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "horizontalOffset", f)
+}
+
+// int verticalOffset()
+func (this *QTreeView) InheritVerticalOffset(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "verticalOffset", f)
+}
+
+// void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
+func (this *QTreeView) InheritSetSelection(f func(rect *qtcore.QRect, command int)) {
+	ffiqt.SetAllInheritCallback(this, "setSelection", f)
+}
+
+// QRegion visualRegionForSelection(const class QItemSelection &)
+func (this *QTreeView) InheritVisualRegionForSelection(f func(selection *qtcore.QItemSelection) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "visualRegionForSelection", f)
+}
+
+// void timerEvent(class QTimerEvent *)
+func (this *QTreeView) InheritTimerEvent(f func(event *qtcore.QTimerEvent /*777 QTimerEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "timerEvent", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QTreeView) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void drawTree(class QPainter *, const class QRegion &)
+func (this *QTreeView) InheritDrawTree(f func(painter *qtgui.QPainter /*777 QPainter **/, region *qtgui.QRegion)) {
+	ffiqt.SetAllInheritCallback(this, "drawTree", f)
+}
+
+// void drawRow(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
+func (this *QTreeView) InheritDrawRow(f func(painter *qtgui.QPainter /*777 QPainter **/, options *QStyleOptionViewItem, index *qtcore.QModelIndex)) {
+	ffiqt.SetAllInheritCallback(this, "drawRow", f)
+}
+
+// void drawBranches(class QPainter *, const class QRect &, const class QModelIndex &)
+func (this *QTreeView) InheritDrawBranches(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, index *qtcore.QModelIndex)) {
+	ffiqt.SetAllInheritCallback(this, "drawBranches", f)
+}
+
+// void mousePressEvent(class QMouseEvent *)
+func (this *QTreeView) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void mouseReleaseEvent(class QMouseEvent *)
+func (this *QTreeView) InheritMouseReleaseEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+}
+
+// void mouseDoubleClickEvent(class QMouseEvent *)
+func (this *QTreeView) InheritMouseDoubleClickEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
+}
+
+// void mouseMoveEvent(class QMouseEvent *)
+func (this *QTreeView) InheritMouseMoveEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void keyPressEvent(class QKeyEvent *)
+func (this *QTreeView) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyPressEvent", f)
+}
+
+// void dragMoveEvent(class QDragMoveEvent *)
+func (this *QTreeView) InheritDragMoveEvent(f func(event *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dragMoveEvent", f)
+}
+
+// bool viewportEvent(class QEvent *)
+func (this *QTreeView) InheritViewportEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "viewportEvent", f)
+}
+
+// void updateGeometries()
+func (this *QTreeView) InheritUpdateGeometries(f func()) {
+	ffiqt.SetAllInheritCallback(this, "updateGeometries", f)
+}
+
+// QSize viewportSizeHint()
+func (this *QTreeView) InheritViewportSizeHint(f func() unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "viewportSizeHint", f)
+}
+
+// int sizeHintForColumn(int)
+func (this *QTreeView) InheritSizeHintForColumn(f func(column int) int) {
+	ffiqt.SetAllInheritCallback(this, "sizeHintForColumn", f)
+}
+
+// int indexRowSizeHint(const class QModelIndex &)
+func (this *QTreeView) InheritIndexRowSizeHint(f func(index *qtcore.QModelIndex) int) {
+	ffiqt.SetAllInheritCallback(this, "indexRowSizeHint", f)
+}
+
+// int rowHeight(const class QModelIndex &)
+func (this *QTreeView) InheritRowHeight(f func(index *qtcore.QModelIndex) int) {
+	ffiqt.SetAllInheritCallback(this, "rowHeight", f)
+}
+
+// void horizontalScrollbarAction(int)
+func (this *QTreeView) InheritHorizontalScrollbarAction(f func(action int)) {
+	ffiqt.SetAllInheritCallback(this, "horizontalScrollbarAction", f)
+}
+
+// bool isIndexHidden(const class QModelIndex &)
+func (this *QTreeView) InheritIsIndexHidden(f func(index *qtcore.QModelIndex) bool) {
+	ffiqt.SetAllInheritCallback(this, "isIndexHidden", f)
+}
+
+// void selectionChanged(const class QItemSelection &, const class QItemSelection &)
+func (this *QTreeView) InheritSelectionChanged(f func(selected *qtcore.QItemSelection, deselected *qtcore.QItemSelection)) {
+	ffiqt.SetAllInheritCallback(this, "selectionChanged", f)
+}
+
+// void currentChanged(const class QModelIndex &, const class QModelIndex &)
+func (this *QTreeView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, previous *qtcore.QModelIndex)) {
+	ffiqt.SetAllInheritCallback(this, "currentChanged", f)
+}
+
 type QTreeView struct {
 	*QAbstractItemView
 }
@@ -102,9 +267,10 @@ func NewQTreeView(parent *QWidget /*777 QWidget **/) *QTreeView {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTreeView()
-func DeleteQTreeView(*QTreeView) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeViewD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTreeView(this *QTreeView) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeViewD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qtreeview.h:74
@@ -556,6 +722,7 @@ func (this *QTreeView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*123
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -579,6 +746,7 @@ func (this *QTreeView) IndexAt(p *qtcore.QPoint) *qtcore.QModelIndex /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -592,6 +760,7 @@ func (this *QTreeView) IndexAbove(index *qtcore.QModelIndex) *qtcore.QModelIndex
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -605,6 +774,7 @@ func (this *QTreeView) IndexBelow(index *qtcore.QModelIndex) *qtcore.QModelIndex
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -864,6 +1034,7 @@ func (this *QTreeView) VisualRegionForSelection(selection *qtcore.QItemSelection
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQRegion)
 	return rv2
 }
 
@@ -1012,6 +1183,7 @@ func (this *QTreeView) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

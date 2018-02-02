@@ -52,6 +52,16 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void onTransition(class QEvent *)
+func (this *QKeyEventTransition) InheritOnTransition(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "onTransition", f)
+}
+
+// bool eventTest(class QEvent *)
+func (this *QKeyEventTransition) InheritEventTest(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "eventTest", f)
+}
+
 type QKeyEventTransition struct {
 	*qtcore.QEventTransition
 }
@@ -115,9 +125,10 @@ func NewQKeyEventTransition_1(object *qtcore.QObject /*777 QObject **/, type_ in
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QKeyEventTransition()
-func DeleteQKeyEventTransition(*QKeyEventTransition) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransitionD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQKeyEventTransition(this *QKeyEventTransition) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransitionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qkeyeventtransition.h:62

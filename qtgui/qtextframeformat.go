@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextFrameFormat struct {
 	*QTextFormat
 }
@@ -78,6 +79,7 @@ func NewQTextFrameFormat() *QTextFrameFormat {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormatC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextFrameFormatFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextFrameFormat)
 	return gothis
 }
 
@@ -90,6 +92,7 @@ func NewQTextFrameFormat_1(fmt *QTextFormat) *QTextFrameFormat {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormatC2ERK11QTextFormat", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextFrameFormatFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextFrameFormat)
 	return gothis
 }
 
@@ -163,6 +166,7 @@ func (this *QTextFrameFormat) BorderBrush() *QBrush /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBrush)
 	return rv2
 }
 
@@ -334,6 +338,7 @@ func (this *QTextFrameFormat) Width() *QTextLength /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextLengthFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextLength)
 	return rv2
 }
 
@@ -365,6 +370,7 @@ func (this *QTextFrameFormat) Height() *QTextLength /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextLengthFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextLength)
 	return rv2
 }
 
@@ -386,6 +392,12 @@ func (this *QTextFrameFormat) PageBreakPolicy() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+func DeleteQTextFrameFormat(this *QTextFrameFormat) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormatD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QTextFrameFormat__Position = int

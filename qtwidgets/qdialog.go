@@ -52,6 +52,41 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void keyPressEvent(class QKeyEvent *)
+func (this *QDialog) InheritKeyPressEvent(f func(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyPressEvent", f)
+}
+
+// void closeEvent(class QCloseEvent *)
+func (this *QDialog) InheritCloseEvent(f func(arg0 *qtgui.QCloseEvent /*777 QCloseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "closeEvent", f)
+}
+
+// void showEvent(class QShowEvent *)
+func (this *QDialog) InheritShowEvent(f func(arg0 *qtgui.QShowEvent /*777 QShowEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "showEvent", f)
+}
+
+// void resizeEvent(class QResizeEvent *)
+func (this *QDialog) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void contextMenuEvent(class QContextMenuEvent *)
+func (this *QDialog) InheritContextMenuEvent(f func(arg0 *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "contextMenuEvent", f)
+}
+
+// bool eventFilter(class QObject *, class QEvent *)
+func (this *QDialog) InheritEventFilter(f func(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "eventFilter", f)
+}
+
+// void adjustPosition(class QWidget *)
+func (this *QDialog) InheritAdjustPosition(f func(arg0 *QWidget /*777 QWidget **/)) {
+	ffiqt.SetAllInheritCallback(this, "adjustPosition", f)
+}
+
 type QDialog struct {
 	*QWidget
 }
@@ -102,9 +137,10 @@ func NewQDialog(parent *QWidget /*777 QWidget **/, f int) *QDialog {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDialog()
-func DeleteQDialog(*QDialog) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialogD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDialog(this *QDialog) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialogD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qdialog.h:68
@@ -178,6 +214,7 @@ func (this *QDialog) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -190,6 +227,7 @@ func (this *QDialog) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

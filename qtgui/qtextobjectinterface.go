@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextObjectInterface struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QTextObjectInterface) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTextObjectInterface) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTextObjectInterfaceFromPointer(cthis unsafe.Pointer) *QTextObjectInterface {
 	return &QTextObjectInterface{&qtrt.CObject{cthis}}
@@ -73,9 +78,10 @@ func (*QTextObjectInterface) NewFromPointer(cthis unsafe.Pointer) *QTextObjectIn
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTextObjectInterface()
-func DeleteQTextObjectInterface(*QTextObjectInterface) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextObjectInterfaceD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextObjectInterface(this *QTextObjectInterface) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextObjectInterfaceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qabstracttextdocumentlayout.h:142
@@ -89,6 +95,7 @@ func (this *QTextObjectInterface) IntrinsicSize(doc *QTextDocument /*777 QTextDo
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
 

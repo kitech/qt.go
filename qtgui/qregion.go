@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QRegion struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QRegion) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QRegion) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQRegionFromPointer(cthis unsafe.Pointer) *QRegion {
 	return &QRegion{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQRegion() *QRegion {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRegionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRegion)
 	return gothis
 }
 
@@ -88,6 +94,7 @@ func NewQRegion_1(x int, y int, w int, h int, t int) *QRegion {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2EiiiiNS_10RegionTypeE", ffiqt.FFI_TYPE_POINTER, x, y, w, h, t)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRegionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRegion)
 	return gothis
 }
 
@@ -100,6 +107,7 @@ func NewQRegion_2(r *qtcore.QRect, t int) *QRegion {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2ERK5QRectNS_10RegionTypeE", ffiqt.FFI_TYPE_POINTER, convArg0, t)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRegionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRegion)
 	return gothis
 }
 
@@ -112,6 +120,7 @@ func NewQRegion_3(pa *QPolygon, fillRule int) *QRegion {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2ERK8QPolygonN2Qt8FillRuleE", ffiqt.FFI_TYPE_POINTER, convArg0, fillRule)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRegionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRegion)
 	return gothis
 }
 
@@ -124,6 +133,7 @@ func NewQRegion_4(bitmap *QBitmap) *QRegion {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionC2ERK7QBitmap", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRegionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRegion)
 	return gothis
 }
 
@@ -131,9 +141,10 @@ func NewQRegion_4(bitmap *QBitmap) *QRegion {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QRegion()
-func DeleteQRegion(*QRegion) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQRegion(this *QRegion) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qregion.h:81
@@ -268,6 +279,7 @@ func (this *QRegion) Translated(dx int, dy int) *QRegion /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegion)
 	return rv2
 }
 
@@ -281,6 +293,7 @@ func (this *QRegion) Translated_1(p *qtcore.QPoint) *QRegion /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegion)
 	return rv2
 }
 
@@ -294,6 +307,7 @@ func (this *QRegion) United(r *QRegion) *QRegion /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegion)
 	return rv2
 }
 
@@ -307,6 +321,7 @@ func (this *QRegion) United_1(r *qtcore.QRect) *QRegion /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegion)
 	return rv2
 }
 
@@ -320,6 +335,7 @@ func (this *QRegion) Intersected(r *QRegion) *QRegion /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegion)
 	return rv2
 }
 
@@ -333,6 +349,7 @@ func (this *QRegion) Intersected_1(r *qtcore.QRect) *QRegion /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegion)
 	return rv2
 }
 
@@ -346,6 +363,7 @@ func (this *QRegion) Subtracted(r *QRegion) *QRegion /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegion)
 	return rv2
 }
 
@@ -359,6 +377,7 @@ func (this *QRegion) Xored(r *QRegion) *QRegion /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegion)
 	return rv2
 }
 
@@ -395,6 +414,7 @@ func (this *QRegion) BoundingRect() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 

@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QLine struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QLine) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QLine) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQLineFromPointer(cthis unsafe.Pointer) *QLine {
 	return &QLine{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQLine() *QLine {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QLineC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLineFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQLine)
 	return gothis
 }
 
@@ -86,6 +92,7 @@ func NewQLine_1(pt1 *QPoint, pt2 *QPoint) *QLine {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QLineC2ERK6QPointS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLineFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQLine)
 	return gothis
 }
 
@@ -97,6 +104,7 @@ func NewQLine_2(x1 int, y1 int, x2 int, y2 int) *QLine {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QLineC2Eiiii", ffiqt.FFI_TYPE_POINTER, x1, y1, x2, y2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLineFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQLine)
 	return gothis
 }
 
@@ -120,6 +128,7 @@ func (this *QLine) P1() *QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPoint)
 	return rv2
 }
 
@@ -132,6 +141,7 @@ func (this *QLine) P2() *QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPoint)
 	return rv2
 }
 
@@ -230,6 +240,7 @@ func (this *QLine) Translated(p *QPoint) *QLine /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLine)
 	return rv2
 }
 
@@ -242,6 +253,7 @@ func (this *QLine) Translated_1(dx int, dy int) *QLine /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLine)
 	return rv2
 }
 
@@ -254,6 +266,7 @@ func (this *QLine) Center() *QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPoint)
 	return rv2
 }
 
@@ -295,6 +308,12 @@ func (this *QLine) SetPoints(p1 *QPoint, p2 *QPoint) {
 func (this *QLine) SetLine(x1 int, y1 int, x2 int, y2 int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QLine7setLineEiiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, x2, y2)
 	gopp.ErrPrint(err, rv)
+}
+
+func DeleteQLine(this *QLine) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QLineD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QCommonStyle struct {
 	*QStyle
 }
@@ -101,9 +102,10 @@ func NewQCommonStyle() *QCommonStyle {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QCommonStyle()
-func DeleteQCommonStyle(*QCommonStyle) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QCommonStyleD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQCommonStyle(this *QCommonStyle) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QCommonStyleD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qcommonstyle.h:58
@@ -141,6 +143,7 @@ func (this *QCommonStyle) SubElementRect(r int, opt *QStyleOption /*777 const QS
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -181,6 +184,7 @@ func (this *QCommonStyle) SubControlRect(cc int, opt *QStyleOptionComplex /*777 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -196,6 +200,7 @@ func (this *QCommonStyle) SizeFromContents(ct int, opt *QStyleOption /*777 const
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -237,6 +242,7 @@ func (this *QCommonStyle) StandardIcon(standardIcon int, opt *QStyleOption /*777
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
 }
 
@@ -251,6 +257,7 @@ func (this *QCommonStyle) StandardPixmap(sp int, opt *QStyleOption /*777 const Q
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
 	return rv2
 }
 
@@ -265,6 +272,7 @@ func (this *QCommonStyle) GeneratedIconPixmap(iconMode int, pixmap *qtgui.QPixma
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
 	return rv2
 }
 

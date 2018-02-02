@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QScopedPointerPodDeleter struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QScopedPointerPodDeleter) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QScopedPointerPodDeleter) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQScopedPointerPodDeleterFromPointer(cthis unsafe.Pointer) *QScopedPointerPodDeleter {
 	return &QScopedPointerPodDeleter{&qtrt.CObject{cthis}}
@@ -76,6 +81,12 @@ func (this *QScopedPointerPodDeleter) Cleanup(pointer unsafe.Pointer /*666*/) {
 func QScopedPointerPodDeleter_Cleanup(pointer unsafe.Pointer /*666*/) {
 	var nilthis *QScopedPointerPodDeleter
 	nilthis.Cleanup(pointer)
+}
+
+func DeleteQScopedPointerPodDeleter(this *QScopedPointerPodDeleter) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QScopedPointerPodDeleterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

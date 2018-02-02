@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QFlag struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QFlag) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QFlag) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQFlagFromPointer(cthis unsafe.Pointer) *QFlag {
 	return &QFlag{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQFlag(ai int) *QFlag {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Ei", ffiqt.FFI_TYPE_POINTER, ai)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQFlag)
 	return gothis
 }
 
@@ -84,6 +90,7 @@ func NewQFlag_1(ai uint) *QFlag {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Ej", ffiqt.FFI_TYPE_POINTER, ai)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQFlag)
 	return gothis
 }
 
@@ -95,6 +102,7 @@ func NewQFlag_2(ai int16) *QFlag {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Es", ffiqt.FFI_TYPE_POINTER, ai)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQFlag)
 	return gothis
 }
 
@@ -106,7 +114,14 @@ func NewQFlag_3(ai uint16) *QFlag {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Et", ffiqt.FFI_TYPE_POINTER, ai)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQFlag)
 	return gothis
+}
+
+func DeleteQFlag(this *QFlag) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

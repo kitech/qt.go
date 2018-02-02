@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QPlatformSurfaceEvent struct {
 	*qtcore.QEvent
 }
@@ -78,6 +79,7 @@ func NewQPlatformSurfaceEvent(surfaceEventType int) *QPlatformSurfaceEvent {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventC2ENS_16SurfaceEventTypeE", ffiqt.FFI_TYPE_POINTER, surfaceEventType)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPlatformSurfaceEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPlatformSurfaceEvent)
 	return gothis
 }
 
@@ -85,9 +87,10 @@ func NewQPlatformSurfaceEvent(surfaceEventType int) *QPlatformSurfaceEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPlatformSurfaceEvent()
-func DeleteQPlatformSurfaceEvent(*QPlatformSurfaceEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPlatformSurfaceEvent(this *QPlatformSurfaceEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:454

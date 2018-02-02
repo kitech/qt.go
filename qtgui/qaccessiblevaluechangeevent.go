@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAccessibleValueChangeEvent struct {
 	*QAccessibleEvent
 }
@@ -80,6 +81,7 @@ func NewQAccessibleValueChangeEvent(obj *qtcore.QObject /*777 QObject **/, val *
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventC2EP7QObjectRK8QVariant", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleValueChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQAccessibleValueChangeEvent)
 	return gothis
 }
 
@@ -93,6 +95,7 @@ func NewQAccessibleValueChangeEvent_1(iface *QAccessibleInterface /*777 QAccessi
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventC2EP20QAccessibleInterfaceRK8QVariant", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleValueChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQAccessibleValueChangeEvent)
 	return gothis
 }
 
@@ -100,9 +103,10 @@ func NewQAccessibleValueChangeEvent_1(iface *QAccessibleInterface /*777 QAccessi
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleValueChangeEvent()
-func DeleteQAccessibleValueChangeEvent(*QAccessibleValueChangeEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAccessibleValueChangeEvent(this *QAccessibleValueChangeEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:913
@@ -124,6 +128,7 @@ func (this *QAccessibleValueChangeEvent) Value() *qtcore.QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 

@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAccessiblePlugin struct {
 	*qtcore.QObject
 }
@@ -98,9 +99,10 @@ func NewQAccessiblePlugin(parent *qtcore.QObject /*777 QObject **/) *QAccessible
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessiblePlugin()
-func DeleteQAccessiblePlugin(*QAccessiblePlugin) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessiblePluginD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAccessiblePlugin(this *QAccessiblePlugin) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessiblePluginD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qaccessibleplugin.h:66

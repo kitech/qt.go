@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QInputMethodQueryEvent struct {
 	*qtcore.QEvent
 }
@@ -74,9 +75,10 @@ func (*QInputMethodQueryEvent) NewFromPointer(cthis unsafe.Pointer) *QInputMetho
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QInputMethodQueryEvent()
-func DeleteQInputMethodQueryEvent(*QInputMethodQueryEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QInputMethodQueryEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQInputMethodQueryEvent(this *QInputMethodQueryEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QInputMethodQueryEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:584
@@ -109,6 +111,7 @@ func (this *QInputMethodQueryEvent) Value(query int) *qtcore.QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 

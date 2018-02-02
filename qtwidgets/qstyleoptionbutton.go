@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleOptionButton struct {
 	*QStyleOption
 }
@@ -82,6 +83,7 @@ func NewQStyleOptionButton() *QStyleOptionButton {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionButtonC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionButtonFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionButton)
 	return gothis
 }
 
@@ -93,7 +95,14 @@ func NewQStyleOptionButton_1(version int) *QStyleOptionButton {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionButtonC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionButtonFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionButton)
 	return gothis
+}
+
+func DeleteQStyleOptionButton(this *QStyleOptionButton) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionButtonD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleOptionButton__StyleOptionType = int

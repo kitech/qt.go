@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QMimeDatabase struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QMimeDatabase) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QMimeDatabase) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQMimeDatabaseFromPointer(cthis unsafe.Pointer) *QMimeDatabase {
 	return &QMimeDatabase{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQMimeDatabase() *QMimeDatabase {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMimeDatabaseC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMimeDatabaseFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMimeDatabase)
 	return gothis
 }
 
@@ -80,9 +86,10 @@ func NewQMimeDatabase() *QMimeDatabase {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QMimeDatabase()
-func DeleteQMimeDatabase(*QMimeDatabase) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMimeDatabaseD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQMimeDatabase(this *QMimeDatabase) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMimeDatabaseD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qmimedatabase.h:66
@@ -95,6 +102,7 @@ func (this *QMimeDatabase) MimeTypeForName(nameOrAlias *QString) *QMimeType /*12
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMimeTypeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMimeType)
 	return rv2
 }
 
@@ -108,6 +116,7 @@ func (this *QMimeDatabase) MimeTypeForFile(fileName *QString, mode int) *QMimeTy
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMimeTypeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMimeType)
 	return rv2
 }
 
@@ -121,6 +130,7 @@ func (this *QMimeDatabase) MimeTypeForFile_1(fileInfo *QFileInfo, mode int) *QMi
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMimeTypeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMimeType)
 	return rv2
 }
 
@@ -134,6 +144,7 @@ func (this *QMimeDatabase) MimeTypeForData(data *QByteArray) *QMimeType /*123*/ 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMimeTypeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMimeType)
 	return rv2
 }
 
@@ -147,6 +158,7 @@ func (this *QMimeDatabase) MimeTypeForData_1(device *QIODevice /*777 QIODevice *
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMimeTypeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMimeType)
 	return rv2
 }
 
@@ -160,6 +172,7 @@ func (this *QMimeDatabase) MimeTypeForUrl(url *QUrl) *QMimeType /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMimeTypeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMimeType)
 	return rv2
 }
 
@@ -174,6 +187,7 @@ func (this *QMimeDatabase) MimeTypeForFileNameAndData(fileName *QString, device 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMimeTypeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMimeType)
 	return rv2
 }
 
@@ -188,6 +202,7 @@ func (this *QMimeDatabase) MimeTypeForFileNameAndData_1(fileName *QString, data 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMimeTypeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMimeType)
 	return rv2
 }
 
@@ -201,6 +216,7 @@ func (this *QMimeDatabase) SuffixForFileName(fileName *QString) *QString /*123*/
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 

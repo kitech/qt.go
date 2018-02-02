@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextBlockFormat struct {
 	*QTextFormat
 }
@@ -78,6 +79,7 @@ func NewQTextBlockFormat() *QTextBlockFormat {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormatC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextBlockFormatFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextBlockFormat)
 	return gothis
 }
 
@@ -90,6 +92,7 @@ func NewQTextBlockFormat_1(fmt *QTextFormat) *QTextBlockFormat {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormatC2ERK11QTextFormat", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextBlockFormatFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextBlockFormat)
 	return gothis
 }
 
@@ -315,6 +318,12 @@ func (this *QTextBlockFormat) PageBreakPolicy() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+func DeleteQTextBlockFormat(this *QTextBlockFormat) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextBlockFormatD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QTextBlockFormat__LineHeightTypes = int

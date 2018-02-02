@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QRectF struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QRectF) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QRectF) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQRectFFromPointer(cthis unsafe.Pointer) *QRectF {
 	return &QRectF{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQRectF() *QRectF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QRectFC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRectFFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRectF)
 	return gothis
 }
 
@@ -86,6 +92,7 @@ func NewQRectF_1(topleft *QPointF, size *QSizeF) *QRectF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QRectFC2ERK7QPointFRK6QSizeF", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRectFFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRectF)
 	return gothis
 }
 
@@ -99,6 +106,7 @@ func NewQRectF_2(topleft *QPointF, bottomRight *QPointF) *QRectF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QRectFC2ERK7QPointFS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRectFFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRectF)
 	return gothis
 }
 
@@ -110,6 +118,7 @@ func NewQRectF_3(left float64, top float64, width float64, height float64) *QRec
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QRectFC2Edddd", ffiqt.FFI_TYPE_POINTER, left, top, width, height)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRectFFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRectF)
 	return gothis
 }
 
@@ -122,6 +131,7 @@ func NewQRectF_4(rect *QRect) *QRectF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QRectFC2ERK5QRect", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRectFFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRectF)
 	return gothis
 }
 
@@ -167,6 +177,7 @@ func (this *QRectF) Normalized() *QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRectF)
 	return rv2
 }
 
@@ -299,6 +310,7 @@ func (this *QRectF) TopLeft() *QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPointF)
 	return rv2
 }
 
@@ -311,6 +323,7 @@ func (this *QRectF) BottomRight() *QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPointF)
 	return rv2
 }
 
@@ -323,6 +336,7 @@ func (this *QRectF) TopRight() *QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPointF)
 	return rv2
 }
 
@@ -335,6 +349,7 @@ func (this *QRectF) BottomLeft() *QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPointF)
 	return rv2
 }
 
@@ -347,6 +362,7 @@ func (this *QRectF) Center() *QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPointF)
 	return rv2
 }
 
@@ -504,6 +520,7 @@ func (this *QRectF) Translated(dx float64, dy float64) *QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRectF)
 	return rv2
 }
 
@@ -517,6 +534,7 @@ func (this *QRectF) Translated_1(p *QPointF) *QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRectF)
 	return rv2
 }
 
@@ -529,6 +547,7 @@ func (this *QRectF) Transposed() *QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRectF)
 	return rv2
 }
 
@@ -605,6 +624,7 @@ func (this *QRectF) Adjusted(x1 float64, y1 float64, x2 float64, y2 float64) *QR
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRectF)
 	return rv2
 }
 
@@ -617,6 +637,7 @@ func (this *QRectF) Size() *QSizeF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSizeF)
 	return rv2
 }
 
@@ -715,6 +736,7 @@ func (this *QRectF) United(other *QRectF) *QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRectF)
 	return rv2
 }
 
@@ -728,6 +750,7 @@ func (this *QRectF) Intersected(other *QRectF) *QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRectF)
 	return rv2
 }
 
@@ -753,6 +776,7 @@ func (this *QRectF) MarginsAdded(margins *QMarginsF) *QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRectF)
 	return rv2
 }
 
@@ -766,6 +790,7 @@ func (this *QRectF) MarginsRemoved(margins *QMarginsF) *QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRectF)
 	return rv2
 }
 
@@ -778,6 +803,7 @@ func (this *QRectF) ToRect() *QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRect)
 	return rv2
 }
 
@@ -790,7 +816,14 @@ func (this *QRectF) ToAlignedRect() *QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRect)
 	return rv2
+}
+
+func DeleteQRectF(this *QRectF) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QRectFD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

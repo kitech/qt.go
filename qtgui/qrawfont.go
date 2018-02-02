@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QRawFont struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QRawFont) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QRawFont) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQRawFontFromPointer(cthis unsafe.Pointer) *QRawFont {
 	return &QRawFont{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQRawFont() *QRawFont {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QRawFontC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRawFontFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRawFont)
 	return gothis
 }
 
@@ -89,6 +95,7 @@ func NewQRawFont_1(fileName *qtcore.QString, pixelSize float64, hintingPreferenc
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QRawFontC2ERK7QStringdN5QFont17HintingPreferenceE", ffiqt.FFI_TYPE_POINTER, convArg0, pixelSize, hintingPreference)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRawFontFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRawFont)
 	return gothis
 }
 
@@ -101,6 +108,7 @@ func NewQRawFont_2(fontData *qtcore.QByteArray, pixelSize float64, hintingPrefer
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QRawFontC2ERK10QByteArraydN5QFont17HintingPreferenceE", ffiqt.FFI_TYPE_POINTER, convArg0, pixelSize, hintingPreference)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRawFontFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRawFont)
 	return gothis
 }
 
@@ -108,9 +116,10 @@ func NewQRawFont_2(fontData *qtcore.QByteArray, pixelSize float64, hintingPrefer
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QRawFont()
-func DeleteQRawFont(*QRawFont) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QRawFontD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQRawFont(this *QRawFont) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QRawFontD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qrawfont.h:88
@@ -143,6 +152,7 @@ func (this *QRawFont) FamilyName() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -155,6 +165,7 @@ func (this *QRawFont) StyleName() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -226,6 +237,7 @@ func (this *QRawFont) AlphaMapForGlyph(glyphIndex uint, antialiasingType int, tr
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQImage)
 	return rv2
 }
 
@@ -238,6 +250,7 @@ func (this *QRawFont) PathForGlyph(glyphIndex uint) *QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPainterPath)
 	return rv2
 }
 
@@ -250,6 +263,7 @@ func (this *QRawFont) BoundingRect(glyphIndex uint) *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -448,6 +462,7 @@ func (this *QRawFont) FontTable(tagName string) *qtcore.QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
 
@@ -461,6 +476,7 @@ func (this *QRawFont) FromFont(font *QFont, writingSystem int) *QRawFont /*123*/
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQRawFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRawFont)
 	return rv2
 }
 func QRawFont_FromFont(font *QFont, writingSystem int) *QRawFont /*123*/ {

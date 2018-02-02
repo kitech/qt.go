@@ -52,6 +52,21 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool supportsExtension(enum QGraphicsItem::Extension)
+func (this *QGraphicsPixmapItem) InheritSupportsExtension(f func(extension int) bool) {
+	ffiqt.SetAllInheritCallback(this, "supportsExtension", f)
+}
+
+// void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
+func (this *QGraphicsPixmapItem) InheritSetExtension(f func(extension int, variant *qtcore.QVariant)) {
+	ffiqt.SetAllInheritCallback(this, "setExtension", f)
+}
+
+// QVariant extension(const class QVariant &)
+func (this *QGraphicsPixmapItem) InheritExtension(f func(variant *qtcore.QVariant) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "extension", f)
+}
+
 type QGraphicsPixmapItem struct {
 	*QGraphicsItem
 }
@@ -83,6 +98,7 @@ func NewQGraphicsPixmapItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGra
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsPixmapItemC2EP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsPixmapItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsPixmapItem)
 	return gothis
 }
 
@@ -96,6 +112,7 @@ func NewQGraphicsPixmapItem_1(pixmap *qtgui.QPixmap, parent *QGraphicsItem /*777
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsPixmapItemC2ERK7QPixmapP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsPixmapItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsPixmapItem)
 	return gothis
 }
 
@@ -103,9 +120,10 @@ func NewQGraphicsPixmapItem_1(pixmap *qtgui.QPixmap, parent *QGraphicsItem /*777
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsPixmapItem()
-func DeleteQGraphicsPixmapItem(*QGraphicsPixmapItem) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsPixmapItemD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsPixmapItem(this *QGraphicsPixmapItem) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsPixmapItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:829
@@ -117,6 +135,7 @@ func (this *QGraphicsPixmapItem) Pixmap() *qtgui.QPixmap /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
 	return rv2
 }
 
@@ -159,6 +178,7 @@ func (this *QGraphicsPixmapItem) Offset() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -190,6 +210,7 @@ func (this *QGraphicsPixmapItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -202,6 +223,7 @@ func (this *QGraphicsPixmapItem) Shape() *qtgui.QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
 }
 
@@ -250,6 +272,7 @@ func (this *QGraphicsPixmapItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
 }
 
@@ -315,6 +338,7 @@ func (this *QGraphicsPixmapItem) Extension(variant *qtcore.QVariant) *qtcore.QVa
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 

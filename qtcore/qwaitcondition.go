@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QWaitCondition struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QWaitCondition) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QWaitCondition) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQWaitConditionFromPointer(cthis unsafe.Pointer) *QWaitCondition {
 	return &QWaitCondition{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQWaitCondition() *QWaitCondition {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitConditionC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQWaitConditionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQWaitCondition)
 	return gothis
 }
 
@@ -80,9 +86,10 @@ func NewQWaitCondition() *QWaitCondition {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QWaitCondition()
-func DeleteQWaitCondition(*QWaitCondition) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitConditionD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQWaitCondition(this *QWaitCondition) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitConditionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qwaitcondition.h:62

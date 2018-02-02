@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QFactoryInterface struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QFactoryInterface) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QFactoryInterface) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQFactoryInterfaceFromPointer(cthis unsafe.Pointer) *QFactoryInterface {
 	return &QFactoryInterface{&qtrt.CObject{cthis}}
@@ -69,9 +74,10 @@ func (*QFactoryInterface) NewFromPointer(cthis unsafe.Pointer) *QFactoryInterfac
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFactoryInterface()
-func DeleteQFactoryInterface(*QFactoryInterface) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QFactoryInterfaceD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQFactoryInterface(this *QFactoryInterface) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QFactoryInterfaceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleHintReturnVariant struct {
 	*QStyleHintReturn
 }
@@ -82,6 +83,7 @@ func NewQStyleHintReturnVariant() *QStyleHintReturnVariant {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QStyleHintReturnVariantC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleHintReturnVariantFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleHintReturnVariant)
 	return gothis
 }
 
@@ -89,9 +91,10 @@ func NewQStyleHintReturnVariant() *QStyleHintReturnVariant {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QStyleHintReturnVariant()
-func DeleteQStyleHintReturnVariant(*QStyleHintReturnVariant) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QStyleHintReturnVariantD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQStyleHintReturnVariant(this *QStyleHintReturnVariant) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QStyleHintReturnVariantD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleHintReturnVariant__StyleOptionType = int

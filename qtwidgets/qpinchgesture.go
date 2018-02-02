@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QPinchGesture struct {
 	*QGesture
 }
@@ -102,9 +103,10 @@ func NewQPinchGesture(parent *qtcore.QObject /*777 QObject **/) *QPinchGesture {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPinchGesture()
-func DeleteQPinchGesture(*QPinchGesture) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGestureD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPinchGesture(this *QPinchGesture) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGestureD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:168
@@ -156,6 +158,7 @@ func (this *QPinchGesture) StartCenterPoint() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -168,6 +171,7 @@ func (this *QPinchGesture) LastCenterPoint() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -180,6 +184,7 @@ func (this *QPinchGesture) CenterPoint() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 

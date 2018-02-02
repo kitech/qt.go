@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTabletEvent struct {
 	*QInputEvent
 }
@@ -74,9 +75,10 @@ func (*QTabletEvent) NewFromPointer(cthis unsafe.Pointer) *QTabletEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTabletEvent()
-func DeleteQTabletEvent(*QTabletEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTabletEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTabletEvent(this *QTabletEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTabletEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:261
@@ -88,6 +90,7 @@ func (this *QTabletEvent) Pos() *qtcore.QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
@@ -100,6 +103,7 @@ func (this *QTabletEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
@@ -112,6 +116,7 @@ func (this *QTabletEvent) PosF() *qtcore.QPointF {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -124,6 +129,7 @@ func (this *QTabletEvent) GlobalPosF() *qtcore.QPointF {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 

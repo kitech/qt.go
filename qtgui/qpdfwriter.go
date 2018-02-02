@@ -48,6 +48,16 @@ func init() {
 //  ext block end
 
 //  body block begin
+// QPaintEngine * paintEngine()
+func (this *QPdfWriter) InheritPaintEngine(f func() unsafe.Pointer /*666*/) {
+	ffiqt.SetAllInheritCallback(this, "paintEngine", f)
+}
+
+// int metric(enum QPaintDevice::PaintDeviceMetric)
+func (this *QPdfWriter) InheritMetric(f func(id int) int) {
+	ffiqt.SetAllInheritCallback(this, "metric", f)
+}
+
 type QPdfWriter struct {
 	*qtcore.QObject
 	*QPagedPaintDevice
@@ -113,9 +123,10 @@ func NewQPdfWriter_1(device *qtcore.QIODevice /*777 QIODevice **/) *QPdfWriter {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPdfWriter()
-func DeleteQPdfWriter(*QPdfWriter) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPdfWriterD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPdfWriter(this *QPdfWriter) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPdfWriterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qpdfwriter.h:64
@@ -147,6 +158,7 @@ func (this *QPdfWriter) Title() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -169,6 +181,7 @@ func (this *QPdfWriter) Creator() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

@@ -52,6 +52,46 @@ func init() {
 //  ext block end
 
 //  body block begin
+// QSplitterHandle * createHandle()
+func (this *QSplitter) InheritCreateHandle(f func() unsafe.Pointer /*666*/) {
+	ffiqt.SetAllInheritCallback(this, "createHandle", f)
+}
+
+// void childEvent(class QChildEvent *)
+func (this *QSplitter) InheritChildEvent(f func(arg0 *qtcore.QChildEvent /*777 QChildEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "childEvent", f)
+}
+
+// bool event(class QEvent *)
+func (this *QSplitter) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void resizeEvent(class QResizeEvent *)
+func (this *QSplitter) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void changeEvent(class QEvent *)
+func (this *QSplitter) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
+// void moveSplitter(int, int)
+func (this *QSplitter) InheritMoveSplitter(f func(pos int, index int)) {
+	ffiqt.SetAllInheritCallback(this, "moveSplitter", f)
+}
+
+// void setRubberBand(int)
+func (this *QSplitter) InheritSetRubberBand(f func(position int)) {
+	ffiqt.SetAllInheritCallback(this, "setRubberBand", f)
+}
+
+// int closestLegalPosition(int, int)
+func (this *QSplitter) InheritClosestLegalPosition(f func(arg0 int, arg1 int) int) {
+	ffiqt.SetAllInheritCallback(this, "closestLegalPosition", f)
+}
+
 type QSplitter struct {
 	*QFrame
 }
@@ -114,9 +154,10 @@ func NewQSplitter_1(arg0 int, parent *QWidget /*777 QWidget **/) *QSplitter {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSplitter()
-func DeleteQSplitter(*QSplitter) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSplitterD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSplitter(this *QSplitter) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSplitterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qsplitter.h:71
@@ -250,6 +291,7 @@ func (this *QSplitter) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -262,6 +304,7 @@ func (this *QSplitter) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -274,6 +317,7 @@ func (this *QSplitter) SaveState() *qtcore.QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
 

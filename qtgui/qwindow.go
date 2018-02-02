@@ -48,6 +48,96 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void exposeEvent(class QExposeEvent *)
+func (this *QWindow) InheritExposeEvent(f func(arg0 *QExposeEvent /*777 QExposeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "exposeEvent", f)
+}
+
+// void resizeEvent(class QResizeEvent *)
+func (this *QWindow) InheritResizeEvent(f func(arg0 *QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void moveEvent(class QMoveEvent *)
+func (this *QWindow) InheritMoveEvent(f func(arg0 *QMoveEvent /*777 QMoveEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "moveEvent", f)
+}
+
+// void focusInEvent(class QFocusEvent *)
+func (this *QWindow) InheritFocusInEvent(f func(arg0 *QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusInEvent", f)
+}
+
+// void focusOutEvent(class QFocusEvent *)
+func (this *QWindow) InheritFocusOutEvent(f func(arg0 *QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusOutEvent", f)
+}
+
+// void showEvent(class QShowEvent *)
+func (this *QWindow) InheritShowEvent(f func(arg0 *QShowEvent /*777 QShowEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "showEvent", f)
+}
+
+// void hideEvent(class QHideEvent *)
+func (this *QWindow) InheritHideEvent(f func(arg0 *QHideEvent /*777 QHideEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "hideEvent", f)
+}
+
+// bool event(class QEvent *)
+func (this *QWindow) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void keyPressEvent(class QKeyEvent *)
+func (this *QWindow) InheritKeyPressEvent(f func(arg0 *QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyPressEvent", f)
+}
+
+// void keyReleaseEvent(class QKeyEvent *)
+func (this *QWindow) InheritKeyReleaseEvent(f func(arg0 *QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyReleaseEvent", f)
+}
+
+// void mousePressEvent(class QMouseEvent *)
+func (this *QWindow) InheritMousePressEvent(f func(arg0 *QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void mouseReleaseEvent(class QMouseEvent *)
+func (this *QWindow) InheritMouseReleaseEvent(f func(arg0 *QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+}
+
+// void mouseDoubleClickEvent(class QMouseEvent *)
+func (this *QWindow) InheritMouseDoubleClickEvent(f func(arg0 *QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
+}
+
+// void mouseMoveEvent(class QMouseEvent *)
+func (this *QWindow) InheritMouseMoveEvent(f func(arg0 *QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void wheelEvent(class QWheelEvent *)
+func (this *QWindow) InheritWheelEvent(f func(arg0 *QWheelEvent /*777 QWheelEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "wheelEvent", f)
+}
+
+// void touchEvent(class QTouchEvent *)
+func (this *QWindow) InheritTouchEvent(f func(arg0 *QTouchEvent /*777 QTouchEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "touchEvent", f)
+}
+
+// void tabletEvent(class QTabletEvent *)
+func (this *QWindow) InheritTabletEvent(f func(arg0 *QTabletEvent /*777 QTabletEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "tabletEvent", f)
+}
+
+// bool nativeEvent(const class QByteArray &, void *, long *)
+func (this *QWindow) InheritNativeEvent(f func(eventType *qtcore.QByteArray, message unsafe.Pointer /*666*/, result unsafe.Pointer /*666*/) bool) {
+	ffiqt.SetAllInheritCallback(this, "nativeEvent", f)
+}
+
 type QWindow struct {
 	*qtcore.QObject
 	*QSurface
@@ -113,9 +203,10 @@ func NewQWindow_1(parent *QWindow /*777 QWindow **/) *QWindow {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWindow()
-func DeleteQWindow(*QWindow) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindowD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQWindow(this *QWindow) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindowD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qwindow.h:148
@@ -284,6 +375,7 @@ func (this *QWindow) Format() *QSurfaceFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSurfaceFormat)
 	return rv2
 }
 
@@ -296,6 +388,7 @@ func (this *QWindow) RequestedFormat() *QSurfaceFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSurfaceFormat)
 	return rv2
 }
 
@@ -348,6 +441,7 @@ func (this *QWindow) Title() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -390,6 +484,7 @@ func (this *QWindow) Mask() *QRegion /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegion)
 	return rv2
 }
 
@@ -564,6 +659,7 @@ func (this *QWindow) MinimumSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -576,6 +672,7 @@ func (this *QWindow) MaximumSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -588,6 +685,7 @@ func (this *QWindow) BaseSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -600,6 +698,7 @@ func (this *QWindow) SizeIncrement() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -652,6 +751,7 @@ func (this *QWindow) Geometry() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -664,6 +764,7 @@ func (this *QWindow) FrameMargins() *qtcore.QMargins /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQMargins)
 	return rv2
 }
 
@@ -676,6 +777,7 @@ func (this *QWindow) FrameGeometry() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -688,6 +790,7 @@ func (this *QWindow) FramePosition() *qtcore.QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
@@ -754,6 +857,7 @@ func (this *QWindow) Size() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -766,6 +870,7 @@ func (this *QWindow) Position() *qtcore.QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
@@ -826,6 +931,7 @@ func (this *QWindow) FilePath() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -848,6 +954,7 @@ func (this *QWindow) Icon() *QIcon /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIcon)
 	return rv2
 }
 
@@ -938,6 +1045,7 @@ func (this *QWindow) MapToGlobal(pos *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
@@ -951,6 +1059,7 @@ func (this *QWindow) MapFromGlobal(pos *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
@@ -963,6 +1072,7 @@ func (this *QWindow) Cursor() *QCursor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQCursor)
 	return rv2
 }
 

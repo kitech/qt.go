@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSystemSemaphore struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QSystemSemaphore) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSystemSemaphore) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSystemSemaphoreFromPointer(cthis unsafe.Pointer) *QSystemSemaphore {
 	return &QSystemSemaphore{&qtrt.CObject{cthis}}
@@ -74,6 +79,7 @@ func NewQSystemSemaphore(key *QString, initialValue int, mode int) *QSystemSemap
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphoreC2ERK7QStringiNS_10AccessModeE", ffiqt.FFI_TYPE_POINTER, convArg0, initialValue, mode)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSystemSemaphoreFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSystemSemaphore)
 	return gothis
 }
 
@@ -81,9 +87,10 @@ func NewQSystemSemaphore(key *QString, initialValue int, mode int) *QSystemSemap
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QSystemSemaphore()
-func DeleteQSystemSemaphore(*QSystemSemaphore) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphoreD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSystemSemaphore(this *QSystemSemaphore) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphoreD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qsystemsemaphore.h:77
@@ -105,6 +112,7 @@ func (this *QSystemSemaphore) Key() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -150,6 +158,7 @@ func (this *QSystemSemaphore) ErrorString() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 

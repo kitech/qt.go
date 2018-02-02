@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStandardPaths struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QStandardPaths) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QStandardPaths) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQStandardPathsFromPointer(cthis unsafe.Pointer) *QStandardPaths {
 	return &QStandardPaths{&qtrt.CObject{cthis}}
@@ -74,6 +79,7 @@ func (this *QStandardPaths) WritableLocation(type_ int) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QStandardPaths_WritableLocation(type_ int) *QString /*123*/ {
@@ -91,6 +97,7 @@ func (this *QStandardPaths) DisplayName(type_ int) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QStandardPaths_DisplayName(type_ int) *QString /*123*/ {
@@ -110,6 +117,7 @@ func (this *QStandardPaths) FindExecutable(executableName *QString, paths *QStri
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QStandardPaths_FindExecutable(executableName *QString, paths *QStringList) *QString /*123*/ {
@@ -158,6 +166,12 @@ func QStandardPaths_IsTestModeEnabled() bool {
 	var nilthis *QStandardPaths
 	rv := nilthis.IsTestModeEnabled()
 	return rv
+}
+
+func DeleteQStandardPaths(this *QStandardPaths) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPathsD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStandardPaths__StandardLocation = int

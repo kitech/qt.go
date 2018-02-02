@@ -52,6 +52,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// QSizeF sizeHint(Qt::SizeHint, const class QSizeF &)
+func (this *QGraphicsAnchorLayout) InheritSizeHint(f func(which int, constraint *qtcore.QSizeF) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "sizeHint", f)
+}
+
 type QGraphicsAnchorLayout struct {
 	*QGraphicsLayout
 }
@@ -83,6 +88,7 @@ func NewQGraphicsAnchorLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutI
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayoutC2EP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsAnchorLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsAnchorLayout)
 	return gothis
 }
 
@@ -90,9 +96,10 @@ func NewQGraphicsAnchorLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutI
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsAnchorLayout()
-func DeleteQGraphicsAnchorLayout(*QGraphicsAnchorLayout) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayoutD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsAnchorLayout(this *QGraphicsAnchorLayout) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:82
@@ -244,6 +251,7 @@ func (this *QGraphicsAnchorLayout) SizeHint(which int, constraint *qtcore.QSizeF
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
 

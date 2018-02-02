@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QContainerImplHelper struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QContainerImplHelper) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QContainerImplHelper) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQContainerImplHelperFromPointer(cthis unsafe.Pointer) *QContainerImplHelper {
 	return &QContainerImplHelper{&qtrt.CObject{cthis}}
@@ -79,6 +84,12 @@ func QContainerImplHelper_Mid(originalLength int, position unsafe.Pointer /*666*
 	var nilthis *QContainerImplHelper
 	rv := nilthis.Mid(originalLength, position, length)
 	return rv
+}
+
+func DeleteQContainerImplHelper(this *QContainerImplHelper) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QContainerImplHelperD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QContainerImplHelper__CutResult = int

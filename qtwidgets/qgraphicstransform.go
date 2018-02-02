@@ -52,6 +52,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void update()
+func (this *QGraphicsTransform) InheritUpdate(f func()) {
+	ffiqt.SetAllInheritCallback(this, "update", f)
+}
+
 type QGraphicsTransform struct {
 	*qtcore.QObject
 }
@@ -102,9 +107,10 @@ func NewQGraphicsTransform(parent *qtcore.QObject /*777 QObject **/) *QGraphicsT
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsTransform()
-func DeleteQGraphicsTransform(*QGraphicsTransform) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsTransformD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsTransform(this *QGraphicsTransform) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsTransformD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:63

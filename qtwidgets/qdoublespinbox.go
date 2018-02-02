@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QDoubleSpinBox struct {
 	*QAbstractSpinBox
 }
@@ -102,9 +103,10 @@ func NewQDoubleSpinBox(parent *QWidget /*777 QWidget **/) *QDoubleSpinBox {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDoubleSpinBox()
-func DeleteQDoubleSpinBox(*QDoubleSpinBox) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBoxD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDoubleSpinBox(this *QDoubleSpinBox) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:129
@@ -127,6 +129,7 @@ func (this *QDoubleSpinBox) Prefix() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -149,6 +152,7 @@ func (this *QDoubleSpinBox) Suffix() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -171,6 +175,7 @@ func (this *QDoubleSpinBox) CleanText() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -296,6 +301,7 @@ func (this *QDoubleSpinBox) TextFromValue(val float64) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

@@ -52,6 +52,31 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QListWidget) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// bool dropMimeData(int, const class QMimeData *, Qt::DropAction)
+func (this *QListWidget) InheritDropMimeData(f func(index int, data *qtcore.QMimeData /*777 const QMimeData **/, action int) bool) {
+	ffiqt.SetAllInheritCallback(this, "dropMimeData", f)
+}
+
+// Qt::DropActions supportedDropActions()
+func (this *QListWidget) InheritSupportedDropActions(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "supportedDropActions", f)
+}
+
+// QModelIndex indexFromItem(class QListWidgetItem *)
+func (this *QListWidget) InheritIndexFromItem(f func(item *QListWidgetItem /*777 QListWidgetItem **/) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "indexFromItem", f)
+}
+
+// QListWidgetItem * itemFromIndex(const class QModelIndex &)
+func (this *QListWidget) InheritItemFromIndex(f func(index *qtcore.QModelIndex) unsafe.Pointer /*666*/) {
+	ffiqt.SetAllInheritCallback(this, "itemFromIndex", f)
+}
+
 type QListWidget struct {
 	*QListView
 }
@@ -102,9 +127,10 @@ func NewQListWidget(parent *QWidget /*777 QWidget **/) *QListWidget {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QListWidget()
-func DeleteQListWidget(*QListWidget) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QListWidgetD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQListWidget(this *QListWidget) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QListWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:210
@@ -320,6 +346,7 @@ func (this *QListWidget) VisualItemRect(item *QListWidgetItem /*777 const QListW
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -645,6 +672,7 @@ func (this *QListWidget) IndexFromItem(item *QListWidgetItem /*777 QListWidgetIt
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 

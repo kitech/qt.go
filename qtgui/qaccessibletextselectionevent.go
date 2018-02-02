@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAccessibleTextSelectionEvent struct {
 	*QAccessibleTextCursorEvent
 }
@@ -79,6 +80,7 @@ func NewQAccessibleTextSelectionEvent(obj *qtcore.QObject /*777 QObject **/, sta
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventC2EP7QObjectii", ffiqt.FFI_TYPE_POINTER, convArg0, start, end)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextSelectionEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQAccessibleTextSelectionEvent)
 	return gothis
 }
 
@@ -91,6 +93,7 @@ func NewQAccessibleTextSelectionEvent_1(iface *QAccessibleInterface /*777 QAcces
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventC2EP20QAccessibleInterfaceii", ffiqt.FFI_TYPE_POINTER, convArg0, start, end)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextSelectionEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQAccessibleTextSelectionEvent)
 	return gothis
 }
 
@@ -98,9 +101,10 @@ func NewQAccessibleTextSelectionEvent_1(iface *QAccessibleInterface /*777 QAcces
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleTextSelectionEvent()
-func DeleteQAccessibleTextSelectionEvent(*QAccessibleTextSelectionEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAccessibleTextSelectionEvent(this *QAccessibleTextSelectionEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:788

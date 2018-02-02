@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStaticText struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QStaticText) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QStaticText) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQStaticTextFromPointer(cthis unsafe.Pointer) *QStaticText {
 	return &QStaticText{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQStaticText() *QStaticText {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticTextC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStaticTextFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStaticText)
 	return gothis
 }
 
@@ -89,6 +95,7 @@ func NewQStaticText_1(text *qtcore.QString) *QStaticText {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticTextC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStaticTextFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStaticText)
 	return gothis
 }
 
@@ -96,9 +103,10 @@ func NewQStaticText_1(text *qtcore.QString) *QStaticText {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QStaticText()
-func DeleteQStaticText(*QStaticText) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticTextD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQStaticText(this *QStaticText) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticTextD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:73
@@ -130,6 +138,7 @@ func (this *QStaticText) Text() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -192,6 +201,7 @@ func (this *QStaticText) TextOption() *QTextOption /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextOptionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextOption)
 	return rv2
 }
 
@@ -204,6 +214,7 @@ func (this *QStaticText) Size() *qtcore.QSizeF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
 

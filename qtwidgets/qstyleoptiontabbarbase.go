@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleOptionTabBarBase struct {
 	*QStyleOption
 }
@@ -82,6 +83,7 @@ func NewQStyleOptionTabBarBase() *QStyleOptionTabBarBase {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionTabBarBaseC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTabBarBaseFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionTabBarBase)
 	return gothis
 }
 
@@ -93,7 +95,14 @@ func NewQStyleOptionTabBarBase_1(version int) *QStyleOptionTabBarBase {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionTabBarBaseC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTabBarBaseFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionTabBarBase)
 	return gothis
+}
+
+func DeleteQStyleOptionTabBarBase(this *QStyleOptionTabBarBase) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionTabBarBaseD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleOptionTabBarBase__StyleOptionType = int

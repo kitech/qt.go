@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QUndoCommand struct {
 	*qtrt.CObject
 }
@@ -64,7 +65,11 @@ func (this *QUndoCommand) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QUndoCommand) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQUndoCommandFromPointer(cthis unsafe.Pointer) *QUndoCommand {
 	return &QUndoCommand{&qtrt.CObject{cthis}}
@@ -82,6 +87,7 @@ func NewQUndoCommand(parent *QUndoCommand /*777 QUndoCommand **/) *QUndoCommand 
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommandC2EPS_", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQUndoCommandFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQUndoCommand)
 	return gothis
 }
 
@@ -95,6 +101,7 @@ func NewQUndoCommand_1(text *qtcore.QString, parent *QUndoCommand /*777 QUndoCom
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommandC2ERK7QStringPS_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQUndoCommandFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQUndoCommand)
 	return gothis
 }
 
@@ -102,9 +109,10 @@ func NewQUndoCommand_1(text *qtcore.QString, parent *QUndoCommand /*777 QUndoCom
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QUndoCommand()
-func DeleteQUndoCommand(*QUndoCommand) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommandD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQUndoCommand(this *QUndoCommand) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommandD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qundostack.h:64
@@ -134,6 +142,7 @@ func (this *QUndoCommand) Text() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -146,6 +155,7 @@ func (this *QUndoCommand) ActionText() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

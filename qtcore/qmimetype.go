@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QMimeType struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QMimeType) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QMimeType) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQMimeTypeFromPointer(cthis unsafe.Pointer) *QMimeType {
 	return &QMimeType{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQMimeType() *QMimeType {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeTypeC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMimeTypeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMimeType)
 	return gothis
 }
 
@@ -90,9 +96,10 @@ func (this *QMimeType) Swap(other *QMimeType) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QMimeType()
-func DeleteQMimeType(*QMimeType) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeTypeD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQMimeType(this *QMimeType) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeTypeD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:98
@@ -126,6 +133,7 @@ func (this *QMimeType) Name() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -138,6 +146,7 @@ func (this *QMimeType) Comment() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -150,6 +159,7 @@ func (this *QMimeType) GenericIconName() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -162,6 +172,7 @@ func (this *QMimeType) IconName() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -174,6 +185,7 @@ func (this *QMimeType) PreferredSuffix() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -198,6 +210,7 @@ func (this *QMimeType) FilterString() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 

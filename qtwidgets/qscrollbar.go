@@ -52,6 +52,51 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void wheelEvent(class QWheelEvent *)
+func (this *QScrollBar) InheritWheelEvent(f func(arg0 *qtgui.QWheelEvent /*777 QWheelEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "wheelEvent", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QScrollBar) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void mousePressEvent(class QMouseEvent *)
+func (this *QScrollBar) InheritMousePressEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void mouseReleaseEvent(class QMouseEvent *)
+func (this *QScrollBar) InheritMouseReleaseEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+}
+
+// void mouseMoveEvent(class QMouseEvent *)
+func (this *QScrollBar) InheritMouseMoveEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void hideEvent(class QHideEvent *)
+func (this *QScrollBar) InheritHideEvent(f func(arg0 *qtgui.QHideEvent /*777 QHideEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "hideEvent", f)
+}
+
+// void sliderChange(enum QAbstractSlider::SliderChange)
+func (this *QScrollBar) InheritSliderChange(f func(change int)) {
+	ffiqt.SetAllInheritCallback(this, "sliderChange", f)
+}
+
+// void contextMenuEvent(class QContextMenuEvent *)
+func (this *QScrollBar) InheritContextMenuEvent(f func(arg0 *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "contextMenuEvent", f)
+}
+
+// void initStyleOption(class QStyleOptionSlider *)
+func (this *QScrollBar) InheritInitStyleOption(f func(option *QStyleOptionSlider /*777 QStyleOptionSlider **/)) {
+	ffiqt.SetAllInheritCallback(this, "initStyleOption", f)
+}
+
 type QScrollBar struct {
 	*QAbstractSlider
 }
@@ -114,9 +159,10 @@ func NewQScrollBar_1(arg0 int, parent *QWidget /*777 QWidget **/) *QScrollBar {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QScrollBar()
-func DeleteQScrollBar(*QScrollBar) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QScrollBarD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQScrollBar(this *QScrollBar) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QScrollBarD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qscrollbar.h:63
@@ -128,6 +174,7 @@ func (this *QScrollBar) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

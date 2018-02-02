@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAccessible struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QAccessible) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QAccessible) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQAccessibleFromPointer(cthis unsafe.Pointer) *QAccessible {
 	return &QAccessible{&qtrt.CObject{cthis}}
@@ -219,6 +224,12 @@ func (this *QAccessible) Cleanup() {
 func QAccessible_Cleanup() {
 	var nilthis *QAccessible
 	nilthis.Cleanup()
+}
+
+func DeleteQAccessible(this *QAccessible) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QAccessibleD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QAccessible__Event = int

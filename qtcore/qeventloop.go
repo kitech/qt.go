@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QEventLoop struct {
 	*QObject
 }
@@ -94,9 +95,10 @@ func NewQEventLoop(parent *QObject /*777 QObject **/) *QEventLoop {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QEventLoop()
-func DeleteQEventLoop(*QEventLoop) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoopD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQEventLoop(this *QEventLoop) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoopD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qeventloop.h:70

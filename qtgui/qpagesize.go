@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QPageSize struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QPageSize) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QPageSize) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQPageSizeFromPointer(cthis unsafe.Pointer) *QPageSize {
 	return &QPageSize{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQPageSize() *QPageSize {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPageSizeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPageSize)
 	return gothis
 }
 
@@ -88,6 +94,7 @@ func NewQPageSize_1(pageSizeId int) *QPageSize {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeC2ENS_10PageSizeIdE", ffiqt.FFI_TYPE_POINTER, pageSizeId)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPageSizeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPageSize)
 	return gothis
 }
 
@@ -101,6 +108,7 @@ func NewQPageSize_2(pointSize *qtcore.QSize, name *qtcore.QString, matchPolicy i
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeC2ERK5QSizeRK7QStringNS_15SizeMatchPolicyE", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, matchPolicy)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPageSizeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPageSize)
 	return gothis
 }
 
@@ -114,6 +122,7 @@ func NewQPageSize_3(size *qtcore.QSizeF, units int, name *qtcore.QString, matchP
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeC2ERK6QSizeFNS_4UnitERK7QStringNS_15SizeMatchPolicyE", ffiqt.FFI_TYPE_POINTER, convArg0, units, convArg2, matchPolicy)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPageSizeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPageSize)
 	return gothis
 }
 
@@ -121,9 +130,10 @@ func NewQPageSize_3(size *qtcore.QSizeF, units int, name *qtcore.QString, matchP
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QPageSize()
-func DeleteQPageSize(*QPageSize) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPageSize(this *QPageSize) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qpagesize.h:246
@@ -168,6 +178,7 @@ func (this *QPageSize) Key() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -180,6 +191,7 @@ func (this *QPageSize) Key_1(pageSizeId int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 func QPageSize_Key_1(pageSizeId int) *qtcore.QString /*123*/ {
@@ -197,6 +209,7 @@ func (this *QPageSize) Name() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -209,6 +222,7 @@ func (this *QPageSize) Name_1(pageSizeId int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 func QPageSize_Name_1(pageSizeId int) *qtcore.QString /*123*/ {
@@ -314,6 +328,7 @@ func (this *QPageSize) DefinitionSize() *qtcore.QSizeF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
 
@@ -326,6 +341,7 @@ func (this *QPageSize) DefinitionSize_1(pageSizeId int) *qtcore.QSizeF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
 func QPageSize_DefinitionSize_1(pageSizeId int) *qtcore.QSizeF /*123*/ {
@@ -370,6 +386,7 @@ func (this *QPageSize) Size(units int) *qtcore.QSizeF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
 
@@ -382,6 +399,7 @@ func (this *QPageSize) Size_1(pageSizeId int, units int) *qtcore.QSizeF /*123*/ 
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
 func QPageSize_Size_1(pageSizeId int, units int) *qtcore.QSizeF /*123*/ {
@@ -399,6 +417,7 @@ func (this *QPageSize) SizePoints() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -411,6 +430,7 @@ func (this *QPageSize) SizePoints_1(pageSizeId int) *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 func QPageSize_SizePoints_1(pageSizeId int) *qtcore.QSize /*123*/ {
@@ -428,6 +448,7 @@ func (this *QPageSize) SizePixels(resolution int) *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -440,6 +461,7 @@ func (this *QPageSize) SizePixels_1(pageSizeId int, resolution int) *qtcore.QSiz
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 func QPageSize_SizePixels_1(pageSizeId int, resolution int) *qtcore.QSize /*123*/ {
@@ -457,6 +479,7 @@ func (this *QPageSize) Rect(units int) *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -469,6 +492,7 @@ func (this *QPageSize) RectPoints() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -481,6 +505,7 @@ func (this *QPageSize) RectPixels(resolution int) *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 

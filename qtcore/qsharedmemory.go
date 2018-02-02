@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSharedMemory struct {
 	*QObject
 }
@@ -107,9 +108,10 @@ func NewQSharedMemory_1(key *QString, parent *QObject /*777 QObject **/) *QShare
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSharedMemory()
-func DeleteQSharedMemory(*QSharedMemory) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemoryD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSharedMemory(this *QSharedMemory) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemoryD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qsharedmemory.h:81
@@ -131,6 +133,7 @@ func (this *QSharedMemory) Key() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -153,6 +156,7 @@ func (this *QSharedMemory) NativeKey() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -286,6 +290,7 @@ func (this *QSharedMemory) ErrorString() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 

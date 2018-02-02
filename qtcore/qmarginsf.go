@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QMarginsF struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QMarginsF) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QMarginsF) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQMarginsFFromPointer(cthis unsafe.Pointer) *QMarginsF {
 	return &QMarginsF{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQMarginsF() *QMarginsF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMarginsFC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMarginsFFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMarginsF)
 	return gothis
 }
 
@@ -84,6 +90,7 @@ func NewQMarginsF_1(left float64, top float64, right float64, bottom float64) *Q
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMarginsFC2Edddd", ffiqt.FFI_TYPE_POINTER, left, top, right, bottom)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMarginsFFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMarginsF)
 	return gothis
 }
 
@@ -96,6 +103,7 @@ func NewQMarginsF_2(margins *QMargins) *QMarginsF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMarginsFC2ERK8QMargins", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMarginsFFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMarginsF)
 	return gothis
 }
 
@@ -199,7 +207,14 @@ func (this *QMarginsF) ToMargins() *QMargins /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMargins)
 	return rv2
+}
+
+func DeleteQMarginsF(this *QMarginsF) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMarginsFD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

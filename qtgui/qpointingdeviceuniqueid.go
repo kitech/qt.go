@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QPointingDeviceUniqueId struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QPointingDeviceUniqueId) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QPointingDeviceUniqueId) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQPointingDeviceUniqueIdFromPointer(cthis unsafe.Pointer) *QPointingDeviceUniqueId {
 	return &QPointingDeviceUniqueId{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQPointingDeviceUniqueId() *QPointingDeviceUniqueId {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QPointingDeviceUniqueIdC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPointingDeviceUniqueIdFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPointingDeviceUniqueId)
 	return gothis
 }
 
@@ -89,6 +95,7 @@ func (this *QPointingDeviceUniqueId) FromNumericId(id int64) *QPointingDeviceUni
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQPointingDeviceUniqueIdFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPointingDeviceUniqueId)
 	return rv2
 }
 func QPointingDeviceUniqueId_FromNumericId(id int64) *QPointingDeviceUniqueId /*123*/ {
@@ -117,6 +124,12 @@ func (this *QPointingDeviceUniqueId) NumericId() int64 {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
+}
+
+func DeleteQPointingDeviceUniqueId(this *QPointingDeviceUniqueId) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QPointingDeviceUniqueIdD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

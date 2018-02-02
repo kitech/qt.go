@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextTableCell struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QTextTableCell) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTextTableCell) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTextTableCellFromPointer(cthis unsafe.Pointer) *QTextTableCell {
 	return &QTextTableCell{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQTextTableCell() *QTextTableCell {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTextTableCellC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextTableCellFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextTableCell)
 	return gothis
 }
 
@@ -84,9 +90,10 @@ func NewQTextTableCell() *QTextTableCell {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QTextTableCell()
-func DeleteQTextTableCell(*QTextTableCell) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTextTableCellD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextTableCell(this *QTextTableCell) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTextTableCellD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qtexttable.h:63
@@ -108,6 +115,7 @@ func (this *QTextTableCell) Format() *QTextCharFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCharFormat)
 	return rv2
 }
 
@@ -175,6 +183,7 @@ func (this *QTextTableCell) FirstCursorPosition() *QTextCursor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCursor)
 	return rv2
 }
 
@@ -187,6 +196,7 @@ func (this *QTextTableCell) LastCursorPosition() *QTextCursor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCursor)
 	return rv2
 }
 

@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStylePainter struct {
 	*qtgui.QPainter
 }
@@ -82,6 +83,7 @@ func NewQStylePainter() *QStylePainter {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainterC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStylePainterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStylePainter)
 	return gothis
 }
 
@@ -94,6 +96,7 @@ func NewQStylePainter_1(w *QWidget /*777 QWidget **/) *QStylePainter {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainterC2EP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStylePainterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStylePainter)
 	return gothis
 }
 
@@ -107,6 +110,7 @@ func NewQStylePainter_2(pd *qtgui.QPaintDevice /*777 QPaintDevice **/, w *QWidge
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainterC2EP12QPaintDeviceP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStylePainterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStylePainter)
 	return gothis
 }
 
@@ -198,6 +202,12 @@ func (this *QStylePainter) Style() *QStyle /*777 QStyle **/ {
 	//  return rv
 	rv2 := /*==*/ NewQStyleFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
+}
+
+func DeleteQStylePainter(this *QStylePainter) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStylePainterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

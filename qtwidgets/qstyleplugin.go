@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStylePlugin struct {
 	*qtcore.QObject
 }
@@ -102,9 +103,10 @@ func NewQStylePlugin(parent *qtcore.QObject /*777 QObject **/) *QStylePlugin {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStylePlugin()
-func DeleteQStylePlugin(*QStylePlugin) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStylePluginD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQStylePlugin(this *QStylePlugin) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStylePluginD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qstyleplugin.h:61

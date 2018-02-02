@@ -52,6 +52,31 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void changeEvent(class QEvent *)
+func (this *QDockWidget) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
+// void closeEvent(class QCloseEvent *)
+func (this *QDockWidget) InheritCloseEvent(f func(event *qtgui.QCloseEvent /*777 QCloseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "closeEvent", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QDockWidget) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// bool event(class QEvent *)
+func (this *QDockWidget) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void initStyleOption(class QStyleOptionDockWidget *)
+func (this *QDockWidget) InheritInitStyleOption(f func(option *QStyleOptionDockWidget /*777 QStyleOptionDockWidget **/)) {
+	ffiqt.SetAllInheritCallback(this, "initStyleOption", f)
+}
+
 type QDockWidget struct {
 	*QWidget
 }
@@ -115,9 +140,10 @@ func NewQDockWidget_1(parent *QWidget /*777 QWidget **/, flags int) *QDockWidget
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDockWidget()
-func DeleteQDockWidget(*QDockWidget) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidgetD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDockWidget(this *QDockWidget) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:71

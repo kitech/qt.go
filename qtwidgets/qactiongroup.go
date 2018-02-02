@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QActionGroup struct {
 	*qtcore.QObject
 }
@@ -102,9 +103,10 @@ func NewQActionGroup(parent *qtcore.QObject /*777 QObject **/) *QActionGroup {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QActionGroup()
-func DeleteQActionGroup(*QActionGroup) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroupD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQActionGroup(this *QActionGroup) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionGroupD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qactiongroup.h:66

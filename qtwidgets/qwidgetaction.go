@@ -52,6 +52,26 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QWidgetAction) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// bool eventFilter(class QObject *, class QEvent *)
+func (this *QWidgetAction) InheritEventFilter(f func(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "eventFilter", f)
+}
+
+// QWidget * createWidget(class QWidget *)
+func (this *QWidgetAction) InheritCreateWidget(f func(parent *QWidget /*777 QWidget **/) unsafe.Pointer /*666*/) {
+	ffiqt.SetAllInheritCallback(this, "createWidget", f)
+}
+
+// void deleteWidget(class QWidget *)
+func (this *QWidgetAction) InheritDeleteWidget(f func(widget *QWidget /*777 QWidget **/)) {
+	ffiqt.SetAllInheritCallback(this, "deleteWidget", f)
+}
+
 type QWidgetAction struct {
 	*QAction
 }
@@ -102,9 +122,10 @@ func NewQWidgetAction(parent *qtcore.QObject /*777 QObject **/) *QWidgetAction {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWidgetAction()
-func DeleteQWidgetAction(*QWidgetAction) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QWidgetActionD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQWidgetAction(this *QWidgetAction) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QWidgetActionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qwidgetaction.h:62

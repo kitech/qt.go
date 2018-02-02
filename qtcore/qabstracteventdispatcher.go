@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAbstractEventDispatcher struct {
 	*QObject
 }
@@ -94,9 +95,10 @@ func NewQAbstractEventDispatcher(parent *QObject /*777 QObject **/) *QAbstractEv
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractEventDispatcher()
-func DeleteQAbstractEventDispatcher(*QAbstractEventDispatcher) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractEventDispatcherD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAbstractEventDispatcher(this *QAbstractEventDispatcher) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractEventDispatcherD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qabstracteventdispatcher.h:76

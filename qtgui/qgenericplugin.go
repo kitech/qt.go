@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QGenericPlugin struct {
 	*qtcore.QObject
 }
@@ -98,9 +99,10 @@ func NewQGenericPlugin(parent *qtcore.QObject /*777 QObject **/) *QGenericPlugin
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGenericPlugin()
-func DeleteQGenericPlugin(*QGenericPlugin) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGenericPluginD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGenericPlugin(this *QGenericPlugin) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGenericPluginD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qgenericplugin.h:58

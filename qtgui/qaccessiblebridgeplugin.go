@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAccessibleBridgePlugin struct {
 	*qtcore.QObject
 }
@@ -98,9 +99,10 @@ func NewQAccessibleBridgePlugin(parent *qtcore.QObject /*777 QObject **/) *QAcce
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleBridgePlugin()
-func DeleteQAccessibleBridgePlugin(*QAccessibleBridgePlugin) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QAccessibleBridgePluginD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAccessibleBridgePlugin(this *QAccessibleBridgePlugin) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QAccessibleBridgePluginD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qaccessiblebridge.h:72

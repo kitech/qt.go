@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type AbstractDebugStreamFunction struct {
 	*qtrt.CObject
 }
@@ -56,13 +57,23 @@ func (this *AbstractDebugStreamFunction) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *AbstractDebugStreamFunction) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewAbstractDebugStreamFunctionFromPointer(cthis unsafe.Pointer) *AbstractDebugStreamFunction {
 	return &AbstractDebugStreamFunction{&qtrt.CObject{cthis}}
 }
 func (*AbstractDebugStreamFunction) NewFromPointer(cthis unsafe.Pointer) *AbstractDebugStreamFunction {
 	return NewAbstractDebugStreamFunctionFromPointer(cthis)
+}
+
+func DeleteAbstractDebugStreamFunction(this *AbstractDebugStreamFunction) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27AbstractDebugStreamFunctionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

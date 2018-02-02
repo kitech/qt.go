@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QFocusEvent struct {
 	*qtcore.QEvent
 }
@@ -78,6 +79,7 @@ func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFocusEventC2EN6QEvent4TypeEN2Qt11FocusReasonE", ffiqt.FFI_TYPE_POINTER, type_, reason)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFocusEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQFocusEvent)
 	return gothis
 }
 
@@ -85,9 +87,10 @@ func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFocusEvent()
-func DeleteQFocusEvent(*QFocusEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFocusEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQFocusEvent(this *QFocusEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFocusEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:392

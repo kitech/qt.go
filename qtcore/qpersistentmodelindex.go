@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QPersistentModelIndex struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QPersistentModelIndex) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QPersistentModelIndex) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQPersistentModelIndexFromPointer(cthis unsafe.Pointer) *QPersistentModelIndex {
 	return &QPersistentModelIndex{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQPersistentModelIndex() *QPersistentModelIndex {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPersistentModelIndexC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPersistentModelIndexFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPersistentModelIndex)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func NewQPersistentModelIndex_1(index *QModelIndex) *QPersistentModelIndex {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPersistentModelIndexC2ERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPersistentModelIndexFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPersistentModelIndex)
 	return gothis
 }
 
@@ -92,9 +99,10 @@ func NewQPersistentModelIndex_1(index *QModelIndex) *QPersistentModelIndex {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QPersistentModelIndex()
-func DeleteQPersistentModelIndex(*QPersistentModelIndex) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPersistentModelIndexD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPersistentModelIndex(this *QPersistentModelIndex) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPersistentModelIndexD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:122
@@ -160,6 +168,7 @@ func (this *QPersistentModelIndex) Parent() *QModelIndex /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -172,6 +181,7 @@ func (this *QPersistentModelIndex) Sibling(row int, column int) *QModelIndex /*1
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -184,6 +194,7 @@ func (this *QPersistentModelIndex) Child(row int, column int) *QModelIndex /*123
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -196,6 +207,7 @@ func (this *QPersistentModelIndex) Data(role int) *QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 

@@ -44,6 +44,21 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool eventTest(class QEvent *)
+func (this *QAbstractTransition) InheritEventTest(f func(event *QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "eventTest", f)
+}
+
+// void onTransition(class QEvent *)
+func (this *QAbstractTransition) InheritOnTransition(f func(event *QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "onTransition", f)
+}
+
+// bool event(class QEvent *)
+func (this *QAbstractTransition) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QAbstractTransition struct {
 	*QObject
 }
@@ -94,9 +109,10 @@ func NewQAbstractTransition(sourceState *QState /*777 QState **/) *QAbstractTran
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractTransition()
-func DeleteQAbstractTransition(*QAbstractTransition) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransitionD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAbstractTransition(this *QAbstractTransition) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransitionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qabstracttransition.h:78

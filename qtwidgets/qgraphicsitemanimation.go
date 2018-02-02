@@ -52,6 +52,16 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void beforeAnimationStep(qreal)
+func (this *QGraphicsItemAnimation) InheritBeforeAnimationStep(f func(step float64)) {
+	ffiqt.SetAllInheritCallback(this, "beforeAnimationStep", f)
+}
+
+// void afterAnimationStep(qreal)
+func (this *QGraphicsItemAnimation) InheritAfterAnimationStep(f func(step float64)) {
+	ffiqt.SetAllInheritCallback(this, "afterAnimationStep", f)
+}
+
 type QGraphicsItemAnimation struct {
 	*qtcore.QObject
 }
@@ -102,9 +112,10 @@ func NewQGraphicsItemAnimation(parent *qtcore.QObject /*777 QObject **/) *QGraph
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsItemAnimation()
-func DeleteQGraphicsItemAnimation(*QGraphicsItemAnimation) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimationD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsItemAnimation(this *QGraphicsItemAnimation) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:64
@@ -160,6 +171,7 @@ func (this *QGraphicsItemAnimation) PosAt(step float64) *qtcore.QPointF /*123*/ 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -182,6 +194,7 @@ func (this *QGraphicsItemAnimation) MatrixAt(step float64) *qtgui.QMatrix /*123*
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQMatrix)
 	return rv2
 }
 

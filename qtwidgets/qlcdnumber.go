@@ -52,6 +52,16 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QLCDNumber) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QLCDNumber) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
 type QLCDNumber struct {
 	*QFrame
 }
@@ -114,9 +124,10 @@ func NewQLCDNumber_1(numDigits uint, parent *QWidget /*777 QWidget **/) *QLCDNum
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QLCDNumber()
-func DeleteQLCDNumber(*QLCDNumber) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumberD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQLCDNumber(this *QLCDNumber) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumberD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qlcdnumber.h:75
@@ -243,6 +254,7 @@ func (this *QLCDNumber) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

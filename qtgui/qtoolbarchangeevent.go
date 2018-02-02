@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QToolBarChangeEvent struct {
 	*qtcore.QEvent
 }
@@ -78,6 +79,7 @@ func NewQToolBarChangeEvent(t bool) *QToolBarChangeEvent {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QToolBarChangeEventC2Eb", ffiqt.FFI_TYPE_POINTER, t)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQToolBarChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQToolBarChangeEvent)
 	return gothis
 }
 
@@ -85,9 +87,10 @@ func NewQToolBarChangeEvent(t bool) *QToolBarChangeEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QToolBarChangeEvent()
-func DeleteQToolBarChangeEvent(*QToolBarChangeEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QToolBarChangeEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQToolBarChangeEvent(this *QToolBarChangeEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QToolBarChangeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:757

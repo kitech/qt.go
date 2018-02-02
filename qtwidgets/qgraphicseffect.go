@@ -52,6 +52,41 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void draw(class QPainter *)
+func (this *QGraphicsEffect) InheritDraw(f func(painter *qtgui.QPainter /*777 QPainter **/)) {
+	ffiqt.SetAllInheritCallback(this, "draw", f)
+}
+
+// void sourceChanged(QGraphicsEffect::ChangeFlags)
+func (this *QGraphicsEffect) InheritSourceChanged(f func(flags int)) {
+	ffiqt.SetAllInheritCallback(this, "sourceChanged", f)
+}
+
+// void updateBoundingRect()
+func (this *QGraphicsEffect) InheritUpdateBoundingRect(f func()) {
+	ffiqt.SetAllInheritCallback(this, "updateBoundingRect", f)
+}
+
+// bool sourceIsPixmap()
+func (this *QGraphicsEffect) InheritSourceIsPixmap(f func() bool) {
+	ffiqt.SetAllInheritCallback(this, "sourceIsPixmap", f)
+}
+
+// QRectF sourceBoundingRect(Qt::CoordinateSystem)
+func (this *QGraphicsEffect) InheritSourceBoundingRect(f func(system int) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "sourceBoundingRect", f)
+}
+
+// void drawSource(class QPainter *)
+func (this *QGraphicsEffect) InheritDrawSource(f func(painter *qtgui.QPainter /*777 QPainter **/)) {
+	ffiqt.SetAllInheritCallback(this, "drawSource", f)
+}
+
+// QPixmap sourcePixmap(Qt::CoordinateSystem, class QPoint *, enum QGraphicsEffect::PixmapPadMode)
+func (this *QGraphicsEffect) InheritSourcePixmap(f func(system int, offset *qtcore.QPoint /*777 QPoint **/, mode int) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "sourcePixmap", f)
+}
+
 type QGraphicsEffect struct {
 	*qtcore.QObject
 }
@@ -102,9 +137,10 @@ func NewQGraphicsEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsEffe
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsEffect()
-func DeleteQGraphicsEffect(*QGraphicsEffect) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsEffectD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsEffect(this *QGraphicsEffect) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsEffectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:85
@@ -117,6 +153,7 @@ func (this *QGraphicsEffect) BoundingRectFor(sourceRect *qtcore.QRectF) *qtcore.
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -129,6 +166,7 @@ func (this *QGraphicsEffect) BoundingRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -218,6 +256,7 @@ func (this *QGraphicsEffect) SourceBoundingRect(system int) *qtcore.QRectF /*123
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -241,6 +280,7 @@ func (this *QGraphicsEffect) SourcePixmap(system int, offset *qtcore.QPoint /*77
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
 	return rv2
 }
 

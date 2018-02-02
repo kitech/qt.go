@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QCollator struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QCollator) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QCollator) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQCollatorFromPointer(cthis unsafe.Pointer) *QCollator {
 	return &QCollator{&qtrt.CObject{cthis}}
@@ -74,6 +79,7 @@ func NewQCollator(locale *QLocale) *QCollator {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollatorC2ERK7QLocale", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCollatorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQCollator)
 	return gothis
 }
 
@@ -81,9 +87,10 @@ func NewQCollator(locale *QLocale) *QCollator {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QCollator()
-func DeleteQCollator(*QCollator) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollatorD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQCollator(this *QCollator) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollatorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qcollator.h:97
@@ -115,6 +122,7 @@ func (this *QCollator) Locale() *QLocale /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLocale)
 	return rv2
 }
 
@@ -227,6 +235,7 @@ func (this *QCollator) SortKey(string *QString) *QCollatorSortKey /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCollatorSortKeyFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQCollatorSortKey)
 	return rv2
 }
 

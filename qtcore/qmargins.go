@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QMargins struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QMargins) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QMargins) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQMarginsFromPointer(cthis unsafe.Pointer) *QMargins {
 	return &QMargins{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQMargins() *QMargins {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMarginsC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMargins)
 	return gothis
 }
 
@@ -84,6 +90,7 @@ func NewQMargins_1(left int, top int, right int, bottom int) *QMargins {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMarginsC2Eiiii", ffiqt.FFI_TYPE_POINTER, left, top, right, bottom)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMargins)
 	return gothis
 }
 
@@ -176,6 +183,12 @@ func (this *QMargins) SetRight(right int) {
 func (this *QMargins) SetBottom(bottom int) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins9setBottomEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), bottom)
 	gopp.ErrPrint(err, rv)
+}
+
+func DeleteQMargins(this *QMargins) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMarginsD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

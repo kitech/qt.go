@@ -52,6 +52,26 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void setField(const class QString &, const class QVariant &)
+func (this *QWizardPage) InheritSetField(f func(name *qtcore.QString, value *qtcore.QVariant)) {
+	ffiqt.SetAllInheritCallback(this, "setField", f)
+}
+
+// QVariant field(const class QString &)
+func (this *QWizardPage) InheritField(f func(name *qtcore.QString) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "field", f)
+}
+
+// void registerField(const class QString &, class QWidget *, const char *, const char *)
+func (this *QWizardPage) InheritRegisterField(f func(name *qtcore.QString, widget *QWidget /*777 QWidget **/, property string, changedSignal string)) {
+	ffiqt.SetAllInheritCallback(this, "registerField", f)
+}
+
+// QWizard * wizard()
+func (this *QWizardPage) InheritWizard(f func() unsafe.Pointer /*666*/) {
+	ffiqt.SetAllInheritCallback(this, "wizard", f)
+}
+
 type QWizardPage struct {
 	*QWidget
 }
@@ -102,9 +122,10 @@ func NewQWizardPage(parent *QWidget /*777 QWidget **/) *QWizardPage {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWizardPage()
-func DeleteQWizardPage(*QWizardPage) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPageD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQWizardPage(this *QWizardPage) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPageD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:221
@@ -126,6 +147,7 @@ func (this *QWizardPage) Title() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -148,6 +170,7 @@ func (this *QWizardPage) SubTitle() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -170,6 +193,7 @@ func (this *QWizardPage) Pixmap(which int) *qtgui.QPixmap /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
 	return rv2
 }
 
@@ -232,6 +256,7 @@ func (this *QWizardPage) ButtonText(which int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -316,6 +341,7 @@ func (this *QWizardPage) Field(name *qtcore.QString) *qtcore.QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 

@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAccessibleEditableTextInterface struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QAccessibleEditableTextInterface) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QAccessibleEditableTextInterface) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQAccessibleEditableTextInterfaceFromPointer(cthis unsafe.Pointer) *QAccessibleEditableTextInterface {
 	return &QAccessibleEditableTextInterface{&qtrt.CObject{cthis}}
@@ -73,9 +78,10 @@ func (*QAccessibleEditableTextInterface) NewFromPointer(cthis unsafe.Pointer) *Q
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleEditableTextInterface()
-func DeleteQAccessibleEditableTextInterface(*QAccessibleEditableTextInterface) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN32QAccessibleEditableTextInterfaceD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAccessibleEditableTextInterface(this *QAccessibleEditableTextInterface) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN32QAccessibleEditableTextInterfaceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:558

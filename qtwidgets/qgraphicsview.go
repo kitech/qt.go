@@ -52,6 +52,136 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void setupViewport(class QWidget *)
+func (this *QGraphicsView) InheritSetupViewport(f func(widget *QWidget /*777 QWidget **/)) {
+	ffiqt.SetAllInheritCallback(this, "setupViewport", f)
+}
+
+// bool event(class QEvent *)
+func (this *QGraphicsView) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// bool viewportEvent(class QEvent *)
+func (this *QGraphicsView) InheritViewportEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "viewportEvent", f)
+}
+
+// void contextMenuEvent(class QContextMenuEvent *)
+func (this *QGraphicsView) InheritContextMenuEvent(f func(event *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "contextMenuEvent", f)
+}
+
+// void dragEnterEvent(class QDragEnterEvent *)
+func (this *QGraphicsView) InheritDragEnterEvent(f func(event *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dragEnterEvent", f)
+}
+
+// void dragLeaveEvent(class QDragLeaveEvent *)
+func (this *QGraphicsView) InheritDragLeaveEvent(f func(event *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dragLeaveEvent", f)
+}
+
+// void dragMoveEvent(class QDragMoveEvent *)
+func (this *QGraphicsView) InheritDragMoveEvent(f func(event *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dragMoveEvent", f)
+}
+
+// void dropEvent(class QDropEvent *)
+func (this *QGraphicsView) InheritDropEvent(f func(event *qtgui.QDropEvent /*777 QDropEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dropEvent", f)
+}
+
+// void focusInEvent(class QFocusEvent *)
+func (this *QGraphicsView) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusInEvent", f)
+}
+
+// bool focusNextPrevChild(_Bool)
+func (this *QGraphicsView) InheritFocusNextPrevChild(f func(next bool) bool) {
+	ffiqt.SetAllInheritCallback(this, "focusNextPrevChild", f)
+}
+
+// void focusOutEvent(class QFocusEvent *)
+func (this *QGraphicsView) InheritFocusOutEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusOutEvent", f)
+}
+
+// void keyPressEvent(class QKeyEvent *)
+func (this *QGraphicsView) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyPressEvent", f)
+}
+
+// void keyReleaseEvent(class QKeyEvent *)
+func (this *QGraphicsView) InheritKeyReleaseEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyReleaseEvent", f)
+}
+
+// void mouseDoubleClickEvent(class QMouseEvent *)
+func (this *QGraphicsView) InheritMouseDoubleClickEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
+}
+
+// void mousePressEvent(class QMouseEvent *)
+func (this *QGraphicsView) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void mouseMoveEvent(class QMouseEvent *)
+func (this *QGraphicsView) InheritMouseMoveEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void mouseReleaseEvent(class QMouseEvent *)
+func (this *QGraphicsView) InheritMouseReleaseEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+}
+
+// void wheelEvent(class QWheelEvent *)
+func (this *QGraphicsView) InheritWheelEvent(f func(event *qtgui.QWheelEvent /*777 QWheelEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "wheelEvent", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QGraphicsView) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void resizeEvent(class QResizeEvent *)
+func (this *QGraphicsView) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void scrollContentsBy(int, int)
+func (this *QGraphicsView) InheritScrollContentsBy(f func(dx int, dy int)) {
+	ffiqt.SetAllInheritCallback(this, "scrollContentsBy", f)
+}
+
+// void showEvent(class QShowEvent *)
+func (this *QGraphicsView) InheritShowEvent(f func(event *qtgui.QShowEvent /*777 QShowEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "showEvent", f)
+}
+
+// void inputMethodEvent(class QInputMethodEvent *)
+func (this *QGraphicsView) InheritInputMethodEvent(f func(event *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "inputMethodEvent", f)
+}
+
+// void drawBackground(class QPainter *, const class QRectF &)
+func (this *QGraphicsView) InheritDrawBackground(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRectF)) {
+	ffiqt.SetAllInheritCallback(this, "drawBackground", f)
+}
+
+// void drawForeground(class QPainter *, const class QRectF &)
+func (this *QGraphicsView) InheritDrawForeground(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRectF)) {
+	ffiqt.SetAllInheritCallback(this, "drawForeground", f)
+}
+
+// void drawItems(class QPainter *, int, class QGraphicsItem **, const class QStyleOptionGraphicsItem *)
+func (this *QGraphicsView) InheritDrawItems(f func(painter *qtgui.QPainter /*777 QPainter **/, numItems int, items []interface{}, options []interface{})) {
+	ffiqt.SetAllInheritCallback(this, "drawItems", f)
+}
+
 type QGraphicsView struct {
 	*QAbstractScrollArea
 }
@@ -115,9 +245,10 @@ func NewQGraphicsView_1(scene *QGraphicsScene /*777 QGraphicsScene **/, parent *
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsView()
-func DeleteQGraphicsView(*QGraphicsView) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsViewD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsView(this *QGraphicsView) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsViewD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsview.h:121
@@ -129,6 +260,7 @@ func (this *QGraphicsView) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -301,6 +433,7 @@ func (this *QGraphicsView) RubberBandRect() *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -375,6 +508,7 @@ func (this *QGraphicsView) SceneRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -406,6 +540,7 @@ func (this *QGraphicsView) Matrix() *qtgui.QMatrix /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQMatrix)
 	return rv2
 }
 
@@ -437,6 +572,7 @@ func (this *QGraphicsView) Transform() *qtgui.QTransform /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQTransform)
 	return rv2
 }
 
@@ -449,6 +585,7 @@ func (this *QGraphicsView) ViewportTransform() *qtgui.QTransform /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQTransform)
 	return rv2
 }
 
@@ -652,6 +789,7 @@ func (this *QGraphicsView) MapToScene(point *qtcore.QPoint) *qtcore.QPointF /*12
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -665,6 +803,7 @@ func (this *QGraphicsView) MapToScene_1(rect *qtcore.QRect) *qtgui.QPolygonF /*1
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPolygonF)
 	return rv2
 }
 
@@ -678,6 +817,7 @@ func (this *QGraphicsView) MapToScene_2(polygon *qtgui.QPolygon) *qtgui.QPolygon
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPolygonF)
 	return rv2
 }
 
@@ -691,6 +831,7 @@ func (this *QGraphicsView) MapToScene_3(path *qtgui.QPainterPath) *qtgui.QPainte
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
 }
 
@@ -703,6 +844,7 @@ func (this *QGraphicsView) MapToScene_4(x int, y int) *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -715,6 +857,7 @@ func (this *QGraphicsView) MapToScene_5(x int, y int, w int, h int) *qtgui.QPoly
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPolygonF)
 	return rv2
 }
 
@@ -728,6 +871,7 @@ func (this *QGraphicsView) MapFromScene(point *qtcore.QPointF) *qtcore.QPoint /*
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
@@ -741,6 +885,7 @@ func (this *QGraphicsView) MapFromScene_1(rect *qtcore.QRectF) *qtgui.QPolygon /
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPolygon)
 	return rv2
 }
 
@@ -754,6 +899,7 @@ func (this *QGraphicsView) MapFromScene_2(polygon *qtgui.QPolygonF) *qtgui.QPoly
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPolygon)
 	return rv2
 }
 
@@ -767,6 +913,7 @@ func (this *QGraphicsView) MapFromScene_3(path *qtgui.QPainterPath) *qtgui.QPain
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
 }
 
@@ -779,6 +926,7 @@ func (this *QGraphicsView) MapFromScene_4(x float64, y float64) *qtcore.QPoint /
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
@@ -791,6 +939,7 @@ func (this *QGraphicsView) MapFromScene_5(x float64, y float64, w float64, h flo
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPolygon)
 	return rv2
 }
 
@@ -803,6 +952,7 @@ func (this *QGraphicsView) InputMethodQuery(query int) *qtcore.QVariant /*123*/ 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -815,6 +965,7 @@ func (this *QGraphicsView) BackgroundBrush() *qtgui.QBrush /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQBrush)
 	return rv2
 }
 
@@ -837,6 +988,7 @@ func (this *QGraphicsView) ForegroundBrush() *qtgui.QBrush /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQBrush)
 	return rv2
 }
 

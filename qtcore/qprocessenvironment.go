@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QProcessEnvironment struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QProcessEnvironment) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QProcessEnvironment) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQProcessEnvironmentFromPointer(cthis unsafe.Pointer) *QProcessEnvironment {
 	return &QProcessEnvironment{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQProcessEnvironment() *QProcessEnvironment {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QProcessEnvironmentC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQProcessEnvironmentFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQProcessEnvironment)
 	return gothis
 }
 
@@ -80,9 +86,10 @@ func NewQProcessEnvironment() *QProcessEnvironment {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QProcessEnvironment()
-func DeleteQProcessEnvironment(*QProcessEnvironment) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QProcessEnvironmentD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQProcessEnvironment(this *QProcessEnvironment) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QProcessEnvironmentD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qprocess.h:78
@@ -148,6 +155,7 @@ func (this *QProcessEnvironment) Value(name *QString, defaultValue *QString) *QS
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -160,6 +168,7 @@ func (this *QProcessEnvironment) SystemEnvironment() *QProcessEnvironment /*123*
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQProcessEnvironmentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQProcessEnvironment)
 	return rv2
 }
 func QProcessEnvironment_SystemEnvironment() *QProcessEnvironment /*123*/ {

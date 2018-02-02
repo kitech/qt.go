@@ -44,6 +44,16 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QPauseAnimation) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void updateCurrentTime(int)
+func (this *QPauseAnimation) InheritUpdateCurrentTime(f func(arg0 int)) {
+	ffiqt.SetAllInheritCallback(this, "updateCurrentTime", f)
+}
+
 type QPauseAnimation struct {
 	*QAbstractAnimation
 }
@@ -106,9 +116,10 @@ func NewQPauseAnimation_1(msecs int, parent *QObject /*777 QObject **/) *QPauseA
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPauseAnimation()
-func DeleteQPauseAnimation(*QPauseAnimation) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimationD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPauseAnimation(this *QPauseAnimation) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qpauseanimation.h:61

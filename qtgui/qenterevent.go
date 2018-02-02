@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QEnterEvent struct {
 	*qtcore.QEvent
 }
@@ -81,6 +82,7 @@ func NewQEnterEvent(localPos *qtcore.QPointF, windowPos *qtcore.QPointF, screenP
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QEnterEventC2ERK7QPointFS2_S2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQEnterEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQEnterEvent)
 	return gothis
 }
 
@@ -88,9 +90,10 @@ func NewQEnterEvent(localPos *qtcore.QPointF, windowPos *qtcore.QPointF, screenP
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QEnterEvent()
-func DeleteQEnterEvent(*QEnterEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QEnterEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQEnterEvent(this *QEnterEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QEnterEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:89
@@ -102,6 +105,7 @@ func (this *QEnterEvent) Pos() *qtcore.QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
@@ -114,6 +118,7 @@ func (this *QEnterEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
@@ -170,6 +175,7 @@ func (this *QEnterEvent) LocalPos() *qtcore.QPointF {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -182,6 +188,7 @@ func (this *QEnterEvent) WindowPos() *qtcore.QPointF {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -194,6 +201,7 @@ func (this *QEnterEvent) ScreenPos() *qtcore.QPointF {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 

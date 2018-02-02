@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextDocumentFragment struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QTextDocumentFragment) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTextDocumentFragment) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTextDocumentFragmentFromPointer(cthis unsafe.Pointer) *QTextDocumentFragment {
 	return &QTextDocumentFragment{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQTextDocumentFragment() *QTextDocumentFragment {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextDocumentFragmentFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextDocumentFragment)
 	return gothis
 }
 
@@ -89,6 +95,7 @@ func NewQTextDocumentFragment_1(document *QTextDocument /*777 const QTextDocumen
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2EPK13QTextDocument", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextDocumentFragmentFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextDocumentFragment)
 	return gothis
 }
 
@@ -101,6 +108,7 @@ func NewQTextDocumentFragment_2(range_ *QTextCursor) *QTextDocumentFragment {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentC2ERK11QTextCursor", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextDocumentFragmentFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextDocumentFragment)
 	return gothis
 }
 
@@ -108,9 +116,10 @@ func NewQTextDocumentFragment_2(range_ *QTextCursor) *QTextDocumentFragment {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTextDocumentFragment()
-func DeleteQTextDocumentFragment(*QTextDocumentFragment) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextDocumentFragment(this *QTextDocumentFragment) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qtextdocumentfragment.h:64
@@ -133,6 +142,7 @@ func (this *QTextDocumentFragment) ToPlainText() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -146,6 +156,7 @@ func (this *QTextDocumentFragment) ToHtml(encoding *qtcore.QByteArray) *qtcore.Q
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -159,6 +170,7 @@ func (this *QTextDocumentFragment) FromPlainText(plainText *qtcore.QString) *QTe
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTextDocumentFragmentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextDocumentFragment)
 	return rv2
 }
 func QTextDocumentFragment_FromPlainText(plainText *qtcore.QString) *QTextDocumentFragment /*123*/ {
@@ -177,6 +189,7 @@ func (this *QTextDocumentFragment) FromHtml(html *qtcore.QString) *QTextDocument
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTextDocumentFragmentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextDocumentFragment)
 	return rv2
 }
 func QTextDocumentFragment_FromHtml(html *qtcore.QString) *QTextDocumentFragment /*123*/ {
@@ -196,6 +209,7 @@ func (this *QTextDocumentFragment) FromHtml_1(html *qtcore.QString, resourceProv
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTextDocumentFragmentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextDocumentFragment)
 	return rv2
 }
 func QTextDocumentFragment_FromHtml_1(html *qtcore.QString, resourceProvider *QTextDocument /*777 const QTextDocument **/) *QTextDocumentFragment /*123*/ {

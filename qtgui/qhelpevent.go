@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QHelpEvent struct {
 	*qtcore.QEvent
 }
@@ -80,6 +81,7 @@ func NewQHelpEvent(type_ int, pos *qtcore.QPoint, globalPos *qtcore.QPoint) *QHe
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHelpEventC2EN6QEvent4TypeERK6QPointS4_", ffiqt.FFI_TYPE_POINTER, type_, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQHelpEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQHelpEvent)
 	return gothis
 }
 
@@ -87,9 +89,10 @@ func NewQHelpEvent(type_ int, pos *qtcore.QPoint, globalPos *qtcore.QPoint) *QHe
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QHelpEvent()
-func DeleteQHelpEvent(*QHelpEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHelpEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQHelpEvent(this *QHelpEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHelpEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:683
@@ -145,6 +148,7 @@ func (this *QHelpEvent) Pos() *qtcore.QPoint {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
@@ -157,6 +161,7 @@ func (this *QHelpEvent) GlobalPos() *qtcore.QPoint {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 

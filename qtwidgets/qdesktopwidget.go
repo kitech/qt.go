@@ -52,6 +52,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void resizeEvent(class QResizeEvent *)
+func (this *QDesktopWidget) InheritResizeEvent(f func(e *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
 type QDesktopWidget struct {
 	*QWidget
 }
@@ -101,9 +106,10 @@ func NewQDesktopWidget() *QDesktopWidget {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDesktopWidget()
-func DeleteQDesktopWidget(*QDesktopWidget) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDesktopWidgetD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDesktopWidget(this *QDesktopWidget) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDesktopWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qdesktopwidget.h:62
@@ -195,6 +201,7 @@ func (this *QDesktopWidget) ScreenGeometry(screen int) *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -208,6 +215,7 @@ func (this *QDesktopWidget) ScreenGeometry_1(widget *QWidget /*777 const QWidget
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -221,6 +229,7 @@ func (this *QDesktopWidget) ScreenGeometry_2(point *qtcore.QPoint) *qtcore.QRect
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -233,6 +242,7 @@ func (this *QDesktopWidget) AvailableGeometry(screen int) *qtcore.QRect /*123*/ 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -246,6 +256,7 @@ func (this *QDesktopWidget) AvailableGeometry_1(widget *QWidget /*777 const QWid
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -259,6 +270,7 @@ func (this *QDesktopWidget) AvailableGeometry_2(point *qtcore.QPoint) *qtcore.QR
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 

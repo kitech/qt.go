@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextTableFormat struct {
 	*QTextFrameFormat
 }
@@ -78,6 +79,7 @@ func NewQTextTableFormat() *QTextTableFormat {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormatC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextTableFormatFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextTableFormat)
 	return gothis
 }
 
@@ -90,6 +92,7 @@ func NewQTextTableFormat_1(fmt *QTextFormat) *QTextTableFormat {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormatC2ERK11QTextFormat", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextTableFormatFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextTableFormat)
 	return gothis
 }
 
@@ -202,6 +205,12 @@ func (this *QTextTableFormat) HeaderRowCount() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+func DeleteQTextTableFormat(this *QTextTableFormat) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextTableFormatD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

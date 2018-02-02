@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QUrl struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QUrl) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QUrl) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQUrlFromPointer(cthis unsafe.Pointer) *QUrl {
 	return &QUrl{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQUrl() *QUrl {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrlC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQUrlFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQUrl)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func NewQUrl_1(url *QString, mode int) *QUrl {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrlC2ERK7QStringNS_11ParsingModeE", ffiqt.FFI_TYPE_POINTER, convArg0, mode)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQUrlFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQUrl)
 	return gothis
 }
 
@@ -92,9 +99,10 @@ func NewQUrl_1(url *QString, mode int) *QUrl {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QUrl()
-func DeleteQUrl(*QUrl) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrlD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQUrl(this *QUrl) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrlD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qurl.h:193
@@ -127,6 +135,7 @@ func (this *QUrl) FromEncoded(url *QByteArray, mode int) *QUrl /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUrl)
 	return rv2
 }
 func QUrl_FromEncoded(url *QByteArray, mode int) *QUrl /*123*/ {
@@ -145,6 +154,7 @@ func (this *QUrl) FromUserInput(userInput *QString) *QUrl /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUrl)
 	return rv2
 }
 func QUrl_FromUserInput(userInput *QString) *QUrl /*123*/ {
@@ -173,6 +183,7 @@ func (this *QUrl) ErrorString() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -215,6 +226,7 @@ func (this *QUrl) Scheme() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -360,6 +372,7 @@ func (this *QUrl) Resolved(relative *QUrl) *QUrl /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUrl)
 	return rv2
 }
 
@@ -407,6 +420,7 @@ func (this *QUrl) FromLocalFile(localfile *QString) *QUrl /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQUrl)
 	return rv2
 }
 func QUrl_FromLocalFile(localfile *QString) *QUrl /*123*/ {
@@ -424,6 +438,7 @@ func (this *QUrl) ToLocalFile() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -457,6 +472,7 @@ func (this *QUrl) FromPercentEncoding(arg0 *QByteArray) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QUrl_FromPercentEncoding(arg0 *QByteArray) *QString /*123*/ {
@@ -477,6 +493,7 @@ func (this *QUrl) ToPercentEncoding(arg0 *QString, exclude *QByteArray, include 
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 func QUrl_ToPercentEncoding(arg0 *QString, exclude *QByteArray, include *QByteArray) *QByteArray /*123*/ {
@@ -495,6 +512,7 @@ func (this *QUrl) FromAce(arg0 *QByteArray) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QUrl_FromAce(arg0 *QByteArray) *QString /*123*/ {
@@ -513,6 +531,7 @@ func (this *QUrl) ToAce(arg0 *QString) *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 func QUrl_ToAce(arg0 *QString) *QByteArray /*123*/ {

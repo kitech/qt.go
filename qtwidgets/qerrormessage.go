@@ -52,6 +52,16 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void done(int)
+func (this *QErrorMessage) InheritDone(f func(arg0 int)) {
+	ffiqt.SetAllInheritCallback(this, "done", f)
+}
+
+// void changeEvent(class QEvent *)
+func (this *QErrorMessage) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
 type QErrorMessage struct {
 	*QDialog
 }
@@ -102,9 +112,10 @@ func NewQErrorMessage(parent *QWidget /*777 QWidget **/) *QErrorMessage {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QErrorMessage()
-func DeleteQErrorMessage(*QErrorMessage) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessageD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQErrorMessage(this *QErrorMessage) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessageD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qerrormessage.h:61

@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QLoggingCategory struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QLoggingCategory) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QLoggingCategory) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQLoggingCategoryFromPointer(cthis unsafe.Pointer) *QLoggingCategory {
 	return &QLoggingCategory{&qtrt.CObject{cthis}}
@@ -75,6 +80,7 @@ func NewQLoggingCategory(category string) *QLoggingCategory {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLoggingCategoryFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQLoggingCategory)
 	return gothis
 }
 
@@ -88,6 +94,7 @@ func NewQLoggingCategory_1(category string, severityLevel int) *QLoggingCategory
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc9QtMsgType", ffiqt.FFI_TYPE_POINTER, convArg0, severityLevel)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLoggingCategoryFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQLoggingCategory)
 	return gothis
 }
 
@@ -95,9 +102,10 @@ func NewQLoggingCategory_1(category string, severityLevel int) *QLoggingCategory
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QLoggingCategory()
-func DeleteQLoggingCategory(*QLoggingCategory) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategoryD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQLoggingCategory(this *QLoggingCategory) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategoryD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qloggingcategory.h:57

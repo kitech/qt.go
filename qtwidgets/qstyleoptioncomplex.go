@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleOptionComplex struct {
 	*QStyleOption
 }
@@ -82,7 +83,14 @@ func NewQStyleOptionComplex(version int, type_ int) *QStyleOptionComplex {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionComplexC2Eii", ffiqt.FFI_TYPE_POINTER, version, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionComplexFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionComplex)
 	return gothis
+}
+
+func DeleteQStyleOptionComplex(this *QStyleOptionComplex) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionComplexD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleOptionComplex__StyleOptionType = int

@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QDirIterator struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QDirIterator) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QDirIterator) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQDirIteratorFromPointer(cthis unsafe.Pointer) *QDirIterator {
 	return &QDirIterator{&qtrt.CObject{cthis}}
@@ -74,6 +79,7 @@ func NewQDirIterator(dir *QDir, flags int) *QDirIterator {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK4QDir6QFlagsINS_12IteratorFlagEE", ffiqt.FFI_TYPE_POINTER, convArg0, flags)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDirIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDirIterator)
 	return gothis
 }
 
@@ -86,6 +92,7 @@ func NewQDirIterator_1(path *QString, flags int) *QDirIterator {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QDirIteratorC2ERK7QString6QFlagsINS_12IteratorFlagEE", ffiqt.FFI_TYPE_POINTER, convArg0, flags)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDirIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDirIterator)
 	return gothis
 }
 
@@ -93,9 +100,10 @@ func NewQDirIterator_1(path *QString, flags int) *QDirIterator {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QDirIterator()
-func DeleteQDirIterator(*QDirIterator) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QDirIteratorD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDirIterator(this *QDirIterator) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QDirIteratorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qdiriterator.h:71
@@ -107,6 +115,7 @@ func (this *QDirIterator) Next() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -130,6 +139,7 @@ func (this *QDirIterator) FileName() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -142,6 +152,7 @@ func (this *QDirIterator) FilePath() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -154,6 +165,7 @@ func (this *QDirIterator) FileInfo() *QFileInfo /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQFileInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFileInfo)
 	return rv2
 }
 
@@ -166,6 +178,7 @@ func (this *QDirIterator) Path() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 

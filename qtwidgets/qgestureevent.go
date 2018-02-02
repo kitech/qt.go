@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QGestureEvent struct {
 	*qtcore.QEvent
 }
@@ -78,9 +79,10 @@ func (*QGestureEvent) NewFromPointer(cthis unsafe.Pointer) *QGestureEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGestureEvent()
-func DeleteQGestureEvent(*QGestureEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGestureEvent(this *QGestureEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgesture.h:281
@@ -207,6 +209,7 @@ func (this *QGestureEvent) MapToGraphicsScene(gesturePoint *qtcore.QPointF) *qtc
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 

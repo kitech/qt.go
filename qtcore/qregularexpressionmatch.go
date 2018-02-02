@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QRegularExpressionMatch struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QRegularExpressionMatch) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QRegularExpressionMatch) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQRegularExpressionMatchFromPointer(cthis unsafe.Pointer) *QRegularExpressionMatch {
 	return &QRegularExpressionMatch{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQRegularExpressionMatch() *QRegularExpressionMatch {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QRegularExpressionMatchC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRegularExpressionMatchFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRegularExpressionMatch)
 	return gothis
 }
 
@@ -80,9 +86,10 @@ func NewQRegularExpressionMatch() *QRegularExpressionMatch {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QRegularExpressionMatch()
-func DeleteQRegularExpressionMatch(*QRegularExpressionMatch) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QRegularExpressionMatchD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQRegularExpressionMatch(this *QRegularExpressionMatch) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QRegularExpressionMatchD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:187
@@ -104,6 +111,7 @@ func (this *QRegularExpressionMatch) RegularExpression() *QRegularExpression /*1
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegularExpressionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegularExpression)
 	return rv2
 }
 
@@ -182,6 +190,7 @@ func (this *QRegularExpressionMatch) Captured(nth int) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -195,6 +204,7 @@ func (this *QRegularExpressionMatch) Captured_1(name *QString) *QString /*123*/ 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -208,6 +218,7 @@ func (this *QRegularExpressionMatch) Captured_2(name *QStringView /*123*/) *QStr
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -220,6 +231,7 @@ func (this *QRegularExpressionMatch) CapturedRef(nth int) *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -233,6 +245,7 @@ func (this *QRegularExpressionMatch) CapturedRef_1(name *QString) *QStringRef /*
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -246,6 +259,7 @@ func (this *QRegularExpressionMatch) CapturedRef_2(name *QStringView /*123*/) *Q
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -258,6 +272,7 @@ func (this *QRegularExpressionMatch) CapturedView(nth int) *QStringView /*123*/ 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringViewFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringView)
 	return rv2
 }
 
@@ -271,6 +286,7 @@ func (this *QRegularExpressionMatch) CapturedView_1(name *QStringView /*123*/) *
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringViewFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringView)
 	return rv2
 }
 

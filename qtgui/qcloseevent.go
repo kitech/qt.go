@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QCloseEvent struct {
 	*qtcore.QEvent
 }
@@ -78,6 +79,7 @@ func NewQCloseEvent() *QCloseEvent {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QCloseEventC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCloseEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQCloseEvent)
 	return gothis
 }
 
@@ -85,9 +87,10 @@ func NewQCloseEvent() *QCloseEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QCloseEvent()
-func DeleteQCloseEvent(*QCloseEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QCloseEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQCloseEvent(this *QCloseEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QCloseEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

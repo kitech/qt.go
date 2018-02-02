@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAccessibleApplication struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QAccessibleApplication) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QAccessibleApplication) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQAccessibleApplicationFromPointer(cthis unsafe.Pointer) *QAccessibleApplication {
 	return &QAccessibleApplication{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQAccessibleApplication() *QAccessibleApplication {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QAccessibleApplicationC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleApplicationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQAccessibleApplication)
 	return gothis
 }
 
@@ -160,6 +166,7 @@ func (this *QAccessibleApplication) Text(t int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -183,6 +190,12 @@ func (this *QAccessibleApplication) State() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+func DeleteQAccessibleApplication(this *QAccessibleApplication) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QAccessibleApplicationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

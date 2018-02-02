@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QChildEvent struct {
 	*QEvent
 }
@@ -75,6 +76,7 @@ func NewQChildEvent(type_ int, child *QObject /*777 QObject **/) *QChildEvent {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QChildEventC2EN6QEvent4TypeEP7QObject", ffiqt.FFI_TYPE_POINTER, type_, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQChildEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQChildEvent)
 	return gothis
 }
 
@@ -82,9 +84,10 @@ func NewQChildEvent(type_ int, child *QObject /*777 QObject **/) *QChildEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QChildEvent()
-func DeleteQChildEvent(*QChildEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QChildEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQChildEvent(this *QChildEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QChildEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:354

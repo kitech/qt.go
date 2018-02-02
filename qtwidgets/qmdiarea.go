@@ -52,6 +52,56 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void setupViewport(class QWidget *)
+func (this *QMdiArea) InheritSetupViewport(f func(viewport *QWidget /*777 QWidget **/)) {
+	ffiqt.SetAllInheritCallback(this, "setupViewport", f)
+}
+
+// bool event(class QEvent *)
+func (this *QMdiArea) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// bool eventFilter(class QObject *, class QEvent *)
+func (this *QMdiArea) InheritEventFilter(f func(object *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "eventFilter", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QMdiArea) InheritPaintEvent(f func(paintEvent *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void childEvent(class QChildEvent *)
+func (this *QMdiArea) InheritChildEvent(f func(childEvent *qtcore.QChildEvent /*777 QChildEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "childEvent", f)
+}
+
+// void resizeEvent(class QResizeEvent *)
+func (this *QMdiArea) InheritResizeEvent(f func(resizeEvent *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void timerEvent(class QTimerEvent *)
+func (this *QMdiArea) InheritTimerEvent(f func(timerEvent *qtcore.QTimerEvent /*777 QTimerEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "timerEvent", f)
+}
+
+// void showEvent(class QShowEvent *)
+func (this *QMdiArea) InheritShowEvent(f func(showEvent *qtgui.QShowEvent /*777 QShowEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "showEvent", f)
+}
+
+// bool viewportEvent(class QEvent *)
+func (this *QMdiArea) InheritViewportEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "viewportEvent", f)
+}
+
+// void scrollContentsBy(int, int)
+func (this *QMdiArea) InheritScrollContentsBy(f func(dx int, dy int)) {
+	ffiqt.SetAllInheritCallback(this, "scrollContentsBy", f)
+}
+
 type QMdiArea struct {
 	*QAbstractScrollArea
 }
@@ -102,9 +152,10 @@ func NewQMdiArea(parent *QWidget /*777 QWidget **/) *QMdiArea {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMdiArea()
-func DeleteQMdiArea(*QMdiArea) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiAreaD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQMdiArea(this *QMdiArea) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiAreaD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qmdiarea.h:93
@@ -116,6 +167,7 @@ func (this *QMdiArea) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -128,6 +180,7 @@ func (this *QMdiArea) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -187,6 +240,7 @@ func (this *QMdiArea) Background() *qtgui.QBrush /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQBrush)
 	return rv2
 }
 

@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSemaphore struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QSemaphore) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSemaphore) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSemaphoreFromPointer(cthis unsafe.Pointer) *QSemaphore {
 	return &QSemaphore{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQSemaphore(n int) *QSemaphore {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphoreC2Ei", ffiqt.FFI_TYPE_POINTER, n)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSemaphoreFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSemaphore)
 	return gothis
 }
 
@@ -80,9 +86,10 @@ func NewQSemaphore(n int) *QSemaphore {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QSemaphore()
-func DeleteQSemaphore(*QSemaphore) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphoreD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSemaphore(this *QSemaphore) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphoreD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qsemaphore.h:58

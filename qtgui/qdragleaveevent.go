@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QDragLeaveEvent struct {
 	*qtcore.QEvent
 }
@@ -78,6 +79,7 @@ func NewQDragLeaveEvent() *QDragLeaveEvent {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QDragLeaveEventC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDragLeaveEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDragLeaveEvent)
 	return gothis
 }
 
@@ -85,9 +87,10 @@ func NewQDragLeaveEvent() *QDragLeaveEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDragLeaveEvent()
-func DeleteQDragLeaveEvent(*QDragLeaveEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QDragLeaveEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDragLeaveEvent(this *QDragLeaveEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QDragLeaveEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

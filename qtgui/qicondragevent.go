@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QIconDragEvent struct {
 	*qtcore.QEvent
 }
@@ -78,6 +79,7 @@ func NewQIconDragEvent() *QIconDragEvent {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QIconDragEventC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQIconDragEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQIconDragEvent)
 	return gothis
 }
 
@@ -85,9 +87,10 @@ func NewQIconDragEvent() *QIconDragEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QIconDragEvent()
-func DeleteQIconDragEvent(*QIconDragEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QIconDragEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQIconDragEvent(this *QIconDragEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QIconDragEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

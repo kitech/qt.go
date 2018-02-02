@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QVBoxLayout struct {
 	*QBoxLayout
 }
@@ -113,9 +114,10 @@ func NewQVBoxLayout_1(parent *QWidget /*777 QWidget **/) *QVBoxLayout {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QVBoxLayout()
-func DeleteQVBoxLayout(*QVBoxLayout) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QVBoxLayoutD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQVBoxLayout(this *QVBoxLayout) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QVBoxLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

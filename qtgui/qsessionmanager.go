@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSessionManager struct {
 	*qtcore.QObject
 }
@@ -91,6 +92,7 @@ func (this *QSessionManager) SessionId() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -103,6 +105,7 @@ func (this *QSessionManager) SessionKey() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -226,6 +229,12 @@ func (this *QSessionManager) IsPhase2() bool {
 func (this *QSessionManager) RequestPhase2() {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager13requestPhase2Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+}
+
+func DeleteQSessionManager(this *QSessionManager) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManagerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QSessionManager__RestartHint = int

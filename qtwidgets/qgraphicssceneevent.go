@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QGraphicsSceneEvent struct {
 	*qtcore.QEvent
 }
@@ -82,6 +83,7 @@ func NewQGraphicsSceneEvent(type_ int) *QGraphicsSceneEvent {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsSceneEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsSceneEvent)
 	return gothis
 }
 
@@ -89,9 +91,10 @@ func NewQGraphicsSceneEvent(type_ int) *QGraphicsSceneEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsSceneEvent()
-func DeleteQGraphicsSceneEvent(*QGraphicsSceneEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsSceneEvent(this *QGraphicsSceneEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h:70

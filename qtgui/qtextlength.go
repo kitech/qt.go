@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextLength struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QTextLength) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTextLength) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTextLengthFromPointer(cthis unsafe.Pointer) *QTextLength {
 	return &QTextLength{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQTextLength() *QTextLength {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLengthC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextLengthFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextLength)
 	return gothis
 }
 
@@ -88,6 +94,7 @@ func NewQTextLength_1(type_ int, value float64) *QTextLength {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLengthC2ENS_4TypeEd", ffiqt.FFI_TYPE_POINTER, type_, value)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextLengthFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextLength)
 	return gothis
 }
 
@@ -122,6 +129,12 @@ func (this *QTextLength) RawValue() float64 {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+func DeleteQTextLength(this *QTextLength) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLengthD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QTextLength__Type = int

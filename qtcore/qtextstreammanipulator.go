@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextStreamManipulator struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QTextStreamManipulator) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTextStreamManipulator) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTextStreamManipulatorFromPointer(cthis unsafe.Pointer) *QTextStreamManipulator {
 	return &QTextStreamManipulator{&qtrt.CObject{cthis}}
@@ -73,6 +78,12 @@ func (this *QTextStreamManipulator) Exec(s *QTextStream) {
 	var convArg0 = s.GetCthis()
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QTextStreamManipulator4execER11QTextStream", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+}
+
+func DeleteQTextStreamManipulator(this *QTextStreamManipulator) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QTextStreamManipulatorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

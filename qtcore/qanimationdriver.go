@@ -44,6 +44,21 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void advanceAnimation(qint64)
+func (this *QAnimationDriver) InheritAdvanceAnimation(f func(timeStep int64)) {
+	ffiqt.SetAllInheritCallback(this, "advanceAnimation", f)
+}
+
+// void start()
+func (this *QAnimationDriver) InheritStart(f func()) {
+	ffiqt.SetAllInheritCallback(this, "start", f)
+}
+
+// void stop()
+func (this *QAnimationDriver) InheritStop(f func()) {
+	ffiqt.SetAllInheritCallback(this, "stop", f)
+}
+
 type QAnimationDriver struct {
 	*QObject
 }
@@ -94,9 +109,10 @@ func NewQAnimationDriver(parent *QObject /*777 QObject **/) *QAnimationDriver {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAnimationDriver()
-func DeleteQAnimationDriver(*QAnimationDriver) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriverD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAnimationDriver(this *QAnimationDriver) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriverD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qabstractanimation.h:142

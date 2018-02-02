@@ -44,6 +44,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QAnimationGroup) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QAnimationGroup struct {
 	*QAbstractAnimation
 }
@@ -94,9 +99,10 @@ func NewQAnimationGroup(parent *QObject /*777 QObject **/) *QAnimationGroup {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAnimationGroup()
-func DeleteQAnimationGroup(*QAnimationGroup) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAnimationGroupD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAnimationGroup(this *QAnimationGroup) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAnimationGroupD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qanimationgroup.h:59

@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QIncompatibleFlag struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QIncompatibleFlag) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QIncompatibleFlag) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQIncompatibleFlagFromPointer(cthis unsafe.Pointer) *QIncompatibleFlag {
 	return &QIncompatibleFlag{&qtrt.CObject{cthis}}
@@ -73,7 +78,14 @@ func NewQIncompatibleFlag(i int) *QIncompatibleFlag {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIncompatibleFlagC2Ei", ffiqt.FFI_TYPE_POINTER, i)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQIncompatibleFlag)
 	return gothis
+}
+
+func DeleteQIncompatibleFlag(this *QIncompatibleFlag) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIncompatibleFlagD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

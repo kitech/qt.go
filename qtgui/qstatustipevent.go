@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStatusTipEvent struct {
 	*qtcore.QEvent
 }
@@ -79,6 +80,7 @@ func NewQStatusTipEvent(tip *qtcore.QString) *QStatusTipEvent {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStatusTipEventC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStatusTipEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStatusTipEvent)
 	return gothis
 }
 
@@ -86,9 +88,10 @@ func NewQStatusTipEvent(tip *qtcore.QString) *QStatusTipEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStatusTipEvent()
-func DeleteQStatusTipEvent(*QStatusTipEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStatusTipEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQStatusTipEvent(this *QStatusTipEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStatusTipEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:703
@@ -100,6 +103,7 @@ func (this *QStatusTipEvent) Tip() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

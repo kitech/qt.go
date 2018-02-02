@@ -44,6 +44,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void emitSelectionChanged(const class QItemSelection &, const class QItemSelection &)
+func (this *QItemSelectionModel) InheritEmitSelectionChanged(f func(newSelection *QItemSelection, oldSelection *QItemSelection)) {
+	ffiqt.SetAllInheritCallback(this, "emitSelectionChanged", f)
+}
+
 type QItemSelectionModel struct {
 	*QObject
 }
@@ -107,9 +112,10 @@ func NewQItemSelectionModel_1(model *QAbstractItemModel /*777 QAbstractItemModel
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QItemSelectionModel()
-func DeleteQItemSelectionModel(*QItemSelectionModel) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QItemSelectionModelD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQItemSelectionModel(this *QItemSelectionModel) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QItemSelectionModelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:171
@@ -121,6 +127,7 @@ func (this *QItemSelectionModel) CurrentIndex() *QModelIndex /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -204,6 +211,7 @@ func (this *QItemSelectionModel) Selection() *QItemSelection /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQItemSelection)
 	return rv2
 }
 

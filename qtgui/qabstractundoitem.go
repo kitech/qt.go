@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAbstractUndoItem struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QAbstractUndoItem) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QAbstractUndoItem) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQAbstractUndoItemFromPointer(cthis unsafe.Pointer) *QAbstractUndoItem {
 	return &QAbstractUndoItem{&qtrt.CObject{cthis}}
@@ -73,9 +78,10 @@ func (*QAbstractUndoItem) NewFromPointer(cthis unsafe.Pointer) *QAbstractUndoIte
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractUndoItem()
-func DeleteQAbstractUndoItem(*QAbstractUndoItem) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractUndoItemD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAbstractUndoItem(this *QAbstractUndoItem) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractUndoItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qtextdocument.h:87

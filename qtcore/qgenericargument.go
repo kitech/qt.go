@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QGenericArgument struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QGenericArgument) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QGenericArgument) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQGenericArgumentFromPointer(cthis unsafe.Pointer) *QGenericArgument {
 	return &QGenericArgument{&qtrt.CObject{cthis}}
@@ -75,6 +80,7 @@ func NewQGenericArgument(aName string, aData unsafe.Pointer /*666*/) *QGenericAr
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QGenericArgumentC2EPKcPKv", ffiqt.FFI_TYPE_POINTER, convArg0, aData)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGenericArgumentFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGenericArgument)
 	return gothis
 }
 
@@ -98,6 +104,12 @@ func (this *QGenericArgument) Name() string {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.GoStringI(rv)
+}
+
+func DeleteQGenericArgument(this *QGenericArgument) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QGenericArgumentD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

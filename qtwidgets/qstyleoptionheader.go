@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleOptionHeader struct {
 	*QStyleOption
 }
@@ -82,6 +83,7 @@ func NewQStyleOptionHeader() *QStyleOptionHeader {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionHeaderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionHeader)
 	return gothis
 }
 
@@ -93,7 +95,14 @@ func NewQStyleOptionHeader_1(version int) *QStyleOptionHeader {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionHeaderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionHeader)
 	return gothis
+}
+
+func DeleteQStyleOptionHeader(this *QStyleOptionHeader) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionHeaderD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleOptionHeader__StyleOptionType = int

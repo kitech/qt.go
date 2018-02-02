@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QHashDummyValue struct {
 	*qtrt.CObject
 }
@@ -56,13 +57,23 @@ func (this *QHashDummyValue) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QHashDummyValue) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQHashDummyValueFromPointer(cthis unsafe.Pointer) *QHashDummyValue {
 	return &QHashDummyValue{&qtrt.CObject{cthis}}
 }
 func (*QHashDummyValue) NewFromPointer(cthis unsafe.Pointer) *QHashDummyValue {
 	return NewQHashDummyValueFromPointer(cthis)
+}
+
+func DeleteQHashDummyValue(this *QHashDummyValue) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QHashDummyValueD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

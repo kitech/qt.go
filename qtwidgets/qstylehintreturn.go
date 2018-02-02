@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleHintReturn struct {
 	*qtrt.CObject
 }
@@ -64,7 +65,11 @@ func (this *QStyleHintReturn) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QStyleHintReturn) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQStyleHintReturnFromPointer(cthis unsafe.Pointer) *QStyleHintReturn {
 	return &QStyleHintReturn{&qtrt.CObject{cthis}}
@@ -81,6 +86,7 @@ func NewQStyleHintReturn(version int, type_ int) *QStyleHintReturn {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStyleHintReturnC2Eii", ffiqt.FFI_TYPE_POINTER, version, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleHintReturnFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleHintReturn)
 	return gothis
 }
 
@@ -88,9 +94,10 @@ func NewQStyleHintReturn(version int, type_ int) *QStyleHintReturn {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QStyleHintReturn()
-func DeleteQStyleHintReturn(*QStyleHintReturn) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStyleHintReturnD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQStyleHintReturn(this *QStyleHintReturn) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStyleHintReturnD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleHintReturn__HintReturnType = int

@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QCryptographicHash struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QCryptographicHash) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QCryptographicHash) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQCryptographicHashFromPointer(cthis unsafe.Pointer) *QCryptographicHash {
 	return &QCryptographicHash{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQCryptographicHash(method int) *QCryptographicHash {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHashC2ENS_9AlgorithmE", ffiqt.FFI_TYPE_POINTER, method)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCryptographicHashFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQCryptographicHash)
 	return gothis
 }
 
@@ -80,9 +86,10 @@ func NewQCryptographicHash(method int) *QCryptographicHash {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QCryptographicHash()
-func DeleteQCryptographicHash(*QCryptographicHash) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHashD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQCryptographicHash(this *QCryptographicHash) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHashD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qcryptographichash.h:95
@@ -136,6 +143,7 @@ func (this *QCryptographicHash) Result() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -149,6 +157,7 @@ func (this *QCryptographicHash) Hash(data *QByteArray, method int) *QByteArray /
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 func QCryptographicHash_Hash(data *QByteArray, method int) *QByteArray /*123*/ {

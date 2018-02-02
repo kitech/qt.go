@@ -52,6 +52,16 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void contextMenuEvent(class QContextMenuEvent *)
+func (this *QMainWindow) InheritContextMenuEvent(f func(event *qtgui.QContextMenuEvent /*777 QContextMenuEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "contextMenuEvent", f)
+}
+
+// bool event(class QEvent *)
+func (this *QMainWindow) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QMainWindow struct {
 	*QWidget
 }
@@ -102,9 +112,10 @@ func NewQMainWindow(parent *QWidget /*777 QWidget **/, flags int) *QMainWindow {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMainWindow()
-func DeleteQMainWindow(*QMainWindow) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindowD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQMainWindow(this *QMainWindow) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindowD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qmainwindow.h:97
@@ -116,6 +127,7 @@ func (this *QMainWindow) IconSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -568,6 +580,7 @@ func (this *QMainWindow) SaveState(version int) *qtcore.QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
 

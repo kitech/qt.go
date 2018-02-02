@@ -52,6 +52,76 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void drawDisplay(class QPainter *, const class QStyleOptionViewItem &, const class QRect &, const class QString &)
+func (this *QItemDelegate) InheritDrawDisplay(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, rect *qtcore.QRect, text *qtcore.QString)) {
+	ffiqt.SetAllInheritCallback(this, "drawDisplay", f)
+}
+
+// void drawDecoration(class QPainter *, const class QStyleOptionViewItem &, const class QRect &, const class QPixmap &)
+func (this *QItemDelegate) InheritDrawDecoration(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, rect *qtcore.QRect, pixmap *qtgui.QPixmap)) {
+	ffiqt.SetAllInheritCallback(this, "drawDecoration", f)
+}
+
+// void drawFocus(class QPainter *, const class QStyleOptionViewItem &, const class QRect &)
+func (this *QItemDelegate) InheritDrawFocus(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, rect *qtcore.QRect)) {
+	ffiqt.SetAllInheritCallback(this, "drawFocus", f)
+}
+
+// void drawCheck(class QPainter *, const class QStyleOptionViewItem &, const class QRect &, Qt::CheckState)
+func (this *QItemDelegate) InheritDrawCheck(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, rect *qtcore.QRect, state int)) {
+	ffiqt.SetAllInheritCallback(this, "drawCheck", f)
+}
+
+// void drawBackground(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
+func (this *QItemDelegate) InheritDrawBackground(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, index *qtcore.QModelIndex)) {
+	ffiqt.SetAllInheritCallback(this, "drawBackground", f)
+}
+
+// void doLayout(const class QStyleOptionViewItem &, class QRect *, class QRect *, class QRect *, _Bool)
+func (this *QItemDelegate) InheritDoLayout(f func(option *QStyleOptionViewItem, checkRect *qtcore.QRect /*777 QRect **/, iconRect *qtcore.QRect /*777 QRect **/, textRect *qtcore.QRect /*777 QRect **/, hint bool)) {
+	ffiqt.SetAllInheritCallback(this, "doLayout", f)
+}
+
+// QRect rect(const class QStyleOptionViewItem &, const class QModelIndex &, int)
+func (this *QItemDelegate) InheritRect(f func(option *QStyleOptionViewItem, index *qtcore.QModelIndex, role int) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "rect", f)
+}
+
+// bool eventFilter(class QObject *, class QEvent *)
+func (this *QItemDelegate) InheritEventFilter(f func(object *qtcore.QObject /*777 QObject **/, event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "eventFilter", f)
+}
+
+// bool editorEvent(class QEvent *, class QAbstractItemModel *, const class QStyleOptionViewItem &, const class QModelIndex &)
+func (this *QItemDelegate) InheritEditorEvent(f func(event *qtcore.QEvent /*777 QEvent **/, model *qtcore.QAbstractItemModel /*777 QAbstractItemModel **/, option *QStyleOptionViewItem, index *qtcore.QModelIndex) bool) {
+	ffiqt.SetAllInheritCallback(this, "editorEvent", f)
+}
+
+// QStyleOptionViewItem setOptions(const class QModelIndex &, const class QStyleOptionViewItem &)
+func (this *QItemDelegate) InheritSetOptions(f func(index *qtcore.QModelIndex, option *QStyleOptionViewItem) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "setOptions", f)
+}
+
+// QPixmap decoration(const class QStyleOptionViewItem &, const class QVariant &)
+func (this *QItemDelegate) InheritDecoration(f func(option *QStyleOptionViewItem, variant *qtcore.QVariant) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "decoration", f)
+}
+
+// QPixmap * selected(const class QPixmap &, const class QPalette &, _Bool)
+func (this *QItemDelegate) InheritSelected(f func(pixmap *qtgui.QPixmap, palette *qtgui.QPalette, enabled bool) unsafe.Pointer /*666*/) {
+	ffiqt.SetAllInheritCallback(this, "selected", f)
+}
+
+// QRect doCheck(const class QStyleOptionViewItem &, const class QRect &, const class QVariant &)
+func (this *QItemDelegate) InheritDoCheck(f func(option *QStyleOptionViewItem, bounding *qtcore.QRect, variant *qtcore.QVariant) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "doCheck", f)
+}
+
+// QRect textRectangle(class QPainter *, const class QRect &, const class QFont &, const class QString &)
+func (this *QItemDelegate) InheritTextRectangle(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, font *qtgui.QFont, text *qtcore.QString) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "textRectangle", f)
+}
+
 type QItemDelegate struct {
 	*QAbstractItemDelegate
 }
@@ -102,9 +172,10 @@ func NewQItemDelegate(parent *qtcore.QObject /*777 QObject **/) *QItemDelegate {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QItemDelegate()
-func DeleteQItemDelegate(*QItemDelegate) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QItemDelegateD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQItemDelegate(this *QItemDelegate) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QItemDelegateD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qitemdelegate.h:65
@@ -150,6 +221,7 @@ func (this *QItemDelegate) SizeHint(option *QStyleOptionViewItem, index *qtcore.
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -311,6 +383,7 @@ func (this *QItemDelegate) Rect(option *QStyleOptionViewItem, index *qtcore.QMod
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -353,6 +426,7 @@ func (this *QItemDelegate) SetOptions(index *qtcore.QModelIndex, option *QStyleO
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStyleOptionViewItemFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStyleOptionViewItem)
 	return rv2
 }
 
@@ -367,6 +441,7 @@ func (this *QItemDelegate) Decoration(option *QStyleOptionViewItem, variant *qtc
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
 	return rv2
 }
 
@@ -396,6 +471,7 @@ func (this *QItemDelegate) DoCheck(option *QStyleOptionViewItem, bounding *qtcor
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -412,6 +488,7 @@ func (this *QItemDelegate) TextRectangle(painter *qtgui.QPainter /*777 QPainter 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 

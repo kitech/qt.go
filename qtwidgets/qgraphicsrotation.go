@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QGraphicsRotation struct {
 	*QGraphicsTransform
 }
@@ -102,9 +103,10 @@ func NewQGraphicsRotation(parent *qtcore.QObject /*777 QObject **/) *QGraphicsRo
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsRotation()
-func DeleteQGraphicsRotation(*QGraphicsRotation) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotationD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsRotation(this *QGraphicsRotation) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:129
@@ -116,6 +118,7 @@ func (this *QGraphicsRotation) Origin() *qtgui.QVector3D /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQVector3D)
 	return rv2
 }
 
@@ -158,6 +161,7 @@ func (this *QGraphicsRotation) Axis() *qtgui.QVector3D /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQVector3D)
 	return rv2
 }
 

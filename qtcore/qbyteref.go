@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QByteRef struct {
 	*qtrt.CObject
 }
@@ -56,13 +57,23 @@ func (this *QByteRef) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QByteRef) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQByteRefFromPointer(cthis unsafe.Pointer) *QByteRef {
 	return &QByteRef{&qtrt.CObject{cthis}}
 }
 func (*QByteRef) NewFromPointer(cthis unsafe.Pointer) *QByteRef {
 	return NewQByteRefFromPointer(cthis)
+}
+
+func DeleteQByteRef(this *QByteRef) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QByteRefD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

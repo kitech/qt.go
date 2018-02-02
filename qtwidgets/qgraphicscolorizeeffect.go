@@ -52,6 +52,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void draw(class QPainter *)
+func (this *QGraphicsColorizeEffect) InheritDraw(f func(painter *qtgui.QPainter /*777 QPainter **/)) {
+	ffiqt.SetAllInheritCallback(this, "draw", f)
+}
+
 type QGraphicsColorizeEffect struct {
 	*QGraphicsEffect
 }
@@ -102,9 +107,10 @@ func NewQGraphicsColorizeEffect(parent *qtcore.QObject /*777 QObject **/) *QGrap
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsColorizeEffect()
-func DeleteQGraphicsColorizeEffect(*QGraphicsColorizeEffect) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffectD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsColorizeEffect(this *QGraphicsColorizeEffect) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:135
@@ -116,6 +122,7 @@ func (this *QGraphicsColorizeEffect) Color() *qtgui.QColor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
 }
 

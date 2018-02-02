@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSizePolicy struct {
 	*qtrt.CObject
 }
@@ -64,7 +65,11 @@ func (this *QSizePolicy) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSizePolicy) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSizePolicyFromPointer(cthis unsafe.Pointer) *QSizePolicy {
 	return &QSizePolicy{&qtrt.CObject{cthis}}
@@ -81,6 +86,7 @@ func NewQSizePolicy() *QSizePolicy {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicyC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSizePolicyFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSizePolicy)
 	return gothis
 }
 
@@ -92,6 +98,7 @@ func NewQSizePolicy_1(horizontal int, vertical int, type_ int) *QSizePolicy {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicyC2ENS_6PolicyES0_NS_11ControlTypeE", ffiqt.FFI_TYPE_POINTER, horizontal, vertical, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSizePolicyFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSizePolicy)
 	return gothis
 }
 
@@ -284,7 +291,14 @@ func (this *QSizePolicy) Transposed() *QSizePolicy /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSizePolicyFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSizePolicy)
 	return rv2
+}
+
+func DeleteQSizePolicy(this *QSizePolicy) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSizePolicyD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QSizePolicy__PolicyFlag = int

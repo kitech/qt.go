@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QFontInfo struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QFontInfo) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QFontInfo) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQFontInfoFromPointer(cthis unsafe.Pointer) *QFontInfo {
 	return &QFontInfo{&qtrt.CObject{cthis}}
@@ -78,6 +83,7 @@ func NewQFontInfo(arg0 *QFont) *QFontInfo {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFontInfoC2ERK5QFont", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFontInfoFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQFontInfo)
 	return gothis
 }
 
@@ -85,9 +91,10 @@ func NewQFontInfo(arg0 *QFont) *QFontInfo {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QFontInfo()
-func DeleteQFontInfo(*QFontInfo) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFontInfoD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQFontInfo(this *QFontInfo) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFontInfoD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qfontinfo.h:59
@@ -109,6 +116,7 @@ func (this *QFontInfo) Family() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -121,6 +129,7 @@ func (this *QFontInfo) StyleName() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

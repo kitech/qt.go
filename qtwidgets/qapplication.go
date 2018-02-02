@@ -52,6 +52,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QApplication) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QApplication struct {
 	*qtgui.QGuiApplication
 }
@@ -102,9 +107,10 @@ func NewQApplication(argc int, argv []string, arg2 int) *QApplication {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QApplication()
-func DeleteQApplication(*QApplication) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplicationD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQApplication(this *QApplication) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QApplicationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:98
@@ -195,6 +201,7 @@ func (this *QApplication) Palette(arg0 *QWidget /*777 const QWidget **/) *qtgui.
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtgui.NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPalette)
 	return rv2
 }
 func QApplication_Palette(arg0 *QWidget /*777 const QWidget **/) *qtgui.QPalette /*123*/ {
@@ -214,6 +221,7 @@ func (this *QApplication) Palette_1(className string) *qtgui.QPalette /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtgui.NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPalette)
 	return rv2
 }
 func QApplication_Palette_1(className string) *qtgui.QPalette /*123*/ {
@@ -247,6 +255,7 @@ func (this *QApplication) Font() *qtgui.QFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
 }
 func QApplication_Font() *qtgui.QFont /*123*/ {
@@ -265,6 +274,7 @@ func (this *QApplication) Font_1(arg0 *QWidget /*777 const QWidget **/) *qtgui.Q
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
 }
 func QApplication_Font_1(arg0 *QWidget /*777 const QWidget **/) *qtgui.QFont /*123*/ {
@@ -284,6 +294,7 @@ func (this *QApplication) Font_2(className string) *qtgui.QFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
 }
 func QApplication_Font_2(className string) *qtgui.QFont /*123*/ {
@@ -317,6 +328,7 @@ func (this *QApplication) FontMetrics() *qtgui.QFontMetrics /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtgui.NewQFontMetricsFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQFontMetrics)
 	return rv2
 }
 func QApplication_FontMetrics() *qtgui.QFontMetrics /*123*/ {
@@ -348,6 +360,7 @@ func (this *QApplication) WindowIcon() *qtgui.QIcon /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
 }
 func QApplication_WindowIcon() *qtgui.QIcon /*123*/ {
@@ -691,6 +704,7 @@ func (this *QApplication) GlobalStrut() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 func QApplication_GlobalStrut() *qtcore.QSize /*123*/ {
@@ -835,6 +849,7 @@ func (this *QApplication) StyleSheet() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

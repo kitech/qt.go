@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTransform struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QTransform) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTransform) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTransformFromPointer(cthis unsafe.Pointer) *QTransform {
 	return &QTransform{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQTransform(arg0 int) *QTransform {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransformC2EN2Qt14InitializationE", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTransformFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTransform)
 	return gothis
 }
 
@@ -88,6 +94,7 @@ func NewQTransform_1() *QTransform {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransformC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTransformFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTransform)
 	return gothis
 }
 
@@ -99,6 +106,7 @@ func NewQTransform_2(h11 float64, h12 float64, h13 float64, h21 float64, h22 flo
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransformC2Eddddddddd", ffiqt.FFI_TYPE_POINTER, h11, h12, h13, h21, h22, h23, h31, h32, h33)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTransformFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTransform)
 	return gothis
 }
 
@@ -110,6 +118,7 @@ func NewQTransform_3(h11 float64, h12 float64, h21 float64, h22 float64, dx floa
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransformC2Edddddd", ffiqt.FFI_TYPE_POINTER, h11, h12, h21, h22, dx, dy)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTransformFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTransform)
 	return gothis
 }
 
@@ -122,6 +131,7 @@ func NewQTransform_4(mtx *QMatrix) *QTransform {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransformC2ERK7QMatrix", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTransformFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTransform)
 	return gothis
 }
 
@@ -363,6 +373,7 @@ func (this *QTransform) Inverted(invertible unsafe.Pointer /*666*/) *QTransform 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
 	return rv2
 }
 
@@ -375,6 +386,7 @@ func (this *QTransform) Adjoint() *QTransform /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
 	return rv2
 }
 
@@ -387,6 +399,7 @@ func (this *QTransform) Transposed() *QTransform /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
 	return rv2
 }
 
@@ -399,6 +412,7 @@ func (this *QTransform) Translate(dx float64, dy float64) *QTransform {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
 	return rv2
 }
 
@@ -411,6 +425,7 @@ func (this *QTransform) Scale(sx float64, sy float64) *QTransform {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
 	return rv2
 }
 
@@ -423,6 +438,7 @@ func (this *QTransform) Shear(sh float64, sv float64) *QTransform {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
 	return rv2
 }
 
@@ -435,6 +451,7 @@ func (this *QTransform) Rotate(a float64, axis int) *QTransform {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
 	return rv2
 }
 
@@ -447,6 +464,7 @@ func (this *QTransform) RotateRadians(a float64, axis int) *QTransform {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
 	return rv2
 }
 
@@ -524,6 +542,7 @@ func (this *QTransform) Map(p *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
@@ -537,6 +556,7 @@ func (this *QTransform) Map_1(p *qtcore.QPointF) *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -550,6 +570,7 @@ func (this *QTransform) Map_2(l *qtcore.QLine) *qtcore.QLine /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQLine)
 	return rv2
 }
 
@@ -563,6 +584,7 @@ func (this *QTransform) Map_3(l *qtcore.QLineF) *qtcore.QLineF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQLineFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQLineF)
 	return rv2
 }
 
@@ -576,6 +598,7 @@ func (this *QTransform) Map_4(a *QPolygonF) *QPolygonF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygonF)
 	return rv2
 }
 
@@ -589,6 +612,7 @@ func (this *QTransform) Map_5(a *QPolygon) *QPolygon /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygon)
 	return rv2
 }
 
@@ -602,6 +626,7 @@ func (this *QTransform) Map_6(r *QRegion) *QRegion /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegion)
 	return rv2
 }
 
@@ -615,6 +640,7 @@ func (this *QTransform) Map_7(p *QPainterPath) *QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPainterPath)
 	return rv2
 }
 
@@ -646,6 +672,7 @@ func (this *QTransform) MapToPolygon(r *qtcore.QRect) *QPolygon /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygon)
 	return rv2
 }
 
@@ -659,6 +686,7 @@ func (this *QTransform) MapRect(arg0 *qtcore.QRect) *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -672,6 +700,7 @@ func (this *QTransform) MapRect_1(arg0 *qtcore.QRectF) *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -684,6 +713,7 @@ func (this *QTransform) ToAffine() *QMatrix {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMatrix)
 	return rv2
 }
 
@@ -696,6 +726,7 @@ func (this *QTransform) FromTranslate(dx float64, dy float64) *QTransform /*123*
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
 	return rv2
 }
 func QTransform_FromTranslate(dx float64, dy float64) *QTransform /*123*/ {
@@ -713,12 +744,19 @@ func (this *QTransform) FromScale(dx float64, dy float64) *QTransform /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTransform)
 	return rv2
 }
 func QTransform_FromScale(dx float64, dy float64) *QTransform /*123*/ {
 	var nilthis *QTransform
 	rv := nilthis.FromScale(dx, dy)
 	return rv
+}
+
+func DeleteQTransform(this *QTransform) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTransformD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QTransform__TransformationType = int

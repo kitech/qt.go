@@ -52,6 +52,36 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QTableWidget) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// bool dropMimeData(int, int, const class QMimeData *, Qt::DropAction)
+func (this *QTableWidget) InheritDropMimeData(f func(row int, column int, data *qtcore.QMimeData /*777 const QMimeData **/, action int) bool) {
+	ffiqt.SetAllInheritCallback(this, "dropMimeData", f)
+}
+
+// Qt::DropActions supportedDropActions()
+func (this *QTableWidget) InheritSupportedDropActions(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "supportedDropActions", f)
+}
+
+// QModelIndex indexFromItem(class QTableWidgetItem *)
+func (this *QTableWidget) InheritIndexFromItem(f func(item *QTableWidgetItem /*777 QTableWidgetItem **/) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "indexFromItem", f)
+}
+
+// QTableWidgetItem * itemFromIndex(const class QModelIndex &)
+func (this *QTableWidget) InheritItemFromIndex(f func(index *qtcore.QModelIndex) unsafe.Pointer /*666*/) {
+	ffiqt.SetAllInheritCallback(this, "itemFromIndex", f)
+}
+
+// void dropEvent(class QDropEvent *)
+func (this *QTableWidget) InheritDropEvent(f func(event *qtgui.QDropEvent /*777 QDropEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dropEvent", f)
+}
+
 type QTableWidget struct {
 	*QTableView
 }
@@ -114,9 +144,10 @@ func NewQTableWidget_1(rows int, columns int, parent *QWidget /*777 QWidget **/)
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTableWidget()
-func DeleteQTableWidget(*QTableWidget) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidgetD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTableWidget(this *QTableWidget) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:226
@@ -568,6 +599,7 @@ func (this *QTableWidget) VisualItemRect(item *QTableWidgetItem /*777 const QTab
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -845,6 +877,7 @@ func (this *QTableWidget) IndexFromItem(item *QTableWidgetItem /*777 QTableWidge
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 

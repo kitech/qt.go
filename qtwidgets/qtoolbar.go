@@ -52,6 +52,31 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void actionEvent(class QActionEvent *)
+func (this *QToolBar) InheritActionEvent(f func(event *qtgui.QActionEvent /*777 QActionEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "actionEvent", f)
+}
+
+// void changeEvent(class QEvent *)
+func (this *QToolBar) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QToolBar) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// bool event(class QEvent *)
+func (this *QToolBar) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void initStyleOption(class QStyleOptionToolBar *)
+func (this *QToolBar) InheritInitStyleOption(f func(option *QStyleOptionToolBar /*777 QStyleOptionToolBar **/)) {
+	ffiqt.SetAllInheritCallback(this, "initStyleOption", f)
+}
+
 type QToolBar struct {
 	*QWidget
 }
@@ -115,9 +140,10 @@ func NewQToolBar_1(parent *QWidget /*777 QWidget **/) *QToolBar {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QToolBar()
-func DeleteQToolBar(*QToolBar) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBarD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQToolBar(this *QToolBar) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBarD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qtoolbar.h:83
@@ -313,6 +339,7 @@ func (this *QToolBar) ActionGeometry(action *QAction /*777 QAction **/) *qtcore.
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -362,6 +389,7 @@ func (this *QToolBar) IconSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

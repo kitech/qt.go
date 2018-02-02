@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QLockFile struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QLockFile) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QLockFile) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQLockFileFromPointer(cthis unsafe.Pointer) *QLockFile {
 	return &QLockFile{&qtrt.CObject{cthis}}
@@ -74,6 +79,7 @@ func NewQLockFile(fileName *QString) *QLockFile {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFileC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLockFileFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQLockFile)
 	return gothis
 }
 
@@ -81,9 +87,10 @@ func NewQLockFile(fileName *QString) *QLockFile {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QLockFile()
-func DeleteQLockFile(*QLockFile) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFileD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQLockFile(this *QLockFile) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFileD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qlockfile.h:56

@@ -52,6 +52,36 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QTreeWidget) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// bool dropMimeData(class QTreeWidgetItem *, int, const class QMimeData *, Qt::DropAction)
+func (this *QTreeWidget) InheritDropMimeData(f func(parent *QTreeWidgetItem /*777 QTreeWidgetItem **/, index int, data *qtcore.QMimeData /*777 const QMimeData **/, action int) bool) {
+	ffiqt.SetAllInheritCallback(this, "dropMimeData", f)
+}
+
+// Qt::DropActions supportedDropActions()
+func (this *QTreeWidget) InheritSupportedDropActions(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "supportedDropActions", f)
+}
+
+// QModelIndex indexFromItem(const class QTreeWidgetItem *, int)
+func (this *QTreeWidget) InheritIndexFromItem(f func(item *QTreeWidgetItem /*777 const QTreeWidgetItem **/, column int) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "indexFromItem", f)
+}
+
+// QTreeWidgetItem * itemFromIndex(const class QModelIndex &)
+func (this *QTreeWidget) InheritItemFromIndex(f func(index *qtcore.QModelIndex) unsafe.Pointer /*666*/) {
+	ffiqt.SetAllInheritCallback(this, "itemFromIndex", f)
+}
+
+// void dropEvent(class QDropEvent *)
+func (this *QTreeWidget) InheritDropEvent(f func(event *qtgui.QDropEvent /*777 QDropEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dropEvent", f)
+}
+
 type QTreeWidget struct {
 	*QTreeView
 }
@@ -102,9 +132,10 @@ func NewQTreeWidget(parent *QWidget /*777 QWidget **/) *QTreeWidget {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTreeWidget()
-func DeleteQTreeWidget(*QTreeWidget) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTreeWidgetD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTreeWidget(this *QTreeWidget) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTreeWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qtreewidget.h:267
@@ -336,6 +367,7 @@ func (this *QTreeWidget) VisualItemRect(item *QTreeWidgetItem /*777 const QTreeW
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -744,6 +776,7 @@ func (this *QTreeWidget) IndexFromItem(item *QTreeWidgetItem /*777 const QTreeWi
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -757,6 +790,7 @@ func (this *QTreeWidget) IndexFromItem_1(item *QTreeWidgetItem /*777 QTreeWidget
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 

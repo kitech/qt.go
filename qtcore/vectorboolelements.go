@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type VectorBoolElements struct {
 	*qtrt.CObject
 }
@@ -56,13 +57,23 @@ func (this *VectorBoolElements) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *VectorBoolElements) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewVectorBoolElementsFromPointer(cthis unsafe.Pointer) *VectorBoolElements {
 	return &VectorBoolElements{&qtrt.CObject{cthis}}
 }
 func (*VectorBoolElements) NewFromPointer(cthis unsafe.Pointer) *VectorBoolElements {
 	return NewVectorBoolElementsFromPointer(cthis)
+}
+
+func DeleteVectorBoolElements(this *VectorBoolElements) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18VectorBoolElementsD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QDesktopServices struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QDesktopServices) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QDesktopServices) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQDesktopServicesFromPointer(cthis unsafe.Pointer) *QDesktopServices {
 	return &QDesktopServices{&qtrt.CObject{cthis}}
@@ -115,6 +120,12 @@ func (this *QDesktopServices) UnsetUrlHandler(scheme *qtcore.QString) {
 func QDesktopServices_UnsetUrlHandler(scheme *qtcore.QString) {
 	var nilthis *QDesktopServices
 	nilthis.UnsetUrlHandler(scheme)
+}
+
+func DeleteQDesktopServices(this *QDesktopServices) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDesktopServicesD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

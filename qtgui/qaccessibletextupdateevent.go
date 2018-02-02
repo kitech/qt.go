@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAccessibleTextUpdateEvent struct {
 	*QAccessibleTextCursorEvent
 }
@@ -81,6 +82,7 @@ func NewQAccessibleTextUpdateEvent(obj *qtcore.QObject /*777 QObject **/, positi
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventC2EP7QObjectiRK7QStringS4_", ffiqt.FFI_TYPE_POINTER, convArg0, position, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextUpdateEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQAccessibleTextUpdateEvent)
 	return gothis
 }
 
@@ -95,6 +97,7 @@ func NewQAccessibleTextUpdateEvent_1(iface *QAccessibleInterface /*777 QAccessib
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventC2EP20QAccessibleInterfaceiRK7QStringS4_", ffiqt.FFI_TYPE_POINTER, convArg0, position, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextUpdateEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQAccessibleTextUpdateEvent)
 	return gothis
 }
 
@@ -102,9 +105,10 @@ func NewQAccessibleTextUpdateEvent_1(iface *QAccessibleInterface /*777 QAccessib
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleTextUpdateEvent()
-func DeleteQAccessibleTextUpdateEvent(*QAccessibleTextUpdateEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAccessibleTextUpdateEvent(this *QAccessibleTextUpdateEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:879
@@ -116,6 +120,7 @@ func (this *QAccessibleTextUpdateEvent) TextRemoved() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -128,6 +133,7 @@ func (this *QAccessibleTextUpdateEvent) TextInserted() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

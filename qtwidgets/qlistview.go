@@ -52,6 +52,141 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QListView) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void scrollContentsBy(int, int)
+func (this *QListView) InheritScrollContentsBy(f func(dx int, dy int)) {
+	ffiqt.SetAllInheritCallback(this, "scrollContentsBy", f)
+}
+
+// void resizeContents(int, int)
+func (this *QListView) InheritResizeContents(f func(width int, height int)) {
+	ffiqt.SetAllInheritCallback(this, "resizeContents", f)
+}
+
+// QSize contentsSize()
+func (this *QListView) InheritContentsSize(f func() unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "contentsSize", f)
+}
+
+// void rowsInserted(const class QModelIndex &, int, int)
+func (this *QListView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int)) {
+	ffiqt.SetAllInheritCallback(this, "rowsInserted", f)
+}
+
+// void rowsAboutToBeRemoved(const class QModelIndex &, int, int)
+func (this *QListView) InheritRowsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, start int, end int)) {
+	ffiqt.SetAllInheritCallback(this, "rowsAboutToBeRemoved", f)
+}
+
+// void mouseMoveEvent(class QMouseEvent *)
+func (this *QListView) InheritMouseMoveEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void mouseReleaseEvent(class QMouseEvent *)
+func (this *QListView) InheritMouseReleaseEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+}
+
+// void wheelEvent(class QWheelEvent *)
+func (this *QListView) InheritWheelEvent(f func(e *qtgui.QWheelEvent /*777 QWheelEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "wheelEvent", f)
+}
+
+// void timerEvent(class QTimerEvent *)
+func (this *QListView) InheritTimerEvent(f func(e *qtcore.QTimerEvent /*777 QTimerEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "timerEvent", f)
+}
+
+// void resizeEvent(class QResizeEvent *)
+func (this *QListView) InheritResizeEvent(f func(e *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void dragMoveEvent(class QDragMoveEvent *)
+func (this *QListView) InheritDragMoveEvent(f func(e *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dragMoveEvent", f)
+}
+
+// void dragLeaveEvent(class QDragLeaveEvent *)
+func (this *QListView) InheritDragLeaveEvent(f func(e *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dragLeaveEvent", f)
+}
+
+// void dropEvent(class QDropEvent *)
+func (this *QListView) InheritDropEvent(f func(e *qtgui.QDropEvent /*777 QDropEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dropEvent", f)
+}
+
+// QStyleOptionViewItem viewOptions()
+func (this *QListView) InheritViewOptions(f func() unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "viewOptions", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QListView) InheritPaintEvent(f func(e *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// int horizontalOffset()
+func (this *QListView) InheritHorizontalOffset(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "horizontalOffset", f)
+}
+
+// int verticalOffset()
+func (this *QListView) InheritVerticalOffset(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "verticalOffset", f)
+}
+
+// QRect rectForIndex(const class QModelIndex &)
+func (this *QListView) InheritRectForIndex(f func(index *qtcore.QModelIndex) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "rectForIndex", f)
+}
+
+// void setPositionForIndex(const class QPoint &, const class QModelIndex &)
+func (this *QListView) InheritSetPositionForIndex(f func(position *qtcore.QPoint, index *qtcore.QModelIndex)) {
+	ffiqt.SetAllInheritCallback(this, "setPositionForIndex", f)
+}
+
+// void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
+func (this *QListView) InheritSetSelection(f func(rect *qtcore.QRect, command int)) {
+	ffiqt.SetAllInheritCallback(this, "setSelection", f)
+}
+
+// QRegion visualRegionForSelection(const class QItemSelection &)
+func (this *QListView) InheritVisualRegionForSelection(f func(selection *qtcore.QItemSelection) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "visualRegionForSelection", f)
+}
+
+// void updateGeometries()
+func (this *QListView) InheritUpdateGeometries(f func()) {
+	ffiqt.SetAllInheritCallback(this, "updateGeometries", f)
+}
+
+// bool isIndexHidden(const class QModelIndex &)
+func (this *QListView) InheritIsIndexHidden(f func(index *qtcore.QModelIndex) bool) {
+	ffiqt.SetAllInheritCallback(this, "isIndexHidden", f)
+}
+
+// void selectionChanged(const class QItemSelection &, const class QItemSelection &)
+func (this *QListView) InheritSelectionChanged(f func(selected *qtcore.QItemSelection, deselected *qtcore.QItemSelection)) {
+	ffiqt.SetAllInheritCallback(this, "selectionChanged", f)
+}
+
+// void currentChanged(const class QModelIndex &, const class QModelIndex &)
+func (this *QListView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, previous *qtcore.QModelIndex)) {
+	ffiqt.SetAllInheritCallback(this, "currentChanged", f)
+}
+
+// QSize viewportSizeHint()
+func (this *QListView) InheritViewportSizeHint(f func() unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "viewportSizeHint", f)
+}
+
 type QListView struct {
 	*QAbstractItemView
 }
@@ -102,9 +237,10 @@ func NewQListView(parent *QWidget /*777 QWidget **/) *QListView {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QListView()
-func DeleteQListView(*QListView) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListViewD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQListView(this *QListView) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListViewD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qlistview.h:84
@@ -266,6 +402,7 @@ func (this *QListView) GridSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -408,6 +545,7 @@ func (this *QListView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*123
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -431,6 +569,7 @@ func (this *QListView) IndexAt(p *qtcore.QPoint) *qtcore.QModelIndex /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -501,6 +640,7 @@ func (this *QListView) ContentsSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -613,6 +753,7 @@ func (this *QListView) ViewOptions() *QStyleOptionViewItem /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStyleOptionViewItemFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStyleOptionViewItem)
 	return rv2
 }
 
@@ -658,6 +799,7 @@ func (this *QListView) RectForIndex(index *qtcore.QModelIndex) *qtcore.QRect /*1
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -692,6 +834,7 @@ func (this *QListView) VisualRegionForSelection(selection *qtcore.QItemSelection
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQRegion)
 	return rv2
 }
 
@@ -747,6 +890,7 @@ func (this *QListView) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

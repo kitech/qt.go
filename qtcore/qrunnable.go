@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QRunnable struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QRunnable) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QRunnable) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQRunnableFromPointer(cthis unsafe.Pointer) *QRunnable {
 	return &QRunnable{&qtrt.CObject{cthis}}
@@ -82,6 +87,7 @@ func NewQRunnable() *QRunnable {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QRunnableC1Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRunnableFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRunnable)
 	return gothis
 }
 
@@ -89,9 +95,10 @@ func NewQRunnable() *QRunnable {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QRunnable()
-func DeleteQRunnable(*QRunnable) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QRunnableD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQRunnable(this *QRunnable) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QRunnableD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qrunnable.h:63

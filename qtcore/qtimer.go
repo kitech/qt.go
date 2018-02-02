@@ -44,6 +44,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void timerEvent(class QTimerEvent *)
+func (this *QTimer) InheritTimerEvent(f func(arg0 *QTimerEvent /*777 QTimerEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "timerEvent", f)
+}
+
 type QTimer struct {
 	*QObject
 }
@@ -94,9 +99,10 @@ func NewQTimer(parent *QObject /*777 QObject **/) *QTimer {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTimer()
-func DeleteQTimer(*QTimer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimerD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTimer(this *QTimer) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qtimer.h:69

@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QContextMenuEvent struct {
 	*QInputEvent
 }
@@ -80,6 +81,7 @@ func NewQContextMenuEvent(reason int, pos *qtcore.QPoint, globalPos *qtcore.QPoi
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPointS3_", ffiqt.FFI_TYPE_POINTER, reason, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQContextMenuEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQContextMenuEvent)
 	return gothis
 }
 
@@ -92,6 +94,7 @@ func NewQContextMenuEvent_1(reason int, pos *qtcore.QPoint) *QContextMenuEvent {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventC2ENS_6ReasonERK6QPoint", ffiqt.FFI_TYPE_POINTER, reason, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQContextMenuEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQContextMenuEvent)
 	return gothis
 }
 
@@ -99,9 +102,10 @@ func NewQContextMenuEvent_1(reason int, pos *qtcore.QPoint) *QContextMenuEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QContextMenuEvent()
-func DeleteQContextMenuEvent(*QContextMenuEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQContextMenuEvent(this *QContextMenuEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:517
@@ -157,6 +161,7 @@ func (this *QContextMenuEvent) Pos() *qtcore.QPoint {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
@@ -169,6 +174,7 @@ func (this *QContextMenuEvent) GlobalPos() *qtcore.QPoint {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 

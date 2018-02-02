@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSysInfo struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QSysInfo) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSysInfo) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSysInfoFromPointer(cthis unsafe.Pointer) *QSysInfo {
 	return &QSysInfo{&qtrt.CObject{cthis}}
@@ -106,6 +111,7 @@ func (this *QSysInfo) BuildCpuArchitecture() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QSysInfo_BuildCpuArchitecture() *QString /*123*/ {
@@ -123,6 +129,7 @@ func (this *QSysInfo) CurrentCpuArchitecture() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QSysInfo_CurrentCpuArchitecture() *QString /*123*/ {
@@ -140,6 +147,7 @@ func (this *QSysInfo) BuildAbi() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QSysInfo_BuildAbi() *QString /*123*/ {
@@ -157,6 +165,7 @@ func (this *QSysInfo) KernelType() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QSysInfo_KernelType() *QString /*123*/ {
@@ -174,6 +183,7 @@ func (this *QSysInfo) KernelVersion() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QSysInfo_KernelVersion() *QString /*123*/ {
@@ -191,6 +201,7 @@ func (this *QSysInfo) ProductType() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QSysInfo_ProductType() *QString /*123*/ {
@@ -208,6 +219,7 @@ func (this *QSysInfo) ProductVersion() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QSysInfo_ProductVersion() *QString /*123*/ {
@@ -225,6 +237,7 @@ func (this *QSysInfo) PrettyProductName() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QSysInfo_PrettyProductName() *QString /*123*/ {
@@ -242,12 +255,19 @@ func (this *QSysInfo) MachineHostName() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QSysInfo_MachineHostName() *QString /*123*/ {
 	var nilthis *QSysInfo
 	rv := nilthis.MachineHostName()
 	return rv
+}
+
+func DeleteQSysInfo(this *QSysInfo) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfoD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QSysInfo__Sizes = int

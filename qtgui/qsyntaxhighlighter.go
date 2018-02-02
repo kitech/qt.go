@@ -48,6 +48,51 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void highlightBlock(const class QString &)
+func (this *QSyntaxHighlighter) InheritHighlightBlock(f func(text *qtcore.QString)) {
+	ffiqt.SetAllInheritCallback(this, "highlightBlock", f)
+}
+
+// void setFormat(int, int, const class QTextCharFormat &)
+func (this *QSyntaxHighlighter) InheritSetFormat(f func(start int, count int, format *QTextCharFormat)) {
+	ffiqt.SetAllInheritCallback(this, "setFormat", f)
+}
+
+// QTextCharFormat format(int)
+func (this *QSyntaxHighlighter) InheritFormat(f func(pos int) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "format", f)
+}
+
+// int previousBlockState()
+func (this *QSyntaxHighlighter) InheritPreviousBlockState(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "previousBlockState", f)
+}
+
+// int currentBlockState()
+func (this *QSyntaxHighlighter) InheritCurrentBlockState(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "currentBlockState", f)
+}
+
+// void setCurrentBlockState(int)
+func (this *QSyntaxHighlighter) InheritSetCurrentBlockState(f func(newState int)) {
+	ffiqt.SetAllInheritCallback(this, "setCurrentBlockState", f)
+}
+
+// void setCurrentBlockUserData(class QTextBlockUserData *)
+func (this *QSyntaxHighlighter) InheritSetCurrentBlockUserData(f func(data *QTextBlockUserData /*777 QTextBlockUserData **/)) {
+	ffiqt.SetAllInheritCallback(this, "setCurrentBlockUserData", f)
+}
+
+// QTextBlockUserData * currentBlockUserData()
+func (this *QSyntaxHighlighter) InheritCurrentBlockUserData(f func() unsafe.Pointer /*666*/) {
+	ffiqt.SetAllInheritCallback(this, "currentBlockUserData", f)
+}
+
+// QTextBlock currentBlock()
+func (this *QSyntaxHighlighter) InheritCurrentBlock(f func() unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "currentBlock", f)
+}
+
 type QSyntaxHighlighter struct {
 	*qtcore.QObject
 }
@@ -110,9 +155,10 @@ func NewQSyntaxHighlighter_1(parent *QTextDocument /*777 QTextDocument **/) *QSy
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSyntaxHighlighter()
-func DeleteQSyntaxHighlighter(*QSyntaxHighlighter) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSyntaxHighlighterD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSyntaxHighlighter(this *QSyntaxHighlighter) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSyntaxHighlighterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:69
@@ -205,6 +251,7 @@ func (this *QSyntaxHighlighter) Format(pos int) *QTextCharFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCharFormat)
 	return rv2
 }
 
@@ -270,6 +317,7 @@ func (this *QSyntaxHighlighter) CurrentBlock() *QTextBlock /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextBlock)
 	return rv2
 }
 

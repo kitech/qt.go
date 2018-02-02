@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QPolygonF struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QPolygonF) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QPolygonF) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQPolygonFFromPointer(cthis unsafe.Pointer) *QPolygonF {
 	return &QPolygonF{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQPolygonF() *QPolygonF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPolygonFC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPolygonF)
 	return gothis
 }
 
@@ -88,6 +94,7 @@ func NewQPolygonF_1(size int) *QPolygonF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPolygonFC2Ei", ffiqt.FFI_TYPE_POINTER, size)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPolygonF)
 	return gothis
 }
 
@@ -100,6 +107,7 @@ func NewQPolygonF_2(r *qtcore.QRectF) *QPolygonF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPolygonFC2ERK6QRectF", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPolygonF)
 	return gothis
 }
 
@@ -112,6 +120,7 @@ func NewQPolygonF_3(a *QPolygon) *QPolygonF {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPolygonFC2ERK8QPolygon", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPolygonF)
 	return gothis
 }
 
@@ -119,9 +128,10 @@ func NewQPolygonF_3(a *QPolygon) *QPolygonF {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QPolygonF()
-func DeleteQPolygonF(*QPolygonF) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPolygonFD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPolygonF(this *QPolygonF) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPolygonFD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qpolygon.h:159
@@ -162,6 +172,7 @@ func (this *QPolygonF) Translated(dx float64, dy float64) *QPolygonF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygonF)
 	return rv2
 }
 
@@ -175,6 +186,7 @@ func (this *QPolygonF) Translated_1(offset *qtcore.QPointF) *QPolygonF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygonF)
 	return rv2
 }
 
@@ -187,6 +199,7 @@ func (this *QPolygonF) ToPolygon() *QPolygon /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygon)
 	return rv2
 }
 
@@ -210,6 +223,7 @@ func (this *QPolygonF) BoundingRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -235,6 +249,7 @@ func (this *QPolygonF) United(r *QPolygonF) *QPolygonF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygonF)
 	return rv2
 }
 
@@ -248,6 +263,7 @@ func (this *QPolygonF) Intersected(r *QPolygonF) *QPolygonF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygonF)
 	return rv2
 }
 
@@ -261,6 +277,7 @@ func (this *QPolygonF) Subtracted(r *QPolygonF) *QPolygonF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygonF)
 	return rv2
 }
 

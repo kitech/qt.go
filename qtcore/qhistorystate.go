@@ -44,6 +44,21 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void onEntry(class QEvent *)
+func (this *QHistoryState) InheritOnEntry(f func(event *QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "onEntry", f)
+}
+
+// void onExit(class QEvent *)
+func (this *QHistoryState) InheritOnExit(f func(event *QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "onExit", f)
+}
+
+// bool event(class QEvent *)
+func (this *QHistoryState) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QHistoryState struct {
 	*QAbstractState
 }
@@ -106,9 +121,10 @@ func NewQHistoryState_1(type_ int, parent *QState /*777 QState **/) *QHistorySta
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QHistoryState()
-func DeleteQHistoryState(*QHistoryState) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryStateD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQHistoryState(this *QHistoryState) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryStateD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qhistorystate.h:68

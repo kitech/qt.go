@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTreeWidgetItemIterator struct {
 	*qtrt.CObject
 }
@@ -64,7 +65,11 @@ func (this *QTreeWidgetItemIterator) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTreeWidgetItemIterator) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTreeWidgetItemIteratorFromPointer(cthis unsafe.Pointer) *QTreeWidgetItemIterator {
 	return &QTreeWidgetItemIterator{&qtrt.CObject{cthis}}
@@ -82,6 +87,7 @@ func NewQTreeWidgetItemIterator(widget *QTreeWidget /*777 QTreeWidget **/, flags
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QTreeWidgetItemIteratorC2EP11QTreeWidget6QFlagsINS_12IteratorFlagEE", ffiqt.FFI_TYPE_POINTER, convArg0, flags)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTreeWidgetItemIterator)
 	return gothis
 }
 
@@ -94,6 +100,7 @@ func NewQTreeWidgetItemIterator_1(item *QTreeWidgetItem /*777 QTreeWidgetItem **
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QTreeWidgetItemIteratorC2EP15QTreeWidgetItem6QFlagsINS_12IteratorFlagEE", ffiqt.FFI_TYPE_POINTER, convArg0, flags)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTreeWidgetItemIterator)
 	return gothis
 }
 
@@ -101,9 +108,10 @@ func NewQTreeWidgetItemIterator_1(item *QTreeWidgetItem /*777 QTreeWidgetItem **
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTreeWidgetItemIterator()
-func DeleteQTreeWidgetItemIterator(*QTreeWidgetItemIterator) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QTreeWidgetItemIteratorD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTreeWidgetItemIterator(this *QTreeWidgetItemIterator) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QTreeWidgetItemIteratorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QTreeWidgetItemIterator__IteratorFlag = int

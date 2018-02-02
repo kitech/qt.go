@@ -44,6 +44,41 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void onEntry(class QEvent *)
+func (this *QStateMachine) InheritOnEntry(f func(event *QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "onEntry", f)
+}
+
+// void onExit(class QEvent *)
+func (this *QStateMachine) InheritOnExit(f func(event *QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "onExit", f)
+}
+
+// void beginSelectTransitions(class QEvent *)
+func (this *QStateMachine) InheritBeginSelectTransitions(f func(event *QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "beginSelectTransitions", f)
+}
+
+// void endSelectTransitions(class QEvent *)
+func (this *QStateMachine) InheritEndSelectTransitions(f func(event *QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "endSelectTransitions", f)
+}
+
+// void beginMicrostep(class QEvent *)
+func (this *QStateMachine) InheritBeginMicrostep(f func(event *QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "beginMicrostep", f)
+}
+
+// void endMicrostep(class QEvent *)
+func (this *QStateMachine) InheritEndMicrostep(f func(event *QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "endMicrostep", f)
+}
+
+// bool event(class QEvent *)
+func (this *QStateMachine) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QStateMachine struct {
 	*QState
 }
@@ -106,9 +141,10 @@ func NewQStateMachine_1(childMode int, parent *QObject /*777 QObject **/) *QStat
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStateMachine()
-func DeleteQStateMachine(*QStateMachine) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachineD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQStateMachine(this *QStateMachine) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachineD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qstatemachine.h:116
@@ -151,6 +187,7 @@ func (this *QStateMachine) ErrorString() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 

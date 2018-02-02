@@ -52,6 +52,121 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void rowMoved(int, int, int)
+func (this *QTableView) InheritRowMoved(f func(row int, oldIndex int, newIndex int)) {
+	ffiqt.SetAllInheritCallback(this, "rowMoved", f)
+}
+
+// void columnMoved(int, int, int)
+func (this *QTableView) InheritColumnMoved(f func(column int, oldIndex int, newIndex int)) {
+	ffiqt.SetAllInheritCallback(this, "columnMoved", f)
+}
+
+// void rowResized(int, int, int)
+func (this *QTableView) InheritRowResized(f func(row int, oldHeight int, newHeight int)) {
+	ffiqt.SetAllInheritCallback(this, "rowResized", f)
+}
+
+// void columnResized(int, int, int)
+func (this *QTableView) InheritColumnResized(f func(column int, oldWidth int, newWidth int)) {
+	ffiqt.SetAllInheritCallback(this, "columnResized", f)
+}
+
+// void rowCountChanged(int, int)
+func (this *QTableView) InheritRowCountChanged(f func(oldCount int, newCount int)) {
+	ffiqt.SetAllInheritCallback(this, "rowCountChanged", f)
+}
+
+// void columnCountChanged(int, int)
+func (this *QTableView) InheritColumnCountChanged(f func(oldCount int, newCount int)) {
+	ffiqt.SetAllInheritCallback(this, "columnCountChanged", f)
+}
+
+// void scrollContentsBy(int, int)
+func (this *QTableView) InheritScrollContentsBy(f func(dx int, dy int)) {
+	ffiqt.SetAllInheritCallback(this, "scrollContentsBy", f)
+}
+
+// QStyleOptionViewItem viewOptions()
+func (this *QTableView) InheritViewOptions(f func() unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "viewOptions", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QTableView) InheritPaintEvent(f func(e *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void timerEvent(class QTimerEvent *)
+func (this *QTableView) InheritTimerEvent(f func(event *qtcore.QTimerEvent /*777 QTimerEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "timerEvent", f)
+}
+
+// int horizontalOffset()
+func (this *QTableView) InheritHorizontalOffset(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "horizontalOffset", f)
+}
+
+// int verticalOffset()
+func (this *QTableView) InheritVerticalOffset(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "verticalOffset", f)
+}
+
+// void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
+func (this *QTableView) InheritSetSelection(f func(rect *qtcore.QRect, command int)) {
+	ffiqt.SetAllInheritCallback(this, "setSelection", f)
+}
+
+// QRegion visualRegionForSelection(const class QItemSelection &)
+func (this *QTableView) InheritVisualRegionForSelection(f func(selection *qtcore.QItemSelection) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "visualRegionForSelection", f)
+}
+
+// void updateGeometries()
+func (this *QTableView) InheritUpdateGeometries(f func()) {
+	ffiqt.SetAllInheritCallback(this, "updateGeometries", f)
+}
+
+// QSize viewportSizeHint()
+func (this *QTableView) InheritViewportSizeHint(f func() unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "viewportSizeHint", f)
+}
+
+// int sizeHintForRow(int)
+func (this *QTableView) InheritSizeHintForRow(f func(row int) int) {
+	ffiqt.SetAllInheritCallback(this, "sizeHintForRow", f)
+}
+
+// int sizeHintForColumn(int)
+func (this *QTableView) InheritSizeHintForColumn(f func(column int) int) {
+	ffiqt.SetAllInheritCallback(this, "sizeHintForColumn", f)
+}
+
+// void verticalScrollbarAction(int)
+func (this *QTableView) InheritVerticalScrollbarAction(f func(action int)) {
+	ffiqt.SetAllInheritCallback(this, "verticalScrollbarAction", f)
+}
+
+// void horizontalScrollbarAction(int)
+func (this *QTableView) InheritHorizontalScrollbarAction(f func(action int)) {
+	ffiqt.SetAllInheritCallback(this, "horizontalScrollbarAction", f)
+}
+
+// bool isIndexHidden(const class QModelIndex &)
+func (this *QTableView) InheritIsIndexHidden(f func(index *qtcore.QModelIndex) bool) {
+	ffiqt.SetAllInheritCallback(this, "isIndexHidden", f)
+}
+
+// void selectionChanged(const class QItemSelection &, const class QItemSelection &)
+func (this *QTableView) InheritSelectionChanged(f func(selected *qtcore.QItemSelection, deselected *qtcore.QItemSelection)) {
+	ffiqt.SetAllInheritCallback(this, "selectionChanged", f)
+}
+
+// void currentChanged(const class QModelIndex &, const class QModelIndex &)
+func (this *QTableView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, previous *qtcore.QModelIndex)) {
+	ffiqt.SetAllInheritCallback(this, "currentChanged", f)
+}
+
 type QTableView struct {
 	*QAbstractItemView
 }
@@ -102,9 +217,10 @@ func NewQTableView(parent *QWidget /*777 QWidget **/) *QTableView {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTableView()
-func DeleteQTableView(*QTableView) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableViewD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTableView(this *QTableView) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableViewD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qtableview.h:68
@@ -415,6 +531,7 @@ func (this *QTableView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*12
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -438,6 +555,7 @@ func (this *QTableView) IndexAt(p *qtcore.QPoint) *qtcore.QModelIndex /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -670,6 +788,7 @@ func (this *QTableView) ViewOptions() *QStyleOptionViewItem /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStyleOptionViewItemFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStyleOptionViewItem)
 	return rv2
 }
 
@@ -735,6 +854,7 @@ func (this *QTableView) VisualRegionForSelection(selection *qtcore.QItemSelectio
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQRegion)
 	return rv2
 }
 
@@ -756,6 +876,7 @@ func (this *QTableView) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

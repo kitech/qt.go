@@ -52,6 +52,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void emitDataChanged()
+func (this *QTreeWidgetItem) InheritEmitDataChanged(f func()) {
+	ffiqt.SetAllInheritCallback(this, "emitDataChanged", f)
+}
+
 type QTreeWidgetItem struct {
 	*qtrt.CObject
 }
@@ -64,7 +69,11 @@ func (this *QTreeWidgetItem) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTreeWidgetItem) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTreeWidgetItemFromPointer(cthis unsafe.Pointer) *QTreeWidgetItem {
 	return &QTreeWidgetItem{&qtrt.CObject{cthis}}
@@ -81,6 +90,7 @@ func NewQTreeWidgetItem(type_ int) *QTreeWidgetItem {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2Ei", ffiqt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTreeWidgetItem)
 	return gothis
 }
 
@@ -93,6 +103,7 @@ func NewQTreeWidgetItem_1(strings *qtcore.QStringList, type_ int) *QTreeWidgetIt
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2ERK11QStringListi", ffiqt.FFI_TYPE_POINTER, convArg0, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTreeWidgetItem)
 	return gothis
 }
 
@@ -105,6 +116,7 @@ func NewQTreeWidgetItem_2(view *QTreeWidget /*777 QTreeWidget **/, type_ int) *Q
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EP11QTreeWidgeti", ffiqt.FFI_TYPE_POINTER, convArg0, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTreeWidgetItem)
 	return gothis
 }
 
@@ -118,6 +130,7 @@ func NewQTreeWidgetItem_3(view *QTreeWidget /*777 QTreeWidget **/, strings *qtco
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EP11QTreeWidgetRK11QStringListi", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTreeWidgetItem)
 	return gothis
 }
 
@@ -131,6 +144,7 @@ func NewQTreeWidgetItem_4(view *QTreeWidget /*777 QTreeWidget **/, after *QTreeW
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EP11QTreeWidgetPS_i", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTreeWidgetItem)
 	return gothis
 }
 
@@ -143,6 +157,7 @@ func NewQTreeWidgetItem_5(parent *QTreeWidgetItem /*777 QTreeWidgetItem **/, typ
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EPS_i", ffiqt.FFI_TYPE_POINTER, convArg0, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTreeWidgetItem)
 	return gothis
 }
 
@@ -156,6 +171,7 @@ func NewQTreeWidgetItem_6(parent *QTreeWidgetItem /*777 QTreeWidgetItem **/, str
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EPS_RK11QStringListi", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTreeWidgetItem)
 	return gothis
 }
 
@@ -169,6 +185,7 @@ func NewQTreeWidgetItem_7(parent *QTreeWidgetItem /*777 QTreeWidgetItem **/, aft
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemC2EPS_S0_i", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTreeWidgetItem)
 	return gothis
 }
 
@@ -176,9 +193,10 @@ func NewQTreeWidgetItem_7(parent *QTreeWidgetItem /*777 QTreeWidgetItem **/, aft
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTreeWidgetItem()
-func DeleteQTreeWidgetItem(*QTreeWidgetItem) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTreeWidgetItem(this *QTreeWidgetItem) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qtreewidget.h:78
@@ -354,6 +372,7 @@ func (this *QTreeWidgetItem) Text(column int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -376,6 +395,7 @@ func (this *QTreeWidgetItem) Icon(column int) *qtgui.QIcon /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
 }
 
@@ -398,6 +418,7 @@ func (this *QTreeWidgetItem) StatusTip(column int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -420,6 +441,7 @@ func (this *QTreeWidgetItem) ToolTip(column int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -442,6 +464,7 @@ func (this *QTreeWidgetItem) WhatsThis(column int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -464,6 +487,7 @@ func (this *QTreeWidgetItem) Font(column int) *qtgui.QFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
 }
 
@@ -506,6 +530,7 @@ func (this *QTreeWidgetItem) BackgroundColor(column int) *qtgui.QColor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
 }
 
@@ -528,6 +553,7 @@ func (this *QTreeWidgetItem) Background(column int) *qtgui.QBrush /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQBrush)
 	return rv2
 }
 
@@ -550,6 +576,7 @@ func (this *QTreeWidgetItem) TextColor(column int) *qtgui.QColor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
 }
 
@@ -572,6 +599,7 @@ func (this *QTreeWidgetItem) Foreground(column int) *qtgui.QBrush /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQBrush)
 	return rv2
 }
 
@@ -614,6 +642,7 @@ func (this *QTreeWidgetItem) SizeHint(column int) *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -636,6 +665,7 @@ func (this *QTreeWidgetItem) Data(column int, role int) *qtcore.QVariant /*123*/
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 

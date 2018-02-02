@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QXmlStreamReader struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QXmlStreamReader) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QXmlStreamReader) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQXmlStreamReaderFromPointer(cthis unsafe.Pointer) *QXmlStreamReader {
 	return &QXmlStreamReader{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQXmlStreamReader() *QXmlStreamReader {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamReaderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamReader)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func NewQXmlStreamReader_1(device *QIODevice /*777 QIODevice **/) *QXmlStreamRea
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2EP9QIODevice", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamReaderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamReader)
 	return gothis
 }
 
@@ -97,6 +104,7 @@ func NewQXmlStreamReader_2(data *QByteArray) *QXmlStreamReader {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2ERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamReaderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamReader)
 	return gothis
 }
 
@@ -109,6 +117,7 @@ func NewQXmlStreamReader_3(data *QString) *QXmlStreamReader {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamReaderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamReader)
 	return gothis
 }
 
@@ -122,6 +131,7 @@ func NewQXmlStreamReader_4(data string) *QXmlStreamReader {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReaderC2EPKc", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamReaderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamReader)
 	return gothis
 }
 
@@ -129,9 +139,10 @@ func NewQXmlStreamReader_4(data string) *QXmlStreamReader {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QXmlStreamReader()
-func DeleteQXmlStreamReader(*QXmlStreamReader) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReaderD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQXmlStreamReader(this *QXmlStreamReader) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReaderD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:367
@@ -258,6 +269,7 @@ func (this *QXmlStreamReader) TokenString() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -422,6 +434,7 @@ func (this *QXmlStreamReader) DocumentVersion() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -434,6 +447,7 @@ func (this *QXmlStreamReader) DocumentEncoding() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -479,6 +493,7 @@ func (this *QXmlStreamReader) Attributes() *QXmlStreamAttributes /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQXmlStreamAttributesFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQXmlStreamAttributes)
 	return rv2
 }
 
@@ -491,6 +506,7 @@ func (this *QXmlStreamReader) ReadElementText(behaviour int) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -503,6 +519,7 @@ func (this *QXmlStreamReader) Name() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -515,6 +532,7 @@ func (this *QXmlStreamReader) NamespaceUri() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -527,6 +545,7 @@ func (this *QXmlStreamReader) QualifiedName() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -539,6 +558,7 @@ func (this *QXmlStreamReader) Prefix() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -551,6 +571,7 @@ func (this *QXmlStreamReader) ProcessingInstructionTarget() *QStringRef /*123*/ 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -563,6 +584,7 @@ func (this *QXmlStreamReader) ProcessingInstructionData() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -575,6 +597,7 @@ func (this *QXmlStreamReader) Text() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -597,6 +620,7 @@ func (this *QXmlStreamReader) DtdName() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -609,6 +633,7 @@ func (this *QXmlStreamReader) DtdPublicId() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -621,6 +646,7 @@ func (this *QXmlStreamReader) DtdSystemId() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -643,6 +669,7 @@ func (this *QXmlStreamReader) ErrorString() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 

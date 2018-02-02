@@ -52,6 +52,31 @@ func init() {
 //  ext block end
 
 //  body block begin
+// QSize sizeHint()
+func (this *QCommandLinkButton) InheritSizeHint(f func() unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "sizeHint", f)
+}
+
+// int heightForWidth(int)
+func (this *QCommandLinkButton) InheritHeightForWidth(f func(arg0 int) int) {
+	ffiqt.SetAllInheritCallback(this, "heightForWidth", f)
+}
+
+// QSize minimumSizeHint()
+func (this *QCommandLinkButton) InheritMinimumSizeHint(f func() unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "minimumSizeHint", f)
+}
+
+// bool event(class QEvent *)
+func (this *QCommandLinkButton) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QCommandLinkButton) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
 type QCommandLinkButton struct {
 	*QPushButton
 }
@@ -129,9 +154,10 @@ func NewQCommandLinkButton_2(text *qtcore.QString, description *qtcore.QString, 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QCommandLinkButton()
-func DeleteQCommandLinkButton(*QCommandLinkButton) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLinkButtonD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQCommandLinkButton(this *QCommandLinkButton) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLinkButtonD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qcommandlinkbutton.h:66
@@ -143,6 +169,7 @@ func (this *QCommandLinkButton) Description() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -165,6 +192,7 @@ func (this *QCommandLinkButton) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -188,6 +216,7 @@ func (this *QCommandLinkButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

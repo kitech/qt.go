@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QLatin1String struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QLatin1String) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QLatin1String) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQLatin1StringFromPointer(cthis unsafe.Pointer) *QLatin1String {
 	return &QLatin1String{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQLatin1String() *QLatin1String {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QLatin1StringC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQLatin1String)
 	return gothis
 }
 
@@ -86,6 +92,7 @@ func NewQLatin1String_1(s string) *QLatin1String {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QLatin1StringC2EPKc", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQLatin1String)
 	return gothis
 }
 
@@ -101,6 +108,7 @@ func NewQLatin1String_2(f string, l string) *QLatin1String {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QLatin1StringC2EPKcS1_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQLatin1String)
 	return gothis
 }
 
@@ -114,6 +122,7 @@ func NewQLatin1String_3(s string, sz int) *QLatin1String {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QLatin1StringC2EPKci", ffiqt.FFI_TYPE_POINTER, convArg0, sz)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQLatin1String)
 	return gothis
 }
 
@@ -126,6 +135,7 @@ func NewQLatin1String_4(s *QByteArray) *QLatin1String {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QLatin1StringC2ERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQLatin1String)
 	return gothis
 }
 
@@ -193,6 +203,7 @@ func (this *QLatin1String) At(i int) *QLatin1Char /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLatin1CharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLatin1Char)
 	return rv2
 }
 
@@ -205,6 +216,7 @@ func (this *QLatin1String) Front() *QLatin1Char /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLatin1CharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLatin1Char)
 	return rv2
 }
 
@@ -217,6 +229,7 @@ func (this *QLatin1String) Back() *QLatin1Char /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLatin1CharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLatin1Char)
 	return rv2
 }
 
@@ -369,6 +382,7 @@ func (this *QLatin1String) Mid(pos int) *QLatin1String /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLatin1String)
 	return rv2
 }
 
@@ -381,6 +395,7 @@ func (this *QLatin1String) Mid_1(pos int, n int) *QLatin1String /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLatin1String)
 	return rv2
 }
 
@@ -393,6 +408,7 @@ func (this *QLatin1String) Left(n int) *QLatin1String /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLatin1String)
 	return rv2
 }
 
@@ -405,6 +421,7 @@ func (this *QLatin1String) Right(n int) *QLatin1String /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLatin1String)
 	return rv2
 }
 
@@ -417,6 +434,7 @@ func (this *QLatin1String) Chopped(n int) *QLatin1String /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLatin1String)
 	return rv2
 }
 
@@ -447,7 +465,14 @@ func (this *QLatin1String) Trimmed() *QLatin1String /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLatin1StringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLatin1String)
 	return rv2
+}
+
+func DeleteQLatin1String(this *QLatin1String) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QLatin1StringD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

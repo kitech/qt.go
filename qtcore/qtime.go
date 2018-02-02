@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTime struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QTime) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTime) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTimeFromPointer(cthis unsafe.Pointer) *QTime {
 	return &QTime{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQTime() *QTime {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QTimeC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTimeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTime)
 	return gothis
 }
 
@@ -84,6 +90,7 @@ func NewQTime_1(h int, m int, s int, ms int) *QTime {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QTimeC2Eiiii", ffiqt.FFI_TYPE_POINTER, h, m, s, ms)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTimeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTime)
 	return gothis
 }
 
@@ -178,6 +185,7 @@ func (this *QTime) ToString(f int) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -191,6 +199,7 @@ func (this *QTime) ToString_1(format *QString) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -204,6 +213,7 @@ func (this *QTime) ToString_2(format *QStringView /*123*/) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -227,6 +237,7 @@ func (this *QTime) AddSecs(secs int) *QTime /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTime)
 	return rv2
 }
 
@@ -251,6 +262,7 @@ func (this *QTime) AddMSecs(ms int) *QTime /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTime)
 	return rv2
 }
 
@@ -275,6 +287,7 @@ func (this *QTime) FromMSecsSinceStartOfDay(msecs int) *QTime /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTime)
 	return rv2
 }
 func QTime_FromMSecsSinceStartOfDay(msecs int) *QTime /*123*/ {
@@ -303,6 +316,7 @@ func (this *QTime) CurrentTime() *QTime /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTime)
 	return rv2
 }
 func QTime_CurrentTime() *QTime /*123*/ {
@@ -321,6 +335,7 @@ func (this *QTime) FromString(s *QString, f int) *QTime /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTime)
 	return rv2
 }
 func QTime_FromString(s *QString, f int) *QTime /*123*/ {
@@ -340,6 +355,7 @@ func (this *QTime) FromString_1(s *QString, format *QString) *QTime /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTime)
 	return rv2
 }
 func QTime_FromString_1(s *QString, format *QString) *QTime /*123*/ {
@@ -377,6 +393,12 @@ func (this *QTime) Elapsed() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+func DeleteQTime(this *QTime) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QTimeD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QTime__TimeFlag = int

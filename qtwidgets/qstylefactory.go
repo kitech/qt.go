@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleFactory struct {
 	*qtrt.CObject
 }
@@ -64,7 +65,11 @@ func (this *QStyleFactory) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QStyleFactory) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQStyleFactoryFromPointer(cthis unsafe.Pointer) *QStyleFactory {
 	return &QStyleFactory{&qtrt.CObject{cthis}}
@@ -89,6 +94,12 @@ func QStyleFactory_Create(arg0 *qtcore.QString) *QStyle /*777 QStyle **/ {
 	var nilthis *QStyleFactory
 	rv := nilthis.Create(arg0)
 	return rv
+}
+
+func DeleteQStyleFactory(this *QStyleFactory) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStyleFactoryD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

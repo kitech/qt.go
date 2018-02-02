@@ -48,6 +48,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool isInitialized()
+func (this *QAbstractOpenGLFunctions) InheritIsInitialized(f func() bool) {
+	ffiqt.SetAllInheritCallback(this, "isInitialized", f)
+}
+
 type QAbstractOpenGLFunctions struct {
 	*qtrt.CObject
 }
@@ -60,7 +65,11 @@ func (this *QAbstractOpenGLFunctions) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QAbstractOpenGLFunctions) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQAbstractOpenGLFunctionsFromPointer(cthis unsafe.Pointer) *QAbstractOpenGLFunctions {
 	return &QAbstractOpenGLFunctions{&qtrt.CObject{cthis}}
@@ -73,9 +82,10 @@ func (*QAbstractOpenGLFunctions) NewFromPointer(cthis unsafe.Pointer) *QAbstract
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractOpenGLFunctions()
-func DeleteQAbstractOpenGLFunctions(*QAbstractOpenGLFunctions) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctionsD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAbstractOpenGLFunctions(this *QAbstractOpenGLFunctions) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctionsD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qopenglversionfunctions.h:215
@@ -97,6 +107,7 @@ func NewQAbstractOpenGLFunctions() *QAbstractOpenGLFunctions {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctionsC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractOpenGLFunctionsFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQAbstractOpenGLFunctions)
 	return gothis
 }
 

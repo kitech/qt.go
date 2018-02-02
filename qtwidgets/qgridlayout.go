@@ -52,6 +52,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void addItem(class QLayoutItem *)
+func (this *QGridLayout) InheritAddItem(f func(arg0 *QLayoutItem /*777 QLayoutItem **/)) {
+	ffiqt.SetAllInheritCallback(this, "addItem", f)
+}
+
 type QGridLayout struct {
 	*QLayout
 }
@@ -113,9 +118,10 @@ func NewQGridLayout_1() *QGridLayout {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGridLayout()
-func DeleteQGridLayout(*QGridLayout) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayoutD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGridLayout(this *QGridLayout) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgridlayout.h:69
@@ -127,6 +133,7 @@ func (this *QGridLayout) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -139,6 +146,7 @@ func (this *QGridLayout) MinimumSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -151,6 +159,7 @@ func (this *QGridLayout) MaximumSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -325,6 +334,7 @@ func (this *QGridLayout) CellRect(row int, column int) *qtcore.QRect /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 

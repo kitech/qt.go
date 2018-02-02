@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QXmlStreamWriter struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QXmlStreamWriter) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QXmlStreamWriter) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQXmlStreamWriterFromPointer(cthis unsafe.Pointer) *QXmlStreamWriter {
 	return &QXmlStreamWriter{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQXmlStreamWriter() *QXmlStreamWriter {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamWriterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamWriter)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func NewQXmlStreamWriter_1(device *QIODevice /*777 QIODevice **/) *QXmlStreamWri
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2EP9QIODevice", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamWriterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamWriter)
 	return gothis
 }
 
@@ -97,6 +104,7 @@ func NewQXmlStreamWriter_2(array *QByteArray /*777 QByteArray **/) *QXmlStreamWr
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2EP10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamWriterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamWriter)
 	return gothis
 }
 
@@ -109,6 +117,7 @@ func NewQXmlStreamWriter_3(string *QString /*777 QString **/) *QXmlStreamWriter 
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriterC2EP7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamWriterFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamWriter)
 	return gothis
 }
 
@@ -116,9 +125,10 @@ func NewQXmlStreamWriter_3(string *QString /*777 QString **/) *QXmlStreamWriter 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QXmlStreamWriter()
-func DeleteQXmlStreamWriter(*QXmlStreamWriter) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriterD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQXmlStreamWriter(this *QXmlStreamWriter) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:478

@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAccessibleTextInterface struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QAccessibleTextInterface) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QAccessibleTextInterface) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQAccessibleTextInterfaceFromPointer(cthis unsafe.Pointer) *QAccessibleTextInterface {
 	return &QAccessibleTextInterface{&qtrt.CObject{cthis}}
@@ -73,9 +78,10 @@ func (*QAccessibleTextInterface) NewFromPointer(cthis unsafe.Pointer) *QAccessib
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleTextInterface()
-func DeleteQAccessibleTextInterface(*QAccessibleTextInterface) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAccessibleTextInterfaceD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAccessibleTextInterface(this *QAccessibleTextInterface) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAccessibleTextInterfaceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:525
@@ -154,6 +160,7 @@ func (this *QAccessibleTextInterface) Text(startOffset int, endOffset int) *qtco
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -166,6 +173,7 @@ func (this *QAccessibleTextInterface) TextBeforeOffset(offset int, boundaryType 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -178,6 +186,7 @@ func (this *QAccessibleTextInterface) TextAfterOffset(offset int, boundaryType i
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -190,6 +199,7 @@ func (this *QAccessibleTextInterface) TextAtOffset(offset int, boundaryType int,
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -213,6 +223,7 @@ func (this *QAccessibleTextInterface) CharacterRect(offset int) *qtcore.QRect /*
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -246,6 +257,7 @@ func (this *QAccessibleTextInterface) Attributes(offset int, startOffset unsafe.
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

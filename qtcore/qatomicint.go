@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAtomicInt struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QAtomicInt) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QAtomicInt) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQAtomicIntFromPointer(cthis unsafe.Pointer) *QAtomicInt {
 	return &QAtomicInt{&qtrt.CObject{cthis}}
@@ -73,7 +78,14 @@ func NewQAtomicInt(value int) *QAtomicInt {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QAtomicIntC2Ei", ffiqt.FFI_TYPE_POINTER, value)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAtomicIntFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQAtomicInt)
 	return gothis
+}
+
+func DeleteQAtomicInt(this *QAtomicInt) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QAtomicIntD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

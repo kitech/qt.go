@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextBlock struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QTextBlock) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTextBlock) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTextBlockFromPointer(cthis unsafe.Pointer) *QTextBlock {
 	return &QTextBlock{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQTextBlock() *QTextBlock {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlockC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextBlock)
 	return gothis
 }
 
@@ -154,6 +160,7 @@ func (this *QTextBlock) BlockFormat() *QTextBlockFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextBlockFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextBlockFormat)
 	return rv2
 }
 
@@ -177,6 +184,7 @@ func (this *QTextBlock) CharFormat() *QTextCharFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCharFormat)
 	return rv2
 }
 
@@ -211,6 +219,7 @@ func (this *QTextBlock) Text() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -393,6 +402,7 @@ func (this *QTextBlock) Next() *QTextBlock /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextBlock)
 	return rv2
 }
 
@@ -405,6 +415,7 @@ func (this *QTextBlock) Previous() *QTextBlock /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextBlock)
 	return rv2
 }
 
@@ -417,6 +428,12 @@ func (this *QTextBlock) FragmentIndex() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+func DeleteQTextBlock(this *QTextBlock) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextBlockD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

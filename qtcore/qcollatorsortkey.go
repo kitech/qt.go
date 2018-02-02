@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QCollatorSortKey struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QCollatorSortKey) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QCollatorSortKey) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQCollatorSortKeyFromPointer(cthis unsafe.Pointer) *QCollatorSortKey {
 	return &QCollatorSortKey{&qtrt.CObject{cthis}}
@@ -69,9 +74,10 @@ func (*QCollatorSortKey) NewFromPointer(cthis unsafe.Pointer) *QCollatorSortKey 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QCollatorSortKey()
-func DeleteQCollatorSortKey(*QCollatorSortKey) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCollatorSortKeyD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQCollatorSortKey(this *QCollatorSortKey) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCollatorSortKeyD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qcollator.h:64

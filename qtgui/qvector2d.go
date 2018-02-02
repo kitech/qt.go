@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QVector2D struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QVector2D) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QVector2D) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQVector2DFromPointer(cthis unsafe.Pointer) *QVector2D {
 	return &QVector2D{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQVector2D() *QVector2D {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector2DC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVector2DFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQVector2D)
 	return gothis
 }
 
@@ -88,6 +94,7 @@ func NewQVector2D_1(arg0 int) *QVector2D {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector2DC2EN2Qt14InitializationE", ffiqt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVector2DFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQVector2D)
 	return gothis
 }
 
@@ -99,6 +106,7 @@ func NewQVector2D_2(xpos float32, ypos float32) *QVector2D {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector2DC2Eff", ffiqt.FFI_TYPE_POINTER, xpos, ypos)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVector2DFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQVector2D)
 	return gothis
 }
 
@@ -111,6 +119,7 @@ func NewQVector2D_3(point *qtcore.QPoint) *QVector2D {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector2DC2ERK6QPoint", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVector2DFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQVector2D)
 	return gothis
 }
 
@@ -123,6 +132,7 @@ func NewQVector2D_4(point *qtcore.QPointF) *QVector2D {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector2DC2ERK7QPointF", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVector2DFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQVector2D)
 	return gothis
 }
 
@@ -135,6 +145,7 @@ func NewQVector2D_5(vector *QVector3D) *QVector2D {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector2DC2ERK9QVector3D", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVector2DFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQVector2D)
 	return gothis
 }
 
@@ -147,6 +158,7 @@ func NewQVector2D_6(vector *QVector4D) *QVector2D {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector2DC2ERK9QVector4D", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVector2DFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQVector2D)
 	return gothis
 }
 
@@ -232,6 +244,7 @@ func (this *QVector2D) Normalized() *QVector2D /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVector2DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector2D)
 	return rv2
 }
 
@@ -296,6 +309,7 @@ func (this *QVector2D) ToVector3D() *QVector3D /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector3D)
 	return rv2
 }
 
@@ -308,6 +322,7 @@ func (this *QVector2D) ToVector4D() *QVector4D /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVector4DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector4D)
 	return rv2
 }
 
@@ -320,6 +335,7 @@ func (this *QVector2D) ToPoint() *qtcore.QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
@@ -332,7 +348,14 @@ func (this *QVector2D) ToPointF() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
+}
+
+func DeleteQVector2D(this *QVector2D) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QVector2DD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

@@ -44,6 +44,26 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void connectNotify(const class QMetaMethod &)
+func (this *QFutureWatcherBase) InheritConnectNotify(f func(signal *QMetaMethod)) {
+	ffiqt.SetAllInheritCallback(this, "connectNotify", f)
+}
+
+// void disconnectNotify(const class QMetaMethod &)
+func (this *QFutureWatcherBase) InheritDisconnectNotify(f func(signal *QMetaMethod)) {
+	ffiqt.SetAllInheritCallback(this, "disconnectNotify", f)
+}
+
+// void connectOutputInterface()
+func (this *QFutureWatcherBase) InheritConnectOutputInterface(f func()) {
+	ffiqt.SetAllInheritCallback(this, "connectOutputInterface", f)
+}
+
+// void disconnectOutputInterface(_Bool)
+func (this *QFutureWatcherBase) InheritDisconnectOutputInterface(f func(pendingAssignment bool)) {
+	ffiqt.SetAllInheritCallback(this, "disconnectOutputInterface", f)
+}
+
 type QFutureWatcherBase struct {
 	*QObject
 }
@@ -132,6 +152,7 @@ func (this *QFutureWatcherBase) ProgressText() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -392,6 +413,12 @@ func (this *QFutureWatcherBase) ConnectOutputInterface() {
 func (this *QFutureWatcherBase) DisconnectOutputInterface(pendingAssignment bool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBase25disconnectOutputInterfaceEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pendingAssignment)
 	gopp.ErrPrint(err, rv)
+}
+
+func DeleteQFutureWatcherBase(this *QFutureWatcherBase) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFutureWatcherBaseD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

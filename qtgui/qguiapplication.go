@@ -48,6 +48,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QGuiApplication) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QGuiApplication struct {
 	*qtcore.QCoreApplication
 }
@@ -98,9 +103,10 @@ func NewQGuiApplication(argc int, argv []string, arg2 int) *QGuiApplication {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGuiApplication()
-func DeleteQGuiApplication(*QGuiApplication) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplicationD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGuiApplication(this *QGuiApplication) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplicationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qguiapplication.h:91
@@ -126,6 +132,7 @@ func (this *QGuiApplication) ApplicationDisplayName() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 func QGuiApplication_ApplicationDisplayName() *qtcore.QString /*123*/ {
@@ -157,6 +164,7 @@ func (this *QGuiApplication) DesktopFileName() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 func QGuiApplication_DesktopFileName() *qtcore.QString /*123*/ {
@@ -206,6 +214,7 @@ func (this *QGuiApplication) WindowIcon() *QIcon /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIcon)
 	return rv2
 }
 func QGuiApplication_WindowIcon() *QIcon /*123*/ {
@@ -223,6 +232,7 @@ func (this *QGuiApplication) PlatformName() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 func QGuiApplication_PlatformName() *qtcore.QString /*123*/ {
@@ -395,6 +405,7 @@ func (this *QGuiApplication) Font() *QFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFont)
 	return rv2
 }
 func QGuiApplication_Font() *QFont /*123*/ {
@@ -443,6 +454,7 @@ func (this *QGuiApplication) Palette() *QPalette /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPalette)
 	return rv2
 }
 func QGuiApplication_Palette() *QPalette /*123*/ {
@@ -748,6 +760,7 @@ func (this *QGuiApplication) SessionId() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -760,6 +773,7 @@ func (this *QGuiApplication) SessionKey() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

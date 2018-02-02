@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QFormLayout struct {
 	*QLayout
 }
@@ -102,9 +103,10 @@ func NewQFormLayout(parent *QWidget /*777 QWidget **/) *QFormLayout {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFormLayout()
-func DeleteQFormLayout(*QFormLayout) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayoutD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQFormLayout(this *QFormLayout) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qformlayout.h:94
@@ -571,6 +573,7 @@ func (this *QFormLayout) MinimumSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -583,6 +586,7 @@ func (this *QFormLayout) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

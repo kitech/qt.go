@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QContiguousCacheData struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QContiguousCacheData) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QContiguousCacheData) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQContiguousCacheDataFromPointer(cthis unsafe.Pointer) *QContiguousCacheData {
 	return &QContiguousCacheData{&qtrt.CObject{cthis}}
@@ -80,6 +85,12 @@ func QContiguousCacheData_AllocateData(size int, alignment int) *QContiguousCach
 	var nilthis *QContiguousCacheData
 	rv := nilthis.AllocateData(size, alignment)
 	return rv
+}
+
+func DeleteQContiguousCacheData(this *QContiguousCacheData) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QContiguousCacheDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QPictureFormatPlugin struct {
 	*qtcore.QObject
 }
@@ -98,9 +99,10 @@ func NewQPictureFormatPlugin(parent *qtcore.QObject /*777 QObject **/) *QPicture
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPictureFormatPlugin()
-func DeleteQPictureFormatPlugin(*QPictureFormatPlugin) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QPictureFormatPluginD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQPictureFormatPlugin(this *QPictureFormatPlugin) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QPictureFormatPluginD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qpictureformatplugin.h:66

@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSignalMapper struct {
 	*QObject
 }
@@ -94,9 +95,10 @@ func NewQSignalMapper(parent *QObject /*777 QObject **/) *QSignalMapper {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSignalMapper()
-func DeleteQSignalMapper(*QSignalMapper) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSignalMapperD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSignalMapper(this *QSignalMapper) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSignalMapperD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qsignalmapper.h:59

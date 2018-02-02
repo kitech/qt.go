@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QGraphicsLinearLayout struct {
 	*QGraphicsLayout
 }
@@ -83,6 +84,7 @@ func NewQGraphicsLinearLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutI
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsLinearLayoutC2EP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsLinearLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsLinearLayout)
 	return gothis
 }
 
@@ -95,6 +97,7 @@ func NewQGraphicsLinearLayout_1(orientation int, parent *QGraphicsLayoutItem /*7
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsLinearLayoutC2EN2Qt11OrientationEP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, orientation, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsLinearLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsLinearLayout)
 	return gothis
 }
 
@@ -102,9 +105,10 @@ func NewQGraphicsLinearLayout_1(orientation int, parent *QGraphicsLayoutItem /*7
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsLinearLayout()
-func DeleteQGraphicsLinearLayout(*QGraphicsLinearLayout) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsLinearLayoutD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsLinearLayout(this *QGraphicsLinearLayout) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsLinearLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:60
@@ -310,6 +314,7 @@ func (this *QGraphicsLinearLayout) SizeHint(which int, constraint *qtcore.QSizeF
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
 }
 

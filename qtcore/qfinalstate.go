@@ -44,6 +44,21 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void onEntry(class QEvent *)
+func (this *QFinalState) InheritOnEntry(f func(event *QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "onEntry", f)
+}
+
+// void onExit(class QEvent *)
+func (this *QFinalState) InheritOnExit(f func(event *QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "onExit", f)
+}
+
+// bool event(class QEvent *)
+func (this *QFinalState) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QFinalState struct {
 	*QAbstractState
 }
@@ -94,9 +109,10 @@ func NewQFinalState(parent *QState /*777 QState **/) *QFinalState {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFinalState()
-func DeleteQFinalState(*QFinalState) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalStateD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQFinalState(this *QFinalState) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalStateD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qfinalstate.h:58

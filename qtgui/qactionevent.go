@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QActionEvent struct {
 	*qtcore.QEvent
 }
@@ -78,6 +79,7 @@ func NewQActionEvent(type_ int, action unsafe.Pointer /*666*/, before unsafe.Poi
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionEventC2EiP7QActionS1_", ffiqt.FFI_TYPE_POINTER, type_, action, before)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQActionEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQActionEvent)
 	return gothis
 }
 
@@ -85,9 +87,10 @@ func NewQActionEvent(type_ int, action unsafe.Pointer /*666*/, before unsafe.Poi
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QActionEvent()
-func DeleteQActionEvent(*QActionEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQActionEvent(this *QActionEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:730

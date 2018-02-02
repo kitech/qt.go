@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QLinearGradient struct {
 	*QGradient
 }
@@ -78,6 +79,7 @@ func NewQLinearGradient() *QLinearGradient {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QLinearGradientC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLinearGradientFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQLinearGradient)
 	return gothis
 }
 
@@ -91,6 +93,7 @@ func NewQLinearGradient_1(start *qtcore.QPointF, finalStop *qtcore.QPointF) *QLi
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QLinearGradientC2ERK7QPointFS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLinearGradientFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQLinearGradient)
 	return gothis
 }
 
@@ -102,6 +105,7 @@ func NewQLinearGradient_2(xStart float64, yStart float64, xFinalStop float64, yF
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QLinearGradientC2Edddd", ffiqt.FFI_TYPE_POINTER, xStart, yStart, xFinalStop, yFinalStop)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLinearGradientFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQLinearGradient)
 	return gothis
 }
 
@@ -114,6 +118,7 @@ func (this *QLinearGradient) Start() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -145,6 +150,7 @@ func (this *QLinearGradient) FinalStop() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -165,6 +171,12 @@ func (this *QLinearGradient) SetFinalStop(stop *qtcore.QPointF) {
 func (this *QLinearGradient) SetFinalStop_1(x float64, y float64) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QLinearGradient12setFinalStopEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
+}
+
+func DeleteQLinearGradient(this *QLinearGradient) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QLinearGradientD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

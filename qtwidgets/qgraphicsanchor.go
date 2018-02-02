@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QGraphicsAnchor struct {
 	*qtcore.QObject
 }
@@ -139,9 +140,10 @@ func (this *QGraphicsAnchor) SizePolicy() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsAnchor()
-func DeleteQGraphicsAnchor(*QGraphicsAnchor) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsAnchorD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsAnchor(this *QGraphicsAnchor) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsAnchorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

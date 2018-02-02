@@ -52,6 +52,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void draw(class QPainter *)
+func (this *QGraphicsBlurEffect) InheritDraw(f func(painter *qtgui.QPainter /*777 QPainter **/)) {
+	ffiqt.SetAllInheritCallback(this, "draw", f)
+}
+
 type QGraphicsBlurEffect struct {
 	*QGraphicsEffect
 }
@@ -102,9 +107,10 @@ func NewQGraphicsBlurEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphics
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsBlurEffect()
-func DeleteQGraphicsBlurEffect(*QGraphicsBlurEffect) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffectD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsBlurEffect(this *QGraphicsBlurEffect) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicseffect.h:173
@@ -117,6 +123,7 @@ func (this *QGraphicsBlurEffect) BoundingRectFor(rect *qtcore.QRectF) *qtcore.QR
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 

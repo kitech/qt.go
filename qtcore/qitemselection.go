@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QItemSelection struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QItemSelection) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QItemSelection) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQItemSelectionFromPointer(cthis unsafe.Pointer) *QItemSelection {
 	return &QItemSelection{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQItemSelection() *QItemSelection {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelectionC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQItemSelection)
 	return gothis
 }
 
@@ -86,6 +92,7 @@ func NewQItemSelection_1(topLeft *QModelIndex, bottomRight *QModelIndex) *QItemS
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelectionC2ERK11QModelIndexS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQItemSelection)
 	return gothis
 }
 
@@ -136,6 +143,12 @@ func (this *QItemSelection) Split(range_ *QItemSelectionRange, other *QItemSelec
 func QItemSelection_Split(range_ *QItemSelectionRange, other *QItemSelectionRange, result *QItemSelection /*777 QItemSelection **/) {
 	var nilthis *QItemSelection
 	nilthis.Split(range_, other, result)
+}
+
+func DeleteQItemSelection(this *QItemSelection) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelectionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

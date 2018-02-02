@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QXmlStreamEntityResolver struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QXmlStreamEntityResolver) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QXmlStreamEntityResolver) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQXmlStreamEntityResolverFromPointer(cthis unsafe.Pointer) *QXmlStreamEntityResolver {
 	return &QXmlStreamEntityResolver{&qtrt.CObject{cthis}}
@@ -69,9 +74,10 @@ func (*QXmlStreamEntityResolver) NewFromPointer(cthis unsafe.Pointer) *QXmlStrea
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QXmlStreamEntityResolver()
-func DeleteQXmlStreamEntityResolver(*QXmlStreamEntityResolver) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolverD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQXmlStreamEntityResolver(this *QXmlStreamEntityResolver) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolverD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:337
@@ -85,6 +91,7 @@ func (this *QXmlStreamEntityResolver) ResolveEntity(publicId *QString, systemId 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -98,6 +105,7 @@ func (this *QXmlStreamEntityResolver) ResolveUndeclaredEntity(name *QString) *QS
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 

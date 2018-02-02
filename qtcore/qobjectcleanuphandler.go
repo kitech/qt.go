@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QObjectCleanupHandler struct {
 	*QObject
 }
@@ -93,9 +94,10 @@ func NewQObjectCleanupHandler() *QObjectCleanupHandler {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QObjectCleanupHandler()
-func DeleteQObjectCleanupHandler(*QObjectCleanupHandler) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQObjectCleanupHandler(this *QObjectCleanupHandler) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qobjectcleanuphandler.h:56

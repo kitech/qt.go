@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QAccessibleTableCellInterface struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QAccessibleTableCellInterface) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QAccessibleTableCellInterface) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQAccessibleTableCellInterfaceFromPointer(cthis unsafe.Pointer) *QAccessibleTableCellInterface {
 	return &QAccessibleTableCellInterface{&qtrt.CObject{cthis}}
@@ -73,9 +78,10 @@ func (*QAccessibleTableCellInterface) NewFromPointer(cthis unsafe.Pointer) *QAcc
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleTableCellInterface()
-func DeleteQAccessibleTableCellInterface(*QAccessibleTableCellInterface) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTableCellInterfaceD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAccessibleTableCellInterface(this *QAccessibleTableCellInterface) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTableCellInterfaceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:580

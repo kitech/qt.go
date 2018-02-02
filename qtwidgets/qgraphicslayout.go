@@ -52,6 +52,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void addChildLayoutItem(class QGraphicsLayoutItem *)
+func (this *QGraphicsLayout) InheritAddChildLayoutItem(f func(layoutItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/)) {
+	ffiqt.SetAllInheritCallback(this, "addChildLayoutItem", f)
+}
+
 type QGraphicsLayout struct {
 	*QGraphicsLayoutItem
 }
@@ -83,6 +88,7 @@ func NewQGraphicsLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsLayout)
 	return gothis
 }
 
@@ -90,9 +96,10 @@ func NewQGraphicsLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsLayout()
-func DeleteQGraphicsLayout(*QGraphicsLayout) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayoutD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsLayout(this *QGraphicsLayout) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:60

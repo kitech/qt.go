@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStandardItemModel struct {
 	*qtcore.QAbstractItemModel
 }
@@ -110,9 +111,10 @@ func NewQStandardItemModel_1(rows int, columns int, parent *qtcore.QObject /*777
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStandardItemModel()
-func DeleteQStandardItemModel(*QStandardItemModel) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStandardItemModelD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQStandardItemModel(this *QStandardItemModel) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStandardItemModelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qstandarditemmodel.h:336
@@ -125,6 +127,7 @@ func (this *QStandardItemModel) Index(row int, column int, parent *qtcore.QModel
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -138,6 +141,7 @@ func (this *QStandardItemModel) Parent(child *qtcore.QModelIndex) *qtcore.QModel
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -187,6 +191,7 @@ func (this *QStandardItemModel) Sibling(row int, column int, idx *qtcore.QModelI
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -200,6 +205,7 @@ func (this *QStandardItemModel) Data(index *qtcore.QModelIndex, role int) *qtcor
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -225,6 +231,7 @@ func (this *QStandardItemModel) HeaderData(section int, orientation int, role in
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -352,6 +359,7 @@ func (this *QStandardItemModel) IndexFromItem(item *QStandardItem /*777 const QS
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 

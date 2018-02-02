@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSharedData struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QSharedData) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSharedData) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSharedDataFromPointer(cthis unsafe.Pointer) *QSharedData {
 	return &QSharedData{&qtrt.CObject{cthis}}
@@ -73,7 +78,14 @@ func NewQSharedData() *QSharedData {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSharedDataC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSharedDataFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSharedData)
 	return gothis
+}
+
+func DeleteQSharedData(this *QSharedData) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSharedDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

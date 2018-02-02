@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QMetaClassInfo struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QMetaClassInfo) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QMetaClassInfo) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQMetaClassInfoFromPointer(cthis unsafe.Pointer) *QMetaClassInfo {
 	return &QMetaClassInfo{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQMetaClassInfo() *QMetaClassInfo {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMetaClassInfoC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMetaClassInfoFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMetaClassInfo)
 	return gothis
 }
 
@@ -108,6 +114,12 @@ func (this *QMetaClassInfo) EnclosingMetaObject() *QMetaObject /*777 const QMeta
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
+}
+
+func DeleteQMetaClassInfo(this *QMetaClassInfo) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMetaClassInfoD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

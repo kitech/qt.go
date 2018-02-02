@@ -44,6 +44,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QCoreApplication) InheritEvent(f func(arg0 *QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QCoreApplication struct {
 	*QObject
 }
@@ -94,9 +99,10 @@ func NewQCoreApplication(argc int, argv []string, arg2 int) *QCoreApplication {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QCoreApplication()
-func DeleteQCoreApplication(*QCoreApplication) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplicationD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQCoreApplication(this *QCoreApplication) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplicationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qcoreapplication.h:101
@@ -151,6 +157,7 @@ func (this *QCoreApplication) OrganizationDomain() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QCoreApplication_OrganizationDomain() *QString /*123*/ {
@@ -182,6 +189,7 @@ func (this *QCoreApplication) OrganizationName() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QCoreApplication_OrganizationName() *QString /*123*/ {
@@ -213,6 +221,7 @@ func (this *QCoreApplication) ApplicationName() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QCoreApplication_ApplicationName() *QString /*123*/ {
@@ -244,6 +253,7 @@ func (this *QCoreApplication) ApplicationVersion() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QCoreApplication_ApplicationVersion() *QString /*123*/ {
@@ -515,6 +525,7 @@ func (this *QCoreApplication) ApplicationDirPath() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QCoreApplication_ApplicationDirPath() *QString /*123*/ {
@@ -532,6 +543,7 @@ func (this *QCoreApplication) ApplicationFilePath() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QCoreApplication_ApplicationFilePath() *QString /*123*/ {
@@ -647,6 +659,7 @@ func (this *QCoreApplication) Translate(context string, key string, disambiguati
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QCoreApplication_Translate(context string, key string, disambiguation string, n int) *QString /*123*/ {

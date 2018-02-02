@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextOption struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QTextOption) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTextOption) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTextOptionFromPointer(cthis unsafe.Pointer) *QTextOption {
 	return &QTextOption{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQTextOption() *QTextOption {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOptionC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextOptionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextOption)
 	return gothis
 }
 
@@ -84,9 +90,10 @@ func NewQTextOption() *QTextOption {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTextOption()
-func DeleteQTextOption(*QTextOption) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOptionD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextOption(this *QTextOption) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOptionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qtextoption.h:93

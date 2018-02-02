@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QGenericPluginFactory struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QGenericPluginFactory) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QGenericPluginFactory) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQGenericPluginFactoryFromPointer(cthis unsafe.Pointer) *QGenericPluginFactory {
 	return &QGenericPluginFactory{&qtrt.CObject{cthis}}
@@ -86,6 +91,12 @@ func QGenericPluginFactory_Create(arg0 *qtcore.QString, arg1 *qtcore.QString) *q
 	var nilthis *QGenericPluginFactory
 	rv := nilthis.Create(arg0, arg1)
 	return rv
+}
+
+func DeleteQGenericPluginFactory(this *QGenericPluginFactory) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGenericPluginFactoryD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

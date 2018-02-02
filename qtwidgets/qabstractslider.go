@@ -52,6 +52,46 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QAbstractSlider) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void setRepeatAction(enum QAbstractSlider::SliderAction, int, int)
+func (this *QAbstractSlider) InheritSetRepeatAction(f func(action int, thresholdTime int, repeatTime int)) {
+	ffiqt.SetAllInheritCallback(this, "setRepeatAction", f)
+}
+
+// QAbstractSlider::SliderAction repeatAction()
+func (this *QAbstractSlider) InheritRepeatAction(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "repeatAction", f)
+}
+
+// void sliderChange(enum QAbstractSlider::SliderChange)
+func (this *QAbstractSlider) InheritSliderChange(f func(change int)) {
+	ffiqt.SetAllInheritCallback(this, "sliderChange", f)
+}
+
+// void keyPressEvent(class QKeyEvent *)
+func (this *QAbstractSlider) InheritKeyPressEvent(f func(ev *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyPressEvent", f)
+}
+
+// void timerEvent(class QTimerEvent *)
+func (this *QAbstractSlider) InheritTimerEvent(f func(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "timerEvent", f)
+}
+
+// void wheelEvent(class QWheelEvent *)
+func (this *QAbstractSlider) InheritWheelEvent(f func(e *qtgui.QWheelEvent /*777 QWheelEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "wheelEvent", f)
+}
+
+// void changeEvent(class QEvent *)
+func (this *QAbstractSlider) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
 type QAbstractSlider struct {
 	*QWidget
 }
@@ -102,9 +142,10 @@ func NewQAbstractSlider(parent *QWidget /*777 QWidget **/) *QAbstractSlider {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractSlider()
-func DeleteQAbstractSlider(*QAbstractSlider) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSliderD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAbstractSlider(this *QAbstractSlider) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSliderD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qabstractslider.h:73

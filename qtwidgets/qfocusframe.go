@@ -52,6 +52,26 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QFocusFrame) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// bool eventFilter(class QObject *, class QEvent *)
+func (this *QFocusFrame) InheritEventFilter(f func(arg0 *qtcore.QObject /*777 QObject **/, arg1 *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "eventFilter", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QFocusFrame) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void initStyleOption(class QStyleOption *)
+func (this *QFocusFrame) InheritInitStyleOption(f func(option *QStyleOption /*777 QStyleOption **/)) {
+	ffiqt.SetAllInheritCallback(this, "initStyleOption", f)
+}
+
 type QFocusFrame struct {
 	*QWidget
 }
@@ -102,9 +122,10 @@ func NewQFocusFrame(parent *QWidget /*777 QWidget **/) *QFocusFrame {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFocusFrame()
-func DeleteQFocusFrame(*QFocusFrame) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFocusFrameD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQFocusFrame(this *QFocusFrame) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFocusFrameD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qfocusframe.h:59

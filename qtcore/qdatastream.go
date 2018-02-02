@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QDataStream struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QDataStream) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QDataStream) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQDataStreamFromPointer(cthis unsafe.Pointer) *QDataStream {
 	return &QDataStream{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQDataStream() *QDataStream {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDataStream)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func NewQDataStream_1(arg0 *QIODevice /*777 QIODevice **/) *QDataStream {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamC2EP9QIODevice", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDataStream)
 	return gothis
 }
 
@@ -97,6 +104,7 @@ func NewQDataStream_2(arg0 *QByteArray) *QDataStream {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamC2ERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDataStream)
 	return gothis
 }
 
@@ -104,9 +112,10 @@ func NewQDataStream_2(arg0 *QByteArray) *QDataStream {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QDataStream()
-func DeleteQDataStream(*QDataStream) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDataStream(this *QDataStream) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:129
@@ -249,6 +258,7 @@ func (this *QDataStream) ReadBytes(arg0 unsafe.Pointer /*555*/, len uint) *QData
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDataStream)
 	return rv2
 }
 
@@ -276,6 +286,7 @@ func (this *QDataStream) WriteBytes(arg0 string, len uint) *QDataStream {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDataStream)
 	return rv2
 }
 

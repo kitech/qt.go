@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QFileIconProvider struct {
 	*qtrt.CObject
 }
@@ -64,7 +65,11 @@ func (this *QFileIconProvider) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QFileIconProvider) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQFileIconProviderFromPointer(cthis unsafe.Pointer) *QFileIconProvider {
 	return &QFileIconProvider{&qtrt.CObject{cthis}}
@@ -81,6 +86,7 @@ func NewQFileIconProvider() *QFileIconProvider {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QFileIconProviderC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFileIconProviderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQFileIconProvider)
 	return gothis
 }
 
@@ -88,9 +94,10 @@ func NewQFileIconProvider() *QFileIconProvider {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFileIconProvider()
-func DeleteQFileIconProvider(*QFileIconProvider) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QFileIconProviderD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQFileIconProvider(this *QFileIconProvider) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QFileIconProviderD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qfileiconprovider.h:65
@@ -102,6 +109,7 @@ func (this *QFileIconProvider) Icon(type_ int) *qtgui.QIcon /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
 }
 
@@ -115,6 +123,7 @@ func (this *QFileIconProvider) Icon_1(info *qtcore.QFileInfo) *qtgui.QIcon /*123
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
 }
 
@@ -128,6 +137,7 @@ func (this *QFileIconProvider) Type(info *qtcore.QFileInfo) *qtcore.QString /*12
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

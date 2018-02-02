@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QVersionNumber struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QVersionNumber) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QVersionNumber) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQVersionNumberFromPointer(cthis unsafe.Pointer) *QVersionNumber {
 	return &QVersionNumber{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQVersionNumber() *QVersionNumber {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumberC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQVersionNumber)
 	return gothis
 }
 
@@ -84,6 +90,7 @@ func NewQVersionNumber_1(maj int) *QVersionNumber {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumberC2Ei", ffiqt.FFI_TYPE_POINTER, maj)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQVersionNumber)
 	return gothis
 }
 
@@ -95,6 +102,7 @@ func NewQVersionNumber_2(maj int, min int) *QVersionNumber {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumberC2Eii", ffiqt.FFI_TYPE_POINTER, maj, min)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQVersionNumber)
 	return gothis
 }
 
@@ -106,6 +114,7 @@ func NewQVersionNumber_3(maj int, min int, mic int) *QVersionNumber {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumberC2Eiii", ffiqt.FFI_TYPE_POINTER, maj, min, mic)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQVersionNumber)
 	return gothis
 }
 
@@ -173,6 +182,7 @@ func (this *QVersionNumber) Normalized() *QVersionNumber /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVersionNumber)
 	return rv2
 }
 
@@ -239,6 +249,7 @@ func (this *QVersionNumber) CommonPrefix(v1 *QVersionNumber, v2 *QVersionNumber)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVersionNumber)
 	return rv2
 }
 func QVersionNumber_CommonPrefix(v1 *QVersionNumber, v2 *QVersionNumber) *QVersionNumber /*123*/ {
@@ -256,6 +267,7 @@ func (this *QVersionNumber) ToString() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -269,6 +281,7 @@ func (this *QVersionNumber) FromString(string *QString, suffixIndex unsafe.Point
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVersionNumber)
 	return rv2
 }
 func QVersionNumber_FromString(string *QString, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
@@ -287,6 +300,7 @@ func (this *QVersionNumber) FromString_1(string *QLatin1String /*123*/, suffixIn
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVersionNumber)
 	return rv2
 }
 func QVersionNumber_FromString_1(string *QLatin1String /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
@@ -305,12 +319,19 @@ func (this *QVersionNumber) FromString_2(string *QStringView /*123*/, suffixInde
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVersionNumber)
 	return rv2
 }
 func QVersionNumber_FromString_2(string *QStringView /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
 	var nilthis *QVersionNumber
 	rv := nilthis.FromString_2(string, suffixIndex)
 	return rv
+}
+
+func DeleteQVersionNumber(this *QVersionNumber) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QVersionNumberD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QVersionNumber__ = int

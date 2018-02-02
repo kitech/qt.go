@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextStream struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QTextStream) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTextStream) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTextStreamFromPointer(cthis unsafe.Pointer) *QTextStream {
 	return &QTextStream{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQTextStream() *QTextStream {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStreamC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextStream)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func NewQTextStream_1(device *QIODevice /*777 QIODevice **/) *QTextStream {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStreamC2EP9QIODevice", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextStream)
 	return gothis
 }
 
@@ -92,9 +99,10 @@ func NewQTextStream_1(device *QIODevice /*777 QIODevice **/) *QTextStream {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTextStream()
-func DeleteQTextStream(*QTextStream) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStreamD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextStream(this *QTextStream) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStreamD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qtextstream.h:102
@@ -189,6 +197,7 @@ func (this *QTextStream) Locale() *QLocale /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLocale)
 	return rv2
 }
 
@@ -324,6 +333,7 @@ func (this *QTextStream) ReadLine(maxlen int64) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -348,6 +358,7 @@ func (this *QTextStream) ReadAll() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -360,6 +371,7 @@ func (this *QTextStream) Read(maxlen int64) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -402,6 +414,7 @@ func (this *QTextStream) PadChar() *QChar /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
 }
 

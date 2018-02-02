@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QFile struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QFile) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QFile) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQFileFromPointer(cthis unsafe.Pointer) *QFile {
 	return &QFile{&qtrt.CObject{cthis}}
@@ -129,9 +134,10 @@ func NewQFile_3(name *QString, parent *QObject /*777 QObject **/) *QFile {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFile()
-func DeleteQFile(*QFile) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFileD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQFile(this *QFile) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFileD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qfile.h:73
@@ -143,6 +149,7 @@ func (this *QFile) FileName() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -166,6 +173,7 @@ func (this *QFile) EncodeName(fileName *QString) *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 func QFile_EncodeName(fileName *QString) *QByteArray /*123*/ {
@@ -184,6 +192,7 @@ func (this *QFile) DecodeName(localFileName *QByteArray) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QFile_DecodeName(localFileName *QByteArray) *QString /*123*/ {
@@ -203,6 +212,7 @@ func (this *QFile) DecodeName_1(localFileName string) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QFile_DecodeName_1(localFileName string) *QString /*123*/ {
@@ -248,6 +258,7 @@ func (this *QFile) ReadLink() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -261,6 +272,7 @@ func (this *QFile) ReadLink_1(fileName *QString) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QFile_ReadLink_1(fileName *QString) *QString /*123*/ {
@@ -278,6 +290,7 @@ func (this *QFile) SymLinkTarget() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -291,6 +304,7 @@ func (this *QFile) SymLinkTarget_1(fileName *QString) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QFile_SymLinkTarget_1(fileName *QString) *QString /*123*/ {

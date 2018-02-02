@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTranslator struct {
 	*QObject
 }
@@ -94,9 +95,10 @@ func NewQTranslator(parent *QObject /*777 QObject **/) *QTranslator {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTranslator()
-func DeleteQTranslator(*QTranslator) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTranslatorD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTranslator(this *QTranslator) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTranslatorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qtranslator.h:61
@@ -114,6 +116,7 @@ func (this *QTranslator) Translate(context string, sourceText string, disambigua
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 

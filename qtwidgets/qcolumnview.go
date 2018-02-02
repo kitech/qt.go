@@ -52,6 +52,61 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool isIndexHidden(const class QModelIndex &)
+func (this *QColumnView) InheritIsIndexHidden(f func(index *qtcore.QModelIndex) bool) {
+	ffiqt.SetAllInheritCallback(this, "isIndexHidden", f)
+}
+
+// void resizeEvent(class QResizeEvent *)
+func (this *QColumnView) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
+func (this *QColumnView) InheritSetSelection(f func(rect *qtcore.QRect, command int)) {
+	ffiqt.SetAllInheritCallback(this, "setSelection", f)
+}
+
+// QRegion visualRegionForSelection(const class QItemSelection &)
+func (this *QColumnView) InheritVisualRegionForSelection(f func(selection *qtcore.QItemSelection) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "visualRegionForSelection", f)
+}
+
+// int horizontalOffset()
+func (this *QColumnView) InheritHorizontalOffset(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "horizontalOffset", f)
+}
+
+// int verticalOffset()
+func (this *QColumnView) InheritVerticalOffset(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "verticalOffset", f)
+}
+
+// void rowsInserted(const class QModelIndex &, int, int)
+func (this *QColumnView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int)) {
+	ffiqt.SetAllInheritCallback(this, "rowsInserted", f)
+}
+
+// void currentChanged(const class QModelIndex &, const class QModelIndex &)
+func (this *QColumnView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, previous *qtcore.QModelIndex)) {
+	ffiqt.SetAllInheritCallback(this, "currentChanged", f)
+}
+
+// void scrollContentsBy(int, int)
+func (this *QColumnView) InheritScrollContentsBy(f func(dx int, dy int)) {
+	ffiqt.SetAllInheritCallback(this, "scrollContentsBy", f)
+}
+
+// QAbstractItemView * createColumn(const class QModelIndex &)
+func (this *QColumnView) InheritCreateColumn(f func(rootIndex *qtcore.QModelIndex) unsafe.Pointer /*666*/) {
+	ffiqt.SetAllInheritCallback(this, "createColumn", f)
+}
+
+// void initializeColumn(class QAbstractItemView *)
+func (this *QColumnView) InheritInitializeColumn(f func(column *QAbstractItemView /*777 QAbstractItemView **/)) {
+	ffiqt.SetAllInheritCallback(this, "initializeColumn", f)
+}
+
 type QColumnView struct {
 	*QAbstractItemView
 }
@@ -112,9 +167,10 @@ func NewQColumnView(parent *QWidget /*777 QWidget **/) *QColumnView {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QColumnView()
-func DeleteQColumnView(*QColumnView) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnViewD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQColumnView(this *QColumnView) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnViewD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qcolumnview.h:65
@@ -127,6 +183,7 @@ func (this *QColumnView) IndexAt(point *qtcore.QPoint) *qtcore.QModelIndex /*123
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -149,6 +206,7 @@ func (this *QColumnView) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -162,6 +220,7 @@ func (this *QColumnView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*1
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -288,6 +347,7 @@ func (this *QColumnView) VisualRegionForSelection(selection *qtcore.QItemSelecti
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQRegion)
 	return rv2
 }
 

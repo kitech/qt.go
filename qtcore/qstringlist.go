@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStringList struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QStringList) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QStringList) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQStringListFromPointer(cthis unsafe.Pointer) *QStringList {
 	return &QStringList{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQStringList() *QStringList {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStringListC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStringListFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStringList)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func NewQStringList_1(i *QString) *QStringList {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStringListC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStringListFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStringList)
 	return gothis
 }
 
@@ -182,6 +189,12 @@ func (this *QStringList) LastIndexOf_2(re *QRegularExpression, from int) int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+func DeleteQStringList(this *QStringList) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStringListD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

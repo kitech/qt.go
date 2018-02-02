@@ -52,6 +52,21 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool supportsExtension(enum QGraphicsItem::Extension)
+func (this *QGraphicsRectItem) InheritSupportsExtension(f func(extension int) bool) {
+	ffiqt.SetAllInheritCallback(this, "supportsExtension", f)
+}
+
+// void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
+func (this *QGraphicsRectItem) InheritSetExtension(f func(extension int, variant *qtcore.QVariant)) {
+	ffiqt.SetAllInheritCallback(this, "setExtension", f)
+}
+
+// QVariant extension(const class QVariant &)
+func (this *QGraphicsRectItem) InheritExtension(f func(variant *qtcore.QVariant) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "extension", f)
+}
+
 type QGraphicsRectItem struct {
 	*QAbstractGraphicsShapeItem
 }
@@ -83,6 +98,7 @@ func NewQGraphicsRectItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraph
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRectItemC2EP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsRectItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsRectItem)
 	return gothis
 }
 
@@ -96,6 +112,7 @@ func NewQGraphicsRectItem_1(rect *qtcore.QRectF, parent *QGraphicsItem /*777 QGr
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRectItemC2ERK6QRectFP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsRectItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsRectItem)
 	return gothis
 }
 
@@ -108,6 +125,7 @@ func NewQGraphicsRectItem_2(x float64, y float64, w float64, h float64, parent *
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRectItemC2EddddP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, x, y, w, h, convArg4)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsRectItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsRectItem)
 	return gothis
 }
 
@@ -115,9 +133,10 @@ func NewQGraphicsRectItem_2(x float64, y float64, w float64, h float64, parent *
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsRectItem()
-func DeleteQGraphicsRectItem(*QGraphicsRectItem) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRectItemD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsRectItem(this *QGraphicsRectItem) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRectItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:666
@@ -129,6 +148,7 @@ func (this *QGraphicsRectItem) Rect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -160,6 +180,7 @@ func (this *QGraphicsRectItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -172,6 +193,7 @@ func (this *QGraphicsRectItem) Shape() *qtgui.QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
 }
 
@@ -220,6 +242,7 @@ func (this *QGraphicsRectItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
 }
 
@@ -265,6 +288,7 @@ func (this *QGraphicsRectItem) Extension(variant *qtcore.QVariant) *qtcore.QVari
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 

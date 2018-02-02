@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStackedLayout struct {
 	*QLayout
 }
@@ -125,9 +126,10 @@ func NewQStackedLayout_2(parentLayout *QLayout /*777 QLayout **/) *QStackedLayou
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStackedLayout()
-func DeleteQStackedLayout(*QStackedLayout) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayoutD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQStackedLayout(this *QStackedLayout) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStackedLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qstackedlayout.h:71
@@ -239,6 +241,7 @@ func (this *QStackedLayout) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -251,6 +254,7 @@ func (this *QStackedLayout) MinimumSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

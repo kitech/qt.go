@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextLayout struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QTextLayout) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTextLayout) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTextLayoutFromPointer(cthis unsafe.Pointer) *QTextLayout {
 	return &QTextLayout{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQTextLayout() *QTextLayout {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayoutC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextLayout)
 	return gothis
 }
 
@@ -89,6 +95,7 @@ func NewQTextLayout_1(text *qtcore.QString) *QTextLayout {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayoutC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextLayout)
 	return gothis
 }
 
@@ -103,6 +110,7 @@ func NewQTextLayout_2(text *qtcore.QString, font *QFont, paintdevice *QPaintDevi
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayoutC2ERK7QStringRK5QFontP12QPaintDevice", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextLayout)
 	return gothis
 }
 
@@ -115,6 +123,7 @@ func NewQTextLayout_3(b *QTextBlock) *QTextLayout {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayoutC2ERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextLayout)
 	return gothis
 }
 
@@ -122,9 +131,10 @@ func NewQTextLayout_3(b *QTextBlock) *QTextLayout {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTextLayout()
-func DeleteQTextLayout(*QTextLayout) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayoutD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextLayout(this *QTextLayout) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qtextlayout.h:114
@@ -146,6 +156,7 @@ func (this *QTextLayout) Font() *QFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFont)
 	return rv2
 }
 
@@ -178,6 +189,7 @@ func (this *QTextLayout) Text() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -200,6 +212,7 @@ func (this *QTextLayout) TextOption() *QTextOption {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextOptionFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextOption)
 	return rv2
 }
 
@@ -233,6 +246,7 @@ func (this *QTextLayout) PreeditAreaText() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -330,6 +344,7 @@ func (this *QTextLayout) CreateLine() *QTextLine /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextLine)
 	return rv2
 }
 
@@ -353,6 +368,7 @@ func (this *QTextLayout) LineAt(i int) *QTextLine /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextLine)
 	return rv2
 }
 
@@ -365,6 +381,7 @@ func (this *QTextLayout) LineForTextPosition(pos int) *QTextLine /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextLine)
 	return rv2
 }
 
@@ -454,6 +471,7 @@ func (this *QTextLayout) Position() *qtcore.QPointF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
 }
 
@@ -476,6 +494,7 @@ func (this *QTextLayout) BoundingRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 

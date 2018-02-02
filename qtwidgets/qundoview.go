@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QUndoView struct {
 	*QListView
 }
@@ -128,9 +129,10 @@ func NewQUndoView_2(group *QUndoGroup /*777 QUndoGroup **/, parent *QWidget /*77
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QUndoView()
-func DeleteQUndoView(*QUndoView) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUndoViewD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQUndoView(this *QUndoView) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUndoViewD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qundoview.h:72
@@ -176,6 +178,7 @@ func (this *QUndoView) EmptyLabel() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -198,6 +201,7 @@ func (this *QUndoView) CleanIcon() *qtgui.QIcon /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
 }
 

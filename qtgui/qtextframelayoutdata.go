@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextFrameLayoutData struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QTextFrameLayoutData) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTextFrameLayoutData) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTextFrameLayoutDataFromPointer(cthis unsafe.Pointer) *QTextFrameLayoutData {
 	return &QTextFrameLayoutData{&qtrt.CObject{cthis}}
@@ -73,9 +78,10 @@ func (*QTextFrameLayoutData) NewFromPointer(cthis unsafe.Pointer) *QTextFrameLay
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTextFrameLayoutData()
-func DeleteQTextFrameLayoutData(*QTextFrameLayoutData) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextFrameLayoutDataD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextFrameLayoutData(this *QTextFrameLayoutData) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextFrameLayoutDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

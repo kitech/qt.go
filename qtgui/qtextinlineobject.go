@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextInlineObject struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QTextInlineObject) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTextInlineObject) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTextInlineObjectFromPointer(cthis unsafe.Pointer) *QTextInlineObject {
 	return &QTextInlineObject{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQTextInlineObject() *QTextInlineObject {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QTextInlineObjectC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextInlineObjectFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextInlineObject)
 	return gothis
 }
 
@@ -100,6 +106,7 @@ func (this *QTextInlineObject) Rect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -216,7 +223,14 @@ func (this *QTextInlineObject) Format() *QTextFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextFormat)
 	return rv2
+}
+
+func DeleteQTextInlineObject(this *QTextInlineObject) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QTextInlineObjectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

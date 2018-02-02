@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QLinkedListData struct {
 	*qtrt.CObject
 }
@@ -56,13 +57,23 @@ func (this *QLinkedListData) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QLinkedListData) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQLinkedListDataFromPointer(cthis unsafe.Pointer) *QLinkedListData {
 	return &QLinkedListData{&qtrt.CObject{cthis}}
 }
 func (*QLinkedListData) NewFromPointer(cthis unsafe.Pointer) *QLinkedListData {
 	return NewQLinkedListDataFromPointer(cthis)
+}
+
+func DeleteQLinkedListData(this *QLinkedListData) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QLinkedListDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

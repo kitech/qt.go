@@ -52,6 +52,281 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void rowsInserted(const class QModelIndex &, int, int)
+func (this *QAbstractItemView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int)) {
+	ffiqt.SetAllInheritCallback(this, "rowsInserted", f)
+}
+
+// void rowsAboutToBeRemoved(const class QModelIndex &, int, int)
+func (this *QAbstractItemView) InheritRowsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, start int, end int)) {
+	ffiqt.SetAllInheritCallback(this, "rowsAboutToBeRemoved", f)
+}
+
+// void selectionChanged(const class QItemSelection &, const class QItemSelection &)
+func (this *QAbstractItemView) InheritSelectionChanged(f func(selected *qtcore.QItemSelection, deselected *qtcore.QItemSelection)) {
+	ffiqt.SetAllInheritCallback(this, "selectionChanged", f)
+}
+
+// void currentChanged(const class QModelIndex &, const class QModelIndex &)
+func (this *QAbstractItemView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, previous *qtcore.QModelIndex)) {
+	ffiqt.SetAllInheritCallback(this, "currentChanged", f)
+}
+
+// void updateEditorData()
+func (this *QAbstractItemView) InheritUpdateEditorData(f func()) {
+	ffiqt.SetAllInheritCallback(this, "updateEditorData", f)
+}
+
+// void updateEditorGeometries()
+func (this *QAbstractItemView) InheritUpdateEditorGeometries(f func()) {
+	ffiqt.SetAllInheritCallback(this, "updateEditorGeometries", f)
+}
+
+// void updateGeometries()
+func (this *QAbstractItemView) InheritUpdateGeometries(f func()) {
+	ffiqt.SetAllInheritCallback(this, "updateGeometries", f)
+}
+
+// void verticalScrollbarAction(int)
+func (this *QAbstractItemView) InheritVerticalScrollbarAction(f func(action int)) {
+	ffiqt.SetAllInheritCallback(this, "verticalScrollbarAction", f)
+}
+
+// void horizontalScrollbarAction(int)
+func (this *QAbstractItemView) InheritHorizontalScrollbarAction(f func(action int)) {
+	ffiqt.SetAllInheritCallback(this, "horizontalScrollbarAction", f)
+}
+
+// void verticalScrollbarValueChanged(int)
+func (this *QAbstractItemView) InheritVerticalScrollbarValueChanged(f func(value int)) {
+	ffiqt.SetAllInheritCallback(this, "verticalScrollbarValueChanged", f)
+}
+
+// void horizontalScrollbarValueChanged(int)
+func (this *QAbstractItemView) InheritHorizontalScrollbarValueChanged(f func(value int)) {
+	ffiqt.SetAllInheritCallback(this, "horizontalScrollbarValueChanged", f)
+}
+
+// void closeEditor(class QWidget *, class QAbstractItemDelegate::EndEditHint)
+func (this *QAbstractItemView) InheritCloseEditor(f func(editor *QWidget /*777 QWidget **/, hint int)) {
+	ffiqt.SetAllInheritCallback(this, "closeEditor", f)
+}
+
+// void commitData(class QWidget *)
+func (this *QAbstractItemView) InheritCommitData(f func(editor *QWidget /*777 QWidget **/)) {
+	ffiqt.SetAllInheritCallback(this, "commitData", f)
+}
+
+// void editorDestroyed(class QObject *)
+func (this *QAbstractItemView) InheritEditorDestroyed(f func(editor *qtcore.QObject /*777 QObject **/)) {
+	ffiqt.SetAllInheritCallback(this, "editorDestroyed", f)
+}
+
+// void setHorizontalStepsPerItem(int)
+func (this *QAbstractItemView) InheritSetHorizontalStepsPerItem(f func(steps int)) {
+	ffiqt.SetAllInheritCallback(this, "setHorizontalStepsPerItem", f)
+}
+
+// int horizontalStepsPerItem()
+func (this *QAbstractItemView) InheritHorizontalStepsPerItem(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "horizontalStepsPerItem", f)
+}
+
+// void setVerticalStepsPerItem(int)
+func (this *QAbstractItemView) InheritSetVerticalStepsPerItem(f func(steps int)) {
+	ffiqt.SetAllInheritCallback(this, "setVerticalStepsPerItem", f)
+}
+
+// int verticalStepsPerItem()
+func (this *QAbstractItemView) InheritVerticalStepsPerItem(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "verticalStepsPerItem", f)
+}
+
+// int horizontalOffset()
+func (this *QAbstractItemView) InheritHorizontalOffset(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "horizontalOffset", f)
+}
+
+// int verticalOffset()
+func (this *QAbstractItemView) InheritVerticalOffset(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "verticalOffset", f)
+}
+
+// bool isIndexHidden(const class QModelIndex &)
+func (this *QAbstractItemView) InheritIsIndexHidden(f func(index *qtcore.QModelIndex) bool) {
+	ffiqt.SetAllInheritCallback(this, "isIndexHidden", f)
+}
+
+// void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
+func (this *QAbstractItemView) InheritSetSelection(f func(rect *qtcore.QRect, command int)) {
+	ffiqt.SetAllInheritCallback(this, "setSelection", f)
+}
+
+// QRegion visualRegionForSelection(const class QItemSelection &)
+func (this *QAbstractItemView) InheritVisualRegionForSelection(f func(selection *qtcore.QItemSelection) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "visualRegionForSelection", f)
+}
+
+// bool edit(const class QModelIndex &, enum QAbstractItemView::EditTrigger, class QEvent *)
+func (this *QAbstractItemView) InheritEdit(f func(index *qtcore.QModelIndex, trigger int, event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "edit", f)
+}
+
+// QItemSelectionModel::SelectionFlags selectionCommand(const class QModelIndex &, const class QEvent *)
+func (this *QAbstractItemView) InheritSelectionCommand(f func(index *qtcore.QModelIndex, event *qtcore.QEvent /*777 const QEvent **/) int) {
+	ffiqt.SetAllInheritCallback(this, "selectionCommand", f)
+}
+
+// QStyleOptionViewItem viewOptions()
+func (this *QAbstractItemView) InheritViewOptions(f func() unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "viewOptions", f)
+}
+
+// QAbstractItemView::State state()
+func (this *QAbstractItemView) InheritState(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "state", f)
+}
+
+// void setState(enum QAbstractItemView::State)
+func (this *QAbstractItemView) InheritSetState(f func(state int)) {
+	ffiqt.SetAllInheritCallback(this, "setState", f)
+}
+
+// void scheduleDelayedItemsLayout()
+func (this *QAbstractItemView) InheritScheduleDelayedItemsLayout(f func()) {
+	ffiqt.SetAllInheritCallback(this, "scheduleDelayedItemsLayout", f)
+}
+
+// void executeDelayedItemsLayout()
+func (this *QAbstractItemView) InheritExecuteDelayedItemsLayout(f func()) {
+	ffiqt.SetAllInheritCallback(this, "executeDelayedItemsLayout", f)
+}
+
+// void setDirtyRegion(const class QRegion &)
+func (this *QAbstractItemView) InheritSetDirtyRegion(f func(region *qtgui.QRegion)) {
+	ffiqt.SetAllInheritCallback(this, "setDirtyRegion", f)
+}
+
+// void scrollDirtyRegion(int, int)
+func (this *QAbstractItemView) InheritScrollDirtyRegion(f func(dx int, dy int)) {
+	ffiqt.SetAllInheritCallback(this, "scrollDirtyRegion", f)
+}
+
+// QPoint dirtyRegionOffset()
+func (this *QAbstractItemView) InheritDirtyRegionOffset(f func() unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "dirtyRegionOffset", f)
+}
+
+// void startAutoScroll()
+func (this *QAbstractItemView) InheritStartAutoScroll(f func()) {
+	ffiqt.SetAllInheritCallback(this, "startAutoScroll", f)
+}
+
+// void stopAutoScroll()
+func (this *QAbstractItemView) InheritStopAutoScroll(f func()) {
+	ffiqt.SetAllInheritCallback(this, "stopAutoScroll", f)
+}
+
+// void doAutoScroll()
+func (this *QAbstractItemView) InheritDoAutoScroll(f func()) {
+	ffiqt.SetAllInheritCallback(this, "doAutoScroll", f)
+}
+
+// bool focusNextPrevChild(_Bool)
+func (this *QAbstractItemView) InheritFocusNextPrevChild(f func(next bool) bool) {
+	ffiqt.SetAllInheritCallback(this, "focusNextPrevChild", f)
+}
+
+// bool event(class QEvent *)
+func (this *QAbstractItemView) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// bool viewportEvent(class QEvent *)
+func (this *QAbstractItemView) InheritViewportEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "viewportEvent", f)
+}
+
+// void mousePressEvent(class QMouseEvent *)
+func (this *QAbstractItemView) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+}
+
+// void mouseMoveEvent(class QMouseEvent *)
+func (this *QAbstractItemView) InheritMouseMoveEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+}
+
+// void mouseReleaseEvent(class QMouseEvent *)
+func (this *QAbstractItemView) InheritMouseReleaseEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+}
+
+// void mouseDoubleClickEvent(class QMouseEvent *)
+func (this *QAbstractItemView) InheritMouseDoubleClickEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
+}
+
+// void dragEnterEvent(class QDragEnterEvent *)
+func (this *QAbstractItemView) InheritDragEnterEvent(f func(event *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dragEnterEvent", f)
+}
+
+// void dragMoveEvent(class QDragMoveEvent *)
+func (this *QAbstractItemView) InheritDragMoveEvent(f func(event *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dragMoveEvent", f)
+}
+
+// void dragLeaveEvent(class QDragLeaveEvent *)
+func (this *QAbstractItemView) InheritDragLeaveEvent(f func(event *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dragLeaveEvent", f)
+}
+
+// void dropEvent(class QDropEvent *)
+func (this *QAbstractItemView) InheritDropEvent(f func(event *qtgui.QDropEvent /*777 QDropEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "dropEvent", f)
+}
+
+// void focusInEvent(class QFocusEvent *)
+func (this *QAbstractItemView) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusInEvent", f)
+}
+
+// void focusOutEvent(class QFocusEvent *)
+func (this *QAbstractItemView) InheritFocusOutEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "focusOutEvent", f)
+}
+
+// void keyPressEvent(class QKeyEvent *)
+func (this *QAbstractItemView) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "keyPressEvent", f)
+}
+
+// void resizeEvent(class QResizeEvent *)
+func (this *QAbstractItemView) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void timerEvent(class QTimerEvent *)
+func (this *QAbstractItemView) InheritTimerEvent(f func(event *qtcore.QTimerEvent /*777 QTimerEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "timerEvent", f)
+}
+
+// void inputMethodEvent(class QInputMethodEvent *)
+func (this *QAbstractItemView) InheritInputMethodEvent(f func(event *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "inputMethodEvent", f)
+}
+
+// QAbstractItemView::DropIndicatorPosition dropIndicatorPosition()
+func (this *QAbstractItemView) InheritDropIndicatorPosition(f func() int) {
+	ffiqt.SetAllInheritCallback(this, "dropIndicatorPosition", f)
+}
+
+// QSize viewportSizeHint()
+func (this *QAbstractItemView) InheritViewportSizeHint(f func() unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "viewportSizeHint", f)
+}
+
 type QAbstractItemView struct {
 	*QAbstractScrollArea
 }
@@ -102,9 +377,10 @@ func NewQAbstractItemView(parent *QWidget /*777 QWidget **/) *QAbstractItemView 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractItemView()
-func DeleteQAbstractItemView(*QAbstractItemView) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemViewD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQAbstractItemView(this *QAbstractItemView) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemViewD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qabstractitemview.h:130
@@ -235,6 +511,7 @@ func (this *QAbstractItemView) CurrentIndex() *qtcore.QModelIndex /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -247,6 +524,7 @@ func (this *QAbstractItemView) RootIndex() *qtcore.QModelIndex /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -518,6 +796,7 @@ func (this *QAbstractItemView) IconSize() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -561,6 +840,7 @@ func (this *QAbstractItemView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRe
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -584,6 +864,7 @@ func (this *QAbstractItemView) IndexAt(point *qtcore.QPoint) *qtcore.QModelIndex
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -597,6 +878,7 @@ func (this *QAbstractItemView) SizeHintForIndex(index *qtcore.QModelIndex) *qtco
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -731,6 +1013,7 @@ func (this *QAbstractItemView) InputMethodQuery(query int) *qtcore.QVariant /*12
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -1139,6 +1422,7 @@ func (this *QAbstractItemView) VisualRegionForSelection(selection *qtcore.QItemS
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQRegion)
 	return rv2
 }
 
@@ -1164,6 +1448,7 @@ func (this *QAbstractItemView) ViewOptions() *QStyleOptionViewItem /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStyleOptionViewItemFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStyleOptionViewItem)
 	return rv2
 }
 
@@ -1233,6 +1518,7 @@ func (this *QAbstractItemView) DirtyRegionOffset() *qtcore.QPoint /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 
@@ -1458,6 +1744,7 @@ func (this *QAbstractItemView) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

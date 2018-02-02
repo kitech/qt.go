@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QRegExp struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QRegExp) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QRegExp) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQRegExpFromPointer(cthis unsafe.Pointer) *QRegExp {
 	return &QRegExp{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQRegExp() *QRegExp {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExpC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRegExpFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRegExp)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func NewQRegExp_1(pattern *QString, cs int, syntax int) *QRegExp {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExpC2ERK7QStringN2Qt15CaseSensitivityENS_13PatternSyntaxE", ffiqt.FFI_TYPE_POINTER, convArg0, cs, syntax)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRegExpFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRegExp)
 	return gothis
 }
 
@@ -92,9 +99,10 @@ func NewQRegExp_1(pattern *QString, cs int, syntax int) *QRegExp {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QRegExp()
-func DeleteQRegExp(*QRegExp) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExpD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQRegExp(this *QRegExp) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExpD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qregexp.h:79
@@ -138,6 +146,7 @@ func (this *QRegExp) Pattern() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -278,6 +287,7 @@ func (this *QRegExp) Cap(nth int) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -290,6 +300,7 @@ func (this *QRegExp) Cap_1(nth int) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -324,6 +335,7 @@ func (this *QRegExp) ErrorString() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -336,6 +348,7 @@ func (this *QRegExp) ErrorString_1() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -349,6 +362,7 @@ func (this *QRegExp) Escape(str *QString) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 func QRegExp_Escape(str *QString) *QString /*123*/ {

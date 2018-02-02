@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QObjectData struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QObjectData) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QObjectData) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQObjectDataFromPointer(cthis unsafe.Pointer) *QObjectData {
 	return &QObjectData{&qtrt.CObject{cthis}}
@@ -69,9 +74,10 @@ func (*QObjectData) NewFromPointer(cthis unsafe.Pointer) *QObjectData {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void ~QObjectData()
-func DeleteQObjectData(*QObjectData) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QObjectDataD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQObjectData(this *QObjectData) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QObjectDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qobject.h:112

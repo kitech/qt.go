@@ -136,6 +136,7 @@ func QAccessibleLocalizedActionDescription(actionName *qtcore.QString) *qtcore.Q
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

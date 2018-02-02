@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QUrlQuery struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QUrlQuery) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QUrlQuery) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQUrlQueryFromPointer(cthis unsafe.Pointer) *QUrlQuery {
 	return &QUrlQuery{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQUrlQuery() *QUrlQuery {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQueryC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQUrlQueryFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQUrlQuery)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func NewQUrlQuery_1(url *QUrl) *QUrlQuery {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQueryC2ERK4QUrl", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQUrlQueryFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQUrlQuery)
 	return gothis
 }
 
@@ -97,6 +104,7 @@ func NewQUrlQuery_2(queryString *QString) *QUrlQuery {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQueryC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQUrlQueryFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQUrlQuery)
 	return gothis
 }
 
@@ -104,9 +112,10 @@ func NewQUrlQuery_2(queryString *QString) *QUrlQuery {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QUrlQuery()
-func DeleteQUrlQuery(*QUrlQuery) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQueryD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQUrlQuery(this *QUrlQuery) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQueryD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qurlquery.h:73
@@ -180,6 +189,7 @@ func (this *QUrlQuery) QueryValueDelimiter() *QChar /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
 }
 
@@ -192,6 +202,7 @@ func (this *QUrlQuery) QueryPairDelimiter() *QChar /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
 }
 
@@ -247,6 +258,7 @@ func (this *QUrlQuery) DefaultQueryValueDelimiter() *QChar /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
 }
 func QUrlQuery_DefaultQueryValueDelimiter() *QChar /*123*/ {
@@ -264,6 +276,7 @@ func (this *QUrlQuery) DefaultQueryPairDelimiter() *QChar /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
 }
 func QUrlQuery_DefaultQueryPairDelimiter() *QChar /*123*/ {

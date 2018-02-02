@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QGestureRecognizer struct {
 	*qtrt.CObject
 }
@@ -64,7 +65,11 @@ func (this *QGestureRecognizer) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QGestureRecognizer) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQGestureRecognizerFromPointer(cthis unsafe.Pointer) *QGestureRecognizer {
 	return &QGestureRecognizer{&qtrt.CObject{cthis}}
@@ -81,6 +86,7 @@ func NewQGestureRecognizer() *QGestureRecognizer {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGestureRecognizerC1Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGestureRecognizerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGestureRecognizer)
 	return gothis
 }
 
@@ -88,9 +94,10 @@ func NewQGestureRecognizer() *QGestureRecognizer {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGestureRecognizer()
-func DeleteQGestureRecognizer(*QGestureRecognizer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGestureRecognizerD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGestureRecognizer(this *QGestureRecognizer) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGestureRecognizerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgesturerecognizer.h:80

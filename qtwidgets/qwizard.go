@@ -52,6 +52,36 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QWizard) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void resizeEvent(class QResizeEvent *)
+func (this *QWizard) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+}
+
+// void paintEvent(class QPaintEvent *)
+func (this *QWizard) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+}
+
+// void done(int)
+func (this *QWizard) InheritDone(f func(result int)) {
+	ffiqt.SetAllInheritCallback(this, "done", f)
+}
+
+// void initializePage(int)
+func (this *QWizard) InheritInitializePage(f func(id int)) {
+	ffiqt.SetAllInheritCallback(this, "initializePage", f)
+}
+
+// void cleanupPage(int)
+func (this *QWizard) InheritCleanupPage(f func(id int)) {
+	ffiqt.SetAllInheritCallback(this, "cleanupPage", f)
+}
+
 type QWizard struct {
 	*QDialog
 }
@@ -102,9 +132,10 @@ func NewQWizard(parent *QWidget /*777 QWidget **/, flags int) *QWizard {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWizard()
-func DeleteQWizard(*QWizard) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizardD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQWizard(this *QWizard) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizardD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qwizard.h:126
@@ -247,6 +278,7 @@ func (this *QWizard) Field(name *qtcore.QString) *qtcore.QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -320,6 +352,7 @@ func (this *QWizard) ButtonText(which int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -404,6 +437,7 @@ func (this *QWizard) Pixmap(which int) *qtgui.QPixmap /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
 	return rv2
 }
 
@@ -462,6 +496,7 @@ func (this *QWizard) SizeHint() *qtcore.QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

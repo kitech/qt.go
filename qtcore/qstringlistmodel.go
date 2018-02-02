@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStringListModel struct {
 	*QAbstractListModel
 }
@@ -125,6 +126,7 @@ func (this *QStringListModel) Sibling(row int, column int, idx *QModelIndex) *QM
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -138,6 +140,7 @@ func (this *QStringListModel) Data(index *QModelIndex, role int) *QVariant /*123
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -218,6 +221,12 @@ func (this *QStringListModel) SupportedDropActions() int {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+func DeleteQStringListModel(this *QStringListModel) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStringListModelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

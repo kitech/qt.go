@@ -52,6 +52,16 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void timerEvent(class QTimerEvent *)
+func (this *QFileSystemModel) InheritTimerEvent(f func(event *qtcore.QTimerEvent /*777 QTimerEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "timerEvent", f)
+}
+
+// bool event(class QEvent *)
+func (this *QFileSystemModel) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QFileSystemModel struct {
 	*qtcore.QAbstractItemModel
 }
@@ -134,9 +144,10 @@ func NewQFileSystemModel(parent *qtcore.QObject /*777 QObject **/) *QFileSystemM
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFileSystemModel()
-func DeleteQFileSystemModel(*QFileSystemModel) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModelD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQFileSystemModel(this *QFileSystemModel) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:81
@@ -149,6 +160,7 @@ func (this *QFileSystemModel) Index(row int, column int, parent *qtcore.QModelIn
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -162,6 +174,7 @@ func (this *QFileSystemModel) Index_1(path *qtcore.QString, column int) *qtcore.
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -175,6 +188,7 @@ func (this *QFileSystemModel) Parent(child *qtcore.QModelIndex) *qtcore.QModelIn
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -188,6 +202,7 @@ func (this *QFileSystemModel) Sibling(row int, column int, idx *qtcore.QModelInd
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -258,6 +273,7 @@ func (this *QFileSystemModel) MyComputer(role int) *qtcore.QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -271,6 +287,7 @@ func (this *QFileSystemModel) Data(index *qtcore.QModelIndex, role int) *qtcore.
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -296,6 +313,7 @@ func (this *QFileSystemModel) HeaderData(section int, orientation int, role int)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -354,6 +372,7 @@ func (this *QFileSystemModel) SetRootPath(path *qtcore.QString) *qtcore.QModelIn
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -366,6 +385,7 @@ func (this *QFileSystemModel) RootPath() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -378,6 +398,7 @@ func (this *QFileSystemModel) RootDirectory() *qtcore.QDir /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQDirFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQDir)
 	return rv2
 }
 
@@ -494,6 +515,7 @@ func (this *QFileSystemModel) FilePath(index *qtcore.QModelIndex) *qtcore.QStrin
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -531,6 +553,7 @@ func (this *QFileSystemModel) Type(index *qtcore.QModelIndex) *qtcore.QString /*
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -544,6 +567,7 @@ func (this *QFileSystemModel) LastModified(index *qtcore.QModelIndex) *qtcore.QD
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQDateTime)
 	return rv2
 }
 
@@ -558,6 +582,7 @@ func (this *QFileSystemModel) Mkdir(parent *qtcore.QModelIndex, name *qtcore.QSt
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -583,6 +608,7 @@ func (this *QFileSystemModel) FileName(index *qtcore.QModelIndex) *qtcore.QStrin
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -596,6 +622,7 @@ func (this *QFileSystemModel) FileIcon(index *qtcore.QModelIndex) *qtgui.QIcon /
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
 }
 
@@ -621,6 +648,7 @@ func (this *QFileSystemModel) FileInfo(index *qtcore.QModelIndex) *qtcore.QFileI
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQFileInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQFileInfo)
 	return rv2
 }
 

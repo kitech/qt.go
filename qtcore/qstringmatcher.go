@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStringMatcher struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QStringMatcher) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QStringMatcher) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQStringMatcherFromPointer(cthis unsafe.Pointer) *QStringMatcher {
 	return &QStringMatcher{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQStringMatcher() *QStringMatcher {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStringMatcherC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStringMatcherFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStringMatcher)
 	return gothis
 }
 
@@ -85,6 +91,7 @@ func NewQStringMatcher_1(pattern *QString, cs int) *QStringMatcher {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStringMatcherC2ERK7QStringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStringMatcherFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStringMatcher)
 	return gothis
 }
 
@@ -97,6 +104,7 @@ func NewQStringMatcher_2(uc *QChar /*777 const QChar **/, len int, cs int) *QStr
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStringMatcherC2EPK5QChariN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, convArg0, len, cs)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStringMatcherFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStringMatcher)
 	return gothis
 }
 
@@ -104,9 +112,10 @@ func NewQStringMatcher_2(uc *QChar /*777 const QChar **/, len int, cs int) *QStr
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QStringMatcher()
-func DeleteQStringMatcher(*QStringMatcher) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStringMatcherD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQStringMatcher(this *QStringMatcher) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStringMatcherD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qstringmatcher.h:63
@@ -161,6 +170,7 @@ func (this *QStringMatcher) Pattern() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 

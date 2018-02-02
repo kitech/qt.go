@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QEvent struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QEvent) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QEvent) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQEventFromPointer(cthis unsafe.Pointer) *QEvent {
 	return &QEvent{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQEvent(type_ int) *QEvent {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEventC2ENS_4TypeE", ffiqt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQEvent)
 	return gothis
 }
 
@@ -80,9 +86,10 @@ func NewQEvent(type_ int) *QEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QEvent()
-func DeleteQEvent(*QEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQEvent(this *QEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:301

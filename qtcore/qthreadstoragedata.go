@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QThreadStorageData struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QThreadStorageData) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QThreadStorageData) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQThreadStorageDataFromPointer(cthis unsafe.Pointer) *QThreadStorageData {
 	return &QThreadStorageData{&qtrt.CObject{cthis}}
@@ -69,9 +74,10 @@ func (*QThreadStorageData) NewFromPointer(cthis unsafe.Pointer) *QThreadStorageD
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QThreadStorageData()
-func DeleteQThreadStorageData(*QThreadStorageData) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QThreadStorageDataD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQThreadStorageData(this *QThreadStorageData) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QThreadStorageDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qthreadstorage.h:56

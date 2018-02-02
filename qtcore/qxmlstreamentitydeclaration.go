@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QXmlStreamEntityDeclaration struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QXmlStreamEntityDeclaration) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QXmlStreamEntityDeclaration) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQXmlStreamEntityDeclarationFromPointer(cthis unsafe.Pointer) *QXmlStreamEntityDeclaration {
 	return &QXmlStreamEntityDeclaration{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQXmlStreamEntityDeclaration() *QXmlStreamEntityDeclaration {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QXmlStreamEntityDeclarationC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamEntityDeclarationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamEntityDeclaration)
 	return gothis
 }
 
@@ -80,9 +86,10 @@ func NewQXmlStreamEntityDeclaration() *QXmlStreamEntityDeclaration {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QXmlStreamEntityDeclaration()
-func DeleteQXmlStreamEntityDeclaration(*QXmlStreamEntityDeclaration) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QXmlStreamEntityDeclarationD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQXmlStreamEntityDeclaration(this *QXmlStreamEntityDeclaration) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN27QXmlStreamEntityDeclarationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:313
@@ -94,6 +101,7 @@ func (this *QXmlStreamEntityDeclaration) Name() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -106,6 +114,7 @@ func (this *QXmlStreamEntityDeclaration) NotationName() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -118,6 +127,7 @@ func (this *QXmlStreamEntityDeclaration) SystemId() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -130,6 +140,7 @@ func (this *QXmlStreamEntityDeclaration) PublicId() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -142,6 +153,7 @@ func (this *QXmlStreamEntityDeclaration) Value() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 

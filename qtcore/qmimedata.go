@@ -44,6 +44,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// QVariant retrieveData(const class QString &, class QVariant::Type)
+func (this *QMimeData) InheritRetrieveData(f func(mimetype *QString, preferredType int) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "retrieveData", f)
+}
+
 type QMimeData struct {
 	*QObject
 }
@@ -93,9 +98,10 @@ func NewQMimeData() *QMimeData {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMimeData()
-func DeleteQMimeData(*QMimeData) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeDataD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQMimeData(this *QMimeData) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:61
@@ -118,6 +124,7 @@ func (this *QMimeData) Text() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -151,6 +158,7 @@ func (this *QMimeData) Html() *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -184,6 +192,7 @@ func (this *QMimeData) ImageData() *QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -217,6 +226,7 @@ func (this *QMimeData) ColorData() *QVariant /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -251,6 +261,7 @@ func (this *QMimeData) Data(mimetype *QString) *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -306,6 +317,7 @@ func (this *QMimeData) RetrieveData(mimetype *QString, preferredType int) *QVari
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 

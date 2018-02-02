@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QArrayData struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QArrayData) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QArrayData) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQArrayDataFromPointer(cthis unsafe.Pointer) *QArrayData {
 	return &QArrayData{&qtrt.CObject{cthis}}
@@ -146,6 +151,12 @@ func QArrayData_SharedNull() *QArrayData /*777 QArrayData **/ {
 	var nilthis *QArrayData
 	rv := nilthis.SharedNull()
 	return rv
+}
+
+func DeleteQArrayData(this *QArrayData) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QArrayDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QArrayData__AllocationOption = int

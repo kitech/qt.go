@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTouchEvent struct {
 	*QInputEvent
 }
@@ -74,9 +75,10 @@ func (*QTouchEvent) NewFromPointer(cthis unsafe.Pointer) *QTouchEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTouchEvent()
-func DeleteQTouchEvent(*QTouchEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTouchEvent(this *QTouchEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:949

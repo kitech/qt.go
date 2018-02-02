@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QImageIOPlugin struct {
 	*qtcore.QObject
 }
@@ -98,9 +99,10 @@ func NewQImageIOPlugin(parent *qtcore.QObject /*777 QObject **/) *QImageIOPlugin
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QImageIOPlugin()
-func DeleteQImageIOPlugin(*QImageIOPlugin) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QImageIOPluginD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQImageIOPlugin(this *QImageIOPlugin) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QImageIOPluginD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qimageiohandler.h:153

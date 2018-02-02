@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QBasicMutex struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QBasicMutex) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QBasicMutex) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQBasicMutexFromPointer(cthis unsafe.Pointer) *QBasicMutex {
 	return &QBasicMutex{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQBasicMutex() *QBasicMutex {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutexC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBasicMutexFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQBasicMutex)
 	return gothis
 }
 
@@ -136,6 +142,12 @@ func (this *QBasicMutex) IsRecursive_1() bool {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
+}
+
+func DeleteQBasicMutex(this *QBasicMutex) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicMutexD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

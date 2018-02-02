@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QGraphicsItemGroup struct {
 	*QGraphicsItem
 }
@@ -83,6 +84,7 @@ func NewQGraphicsItemGroup(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGrap
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsItemGroupC2EP13QGraphicsItem", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsItemGroupFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGraphicsItemGroup)
 	return gothis
 }
 
@@ -90,9 +92,10 @@ func NewQGraphicsItemGroup(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGrap
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsItemGroup()
-func DeleteQGraphicsItemGroup(*QGraphicsItemGroup) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsItemGroupD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQGraphicsItemGroup(this *QGraphicsItemGroup) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsItemGroupD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:1007
@@ -124,6 +127,7 @@ func (this *QGraphicsItemGroup) BoundingRect() *qtcore.QRectF /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -160,6 +164,7 @@ func (this *QGraphicsItemGroup) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
 }
 

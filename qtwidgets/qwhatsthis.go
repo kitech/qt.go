@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QWhatsThis struct {
 	*qtrt.CObject
 }
@@ -64,7 +65,11 @@ func (this *QWhatsThis) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QWhatsThis) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQWhatsThisFromPointer(cthis unsafe.Pointer) *QWhatsThis {
 	return &QWhatsThis{&qtrt.CObject{cthis}}
@@ -160,6 +165,12 @@ func QWhatsThis_CreateAction(parent *qtcore.QObject /*777 QObject **/) *QAction 
 	var nilthis *QWhatsThis
 	rv := nilthis.CreateAction(parent)
 	return rv
+}
+
+func DeleteQWhatsThis(this *QWhatsThis) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QWhatsThisD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QResizeEvent struct {
 	*qtcore.QEvent
 }
@@ -80,6 +81,7 @@ func NewQResizeEvent(size *qtcore.QSize, oldSize *qtcore.QSize) *QResizeEvent {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QResizeEventC2ERK5QSizeS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQResizeEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQResizeEvent)
 	return gothis
 }
 
@@ -87,9 +89,10 @@ func NewQResizeEvent(size *qtcore.QSize, oldSize *qtcore.QSize) *QResizeEvent {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QResizeEvent()
-func DeleteQResizeEvent(*QResizeEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QResizeEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQResizeEvent(this *QResizeEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QResizeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:466
@@ -101,6 +104,7 @@ func (this *QResizeEvent) Size() *qtcore.QSize {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -113,6 +117,7 @@ func (this *QResizeEvent) OldSize() *qtcore.QSize {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 

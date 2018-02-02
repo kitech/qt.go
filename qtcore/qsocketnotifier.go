@@ -44,6 +44,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QSocketNotifier) InheritEvent(f func(arg0 *QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QSocketNotifier struct {
 	*QObject
 }
@@ -94,9 +99,10 @@ func NewQSocketNotifier(socket int64, arg1 int, parent *QObject /*777 QObject **
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSocketNotifier()
-func DeleteQSocketNotifier(*QSocketNotifier) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifierD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSocketNotifier(this *QSocketNotifier) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifierD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qsocketnotifier.h:59

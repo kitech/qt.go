@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextItem struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QTextItem) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTextItem) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTextItemFromPointer(cthis unsafe.Pointer) *QTextItem {
 	return &QTextItem{&qtrt.CObject{cthis}}
@@ -122,6 +127,7 @@ func (this *QTextItem) Text() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -134,7 +140,14 @@ func (this *QTextItem) Font() *QFont /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFont)
 	return rv2
+}
+
+func DeleteQTextItem(this *QTextItem) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QTextItem__RenderFlag = int

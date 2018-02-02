@@ -44,6 +44,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void timerEvent(class QTimerEvent *)
+func (this *QTimeLine) InheritTimerEvent(f func(event *QTimerEvent /*777 QTimerEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "timerEvent", f)
+}
+
 type QTimeLine struct {
 	*QObject
 }
@@ -94,9 +99,10 @@ func NewQTimeLine(duration int, parent *QObject /*777 QObject **/) *QTimeLine {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTimeLine()
-func DeleteQTimeLine(*QTimeLine) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLineD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTimeLine(this *QTimeLine) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLineD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qtimeline.h:82
@@ -268,6 +274,7 @@ func (this *QTimeLine) EasingCurve() *QEasingCurve /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQEasingCurveFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQEasingCurve)
 	return rv2
 }
 

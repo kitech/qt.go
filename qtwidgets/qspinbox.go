@@ -52,6 +52,31 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QSpinBox) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// QValidator::State validate(class QString &, int &)
+func (this *QSpinBox) InheritValidate(f func(input *qtcore.QString, pos int) int) {
+	ffiqt.SetAllInheritCallback(this, "validate", f)
+}
+
+// int valueFromText(const class QString &)
+func (this *QSpinBox) InheritValueFromText(f func(text *qtcore.QString) int) {
+	ffiqt.SetAllInheritCallback(this, "valueFromText", f)
+}
+
+// QString textFromValue(int)
+func (this *QSpinBox) InheritTextFromValue(f func(val int) unsafe.Pointer) {
+	ffiqt.SetAllInheritCallback(this, "textFromValue", f)
+}
+
+// void fixup(class QString &)
+func (this *QSpinBox) InheritFixup(f func(str *qtcore.QString)) {
+	ffiqt.SetAllInheritCallback(this, "fixup", f)
+}
+
 type QSpinBox struct {
 	*QAbstractSpinBox
 }
@@ -102,9 +127,10 @@ func NewQSpinBox(parent *QWidget /*777 QWidget **/) *QSpinBox {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSpinBox()
-func DeleteQSpinBox(*QSpinBox) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBoxD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSpinBox(this *QSpinBox) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:68
@@ -127,6 +153,7 @@ func (this *QSpinBox) Prefix() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -149,6 +176,7 @@ func (this *QSpinBox) Suffix() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -171,6 +199,7 @@ func (this *QSpinBox) CleanText() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -308,6 +337,7 @@ func (this *QSpinBox) TextFromValue(val int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

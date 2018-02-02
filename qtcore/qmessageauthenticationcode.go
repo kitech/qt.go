@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QMessageAuthenticationCode struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QMessageAuthenticationCode) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QMessageAuthenticationCode) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQMessageAuthenticationCodeFromPointer(cthis unsafe.Pointer) *QMessageAuthenticationCode {
 	return &QMessageAuthenticationCode{&qtrt.CObject{cthis}}
@@ -74,6 +79,7 @@ func NewQMessageAuthenticationCode(method int, key *QByteArray) *QMessageAuthent
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCodeC2EN18QCryptographicHash9AlgorithmERK10QByteArray", ffiqt.FFI_TYPE_POINTER, method, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMessageAuthenticationCodeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMessageAuthenticationCode)
 	return gothis
 }
 
@@ -81,9 +87,10 @@ func NewQMessageAuthenticationCode(method int, key *QByteArray) *QMessageAuthent
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QMessageAuthenticationCode()
-func DeleteQMessageAuthenticationCode(*QMessageAuthenticationCode) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCodeD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQMessageAuthenticationCode(this *QMessageAuthenticationCode) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCodeD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qmessageauthenticationcode.h:58
@@ -147,6 +154,7 @@ func (this *QMessageAuthenticationCode) Result() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -161,6 +169,7 @@ func (this *QMessageAuthenticationCode) Hash(message *QByteArray, key *QByteArra
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 func QMessageAuthenticationCode_Hash(message *QByteArray, key *QByteArray, method int) *QByteArray /*123*/ {

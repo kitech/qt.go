@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QPixelFormat struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QPixelFormat) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QPixelFormat) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQPixelFormatFromPointer(cthis unsafe.Pointer) *QPixelFormat {
 	return &QPixelFormat{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQPixelFormat() *QPixelFormat {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixelFormatC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPixelFormatFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPixelFormat)
 	return gothis
 }
 
@@ -88,6 +94,7 @@ func NewQPixelFormat_1(colorModel int, firstSize byte, secondSize byte, thirdSiz
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixelFormatC2ENS_10ColorModelEhhhhhhNS_10AlphaUsageENS_13AlphaPositionENS_18AlphaPremultipliedENS_18TypeInterpretationENS_9ByteOrderEh", ffiqt.FFI_TYPE_POINTER, colorModel, firstSize, secondSize, thirdSize, fourthSize, fifthSize, alphaSize, alphaUsage, alphaPosition, premultiplied, typeInterpretation, byteOrder, subEnum)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPixelFormatFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQPixelFormat)
 	return gothis
 }
 
@@ -331,6 +338,12 @@ func (this *QPixelFormat) SubEnum() byte {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return byte(rv) // 222
+}
+
+func DeleteQPixelFormat(this *QPixelFormat) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixelFormatD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QPixelFormat__FieldWidth = int

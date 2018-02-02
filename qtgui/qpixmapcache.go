@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QPixmapCache struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QPixmapCache) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QPixmapCache) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQPixmapCacheFromPointer(cthis unsafe.Pointer) *QPixmapCache {
 	return &QPixmapCache{&qtrt.CObject{cthis}}
@@ -177,6 +182,12 @@ func (this *QPixmapCache) Clear() {
 func QPixmapCache_Clear() {
 	var nilthis *QPixmapCache
 	nilthis.Clear()
+}
+
+func DeleteQPixmapCache(this *QPixmapCache) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCacheD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

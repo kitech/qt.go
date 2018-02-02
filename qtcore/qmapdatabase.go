@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QMapDataBase struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QMapDataBase) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QMapDataBase) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQMapDataBaseFromPointer(cthis unsafe.Pointer) *QMapDataBase {
 	return &QMapDataBase{&qtrt.CObject{cthis}}
@@ -89,6 +94,12 @@ func QMapDataBase_CreateData() *QMapDataBase /*777 QMapDataBase **/ {
 	var nilthis *QMapDataBase
 	rv := nilthis.CreateData()
 	return rv
+}
+
+func DeleteQMapDataBase(this *QMapDataBase) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapDataBaseD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

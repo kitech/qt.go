@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QElapsedTimer struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QElapsedTimer) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QElapsedTimer) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQElapsedTimerFromPointer(cthis unsafe.Pointer) *QElapsedTimer {
 	return &QElapsedTimer{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQElapsedTimer() *QElapsedTimer {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QElapsedTimerC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQElapsedTimerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQElapsedTimer)
 	return gothis
 }
 
@@ -214,6 +220,12 @@ func (this *QElapsedTimer) SecsTo(other *QElapsedTimer) int64 {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
+}
+
+func DeleteQElapsedTimer(this *QElapsedTimer) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QElapsedTimerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QElapsedTimer__ClockType = int

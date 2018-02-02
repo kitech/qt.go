@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QShortcutEvent struct {
 	*qtcore.QEvent
 }
@@ -79,6 +80,7 @@ func NewQShortcutEvent(key *QKeySequence, id int, ambiguous bool) *QShortcutEven
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QShortcutEventC2ERK12QKeySequenceib", ffiqt.FFI_TYPE_POINTER, convArg0, id, ambiguous)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQShortcutEventFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQShortcutEvent)
 	return gothis
 }
 
@@ -86,9 +88,10 @@ func NewQShortcutEvent(key *QKeySequence, id int, ambiguous bool) *QShortcutEven
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QShortcutEvent()
-func DeleteQShortcutEvent(*QShortcutEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QShortcutEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQShortcutEvent(this *QShortcutEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QShortcutEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:770
@@ -100,6 +103,7 @@ func (this *QShortcutEvent) Key() *QKeySequence {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQKeySequence)
 	return rv2
 }
 

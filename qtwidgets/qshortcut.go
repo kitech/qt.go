@@ -52,6 +52,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QShortcut) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
 type QShortcut struct {
 	*qtcore.QObject
 }
@@ -119,9 +124,10 @@ func NewQShortcut_1(key *qtgui.QKeySequence, parent *QWidget /*777 QWidget **/, 
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QShortcut()
-func DeleteQShortcut(*QShortcut) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcutD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQShortcut(this *QShortcut) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qshortcut.h:69
@@ -143,6 +149,7 @@ func (this *QShortcut) Key() *qtgui.QKeySequence /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQKeySequence)
 	return rv2
 }
 
@@ -205,6 +212,7 @@ func (this *QShortcut) WhatsThis() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

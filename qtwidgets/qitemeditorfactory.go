@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QItemEditorFactory struct {
 	*qtrt.CObject
 }
@@ -64,7 +65,11 @@ func (this *QItemEditorFactory) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QItemEditorFactory) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQItemEditorFactoryFromPointer(cthis unsafe.Pointer) *QItemEditorFactory {
 	return &QItemEditorFactory{&qtrt.CObject{cthis}}
@@ -81,6 +86,7 @@ func NewQItemEditorFactory() *QItemEditorFactory {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactoryC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQItemEditorFactoryFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQItemEditorFactory)
 	return gothis
 }
 
@@ -88,9 +94,10 @@ func NewQItemEditorFactory() *QItemEditorFactory {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QItemEditorFactory()
-func DeleteQItemEditorFactory(*QItemEditorFactory) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactoryD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQItemEditorFactory(this *QItemEditorFactory) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactoryD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h:101
@@ -115,6 +122,7 @@ func (this *QItemEditorFactory) ValuePropertyName(userType int) *qtcore.QByteArr
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
 

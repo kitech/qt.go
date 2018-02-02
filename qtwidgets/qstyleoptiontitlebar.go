@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleOptionTitleBar struct {
 	*QStyleOptionComplex
 }
@@ -82,6 +83,7 @@ func NewQStyleOptionTitleBar() *QStyleOptionTitleBar {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionTitleBarC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTitleBarFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionTitleBar)
 	return gothis
 }
 
@@ -93,7 +95,14 @@ func NewQStyleOptionTitleBar_1(version int) *QStyleOptionTitleBar {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionTitleBarC2Ei", ffiqt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTitleBarFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOptionTitleBar)
 	return gothis
+}
+
+func DeleteQStyleOptionTitleBar(this *QStyleOptionTitleBar) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionTitleBarD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QStyleOptionTitleBar__StyleOptionType = int

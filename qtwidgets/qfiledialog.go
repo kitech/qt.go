@@ -52,6 +52,21 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void done(int)
+func (this *QFileDialog) InheritDone(f func(result int)) {
+	ffiqt.SetAllInheritCallback(this, "done", f)
+}
+
+// void accept()
+func (this *QFileDialog) InheritAccept(f func()) {
+	ffiqt.SetAllInheritCallback(this, "accept", f)
+}
+
+// void changeEvent(class QEvent *)
+func (this *QFileDialog) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
 type QFileDialog struct {
 	*QDialog
 }
@@ -117,9 +132,10 @@ func NewQFileDialog_1(parent *QWidget /*777 QWidget **/, caption *qtcore.QString
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFileDialog()
-func DeleteQFileDialog(*QFileDialog) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialogD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQFileDialog(this *QFileDialog) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialogD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:107
@@ -151,6 +167,7 @@ func (this *QFileDialog) Directory() *qtcore.QDir /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQDirFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQDir)
 	return rv2
 }
 
@@ -173,6 +190,7 @@ func (this *QFileDialog) DirectoryUrl() *qtcore.QUrl /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQUrl)
 	return rv2
 }
 
@@ -255,6 +273,7 @@ func (this *QFileDialog) SelectedMimeTypeFilter() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -267,6 +286,7 @@ func (this *QFileDialog) SelectedNameFilter() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -410,6 +430,7 @@ func (this *QFileDialog) SaveState() *qtcore.QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
 
@@ -464,6 +485,7 @@ func (this *QFileDialog) DefaultSuffix() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -540,6 +562,7 @@ func (this *QFileDialog) LabelText(label int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

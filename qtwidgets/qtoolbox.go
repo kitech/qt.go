@@ -52,6 +52,31 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QToolBox) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void itemInserted(int)
+func (this *QToolBox) InheritItemInserted(f func(index int)) {
+	ffiqt.SetAllInheritCallback(this, "itemInserted", f)
+}
+
+// void itemRemoved(int)
+func (this *QToolBox) InheritItemRemoved(f func(index int)) {
+	ffiqt.SetAllInheritCallback(this, "itemRemoved", f)
+}
+
+// void showEvent(class QShowEvent *)
+func (this *QToolBox) InheritShowEvent(f func(e *qtgui.QShowEvent /*777 QShowEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "showEvent", f)
+}
+
+// void changeEvent(class QEvent *)
+func (this *QToolBox) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/)) {
+	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+}
+
 type QToolBox struct {
 	*QFrame
 }
@@ -102,9 +127,10 @@ func NewQToolBox(parent *QWidget /*777 QWidget **/, f int) *QToolBox {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QToolBox()
-func DeleteQToolBox(*QToolBox) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBoxD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQToolBox(this *QToolBox) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qtoolbox.h:63
@@ -209,6 +235,7 @@ func (this *QToolBox) ItemText(index int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -231,6 +258,7 @@ func (this *QToolBox) ItemIcon(index int) *qtgui.QIcon /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
 }
 
@@ -253,6 +281,7 @@ func (this *QToolBox) ItemToolTip(index int) *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

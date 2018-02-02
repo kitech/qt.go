@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSurfaceFormat struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QSurfaceFormat) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSurfaceFormat) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSurfaceFormatFromPointer(cthis unsafe.Pointer) *QSurfaceFormat {
 	return &QSurfaceFormat{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQSurfaceFormat() *QSurfaceFormat {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormatC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSurfaceFormat)
 	return gothis
 }
 
@@ -84,9 +90,10 @@ func NewQSurfaceFormat() *QSurfaceFormat {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QSurfaceFormat()
-func DeleteQSurfaceFormat(*QSurfaceFormat) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormatD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSurfaceFormat(this *QSurfaceFormat) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormatD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qsurfaceformat.h:100
@@ -463,6 +470,7 @@ func (this *QSurfaceFormat) DefaultFormat() *QSurfaceFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSurfaceFormat)
 	return rv2
 }
 func QSurfaceFormat_DefaultFormat() *QSurfaceFormat /*123*/ {

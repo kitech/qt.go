@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QDirModel struct {
 	*qtcore.QAbstractItemModel
 }
@@ -102,9 +103,10 @@ func NewQDirModel(parent *qtcore.QObject /*777 QObject **/) *QDirModel {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDirModel()
-func DeleteQDirModel(*QDirModel) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModelD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDirModel(this *QDirModel) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qdirmodel.h:73
@@ -117,6 +119,7 @@ func (this *QDirModel) Index(row int, column int, parent *qtcore.QModelIndex) *q
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -130,6 +133,7 @@ func (this *QDirModel) Index_1(path *qtcore.QString, column int) *qtcore.QModelI
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -143,6 +147,7 @@ func (this *QDirModel) Parent(child *qtcore.QModelIndex) *qtcore.QModelIndex /*1
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -180,6 +185,7 @@ func (this *QDirModel) Data(index *qtcore.QModelIndex, role int) *qtcore.QVarian
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -205,6 +211,7 @@ func (this *QDirModel) HeaderData(section int, orientation int, role int) *qtcor
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -411,6 +418,7 @@ func (this *QDirModel) Mkdir(parent *qtcore.QModelIndex, name *qtcore.QString) *
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
 }
 
@@ -448,6 +456,7 @@ func (this *QDirModel) FilePath(index *qtcore.QModelIndex) *qtcore.QString /*123
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -461,6 +470,7 @@ func (this *QDirModel) FileName(index *qtcore.QModelIndex) *qtcore.QString /*123
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -474,6 +484,7 @@ func (this *QDirModel) FileIcon(index *qtcore.QModelIndex) *qtgui.QIcon /*123*/ 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
 }
 
@@ -487,6 +498,7 @@ func (this *QDirModel) FileInfo(index *qtcore.QModelIndex) *qtcore.QFileInfo /*1
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQFileInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQFileInfo)
 	return rv2
 }
 

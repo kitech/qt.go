@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyle struct {
 	*qtcore.QObject
 }
@@ -101,9 +102,10 @@ func NewQStyle() *QStyle {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStyle()
-func DeleteQStyle(*QStyle) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QStyleD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQStyle(this *QStyle) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN6QStyleD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qstyle.h:76
@@ -168,6 +170,7 @@ func (this *QStyle) ItemTextRect(fm *qtgui.QFontMetrics, r *qtcore.QRect, flags 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -182,6 +185,7 @@ func (this *QStyle) ItemPixmapRect(r *qtcore.QRect, flags int, pixmap *qtgui.QPi
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -219,6 +223,7 @@ func (this *QStyle) StandardPalette() *qtgui.QPalette /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPalette)
 	return rv2
 }
 
@@ -257,6 +262,7 @@ func (this *QStyle) SubElementRect(subElement int, option *QStyleOption /*777 co
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -297,6 +303,7 @@ func (this *QStyle) SubControlRect(cc int, opt *QStyleOptionComplex /*777 const 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 
@@ -325,6 +332,7 @@ func (this *QStyle) SizeFromContents(ct int, opt *QStyleOption /*777 const QStyl
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -353,6 +361,7 @@ func (this *QStyle) StandardPixmap(standardPixmap int, opt *QStyleOption /*777 c
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
 	return rv2
 }
 
@@ -367,6 +376,7 @@ func (this *QStyle) StandardIcon(standardIcon int, option *QStyleOption /*777 co
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
 }
 
@@ -381,6 +391,7 @@ func (this *QStyle) GeneratedIconPixmap(iconMode int, pixmap *qtgui.QPixmap, opt
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
 	return rv2
 }
 
@@ -395,6 +406,7 @@ func (this *QStyle) VisualRect(direction int, boundingRect *qtcore.QRect, logica
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
 }
 func QStyle_VisualRect(direction int, boundingRect *qtcore.QRect, logicalRect *qtcore.QRect) *qtcore.QRect /*123*/ {
@@ -414,6 +426,7 @@ func (this *QStyle) VisualPos(direction int, boundingRect *qtcore.QRect, logical
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
 }
 func QStyle_VisualPos(direction int, boundingRect *qtcore.QRect, logicalPos *qtcore.QPoint) *qtcore.QPoint /*123*/ {

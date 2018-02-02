@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QIdentityProxyModel struct {
 	*QAbstractProxyModel
 }
@@ -94,9 +95,10 @@ func NewQIdentityProxyModel(parent *QObject /*777 QObject **/) *QIdentityProxyMo
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QIdentityProxyModel()
-func DeleteQIdentityProxyModel(*QIdentityProxyModel) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QIdentityProxyModelD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQIdentityProxyModel(this *QIdentityProxyModel) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN19QIdentityProxyModelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qidentityproxymodel.h:60
@@ -121,6 +123,7 @@ func (this *QIdentityProxyModel) Index(row int, column int, parent *QModelIndex)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -134,6 +137,7 @@ func (this *QIdentityProxyModel) MapFromSource(sourceIndex *QModelIndex) *QModel
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -147,6 +151,7 @@ func (this *QIdentityProxyModel) MapToSource(proxyIndex *QModelIndex) *QModelInd
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -160,6 +165,7 @@ func (this *QIdentityProxyModel) Parent(child *QModelIndex) *QModelIndex /*123*/
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -184,6 +190,7 @@ func (this *QIdentityProxyModel) HeaderData(section int, orientation int, role i
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -210,6 +217,7 @@ func (this *QIdentityProxyModel) Sibling(row int, column int, idx *QModelIndex) 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -223,6 +231,7 @@ func (this *QIdentityProxyModel) MapSelectionFromSource(selection *QItemSelectio
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQItemSelection)
 	return rv2
 }
 
@@ -236,6 +245,7 @@ func (this *QIdentityProxyModel) MapSelectionToSource(selection *QItemSelection)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQItemSelection)
 	return rv2
 }
 

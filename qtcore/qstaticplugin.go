@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStaticPlugin struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QStaticPlugin) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QStaticPlugin) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQStaticPluginFromPointer(cthis unsafe.Pointer) *QStaticPlugin {
 	return &QStaticPlugin{&qtrt.CObject{cthis}}
@@ -74,7 +79,14 @@ func (this *QStaticPlugin) MetaData() *QJsonObject /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQJsonObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonObject)
 	return rv2
+}
+
+func DeleteQStaticPlugin(this *QStaticPlugin) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStaticPluginD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

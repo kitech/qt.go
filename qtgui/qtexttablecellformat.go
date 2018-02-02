@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextTableCellFormat struct {
 	*QTextCharFormat
 }
@@ -78,6 +79,7 @@ func NewQTextTableCellFormat() *QTextTableCellFormat {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextTableCellFormatC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextTableCellFormatFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextTableCellFormat)
 	return gothis
 }
 
@@ -90,6 +92,7 @@ func NewQTextTableCellFormat_1(fmt *QTextFormat) *QTextTableCellFormat {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextTableCellFormatC2ERK11QTextFormat", ffiqt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextTableCellFormatFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextTableCellFormat)
 	return gothis
 }
 
@@ -191,6 +194,12 @@ func (this *QTextTableCellFormat) RightPadding() float64 {
 func (this *QTextTableCellFormat) SetPadding(padding float64) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextTableCellFormat10setPaddingEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), padding)
 	gopp.ErrPrint(err, rv)
+}
+
+func DeleteQTextTableCellFormat(this *QTextTableCellFormat) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextTableCellFormatD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

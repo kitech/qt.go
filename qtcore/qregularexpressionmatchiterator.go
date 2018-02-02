@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QRegularExpressionMatchIterator struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QRegularExpressionMatchIterator) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QRegularExpressionMatchIterator) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQRegularExpressionMatchIteratorFromPointer(cthis unsafe.Pointer) *QRegularExpressionMatchIterator {
 	return &QRegularExpressionMatchIterator{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQRegularExpressionMatchIterator() *QRegularExpressionMatchIterator {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIteratorC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRegularExpressionMatchIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQRegularExpressionMatchIterator)
 	return gothis
 }
 
@@ -80,9 +86,10 @@ func NewQRegularExpressionMatchIterator() *QRegularExpressionMatchIterator {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QRegularExpressionMatchIterator()
-func DeleteQRegularExpressionMatchIterator(*QRegularExpressionMatchIterator) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIteratorD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQRegularExpressionMatchIterator(this *QRegularExpressionMatchIterator) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIteratorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qregularexpression.h:257
@@ -126,6 +133,7 @@ func (this *QRegularExpressionMatchIterator) Next() *QRegularExpressionMatch /*1
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegularExpressionMatchFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegularExpressionMatch)
 	return rv2
 }
 
@@ -138,6 +146,7 @@ func (this *QRegularExpressionMatchIterator) PeekNext() *QRegularExpressionMatch
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegularExpressionMatchFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegularExpressionMatch)
 	return rv2
 }
 
@@ -150,6 +159,7 @@ func (this *QRegularExpressionMatchIterator) RegularExpression() *QRegularExpres
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegularExpressionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegularExpression)
 	return rv2
 }
 

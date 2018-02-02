@@ -48,6 +48,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void setFormat(const class QTextFormat &)
+func (this *QTextObject) InheritSetFormat(f func(format *QTextFormat)) {
+	ffiqt.SetAllInheritCallback(this, "setFormat", f)
+}
+
 type QTextObject struct {
 	*qtcore.QObject
 }
@@ -98,9 +103,10 @@ func NewQTextObject(doc *QTextDocument /*777 QTextDocument **/) *QTextObject {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void ~QTextObject()
-func DeleteQTextObject(*QTextObject) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextObjectD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextObject(this *QTextObject) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextObjectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:68
@@ -122,6 +128,7 @@ func (this *QTextObject) Format() *QTextFormat /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextFormat)
 	return rv2
 }
 

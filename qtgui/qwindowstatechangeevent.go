@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QWindowStateChangeEvent struct {
 	*qtcore.QEvent
 }
@@ -74,9 +75,10 @@ func (*QWindowStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QWindowSta
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWindowStateChangeEvent()
-func DeleteQWindowStateChangeEvent(*QWindowStateChangeEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QWindowStateChangeEventD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQWindowStateChangeEvent(this *QWindowStateChangeEvent) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN23QWindowStateChangeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qevent.h:786

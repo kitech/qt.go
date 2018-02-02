@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QXmlStreamNamespaceDeclaration struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QXmlStreamNamespaceDeclaration) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QXmlStreamNamespaceDeclaration) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQXmlStreamNamespaceDeclarationFromPointer(cthis unsafe.Pointer) *QXmlStreamNamespaceDeclaration {
 	return &QXmlStreamNamespaceDeclaration{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQXmlStreamNamespaceDeclaration() *QXmlStreamNamespaceDeclaration {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamNamespaceDeclarationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamNamespaceDeclaration)
 	return gothis
 }
 
@@ -86,6 +92,7 @@ func NewQXmlStreamNamespaceDeclaration_1(prefix *QString, namespaceUri *QString)
 	rv, err := ffiqt.InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationC2ERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamNamespaceDeclarationFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQXmlStreamNamespaceDeclaration)
 	return gothis
 }
 
@@ -93,9 +100,10 @@ func NewQXmlStreamNamespaceDeclaration_1(prefix *QString, namespaceUri *QString)
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QXmlStreamNamespaceDeclaration()
-func DeleteQXmlStreamNamespaceDeclaration(*QXmlStreamNamespaceDeclaration) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQXmlStreamNamespaceDeclaration(this *QXmlStreamNamespaceDeclaration) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:221
@@ -107,6 +115,7 @@ func (this *QXmlStreamNamespaceDeclaration) Prefix() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 
@@ -119,6 +128,7 @@ func (this *QXmlStreamNamespaceDeclaration) NamespaceUri() *QStringRef /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
 }
 

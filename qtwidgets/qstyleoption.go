@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QStyleOption struct {
 	*qtrt.CObject
 }
@@ -64,7 +65,11 @@ func (this *QStyleOption) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QStyleOption) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQStyleOptionFromPointer(cthis unsafe.Pointer) *QStyleOption {
 	return &QStyleOption{&qtrt.CObject{cthis}}
@@ -81,6 +86,7 @@ func NewQStyleOption(version int, type_ int) *QStyleOption {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOptionC2Eii", ffiqt.FFI_TYPE_POINTER, version, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQStyleOption)
 	return gothis
 }
 
@@ -88,9 +94,10 @@ func NewQStyleOption(version int, type_ int) *QStyleOption {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QStyleOption()
-func DeleteQStyleOption(*QStyleOption) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOptionD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQStyleOption(this *QStyleOption) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOptionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qstyleoption.h:106

@@ -48,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QIconEngine struct {
 	*qtrt.CObject
 }
@@ -60,7 +61,11 @@ func (this *QIconEngine) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QIconEngine) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQIconEngineFromPointer(cthis unsafe.Pointer) *QIconEngine {
 	return &QIconEngine{&qtrt.CObject{cthis}}
@@ -77,6 +82,7 @@ func NewQIconEngine() *QIconEngine {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QIconEngineC1Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQIconEngineFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQIconEngine)
 	return gothis
 }
 
@@ -84,9 +90,10 @@ func NewQIconEngine() *QIconEngine {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QIconEngine()
-func DeleteQIconEngine(*QIconEngine) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QIconEngineD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQIconEngine(this *QIconEngine) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QIconEngineD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtGui/qiconengine.h:56
@@ -110,6 +117,7 @@ func (this *QIconEngine) ActualSize(size *qtcore.QSize, mode int, state int) *qt
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -123,6 +131,7 @@ func (this *QIconEngine) Pixmap(size *qtcore.QSize, mode int, state int) *QPixma
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPixmap)
 	return rv2
 }
 
@@ -156,6 +165,7 @@ func (this *QIconEngine) Key() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -204,6 +214,7 @@ func (this *QIconEngine) IconName() *qtcore.QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -228,6 +239,7 @@ func (this *QIconEngine) ScaledPixmap(size *qtcore.QSize, mode int, state int, s
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPixmap)
 	return rv2
 }
 

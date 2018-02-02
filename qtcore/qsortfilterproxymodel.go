@@ -44,6 +44,31 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool filterAcceptsRow(int, const class QModelIndex &)
+func (this *QSortFilterProxyModel) InheritFilterAcceptsRow(f func(source_row int, source_parent *QModelIndex) bool) {
+	ffiqt.SetAllInheritCallback(this, "filterAcceptsRow", f)
+}
+
+// bool filterAcceptsColumn(int, const class QModelIndex &)
+func (this *QSortFilterProxyModel) InheritFilterAcceptsColumn(f func(source_column int, source_parent *QModelIndex) bool) {
+	ffiqt.SetAllInheritCallback(this, "filterAcceptsColumn", f)
+}
+
+// bool lessThan(const class QModelIndex &, const class QModelIndex &)
+func (this *QSortFilterProxyModel) InheritLessThan(f func(source_left *QModelIndex, source_right *QModelIndex) bool) {
+	ffiqt.SetAllInheritCallback(this, "lessThan", f)
+}
+
+// void filterChanged()
+func (this *QSortFilterProxyModel) InheritFilterChanged(f func()) {
+	ffiqt.SetAllInheritCallback(this, "filterChanged", f)
+}
+
+// void invalidateFilter()
+func (this *QSortFilterProxyModel) InheritInvalidateFilter(f func()) {
+	ffiqt.SetAllInheritCallback(this, "invalidateFilter", f)
+}
+
 type QSortFilterProxyModel struct {
 	*QAbstractProxyModel
 }
@@ -94,9 +119,10 @@ func NewQSortFilterProxyModel(parent *QObject /*777 QObject **/) *QSortFilterPro
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSortFilterProxyModel()
-func DeleteQSortFilterProxyModel(*QSortFilterProxyModel) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModelD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSortFilterProxyModel(this *QSortFilterProxyModel) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qsortfilterproxymodel.h:76
@@ -119,6 +145,7 @@ func (this *QSortFilterProxyModel) MapToSource(proxyIndex *QModelIndex) *QModelI
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -132,6 +159,7 @@ func (this *QSortFilterProxyModel) MapFromSource(sourceIndex *QModelIndex) *QMod
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -145,6 +173,7 @@ func (this *QSortFilterProxyModel) MapSelectionToSource(proxySelection *QItemSel
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQItemSelection)
 	return rv2
 }
 
@@ -158,6 +187,7 @@ func (this *QSortFilterProxyModel) MapSelectionFromSource(sourceSelection *QItem
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQItemSelection)
 	return rv2
 }
 
@@ -170,6 +200,7 @@ func (this *QSortFilterProxyModel) FilterRegExp() *QRegExp /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegExpFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegExp)
 	return rv2
 }
 
@@ -478,6 +509,7 @@ func (this *QSortFilterProxyModel) Index(row int, column int, parent *QModelInde
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -491,6 +523,7 @@ func (this *QSortFilterProxyModel) Parent(child *QModelIndex) *QModelIndex /*123
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -504,6 +537,7 @@ func (this *QSortFilterProxyModel) Sibling(row int, column int, idx *QModelIndex
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -553,6 +587,7 @@ func (this *QSortFilterProxyModel) Data(index *QModelIndex, role int) *QVariant 
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -578,6 +613,7 @@ func (this *QSortFilterProxyModel) HeaderData(section int, orientation int, role
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
 }
 
@@ -698,6 +734,7 @@ func (this *QSortFilterProxyModel) Buddy(index *QModelIndex) *QModelIndex /*123*
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
 
@@ -711,6 +748,7 @@ func (this *QSortFilterProxyModel) Span(index *QModelIndex) *QSize /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
 	return rv2
 }
 

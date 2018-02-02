@@ -52,6 +52,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QColormap struct {
 	*qtrt.CObject
 }
@@ -64,7 +65,11 @@ func (this *QColormap) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QColormap) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQColormapFromPointer(cthis unsafe.Pointer) *QColormap {
 	return &QColormap{&qtrt.CObject{cthis}}
@@ -108,6 +113,7 @@ func (this *QColormap) Instance(screen int) *QColormap /*123*/ {
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQColormapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQColormap)
 	return rv2
 }
 func QColormap_Instance(screen int) *QColormap /*123*/ {
@@ -120,9 +126,10 @@ func QColormap_Instance(screen int) *QColormap /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QColormap()
-func DeleteQColormap(*QColormap) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QColormapD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQColormap(this *QColormap) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN9QColormapD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtWidgets/qcolormap.h:70
@@ -179,6 +186,7 @@ func (this *QColormap) ColorAt(pixel uint) *qtgui.QColor /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
 }
 

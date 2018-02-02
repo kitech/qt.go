@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QMessageLogger struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QMessageLogger) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QMessageLogger) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQMessageLoggerFromPointer(cthis unsafe.Pointer) *QMessageLogger {
 	return &QMessageLogger{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQMessageLogger() *QMessageLogger {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMessageLoggerC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMessageLoggerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMessageLogger)
 	return gothis
 }
 
@@ -88,6 +94,7 @@ func NewQMessageLogger_1(file string, line int, function string) *QMessageLogger
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMessageLoggerC2EPKciS1_", ffiqt.FFI_TYPE_POINTER, convArg0, line, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMessageLoggerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMessageLogger)
 	return gothis
 }
 
@@ -105,7 +112,14 @@ func NewQMessageLogger_2(file string, line int, function string, category string
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMessageLoggerC2EPKciS1_S1_", ffiqt.FFI_TYPE_POINTER, convArg0, line, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMessageLoggerFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQMessageLogger)
 	return gothis
+}
+
+func DeleteQMessageLogger(this *QMessageLogger) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMessageLoggerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

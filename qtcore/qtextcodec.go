@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QTextCodec struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QTextCodec) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QTextCodec) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQTextCodecFromPointer(cthis unsafe.Pointer) *QTextCodec {
 	return &QTextCodec{&qtrt.CObject{cthis}}
@@ -270,6 +275,7 @@ func (this *QTextCodec) ToUnicode(arg0 *QByteArray) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -284,6 +290,7 @@ func (this *QTextCodec) ToUnicode_1(chars string) *QString /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
 	return rv2
 }
 
@@ -297,6 +304,7 @@ func (this *QTextCodec) FromUnicode(uc *QString) *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -310,6 +318,7 @@ func (this *QTextCodec) FromUnicode_1(uc *QStringView /*123*/) *QByteArray /*123
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -346,6 +355,7 @@ func (this *QTextCodec) Name() *QByteArray /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
 
@@ -368,6 +378,7 @@ func NewQTextCodec() *QTextCodec {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextCodecC1Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextCodecFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQTextCodec)
 	return gothis
 }
 
@@ -375,9 +386,10 @@ func NewQTextCodec() *QTextCodec {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void ~QTextCodec()
-func DeleteQTextCodec(*QTextCodec) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextCodecD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQTextCodec(this *QTextCodec) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextCodecD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 type QTextCodec__ConversionFlag = int

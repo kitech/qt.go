@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QJsonObject struct {
 	*qtrt.CObject
 }
@@ -56,7 +57,11 @@ func (this *QJsonObject) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QJsonObject) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQJsonObjectFromPointer(cthis unsafe.Pointer) *QJsonObject {
 	return &QJsonObject{&qtrt.CObject{cthis}}
@@ -73,6 +78,7 @@ func NewQJsonObject() *QJsonObject {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QJsonObjectC2Ev", ffiqt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJsonObjectFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQJsonObject)
 	return gothis
 }
 
@@ -80,9 +86,10 @@ func NewQJsonObject() *QJsonObject {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QJsonObject()
-func DeleteQJsonObject(*QJsonObject) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QJsonObjectD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQJsonObject(this *QJsonObject) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN11QJsonObjectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qjsonobject.h:90
@@ -149,6 +156,7 @@ func (this *QJsonObject) Value(key *QString) *QJsonValue /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonValue)
 	return rv2
 }
 
@@ -162,6 +170,7 @@ func (this *QJsonObject) Value_1(key *QLatin1String /*123*/) *QJsonValue /*123*/
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonValue)
 	return rv2
 }
 
@@ -185,6 +194,7 @@ func (this *QJsonObject) Take(key *QString) *QJsonValue /*123*/ {
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonValue)
 	return rv2
 }
 

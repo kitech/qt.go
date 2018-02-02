@@ -44,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QGenericReturnArgument struct {
 	*QGenericArgument
 }
@@ -76,7 +77,14 @@ func NewQGenericReturnArgument(aName string, aData unsafe.Pointer /*666*/) *QGen
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGenericReturnArgumentC2EPKcPv", ffiqt.FFI_TYPE_POINTER, convArg0, aData)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGenericReturnArgumentFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQGenericReturnArgument)
 	return gothis
+}
+
+func DeleteQGenericReturnArgument(this *QGenericReturnArgument) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGenericReturnArgumentD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

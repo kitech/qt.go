@@ -44,6 +44,26 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QSequentialAnimationGroup) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool) {
+	ffiqt.SetAllInheritCallback(this, "event", f)
+}
+
+// void updateCurrentTime(int)
+func (this *QSequentialAnimationGroup) InheritUpdateCurrentTime(f func(arg0 int)) {
+	ffiqt.SetAllInheritCallback(this, "updateCurrentTime", f)
+}
+
+// void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
+func (this *QSequentialAnimationGroup) InheritUpdateState(f func(newState int, oldState int)) {
+	ffiqt.SetAllInheritCallback(this, "updateState", f)
+}
+
+// void updateDirection(class QAbstractAnimation::Direction)
+func (this *QSequentialAnimationGroup) InheritUpdateDirection(f func(direction int)) {
+	ffiqt.SetAllInheritCallback(this, "updateDirection", f)
+}
+
 type QSequentialAnimationGroup struct {
 	*QAnimationGroup
 }
@@ -94,9 +114,10 @@ func NewQSequentialAnimationGroup(parent *QObject /*777 QObject **/) *QSequentia
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSequentialAnimationGroup()
-func DeleteQSequentialAnimationGroup(*QSequentialAnimationGroup) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroupD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSequentialAnimationGroup(this *QSequentialAnimationGroup) {
+	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroupD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtCore/qsequentialanimationgroup.h:62
