@@ -85,6 +85,7 @@ func NewQMutex(mode int) *QMutex {
 // [-2] void ~QMutex()
 func DeleteQMutex(this *QMutex) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QMutexD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

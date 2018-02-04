@@ -90,6 +90,7 @@ func NewQScreenOrientationChangeEvent(screen *QScreen /*777 QScreen **/, orienta
 // [-2] void ~QScreenOrientationChangeEvent()
 func DeleteQScreenOrientationChangeEvent(this *QScreenOrientationChangeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

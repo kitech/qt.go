@@ -162,6 +162,7 @@ func NewQMessageBox_2(title *qtcore.QString, text *qtcore.QString, icon int, but
 // [-2] void ~QMessageBox()
 func DeleteQMessageBox(this *QMessageBox) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMessageBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

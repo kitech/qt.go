@@ -121,6 +121,7 @@ func NewQProxyStyle_1(key *qtcore.QString) *QProxyStyle {
 // [-2] void ~QProxyStyle()
 func DeleteQProxyStyle(this *QProxyStyle) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QProxyStyleD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

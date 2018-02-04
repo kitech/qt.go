@@ -131,6 +131,7 @@ func NewQIcon_3(engine *QIconEngine /*777 QIconEngine **/) *QIcon {
 // [-2] void ~QIcon()
 func DeleteQIcon(this *QIcon) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QIconD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

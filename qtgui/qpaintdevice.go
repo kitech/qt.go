@@ -99,6 +99,7 @@ func (*QPaintDevice) NewFromPointer(cthis unsafe.Pointer) *QPaintDevice {
 // [-2] void ~QPaintDevice()
 func DeleteQPaintDevice(this *QPaintDevice) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintDeviceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

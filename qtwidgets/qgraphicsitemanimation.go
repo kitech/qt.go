@@ -114,6 +114,7 @@ func NewQGraphicsItemAnimation(parent *qtcore.QObject /*777 QObject **/) *QGraph
 // [-2] void ~QGraphicsItemAnimation()
 func DeleteQGraphicsItemAnimation(this *QGraphicsItemAnimation) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsItemAnimationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

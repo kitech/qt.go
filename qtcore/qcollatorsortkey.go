@@ -76,6 +76,7 @@ func (*QCollatorSortKey) NewFromPointer(cthis unsafe.Pointer) *QCollatorSortKey 
 // [-2] void ~QCollatorSortKey()
 func DeleteQCollatorSortKey(this *QCollatorSortKey) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCollatorSortKeyD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

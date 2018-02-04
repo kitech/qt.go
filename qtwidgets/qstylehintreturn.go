@@ -96,6 +96,7 @@ func NewQStyleHintReturn(version int, type_ int) *QStyleHintReturn {
 // [-2] void ~QStyleHintReturn()
 func DeleteQStyleHintReturn(this *QStyleHintReturn) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStyleHintReturnD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

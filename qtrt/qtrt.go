@@ -4,6 +4,7 @@ package qtrt
 #cgo CFLAGS: -std=c11
 
 #include <stdlib.h>
+#include <string.h>
 */
 import "C"
 
@@ -18,6 +19,20 @@ import (
 func CString(s string) unsafe.Pointer  { return unsafe.Pointer(C.CString(s)) }
 func GoString(p unsafe.Pointer) string { return C.GoString((*C.char)(p)) }
 func GoStringI(p uint64) string        { return GoString(unsafe.Pointer(uintptr(p))) }
+
+var zeromem = C.calloc(1, 8096)
+
+func Cmemset(p unsafe.Pointer, c int, n int) {
+	if p != nil {
+		// C.memset(p, C.int(c), C.size_t(n))
+	}
+	if false { // 在这里也不能set了，回收的的内存有可能重新分配使用了
+		r1 := C.memcmp(p, zeromem, C.size_t(n))
+		C.memcpy(p, zeromem, C.size_t(n)) // 采用溢出副作用，而memset则会导致无效内存访问。
+		r2 := C.memcmp(p, zeromem, C.size_t(n))
+		log.Println("iszero after dtor:", r1, r2)
+	}
+}
 
 // 所有的Qt绑定类必须继承自这个
 type CObject struct {
@@ -57,7 +72,7 @@ func SetFinalizer(obj interface{}, finalizer interface{}) {
 }
 
 // 返回true表示确定
-var finalizerObjectFilterFn func(reflect.Value) bool
+var finalizerObjectFilterFn func(reflect.Value) bool = func(ov reflect.Value) bool { return true }
 
 func SetFinalizerObjectFilter(f func(reflect.Value) bool) {
 	finalizerObjectFilterFn = f

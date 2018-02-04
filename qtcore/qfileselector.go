@@ -97,6 +97,7 @@ func NewQFileSelector(parent *QObject /*777 QObject **/) *QFileSelector {
 // [-2] void ~QFileSelector()
 func DeleteQFileSelector(this *QFileSelector) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFileSelectorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

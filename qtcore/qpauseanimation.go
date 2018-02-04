@@ -118,6 +118,7 @@ func NewQPauseAnimation_1(msecs int, parent *QObject /*777 QObject **/) *QPauseA
 // [-2] void ~QPauseAnimation()
 func DeleteQPauseAnimation(this *QPauseAnimation) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QPauseAnimationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

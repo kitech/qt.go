@@ -101,6 +101,7 @@ func NewQImageIOPlugin(parent *qtcore.QObject /*777 QObject **/) *QImageIOPlugin
 // [-2] void ~QImageIOPlugin()
 func DeleteQImageIOPlugin(this *QImageIOPlugin) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QImageIOPluginD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

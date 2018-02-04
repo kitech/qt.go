@@ -101,6 +101,7 @@ func NewQIconEnginePlugin(parent *qtcore.QObject /*777 QObject **/) *QIconEngine
 // [-2] void ~QIconEnginePlugin()
 func DeleteQIconEnginePlugin(this *QIconEnginePlugin) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIconEnginePluginD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

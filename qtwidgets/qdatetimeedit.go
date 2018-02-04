@@ -216,6 +216,7 @@ func NewQDateTimeEdit_4(val *qtcore.QVariant, parserType int, parent *QWidget /*
 // [-2] void ~QDateTimeEdit()
 func DeleteQDateTimeEdit(this *QDateTimeEdit) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QDateTimeEditD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

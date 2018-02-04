@@ -130,6 +130,7 @@ func NewQPen_3(brush *QBrush, width float64, s int, c int, j int) *QPen {
 // [-2] void ~QPen()
 func DeleteQPen(this *QPen) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPenD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -195,6 +195,7 @@ func NewQBrush_8(gradient *QGradient) *QBrush {
 // [-2] void ~QBrush()
 func DeleteQBrush(this *QBrush) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

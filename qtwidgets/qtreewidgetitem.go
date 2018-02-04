@@ -195,6 +195,7 @@ func NewQTreeWidgetItem_7(parent *QTreeWidgetItem /*777 QTreeWidgetItem **/, aft
 // [-2] void ~QTreeWidgetItem()
 func DeleteQTreeWidgetItem(this *QTreeWidgetItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTreeWidgetItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 64)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

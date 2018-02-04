@@ -143,6 +143,7 @@ func NewQStateMachine_1(childMode int, parent *QObject /*777 QObject **/) *QStat
 // [-2] void ~QStateMachine()
 func DeleteQStateMachine(this *QStateMachine) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStateMachineD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -80,6 +80,7 @@ func (*QAccessibleInterface) NewFromPointer(cthis unsafe.Pointer) *QAccessibleIn
 // [-2] void ~QAccessibleInterface()
 func DeleteQAccessibleInterface(this *QAccessibleInterface) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QAccessibleInterfaceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

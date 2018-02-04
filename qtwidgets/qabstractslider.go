@@ -144,6 +144,7 @@ func NewQAbstractSlider(parent *QWidget /*777 QWidget **/) *QAbstractSlider {
 // [-2] void ~QAbstractSlider()
 func DeleteQAbstractSlider(this *QAbstractSlider) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractSliderD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

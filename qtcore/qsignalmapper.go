@@ -97,6 +97,7 @@ func NewQSignalMapper(parent *QObject /*777 QObject **/) *QSignalMapper {
 // [-2] void ~QSignalMapper()
 func DeleteQSignalMapper(this *QSignalMapper) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSignalMapperD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

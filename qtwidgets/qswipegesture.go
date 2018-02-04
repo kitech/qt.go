@@ -105,6 +105,7 @@ func NewQSwipeGesture(parent *qtcore.QObject /*777 QObject **/) *QSwipeGesture {
 // [-2] void ~QSwipeGesture()
 func DeleteQSwipeGesture(this *QSwipeGesture) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSwipeGestureD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

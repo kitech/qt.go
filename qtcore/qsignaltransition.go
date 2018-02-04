@@ -126,6 +126,7 @@ func NewQSignalTransition_1(sender *QObject /*777 const QObject **/, signal stri
 // [-2] void ~QSignalTransition()
 func DeleteQSignalTransition(this *QSignalTransition) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSignalTransitionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

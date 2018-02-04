@@ -108,6 +108,7 @@ func NewQNativeGestureEvent_1(type_ int, dev *QTouchDevice /*777 const QTouchDev
 // [-2] void ~QNativeGestureEvent()
 func DeleteQNativeGestureEvent(this *QNativeGestureEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QNativeGestureEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 112)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

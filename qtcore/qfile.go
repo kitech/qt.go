@@ -136,6 +136,7 @@ func NewQFile_3(name *QString, parent *QObject /*777 QObject **/) *QFile {
 // [-2] void ~QFile()
 func DeleteQFile(this *QFile) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFileD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

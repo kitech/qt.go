@@ -89,6 +89,7 @@ func NewQDragLeaveEvent() *QDragLeaveEvent {
 // [-2] void ~QDragLeaveEvent()
 func DeleteQDragLeaveEvent(this *QDragLeaveEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QDragLeaveEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

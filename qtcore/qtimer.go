@@ -101,6 +101,7 @@ func NewQTimer(parent *QObject /*777 QObject **/) *QTimer {
 // [-2] void ~QTimer()
 func DeleteQTimer(this *QTimer) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -109,6 +109,7 @@ func NewQGraphicsColorizeEffect(parent *qtcore.QObject /*777 QObject **/) *QGrap
 // [-2] void ~QGraphicsColorizeEffect()
 func DeleteQGraphicsColorizeEffect(this *QGraphicsColorizeEffect) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsColorizeEffectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

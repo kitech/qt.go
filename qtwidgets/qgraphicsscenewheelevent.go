@@ -93,6 +93,7 @@ func NewQGraphicsSceneWheelEvent(type_ int) *QGraphicsSceneWheelEvent {
 // [-2] void ~QGraphicsSceneWheelEvent()
 func DeleteQGraphicsSceneWheelEvent(this *QGraphicsSceneWheelEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneWheelEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

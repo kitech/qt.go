@@ -111,6 +111,7 @@ func NewQUndoCommand_1(text *qtcore.QString, parent *QUndoCommand /*777 QUndoCom
 // [-2] void ~QUndoCommand()
 func DeleteQUndoCommand(this *QUndoCommand) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommandD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

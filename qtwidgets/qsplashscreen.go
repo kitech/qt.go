@@ -132,6 +132,7 @@ func NewQSplashScreen_1(parent *QWidget /*777 QWidget **/, pixmap *qtgui.QPixmap
 // [-2] void ~QSplashScreen()
 func DeleteQSplashScreen(this *QSplashScreen) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSplashScreenD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

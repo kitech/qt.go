@@ -89,6 +89,7 @@ func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
 // [-2] void ~QFocusEvent()
 func DeleteQFocusEvent(this *QFocusEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFocusEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

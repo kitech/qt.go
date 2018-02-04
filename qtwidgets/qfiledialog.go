@@ -134,6 +134,7 @@ func NewQFileDialog_1(parent *QWidget /*777 QWidget **/, caption *qtcore.QString
 // [-2] void ~QFileDialog()
 func DeleteQFileDialog(this *QFileDialog) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFileDialogD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

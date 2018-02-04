@@ -93,6 +93,7 @@ func NewQGraphicsSceneHoverEvent(type_ int) *QGraphicsSceneHoverEvent {
 // [-2] void ~QGraphicsSceneHoverEvent()
 func DeleteQGraphicsSceneHoverEvent(this *QGraphicsSceneHoverEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneHoverEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

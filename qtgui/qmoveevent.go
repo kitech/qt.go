@@ -91,6 +91,7 @@ func NewQMoveEvent(pos *qtcore.QPoint, oldPos *qtcore.QPoint) *QMoveEvent {
 // [-2] void ~QMoveEvent()
 func DeleteQMoveEvent(this *QMoveEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMoveEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

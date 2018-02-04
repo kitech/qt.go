@@ -118,6 +118,7 @@ func NewQDirModel_1(parent *qtcore.QObject /*777 QObject **/) *QDirModel {
 // [-2] void ~QDirModel()
 func DeleteQDirModel(this *QDirModel) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDirModelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

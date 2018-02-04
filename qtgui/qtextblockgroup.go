@@ -115,6 +115,7 @@ func NewQTextBlockGroup(doc *QTextDocument /*777 QTextDocument **/) *QTextBlockG
 // [-2] void ~QTextBlockGroup()
 func DeleteQTextBlockGroup(this *QTextBlockGroup) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextBlockGroupD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

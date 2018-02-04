@@ -91,6 +91,7 @@ func NewQHelpEvent(type_ int, pos *qtcore.QPoint, globalPos *qtcore.QPoint) *QHe
 // [-2] void ~QHelpEvent()
 func DeleteQHelpEvent(this *QHelpEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHelpEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

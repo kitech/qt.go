@@ -140,6 +140,7 @@ func NewQTextStream_4(array *QByteArray, openMode int) *QTextStream {
 // [-2] void ~QTextStream()
 func DeleteQTextStream(this *QTextStream) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextStreamD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

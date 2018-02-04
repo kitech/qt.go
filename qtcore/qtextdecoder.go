@@ -102,6 +102,7 @@ func NewQTextDecoder_1(codec *QTextCodec /*777 const QTextCodec **/, flags int) 
 // [-2] void ~QTextDecoder()
 func DeleteQTextDecoder(this *QTextDecoder) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoderD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

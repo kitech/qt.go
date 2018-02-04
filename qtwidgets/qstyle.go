@@ -104,6 +104,7 @@ func NewQStyle() *QStyle {
 // [-2] void ~QStyle()
 func DeleteQStyle(this *QStyle) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QStyleD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

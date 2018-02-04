@@ -142,6 +142,7 @@ func NewQBitmap_4(fileName *qtcore.QString, format string) *QBitmap {
 // [-2] void ~QBitmap()
 func DeleteQBitmap(this *QBitmap) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmapD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

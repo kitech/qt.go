@@ -161,6 +161,7 @@ func NewQPushButton_2(icon *qtgui.QIcon, text *qtcore.QString, parent *QWidget /
 // [-2] void ~QPushButton()
 func DeleteQPushButton(this *QPushButton) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPushButtonD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

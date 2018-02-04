@@ -124,6 +124,7 @@ func NewQEventTransition_1(object *QObject /*777 QObject **/, type_ int, sourceS
 // [-2] void ~QEventTransition()
 func DeleteQEventTransition(this *QEventTransition) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventTransitionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

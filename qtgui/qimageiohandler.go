@@ -92,6 +92,7 @@ func NewQImageIOHandler() *QImageIOHandler {
 // [-2] void ~QImageIOHandler()
 func DeleteQImageIOHandler(this *QImageIOHandler) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QImageIOHandlerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -119,6 +119,7 @@ func NewQFont_2(arg0 *QFont, pd *QPaintDevice /*777 QPaintDevice **/) *QFont {
 // [-2] void ~QFont()
 func DeleteQFont(this *QFont) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFontD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

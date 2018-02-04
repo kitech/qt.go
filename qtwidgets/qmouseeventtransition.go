@@ -127,6 +127,7 @@ func NewQMouseEventTransition_1(object *qtcore.QObject /*777 QObject **/, type_ 
 // [-2] void ~QMouseEventTransition()
 func DeleteQMouseEventTransition(this *QMouseEventTransition) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QMouseEventTransitionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

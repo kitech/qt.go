@@ -134,6 +134,7 @@ func NewQStatusBar(parent *QWidget /*777 QWidget **/) *QStatusBar {
 // [-2] void ~QStatusBar()
 func DeleteQStatusBar(this *QStatusBar) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBarD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

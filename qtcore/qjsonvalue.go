@@ -202,6 +202,7 @@ func NewQJsonValue_9(o *QJsonObject) *QJsonValue {
 // [-2] void ~QJsonValue()
 func DeleteQJsonValue(this *QJsonValue) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonValueD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

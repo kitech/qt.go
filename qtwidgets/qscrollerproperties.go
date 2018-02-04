@@ -96,6 +96,7 @@ func NewQScrollerProperties() *QScrollerProperties {
 // [-2] void ~QScrollerProperties()
 func DeleteQScrollerProperties(this *QScrollerProperties) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollerPropertiesD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

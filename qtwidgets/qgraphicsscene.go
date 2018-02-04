@@ -239,6 +239,7 @@ func NewQGraphicsScene_2(x float64, y float64, width float64, height float64, pa
 // [-2] void ~QGraphicsScene()
 func DeleteQGraphicsScene(this *QGraphicsScene) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsSceneD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

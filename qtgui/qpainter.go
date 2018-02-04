@@ -105,6 +105,7 @@ func NewQPainter_1(arg0 *QPaintDevice /*777 QPaintDevice **/) *QPainter {
 // [-2] void ~QPainter()
 func DeleteQPainter(this *QPainter) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPainterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

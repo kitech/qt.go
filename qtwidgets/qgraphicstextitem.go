@@ -230,6 +230,7 @@ func NewQGraphicsTextItem_1(text *qtcore.QString, parent *QGraphicsItem /*777 QG
 // [-2] void ~QGraphicsTextItem()
 func DeleteQGraphicsTextItem(this *QGraphicsTextItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsTextItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

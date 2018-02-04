@@ -122,6 +122,7 @@ func NewQGraphicsPolygonItem_1(polygon *qtgui.QPolygonF, parent *QGraphicsItem /
 // [-2] void ~QGraphicsPolygonItem()
 func DeleteQGraphicsPolygonItem(this *QGraphicsPolygonItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsPolygonItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

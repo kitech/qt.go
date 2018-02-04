@@ -205,6 +205,7 @@ func NewQWindow_1(parent *QWindow /*777 QWindow **/) *QWindow {
 // [-2] void ~QWindow()
 func DeleteQWindow(this *QWindow) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindowD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

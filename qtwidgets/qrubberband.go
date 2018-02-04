@@ -139,6 +139,7 @@ func NewQRubberBand(arg0 int, arg1 *QWidget /*777 QWidget **/) *QRubberBand {
 // [-2] void ~QRubberBand()
 func DeleteQRubberBand(this *QRubberBand) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QRubberBandD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

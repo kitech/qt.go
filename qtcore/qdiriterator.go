@@ -129,6 +129,7 @@ func NewQDirIterator_3(path *QString, nameFilters *QStringList, filters int, fla
 // [-2] void ~QDirIterator()
 func DeleteQDirIterator(this *QDirIterator) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QDirIteratorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

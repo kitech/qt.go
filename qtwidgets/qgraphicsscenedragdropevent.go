@@ -93,6 +93,7 @@ func NewQGraphicsSceneDragDropEvent(type_ int) *QGraphicsSceneDragDropEvent {
 // [-2] void ~QGraphicsSceneDragDropEvent()
 func DeleteQGraphicsSceneDragDropEvent(this *QGraphicsSceneDragDropEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QGraphicsSceneDragDropEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

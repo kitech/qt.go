@@ -128,6 +128,7 @@ func NewQFileInfo_3(dir *QDir, file *QString) *QFileInfo {
 // [-2] void ~QFileInfo()
 func DeleteQFileInfo(this *QFileInfo) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFileInfoD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

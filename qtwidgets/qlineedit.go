@@ -202,6 +202,7 @@ func NewQLineEdit_1(arg0 *qtcore.QString, parent *QWidget /*777 QWidget **/) *QL
 // [-2] void ~QLineEdit()
 func DeleteQLineEdit(this *QLineEdit) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLineEditD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

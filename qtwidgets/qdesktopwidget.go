@@ -108,6 +108,7 @@ func NewQDesktopWidget() *QDesktopWidget {
 // [-2] void ~QDesktopWidget()
 func DeleteQDesktopWidget(this *QDesktopWidget) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDesktopWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -114,6 +114,7 @@ func NewQRegularExpressionValidator_1(re *qtcore.QRegularExpression, parent *qtc
 // [-2] void ~QRegularExpressionValidator()
 func DeleteQRegularExpressionValidator(this *QRegularExpressionValidator) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QRegularExpressionValidatorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

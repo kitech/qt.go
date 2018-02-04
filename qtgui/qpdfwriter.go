@@ -125,6 +125,7 @@ func NewQPdfWriter_1(device *qtcore.QIODevice /*777 QIODevice **/) *QPdfWriter {
 // [-2] void ~QPdfWriter()
 func DeleteQPdfWriter(this *QPdfWriter) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPdfWriterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

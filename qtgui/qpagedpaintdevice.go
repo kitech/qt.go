@@ -93,6 +93,7 @@ func NewQPagedPaintDevice() *QPagedPaintDevice {
 // [-2] void ~QPagedPaintDevice()
 func DeleteQPagedPaintDevice(this *QPagedPaintDevice) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QPagedPaintDeviceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

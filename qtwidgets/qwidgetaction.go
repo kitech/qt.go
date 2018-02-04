@@ -124,6 +124,7 @@ func NewQWidgetAction(parent *qtcore.QObject /*777 QObject **/) *QWidgetAction {
 // [-2] void ~QWidgetAction()
 func DeleteQWidgetAction(this *QWidgetAction) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QWidgetActionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

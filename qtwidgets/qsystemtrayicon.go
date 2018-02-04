@@ -122,6 +122,7 @@ func NewQSystemTrayIcon_1(icon *qtgui.QIcon, parent *qtcore.QObject /*777 QObjec
 // [-2] void ~QSystemTrayIcon()
 func DeleteQSystemTrayIcon(this *QSystemTrayIcon) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIconD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

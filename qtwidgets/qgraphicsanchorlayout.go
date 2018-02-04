@@ -98,6 +98,7 @@ func NewQGraphicsAnchorLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutI
 // [-2] void ~QGraphicsAnchorLayout()
 func DeleteQGraphicsAnchorLayout(this *QGraphicsAnchorLayout) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsAnchorLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

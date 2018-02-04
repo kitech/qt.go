@@ -105,6 +105,7 @@ func NewQStylePlugin(parent *qtcore.QObject /*777 QObject **/) *QStylePlugin {
 // [-2] void ~QStylePlugin()
 func DeleteQStylePlugin(this *QStylePlugin) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStylePluginD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

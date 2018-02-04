@@ -171,6 +171,7 @@ func NewQPalette_5(windowText *QColor, window *QColor, light *QColor, dark *QCol
 // [-2] void ~QPalette()
 func DeleteQPalette(this *QPalette) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPaletteD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

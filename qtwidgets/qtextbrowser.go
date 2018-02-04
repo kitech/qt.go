@@ -144,6 +144,7 @@ func NewQTextBrowser(parent *QWidget /*777 QWidget **/) *QTextBrowser {
 // [-2] void ~QTextBrowser()
 func DeleteQTextBrowser(this *QTextBrowser) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextBrowserD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

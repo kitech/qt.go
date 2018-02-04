@@ -146,6 +146,7 @@ func NewQTableWidget_1(rows int, columns int, parent *QWidget /*777 QWidget **/)
 // [-2] void ~QTableWidget()
 func DeleteQTableWidget(this *QTableWidget) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTableWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

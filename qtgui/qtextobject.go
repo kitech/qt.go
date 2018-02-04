@@ -105,6 +105,7 @@ func NewQTextObject(doc *QTextDocument /*777 QTextDocument **/) *QTextObject {
 // [-2] void ~QTextObject()
 func DeleteQTextObject(this *QTextObject) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextObjectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -89,6 +89,7 @@ func NewQMessageAuthenticationCode(method int, key *QByteArray) *QMessageAuthent
 // [-2] void ~QMessageAuthenticationCode()
 func DeleteQMessageAuthenticationCode(this *QMessageAuthenticationCode) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QMessageAuthenticationCodeD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

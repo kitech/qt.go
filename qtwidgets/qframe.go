@@ -129,6 +129,7 @@ func NewQFrame(parent *QWidget /*777 QWidget **/, f int) *QFrame {
 // [-2] void ~QFrame()
 func DeleteQFrame(this *QFrame) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QFrameD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

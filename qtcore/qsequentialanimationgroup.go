@@ -116,6 +116,7 @@ func NewQSequentialAnimationGroup(parent *QObject /*777 QObject **/) *QSequentia
 // [-2] void ~QSequentialAnimationGroup()
 func DeleteQSequentialAnimationGroup(this *QSequentialAnimationGroup) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QSequentialAnimationGroupD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

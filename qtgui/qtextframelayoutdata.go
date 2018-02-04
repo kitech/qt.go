@@ -80,6 +80,7 @@ func (*QTextFrameLayoutData) NewFromPointer(cthis unsafe.Pointer) *QTextFrameLay
 // [-2] void ~QTextFrameLayoutData()
 func DeleteQTextFrameLayoutData(this *QTextFrameLayoutData) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextFrameLayoutDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -157,6 +157,7 @@ func NewQSyntaxHighlighter_1(parent *QTextDocument /*777 QTextDocument **/) *QSy
 // [-2] void ~QSyntaxHighlighter()
 func DeleteQSyntaxHighlighter(this *QSyntaxHighlighter) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSyntaxHighlighterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

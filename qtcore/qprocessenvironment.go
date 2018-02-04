@@ -88,6 +88,7 @@ func NewQProcessEnvironment() *QProcessEnvironment {
 // [-2] void ~QProcessEnvironment()
 func DeleteQProcessEnvironment(this *QProcessEnvironment) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QProcessEnvironmentD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

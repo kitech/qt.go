@@ -86,6 +86,7 @@ func NewQDynamicPropertyChangeEvent(name *QByteArray) *QDynamicPropertyChangeEve
 // [-2] void ~QDynamicPropertyChangeEvent()
 func DeleteQDynamicPropertyChangeEvent(this *QDynamicPropertyChangeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

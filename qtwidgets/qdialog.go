@@ -139,6 +139,7 @@ func NewQDialog(parent *QWidget /*777 QWidget **/, f int) *QDialog {
 // [-2] void ~QDialog()
 func DeleteQDialog(this *QDialog) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QDialogD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -88,6 +88,7 @@ func NewQBasicTimer() *QBasicTimer {
 // [-2] void ~QBasicTimer()
 func DeleteQBasicTimer(this *QBasicTimer) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QBasicTimerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 4)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

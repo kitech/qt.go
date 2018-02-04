@@ -134,6 +134,7 @@ func NewQWizard(parent *QWidget /*777 QWidget **/, flags int) *QWizard {
 // [-2] void ~QWizard()
 func DeleteQWizard(this *QWizard) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWizardD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

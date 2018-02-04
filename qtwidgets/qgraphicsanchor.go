@@ -142,6 +142,7 @@ func (this *QGraphicsAnchor) SizePolicy() int {
 // [-2] void ~QGraphicsAnchor()
 func DeleteQGraphicsAnchor(this *QGraphicsAnchor) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsAnchorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

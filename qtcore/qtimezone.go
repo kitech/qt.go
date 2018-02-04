@@ -129,6 +129,7 @@ func NewQTimeZone_3(zoneId *QByteArray, offsetSeconds int, name *QString, abbrev
 // [-2] void ~QTimeZone()
 func DeleteQTimeZone(this *QTimeZone) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeZoneD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

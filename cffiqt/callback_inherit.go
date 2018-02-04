@@ -14,6 +14,7 @@ import (
 	"log"
 	"reflect"
 	"regexp"
+	"strings"
 	"unsafe"
 
 	"github.com/therecipe/qt"
@@ -52,7 +53,7 @@ func CallbackAllInherits(cbobj unsafe.Pointer, name string, args ...interface{})
 	if signal := qt.GetSignal(cbobj, name); signal != nil {
 		return signal.(func(...interface{}) interface{})(args...)
 	} else {
-		gopp.NilPrint(nil, "not found sigobj:", cbobj, name, args)
+		// gopp.NilPrint(nil, "not found sigobj:", cbobj, name, args)
 	}
 
 	return nil
@@ -140,7 +141,9 @@ func callbackAllInherits(cbobj unsafe.Pointer, iname *C.char, handled *C.int, ar
 }
 
 func callbackAllInheritsGo(cbobj unsafe.Pointer, name string, handled *int, argc int, pargs ...uint64) uint64 {
-	log.Println(cbobj, name, handled, argc, pargs)
+	if !strings.Contains(strings.ToLower(name), "event") {
+		log.Println(cbobj, name, handled, argc, pargs)
+	}
 
 	if signal := qt.GetSignal(cbobj, name); signal != nil {
 		*handled = 1
@@ -172,7 +175,8 @@ func callbackAllInheritsGo(cbobj unsafe.Pointer, name string, handled *int, argc
 			return rv.(uint64)
 		}
 	} else {
-		gopp.NilPrint(nil, "not found sigobj:", cbobj, name, pargs)
+		// 这个函数还是比较可靠的，没有找到那一定是没有了
+		// gopp.NilPrint(nil, "not found sigobj:", cbobj, name, pargs)
 	}
 
 	return 0

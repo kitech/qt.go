@@ -88,6 +88,7 @@ func NewQJsonObject() *QJsonObject {
 // [-2] void ~QJsonObject()
 func DeleteQJsonObject(this *QJsonObject) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QJsonObjectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

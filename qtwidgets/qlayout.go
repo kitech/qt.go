@@ -148,6 +148,7 @@ func NewQLayout_1() *QLayout {
 // [-2] void ~QLayout()
 func DeleteQLayout(this *QLayout) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

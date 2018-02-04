@@ -101,6 +101,7 @@ func NewQSocketNotifier(socket int64, arg1 int, parent *QObject /*777 QObject **
 // [-2] void ~QSocketNotifier()
 func DeleteQSocketNotifier(this *QSocketNotifier) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifierD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

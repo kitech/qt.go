@@ -257,6 +257,7 @@ func NewQTextEdit_1(text *qtcore.QString, parent *QWidget /*777 QWidget **/) *QT
 // [-2] void ~QTextEdit()
 func DeleteQTextEdit(this *QTextEdit) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextEditD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

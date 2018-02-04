@@ -93,6 +93,7 @@ func NewQSpacerItem(w int, h int, hData int, vData int) *QSpacerItem {
 // [-2] void ~QSpacerItem()
 func DeleteQSpacerItem(this *QSpacerItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

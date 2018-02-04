@@ -105,6 +105,7 @@ func NewQStaticText_1(text *qtcore.QString) *QStaticText {
 // [-2] void ~QStaticText()
 func DeleteQStaticText(this *QStaticText) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStaticTextD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

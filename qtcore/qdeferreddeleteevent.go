@@ -85,6 +85,7 @@ func NewQDeferredDeleteEvent() *QDeferredDeleteEvent {
 // [-2] void ~QDeferredDeleteEvent()
 func DeleteQDeferredDeleteEvent(this *QDeferredDeleteEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QDeferredDeleteEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

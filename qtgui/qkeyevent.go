@@ -103,6 +103,7 @@ func NewQKeyEvent_1(type_ int, key int, modifiers int, nativeScanCode uint, nati
 // [-2] void ~QKeyEvent()
 func DeleteQKeyEvent(this *QKeyEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QKeyEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 64)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

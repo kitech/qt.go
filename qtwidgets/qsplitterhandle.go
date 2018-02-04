@@ -144,6 +144,7 @@ func NewQSplitterHandle(o int, parent *QSplitter /*777 QSplitter **/) *QSplitter
 // [-2] void ~QSplitterHandle()
 func DeleteQSplitterHandle(this *QSplitterHandle) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSplitterHandleD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

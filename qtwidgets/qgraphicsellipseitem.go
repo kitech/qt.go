@@ -135,6 +135,7 @@ func NewQGraphicsEllipseItem_2(x float64, y float64, w float64, h float64, paren
 // [-2] void ~QGraphicsEllipseItem()
 func DeleteQGraphicsEllipseItem(this *QGraphicsEllipseItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsEllipseItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

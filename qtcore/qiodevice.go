@@ -132,6 +132,7 @@ func NewQIODevice_1(parent *QObject /*777 QObject **/) *QIODevice {
 // [-2] void ~QIODevice()
 func DeleteQIODevice(this *QIODevice) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QIODeviceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

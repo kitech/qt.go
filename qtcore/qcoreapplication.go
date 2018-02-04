@@ -101,6 +101,7 @@ func NewQCoreApplication(argc int, argv []string, arg2 int) *QCoreApplication {
 // [-2] void ~QCoreApplication()
 func DeleteQCoreApplication(this *QCoreApplication) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QCoreApplicationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

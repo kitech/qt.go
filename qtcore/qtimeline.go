@@ -101,6 +101,7 @@ func NewQTimeLine(duration int, parent *QObject /*777 QObject **/) *QTimeLine {
 // [-2] void ~QTimeLine()
 func DeleteQTimeLine(this *QTimeLine) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLineD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -289,6 +289,7 @@ func (this *QAccessibleWidget) DoAction(actionName *qtcore.QString) {
 // [-2] void ~QAccessibleWidget()
 func DeleteQAccessibleWidget(this *QAccessibleWidget) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

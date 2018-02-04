@@ -126,6 +126,7 @@ func NewQByteArray_3(size int, arg1 int) *QByteArray {
 // [-2] void ~QByteArray()
 func DeleteQByteArray(this *QByteArray) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArrayD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

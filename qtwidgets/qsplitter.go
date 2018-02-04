@@ -156,6 +156,7 @@ func NewQSplitter_1(arg0 int, parent *QWidget /*777 QWidget **/) *QSplitter {
 // [-2] void ~QSplitter()
 func DeleteQSplitter(this *QSplitter) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSplitterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

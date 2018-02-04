@@ -120,6 +120,7 @@ func NewQFontMetricsF_2(arg0 *QFontMetrics) *QFontMetricsF {
 // [-2] void ~QFontMetricsF()
 func DeleteQFontMetricsF(this *QFontMetricsF) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontMetricsFD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

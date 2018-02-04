@@ -132,6 +132,7 @@ func NewQPageSize_3(size *qtcore.QSizeF, units int, name *qtcore.QString, matchP
 // [-2] void ~QPageSize()
 func DeleteQPageSize(this *QPageSize) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QPageSizeD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

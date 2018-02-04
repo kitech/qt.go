@@ -156,6 +156,7 @@ func NewQCommandLinkButton_2(text *qtcore.QString, description *qtcore.QString, 
 // [-2] void ~QCommandLinkButton()
 func DeleteQCommandLinkButton(this *QCommandLinkButton) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLinkButtonD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

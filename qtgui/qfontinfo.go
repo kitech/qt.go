@@ -93,6 +93,7 @@ func NewQFontInfo(arg0 *QFont) *QFontInfo {
 // [-2] void ~QFontInfo()
 func DeleteQFontInfo(this *QFontInfo) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QFontInfoD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

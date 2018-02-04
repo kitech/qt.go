@@ -282,6 +282,7 @@ func NewQPlainTextEdit_1(text *qtcore.QString, parent *QWidget /*777 QWidget **/
 // [-2] void ~QPlainTextEdit()
 func DeleteQPlainTextEdit(this *QPlainTextEdit) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QPlainTextEditD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

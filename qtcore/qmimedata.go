@@ -100,6 +100,7 @@ func NewQMimeData() *QMimeData {
 // [-2] void ~QMimeData()
 func DeleteQMimeData(this *QMimeData) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

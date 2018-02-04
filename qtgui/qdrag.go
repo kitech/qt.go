@@ -101,6 +101,7 @@ func NewQDrag(dragSource *qtcore.QObject /*777 QObject **/) *QDrag {
 // [-2] void ~QDrag()
 func DeleteQDrag(this *QDrag) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDragD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

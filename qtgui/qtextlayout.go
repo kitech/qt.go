@@ -133,6 +133,7 @@ func NewQTextLayout_3(b *QTextBlock) *QTextLayout {
 // [-2] void ~QTextLayout()
 func DeleteQTextLayout(this *QTextLayout) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

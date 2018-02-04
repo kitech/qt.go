@@ -124,6 +124,7 @@ func NewQFocusFrame(parent *QWidget /*777 QWidget **/) *QFocusFrame {
 // [-2] void ~QFocusFrame()
 func DeleteQFocusFrame(this *QFocusFrame) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFocusFrameD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

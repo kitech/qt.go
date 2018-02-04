@@ -116,6 +116,7 @@ func NewQVBoxLayout_1(parent *QWidget /*777 QWidget **/) *QVBoxLayout {
 // [-2] void ~QVBoxLayout()
 func DeleteQVBoxLayout(this *QVBoxLayout) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QVBoxLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

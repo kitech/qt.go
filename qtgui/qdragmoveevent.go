@@ -91,6 +91,7 @@ func NewQDragMoveEvent(pos *qtcore.QPoint, actions int, data *qtcore.QMimeData /
 // [-2] void ~QDragMoveEvent()
 func DeleteQDragMoveEvent(this *QDragMoveEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 88)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

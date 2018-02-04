@@ -113,6 +113,7 @@ func NewQIntValidator_1(bottom int, top int, parent *qtcore.QObject /*777 QObjec
 // [-2] void ~QIntValidator()
 func DeleteQIntValidator(this *QIntValidator) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QIntValidatorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

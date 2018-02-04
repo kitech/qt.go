@@ -134,6 +134,7 @@ func NewQCommandLineOption_3(names *QStringList, description *QString, valueName
 // [-2] void ~QCommandLineOption()
 func DeleteQCommandLineOption(this *QCommandLineOption) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineOptionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

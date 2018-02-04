@@ -88,6 +88,7 @@ func NewQXmlStreamNotationDeclaration() *QXmlStreamNotationDeclaration {
 // [-2] void ~QXmlStreamNotationDeclaration()
 func DeleteQXmlStreamNotationDeclaration(this *QXmlStreamNotationDeclaration) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 56)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

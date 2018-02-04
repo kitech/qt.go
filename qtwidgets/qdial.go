@@ -144,6 +144,7 @@ func NewQDial(parent *QWidget /*777 QWidget **/) *QDial {
 // [-2] void ~QDial()
 func DeleteQDial(this *QDial) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDialD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

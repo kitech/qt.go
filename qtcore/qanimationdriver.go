@@ -111,6 +111,7 @@ func NewQAnimationDriver(parent *QObject /*777 QObject **/) *QAnimationDriver {
 // [-2] void ~QAnimationDriver()
 func DeleteQAnimationDriver(this *QAnimationDriver) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriverD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

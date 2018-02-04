@@ -122,6 +122,7 @@ func NewQGraphicsPixmapItem_1(pixmap *qtgui.QPixmap, parent *QGraphicsItem /*777
 // [-2] void ~QGraphicsPixmapItem()
 func DeleteQGraphicsPixmapItem(this *QGraphicsPixmapItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsPixmapItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

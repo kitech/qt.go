@@ -119,6 +119,7 @@ func NewQStyledItemDelegate(parent *qtcore.QObject /*777 QObject **/) *QStyledIt
 // [-2] void ~QStyledItemDelegate()
 func DeleteQStyledItemDelegate(this *QStyledItemDelegate) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyledItemDelegateD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

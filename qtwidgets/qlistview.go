@@ -249,6 +249,7 @@ func NewQListView(parent *QWidget /*777 QWidget **/) *QListView {
 // [-2] void ~QListView()
 func DeleteQListView(this *QListView) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QListViewD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -152,6 +152,7 @@ func NewQCheckBox_1(text *qtcore.QString, parent *QWidget /*777 QWidget **/) *QC
 // [-2] void ~QCheckBox()
 func DeleteQCheckBox(this *QCheckBox) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCheckBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

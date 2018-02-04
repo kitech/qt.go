@@ -124,6 +124,7 @@ func NewQWizardPage(parent *QWidget /*777 QWidget **/) *QWizardPage {
 // [-2] void ~QWizardPage()
 func DeleteQWizardPage(this *QWizardPage) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWizardPageD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

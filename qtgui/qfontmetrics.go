@@ -107,6 +107,7 @@ func NewQFontMetrics_1(arg0 *QFont, pd *QPaintDevice /*777 QPaintDevice **/) *QF
 // [-2] void ~QFontMetrics()
 func DeleteQFontMetrics(this *QFontMetrics) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QFontMetricsD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

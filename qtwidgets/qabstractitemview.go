@@ -389,6 +389,7 @@ func NewQAbstractItemView(parent *QWidget /*777 QWidget **/) *QAbstractItemView 
 // [-2] void ~QAbstractItemView()
 func DeleteQAbstractItemView(this *QAbstractItemView) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractItemViewD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

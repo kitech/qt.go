@@ -89,6 +89,7 @@ func NewQIconDragEvent() *QIconDragEvent {
 // [-2] void ~QIconDragEvent()
 func DeleteQIconDragEvent(this *QIconDragEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QIconDragEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

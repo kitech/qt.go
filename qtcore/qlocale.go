@@ -125,6 +125,7 @@ func NewQLocale_3(language int, script int, country int) *QLocale {
 // [-2] void ~QLocale()
 func DeleteQLocale(this *QLocale) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QLocaleD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

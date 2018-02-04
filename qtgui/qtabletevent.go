@@ -105,6 +105,7 @@ func NewQTabletEvent_1(t int, pos *qtcore.QPointF, globalPos *qtcore.QPointF, de
 // [-2] void ~QTabletEvent()
 func DeleteQTabletEvent(this *QTabletEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTabletEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 128)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

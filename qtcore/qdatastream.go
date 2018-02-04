@@ -127,6 +127,7 @@ func NewQDataStream_3(arg0 *QByteArray) *QDataStream {
 // [-2] void ~QDataStream()
 func DeleteQDataStream(this *QDataStream) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDataStreamD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

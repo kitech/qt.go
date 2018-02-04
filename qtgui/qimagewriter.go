@@ -120,6 +120,7 @@ func NewQImageWriter_2(fileName *qtcore.QString, format *qtcore.QByteArray) *QIm
 // [-2] void ~QImageWriter()
 func DeleteQImageWriter(this *QImageWriter) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QImageWriterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

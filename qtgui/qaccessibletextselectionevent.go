@@ -103,6 +103,7 @@ func NewQAccessibleTextSelectionEvent_1(iface *QAccessibleInterface /*777 QAcces
 // [-2] void ~QAccessibleTextSelectionEvent()
 func DeleteQAccessibleTextSelectionEvent(this *QAccessibleTextSelectionEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTextSelectionEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

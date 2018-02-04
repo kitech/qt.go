@@ -131,6 +131,7 @@ func NewQUndoView_2(group *QUndoGroup /*777 QUndoGroup **/, parent *QWidget /*77
 // [-2] void ~QUndoView()
 func DeleteQUndoView(this *QUndoView) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUndoViewD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -149,6 +149,7 @@ func NewQSizeGrip(parent *QWidget /*777 QWidget **/) *QSizeGrip {
 // [-2] void ~QSizeGrip()
 func DeleteQSizeGrip(this *QSizeGrip) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSizeGripD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

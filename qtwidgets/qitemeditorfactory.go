@@ -96,6 +96,7 @@ func NewQItemEditorFactory() *QItemEditorFactory {
 // [-2] void ~QItemEditorFactory()
 func DeleteQItemEditorFactory(this *QItemEditorFactory) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QItemEditorFactoryD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

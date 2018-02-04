@@ -91,6 +91,7 @@ func NewQResizeEvent(size *qtcore.QSize, oldSize *qtcore.QSize) *QResizeEvent {
 // [-2] void ~QResizeEvent()
 func DeleteQResizeEvent(this *QResizeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QResizeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -114,6 +114,7 @@ func NewQItemSelectionModel_1(model *QAbstractItemModel /*777 QAbstractItemModel
 // [-2] void ~QItemSelectionModel()
 func DeleteQItemSelectionModel(this *QItemSelectionModel) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QItemSelectionModelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

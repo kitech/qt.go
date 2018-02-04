@@ -113,6 +113,7 @@ func NewQDoubleValidator_1(bottom float64, top float64, decimals int, parent *qt
 // [-2] void ~QDoubleValidator()
 func DeleteQDoubleValidator(this *QDoubleValidator) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDoubleValidatorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

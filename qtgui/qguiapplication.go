@@ -105,6 +105,7 @@ func NewQGuiApplication(argc int, argv []string, arg2 int) *QGuiApplication {
 // [-2] void ~QGuiApplication()
 func DeleteQGuiApplication(this *QGuiApplication) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGuiApplicationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

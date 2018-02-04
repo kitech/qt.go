@@ -89,6 +89,7 @@ func NewQPlatformSurfaceEvent(surfaceEventType int) *QPlatformSurfaceEvent {
 // [-2] void ~QPlatformSurfaceEvent()
 func DeleteQPlatformSurfaceEvent(this *QPlatformSurfaceEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPlatformSurfaceEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

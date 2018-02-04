@@ -137,6 +137,7 @@ func NewQLibrary_3(fileName *QString, version *QString, parent *QObject /*777 QO
 // [-2] void ~QLibrary()
 func DeleteQLibrary(this *QLibrary) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QLibraryD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

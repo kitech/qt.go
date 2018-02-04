@@ -101,6 +101,7 @@ func NewQRegExp_1(pattern *QString, cs int, syntax int) *QRegExp {
 // [-2] void ~QRegExp()
 func DeleteQRegExp(this *QRegExp) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegExpD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

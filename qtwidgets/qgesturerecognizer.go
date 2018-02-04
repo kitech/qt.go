@@ -96,6 +96,7 @@ func NewQGestureRecognizer() *QGestureRecognizer {
 // [-2] void ~QGestureRecognizer()
 func DeleteQGestureRecognizer(this *QGestureRecognizer) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGestureRecognizerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

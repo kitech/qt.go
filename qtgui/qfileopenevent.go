@@ -103,6 +103,7 @@ func NewQFileOpenEvent_1(url *qtcore.QUrl) *QFileOpenEvent {
 // [-2] void ~QFileOpenEvent()
 func DeleteQFileOpenEvent(this *QFileOpenEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QFileOpenEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

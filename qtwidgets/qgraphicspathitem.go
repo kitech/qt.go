@@ -122,6 +122,7 @@ func NewQGraphicsPathItem_1(path *qtgui.QPainterPath, parent *QGraphicsItem /*77
 // [-2] void ~QGraphicsPathItem()
 func DeleteQGraphicsPathItem(this *QGraphicsPathItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsPathItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

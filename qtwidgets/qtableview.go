@@ -224,6 +224,7 @@ func NewQTableView(parent *QWidget /*777 QWidget **/) *QTableView {
 // [-2] void ~QTableView()
 func DeleteQTableView(this *QTableView) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTableViewD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

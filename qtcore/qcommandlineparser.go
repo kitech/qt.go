@@ -88,6 +88,7 @@ func NewQCommandLineParser() *QCommandLineParser {
 // [-2] void ~QCommandLineParser()
 func DeleteQCommandLineParser(this *QCommandLineParser) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLineParserD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

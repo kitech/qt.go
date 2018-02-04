@@ -241,6 +241,7 @@ func NewQGraphicsItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsI
 // [-2] void ~QGraphicsItem()
 func DeleteQGraphicsItem(this *QGraphicsItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

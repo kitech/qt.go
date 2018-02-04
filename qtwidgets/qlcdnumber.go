@@ -126,6 +126,7 @@ func NewQLCDNumber_1(numDigits uint, parent *QWidget /*777 QWidget **/) *QLCDNum
 // [-2] void ~QLCDNumber()
 func DeleteQLCDNumber(this *QLCDNumber) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QLCDNumberD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

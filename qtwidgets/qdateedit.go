@@ -118,6 +118,7 @@ func NewQDateEdit_1(date *qtcore.QDate, parent *QWidget /*777 QWidget **/) *QDat
 // [-2] void ~QDateEdit()
 func DeleteQDateEdit(this *QDateEdit) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateEditD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

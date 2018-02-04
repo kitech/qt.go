@@ -114,6 +114,7 @@ func NewQSemaphoreReleaser_2(sem *QSemaphore /*777 QSemaphore **/, n int) *QSema
 // [-2] void ~QSemaphoreReleaser()
 func DeleteQSemaphoreReleaser(this *QSemaphoreReleaser) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSemaphoreReleaserD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

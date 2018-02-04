@@ -98,6 +98,7 @@ func (this *QMimeType) Swap(other *QMimeType) {
 // [-2] void ~QMimeType()
 func DeleteQMimeType(this *QMimeType) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeTypeD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

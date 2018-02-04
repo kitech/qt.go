@@ -137,6 +137,7 @@ func NewQTemporaryFile_3(templateName *QString, parent *QObject /*777 QObject **
 // [-2] void ~QTemporaryFile()
 func DeleteQTemporaryFile(this *QTemporaryFile) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFileD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

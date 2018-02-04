@@ -110,6 +110,7 @@ func NewQTreeWidgetItemIterator_1(item *QTreeWidgetItem /*777 QTreeWidgetItem **
 // [-2] void ~QTreeWidgetItemIterator()
 func DeleteQTreeWidgetItemIterator(this *QTreeWidgetItemIterator) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QTreeWidgetItemIteratorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

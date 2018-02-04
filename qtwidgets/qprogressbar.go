@@ -119,6 +119,7 @@ func NewQProgressBar(parent *QWidget /*777 QWidget **/) *QProgressBar {
 // [-2] void ~QProgressBar()
 func DeleteQProgressBar(this *QProgressBar) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QProgressBarD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

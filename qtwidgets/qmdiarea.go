@@ -154,6 +154,7 @@ func NewQMdiArea(parent *QWidget /*777 QWidget **/) *QMdiArea {
 // [-2] void ~QMdiArea()
 func DeleteQMdiArea(this *QMdiArea) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMdiAreaD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

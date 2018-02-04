@@ -93,6 +93,7 @@ func NewQGraphicsSceneResizeEvent() *QGraphicsSceneResizeEvent {
 // [-2] void ~QGraphicsSceneResizeEvent()
 func DeleteQGraphicsSceneResizeEvent(this *QGraphicsSceneResizeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QGraphicsSceneResizeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

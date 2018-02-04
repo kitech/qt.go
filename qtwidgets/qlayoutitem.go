@@ -96,6 +96,7 @@ func NewQLayoutItem(alignment int) *QLayoutItem {
 // [-2] void ~QLayoutItem()
 func DeleteQLayoutItem(this *QLayoutItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QLayoutItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

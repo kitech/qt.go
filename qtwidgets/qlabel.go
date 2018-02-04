@@ -172,6 +172,7 @@ func NewQLabel_1(text *qtcore.QString, parent *QWidget /*777 QWidget **/, f int)
 // [-2] void ~QLabel()
 func DeleteQLabel(this *QLabel) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLabelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

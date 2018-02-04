@@ -151,6 +151,7 @@ func NewQPixmap_4(xpm []string) *QPixmap {
 // [-2] void ~QPixmap()
 func DeleteQPixmap(this *QPixmap) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QPixmapD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -90,6 +90,7 @@ func NewQShortcutEvent(key *QKeySequence, id int, ambiguous bool) *QShortcutEven
 // [-2] void ~QShortcutEvent()
 func DeleteQShortcutEvent(this *QShortcutEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QShortcutEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

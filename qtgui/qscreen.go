@@ -89,6 +89,7 @@ func (this *QScreen) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 // [-2] void ~QScreen()
 func DeleteQScreen(this *QScreen) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QScreenD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

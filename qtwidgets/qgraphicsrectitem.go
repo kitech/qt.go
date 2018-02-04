@@ -135,6 +135,7 @@ func NewQGraphicsRectItem_2(x float64, y float64, w float64, h float64, parent *
 // [-2] void ~QGraphicsRectItem()
 func DeleteQGraphicsRectItem(this *QGraphicsRectItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRectItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -136,6 +136,7 @@ func NewQAction_2(icon *qtgui.QIcon, text *qtcore.QString, parent *qtcore.QObjec
 // [-2] void ~QAction()
 func DeleteQAction(this *QAction) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QActionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

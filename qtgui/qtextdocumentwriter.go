@@ -120,6 +120,7 @@ func NewQTextDocumentWriter_2(fileName *qtcore.QString, format *qtcore.QByteArra
 // [-2] void ~QTextDocumentWriter()
 func DeleteQTextDocumentWriter(this *QTextDocumentWriter) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextDocumentWriterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

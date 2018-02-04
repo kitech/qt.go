@@ -94,6 +94,7 @@ func NewQGraphicsGridLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutIte
 // [-2] void ~QGraphicsGridLayout()
 func DeleteQGraphicsGridLayout(this *QGraphicsGridLayout) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsGridLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

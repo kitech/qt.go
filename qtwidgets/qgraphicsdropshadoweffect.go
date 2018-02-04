@@ -109,6 +109,7 @@ func NewQGraphicsDropShadowEffect(parent *qtcore.QObject /*777 QObject **/) *QGr
 // [-2] void ~QGraphicsDropShadowEffect()
 func DeleteQGraphicsDropShadowEffect(this *QGraphicsDropShadowEffect) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN25QGraphicsDropShadowEffectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -204,6 +204,7 @@ func NewQAbstractSpinBox(parent *QWidget /*777 QWidget **/) *QAbstractSpinBox {
 // [-2] void ~QAbstractSpinBox()
 func DeleteQAbstractSpinBox(this *QAbstractSpinBox) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAbstractSpinBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

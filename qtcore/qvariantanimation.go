@@ -121,6 +121,7 @@ func NewQVariantAnimation(parent *QObject /*777 QObject **/) *QVariantAnimation 
 // [-2] void ~QVariantAnimation()
 func DeleteQVariantAnimation(this *QVariantAnimation) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QVariantAnimationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -113,6 +113,7 @@ func NewQStandardItemModel_1(rows int, columns int, parent *qtcore.QObject /*777
 // [-2] void ~QStandardItemModel()
 func DeleteQStandardItemModel(this *QStandardItemModel) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStandardItemModelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

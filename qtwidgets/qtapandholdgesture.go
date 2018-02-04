@@ -105,6 +105,7 @@ func NewQTapAndHoldGesture(parent *qtcore.QObject /*777 QObject **/) *QTapAndHol
 // [-2] void ~QTapAndHoldGesture()
 func DeleteQTapAndHoldGesture(this *QTapAndHoldGesture) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QTapAndHoldGestureD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

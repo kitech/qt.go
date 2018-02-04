@@ -97,6 +97,7 @@ func NewQRunnable() *QRunnable {
 // [-2] void ~QRunnable()
 func DeleteQRunnable(this *QRunnable) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QRunnableD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

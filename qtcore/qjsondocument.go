@@ -114,6 +114,7 @@ func NewQJsonDocument_2(array *QJsonArray) *QJsonDocument {
 // [-2] void ~QJsonDocument()
 func DeleteQJsonDocument(this *QJsonDocument) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonDocumentD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

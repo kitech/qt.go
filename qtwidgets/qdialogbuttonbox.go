@@ -150,6 +150,7 @@ func NewQDialogButtonBox_3(buttons int, orientation int, parent *QWidget /*777 Q
 // [-2] void ~QDialogButtonBox()
 func DeleteQDialogButtonBox(this *QDialogButtonBox) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDialogButtonBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

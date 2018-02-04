@@ -388,6 +388,7 @@ func NewQTextCodec() *QTextCodec {
 // [-2] void ~QTextCodec()
 func DeleteQTextCodec(this *QTextCodec) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextCodecD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

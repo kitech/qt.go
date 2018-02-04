@@ -122,6 +122,7 @@ func NewQPictureIO_2(fileName *qtcore.QString, format string) *QPictureIO {
 // [-2] void ~QPictureIO()
 func DeleteQPictureIO(this *QPictureIO) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QPictureIOD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

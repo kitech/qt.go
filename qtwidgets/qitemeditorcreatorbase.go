@@ -84,6 +84,7 @@ func (*QItemEditorCreatorBase) NewFromPointer(cthis unsafe.Pointer) *QItemEditor
 // [-2] void ~QItemEditorCreatorBase()
 func DeleteQItemEditorCreatorBase(this *QItemEditorCreatorBase) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QItemEditorCreatorBaseD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

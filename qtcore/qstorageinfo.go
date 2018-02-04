@@ -114,6 +114,7 @@ func NewQStorageInfo_2(dir *QDir) *QStorageInfo {
 // [-2] void ~QStorageInfo()
 func DeleteQStorageInfo(this *QStorageInfo) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStorageInfoD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

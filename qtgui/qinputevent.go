@@ -89,6 +89,7 @@ func NewQInputEvent(type_ int, modifiers int) *QInputEvent {
 // [-2] void ~QInputEvent()
 func DeleteQInputEvent(this *QInputEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QInputEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -97,6 +97,7 @@ func NewQThreadPool(parent *QObject /*777 QObject **/) *QThreadPool {
 // [-2] void ~QThreadPool()
 func DeleteQThreadPool(this *QThreadPool) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPoolD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

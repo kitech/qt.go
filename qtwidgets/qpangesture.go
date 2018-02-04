@@ -105,6 +105,7 @@ func NewQPanGesture(parent *qtcore.QObject /*777 QObject **/) *QPanGesture {
 // [-2] void ~QPanGesture()
 func DeleteQPanGesture(this *QPanGesture) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPanGestureD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

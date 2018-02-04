@@ -91,6 +91,7 @@ func NewQScrollEvent(contentPos *qtcore.QPointF, overshoot *qtcore.QPointF, scro
 // [-2] void ~QScrollEvent()
 func DeleteQScrollEvent(this *QScrollEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QScrollEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 64)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

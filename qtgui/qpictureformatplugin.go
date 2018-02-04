@@ -101,6 +101,7 @@ func NewQPictureFormatPlugin(parent *qtcore.QObject /*777 QObject **/) *QPicture
 // [-2] void ~QPictureFormatPlugin()
 func DeleteQPictureFormatPlugin(this *QPictureFormatPlugin) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QPictureFormatPluginD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

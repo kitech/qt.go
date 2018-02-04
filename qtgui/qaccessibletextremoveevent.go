@@ -105,6 +105,7 @@ func NewQAccessibleTextRemoveEvent_1(iface *QAccessibleInterface /*777 QAccessib
 // [-2] void ~QAccessibleTextRemoveEvent()
 func DeleteQAccessibleTextRemoveEvent(this *QAccessibleTextRemoveEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextRemoveEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

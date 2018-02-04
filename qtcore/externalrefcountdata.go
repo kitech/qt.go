@@ -88,6 +88,7 @@ func NewExternalRefCountData(arg0 int) *ExternalRefCountData {
 // [-2] void ~ExternalRefCountData()
 func DeleteExternalRefCountData(this *ExternalRefCountData) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QtSharedPointer20ExternalRefCountDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

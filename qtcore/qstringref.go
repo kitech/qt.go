@@ -114,6 +114,7 @@ func NewQStringRef_2(string *QString /*777 const QString **/) *QStringRef {
 // [-2] void ~QStringRef()
 func DeleteQStringRef(this *QStringRef) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStringRefD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -88,6 +88,7 @@ func NewQRegularExpressionMatch() *QRegularExpressionMatch {
 // [-2] void ~QRegularExpressionMatch()
 func DeleteQRegularExpressionMatch(this *QRegularExpressionMatch) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QRegularExpressionMatchD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

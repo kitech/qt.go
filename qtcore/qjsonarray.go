@@ -88,6 +88,7 @@ func NewQJsonArray() *QJsonArray {
 // [-2] void ~QJsonArray()
 func DeleteQJsonArray(this *QJsonArray) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QJsonArrayD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

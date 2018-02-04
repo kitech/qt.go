@@ -156,6 +156,7 @@ func NewQSettings_4(parent *QObject /*777 QObject **/) *QSettings {
 // [-2] void ~QSettings()
 func DeleteQSettings(this *QSettings) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSettingsD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

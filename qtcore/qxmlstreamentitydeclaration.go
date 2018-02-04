@@ -88,6 +88,7 @@ func NewQXmlStreamEntityDeclaration() *QXmlStreamEntityDeclaration {
 // [-2] void ~QXmlStreamEntityDeclaration()
 func DeleteQXmlStreamEntityDeclaration(this *QXmlStreamEntityDeclaration) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QXmlStreamEntityDeclarationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 88)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

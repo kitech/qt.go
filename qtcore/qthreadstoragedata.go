@@ -76,6 +76,7 @@ func (*QThreadStorageData) NewFromPointer(cthis unsafe.Pointer) *QThreadStorageD
 // [-2] void ~QThreadStorageData()
 func DeleteQThreadStorageData(this *QThreadStorageData) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QThreadStorageDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 4)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

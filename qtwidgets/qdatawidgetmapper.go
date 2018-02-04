@@ -105,6 +105,7 @@ func NewQDataWidgetMapper(parent *qtcore.QObject /*777 QObject **/) *QDataWidget
 // [-2] void ~QDataWidgetMapper()
 func DeleteQDataWidgetMapper(this *QDataWidgetMapper) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QDataWidgetMapperD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

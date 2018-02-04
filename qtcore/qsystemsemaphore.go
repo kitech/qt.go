@@ -89,6 +89,7 @@ func NewQSystemSemaphore(key *QString, initialValue int, mode int) *QSystemSemap
 // [-2] void ~QSystemSemaphore()
 func DeleteQSystemSemaphore(this *QSystemSemaphore) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSystemSemaphoreD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -92,6 +92,7 @@ func NewQEnterEvent(localPos *qtcore.QPointF, windowPos *qtcore.QPointF, screenP
 // [-2] void ~QEnterEvent()
 func DeleteQEnterEvent(this *QEnterEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QEnterEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 72)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

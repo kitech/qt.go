@@ -174,6 +174,7 @@ func NewQColumnView(parent *QWidget /*777 QWidget **/) *QColumnView {
 // [-2] void ~QColumnView()
 func DeleteQColumnView(this *QColumnView) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QColumnViewD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

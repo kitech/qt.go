@@ -118,6 +118,7 @@ func NewQTimeEdit_1(time *qtcore.QTime, parent *QWidget /*777 QWidget **/) *QTim
 // [-2] void ~QTimeEdit()
 func DeleteQTimeEdit(this *QTimeEdit) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeEditD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

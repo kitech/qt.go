@@ -89,6 +89,7 @@ func NewQToolBarChangeEvent(t bool) *QToolBarChangeEvent {
 // [-2] void ~QToolBarChangeEvent()
 func DeleteQToolBarChangeEvent(this *QToolBarChangeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QToolBarChangeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

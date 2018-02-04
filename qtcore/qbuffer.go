@@ -129,6 +129,7 @@ func NewQBuffer_1(buf *QByteArray /*777 QByteArray **/, parent *QObject /*777 QO
 // [-2] void ~QBuffer()
 func DeleteQBuffer(this *QBuffer) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBufferD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

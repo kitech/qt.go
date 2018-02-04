@@ -109,6 +109,7 @@ func NewQPlainTextDocumentLayout(document *qtgui.QTextDocument /*777 QTextDocume
 // [-2] void ~QPlainTextDocumentLayout()
 func DeleteQPlainTextDocumentLayout(this *QPlainTextDocumentLayout) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

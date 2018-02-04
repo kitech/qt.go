@@ -101,6 +101,7 @@ func NewQTextFrame(doc *QTextDocument /*777 QTextDocument **/) *QTextFrame {
 // [-2] void ~QTextFrame()
 func DeleteQTextFrame(this *QTextFrame) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextFrameD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -89,6 +89,7 @@ func NewQWriteLocker(readWriteLock *QReadWriteLock /*777 QReadWriteLock **/) *QW
 // [-2] void ~QWriteLocker()
 func DeleteQWriteLocker(this *QWriteLocker) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QWriteLockerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -94,6 +94,7 @@ func NewQWidgetItemV2(widget *QWidget /*777 QWidget **/) *QWidgetItemV2 {
 // [-2] void ~QWidgetItemV2()
 func DeleteQWidgetItemV2(this *QWidgetItemV2) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QWidgetItemV2D2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 88)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

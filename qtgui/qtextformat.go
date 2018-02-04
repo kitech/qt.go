@@ -104,6 +104,7 @@ func NewQTextFormat_1(type_ int) *QTextFormat {
 // [-2] void ~QTextFormat()
 func DeleteQTextFormat(this *QTextFormat) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextFormatD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -174,6 +174,7 @@ func NewQAbstractButton(parent *QWidget /*777 QWidget **/) *QAbstractButton {
 // [-2] void ~QAbstractButton()
 func DeleteQAbstractButton(this *QAbstractButton) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAbstractButtonD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

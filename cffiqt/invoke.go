@@ -86,7 +86,10 @@ import (
 	"gopp"
 	"log"
 	"reflect"
+	"regexp"
+	"runtime"
 	"strings"
+	"sync"
 	"unsafe"
 
 	"github.com/gonuts/ffi"
@@ -206,6 +209,7 @@ func InvokeQtFunc5(symname string, retype byte, argc int, types []byte, args []u
 }
 
 func InvokeQtFunc6(symname string, retype byte, args ...interface{}) (VRetype, error) {
+	rawname := symname
 	addr := GetQtSymAddr(symname)
 	log.Println("FFI Call:", symname, addr, "retype=", retype, "argc=", len(args))
 
@@ -214,6 +218,7 @@ func InvokeQtFunc6(symname string, retype byte, args ...interface{}) (VRetype, e
 	C.ffi_call_ex(addr, C.int(retype), &retval, C.int(len(argtys)),
 		(*C.uint8_t)(&argtys[0]), (*C.uint64_t)(&argvals[0]))
 
+	onCtorAlloc(rawname)
 	return uint64(retval), nil
 }
 
@@ -326,15 +331,6 @@ func convRetval(retype byte, retval interface{}) interface{} {
 	return retval
 }
 
-func test() {
-	var ret VRetype
-	var err error
-	ret, err = InvokeQtFunc("_Z5qrandv", 0, nil)
-	log.Println(ret, err)
-	// ret, err = InvokeQtFunc("_Z6qsrandj", nil, nil)
-	// log.Println(ret, err)
-}
-
 const (
 	FFI_TYPE_VOID       = byte(C.FFI_TYPE_VOID)
 	FFI_TYPE_INT        = byte(C.FFI_TYPE_INT)
@@ -355,3 +351,66 @@ const (
 )
 
 func KeepMe() {}
+
+var ctorAllocStacks = map[string][]uintptr{}
+var ctorAllocStacksMu sync.Mutex
+
+func onCtorAlloc(symname string) {
+	f := func(clsname string) {
+		var pc [16]uintptr
+		n := runtime.Callers(2, pc[:])
+		_ = n
+		ctorAllocStacksMu.Lock()
+		ctorAllocStacks[clsname] = pc[:]
+		ctorAllocStacksMu.Unlock()
+	}
+
+	if strings.Index(symname, "C2") > 0 {
+		tmp1 := strings.Split(symname, "C2")[0]
+		if strings.Index(tmp1, "Q") > 0 {
+			tmp2 := strings.Split(tmp1, "Q")[1]
+			clsname := "Q" + tmp2
+			_ = clsname
+			// log.Println("ctor alloc:", clsname)
+
+			f(clsname)
+		}
+	}
+}
+
+// 奇怪了，正则怎么就让程序乱了呢？
+func onCtorAlloc1(symname string) {
+	reg := `_ZN(\d+)(Q.+)C2.*`
+	exp := regexp.MustCompile(reg)
+	mats := exp.FindAllStringSubmatch(symname, -1)
+	if len(mats) > 0 {
+		// var pc [16]uintptr
+		// n := runtime.Callers(2, pc[:])
+		// _ = n
+		// log.Println("fill elems:", n, symname)
+		// ctorAllocStacksMu.Lock()
+		// ctorAllocStacks[mats[0][2]] = pc[:]
+		// ctorAllocStacksMu.Unlock()
+	} else {
+		// log.Println("not match ctor: ", symname)
+	}
+}
+
+func GetCtorAllocStack(clsname string) []uintptr {
+	// ctorAllocStacksMu.Lock()
+	// defer ctorAllocStacksMu.Unlock()
+	if stk, ok := ctorAllocStacks[clsname]; ok {
+		return stk
+	}
+	return nil
+}
+
+///
+func test() {
+	var ret VRetype
+	var err error
+	ret, err = InvokeQtFunc("_Z5qrandv", 0, nil)
+	log.Println(ret, err)
+	// ret, err = InvokeQtFunc("_Z6qsrandj", nil, nil)
+	// log.Println(ret, err)
+}

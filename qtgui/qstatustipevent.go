@@ -90,6 +90,7 @@ func NewQStatusTipEvent(tip *qtcore.QString) *QStatusTipEvent {
 // [-2] void ~QStatusTipEvent()
 func DeleteQStatusTipEvent(this *QStatusTipEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QStatusTipEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

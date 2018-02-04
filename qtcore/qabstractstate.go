@@ -99,6 +99,7 @@ func (this *QAbstractState) MetaObject() *QMetaObject /*777 const QMetaObject **
 // [-2] void ~QAbstractState()
 func DeleteQAbstractState(this *QAbstractState) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QAbstractStateD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

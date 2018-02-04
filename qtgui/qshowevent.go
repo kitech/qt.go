@@ -89,6 +89,7 @@ func NewQShowEvent() *QShowEvent {
 // [-2] void ~QShowEvent()
 func DeleteQShowEvent(this *QShowEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QShowEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

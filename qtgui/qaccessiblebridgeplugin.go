@@ -101,6 +101,7 @@ func NewQAccessibleBridgePlugin(parent *qtcore.QObject /*777 QObject **/) *QAcce
 // [-2] void ~QAccessibleBridgePlugin()
 func DeleteQAccessibleBridgePlugin(this *QAccessibleBridgePlugin) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QAccessibleBridgePluginD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

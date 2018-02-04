@@ -129,6 +129,7 @@ func NewQSaveFile_2(name *QString, parent *QObject /*777 QObject **/) *QSaveFile
 // [-2] void ~QSaveFile()
 func DeleteQSaveFile(this *QSaveFile) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSaveFileD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

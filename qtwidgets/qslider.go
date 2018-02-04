@@ -141,6 +141,7 @@ func NewQSlider_1(orientation int, parent *QWidget /*777 QWidget **/) *QSlider {
 // [-2] void ~QSlider()
 func DeleteQSlider(this *QSlider) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSliderD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

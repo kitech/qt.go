@@ -105,6 +105,7 @@ func NewQGraphicsRotation(parent *qtcore.QObject /*777 QObject **/) *QGraphicsRo
 // [-2] void ~QGraphicsRotation()
 func DeleteQGraphicsRotation(this *QGraphicsRotation) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsRotationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

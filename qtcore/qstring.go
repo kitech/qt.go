@@ -179,6 +179,7 @@ func NewQString_7(size int, arg1 int) *QString {
 // [-2] void ~QString()
 func DeleteQString(this *QString) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QStringD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

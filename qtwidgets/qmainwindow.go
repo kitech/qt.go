@@ -114,6 +114,7 @@ func NewQMainWindow(parent *QWidget /*777 QWidget **/, flags int) *QMainWindow {
 // [-2] void ~QMainWindow()
 func DeleteQMainWindow(this *QMainWindow) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMainWindowD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

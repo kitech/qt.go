@@ -109,6 +109,7 @@ func NewQFontComboBox(parent *QWidget /*777 QWidget **/) *QFontComboBox {
 // [-2] void ~QFontComboBox()
 func DeleteQFontComboBox(this *QFontComboBox) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QFontComboBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

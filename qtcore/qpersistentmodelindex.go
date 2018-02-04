@@ -101,6 +101,7 @@ func NewQPersistentModelIndex_1(index *QModelIndex) *QPersistentModelIndex {
 // [-2] void ~QPersistentModelIndex()
 func DeleteQPersistentModelIndex(this *QPersistentModelIndex) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QPersistentModelIndexD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

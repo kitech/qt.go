@@ -80,6 +80,7 @@ func (*QTextObjectInterface) NewFromPointer(cthis unsafe.Pointer) *QTextObjectIn
 // [-2] void ~QTextObjectInterface()
 func DeleteQTextObjectInterface(this *QTextObjectInterface) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QTextObjectInterfaceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -104,6 +104,7 @@ func NewQTextOption_1(alignment int) *QTextOption {
 // [-2] void ~QTextOption()
 func DeleteQTextOption(this *QTextOption) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextOptionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -109,6 +109,7 @@ func NewQGraphicsOpacityEffect(parent *qtcore.QObject /*777 QObject **/) *QGraph
 // [-2] void ~QGraphicsOpacityEffect()
 func DeleteQGraphicsOpacityEffect(this *QGraphicsOpacityEffect) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QGraphicsOpacityEffectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

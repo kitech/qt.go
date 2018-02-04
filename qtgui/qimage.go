@@ -181,6 +181,7 @@ func NewQImage_4(fileName *qtcore.QString, format string) *QImage {
 // [-2] void ~QImage()
 func DeleteQImage(this *QImage) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QImageD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

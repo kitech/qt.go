@@ -127,6 +127,7 @@ func NewQKeyEventTransition_1(object *qtcore.QObject /*777 QObject **/, type_ in
 // [-2] void ~QKeyEventTransition()
 func DeleteQKeyEventTransition(this *QKeyEventTransition) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QKeyEventTransitionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

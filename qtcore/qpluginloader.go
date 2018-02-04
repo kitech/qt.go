@@ -110,6 +110,7 @@ func NewQPluginLoader_1(fileName *QString, parent *QObject /*777 QObject **/) *Q
 // [-2] void ~QPluginLoader()
 func DeleteQPluginLoader(this *QPluginLoader) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoaderD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

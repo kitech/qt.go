@@ -110,6 +110,7 @@ func NewQSharedMemory_1(key *QString, parent *QObject /*777 QObject **/) *QShare
 // [-2] void ~QSharedMemory()
 func DeleteQSharedMemory(this *QSharedMemory) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSharedMemoryD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

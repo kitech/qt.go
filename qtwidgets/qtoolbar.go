@@ -142,6 +142,7 @@ func NewQToolBar_1(parent *QWidget /*777 QWidget **/) *QToolBar {
 // [-2] void ~QToolBar()
 func DeleteQToolBar(this *QToolBar) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolBarD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -101,6 +101,7 @@ func NewQTemporaryDir_1(templateName *QString) *QTemporaryDir {
 // [-2] void ~QTemporaryDir()
 func DeleteQTemporaryDir(this *QTemporaryDir) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTemporaryDirD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -93,6 +93,7 @@ func NewQGraphicsSceneMoveEvent() *QGraphicsSceneMoveEvent {
 // [-2] void ~QGraphicsSceneMoveEvent()
 func DeleteQGraphicsSceneMoveEvent(this *QGraphicsSceneMoveEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsSceneMoveEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

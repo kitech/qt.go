@@ -141,6 +141,7 @@ func NewQXmlStreamReader_4(data string) *QXmlStreamReader {
 // [-2] void ~QXmlStreamReader()
 func DeleteQXmlStreamReader(this *QXmlStreamReader) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamReaderD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

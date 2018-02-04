@@ -91,6 +91,7 @@ func NewQHoverEvent(type_ int, pos *qtcore.QPointF, oldPos *qtcore.QPointF, modi
 // [-2] void ~QHoverEvent()
 func DeleteQHoverEvent(this *QHoverEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHoverEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 64)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

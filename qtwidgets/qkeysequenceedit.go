@@ -137,6 +137,7 @@ func NewQKeySequenceEdit_1(keySequence *qtgui.QKeySequence, parent *QWidget /*77
 // [-2] void ~QKeySequenceEdit()
 func DeleteQKeySequenceEdit(this *QKeySequenceEdit) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QKeySequenceEditD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

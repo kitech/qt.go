@@ -101,6 +101,7 @@ func NewQGenericPlugin(parent *qtcore.QObject /*777 QObject **/) *QGenericPlugin
 // [-2] void ~QGenericPlugin()
 func DeleteQGenericPlugin(this *QGenericPlugin) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGenericPluginD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -101,6 +101,7 @@ func NewQTextTable(doc *QTextDocument /*777 QTextDocument **/) *QTextTable {
 // [-2] void ~QTextTable()
 func DeleteQTextTable(this *QTextTable) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTextTableD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

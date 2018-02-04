@@ -114,6 +114,7 @@ func NewQStringMatcher_2(uc *QChar /*777 const QChar **/, len int, cs int) *QStr
 // [-2] void ~QStringMatcher()
 func DeleteQStringMatcher(this *QStringMatcher) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStringMatcherD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 1048)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

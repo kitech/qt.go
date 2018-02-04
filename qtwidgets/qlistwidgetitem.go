@@ -126,6 +126,7 @@ func NewQListWidgetItem_2(icon *qtgui.QIcon, text *qtcore.QString, view *QListWi
 // [-2] void ~QListWidgetItem()
 func DeleteQListWidgetItem(this *QListWidgetItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QListWidgetItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

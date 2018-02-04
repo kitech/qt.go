@@ -144,6 +144,7 @@ func NewQDateTime_4(date *QDate, time *QTime, timeZone *QTimeZone) *QDateTime {
 // [-2] void ~QDateTime()
 func DeleteQDateTime(this *QDateTime) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QDateTimeD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

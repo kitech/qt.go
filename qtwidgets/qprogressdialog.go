@@ -143,6 +143,7 @@ func NewQProgressDialog_1(labelText *qtcore.QString, cancelButtonText *qtcore.QS
 // [-2] void ~QProgressDialog()
 func DeleteQProgressDialog(this *QProgressDialog) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QProgressDialogD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

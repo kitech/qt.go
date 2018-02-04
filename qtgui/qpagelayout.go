@@ -107,6 +107,7 @@ func NewQPageLayout_1(pageSize *QPageSize, orientation int, margins *qtcore.QMar
 // [-2] void ~QPageLayout()
 func DeleteQPageLayout(this *QPageLayout) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPageLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

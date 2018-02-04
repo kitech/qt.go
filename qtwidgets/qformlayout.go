@@ -105,6 +105,7 @@ func NewQFormLayout(parent *QWidget /*777 QWidget **/) *QFormLayout {
 // [-2] void ~QFormLayout()
 func DeleteQFormLayout(this *QFormLayout) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFormLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

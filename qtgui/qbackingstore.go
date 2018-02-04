@@ -93,6 +93,7 @@ func NewQBackingStore(window *QWindow /*777 QWindow **/) *QBackingStore {
 // [-2] void ~QBackingStore()
 func DeleteQBackingStore(this *QBackingStore) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QBackingStoreD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

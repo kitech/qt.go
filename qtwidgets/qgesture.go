@@ -105,6 +105,7 @@ func NewQGesture(parent *qtcore.QObject /*777 QObject **/) *QGesture {
 // [-2] void ~QGesture()
 func DeleteQGesture(this *QGesture) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QGestureD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

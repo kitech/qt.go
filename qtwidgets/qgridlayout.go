@@ -120,6 +120,7 @@ func NewQGridLayout_1() *QGridLayout {
 // [-2] void ~QGridLayout()
 func DeleteQGridLayout(this *QGridLayout) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QGridLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -88,6 +88,7 @@ func NewQCryptographicHash(method int) *QCryptographicHash {
 // [-2] void ~QCryptographicHash()
 func DeleteQCryptographicHash(this *QCryptographicHash) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCryptographicHashD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

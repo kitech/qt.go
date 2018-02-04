@@ -167,6 +167,7 @@ func NewQGroupBox_1(title *qtcore.QString, parent *QWidget /*777 QWidget **/) *Q
 // [-2] void ~QGroupBox()
 func DeleteQGroupBox(this *QGroupBox) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGroupBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

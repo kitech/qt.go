@@ -99,6 +99,7 @@ func NewQResource(file *QString, locale *QLocale) *QResource {
 // [-2] void ~QResource()
 func DeleteQResource(this *QResource) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QResourceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -139,6 +139,7 @@ func NewQGraphicsEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsEffe
 // [-2] void ~QGraphicsEffect()
 func DeleteQGraphicsEffect(this *QGraphicsEffect) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsEffectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

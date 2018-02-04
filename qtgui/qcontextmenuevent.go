@@ -118,6 +118,7 @@ func NewQContextMenuEvent_2(reason int, pos *qtcore.QPoint) *QContextMenuEvent {
 // [-2] void ~QContextMenuEvent()
 func DeleteQContextMenuEvent(this *QContextMenuEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QContextMenuEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 56)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

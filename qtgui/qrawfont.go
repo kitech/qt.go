@@ -118,6 +118,7 @@ func NewQRawFont_2(fontData *qtcore.QByteArray, pixelSize float64, hintingPrefer
 // [-2] void ~QRawFont()
 func DeleteQRawFont(this *QRawFont) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QRawFontD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

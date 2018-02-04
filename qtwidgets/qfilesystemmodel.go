@@ -146,6 +146,7 @@ func NewQFileSystemModel(parent *qtcore.QObject /*777 QObject **/) *QFileSystemM
 // [-2] void ~QFileSystemModel()
 func DeleteQFileSystemModel(this *QFileSystemModel) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QFileSystemModelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

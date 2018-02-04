@@ -129,6 +129,7 @@ func NewQPolygon_3(nPoints int, points unsafe.Pointer /*666*/) *QPolygon {
 // [-2] void ~QPolygon()
 func DeleteQPolygon(this *QPolygon) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPolygonD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

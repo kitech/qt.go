@@ -142,6 +142,7 @@ func NewQDockWidget_1(parent *QWidget /*777 QWidget **/, flags int) *QDockWidget
 // [-2] void ~QDockWidget()
 func DeleteQDockWidget(this *QDockWidget) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QDockWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

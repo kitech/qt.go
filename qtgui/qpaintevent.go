@@ -103,6 +103,7 @@ func NewQPaintEvent_1(paintRect *qtcore.QRect) *QPaintEvent {
 // [-2] void ~QPaintEvent()
 func DeleteQPaintEvent(this *QPaintEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPaintEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 56)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

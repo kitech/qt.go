@@ -110,6 +110,7 @@ func NewQFileSystemWatcher_1(paths *QStringList, parent *QObject /*777 QObject *
 // [-2] void ~QFileSystemWatcher()
 func DeleteQFileSystemWatcher(this *QFileSystemWatcher) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFileSystemWatcherD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

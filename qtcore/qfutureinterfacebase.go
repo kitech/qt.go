@@ -97,6 +97,7 @@ func NewQFutureInterfaceBase(initialState int) *QFutureInterfaceBase {
 // [-2] void ~QFutureInterfaceBase()
 func DeleteQFutureInterfaceBase(this *QFutureInterfaceBase) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QFutureInterfaceBaseD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

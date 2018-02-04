@@ -80,6 +80,7 @@ func (*QAccessibleBridge) NewFromPointer(cthis unsafe.Pointer) *QAccessibleBridg
 // [-2] void ~QAccessibleBridge()
 func DeleteQAccessibleBridge(this *QAccessibleBridge) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAccessibleBridgeD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

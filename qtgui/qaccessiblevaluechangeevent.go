@@ -105,6 +105,7 @@ func NewQAccessibleValueChangeEvent_1(iface *QAccessibleInterface /*777 QAccessi
 // [-2] void ~QAccessibleValueChangeEvent()
 func DeleteQAccessibleValueChangeEvent(this *QAccessibleValueChangeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleValueChangeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

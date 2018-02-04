@@ -102,6 +102,7 @@ func NewQSignalBlocker_1(o *QObject) *QSignalBlocker {
 // [-2] void ~QSignalBlocker()
 func DeleteQSignalBlocker(this *QSignalBlocker) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlockerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

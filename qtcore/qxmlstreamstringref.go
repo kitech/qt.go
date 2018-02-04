@@ -126,6 +126,7 @@ func NewQXmlStreamStringRef_3(aString unsafe.Pointer /*333*/) *QXmlStreamStringR
 // [-2] void ~QXmlStreamStringRef()
 func DeleteQXmlStreamStringRef(this *QXmlStreamStringRef) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamStringRefD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

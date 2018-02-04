@@ -90,6 +90,7 @@ func NewQScrollPrepareEvent(startPos *qtcore.QPointF) *QScrollPrepareEvent {
 // [-2] void ~QScrollPrepareEvent()
 func DeleteQScrollPrepareEvent(this *QScrollPrepareEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QScrollPrepareEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 112)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

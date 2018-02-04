@@ -111,6 +111,7 @@ func NewQAbstractTransition(sourceState *QState /*777 QState **/) *QAbstractTran
 // [-2] void ~QAbstractTransition()
 func DeleteQAbstractTransition(this *QAbstractTransition) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTransitionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

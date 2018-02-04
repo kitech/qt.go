@@ -144,6 +144,7 @@ func NewQCalendarWidget(parent *QWidget /*777 QWidget **/) *QCalendarWidget {
 // [-2] void ~QCalendarWidget()
 func DeleteQCalendarWidget(this *QCalendarWidget) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QCalendarWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

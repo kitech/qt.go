@@ -93,6 +93,7 @@ func NewQGraphicsSceneContextMenuEvent(type_ int) *QGraphicsSceneContextMenuEven
 // [-2] void ~QGraphicsSceneContextMenuEvent()
 func DeleteQGraphicsSceneContextMenuEvent(this *QGraphicsSceneContextMenuEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN30QGraphicsSceneContextMenuEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -89,6 +89,7 @@ func NewQCollator(locale *QLocale) *QCollator {
 // [-2] void ~QCollator()
 func DeleteQCollator(this *QCollator) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QCollatorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

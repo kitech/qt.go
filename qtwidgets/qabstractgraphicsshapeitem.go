@@ -94,6 +94,7 @@ func NewQAbstractGraphicsShapeItem(parent *QGraphicsItem /*777 QGraphicsItem **/
 // [-2] void ~QAbstractGraphicsShapeItem()
 func DeleteQAbstractGraphicsShapeItem(this *QAbstractGraphicsShapeItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAbstractGraphicsShapeItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

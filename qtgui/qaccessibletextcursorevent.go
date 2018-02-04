@@ -103,6 +103,7 @@ func NewQAccessibleTextCursorEvent_1(iface *QAccessibleInterface /*777 QAccessib
 // [-2] void ~QAccessibleTextCursorEvent()
 func DeleteQAccessibleTextCursorEvent(this *QAccessibleTextCursorEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextCursorEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

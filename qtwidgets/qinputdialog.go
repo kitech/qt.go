@@ -105,6 +105,7 @@ func NewQInputDialog(parent *QWidget /*777 QWidget **/, flags int) *QInputDialog
 // [-2] void ~QInputDialog()
 func DeleteQInputDialog(this *QInputDialog) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QInputDialogD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

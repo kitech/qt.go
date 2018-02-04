@@ -274,6 +274,7 @@ func NewQTreeView(parent *QWidget /*777 QWidget **/) *QTreeView {
 // [-2] void ~QTreeView()
 func DeleteQTreeView(this *QTreeView) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTreeViewD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

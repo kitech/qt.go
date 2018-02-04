@@ -96,6 +96,7 @@ func NewQObjectCleanupHandler() *QObjectCleanupHandler {
 // [-2] void ~QObjectCleanupHandler()
 func DeleteQObjectCleanupHandler(this *QObjectCleanupHandler) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

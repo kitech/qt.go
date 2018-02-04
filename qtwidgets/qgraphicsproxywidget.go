@@ -254,6 +254,7 @@ func NewQGraphicsProxyWidget(parent *QGraphicsItem /*777 QGraphicsItem **/, wFla
 // [-2] void ~QGraphicsProxyWidget()
 func DeleteQGraphicsProxyWidget(this *QGraphicsProxyWidget) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QGraphicsProxyWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

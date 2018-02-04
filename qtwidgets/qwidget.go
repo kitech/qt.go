@@ -297,6 +297,7 @@ func NewQWidget(parent *QWidget /*777 QWidget **/, f int) *QWidget {
 // [-2] void ~QWidget()
 func DeleteQWidget(this *QWidget) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -105,6 +105,7 @@ func NewQDoubleSpinBox(parent *QWidget /*777 QWidget **/) *QDoubleSpinBox {
 // [-2] void ~QDoubleSpinBox()
 func DeleteQDoubleSpinBox(this *QDoubleSpinBox) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDoubleSpinBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

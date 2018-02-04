@@ -143,6 +143,7 @@ func NewQRegion_4(bitmap *QBitmap) *QRegion {
 // [-2] void ~QRegion()
 func DeleteQRegion(this *QRegion) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QRegionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

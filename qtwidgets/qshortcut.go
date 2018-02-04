@@ -126,6 +126,7 @@ func NewQShortcut_1(key *qtgui.QKeySequence, parent *QWidget /*777 QWidget **/, 
 // [-2] void ~QShortcut()
 func DeleteQShortcut(this *QShortcut) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QShortcutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

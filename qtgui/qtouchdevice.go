@@ -92,6 +92,7 @@ func NewQTouchDevice() *QTouchDevice {
 // [-2] void ~QTouchDevice()
 func DeleteQTouchDevice(this *QTouchDevice) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTouchDeviceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

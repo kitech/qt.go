@@ -97,6 +97,7 @@ func NewQTranslator(parent *QObject /*777 QObject **/) *QTranslator {
 // [-2] void ~QTranslator()
 func DeleteQTranslator(this *QTranslator) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTranslatorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

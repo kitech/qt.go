@@ -84,6 +84,7 @@ func (*QAbstractOpenGLFunctions) NewFromPointer(cthis unsafe.Pointer) *QAbstract
 // [-2] void ~QAbstractOpenGLFunctions()
 func DeleteQAbstractOpenGLFunctions(this *QAbstractOpenGLFunctions) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctionsD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

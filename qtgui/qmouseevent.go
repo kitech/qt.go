@@ -134,6 +134,7 @@ func NewQMouseEvent_3(type_ int, localPos *qtcore.QPointF, windowPos *qtcore.QPo
 // [-2] void ~QMouseEvent()
 func DeleteQMouseEvent(this *QMouseEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QMouseEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 104)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

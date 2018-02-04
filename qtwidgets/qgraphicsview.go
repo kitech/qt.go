@@ -247,6 +247,7 @@ func NewQGraphicsView_1(scene *QGraphicsScene /*777 QGraphicsScene **/, parent *
 // [-2] void ~QGraphicsView()
 func DeleteQGraphicsView(this *QGraphicsView) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGraphicsViewD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

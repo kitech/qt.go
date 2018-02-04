@@ -97,6 +97,7 @@ func NewQAbstractTableModel(parent *QObject /*777 QObject **/) *QAbstractTableMo
 // [-2] void ~QAbstractTableModel()
 func DeleteQAbstractTableModel(this *QAbstractTableModel) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractTableModelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

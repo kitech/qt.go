@@ -91,6 +91,7 @@ func NewQDragEnterEvent(pos *qtcore.QPoint, actions int, data *qtcore.QMimeData 
 // [-2] void ~QDragEnterEvent()
 func DeleteQDragEnterEvent(this *QDragEnterEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QDragEnterEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 88)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

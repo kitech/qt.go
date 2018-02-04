@@ -111,6 +111,7 @@ func NewQFinalState(parent *QState /*777 QState **/) *QFinalState {
 // [-2] void ~QFinalState()
 func DeleteQFinalState(this *QFinalState) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalStateD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

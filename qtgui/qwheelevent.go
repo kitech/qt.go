@@ -168,6 +168,7 @@ func NewQWheelEvent_5(pos *qtcore.QPointF, globalPos *qtcore.QPointF, pixelDelta
 // [-2] void ~QWheelEvent()
 func DeleteQWheelEvent(this *QWheelEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QWheelEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 96)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

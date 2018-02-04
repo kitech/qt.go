@@ -179,6 +179,7 @@ func NewQMenuBar(parent *QWidget /*777 QWidget **/) *QMenuBar {
 // [-2] void ~QMenuBar()
 func DeleteQMenuBar(this *QMenuBar) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMenuBarD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

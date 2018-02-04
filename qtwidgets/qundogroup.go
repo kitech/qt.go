@@ -105,6 +105,7 @@ func NewQUndoGroup(parent *qtcore.QObject /*777 QObject **/) *QUndoGroup {
 // [-2] void ~QUndoGroup()
 func DeleteQUndoGroup(this *QUndoGroup) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoGroupD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

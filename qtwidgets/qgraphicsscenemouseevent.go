@@ -93,6 +93,7 @@ func NewQGraphicsSceneMouseEvent(type_ int) *QGraphicsSceneMouseEvent {
 // [-2] void ~QGraphicsSceneMouseEvent()
 func DeleteQGraphicsSceneMouseEvent(this *QGraphicsSceneMouseEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QGraphicsSceneMouseEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

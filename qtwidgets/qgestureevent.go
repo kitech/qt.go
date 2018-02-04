@@ -81,6 +81,7 @@ func (*QGestureEvent) NewFromPointer(cthis unsafe.Pointer) *QGestureEvent {
 // [-2] void ~QGestureEvent()
 func DeleteQGestureEvent(this *QGestureEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QGestureEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 56)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -97,6 +97,7 @@ func NewQEventLoop(parent *QObject /*777 QObject **/) *QEventLoop {
 // [-2] void ~QEventLoop()
 func DeleteQEventLoop(this *QEventLoop) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoopD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

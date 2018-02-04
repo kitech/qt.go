@@ -101,6 +101,7 @@ func NewQAbstractProxyModel(parent *QObject /*777 QObject **/) *QAbstractProxyMo
 // [-2] void ~QAbstractProxyModel()
 func DeleteQAbstractProxyModel(this *QAbstractProxyModel) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QAbstractProxyModelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -129,6 +129,7 @@ func NewQKeySequence_3(key int) *QKeySequence {
 // [-2] void ~QKeySequence()
 func DeleteQKeySequence(this *QKeySequence) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QKeySequenceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

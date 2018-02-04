@@ -76,6 +76,7 @@ func (*QObjectUserData) NewFromPointer(cthis unsafe.Pointer) *QObjectUserData {
 // [-2] void ~QObjectUserData()
 func DeleteQObjectUserData(this *QObjectUserData) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QObjectUserDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

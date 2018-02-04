@@ -161,6 +161,7 @@ func NewQScrollBar_1(arg0 int, parent *QWidget /*777 QWidget **/) *QScrollBar {
 // [-2] void ~QScrollBar()
 func DeleteQScrollBar(this *QScrollBar) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QScrollBarD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -128,6 +128,7 @@ func QColormap_Instance(screen int) *QColormap /*123*/ {
 // [-2] void ~QColormap()
 func DeleteQColormap(this *QColormap) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QColormapD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

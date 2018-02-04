@@ -101,6 +101,7 @@ func NewQAnimationGroup(parent *QObject /*777 QObject **/) *QAnimationGroup {
 // [-2] void ~QAnimationGroup()
 func DeleteQAnimationGroup(this *QAnimationGroup) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QAnimationGroupD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

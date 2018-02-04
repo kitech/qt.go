@@ -117,6 +117,7 @@ func NewQXmlStreamAttribute_2(namespaceUri *QString, name *QString, value *QStri
 // [-2] void ~QXmlStreamAttribute()
 func DeleteQXmlStreamAttribute(this *QXmlStreamAttribute) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QXmlStreamAttributeD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 80)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

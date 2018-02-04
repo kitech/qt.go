@@ -77,6 +77,7 @@ func (*QAccessibleStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QAcces
 // [-2] void ~QAccessibleStateChangeEvent()
 func DeleteQAccessibleStateChangeEvent(this *QAccessibleStateChangeEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleStateChangeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

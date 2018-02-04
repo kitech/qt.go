@@ -123,6 +123,7 @@ func NewQTextDocument_1(text *qtcore.QString, parent *qtcore.QObject /*777 QObje
 // [-2] void ~QTextDocument()
 func DeleteQTextDocument(this *QTextDocument) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextDocumentD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

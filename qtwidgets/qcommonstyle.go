@@ -104,6 +104,7 @@ func NewQCommonStyle() *QCommonStyle {
 // [-2] void ~QCommonStyle()
 func DeleteQCommonStyle(this *QCommonStyle) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QCommonStyleD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -92,6 +92,7 @@ func NewQGlyphRun() *QGlyphRun {
 // [-2] void ~QGlyphRun()
 func DeleteQGlyphRun(this *QGlyphRun) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRunD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

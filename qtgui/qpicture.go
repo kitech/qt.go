@@ -93,6 +93,7 @@ func NewQPicture(formatVersion int) *QPicture {
 // [-2] void ~QPicture()
 func DeleteQPicture(this *QPicture) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPictureD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

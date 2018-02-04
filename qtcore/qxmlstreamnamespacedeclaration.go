@@ -102,6 +102,7 @@ func NewQXmlStreamNamespaceDeclaration_1(prefix *QString, namespaceUri *QString)
 // [-2] void ~QXmlStreamNamespaceDeclaration()
 func DeleteQXmlStreamNamespaceDeclaration(this *QXmlStreamNamespaceDeclaration) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

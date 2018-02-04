@@ -108,6 +108,7 @@ func NewQTableWidgetSelectionRange_1(top int, left int, bottom int, right int) *
 // [-2] void ~QTableWidgetSelectionRange()
 func DeleteQTableWidgetSelectionRange(this *QTableWidgetSelectionRange) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -97,6 +97,7 @@ func NewQAbstractListModel(parent *QObject /*777 QObject **/) *QAbstractListMode
 // [-2] void ~QAbstractListModel()
 func DeleteQAbstractListModel(this *QAbstractListModel) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractListModelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

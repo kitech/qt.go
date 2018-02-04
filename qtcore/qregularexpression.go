@@ -121,6 +121,7 @@ func NewQRegularExpression_1(pattern *QString, options int) *QRegularExpression 
 // [-2] void ~QRegularExpression()
 func DeleteQRegularExpression(this *QRegularExpression) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QRegularExpressionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

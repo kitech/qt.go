@@ -164,6 +164,7 @@ func NewQToolButton(parent *QWidget /*777 QWidget **/) *QToolButton {
 // [-2] void ~QToolButton()
 func DeleteQToolButton(this *QToolButton) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QToolButtonD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

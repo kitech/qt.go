@@ -135,6 +135,7 @@ func NewQGraphicsLineItem_2(x1 float64, y1 float64, x2 float64, y2 float64, pare
 // [-2] void ~QGraphicsLineItem()
 func DeleteQGraphicsLineItem(this *QGraphicsLineItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QGraphicsLineItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

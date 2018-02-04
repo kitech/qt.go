@@ -114,6 +114,7 @@ func NewQUrlQuery_2(queryString *QString) *QUrlQuery {
 // [-2] void ~QUrlQuery()
 func DeleteQUrlQuery(this *QUrlQuery) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUrlQueryD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

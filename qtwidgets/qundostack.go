@@ -105,6 +105,7 @@ func NewQUndoStack(parent *qtcore.QObject /*777 QObject **/) *QUndoStack {
 // [-2] void ~QUndoStack()
 func DeleteQUndoStack(this *QUndoStack) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QUndoStackD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

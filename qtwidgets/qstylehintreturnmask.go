@@ -93,6 +93,7 @@ func NewQStyleHintReturnMask() *QStyleHintReturnMask {
 // [-2] void ~QStyleHintReturnMask()
 func DeleteQStyleHintReturnMask(this *QStyleHintReturnMask) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleHintReturnMaskD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

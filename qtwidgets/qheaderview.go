@@ -249,6 +249,7 @@ func NewQHeaderView(orientation int, parent *QWidget /*777 QWidget **/) *QHeader
 // [-2] void ~QHeaderView()
 func DeleteQHeaderView(this *QHeaderView) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHeaderViewD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -123,6 +123,7 @@ func NewQTableWidgetItem_2(icon *qtgui.QIcon, text *qtcore.QString, type_ int) *
 // [-2] void ~QTableWidgetItem()
 func DeleteQTableWidgetItem(this *QTableWidgetItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTableWidgetItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

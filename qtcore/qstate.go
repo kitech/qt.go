@@ -123,6 +123,7 @@ func NewQState_1(childMode int, parent *QState /*777 QState **/) *QState {
 // [-2] void ~QState()
 func DeleteQState(this *QState) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QStateD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

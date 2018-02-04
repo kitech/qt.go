@@ -114,6 +114,7 @@ func NewQTextBoundaryFinder_2(type_ int, chars *QChar /*777 const QChar **/, len
 // [-2] void ~QTextBoundaryFinder()
 func DeleteQTextBoundaryFinder(this *QTextBoundaryFinder) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QTextBoundaryFinderD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

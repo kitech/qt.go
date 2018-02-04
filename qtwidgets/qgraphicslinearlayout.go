@@ -107,6 +107,7 @@ func NewQGraphicsLinearLayout_1(orientation int, parent *QGraphicsLayoutItem /*7
 // [-2] void ~QGraphicsLinearLayout()
 func DeleteQGraphicsLinearLayout(this *QGraphicsLinearLayout) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QGraphicsLinearLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

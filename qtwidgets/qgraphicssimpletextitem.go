@@ -122,6 +122,7 @@ func NewQGraphicsSimpleTextItem_1(text *qtcore.QString, parent *QGraphicsItem /*
 // [-2] void ~QGraphicsSimpleTextItem()
 func DeleteQGraphicsSimpleTextItem(this *QGraphicsSimpleTextItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN23QGraphicsSimpleTextItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

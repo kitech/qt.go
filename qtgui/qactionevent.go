@@ -89,6 +89,7 @@ func NewQActionEvent(type_ int, action unsafe.Pointer /*666*/, before unsafe.Poi
 // [-2] void ~QActionEvent()
 func DeleteQActionEvent(this *QActionEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

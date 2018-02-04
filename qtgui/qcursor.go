@@ -131,6 +131,7 @@ func NewQCursor_3(pixmap *QPixmap, hotX int, hotY int) *QCursor {
 // [-2] void ~QCursor()
 func DeleteQCursor(this *QCursor) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QCursorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

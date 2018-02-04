@@ -116,6 +116,7 @@ func NewQAbstractAnimation(parent *QObject /*777 QObject **/) *QAbstractAnimatio
 // [-2] void ~QAbstractAnimation()
 func DeleteQAbstractAnimation(this *QAbstractAnimation) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -115,6 +115,7 @@ func NewQByteArrayMatcher_2(pattern string, length int) *QByteArrayMatcher {
 // [-2] void ~QByteArrayMatcher()
 func DeleteQByteArrayMatcher(this *QByteArrayMatcher) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QByteArrayMatcherD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 1040)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

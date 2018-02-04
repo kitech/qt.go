@@ -88,6 +88,7 @@ func NewQEvent(type_ int) *QEvent {
 // [-2] void ~QEvent()
 func DeleteQEvent(this *QEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

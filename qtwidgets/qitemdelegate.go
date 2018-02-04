@@ -174,6 +174,7 @@ func NewQItemDelegate(parent *qtcore.QObject /*777 QObject **/) *QItemDelegate {
 // [-2] void ~QItemDelegate()
 func DeleteQItemDelegate(this *QItemDelegate) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QItemDelegateD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

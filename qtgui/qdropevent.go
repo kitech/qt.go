@@ -91,6 +91,7 @@ func NewQDropEvent(pos *qtcore.QPointF, actions int, data *qtcore.QMimeData /*77
 // [-2] void ~QDropEvent()
 func DeleteQDropEvent(this *QDropEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QDropEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 72)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

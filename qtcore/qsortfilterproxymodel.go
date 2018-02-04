@@ -121,6 +121,7 @@ func NewQSortFilterProxyModel(parent *QObject /*777 QObject **/) *QSortFilterPro
 // [-2] void ~QSortFilterProxyModel()
 func DeleteQSortFilterProxyModel(this *QSortFilterProxyModel) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QSortFilterProxyModelD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

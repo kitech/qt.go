@@ -104,6 +104,7 @@ func NewQSurfaceFormat_1(options int) *QSurfaceFormat {
 // [-2] void ~QSurfaceFormat()
 func DeleteQSurfaceFormat(this *QSurfaceFormat) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormatD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

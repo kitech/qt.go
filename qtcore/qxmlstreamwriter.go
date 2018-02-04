@@ -127,6 +127,7 @@ func NewQXmlStreamWriter_3(string *QString /*777 QString **/) *QXmlStreamWriter 
 // [-2] void ~QXmlStreamWriter()
 func DeleteQXmlStreamWriter(this *QXmlStreamWriter) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN16QXmlStreamWriterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

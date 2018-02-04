@@ -197,6 +197,7 @@ func NewQMenu_1(title *qtcore.QString, parent *QWidget /*777 QWidget **/) *QMenu
 // [-2] void ~QMenu()
 func DeleteQMenu(this *QMenu) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN5QMenuD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

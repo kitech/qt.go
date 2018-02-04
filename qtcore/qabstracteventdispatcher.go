@@ -97,6 +97,7 @@ func NewQAbstractEventDispatcher(parent *QObject /*777 QObject **/) *QAbstractEv
 // [-2] void ~QAbstractEventDispatcher()
 func DeleteQAbstractEventDispatcher(this *QAbstractEventDispatcher) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QAbstractEventDispatcherD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

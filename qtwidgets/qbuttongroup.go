@@ -105,6 +105,7 @@ func NewQButtonGroup(parent *qtcore.QObject /*777 QObject **/) *QButtonGroup {
 // [-2] void ~QButtonGroup()
 func DeleteQButtonGroup(this *QButtonGroup) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QButtonGroupD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -92,6 +92,7 @@ func NewQTextTableCell() *QTextTableCell {
 // [-2] void ~QTextTableCell()
 func DeleteQTextTableCell(this *QTextTableCell) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTextTableCellD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

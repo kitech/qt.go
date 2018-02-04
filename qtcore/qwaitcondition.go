@@ -88,6 +88,7 @@ func NewQWaitCondition() *QWaitCondition {
 // [-2] void ~QWaitCondition()
 func DeleteQWaitCondition(this *QWaitCondition) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitConditionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

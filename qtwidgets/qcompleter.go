@@ -140,6 +140,7 @@ func NewQCompleter_2(completions *qtcore.QStringList, parent *qtcore.QObject /*7
 // [-2] void ~QCompleter()
 func DeleteQCompleter(this *QCompleter) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN10QCompleterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

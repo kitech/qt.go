@@ -96,6 +96,7 @@ func NewQStyleOption(version int, type_ int) *QStyleOption {
 // [-2] void ~QStyleOption()
 func DeleteQStyleOption(this *QStyleOption) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStyleOptionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 64)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

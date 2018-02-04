@@ -173,6 +173,7 @@ func NewQThread(parent *QObject /*777 QObject **/) *QThread {
 // [-2] void ~QThread()
 func DeleteQThread(this *QThread) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QThreadD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

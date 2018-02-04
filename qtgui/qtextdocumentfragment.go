@@ -118,6 +118,7 @@ func NewQTextDocumentFragment_2(range_ *QTextCursor) *QTextDocumentFragment {
 // [-2] void ~QTextDocumentFragment()
 func DeleteQTextDocumentFragment(this *QTextDocumentFragment) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN21QTextDocumentFragmentD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -131,6 +131,7 @@ func NewQTextCursor_3(block *QTextBlock) *QTextCursor {
 // [-2] void ~QTextCursor()
 func DeleteQTextCursor(this *QTextCursor) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextCursorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

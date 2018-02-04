@@ -90,6 +90,7 @@ func NewQWhatsThisClickedEvent(href *qtcore.QString) *QWhatsThisClickedEvent {
 // [-2] void ~QWhatsThisClickedEvent()
 func DeleteQWhatsThisClickedEvent(this *QWhatsThisClickedEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN22QWhatsThisClickedEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -76,6 +76,7 @@ func (*QXmlStreamEntityResolver) NewFromPointer(cthis unsafe.Pointer) *QXmlStrea
 // [-2] void ~QXmlStreamEntityResolver()
 func DeleteQXmlStreamEntityResolver(this *QXmlStreamEntityResolver) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolverD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

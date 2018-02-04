@@ -194,6 +194,7 @@ func NewQTabBar(parent *QWidget /*777 QWidget **/) *QTabBar {
 // [-2] void ~QTabBar()
 func DeleteQTabBar(this *QTabBar) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN7QTabBarD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

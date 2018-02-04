@@ -135,6 +135,7 @@ func NewQStandardItem_3(rows int, columns int) *QStandardItem {
 // [-2] void ~QStandardItem()
 func DeleteQStandardItem(this *QStandardItem) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStandardItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

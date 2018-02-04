@@ -110,6 +110,7 @@ func NewQRasterWindow(parent *QWindow /*777 QWindow **/) *QRasterWindow {
 // [-2] void ~QRasterWindow()
 func DeleteQRasterWindow(this *QRasterWindow) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QRasterWindowD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 64)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -123,6 +123,7 @@ func NewQHistoryState_1(type_ int, parent *QState /*777 QState **/) *QHistorySta
 // [-2] void ~QHistoryState()
 func DeleteQHistoryState(this *QHistoryState) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryStateD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

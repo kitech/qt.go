@@ -109,6 +109,7 @@ func NewQGraphicsBlurEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphics
 // [-2] void ~QGraphicsBlurEffect()
 func DeleteQGraphicsBlurEffect(this *QGraphicsBlurEffect) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsBlurEffectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

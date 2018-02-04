@@ -105,6 +105,7 @@ func NewQPinchGesture(parent *qtcore.QObject /*777 QObject **/) *QPinchGesture {
 // [-2] void ~QPinchGesture()
 func DeleteQPinchGesture(this *QPinchGesture) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPinchGestureD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

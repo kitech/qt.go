@@ -101,6 +101,7 @@ func NewQUrl_1(url *QString, mode int) *QUrl {
 // [-2] void ~QUrl()
 func DeleteQUrl(this *QUrl) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QUrlD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

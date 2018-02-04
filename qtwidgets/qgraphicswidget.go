@@ -229,6 +229,7 @@ func NewQGraphicsWidget(parent *QGraphicsItem /*777 QGraphicsItem **/, wFlags in
 // [-2] void ~QGraphicsWidget()
 func DeleteQGraphicsWidget(this *QGraphicsWidget) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

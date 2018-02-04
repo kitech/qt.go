@@ -105,6 +105,7 @@ func NewQAccessibleTextInsertEvent_1(iface *QAccessibleInterface /*777 QAccessib
 // [-2] void ~QAccessibleTextInsertEvent()
 func DeleteQAccessibleTextInsertEvent(this *QAccessibleTextInsertEvent) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextInsertEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

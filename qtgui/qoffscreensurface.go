@@ -117,6 +117,7 @@ func NewQOffscreenSurface_1(screen *QScreen /*777 QScreen **/) *QOffscreenSurfac
 // [-2] void ~QOffscreenSurface()
 func DeleteQOffscreenSurface(this *QOffscreenSurface) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QOffscreenSurfaceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -103,6 +103,7 @@ func NewQDir_1(path *QString, nameFilter *QString, sort int, filter int) *QDir {
 // [-2] void ~QDir()
 func DeleteQDir(this *QDir) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN4QDirD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -76,6 +76,7 @@ func (*QFactoryInterface) NewFromPointer(cthis unsafe.Pointer) *QFactoryInterfac
 // [-2] void ~QFactoryInterface()
 func DeleteQFactoryInterface(this *QFactoryInterface) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN17QFactoryInterfaceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

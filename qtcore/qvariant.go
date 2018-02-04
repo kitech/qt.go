@@ -631,6 +631,7 @@ func NewQVariant_41(jsonDocument *QJsonDocument) *QVariant {
 // [-2] void ~QVariant()
 func DeleteQVariant(this *QVariant) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN8QVariantD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

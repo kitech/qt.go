@@ -105,6 +105,7 @@ func NewQGraphicsScale(parent *qtcore.QObject /*777 QObject **/) *QGraphicsScale
 // [-2] void ~QGraphicsScale()
 func DeleteQGraphicsScale(this *QGraphicsScale) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN14QGraphicsScaleD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -88,6 +88,7 @@ func NewQMimeDatabase() *QMimeDatabase {
 // [-2] void ~QMimeDatabase()
 func DeleteQMimeDatabase(this *QMimeDatabase) {
 	rv, err := ffiqt.InvokeQtFunc6("_ZN13QMimeDatabaseD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
