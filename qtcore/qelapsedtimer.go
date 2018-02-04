@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QElapsedTimer) NewFromPointer(cthis unsafe.Pointer) *QElapsedTimer {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QElapsedTimer()
 func NewQElapsedTimer() *QElapsedTimer {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QElapsedTimerC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimerC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQElapsedTimerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQElapsedTimer)
@@ -87,7 +83,7 @@ func NewQElapsedTimer() *QElapsedTimer {
 // Public static Visibility=Default Availability=Available
 // [4] QElapsedTimer::ClockType clockType()
 func (this *QElapsedTimer) ClockType() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QElapsedTimer9clockTypeEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimer9clockTypeEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv)
@@ -103,7 +99,7 @@ func QElapsedTimer_ClockType() int {
 // Public static Visibility=Default Availability=Available
 // [1] bool isMonotonic()
 func (this *QElapsedTimer) IsMonotonic() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QElapsedTimer11isMonotonicEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimer11isMonotonicEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -119,7 +115,7 @@ func QElapsedTimer_IsMonotonic() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void start()
 func (this *QElapsedTimer) Start() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QElapsedTimer5startEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimer5startEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -128,7 +124,7 @@ func (this *QElapsedTimer) Start() {
 // Public Visibility=Default Availability=Available
 // [8] qint64 restart()
 func (this *QElapsedTimer) Restart() int64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QElapsedTimer7restartEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimer7restartEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -139,7 +135,7 @@ func (this *QElapsedTimer) Restart() int64 {
 // Public Visibility=Default Availability=Available
 // [-2] void invalidate()
 func (this *QElapsedTimer) Invalidate() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QElapsedTimer10invalidateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimer10invalidateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -148,7 +144,7 @@ func (this *QElapsedTimer) Invalidate() {
 // Public Visibility=Default Availability=Available
 // [1] bool isValid()
 func (this *QElapsedTimer) IsValid() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QElapsedTimer7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -159,7 +155,7 @@ func (this *QElapsedTimer) IsValid() bool {
 // Public Visibility=Default Availability=Available
 // [8] qint64 nsecsElapsed()
 func (this *QElapsedTimer) NsecsElapsed() int64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QElapsedTimer12nsecsElapsedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer12nsecsElapsedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -170,7 +166,7 @@ func (this *QElapsedTimer) NsecsElapsed() int64 {
 // Public Visibility=Default Availability=Available
 // [8] qint64 elapsed()
 func (this *QElapsedTimer) Elapsed() int64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QElapsedTimer7elapsedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer7elapsedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -181,7 +177,7 @@ func (this *QElapsedTimer) Elapsed() int64 {
 // Public Visibility=Default Availability=Available
 // [1] bool hasExpired(qint64)
 func (this *QElapsedTimer) HasExpired(timeout int64) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QElapsedTimer10hasExpiredEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer10hasExpiredEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -192,7 +188,7 @@ func (this *QElapsedTimer) HasExpired(timeout int64) bool {
 // Public Visibility=Default Availability=Available
 // [8] qint64 msecsSinceReference()
 func (this *QElapsedTimer) MsecsSinceReference() int64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QElapsedTimer19msecsSinceReferenceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer19msecsSinceReferenceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -204,7 +200,7 @@ func (this *QElapsedTimer) MsecsSinceReference() int64 {
 // [8] qint64 msecsTo(const QElapsedTimer &)
 func (this *QElapsedTimer) MsecsTo(other *QElapsedTimer) int64 {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QElapsedTimer7msecsToERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer7msecsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -216,14 +212,14 @@ func (this *QElapsedTimer) MsecsTo(other *QElapsedTimer) int64 {
 // [8] qint64 secsTo(const QElapsedTimer &)
 func (this *QElapsedTimer) SecsTo(other *QElapsedTimer) int64 {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QElapsedTimer6secsToERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer6secsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
 }
 
 func DeleteQElapsedTimer(this *QElapsedTimer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QElapsedTimerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

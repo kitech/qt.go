@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QStylePlugin) NewFromPointer(cthis unsafe.Pointer) *QStylePlugin {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QStylePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QStylePlugin10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStylePlugin10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -93,7 +89,7 @@ func (this *QStylePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // [-2] void QStylePlugin(QObject *)
 func NewQStylePlugin(parent *qtcore.QObject /*777 QObject **/) *QStylePlugin {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStylePluginC1EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QStylePluginC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStylePluginFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -104,7 +100,7 @@ func NewQStylePlugin(parent *qtcore.QObject /*777 QObject **/) *QStylePlugin {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStylePlugin()
 func DeleteQStylePlugin(this *QStylePlugin) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStylePluginD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QStylePluginD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -116,7 +112,7 @@ func DeleteQStylePlugin(this *QStylePlugin) {
 // [8] QStyle * create(const QString &)
 func (this *QStylePlugin) Create(key *qtcore.QString) *QStyle /*777 QStyle **/ {
 	var convArg0 = key.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QStylePlugin6createERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QStylePlugin6createERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStyleFromPointer(unsafe.Pointer(uintptr(rv))) // 444

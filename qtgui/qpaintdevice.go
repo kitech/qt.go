@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -35,9 +34,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -50,22 +46,22 @@ func init() {
 //  body block begin
 // int metric(enum QPaintDevice::PaintDeviceMetric)
 func (this *QPaintDevice) InheritMetric(f func(metric int) int) {
-	ffiqt.SetAllInheritCallback(this, "metric", f)
+	qtrt.SetAllInheritCallback(this, "metric", f)
 }
 
 // void initPainter(class QPainter *)
 func (this *QPaintDevice) InheritInitPainter(f func(painter *QPainter /*777 QPainter **/)) {
-	ffiqt.SetAllInheritCallback(this, "initPainter", f)
+	qtrt.SetAllInheritCallback(this, "initPainter", f)
 }
 
 // QPaintDevice * redirected(class QPoint *)
 func (this *QPaintDevice) InheritRedirected(f func(offset *qtcore.QPoint /*777 QPoint **/) unsafe.Pointer /*666*/) {
-	ffiqt.SetAllInheritCallback(this, "redirected", f)
+	qtrt.SetAllInheritCallback(this, "redirected", f)
 }
 
 // QPainter * sharedPainter()
 func (this *QPaintDevice) InheritSharedPainter(f func() unsafe.Pointer /*666*/) {
-	ffiqt.SetAllInheritCallback(this, "sharedPainter", f)
+	qtrt.SetAllInheritCallback(this, "sharedPainter", f)
 }
 
 type QPaintDevice struct {
@@ -98,7 +94,7 @@ func (*QPaintDevice) NewFromPointer(cthis unsafe.Pointer) *QPaintDevice {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPaintDevice()
 func DeleteQPaintDevice(this *QPaintDevice) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintDeviceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintDeviceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -109,7 +105,7 @@ func DeleteQPaintDevice(this *QPaintDevice) {
 // Public virtual Visibility=Default Availability=Available
 // [4] int devType()
 func (this *QPaintDevice) DevType() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice7devTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice7devTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -120,7 +116,7 @@ func (this *QPaintDevice) DevType() int {
 // Public Visibility=Default Availability=Available
 // [1] bool paintingActive()
 func (this *QPaintDevice) PaintingActive() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice14paintingActiveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice14paintingActiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -131,7 +127,7 @@ func (this *QPaintDevice) PaintingActive() bool {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QPaintEngine * paintEngine()
 func (this *QPaintDevice) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice11paintEngineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice11paintEngineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPaintEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -143,7 +139,7 @@ func (this *QPaintDevice) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 // Public inline Visibility=Default Availability=Available
 // [4] int width()
 func (this *QPaintDevice) Width() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice5widthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -154,7 +150,7 @@ func (this *QPaintDevice) Width() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int height()
 func (this *QPaintDevice) Height() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice6heightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice6heightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -165,7 +161,7 @@ func (this *QPaintDevice) Height() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int widthMM()
 func (this *QPaintDevice) WidthMM() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice7widthMMEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice7widthMMEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -176,7 +172,7 @@ func (this *QPaintDevice) WidthMM() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int heightMM()
 func (this *QPaintDevice) HeightMM() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice8heightMMEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice8heightMMEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -187,7 +183,7 @@ func (this *QPaintDevice) HeightMM() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int logicalDpiX()
 func (this *QPaintDevice) LogicalDpiX() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice11logicalDpiXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice11logicalDpiXEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -198,7 +194,7 @@ func (this *QPaintDevice) LogicalDpiX() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int logicalDpiY()
 func (this *QPaintDevice) LogicalDpiY() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice11logicalDpiYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice11logicalDpiYEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -209,7 +205,7 @@ func (this *QPaintDevice) LogicalDpiY() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int physicalDpiX()
 func (this *QPaintDevice) PhysicalDpiX() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice12physicalDpiXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice12physicalDpiXEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -220,7 +216,7 @@ func (this *QPaintDevice) PhysicalDpiX() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int physicalDpiY()
 func (this *QPaintDevice) PhysicalDpiY() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice12physicalDpiYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice12physicalDpiYEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -231,7 +227,7 @@ func (this *QPaintDevice) PhysicalDpiY() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int devicePixelRatio()
 func (this *QPaintDevice) DevicePixelRatio() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice16devicePixelRatioEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice16devicePixelRatioEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -242,7 +238,7 @@ func (this *QPaintDevice) DevicePixelRatio() int {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal devicePixelRatioF()
 func (this *QPaintDevice) DevicePixelRatioF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice17devicePixelRatioFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice17devicePixelRatioFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -253,7 +249,7 @@ func (this *QPaintDevice) DevicePixelRatioF() float64 {
 // Public inline Visibility=Default Availability=Available
 // [4] int colorCount()
 func (this *QPaintDevice) ColorCount() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice10colorCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice10colorCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -264,7 +260,7 @@ func (this *QPaintDevice) ColorCount() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int depth()
 func (this *QPaintDevice) Depth() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice5depthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice5depthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -275,7 +271,7 @@ func (this *QPaintDevice) Depth() int {
 // Public static inline Visibility=Default Availability=Available
 // [8] qreal devicePixelRatioFScale()
 func (this *QPaintDevice) DevicePixelRatioFScale() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintDevice22devicePixelRatioFScaleEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintDevice22devicePixelRatioFScaleEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -291,7 +287,7 @@ func QPaintDevice_DevicePixelRatioFScale() float64 {
 // Protected Visibility=Default Availability=Available
 // [-2] void QPaintDevice()
 func NewQPaintDevice() *QPaintDevice {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintDeviceC1Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintDeviceC1Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPaintDevice)
@@ -304,7 +300,7 @@ func NewQPaintDevice() *QPaintDevice {
 // [-2] void QPaintDevice(const QPaintDevice &)
 func NewQPaintDevice_1(arg0 *QPaintDevice) *QPaintDevice {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPaintDeviceC1ERKS_", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintDeviceC1ERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPaintDevice)
@@ -316,7 +312,7 @@ func NewQPaintDevice_1(arg0 *QPaintDevice) *QPaintDevice {
 // Protected virtual Visibility=Default Availability=Available
 // [4] int metric(enum QPaintDevice::PaintDeviceMetric)
 func (this *QPaintDevice) Metric(metric int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice6metricENS_17PaintDeviceMetricE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), metric)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice6metricENS_17PaintDeviceMetricE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), metric)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -328,7 +324,7 @@ func (this *QPaintDevice) Metric(metric int) int {
 // [-2] void initPainter(QPainter *)
 func (this *QPaintDevice) InitPainter(painter *QPainter /*777 QPainter **/) {
 	var convArg0 = painter.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice11initPainterEP8QPainter", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice11initPainterEP8QPainter", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -338,7 +334,7 @@ func (this *QPaintDevice) InitPainter(painter *QPainter /*777 QPainter **/) {
 // [8] QPaintDevice * redirected(QPoint *)
 func (this *QPaintDevice) Redirected(offset *qtcore.QPoint /*777 QPoint **/) *QPaintDevice /*777 QPaintDevice **/ {
 	var convArg0 = offset.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice10redirectedEP6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice10redirectedEP6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -350,7 +346,7 @@ func (this *QPaintDevice) Redirected(offset *qtcore.QPoint /*777 QPoint **/) *QP
 // Protected virtual Visibility=Default Availability=Available
 // [8] QPainter * sharedPainter()
 func (this *QPaintDevice) SharedPainter() *QPainter /*777 QPainter **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QPaintDevice13sharedPainterEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintDevice13sharedPainterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPainterFromPointer(unsafe.Pointer(uintptr(rv))) // 444

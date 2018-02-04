@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -54,32 +50,32 @@ func init() {
 //  body block begin
 // void showEvent(class QShowEvent *)
 func (this *QStatusBar) InheritShowEvent(f func(arg0 *qtgui.QShowEvent /*777 QShowEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "showEvent", f)
+	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
 // void paintEvent(class QPaintEvent *)
 func (this *QStatusBar) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
 // void resizeEvent(class QResizeEvent *)
 func (this *QStatusBar) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
 // void reformat()
 func (this *QStatusBar) InheritReformat(f func()) {
-	ffiqt.SetAllInheritCallback(this, "reformat", f)
+	qtrt.SetAllInheritCallback(this, "reformat", f)
 }
 
 // void hideOrShow()
 func (this *QStatusBar) InheritHideOrShow(f func()) {
-	ffiqt.SetAllInheritCallback(this, "hideOrShow", f)
+	qtrt.SetAllInheritCallback(this, "hideOrShow", f)
 }
 
 // bool event(class QEvent *)
 func (this *QStatusBar) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
-	ffiqt.SetAllInheritCallback(this, "event", f)
+	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
 type QStatusBar struct {
@@ -109,7 +105,7 @@ func (*QStatusBar) NewFromPointer(cthis unsafe.Pointer) *QStatusBar {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QStatusBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QStatusBar10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStatusBar10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -122,7 +118,7 @@ func (this *QStatusBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // [-2] void QStatusBar(QWidget *)
 func NewQStatusBar(parent *QWidget /*777 QWidget **/) *QStatusBar {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBarC2EP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBarC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStatusBarFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -133,7 +129,7 @@ func NewQStatusBar(parent *QWidget /*777 QWidget **/) *QStatusBar {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStatusBar()
 func DeleteQStatusBar(this *QStatusBar) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBarD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBarD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -145,7 +141,7 @@ func DeleteQStatusBar(this *QStatusBar) {
 // [-2] void addWidget(QWidget *, int)
 func (this *QStatusBar) AddWidget(widget *QWidget /*777 QWidget **/, stretch int) {
 	var convArg0 = widget.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar9addWidgetEP7QWidgeti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar9addWidgetEP7QWidgeti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -155,7 +151,7 @@ func (this *QStatusBar) AddWidget(widget *QWidget /*777 QWidget **/, stretch int
 // [4] int insertWidget(int, QWidget *, int)
 func (this *QStatusBar) InsertWidget(index int, widget *QWidget /*777 QWidget **/, stretch int) int {
 	var convArg1 = widget.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar12insertWidgetEiP7QWidgeti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar12insertWidgetEiP7QWidgeti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -167,7 +163,7 @@ func (this *QStatusBar) InsertWidget(index int, widget *QWidget /*777 QWidget **
 // [-2] void addPermanentWidget(QWidget *, int)
 func (this *QStatusBar) AddPermanentWidget(widget *QWidget /*777 QWidget **/, stretch int) {
 	var convArg0 = widget.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar18addPermanentWidgetEP7QWidgeti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar18addPermanentWidgetEP7QWidgeti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, stretch)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -177,7 +173,7 @@ func (this *QStatusBar) AddPermanentWidget(widget *QWidget /*777 QWidget **/, st
 // [4] int insertPermanentWidget(int, QWidget *, int)
 func (this *QStatusBar) InsertPermanentWidget(index int, widget *QWidget /*777 QWidget **/, stretch int) int {
 	var convArg1 = widget.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1, stretch)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -189,7 +185,7 @@ func (this *QStatusBar) InsertPermanentWidget(index int, widget *QWidget /*777 Q
 // [-2] void removeWidget(QWidget *)
 func (this *QStatusBar) RemoveWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar12removeWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar12removeWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -198,7 +194,7 @@ func (this *QStatusBar) RemoveWidget(widget *QWidget /*777 QWidget **/) {
 // Public Visibility=Default Availability=Available
 // [-2] void setSizeGripEnabled(_Bool)
 func (this *QStatusBar) SetSizeGripEnabled(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar18setSizeGripEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar18setSizeGripEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -207,7 +203,7 @@ func (this *QStatusBar) SetSizeGripEnabled(arg0 bool) {
 // Public Visibility=Default Availability=Available
 // [1] bool isSizeGripEnabled()
 func (this *QStatusBar) IsSizeGripEnabled() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QStatusBar17isSizeGripEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStatusBar17isSizeGripEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -218,7 +214,7 @@ func (this *QStatusBar) IsSizeGripEnabled() bool {
 // Public Visibility=Default Availability=Available
 // [8] QString currentMessage()
 func (this *QStatusBar) CurrentMessage() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QStatusBar14currentMessageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QStatusBar14currentMessageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -232,7 +228,7 @@ func (this *QStatusBar) CurrentMessage() *qtcore.QString /*123*/ {
 // [-2] void showMessage(const QString &, int)
 func (this *QStatusBar) ShowMessage(text *qtcore.QString, timeout int) {
 	var convArg0 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar11showMessageERK7QStringi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, timeout)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar11showMessageERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, timeout)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -241,7 +237,7 @@ func (this *QStatusBar) ShowMessage(text *qtcore.QString, timeout int) {
 // Public Visibility=Default Availability=Available
 // [-2] void clearMessage()
 func (this *QStatusBar) ClearMessage() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar12clearMessageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar12clearMessageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -251,7 +247,7 @@ func (this *QStatusBar) ClearMessage() {
 // [-2] void messageChanged(const QString &)
 func (this *QStatusBar) MessageChanged(text *qtcore.QString) {
 	var convArg0 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar14messageChangedERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar14messageChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -261,7 +257,7 @@ func (this *QStatusBar) MessageChanged(text *qtcore.QString) {
 // [-2] void showEvent(QShowEvent *)
 func (this *QStatusBar) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar9showEventEP10QShowEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar9showEventEP10QShowEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -271,7 +267,7 @@ func (this *QStatusBar) ShowEvent(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) {
 // [-2] void paintEvent(QPaintEvent *)
 func (this *QStatusBar) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -281,7 +277,7 @@ func (this *QStatusBar) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/
 // [-2] void resizeEvent(QResizeEvent *)
 func (this *QStatusBar) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -290,7 +286,7 @@ func (this *QStatusBar) ResizeEvent(arg0 *qtgui.QResizeEvent /*777 QResizeEvent 
 // Protected Visibility=Default Availability=Available
 // [-2] void reformat()
 func (this *QStatusBar) Reformat() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar8reformatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar8reformatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -299,7 +295,7 @@ func (this *QStatusBar) Reformat() {
 // Protected Visibility=Default Availability=Available
 // [-2] void hideOrShow()
 func (this *QStatusBar) HideOrShow() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar10hideOrShowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar10hideOrShowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -309,7 +305,7 @@ func (this *QStatusBar) HideOrShow() {
 // [1] bool event(QEvent *)
 func (this *QStatusBar) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QStatusBar5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QStatusBar5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

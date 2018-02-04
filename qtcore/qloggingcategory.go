@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -77,7 +73,7 @@ func (*QLoggingCategory) NewFromPointer(cthis unsafe.Pointer) *QLoggingCategory 
 func NewQLoggingCategory(category string) *QLoggingCategory {
 	var convArg0 = qtrt.CString(category)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLoggingCategoryFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLoggingCategory)
@@ -91,7 +87,7 @@ func NewQLoggingCategory(category string) *QLoggingCategory {
 func NewQLoggingCategory_1(category string, severityLevel int) *QLoggingCategory {
 	var convArg0 = qtrt.CString(category)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc9QtMsgType", ffiqt.FFI_TYPE_POINTER, convArg0, severityLevel)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc9QtMsgType", qtrt.FFI_TYPE_POINTER, convArg0, severityLevel)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLoggingCategoryFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLoggingCategory)
@@ -103,7 +99,7 @@ func NewQLoggingCategory_1(category string, severityLevel int) *QLoggingCategory
 // Public Visibility=Default Availability=Available
 // [-2] void ~QLoggingCategory()
 func DeleteQLoggingCategory(this *QLoggingCategory) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategoryD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QLoggingCategoryD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -114,7 +110,7 @@ func DeleteQLoggingCategory(this *QLoggingCategory) {
 // Public Visibility=Default Availability=Available
 // [1] bool isEnabled(enum QtMsgType)
 func (this *QLoggingCategory) IsEnabled(type_ int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory9isEnabledE9QtMsgType", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QLoggingCategory9isEnabledE9QtMsgType", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -125,7 +121,7 @@ func (this *QLoggingCategory) IsEnabled(type_ int) bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setEnabled(enum QtMsgType, _Bool)
 func (this *QLoggingCategory) SetEnabled(type_ int, enable bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategory10setEnabledE9QtMsgTypeb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_, enable)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QLoggingCategory10setEnabledE9QtMsgTypeb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_, enable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -134,7 +130,7 @@ func (this *QLoggingCategory) SetEnabled(type_ int, enable bool) {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isDebugEnabled()
 func (this *QLoggingCategory) IsDebugEnabled() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory14isDebugEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QLoggingCategory14isDebugEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -145,7 +141,7 @@ func (this *QLoggingCategory) IsDebugEnabled() bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isInfoEnabled()
 func (this *QLoggingCategory) IsInfoEnabled() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory13isInfoEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QLoggingCategory13isInfoEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -156,7 +152,7 @@ func (this *QLoggingCategory) IsInfoEnabled() bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isWarningEnabled()
 func (this *QLoggingCategory) IsWarningEnabled() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory16isWarningEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QLoggingCategory16isWarningEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -167,7 +163,7 @@ func (this *QLoggingCategory) IsWarningEnabled() bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isCriticalEnabled()
 func (this *QLoggingCategory) IsCriticalEnabled() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory17isCriticalEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QLoggingCategory17isCriticalEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -178,7 +174,7 @@ func (this *QLoggingCategory) IsCriticalEnabled() bool {
 // Public inline Visibility=Default Availability=Available
 // [8] const char * categoryName()
 func (this *QLoggingCategory) CategoryName() string {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QLoggingCategory12categoryNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QLoggingCategory12categoryNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.GoStringI(rv)
@@ -189,7 +185,7 @@ func (this *QLoggingCategory) CategoryName() string {
 // Public static Visibility=Default Availability=Available
 // [8] QLoggingCategory * defaultCategory()
 func (this *QLoggingCategory) DefaultCategory() *QLoggingCategory /*777 QLoggingCategory **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategory15defaultCategoryEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QLoggingCategory15defaultCategoryEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQLoggingCategoryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -207,7 +203,7 @@ func QLoggingCategory_DefaultCategory() *QLoggingCategory /*777 QLoggingCategory
 // [-2] void setFilterRules(const QString &)
 func (this *QLoggingCategory) SetFilterRules(rules *QString) {
 	var convArg0 = rules.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QLoggingCategory14setFilterRulesERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QLoggingCategory14setFilterRulesERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QLoggingCategory_SetFilterRules(rules *QString) {

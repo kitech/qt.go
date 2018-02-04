@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -79,7 +75,7 @@ func (*QTextTableCell) NewFromPointer(cthis unsafe.Pointer) *QTextTableCell {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTextTableCell()
 func NewQTextTableCell() *QTextTableCell {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTextTableCellC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QTextTableCellC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextTableCellFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextTableCell)
@@ -91,7 +87,7 @@ func NewQTextTableCell() *QTextTableCell {
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QTextTableCell()
 func DeleteQTextTableCell(this *QTextTableCell) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTextTableCellD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QTextTableCellD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -103,7 +99,7 @@ func DeleteQTextTableCell(this *QTextTableCell) {
 // [-2] void setFormat(const QTextCharFormat &)
 func (this *QTextTableCell) SetFormat(format *QTextCharFormat) {
 	var convArg0 = format.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTextTableCell9setFormatERK15QTextCharFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QTextTableCell9setFormatERK15QTextCharFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -112,7 +108,7 @@ func (this *QTextTableCell) SetFormat(format *QTextCharFormat) {
 // Public Visibility=Default Availability=Available
 // [16] QTextCharFormat format()
 func (this *QTextTableCell) Format() *QTextCharFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -125,7 +121,7 @@ func (this *QTextTableCell) Format() *QTextCharFormat /*123*/ {
 // Public Visibility=Default Availability=Available
 // [4] int row()
 func (this *QTextTableCell) Row() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell3rowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell3rowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -136,7 +132,7 @@ func (this *QTextTableCell) Row() int {
 // Public Visibility=Default Availability=Available
 // [4] int column()
 func (this *QTextTableCell) Column() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell6columnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell6columnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -147,7 +143,7 @@ func (this *QTextTableCell) Column() int {
 // Public Visibility=Default Availability=Available
 // [4] int rowSpan()
 func (this *QTextTableCell) RowSpan() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell7rowSpanEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell7rowSpanEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -158,7 +154,7 @@ func (this *QTextTableCell) RowSpan() int {
 // Public Visibility=Default Availability=Available
 // [4] int columnSpan()
 func (this *QTextTableCell) ColumnSpan() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell10columnSpanEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell10columnSpanEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -169,7 +165,7 @@ func (this *QTextTableCell) ColumnSpan() int {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid()
 func (this *QTextTableCell) IsValid() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -180,7 +176,7 @@ func (this *QTextTableCell) IsValid() bool {
 // Public Visibility=Default Availability=Available
 // [8] QTextCursor firstCursorPosition()
 func (this *QTextTableCell) FirstCursorPosition() *QTextCursor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell19firstCursorPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell19firstCursorPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -193,7 +189,7 @@ func (this *QTextTableCell) FirstCursorPosition() *QTextCursor /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QTextCursor lastCursorPosition()
 func (this *QTextTableCell) LastCursorPosition() *QTextCursor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell18lastCursorPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell18lastCursorPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -206,7 +202,7 @@ func (this *QTextTableCell) LastCursorPosition() *QTextCursor /*123*/ {
 // Public Visibility=Default Availability=Available
 // [4] int firstPosition()
 func (this *QTextTableCell) FirstPosition() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell13firstPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell13firstPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -217,7 +213,7 @@ func (this *QTextTableCell) FirstPosition() int {
 // Public Visibility=Default Availability=Available
 // [4] int lastPosition()
 func (this *QTextTableCell) LastPosition() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell12lastPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell12lastPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -228,7 +224,7 @@ func (this *QTextTableCell) LastPosition() int {
 // Public Visibility=Default Availability=Available
 // [32] QTextFrame::iterator begin()
 func (this *QTextTableCell) Begin() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell5beginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -239,7 +235,7 @@ func (this *QTextTableCell) Begin() int {
 // Public Visibility=Default Availability=Available
 // [32] QTextFrame::iterator end()
 func (this *QTextTableCell) End() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -250,7 +246,7 @@ func (this *QTextTableCell) End() int {
 // Public Visibility=Default Availability=Available
 // [4] int tableCellFormatIndex()
 func (this *QTextTableCell) TableCellFormatIndex() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTextTableCell20tableCellFormatIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTextTableCell20tableCellFormatIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111

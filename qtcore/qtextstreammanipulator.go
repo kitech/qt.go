@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,12 +72,12 @@ func (*QTextStreamManipulator) NewFromPointer(cthis unsafe.Pointer) *QTextStream
 // [-2] void exec(QTextStream &)
 func (this *QTextStreamManipulator) Exec(s *QTextStream) {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QTextStreamManipulator4execER11QTextStream", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QTextStreamManipulator4execER11QTextStream", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 func DeleteQTextStreamManipulator(this *QTextStreamManipulator) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QTextStreamManipulatorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QTextStreamManipulatorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -79,7 +75,7 @@ func (*QTextLength) NewFromPointer(cthis unsafe.Pointer) *QTextLength {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTextLength()
 func NewQTextLength() *QTextLength {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLengthC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLengthC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextLengthFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextLength)
@@ -91,7 +87,7 @@ func NewQTextLength() *QTextLength {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTextLength(enum QTextLength::Type, qreal)
 func NewQTextLength_1(type_ int, value float64) *QTextLength {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLengthC2ENS_4TypeEd", ffiqt.FFI_TYPE_POINTER, type_, value)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLengthC2ENS_4TypeEd", qtrt.FFI_TYPE_POINTER, type_, value)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextLengthFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextLength)
@@ -103,7 +99,7 @@ func NewQTextLength_1(type_ int, value float64) *QTextLength {
 // Public inline Visibility=Default Availability=Available
 // [4] QTextLength::Type type()
 func (this *QTextLength) Type() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLength4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLength4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -114,7 +110,7 @@ func (this *QTextLength) Type() int {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal value(qreal)
 func (this *QTextLength) Value(maximumLength float64) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLength5valueEd", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), maximumLength)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLength5valueEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), maximumLength)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -125,14 +121,14 @@ func (this *QTextLength) Value(maximumLength float64) float64 {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal rawValue()
 func (this *QTextLength) RawValue() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLength8rawValueEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLength8rawValueEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
 func DeleteQTextLength(this *QTextLength) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLengthD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLengthD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

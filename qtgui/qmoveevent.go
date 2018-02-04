@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -78,7 +74,7 @@ func (*QMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QMoveEvent {
 func NewQMoveEvent(pos *qtcore.QPoint, oldPos *qtcore.QPoint) *QMoveEvent {
 	var convArg0 = pos.GetCthis()
 	var convArg1 = oldPos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMoveEventC2ERK6QPointS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QMoveEventC2ERK6QPointS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMoveEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMoveEvent)
@@ -90,7 +86,7 @@ func NewQMoveEvent(pos *qtcore.QPoint, oldPos *qtcore.QPoint) *QMoveEvent {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMoveEvent()
 func DeleteQMoveEvent(this *QMoveEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QMoveEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QMoveEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -101,7 +97,7 @@ func DeleteQMoveEvent(this *QMoveEvent) {
 // Public inline Visibility=Default Availability=Available
 // [8] const QPoint & pos()
 func (this *QMoveEvent) Pos() *qtcore.QPoint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMoveEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMoveEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -114,7 +110,7 @@ func (this *QMoveEvent) Pos() *qtcore.QPoint {
 // Public inline Visibility=Default Availability=Available
 // [8] const QPoint & oldPos()
 func (this *QMoveEvent) OldPos() *qtcore.QPoint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QMoveEvent6oldPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QMoveEvent6oldPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

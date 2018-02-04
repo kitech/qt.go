@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QStyleOptionFrame) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionFram
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionFrame()
 func NewQStyleOptionFrame() *QStyleOptionFrame {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QStyleOptionFrameC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QStyleOptionFrameC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionFrameFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionFrame)
@@ -92,7 +88,7 @@ func NewQStyleOptionFrame() *QStyleOptionFrame {
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionFrame(int)
 func NewQStyleOptionFrame_1(version int) *QStyleOptionFrame {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QStyleOptionFrameC2Ei", ffiqt.FFI_TYPE_POINTER, version)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QStyleOptionFrameC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionFrameFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionFrame)
@@ -100,7 +96,7 @@ func NewQStyleOptionFrame_1(version int) *QStyleOptionFrame {
 }
 
 func DeleteQStyleOptionFrame(this *QStyleOptionFrame) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QStyleOptionFrameD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QStyleOptionFrameD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

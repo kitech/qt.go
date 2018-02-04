@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QStringList) NewFromPointer(cthis unsafe.Pointer) *QStringList {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QStringList()
 func NewQStringList() *QStringList {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStringListC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QStringListC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStringListFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStringList)
@@ -88,7 +84,7 @@ func NewQStringList() *QStringList {
 // [-2] void QStringList(const QString &)
 func NewQStringList_1(i *QString) *QStringList {
 	var convArg0 = i.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStringListC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QStringListC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStringListFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStringList)
@@ -101,7 +97,7 @@ func NewQStringList_1(i *QString) *QStringList {
 // [1] bool contains(const QString &, Qt::CaseSensitivity)
 func (this *QStringList) Contains(str *QString, cs int) bool {
 	var convArg0 = str.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList8containsERK7QStringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList8containsERK7QStringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -113,7 +109,7 @@ func (this *QStringList) Contains(str *QString, cs int) bool {
 // [1] bool contains(QLatin1String, Qt::CaseSensitivity)
 func (this *QStringList) Contains_1(str *QLatin1String /*123*/, cs int) bool {
 	var convArg0 = str.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList8containsE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList8containsE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -125,7 +121,7 @@ func (this *QStringList) Contains_1(str *QLatin1String /*123*/, cs int) bool {
 // [4] int indexOf(const QRegExp &, int)
 func (this *QStringList) IndexOf(rx *QRegExp, from int) int {
 	var convArg0 = rx.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList7indexOfERK7QRegExpi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList7indexOfERK7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -137,7 +133,7 @@ func (this *QStringList) IndexOf(rx *QRegExp, from int) int {
 // [4] int indexOf(QRegExp &, int)
 func (this *QStringList) IndexOf_1(rx *QRegExp, from int) int {
 	var convArg0 = rx.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList7indexOfER7QRegExpi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList7indexOfER7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -149,7 +145,7 @@ func (this *QStringList) IndexOf_1(rx *QRegExp, from int) int {
 // [4] int indexOf(const QRegularExpression &, int)
 func (this *QStringList) IndexOf_2(re *QRegularExpression, from int) int {
 	var convArg0 = re.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList7indexOfERK18QRegularExpressioni", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList7indexOfERK18QRegularExpressioni", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -161,7 +157,7 @@ func (this *QStringList) IndexOf_2(re *QRegularExpression, from int) int {
 // [4] int lastIndexOf(const QRegExp &, int)
 func (this *QStringList) LastIndexOf(rx *QRegExp, from int) int {
 	var convArg0 = rx.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfERK7QRegExpi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfERK7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -173,7 +169,7 @@ func (this *QStringList) LastIndexOf(rx *QRegExp, from int) int {
 // [4] int lastIndexOf(QRegExp &, int)
 func (this *QStringList) LastIndexOf_1(rx *QRegExp, from int) int {
 	var convArg0 = rx.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfER7QRegExpi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfER7QRegExpi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -185,14 +181,14 @@ func (this *QStringList) LastIndexOf_1(rx *QRegExp, from int) int {
 // [4] int lastIndexOf(const QRegularExpression &, int)
 func (this *QStringList) LastIndexOf_2(re *QRegularExpression, from int) int {
 	var convArg0 = re.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 func DeleteQStringList(this *QStringList) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStringListD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QStringListD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

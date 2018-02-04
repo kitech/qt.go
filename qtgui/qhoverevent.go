@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -78,7 +74,7 @@ func (*QHoverEvent) NewFromPointer(cthis unsafe.Pointer) *QHoverEvent {
 func NewQHoverEvent(type_ int, pos *qtcore.QPointF, oldPos *qtcore.QPointF, modifiers int) *QHoverEvent {
 	var convArg1 = pos.GetCthis()
 	var convArg2 = oldPos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHoverEventC2EN6QEvent4TypeERK7QPointFS4_6QFlagsIN2Qt16KeyboardModifierEE", ffiqt.FFI_TYPE_POINTER, type_, convArg1, convArg2, modifiers)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QHoverEventC2EN6QEvent4TypeERK7QPointFS4_6QFlagsIN2Qt16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2, modifiers)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQHoverEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQHoverEvent)
@@ -90,7 +86,7 @@ func NewQHoverEvent(type_ int, pos *qtcore.QPointF, oldPos *qtcore.QPointF, modi
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QHoverEvent()
 func DeleteQHoverEvent(this *QHoverEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHoverEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QHoverEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 64)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -101,7 +97,7 @@ func DeleteQHoverEvent(this *QHoverEvent) {
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint pos()
 func (this *QHoverEvent) Pos() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHoverEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHoverEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -114,7 +110,7 @@ func (this *QHoverEvent) Pos() *qtcore.QPoint /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint oldPos()
 func (this *QHoverEvent) OldPos() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHoverEvent6oldPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHoverEvent6oldPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -127,7 +123,7 @@ func (this *QHoverEvent) OldPos() *qtcore.QPoint /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [16] const QPointF & posF()
 func (this *QHoverEvent) PosF() *qtcore.QPointF {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHoverEvent4posFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHoverEvent4posFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -140,7 +136,7 @@ func (this *QHoverEvent) PosF() *qtcore.QPointF {
 // Public inline Visibility=Default Availability=Available
 // [16] const QPointF & oldPosF()
 func (this *QHoverEvent) OldPosF() *qtcore.QPointF {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHoverEvent7oldPosFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHoverEvent7oldPosFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

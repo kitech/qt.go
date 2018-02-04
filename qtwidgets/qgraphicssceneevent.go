@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QGraphicsSceneEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphicsScene
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneEvent(enum QEvent::Type)
 func NewQGraphicsSceneEvent(type_ int) *QGraphicsSceneEvent {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEventC2EN6QEvent4TypeE", ffiqt.FFI_TYPE_POINTER, type_)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsSceneEventC2EN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsSceneEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQGraphicsSceneEvent)
@@ -92,7 +88,7 @@ func NewQGraphicsSceneEvent(type_ int) *QGraphicsSceneEvent {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsSceneEvent()
 func DeleteQGraphicsSceneEvent(this *QGraphicsSceneEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsSceneEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -103,7 +99,7 @@ func DeleteQGraphicsSceneEvent(this *QGraphicsSceneEvent) {
 // Public Visibility=Default Availability=Available
 // [8] QWidget * widget()
 func (this *QGraphicsSceneEvent) Widget() *QWidget /*777 QWidget **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QGraphicsSceneEvent6widgetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QGraphicsSceneEvent6widgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -116,7 +112,7 @@ func (this *QGraphicsSceneEvent) Widget() *QWidget /*777 QWidget **/ {
 // [-2] void setWidget(QWidget *)
 func (this *QGraphicsSceneEvent) SetWidget(widget *QWidget /*777 QWidget **/) {
 	var convArg0 = widget.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QGraphicsSceneEvent9setWidgetEP7QWidget", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsSceneEvent9setWidgetEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

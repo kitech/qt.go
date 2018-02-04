@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -83,7 +79,7 @@ func (*QTileRules) NewFromPointer(cthis unsafe.Pointer) *QTileRules {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTileRules(Qt::TileRule, Qt::TileRule)
 func NewQTileRules(horizontalRule int, verticalRule int) *QTileRules {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTileRulesC2EN2Qt8TileRuleES1_", ffiqt.FFI_TYPE_POINTER, horizontalRule, verticalRule)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QTileRulesC2EN2Qt8TileRuleES1_", qtrt.FFI_TYPE_POINTER, horizontalRule, verticalRule)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTileRulesFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTileRules)
@@ -95,7 +91,7 @@ func NewQTileRules(horizontalRule int, verticalRule int) *QTileRules {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTileRules(Qt::TileRule)
 func NewQTileRules_1(rule int) *QTileRules {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTileRulesC2EN2Qt8TileRuleE", ffiqt.FFI_TYPE_POINTER, rule)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QTileRulesC2EN2Qt8TileRuleE", qtrt.FFI_TYPE_POINTER, rule)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTileRulesFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTileRules)
@@ -103,7 +99,7 @@ func NewQTileRules_1(rule int) *QTileRules {
 }
 
 func DeleteQTileRules(this *QTileRules) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QTileRulesD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QTileRulesD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

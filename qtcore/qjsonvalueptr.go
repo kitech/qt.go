@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QJsonValuePtr) NewFromPointer(cthis unsafe.Pointer) *QJsonValuePtr {
 // [-2] void QJsonValuePtr(const QJsonValue &)
 func NewQJsonValuePtr(val *QJsonValue) *QJsonValuePtr {
 	var convArg0 = val.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonValuePtrC2ERK10QJsonValue", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonValuePtrC2ERK10QJsonValue", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJsonValuePtrFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQJsonValuePtr)
@@ -84,7 +80,7 @@ func NewQJsonValuePtr(val *QJsonValue) *QJsonValuePtr {
 }
 
 func DeleteQJsonValuePtr(this *QJsonValuePtr) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QJsonValuePtrD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QJsonValuePtrD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

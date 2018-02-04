@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -79,7 +75,7 @@ func (*QSurfaceFormat) NewFromPointer(cthis unsafe.Pointer) *QSurfaceFormat {
 // Public Visibility=Default Availability=Available
 // [-2] void QSurfaceFormat()
 func NewQSurfaceFormat() *QSurfaceFormat {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormatC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormatC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSurfaceFormat)
@@ -91,7 +87,7 @@ func NewQSurfaceFormat() *QSurfaceFormat {
 // Public Visibility=Default Availability=Available
 // [-2] void QSurfaceFormat(QSurfaceFormat::FormatOptions)
 func NewQSurfaceFormat_1(options int) *QSurfaceFormat {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormatC2E6QFlagsINS_12FormatOptionEE", ffiqt.FFI_TYPE_POINTER, options)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormatC2E6QFlagsINS_12FormatOptionEE", qtrt.FFI_TYPE_POINTER, options)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSurfaceFormat)
@@ -103,7 +99,7 @@ func NewQSurfaceFormat_1(options int) *QSurfaceFormat {
 // Public Visibility=Default Availability=Available
 // [-2] void ~QSurfaceFormat()
 func DeleteQSurfaceFormat(this *QSurfaceFormat) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormatD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormatD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -114,7 +110,7 @@ func DeleteQSurfaceFormat(this *QSurfaceFormat) {
 // Public Visibility=Default Availability=Available
 // [-2] void setDepthBufferSize(int)
 func (this *QSurfaceFormat) SetDepthBufferSize(size int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat18setDepthBufferSizeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat18setDepthBufferSizeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -123,7 +119,7 @@ func (this *QSurfaceFormat) SetDepthBufferSize(size int) {
 // Public Visibility=Default Availability=Available
 // [4] int depthBufferSize()
 func (this *QSurfaceFormat) DepthBufferSize() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat15depthBufferSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat15depthBufferSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -134,7 +130,7 @@ func (this *QSurfaceFormat) DepthBufferSize() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setStencilBufferSize(int)
 func (this *QSurfaceFormat) SetStencilBufferSize(size int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat20setStencilBufferSizeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat20setStencilBufferSizeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -143,7 +139,7 @@ func (this *QSurfaceFormat) SetStencilBufferSize(size int) {
 // Public Visibility=Default Availability=Available
 // [4] int stencilBufferSize()
 func (this *QSurfaceFormat) StencilBufferSize() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat17stencilBufferSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat17stencilBufferSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -154,7 +150,7 @@ func (this *QSurfaceFormat) StencilBufferSize() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setRedBufferSize(int)
 func (this *QSurfaceFormat) SetRedBufferSize(size int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat16setRedBufferSizeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat16setRedBufferSizeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -163,7 +159,7 @@ func (this *QSurfaceFormat) SetRedBufferSize(size int) {
 // Public Visibility=Default Availability=Available
 // [4] int redBufferSize()
 func (this *QSurfaceFormat) RedBufferSize() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat13redBufferSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat13redBufferSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -174,7 +170,7 @@ func (this *QSurfaceFormat) RedBufferSize() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setGreenBufferSize(int)
 func (this *QSurfaceFormat) SetGreenBufferSize(size int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat18setGreenBufferSizeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat18setGreenBufferSizeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -183,7 +179,7 @@ func (this *QSurfaceFormat) SetGreenBufferSize(size int) {
 // Public Visibility=Default Availability=Available
 // [4] int greenBufferSize()
 func (this *QSurfaceFormat) GreenBufferSize() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat15greenBufferSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat15greenBufferSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -194,7 +190,7 @@ func (this *QSurfaceFormat) GreenBufferSize() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setBlueBufferSize(int)
 func (this *QSurfaceFormat) SetBlueBufferSize(size int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat17setBlueBufferSizeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat17setBlueBufferSizeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -203,7 +199,7 @@ func (this *QSurfaceFormat) SetBlueBufferSize(size int) {
 // Public Visibility=Default Availability=Available
 // [4] int blueBufferSize()
 func (this *QSurfaceFormat) BlueBufferSize() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat14blueBufferSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat14blueBufferSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -214,7 +210,7 @@ func (this *QSurfaceFormat) BlueBufferSize() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setAlphaBufferSize(int)
 func (this *QSurfaceFormat) SetAlphaBufferSize(size int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat18setAlphaBufferSizeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat18setAlphaBufferSizeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -223,7 +219,7 @@ func (this *QSurfaceFormat) SetAlphaBufferSize(size int) {
 // Public Visibility=Default Availability=Available
 // [4] int alphaBufferSize()
 func (this *QSurfaceFormat) AlphaBufferSize() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat15alphaBufferSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat15alphaBufferSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -234,7 +230,7 @@ func (this *QSurfaceFormat) AlphaBufferSize() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setSamples(int)
 func (this *QSurfaceFormat) SetSamples(numSamples int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat10setSamplesEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), numSamples)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat10setSamplesEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), numSamples)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -243,7 +239,7 @@ func (this *QSurfaceFormat) SetSamples(numSamples int) {
 // Public Visibility=Default Availability=Available
 // [4] int samples()
 func (this *QSurfaceFormat) Samples() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat7samplesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat7samplesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -254,7 +250,7 @@ func (this *QSurfaceFormat) Samples() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setSwapBehavior(enum QSurfaceFormat::SwapBehavior)
 func (this *QSurfaceFormat) SetSwapBehavior(behavior int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat15setSwapBehaviorENS_12SwapBehaviorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), behavior)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat15setSwapBehaviorENS_12SwapBehaviorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), behavior)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -263,7 +259,7 @@ func (this *QSurfaceFormat) SetSwapBehavior(behavior int) {
 // Public Visibility=Default Availability=Available
 // [4] QSurfaceFormat::SwapBehavior swapBehavior()
 func (this *QSurfaceFormat) SwapBehavior() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat12swapBehaviorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat12swapBehaviorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -274,7 +270,7 @@ func (this *QSurfaceFormat) SwapBehavior() int {
 // Public Visibility=Default Availability=Available
 // [1] bool hasAlpha()
 func (this *QSurfaceFormat) HasAlpha() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat8hasAlphaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat8hasAlphaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -285,7 +281,7 @@ func (this *QSurfaceFormat) HasAlpha() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setProfile(enum QSurfaceFormat::OpenGLContextProfile)
 func (this *QSurfaceFormat) SetProfile(profile int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat10setProfileENS_20OpenGLContextProfileE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), profile)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat10setProfileENS_20OpenGLContextProfileE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), profile)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -294,7 +290,7 @@ func (this *QSurfaceFormat) SetProfile(profile int) {
 // Public Visibility=Default Availability=Available
 // [4] QSurfaceFormat::OpenGLContextProfile profile()
 func (this *QSurfaceFormat) Profile() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat7profileEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat7profileEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -305,7 +301,7 @@ func (this *QSurfaceFormat) Profile() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setRenderableType(enum QSurfaceFormat::RenderableType)
 func (this *QSurfaceFormat) SetRenderableType(type_ int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat17setRenderableTypeENS_14RenderableTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat17setRenderableTypeENS_14RenderableTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -314,7 +310,7 @@ func (this *QSurfaceFormat) SetRenderableType(type_ int) {
 // Public Visibility=Default Availability=Available
 // [4] QSurfaceFormat::RenderableType renderableType()
 func (this *QSurfaceFormat) RenderableType() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat14renderableTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat14renderableTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -325,7 +321,7 @@ func (this *QSurfaceFormat) RenderableType() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setMajorVersion(int)
 func (this *QSurfaceFormat) SetMajorVersion(majorVersion int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat15setMajorVersionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), majorVersion)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat15setMajorVersionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), majorVersion)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -334,7 +330,7 @@ func (this *QSurfaceFormat) SetMajorVersion(majorVersion int) {
 // Public Visibility=Default Availability=Available
 // [4] int majorVersion()
 func (this *QSurfaceFormat) MajorVersion() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat12majorVersionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat12majorVersionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -345,7 +341,7 @@ func (this *QSurfaceFormat) MajorVersion() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setMinorVersion(int)
 func (this *QSurfaceFormat) SetMinorVersion(minorVersion int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat15setMinorVersionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), minorVersion)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat15setMinorVersionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), minorVersion)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -354,7 +350,7 @@ func (this *QSurfaceFormat) SetMinorVersion(minorVersion int) {
 // Public Visibility=Default Availability=Available
 // [4] int minorVersion()
 func (this *QSurfaceFormat) MinorVersion() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat12minorVersionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat12minorVersionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -365,7 +361,7 @@ func (this *QSurfaceFormat) MinorVersion() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setVersion(int, int)
 func (this *QSurfaceFormat) SetVersion(major int, minor int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat10setVersionEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), major, minor)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat10setVersionEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), major, minor)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -374,7 +370,7 @@ func (this *QSurfaceFormat) SetVersion(major int, minor int) {
 // Public Visibility=Default Availability=Available
 // [1] bool stereo()
 func (this *QSurfaceFormat) Stereo() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat6stereoEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat6stereoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -385,7 +381,7 @@ func (this *QSurfaceFormat) Stereo() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setStereo(_Bool)
 func (this *QSurfaceFormat) SetStereo(enable bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat9setStereoEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat9setStereoEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -394,7 +390,7 @@ func (this *QSurfaceFormat) SetStereo(enable bool) {
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(QSurfaceFormat::FormatOptions)
 func (this *QSurfaceFormat) SetOption(opt int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat9setOptionE6QFlagsINS_12FormatOptionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), opt)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat9setOptionE6QFlagsINS_12FormatOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), opt)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -403,7 +399,7 @@ func (this *QSurfaceFormat) SetOption(opt int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(enum QSurfaceFormat::FormatOption, _Bool)
 func (this *QSurfaceFormat) SetOption_1(option int, on bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat9setOptionENS_12FormatOptionEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat9setOptionENS_12FormatOptionEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option, on)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -412,7 +408,7 @@ func (this *QSurfaceFormat) SetOption_1(option int, on bool) {
 // Public Visibility=Default Availability=Available
 // [1] bool testOption(QSurfaceFormat::FormatOptions)
 func (this *QSurfaceFormat) TestOption(opt int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat10testOptionE6QFlagsINS_12FormatOptionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), opt)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat10testOptionE6QFlagsINS_12FormatOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), opt)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -423,7 +419,7 @@ func (this *QSurfaceFormat) TestOption(opt int) bool {
 // Public Visibility=Default Availability=Available
 // [1] bool testOption(enum QSurfaceFormat::FormatOption)
 func (this *QSurfaceFormat) TestOption_1(option int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat10testOptionENS_12FormatOptionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), option)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat10testOptionENS_12FormatOptionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), option)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -434,7 +430,7 @@ func (this *QSurfaceFormat) TestOption_1(option int) bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setOptions(QSurfaceFormat::FormatOptions)
 func (this *QSurfaceFormat) SetOptions(options int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat10setOptionsE6QFlagsINS_12FormatOptionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), options)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat10setOptionsE6QFlagsINS_12FormatOptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), options)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -443,7 +439,7 @@ func (this *QSurfaceFormat) SetOptions(options int) {
 // Public Visibility=Default Availability=Available
 // [4] QSurfaceFormat::FormatOptions options()
 func (this *QSurfaceFormat) Options() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat7optionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat7optionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -454,7 +450,7 @@ func (this *QSurfaceFormat) Options() int {
 // Public Visibility=Default Availability=Available
 // [4] int swapInterval()
 func (this *QSurfaceFormat) SwapInterval() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat12swapIntervalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat12swapIntervalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -465,7 +461,7 @@ func (this *QSurfaceFormat) SwapInterval() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setSwapInterval(int)
 func (this *QSurfaceFormat) SetSwapInterval(interval int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat15setSwapIntervalEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), interval)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat15setSwapIntervalEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), interval)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -474,7 +470,7 @@ func (this *QSurfaceFormat) SetSwapInterval(interval int) {
 // Public Visibility=Default Availability=Available
 // [4] QSurfaceFormat::ColorSpace colorSpace()
 func (this *QSurfaceFormat) ColorSpace() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSurfaceFormat10colorSpaceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat10colorSpaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -485,7 +481,7 @@ func (this *QSurfaceFormat) ColorSpace() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setColorSpace(enum QSurfaceFormat::ColorSpace)
 func (this *QSurfaceFormat) SetColorSpace(colorSpace int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat13setColorSpaceENS_10ColorSpaceE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), colorSpace)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat13setColorSpaceENS_10ColorSpaceE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), colorSpace)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -495,7 +491,7 @@ func (this *QSurfaceFormat) SetColorSpace(colorSpace int) {
 // [-2] void setDefaultFormat(const QSurfaceFormat &)
 func (this *QSurfaceFormat) SetDefaultFormat(format *QSurfaceFormat) {
 	var convArg0 = format.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat16setDefaultFormatERKS_", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat16setDefaultFormatERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QSurfaceFormat_SetDefaultFormat(format *QSurfaceFormat) {
@@ -508,7 +504,7 @@ func QSurfaceFormat_SetDefaultFormat(format *QSurfaceFormat) {
 // Public static Visibility=Default Availability=Available
 // [8] QSurfaceFormat defaultFormat()
 func (this *QSurfaceFormat) DefaultFormat() *QSurfaceFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSurfaceFormat13defaultFormatEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat13defaultFormatEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333

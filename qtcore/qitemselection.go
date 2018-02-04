@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QItemSelection) NewFromPointer(cthis unsafe.Pointer) *QItemSelection {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QItemSelection()
 func NewQItemSelection() *QItemSelection {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelectionC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QItemSelectionC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQItemSelection)
@@ -89,7 +85,7 @@ func NewQItemSelection() *QItemSelection {
 func NewQItemSelection_1(topLeft *QModelIndex, bottomRight *QModelIndex) *QItemSelection {
 	var convArg0 = topLeft.GetCthis()
 	var convArg1 = bottomRight.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelectionC2ERK11QModelIndexS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QItemSelectionC2ERK11QModelIndexS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQItemSelectionFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQItemSelection)
@@ -103,7 +99,7 @@ func NewQItemSelection_1(topLeft *QModelIndex, bottomRight *QModelIndex) *QItemS
 func (this *QItemSelection) Select(topLeft *QModelIndex, bottomRight *QModelIndex) {
 	var convArg0 = topLeft.GetCthis()
 	var convArg1 = bottomRight.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelection6selectERK11QModelIndexS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QItemSelection6selectERK11QModelIndexS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -113,7 +109,7 @@ func (this *QItemSelection) Select(topLeft *QModelIndex, bottomRight *QModelInde
 // [1] bool contains(const QModelIndex &)
 func (this *QItemSelection) Contains(index *QModelIndex) bool {
 	var convArg0 = index.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QItemSelection8containsERK11QModelIndex", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QItemSelection8containsERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -125,7 +121,7 @@ func (this *QItemSelection) Contains(index *QModelIndex) bool {
 // [-2] void merge(const QItemSelection &, QItemSelectionModel::SelectionFlags)
 func (this *QItemSelection) Merge(other *QItemSelection, command int) {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelection5mergeERKS_6QFlagsIN19QItemSelectionModel13SelectionFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QItemSelection5mergeERKS_6QFlagsIN19QItemSelectionModel13SelectionFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, command)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -137,7 +133,7 @@ func (this *QItemSelection) Split(range_ *QItemSelectionRange, other *QItemSelec
 	var convArg0 = range_.GetCthis()
 	var convArg1 = other.GetCthis()
 	var convArg2 = result.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelection5splitERK19QItemSelectionRangeS2_PS_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QItemSelection5splitERK19QItemSelectionRangeS2_PS_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 func QItemSelection_Split(range_ *QItemSelectionRange, other *QItemSelectionRange, result *QItemSelection /*777 QItemSelection **/) {
@@ -146,7 +142,7 @@ func QItemSelection_Split(range_ *QItemSelectionRange, other *QItemSelectionRang
 }
 
 func DeleteQItemSelection(this *QItemSelection) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QItemSelectionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QItemSelectionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

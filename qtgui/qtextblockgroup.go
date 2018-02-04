@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -35,9 +34,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -50,17 +46,17 @@ func init() {
 //  body block begin
 // void blockInserted(const class QTextBlock &)
 func (this *QTextBlockGroup) InheritBlockInserted(f func(block *QTextBlock)) {
-	ffiqt.SetAllInheritCallback(this, "blockInserted", f)
+	qtrt.SetAllInheritCallback(this, "blockInserted", f)
 }
 
 // void blockRemoved(const class QTextBlock &)
 func (this *QTextBlockGroup) InheritBlockRemoved(f func(block *QTextBlock)) {
-	ffiqt.SetAllInheritCallback(this, "blockRemoved", f)
+	qtrt.SetAllInheritCallback(this, "blockRemoved", f)
 }
 
 // void blockFormatChanged(const class QTextBlock &)
 func (this *QTextBlockGroup) InheritBlockFormatChanged(f func(block *QTextBlock)) {
-	ffiqt.SetAllInheritCallback(this, "blockFormatChanged", f)
+	qtrt.SetAllInheritCallback(this, "blockFormatChanged", f)
 }
 
 type QTextBlockGroup struct {
@@ -90,7 +86,7 @@ func (*QTextBlockGroup) NewFromPointer(cthis unsafe.Pointer) *QTextBlockGroup {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QTextBlockGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QTextBlockGroup10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextBlockGroup10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -103,7 +99,7 @@ func (this *QTextBlockGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // [-2] void QTextBlockGroup(QTextDocument *)
 func NewQTextBlockGroup(doc *QTextDocument /*777 QTextDocument **/) *QTextBlockGroup {
 	var convArg0 = doc.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextBlockGroupC2EP13QTextDocument", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextBlockGroupC2EP13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextBlockGroupFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -114,7 +110,7 @@ func NewQTextBlockGroup(doc *QTextDocument /*777 QTextDocument **/) *QTextBlockG
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void ~QTextBlockGroup()
 func DeleteQTextBlockGroup(this *QTextBlockGroup) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextBlockGroupD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextBlockGroupD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -126,7 +122,7 @@ func DeleteQTextBlockGroup(this *QTextBlockGroup) {
 // [-2] void blockInserted(const QTextBlock &)
 func (this *QTextBlockGroup) BlockInserted(block *QTextBlock) {
 	var convArg0 = block.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextBlockGroup13blockInsertedERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextBlockGroup13blockInsertedERK10QTextBlock", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -136,7 +132,7 @@ func (this *QTextBlockGroup) BlockInserted(block *QTextBlock) {
 // [-2] void blockRemoved(const QTextBlock &)
 func (this *QTextBlockGroup) BlockRemoved(block *QTextBlock) {
 	var convArg0 = block.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextBlockGroup12blockRemovedERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextBlockGroup12blockRemovedERK10QTextBlock", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -146,7 +142,7 @@ func (this *QTextBlockGroup) BlockRemoved(block *QTextBlock) {
 // [-2] void blockFormatChanged(const QTextBlock &)
 func (this *QTextBlockGroup) BlockFormatChanged(block *QTextBlock) {
 	var convArg0 = block.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QTextBlockGroup18blockFormatChangedERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextBlockGroup18blockFormatChangedERK10QTextBlock", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

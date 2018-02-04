@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -79,7 +75,7 @@ func (*QAccessibleTableCellInterface) NewFromPointer(cthis unsafe.Pointer) *QAcc
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleTableCellInterface()
 func DeleteQAccessibleTableCellInterface(this *QAccessibleTableCellInterface) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN29QAccessibleTableCellInterfaceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN29QAccessibleTableCellInterfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -90,7 +86,7 @@ func DeleteQAccessibleTableCellInterface(this *QAccessibleTableCellInterface) {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool isSelected()
 func (this *QAccessibleTableCellInterface) IsSelected() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface10isSelectedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface10isSelectedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -101,7 +97,7 @@ func (this *QAccessibleTableCellInterface) IsSelected() bool {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int columnIndex()
 func (this *QAccessibleTableCellInterface) ColumnIndex() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface11columnIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface11columnIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -112,7 +108,7 @@ func (this *QAccessibleTableCellInterface) ColumnIndex() int {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int rowIndex()
 func (this *QAccessibleTableCellInterface) RowIndex() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface8rowIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface8rowIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -123,7 +119,7 @@ func (this *QAccessibleTableCellInterface) RowIndex() int {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int columnExtent()
 func (this *QAccessibleTableCellInterface) ColumnExtent() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface12columnExtentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface12columnExtentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -134,7 +130,7 @@ func (this *QAccessibleTableCellInterface) ColumnExtent() int {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int rowExtent()
 func (this *QAccessibleTableCellInterface) RowExtent() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface9rowExtentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface9rowExtentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -145,7 +141,7 @@ func (this *QAccessibleTableCellInterface) RowExtent() int {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QAccessibleInterface * table()
 func (this *QAccessibleTableCellInterface) Table() *QAccessibleInterface /*777 QAccessibleInterface **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface5tableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK29QAccessibleTableCellInterface5tableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444

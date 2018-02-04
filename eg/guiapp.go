@@ -8,14 +8,13 @@ import (
 	"log"
 	"unsafe"
 
-	ffiqt "qt.go/cffiqt"
 	"qt.go/qtcore"
 	"qt.go/qtrt"
 	"qt.go/qtwidgets"
 )
 
 func tLength(ptr unsafe.Pointer) int {
-	rv, err := ffiqt.InvokeQtFunc6("C_ZNK7QString6lengthEv", ffiqt.FFI_TYPE_POINTER, ptr)
+	rv, err := qtrt.InvokeQtFunc6("C_ZNK7QString6lengthEv", qtrt.FFI_TYPE_POINTER, ptr)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	log.Println(rv)

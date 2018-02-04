@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -79,7 +75,7 @@ func (*QTextLayout) NewFromPointer(cthis unsafe.Pointer) *QTextLayout {
 // Public Visibility=Default Availability=Available
 // [-2] void QTextLayout()
 func NewQTextLayout() *QTextLayout {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayoutC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayoutC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextLayout)
@@ -92,7 +88,7 @@ func NewQTextLayout() *QTextLayout {
 // [-2] void QTextLayout(const QString &)
 func NewQTextLayout_1(text *qtcore.QString) *QTextLayout {
 	var convArg0 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayoutC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayoutC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextLayout)
@@ -107,7 +103,7 @@ func NewQTextLayout_2(text *qtcore.QString, font *QFont, paintdevice *QPaintDevi
 	var convArg0 = text.GetCthis()
 	var convArg1 = font.GetCthis()
 	var convArg2 = paintdevice.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayoutC2ERK7QStringRK5QFontP12QPaintDevice", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayoutC2ERK7QStringRK5QFontP12QPaintDevice", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextLayout)
@@ -120,7 +116,7 @@ func NewQTextLayout_2(text *qtcore.QString, font *QFont, paintdevice *QPaintDevi
 // [-2] void QTextLayout(const QTextBlock &)
 func NewQTextLayout_3(b *QTextBlock) *QTextLayout {
 	var convArg0 = b.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayoutC2ERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayoutC2ERK10QTextBlock", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextLayout)
@@ -132,7 +128,7 @@ func NewQTextLayout_3(b *QTextBlock) *QTextLayout {
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTextLayout()
 func DeleteQTextLayout(this *QTextLayout) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayoutD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -144,7 +140,7 @@ func DeleteQTextLayout(this *QTextLayout) {
 // [-2] void setFont(const QFont &)
 func (this *QTextLayout) SetFont(f *QFont) {
 	var convArg0 = f.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout7setFontERK5QFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout7setFontERK5QFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -153,7 +149,7 @@ func (this *QTextLayout) SetFont(f *QFont) {
 // Public Visibility=Default Availability=Available
 // [16] QFont font()
 func (this *QTextLayout) Font() *QFont /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout4fontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout4fontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -167,7 +163,7 @@ func (this *QTextLayout) Font() *QFont /*123*/ {
 // [-2] void setRawFont(const QRawFont &)
 func (this *QTextLayout) SetRawFont(rawFont *QRawFont) {
 	var convArg0 = rawFont.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout10setRawFontERK8QRawFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout10setRawFontERK8QRawFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -177,7 +173,7 @@ func (this *QTextLayout) SetRawFont(rawFont *QRawFont) {
 // [-2] void setText(const QString &)
 func (this *QTextLayout) SetText(string *qtcore.QString) {
 	var convArg0 = string.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout7setTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -186,7 +182,7 @@ func (this *QTextLayout) SetText(string *qtcore.QString) {
 // Public Visibility=Default Availability=Available
 // [8] QString text()
 func (this *QTextLayout) Text() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -200,7 +196,7 @@ func (this *QTextLayout) Text() *qtcore.QString /*123*/ {
 // [-2] void setTextOption(const QTextOption &)
 func (this *QTextLayout) SetTextOption(option *QTextOption) {
 	var convArg0 = option.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout13setTextOptionERK11QTextOption", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout13setTextOptionERK11QTextOption", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -209,7 +205,7 @@ func (this *QTextLayout) SetTextOption(option *QTextOption) {
 // Public Visibility=Default Availability=Available
 // [32] const QTextOption & textOption()
 func (this *QTextLayout) TextOption() *QTextOption {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout10textOptionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout10textOptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextOptionFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -223,7 +219,7 @@ func (this *QTextLayout) TextOption() *QTextOption {
 // [-2] void setPreeditArea(int, const QString &)
 func (this *QTextLayout) SetPreeditArea(position int, text *qtcore.QString) {
 	var convArg1 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout14setPreeditAreaEiRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), position, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout14setPreeditAreaEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), position, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -232,7 +228,7 @@ func (this *QTextLayout) SetPreeditArea(position int, text *qtcore.QString) {
 // Public Visibility=Default Availability=Available
 // [4] int preeditAreaPosition()
 func (this *QTextLayout) PreeditAreaPosition() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout19preeditAreaPositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout19preeditAreaPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -243,7 +239,7 @@ func (this *QTextLayout) PreeditAreaPosition() int {
 // Public Visibility=Default Availability=Available
 // [8] QString preeditAreaText()
 func (this *QTextLayout) PreeditAreaText() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout15preeditAreaTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout15preeditAreaTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -256,7 +252,7 @@ func (this *QTextLayout) PreeditAreaText() *qtcore.QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void clearAdditionalFormats()
 func (this *QTextLayout) ClearAdditionalFormats() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout22clearAdditionalFormatsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout22clearAdditionalFormatsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -265,7 +261,7 @@ func (this *QTextLayout) ClearAdditionalFormats() {
 // Public Visibility=Default Availability=Available
 // [-2] void clearFormats()
 func (this *QTextLayout) ClearFormats() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout12clearFormatsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout12clearFormatsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -274,7 +270,7 @@ func (this *QTextLayout) ClearFormats() {
 // Public Visibility=Default Availability=Available
 // [-2] void setCacheEnabled(_Bool)
 func (this *QTextLayout) SetCacheEnabled(enable bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout15setCacheEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), enable)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout15setCacheEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enable)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -283,7 +279,7 @@ func (this *QTextLayout) SetCacheEnabled(enable bool) {
 // Public Visibility=Default Availability=Available
 // [1] bool cacheEnabled()
 func (this *QTextLayout) CacheEnabled() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout12cacheEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout12cacheEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -294,7 +290,7 @@ func (this *QTextLayout) CacheEnabled() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setCursorMoveStyle(Qt::CursorMoveStyle)
 func (this *QTextLayout) SetCursorMoveStyle(style int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout18setCursorMoveStyleEN2Qt15CursorMoveStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), style)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout18setCursorMoveStyleEN2Qt15CursorMoveStyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -303,7 +299,7 @@ func (this *QTextLayout) SetCursorMoveStyle(style int) {
 // Public Visibility=Default Availability=Available
 // [4] Qt::CursorMoveStyle cursorMoveStyle()
 func (this *QTextLayout) CursorMoveStyle() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout15cursorMoveStyleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout15cursorMoveStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -314,7 +310,7 @@ func (this *QTextLayout) CursorMoveStyle() int {
 // Public Visibility=Default Availability=Available
 // [-2] void beginLayout()
 func (this *QTextLayout) BeginLayout() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout11beginLayoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout11beginLayoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -323,7 +319,7 @@ func (this *QTextLayout) BeginLayout() {
 // Public Visibility=Default Availability=Available
 // [-2] void endLayout()
 func (this *QTextLayout) EndLayout() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout9endLayoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout9endLayoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -332,7 +328,7 @@ func (this *QTextLayout) EndLayout() {
 // Public Visibility=Default Availability=Available
 // [-2] void clearLayout()
 func (this *QTextLayout) ClearLayout() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout11clearLayoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout11clearLayoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -341,7 +337,7 @@ func (this *QTextLayout) ClearLayout() {
 // Public Visibility=Default Availability=Available
 // [16] QTextLine createLine()
 func (this *QTextLayout) CreateLine() *QTextLine /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout10createLineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout10createLineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -354,7 +350,7 @@ func (this *QTextLayout) CreateLine() *QTextLine /*123*/ {
 // Public Visibility=Default Availability=Available
 // [4] int lineCount()
 func (this *QTextLayout) LineCount() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout9lineCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout9lineCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -365,7 +361,7 @@ func (this *QTextLayout) LineCount() int {
 // Public Visibility=Default Availability=Available
 // [16] QTextLine lineAt(int)
 func (this *QTextLayout) LineAt(i int) *QTextLine /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout6lineAtEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout6lineAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -378,7 +374,7 @@ func (this *QTextLayout) LineAt(i int) *QTextLine /*123*/ {
 // Public Visibility=Default Availability=Available
 // [16] QTextLine lineForTextPosition(int)
 func (this *QTextLayout) LineForTextPosition(pos int) *QTextLine /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout19lineForTextPositionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pos)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout19lineForTextPositionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -391,7 +387,7 @@ func (this *QTextLayout) LineForTextPosition(pos int) *QTextLine /*123*/ {
 // Public Visibility=Default Availability=Available
 // [1] bool isValidCursorPosition(int)
 func (this *QTextLayout) IsValidCursorPosition(pos int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout21isValidCursorPositionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pos)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout21isValidCursorPositionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -402,7 +398,7 @@ func (this *QTextLayout) IsValidCursorPosition(pos int) bool {
 // Public Visibility=Default Availability=Available
 // [4] int nextCursorPosition(int, enum QTextLayout::CursorMode)
 func (this *QTextLayout) NextCursorPosition(oldPos int, mode int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout18nextCursorPositionEiNS_10CursorModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), oldPos, mode)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout18nextCursorPositionEiNS_10CursorModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), oldPos, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -413,7 +409,7 @@ func (this *QTextLayout) NextCursorPosition(oldPos int, mode int) int {
 // Public Visibility=Default Availability=Available
 // [4] int previousCursorPosition(int, enum QTextLayout::CursorMode)
 func (this *QTextLayout) PreviousCursorPosition(oldPos int, mode int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout22previousCursorPositionEiNS_10CursorModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), oldPos, mode)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout22previousCursorPositionEiNS_10CursorModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), oldPos, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -424,7 +420,7 @@ func (this *QTextLayout) PreviousCursorPosition(oldPos int, mode int) int {
 // Public Visibility=Default Availability=Available
 // [4] int leftCursorPosition(int)
 func (this *QTextLayout) LeftCursorPosition(oldPos int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout18leftCursorPositionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), oldPos)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout18leftCursorPositionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), oldPos)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -435,7 +431,7 @@ func (this *QTextLayout) LeftCursorPosition(oldPos int) int {
 // Public Visibility=Default Availability=Available
 // [4] int rightCursorPosition(int)
 func (this *QTextLayout) RightCursorPosition(oldPos int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout19rightCursorPositionEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), oldPos)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout19rightCursorPositionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), oldPos)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -448,7 +444,7 @@ func (this *QTextLayout) RightCursorPosition(oldPos int) int {
 func (this *QTextLayout) DrawCursor(p *QPainter /*777 QPainter **/, pos *qtcore.QPointF, cursorPosition int) {
 	var convArg0 = p.GetCthis()
 	var convArg1 = pos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cursorPosition)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cursorPosition)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -459,7 +455,7 @@ func (this *QTextLayout) DrawCursor(p *QPainter /*777 QPainter **/, pos *qtcore.
 func (this *QTextLayout) DrawCursor_1(p *QPainter /*777 QPainter **/, pos *qtcore.QPointF, cursorPosition int, width int) {
 	var convArg0 = p.GetCthis()
 	var convArg1 = pos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cursorPosition, width)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, cursorPosition, width)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -468,7 +464,7 @@ func (this *QTextLayout) DrawCursor_1(p *QPainter /*777 QPainter **/, pos *qtcor
 // Public Visibility=Default Availability=Available
 // [16] QPointF position()
 func (this *QTextLayout) Position() *qtcore.QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout8positionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout8positionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -482,7 +478,7 @@ func (this *QTextLayout) Position() *qtcore.QPointF /*123*/ {
 // [-2] void setPosition(const QPointF &)
 func (this *QTextLayout) SetPosition(p *qtcore.QPointF) {
 	var convArg0 = p.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout11setPositionERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout11setPositionERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -491,7 +487,7 @@ func (this *QTextLayout) SetPosition(p *qtcore.QPointF) {
 // Public Visibility=Default Availability=Available
 // [32] QRectF boundingRect()
 func (this *QTextLayout) BoundingRect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout12boundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -504,7 +500,7 @@ func (this *QTextLayout) BoundingRect() *qtcore.QRectF /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] qreal minimumWidth()
 func (this *QTextLayout) MinimumWidth() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout12minimumWidthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout12minimumWidthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -515,7 +511,7 @@ func (this *QTextLayout) MinimumWidth() float64 {
 // Public Visibility=Default Availability=Available
 // [8] qreal maximumWidth()
 func (this *QTextLayout) MaximumWidth() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTextLayout12maximumWidthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLayout12maximumWidthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -526,7 +522,7 @@ func (this *QTextLayout) MaximumWidth() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void setFlags(int)
 func (this *QTextLayout) SetFlags(flags int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTextLayout8setFlagsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextLayout8setFlagsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	gopp.ErrPrint(err, rv)
 }
 

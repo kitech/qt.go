@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QToolBarChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QToolBarChange
 // Public Visibility=Default Availability=Available
 // [-2] void QToolBarChangeEvent(_Bool)
 func NewQToolBarChangeEvent(t bool) *QToolBarChangeEvent {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QToolBarChangeEventC2Eb", ffiqt.FFI_TYPE_POINTER, t)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QToolBarChangeEventC2Eb", qtrt.FFI_TYPE_POINTER, t)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQToolBarChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQToolBarChangeEvent)
@@ -88,7 +84,7 @@ func NewQToolBarChangeEvent(t bool) *QToolBarChangeEvent {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QToolBarChangeEvent()
 func DeleteQToolBarChangeEvent(this *QToolBarChangeEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QToolBarChangeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QToolBarChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -99,7 +95,7 @@ func DeleteQToolBarChangeEvent(this *QToolBarChangeEvent) {
 // Public inline Visibility=Default Availability=Available
 // [1] bool toggle()
 func (this *QToolBarChangeEvent) Toggle() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QToolBarChangeEvent6toggleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QToolBarChangeEvent6toggleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QXmlStreamNotationDeclaration) NewFromPointer(cthis unsafe.Pointer) *QXml
 // Public Visibility=Default Availability=Available
 // [-2] void QXmlStreamNotationDeclaration()
 func NewQXmlStreamNotationDeclaration() *QXmlStreamNotationDeclaration {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamNotationDeclarationFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQXmlStreamNotationDeclaration)
@@ -87,7 +83,7 @@ func NewQXmlStreamNotationDeclaration() *QXmlStreamNotationDeclaration {
 // Public Visibility=Default Availability=Available
 // [-2] void ~QXmlStreamNotationDeclaration()
 func DeleteQXmlStreamNotationDeclaration(this *QXmlStreamNotationDeclaration) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 56)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -98,7 +94,7 @@ func DeleteQXmlStreamNotationDeclaration(this *QXmlStreamNotationDeclaration) {
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef name()
 func (this *QXmlStreamNotationDeclaration) Name() *QStringRef /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -111,7 +107,7 @@ func (this *QXmlStreamNotationDeclaration) Name() *QStringRef /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef systemId()
 func (this *QXmlStreamNotationDeclaration) SystemId() *QStringRef /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8systemIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8systemIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -124,7 +120,7 @@ func (this *QXmlStreamNotationDeclaration) SystemId() *QStringRef /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [16] QStringRef publicId()
 func (this *QXmlStreamNotationDeclaration) PublicId() *QStringRef /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8publicIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8publicIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333

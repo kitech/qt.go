@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QContiguousCacheData) NewFromPointer(cthis unsafe.Pointer) *QContiguousCa
 // Public static Visibility=Default Availability=Available
 // [8] QContiguousCacheData * allocateData(int, int)
 func (this *QContiguousCacheData) AllocateData(size int, alignment int) *QContiguousCacheData /*777 QContiguousCacheData **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QContiguousCacheData12allocateDataEii", ffiqt.FFI_TYPE_POINTER, size, alignment)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QContiguousCacheData12allocateDataEii", qtrt.FFI_TYPE_POINTER, size, alignment)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQContiguousCacheDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -88,7 +84,7 @@ func QContiguousCacheData_AllocateData(size int, alignment int) *QContiguousCach
 }
 
 func DeleteQContiguousCacheData(this *QContiguousCacheData) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QContiguousCacheDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QContiguousCacheDataD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QRegularExpressionMatchIterator) NewFromPointer(cthis unsafe.Pointer) *QR
 // Public Visibility=Default Availability=Available
 // [-2] void QRegularExpressionMatchIterator()
 func NewQRegularExpressionMatchIterator() *QRegularExpressionMatchIterator {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIteratorC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIteratorC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRegularExpressionMatchIteratorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQRegularExpressionMatchIterator)
@@ -87,7 +83,7 @@ func NewQRegularExpressionMatchIterator() *QRegularExpressionMatchIterator {
 // Public Visibility=Default Availability=Available
 // [-2] void ~QRegularExpressionMatchIterator()
 func DeleteQRegularExpressionMatchIterator(this *QRegularExpressionMatchIterator) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIteratorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIteratorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -99,7 +95,7 @@ func DeleteQRegularExpressionMatchIterator(this *QRegularExpressionMatchIterator
 // [-2] void swap(QRegularExpressionMatchIterator &)
 func (this *QRegularExpressionMatchIterator) Swap(other *QRegularExpressionMatchIterator) {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIterator4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIterator4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -108,7 +104,7 @@ func (this *QRegularExpressionMatchIterator) Swap(other *QRegularExpressionMatch
 // Public Visibility=Default Availability=Available
 // [1] bool isValid()
 func (this *QRegularExpressionMatchIterator) IsValid() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -119,7 +115,7 @@ func (this *QRegularExpressionMatchIterator) IsValid() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool hasNext()
 func (this *QRegularExpressionMatchIterator) HasNext() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator7hasNextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator7hasNextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -130,7 +126,7 @@ func (this *QRegularExpressionMatchIterator) HasNext() bool {
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatch next()
 func (this *QRegularExpressionMatchIterator) Next() *QRegularExpressionMatch /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIterator4nextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN31QRegularExpressionMatchIterator4nextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegularExpressionMatchFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -143,7 +139,7 @@ func (this *QRegularExpressionMatchIterator) Next() *QRegularExpressionMatch /*1
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatch peekNext()
 func (this *QRegularExpressionMatchIterator) PeekNext() *QRegularExpressionMatch /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator8peekNextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator8peekNextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegularExpressionMatchFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -156,7 +152,7 @@ func (this *QRegularExpressionMatchIterator) PeekNext() *QRegularExpressionMatch
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpression regularExpression()
 func (this *QRegularExpressionMatchIterator) RegularExpression() *QRegularExpression /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator17regularExpressionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator17regularExpressionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegularExpressionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -169,7 +165,7 @@ func (this *QRegularExpressionMatchIterator) RegularExpression() *QRegularExpres
 // Public Visibility=Default Availability=Available
 // [4] QRegularExpression::MatchType matchType()
 func (this *QRegularExpressionMatchIterator) MatchType() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator9matchTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator9matchTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -180,7 +176,7 @@ func (this *QRegularExpressionMatchIterator) MatchType() int {
 // Public Visibility=Default Availability=Available
 // [4] QRegularExpression::MatchOptions matchOptions()
 func (this *QRegularExpressionMatchIterator) MatchOptions() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator12matchOptionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK31QRegularExpressionMatchIterator12matchOptionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)

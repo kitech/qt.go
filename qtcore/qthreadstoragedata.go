@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QThreadStorageData) NewFromPointer(cthis unsafe.Pointer) *QThreadStorageD
 // Public Visibility=Default Availability=Available
 // [-2] void ~QThreadStorageData()
 func DeleteQThreadStorageData(this *QThreadStorageData) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QThreadStorageDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QThreadStorageDataD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 4)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -86,7 +82,7 @@ func DeleteQThreadStorageData(this *QThreadStorageData) {
 // Public Visibility=Default Availability=Available
 // [8] void ** get()
 func (this *QThreadStorageData) Get() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QThreadStorageData3getEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QThreadStorageData3getEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -97,7 +93,7 @@ func (this *QThreadStorageData) Get() unsafe.Pointer /*666*/ {
 // Public Visibility=Default Availability=Available
 // [8] void ** set(void *)
 func (this *QThreadStorageData) Set(p unsafe.Pointer /*666*/) unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QThreadStorageData3setEPv", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), p)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QThreadStorageData3setEPv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), p)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -108,7 +104,7 @@ func (this *QThreadStorageData) Set(p unsafe.Pointer /*666*/) unsafe.Pointer /*6
 // Public static Visibility=Default Availability=Available
 // [-2] void finish(void **)
 func (this *QThreadStorageData) Finish(arg0 unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QThreadStorageData6finishEPPv", ffiqt.FFI_TYPE_POINTER, arg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QThreadStorageData6finishEPPv", qtrt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
 }
 func QThreadStorageData_Finish(arg0 unsafe.Pointer /*666*/) {

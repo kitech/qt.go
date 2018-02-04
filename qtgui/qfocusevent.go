@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QFocusEvent) NewFromPointer(cthis unsafe.Pointer) *QFocusEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QFocusEvent(enum QEvent::Type, Qt::FocusReason)
 func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFocusEventC2EN6QEvent4TypeEN2Qt11FocusReasonE", ffiqt.FFI_TYPE_POINTER, type_, reason)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusEventC2EN6QEvent4TypeEN2Qt11FocusReasonE", qtrt.FFI_TYPE_POINTER, type_, reason)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFocusEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQFocusEvent)
@@ -88,7 +84,7 @@ func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFocusEvent()
 func DeleteQFocusEvent(this *QFocusEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFocusEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFocusEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -99,7 +95,7 @@ func DeleteQFocusEvent(this *QFocusEvent) {
 // Public inline Visibility=Default Availability=Available
 // [1] bool gotFocus()
 func (this *QFocusEvent) GotFocus() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFocusEvent8gotFocusEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusEvent8gotFocusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -110,7 +106,7 @@ func (this *QFocusEvent) GotFocus() bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool lostFocus()
 func (this *QFocusEvent) LostFocus() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFocusEvent9lostFocusEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusEvent9lostFocusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -121,7 +117,7 @@ func (this *QFocusEvent) LostFocus() bool {
 // Public Visibility=Default Availability=Available
 // [4] Qt::FocusReason reason()
 func (this *QFocusEvent) Reason() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFocusEvent6reasonEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusEvent6reasonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)

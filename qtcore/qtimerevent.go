@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -72,7 +68,7 @@ func (*QTimerEvent) NewFromPointer(cthis unsafe.Pointer) *QTimerEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QTimerEvent(int)
 func NewQTimerEvent(timerId int) *QTimerEvent {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTimerEventC2Ei", ffiqt.FFI_TYPE_POINTER, timerId)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTimerEventC2Ei", qtrt.FFI_TYPE_POINTER, timerId)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTimerEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTimerEvent)
@@ -84,7 +80,7 @@ func NewQTimerEvent(timerId int) *QTimerEvent {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTimerEvent()
 func DeleteQTimerEvent(this *QTimerEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTimerEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTimerEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -95,7 +91,7 @@ func DeleteQTimerEvent(this *QTimerEvent) {
 // Public inline Visibility=Default Availability=Available
 // [4] int timerId()
 func (this *QTimerEvent) TimerId() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTimerEvent7timerIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTimerEvent7timerIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111

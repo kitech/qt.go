@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -78,7 +74,7 @@ func (*QDragMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QDragMoveEvent {
 func NewQDragMoveEvent(pos *qtcore.QPoint, actions int, data *qtcore.QMimeData /*777 const QMimeData **/, buttons int, modifiers int, type_ int) *QDragMoveEvent {
 	var convArg0 = pos.GetCthis()
 	var convArg2 = data.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEventC2ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE", ffiqt.FFI_TYPE_POINTER, convArg0, actions, convArg2, buttons, modifiers, type_)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEventC2ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE", qtrt.FFI_TYPE_POINTER, convArg0, actions, convArg2, buttons, modifiers, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDragMoveEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDragMoveEvent)
@@ -90,7 +86,7 @@ func NewQDragMoveEvent(pos *qtcore.QPoint, actions int, data *qtcore.QMimeData /
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDragMoveEvent()
 func DeleteQDragMoveEvent(this *QDragMoveEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 88)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -101,7 +97,7 @@ func DeleteQDragMoveEvent(this *QDragMoveEvent) {
 // Public inline Visibility=Default Availability=Available
 // [16] QRect answerRect()
 func (this *QDragMoveEvent) AnswerRect() *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDragMoveEvent10answerRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDragMoveEvent10answerRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -114,7 +110,7 @@ func (this *QDragMoveEvent) AnswerRect() *qtcore.QRect /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void accept()
 func (this *QDragMoveEvent) Accept() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEvent6acceptEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEvent6acceptEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -124,7 +120,7 @@ func (this *QDragMoveEvent) Accept() {
 // [-2] void accept(const QRect &)
 func (this *QDragMoveEvent) Accept_1(r *qtcore.QRect) {
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEvent6acceptERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEvent6acceptERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -133,7 +129,7 @@ func (this *QDragMoveEvent) Accept_1(r *qtcore.QRect) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void ignore()
 func (this *QDragMoveEvent) Ignore() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEvent6ignoreEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEvent6ignoreEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -143,7 +139,7 @@ func (this *QDragMoveEvent) Ignore() {
 // [-2] void ignore(const QRect &)
 func (this *QDragMoveEvent) Ignore_1(r *qtcore.QRect) {
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDragMoveEvent6ignoreERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QDragMoveEvent6ignoreERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

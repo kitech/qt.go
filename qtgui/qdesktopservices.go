@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QDesktopServices) NewFromPointer(cthis unsafe.Pointer) *QDesktopServices 
 // [1] bool openUrl(const QUrl &)
 func (this *QDesktopServices) OpenUrl(url *qtcore.QUrl) bool {
 	var convArg0 = url.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDesktopServices7openUrlERK4QUrl", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QDesktopServices7openUrlERK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -100,7 +96,7 @@ func (this *QDesktopServices) SetUrlHandler(scheme *qtcore.QString, receiver *qt
 	var convArg1 = receiver.GetCthis()
 	var convArg2 = qtrt.CString(method)
 	defer qtrt.FreeMem(convArg2)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 func QDesktopServices_SetUrlHandler(scheme *qtcore.QString, receiver *qtcore.QObject /*777 QObject **/, method string) {
@@ -114,7 +110,7 @@ func QDesktopServices_SetUrlHandler(scheme *qtcore.QString, receiver *qtcore.QOb
 // [-2] void unsetUrlHandler(const QString &)
 func (this *QDesktopServices) UnsetUrlHandler(scheme *qtcore.QString) {
 	var convArg0 = scheme.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDesktopServices15unsetUrlHandlerERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QDesktopServices15unsetUrlHandlerERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QDesktopServices_UnsetUrlHandler(scheme *qtcore.QString) {
@@ -123,7 +119,7 @@ func QDesktopServices_UnsetUrlHandler(scheme *qtcore.QString) {
 }
 
 func DeleteQDesktopServices(this *QDesktopServices) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QDesktopServicesD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QDesktopServicesD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

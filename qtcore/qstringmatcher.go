@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QStringMatcher) NewFromPointer(cthis unsafe.Pointer) *QStringMatcher {
 // Public Visibility=Default Availability=Available
 // [-2] void QStringMatcher()
 func NewQStringMatcher() *QStringMatcher {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStringMatcherC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStringMatcherC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStringMatcherFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStringMatcher)
@@ -88,7 +84,7 @@ func NewQStringMatcher() *QStringMatcher {
 // [-2] void QStringMatcher(const QString &, Qt::CaseSensitivity)
 func NewQStringMatcher_1(pattern *QString, cs int) *QStringMatcher {
 	var convArg0 = pattern.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStringMatcherC2ERK7QStringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, convArg0, cs)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStringMatcherC2ERK7QStringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStringMatcherFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStringMatcher)
@@ -101,7 +97,7 @@ func NewQStringMatcher_1(pattern *QString, cs int) *QStringMatcher {
 // [-2] void QStringMatcher(const QChar *, int, Qt::CaseSensitivity)
 func NewQStringMatcher_2(uc *QChar /*777 const QChar **/, len int, cs int) *QStringMatcher {
 	var convArg0 = uc.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStringMatcherC2EPK5QChariN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, convArg0, len, cs)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStringMatcherC2EPK5QChariN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, convArg0, len, cs)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStringMatcherFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStringMatcher)
@@ -113,7 +109,7 @@ func NewQStringMatcher_2(uc *QChar /*777 const QChar **/, len int, cs int) *QStr
 // Public Visibility=Default Availability=Available
 // [-2] void ~QStringMatcher()
 func DeleteQStringMatcher(this *QStringMatcher) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStringMatcherD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStringMatcherD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 1048)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -125,7 +121,7 @@ func DeleteQStringMatcher(this *QStringMatcher) {
 // [-2] void setPattern(const QString &)
 func (this *QStringMatcher) SetPattern(pattern *QString) {
 	var convArg0 = pattern.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStringMatcher10setPatternERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStringMatcher10setPatternERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -134,7 +130,7 @@ func (this *QStringMatcher) SetPattern(pattern *QString) {
 // Public Visibility=Default Availability=Available
 // [-2] void setCaseSensitivity(Qt::CaseSensitivity)
 func (this *QStringMatcher) SetCaseSensitivity(cs int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStringMatcher18setCaseSensitivityEN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cs)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStringMatcher18setCaseSensitivityEN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -144,7 +140,7 @@ func (this *QStringMatcher) SetCaseSensitivity(cs int) {
 // [4] int indexIn(const QString &, int)
 func (this *QStringMatcher) IndexIn(str *QString, from int) int {
 	var convArg0 = str.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStringMatcher7indexInERK7QStringi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStringMatcher7indexInERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -156,7 +152,7 @@ func (this *QStringMatcher) IndexIn(str *QString, from int) int {
 // [4] int indexIn(const QChar *, int, int)
 func (this *QStringMatcher) IndexIn_1(str *QChar /*777 const QChar **/, length int, from int) int {
 	var convArg0 = str.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStringMatcher7indexInEPK5QCharii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, length, from)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStringMatcher7indexInEPK5QCharii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, length, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -167,7 +163,7 @@ func (this *QStringMatcher) IndexIn_1(str *QChar /*777 const QChar **/, length i
 // Public Visibility=Default Availability=Available
 // [8] QString pattern()
 func (this *QStringMatcher) Pattern() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStringMatcher7patternEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStringMatcher7patternEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -180,7 +176,7 @@ func (this *QStringMatcher) Pattern() *QString /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::CaseSensitivity caseSensitivity()
 func (this *QStringMatcher) CaseSensitivity() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QStringMatcher15caseSensitivityEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QStringMatcher15caseSensitivityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)

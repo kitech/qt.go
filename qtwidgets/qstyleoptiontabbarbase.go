@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QStyleOptionTabBarBase) NewFromPointer(cthis unsafe.Pointer) *QStyleOptio
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionTabBarBase()
 func NewQStyleOptionTabBarBase() *QStyleOptionTabBarBase {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionTabBarBaseC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionTabBarBaseC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTabBarBaseFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionTabBarBase)
@@ -92,7 +88,7 @@ func NewQStyleOptionTabBarBase() *QStyleOptionTabBarBase {
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionTabBarBase(int)
 func NewQStyleOptionTabBarBase_1(version int) *QStyleOptionTabBarBase {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionTabBarBaseC2Ei", ffiqt.FFI_TYPE_POINTER, version)
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionTabBarBaseC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTabBarBaseFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionTabBarBase)
@@ -100,7 +96,7 @@ func NewQStyleOptionTabBarBase_1(version int) *QStyleOptionTabBarBase {
 }
 
 func DeleteQStyleOptionTabBarBase(this *QStyleOptionTabBarBase) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionTabBarBaseD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionTabBarBaseD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

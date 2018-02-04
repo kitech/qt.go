@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QMimeType) NewFromPointer(cthis unsafe.Pointer) *QMimeType {
 // Public Visibility=Default Availability=Available
 // [-2] void QMimeType()
 func NewQMimeType() *QMimeType {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeTypeC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeTypeC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMimeTypeFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMimeType)
@@ -88,7 +84,7 @@ func NewQMimeType() *QMimeType {
 // [-2] void swap(QMimeType &)
 func (this *QMimeType) Swap(other *QMimeType) {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeType4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeType4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -97,7 +93,7 @@ func (this *QMimeType) Swap(other *QMimeType) {
 // Public Visibility=Default Availability=Available
 // [-2] void ~QMimeType()
 func DeleteQMimeType(this *QMimeType) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QMimeTypeD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeTypeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -108,7 +104,7 @@ func DeleteQMimeType(this *QMimeType) {
 // Public Visibility=Default Availability=Available
 // [1] bool isValid()
 func (this *QMimeType) IsValid() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -119,7 +115,7 @@ func (this *QMimeType) IsValid() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isDefault()
 func (this *QMimeType) IsDefault() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType9isDefaultEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType9isDefaultEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -130,7 +126,7 @@ func (this *QMimeType) IsDefault() bool {
 // Public Visibility=Default Availability=Available
 // [8] QString name()
 func (this *QMimeType) Name() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -143,7 +139,7 @@ func (this *QMimeType) Name() *QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QString comment()
 func (this *QMimeType) Comment() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType7commentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType7commentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -156,7 +152,7 @@ func (this *QMimeType) Comment() *QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QString genericIconName()
 func (this *QMimeType) GenericIconName() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType15genericIconNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType15genericIconNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -169,7 +165,7 @@ func (this *QMimeType) GenericIconName() *QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QString iconName()
 func (this *QMimeType) IconName() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType8iconNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType8iconNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -182,7 +178,7 @@ func (this *QMimeType) IconName() *QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QString preferredSuffix()
 func (this *QMimeType) PreferredSuffix() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType15preferredSuffixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType15preferredSuffixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -196,7 +192,7 @@ func (this *QMimeType) PreferredSuffix() *QString /*123*/ {
 // [1] bool inherits(const QString &)
 func (this *QMimeType) Inherits(mimeTypeName *QString) bool {
 	var convArg0 = mimeTypeName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType8inheritsERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType8inheritsERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -207,7 +203,7 @@ func (this *QMimeType) Inherits(mimeTypeName *QString) bool {
 // Public Visibility=Default Availability=Available
 // [8] QString filterString()
 func (this *QMimeType) FilterString() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QMimeType12filterStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType12filterStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QFlag) NewFromPointer(cthis unsafe.Pointer) *QFlag {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QFlag(int)
 func NewQFlag(ai int) *QFlag {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Ei", ffiqt.FFI_TYPE_POINTER, ai)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Ei", qtrt.FFI_TYPE_POINTER, ai)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQFlag)
@@ -87,7 +83,7 @@ func NewQFlag(ai int) *QFlag {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QFlag(uint)
 func NewQFlag_1(ai uint) *QFlag {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Ej", ffiqt.FFI_TYPE_POINTER, ai)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Ej", qtrt.FFI_TYPE_POINTER, ai)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQFlag)
@@ -99,7 +95,7 @@ func NewQFlag_1(ai uint) *QFlag {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QFlag(short)
 func NewQFlag_2(ai int16) *QFlag {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Es", ffiqt.FFI_TYPE_POINTER, ai)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Es", qtrt.FFI_TYPE_POINTER, ai)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQFlag)
@@ -111,7 +107,7 @@ func NewQFlag_2(ai int16) *QFlag {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QFlag(ushort)
 func NewQFlag_3(ai uint16) *QFlag {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagC2Et", ffiqt.FFI_TYPE_POINTER, ai)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagC2Et", qtrt.FFI_TYPE_POINTER, ai)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQFlag)
@@ -119,7 +115,7 @@ func NewQFlag_3(ai uint16) *QFlag {
 }
 
 func DeleteQFlag(this *QFlag) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QFlagD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QFlagD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

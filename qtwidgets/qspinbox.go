@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -54,27 +50,27 @@ func init() {
 //  body block begin
 // bool event(class QEvent *)
 func (this *QSpinBox) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
-	ffiqt.SetAllInheritCallback(this, "event", f)
+	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
 // QValidator::State validate(class QString &, int &)
 func (this *QSpinBox) InheritValidate(f func(input *qtcore.QString, pos int) int) {
-	ffiqt.SetAllInheritCallback(this, "validate", f)
+	qtrt.SetAllInheritCallback(this, "validate", f)
 }
 
 // int valueFromText(const class QString &)
 func (this *QSpinBox) InheritValueFromText(f func(text *qtcore.QString) int) {
-	ffiqt.SetAllInheritCallback(this, "valueFromText", f)
+	qtrt.SetAllInheritCallback(this, "valueFromText", f)
 }
 
 // QString textFromValue(int)
 func (this *QSpinBox) InheritTextFromValue(f func(val int) unsafe.Pointer) {
-	ffiqt.SetAllInheritCallback(this, "textFromValue", f)
+	qtrt.SetAllInheritCallback(this, "textFromValue", f)
 }
 
 // void fixup(class QString &)
 func (this *QSpinBox) InheritFixup(f func(str *qtcore.QString)) {
-	ffiqt.SetAllInheritCallback(this, "fixup", f)
+	qtrt.SetAllInheritCallback(this, "fixup", f)
 }
 
 type QSpinBox struct {
@@ -104,7 +100,7 @@ func (*QSpinBox) NewFromPointer(cthis unsafe.Pointer) *QSpinBox {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -117,7 +113,7 @@ func (this *QSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject *
 // [-2] void QSpinBox(QWidget *)
 func NewQSpinBox(parent *QWidget /*777 QWidget **/) *QSpinBox {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBoxC2EP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBoxC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSpinBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -128,7 +124,7 @@ func NewQSpinBox(parent *QWidget /*777 QWidget **/) *QSpinBox {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSpinBox()
 func DeleteQSpinBox(this *QSpinBox) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBoxD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -139,7 +135,7 @@ func DeleteQSpinBox(this *QSpinBox) {
 // Public Visibility=Default Availability=Available
 // [4] int value()
 func (this *QSpinBox) Value() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -150,7 +146,7 @@ func (this *QSpinBox) Value() int {
 // Public Visibility=Default Availability=Available
 // [8] QString prefix()
 func (this *QSpinBox) Prefix() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox6prefixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox6prefixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -164,7 +160,7 @@ func (this *QSpinBox) Prefix() *qtcore.QString /*123*/ {
 // [-2] void setPrefix(const QString &)
 func (this *QSpinBox) SetPrefix(prefix *qtcore.QString) {
 	var convArg0 = prefix.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox9setPrefixERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBox9setPrefixERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -173,7 +169,7 @@ func (this *QSpinBox) SetPrefix(prefix *qtcore.QString) {
 // Public Visibility=Default Availability=Available
 // [8] QString suffix()
 func (this *QSpinBox) Suffix() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox6suffixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox6suffixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -187,7 +183,7 @@ func (this *QSpinBox) Suffix() *qtcore.QString /*123*/ {
 // [-2] void setSuffix(const QString &)
 func (this *QSpinBox) SetSuffix(suffix *qtcore.QString) {
 	var convArg0 = suffix.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox9setSuffixERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBox9setSuffixERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -196,7 +192,7 @@ func (this *QSpinBox) SetSuffix(suffix *qtcore.QString) {
 // Public Visibility=Default Availability=Available
 // [8] QString cleanText()
 func (this *QSpinBox) CleanText() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox9cleanTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox9cleanTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -209,7 +205,7 @@ func (this *QSpinBox) CleanText() *qtcore.QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [4] int singleStep()
 func (this *QSpinBox) SingleStep() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox10singleStepEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox10singleStepEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -220,7 +216,7 @@ func (this *QSpinBox) SingleStep() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setSingleStep(int)
 func (this *QSpinBox) SetSingleStep(val int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox13setSingleStepEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), val)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBox13setSingleStepEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), val)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -229,7 +225,7 @@ func (this *QSpinBox) SetSingleStep(val int) {
 // Public Visibility=Default Availability=Available
 // [4] int minimum()
 func (this *QSpinBox) Minimum() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox7minimumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox7minimumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -240,7 +236,7 @@ func (this *QSpinBox) Minimum() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimum(int)
 func (this *QSpinBox) SetMinimum(min int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox10setMinimumEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), min)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBox10setMinimumEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), min)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -249,7 +245,7 @@ func (this *QSpinBox) SetMinimum(min int) {
 // Public Visibility=Default Availability=Available
 // [4] int maximum()
 func (this *QSpinBox) Maximum() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox7maximumEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox7maximumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -260,7 +256,7 @@ func (this *QSpinBox) Maximum() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximum(int)
 func (this *QSpinBox) SetMaximum(max int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox10setMaximumEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), max)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBox10setMaximumEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), max)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -269,7 +265,7 @@ func (this *QSpinBox) SetMaximum(max int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setRange(int, int)
 func (this *QSpinBox) SetRange(min int, max int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox8setRangeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), min, max)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBox8setRangeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), min, max)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -278,7 +274,7 @@ func (this *QSpinBox) SetRange(min int, max int) {
 // Public Visibility=Default Availability=Available
 // [4] int displayIntegerBase()
 func (this *QSpinBox) DisplayIntegerBase() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox18displayIntegerBaseEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox18displayIntegerBaseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -289,7 +285,7 @@ func (this *QSpinBox) DisplayIntegerBase() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setDisplayIntegerBase(int)
 func (this *QSpinBox) SetDisplayIntegerBase(base int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox21setDisplayIntegerBaseEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), base)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBox21setDisplayIntegerBaseEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), base)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -299,7 +295,7 @@ func (this *QSpinBox) SetDisplayIntegerBase(base int) {
 // [1] bool event(QEvent *)
 func (this *QSpinBox) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBox5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -311,7 +307,7 @@ func (this *QSpinBox) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 // [4] QValidator::State validate(QString &, int &)
 func (this *QSpinBox) Validate(input *qtcore.QString, pos int) int {
 	var convArg0 = input.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox8validateER7QStringRi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox8validateER7QStringRi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -323,7 +319,7 @@ func (this *QSpinBox) Validate(input *qtcore.QString, pos int) int {
 // [4] int valueFromText(const QString &)
 func (this *QSpinBox) ValueFromText(text *qtcore.QString) int {
 	var convArg0 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox13valueFromTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox13valueFromTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -334,7 +330,7 @@ func (this *QSpinBox) ValueFromText(text *qtcore.QString) int {
 // Protected virtual Visibility=Default Availability=Available
 // [8] QString textFromValue(int)
 func (this *QSpinBox) TextFromValue(val int) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox13textFromValueEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), val)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox13textFromValueEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), val)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -348,7 +344,7 @@ func (this *QSpinBox) TextFromValue(val int) *qtcore.QString /*123*/ {
 // [-2] void fixup(QString &)
 func (this *QSpinBox) Fixup(str *qtcore.QString) {
 	var convArg0 = str.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSpinBox5fixupER7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSpinBox5fixupER7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -357,7 +353,7 @@ func (this *QSpinBox) Fixup(str *qtcore.QString) {
 // Public Visibility=Default Availability=Available
 // [-2] void setValue(int)
 func (this *QSpinBox) SetValue(val int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox8setValueEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), val)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBox8setValueEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), val)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -366,7 +362,7 @@ func (this *QSpinBox) SetValue(val int) {
 // Public Visibility=Default Availability=Available
 // [-2] void valueChanged(int)
 func (this *QSpinBox) ValueChanged(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox12valueChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBox12valueChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -376,7 +372,7 @@ func (this *QSpinBox) ValueChanged(arg0 int) {
 // [-2] void valueChanged(const QString &)
 func (this *QSpinBox) ValueChanged_1(arg0 *qtcore.QString) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSpinBox12valueChangedERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSpinBox12valueChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

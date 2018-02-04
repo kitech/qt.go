@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QJsonValueRefPtr) NewFromPointer(cthis unsafe.Pointer) *QJsonValueRefPtr 
 // [-2] void QJsonValueRefPtr(QJsonArray *, int)
 func NewQJsonValueRefPtr(array *QJsonArray /*777 QJsonArray **/, idx int) *QJsonValueRefPtr {
 	var convArg0 = array.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QJsonValueRefPtrC2EP10QJsonArrayi", ffiqt.FFI_TYPE_POINTER, convArg0, idx)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QJsonValueRefPtrC2EP10QJsonArrayi", qtrt.FFI_TYPE_POINTER, convArg0, idx)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJsonValueRefPtrFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQJsonValueRefPtr)
@@ -89,7 +85,7 @@ func NewQJsonValueRefPtr(array *QJsonArray /*777 QJsonArray **/, idx int) *QJson
 // [-2] void QJsonValueRefPtr(QJsonObject *, int)
 func NewQJsonValueRefPtr_1(object *QJsonObject /*777 QJsonObject **/, idx int) *QJsonValueRefPtr {
 	var convArg0 = object.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QJsonValueRefPtrC2EP11QJsonObjecti", ffiqt.FFI_TYPE_POINTER, convArg0, idx)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QJsonValueRefPtrC2EP11QJsonObjecti", qtrt.FFI_TYPE_POINTER, convArg0, idx)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJsonValueRefPtrFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQJsonValueRefPtr)
@@ -97,7 +93,7 @@ func NewQJsonValueRefPtr_1(object *QJsonObject /*777 QJsonObject **/, idx int) *
 }
 
 func DeleteQJsonValueRefPtr(this *QJsonValueRefPtr) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QJsonValueRefPtrD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QJsonValueRefPtrD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

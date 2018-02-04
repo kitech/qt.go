@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QEventLoopLocker) NewFromPointer(cthis unsafe.Pointer) *QEventLoopLocker 
 // Public Visibility=Default Availability=Available
 // [-2] void QEventLoopLocker()
 func NewQEventLoopLocker() *QEventLoopLocker {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventLoopLockerC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQEventLoopLockerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQEventLoopLocker)
@@ -88,7 +84,7 @@ func NewQEventLoopLocker() *QEventLoopLocker {
 // [-2] void QEventLoopLocker(QEventLoop *)
 func NewQEventLoopLocker_1(loop *QEventLoop /*777 QEventLoop **/) *QEventLoopLocker {
 	var convArg0 = loop.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP10QEventLoop", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP10QEventLoop", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQEventLoopLockerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQEventLoopLocker)
@@ -101,7 +97,7 @@ func NewQEventLoopLocker_1(loop *QEventLoop /*777 QEventLoop **/) *QEventLoopLoc
 // [-2] void QEventLoopLocker(QThread *)
 func NewQEventLoopLocker_2(thread *QThread /*777 QThread **/) *QEventLoopLocker {
 	var convArg0 = thread.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP7QThread", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventLoopLockerC2EP7QThread", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQEventLoopLockerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQEventLoopLocker)
@@ -113,7 +109,7 @@ func NewQEventLoopLocker_2(thread *QThread /*777 QThread **/) *QEventLoopLocker 
 // Public Visibility=Default Availability=Available
 // [-2] void ~QEventLoopLocker()
 func DeleteQEventLoopLocker(this *QEventLoopLocker) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QEventLoopLockerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QEventLoopLockerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)

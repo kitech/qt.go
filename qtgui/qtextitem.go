@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -79,7 +75,7 @@ func (*QTextItem) NewFromPointer(cthis unsafe.Pointer) *QTextItem {
 // Public Visibility=Default Availability=Available
 // [8] qreal descent()
 func (this *QTextItem) Descent() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem7descentEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem7descentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -90,7 +86,7 @@ func (this *QTextItem) Descent() float64 {
 // Public Visibility=Default Availability=Available
 // [8] qreal ascent()
 func (this *QTextItem) Ascent() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem6ascentEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem6ascentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -101,7 +97,7 @@ func (this *QTextItem) Ascent() float64 {
 // Public Visibility=Default Availability=Available
 // [8] qreal width()
 func (this *QTextItem) Width() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem5widthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -112,7 +108,7 @@ func (this *QTextItem) Width() float64 {
 // Public Visibility=Default Availability=Available
 // [4] QTextItem::RenderFlags renderFlags()
 func (this *QTextItem) RenderFlags() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem11renderFlagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem11renderFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -123,7 +119,7 @@ func (this *QTextItem) RenderFlags() int {
 // Public Visibility=Default Availability=Available
 // [8] QString text()
 func (this *QTextItem) Text() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -136,7 +132,7 @@ func (this *QTextItem) Text() *qtcore.QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [16] QFont font()
 func (this *QTextItem) Font() *QFont /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTextItem4fontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem4fontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -145,7 +141,7 @@ func (this *QTextItem) Font() *QFont /*123*/ {
 }
 
 func DeleteQTextItem(this *QTextItem) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTextItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTextItemD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
@@ -156,6 +152,6 @@ const QTextItem__RightToLeft QTextItem__RenderFlag = 1
 const QTextItem__Overline QTextItem__RenderFlag = 16
 const QTextItem__Underline QTextItem__RenderFlag = 32
 const QTextItem__StrikeOut QTextItem__RenderFlag = 64
-const QTextItem__Dummy QTextItem__RenderFlag = 4294967295
+const QTextItem__Dummy QTextItem__RenderFlag = -1
 
 //  body block end

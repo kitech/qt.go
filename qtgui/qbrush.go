@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -79,7 +75,7 @@ func (*QBrush) NewFromPointer(cthis unsafe.Pointer) *QBrush {
 // Public Visibility=Default Availability=Available
 // [-2] void QBrush()
 func NewQBrush() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQBrush)
@@ -91,7 +87,7 @@ func NewQBrush() *QBrush {
 // Public Visibility=Default Availability=Available
 // [-2] void QBrush(Qt::BrushStyle)
 func NewQBrush_1(bs int) *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushC2EN2Qt10BrushStyleE", ffiqt.FFI_TYPE_POINTER, bs)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2EN2Qt10BrushStyleE", qtrt.FFI_TYPE_POINTER, bs)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQBrush)
@@ -104,7 +100,7 @@ func NewQBrush_1(bs int) *QBrush {
 // [-2] void QBrush(const QColor &, Qt::BrushStyle)
 func NewQBrush_2(color *QColor, bs int) *QBrush {
 	var convArg0 = color.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushC2ERK6QColorN2Qt10BrushStyleE", ffiqt.FFI_TYPE_POINTER, convArg0, bs)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2ERK6QColorN2Qt10BrushStyleE", qtrt.FFI_TYPE_POINTER, convArg0, bs)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQBrush)
@@ -116,7 +112,7 @@ func NewQBrush_2(color *QColor, bs int) *QBrush {
 // Public Visibility=Default Availability=Available
 // [-2] void QBrush(Qt::GlobalColor, Qt::BrushStyle)
 func NewQBrush_3(color int, bs int) *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushC2EN2Qt11GlobalColorENS0_10BrushStyleE", ffiqt.FFI_TYPE_POINTER, color, bs)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2EN2Qt11GlobalColorENS0_10BrushStyleE", qtrt.FFI_TYPE_POINTER, color, bs)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQBrush)
@@ -130,7 +126,7 @@ func NewQBrush_3(color int, bs int) *QBrush {
 func NewQBrush_4(color *QColor, pixmap *QPixmap) *QBrush {
 	var convArg0 = color.GetCthis()
 	var convArg1 = pixmap.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushC2ERK6QColorRK7QPixmap", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2ERK6QColorRK7QPixmap", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQBrush)
@@ -143,7 +139,7 @@ func NewQBrush_4(color *QColor, pixmap *QPixmap) *QBrush {
 // [-2] void QBrush(Qt::GlobalColor, const QPixmap &)
 func NewQBrush_5(color int, pixmap *QPixmap) *QBrush {
 	var convArg1 = pixmap.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushC2EN2Qt11GlobalColorERK7QPixmap", ffiqt.FFI_TYPE_POINTER, color, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2EN2Qt11GlobalColorERK7QPixmap", qtrt.FFI_TYPE_POINTER, color, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQBrush)
@@ -156,7 +152,7 @@ func NewQBrush_5(color int, pixmap *QPixmap) *QBrush {
 // [-2] void QBrush(const QPixmap &)
 func NewQBrush_6(pixmap *QPixmap) *QBrush {
 	var convArg0 = pixmap.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushC2ERK7QPixmap", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2ERK7QPixmap", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQBrush)
@@ -169,7 +165,7 @@ func NewQBrush_6(pixmap *QPixmap) *QBrush {
 // [-2] void QBrush(const QImage &)
 func NewQBrush_7(image *QImage) *QBrush {
 	var convArg0 = image.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushC2ERK6QImage", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2ERK6QImage", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQBrush)
@@ -182,7 +178,7 @@ func NewQBrush_7(image *QImage) *QBrush {
 // [-2] void QBrush(const QGradient &)
 func NewQBrush_8(gradient *QGradient) *QBrush {
 	var convArg0 = gradient.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushC2ERK9QGradient", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushC2ERK9QGradient", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBrushFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQBrush)
@@ -194,7 +190,7 @@ func NewQBrush_8(gradient *QGradient) *QBrush {
 // Public Visibility=Default Availability=Available
 // [-2] void ~QBrush()
 func DeleteQBrush(this *QBrush) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrushD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrushD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -206,7 +202,7 @@ func DeleteQBrush(this *QBrush) {
 // [-2] void swap(QBrush &)
 func (this *QBrush) Swap(other *QBrush) {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrush4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -215,7 +211,7 @@ func (this *QBrush) Swap(other *QBrush) {
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::BrushStyle style()
 func (this *QBrush) Style() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush5styleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QBrush5styleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -226,7 +222,7 @@ func (this *QBrush) Style() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setStyle(Qt::BrushStyle)
 func (this *QBrush) SetStyle(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrush8setStyleEN2Qt10BrushStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush8setStyleEN2Qt10BrushStyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -235,7 +231,7 @@ func (this *QBrush) SetStyle(arg0 int) {
 // Public inline Visibility=Default Availability=Available
 // [48] const QMatrix & matrix()
 func (this *QBrush) Matrix() *QMatrix {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush6matrixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QBrush6matrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -249,7 +245,7 @@ func (this *QBrush) Matrix() *QMatrix {
 // [-2] void setMatrix(const QMatrix &)
 func (this *QBrush) SetMatrix(mat *QMatrix) {
 	var convArg0 = mat.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrush9setMatrixERK7QMatrix", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush9setMatrixERK7QMatrix", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -258,7 +254,7 @@ func (this *QBrush) SetMatrix(mat *QMatrix) {
 // Public inline Visibility=Default Availability=Available
 // [88] QTransform transform()
 func (this *QBrush) Transform() *QTransform /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush9transformEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QBrush9transformEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -272,7 +268,7 @@ func (this *QBrush) Transform() *QTransform /*123*/ {
 // [-2] void setTransform(const QTransform &)
 func (this *QBrush) SetTransform(arg0 *QTransform) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrush12setTransformERK10QTransform", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush12setTransformERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -281,7 +277,7 @@ func (this *QBrush) SetTransform(arg0 *QTransform) {
 // Public Visibility=Default Availability=Available
 // [32] QPixmap texture()
 func (this *QBrush) Texture() *QPixmap /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush7textureEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QBrush7textureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -295,7 +291,7 @@ func (this *QBrush) Texture() *QPixmap /*123*/ {
 // [-2] void setTexture(const QPixmap &)
 func (this *QBrush) SetTexture(pixmap *QPixmap) {
 	var convArg0 = pixmap.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrush10setTextureERK7QPixmap", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush10setTextureERK7QPixmap", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -304,7 +300,7 @@ func (this *QBrush) SetTexture(pixmap *QPixmap) {
 // Public Visibility=Default Availability=Available
 // [32] QImage textureImage()
 func (this *QBrush) TextureImage() *QImage /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush12textureImageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QBrush12textureImageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -318,7 +314,7 @@ func (this *QBrush) TextureImage() *QImage /*123*/ {
 // [-2] void setTextureImage(const QImage &)
 func (this *QBrush) SetTextureImage(image *QImage) {
 	var convArg0 = image.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrush15setTextureImageERK6QImage", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush15setTextureImageERK6QImage", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -327,7 +323,7 @@ func (this *QBrush) SetTextureImage(image *QImage) {
 // Public inline Visibility=Default Availability=Available
 // [16] const QColor & color()
 func (this *QBrush) Color() *QColor {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush5colorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QBrush5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -341,7 +337,7 @@ func (this *QBrush) Color() *QColor {
 // [-2] void setColor(const QColor &)
 func (this *QBrush) SetColor(color *QColor) {
 	var convArg0 = color.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrush8setColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush8setColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -350,7 +346,7 @@ func (this *QBrush) SetColor(color *QColor) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setColor(Qt::GlobalColor)
 func (this *QBrush) SetColor_1(color int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QBrush8setColorEN2Qt11GlobalColorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), color)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QBrush8setColorEN2Qt11GlobalColorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), color)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -359,7 +355,7 @@ func (this *QBrush) SetColor_1(color int) {
 // Public Visibility=Default Availability=Available
 // [8] const QGradient * gradient()
 func (this *QBrush) Gradient() *QGradient /*777 const QGradient **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush8gradientEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QBrush8gradientEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQGradientFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -371,7 +367,7 @@ func (this *QBrush) Gradient() *QGradient /*777 const QGradient **/ {
 // Public Visibility=Default Availability=Available
 // [1] bool isOpaque()
 func (this *QBrush) IsOpaque() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush8isOpaqueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QBrush8isOpaqueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -382,7 +378,7 @@ func (this *QBrush) IsOpaque() bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isDetached()
 func (this *QBrush) IsDetached() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QBrush10isDetachedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QBrush10isDetachedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

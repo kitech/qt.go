@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -34,9 +33,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 }
@@ -46,22 +42,22 @@ func init() {
 //  body block begin
 // bool event(class QEvent *)
 func (this *QAbstractAnimation) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool) {
-	ffiqt.SetAllInheritCallback(this, "event", f)
+	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
 // void updateCurrentTime(int)
 func (this *QAbstractAnimation) InheritUpdateCurrentTime(f func(currentTime int)) {
-	ffiqt.SetAllInheritCallback(this, "updateCurrentTime", f)
+	qtrt.SetAllInheritCallback(this, "updateCurrentTime", f)
 }
 
 // void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
 func (this *QAbstractAnimation) InheritUpdateState(f func(newState int, oldState int)) {
-	ffiqt.SetAllInheritCallback(this, "updateState", f)
+	qtrt.SetAllInheritCallback(this, "updateState", f)
 }
 
 // void updateDirection(class QAbstractAnimation::Direction)
 func (this *QAbstractAnimation) InheritUpdateDirection(f func(direction int)) {
-	ffiqt.SetAllInheritCallback(this, "updateDirection", f)
+	qtrt.SetAllInheritCallback(this, "updateDirection", f)
 }
 
 type QAbstractAnimation struct {
@@ -91,7 +87,7 @@ func (*QAbstractAnimation) NewFromPointer(cthis unsafe.Pointer) *QAbstractAnimat
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QAbstractAnimation) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -104,7 +100,7 @@ func (this *QAbstractAnimation) MetaObject() *QMetaObject /*777 const QMetaObjec
 // [-2] void QAbstractAnimation(QObject *)
 func NewQAbstractAnimation(parent *QObject /*777 QObject **/) *QAbstractAnimation {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimationC1EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimationC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -115,7 +111,7 @@ func NewQAbstractAnimation(parent *QObject /*777 QObject **/) *QAbstractAnimatio
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractAnimation()
 func DeleteQAbstractAnimation(this *QAbstractAnimation) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -126,7 +122,7 @@ func DeleteQAbstractAnimation(this *QAbstractAnimation) {
 // Public Visibility=Default Availability=Available
 // [4] QAbstractAnimation::State state()
 func (this *QAbstractAnimation) State() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation5stateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation5stateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -137,7 +133,7 @@ func (this *QAbstractAnimation) State() int {
 // Public Visibility=Default Availability=Available
 // [8] QAnimationGroup * group()
 func (this *QAbstractAnimation) Group() *QAnimationGroup /*777 QAnimationGroup **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation5groupEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation5groupEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQAnimationGroupFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -149,7 +145,7 @@ func (this *QAbstractAnimation) Group() *QAnimationGroup /*777 QAnimationGroup *
 // Public Visibility=Default Availability=Available
 // [4] QAbstractAnimation::Direction direction()
 func (this *QAbstractAnimation) Direction() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation9directionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation9directionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -160,7 +156,7 @@ func (this *QAbstractAnimation) Direction() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setDirection(enum QAbstractAnimation::Direction)
 func (this *QAbstractAnimation) SetDirection(direction int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation12setDirectionENS_9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), direction)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation12setDirectionENS_9DirectionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), direction)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -169,7 +165,7 @@ func (this *QAbstractAnimation) SetDirection(direction int) {
 // Public Visibility=Default Availability=Available
 // [4] int currentTime()
 func (this *QAbstractAnimation) CurrentTime() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation11currentTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation11currentTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -180,7 +176,7 @@ func (this *QAbstractAnimation) CurrentTime() int {
 // Public Visibility=Default Availability=Available
 // [4] int currentLoopTime()
 func (this *QAbstractAnimation) CurrentLoopTime() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation15currentLoopTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation15currentLoopTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -191,7 +187,7 @@ func (this *QAbstractAnimation) CurrentLoopTime() int {
 // Public Visibility=Default Availability=Available
 // [4] int loopCount()
 func (this *QAbstractAnimation) LoopCount() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation9loopCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation9loopCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -202,7 +198,7 @@ func (this *QAbstractAnimation) LoopCount() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setLoopCount(int)
 func (this *QAbstractAnimation) SetLoopCount(loopCount int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation12setLoopCountEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), loopCount)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation12setLoopCountEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), loopCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -211,7 +207,7 @@ func (this *QAbstractAnimation) SetLoopCount(loopCount int) {
 // Public Visibility=Default Availability=Available
 // [4] int currentLoop()
 func (this *QAbstractAnimation) CurrentLoop() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation11currentLoopEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation11currentLoopEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -222,7 +218,7 @@ func (this *QAbstractAnimation) CurrentLoop() int {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int duration()
 func (this *QAbstractAnimation) Duration() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation8durationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation8durationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -233,7 +229,7 @@ func (this *QAbstractAnimation) Duration() int {
 // Public Visibility=Default Availability=Available
 // [4] int totalDuration()
 func (this *QAbstractAnimation) TotalDuration() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QAbstractAnimation13totalDurationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractAnimation13totalDurationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -244,7 +240,7 @@ func (this *QAbstractAnimation) TotalDuration() int {
 // Public Visibility=Default Availability=Available
 // [-2] void finished()
 func (this *QAbstractAnimation) Finished() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation8finishedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation8finishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -253,7 +249,7 @@ func (this *QAbstractAnimation) Finished() {
 // Public Visibility=Default Availability=Available
 // [-2] void stateChanged(QAbstractAnimation::State, QAbstractAnimation::State)
 func (this *QAbstractAnimation) StateChanged(newState int, oldState int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation12stateChangedENS_5StateES0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation12stateChangedENS_5StateES0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -262,7 +258,7 @@ func (this *QAbstractAnimation) StateChanged(newState int, oldState int) {
 // Public Visibility=Default Availability=Available
 // [-2] void currentLoopChanged(int)
 func (this *QAbstractAnimation) CurrentLoopChanged(currentLoop int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation18currentLoopChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), currentLoop)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation18currentLoopChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), currentLoop)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -271,7 +267,7 @@ func (this *QAbstractAnimation) CurrentLoopChanged(currentLoop int) {
 // Public Visibility=Default Availability=Available
 // [-2] void directionChanged(QAbstractAnimation::Direction)
 func (this *QAbstractAnimation) DirectionChanged(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation16directionChangedENS_9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation16directionChangedENS_9DirectionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -280,7 +276,7 @@ func (this *QAbstractAnimation) DirectionChanged(arg0 int) {
 // Public Visibility=Default Availability=Available
 // [-2] void start(QAbstractAnimation::DeletionPolicy)
 func (this *QAbstractAnimation) Start(policy int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation5startENS_14DeletionPolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation5startENS_14DeletionPolicyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -289,7 +285,7 @@ func (this *QAbstractAnimation) Start(policy int) {
 // Public Visibility=Default Availability=Available
 // [-2] void pause()
 func (this *QAbstractAnimation) Pause() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation5pauseEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation5pauseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -298,7 +294,7 @@ func (this *QAbstractAnimation) Pause() {
 // Public Visibility=Default Availability=Available
 // [-2] void resume()
 func (this *QAbstractAnimation) Resume() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation6resumeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation6resumeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -307,7 +303,7 @@ func (this *QAbstractAnimation) Resume() {
 // Public Visibility=Default Availability=Available
 // [-2] void setPaused(_Bool)
 func (this *QAbstractAnimation) SetPaused(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation9setPausedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation9setPausedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -316,7 +312,7 @@ func (this *QAbstractAnimation) SetPaused(arg0 bool) {
 // Public Visibility=Default Availability=Available
 // [-2] void stop()
 func (this *QAbstractAnimation) Stop() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation4stopEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation4stopEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -325,7 +321,7 @@ func (this *QAbstractAnimation) Stop() {
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentTime(int)
 func (this *QAbstractAnimation) SetCurrentTime(msecs int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation14setCurrentTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation14setCurrentTimeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -335,7 +331,7 @@ func (this *QAbstractAnimation) SetCurrentTime(msecs int) {
 // [1] bool event(QEvent *)
 func (this *QAbstractAnimation) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -346,7 +342,7 @@ func (this *QAbstractAnimation) Event(event *QEvent /*777 QEvent **/) bool {
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [-2] void updateCurrentTime(int)
 func (this *QAbstractAnimation) UpdateCurrentTime(currentTime int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation17updateCurrentTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), currentTime)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation17updateCurrentTimeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), currentTime)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -355,7 +351,7 @@ func (this *QAbstractAnimation) UpdateCurrentTime(currentTime int) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
 func (this *QAbstractAnimation) UpdateState(newState int, oldState int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation11updateStateENS_5StateES0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation11updateStateENS_5StateES0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -364,7 +360,7 @@ func (this *QAbstractAnimation) UpdateState(newState int, oldState int) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateDirection(QAbstractAnimation::Direction)
 func (this *QAbstractAnimation) UpdateDirection(direction int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QAbstractAnimation15updateDirectionENS_9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), direction)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimation15updateDirectionENS_9DirectionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), direction)
 	gopp.ErrPrint(err, rv)
 }
 

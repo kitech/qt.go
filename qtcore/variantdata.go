@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*VariantData) NewFromPointer(cthis unsafe.Pointer) *VariantData {
 // Public inline Visibility=Default Availability=Available
 // [-2] void VariantData(const int, const void *, const uint)
 func NewVariantData(metaTypeId_ int, data_ unsafe.Pointer /*666*/, flags_ uint) *VariantData {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QtMetaTypePrivate11VariantDataC2EiPKvj", ffiqt.FFI_TYPE_POINTER, metaTypeId_, data_, flags_)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QtMetaTypePrivate11VariantDataC2EiPKvj", qtrt.FFI_TYPE_POINTER, metaTypeId_, data_, flags_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewVariantDataFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteVariantData)
@@ -83,7 +79,7 @@ func NewVariantData(metaTypeId_ int, data_ unsafe.Pointer /*666*/, flags_ uint) 
 }
 
 func DeleteVariantData(this *VariantData) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11VariantDataD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11VariantDataD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

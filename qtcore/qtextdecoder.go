@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QTextDecoder) NewFromPointer(cthis unsafe.Pointer) *QTextDecoder {
 // [-2] void QTextDecoder(const QTextCodec *)
 func NewQTextDecoder(codec *QTextCodec /*777 const QTextCodec **/) *QTextDecoder {
 	var convArg0 = codec.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoderC2EPK10QTextCodec", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextDecoderC2EPK10QTextCodec", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextDecoderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextDecoder)
@@ -89,7 +85,7 @@ func NewQTextDecoder(codec *QTextCodec /*777 const QTextCodec **/) *QTextDecoder
 // [-2] void QTextDecoder(const QTextCodec *, QTextCodec::ConversionFlags)
 func NewQTextDecoder_1(codec *QTextCodec /*777 const QTextCodec **/, flags int) *QTextDecoder {
 	var convArg0 = codec.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoderC2EPK10QTextCodec6QFlagsINS0_14ConversionFlagEE", ffiqt.FFI_TYPE_POINTER, convArg0, flags)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextDecoderC2EPK10QTextCodec6QFlagsINS0_14ConversionFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextDecoderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextDecoder)
@@ -101,7 +97,7 @@ func NewQTextDecoder_1(codec *QTextCodec /*777 const QTextCodec **/, flags int) 
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTextDecoder()
 func DeleteQTextDecoder(this *QTextDecoder) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoderD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextDecoderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -114,7 +110,7 @@ func DeleteQTextDecoder(this *QTextDecoder) {
 func (this *QTextDecoder) ToUnicode(chars string, len int) *QString /*123*/ {
 	var convArg0 = qtrt.CString(chars)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeEPKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeEPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -128,7 +124,7 @@ func (this *QTextDecoder) ToUnicode(chars string, len int) *QString /*123*/ {
 // [8] QString toUnicode(const QByteArray &)
 func (this *QTextDecoder) ToUnicode_1(ba *QByteArray) *QString /*123*/ {
 	var convArg0 = ba.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -144,7 +140,7 @@ func (this *QTextDecoder) ToUnicode_2(target *QString /*777 QString **/, chars s
 	var convArg0 = target.GetCthis()
 	var convArg1 = qtrt.CString(chars)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeEP7QStringPKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, len)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextDecoder9toUnicodeEP7QStringPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, len)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -153,7 +149,7 @@ func (this *QTextDecoder) ToUnicode_2(target *QString /*777 QString **/, chars s
 // Public Visibility=Default Availability=Available
 // [1] bool hasFailure()
 func (this *QTextDecoder) HasFailure() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTextDecoder10hasFailureEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextDecoder10hasFailureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -73,7 +69,7 @@ func (*QDynamicPropertyChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QDynam
 // [-2] void QDynamicPropertyChangeEvent(const QByteArray &)
 func NewQDynamicPropertyChangeEvent(name *QByteArray) *QDynamicPropertyChangeEvent {
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDynamicPropertyChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDynamicPropertyChangeEvent)
@@ -85,7 +81,7 @@ func NewQDynamicPropertyChangeEvent(name *QByteArray) *QDynamicPropertyChangeEve
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDynamicPropertyChangeEvent()
 func DeleteQDynamicPropertyChangeEvent(this *QDynamicPropertyChangeEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -96,7 +92,7 @@ func DeleteQDynamicPropertyChangeEvent(this *QDynamicPropertyChangeEvent) {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray propertyName()
 func (this *QDynamicPropertyChangeEvent) PropertyName() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QDynamicPropertyChangeEvent12propertyNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK27QDynamicPropertyChangeEvent12propertyNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333

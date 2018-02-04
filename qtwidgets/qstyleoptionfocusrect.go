@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QStyleOptionFocusRect) NewFromPointer(cthis unsafe.Pointer) *QStyleOption
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionFocusRect()
 func NewQStyleOptionFocusRect() *QStyleOptionFocusRect {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QStyleOptionFocusRectC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QStyleOptionFocusRectC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionFocusRectFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionFocusRect)
@@ -92,7 +88,7 @@ func NewQStyleOptionFocusRect() *QStyleOptionFocusRect {
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionFocusRect(int)
 func NewQStyleOptionFocusRect_1(version int) *QStyleOptionFocusRect {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QStyleOptionFocusRectC2Ei", ffiqt.FFI_TYPE_POINTER, version)
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QStyleOptionFocusRectC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionFocusRectFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionFocusRect)
@@ -100,7 +96,7 @@ func NewQStyleOptionFocusRect_1(version int) *QStyleOptionFocusRect {
 }
 
 func DeleteQStyleOptionFocusRect(this *QStyleOptionFocusRect) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QStyleOptionFocusRectD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QStyleOptionFocusRectD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

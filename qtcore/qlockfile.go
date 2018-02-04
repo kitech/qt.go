@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QLockFile) NewFromPointer(cthis unsafe.Pointer) *QLockFile {
 // [-2] void QLockFile(const QString &)
 func NewQLockFile(fileName *QString) *QLockFile {
 	var convArg0 = fileName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFileC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFileC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLockFileFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLockFile)
@@ -88,7 +84,7 @@ func NewQLockFile(fileName *QString) *QLockFile {
 // Public Visibility=Default Availability=Available
 // [-2] void ~QLockFile()
 func DeleteQLockFile(this *QLockFile) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFileD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFileD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -99,7 +95,7 @@ func DeleteQLockFile(this *QLockFile) {
 // Public Visibility=Default Availability=Available
 // [1] bool lock()
 func (this *QLockFile) Lock() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFile4lockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFile4lockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -110,7 +106,7 @@ func (this *QLockFile) Lock() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool tryLock(int)
 func (this *QLockFile) TryLock(timeout int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFile7tryLockEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFile7tryLockEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -121,7 +117,7 @@ func (this *QLockFile) TryLock(timeout int) bool {
 // Public Visibility=Default Availability=Available
 // [-2] void unlock()
 func (this *QLockFile) Unlock() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFile6unlockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFile6unlockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -130,7 +126,7 @@ func (this *QLockFile) Unlock() {
 // Public Visibility=Default Availability=Available
 // [-2] void setStaleLockTime(int)
 func (this *QLockFile) SetStaleLockTime(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFile16setStaleLockTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFile16setStaleLockTimeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -139,7 +135,7 @@ func (this *QLockFile) SetStaleLockTime(arg0 int) {
 // Public Visibility=Default Availability=Available
 // [4] int staleLockTime()
 func (this *QLockFile) StaleLockTime() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLockFile13staleLockTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QLockFile13staleLockTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -150,7 +146,7 @@ func (this *QLockFile) StaleLockTime() int {
 // Public Visibility=Default Availability=Available
 // [1] bool isLocked()
 func (this *QLockFile) IsLocked() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLockFile8isLockedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QLockFile8isLockedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -163,7 +159,7 @@ func (this *QLockFile) IsLocked() bool {
 func (this *QLockFile) GetLockInfo(pid unsafe.Pointer /*666*/, hostname *QString /*777 QString **/, appname *QString /*777 QString **/) bool {
 	var convArg1 = hostname.GetCthis()
 	var convArg2 = appname.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLockFile11getLockInfoEPxP7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &pid, convArg1, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QLockFile11getLockInfoEPxP7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &pid, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -174,7 +170,7 @@ func (this *QLockFile) GetLockInfo(pid unsafe.Pointer /*666*/, hostname *QString
 // Public Visibility=Default Availability=Available
 // [1] bool removeStaleLockFile()
 func (this *QLockFile) RemoveStaleLockFile() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QLockFile19removeStaleLockFileEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QLockFile19removeStaleLockFileEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -185,7 +181,7 @@ func (this *QLockFile) RemoveStaleLockFile() bool {
 // Public Visibility=Default Availability=Available
 // [4] QLockFile::LockError error()
 func (this *QLockFile) Error() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QLockFile5errorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QLockFile5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)

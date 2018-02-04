@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -78,7 +74,7 @@ func (*QTabletEvent) NewFromPointer(cthis unsafe.Pointer) *QTabletEvent {
 func NewQTabletEvent(t int, pos *qtcore.QPointF, globalPos *qtcore.QPointF, device int, pointerType int, pressure float64, xTilt int, yTilt int, tangentialPressure float64, rotation float64, z int, keyState int, uniqueID int64) *QTabletEvent {
 	var convArg1 = pos.GetCthis()
 	var convArg2 = globalPos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTabletEventC2EN6QEvent4TypeERK7QPointFS4_iidiiddi6QFlagsIN2Qt16KeyboardModifierEEx", ffiqt.FFI_TYPE_POINTER, t, convArg1, convArg2, device, pointerType, pressure, xTilt, yTilt, tangentialPressure, rotation, z, keyState, uniqueID)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QTabletEventC2EN6QEvent4TypeERK7QPointFS4_iidiiddi6QFlagsIN2Qt16KeyboardModifierEEx", qtrt.FFI_TYPE_POINTER, t, convArg1, convArg2, device, pointerType, pressure, xTilt, yTilt, tangentialPressure, rotation, z, keyState, uniqueID)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTabletEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTabletEvent)
@@ -92,7 +88,7 @@ func NewQTabletEvent(t int, pos *qtcore.QPointF, globalPos *qtcore.QPointF, devi
 func NewQTabletEvent_1(t int, pos *qtcore.QPointF, globalPos *qtcore.QPointF, device int, pointerType int, pressure float64, xTilt int, yTilt int, tangentialPressure float64, rotation float64, z int, keyState int, uniqueID int64, button int, buttons int) *QTabletEvent {
 	var convArg1 = pos.GetCthis()
 	var convArg2 = globalPos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTabletEventC2EN6QEvent4TypeERK7QPointFS4_iidiiddi6QFlagsIN2Qt16KeyboardModifierEExNS6_11MouseButtonES5_IS9_E", ffiqt.FFI_TYPE_POINTER, t, convArg1, convArg2, device, pointerType, pressure, xTilt, yTilt, tangentialPressure, rotation, z, keyState, uniqueID, button, buttons)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QTabletEventC2EN6QEvent4TypeERK7QPointFS4_iidiiddi6QFlagsIN2Qt16KeyboardModifierEExNS6_11MouseButtonES5_IS9_E", qtrt.FFI_TYPE_POINTER, t, convArg1, convArg2, device, pointerType, pressure, xTilt, yTilt, tangentialPressure, rotation, z, keyState, uniqueID, button, buttons)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTabletEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTabletEvent)
@@ -104,7 +100,7 @@ func NewQTabletEvent_1(t int, pos *qtcore.QPointF, globalPos *qtcore.QPointF, de
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTabletEvent()
 func DeleteQTabletEvent(this *QTabletEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QTabletEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QTabletEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 128)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -115,7 +111,7 @@ func DeleteQTabletEvent(this *QTabletEvent) {
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint pos()
 func (this *QTabletEvent) Pos() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -128,7 +124,7 @@ func (this *QTabletEvent) Pos() *qtcore.QPoint /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint globalPos()
 func (this *QTabletEvent) GlobalPos() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent9globalPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -141,7 +137,7 @@ func (this *QTabletEvent) GlobalPos() *qtcore.QPoint /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [16] const QPointF & posF()
 func (this *QTabletEvent) PosF() *qtcore.QPointF {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent4posFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent4posFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -154,7 +150,7 @@ func (this *QTabletEvent) PosF() *qtcore.QPointF {
 // Public inline Visibility=Default Availability=Available
 // [16] const QPointF & globalPosF()
 func (this *QTabletEvent) GlobalPosF() *qtcore.QPointF {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent10globalPosFEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent10globalPosFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -167,7 +163,7 @@ func (this *QTabletEvent) GlobalPosF() *qtcore.QPointF {
 // Public inline Visibility=Default Availability=Available
 // [4] int x()
 func (this *QTabletEvent) X() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent1xEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -178,7 +174,7 @@ func (this *QTabletEvent) X() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int y()
 func (this *QTabletEvent) Y() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent1yEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -189,7 +185,7 @@ func (this *QTabletEvent) Y() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int globalX()
 func (this *QTabletEvent) GlobalX() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent7globalXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent7globalXEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -200,7 +196,7 @@ func (this *QTabletEvent) GlobalX() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int globalY()
 func (this *QTabletEvent) GlobalY() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent7globalYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent7globalYEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -211,7 +207,7 @@ func (this *QTabletEvent) GlobalY() int {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal hiResGlobalX()
 func (this *QTabletEvent) HiResGlobalX() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent12hiResGlobalXEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent12hiResGlobalXEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -222,7 +218,7 @@ func (this *QTabletEvent) HiResGlobalX() float64 {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal hiResGlobalY()
 func (this *QTabletEvent) HiResGlobalY() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent12hiResGlobalYEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent12hiResGlobalYEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -233,7 +229,7 @@ func (this *QTabletEvent) HiResGlobalY() float64 {
 // Public inline Visibility=Default Availability=Available
 // [4] QTabletEvent::TabletDevice device()
 func (this *QTabletEvent) Device() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -244,7 +240,7 @@ func (this *QTabletEvent) Device() int {
 // Public inline Visibility=Default Availability=Available
 // [4] QTabletEvent::PointerType pointerType()
 func (this *QTabletEvent) PointerType() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent11pointerTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent11pointerTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -255,7 +251,7 @@ func (this *QTabletEvent) PointerType() int {
 // Public inline Visibility=Default Availability=Available
 // [8] qint64 uniqueId()
 func (this *QTabletEvent) UniqueId() int64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent8uniqueIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent8uniqueIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -266,7 +262,7 @@ func (this *QTabletEvent) UniqueId() int64 {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal pressure()
 func (this *QTabletEvent) Pressure() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent8pressureEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent8pressureEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -277,7 +273,7 @@ func (this *QTabletEvent) Pressure() float64 {
 // Public inline Visibility=Default Availability=Available
 // [4] int z()
 func (this *QTabletEvent) Z() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent1zEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent1zEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -288,7 +284,7 @@ func (this *QTabletEvent) Z() int {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal tangentialPressure()
 func (this *QTabletEvent) TangentialPressure() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent18tangentialPressureEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent18tangentialPressureEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -299,7 +295,7 @@ func (this *QTabletEvent) TangentialPressure() float64 {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal rotation()
 func (this *QTabletEvent) Rotation() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent8rotationEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent8rotationEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -310,7 +306,7 @@ func (this *QTabletEvent) Rotation() float64 {
 // Public inline Visibility=Default Availability=Available
 // [4] int xTilt()
 func (this *QTabletEvent) XTilt() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent5xTiltEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent5xTiltEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -321,7 +317,7 @@ func (this *QTabletEvent) XTilt() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int yTilt()
 func (this *QTabletEvent) YTilt() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent5yTiltEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent5yTiltEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -332,7 +328,7 @@ func (this *QTabletEvent) YTilt() int {
 // Public Visibility=Default Availability=Available
 // [4] Qt::MouseButton button()
 func (this *QTabletEvent) Button() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent6buttonEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent6buttonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -343,7 +339,7 @@ func (this *QTabletEvent) Button() int {
 // Public Visibility=Default Availability=Available
 // [4] Qt::MouseButtons buttons()
 func (this *QTabletEvent) Buttons() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QTabletEvent7buttonsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTabletEvent7buttonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)

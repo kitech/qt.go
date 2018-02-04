@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -34,9 +33,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 }
@@ -46,17 +42,17 @@ func init() {
 //  body block begin
 // void onEntry(class QEvent *)
 func (this *QState) InheritOnEntry(f func(event *QEvent /*777 QEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "onEntry", f)
+	qtrt.SetAllInheritCallback(this, "onEntry", f)
 }
 
 // void onExit(class QEvent *)
 func (this *QState) InheritOnExit(f func(event *QEvent /*777 QEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "onExit", f)
+	qtrt.SetAllInheritCallback(this, "onExit", f)
 }
 
 // bool event(class QEvent *)
 func (this *QState) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
-	ffiqt.SetAllInheritCallback(this, "event", f)
+	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
 type QState struct {
@@ -86,7 +82,7 @@ func (*QState) NewFromPointer(cthis unsafe.Pointer) *QState {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QState10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QState10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -99,7 +95,7 @@ func (this *QState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // [-2] void QState(QState *)
 func NewQState(parent *QState /*777 QState **/) *QState {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QStateC2EPS_", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QStateC2EPS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStateFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -111,7 +107,7 @@ func NewQState(parent *QState /*777 QState **/) *QState {
 // [-2] void QState(enum QState::ChildMode, QState *)
 func NewQState_1(childMode int, parent *QState /*777 QState **/) *QState {
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QStateC2ENS_9ChildModeEPS_", ffiqt.FFI_TYPE_POINTER, childMode, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QStateC2ENS_9ChildModeEPS_", qtrt.FFI_TYPE_POINTER, childMode, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStateFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -122,7 +118,7 @@ func NewQState_1(childMode int, parent *QState /*777 QState **/) *QState {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QState()
 func DeleteQState(this *QState) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QStateD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QStateD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -133,7 +129,7 @@ func DeleteQState(this *QState) {
 // Public Visibility=Default Availability=Available
 // [8] QAbstractState * errorState()
 func (this *QState) ErrorState() *QAbstractState /*777 QAbstractState **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QState10errorStateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QState10errorStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQAbstractStateFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -146,7 +142,7 @@ func (this *QState) ErrorState() *QAbstractState /*777 QAbstractState **/ {
 // [-2] void setErrorState(QAbstractState *)
 func (this *QState) SetErrorState(state *QAbstractState /*777 QAbstractState **/) {
 	var convArg0 = state.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QState13setErrorStateEP14QAbstractState", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QState13setErrorStateEP14QAbstractState", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -156,7 +152,7 @@ func (this *QState) SetErrorState(state *QAbstractState /*777 QAbstractState **/
 // [-2] void addTransition(QAbstractTransition *)
 func (this *QState) AddTransition(transition *QAbstractTransition /*777 QAbstractTransition **/) {
 	var convArg0 = transition.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QState13addTransitionEP19QAbstractTransition", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QState13addTransitionEP19QAbstractTransition", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -169,7 +165,7 @@ func (this *QState) AddTransition_1(sender *QObject /*777 const QObject **/, sig
 	var convArg1 = qtrt.CString(signal)
 	defer qtrt.FreeMem(convArg1)
 	var convArg2 = target.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSignalTransitionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -182,7 +178,7 @@ func (this *QState) AddTransition_1(sender *QObject /*777 const QObject **/, sig
 // [8] QAbstractTransition * addTransition(QAbstractState *)
 func (this *QState) AddTransition_2(target *QAbstractState /*777 QAbstractState **/) *QAbstractTransition /*777 QAbstractTransition **/ {
 	var convArg0 = target.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QState13addTransitionEP14QAbstractState", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QState13addTransitionEP14QAbstractState", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQAbstractTransitionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -195,7 +191,7 @@ func (this *QState) AddTransition_2(target *QAbstractState /*777 QAbstractState 
 // [-2] void removeTransition(QAbstractTransition *)
 func (this *QState) RemoveTransition(transition *QAbstractTransition /*777 QAbstractTransition **/) {
 	var convArg0 = transition.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QState16removeTransitionEP19QAbstractTransition", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QState16removeTransitionEP19QAbstractTransition", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -204,7 +200,7 @@ func (this *QState) RemoveTransition(transition *QAbstractTransition /*777 QAbst
 // Public Visibility=Default Availability=Available
 // [8] QAbstractState * initialState()
 func (this *QState) InitialState() *QAbstractState /*777 QAbstractState **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QState12initialStateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QState12initialStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQAbstractStateFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -217,7 +213,7 @@ func (this *QState) InitialState() *QAbstractState /*777 QAbstractState **/ {
 // [-2] void setInitialState(QAbstractState *)
 func (this *QState) SetInitialState(state *QAbstractState /*777 QAbstractState **/) {
 	var convArg0 = state.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QState15setInitialStateEP14QAbstractState", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QState15setInitialStateEP14QAbstractState", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -226,7 +222,7 @@ func (this *QState) SetInitialState(state *QAbstractState /*777 QAbstractState *
 // Public Visibility=Default Availability=Available
 // [4] QState::ChildMode childMode()
 func (this *QState) ChildMode() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QState9childModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QState9childModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -237,7 +233,7 @@ func (this *QState) ChildMode() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setChildMode(enum QState::ChildMode)
 func (this *QState) SetChildMode(mode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QState12setChildModeENS_9ChildModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QState12setChildModeENS_9ChildModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -250,7 +246,7 @@ func (this *QState) AssignProperty(object *QObject /*777 QObject **/, name strin
 	var convArg1 = qtrt.CString(name)
 	defer qtrt.FreeMem(convArg1)
 	var convArg2 = value.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -260,7 +256,7 @@ func (this *QState) AssignProperty(object *QObject /*777 QObject **/, name strin
 // [-2] void onEntry(QEvent *)
 func (this *QState) OnEntry(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QState7onEntryEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QState7onEntryEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -270,7 +266,7 @@ func (this *QState) OnEntry(event *QEvent /*777 QEvent **/) {
 // [-2] void onExit(QEvent *)
 func (this *QState) OnExit(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QState6onExitEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QState6onExitEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -280,7 +276,7 @@ func (this *QState) OnExit(event *QEvent /*777 QEvent **/) {
 // [1] bool event(QEvent *)
 func (this *QState) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QState5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QState5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

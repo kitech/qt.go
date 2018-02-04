@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QInputMethodQueryEvent) NewFromPointer(cthis unsafe.Pointer) *QInputMetho
 // Public Visibility=Default Availability=Available
 // [-2] void QInputMethodQueryEvent(Qt::InputMethodQueries)
 func NewQInputMethodQueryEvent(queries int) *QInputMethodQueryEvent {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QInputMethodQueryEventC2E6QFlagsIN2Qt16InputMethodQueryEE", ffiqt.FFI_TYPE_POINTER, queries)
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QInputMethodQueryEventC2E6QFlagsIN2Qt16InputMethodQueryEE", qtrt.FFI_TYPE_POINTER, queries)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQInputMethodQueryEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQInputMethodQueryEvent)
@@ -88,7 +84,7 @@ func NewQInputMethodQueryEvent(queries int) *QInputMethodQueryEvent {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QInputMethodQueryEvent()
 func DeleteQInputMethodQueryEvent(this *QInputMethodQueryEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QInputMethodQueryEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QInputMethodQueryEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -99,7 +95,7 @@ func DeleteQInputMethodQueryEvent(this *QInputMethodQueryEvent) {
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::InputMethodQueries queries()
 func (this *QInputMethodQueryEvent) Queries() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QInputMethodQueryEvent7queriesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK22QInputMethodQueryEvent7queriesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -111,7 +107,7 @@ func (this *QInputMethodQueryEvent) Queries() int {
 // [-2] void setValue(Qt::InputMethodQuery, const QVariant &)
 func (this *QInputMethodQueryEvent) SetValue(query int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QInputMethodQueryEvent8setValueEN2Qt16InputMethodQueryERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), query, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QInputMethodQueryEvent8setValueEN2Qt16InputMethodQueryERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), query, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -120,7 +116,7 @@ func (this *QInputMethodQueryEvent) SetValue(query int, value *qtcore.QVariant) 
 // Public Visibility=Default Availability=Available
 // [16] QVariant value(Qt::InputMethodQuery)
 func (this *QInputMethodQueryEvent) Value(query int) *qtcore.QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QInputMethodQueryEvent5valueEN2Qt16InputMethodQueryE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), query)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK22QInputMethodQueryEvent5valueEN2Qt16InputMethodQueryE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), query)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333

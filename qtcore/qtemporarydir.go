@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QTemporaryDir) NewFromPointer(cthis unsafe.Pointer) *QTemporaryDir {
 // Public Visibility=Default Availability=Available
 // [-2] void QTemporaryDir()
 func NewQTemporaryDir() *QTemporaryDir {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTemporaryDirC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QTemporaryDirC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTemporaryDirFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTemporaryDir)
@@ -88,7 +84,7 @@ func NewQTemporaryDir() *QTemporaryDir {
 // [-2] void QTemporaryDir(const QString &)
 func NewQTemporaryDir_1(templateName *QString) *QTemporaryDir {
 	var convArg0 = templateName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTemporaryDirC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QTemporaryDirC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTemporaryDirFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTemporaryDir)
@@ -100,7 +96,7 @@ func NewQTemporaryDir_1(templateName *QString) *QTemporaryDir {
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTemporaryDir()
 func DeleteQTemporaryDir(this *QTemporaryDir) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTemporaryDirD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QTemporaryDirD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -111,7 +107,7 @@ func DeleteQTemporaryDir(this *QTemporaryDir) {
 // Public Visibility=Default Availability=Available
 // [1] bool isValid()
 func (this *QTemporaryDir) IsValid() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTemporaryDir7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -122,7 +118,7 @@ func (this *QTemporaryDir) IsValid() bool {
 // Public Visibility=Default Availability=Available
 // [8] QString errorString()
 func (this *QTemporaryDir) ErrorString() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTemporaryDir11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -135,7 +131,7 @@ func (this *QTemporaryDir) ErrorString() *QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [1] bool autoRemove()
 func (this *QTemporaryDir) AutoRemove() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTemporaryDir10autoRemoveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir10autoRemoveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -146,7 +142,7 @@ func (this *QTemporaryDir) AutoRemove() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoRemove(_Bool)
 func (this *QTemporaryDir) SetAutoRemove(b bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTemporaryDir13setAutoRemoveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QTemporaryDir13setAutoRemoveEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -155,7 +151,7 @@ func (this *QTemporaryDir) SetAutoRemove(b bool) {
 // Public Visibility=Default Availability=Available
 // [1] bool remove()
 func (this *QTemporaryDir) Remove() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTemporaryDir6removeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QTemporaryDir6removeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -166,7 +162,7 @@ func (this *QTemporaryDir) Remove() bool {
 // Public Visibility=Default Availability=Available
 // [8] QString path()
 func (this *QTemporaryDir) Path() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTemporaryDir4pathEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir4pathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -180,7 +176,7 @@ func (this *QTemporaryDir) Path() *QString /*123*/ {
 // [8] QString filePath(const QString &)
 func (this *QTemporaryDir) FilePath(fileName *QString) *QString /*123*/ {
 	var convArg0 = fileName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTemporaryDir8filePathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTemporaryDir8filePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333

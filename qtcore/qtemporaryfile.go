@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -34,9 +33,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 }
@@ -46,7 +42,7 @@ func init() {
 //  body block begin
 // bool open(QIODevice::OpenMode)
 func (this *QTemporaryFile) InheritOpen(f func(flags int) bool) {
-	ffiqt.SetAllInheritCallback(this, "open", f)
+	qtrt.SetAllInheritCallback(this, "open", f)
 }
 
 type QTemporaryFile struct {
@@ -76,7 +72,7 @@ func (*QTemporaryFile) NewFromPointer(cthis unsafe.Pointer) *QTemporaryFile {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QTemporaryFile) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTemporaryFile10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTemporaryFile10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -88,7 +84,7 @@ func (this *QTemporaryFile) MetaObject() *QMetaObject /*777 const QMetaObject **
 // Public Visibility=Default Availability=Available
 // [-2] void QTemporaryFile()
 func NewQTemporaryFile() *QTemporaryFile {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFileC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFileC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTemporaryFileFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -100,7 +96,7 @@ func NewQTemporaryFile() *QTemporaryFile {
 // [-2] void QTemporaryFile(const QString &)
 func NewQTemporaryFile_1(templateName *QString) *QTemporaryFile {
 	var convArg0 = templateName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFileC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFileC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTemporaryFileFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -112,7 +108,7 @@ func NewQTemporaryFile_1(templateName *QString) *QTemporaryFile {
 // [-2] void QTemporaryFile(QObject *)
 func NewQTemporaryFile_2(parent *QObject /*777 QObject **/) *QTemporaryFile {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFileC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFileC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTemporaryFileFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -125,7 +121,7 @@ func NewQTemporaryFile_2(parent *QObject /*777 QObject **/) *QTemporaryFile {
 func NewQTemporaryFile_3(templateName *QString, parent *QObject /*777 QObject **/) *QTemporaryFile {
 	var convArg0 = templateName.GetCthis()
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFileC2ERK7QStringP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFileC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTemporaryFileFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -136,7 +132,7 @@ func NewQTemporaryFile_3(templateName *QString, parent *QObject /*777 QObject **
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTemporaryFile()
 func DeleteQTemporaryFile(this *QTemporaryFile) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFileD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFileD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -147,7 +143,7 @@ func DeleteQTemporaryFile(this *QTemporaryFile) {
 // Public Visibility=Default Availability=Available
 // [1] bool autoRemove()
 func (this *QTemporaryFile) AutoRemove() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTemporaryFile10autoRemoveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTemporaryFile10autoRemoveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -158,7 +154,7 @@ func (this *QTemporaryFile) AutoRemove() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoRemove(_Bool)
 func (this *QTemporaryFile) SetAutoRemove(b bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile13setAutoRemoveEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), b)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFile13setAutoRemoveEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -167,7 +163,7 @@ func (this *QTemporaryFile) SetAutoRemove(b bool) {
 // Public inline Visibility=Default Availability=Available
 // [1] bool open()
 func (this *QTemporaryFile) Open() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile4openEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFile4openEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -178,7 +174,7 @@ func (this *QTemporaryFile) Open() bool {
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool open(QIODevice::OpenMode)
 func (this *QTemporaryFile) Open_1(flags int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile4openE6QFlagsIN9QIODevice12OpenModeFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFile4openE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -189,7 +185,7 @@ func (this *QTemporaryFile) Open_1(flags int) bool {
 // Public virtual Visibility=Default Availability=Available
 // [8] QString fileName()
 func (this *QTemporaryFile) FileName() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTemporaryFile8fileNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTemporaryFile8fileNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -202,7 +198,7 @@ func (this *QTemporaryFile) FileName() *QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QString fileTemplate()
 func (this *QTemporaryFile) FileTemplate() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QTemporaryFile12fileTemplateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QTemporaryFile12fileTemplateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -216,7 +212,7 @@ func (this *QTemporaryFile) FileTemplate() *QString /*123*/ {
 // [-2] void setFileTemplate(const QString &)
 func (this *QTemporaryFile) SetFileTemplate(name *QString) {
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile15setFileTemplateERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFile15setFileTemplateERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -226,7 +222,7 @@ func (this *QTemporaryFile) SetFileTemplate(name *QString) {
 // [1] bool rename(const QString &)
 func (this *QTemporaryFile) Rename(newName *QString) bool {
 	var convArg0 = newName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile6renameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFile6renameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -238,7 +234,7 @@ func (this *QTemporaryFile) Rename(newName *QString) bool {
 // [8] QTemporaryFile * createLocalFile(const QString &)
 func (this *QTemporaryFile) CreateLocalFile(fileName *QString) *QTemporaryFile /*777 QTemporaryFile **/ {
 	var convArg0 = fileName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile15createLocalFileERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFile15createLocalFileERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTemporaryFileFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -256,7 +252,7 @@ func QTemporaryFile_CreateLocalFile(fileName *QString) *QTemporaryFile /*777 QTe
 // [8] QTemporaryFile * createLocalFile(QFile &)
 func (this *QTemporaryFile) CreateLocalFile_1(file *QFile) *QTemporaryFile /*777 QTemporaryFile **/ {
 	var convArg0 = file.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile15createLocalFileER5QFile", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFile15createLocalFileER5QFile", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTemporaryFileFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -274,7 +270,7 @@ func QTemporaryFile_CreateLocalFile_1(file *QFile) *QTemporaryFile /*777 QTempor
 // [8] QTemporaryFile * createNativeFile(const QString &)
 func (this *QTemporaryFile) CreateNativeFile(fileName *QString) *QTemporaryFile /*777 QTemporaryFile **/ {
 	var convArg0 = fileName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile16createNativeFileERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFile16createNativeFileERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTemporaryFileFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -292,7 +288,7 @@ func QTemporaryFile_CreateNativeFile(fileName *QString) *QTemporaryFile /*777 QT
 // [8] QTemporaryFile * createNativeFile(QFile &)
 func (this *QTemporaryFile) CreateNativeFile_1(file *QFile) *QTemporaryFile /*777 QTemporaryFile **/ {
 	var convArg0 = file.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QTemporaryFile16createNativeFileER5QFile", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFile16createNativeFileER5QFile", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTemporaryFileFromPointer(unsafe.Pointer(uintptr(rv))) // 444

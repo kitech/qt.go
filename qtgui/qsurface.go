@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -79,7 +75,7 @@ func (*QSurface) NewFromPointer(cthis unsafe.Pointer) *QSurface {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSurface()
 func DeleteQSurface(this *QSurface) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSurfaceD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSurfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -90,7 +86,7 @@ func DeleteQSurface(this *QSurface) {
 // Public Visibility=Default Availability=Available
 // [4] QSurface::SurfaceClass surfaceClass()
 func (this *QSurface) SurfaceClass() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSurface12surfaceClassEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface12surfaceClassEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -101,7 +97,7 @@ func (this *QSurface) SurfaceClass() int {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSurfaceFormat format()
 func (this *QSurface) Format() *QSurfaceFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSurface6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -114,7 +110,7 @@ func (this *QSurface) Format() *QSurfaceFormat /*123*/ {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QSurface::SurfaceType surfaceType()
 func (this *QSurface) SurfaceType() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSurface11surfaceTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface11surfaceTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -125,7 +121,7 @@ func (this *QSurface) SurfaceType() int {
 // Public Visibility=Default Availability=Available
 // [1] bool supportsOpenGL()
 func (this *QSurface) SupportsOpenGL() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSurface14supportsOpenGLEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface14supportsOpenGLEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -136,7 +132,7 @@ func (this *QSurface) SupportsOpenGL() bool {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSize size()
 func (this *QSurface) Size() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QSurface4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QSurface4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -149,7 +145,7 @@ func (this *QSurface) Size() *qtcore.QSize /*123*/ {
 // Protected Visibility=Default Availability=Available
 // [-2] void QSurface(enum QSurface::SurfaceClass)
 func NewQSurface(type_ int) *QSurface {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSurfaceC1ENS_12SurfaceClassE", ffiqt.FFI_TYPE_POINTER, type_)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSurfaceC1ENS_12SurfaceClassE", qtrt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSurfaceFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSurface)

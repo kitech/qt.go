@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -83,7 +79,7 @@ func (*QTableWidgetSelectionRange) NewFromPointer(cthis unsafe.Pointer) *QTableW
 // Public Visibility=Default Availability=Available
 // [-2] void QTableWidgetSelectionRange()
 func NewQTableWidgetSelectionRange() *QTableWidgetSelectionRange {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTableWidgetSelectionRangeFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTableWidgetSelectionRange)
@@ -95,7 +91,7 @@ func NewQTableWidgetSelectionRange() *QTableWidgetSelectionRange {
 // Public Visibility=Default Availability=Available
 // [-2] void QTableWidgetSelectionRange(int, int, int, int)
 func NewQTableWidgetSelectionRange_1(top int, left int, bottom int, right int) *QTableWidgetSelectionRange {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeC2Eiiii", ffiqt.FFI_TYPE_POINTER, top, left, bottom, right)
+	rv, err := qtrt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeC2Eiiii", qtrt.FFI_TYPE_POINTER, top, left, bottom, right)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTableWidgetSelectionRangeFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTableWidgetSelectionRange)
@@ -107,7 +103,7 @@ func NewQTableWidgetSelectionRange_1(top int, left int, bottom int, right int) *
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTableWidgetSelectionRange()
 func DeleteQTableWidgetSelectionRange(this *QTableWidgetSelectionRange) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN26QTableWidgetSelectionRangeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -118,7 +114,7 @@ func DeleteQTableWidgetSelectionRange(this *QTableWidgetSelectionRange) {
 // Public inline Visibility=Default Availability=Available
 // [4] int topRow()
 func (this *QTableWidgetSelectionRange) TopRow() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange6topRowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange6topRowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -129,7 +125,7 @@ func (this *QTableWidgetSelectionRange) TopRow() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int bottomRow()
 func (this *QTableWidgetSelectionRange) BottomRow() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange9bottomRowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange9bottomRowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -140,7 +136,7 @@ func (this *QTableWidgetSelectionRange) BottomRow() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int leftColumn()
 func (this *QTableWidgetSelectionRange) LeftColumn() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange10leftColumnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange10leftColumnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -151,7 +147,7 @@ func (this *QTableWidgetSelectionRange) LeftColumn() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int rightColumn()
 func (this *QTableWidgetSelectionRange) RightColumn() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange11rightColumnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange11rightColumnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -162,7 +158,7 @@ func (this *QTableWidgetSelectionRange) RightColumn() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int rowCount()
 func (this *QTableWidgetSelectionRange) RowCount() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange8rowCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange8rowCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -173,7 +169,7 @@ func (this *QTableWidgetSelectionRange) RowCount() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int columnCount()
 func (this *QTableWidgetSelectionRange) ColumnCount() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange11columnCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange11columnCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -34,9 +33,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 }
@@ -46,22 +42,22 @@ func init() {
 //  body block begin
 // bool event(class QEvent *)
 func (this *QParallelAnimationGroup) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool) {
-	ffiqt.SetAllInheritCallback(this, "event", f)
+	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
 // void updateCurrentTime(int)
 func (this *QParallelAnimationGroup) InheritUpdateCurrentTime(f func(currentTime int)) {
-	ffiqt.SetAllInheritCallback(this, "updateCurrentTime", f)
+	qtrt.SetAllInheritCallback(this, "updateCurrentTime", f)
 }
 
 // void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
 func (this *QParallelAnimationGroup) InheritUpdateState(f func(newState int, oldState int)) {
-	ffiqt.SetAllInheritCallback(this, "updateState", f)
+	qtrt.SetAllInheritCallback(this, "updateState", f)
 }
 
 // void updateDirection(class QAbstractAnimation::Direction)
 func (this *QParallelAnimationGroup) InheritUpdateDirection(f func(direction int)) {
-	ffiqt.SetAllInheritCallback(this, "updateDirection", f)
+	qtrt.SetAllInheritCallback(this, "updateDirection", f)
 }
 
 type QParallelAnimationGroup struct {
@@ -91,7 +87,7 @@ func (*QParallelAnimationGroup) NewFromPointer(cthis unsafe.Pointer) *QParallelA
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QParallelAnimationGroup) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QParallelAnimationGroup10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK23QParallelAnimationGroup10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -104,7 +100,7 @@ func (this *QParallelAnimationGroup) MetaObject() *QMetaObject /*777 const QMeta
 // [-2] void QParallelAnimationGroup(QObject *)
 func NewQParallelAnimationGroup(parent *QObject /*777 QObject **/) *QParallelAnimationGroup {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroupC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQParallelAnimationGroupFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -115,7 +111,7 @@ func NewQParallelAnimationGroup(parent *QObject /*777 QObject **/) *QParallelAni
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QParallelAnimationGroup()
 func DeleteQParallelAnimationGroup(this *QParallelAnimationGroup) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroupD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroupD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -126,7 +122,7 @@ func DeleteQParallelAnimationGroup(this *QParallelAnimationGroup) {
 // Public virtual Visibility=Default Availability=Available
 // [4] int duration()
 func (this *QParallelAnimationGroup) Duration() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QParallelAnimationGroup8durationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK23QParallelAnimationGroup8durationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -138,7 +134,7 @@ func (this *QParallelAnimationGroup) Duration() int {
 // [1] bool event(QEvent *)
 func (this *QParallelAnimationGroup) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroup5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroup5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -149,7 +145,7 @@ func (this *QParallelAnimationGroup) Event(event *QEvent /*777 QEvent **/) bool 
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateCurrentTime(int)
 func (this *QParallelAnimationGroup) UpdateCurrentTime(currentTime int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroup17updateCurrentTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), currentTime)
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroup17updateCurrentTimeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), currentTime)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -158,7 +154,7 @@ func (this *QParallelAnimationGroup) UpdateCurrentTime(currentTime int) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
 func (this *QParallelAnimationGroup) UpdateState(newState int, oldState int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroup11updateStateEN18QAbstractAnimation5StateES1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroup11updateStateEN18QAbstractAnimation5StateES1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -167,7 +163,7 @@ func (this *QParallelAnimationGroup) UpdateState(newState int, oldState int) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateDirection(QAbstractAnimation::Direction)
 func (this *QParallelAnimationGroup) UpdateDirection(direction int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QParallelAnimationGroup15updateDirectionEN18QAbstractAnimation9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), direction)
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QParallelAnimationGroup15updateDirectionEN18QAbstractAnimation9DirectionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), direction)
 	gopp.ErrPrint(err, rv)
 }
 

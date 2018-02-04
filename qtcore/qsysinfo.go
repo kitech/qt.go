@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QSysInfo) NewFromPointer(cthis unsafe.Pointer) *QSysInfo {
 // Public static inline Visibility=Default Availability=Available
 // [4] QSysInfo::WinVersion windowsVersion()
 func (this *QSysInfo) WindowsVersion() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo14windowsVersionEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo14windowsVersionEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv)
@@ -91,7 +87,7 @@ func QSysInfo_WindowsVersion() int {
 // Public static inline Visibility=Default Availability=Available
 // [4] QSysInfo::MacVersion macVersion()
 func (this *QSysInfo) MacVersion() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo10macVersionEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo10macVersionEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv)
@@ -107,7 +103,7 @@ func QSysInfo_MacVersion() int {
 // Public static Visibility=Default Availability=Available
 // [8] QString buildCpuArchitecture()
 func (this *QSysInfo) BuildCpuArchitecture() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo20buildCpuArchitectureEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo20buildCpuArchitectureEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -125,7 +121,7 @@ func QSysInfo_BuildCpuArchitecture() *QString /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [8] QString currentCpuArchitecture()
 func (this *QSysInfo) CurrentCpuArchitecture() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo22currentCpuArchitectureEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo22currentCpuArchitectureEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -143,7 +139,7 @@ func QSysInfo_CurrentCpuArchitecture() *QString /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [8] QString buildAbi()
 func (this *QSysInfo) BuildAbi() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo8buildAbiEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo8buildAbiEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -161,7 +157,7 @@ func QSysInfo_BuildAbi() *QString /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [8] QString kernelType()
 func (this *QSysInfo) KernelType() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo10kernelTypeEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo10kernelTypeEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -179,7 +175,7 @@ func QSysInfo_KernelType() *QString /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [8] QString kernelVersion()
 func (this *QSysInfo) KernelVersion() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo13kernelVersionEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo13kernelVersionEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -197,7 +193,7 @@ func QSysInfo_KernelVersion() *QString /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [8] QString productType()
 func (this *QSysInfo) ProductType() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo11productTypeEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo11productTypeEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -215,7 +211,7 @@ func QSysInfo_ProductType() *QString /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [8] QString productVersion()
 func (this *QSysInfo) ProductVersion() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo14productVersionEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo14productVersionEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -233,7 +229,7 @@ func QSysInfo_ProductVersion() *QString /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [8] QString prettyProductName()
 func (this *QSysInfo) PrettyProductName() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo17prettyProductNameEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo17prettyProductNameEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -251,7 +247,7 @@ func QSysInfo_PrettyProductName() *QString /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [8] QString machineHostName()
 func (this *QSysInfo) MachineHostName() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfo15machineHostNameEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo15machineHostNameEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -265,7 +261,7 @@ func QSysInfo_MachineHostName() *QString /*123*/ {
 }
 
 func DeleteQSysInfo(this *QSysInfo) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QSysInfoD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfoD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

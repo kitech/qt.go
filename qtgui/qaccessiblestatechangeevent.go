@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QAccessibleStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QAcces
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleStateChangeEvent()
 func DeleteQAccessibleStateChangeEvent(this *QAccessibleStateChangeEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QAccessibleStateChangeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN27QAccessibleStateChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -87,7 +83,7 @@ func DeleteQAccessibleStateChangeEvent(this *QAccessibleStateChangeEvent) {
 // Public inline Visibility=Default Availability=Available
 // [8] QAccessible::State changedStates()
 func (this *QAccessibleStateChangeEvent) ChangedStates() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QAccessibleStateChangeEvent13changedStatesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK27QAccessibleStateChangeEvent13changedStatesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -72,7 +68,7 @@ func (*QDeferredDeleteEvent) NewFromPointer(cthis unsafe.Pointer) *QDeferredDele
 // Public Visibility=Default Availability=Available
 // [-2] void QDeferredDeleteEvent()
 func NewQDeferredDeleteEvent() *QDeferredDeleteEvent {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QDeferredDeleteEventC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QDeferredDeleteEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDeferredDeleteEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDeferredDeleteEvent)
@@ -84,7 +80,7 @@ func NewQDeferredDeleteEvent() *QDeferredDeleteEvent {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDeferredDeleteEvent()
 func DeleteQDeferredDeleteEvent(this *QDeferredDeleteEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QDeferredDeleteEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QDeferredDeleteEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -95,7 +91,7 @@ func DeleteQDeferredDeleteEvent(this *QDeferredDeleteEvent) {
 // Public inline Visibility=Default Availability=Available
 // [4] int loopLevel()
 func (this *QDeferredDeleteEvent) LoopLevel() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QDeferredDeleteEvent9loopLevelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QDeferredDeleteEvent9loopLevelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111

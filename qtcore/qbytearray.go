@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QByteArray) NewFromPointer(cthis unsafe.Pointer) *QByteArray {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QByteArray()
 func NewQByteArray() *QByteArray {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArrayC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArrayC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQByteArray)
@@ -89,7 +85,7 @@ func NewQByteArray() *QByteArray {
 func NewQByteArray_1(arg0 string, size int) *QByteArray {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArrayC2EPKci", ffiqt.FFI_TYPE_POINTER, convArg0, size)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArrayC2EPKci", qtrt.FFI_TYPE_POINTER, convArg0, size)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQByteArray)
@@ -101,7 +97,7 @@ func NewQByteArray_1(arg0 string, size int) *QByteArray {
 // Public Visibility=Default Availability=Available
 // [-2] void QByteArray(int, char)
 func NewQByteArray_2(size int, c byte) *QByteArray {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArrayC2Eic", ffiqt.FFI_TYPE_POINTER, size, c)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArrayC2Eic", qtrt.FFI_TYPE_POINTER, size, c)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQByteArray)
@@ -113,7 +109,7 @@ func NewQByteArray_2(size int, c byte) *QByteArray {
 // Public Visibility=Default Availability=Available
 // [-2] void QByteArray(int, Qt::Initialization)
 func NewQByteArray_3(size int, arg1 int) *QByteArray {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArrayC2EiN2Qt14InitializationE", ffiqt.FFI_TYPE_POINTER, size, arg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArrayC2EiN2Qt14InitializationE", qtrt.FFI_TYPE_POINTER, size, arg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQByteArray)
@@ -125,7 +121,7 @@ func NewQByteArray_3(size int, arg1 int) *QByteArray {
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QByteArray()
 func DeleteQByteArray(this *QByteArray) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArrayD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArrayD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -137,7 +133,7 @@ func DeleteQByteArray(this *QByteArray) {
 // [-2] void swap(QByteArray &)
 func (this *QByteArray) Swap(other *QByteArray) {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -146,7 +142,7 @@ func (this *QByteArray) Swap(other *QByteArray) {
 // Public inline Visibility=Default Availability=Available
 // [4] int size()
 func (this *QByteArray) Size() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -157,7 +153,7 @@ func (this *QByteArray) Size() int {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isEmpty()
 func (this *QByteArray) IsEmpty() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -168,7 +164,7 @@ func (this *QByteArray) IsEmpty() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void resize(int)
 func (this *QByteArray) Resize(size int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray6resizeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6resizeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -177,7 +173,7 @@ func (this *QByteArray) Resize(size int) {
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & fill(char, int)
 func (this *QByteArray) Fill(c byte, size int) *QByteArray {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray4fillEci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c, size)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray4fillEci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, size)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -190,7 +186,7 @@ func (this *QByteArray) Fill(c byte, size int) *QByteArray {
 // Public inline Visibility=Default Availability=Available
 // [4] int capacity()
 func (this *QByteArray) Capacity() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8capacityEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8capacityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -201,7 +197,7 @@ func (this *QByteArray) Capacity() int {
 // Public inline Visibility=Default Availability=Available
 // [-2] void reserve(int)
 func (this *QByteArray) Reserve(size int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7reserveEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), size)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7reserveEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -210,7 +206,7 @@ func (this *QByteArray) Reserve(size int) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void squeeze()
 func (this *QByteArray) Squeeze() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7squeezeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7squeezeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -219,7 +215,7 @@ func (this *QByteArray) Squeeze() {
 // Public inline Visibility=Default Availability=Available
 // [8] char * data()
 func (this *QByteArray) Data() string {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.GoStringI(rv)
@@ -230,7 +226,7 @@ func (this *QByteArray) Data() string {
 // Public inline Visibility=Default Availability=Available
 // [8] const char * data()
 func (this *QByteArray) Data_1() string {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.GoStringI(rv)
@@ -241,7 +237,7 @@ func (this *QByteArray) Data_1() string {
 // Public inline Visibility=Default Availability=Available
 // [8] const char * constData()
 func (this *QByteArray) ConstData() string {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray9constDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray9constDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.GoStringI(rv)
@@ -252,7 +248,7 @@ func (this *QByteArray) ConstData() string {
 // Public inline Visibility=Default Availability=Available
 // [-2] void detach()
 func (this *QByteArray) Detach() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray6detachEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6detachEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -261,7 +257,7 @@ func (this *QByteArray) Detach() {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isDetached()
 func (this *QByteArray) IsDetached() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray10isDetachedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10isDetachedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -273,7 +269,7 @@ func (this *QByteArray) IsDetached() bool {
 // [1] bool isSharedWith(const QByteArray &)
 func (this *QByteArray) IsSharedWith(other *QByteArray) bool {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray12isSharedWithERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray12isSharedWithERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -284,7 +280,7 @@ func (this *QByteArray) IsSharedWith(other *QByteArray) bool {
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
 func (this *QByteArray) Clear() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -293,7 +289,7 @@ func (this *QByteArray) Clear() {
 // Public inline Visibility=Default Availability=Available
 // [1] char at(int)
 func (this *QByteArray) At(i int) byte {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray2atEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), i)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray2atEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
@@ -304,7 +300,7 @@ func (this *QByteArray) At(i int) byte {
 // Public inline Visibility=Default Availability=Available
 // [1] char front()
 func (this *QByteArray) Front() byte {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray5frontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5frontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
@@ -315,7 +311,7 @@ func (this *QByteArray) Front() byte {
 // Public inline Visibility=Default Availability=Available
 // [16] QByteRef front()
 func (this *QByteArray) Front_1() *QByteRef /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray5frontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray5frontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -328,7 +324,7 @@ func (this *QByteArray) Front_1() *QByteRef /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [1] char back()
 func (this *QByteArray) Back() byte {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray4backEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray4backEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
@@ -339,7 +335,7 @@ func (this *QByteArray) Back() byte {
 // Public inline Visibility=Default Availability=Available
 // [16] QByteRef back()
 func (this *QByteArray) Back_1() *QByteRef /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray4backEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray4backEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -352,7 +348,7 @@ func (this *QByteArray) Back_1() *QByteRef /*123*/ {
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(char, int)
 func (this *QByteArray) IndexOf(c byte, from int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray7indexOfEci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c, from)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7indexOfEci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -365,7 +361,7 @@ func (this *QByteArray) IndexOf(c byte, from int) int {
 func (this *QByteArray) IndexOf_1(c string, from int) int {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray7indexOfEPKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7indexOfEPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -377,7 +373,7 @@ func (this *QByteArray) IndexOf_1(c string, from int) int {
 // [4] int indexOf(const QByteArray &, int)
 func (this *QByteArray) IndexOf_2(a *QByteArray, from int) int {
 	var convArg0 = a.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray7indexOfERKS_i", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7indexOfERKS_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -389,7 +385,7 @@ func (this *QByteArray) IndexOf_2(a *QByteArray, from int) int {
 // [4] int indexOf(const QString &, int)
 func (this *QByteArray) IndexOf_3(s *QString, from int) int {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray7indexOfERK7QStringi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7indexOfERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -400,7 +396,7 @@ func (this *QByteArray) IndexOf_3(s *QString, from int) int {
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(char, int)
 func (this *QByteArray) LastIndexOf(c byte, from int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfEci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c, from)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfEci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -413,7 +409,7 @@ func (this *QByteArray) LastIndexOf(c byte, from int) int {
 func (this *QByteArray) LastIndexOf_1(c string, from int) int {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfEPKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfEPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -425,7 +421,7 @@ func (this *QByteArray) LastIndexOf_1(c string, from int) int {
 // [4] int lastIndexOf(const QByteArray &, int)
 func (this *QByteArray) LastIndexOf_2(a *QByteArray, from int) int {
 	var convArg0 = a.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfERKS_i", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfERKS_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -437,7 +433,7 @@ func (this *QByteArray) LastIndexOf_2(a *QByteArray, from int) int {
 // [4] int lastIndexOf(const QString &, int)
 func (this *QByteArray) LastIndexOf_3(s *QString, from int) int {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfERK7QStringi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11lastIndexOfERK7QStringi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, from)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -448,7 +444,7 @@ func (this *QByteArray) LastIndexOf_3(s *QString, from int) int {
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(char)
 func (this *QByteArray) Contains(c byte) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8containsEc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8containsEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -461,7 +457,7 @@ func (this *QByteArray) Contains(c byte) bool {
 func (this *QByteArray) Contains_1(a string) bool {
 	var convArg0 = qtrt.CString(a)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8containsEPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8containsEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -473,7 +469,7 @@ func (this *QByteArray) Contains_1(a string) bool {
 // [1] bool contains(const QByteArray &)
 func (this *QByteArray) Contains_2(a *QByteArray) bool {
 	var convArg0 = a.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8containsERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8containsERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -484,7 +480,7 @@ func (this *QByteArray) Contains_2(a *QByteArray) bool {
 // Public Visibility=Default Availability=Available
 // [4] int count(char)
 func (this *QByteArray) Count(c byte) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray5countEc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5countEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -497,7 +493,7 @@ func (this *QByteArray) Count(c byte) int {
 func (this *QByteArray) Count_1(a string) int {
 	var convArg0 = qtrt.CString(a)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray5countEPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5countEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -509,7 +505,7 @@ func (this *QByteArray) Count_1(a string) int {
 // [4] int count(const QByteArray &)
 func (this *QByteArray) Count_2(a *QByteArray) int {
 	var convArg0 = a.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray5countERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5countERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -520,7 +516,7 @@ func (this *QByteArray) Count_2(a *QByteArray) int {
 // Public inline Visibility=Default Availability=Available
 // [4] int count()
 func (this *QByteArray) Count_3() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray5countEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -531,7 +527,7 @@ func (this *QByteArray) Count_3() int {
 // Public Visibility=Default Availability=Available
 // [8] QByteArray left(int)
 func (this *QByteArray) Left(len int) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray4leftEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), len)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray4leftEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), len)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -544,7 +540,7 @@ func (this *QByteArray) Left(len int) *QByteArray /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QByteArray right(int)
 func (this *QByteArray) Right(len int) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray5rightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), len)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5rightEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), len)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -557,7 +553,7 @@ func (this *QByteArray) Right(len int) *QByteArray /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QByteArray mid(int, int)
 func (this *QByteArray) Mid(index int, len int) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray3midEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, len)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray3midEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -570,7 +566,7 @@ func (this *QByteArray) Mid(index int, len int) *QByteArray /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray chopped(int)
 func (this *QByteArray) Chopped(len int) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray7choppedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), len)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7choppedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), len)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -584,7 +580,7 @@ func (this *QByteArray) Chopped(len int) *QByteArray /*123*/ {
 // [1] bool startsWith(const QByteArray &)
 func (this *QByteArray) StartsWith(a *QByteArray) bool {
 	var convArg0 = a.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray10startsWithERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10startsWithERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -595,7 +591,7 @@ func (this *QByteArray) StartsWith(a *QByteArray) bool {
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(char)
 func (this *QByteArray) StartsWith_1(c byte) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray10startsWithEc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10startsWithEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -608,7 +604,7 @@ func (this *QByteArray) StartsWith_1(c byte) bool {
 func (this *QByteArray) StartsWith_2(c string) bool {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray10startsWithEPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10startsWithEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -620,7 +616,7 @@ func (this *QByteArray) StartsWith_2(c string) bool {
 // [1] bool endsWith(const QByteArray &)
 func (this *QByteArray) EndsWith(a *QByteArray) bool {
 	var convArg0 = a.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8endsWithERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8endsWithERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -631,7 +627,7 @@ func (this *QByteArray) EndsWith(a *QByteArray) bool {
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(char)
 func (this *QByteArray) EndsWith_1(c byte) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8endsWithEc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8endsWithEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -644,7 +640,7 @@ func (this *QByteArray) EndsWith_1(c byte) bool {
 func (this *QByteArray) EndsWith_2(c string) bool {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8endsWithEPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8endsWithEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -655,7 +651,7 @@ func (this *QByteArray) EndsWith_2(c string) bool {
 // Public Visibility=Default Availability=Available
 // [-2] void truncate(int)
 func (this *QByteArray) Truncate(pos int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray8truncateEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pos)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray8truncateEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -664,7 +660,7 @@ func (this *QByteArray) Truncate(pos int) {
 // Public Visibility=Default Availability=Available
 // [-2] void chop(int)
 func (this *QByteArray) Chop(n int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray4chopEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray4chopEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -673,7 +669,7 @@ func (this *QByteArray) Chop(n int) {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toLower()
 func (this *QByteArray) ToLower() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNKR10QByteArray7toLowerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNKR10QByteArray7toLowerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -686,7 +682,7 @@ func (this *QByteArray) ToLower() *QByteArray /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toLower()
 func (this *QByteArray) ToLower_1() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNO10QByteArray7toLowerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNO10QByteArray7toLowerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -699,7 +695,7 @@ func (this *QByteArray) ToLower_1() *QByteArray /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toUpper()
 func (this *QByteArray) ToUpper() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNKR10QByteArray7toUpperEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNKR10QByteArray7toUpperEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -712,7 +708,7 @@ func (this *QByteArray) ToUpper() *QByteArray /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toUpper()
 func (this *QByteArray) ToUpper_1() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNO10QByteArray7toUpperEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNO10QByteArray7toUpperEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -725,7 +721,7 @@ func (this *QByteArray) ToUpper_1() *QByteArray /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray trimmed()
 func (this *QByteArray) Trimmed() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNKR10QByteArray7trimmedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNKR10QByteArray7trimmedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -738,7 +734,7 @@ func (this *QByteArray) Trimmed() *QByteArray /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray trimmed()
 func (this *QByteArray) Trimmed_1() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNO10QByteArray7trimmedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNO10QByteArray7trimmedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -751,7 +747,7 @@ func (this *QByteArray) Trimmed_1() *QByteArray /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray simplified()
 func (this *QByteArray) Simplified() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNKR10QByteArray10simplifiedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNKR10QByteArray10simplifiedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -764,7 +760,7 @@ func (this *QByteArray) Simplified() *QByteArray /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray simplified()
 func (this *QByteArray) Simplified_1() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNO10QByteArray10simplifiedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNO10QByteArray10simplifiedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -777,7 +773,7 @@ func (this *QByteArray) Simplified_1() *QByteArray /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QByteArray leftJustified(int, char, _Bool)
 func (this *QByteArray) LeftJustified(width int, fill byte, truncate bool) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray13leftJustifiedEicb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), width, fill, truncate)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray13leftJustifiedEicb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, fill, truncate)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -790,7 +786,7 @@ func (this *QByteArray) LeftJustified(width int, fill byte, truncate bool) *QByt
 // Public Visibility=Default Availability=Available
 // [8] QByteArray rightJustified(int, char, _Bool)
 func (this *QByteArray) RightJustified(width int, fill byte, truncate bool) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray14rightJustifiedEicb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), width, fill, truncate)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray14rightJustifiedEicb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width, fill, truncate)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -803,7 +799,7 @@ func (this *QByteArray) RightJustified(width int, fill byte, truncate bool) *QBy
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & remove(int, int)
 func (this *QByteArray) Remove(index int, len int) *QByteArray {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray6removeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, len)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6removeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -818,7 +814,7 @@ func (this *QByteArray) Remove(index int, len int) *QByteArray {
 func (this *QByteArray) Replace(index int, len int, s string) *QByteArray {
 	var convArg2 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg2)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7replaceEiiPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, len, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEiiPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -833,7 +829,7 @@ func (this *QByteArray) Replace(index int, len int, s string) *QByteArray {
 func (this *QByteArray) Replace_1(index int, len int, s string, alen int) *QByteArray {
 	var convArg2 = qtrt.CString(s)
 	defer qtrt.FreeMem(convArg2)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7replaceEiiPKci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, len, convArg2, alen)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEiiPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len, convArg2, alen)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -847,7 +843,7 @@ func (this *QByteArray) Replace_1(index int, len int, s string, alen int) *QByte
 // [8] QByteArray & replace(int, int, const QByteArray &)
 func (this *QByteArray) Replace_2(index int, len int, s *QByteArray) *QByteArray {
 	var convArg2 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7replaceEiiRKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index, len, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEiiRKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, len, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -862,7 +858,7 @@ func (this *QByteArray) Replace_2(index int, len int, s *QByteArray) *QByteArray
 func (this *QByteArray) Replace_3(before byte, after string) *QByteArray {
 	var convArg1 = qtrt.CString(after)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7replaceEcPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), before, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEcPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), before, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -876,7 +872,7 @@ func (this *QByteArray) Replace_3(before byte, after string) *QByteArray {
 // [8] QByteArray & replace(char, const QByteArray &)
 func (this *QByteArray) Replace_4(before byte, after *QByteArray) *QByteArray {
 	var convArg1 = after.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7replaceEcRKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), before, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEcRKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), before, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -893,7 +889,7 @@ func (this *QByteArray) Replace_5(before string, after string) *QByteArray {
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(after)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7replaceEPKcS1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEPKcS1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -910,7 +906,7 @@ func (this *QByteArray) Replace_6(before string, bsize int, after string, asize 
 	defer qtrt.FreeMem(convArg0)
 	var convArg2 = qtrt.CString(after)
 	defer qtrt.FreeMem(convArg2)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7replaceEPKciS1_i", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, bsize, convArg2, asize)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEPKciS1_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, bsize, convArg2, asize)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -925,7 +921,7 @@ func (this *QByteArray) Replace_6(before string, bsize int, after string, asize 
 func (this *QByteArray) Replace_7(before *QByteArray, after *QByteArray) *QByteArray {
 	var convArg0 = before.GetCthis()
 	var convArg1 = after.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7replaceERKS_S1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceERKS_S1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -941,7 +937,7 @@ func (this *QByteArray) Replace_8(before *QByteArray, after string) *QByteArray 
 	var convArg0 = before.GetCthis()
 	var convArg1 = qtrt.CString(after)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7replaceERKS_PKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceERKS_PKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -957,7 +953,7 @@ func (this *QByteArray) Replace_9(before string, after *QByteArray) *QByteArray 
 	var convArg0 = qtrt.CString(before)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = after.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7replaceEPKcRKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEPKcRKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -970,7 +966,7 @@ func (this *QByteArray) Replace_9(before string, after *QByteArray) *QByteArray 
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & replace(char, char)
 func (this *QByteArray) Replace_10(before byte, after byte) *QByteArray {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7replaceEcc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), before, after)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEcc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), before, after)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -986,7 +982,7 @@ func (this *QByteArray) Replace_11(before *QString, after string) *QByteArray {
 	var convArg0 = before.GetCthis()
 	var convArg1 = qtrt.CString(after)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7replaceERK7QStringPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceERK7QStringPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1000,7 +996,7 @@ func (this *QByteArray) Replace_11(before *QString, after string) *QByteArray {
 // [8] QByteArray & replace(char, const QString &)
 func (this *QByteArray) Replace_12(c byte, after *QString) *QByteArray {
 	var convArg1 = after.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7replaceEcRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceEcRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1015,7 +1011,7 @@ func (this *QByteArray) Replace_12(c byte, after *QString) *QByteArray {
 func (this *QByteArray) Replace_13(before *QString, after *QByteArray) *QByteArray {
 	var convArg0 = before.GetCthis()
 	var convArg1 = after.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7replaceERK7QStringRKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7replaceERK7QStringRKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1028,7 +1024,7 @@ func (this *QByteArray) Replace_13(before *QString, after *QByteArray) *QByteArr
 // Public Visibility=Default Availability=Available
 // [8] QByteArray repeated(int)
 func (this *QByteArray) Repeated(times int) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8repeatedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), times)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8repeatedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), times)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1041,7 +1037,7 @@ func (this *QByteArray) Repeated(times int) *QByteArray /*123*/ {
 // Public Visibility=Default Availability=Available
 // [2] short toShort(_Bool *, int)
 func (this *QByteArray) ToShort(ok unsafe.Pointer /*666*/, base int) int16 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray7toShortEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7toShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
@@ -1052,7 +1048,7 @@ func (this *QByteArray) ToShort(ok unsafe.Pointer /*666*/, base int) int16 {
 // Public Visibility=Default Availability=Available
 // [2] ushort toUShort(_Bool *, int)
 func (this *QByteArray) ToUShort(ok unsafe.Pointer /*666*/, base int) uint16 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8toUShortEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8toUShortEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint16(rv) // 222
@@ -1063,7 +1059,7 @@ func (this *QByteArray) ToUShort(ok unsafe.Pointer /*666*/, base int) uint16 {
 // Public Visibility=Default Availability=Available
 // [4] int toInt(_Bool *, int)
 func (this *QByteArray) ToInt(ok unsafe.Pointer /*666*/, base int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray5toIntEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5toIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -1074,7 +1070,7 @@ func (this *QByteArray) ToInt(ok unsafe.Pointer /*666*/, base int) int {
 // Public Visibility=Default Availability=Available
 // [4] uint toUInt(_Bool *, int)
 func (this *QByteArray) ToUInt(ok unsafe.Pointer /*666*/, base int) uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray6toUIntEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6toUIntEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
@@ -1085,7 +1081,7 @@ func (this *QByteArray) ToUInt(ok unsafe.Pointer /*666*/, base int) uint {
 // Public Visibility=Default Availability=Available
 // [8] long toLong(_Bool *, int)
 func (this *QByteArray) ToLong(ok unsafe.Pointer /*666*/, base int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray6toLongEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6toLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -1096,7 +1092,7 @@ func (this *QByteArray) ToLong(ok unsafe.Pointer /*666*/, base int) int {
 // Public Visibility=Default Availability=Available
 // [8] ulong toULong(_Bool *, int)
 func (this *QByteArray) ToULong(ok unsafe.Pointer /*666*/, base int) uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray7toULongEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7toULongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
@@ -1107,7 +1103,7 @@ func (this *QByteArray) ToULong(ok unsafe.Pointer /*666*/, base int) uint {
 // Public Visibility=Default Availability=Available
 // [8] qlonglong toLongLong(_Bool *, int)
 func (this *QByteArray) ToLongLong(ok unsafe.Pointer /*666*/, base int) int64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray10toLongLongEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10toLongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -1118,7 +1114,7 @@ func (this *QByteArray) ToLongLong(ok unsafe.Pointer /*666*/, base int) int64 {
 // Public Visibility=Default Availability=Available
 // [8] qulonglong toULongLong(_Bool *, int)
 func (this *QByteArray) ToULongLong(ok unsafe.Pointer /*666*/, base int) uint64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray11toULongLongEPbi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11toULongLongEPbi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint64(rv) // 222
@@ -1129,7 +1125,7 @@ func (this *QByteArray) ToULongLong(ok unsafe.Pointer /*666*/, base int) uint64 
 // Public Visibility=Default Availability=Available
 // [4] float toFloat(_Bool *)
 func (this *QByteArray) ToFloat(ok unsafe.Pointer /*666*/) float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray7toFloatEPb", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), &ok)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray7toFloatEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
@@ -1140,7 +1136,7 @@ func (this *QByteArray) ToFloat(ok unsafe.Pointer /*666*/) float32 {
 // Public Visibility=Default Availability=Available
 // [8] double toDouble(_Bool *)
 func (this *QByteArray) ToDouble(ok unsafe.Pointer /*666*/) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8toDoubleEPb", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), &ok)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8toDoubleEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -1151,7 +1147,7 @@ func (this *QByteArray) ToDouble(ok unsafe.Pointer /*666*/) float64 {
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toBase64(QByteArray::Base64Options)
 func (this *QByteArray) ToBase64(options int) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8toBase64E6QFlagsINS_12Base64OptionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), options)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8toBase64E6QFlagsINS_12Base64OptionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), options)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1164,7 +1160,7 @@ func (this *QByteArray) ToBase64(options int) *QByteArray /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toBase64()
 func (this *QByteArray) ToBase64_1() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8toBase64Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8toBase64Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1177,7 +1173,7 @@ func (this *QByteArray) ToBase64_1() *QByteArray /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toHex()
 func (this *QByteArray) ToHex() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray5toHexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5toHexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1190,7 +1186,7 @@ func (this *QByteArray) ToHex() *QByteArray /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QByteArray toHex(char)
 func (this *QByteArray) ToHex_1(separator byte) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray5toHexEc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), separator)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5toHexEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), separator)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1205,7 +1201,7 @@ func (this *QByteArray) ToHex_1(separator byte) *QByteArray /*123*/ {
 func (this *QByteArray) ToPercentEncoding(exclude *QByteArray, include *QByteArray, percent byte) *QByteArray /*123*/ {
 	var convArg0 = exclude.GetCthis()
 	var convArg1 = include.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray17toPercentEncodingERKS_S1_c", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, percent)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray17toPercentEncodingERKS_S1_c", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, percent)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1218,7 +1214,7 @@ func (this *QByteArray) ToPercentEncoding(exclude *QByteArray, include *QByteArr
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & setNum(short, int)
 func (this *QByteArray) SetNum(arg0 int16, base int) *QByteArray {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray6setNumEsi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEsi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1231,7 +1227,7 @@ func (this *QByteArray) SetNum(arg0 int16, base int) *QByteArray {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & setNum(ushort, int)
 func (this *QByteArray) SetNum_1(arg0 uint16, base int) *QByteArray {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray6setNumEti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1244,7 +1240,7 @@ func (this *QByteArray) SetNum_1(arg0 uint16, base int) *QByteArray {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & setNum(int, int)
 func (this *QByteArray) SetNum_2(arg0 int, base int) *QByteArray {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray6setNumEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1257,7 +1253,7 @@ func (this *QByteArray) SetNum_2(arg0 int, base int) *QByteArray {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & setNum(uint, int)
 func (this *QByteArray) SetNum_3(arg0 uint, base int) *QByteArray {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray6setNumEji", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEji", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1270,7 +1266,7 @@ func (this *QByteArray) SetNum_3(arg0 uint, base int) *QByteArray {
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & setNum(qlonglong, int)
 func (this *QByteArray) SetNum_4(arg0 int64, base int) *QByteArray {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray6setNumExi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumExi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1283,7 +1279,7 @@ func (this *QByteArray) SetNum_4(arg0 int64, base int) *QByteArray {
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & setNum(qulonglong, int)
 func (this *QByteArray) SetNum_5(arg0 uint64, base int) *QByteArray {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray6setNumEyi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEyi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, base)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1296,7 +1292,7 @@ func (this *QByteArray) SetNum_5(arg0 uint64, base int) *QByteArray {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray & setNum(float, char, int)
 func (this *QByteArray) SetNum_6(arg0 float32, f byte, prec int) *QByteArray {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray6setNumEfci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEfci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1309,7 +1305,7 @@ func (this *QByteArray) SetNum_6(arg0 float32, f byte, prec int) *QByteArray {
 // Public Visibility=Default Availability=Available
 // [8] QByteArray & setNum(double, char, int)
 func (this *QByteArray) SetNum_7(arg0 float64, f byte, prec int) *QByteArray {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray6setNumEdci", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6setNumEdci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, f, prec)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1324,7 +1320,7 @@ func (this *QByteArray) SetNum_7(arg0 float64, f byte, prec int) *QByteArray {
 func (this *QByteArray) SetRawData(a string, n uint) *QByteArray {
 	var convArg0 = qtrt.CString(a)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray10setRawDataEPKcj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, n)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray10setRawDataEPKcj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -1337,7 +1333,7 @@ func (this *QByteArray) SetRawData(a string, n uint) *QByteArray {
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray number(int, int)
 func (this *QByteArray) Number(arg0 int, base int) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray6numberEii", ffiqt.FFI_TYPE_POINTER, arg0, base)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberEii", qtrt.FFI_TYPE_POINTER, arg0, base)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1355,7 +1351,7 @@ func QByteArray_Number(arg0 int, base int) *QByteArray /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray number(uint, int)
 func (this *QByteArray) Number_1(arg0 uint, base int) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray6numberEji", ffiqt.FFI_TYPE_POINTER, arg0, base)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberEji", qtrt.FFI_TYPE_POINTER, arg0, base)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1373,7 +1369,7 @@ func QByteArray_Number_1(arg0 uint, base int) *QByteArray /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray number(qlonglong, int)
 func (this *QByteArray) Number_2(arg0 int64, base int) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray6numberExi", ffiqt.FFI_TYPE_POINTER, arg0, base)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberExi", qtrt.FFI_TYPE_POINTER, arg0, base)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1391,7 +1387,7 @@ func QByteArray_Number_2(arg0 int64, base int) *QByteArray /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray number(qulonglong, int)
 func (this *QByteArray) Number_3(arg0 uint64, base int) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray6numberEyi", ffiqt.FFI_TYPE_POINTER, arg0, base)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberEyi", qtrt.FFI_TYPE_POINTER, arg0, base)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1409,7 +1405,7 @@ func QByteArray_Number_3(arg0 uint64, base int) *QByteArray /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray number(double, char, int)
 func (this *QByteArray) Number_4(arg0 float64, f byte, prec int) *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray6numberEdci", ffiqt.FFI_TYPE_POINTER, arg0, f, prec)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray6numberEdci", qtrt.FFI_TYPE_POINTER, arg0, f, prec)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1429,7 +1425,7 @@ func QByteArray_Number_4(arg0 float64, f byte, prec int) *QByteArray /*123*/ {
 func (this *QByteArray) FromRawData(arg0 string, size int) *QByteArray /*123*/ {
 	var convArg0 = qtrt.CString(arg0)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray11fromRawDataEPKci", ffiqt.FFI_TYPE_POINTER, convArg0, size)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray11fromRawDataEPKci", qtrt.FFI_TYPE_POINTER, convArg0, size)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1448,7 +1444,7 @@ func QByteArray_FromRawData(arg0 string, size int) *QByteArray /*123*/ {
 // [8] QByteArray fromBase64(const QByteArray &, QByteArray::Base64Options)
 func (this *QByteArray) FromBase64(base64 *QByteArray, options int) *QByteArray /*123*/ {
 	var convArg0 = base64.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray10fromBase64ERKS_6QFlagsINS_12Base64OptionEE", ffiqt.FFI_TYPE_POINTER, convArg0, options)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray10fromBase64ERKS_6QFlagsINS_12Base64OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, options)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1467,7 +1463,7 @@ func QByteArray_FromBase64(base64 *QByteArray, options int) *QByteArray /*123*/ 
 // [8] QByteArray fromBase64(const QByteArray &)
 func (this *QByteArray) FromBase64_1(base64 *QByteArray) *QByteArray /*123*/ {
 	var convArg0 = base64.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray10fromBase64ERKS_", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray10fromBase64ERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1486,7 +1482,7 @@ func QByteArray_FromBase64_1(base64 *QByteArray) *QByteArray /*123*/ {
 // [8] QByteArray fromHex(const QByteArray &)
 func (this *QByteArray) FromHex(hexEncoded *QByteArray) *QByteArray /*123*/ {
 	var convArg0 = hexEncoded.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray7fromHexERKS_", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray7fromHexERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1505,7 +1501,7 @@ func QByteArray_FromHex(hexEncoded *QByteArray) *QByteArray /*123*/ {
 // [8] QByteArray fromPercentEncoding(const QByteArray &, char)
 func (this *QByteArray) FromPercentEncoding(pctEncoded *QByteArray, percent byte) *QByteArray /*123*/ {
 	var convArg0 = pctEncoded.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray19fromPercentEncodingERKS_c", ffiqt.FFI_TYPE_POINTER, convArg0, percent)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray19fromPercentEncodingERKS_c", qtrt.FFI_TYPE_POINTER, convArg0, percent)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1523,7 +1519,7 @@ func QByteArray_FromPercentEncoding(pctEncoded *QByteArray, percent byte) *QByte
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray::iterator begin()
 func (this *QByteArray) Begin() string {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray5beginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return string(rv) // 222
@@ -1534,7 +1530,7 @@ func (this *QByteArray) Begin() string {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray::const_iterator begin()
 func (this *QByteArray) Begin_1() string {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray5beginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return string(rv) // 222
@@ -1545,7 +1541,7 @@ func (this *QByteArray) Begin_1() string {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray::const_iterator cbegin()
 func (this *QByteArray) Cbegin() string {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray6cbeginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6cbeginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return string(rv) // 222
@@ -1556,7 +1552,7 @@ func (this *QByteArray) Cbegin() string {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray::const_iterator constBegin()
 func (this *QByteArray) ConstBegin() string {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray10constBeginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray10constBeginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return string(rv) // 222
@@ -1567,7 +1563,7 @@ func (this *QByteArray) ConstBegin() string {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray::iterator end()
 func (this *QByteArray) End() string {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return string(rv) // 222
@@ -1578,7 +1574,7 @@ func (this *QByteArray) End() string {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray::const_iterator end()
 func (this *QByteArray) End_1() string {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return string(rv) // 222
@@ -1589,7 +1585,7 @@ func (this *QByteArray) End_1() string {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray::const_iterator cend()
 func (this *QByteArray) Cend() string {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray4cendEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray4cendEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return string(rv) // 222
@@ -1600,7 +1596,7 @@ func (this *QByteArray) Cend() string {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray::const_iterator constEnd()
 func (this *QByteArray) ConstEnd() string {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray8constEndEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray8constEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return string(rv) // 222
@@ -1611,7 +1607,7 @@ func (this *QByteArray) ConstEnd() string {
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_back(char)
 func (this *QByteArray) Push_back(c byte) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray9push_backEc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray9push_backEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1622,7 +1618,7 @@ func (this *QByteArray) Push_back(c byte) {
 func (this *QByteArray) Push_back_1(c string) {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray9push_backEPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray9push_backEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1632,7 +1628,7 @@ func (this *QByteArray) Push_back_1(c string) {
 // [-2] void push_back(const QByteArray &)
 func (this *QByteArray) Push_back_2(a *QByteArray) {
 	var convArg0 = a.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray9push_backERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray9push_backERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1641,7 +1637,7 @@ func (this *QByteArray) Push_back_2(a *QByteArray) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_front(char)
 func (this *QByteArray) Push_front(c byte) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray10push_frontEc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray10push_frontEc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1652,7 +1648,7 @@ func (this *QByteArray) Push_front(c byte) {
 func (this *QByteArray) Push_front_1(c string) {
 	var convArg0 = qtrt.CString(c)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray10push_frontEPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray10push_frontEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1662,7 +1658,7 @@ func (this *QByteArray) Push_front_1(c string) {
 // [-2] void push_front(const QByteArray &)
 func (this *QByteArray) Push_front_2(a *QByteArray) {
 	var convArg0 = a.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray10push_frontERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray10push_frontERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1671,7 +1667,7 @@ func (this *QByteArray) Push_front_2(a *QByteArray) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void shrink_to_fit()
 func (this *QByteArray) Shrink_to_fit() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QByteArray13shrink_to_fitEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray13shrink_to_fitEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1680,7 +1676,7 @@ func (this *QByteArray) Shrink_to_fit() {
 // Public inline Visibility=Default Availability=Available
 // [32] std::string toStdString()
 func (this *QByteArray) ToStdString() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray11toStdStringB5cxx11Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray11toStdStringB5cxx11Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -1691,7 +1687,7 @@ func (this *QByteArray) ToStdString() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int length()
 func (this *QByteArray) Length() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray6lengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6lengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -1702,7 +1698,7 @@ func (this *QByteArray) Length() int {
 // Public Visibility=Default Availability=Available
 // [1] bool isNull()
 func (this *QByteArray) IsNull() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QByteArray6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QByteArray6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

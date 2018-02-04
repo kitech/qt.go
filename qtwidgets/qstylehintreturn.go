@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -83,7 +79,7 @@ func (*QStyleHintReturn) NewFromPointer(cthis unsafe.Pointer) *QStyleHintReturn 
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleHintReturn(int, int)
 func NewQStyleHintReturn(version int, type_ int) *QStyleHintReturn {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStyleHintReturnC2Eii", ffiqt.FFI_TYPE_POINTER, version, type_)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QStyleHintReturnC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleHintReturnFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleHintReturn)
@@ -95,7 +91,7 @@ func NewQStyleHintReturn(version int, type_ int) *QStyleHintReturn {
 // Public Visibility=Default Availability=Available
 // [-2] void ~QStyleHintReturn()
 func DeleteQStyleHintReturn(this *QStyleHintReturn) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QStyleHintReturnD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QStyleHintReturnD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)

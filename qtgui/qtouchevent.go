@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QTouchEvent) NewFromPointer(cthis unsafe.Pointer) *QTouchEvent {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTouchEvent()
 func DeleteQTouchEvent(this *QTouchEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTouchEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 72)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -87,7 +83,7 @@ func DeleteQTouchEvent(this *QTouchEvent) {
 // Public inline Visibility=Default Availability=Available
 // [8] QWindow * window()
 func (this *QTouchEvent) Window() *QWindow /*777 QWindow **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent6windowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTouchEvent6windowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -99,7 +95,7 @@ func (this *QTouchEvent) Window() *QWindow /*777 QWindow **/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QObject * target()
 func (this *QTouchEvent) Target() *qtcore.QObject /*777 QObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent6targetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTouchEvent6targetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -111,7 +107,7 @@ func (this *QTouchEvent) Target() *qtcore.QObject /*777 QObject **/ {
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::TouchPointStates touchPointStates()
 func (this *QTouchEvent) TouchPointStates() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent16touchPointStatesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTouchEvent16touchPointStatesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -122,7 +118,7 @@ func (this *QTouchEvent) TouchPointStates() int {
 // Public inline Visibility=Default Availability=Available
 // [8] const QList<QTouchEvent::TouchPoint> & touchPoints()
 func (this *QTouchEvent) TouchPoints() unsafe.Pointer /*555*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent11touchPointsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTouchEvent11touchPointsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -133,7 +129,7 @@ func (this *QTouchEvent) TouchPoints() unsafe.Pointer /*555*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QTouchDevice * device()
 func (this *QTouchEvent) Device() *QTouchDevice /*777 QTouchDevice **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QTouchEvent6deviceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTouchEvent6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTouchDeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -146,7 +142,7 @@ func (this *QTouchEvent) Device() *QTouchDevice /*777 QTouchDevice **/ {
 // [-2] void setWindow(QWindow *)
 func (this *QTouchEvent) SetWindow(awindow *QWindow /*777 QWindow **/) {
 	var convArg0 = awindow.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent9setWindowEP7QWindow", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTouchEvent9setWindowEP7QWindow", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -156,7 +152,7 @@ func (this *QTouchEvent) SetWindow(awindow *QWindow /*777 QWindow **/) {
 // [-2] void setTarget(QObject *)
 func (this *QTouchEvent) SetTarget(atarget *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = atarget.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent9setTargetEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTouchEvent9setTargetEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -165,7 +161,7 @@ func (this *QTouchEvent) SetTarget(atarget *qtcore.QObject /*777 QObject **/) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTouchPointStates(Qt::TouchPointStates)
 func (this *QTouchEvent) SetTouchPointStates(aTouchPointStates int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent19setTouchPointStatesE6QFlagsIN2Qt15TouchPointStateEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), aTouchPointStates)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTouchEvent19setTouchPointStatesE6QFlagsIN2Qt15TouchPointStateEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), aTouchPointStates)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -175,7 +171,7 @@ func (this *QTouchEvent) SetTouchPointStates(aTouchPointStates int) {
 // [-2] void setDevice(QTouchDevice *)
 func (this *QTouchEvent) SetDevice(adevice *QTouchDevice /*777 QTouchDevice **/) {
 	var convArg0 = adevice.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QTouchEvent9setDeviceEP12QTouchDevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QTouchEvent9setDeviceEP12QTouchDevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

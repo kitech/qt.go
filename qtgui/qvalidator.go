@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QValidator) NewFromPointer(cthis unsafe.Pointer) *QValidator {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QValidator10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QValidator10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -89,7 +85,7 @@ func (this *QValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // [-2] void QValidator(QObject *)
 func NewQValidator(parent *qtcore.QObject /*777 QObject **/) *QValidator {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QValidatorC1EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QValidatorC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -100,7 +96,7 @@ func NewQValidator(parent *qtcore.QObject /*777 QObject **/) *QValidator {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QValidator()
 func DeleteQValidator(this *QValidator) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QValidatorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QValidatorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -112,7 +108,7 @@ func DeleteQValidator(this *QValidator) {
 // [-2] void setLocale(const QLocale &)
 func (this *QValidator) SetLocale(locale *qtcore.QLocale) {
 	var convArg0 = locale.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QValidator9setLocaleERK7QLocale", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QValidator9setLocaleERK7QLocale", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -121,7 +117,7 @@ func (this *QValidator) SetLocale(locale *qtcore.QLocale) {
 // Public Visibility=Default Availability=Available
 // [8] QLocale locale()
 func (this *QValidator) Locale() *qtcore.QLocale /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QValidator6localeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QValidator6localeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -135,7 +131,7 @@ func (this *QValidator) Locale() *qtcore.QLocale /*123*/ {
 // [4] QValidator::State validate(QString &, int &)
 func (this *QValidator) Validate(arg0 *qtcore.QString, arg1 int) int {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QValidator8validateER7QStringRi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &arg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QValidator8validateER7QStringRi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &arg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -147,7 +143,7 @@ func (this *QValidator) Validate(arg0 *qtcore.QString, arg1 int) int {
 // [-2] void fixup(QString &)
 func (this *QValidator) Fixup(arg0 *qtcore.QString) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QValidator5fixupER7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QValidator5fixupER7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -156,7 +152,7 @@ func (this *QValidator) Fixup(arg0 *qtcore.QString) {
 // Public Visibility=Default Availability=Available
 // [-2] void changed()
 func (this *QValidator) Changed() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QValidator7changedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QValidator7changedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

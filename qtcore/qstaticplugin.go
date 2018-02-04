@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QStaticPlugin) NewFromPointer(cthis unsafe.Pointer) *QStaticPlugin {
 // Public Visibility=Default Availability=Available
 // [16] QJsonObject metaData()
 func (this *QStaticPlugin) MetaData() *QJsonObject /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QStaticPlugin8metaDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QStaticPlugin8metaDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQJsonObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -84,7 +80,7 @@ func (this *QStaticPlugin) MetaData() *QJsonObject /*123*/ {
 }
 
 func DeleteQStaticPlugin(this *QStaticPlugin) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QStaticPluginD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QStaticPluginD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

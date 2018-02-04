@@ -18,7 +18,7 @@ package qtcore
 
 type Qt__float_round_style = int
 
-const Qt__round_indeterminate Qt__float_round_style = 4294967295
+const Qt__round_indeterminate Qt__float_round_style = -1
 const Qt__round_toward_zero Qt__float_round_style = 0
 const Qt__round_to_nearest Qt__float_round_style = 1
 const Qt__round_toward_infinity Qt__float_round_style = 2
@@ -26,7 +26,7 @@ const Qt__round_toward_neg_infinity Qt__float_round_style = 3
 
 type Qt__float_denorm_style = int
 
-const Qt__denorm_indeterminate Qt__float_denorm_style = 4294967295
+const Qt__denorm_indeterminate Qt__float_denorm_style = -1
 const Qt__denorm_absent Qt__float_denorm_style = 0
 const Qt__denorm_present Qt__float_denorm_style = 1
 
@@ -51,7 +51,7 @@ const Qt__memory_order_seq_cst Qt__memory_order = 5
 type Qt____memory_order_modifier = int
 
 const Qt____memory_order_mask Qt____memory_order_modifier = 65535
-const Qt____memory_order_modifier_mask Qt____memory_order_modifier = 4294901760
+const Qt____memory_order_modifier_mask Qt____memory_order_modifier = -65536
 const Qt____memory_order_hle_acquire Qt____memory_order_modifier = 65536
 const Qt____memory_order_hle_release Qt____memory_order_modifier = 131072
 
@@ -87,7 +87,7 @@ const Qt__AltModifier Qt__KeyboardModifier = 134217728
 const Qt__MetaModifier Qt__KeyboardModifier = 268435456
 const Qt__KeypadModifier Qt__KeyboardModifier = 536870912
 const Qt__GroupSwitchModifier Qt__KeyboardModifier = 1073741824
-const Qt__KeyboardModifierMask Qt__KeyboardModifier = 4261412864
+const Qt__KeyboardModifierMask Qt__KeyboardModifier = -33554432
 
 type Qt__Modifier = int
 
@@ -95,7 +95,7 @@ const Qt__META Qt__Modifier = 268435456
 const Qt__SHIFT Qt__Modifier = 33554432
 const Qt__CTRL Qt__Modifier = 67108864
 const Qt__ALT Qt__Modifier = 134217728
-const Qt__MODIFIER_MASK Qt__Modifier = 4261412864
+const Qt__MODIFIER_MASK Qt__Modifier = -33554432
 const Qt__UNICODE_ACCEL Qt__Modifier = 0
 
 type Qt__MouseButton = int
@@ -136,7 +136,7 @@ const Qt__ExtraButton23 Qt__MouseButton = 33554432
 const Qt__ExtraButton24 Qt__MouseButton = 67108864
 const Qt__AllButtons Qt__MouseButton = 134217727
 const Qt__MaxMouseButton Qt__MouseButton = 67108864
-const Qt__MouseButtonMask Qt__MouseButton = 4294967295
+const Qt__MouseButtonMask Qt__MouseButton = -1
 
 type Qt__Orientation = int
 
@@ -215,7 +215,7 @@ type Qt__WhiteSpaceMode = int
 const Qt__WhiteSpaceNormal Qt__WhiteSpaceMode = 0
 const Qt__WhiteSpacePre Qt__WhiteSpaceMode = 1
 const Qt__WhiteSpaceNoWrap Qt__WhiteSpaceMode = 2
-const Qt__WhiteSpaceModeUndefined Qt__WhiteSpaceMode = 4294967295
+const Qt__WhiteSpaceModeUndefined Qt__WhiteSpaceMode = -1
 
 type Qt__HitTestAccuracy = int
 
@@ -261,7 +261,7 @@ const Qt__WindowCloseButtonHint Qt__WindowType = 134217728
 const Qt__MacWindowToolBarButtonHint Qt__WindowType = 268435456
 const Qt__BypassGraphicsProxyWidget Qt__WindowType = 536870912
 const Qt__NoDropShadowWindowHint Qt__WindowType = 1073741824
-const Qt__WindowFullscreenButtonHint Qt__WindowType = 2147483648
+const Qt__WindowFullscreenButtonHint Qt__WindowType = -2147483648
 
 type Qt__WindowState = int
 
@@ -1194,9 +1194,9 @@ const Qt__ImTextAfterCursor Qt__InputMethodQuery = 4096
 const Qt__ImEnterKeyType Qt__InputMethodQuery = 8192
 const Qt__ImAnchorRectangle Qt__InputMethodQuery = 16384
 const Qt__ImInputItemClipRectangle Qt__InputMethodQuery = 32768
-const Qt__ImPlatformData Qt__InputMethodQuery = 2147483648
+const Qt__ImPlatformData Qt__InputMethodQuery = -2147483648
 const Qt__ImQueryInput Qt__InputMethodQuery = 16570
-const Qt__ImQueryAll Qt__InputMethodQuery = 4294967295
+const Qt__ImQueryAll Qt__InputMethodQuery = -1
 
 type Qt__InputMethodHint = int
 
@@ -1220,7 +1220,7 @@ const Qt__ImhDialableCharactersOnly Qt__InputMethodHint = 1048576
 const Qt__ImhEmailCharactersOnly Qt__InputMethodHint = 2097152
 const Qt__ImhUrlCharactersOnly Qt__InputMethodHint = 4194304
 const Qt__ImhLatinOnly Qt__InputMethodHint = 8388608
-const Qt__ImhExclusiveInputMask Qt__InputMethodHint = 4294901760
+const Qt__ImhExclusiveInputMask Qt__InputMethodHint = -65536
 
 type Qt__EnterKeyType = int
 
@@ -1350,7 +1350,7 @@ type Qt__EventPriority = int
 
 const Qt__HighEventPriority Qt__EventPriority = 1
 const Qt__NormalEventPriority Qt__EventPriority = 0
-const Qt__LowEventPriority Qt__EventPriority = 4294967295
+const Qt__LowEventPriority Qt__EventPriority = -1
 
 type Qt__SizeHint = int
 
@@ -1405,7 +1405,7 @@ const Qt__PanGesture Qt__GestureType = 3
 const Qt__PinchGesture Qt__GestureType = 4
 const Qt__SwipeGesture Qt__GestureType = 5
 const Qt__CustomGesture Qt__GestureType = 256
-const Qt__LastGestureType Qt__GestureType = 4294967295
+const Qt__LastGestureType Qt__GestureType = -1
 
 type Qt__GestureFlag = int
 
@@ -1569,7 +1569,7 @@ const Qt___S_basefield Qt___Ios_Fmtflags = 74
 const Qt___S_floatfield Qt___Ios_Fmtflags = 260
 const Qt___S_ios_fmtflags_end Qt___Ios_Fmtflags = 65536
 const Qt___S_ios_fmtflags_max Qt___Ios_Fmtflags = 2147483647
-const Qt___S_ios_fmtflags_min Qt___Ios_Fmtflags = 2147483648
+const Qt___S_ios_fmtflags_min Qt___Ios_Fmtflags = -2147483648
 
 type Qt___Ios_Openmode = int
 
@@ -1581,7 +1581,7 @@ const Qt___S_out Qt___Ios_Openmode = 16
 const Qt___S_trunc Qt___Ios_Openmode = 32
 const Qt___S_ios_openmode_end Qt___Ios_Openmode = 65536
 const Qt___S_ios_openmode_max Qt___Ios_Openmode = 2147483647
-const Qt___S_ios_openmode_min Qt___Ios_Openmode = 2147483648
+const Qt___S_ios_openmode_min Qt___Ios_Openmode = -2147483648
 
 type Qt___Ios_Iostate = int
 
@@ -1591,7 +1591,7 @@ const Qt___S_eofbit Qt___Ios_Iostate = 2
 const Qt___S_failbit Qt___Ios_Iostate = 4
 const Qt___S_ios_iostate_end Qt___Ios_Iostate = 65536
 const Qt___S_ios_iostate_max Qt___Ios_Iostate = 2147483647
-const Qt___S_ios_iostate_min Qt___Ios_Iostate = 2147483648
+const Qt___S_ios_iostate_min Qt___Ios_Iostate = -2147483648
 
 type Qt___Ios_Seekdir = int
 

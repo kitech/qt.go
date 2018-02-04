@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -79,7 +75,7 @@ func (*QGradient) NewFromPointer(cthis unsafe.Pointer) *QGradient {
 // Public Visibility=Default Availability=Available
 // [-2] void QGradient()
 func NewQGradient() *QGradient {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradientC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradientC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGradientFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQGradient)
@@ -91,7 +87,7 @@ func NewQGradient() *QGradient {
 // Public inline Visibility=Default Availability=Available
 // [4] QGradient::Type type()
 func (this *QGradient) Type() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -102,7 +98,7 @@ func (this *QGradient) Type() int {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setSpread(enum QGradient::Spread)
 func (this *QGradient) SetSpread(spread int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient9setSpreadENS_6SpreadE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), spread)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradient9setSpreadENS_6SpreadE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), spread)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -111,7 +107,7 @@ func (this *QGradient) SetSpread(spread int) {
 // Public inline Visibility=Default Availability=Available
 // [4] QGradient::Spread spread()
 func (this *QGradient) Spread() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient6spreadEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient6spreadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -123,7 +119,7 @@ func (this *QGradient) Spread() int {
 // [-2] void setColorAt(qreal, const QColor &)
 func (this *QGradient) SetColorAt(pos float64, color *QColor) {
 	var convArg1 = color.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient10setColorAtEdRK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pos, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradient10setColorAtEdRK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -132,7 +128,7 @@ func (this *QGradient) SetColorAt(pos float64, color *QColor) {
 // Public Visibility=Default Availability=Available
 // [4] QGradient::CoordinateMode coordinateMode()
 func (this *QGradient) CoordinateMode() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient14coordinateModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient14coordinateModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -143,7 +139,7 @@ func (this *QGradient) CoordinateMode() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setCoordinateMode(enum QGradient::CoordinateMode)
 func (this *QGradient) SetCoordinateMode(mode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient17setCoordinateModeENS_14CoordinateModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradient17setCoordinateModeENS_14CoordinateModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -152,7 +148,7 @@ func (this *QGradient) SetCoordinateMode(mode int) {
 // Public Visibility=Default Availability=Available
 // [4] QGradient::InterpolationMode interpolationMode()
 func (this *QGradient) InterpolationMode() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGradient17interpolationModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient17interpolationModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -163,12 +159,12 @@ func (this *QGradient) InterpolationMode() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setInterpolationMode(enum QGradient::InterpolationMode)
 func (this *QGradient) SetInterpolationMode(mode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradient20setInterpolationModeENS_17InterpolationModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradient20setInterpolationModeENS_17InterpolationModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
 }
 
 func DeleteQGradient(this *QGradient) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGradientD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGradientD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

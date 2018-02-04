@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -54,27 +50,27 @@ func init() {
 //  body block begin
 // QSize sizeHint()
 func (this *QCommandLinkButton) InheritSizeHint(f func() unsafe.Pointer) {
-	ffiqt.SetAllInheritCallback(this, "sizeHint", f)
+	qtrt.SetAllInheritCallback(this, "sizeHint", f)
 }
 
 // int heightForWidth(int)
 func (this *QCommandLinkButton) InheritHeightForWidth(f func(arg0 int) int) {
-	ffiqt.SetAllInheritCallback(this, "heightForWidth", f)
+	qtrt.SetAllInheritCallback(this, "heightForWidth", f)
 }
 
 // QSize minimumSizeHint()
 func (this *QCommandLinkButton) InheritMinimumSizeHint(f func() unsafe.Pointer) {
-	ffiqt.SetAllInheritCallback(this, "minimumSizeHint", f)
+	qtrt.SetAllInheritCallback(this, "minimumSizeHint", f)
 }
 
 // bool event(class QEvent *)
 func (this *QCommandLinkButton) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) {
-	ffiqt.SetAllInheritCallback(this, "event", f)
+	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
 // void paintEvent(class QPaintEvent *)
 func (this *QCommandLinkButton) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "paintEvent", f)
+	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
 type QCommandLinkButton struct {
@@ -104,7 +100,7 @@ func (*QCommandLinkButton) NewFromPointer(cthis unsafe.Pointer) *QCommandLinkBut
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QCommandLinkButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLinkButton10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLinkButton10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -117,7 +113,7 @@ func (this *QCommandLinkButton) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // [-2] void QCommandLinkButton(QWidget *)
 func NewQCommandLinkButton(parent *QWidget /*777 QWidget **/) *QCommandLinkButton {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLinkButtonC2EP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLinkButtonC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCommandLinkButtonFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -130,7 +126,7 @@ func NewQCommandLinkButton(parent *QWidget /*777 QWidget **/) *QCommandLinkButto
 func NewQCommandLinkButton_1(text *qtcore.QString, parent *QWidget /*777 QWidget **/) *QCommandLinkButton {
 	var convArg0 = text.GetCthis()
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLinkButtonC2ERK7QStringP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLinkButtonC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCommandLinkButtonFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -144,7 +140,7 @@ func NewQCommandLinkButton_2(text *qtcore.QString, description *qtcore.QString, 
 	var convArg0 = text.GetCthis()
 	var convArg1 = description.GetCthis()
 	var convArg2 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLinkButtonC2ERK7QStringS2_P7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLinkButtonC2ERK7QStringS2_P7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQCommandLinkButtonFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -155,7 +151,7 @@ func NewQCommandLinkButton_2(text *qtcore.QString, description *qtcore.QString, 
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QCommandLinkButton()
 func DeleteQCommandLinkButton(this *QCommandLinkButton) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLinkButtonD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLinkButtonD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -166,7 +162,7 @@ func DeleteQCommandLinkButton(this *QCommandLinkButton) {
 // Public Visibility=Default Availability=Available
 // [8] QString description()
 func (this *QCommandLinkButton) Description() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLinkButton11descriptionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLinkButton11descriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -180,7 +176,7 @@ func (this *QCommandLinkButton) Description() *qtcore.QString /*123*/ {
 // [-2] void setDescription(const QString &)
 func (this *QCommandLinkButton) SetDescription(description *qtcore.QString) {
 	var convArg0 = description.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLinkButton14setDescriptionERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLinkButton14setDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -189,7 +185,7 @@ func (this *QCommandLinkButton) SetDescription(description *qtcore.QString) {
 // Protected virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint()
 func (this *QCommandLinkButton) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLinkButton8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLinkButton8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -202,7 +198,7 @@ func (this *QCommandLinkButton) SizeHint() *qtcore.QSize /*123*/ {
 // Protected virtual Visibility=Default Availability=Available
 // [4] int heightForWidth(int)
 func (this *QCommandLinkButton) HeightForWidth(arg0 int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLinkButton14heightForWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLinkButton14heightForWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -213,7 +209,7 @@ func (this *QCommandLinkButton) HeightForWidth(arg0 int) int {
 // Protected virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint()
 func (this *QCommandLinkButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QCommandLinkButton15minimumSizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLinkButton15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -227,7 +223,7 @@ func (this *QCommandLinkButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 // [1] bool event(QEvent *)
 func (this *QCommandLinkButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLinkButton5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLinkButton5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -239,7 +235,7 @@ func (this *QCommandLinkButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 // [-2] void paintEvent(QPaintEvent *)
 func (this *QCommandLinkButton) PaintEvent(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QCommandLinkButton10paintEventEP11QPaintEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLinkButton10paintEventEP11QPaintEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

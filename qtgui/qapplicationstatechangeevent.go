@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QApplicationStateChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QAppl
 // Public Visibility=Default Availability=Available
 // [-2] void QApplicationStateChangeEvent(Qt::ApplicationState)
 func NewQApplicationStateChangeEvent(state int) *QApplicationStateChangeEvent {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN28QApplicationStateChangeEventC2EN2Qt16ApplicationStateE", ffiqt.FFI_TYPE_POINTER, state)
+	rv, err := qtrt.InvokeQtFunc6("_ZN28QApplicationStateChangeEventC2EN2Qt16ApplicationStateE", qtrt.FFI_TYPE_POINTER, state)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQApplicationStateChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQApplicationStateChangeEvent)
@@ -88,14 +84,14 @@ func NewQApplicationStateChangeEvent(state int) *QApplicationStateChangeEvent {
 // Public Visibility=Default Availability=Available
 // [4] Qt::ApplicationState applicationState()
 func (this *QApplicationStateChangeEvent) ApplicationState() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK28QApplicationStateChangeEvent16applicationStateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK28QApplicationStateChangeEvent16applicationStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
 }
 
 func DeleteQApplicationStateChangeEvent(this *QApplicationStateChangeEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN28QApplicationStateChangeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN28QApplicationStateChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

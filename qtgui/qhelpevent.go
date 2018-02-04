@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -78,7 +74,7 @@ func (*QHelpEvent) NewFromPointer(cthis unsafe.Pointer) *QHelpEvent {
 func NewQHelpEvent(type_ int, pos *qtcore.QPoint, globalPos *qtcore.QPoint) *QHelpEvent {
 	var convArg1 = pos.GetCthis()
 	var convArg2 = globalPos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHelpEventC2EN6QEvent4TypeERK6QPointS4_", ffiqt.FFI_TYPE_POINTER, type_, convArg1, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QHelpEventC2EN6QEvent4TypeERK6QPointS4_", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQHelpEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQHelpEvent)
@@ -90,7 +86,7 @@ func NewQHelpEvent(type_ int, pos *qtcore.QPoint, globalPos *qtcore.QPoint) *QHe
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QHelpEvent()
 func DeleteQHelpEvent(this *QHelpEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHelpEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QHelpEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -101,7 +97,7 @@ func DeleteQHelpEvent(this *QHelpEvent) {
 // Public inline Visibility=Default Availability=Available
 // [4] int x()
 func (this *QHelpEvent) X() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QHelpEvent1xEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -112,7 +108,7 @@ func (this *QHelpEvent) X() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int y()
 func (this *QHelpEvent) Y() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QHelpEvent1yEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -123,7 +119,7 @@ func (this *QHelpEvent) Y() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int globalX()
 func (this *QHelpEvent) GlobalX() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent7globalXEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QHelpEvent7globalXEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -134,7 +130,7 @@ func (this *QHelpEvent) GlobalX() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int globalY()
 func (this *QHelpEvent) GlobalY() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent7globalYEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QHelpEvent7globalYEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -145,7 +141,7 @@ func (this *QHelpEvent) GlobalY() int {
 // Public inline Visibility=Default Availability=Available
 // [8] const QPoint & pos()
 func (this *QHelpEvent) Pos() *qtcore.QPoint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent3posEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QHelpEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -158,7 +154,7 @@ func (this *QHelpEvent) Pos() *qtcore.QPoint {
 // Public inline Visibility=Default Availability=Available
 // [8] const QPoint & globalPos()
 func (this *QHelpEvent) GlobalPos() *qtcore.QPoint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QHelpEvent9globalPosEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QHelpEvent9globalPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

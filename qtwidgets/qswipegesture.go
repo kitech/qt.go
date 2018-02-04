@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QSwipeGesture) NewFromPointer(cthis unsafe.Pointer) *QSwipeGesture {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QSwipeGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSwipeGesture10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -93,7 +89,7 @@ func (this *QSwipeGesture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // [-2] void QSwipeGesture(QObject *)
 func NewQSwipeGesture(parent *qtcore.QObject /*777 QObject **/) *QSwipeGesture {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSwipeGestureC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QSwipeGestureC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSwipeGestureFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -104,7 +100,7 @@ func NewQSwipeGesture(parent *qtcore.QObject /*777 QObject **/) *QSwipeGesture {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSwipeGesture()
 func DeleteQSwipeGesture(this *QSwipeGesture) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSwipeGestureD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QSwipeGestureD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -115,7 +111,7 @@ func DeleteQSwipeGesture(this *QSwipeGesture) {
 // Public Visibility=Default Availability=Available
 // [4] QSwipeGesture::SwipeDirection horizontalDirection()
 func (this *QSwipeGesture) HorizontalDirection() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture19horizontalDirectionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSwipeGesture19horizontalDirectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -126,7 +122,7 @@ func (this *QSwipeGesture) HorizontalDirection() int {
 // Public Visibility=Default Availability=Available
 // [4] QSwipeGesture::SwipeDirection verticalDirection()
 func (this *QSwipeGesture) VerticalDirection() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture17verticalDirectionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSwipeGesture17verticalDirectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -137,7 +133,7 @@ func (this *QSwipeGesture) VerticalDirection() int {
 // Public Visibility=Default Availability=Available
 // [8] qreal swipeAngle()
 func (this *QSwipeGesture) SwipeAngle() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSwipeGesture10swipeAngleEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSwipeGesture10swipeAngleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -148,7 +144,7 @@ func (this *QSwipeGesture) SwipeAngle() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void setSwipeAngle(qreal)
 func (this *QSwipeGesture) SetSwipeAngle(value float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSwipeGesture13setSwipeAngleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), value)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QSwipeGesture13setSwipeAngleEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), value)
 	gopp.ErrPrint(err, rv)
 }
 

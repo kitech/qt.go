@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -84,7 +80,7 @@ func (*QUndoCommand) NewFromPointer(cthis unsafe.Pointer) *QUndoCommand {
 // [-2] void QUndoCommand(QUndoCommand *)
 func NewQUndoCommand(parent *QUndoCommand /*777 QUndoCommand **/) *QUndoCommand {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommandC2EPS_", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommandC2EPS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQUndoCommandFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQUndoCommand)
@@ -98,7 +94,7 @@ func NewQUndoCommand(parent *QUndoCommand /*777 QUndoCommand **/) *QUndoCommand 
 func NewQUndoCommand_1(text *qtcore.QString, parent *QUndoCommand /*777 QUndoCommand **/) *QUndoCommand {
 	var convArg0 = text.GetCthis()
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommandC2ERK7QStringPS_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommandC2ERK7QStringPS_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQUndoCommandFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQUndoCommand)
@@ -110,7 +106,7 @@ func NewQUndoCommand_1(text *qtcore.QString, parent *QUndoCommand /*777 QUndoCom
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QUndoCommand()
 func DeleteQUndoCommand(this *QUndoCommand) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommandD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommandD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -121,7 +117,7 @@ func DeleteQUndoCommand(this *QUndoCommand) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void undo()
 func (this *QUndoCommand) Undo() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand4undoEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommand4undoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -130,7 +126,7 @@ func (this *QUndoCommand) Undo() {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void redo()
 func (this *QUndoCommand) Redo() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand4redoEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommand4redoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -139,7 +135,7 @@ func (this *QUndoCommand) Redo() {
 // Public Visibility=Default Availability=Available
 // [8] QString text()
 func (this *QUndoCommand) Text() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QUndoCommand4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -152,7 +148,7 @@ func (this *QUndoCommand) Text() *qtcore.QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QString actionText()
 func (this *QUndoCommand) ActionText() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand10actionTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QUndoCommand10actionTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -166,7 +162,7 @@ func (this *QUndoCommand) ActionText() *qtcore.QString /*123*/ {
 // [-2] void setText(const QString &)
 func (this *QUndoCommand) SetText(text *qtcore.QString) {
 	var convArg0 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand7setTextERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommand7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -175,7 +171,7 @@ func (this *QUndoCommand) SetText(text *qtcore.QString) {
 // Public Visibility=Default Availability=Available
 // [1] bool isObsolete()
 func (this *QUndoCommand) IsObsolete() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand10isObsoleteEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QUndoCommand10isObsoleteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -186,7 +182,7 @@ func (this *QUndoCommand) IsObsolete() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setObsolete(_Bool)
 func (this *QUndoCommand) SetObsolete(obsolete bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand11setObsoleteEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), obsolete)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommand11setObsoleteEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), obsolete)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -195,7 +191,7 @@ func (this *QUndoCommand) SetObsolete(obsolete bool) {
 // Public virtual Visibility=Default Availability=Available
 // [4] int id()
 func (this *QUndoCommand) Id() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand2idEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QUndoCommand2idEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -207,7 +203,7 @@ func (this *QUndoCommand) Id() int {
 // [1] bool mergeWith(const QUndoCommand *)
 func (this *QUndoCommand) MergeWith(other *QUndoCommand /*777 const QUndoCommand **/) bool {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QUndoCommand9mergeWithEPKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QUndoCommand9mergeWithEPKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -218,7 +214,7 @@ func (this *QUndoCommand) MergeWith(other *QUndoCommand /*777 const QUndoCommand
 // Public Visibility=Default Availability=Available
 // [4] int childCount()
 func (this *QUndoCommand) ChildCount() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand10childCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QUndoCommand10childCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -229,7 +225,7 @@ func (this *QUndoCommand) ChildCount() int {
 // Public Visibility=Default Availability=Available
 // [8] const QUndoCommand * child(int)
 func (this *QUndoCommand) Child(index int) *QUndoCommand /*777 const QUndoCommand **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QUndoCommand5childEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QUndoCommand5childEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQUndoCommandFromPointer(unsafe.Pointer(uintptr(rv))) // 444

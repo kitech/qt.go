@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -78,7 +74,7 @@ func (*QDragEnterEvent) NewFromPointer(cthis unsafe.Pointer) *QDragEnterEvent {
 func NewQDragEnterEvent(pos *qtcore.QPoint, actions int, data *qtcore.QMimeData /*777 const QMimeData **/, buttons int, modifiers int) *QDragEnterEvent {
 	var convArg0 = pos.GetCthis()
 	var convArg2 = data.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QDragEnterEventC2ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEE", ffiqt.FFI_TYPE_POINTER, convArg0, actions, convArg2, buttons, modifiers)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QDragEnterEventC2ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, convArg0, actions, convArg2, buttons, modifiers)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDragEnterEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQDragEnterEvent)
@@ -90,7 +86,7 @@ func NewQDragEnterEvent(pos *qtcore.QPoint, actions int, data *qtcore.QMimeData 
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDragEnterEvent()
 func DeleteQDragEnterEvent(this *QDragEnterEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QDragEnterEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QDragEnterEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 88)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)

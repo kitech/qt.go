@@ -6,13 +6,13 @@ import "C"
 import (
 	"log"
 
-	ffiqt "qt.go/cffiqt"
 	"qt.go/qtcore"
+	"qt.go/qtrt"
 )
 
 // protected method override demo
 func main() {
-	ffiqt.SetDebugDynSlot(true)
+	qtrt.SetDebugDynSlot(true)
 	argv := []string{"./guiapp", "-v", "-x"}
 	app := qtcore.NewQCoreApplication(len(argv), argv, 0)
 	log.Println(app)

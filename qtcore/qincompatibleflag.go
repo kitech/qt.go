@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QIncompatibleFlag) NewFromPointer(cthis unsafe.Pointer) *QIncompatibleFla
 // Public inline Visibility=Default Availability=Available
 // [-2] void QIncompatibleFlag(int)
 func NewQIncompatibleFlag(i int) *QIncompatibleFlag {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIncompatibleFlagC2Ei", ffiqt.FFI_TYPE_POINTER, i)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QIncompatibleFlagC2Ei", qtrt.FFI_TYPE_POINTER, i)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQIncompatibleFlag)
@@ -83,7 +79,7 @@ func NewQIncompatibleFlag(i int) *QIncompatibleFlag {
 }
 
 func DeleteQIncompatibleFlag(this *QIncompatibleFlag) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QIncompatibleFlagD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QIncompatibleFlagD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

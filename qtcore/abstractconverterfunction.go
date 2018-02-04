@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -71,7 +67,7 @@ func (*AbstractConverterFunction) NewFromPointer(cthis unsafe.Pointer) *Abstract
 }
 
 func DeleteAbstractConverterFunction(this *AbstractConverterFunction) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN25AbstractConverterFunctionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN25AbstractConverterFunctionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -79,7 +75,7 @@ func (*QPointingDeviceUniqueId) NewFromPointer(cthis unsafe.Pointer) *QPointingD
 // Public inline Visibility=Default Availability=Available
 // [-2] void QPointingDeviceUniqueId()
 func NewQPointingDeviceUniqueId() *QPointingDeviceUniqueId {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QPointingDeviceUniqueIdC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QPointingDeviceUniqueIdC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPointingDeviceUniqueIdFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPointingDeviceUniqueId)
@@ -91,7 +87,7 @@ func NewQPointingDeviceUniqueId() *QPointingDeviceUniqueId {
 // Public static Visibility=Default Availability=Available
 // [8] QPointingDeviceUniqueId fromNumericId(qint64)
 func (this *QPointingDeviceUniqueId) FromNumericId(id int64) *QPointingDeviceUniqueId /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QPointingDeviceUniqueId13fromNumericIdEx", ffiqt.FFI_TYPE_POINTER, id)
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QPointingDeviceUniqueId13fromNumericIdEx", qtrt.FFI_TYPE_POINTER, id)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQPointingDeviceUniqueIdFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -109,7 +105,7 @@ func QPointingDeviceUniqueId_FromNumericId(id int64) *QPointingDeviceUniqueId /*
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid()
 func (this *QPointingDeviceUniqueId) IsValid() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -120,14 +116,14 @@ func (this *QPointingDeviceUniqueId) IsValid() bool {
 // Public Visibility=Default Availability=Available
 // [8] qint64 numericId()
 func (this *QPointingDeviceUniqueId) NumericId() int64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId9numericIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId9numericIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
 }
 
 func DeleteQPointingDeviceUniqueId(this *QPointingDeviceUniqueId) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QPointingDeviceUniqueIdD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QPointingDeviceUniqueIdD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

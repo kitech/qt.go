@@ -7,12 +7,12 @@ import (
 	"fmt"
 	"log"
 
-	ffiqt "qt.go/cffiqt"
 	"qt.go/qtcore"
+	"qt.go/qtrt"
 )
 
 func main() {
-	ffiqt.SetDebugDynSlot(true)
+	qtrt.SetDebugDynSlot(true)
 	// rs := qtrt.CString("hehehg呵呵")
 	txt := qtcore.NewQString_5("hehehg呵呵")
 	log.Println(txt.Length(), txt.IsEmpty())
@@ -30,18 +30,18 @@ func main() {
 	tmer.Start_1()
 
 	cnter := 3
-	// dyslot := ffiqt.NewQDynSlotObject("abc", 123)
+	// dyslot := qtrt.NewQDynSlotObject("abc", 123)
 	if true {
 		/*
-			ffiqt.Connect(tmer, "timeout()", func(a int, b byte, d string, c *qtcore.QString) {
+			qtrt.Connect(tmer, "timeout()", func(a int, b byte, d string, c *qtcore.QString) {
 				log.Println("hehehhe")
 			})
 
-			ffiqt.Connect(tmer, "timeout()", func(a []string) {
+			qtrt.Connect(tmer, "timeout()", func(a []string) {
 				log.Println("hehehhe222")
 			})
 		*/
-		ffiqt.Connect(tmer, "timeout()", func() {
+		qtrt.Connect(tmer, "timeout()", func() {
 			newname := qtcore.NewQString_5(fmt.Sprintf("testt禾tttttttt-%d", cnter))
 			cnter++
 			log.Println("hehehhe222")
@@ -52,7 +52,7 @@ func main() {
 	tmer.InheritTimerEvent(func(arg0 *qtcore.QTimerEvent) {
 		log.Println(arg0)
 	})
-	ffiqt.Connect(tmer, "objectNameChanged(const QString&)", func(s *qtcore.QString) {
+	qtrt.Connect(tmer, "objectNameChanged(const QString&)", func(s *qtcore.QString) {
 		log.Println("hehehhe333", s, s.Length(), s.ToLocal8Bit().Data())
 	})
 

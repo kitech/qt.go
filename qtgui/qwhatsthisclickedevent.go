@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -77,7 +73,7 @@ func (*QWhatsThisClickedEvent) NewFromPointer(cthis unsafe.Pointer) *QWhatsThisC
 // [-2] void QWhatsThisClickedEvent(const QString &)
 func NewQWhatsThisClickedEvent(href *qtcore.QString) *QWhatsThisClickedEvent {
 	var convArg0 = href.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QWhatsThisClickedEventC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QWhatsThisClickedEventC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQWhatsThisClickedEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQWhatsThisClickedEvent)
@@ -89,7 +85,7 @@ func NewQWhatsThisClickedEvent(href *qtcore.QString) *QWhatsThisClickedEvent {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWhatsThisClickedEvent()
 func DeleteQWhatsThisClickedEvent(this *QWhatsThisClickedEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QWhatsThisClickedEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QWhatsThisClickedEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -100,7 +96,7 @@ func DeleteQWhatsThisClickedEvent(this *QWhatsThisClickedEvent) {
 // Public inline Visibility=Default Availability=Available
 // [8] QString href()
 func (this *QWhatsThisClickedEvent) Href() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK22QWhatsThisClickedEvent4hrefEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK22QWhatsThisClickedEvent4hrefEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333

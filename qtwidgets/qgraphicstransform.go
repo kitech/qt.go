@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -54,7 +50,7 @@ func init() {
 //  body block begin
 // void update()
 func (this *QGraphicsTransform) InheritUpdate(f func()) {
-	ffiqt.SetAllInheritCallback(this, "update", f)
+	qtrt.SetAllInheritCallback(this, "update", f)
 }
 
 type QGraphicsTransform struct {
@@ -84,7 +80,7 @@ func (*QGraphicsTransform) NewFromPointer(cthis unsafe.Pointer) *QGraphicsTransf
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QGraphicsTransform) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsTransform10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QGraphicsTransform10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -97,7 +93,7 @@ func (this *QGraphicsTransform) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // [-2] void QGraphicsTransform(QObject *)
 func NewQGraphicsTransform(parent *qtcore.QObject /*777 QObject **/) *QGraphicsTransform {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsTransformC1EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QGraphicsTransformC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsTransformFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -108,7 +104,7 @@ func NewQGraphicsTransform(parent *qtcore.QObject /*777 QObject **/) *QGraphicsT
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsTransform()
 func DeleteQGraphicsTransform(this *QGraphicsTransform) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsTransformD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QGraphicsTransformD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -120,7 +116,7 @@ func DeleteQGraphicsTransform(this *QGraphicsTransform) {
 // [-2] void applyTo(QMatrix4x4 *)
 func (this *QGraphicsTransform) ApplyTo(matrix *qtgui.QMatrix4x4 /*777 QMatrix4x4 **/) {
 	var convArg0 = matrix.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QGraphicsTransform7applyToEP10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QGraphicsTransform7applyToEP10QMatrix4x4", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -129,7 +125,7 @@ func (this *QGraphicsTransform) ApplyTo(matrix *qtgui.QMatrix4x4 /*777 QMatrix4x
 // Protected Visibility=Default Availability=Available
 // [-2] void update()
 func (this *QGraphicsTransform) Update() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QGraphicsTransform6updateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QGraphicsTransform6updateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

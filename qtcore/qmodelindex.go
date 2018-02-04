@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QModelIndex) NewFromPointer(cthis unsafe.Pointer) *QModelIndex {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QModelIndex()
 func NewQModelIndex() *QModelIndex {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QModelIndexC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QModelIndexC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQModelIndex)
@@ -87,7 +83,7 @@ func NewQModelIndex() *QModelIndex {
 // Public inline Visibility=Default Availability=Available
 // [4] int row()
 func (this *QModelIndex) Row() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex3rowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex3rowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -98,7 +94,7 @@ func (this *QModelIndex) Row() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int column()
 func (this *QModelIndex) Column() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex6columnEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex6columnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -109,7 +105,7 @@ func (this *QModelIndex) Column() int {
 // Public inline Visibility=Default Availability=Available
 // [8] quintptr internalId()
 func (this *QModelIndex) InternalId() uint64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex10internalIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex10internalIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint64(rv) // 222
@@ -120,7 +116,7 @@ func (this *QModelIndex) InternalId() uint64 {
 // Public inline Visibility=Default Availability=Available
 // [8] void * internalPointer()
 func (this *QModelIndex) InternalPointer() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex15internalPointerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex15internalPointerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -131,7 +127,7 @@ func (this *QModelIndex) InternalPointer() unsafe.Pointer /*666*/ {
 // Public inline Visibility=Default Availability=Available
 // [24] QModelIndex parent()
 func (this *QModelIndex) Parent() *QModelIndex /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex6parentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex6parentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -144,7 +140,7 @@ func (this *QModelIndex) Parent() *QModelIndex /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [24] QModelIndex sibling(int, int)
 func (this *QModelIndex) Sibling(row int, column int) *QModelIndex /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex7siblingEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex7siblingEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -157,7 +153,7 @@ func (this *QModelIndex) Sibling(row int, column int) *QModelIndex /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [24] QModelIndex child(int, int)
 func (this *QModelIndex) Child(row int, column int) *QModelIndex /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex5childEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex5childEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -170,7 +166,7 @@ func (this *QModelIndex) Child(row int, column int) *QModelIndex /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [16] QVariant data(int)
 func (this *QModelIndex) Data(role int) *QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex4dataEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), role)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex4dataEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -183,7 +179,7 @@ func (this *QModelIndex) Data(role int) *QVariant /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::ItemFlags flags()
 func (this *QModelIndex) Flags() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex5flagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -194,7 +190,7 @@ func (this *QModelIndex) Flags() int {
 // Public inline Visibility=Default Availability=Available
 // [8] const QAbstractItemModel * model()
 func (this *QModelIndex) Model() *QAbstractItemModel /*777 const QAbstractItemModel **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex5modelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex5modelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -206,14 +202,14 @@ func (this *QModelIndex) Model() *QAbstractItemModel /*777 const QAbstractItemMo
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid()
 func (this *QModelIndex) IsValid() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QModelIndex7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QModelIndex7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
 }
 
 func DeleteQModelIndex(this *QModelIndex) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QModelIndexD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QModelIndexD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

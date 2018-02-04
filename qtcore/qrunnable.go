@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QRunnable) NewFromPointer(cthis unsafe.Pointer) *QRunnable {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void run()
 func (this *QRunnable) Run() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QRunnable3runEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QRunnable3runEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -84,7 +80,7 @@ func (this *QRunnable) Run() {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QRunnable()
 func NewQRunnable() *QRunnable {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QRunnableC1Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QRunnableC1Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRunnableFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQRunnable)
@@ -96,7 +92,7 @@ func NewQRunnable() *QRunnable {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QRunnable()
 func DeleteQRunnable(this *QRunnable) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QRunnableD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QRunnableD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -107,7 +103,7 @@ func DeleteQRunnable(this *QRunnable) {
 // Public inline Visibility=Default Availability=Available
 // [1] bool autoDelete()
 func (this *QRunnable) AutoDelete() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QRunnable10autoDeleteEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QRunnable10autoDeleteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -118,7 +114,7 @@ func (this *QRunnable) AutoDelete() bool {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setAutoDelete(_Bool)
 func (this *QRunnable) SetAutoDelete(_autoDelete bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QRunnable13setAutoDeleteEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), _autoDelete)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QRunnable13setAutoDeleteEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), _autoDelete)
 	gopp.ErrPrint(err, rv)
 }
 

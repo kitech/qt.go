@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -77,7 +73,7 @@ func (*QExposeEvent) NewFromPointer(cthis unsafe.Pointer) *QExposeEvent {
 // [-2] void QExposeEvent(const QRegion &)
 func NewQExposeEvent(rgn *QRegion) *QExposeEvent {
 	var convArg0 = rgn.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QExposeEventC2ERK7QRegion", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QExposeEventC2ERK7QRegion", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQExposeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQExposeEvent)
@@ -89,7 +85,7 @@ func NewQExposeEvent(rgn *QRegion) *QExposeEvent {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QExposeEvent()
 func DeleteQExposeEvent(this *QExposeEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QExposeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QExposeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -100,7 +96,7 @@ func DeleteQExposeEvent(this *QExposeEvent) {
 // Public inline Visibility=Default Availability=Available
 // [8] const QRegion & region()
 func (this *QExposeEvent) Region() *QRegion {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QExposeEvent6regionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QExposeEvent6regionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

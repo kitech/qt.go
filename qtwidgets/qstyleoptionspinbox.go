@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QStyleOptionSpinBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionSp
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionSpinBox()
 func NewQStyleOptionSpinBox() *QStyleOptionSpinBox {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionSpinBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionSpinBox)
@@ -92,7 +88,7 @@ func NewQStyleOptionSpinBox() *QStyleOptionSpinBox {
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionSpinBox(int)
 func NewQStyleOptionSpinBox_1(version int) *QStyleOptionSpinBox {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ei", ffiqt.FFI_TYPE_POINTER, version)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionSpinBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionSpinBox)
@@ -100,7 +96,7 @@ func NewQStyleOptionSpinBox_1(version int) *QStyleOptionSpinBox {
 }
 
 func DeleteQStyleOptionSpinBox(this *QStyleOptionSpinBox) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

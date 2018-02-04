@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QWaitCondition) NewFromPointer(cthis unsafe.Pointer) *QWaitCondition {
 // Public Visibility=Default Availability=Available
 // [-2] void QWaitCondition()
 func NewQWaitCondition() *QWaitCondition {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitConditionC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitConditionC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQWaitConditionFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQWaitCondition)
@@ -87,7 +83,7 @@ func NewQWaitCondition() *QWaitCondition {
 // Public Visibility=Default Availability=Available
 // [-2] void ~QWaitCondition()
 func DeleteQWaitCondition(this *QWaitCondition) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitConditionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitConditionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -99,7 +95,7 @@ func DeleteQWaitCondition(this *QWaitCondition) {
 // [1] bool wait(QMutex *, unsigned long)
 func (this *QWaitCondition) Wait(lockedMutex *QMutex /*777 QMutex **/, time uint) bool {
 	var convArg0 = lockedMutex.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP6QMutexm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP6QMutexm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -111,7 +107,7 @@ func (this *QWaitCondition) Wait(lockedMutex *QMutex /*777 QMutex **/, time uint
 // [1] bool wait(QReadWriteLock *, unsigned long)
 func (this *QWaitCondition) Wait_1(lockedReadWriteLock *QReadWriteLock /*777 QReadWriteLock **/, time uint) bool {
 	var convArg0 = lockedReadWriteLock.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP14QReadWriteLockm", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP14QReadWriteLockm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -122,7 +118,7 @@ func (this *QWaitCondition) Wait_1(lockedReadWriteLock *QReadWriteLock /*777 QRe
 // Public Visibility=Default Availability=Available
 // [-2] void wakeOne()
 func (this *QWaitCondition) WakeOne() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitCondition7wakeOneEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition7wakeOneEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -131,7 +127,7 @@ func (this *QWaitCondition) WakeOne() {
 // Public Visibility=Default Availability=Available
 // [-2] void wakeAll()
 func (this *QWaitCondition) WakeAll() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitCondition7wakeAllEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition7wakeAllEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -140,7 +136,7 @@ func (this *QWaitCondition) WakeAll() {
 // Public inline Visibility=Default Availability=Available
 // [-2] void notify_one()
 func (this *QWaitCondition) Notify_one() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitCondition10notify_oneEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition10notify_oneEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -149,7 +145,7 @@ func (this *QWaitCondition) Notify_one() {
 // Public inline Visibility=Default Availability=Available
 // [-2] void notify_all()
 func (this *QWaitCondition) Notify_all() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QWaitCondition10notify_allEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition10notify_allEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

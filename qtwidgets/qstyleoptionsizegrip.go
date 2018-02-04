@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QStyleOptionSizeGrip) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionS
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionSizeGrip()
 func NewQStyleOptionSizeGrip() *QStyleOptionSizeGrip {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionSizeGripFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionSizeGrip)
@@ -92,7 +88,7 @@ func NewQStyleOptionSizeGrip() *QStyleOptionSizeGrip {
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionSizeGrip(int)
 func NewQStyleOptionSizeGrip_1(version int) *QStyleOptionSizeGrip {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ei", ffiqt.FFI_TYPE_POINTER, version)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionSizeGripFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionSizeGrip)
@@ -100,7 +96,7 @@ func NewQStyleOptionSizeGrip_1(version int) *QStyleOptionSizeGrip {
 }
 
 func DeleteQStyleOptionSizeGrip(this *QStyleOptionSizeGrip) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionSizeGripD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

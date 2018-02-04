@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -34,9 +33,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 }
@@ -46,7 +42,7 @@ func init() {
 //  body block begin
 // void timerEvent(class QTimerEvent *)
 func (this *QTimeLine) InheritTimerEvent(f func(event *QTimerEvent /*777 QTimerEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "timerEvent", f)
+	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
 type QTimeLine struct {
@@ -76,7 +72,7 @@ func (*QTimeLine) NewFromPointer(cthis unsafe.Pointer) *QTimeLine {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QTimeLine) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -89,7 +85,7 @@ func (this *QTimeLine) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // [-2] void QTimeLine(int, QObject *)
 func NewQTimeLine(duration int, parent *QObject /*777 QObject **/) *QTimeLine {
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLineC2EiP7QObject", ffiqt.FFI_TYPE_POINTER, duration, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLineC2EiP7QObject", qtrt.FFI_TYPE_POINTER, duration, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTimeLineFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -100,7 +96,7 @@ func NewQTimeLine(duration int, parent *QObject /*777 QObject **/) *QTimeLine {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTimeLine()
 func DeleteQTimeLine(this *QTimeLine) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLineD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLineD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -111,7 +107,7 @@ func DeleteQTimeLine(this *QTimeLine) {
 // Public Visibility=Default Availability=Available
 // [4] QTimeLine::State state()
 func (this *QTimeLine) State() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine5stateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine5stateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -122,7 +118,7 @@ func (this *QTimeLine) State() int {
 // Public Visibility=Default Availability=Available
 // [4] int loopCount()
 func (this *QTimeLine) LoopCount() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine9loopCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine9loopCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -133,7 +129,7 @@ func (this *QTimeLine) LoopCount() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setLoopCount(int)
 func (this *QTimeLine) SetLoopCount(count int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine12setLoopCountEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), count)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLine12setLoopCountEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), count)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -142,7 +138,7 @@ func (this *QTimeLine) SetLoopCount(count int) {
 // Public Visibility=Default Availability=Available
 // [4] QTimeLine::Direction direction()
 func (this *QTimeLine) Direction() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine9directionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine9directionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -153,7 +149,7 @@ func (this *QTimeLine) Direction() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setDirection(enum QTimeLine::Direction)
 func (this *QTimeLine) SetDirection(direction int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine12setDirectionENS_9DirectionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), direction)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLine12setDirectionENS_9DirectionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), direction)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -162,7 +158,7 @@ func (this *QTimeLine) SetDirection(direction int) {
 // Public Visibility=Default Availability=Available
 // [4] int duration()
 func (this *QTimeLine) Duration() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine8durationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine8durationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -173,7 +169,7 @@ func (this *QTimeLine) Duration() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setDuration(int)
 func (this *QTimeLine) SetDuration(duration int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine11setDurationEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), duration)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLine11setDurationEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), duration)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -182,7 +178,7 @@ func (this *QTimeLine) SetDuration(duration int) {
 // Public Visibility=Default Availability=Available
 // [4] int startFrame()
 func (this *QTimeLine) StartFrame() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine10startFrameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine10startFrameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -193,7 +189,7 @@ func (this *QTimeLine) StartFrame() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setStartFrame(int)
 func (this *QTimeLine) SetStartFrame(frame int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine13setStartFrameEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), frame)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLine13setStartFrameEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), frame)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -202,7 +198,7 @@ func (this *QTimeLine) SetStartFrame(frame int) {
 // Public Visibility=Default Availability=Available
 // [4] int endFrame()
 func (this *QTimeLine) EndFrame() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine8endFrameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine8endFrameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -213,7 +209,7 @@ func (this *QTimeLine) EndFrame() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setEndFrame(int)
 func (this *QTimeLine) SetEndFrame(frame int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine11setEndFrameEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), frame)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLine11setEndFrameEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), frame)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -222,7 +218,7 @@ func (this *QTimeLine) SetEndFrame(frame int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setFrameRange(int, int)
 func (this *QTimeLine) SetFrameRange(startFrame int, endFrame int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine13setFrameRangeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), startFrame, endFrame)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLine13setFrameRangeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), startFrame, endFrame)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -231,7 +227,7 @@ func (this *QTimeLine) SetFrameRange(startFrame int, endFrame int) {
 // Public Visibility=Default Availability=Available
 // [4] int updateInterval()
 func (this *QTimeLine) UpdateInterval() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine14updateIntervalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine14updateIntervalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -242,7 +238,7 @@ func (this *QTimeLine) UpdateInterval() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setUpdateInterval(int)
 func (this *QTimeLine) SetUpdateInterval(interval int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine17setUpdateIntervalEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), interval)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLine17setUpdateIntervalEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), interval)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -251,7 +247,7 @@ func (this *QTimeLine) SetUpdateInterval(interval int) {
 // Public Visibility=Default Availability=Available
 // [4] QTimeLine::CurveShape curveShape()
 func (this *QTimeLine) CurveShape() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine10curveShapeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine10curveShapeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -262,7 +258,7 @@ func (this *QTimeLine) CurveShape() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setCurveShape(enum QTimeLine::CurveShape)
 func (this *QTimeLine) SetCurveShape(shape int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine13setCurveShapeENS_10CurveShapeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), shape)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLine13setCurveShapeENS_10CurveShapeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), shape)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -271,7 +267,7 @@ func (this *QTimeLine) SetCurveShape(shape int) {
 // Public Visibility=Default Availability=Available
 // [8] QEasingCurve easingCurve()
 func (this *QTimeLine) EasingCurve() *QEasingCurve /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine11easingCurveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine11easingCurveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQEasingCurveFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -285,7 +281,7 @@ func (this *QTimeLine) EasingCurve() *QEasingCurve /*123*/ {
 // [-2] void setEasingCurve(const QEasingCurve &)
 func (this *QTimeLine) SetEasingCurve(curve *QEasingCurve) {
 	var convArg0 = curve.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine14setEasingCurveERK12QEasingCurve", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLine14setEasingCurveERK12QEasingCurve", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -294,7 +290,7 @@ func (this *QTimeLine) SetEasingCurve(curve *QEasingCurve) {
 // Public Visibility=Default Availability=Available
 // [4] int currentTime()
 func (this *QTimeLine) CurrentTime() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine11currentTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine11currentTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -305,7 +301,7 @@ func (this *QTimeLine) CurrentTime() int {
 // Public Visibility=Default Availability=Available
 // [4] int currentFrame()
 func (this *QTimeLine) CurrentFrame() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine12currentFrameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine12currentFrameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -316,7 +312,7 @@ func (this *QTimeLine) CurrentFrame() int {
 // Public Visibility=Default Availability=Available
 // [8] qreal currentValue()
 func (this *QTimeLine) CurrentValue() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine12currentValueEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine12currentValueEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -327,7 +323,7 @@ func (this *QTimeLine) CurrentValue() float64 {
 // Public Visibility=Default Availability=Available
 // [4] int frameForTime(int)
 func (this *QTimeLine) FrameForTime(msec int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine12frameForTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine12frameForTimeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -338,7 +334,7 @@ func (this *QTimeLine) FrameForTime(msec int) int {
 // Public virtual Visibility=Default Availability=Available
 // [8] qreal valueForTime(int)
 func (this *QTimeLine) ValueForTime(msec int) float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QTimeLine12valueForTimeEi", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), msec)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTimeLine12valueForTimeEi", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), msec)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -349,7 +345,7 @@ func (this *QTimeLine) ValueForTime(msec int) float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void start()
 func (this *QTimeLine) Start() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine5startEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLine5startEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -358,7 +354,7 @@ func (this *QTimeLine) Start() {
 // Public Visibility=Default Availability=Available
 // [-2] void resume()
 func (this *QTimeLine) Resume() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine6resumeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLine6resumeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -367,7 +363,7 @@ func (this *QTimeLine) Resume() {
 // Public Visibility=Default Availability=Available
 // [-2] void stop()
 func (this *QTimeLine) Stop() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine4stopEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLine4stopEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -376,7 +372,7 @@ func (this *QTimeLine) Stop() {
 // Public Visibility=Default Availability=Available
 // [-2] void setPaused(_Bool)
 func (this *QTimeLine) SetPaused(paused bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine9setPausedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), paused)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLine9setPausedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), paused)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -385,7 +381,7 @@ func (this *QTimeLine) SetPaused(paused bool) {
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentTime(int)
 func (this *QTimeLine) SetCurrentTime(msec int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine14setCurrentTimeEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLine14setCurrentTimeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -394,7 +390,7 @@ func (this *QTimeLine) SetCurrentTime(msec int) {
 // Public Visibility=Default Availability=Available
 // [-2] void toggleDirection()
 func (this *QTimeLine) ToggleDirection() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine15toggleDirectionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLine15toggleDirectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -404,7 +400,7 @@ func (this *QTimeLine) ToggleDirection() {
 // [-2] void timerEvent(QTimerEvent *)
 func (this *QTimeLine) TimerEvent(event *QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = event.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QTimeLine10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QTimeLine10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -34,9 +33,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 }
@@ -46,17 +42,17 @@ func init() {
 //  body block begin
 // void onEntry(class QEvent *)
 func (this *QHistoryState) InheritOnEntry(f func(event *QEvent /*777 QEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "onEntry", f)
+	qtrt.SetAllInheritCallback(this, "onEntry", f)
 }
 
 // void onExit(class QEvent *)
 func (this *QHistoryState) InheritOnExit(f func(event *QEvent /*777 QEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "onExit", f)
+	qtrt.SetAllInheritCallback(this, "onExit", f)
 }
 
 // bool event(class QEvent *)
 func (this *QHistoryState) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
-	ffiqt.SetAllInheritCallback(this, "event", f)
+	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
 type QHistoryState struct {
@@ -86,7 +82,7 @@ func (*QHistoryState) NewFromPointer(cthis unsafe.Pointer) *QHistoryState {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QHistoryState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QHistoryState10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QHistoryState10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -99,7 +95,7 @@ func (this *QHistoryState) MetaObject() *QMetaObject /*777 const QMetaObject **/
 // [-2] void QHistoryState(QState *)
 func NewQHistoryState(parent *QState /*777 QState **/) *QHistoryState {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryStateC2EP6QState", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryStateC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQHistoryStateFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -111,7 +107,7 @@ func NewQHistoryState(parent *QState /*777 QState **/) *QHistoryState {
 // [-2] void QHistoryState(enum QHistoryState::HistoryType, QState *)
 func NewQHistoryState_1(type_ int, parent *QState /*777 QState **/) *QHistoryState {
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryStateC2ENS_11HistoryTypeEP6QState", ffiqt.FFI_TYPE_POINTER, type_, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryStateC2ENS_11HistoryTypeEP6QState", qtrt.FFI_TYPE_POINTER, type_, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQHistoryStateFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -122,7 +118,7 @@ func NewQHistoryState_1(type_ int, parent *QState /*777 QState **/) *QHistorySta
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QHistoryState()
 func DeleteQHistoryState(this *QHistoryState) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryStateD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryStateD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -133,7 +129,7 @@ func DeleteQHistoryState(this *QHistoryState) {
 // Public Visibility=Default Availability=Available
 // [8] QAbstractTransition * defaultTransition()
 func (this *QHistoryState) DefaultTransition() *QAbstractTransition /*777 QAbstractTransition **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QHistoryState17defaultTransitionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QHistoryState17defaultTransitionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQAbstractTransitionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -146,7 +142,7 @@ func (this *QHistoryState) DefaultTransition() *QAbstractTransition /*777 QAbstr
 // [-2] void setDefaultTransition(QAbstractTransition *)
 func (this *QHistoryState) SetDefaultTransition(transition *QAbstractTransition /*777 QAbstractTransition **/) {
 	var convArg0 = transition.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryState20setDefaultTransitionEP19QAbstractTransition", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryState20setDefaultTransitionEP19QAbstractTransition", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -155,7 +151,7 @@ func (this *QHistoryState) SetDefaultTransition(transition *QAbstractTransition 
 // Public Visibility=Default Availability=Available
 // [8] QAbstractState * defaultState()
 func (this *QHistoryState) DefaultState() *QAbstractState /*777 QAbstractState **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QHistoryState12defaultStateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QHistoryState12defaultStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQAbstractStateFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -168,7 +164,7 @@ func (this *QHistoryState) DefaultState() *QAbstractState /*777 QAbstractState *
 // [-2] void setDefaultState(QAbstractState *)
 func (this *QHistoryState) SetDefaultState(state *QAbstractState /*777 QAbstractState **/) {
 	var convArg0 = state.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryState15setDefaultStateEP14QAbstractState", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryState15setDefaultStateEP14QAbstractState", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -177,7 +173,7 @@ func (this *QHistoryState) SetDefaultState(state *QAbstractState /*777 QAbstract
 // Public Visibility=Default Availability=Available
 // [4] QHistoryState::HistoryType historyType()
 func (this *QHistoryState) HistoryType() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QHistoryState11historyTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QHistoryState11historyTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -188,7 +184,7 @@ func (this *QHistoryState) HistoryType() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setHistoryType(enum QHistoryState::HistoryType)
 func (this *QHistoryState) SetHistoryType(type_ int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryState14setHistoryTypeENS_11HistoryTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), type_)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryState14setHistoryTypeENS_11HistoryTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -198,7 +194,7 @@ func (this *QHistoryState) SetHistoryType(type_ int) {
 // [-2] void onEntry(QEvent *)
 func (this *QHistoryState) OnEntry(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryState7onEntryEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryState7onEntryEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -208,7 +204,7 @@ func (this *QHistoryState) OnEntry(event *QEvent /*777 QEvent **/) {
 // [-2] void onExit(QEvent *)
 func (this *QHistoryState) OnExit(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryState6onExitEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryState6onExitEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -218,7 +214,7 @@ func (this *QHistoryState) OnExit(event *QEvent /*777 QEvent **/) {
 // [1] bool event(QEvent *)
 func (this *QHistoryState) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QHistoryState5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QHistoryState5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

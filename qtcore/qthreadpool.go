@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -72,7 +68,7 @@ func (*QThreadPool) NewFromPointer(cthis unsafe.Pointer) *QThreadPool {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QThreadPool) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QThreadPool10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QThreadPool10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -85,7 +81,7 @@ func (this *QThreadPool) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // [-2] void QThreadPool(QObject *)
 func NewQThreadPool(parent *QObject /*777 QObject **/) *QThreadPool {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPoolC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPoolC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQThreadPoolFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -96,7 +92,7 @@ func NewQThreadPool(parent *QObject /*777 QObject **/) *QThreadPool {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QThreadPool()
 func DeleteQThreadPool(this *QThreadPool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPoolD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPoolD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -107,7 +103,7 @@ func DeleteQThreadPool(this *QThreadPool) {
 // Public static Visibility=Default Availability=Available
 // [8] QThreadPool * globalInstance()
 func (this *QThreadPool) GlobalInstance() *QThreadPool /*777 QThreadPool **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool14globalInstanceEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool14globalInstanceEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQThreadPoolFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -125,7 +121,7 @@ func QThreadPool_GlobalInstance() *QThreadPool /*777 QThreadPool **/ {
 // [-2] void start(QRunnable *, int)
 func (this *QThreadPool) Start(runnable *QRunnable /*777 QRunnable **/, priority int) {
 	var convArg0 = runnable.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool5startEP9QRunnablei", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, priority)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool5startEP9QRunnablei", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, priority)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -135,7 +131,7 @@ func (this *QThreadPool) Start(runnable *QRunnable /*777 QRunnable **/, priority
 // [1] bool tryStart(QRunnable *)
 func (this *QThreadPool) TryStart(runnable *QRunnable /*777 QRunnable **/) bool {
 	var convArg0 = runnable.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool8tryStartEP9QRunnable", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool8tryStartEP9QRunnable", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -146,7 +142,7 @@ func (this *QThreadPool) TryStart(runnable *QRunnable /*777 QRunnable **/) bool 
 // Public Visibility=Default Availability=Available
 // [4] int expiryTimeout()
 func (this *QThreadPool) ExpiryTimeout() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QThreadPool13expiryTimeoutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QThreadPool13expiryTimeoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -157,7 +153,7 @@ func (this *QThreadPool) ExpiryTimeout() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setExpiryTimeout(int)
 func (this *QThreadPool) SetExpiryTimeout(expiryTimeout int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool16setExpiryTimeoutEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), expiryTimeout)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool16setExpiryTimeoutEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), expiryTimeout)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -166,7 +162,7 @@ func (this *QThreadPool) SetExpiryTimeout(expiryTimeout int) {
 // Public Visibility=Default Availability=Available
 // [4] int maxThreadCount()
 func (this *QThreadPool) MaxThreadCount() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QThreadPool14maxThreadCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QThreadPool14maxThreadCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -177,7 +173,7 @@ func (this *QThreadPool) MaxThreadCount() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setMaxThreadCount(int)
 func (this *QThreadPool) SetMaxThreadCount(maxThreadCount int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool17setMaxThreadCountEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), maxThreadCount)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool17setMaxThreadCountEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxThreadCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -186,7 +182,7 @@ func (this *QThreadPool) SetMaxThreadCount(maxThreadCount int) {
 // Public Visibility=Default Availability=Available
 // [4] int activeThreadCount()
 func (this *QThreadPool) ActiveThreadCount() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QThreadPool17activeThreadCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QThreadPool17activeThreadCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -197,7 +193,7 @@ func (this *QThreadPool) ActiveThreadCount() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setStackSize(uint)
 func (this *QThreadPool) SetStackSize(stackSize uint) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool12setStackSizeEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), stackSize)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool12setStackSizeEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), stackSize)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -206,7 +202,7 @@ func (this *QThreadPool) SetStackSize(stackSize uint) {
 // Public Visibility=Default Availability=Available
 // [4] uint stackSize()
 func (this *QThreadPool) StackSize() uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QThreadPool9stackSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QThreadPool9stackSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
@@ -217,7 +213,7 @@ func (this *QThreadPool) StackSize() uint {
 // Public Visibility=Default Availability=Available
 // [-2] void reserveThread()
 func (this *QThreadPool) ReserveThread() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool13reserveThreadEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool13reserveThreadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -226,7 +222,7 @@ func (this *QThreadPool) ReserveThread() {
 // Public Visibility=Default Availability=Available
 // [-2] void releaseThread()
 func (this *QThreadPool) ReleaseThread() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool13releaseThreadEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool13releaseThreadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -235,7 +231,7 @@ func (this *QThreadPool) ReleaseThread() {
 // Public Visibility=Default Availability=Available
 // [1] bool waitForDone(int)
 func (this *QThreadPool) WaitForDone(msecs int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool11waitForDoneEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool11waitForDoneEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -246,7 +242,7 @@ func (this *QThreadPool) WaitForDone(msecs int) bool {
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
 func (this *QThreadPool) Clear() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -256,7 +252,7 @@ func (this *QThreadPool) Clear() {
 // [-2] void cancel(QRunnable *)
 func (this *QThreadPool) Cancel(runnable *QRunnable /*777 QRunnable **/) {
 	var convArg0 = runnable.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool6cancelEP9QRunnable", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool6cancelEP9QRunnable", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -266,7 +262,7 @@ func (this *QThreadPool) Cancel(runnable *QRunnable /*777 QRunnable **/) {
 // [1] bool tryTake(QRunnable *)
 func (this *QThreadPool) TryTake(runnable *QRunnable /*777 QRunnable **/) bool {
 	var convArg0 = runnable.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QThreadPool7tryTakeEP9QRunnable", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool7tryTakeEP9QRunnable", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

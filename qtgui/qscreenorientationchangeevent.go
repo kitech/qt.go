@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -77,7 +73,7 @@ func (*QScreenOrientationChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QScr
 // [-2] void QScreenOrientationChangeEvent(QScreen *, Qt::ScreenOrientation)
 func NewQScreenOrientationChangeEvent(screen *QScreen /*777 QScreen **/, orientation int) *QScreenOrientationChangeEvent {
 	var convArg0 = screen.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventC2EP7QScreenN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_POINTER, convArg0, orientation)
+	rv, err := qtrt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventC2EP7QScreenN2Qt17ScreenOrientationE", qtrt.FFI_TYPE_POINTER, convArg0, orientation)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQScreenOrientationChangeEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQScreenOrientationChangeEvent)
@@ -89,7 +85,7 @@ func NewQScreenOrientationChangeEvent(screen *QScreen /*777 QScreen **/, orienta
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QScreenOrientationChangeEvent()
 func DeleteQScreenOrientationChangeEvent(this *QScreenOrientationChangeEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN29QScreenOrientationChangeEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -100,7 +96,7 @@ func DeleteQScreenOrientationChangeEvent(this *QScreenOrientationChangeEvent) {
 // Public Visibility=Default Availability=Available
 // [8] QScreen * screen()
 func (this *QScreenOrientationChangeEvent) Screen() *QScreen /*777 QScreen **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QScreenOrientationChangeEvent6screenEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK29QScreenOrientationChangeEvent6screenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQScreenFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -112,7 +108,7 @@ func (this *QScreenOrientationChangeEvent) Screen() *QScreen /*777 QScreen **/ {
 // Public Visibility=Default Availability=Available
 // [4] Qt::ScreenOrientation orientation()
 func (this *QScreenOrientationChangeEvent) Orientation() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK29QScreenOrientationChangeEvent11orientationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK29QScreenOrientationChangeEvent11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)

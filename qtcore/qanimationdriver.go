@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -34,9 +33,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 }
@@ -46,17 +42,17 @@ func init() {
 //  body block begin
 // void advanceAnimation(qint64)
 func (this *QAnimationDriver) InheritAdvanceAnimation(f func(timeStep int64)) {
-	ffiqt.SetAllInheritCallback(this, "advanceAnimation", f)
+	qtrt.SetAllInheritCallback(this, "advanceAnimation", f)
 }
 
 // void start()
 func (this *QAnimationDriver) InheritStart(f func()) {
-	ffiqt.SetAllInheritCallback(this, "start", f)
+	qtrt.SetAllInheritCallback(this, "start", f)
 }
 
 // void stop()
 func (this *QAnimationDriver) InheritStop(f func()) {
-	ffiqt.SetAllInheritCallback(this, "stop", f)
+	qtrt.SetAllInheritCallback(this, "stop", f)
 }
 
 type QAnimationDriver struct {
@@ -86,7 +82,7 @@ func (*QAnimationDriver) NewFromPointer(cthis unsafe.Pointer) *QAnimationDriver 
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QAnimationDriver) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAnimationDriver10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAnimationDriver10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -99,7 +95,7 @@ func (this *QAnimationDriver) MetaObject() *QMetaObject /*777 const QMetaObject 
 // [-2] void QAnimationDriver(QObject *)
 func NewQAnimationDriver(parent *QObject /*777 QObject **/) *QAnimationDriver {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriverC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriverC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAnimationDriverFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -110,7 +106,7 @@ func NewQAnimationDriver(parent *QObject /*777 QObject **/) *QAnimationDriver {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAnimationDriver()
 func DeleteQAnimationDriver(this *QAnimationDriver) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriverD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriverD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -121,7 +117,7 @@ func DeleteQAnimationDriver(this *QAnimationDriver) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void advance()
 func (this *QAnimationDriver) Advance() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriver7advanceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver7advanceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -130,7 +126,7 @@ func (this *QAnimationDriver) Advance() {
 // Public Visibility=Default Availability=Available
 // [-2] void install()
 func (this *QAnimationDriver) Install() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriver7installEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver7installEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -139,7 +135,7 @@ func (this *QAnimationDriver) Install() {
 // Public Visibility=Default Availability=Available
 // [-2] void uninstall()
 func (this *QAnimationDriver) Uninstall() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriver9uninstallEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver9uninstallEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -148,7 +144,7 @@ func (this *QAnimationDriver) Uninstall() {
 // Public Visibility=Default Availability=Available
 // [1] bool isRunning()
 func (this *QAnimationDriver) IsRunning() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAnimationDriver9isRunningEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAnimationDriver9isRunningEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -159,7 +155,7 @@ func (this *QAnimationDriver) IsRunning() bool {
 // Public virtual Visibility=Default Availability=Available
 // [8] qint64 elapsed()
 func (this *QAnimationDriver) Elapsed() int64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAnimationDriver7elapsedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAnimationDriver7elapsedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -170,7 +166,7 @@ func (this *QAnimationDriver) Elapsed() int64 {
 // Public Visibility=Default Availability=Available
 // [-2] void setStartTime(qint64)
 func (this *QAnimationDriver) SetStartTime(startTime int64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriver12setStartTimeEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), startTime)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver12setStartTimeEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), startTime)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -179,7 +175,7 @@ func (this *QAnimationDriver) SetStartTime(startTime int64) {
 // Public Visibility=Default Availability=Available
 // [8] qint64 startTime()
 func (this *QAnimationDriver) StartTime() int64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QAnimationDriver9startTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QAnimationDriver9startTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -190,7 +186,7 @@ func (this *QAnimationDriver) StartTime() int64 {
 // Public Visibility=Default Availability=Available
 // [-2] void started()
 func (this *QAnimationDriver) Started() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriver7startedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver7startedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -199,7 +195,7 @@ func (this *QAnimationDriver) Started() {
 // Public Visibility=Default Availability=Available
 // [-2] void stopped()
 func (this *QAnimationDriver) Stopped() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriver7stoppedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver7stoppedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -208,7 +204,7 @@ func (this *QAnimationDriver) Stopped() {
 // Protected Visibility=Default Availability=Available
 // [-2] void advanceAnimation(qint64)
 func (this *QAnimationDriver) AdvanceAnimation(timeStep int64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriver16advanceAnimationEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), timeStep)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver16advanceAnimationEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeStep)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -217,7 +213,7 @@ func (this *QAnimationDriver) AdvanceAnimation(timeStep int64) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void start()
 func (this *QAnimationDriver) Start() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriver5startEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver5startEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -226,7 +222,7 @@ func (this *QAnimationDriver) Start() {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void stop()
 func (this *QAnimationDriver) Stop() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QAnimationDriver4stopEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QAnimationDriver4stopEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

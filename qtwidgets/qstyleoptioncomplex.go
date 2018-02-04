@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QStyleOptionComplex) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionCo
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionComplex(int, int)
 func NewQStyleOptionComplex(version int, type_ int) *QStyleOptionComplex {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionComplexC2Eii", ffiqt.FFI_TYPE_POINTER, version, type_)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionComplexC2Eii", qtrt.FFI_TYPE_POINTER, version, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionComplexFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionComplex)
@@ -88,7 +84,7 @@ func NewQStyleOptionComplex(version int, type_ int) *QStyleOptionComplex {
 }
 
 func DeleteQStyleOptionComplex(this *QStyleOptionComplex) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QStyleOptionComplexD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionComplexD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

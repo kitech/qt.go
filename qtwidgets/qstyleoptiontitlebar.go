@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QStyleOptionTitleBar) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionT
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionTitleBar()
 func NewQStyleOptionTitleBar() *QStyleOptionTitleBar {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionTitleBarC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionTitleBarC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTitleBarFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionTitleBar)
@@ -92,7 +88,7 @@ func NewQStyleOptionTitleBar() *QStyleOptionTitleBar {
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionTitleBar(int)
 func NewQStyleOptionTitleBar_1(version int) *QStyleOptionTitleBar {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionTitleBarC2Ei", ffiqt.FFI_TYPE_POINTER, version)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionTitleBarC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionTitleBarFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionTitleBar)
@@ -100,7 +96,7 @@ func NewQStyleOptionTitleBar_1(version int) *QStyleOptionTitleBar {
 }
 
 func DeleteQStyleOptionTitleBar(this *QStyleOptionTitleBar) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionTitleBarD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionTitleBarD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

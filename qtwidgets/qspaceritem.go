@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QSpacerItem) NewFromPointer(cthis unsafe.Pointer) *QSpacerItem {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSpacerItem(int, int, QSizePolicy::Policy, QSizePolicy::Policy)
 func NewQSpacerItem(w int, h int, hData int, vData int) *QSpacerItem {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItemC2EiiN11QSizePolicy6PolicyES1_", ffiqt.FFI_TYPE_POINTER, w, h, hData, vData)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItemC2EiiN11QSizePolicy6PolicyES1_", qtrt.FFI_TYPE_POINTER, w, h, hData, vData)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSpacerItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSpacerItem)
@@ -92,7 +88,7 @@ func NewQSpacerItem(w int, h int, hData int, vData int) *QSpacerItem {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSpacerItem()
 func DeleteQSpacerItem(this *QSpacerItem) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItemD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -103,7 +99,7 @@ func DeleteQSpacerItem(this *QSpacerItem) {
 // Public Visibility=Default Availability=Available
 // [-2] void changeSize(int, int, QSizePolicy::Policy, QSizePolicy::Policy)
 func (this *QSpacerItem) ChangeSize(w int, h int, hData int, vData int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItem10changeSizeEiiN11QSizePolicy6PolicyES1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w, h, hData, vData)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItem10changeSizeEiiN11QSizePolicy6PolicyES1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, hData, vData)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -112,7 +108,7 @@ func (this *QSpacerItem) ChangeSize(w int, h int, hData int, vData int) {
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint()
 func (this *QSpacerItem) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem8sizeHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -125,7 +121,7 @@ func (this *QSpacerItem) SizeHint() *qtcore.QSize /*123*/ {
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSize()
 func (this *QSpacerItem) MinimumSize() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem11minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -138,7 +134,7 @@ func (this *QSpacerItem) MinimumSize() *qtcore.QSize /*123*/ {
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize maximumSize()
 func (this *QSpacerItem) MaximumSize() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem11maximumSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem11maximumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -151,7 +147,7 @@ func (this *QSpacerItem) MaximumSize() *qtcore.QSize /*123*/ {
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::Orientations expandingDirections()
 func (this *QSpacerItem) ExpandingDirections() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem19expandingDirectionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem19expandingDirectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -162,7 +158,7 @@ func (this *QSpacerItem) ExpandingDirections() int {
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isEmpty()
 func (this *QSpacerItem) IsEmpty() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -174,7 +170,7 @@ func (this *QSpacerItem) IsEmpty() bool {
 // [-2] void setGeometry(const QRect &)
 func (this *QSpacerItem) SetGeometry(arg0 *qtcore.QRect) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItem11setGeometryERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItem11setGeometryERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -183,7 +179,7 @@ func (this *QSpacerItem) SetGeometry(arg0 *qtcore.QRect) {
 // Public virtual Visibility=Default Availability=Available
 // [16] QRect geometry()
 func (this *QSpacerItem) Geometry() *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem8geometryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -196,7 +192,7 @@ func (this *QSpacerItem) Geometry() *qtcore.QRect /*123*/ {
 // Public virtual Visibility=Default Availability=Available
 // [8] QSpacerItem * spacerItem()
 func (this *QSpacerItem) SpacerItem() *QSpacerItem /*777 QSpacerItem **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSpacerItem10spacerItemEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSpacerItem10spacerItemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSpacerItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -208,7 +204,7 @@ func (this *QSpacerItem) SpacerItem() *QSpacerItem /*777 QSpacerItem **/ {
 // Public inline Visibility=Default Availability=Available
 // [4] QSizePolicy sizePolicy()
 func (this *QSpacerItem) SizePolicy() *QSizePolicy /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSpacerItem10sizePolicyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSpacerItem10sizePolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSizePolicyFromPointer(unsafe.Pointer(uintptr(rv))) // 333

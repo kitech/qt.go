@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -34,9 +33,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 }
@@ -46,17 +42,17 @@ func init() {
 //  body block begin
 // void onEntry(class QEvent *)
 func (this *QFinalState) InheritOnEntry(f func(event *QEvent /*777 QEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "onEntry", f)
+	qtrt.SetAllInheritCallback(this, "onEntry", f)
 }
 
 // void onExit(class QEvent *)
 func (this *QFinalState) InheritOnExit(f func(event *QEvent /*777 QEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "onExit", f)
+	qtrt.SetAllInheritCallback(this, "onExit", f)
 }
 
 // bool event(class QEvent *)
 func (this *QFinalState) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
-	ffiqt.SetAllInheritCallback(this, "event", f)
+	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
 type QFinalState struct {
@@ -86,7 +82,7 @@ func (*QFinalState) NewFromPointer(cthis unsafe.Pointer) *QFinalState {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QFinalState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QFinalState10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFinalState10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -99,7 +95,7 @@ func (this *QFinalState) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // [-2] void QFinalState(QState *)
 func NewQFinalState(parent *QState /*777 QState **/) *QFinalState {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalStateC2EP6QState", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFinalStateC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFinalStateFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -110,7 +106,7 @@ func NewQFinalState(parent *QState /*777 QState **/) *QFinalState {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFinalState()
 func DeleteQFinalState(this *QFinalState) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalStateD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFinalStateD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -122,7 +118,7 @@ func DeleteQFinalState(this *QFinalState) {
 // [-2] void onEntry(QEvent *)
 func (this *QFinalState) OnEntry(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState7onEntryEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFinalState7onEntryEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -132,7 +128,7 @@ func (this *QFinalState) OnEntry(event *QEvent /*777 QEvent **/) {
 // [-2] void onExit(QEvent *)
 func (this *QFinalState) OnExit(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState6onExitEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFinalState6onExitEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -142,7 +138,7 @@ func (this *QFinalState) OnExit(event *QEvent /*777 QEvent **/) {
 // [1] bool event(QEvent *)
 func (this *QFinalState) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QFinalState5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFinalState5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

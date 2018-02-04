@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QMessageLogger) NewFromPointer(cthis unsafe.Pointer) *QMessageLogger {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMessageLogger()
 func NewQMessageLogger() *QMessageLogger {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMessageLoggerC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QMessageLoggerC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMessageLoggerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMessageLogger)
@@ -91,7 +87,7 @@ func NewQMessageLogger_1(file string, line int, function string) *QMessageLogger
 	defer qtrt.FreeMem(convArg0)
 	var convArg2 = qtrt.CString(function)
 	defer qtrt.FreeMem(convArg2)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMessageLoggerC2EPKciS1_", ffiqt.FFI_TYPE_POINTER, convArg0, line, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QMessageLoggerC2EPKciS1_", qtrt.FFI_TYPE_POINTER, convArg0, line, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMessageLoggerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMessageLogger)
@@ -109,7 +105,7 @@ func NewQMessageLogger_2(file string, line int, function string, category string
 	defer qtrt.FreeMem(convArg2)
 	var convArg3 = qtrt.CString(category)
 	defer qtrt.FreeMem(convArg3)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMessageLoggerC2EPKciS1_S1_", ffiqt.FFI_TYPE_POINTER, convArg0, line, convArg2, convArg3)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QMessageLoggerC2EPKciS1_S1_", qtrt.FFI_TYPE_POINTER, convArg0, line, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMessageLoggerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMessageLogger)
@@ -117,7 +113,7 @@ func NewQMessageLogger_2(file string, line int, function string, category string
 }
 
 func DeleteQMessageLogger(this *QMessageLogger) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QMessageLoggerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QMessageLoggerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

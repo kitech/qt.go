@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QMapNodeBase) NewFromPointer(cthis unsafe.Pointer) *QMapNodeBase {
 // Public Visibility=Default Availability=Available
 // [8] const QMapNodeBase * nextNode()
 func (this *QMapNodeBase) NextNode() *QMapNodeBase /*777 const QMapNodeBase **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QMapNodeBase8nextNodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QMapNodeBase8nextNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMapNodeBaseFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -87,7 +83,7 @@ func (this *QMapNodeBase) NextNode() *QMapNodeBase /*777 const QMapNodeBase **/ 
 // Public inline Visibility=Default Availability=Available
 // [8] QMapNodeBase * nextNode()
 func (this *QMapNodeBase) NextNode_1() *QMapNodeBase /*777 QMapNodeBase **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapNodeBase8nextNodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QMapNodeBase8nextNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMapNodeBaseFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -99,7 +95,7 @@ func (this *QMapNodeBase) NextNode_1() *QMapNodeBase /*777 QMapNodeBase **/ {
 // Public Visibility=Default Availability=Available
 // [8] const QMapNodeBase * previousNode()
 func (this *QMapNodeBase) PreviousNode() *QMapNodeBase /*777 const QMapNodeBase **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QMapNodeBase12previousNodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QMapNodeBase12previousNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMapNodeBaseFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -111,7 +107,7 @@ func (this *QMapNodeBase) PreviousNode() *QMapNodeBase /*777 const QMapNodeBase 
 // Public inline Visibility=Default Availability=Available
 // [8] QMapNodeBase * previousNode()
 func (this *QMapNodeBase) PreviousNode_1() *QMapNodeBase /*777 QMapNodeBase **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapNodeBase12previousNodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QMapNodeBase12previousNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMapNodeBaseFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -123,7 +119,7 @@ func (this *QMapNodeBase) PreviousNode_1() *QMapNodeBase /*777 QMapNodeBase **/ 
 // Public inline Visibility=Default Availability=Available
 // [4] QMapNodeBase::Color color()
 func (this *QMapNodeBase) Color() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QMapNodeBase5colorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QMapNodeBase5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -134,7 +130,7 @@ func (this *QMapNodeBase) Color() int {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setColor(enum QMapNodeBase::Color)
 func (this *QMapNodeBase) SetColor(c int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapNodeBase8setColorENS_5ColorE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QMapNodeBase8setColorENS_5ColorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -143,7 +139,7 @@ func (this *QMapNodeBase) SetColor(c int) {
 // Public inline Visibility=Default Availability=Available
 // [8] QMapNodeBase * parent()
 func (this *QMapNodeBase) Parent() *QMapNodeBase /*777 QMapNodeBase **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QMapNodeBase6parentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QMapNodeBase6parentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMapNodeBaseFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -151,7 +147,7 @@ func (this *QMapNodeBase) Parent() *QMapNodeBase /*777 QMapNodeBase **/ {
 }
 
 func DeleteQMapNodeBase(this *QMapNodeBase) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapNodeBaseD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QMapNodeBaseD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

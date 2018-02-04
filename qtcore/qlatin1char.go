@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QLatin1Char) NewFromPointer(cthis unsafe.Pointer) *QLatin1Char {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QLatin1Char(char)
 func NewQLatin1Char(c byte) *QLatin1Char {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QLatin1CharC2Ec", ffiqt.FFI_TYPE_POINTER, c)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QLatin1CharC2Ec", qtrt.FFI_TYPE_POINTER, c)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLatin1CharFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLatin1Char)
@@ -87,7 +83,7 @@ func NewQLatin1Char(c byte) *QLatin1Char {
 // Public inline Visibility=Default Availability=Available
 // [1] char toLatin1()
 func (this *QLatin1Char) ToLatin1() byte {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLatin1Char8toLatin1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLatin1Char8toLatin1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
@@ -98,14 +94,14 @@ func (this *QLatin1Char) ToLatin1() byte {
 // Public inline Visibility=Default Availability=Available
 // [2] ushort unicode()
 func (this *QLatin1Char) Unicode() uint16 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QLatin1Char7unicodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLatin1Char7unicodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint16(rv) // 222
 }
 
 func DeleteQLatin1Char(this *QLatin1Char) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QLatin1CharD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QLatin1CharD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

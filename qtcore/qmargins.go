@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QMargins) NewFromPointer(cthis unsafe.Pointer) *QMargins {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMargins()
 func NewQMargins() *QMargins {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMarginsC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginsC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMargins)
@@ -87,7 +83,7 @@ func NewQMargins() *QMargins {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMargins(int, int, int, int)
 func NewQMargins_1(left int, top int, right int, bottom int) *QMargins {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMarginsC2Eiiii", ffiqt.FFI_TYPE_POINTER, left, top, right, bottom)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginsC2Eiiii", qtrt.FFI_TYPE_POINTER, left, top, right, bottom)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMargins)
@@ -99,7 +95,7 @@ func NewQMargins_1(left int, top int, right int, bottom int) *QMargins {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull()
 func (this *QMargins) IsNull() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMargins6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -110,7 +106,7 @@ func (this *QMargins) IsNull() bool {
 // Public inline Visibility=Default Availability=Available
 // [4] int left()
 func (this *QMargins) Left() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins4leftEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMargins4leftEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -121,7 +117,7 @@ func (this *QMargins) Left() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int top()
 func (this *QMargins) Top() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins3topEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMargins3topEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -132,7 +128,7 @@ func (this *QMargins) Top() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int right()
 func (this *QMargins) Right() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins5rightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMargins5rightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -143,7 +139,7 @@ func (this *QMargins) Right() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int bottom()
 func (this *QMargins) Bottom() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QMargins6bottomEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QMargins6bottomEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -154,7 +150,7 @@ func (this *QMargins) Bottom() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setLeft(int)
 func (this *QMargins) SetLeft(left int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins7setLeftEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), left)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMargins7setLeftEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), left)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -163,7 +159,7 @@ func (this *QMargins) SetLeft(left int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setTop(int)
 func (this *QMargins) SetTop(top int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins6setTopEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), top)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMargins6setTopEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), top)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -172,7 +168,7 @@ func (this *QMargins) SetTop(top int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setRight(int)
 func (this *QMargins) SetRight(right int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins8setRightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), right)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMargins8setRightEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), right)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -181,12 +177,12 @@ func (this *QMargins) SetRight(right int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setBottom(int)
 func (this *QMargins) SetBottom(bottom int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMargins9setBottomEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), bottom)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMargins9setBottomEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), bottom)
 	gopp.ErrPrint(err, rv)
 }
 
 func DeleteQMargins(this *QMargins) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QMarginsD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QMarginsD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

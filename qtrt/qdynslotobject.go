@@ -1,4 +1,4 @@
-package ffiqt
+package qtrt
 
 /*
 extern void callbackAllQDynSlotObject(void*, int, int, void**, char*, int, int*, void*);
@@ -8,8 +8,6 @@ import (
 	"gopp"
 	"log"
 	"unsafe"
-
-	"qt.go/qtrt"
 
 	"github.com/therecipe/qt"
 )
@@ -45,7 +43,7 @@ func NewQDynSlotObject(signalName string, argc int) *QDynSlotObject {
 	gopp.ErrPrint(err, rv)
 
 	this.cthis = unsafe.Pointer(uintptr(rv))
-	qtrt.SetFinalizer(this, DeleteQDynSlotObject)
+	SetFinalizer(this, DeleteQDynSlotObject)
 	return this
 }
 

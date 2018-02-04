@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QTextFrameFormat) NewFromPointer(cthis unsafe.Pointer) *QTextFrameFormat 
 // Public Visibility=Default Availability=Available
 // [-2] void QTextFrameFormat()
 func NewQTextFrameFormat() *QTextFrameFormat {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormatC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormatC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextFrameFormatFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextFrameFormat)
@@ -89,7 +85,7 @@ func NewQTextFrameFormat() *QTextFrameFormat {
 // [-2] void QTextFrameFormat(const QTextFormat &)
 func NewQTextFrameFormat_1(fmt *QTextFormat) *QTextFrameFormat {
 	var convArg0 = fmt.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormatC2ERK11QTextFormat", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormatC2ERK11QTextFormat", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextFrameFormatFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextFrameFormat)
@@ -101,7 +97,7 @@ func NewQTextFrameFormat_1(fmt *QTextFormat) *QTextFrameFormat {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid()
 func (this *QTextFrameFormat) IsValid() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextFrameFormat7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextFrameFormat7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -112,7 +108,7 @@ func (this *QTextFrameFormat) IsValid() bool {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setPosition(enum QTextFrameFormat::Position)
 func (this *QTextFrameFormat) SetPosition(f int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat11setPositionENS_8PositionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), f)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat11setPositionENS_8PositionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -121,7 +117,7 @@ func (this *QTextFrameFormat) SetPosition(f int) {
 // Public inline Visibility=Default Availability=Available
 // [4] QTextFrameFormat::Position position()
 func (this *QTextFrameFormat) Position() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextFrameFormat8positionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextFrameFormat8positionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -132,7 +128,7 @@ func (this *QTextFrameFormat) Position() int {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBorder(qreal)
 func (this *QTextFrameFormat) SetBorder(border float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat9setBorderEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), border)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat9setBorderEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), border)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -141,7 +137,7 @@ func (this *QTextFrameFormat) SetBorder(border float64) {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal border()
 func (this *QTextFrameFormat) Border() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextFrameFormat6borderEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextFrameFormat6borderEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -153,7 +149,7 @@ func (this *QTextFrameFormat) Border() float64 {
 // [-2] void setBorderBrush(const QBrush &)
 func (this *QTextFrameFormat) SetBorderBrush(brush *QBrush) {
 	var convArg0 = brush.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat14setBorderBrushERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat14setBorderBrushERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -162,7 +158,7 @@ func (this *QTextFrameFormat) SetBorderBrush(brush *QBrush) {
 // Public inline Visibility=Default Availability=Available
 // [8] QBrush borderBrush()
 func (this *QTextFrameFormat) BorderBrush() *QBrush /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextFrameFormat11borderBrushEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextFrameFormat11borderBrushEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -175,7 +171,7 @@ func (this *QTextFrameFormat) BorderBrush() *QBrush /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBorderStyle(enum QTextFrameFormat::BorderStyle)
 func (this *QTextFrameFormat) SetBorderStyle(style int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat14setBorderStyleENS_11BorderStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), style)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat14setBorderStyleENS_11BorderStyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), style)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -184,7 +180,7 @@ func (this *QTextFrameFormat) SetBorderStyle(style int) {
 // Public inline Visibility=Default Availability=Available
 // [4] QTextFrameFormat::BorderStyle borderStyle()
 func (this *QTextFrameFormat) BorderStyle() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextFrameFormat11borderStyleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextFrameFormat11borderStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -195,7 +191,7 @@ func (this *QTextFrameFormat) BorderStyle() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setMargin(qreal)
 func (this *QTextFrameFormat) SetMargin(margin float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat9setMarginEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), margin)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat9setMarginEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), margin)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -204,7 +200,7 @@ func (this *QTextFrameFormat) SetMargin(margin float64) {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal margin()
 func (this *QTextFrameFormat) Margin() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextFrameFormat6marginEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextFrameFormat6marginEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -215,7 +211,7 @@ func (this *QTextFrameFormat) Margin() float64 {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTopMargin(qreal)
 func (this *QTextFrameFormat) SetTopMargin(margin float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat12setTopMarginEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), margin)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat12setTopMarginEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), margin)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -224,7 +220,7 @@ func (this *QTextFrameFormat) SetTopMargin(margin float64) {
 // Public Visibility=Default Availability=Available
 // [8] qreal topMargin()
 func (this *QTextFrameFormat) TopMargin() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextFrameFormat9topMarginEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextFrameFormat9topMarginEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -235,7 +231,7 @@ func (this *QTextFrameFormat) TopMargin() float64 {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBottomMargin(qreal)
 func (this *QTextFrameFormat) SetBottomMargin(margin float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat15setBottomMarginEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), margin)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat15setBottomMarginEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), margin)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -244,7 +240,7 @@ func (this *QTextFrameFormat) SetBottomMargin(margin float64) {
 // Public Visibility=Default Availability=Available
 // [8] qreal bottomMargin()
 func (this *QTextFrameFormat) BottomMargin() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextFrameFormat12bottomMarginEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextFrameFormat12bottomMarginEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -255,7 +251,7 @@ func (this *QTextFrameFormat) BottomMargin() float64 {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setLeftMargin(qreal)
 func (this *QTextFrameFormat) SetLeftMargin(margin float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat13setLeftMarginEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), margin)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat13setLeftMarginEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), margin)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -264,7 +260,7 @@ func (this *QTextFrameFormat) SetLeftMargin(margin float64) {
 // Public Visibility=Default Availability=Available
 // [8] qreal leftMargin()
 func (this *QTextFrameFormat) LeftMargin() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextFrameFormat10leftMarginEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextFrameFormat10leftMarginEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -275,7 +271,7 @@ func (this *QTextFrameFormat) LeftMargin() float64 {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setRightMargin(qreal)
 func (this *QTextFrameFormat) SetRightMargin(margin float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat14setRightMarginEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), margin)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat14setRightMarginEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), margin)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -284,7 +280,7 @@ func (this *QTextFrameFormat) SetRightMargin(margin float64) {
 // Public Visibility=Default Availability=Available
 // [8] qreal rightMargin()
 func (this *QTextFrameFormat) RightMargin() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextFrameFormat11rightMarginEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextFrameFormat11rightMarginEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -295,7 +291,7 @@ func (this *QTextFrameFormat) RightMargin() float64 {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setPadding(qreal)
 func (this *QTextFrameFormat) SetPadding(padding float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat10setPaddingEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), padding)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat10setPaddingEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), padding)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -304,7 +300,7 @@ func (this *QTextFrameFormat) SetPadding(padding float64) {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal padding()
 func (this *QTextFrameFormat) Padding() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextFrameFormat7paddingEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextFrameFormat7paddingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -315,7 +311,7 @@ func (this *QTextFrameFormat) Padding() float64 {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setWidth(qreal)
 func (this *QTextFrameFormat) SetWidth(width float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat8setWidthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), width)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat8setWidthEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -325,7 +321,7 @@ func (this *QTextFrameFormat) SetWidth(width float64) {
 // [-2] void setWidth(const QTextLength &)
 func (this *QTextFrameFormat) SetWidth_1(length *QTextLength) {
 	var convArg0 = length.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat8setWidthERK11QTextLength", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat8setWidthERK11QTextLength", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -334,7 +330,7 @@ func (this *QTextFrameFormat) SetWidth_1(length *QTextLength) {
 // Public inline Visibility=Default Availability=Available
 // [16] QTextLength width()
 func (this *QTextFrameFormat) Width() *QTextLength /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextFrameFormat5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextFrameFormat5widthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextLengthFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -347,7 +343,7 @@ func (this *QTextFrameFormat) Width() *QTextLength /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setHeight(qreal)
 func (this *QTextFrameFormat) SetHeight(height float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat9setHeightEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), height)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat9setHeightEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), height)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -357,7 +353,7 @@ func (this *QTextFrameFormat) SetHeight(height float64) {
 // [-2] void setHeight(const QTextLength &)
 func (this *QTextFrameFormat) SetHeight_1(height *QTextLength) {
 	var convArg0 = height.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat9setHeightERK11QTextLength", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat9setHeightERK11QTextLength", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -366,7 +362,7 @@ func (this *QTextFrameFormat) SetHeight_1(height *QTextLength) {
 // Public inline Visibility=Default Availability=Available
 // [16] QTextLength height()
 func (this *QTextFrameFormat) Height() *QTextLength /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextFrameFormat6heightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextFrameFormat6heightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextLengthFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -379,7 +375,7 @@ func (this *QTextFrameFormat) Height() *QTextLength /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setPageBreakPolicy(QTextFormat::PageBreakFlags)
 func (this *QTextFrameFormat) SetPageBreakPolicy(flags int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormat18setPageBreakPolicyE6QFlagsIN11QTextFormat13PageBreakFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormat18setPageBreakPolicyE6QFlagsIN11QTextFormat13PageBreakFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -388,14 +384,14 @@ func (this *QTextFrameFormat) SetPageBreakPolicy(flags int) {
 // Public inline Visibility=Default Availability=Available
 // [4] QTextFormat::PageBreakFlags pageBreakPolicy()
 func (this *QTextFrameFormat) PageBreakPolicy() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QTextFrameFormat15pageBreakPolicyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextFrameFormat15pageBreakPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
 }
 
 func DeleteQTextFrameFormat(this *QTextFrameFormat) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QTextFrameFormatD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextFrameFormatD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

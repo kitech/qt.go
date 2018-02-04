@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QProcessEnvironment) NewFromPointer(cthis unsafe.Pointer) *QProcessEnviro
 // Public Visibility=Default Availability=Available
 // [-2] void QProcessEnvironment()
 func NewQProcessEnvironment() *QProcessEnvironment {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QProcessEnvironmentC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironmentC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQProcessEnvironmentFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQProcessEnvironment)
@@ -87,7 +83,7 @@ func NewQProcessEnvironment() *QProcessEnvironment {
 // Public Visibility=Default Availability=Available
 // [-2] void ~QProcessEnvironment()
 func DeleteQProcessEnvironment(this *QProcessEnvironment) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QProcessEnvironmentD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironmentD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -99,7 +95,7 @@ func DeleteQProcessEnvironment(this *QProcessEnvironment) {
 // [-2] void swap(QProcessEnvironment &)
 func (this *QProcessEnvironment) Swap(other *QProcessEnvironment) {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QProcessEnvironment4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironment4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -108,7 +104,7 @@ func (this *QProcessEnvironment) Swap(other *QProcessEnvironment) {
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty()
 func (this *QProcessEnvironment) IsEmpty() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QProcessEnvironment7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QProcessEnvironment7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -119,7 +115,7 @@ func (this *QProcessEnvironment) IsEmpty() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
 func (this *QProcessEnvironment) Clear() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QProcessEnvironment5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironment5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -129,7 +125,7 @@ func (this *QProcessEnvironment) Clear() {
 // [1] bool contains(const QString &)
 func (this *QProcessEnvironment) Contains(name *QString) bool {
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QProcessEnvironment8containsERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QProcessEnvironment8containsERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -141,7 +137,7 @@ func (this *QProcessEnvironment) Contains(name *QString) bool {
 // [-2] void remove(const QString &)
 func (this *QProcessEnvironment) Remove(name *QString) {
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QProcessEnvironment6removeERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironment6removeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -152,7 +148,7 @@ func (this *QProcessEnvironment) Remove(name *QString) {
 func (this *QProcessEnvironment) Value(name *QString, defaultValue *QString) *QString /*123*/ {
 	var convArg0 = name.GetCthis()
 	var convArg1 = defaultValue.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QProcessEnvironment5valueERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QProcessEnvironment5valueERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -165,7 +161,7 @@ func (this *QProcessEnvironment) Value(name *QString, defaultValue *QString) *QS
 // Public static Visibility=Default Availability=Available
 // [8] QProcessEnvironment systemEnvironment()
 func (this *QProcessEnvironment) SystemEnvironment() *QProcessEnvironment /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QProcessEnvironment17systemEnvironmentEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QProcessEnvironment17systemEnvironmentEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQProcessEnvironmentFromPointer(unsafe.Pointer(uintptr(rv))) // 333

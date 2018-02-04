@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -79,7 +75,7 @@ func NewQAccessibleTextUpdateEvent(obj *qtcore.QObject /*777 QObject **/, positi
 	var convArg0 = obj.GetCthis()
 	var convArg2 = oldText.GetCthis()
 	var convArg3 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventC2EP7QObjectiRK7QStringS4_", ffiqt.FFI_TYPE_POINTER, convArg0, position, convArg2, convArg3)
+	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventC2EP7QObjectiRK7QStringS4_", qtrt.FFI_TYPE_POINTER, convArg0, position, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextUpdateEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAccessibleTextUpdateEvent)
@@ -94,7 +90,7 @@ func NewQAccessibleTextUpdateEvent_1(iface *QAccessibleInterface /*777 QAccessib
 	var convArg0 = iface.GetCthis()
 	var convArg2 = oldText.GetCthis()
 	var convArg3 = text.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventC2EP20QAccessibleInterfaceiRK7QStringS4_", ffiqt.FFI_TYPE_POINTER, convArg0, position, convArg2, convArg3)
+	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventC2EP20QAccessibleInterfaceiRK7QStringS4_", qtrt.FFI_TYPE_POINTER, convArg0, position, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextUpdateEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAccessibleTextUpdateEvent)
@@ -106,7 +102,7 @@ func NewQAccessibleTextUpdateEvent_1(iface *QAccessibleInterface /*777 QAccessib
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAccessibleTextUpdateEvent()
 func DeleteQAccessibleTextUpdateEvent(this *QAccessibleTextUpdateEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 56)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -117,7 +113,7 @@ func DeleteQAccessibleTextUpdateEvent(this *QAccessibleTextUpdateEvent) {
 // Public inline Visibility=Default Availability=Available
 // [8] QString textRemoved()
 func (this *QAccessibleTextUpdateEvent) TextRemoved() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent11textRemovedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent11textRemovedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -130,7 +126,7 @@ func (this *QAccessibleTextUpdateEvent) TextRemoved() *qtcore.QString /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QString textInserted()
 func (this *QAccessibleTextUpdateEvent) TextInserted() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent12textInsertedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent12textInsertedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -143,7 +139,7 @@ func (this *QAccessibleTextUpdateEvent) TextInserted() *qtcore.QString /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [4] int changePosition()
 func (this *QAccessibleTextUpdateEvent) ChangePosition() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent14changePositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent14changePositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111

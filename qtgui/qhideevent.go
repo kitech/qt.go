@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QHideEvent) NewFromPointer(cthis unsafe.Pointer) *QHideEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QHideEvent()
 func NewQHideEvent() *QHideEvent {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHideEventC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QHideEventC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQHideEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQHideEvent)
@@ -88,7 +84,7 @@ func NewQHideEvent() *QHideEvent {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QHideEvent()
 func DeleteQHideEvent(this *QHideEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QHideEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QHideEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)

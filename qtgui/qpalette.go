@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -79,7 +75,7 @@ func (*QPalette) NewFromPointer(cthis unsafe.Pointer) *QPalette {
 // Public Visibility=Default Availability=Available
 // [-2] void QPalette()
 func NewQPalette() *QPalette {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPaletteC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPaletteC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPalette)
@@ -92,7 +88,7 @@ func NewQPalette() *QPalette {
 // [-2] void QPalette(const QColor &)
 func NewQPalette_1(button *QColor) *QPalette {
 	var convArg0 = button.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPaletteC2ERK6QColor", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPaletteC2ERK6QColor", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPalette)
@@ -104,7 +100,7 @@ func NewQPalette_1(button *QColor) *QPalette {
 // Public Visibility=Default Availability=Available
 // [-2] void QPalette(Qt::GlobalColor)
 func NewQPalette_2(button int) *QPalette {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPaletteC2EN2Qt11GlobalColorE", ffiqt.FFI_TYPE_POINTER, button)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPaletteC2EN2Qt11GlobalColorE", qtrt.FFI_TYPE_POINTER, button)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPalette)
@@ -118,7 +114,7 @@ func NewQPalette_2(button int) *QPalette {
 func NewQPalette_3(button *QColor, window *QColor) *QPalette {
 	var convArg0 = button.GetCthis()
 	var convArg1 = window.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPaletteC2ERK6QColorS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPaletteC2ERK6QColorS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPalette)
@@ -139,7 +135,7 @@ func NewQPalette_4(windowText *QBrush, button *QBrush, light *QBrush, dark *QBru
 	var convArg6 = bright_text.GetCthis()
 	var convArg7 = base.GetCthis()
 	var convArg8 = window.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPaletteC2ERK6QBrushS2_S2_S2_S2_S2_S2_S2_S2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPaletteC2ERK6QBrushS2_S2_S2_S2_S2_S2_S2_S2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPalette)
@@ -158,7 +154,7 @@ func NewQPalette_5(windowText *QColor, window *QColor, light *QColor, dark *QCol
 	var convArg4 = mid.GetCthis()
 	var convArg5 = text.GetCthis()
 	var convArg6 = base.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPaletteC2ERK6QColorS2_S2_S2_S2_S2_S2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPaletteC2ERK6QColorS2_S2_S2_S2_S2_S2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPalette)
@@ -170,7 +166,7 @@ func NewQPalette_5(windowText *QColor, window *QColor, light *QColor, dark *QCol
 // Public Visibility=Default Availability=Available
 // [-2] void ~QPalette()
 func DeleteQPalette(this *QPalette) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPaletteD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPaletteD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -182,7 +178,7 @@ func DeleteQPalette(this *QPalette) {
 // [-2] void swap(QPalette &)
 func (this *QPalette) Swap(other *QPalette) {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPalette4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -191,7 +187,7 @@ func (this *QPalette) Swap(other *QPalette) {
 // Public inline Visibility=Default Availability=Available
 // [4] QPalette::ColorGroup currentColorGroup()
 func (this *QPalette) CurrentColorGroup() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette17currentColorGroupEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette17currentColorGroupEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -202,7 +198,7 @@ func (this *QPalette) CurrentColorGroup() int {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setCurrentColorGroup(enum QPalette::ColorGroup)
 func (this *QPalette) SetCurrentColorGroup(cg int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette20setCurrentColorGroupENS_10ColorGroupE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cg)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPalette20setCurrentColorGroupENS_10ColorGroupE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cg)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -211,7 +207,7 @@ func (this *QPalette) SetCurrentColorGroup(cg int) {
 // Public inline Visibility=Default Availability=Available
 // [16] const QColor & color(enum QPalette::ColorGroup, enum QPalette::ColorRole)
 func (this *QPalette) Color(cg int, cr int) *QColor {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette5colorENS_10ColorGroupENS_9ColorRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cg, cr)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette5colorENS_10ColorGroupENS_9ColorRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cg, cr)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -224,7 +220,7 @@ func (this *QPalette) Color(cg int, cr int) *QColor {
 // Public inline Visibility=Default Availability=Available
 // [16] const QColor & color(enum QPalette::ColorRole)
 func (this *QPalette) Color_1(cr int) *QColor {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette5colorENS_9ColorRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cr)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette5colorENS_9ColorRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cr)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -237,7 +233,7 @@ func (this *QPalette) Color_1(cr int) *QColor {
 // Public Visibility=Default Availability=Available
 // [8] const QBrush & brush(enum QPalette::ColorGroup, enum QPalette::ColorRole)
 func (this *QPalette) Brush(cg int, cr int) *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette5brushENS_10ColorGroupENS_9ColorRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cg, cr)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette5brushENS_10ColorGroupENS_9ColorRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cg, cr)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -250,7 +246,7 @@ func (this *QPalette) Brush(cg int, cr int) *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & brush(enum QPalette::ColorRole)
 func (this *QPalette) Brush_1(cr int) *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette5brushENS_9ColorRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cr)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette5brushENS_9ColorRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cr)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -264,7 +260,7 @@ func (this *QPalette) Brush_1(cr int) *QBrush {
 // [-2] void setColor(enum QPalette::ColorGroup, enum QPalette::ColorRole, const QColor &)
 func (this *QPalette) SetColor(cg int, cr int, color *QColor) {
 	var convArg2 = color.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette8setColorENS_10ColorGroupENS_9ColorRoleERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cg, cr, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPalette8setColorENS_10ColorGroupENS_9ColorRoleERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cg, cr, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -274,7 +270,7 @@ func (this *QPalette) SetColor(cg int, cr int, color *QColor) {
 // [-2] void setColor(enum QPalette::ColorRole, const QColor &)
 func (this *QPalette) SetColor_1(cr int, color *QColor) {
 	var convArg1 = color.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette8setColorENS_9ColorRoleERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cr, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPalette8setColorENS_9ColorRoleERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cr, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -284,7 +280,7 @@ func (this *QPalette) SetColor_1(cr int, color *QColor) {
 // [-2] void setBrush(enum QPalette::ColorRole, const QBrush &)
 func (this *QPalette) SetBrush(cr int, brush *QBrush) {
 	var convArg1 = brush.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette8setBrushENS_9ColorRoleERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cr, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPalette8setBrushENS_9ColorRoleERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cr, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -294,7 +290,7 @@ func (this *QPalette) SetBrush(cr int, brush *QBrush) {
 // [-2] void setBrush(enum QPalette::ColorGroup, enum QPalette::ColorRole, const QBrush &)
 func (this *QPalette) SetBrush_1(cg int, cr int, brush *QBrush) {
 	var convArg2 = brush.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette8setBrushENS_10ColorGroupENS_9ColorRoleERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cg, cr, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPalette8setBrushENS_10ColorGroupENS_9ColorRoleERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cg, cr, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -303,7 +299,7 @@ func (this *QPalette) SetBrush_1(cg int, cr int, brush *QBrush) {
 // Public Visibility=Default Availability=Available
 // [1] bool isBrushSet(enum QPalette::ColorGroup, enum QPalette::ColorRole)
 func (this *QPalette) IsBrushSet(cg int, cr int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette10isBrushSetENS_10ColorGroupENS_9ColorRoleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cg, cr)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette10isBrushSetENS_10ColorGroupENS_9ColorRoleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cg, cr)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -323,7 +319,7 @@ func (this *QPalette) SetColorGroup(cr int, windowText *QBrush, button *QBrush, 
 	var convArg7 = bright_text.GetCthis()
 	var convArg8 = base.GetCthis()
 	var convArg9 = window.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette13setColorGroupENS_10ColorGroupERK6QBrushS3_S3_S3_S3_S3_S3_S3_S3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cr, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPalette13setColorGroupENS_10ColorGroupERK6QBrushS3_S3_S3_S3_S3_S3_S3_S3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cr, convArg1, convArg2, convArg3, convArg4, convArg5, convArg6, convArg7, convArg8, convArg9)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -332,7 +328,7 @@ func (this *QPalette) SetColorGroup(cr int, windowText *QBrush, button *QBrush, 
 // Public Visibility=Default Availability=Available
 // [1] bool isEqual(enum QPalette::ColorGroup, enum QPalette::ColorGroup)
 func (this *QPalette) IsEqual(cr1 int, cr2 int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette7isEqualENS_10ColorGroupES0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cr1, cr2)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette7isEqualENS_10ColorGroupES0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cr1, cr2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -343,7 +339,7 @@ func (this *QPalette) IsEqual(cr1 int, cr2 int) bool {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & foreground()
 func (this *QPalette) Foreground() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette10foregroundEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette10foregroundEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -356,7 +352,7 @@ func (this *QPalette) Foreground() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & windowText()
 func (this *QPalette) WindowText() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette10windowTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette10windowTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -369,7 +365,7 @@ func (this *QPalette) WindowText() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & button()
 func (this *QPalette) Button() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette6buttonEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette6buttonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -382,7 +378,7 @@ func (this *QPalette) Button() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & light()
 func (this *QPalette) Light() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette5lightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette5lightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -395,7 +391,7 @@ func (this *QPalette) Light() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & dark()
 func (this *QPalette) Dark() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette4darkEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette4darkEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -408,7 +404,7 @@ func (this *QPalette) Dark() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & mid()
 func (this *QPalette) Mid() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette3midEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette3midEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -421,7 +417,7 @@ func (this *QPalette) Mid() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & text()
 func (this *QPalette) Text() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -434,7 +430,7 @@ func (this *QPalette) Text() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & base()
 func (this *QPalette) Base() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette4baseEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette4baseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -447,7 +443,7 @@ func (this *QPalette) Base() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & alternateBase()
 func (this *QPalette) AlternateBase() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette13alternateBaseEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette13alternateBaseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -460,7 +456,7 @@ func (this *QPalette) AlternateBase() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & toolTipBase()
 func (this *QPalette) ToolTipBase() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette11toolTipBaseEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette11toolTipBaseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -473,7 +469,7 @@ func (this *QPalette) ToolTipBase() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & toolTipText()
 func (this *QPalette) ToolTipText() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette11toolTipTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette11toolTipTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -486,7 +482,7 @@ func (this *QPalette) ToolTipText() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & background()
 func (this *QPalette) Background() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette10backgroundEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette10backgroundEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -499,7 +495,7 @@ func (this *QPalette) Background() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & window()
 func (this *QPalette) Window() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette6windowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette6windowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -512,7 +508,7 @@ func (this *QPalette) Window() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & midlight()
 func (this *QPalette) Midlight() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette8midlightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette8midlightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -525,7 +521,7 @@ func (this *QPalette) Midlight() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & brightText()
 func (this *QPalette) BrightText() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette10brightTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette10brightTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -538,7 +534,7 @@ func (this *QPalette) BrightText() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & buttonText()
 func (this *QPalette) ButtonText() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette10buttonTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette10buttonTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -551,7 +547,7 @@ func (this *QPalette) ButtonText() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & shadow()
 func (this *QPalette) Shadow() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette6shadowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette6shadowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -564,7 +560,7 @@ func (this *QPalette) Shadow() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & highlight()
 func (this *QPalette) Highlight() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette9highlightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette9highlightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -577,7 +573,7 @@ func (this *QPalette) Highlight() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & highlightedText()
 func (this *QPalette) HighlightedText() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette15highlightedTextEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette15highlightedTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -590,7 +586,7 @@ func (this *QPalette) HighlightedText() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & link()
 func (this *QPalette) Link() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette4linkEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette4linkEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -603,7 +599,7 @@ func (this *QPalette) Link() *QBrush {
 // Public inline Visibility=Default Availability=Available
 // [8] const QBrush & linkVisited()
 func (this *QPalette) LinkVisited() *QBrush {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette11linkVisitedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette11linkVisitedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -617,7 +613,7 @@ func (this *QPalette) LinkVisited() *QBrush {
 // [1] bool isCopyOf(const QPalette &)
 func (this *QPalette) IsCopyOf(p *QPalette) bool {
 	var convArg0 = p.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette8isCopyOfERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette8isCopyOfERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -628,7 +624,7 @@ func (this *QPalette) IsCopyOf(p *QPalette) bool {
 // Public Visibility=Default Availability=Available
 // [8] qint64 cacheKey()
 func (this *QPalette) CacheKey() int64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette8cacheKeyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette8cacheKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -640,7 +636,7 @@ func (this *QPalette) CacheKey() int64 {
 // [16] QPalette resolve(const QPalette &)
 func (this *QPalette) Resolve(arg0 *QPalette) *QPalette /*123*/ {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette7resolveERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette7resolveERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -653,7 +649,7 @@ func (this *QPalette) Resolve(arg0 *QPalette) *QPalette /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [4] uint resolve()
 func (this *QPalette) Resolve_1() uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QPalette7resolveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPalette7resolveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
@@ -664,7 +660,7 @@ func (this *QPalette) Resolve_1() uint {
 // Public inline Visibility=Default Availability=Available
 // [-2] void resolve(uint)
 func (this *QPalette) Resolve_2(mask uint) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QPalette7resolveEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mask)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPalette7resolveEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mask)
 	gopp.ErrPrint(err, rv)
 }
 

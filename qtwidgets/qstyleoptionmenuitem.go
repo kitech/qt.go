@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QStyleOptionMenuItem) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionM
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionMenuItem()
 func NewQStyleOptionMenuItem() *QStyleOptionMenuItem {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionMenuItemC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionMenuItemC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionMenuItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionMenuItem)
@@ -92,7 +88,7 @@ func NewQStyleOptionMenuItem() *QStyleOptionMenuItem {
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionMenuItem(int)
 func NewQStyleOptionMenuItem_1(version int) *QStyleOptionMenuItem {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionMenuItemC2Ei", ffiqt.FFI_TYPE_POINTER, version)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionMenuItemC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionMenuItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionMenuItem)
@@ -100,7 +96,7 @@ func NewQStyleOptionMenuItem_1(version int) *QStyleOptionMenuItem {
 }
 
 func DeleteQStyleOptionMenuItem(this *QStyleOptionMenuItem) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionMenuItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionMenuItemD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

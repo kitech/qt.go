@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QUndoView) NewFromPointer(cthis unsafe.Pointer) *QUndoView {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QUndoView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUndoView10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUndoView10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -93,7 +89,7 @@ func (this *QUndoView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 // [-2] void QUndoView(QWidget *)
 func NewQUndoView(parent *QWidget /*777 QWidget **/) *QUndoView {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUndoViewC2EP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQUndoViewFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -106,7 +102,7 @@ func NewQUndoView(parent *QWidget /*777 QWidget **/) *QUndoView {
 func NewQUndoView_1(stack *QUndoStack /*777 QUndoStack **/, parent *QWidget /*777 QWidget **/) *QUndoView {
 	var convArg0 = stack.GetCthis()
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUndoViewC2EP10QUndoStackP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoViewC2EP10QUndoStackP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQUndoViewFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -119,7 +115,7 @@ func NewQUndoView_1(stack *QUndoStack /*777 QUndoStack **/, parent *QWidget /*77
 func NewQUndoView_2(group *QUndoGroup /*777 QUndoGroup **/, parent *QWidget /*777 QWidget **/) *QUndoView {
 	var convArg0 = group.GetCthis()
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUndoViewC2EP10QUndoGroupP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoViewC2EP10QUndoGroupP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQUndoViewFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -130,7 +126,7 @@ func NewQUndoView_2(group *QUndoGroup /*777 QUndoGroup **/, parent *QWidget /*77
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QUndoView()
 func DeleteQUndoView(this *QUndoView) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUndoViewD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoViewD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -141,7 +137,7 @@ func DeleteQUndoView(this *QUndoView) {
 // Public Visibility=Default Availability=Available
 // [8] QUndoStack * stack()
 func (this *QUndoView) Stack() *QUndoStack /*777 QUndoStack **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUndoView5stackEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUndoView5stackEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQUndoStackFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -153,7 +149,7 @@ func (this *QUndoView) Stack() *QUndoStack /*777 QUndoStack **/ {
 // Public Visibility=Default Availability=Available
 // [8] QUndoGroup * group()
 func (this *QUndoView) Group() *QUndoGroup /*777 QUndoGroup **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUndoView5groupEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUndoView5groupEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQUndoGroupFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -166,7 +162,7 @@ func (this *QUndoView) Group() *QUndoGroup /*777 QUndoGroup **/ {
 // [-2] void setEmptyLabel(const QString &)
 func (this *QUndoView) SetEmptyLabel(label *qtcore.QString) {
 	var convArg0 = label.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUndoView13setEmptyLabelERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoView13setEmptyLabelERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -175,7 +171,7 @@ func (this *QUndoView) SetEmptyLabel(label *qtcore.QString) {
 // Public Visibility=Default Availability=Available
 // [8] QString emptyLabel()
 func (this *QUndoView) EmptyLabel() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUndoView10emptyLabelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUndoView10emptyLabelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -189,7 +185,7 @@ func (this *QUndoView) EmptyLabel() *qtcore.QString /*123*/ {
 // [-2] void setCleanIcon(const QIcon &)
 func (this *QUndoView) SetCleanIcon(icon *qtgui.QIcon) {
 	var convArg0 = icon.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUndoView12setCleanIconERK5QIcon", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoView12setCleanIconERK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -198,7 +194,7 @@ func (this *QUndoView) SetCleanIcon(icon *qtgui.QIcon) {
 // Public Visibility=Default Availability=Available
 // [8] QIcon cleanIcon()
 func (this *QUndoView) CleanIcon() *qtgui.QIcon /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QUndoView9cleanIconEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUndoView9cleanIconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -212,7 +208,7 @@ func (this *QUndoView) CleanIcon() *qtgui.QIcon /*123*/ {
 // [-2] void setStack(QUndoStack *)
 func (this *QUndoView) SetStack(stack *QUndoStack /*777 QUndoStack **/) {
 	var convArg0 = stack.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUndoView8setStackEP10QUndoStack", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoView8setStackEP10QUndoStack", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -222,7 +218,7 @@ func (this *QUndoView) SetStack(stack *QUndoStack /*777 QUndoStack **/) {
 // [-2] void setGroup(QUndoGroup *)
 func (this *QUndoView) SetGroup(group *QUndoGroup /*777 QUndoGroup **/) {
 	var convArg0 = group.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QUndoView8setGroupEP10QUndoGroup", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoView8setGroupEP10QUndoGroup", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

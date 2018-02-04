@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QLineF) NewFromPointer(cthis unsafe.Pointer) *QLineF {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QLineF()
 func NewQLineF() *QLineF {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineFC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineFC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLineFFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLineF)
@@ -89,7 +85,7 @@ func NewQLineF() *QLineF {
 func NewQLineF_1(pt1 *QPointF, pt2 *QPointF) *QLineF {
 	var convArg0 = pt1.GetCthis()
 	var convArg1 = pt2.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineFC2ERK7QPointFS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineFC2ERK7QPointFS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLineFFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLineF)
@@ -101,7 +97,7 @@ func NewQLineF_1(pt1 *QPointF, pt2 *QPointF) *QLineF {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QLineF(qreal, qreal, qreal, qreal)
 func NewQLineF_2(x1 float64, y1 float64, x2 float64, y2 float64) *QLineF {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineFC2Edddd", ffiqt.FFI_TYPE_POINTER, x1, y1, x2, y2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineFC2Edddd", qtrt.FFI_TYPE_POINTER, x1, y1, x2, y2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLineFFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLineF)
@@ -114,7 +110,7 @@ func NewQLineF_2(x1 float64, y1 float64, x2 float64, y2 float64) *QLineF {
 // [-2] void QLineF(const QLine &)
 func NewQLineF_3(line *QLine) *QLineF {
 	var convArg0 = line.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineFC2ERK5QLine", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineFC2ERK5QLine", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLineFFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLineF)
@@ -126,7 +122,7 @@ func NewQLineF_3(line *QLine) *QLineF {
 // Public static Visibility=Default Availability=Available
 // [32] QLineF fromPolar(qreal, qreal)
 func (this *QLineF) FromPolar(length float64, angle float64) *QLineF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF9fromPolarEdd", ffiqt.FFI_TYPE_POINTER, length, angle)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineF9fromPolarEdd", qtrt.FFI_TYPE_POINTER, length, angle)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQLineFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -144,7 +140,7 @@ func QLineF_FromPolar(length float64, angle float64) *QLineF /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull()
 func (this *QLineF) IsNull() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -155,7 +151,7 @@ func (this *QLineF) IsNull() bool {
 // Public inline Visibility=Default Availability=Available
 // [16] QPointF p1()
 func (this *QLineF) P1() *QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2p1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF2p1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -168,7 +164,7 @@ func (this *QLineF) P1() *QPointF /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [16] QPointF p2()
 func (this *QLineF) P2() *QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2p2Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF2p2Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -181,7 +177,7 @@ func (this *QLineF) P2() *QPointF /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal x1()
 func (this *QLineF) X1() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2x1Ev", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF2x1Ev", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -192,7 +188,7 @@ func (this *QLineF) X1() float64 {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal y1()
 func (this *QLineF) Y1() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2y1Ev", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF2y1Ev", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -203,7 +199,7 @@ func (this *QLineF) Y1() float64 {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal x2()
 func (this *QLineF) X2() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2x2Ev", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF2x2Ev", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -214,7 +210,7 @@ func (this *QLineF) X2() float64 {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal y2()
 func (this *QLineF) Y2() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2y2Ev", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF2y2Ev", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -225,7 +221,7 @@ func (this *QLineF) Y2() float64 {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal dx()
 func (this *QLineF) Dx() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2dxEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF2dxEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -236,7 +232,7 @@ func (this *QLineF) Dx() float64 {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal dy()
 func (this *QLineF) Dy() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF2dyEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF2dyEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -247,7 +243,7 @@ func (this *QLineF) Dy() float64 {
 // Public Visibility=Default Availability=Available
 // [8] qreal length()
 func (this *QLineF) Length() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF6lengthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF6lengthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -258,7 +254,7 @@ func (this *QLineF) Length() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void setLength(qreal)
 func (this *QLineF) SetLength(len float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF9setLengthEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), len)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineF9setLengthEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), len)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -267,7 +263,7 @@ func (this *QLineF) SetLength(len float64) {
 // Public Visibility=Default Availability=Available
 // [8] qreal angle()
 func (this *QLineF) Angle() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF5angleEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF5angleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -279,7 +275,7 @@ func (this *QLineF) Angle() float64 {
 // [8] qreal angle(const QLineF &)
 func (this *QLineF) Angle_1(l *QLineF) float64 {
 	var convArg0 = l.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF5angleERKS_", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF5angleERKS_", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -290,7 +286,7 @@ func (this *QLineF) Angle_1(l *QLineF) float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void setAngle(qreal)
 func (this *QLineF) SetAngle(angle float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF8setAngleEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), angle)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineF8setAngleEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), angle)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -300,7 +296,7 @@ func (this *QLineF) SetAngle(angle float64) {
 // [8] qreal angleTo(const QLineF &)
 func (this *QLineF) AngleTo(l *QLineF) float64 {
 	var convArg0 = l.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF7angleToERKS_", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF7angleToERKS_", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -311,7 +307,7 @@ func (this *QLineF) AngleTo(l *QLineF) float64 {
 // Public Visibility=Default Availability=Available
 // [32] QLineF unitVector()
 func (this *QLineF) UnitVector() *QLineF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF10unitVectorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF10unitVectorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLineFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -324,7 +320,7 @@ func (this *QLineF) UnitVector() *QLineF /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [32] QLineF normalVector()
 func (this *QLineF) NormalVector() *QLineF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF12normalVectorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF12normalVectorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLineFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -339,7 +335,7 @@ func (this *QLineF) NormalVector() *QLineF /*123*/ {
 func (this *QLineF) Intersect(l *QLineF, intersectionPoint *QPointF /*777 QPointF **/) int {
 	var convArg0 = l.GetCthis()
 	var convArg1 = intersectionPoint.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF9intersectERKS_P7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF9intersectERKS_P7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -350,7 +346,7 @@ func (this *QLineF) Intersect(l *QLineF, intersectionPoint *QPointF /*777 QPoint
 // Public inline Visibility=Default Availability=Available
 // [16] QPointF pointAt(qreal)
 func (this *QLineF) PointAt(t float64) *QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF7pointAtEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), t)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF7pointAtEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -364,7 +360,7 @@ func (this *QLineF) PointAt(t float64) *QPointF /*123*/ {
 // [-2] void translate(const QPointF &)
 func (this *QLineF) Translate(p *QPointF) {
 	var convArg0 = p.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF9translateERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineF9translateERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -373,7 +369,7 @@ func (this *QLineF) Translate(p *QPointF) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void translate(qreal, qreal)
 func (this *QLineF) Translate_1(dx float64, dy float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF9translateEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineF9translateEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -383,7 +379,7 @@ func (this *QLineF) Translate_1(dx float64, dy float64) {
 // [32] QLineF translated(const QPointF &)
 func (this *QLineF) Translated(p *QPointF) *QLineF /*123*/ {
 	var convArg0 = p.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF10translatedERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF10translatedERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLineFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -396,7 +392,7 @@ func (this *QLineF) Translated(p *QPointF) *QLineF /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [32] QLineF translated(qreal, qreal)
 func (this *QLineF) Translated_1(dx float64, dy float64) *QLineF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF10translatedEdd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF10translatedEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLineFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -409,7 +405,7 @@ func (this *QLineF) Translated_1(dx float64, dy float64) *QLineF /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [16] QPointF center()
 func (this *QLineF) Center() *QPointF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF6centerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF6centerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -423,7 +419,7 @@ func (this *QLineF) Center() *QPointF /*123*/ {
 // [-2] void setP1(const QPointF &)
 func (this *QLineF) SetP1(p1 *QPointF) {
 	var convArg0 = p1.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF5setP1ERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineF5setP1ERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -433,7 +429,7 @@ func (this *QLineF) SetP1(p1 *QPointF) {
 // [-2] void setP2(const QPointF &)
 func (this *QLineF) SetP2(p2 *QPointF) {
 	var convArg0 = p2.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF5setP2ERK7QPointF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineF5setP2ERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -444,7 +440,7 @@ func (this *QLineF) SetP2(p2 *QPointF) {
 func (this *QLineF) SetPoints(p1 *QPointF, p2 *QPointF) {
 	var convArg0 = p1.GetCthis()
 	var convArg1 = p2.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF9setPointsERK7QPointFS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineF9setPointsERK7QPointFS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -453,7 +449,7 @@ func (this *QLineF) SetPoints(p1 *QPointF, p2 *QPointF) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setLine(qreal, qreal, qreal, qreal)
 func (this *QLineF) SetLine(x1 float64, y1 float64, x2 float64, y2 float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineF7setLineEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, x2, y2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineF7setLineEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, x2, y2)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -462,7 +458,7 @@ func (this *QLineF) SetLine(x1 float64, y1 float64, x2 float64, y2 float64) {
 // Public inline Visibility=Default Availability=Available
 // [16] QLine toLine()
 func (this *QLineF) ToLine() *QLine /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QLineF6toLineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QLineF6toLineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQLineFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -471,7 +467,7 @@ func (this *QLineF) ToLine() *QLine /*123*/ {
 }
 
 func DeleteQLineF(this *QLineF) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QLineFD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QLineFD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

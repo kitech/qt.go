@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QSignalBlocker) NewFromPointer(cthis unsafe.Pointer) *QSignalBlocker {
 // [-2] void QSignalBlocker(QObject *)
 func NewQSignalBlocker(o *QObject /*777 QObject **/) *QSignalBlocker {
 	var convArg0 = o.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlockerC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSignalBlockerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSignalBlockerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSignalBlocker)
@@ -89,7 +85,7 @@ func NewQSignalBlocker(o *QObject /*777 QObject **/) *QSignalBlocker {
 // [-2] void QSignalBlocker(QObject &)
 func NewQSignalBlocker_1(o *QObject) *QSignalBlocker {
 	var convArg0 = o.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlockerC2ER7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSignalBlockerC2ER7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSignalBlockerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSignalBlocker)
@@ -101,7 +97,7 @@ func NewQSignalBlocker_1(o *QObject) *QSignalBlocker {
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QSignalBlocker()
 func DeleteQSignalBlocker(this *QSignalBlocker) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlockerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSignalBlockerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -112,7 +108,7 @@ func DeleteQSignalBlocker(this *QSignalBlocker) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void reblock()
 func (this *QSignalBlocker) Reblock() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlocker7reblockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSignalBlocker7reblockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -121,7 +117,7 @@ func (this *QSignalBlocker) Reblock() {
 // Public inline Visibility=Default Availability=Available
 // [-2] void unblock()
 func (this *QSignalBlocker) Unblock() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSignalBlocker7unblockEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSignalBlocker7unblockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

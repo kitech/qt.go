@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -54,7 +50,7 @@ func init() {
 //  body block begin
 // void documentChanged(int, int, int)
 func (this *QPlainTextDocumentLayout) InheritDocumentChanged(f func(from int, arg1 int, charsAdded int)) {
-	ffiqt.SetAllInheritCallback(this, "documentChanged", f)
+	qtrt.SetAllInheritCallback(this, "documentChanged", f)
 }
 
 type QPlainTextDocumentLayout struct {
@@ -84,7 +80,7 @@ func (*QPlainTextDocumentLayout) NewFromPointer(cthis unsafe.Pointer) *QPlainTex
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QPlainTextDocumentLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -97,7 +93,7 @@ func (this *QPlainTextDocumentLayout) MetaObject() *qtcore.QMetaObject /*777 con
 // [-2] void QPlainTextDocumentLayout(QTextDocument *)
 func NewQPlainTextDocumentLayout(document *qtgui.QTextDocument /*777 QTextDocument **/) *QPlainTextDocumentLayout {
 	var convArg0 = document.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayoutC2EP13QTextDocument", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayoutC2EP13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPlainTextDocumentLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -108,7 +104,7 @@ func NewQPlainTextDocumentLayout(document *qtgui.QTextDocument /*777 QTextDocume
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPlainTextDocumentLayout()
 func DeleteQPlainTextDocumentLayout(this *QPlainTextDocumentLayout) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayoutD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayoutD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -120,7 +116,7 @@ func DeleteQPlainTextDocumentLayout(this *QPlainTextDocumentLayout) {
 // [4] int hitTest(const QPointF &, Qt::HitTestAccuracy)
 func (this *QPlainTextDocumentLayout) HitTest(arg0 *qtcore.QPointF, arg1 int) int {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout7hitTestERK7QPointFN2Qt15HitTestAccuracyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout7hitTestERK7QPointFN2Qt15HitTestAccuracyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -131,7 +127,7 @@ func (this *QPlainTextDocumentLayout) HitTest(arg0 *qtcore.QPointF, arg1 int) in
 // Public virtual Visibility=Default Availability=Available
 // [4] int pageCount()
 func (this *QPlainTextDocumentLayout) PageCount() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout9pageCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout9pageCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -142,7 +138,7 @@ func (this *QPlainTextDocumentLayout) PageCount() int {
 // Public virtual Visibility=Default Availability=Available
 // [16] QSizeF documentSize()
 func (this *QPlainTextDocumentLayout) DocumentSize() *qtcore.QSizeF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout12documentSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout12documentSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -156,7 +152,7 @@ func (this *QPlainTextDocumentLayout) DocumentSize() *qtcore.QSizeF /*123*/ {
 // [32] QRectF frameBoundingRect(QTextFrame *)
 func (this *QPlainTextDocumentLayout) FrameBoundingRect(arg0 *qtgui.QTextFrame /*777 QTextFrame **/) *qtcore.QRectF /*123*/ {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17frameBoundingRectEP10QTextFrame", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17frameBoundingRectEP10QTextFrame", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -170,7 +166,7 @@ func (this *QPlainTextDocumentLayout) FrameBoundingRect(arg0 *qtgui.QTextFrame /
 // [32] QRectF blockBoundingRect(const QTextBlock &)
 func (this *QPlainTextDocumentLayout) BlockBoundingRect(block *qtgui.QTextBlock) *qtcore.QRectF /*123*/ {
 	var convArg0 = block.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17blockBoundingRectERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17blockBoundingRectERK10QTextBlock", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -184,7 +180,7 @@ func (this *QPlainTextDocumentLayout) BlockBoundingRect(block *qtgui.QTextBlock)
 // [-2] void ensureBlockLayout(const QTextBlock &)
 func (this *QPlainTextDocumentLayout) EnsureBlockLayout(block *qtgui.QTextBlock) {
 	var convArg0 = block.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17ensureBlockLayoutERK10QTextBlock", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout17ensureBlockLayoutERK10QTextBlock", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -193,7 +189,7 @@ func (this *QPlainTextDocumentLayout) EnsureBlockLayout(block *qtgui.QTextBlock)
 // Public Visibility=Default Availability=Available
 // [-2] void setCursorWidth(int)
 func (this *QPlainTextDocumentLayout) SetCursorWidth(width int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayout14setCursorWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), width)
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayout14setCursorWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -202,7 +198,7 @@ func (this *QPlainTextDocumentLayout) SetCursorWidth(width int) {
 // Public Visibility=Default Availability=Available
 // [4] int cursorWidth()
 func (this *QPlainTextDocumentLayout) CursorWidth() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout11cursorWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK24QPlainTextDocumentLayout11cursorWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -213,7 +209,7 @@ func (this *QPlainTextDocumentLayout) CursorWidth() int {
 // Public Visibility=Default Availability=Available
 // [-2] void requestUpdate()
 func (this *QPlainTextDocumentLayout) RequestUpdate() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayout13requestUpdateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayout13requestUpdateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -222,7 +218,7 @@ func (this *QPlainTextDocumentLayout) RequestUpdate() {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void documentChanged(int, int, int)
 func (this *QPlainTextDocumentLayout) DocumentChanged(from int, arg1 int, charsAdded int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayout15documentChangedEiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), from, arg1, charsAdded)
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QPlainTextDocumentLayout15documentChangedEiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), from, arg1, charsAdded)
 	gopp.ErrPrint(err, rv)
 }
 

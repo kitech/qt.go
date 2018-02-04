@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QDrag) NewFromPointer(cthis unsafe.Pointer) *QDrag {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QDrag) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDrag10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -89,7 +85,7 @@ func (this *QDrag) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ 
 // [-2] void QDrag(QObject *)
 func NewQDrag(dragSource *qtcore.QObject /*777 QObject **/) *QDrag {
 	var convArg0 = dragSource.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDragC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDragC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDragFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -100,7 +96,7 @@ func NewQDrag(dragSource *qtcore.QObject /*777 QObject **/) *QDrag {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDrag()
 func DeleteQDrag(this *QDrag) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDragD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDragD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -112,7 +108,7 @@ func DeleteQDrag(this *QDrag) {
 // [-2] void setMimeData(QMimeData *)
 func (this *QDrag) SetMimeData(data *qtcore.QMimeData /*777 QMimeData **/) {
 	var convArg0 = data.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag11setMimeDataEP9QMimeData", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDrag11setMimeDataEP9QMimeData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -121,7 +117,7 @@ func (this *QDrag) SetMimeData(data *qtcore.QMimeData /*777 QMimeData **/) {
 // Public Visibility=Default Availability=Available
 // [8] QMimeData * mimeData()
 func (this *QDrag) MimeData() *qtcore.QMimeData /*777 QMimeData **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag8mimeDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDrag8mimeDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMimeDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -134,7 +130,7 @@ func (this *QDrag) MimeData() *qtcore.QMimeData /*777 QMimeData **/ {
 // [-2] void setPixmap(const QPixmap &)
 func (this *QDrag) SetPixmap(arg0 *QPixmap) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag9setPixmapERK7QPixmap", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDrag9setPixmapERK7QPixmap", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -143,7 +139,7 @@ func (this *QDrag) SetPixmap(arg0 *QPixmap) {
 // Public Visibility=Default Availability=Available
 // [32] QPixmap pixmap()
 func (this *QDrag) Pixmap() *QPixmap /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag6pixmapEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDrag6pixmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -157,7 +153,7 @@ func (this *QDrag) Pixmap() *QPixmap /*123*/ {
 // [-2] void setHotSpot(const QPoint &)
 func (this *QDrag) SetHotSpot(hotspot *qtcore.QPoint) {
 	var convArg0 = hotspot.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag10setHotSpotERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDrag10setHotSpotERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -166,7 +162,7 @@ func (this *QDrag) SetHotSpot(hotspot *qtcore.QPoint) {
 // Public Visibility=Default Availability=Available
 // [8] QPoint hotSpot()
 func (this *QDrag) HotSpot() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag7hotSpotEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDrag7hotSpotEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -179,7 +175,7 @@ func (this *QDrag) HotSpot() *qtcore.QPoint /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QObject * source()
 func (this *QDrag) Source() *qtcore.QObject /*777 QObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag6sourceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDrag6sourceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -191,7 +187,7 @@ func (this *QDrag) Source() *qtcore.QObject /*777 QObject **/ {
 // Public Visibility=Default Availability=Available
 // [8] QObject * target()
 func (this *QDrag) Target() *qtcore.QObject /*777 QObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag6targetEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDrag6targetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -203,7 +199,7 @@ func (this *QDrag) Target() *qtcore.QObject /*777 QObject **/ {
 // Public Visibility=Default Availability=Available
 // [4] Qt::DropAction start(Qt::DropActions)
 func (this *QDrag) Start(supportedActions int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag5startE6QFlagsIN2Qt10DropActionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), supportedActions)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDrag5startE6QFlagsIN2Qt10DropActionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), supportedActions)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -214,7 +210,7 @@ func (this *QDrag) Start(supportedActions int) int {
 // Public Visibility=Default Availability=Available
 // [4] Qt::DropAction exec(Qt::DropActions)
 func (this *QDrag) Exec(supportedActions int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag4execE6QFlagsIN2Qt10DropActionEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), supportedActions)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDrag4execE6QFlagsIN2Qt10DropActionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), supportedActions)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -225,7 +221,7 @@ func (this *QDrag) Exec(supportedActions int) int {
 // Public Visibility=Default Availability=Available
 // [4] Qt::DropAction exec(Qt::DropActions, Qt::DropAction)
 func (this *QDrag) Exec_1(supportedActions int, defaultAction int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag4execE6QFlagsIN2Qt10DropActionEES2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), supportedActions, defaultAction)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDrag4execE6QFlagsIN2Qt10DropActionEES2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), supportedActions, defaultAction)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -237,7 +233,7 @@ func (this *QDrag) Exec_1(supportedActions int, defaultAction int) int {
 // [-2] void setDragCursor(const QPixmap &, Qt::DropAction)
 func (this *QDrag) SetDragCursor(cursor *QPixmap, action int) {
 	var convArg0 = cursor.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag13setDragCursorERK7QPixmapN2Qt10DropActionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDrag13setDragCursorERK7QPixmapN2Qt10DropActionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, action)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -246,7 +242,7 @@ func (this *QDrag) SetDragCursor(cursor *QPixmap, action int) {
 // Public Visibility=Default Availability=Available
 // [32] QPixmap dragCursor(Qt::DropAction)
 func (this *QDrag) DragCursor(action int) *QPixmap /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag10dragCursorEN2Qt10DropActionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), action)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDrag10dragCursorEN2Qt10DropActionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), action)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -259,7 +255,7 @@ func (this *QDrag) DragCursor(action int) *QPixmap /*123*/ {
 // Public Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedActions()
 func (this *QDrag) SupportedActions() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag16supportedActionsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDrag16supportedActionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -270,7 +266,7 @@ func (this *QDrag) SupportedActions() int {
 // Public Visibility=Default Availability=Available
 // [4] Qt::DropAction defaultAction()
 func (this *QDrag) DefaultAction() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QDrag13defaultActionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDrag13defaultActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -281,7 +277,7 @@ func (this *QDrag) DefaultAction() int {
 // Public static Visibility=Default Availability=Available
 // [-2] void cancel()
 func (this *QDrag) Cancel() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag6cancelEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDrag6cancelEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 }
 func QDrag_Cancel() {
@@ -294,7 +290,7 @@ func QDrag_Cancel() {
 // Public Visibility=Default Availability=Available
 // [-2] void actionChanged(Qt::DropAction)
 func (this *QDrag) ActionChanged(action int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag13actionChangedEN2Qt10DropActionE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), action)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDrag13actionChangedEN2Qt10DropActionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), action)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -304,7 +300,7 @@ func (this *QDrag) ActionChanged(action int) {
 // [-2] void targetChanged(QObject *)
 func (this *QDrag) TargetChanged(newTarget *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = newTarget.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QDrag13targetChangedEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QDrag13targetChangedEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QSequentialIterable) NewFromPointer(cthis unsafe.Pointer) *QSequentialIte
 // Public Visibility=Default Availability=Available
 // [112] QSequentialIterable::const_iterator begin()
 func (this *QSequentialIterable) Begin() unsafe.Pointer /*444*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable5beginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSequentialIterable5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -86,7 +82,7 @@ func (this *QSequentialIterable) Begin() unsafe.Pointer /*444*/ {
 // Public Visibility=Default Availability=Available
 // [112] QSequentialIterable::const_iterator end()
 func (this *QSequentialIterable) End() unsafe.Pointer /*444*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSequentialIterable3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -97,7 +93,7 @@ func (this *QSequentialIterable) End() unsafe.Pointer /*444*/ {
 // Public Visibility=Default Availability=Available
 // [16] QVariant at(int)
 func (this *QSequentialIterable) At(idx int) *QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable2atEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), idx)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSequentialIterable2atEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), idx)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -110,7 +106,7 @@ func (this *QSequentialIterable) At(idx int) *QVariant /*123*/ {
 // Public Visibility=Default Availability=Available
 // [4] int size()
 func (this *QSequentialIterable) Size() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSequentialIterable4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -121,14 +117,14 @@ func (this *QSequentialIterable) Size() int {
 // Public Visibility=Default Availability=Available
 // [1] bool canReverseIterate()
 func (this *QSequentialIterable) CanReverseIterate() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QSequentialIterable17canReverseIterateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QSequentialIterable17canReverseIterateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
 }
 
 func DeleteQSequentialIterable(this *QSequentialIterable) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QSequentialIterableD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QSequentialIterableD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

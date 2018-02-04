@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -86,7 +82,7 @@ func (this *QToolTip) ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWid
 	var convArg0 = pos.GetCthis()
 	var convArg1 = text.GetCthis()
 	var convArg2 = w.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 func QToolTip_ShowText(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/) {
@@ -103,7 +99,7 @@ func (this *QToolTip) ShowText_1(pos *qtcore.QPoint, text *qtcore.QString, w *QW
 	var convArg1 = text.GetCthis()
 	var convArg2 = w.GetCthis()
 	var convArg3 = rect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 }
 func QToolTip_ShowText_1(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/, rect *qtcore.QRect) {
@@ -120,7 +116,7 @@ func (this *QToolTip) ShowText_2(pos *qtcore.QPoint, text *qtcore.QString, w *QW
 	var convArg1 = text.GetCthis()
 	var convArg2 = w.GetCthis()
 	var convArg3 = rect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, msecShowTime)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, msecShowTime)
 	gopp.ErrPrint(err, rv)
 }
 func QToolTip_ShowText_2(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*777 QWidget **/, rect *qtcore.QRect, msecShowTime int) {
@@ -133,7 +129,7 @@ func QToolTip_ShowText_2(pos *qtcore.QPoint, text *qtcore.QString, w *QWidget /*
 // Public static inline Visibility=Default Availability=Available
 // [-2] void hideText()
 func (this *QToolTip) HideText() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip8hideTextEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip8hideTextEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 }
 func QToolTip_HideText() {
@@ -146,7 +142,7 @@ func QToolTip_HideText() {
 // Public static Visibility=Default Availability=Available
 // [1] bool isVisible()
 func (this *QToolTip) IsVisible() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip9isVisibleEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip9isVisibleEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -162,7 +158,7 @@ func QToolTip_IsVisible() bool {
 // Public static Visibility=Default Availability=Available
 // [8] QString text()
 func (this *QToolTip) Text() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip4textEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip4textEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -180,7 +176,7 @@ func QToolTip_Text() *qtcore.QString /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [16] QPalette palette()
 func (this *QToolTip) Palette() *qtgui.QPalette /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip7paletteEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip7paletteEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtgui.NewQPaletteFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -199,7 +195,7 @@ func QToolTip_Palette() *qtgui.QPalette /*123*/ {
 // [-2] void setPalette(const QPalette &)
 func (this *QToolTip) SetPalette(arg0 *qtgui.QPalette) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip10setPaletteERK8QPalette", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip10setPaletteERK8QPalette", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QToolTip_SetPalette(arg0 *qtgui.QPalette) {
@@ -212,7 +208,7 @@ func QToolTip_SetPalette(arg0 *qtgui.QPalette) {
 // Public static Visibility=Default Availability=Available
 // [16] QFont font()
 func (this *QToolTip) Font() *qtgui.QFont /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip4fontEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip4fontEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -231,7 +227,7 @@ func QToolTip_Font() *qtgui.QFont /*123*/ {
 // [-2] void setFont(const QFont &)
 func (this *QToolTip) SetFont(arg0 *qtgui.QFont) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTip7setFontERK5QFont", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTip7setFontERK5QFont", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QToolTip_SetFont(arg0 *qtgui.QFont) {
@@ -240,7 +236,7 @@ func QToolTip_SetFont(arg0 *qtgui.QFont) {
 }
 
 func DeleteQToolTip(this *QToolTip) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QToolTipD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QToolTipD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

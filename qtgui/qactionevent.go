@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QActionEvent) NewFromPointer(cthis unsafe.Pointer) *QActionEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QActionEvent(int, QAction *, QAction *)
 func NewQActionEvent(type_ int, action unsafe.Pointer /*666*/, before unsafe.Pointer /*666*/) *QActionEvent {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionEventC2EiP7QActionS1_", ffiqt.FFI_TYPE_POINTER, type_, action, before)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionEventC2EiP7QActionS1_", qtrt.FFI_TYPE_POINTER, type_, action, before)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQActionEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQActionEvent)
@@ -88,7 +84,7 @@ func NewQActionEvent(type_ int, action unsafe.Pointer /*666*/, before unsafe.Poi
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QActionEvent()
 func DeleteQActionEvent(this *QActionEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QActionEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QActionEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -99,7 +95,7 @@ func DeleteQActionEvent(this *QActionEvent) {
 // Public inline Visibility=Default Availability=Available
 // [8] QAction * action()
 func (this *QActionEvent) Action() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionEvent6actionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QActionEvent6actionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -110,7 +106,7 @@ func (this *QActionEvent) Action() unsafe.Pointer /*666*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QAction * before()
 func (this *QActionEvent) Before() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QActionEvent6beforeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QActionEvent6beforeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -54,7 +50,7 @@ func init() {
 //  body block begin
 // bool event(class QEvent *)
 func (this *QSystemTrayIcon) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) bool) {
-	ffiqt.SetAllInheritCallback(this, "event", f)
+	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
 type QSystemTrayIcon struct {
@@ -84,7 +80,7 @@ func (*QSystemTrayIcon) NewFromPointer(cthis unsafe.Pointer) *QSystemTrayIcon {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QSystemTrayIcon) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSystemTrayIcon10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSystemTrayIcon10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -97,7 +93,7 @@ func (this *QSystemTrayIcon) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // [-2] void QSystemTrayIcon(QObject *)
 func NewQSystemTrayIcon(parent *qtcore.QObject /*777 QObject **/) *QSystemTrayIcon {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIconC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIconC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSystemTrayIconFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -110,7 +106,7 @@ func NewQSystemTrayIcon(parent *qtcore.QObject /*777 QObject **/) *QSystemTrayIc
 func NewQSystemTrayIcon_1(icon *qtgui.QIcon, parent *qtcore.QObject /*777 QObject **/) *QSystemTrayIcon {
 	var convArg0 = icon.GetCthis()
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIconC2ERK5QIconP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIconC2ERK5QIconP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSystemTrayIconFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -121,7 +117,7 @@ func NewQSystemTrayIcon_1(icon *qtgui.QIcon, parent *qtcore.QObject /*777 QObjec
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSystemTrayIcon()
 func DeleteQSystemTrayIcon(this *QSystemTrayIcon) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIconD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIconD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -133,7 +129,7 @@ func DeleteQSystemTrayIcon(this *QSystemTrayIcon) {
 // [-2] void setContextMenu(QMenu *)
 func (this *QSystemTrayIcon) SetContextMenu(menu *QMenu /*777 QMenu **/) {
 	var convArg0 = menu.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon14setContextMenuEP5QMenu", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon14setContextMenuEP5QMenu", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -142,7 +138,7 @@ func (this *QSystemTrayIcon) SetContextMenu(menu *QMenu /*777 QMenu **/) {
 // Public Visibility=Default Availability=Available
 // [8] QMenu * contextMenu()
 func (this *QSystemTrayIcon) ContextMenu() *QMenu /*777 QMenu **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSystemTrayIcon11contextMenuEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSystemTrayIcon11contextMenuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -154,7 +150,7 @@ func (this *QSystemTrayIcon) ContextMenu() *QMenu /*777 QMenu **/ {
 // Public Visibility=Default Availability=Available
 // [8] QIcon icon()
 func (this *QSystemTrayIcon) Icon() *qtgui.QIcon /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSystemTrayIcon4iconEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSystemTrayIcon4iconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -168,7 +164,7 @@ func (this *QSystemTrayIcon) Icon() *qtgui.QIcon /*123*/ {
 // [-2] void setIcon(const QIcon &)
 func (this *QSystemTrayIcon) SetIcon(icon *qtgui.QIcon) {
 	var convArg0 = icon.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon7setIconERK5QIcon", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon7setIconERK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -177,7 +173,7 @@ func (this *QSystemTrayIcon) SetIcon(icon *qtgui.QIcon) {
 // Public Visibility=Default Availability=Available
 // [8] QString toolTip()
 func (this *QSystemTrayIcon) ToolTip() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSystemTrayIcon7toolTipEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSystemTrayIcon7toolTipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -191,7 +187,7 @@ func (this *QSystemTrayIcon) ToolTip() *qtcore.QString /*123*/ {
 // [-2] void setToolTip(const QString &)
 func (this *QSystemTrayIcon) SetToolTip(tip *qtcore.QString) {
 	var convArg0 = tip.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon10setToolTipERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon10setToolTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -200,7 +196,7 @@ func (this *QSystemTrayIcon) SetToolTip(tip *qtcore.QString) {
 // Public static Visibility=Default Availability=Available
 // [1] bool isSystemTrayAvailable()
 func (this *QSystemTrayIcon) IsSystemTrayAvailable() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon21isSystemTrayAvailableEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon21isSystemTrayAvailableEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -216,7 +212,7 @@ func QSystemTrayIcon_IsSystemTrayAvailable() bool {
 // Public static Visibility=Default Availability=Available
 // [1] bool supportsMessages()
 func (this *QSystemTrayIcon) SupportsMessages() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon16supportsMessagesEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon16supportsMessagesEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -232,7 +228,7 @@ func QSystemTrayIcon_SupportsMessages() bool {
 // Public Visibility=Default Availability=Available
 // [16] QRect geometry()
 func (this *QSystemTrayIcon) Geometry() *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSystemTrayIcon8geometryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSystemTrayIcon8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -245,7 +241,7 @@ func (this *QSystemTrayIcon) Geometry() *qtcore.QRect /*123*/ {
 // Public Visibility=Default Availability=Available
 // [1] bool isVisible()
 func (this *QSystemTrayIcon) IsVisible() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSystemTrayIcon9isVisibleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSystemTrayIcon9isVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -256,7 +252,7 @@ func (this *QSystemTrayIcon) IsVisible() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setVisible(_Bool)
 func (this *QSystemTrayIcon) SetVisible(visible bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon10setVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -265,7 +261,7 @@ func (this *QSystemTrayIcon) SetVisible(visible bool) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void show()
 func (this *QSystemTrayIcon) Show() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon4showEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon4showEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -274,7 +270,7 @@ func (this *QSystemTrayIcon) Show() {
 // Public inline Visibility=Default Availability=Available
 // [-2] void hide()
 func (this *QSystemTrayIcon) Hide() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon4hideEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon4hideEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -286,7 +282,7 @@ func (this *QSystemTrayIcon) ShowMessage(title *qtcore.QString, msg *qtcore.QStr
 	var convArg0 = title.GetCthis()
 	var convArg1 = msg.GetCthis()
 	var convArg2 = icon.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon11showMessageERK7QStringS2_RK5QIconi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, msecs)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon11showMessageERK7QStringS2_RK5QIconi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, msecs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -297,7 +293,7 @@ func (this *QSystemTrayIcon) ShowMessage(title *qtcore.QString, msg *qtcore.QStr
 func (this *QSystemTrayIcon) ShowMessage_1(title *qtcore.QString, msg *qtcore.QString, icon int, msecs int) {
 	var convArg0 = title.GetCthis()
 	var convArg1 = msg.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon11showMessageERK7QStringS2_NS_11MessageIconEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, icon, msecs)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon11showMessageERK7QStringS2_NS_11MessageIconEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, icon, msecs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -306,7 +302,7 @@ func (this *QSystemTrayIcon) ShowMessage_1(title *qtcore.QString, msg *qtcore.QS
 // Public Visibility=Default Availability=Available
 // [-2] void activated(QSystemTrayIcon::ActivationReason)
 func (this *QSystemTrayIcon) Activated(reason int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), reason)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), reason)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -315,7 +311,7 @@ func (this *QSystemTrayIcon) Activated(reason int) {
 // Public Visibility=Default Availability=Available
 // [-2] void messageClicked()
 func (this *QSystemTrayIcon) MessageClicked() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon14messageClickedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon14messageClickedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -325,7 +321,7 @@ func (this *QSystemTrayIcon) MessageClicked() {
 // [1] bool event(QEvent *)
 func (this *QSystemTrayIcon) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSystemTrayIcon5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

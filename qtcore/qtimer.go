@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -34,9 +33,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 }
@@ -46,7 +42,7 @@ func init() {
 //  body block begin
 // void timerEvent(class QTimerEvent *)
 func (this *QTimer) InheritTimerEvent(f func(arg0 *QTimerEvent /*777 QTimerEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "timerEvent", f)
+	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
 type QTimer struct {
@@ -76,7 +72,7 @@ func (*QTimer) NewFromPointer(cthis unsafe.Pointer) *QTimer {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QTimer) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QTimer10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -89,7 +85,7 @@ func (this *QTimer) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // [-2] void QTimer(QObject *)
 func NewQTimer(parent *QObject /*777 QObject **/) *QTimer {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimerC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimerC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTimerFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -100,7 +96,7 @@ func NewQTimer(parent *QObject /*777 QObject **/) *QTimer {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTimer()
 func DeleteQTimer(this *QTimer) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -111,7 +107,7 @@ func DeleteQTimer(this *QTimer) {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isActive()
 func (this *QTimer) IsActive() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer8isActiveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QTimer8isActiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -122,7 +118,7 @@ func (this *QTimer) IsActive() bool {
 // Public inline Visibility=Default Availability=Available
 // [4] int timerId()
 func (this *QTimer) TimerId() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer7timerIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QTimer7timerIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -133,7 +129,7 @@ func (this *QTimer) TimerId() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setInterval(int)
 func (this *QTimer) SetInterval(msec int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer11setIntervalEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimer11setIntervalEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -142,7 +138,7 @@ func (this *QTimer) SetInterval(msec int) {
 // Public inline Visibility=Default Availability=Available
 // [4] int interval()
 func (this *QTimer) Interval() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer8intervalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QTimer8intervalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -153,7 +149,7 @@ func (this *QTimer) Interval() int {
 // Public Visibility=Default Availability=Available
 // [4] int remainingTime()
 func (this *QTimer) RemainingTime() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer13remainingTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QTimer13remainingTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -164,7 +160,7 @@ func (this *QTimer) RemainingTime() int {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTimerType(Qt::TimerType)
 func (this *QTimer) SetTimerType(atype int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer12setTimerTypeEN2Qt9TimerTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), atype)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimer12setTimerTypeEN2Qt9TimerTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), atype)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -173,7 +169,7 @@ func (this *QTimer) SetTimerType(atype int) {
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::TimerType timerType()
 func (this *QTimer) TimerType() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer9timerTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QTimer9timerTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -184,7 +180,7 @@ func (this *QTimer) TimerType() int {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setSingleShot(_Bool)
 func (this *QTimer) SetSingleShot(singleShot bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer13setSingleShotEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), singleShot)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimer13setSingleShotEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), singleShot)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -193,7 +189,7 @@ func (this *QTimer) SetSingleShot(singleShot bool) {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isSingleShot()
 func (this *QTimer) IsSingleShot() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer12isSingleShotEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QTimer12isSingleShotEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -207,7 +203,7 @@ func (this *QTimer) SingleShot(msec int, receiver *QObject /*777 const QObject *
 	var convArg1 = receiver.GetCthis()
 	var convArg2 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg2)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer10singleShotEiPK7QObjectPKc", ffiqt.FFI_TYPE_POINTER, msec, convArg1, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimer10singleShotEiPK7QObjectPKc", qtrt.FFI_TYPE_POINTER, msec, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 func QTimer_SingleShot(msec int, receiver *QObject /*777 const QObject **/, member string) {
@@ -223,7 +219,7 @@ func (this *QTimer) SingleShot_1(msec int, timerType int, receiver *QObject /*77
 	var convArg2 = receiver.GetCthis()
 	var convArg3 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg3)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer10singleShotEiN2Qt9TimerTypeEPK7QObjectPKc", ffiqt.FFI_TYPE_POINTER, msec, timerType, convArg2, convArg3)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimer10singleShotEiN2Qt9TimerTypeEPK7QObjectPKc", qtrt.FFI_TYPE_POINTER, msec, timerType, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 }
 func QTimer_SingleShot_1(msec int, timerType int, receiver *QObject /*777 const QObject **/, member string) {
@@ -236,7 +232,7 @@ func QTimer_SingleShot_1(msec int, timerType int, receiver *QObject /*777 const 
 // Public Visibility=Default Availability=Available
 // [-2] void start(int)
 func (this *QTimer) Start(msec int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer5startEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimer5startEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -245,7 +241,7 @@ func (this *QTimer) Start(msec int) {
 // Public Visibility=Default Availability=Available
 // [-2] void start()
 func (this *QTimer) Start_1() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer5startEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimer5startEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -254,7 +250,7 @@ func (this *QTimer) Start_1() {
 // Public Visibility=Default Availability=Available
 // [-2] void stop()
 func (this *QTimer) Stop() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer4stopEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimer4stopEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -263,7 +259,7 @@ func (this *QTimer) Stop() {
 // Public inline Visibility=Default Availability=Available
 // [8] std::chrono::milliseconds intervalAsDuration()
 func (this *QTimer) IntervalAsDuration() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer18intervalAsDurationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QTimer18intervalAsDurationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -274,7 +270,7 @@ func (this *QTimer) IntervalAsDuration() int {
 // Public inline Visibility=Default Availability=Available
 // [8] std::chrono::milliseconds remainingTimeAsDuration()
 func (this *QTimer) RemainingTimeAsDuration() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QTimer23remainingTimeAsDurationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QTimer23remainingTimeAsDurationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -286,7 +282,7 @@ func (this *QTimer) RemainingTimeAsDuration() int {
 // [-2] void timerEvent(QTimerEvent *)
 func (this *QTimer) TimerEvent(arg0 *QTimerEvent /*777 QTimerEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QTimer10timerEventEP11QTimerEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QTimer10timerEventEP11QTimerEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

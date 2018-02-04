@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QStyleOptionDockWidget) NewFromPointer(cthis unsafe.Pointer) *QStyleOptio
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionDockWidget()
 func NewQStyleOptionDockWidget() *QStyleOptionDockWidget {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionDockWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionDockWidget)
@@ -92,7 +88,7 @@ func NewQStyleOptionDockWidget() *QStyleOptionDockWidget {
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionDockWidget(int)
 func NewQStyleOptionDockWidget_1(version int) *QStyleOptionDockWidget {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetC2Ei", ffiqt.FFI_TYPE_POINTER, version)
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionDockWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionDockWidget)
@@ -100,7 +96,7 @@ func NewQStyleOptionDockWidget_1(version int) *QStyleOptionDockWidget {
 }
 
 func DeleteQStyleOptionDockWidget(this *QStyleOptionDockWidget) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionDockWidgetD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

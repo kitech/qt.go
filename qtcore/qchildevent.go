@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -73,7 +69,7 @@ func (*QChildEvent) NewFromPointer(cthis unsafe.Pointer) *QChildEvent {
 // [-2] void QChildEvent(enum QEvent::Type, QObject *)
 func NewQChildEvent(type_ int, child *QObject /*777 QObject **/) *QChildEvent {
 	var convArg1 = child.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QChildEventC2EN6QEvent4TypeEP7QObject", ffiqt.FFI_TYPE_POINTER, type_, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QChildEventC2EN6QEvent4TypeEP7QObject", qtrt.FFI_TYPE_POINTER, type_, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQChildEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQChildEvent)
@@ -85,7 +81,7 @@ func NewQChildEvent(type_ int, child *QObject /*777 QObject **/) *QChildEvent {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QChildEvent()
 func DeleteQChildEvent(this *QChildEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QChildEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QChildEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -96,7 +92,7 @@ func DeleteQChildEvent(this *QChildEvent) {
 // Public inline Visibility=Default Availability=Available
 // [8] QObject * child()
 func (this *QChildEvent) Child() *QObject /*777 QObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent5childEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QChildEvent5childEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -108,7 +104,7 @@ func (this *QChildEvent) Child() *QObject /*777 QObject **/ {
 // Public inline Visibility=Default Availability=Available
 // [1] bool added()
 func (this *QChildEvent) Added() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent5addedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QChildEvent5addedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -119,7 +115,7 @@ func (this *QChildEvent) Added() bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool polished()
 func (this *QChildEvent) Polished() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent8polishedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QChildEvent8polishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -130,7 +126,7 @@ func (this *QChildEvent) Polished() bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool removed()
 func (this *QChildEvent) Removed() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QChildEvent7removedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QChildEvent7removedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

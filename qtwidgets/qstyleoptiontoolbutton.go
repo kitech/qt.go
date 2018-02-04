@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QStyleOptionToolButton) NewFromPointer(cthis unsafe.Pointer) *QStyleOptio
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionToolButton()
 func NewQStyleOptionToolButton() *QStyleOptionToolButton {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionToolButtonC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionToolButtonC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionToolButtonFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionToolButton)
@@ -92,7 +88,7 @@ func NewQStyleOptionToolButton() *QStyleOptionToolButton {
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionToolButton(int)
 func NewQStyleOptionToolButton_1(version int) *QStyleOptionToolButton {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionToolButtonC2Ei", ffiqt.FFI_TYPE_POINTER, version)
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionToolButtonC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionToolButtonFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionToolButton)
@@ -100,7 +96,7 @@ func NewQStyleOptionToolButton_1(version int) *QStyleOptionToolButton {
 }
 
 func DeleteQStyleOptionToolButton(this *QStyleOptionToolButton) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QStyleOptionToolButtonD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionToolButtonD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

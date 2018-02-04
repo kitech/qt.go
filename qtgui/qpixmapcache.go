@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -79,7 +75,7 @@ func (*QPixmapCache) NewFromPointer(cthis unsafe.Pointer) *QPixmapCache {
 // Public static Visibility=Default Availability=Available
 // [4] int cacheLimit()
 func (this *QPixmapCache) CacheLimit() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache10cacheLimitEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixmapCache10cacheLimitEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -95,7 +91,7 @@ func QPixmapCache_CacheLimit() int {
 // Public static Visibility=Default Availability=Available
 // [-2] void setCacheLimit(int)
 func (this *QPixmapCache) SetCacheLimit(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache13setCacheLimitEi", ffiqt.FFI_TYPE_POINTER, arg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixmapCache13setCacheLimitEi", qtrt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
 }
 func QPixmapCache_SetCacheLimit(arg0 int) {
@@ -109,7 +105,7 @@ func QPixmapCache_SetCacheLimit(arg0 int) {
 // [8] QPixmap * find(const QString &)
 func (this *QPixmapCache) Find(key *qtcore.QString) *QPixmap /*777 QPixmap **/ {
 	var convArg0 = key.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -128,7 +124,7 @@ func QPixmapCache_Find(key *qtcore.QString) *QPixmap /*777 QPixmap **/ {
 func (this *QPixmapCache) Find_1(key *qtcore.QString, pixmap *QPixmap) bool {
 	var convArg0 = key.GetCthis()
 	var convArg1 = pixmap.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringR7QPixmap", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringR7QPixmap", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -146,7 +142,7 @@ func QPixmapCache_Find_1(key *qtcore.QString, pixmap *QPixmap) bool {
 func (this *QPixmapCache) Find_2(key *qtcore.QString, pixmap *QPixmap /*777 QPixmap **/) bool {
 	var convArg0 = key.GetCthis()
 	var convArg1 = pixmap.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringP7QPixmap", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixmapCache4findERK7QStringP7QPixmap", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -163,7 +159,7 @@ func QPixmapCache_Find_2(key *qtcore.QString, pixmap *QPixmap /*777 QPixmap **/)
 // [-2] void remove(const QString &)
 func (this *QPixmapCache) Remove(key *qtcore.QString) {
 	var convArg0 = key.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache6removeERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixmapCache6removeERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QPixmapCache_Remove(key *qtcore.QString) {
@@ -176,7 +172,7 @@ func QPixmapCache_Remove(key *qtcore.QString) {
 // Public static Visibility=Default Availability=Available
 // [-2] void clear()
 func (this *QPixmapCache) Clear() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCache5clearEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixmapCache5clearEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 }
 func QPixmapCache_Clear() {
@@ -185,7 +181,7 @@ func QPixmapCache_Clear() {
 }
 
 func DeleteQPixmapCache(this *QPixmapCache) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QPixmapCacheD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPixmapCacheD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -72,7 +68,7 @@ func (*QObjectCleanupHandler) NewFromPointer(cthis unsafe.Pointer) *QObjectClean
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QObjectCleanupHandler) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -84,7 +80,7 @@ func (this *QObjectCleanupHandler) MetaObject() *QMetaObject /*777 const QMetaOb
 // Public Visibility=Default Availability=Available
 // [-2] void QObjectCleanupHandler()
 func NewQObjectCleanupHandler() *QObjectCleanupHandler {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQObjectCleanupHandlerFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -95,7 +91,7 @@ func NewQObjectCleanupHandler() *QObjectCleanupHandler {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QObjectCleanupHandler()
 func DeleteQObjectCleanupHandler(this *QObjectCleanupHandler) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QObjectCleanupHandlerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -107,7 +103,7 @@ func DeleteQObjectCleanupHandler(this *QObjectCleanupHandler) {
 // [8] QObject * add(QObject *)
 func (this *QObjectCleanupHandler) Add(object *QObject /*777 QObject **/) *QObject /*777 QObject **/ {
 	var convArg0 = object.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler3addEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QObjectCleanupHandler3addEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -120,7 +116,7 @@ func (this *QObjectCleanupHandler) Add(object *QObject /*777 QObject **/) *QObje
 // [-2] void remove(QObject *)
 func (this *QObjectCleanupHandler) Remove(object *QObject /*777 QObject **/) {
 	var convArg0 = object.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler6removeEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QObjectCleanupHandler6removeEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -129,7 +125,7 @@ func (this *QObjectCleanupHandler) Remove(object *QObject /*777 QObject **/) {
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty()
 func (this *QObjectCleanupHandler) IsEmpty() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK21QObjectCleanupHandler7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -140,7 +136,7 @@ func (this *QObjectCleanupHandler) IsEmpty() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
 func (this *QObjectCleanupHandler) Clear() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN21QObjectCleanupHandler5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QObjectCleanupHandler5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

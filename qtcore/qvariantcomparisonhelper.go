@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QVariantComparisonHelper) NewFromPointer(cthis unsafe.Pointer) *QVariantC
 // [-2] void QVariantComparisonHelper(const QVariant &)
 func NewQVariantComparisonHelper(var_ *QVariant) *QVariantComparisonHelper {
 	var convArg0 = var_.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QVariantComparisonHelperC2ERK8QVariant", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QVariantComparisonHelperC2ERK8QVariant", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQVariantComparisonHelperFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQVariantComparisonHelper)
@@ -84,7 +80,7 @@ func NewQVariantComparisonHelper(var_ *QVariant) *QVariantComparisonHelper {
 }
 
 func DeleteQVariantComparisonHelper(this *QVariantComparisonHelper) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QVariantComparisonHelperD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QVariantComparisonHelperD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

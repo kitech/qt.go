@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -79,7 +75,7 @@ func (*QColor) NewFromPointer(cthis unsafe.Pointer) *QColor {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QColor()
 func NewQColor() *QColor {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQColor)
@@ -91,7 +87,7 @@ func NewQColor() *QColor {
 // Public Visibility=Default Availability=Available
 // [-2] void QColor(Qt::GlobalColor)
 func NewQColor_1(color int) *QColor {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2EN2Qt11GlobalColorE", ffiqt.FFI_TYPE_POINTER, color)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2EN2Qt11GlobalColorE", qtrt.FFI_TYPE_POINTER, color)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQColor)
@@ -103,7 +99,7 @@ func NewQColor_1(color int) *QColor {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QColor(int, int, int, int)
 func NewQColor_2(r int, g int, b int, a int) *QColor {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2Eiiii", ffiqt.FFI_TYPE_POINTER, r, g, b, a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2Eiiii", qtrt.FFI_TYPE_POINTER, r, g, b, a)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQColor)
@@ -115,7 +111,7 @@ func NewQColor_2(r int, g int, b int, a int) *QColor {
 // Public Visibility=Default Availability=Available
 // [-2] void QColor(QRgb)
 func NewQColor_3(rgb uint) *QColor {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2Ej", ffiqt.FFI_TYPE_POINTER, rgb)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2Ej", qtrt.FFI_TYPE_POINTER, rgb)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQColor)
@@ -128,7 +124,7 @@ func NewQColor_3(rgb uint) *QColor {
 // [-2] void QColor(QRgba64)
 func NewQColor_4(rgba64 *QRgba64 /*123*/) *QColor {
 	var convArg0 = rgba64.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2E7QRgba64", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2E7QRgba64", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQColor)
@@ -141,7 +137,7 @@ func NewQColor_4(rgba64 *QRgba64 /*123*/) *QColor {
 // [-2] void QColor(const QString &)
 func NewQColor_5(name *qtcore.QString) *QColor {
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQColor)
@@ -154,7 +150,7 @@ func NewQColor_5(name *qtcore.QString) *QColor {
 // [-2] void QColor(QStringView)
 func NewQColor_6(name *qtcore.QStringView /*123*/) *QColor {
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2E11QStringView", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2E11QStringView", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQColor)
@@ -168,7 +164,7 @@ func NewQColor_6(name *qtcore.QStringView /*123*/) *QColor {
 func NewQColor_7(aname string) *QColor {
 	var convArg0 = qtrt.CString(aname)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2EPKc", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2EPKc", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQColor)
@@ -181,7 +177,7 @@ func NewQColor_7(aname string) *QColor {
 // [-2] void QColor(QLatin1String)
 func NewQColor_8(name *qtcore.QLatin1String /*123*/) *QColor {
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2E13QLatin1String", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2E13QLatin1String", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQColor)
@@ -193,7 +189,7 @@ func NewQColor_8(name *qtcore.QLatin1String /*123*/) *QColor {
 // Public Visibility=Default Availability=Available
 // [-2] void QColor(enum QColor::Spec)
 func NewQColor_9(spec int) *QColor {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorC2ENS_4SpecE", ffiqt.FFI_TYPE_POINTER, spec)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2ENS_4SpecE", qtrt.FFI_TYPE_POINTER, spec)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQColor)
@@ -205,7 +201,7 @@ func NewQColor_9(spec int) *QColor {
 // Public Visibility=Default Availability=Available
 // [1] bool isValid()
 func (this *QColor) IsValid() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -216,7 +212,7 @@ func (this *QColor) IsValid() bool {
 // Public Visibility=Default Availability=Available
 // [8] QString name()
 func (this *QColor) Name() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -229,7 +225,7 @@ func (this *QColor) Name() *qtcore.QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QString name(enum QColor::NameFormat)
 func (this *QColor) Name_1(format int) *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4nameENS_10NameFormatE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), format)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor4nameENS_10NameFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), format)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -243,7 +239,7 @@ func (this *QColor) Name_1(format int) *qtcore.QString /*123*/ {
 // [-2] void setNamedColor(const QString &)
 func (this *QColor) SetNamedColor(name *qtcore.QString) {
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor13setNamedColorERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor13setNamedColorERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -253,7 +249,7 @@ func (this *QColor) SetNamedColor(name *qtcore.QString) {
 // [-2] void setNamedColor(QStringView)
 func (this *QColor) SetNamedColor_1(name *qtcore.QStringView /*123*/) {
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor13setNamedColorE11QStringView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor13setNamedColorE11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -263,7 +259,7 @@ func (this *QColor) SetNamedColor_1(name *qtcore.QStringView /*123*/) {
 // [-2] void setNamedColor(QLatin1String)
 func (this *QColor) SetNamedColor_2(name *qtcore.QLatin1String /*123*/) {
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor13setNamedColorE13QLatin1String", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor13setNamedColorE13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -272,7 +268,7 @@ func (this *QColor) SetNamedColor_2(name *qtcore.QLatin1String /*123*/) {
 // Public inline Visibility=Default Availability=Available
 // [4] QColor::Spec spec()
 func (this *QColor) Spec() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4specEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor4specEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -283,7 +279,7 @@ func (this *QColor) Spec() int {
 // Public Visibility=Default Availability=Available
 // [4] int alpha()
 func (this *QColor) Alpha() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5alphaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor5alphaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -294,7 +290,7 @@ func (this *QColor) Alpha() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setAlpha(int)
 func (this *QColor) SetAlpha(alpha int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8setAlphaEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), alpha)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8setAlphaEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), alpha)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -303,7 +299,7 @@ func (this *QColor) SetAlpha(alpha int) {
 // Public Visibility=Default Availability=Available
 // [8] qreal alphaF()
 func (this *QColor) AlphaF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6alphaFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6alphaFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -314,7 +310,7 @@ func (this *QColor) AlphaF() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void setAlphaF(qreal)
 func (this *QColor) SetAlphaF(alpha float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor9setAlphaFEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), alpha)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor9setAlphaFEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), alpha)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -323,7 +319,7 @@ func (this *QColor) SetAlphaF(alpha float64) {
 // Public Visibility=Default Availability=Available
 // [4] int red()
 func (this *QColor) Red() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor3redEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor3redEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -334,7 +330,7 @@ func (this *QColor) Red() int {
 // Public Visibility=Default Availability=Available
 // [4] int green()
 func (this *QColor) Green() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5greenEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor5greenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -345,7 +341,7 @@ func (this *QColor) Green() int {
 // Public Visibility=Default Availability=Available
 // [4] int blue()
 func (this *QColor) Blue() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4blueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor4blueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -356,7 +352,7 @@ func (this *QColor) Blue() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setRed(int)
 func (this *QColor) SetRed(red int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor6setRedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), red)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor6setRedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), red)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -365,7 +361,7 @@ func (this *QColor) SetRed(red int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setGreen(int)
 func (this *QColor) SetGreen(green int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8setGreenEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), green)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8setGreenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), green)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -374,7 +370,7 @@ func (this *QColor) SetGreen(green int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setBlue(int)
 func (this *QColor) SetBlue(blue int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7setBlueEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), blue)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7setBlueEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), blue)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -383,7 +379,7 @@ func (this *QColor) SetBlue(blue int) {
 // Public Visibility=Default Availability=Available
 // [8] qreal redF()
 func (this *QColor) RedF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4redFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor4redFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -394,7 +390,7 @@ func (this *QColor) RedF() float64 {
 // Public Visibility=Default Availability=Available
 // [8] qreal greenF()
 func (this *QColor) GreenF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6greenFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6greenFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -405,7 +401,7 @@ func (this *QColor) GreenF() float64 {
 // Public Visibility=Default Availability=Available
 // [8] qreal blueF()
 func (this *QColor) BlueF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5blueFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor5blueFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -416,7 +412,7 @@ func (this *QColor) BlueF() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void setRedF(qreal)
 func (this *QColor) SetRedF(red float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7setRedFEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), red)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7setRedFEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), red)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -425,7 +421,7 @@ func (this *QColor) SetRedF(red float64) {
 // Public Visibility=Default Availability=Available
 // [-2] void setGreenF(qreal)
 func (this *QColor) SetGreenF(green float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor9setGreenFEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), green)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor9setGreenFEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), green)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -434,7 +430,7 @@ func (this *QColor) SetGreenF(green float64) {
 // Public Visibility=Default Availability=Available
 // [-2] void setBlueF(qreal)
 func (this *QColor) SetBlueF(blue float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8setBlueFEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), blue)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8setBlueFEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), blue)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -443,7 +439,7 @@ func (this *QColor) SetBlueF(blue float64) {
 // Public Visibility=Default Availability=Available
 // [-2] void getRgb(int *, int *, int *, int *)
 func (this *QColor) GetRgb(r unsafe.Pointer /*666*/, g unsafe.Pointer /*666*/, b unsafe.Pointer /*666*/, a unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6getRgbEPiS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &r, &g, &b, &a)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6getRgbEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &r, &g, &b, &a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -452,7 +448,7 @@ func (this *QColor) GetRgb(r unsafe.Pointer /*666*/, g unsafe.Pointer /*666*/, b
 // Public Visibility=Default Availability=Available
 // [-2] void setRgb(int, int, int, int)
 func (this *QColor) SetRgb(r int, g int, b int, a int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor6setRgbEiiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), r, g, b, a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor6setRgbEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), r, g, b, a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -461,7 +457,7 @@ func (this *QColor) SetRgb(r int, g int, b int, a int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setRgb(QRgb)
 func (this *QColor) SetRgb_1(rgb uint) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor6setRgbEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), rgb)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor6setRgbEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), rgb)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -470,7 +466,7 @@ func (this *QColor) SetRgb_1(rgb uint) {
 // Public Visibility=Default Availability=Available
 // [-2] void getRgbF(qreal *, qreal *, qreal *, qreal *)
 func (this *QColor) GetRgbF(r unsafe.Pointer /*666*/, g unsafe.Pointer /*666*/, b unsafe.Pointer /*666*/, a unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7getRgbFEPdS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &r, &g, &b, &a)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7getRgbFEPdS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &r, &g, &b, &a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -479,7 +475,7 @@ func (this *QColor) GetRgbF(r unsafe.Pointer /*666*/, g unsafe.Pointer /*666*/, 
 // Public Visibility=Default Availability=Available
 // [-2] void setRgbF(qreal, qreal, qreal, qreal)
 func (this *QColor) SetRgbF(r float64, g float64, b float64, a float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7setRgbFEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), r, g, b, a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7setRgbFEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), r, g, b, a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -488,7 +484,7 @@ func (this *QColor) SetRgbF(r float64, g float64, b float64, a float64) {
 // Public Visibility=Default Availability=Available
 // [8] QRgba64 rgba64()
 func (this *QColor) Rgba64() *QRgba64 /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6rgba64Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6rgba64Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRgba64FromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -502,7 +498,7 @@ func (this *QColor) Rgba64() *QRgba64 /*123*/ {
 // [-2] void setRgba64(QRgba64)
 func (this *QColor) SetRgba64(rgba *QRgba64 /*123*/) {
 	var convArg0 = rgba.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor9setRgba64E7QRgba64", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor9setRgba64E7QRgba64", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -511,7 +507,7 @@ func (this *QColor) SetRgba64(rgba *QRgba64 /*123*/) {
 // Public Visibility=Default Availability=Available
 // [4] QRgb rgba()
 func (this *QColor) Rgba() uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4rgbaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor4rgbaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
@@ -522,7 +518,7 @@ func (this *QColor) Rgba() uint {
 // Public Visibility=Default Availability=Available
 // [-2] void setRgba(QRgb)
 func (this *QColor) SetRgba(rgba uint) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7setRgbaEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), rgba)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7setRgbaEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), rgba)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -531,7 +527,7 @@ func (this *QColor) SetRgba(rgba uint) {
 // Public Visibility=Default Availability=Available
 // [4] QRgb rgb()
 func (this *QColor) Rgb() uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor3rgbEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor3rgbEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
@@ -542,7 +538,7 @@ func (this *QColor) Rgb() uint {
 // Public Visibility=Default Availability=Available
 // [4] int hue()
 func (this *QColor) Hue() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor3hueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor3hueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -553,7 +549,7 @@ func (this *QColor) Hue() int {
 // Public Visibility=Default Availability=Available
 // [4] int saturation()
 func (this *QColor) Saturation() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor10saturationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor10saturationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -564,7 +560,7 @@ func (this *QColor) Saturation() int {
 // Public Visibility=Default Availability=Available
 // [4] int hsvHue()
 func (this *QColor) HsvHue() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6hsvHueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6hsvHueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -575,7 +571,7 @@ func (this *QColor) HsvHue() int {
 // Public Visibility=Default Availability=Available
 // [4] int hsvSaturation()
 func (this *QColor) HsvSaturation() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor13hsvSaturationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor13hsvSaturationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -586,7 +582,7 @@ func (this *QColor) HsvSaturation() int {
 // Public Visibility=Default Availability=Available
 // [4] int value()
 func (this *QColor) Value() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5valueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -597,7 +593,7 @@ func (this *QColor) Value() int {
 // Public Visibility=Default Availability=Available
 // [8] qreal hueF()
 func (this *QColor) HueF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4hueFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor4hueFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -608,7 +604,7 @@ func (this *QColor) HueF() float64 {
 // Public Visibility=Default Availability=Available
 // [8] qreal saturationF()
 func (this *QColor) SaturationF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor11saturationFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor11saturationFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -619,7 +615,7 @@ func (this *QColor) SaturationF() float64 {
 // Public Visibility=Default Availability=Available
 // [8] qreal hsvHueF()
 func (this *QColor) HsvHueF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7hsvHueFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7hsvHueFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -630,7 +626,7 @@ func (this *QColor) HsvHueF() float64 {
 // Public Visibility=Default Availability=Available
 // [8] qreal hsvSaturationF()
 func (this *QColor) HsvSaturationF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor14hsvSaturationFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor14hsvSaturationFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -641,7 +637,7 @@ func (this *QColor) HsvSaturationF() float64 {
 // Public Visibility=Default Availability=Available
 // [8] qreal valueF()
 func (this *QColor) ValueF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6valueFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6valueFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -652,7 +648,7 @@ func (this *QColor) ValueF() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void getHsv(int *, int *, int *, int *)
 func (this *QColor) GetHsv(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, v unsafe.Pointer /*666*/, a unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6getHsvEPiS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &h, &s, &v, &a)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6getHsvEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &h, &s, &v, &a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -661,7 +657,7 @@ func (this *QColor) GetHsv(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, v
 // Public Visibility=Default Availability=Available
 // [-2] void setHsv(int, int, int, int)
 func (this *QColor) SetHsv(h int, s int, v int, a int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor6setHsvEiiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), h, s, v, a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor6setHsvEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, v, a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -670,7 +666,7 @@ func (this *QColor) SetHsv(h int, s int, v int, a int) {
 // Public Visibility=Default Availability=Available
 // [-2] void getHsvF(qreal *, qreal *, qreal *, qreal *)
 func (this *QColor) GetHsvF(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, v unsafe.Pointer /*666*/, a unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7getHsvFEPdS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &h, &s, &v, &a)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7getHsvFEPdS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &h, &s, &v, &a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -679,7 +675,7 @@ func (this *QColor) GetHsvF(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, 
 // Public Visibility=Default Availability=Available
 // [-2] void setHsvF(qreal, qreal, qreal, qreal)
 func (this *QColor) SetHsvF(h float64, s float64, v float64, a float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7setHsvFEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), h, s, v, a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7setHsvFEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, v, a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -688,7 +684,7 @@ func (this *QColor) SetHsvF(h float64, s float64, v float64, a float64) {
 // Public Visibility=Default Availability=Available
 // [4] int cyan()
 func (this *QColor) Cyan() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4cyanEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor4cyanEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -699,7 +695,7 @@ func (this *QColor) Cyan() int {
 // Public Visibility=Default Availability=Available
 // [4] int magenta()
 func (this *QColor) Magenta() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7magentaEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7magentaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -710,7 +706,7 @@ func (this *QColor) Magenta() int {
 // Public Visibility=Default Availability=Available
 // [4] int yellow()
 func (this *QColor) Yellow() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6yellowEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6yellowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -721,7 +717,7 @@ func (this *QColor) Yellow() int {
 // Public Visibility=Default Availability=Available
 // [4] int black()
 func (this *QColor) Black() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5blackEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor5blackEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -732,7 +728,7 @@ func (this *QColor) Black() int {
 // Public Visibility=Default Availability=Available
 // [8] qreal cyanF()
 func (this *QColor) CyanF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5cyanFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor5cyanFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -743,7 +739,7 @@ func (this *QColor) CyanF() float64 {
 // Public Visibility=Default Availability=Available
 // [8] qreal magentaF()
 func (this *QColor) MagentaF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor8magentaFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor8magentaFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -754,7 +750,7 @@ func (this *QColor) MagentaF() float64 {
 // Public Visibility=Default Availability=Available
 // [8] qreal yellowF()
 func (this *QColor) YellowF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7yellowFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7yellowFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -765,7 +761,7 @@ func (this *QColor) YellowF() float64 {
 // Public Visibility=Default Availability=Available
 // [8] qreal blackF()
 func (this *QColor) BlackF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6blackFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6blackFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -776,7 +772,7 @@ func (this *QColor) BlackF() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void getCmyk(int *, int *, int *, int *, int *)
 func (this *QColor) GetCmyk(c unsafe.Pointer /*666*/, m unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/, k unsafe.Pointer /*666*/, a unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7getCmykEPiS0_S0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &c, &m, &y, &k, &a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7getCmykEPiS0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &c, &m, &y, &k, &a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -785,7 +781,7 @@ func (this *QColor) GetCmyk(c unsafe.Pointer /*666*/, m unsafe.Pointer /*666*/, 
 // Public Visibility=Default Availability=Available
 // [-2] void setCmyk(int, int, int, int, int)
 func (this *QColor) SetCmyk(c int, m int, y int, k int, a int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7setCmykEiiiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c, m, y, k, a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7setCmykEiiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, m, y, k, a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -794,7 +790,7 @@ func (this *QColor) SetCmyk(c int, m int, y int, k int, a int) {
 // Public Visibility=Default Availability=Available
 // [-2] void getCmykF(qreal *, qreal *, qreal *, qreal *, qreal *)
 func (this *QColor) GetCmykF(c unsafe.Pointer /*666*/, m unsafe.Pointer /*666*/, y unsafe.Pointer /*666*/, k unsafe.Pointer /*666*/, a unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8getCmykFEPdS0_S0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &c, &m, &y, &k, &a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8getCmykFEPdS0_S0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &c, &m, &y, &k, &a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -803,7 +799,7 @@ func (this *QColor) GetCmykF(c unsafe.Pointer /*666*/, m unsafe.Pointer /*666*/,
 // Public Visibility=Default Availability=Available
 // [-2] void setCmykF(qreal, qreal, qreal, qreal, qreal)
 func (this *QColor) SetCmykF(c float64, m float64, y float64, k float64, a float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8setCmykFEddddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), c, m, y, k, a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8setCmykFEddddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), c, m, y, k, a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -812,7 +808,7 @@ func (this *QColor) SetCmykF(c float64, m float64, y float64, k float64, a float
 // Public Visibility=Default Availability=Available
 // [4] int hslHue()
 func (this *QColor) HslHue() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6hslHueEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6hslHueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -823,7 +819,7 @@ func (this *QColor) HslHue() int {
 // Public Visibility=Default Availability=Available
 // [4] int hslSaturation()
 func (this *QColor) HslSaturation() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor13hslSaturationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor13hslSaturationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -834,7 +830,7 @@ func (this *QColor) HslSaturation() int {
 // Public Visibility=Default Availability=Available
 // [4] int lightness()
 func (this *QColor) Lightness() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor9lightnessEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor9lightnessEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -845,7 +841,7 @@ func (this *QColor) Lightness() int {
 // Public Visibility=Default Availability=Available
 // [8] qreal hslHueF()
 func (this *QColor) HslHueF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7hslHueFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7hslHueFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -856,7 +852,7 @@ func (this *QColor) HslHueF() float64 {
 // Public Visibility=Default Availability=Available
 // [8] qreal hslSaturationF()
 func (this *QColor) HslSaturationF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor14hslSaturationFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor14hslSaturationFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -867,7 +863,7 @@ func (this *QColor) HslSaturationF() float64 {
 // Public Visibility=Default Availability=Available
 // [8] qreal lightnessF()
 func (this *QColor) LightnessF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor10lightnessFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor10lightnessFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -878,7 +874,7 @@ func (this *QColor) LightnessF() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void getHsl(int *, int *, int *, int *)
 func (this *QColor) GetHsl(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, l unsafe.Pointer /*666*/, a unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6getHslEPiS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &h, &s, &l, &a)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6getHslEPiS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &h, &s, &l, &a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -887,7 +883,7 @@ func (this *QColor) GetHsl(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, l
 // Public Visibility=Default Availability=Available
 // [-2] void setHsl(int, int, int, int)
 func (this *QColor) SetHsl(h int, s int, l int, a int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor6setHslEiiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), h, s, l, a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor6setHslEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, l, a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -896,7 +892,7 @@ func (this *QColor) SetHsl(h int, s int, l int, a int) {
 // Public Visibility=Default Availability=Available
 // [-2] void getHslF(qreal *, qreal *, qreal *, qreal *)
 func (this *QColor) GetHslF(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, l unsafe.Pointer /*666*/, a unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7getHslFEPdS0_S0_S0_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &h, &s, &l, &a)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7getHslFEPdS0_S0_S0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &h, &s, &l, &a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -905,7 +901,7 @@ func (this *QColor) GetHslF(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, 
 // Public Visibility=Default Availability=Available
 // [-2] void setHslF(qreal, qreal, qreal, qreal)
 func (this *QColor) SetHslF(h float64, s float64, l float64, a float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7setHslFEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), h, s, l, a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7setHslFEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, s, l, a)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -914,7 +910,7 @@ func (this *QColor) SetHslF(h float64, s float64, l float64, a float64) {
 // Public Visibility=Default Availability=Available
 // [16] QColor toRgb()
 func (this *QColor) ToRgb() *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5toRgbEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor5toRgbEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -927,7 +923,7 @@ func (this *QColor) ToRgb() *QColor /*123*/ {
 // Public Visibility=Default Availability=Available
 // [16] QColor toHsv()
 func (this *QColor) ToHsv() *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5toHsvEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor5toHsvEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -940,7 +936,7 @@ func (this *QColor) ToHsv() *QColor /*123*/ {
 // Public Visibility=Default Availability=Available
 // [16] QColor toCmyk()
 func (this *QColor) ToCmyk() *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6toCmykEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6toCmykEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -953,7 +949,7 @@ func (this *QColor) ToCmyk() *QColor /*123*/ {
 // Public Visibility=Default Availability=Available
 // [16] QColor toHsl()
 func (this *QColor) ToHsl() *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5toHslEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor5toHslEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -966,7 +962,7 @@ func (this *QColor) ToHsl() *QColor /*123*/ {
 // Public Visibility=Default Availability=Available
 // [16] QColor convertTo(enum QColor::Spec)
 func (this *QColor) ConvertTo(colorSpec int) *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor9convertToENS_4SpecE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), colorSpec)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor9convertToENS_4SpecE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), colorSpec)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -979,7 +975,7 @@ func (this *QColor) ConvertTo(colorSpec int) *QColor /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromRgb(QRgb)
 func (this *QColor) FromRgb(rgb uint) *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7fromRgbEj", ffiqt.FFI_TYPE_POINTER, rgb)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7fromRgbEj", qtrt.FFI_TYPE_POINTER, rgb)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -997,7 +993,7 @@ func QColor_FromRgb(rgb uint) *QColor /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromRgb(int, int, int, int)
 func (this *QColor) FromRgb_1(r int, g int, b int, a int) *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7fromRgbEiiii", ffiqt.FFI_TYPE_POINTER, r, g, b, a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7fromRgbEiiii", qtrt.FFI_TYPE_POINTER, r, g, b, a)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1015,7 +1011,7 @@ func QColor_FromRgb_1(r int, g int, b int, a int) *QColor /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromRgba(QRgb)
 func (this *QColor) FromRgba(rgba uint) *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8fromRgbaEj", ffiqt.FFI_TYPE_POINTER, rgba)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8fromRgbaEj", qtrt.FFI_TYPE_POINTER, rgba)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1033,7 +1029,7 @@ func QColor_FromRgba(rgba uint) *QColor /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromRgbF(qreal, qreal, qreal, qreal)
 func (this *QColor) FromRgbF(r float64, g float64, b float64, a float64) *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8fromRgbFEdddd", ffiqt.FFI_TYPE_POINTER, r, g, b, a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8fromRgbFEdddd", qtrt.FFI_TYPE_POINTER, r, g, b, a)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1051,7 +1047,7 @@ func QColor_FromRgbF(r float64, g float64, b float64, a float64) *QColor /*123*/
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromRgba64(ushort, ushort, ushort, ushort)
 func (this *QColor) FromRgba64(r uint16, g uint16, b uint16, a uint16) *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor10fromRgba64Etttt", ffiqt.FFI_TYPE_POINTER, r, g, b, a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor10fromRgba64Etttt", qtrt.FFI_TYPE_POINTER, r, g, b, a)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1070,7 +1066,7 @@ func QColor_FromRgba64(r uint16, g uint16, b uint16, a uint16) *QColor /*123*/ {
 // [16] QColor fromRgba64(QRgba64)
 func (this *QColor) FromRgba64_1(rgba *QRgba64 /*123*/) *QColor /*123*/ {
 	var convArg0 = rgba.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor10fromRgba64E7QRgba64", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor10fromRgba64E7QRgba64", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1088,7 +1084,7 @@ func QColor_FromRgba64_1(rgba *QRgba64 /*123*/) *QColor /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromHsv(int, int, int, int)
 func (this *QColor) FromHsv(h int, s int, v int, a int) *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7fromHsvEiiii", ffiqt.FFI_TYPE_POINTER, h, s, v, a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7fromHsvEiiii", qtrt.FFI_TYPE_POINTER, h, s, v, a)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1106,7 +1102,7 @@ func QColor_FromHsv(h int, s int, v int, a int) *QColor /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromHsvF(qreal, qreal, qreal, qreal)
 func (this *QColor) FromHsvF(h float64, s float64, v float64, a float64) *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8fromHsvFEdddd", ffiqt.FFI_TYPE_POINTER, h, s, v, a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8fromHsvFEdddd", qtrt.FFI_TYPE_POINTER, h, s, v, a)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1124,7 +1120,7 @@ func QColor_FromHsvF(h float64, s float64, v float64, a float64) *QColor /*123*/
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromCmyk(int, int, int, int, int)
 func (this *QColor) FromCmyk(c int, m int, y int, k int, a int) *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8fromCmykEiiiii", ffiqt.FFI_TYPE_POINTER, c, m, y, k, a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8fromCmykEiiiii", qtrt.FFI_TYPE_POINTER, c, m, y, k, a)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1142,7 +1138,7 @@ func QColor_FromCmyk(c int, m int, y int, k int, a int) *QColor /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromCmykF(qreal, qreal, qreal, qreal, qreal)
 func (this *QColor) FromCmykF(c float64, m float64, y float64, k float64, a float64) *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor9fromCmykFEddddd", ffiqt.FFI_TYPE_POINTER, c, m, y, k, a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor9fromCmykFEddddd", qtrt.FFI_TYPE_POINTER, c, m, y, k, a)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1160,7 +1156,7 @@ func QColor_FromCmykF(c float64, m float64, y float64, k float64, a float64) *QC
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromHsl(int, int, int, int)
 func (this *QColor) FromHsl(h int, s int, l int, a int) *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor7fromHslEiiii", ffiqt.FFI_TYPE_POINTER, h, s, l, a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor7fromHslEiiii", qtrt.FFI_TYPE_POINTER, h, s, l, a)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1178,7 +1174,7 @@ func QColor_FromHsl(h int, s int, l int, a int) *QColor /*123*/ {
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromHslF(qreal, qreal, qreal, qreal)
 func (this *QColor) FromHslF(h float64, s float64, l float64, a float64) *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor8fromHslFEdddd", ffiqt.FFI_TYPE_POINTER, h, s, l, a)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor8fromHslFEdddd", qtrt.FFI_TYPE_POINTER, h, s, l, a)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1196,7 +1192,7 @@ func QColor_FromHslF(h float64, s float64, l float64, a float64) *QColor /*123*/
 // Public Visibility=Default Availability=Available
 // [16] QColor light(int)
 func (this *QColor) Light(f int) *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor5lightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), f)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor5lightEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1209,7 +1205,7 @@ func (this *QColor) Light(f int) *QColor /*123*/ {
 // Public Visibility=Default Availability=Available
 // [16] QColor lighter(int)
 func (this *QColor) Lighter(f int) *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor7lighterEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), f)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor7lighterEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1222,7 +1218,7 @@ func (this *QColor) Lighter(f int) *QColor /*123*/ {
 // Public Visibility=Default Availability=Available
 // [16] QColor dark(int)
 func (this *QColor) Dark(f int) *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor4darkEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), f)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor4darkEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1235,7 +1231,7 @@ func (this *QColor) Dark(f int) *QColor /*123*/ {
 // Public Visibility=Default Availability=Available
 // [16] QColor darker(int)
 func (this *QColor) Darker(f int) *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QColor6darkerEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), f)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QColor6darkerEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1249,7 +1245,7 @@ func (this *QColor) Darker(f int) *QColor /*123*/ {
 // [1] bool isValidColor(const QString &)
 func (this *QColor) IsValidColor(name *qtcore.QString) bool {
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor12isValidColorERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor12isValidColorERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -1266,7 +1262,7 @@ func QColor_IsValidColor(name *qtcore.QString) bool {
 // [1] bool isValidColor(QStringView)
 func (this *QColor) IsValidColor_1(arg0 *qtcore.QStringView /*123*/) bool {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor12isValidColorE11QStringView", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor12isValidColorE11QStringView", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -1283,7 +1279,7 @@ func QColor_IsValidColor_1(arg0 *qtcore.QStringView /*123*/) bool {
 // [1] bool isValidColor(QLatin1String)
 func (this *QColor) IsValidColor_2(arg0 *qtcore.QLatin1String /*123*/) bool {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColor12isValidColorE13QLatin1String", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor12isValidColorE13QLatin1String", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -1295,7 +1291,7 @@ func QColor_IsValidColor_2(arg0 *qtcore.QLatin1String /*123*/) bool {
 }
 
 func DeleteQColor(this *QColor) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QColorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

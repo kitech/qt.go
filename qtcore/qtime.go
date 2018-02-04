@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QTime) NewFromPointer(cthis unsafe.Pointer) *QTime {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTime()
 func NewQTime() *QTime {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QTimeC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QTimeC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTimeFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTime)
@@ -87,7 +83,7 @@ func NewQTime() *QTime {
 // Public Visibility=Default Availability=Available
 // [-2] void QTime(int, int, int, int)
 func NewQTime_1(h int, m int, s int, ms int) *QTime {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QTimeC2Eiiii", ffiqt.FFI_TYPE_POINTER, h, m, s, ms)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QTimeC2Eiiii", qtrt.FFI_TYPE_POINTER, h, m, s, ms)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTimeFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTime)
@@ -99,7 +95,7 @@ func NewQTime_1(h int, m int, s int, ms int) *QTime {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull()
 func (this *QTime) IsNull() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QTime6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -110,7 +106,7 @@ func (this *QTime) IsNull() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isValid()
 func (this *QTime) IsValid() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QTime7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -121,7 +117,7 @@ func (this *QTime) IsValid() bool {
 // Public static Visibility=Default Availability=Available
 // [1] bool isValid(int, int, int, int)
 func (this *QTime) IsValid_1(h int, m int, s int, ms int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QTime7isValidEiiii", ffiqt.FFI_TYPE_POINTER, h, m, s, ms)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime7isValidEiiii", qtrt.FFI_TYPE_POINTER, h, m, s, ms)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -137,7 +133,7 @@ func QTime_IsValid_1(h int, m int, s int, ms int) bool {
 // Public Visibility=Default Availability=Available
 // [4] int hour()
 func (this *QTime) Hour() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QTime4hourEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime4hourEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -148,7 +144,7 @@ func (this *QTime) Hour() int {
 // Public Visibility=Default Availability=Available
 // [4] int minute()
 func (this *QTime) Minute() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QTime6minuteEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime6minuteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -159,7 +155,7 @@ func (this *QTime) Minute() int {
 // Public Visibility=Default Availability=Available
 // [4] int second()
 func (this *QTime) Second() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QTime6secondEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime6secondEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -170,7 +166,7 @@ func (this *QTime) Second() int {
 // Public Visibility=Default Availability=Available
 // [4] int msec()
 func (this *QTime) Msec() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QTime4msecEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime4msecEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -181,7 +177,7 @@ func (this *QTime) Msec() int {
 // Public Visibility=Default Availability=Available
 // [8] QString toString(Qt::DateFormat)
 func (this *QTime) ToString(f int) *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QTime8toStringEN2Qt10DateFormatE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), f)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime8toStringEN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -195,7 +191,7 @@ func (this *QTime) ToString(f int) *QString /*123*/ {
 // [8] QString toString(const QString &)
 func (this *QTime) ToString_1(format *QString) *QString /*123*/ {
 	var convArg0 = format.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QTime8toStringERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime8toStringERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -209,7 +205,7 @@ func (this *QTime) ToString_1(format *QString) *QString /*123*/ {
 // [8] QString toString(QStringView)
 func (this *QTime) ToString_2(format *QStringView /*123*/) *QString /*123*/ {
 	var convArg0 = format.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QTime8toStringE11QStringView", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime8toStringE11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -222,7 +218,7 @@ func (this *QTime) ToString_2(format *QStringView /*123*/) *QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [1] bool setHMS(int, int, int, int)
 func (this *QTime) SetHMS(h int, m int, s int, ms int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QTime6setHMSEiiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), h, m, s, ms)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime6setHMSEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h, m, s, ms)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -233,7 +229,7 @@ func (this *QTime) SetHMS(h int, m int, s int, ms int) bool {
 // Public Visibility=Default Availability=Available
 // [4] QTime addSecs(int)
 func (this *QTime) AddSecs(secs int) *QTime /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QTime7addSecsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), secs)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime7addSecsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), secs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -247,7 +243,7 @@ func (this *QTime) AddSecs(secs int) *QTime /*123*/ {
 // [4] int secsTo(const QTime &)
 func (this *QTime) SecsTo(arg0 *QTime) int {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QTime6secsToERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime6secsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -258,7 +254,7 @@ func (this *QTime) SecsTo(arg0 *QTime) int {
 // Public Visibility=Default Availability=Available
 // [4] QTime addMSecs(int)
 func (this *QTime) AddMSecs(ms int) *QTime /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QTime8addMSecsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ms)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime8addMSecsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ms)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -272,7 +268,7 @@ func (this *QTime) AddMSecs(ms int) *QTime /*123*/ {
 // [4] int msecsTo(const QTime &)
 func (this *QTime) MsecsTo(arg0 *QTime) int {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QTime7msecsToERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime7msecsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -283,7 +279,7 @@ func (this *QTime) MsecsTo(arg0 *QTime) int {
 // Public static inline Visibility=Default Availability=Available
 // [4] QTime fromMSecsSinceStartOfDay(int)
 func (this *QTime) FromMSecsSinceStartOfDay(msecs int) *QTime /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QTime24fromMSecsSinceStartOfDayEi", ffiqt.FFI_TYPE_POINTER, msecs)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime24fromMSecsSinceStartOfDayEi", qtrt.FFI_TYPE_POINTER, msecs)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -301,7 +297,7 @@ func QTime_FromMSecsSinceStartOfDay(msecs int) *QTime /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [4] int msecsSinceStartOfDay()
 func (this *QTime) MsecsSinceStartOfDay() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QTime20msecsSinceStartOfDayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime20msecsSinceStartOfDayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -312,7 +308,7 @@ func (this *QTime) MsecsSinceStartOfDay() int {
 // Public static Visibility=Default Availability=Available
 // [4] QTime currentTime()
 func (this *QTime) CurrentTime() *QTime /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QTime11currentTimeEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime11currentTimeEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -331,7 +327,7 @@ func QTime_CurrentTime() *QTime /*123*/ {
 // [4] QTime fromString(const QString &, Qt::DateFormat)
 func (this *QTime) FromString(s *QString, f int) *QTime /*123*/ {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QTime10fromStringERK7QStringN2Qt10DateFormatE", ffiqt.FFI_TYPE_POINTER, convArg0, f)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime10fromStringERK7QStringN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, convArg0, f)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -351,7 +347,7 @@ func QTime_FromString(s *QString, f int) *QTime /*123*/ {
 func (this *QTime) FromString_1(s *QString, format *QString) *QTime /*123*/ {
 	var convArg0 = s.GetCthis()
 	var convArg1 = format.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QTime10fromStringERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime10fromStringERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -369,7 +365,7 @@ func QTime_FromString_1(s *QString, format *QString) *QTime /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void start()
 func (this *QTime) Start() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QTime5startEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime5startEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -378,7 +374,7 @@ func (this *QTime) Start() {
 // Public Visibility=Default Availability=Available
 // [4] int restart()
 func (this *QTime) Restart() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QTime7restartEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QTime7restartEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -389,20 +385,20 @@ func (this *QTime) Restart() int {
 // Public Visibility=Default Availability=Available
 // [4] int elapsed()
 func (this *QTime) Elapsed() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK5QTime7elapsedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime7elapsedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
 func DeleteQTime(this *QTime) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN5QTimeD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QTimeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
 
 type QTime__TimeFlag = int
 
-const QTime__NullTime QTime__TimeFlag = 4294967295
+const QTime__NullTime QTime__TimeFlag = -1
 
 //  body block end

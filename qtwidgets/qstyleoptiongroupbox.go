@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QStyleOptionGroupBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionG
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionGroupBox()
 func NewQStyleOptionGroupBox() *QStyleOptionGroupBox {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionGroupBoxC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionGroupBoxC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionGroupBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionGroupBox)
@@ -92,7 +88,7 @@ func NewQStyleOptionGroupBox() *QStyleOptionGroupBox {
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionGroupBox(int)
 func NewQStyleOptionGroupBox_1(version int) *QStyleOptionGroupBox {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionGroupBoxC2Ei", ffiqt.FFI_TYPE_POINTER, version)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionGroupBoxC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionGroupBoxFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionGroupBox)
@@ -100,7 +96,7 @@ func NewQStyleOptionGroupBox_1(version int) *QStyleOptionGroupBox {
 }
 
 func DeleteQStyleOptionGroupBox(this *QStyleOptionGroupBox) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QStyleOptionGroupBoxD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionGroupBoxD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

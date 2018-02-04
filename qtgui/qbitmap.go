@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QBitmap) NewFromPointer(cthis unsafe.Pointer) *QBitmap {
 // Public Visibility=Default Availability=Available
 // [-2] void QBitmap()
 func NewQBitmap() *QBitmap {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmapC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmapC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQBitmap)
@@ -89,7 +85,7 @@ func NewQBitmap() *QBitmap {
 // [-2] void QBitmap(const QPixmap &)
 func NewQBitmap_1(arg0 *QPixmap) *QBitmap {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmapC2ERK7QPixmap", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmapC2ERK7QPixmap", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQBitmap)
@@ -101,7 +97,7 @@ func NewQBitmap_1(arg0 *QPixmap) *QBitmap {
 // Public Visibility=Default Availability=Available
 // [-2] void QBitmap(int, int)
 func NewQBitmap_2(w int, h int) *QBitmap {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmapC2Eii", ffiqt.FFI_TYPE_POINTER, w, h)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmapC2Eii", qtrt.FFI_TYPE_POINTER, w, h)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQBitmap)
@@ -114,7 +110,7 @@ func NewQBitmap_2(w int, h int) *QBitmap {
 // [-2] void QBitmap(const QSize &)
 func NewQBitmap_3(arg0 *qtcore.QSize) *QBitmap {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmapC2ERK5QSize", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmapC2ERK5QSize", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQBitmap)
@@ -129,7 +125,7 @@ func NewQBitmap_4(fileName *qtcore.QString, format string) *QBitmap {
 	var convArg0 = fileName.GetCthis()
 	var convArg1 = qtrt.CString(format)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmapC2ERK7QStringPKc", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmapC2ERK7QStringPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQBitmap)
@@ -141,7 +137,7 @@ func NewQBitmap_4(fileName *qtcore.QString, format string) *QBitmap {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QBitmap()
 func DeleteQBitmap(this *QBitmap) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmapD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmapD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -153,7 +149,7 @@ func DeleteQBitmap(this *QBitmap) {
 // [-2] void swap(QBitmap &)
 func (this *QBitmap) Swap(other *QBitmap) {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmap4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmap4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -162,7 +158,7 @@ func (this *QBitmap) Swap(other *QBitmap) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void clear()
 func (this *QBitmap) Clear() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmap5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmap5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -172,7 +168,7 @@ func (this *QBitmap) Clear() {
 // [32] QBitmap fromImage(const QImage &, Qt::ImageConversionFlags)
 func (this *QBitmap) FromImage(image *QImage, flags int) *QBitmap /*123*/ {
 	var convArg0 = image.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmap9fromImageERK6QImage6QFlagsIN2Qt19ImageConversionFlagEE", ffiqt.FFI_TYPE_POINTER, convArg0, flags)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmap9fromImageERK6QImage6QFlagsIN2Qt19ImageConversionFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, flags)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -191,7 +187,7 @@ func QBitmap_FromImage(image *QImage, flags int) *QBitmap /*123*/ {
 // [32] QBitmap fromData(const QSize &, const uchar *, QImage::Format)
 func (this *QBitmap) FromData(size *qtcore.QSize, bits unsafe.Pointer /*666*/, monoFormat int) *QBitmap /*123*/ {
 	var convArg0 = size.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QBitmap8fromDataERK5QSizePKhN6QImage6FormatE", ffiqt.FFI_TYPE_POINTER, convArg0, &bits, monoFormat)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QBitmap8fromDataERK5QSizePKhN6QImage6FormatE", qtrt.FFI_TYPE_POINTER, convArg0, &bits, monoFormat)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -210,7 +206,7 @@ func QBitmap_FromData(size *qtcore.QSize, bits unsafe.Pointer /*666*/, monoForma
 // [32] QBitmap transformed(const QMatrix &)
 func (this *QBitmap) Transformed(arg0 *QMatrix) *QBitmap /*123*/ {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QBitmap11transformedERK7QMatrix", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBitmap11transformedERK7QMatrix", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -224,7 +220,7 @@ func (this *QBitmap) Transformed(arg0 *QMatrix) *QBitmap /*123*/ {
 // [32] QBitmap transformed(const QTransform &)
 func (this *QBitmap) Transformed_1(matrix *QTransform) *QBitmap /*123*/ {
 	var convArg0 = matrix.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QBitmap11transformedERK10QTransform", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBitmap11transformedERK10QTransform", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBitmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333

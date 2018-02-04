@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QStandardPaths) NewFromPointer(cthis unsafe.Pointer) *QStandardPaths {
 // Public static Visibility=Default Availability=Available
 // [8] QString writableLocation(enum QStandardPaths::StandardLocation)
 func (this *QStandardPaths) WritableLocation(type_ int) *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths16writableLocationENS_16StandardLocationE", ffiqt.FFI_TYPE_POINTER, type_)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths16writableLocationENS_16StandardLocationE", qtrt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -94,7 +90,7 @@ func QStandardPaths_WritableLocation(type_ int) *QString /*123*/ {
 // [8] QString locate(enum QStandardPaths::StandardLocation, const QString &, QStandardPaths::LocateOptions)
 func (this *QStandardPaths) Locate(type_ int, fileName *QString, options int) *QString /*123*/ {
 	var convArg1 = fileName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths6locateENS_16StandardLocationERK7QString6QFlagsINS_12LocateOptionEE", ffiqt.FFI_TYPE_POINTER, type_, convArg1, options)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths6locateENS_16StandardLocationERK7QString6QFlagsINS_12LocateOptionEE", qtrt.FFI_TYPE_POINTER, type_, convArg1, options)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -112,7 +108,7 @@ func QStandardPaths_Locate(type_ int, fileName *QString, options int) *QString /
 // Public static Visibility=Default Availability=Available
 // [8] QString displayName(enum QStandardPaths::StandardLocation)
 func (this *QStandardPaths) DisplayName(type_ int) *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths11displayNameENS_16StandardLocationE", ffiqt.FFI_TYPE_POINTER, type_)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths11displayNameENS_16StandardLocationE", qtrt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -132,7 +128,7 @@ func QStandardPaths_DisplayName(type_ int) *QString /*123*/ {
 func (this *QStandardPaths) FindExecutable(executableName *QString, paths *QStringList) *QString /*123*/ {
 	var convArg0 = executableName.GetCthis()
 	var convArg1 = paths.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -150,7 +146,7 @@ func QStandardPaths_FindExecutable(executableName *QString, paths *QStringList) 
 // Public static Visibility=Default Availability=Available
 // [-2] void enableTestMode(_Bool)
 func (this *QStandardPaths) EnableTestMode(testMode bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths14enableTestModeEb", ffiqt.FFI_TYPE_POINTER, testMode)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths14enableTestModeEb", qtrt.FFI_TYPE_POINTER, testMode)
 	gopp.ErrPrint(err, rv)
 }
 func QStandardPaths_EnableTestMode(testMode bool) {
@@ -163,7 +159,7 @@ func QStandardPaths_EnableTestMode(testMode bool) {
 // Public static Visibility=Default Availability=Available
 // [-2] void setTestModeEnabled(_Bool)
 func (this *QStandardPaths) SetTestModeEnabled(testMode bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths18setTestModeEnabledEb", ffiqt.FFI_TYPE_POINTER, testMode)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths18setTestModeEnabledEb", qtrt.FFI_TYPE_POINTER, testMode)
 	gopp.ErrPrint(err, rv)
 }
 func QStandardPaths_SetTestModeEnabled(testMode bool) {
@@ -176,7 +172,7 @@ func QStandardPaths_SetTestModeEnabled(testMode bool) {
 // Public static Visibility=Default Availability=Available
 // [1] bool isTestModeEnabled()
 func (this *QStandardPaths) IsTestModeEnabled() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPaths17isTestModeEnabledEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths17isTestModeEnabledEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -188,7 +184,7 @@ func QStandardPaths_IsTestModeEnabled() bool {
 }
 
 func DeleteQStandardPaths(this *QStandardPaths) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QStandardPathsD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPathsD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

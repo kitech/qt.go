@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QStyleOptionHeader) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionHea
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionHeader()
 func NewQStyleOptionHeader() *QStyleOptionHeader {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionHeaderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionHeader)
@@ -92,7 +88,7 @@ func NewQStyleOptionHeader() *QStyleOptionHeader {
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionHeader(int)
 func NewQStyleOptionHeader_1(version int) *QStyleOptionHeader {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ei", ffiqt.FFI_TYPE_POINTER, version)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QStyleOptionHeaderC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionHeaderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionHeader)
@@ -100,7 +96,7 @@ func NewQStyleOptionHeader_1(version int) *QStyleOptionHeader {
 }
 
 func DeleteQStyleOptionHeader(this *QStyleOptionHeader) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionHeaderD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QStyleOptionHeaderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

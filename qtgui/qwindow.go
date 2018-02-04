@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -35,9 +34,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -50,92 +46,92 @@ func init() {
 //  body block begin
 // void exposeEvent(class QExposeEvent *)
 func (this *QWindow) InheritExposeEvent(f func(arg0 *QExposeEvent /*777 QExposeEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "exposeEvent", f)
+	qtrt.SetAllInheritCallback(this, "exposeEvent", f)
 }
 
 // void resizeEvent(class QResizeEvent *)
 func (this *QWindow) InheritResizeEvent(f func(arg0 *QResizeEvent /*777 QResizeEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "resizeEvent", f)
+	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
 // void moveEvent(class QMoveEvent *)
 func (this *QWindow) InheritMoveEvent(f func(arg0 *QMoveEvent /*777 QMoveEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "moveEvent", f)
+	qtrt.SetAllInheritCallback(this, "moveEvent", f)
 }
 
 // void focusInEvent(class QFocusEvent *)
 func (this *QWindow) InheritFocusInEvent(f func(arg0 *QFocusEvent /*777 QFocusEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "focusInEvent", f)
+	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
 // void focusOutEvent(class QFocusEvent *)
 func (this *QWindow) InheritFocusOutEvent(f func(arg0 *QFocusEvent /*777 QFocusEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "focusOutEvent", f)
+	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
 // void showEvent(class QShowEvent *)
 func (this *QWindow) InheritShowEvent(f func(arg0 *QShowEvent /*777 QShowEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "showEvent", f)
+	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
 // void hideEvent(class QHideEvent *)
 func (this *QWindow) InheritHideEvent(f func(arg0 *QHideEvent /*777 QHideEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "hideEvent", f)
+	qtrt.SetAllInheritCallback(this, "hideEvent", f)
 }
 
 // bool event(class QEvent *)
 func (this *QWindow) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
-	ffiqt.SetAllInheritCallback(this, "event", f)
+	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
 // void keyPressEvent(class QKeyEvent *)
 func (this *QWindow) InheritKeyPressEvent(f func(arg0 *QKeyEvent /*777 QKeyEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "keyPressEvent", f)
+	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
 // void keyReleaseEvent(class QKeyEvent *)
 func (this *QWindow) InheritKeyReleaseEvent(f func(arg0 *QKeyEvent /*777 QKeyEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "keyReleaseEvent", f)
+	qtrt.SetAllInheritCallback(this, "keyReleaseEvent", f)
 }
 
 // void mousePressEvent(class QMouseEvent *)
 func (this *QWindow) InheritMousePressEvent(f func(arg0 *QMouseEvent /*777 QMouseEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "mousePressEvent", f)
+	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
 // void mouseReleaseEvent(class QMouseEvent *)
 func (this *QWindow) InheritMouseReleaseEvent(f func(arg0 *QMouseEvent /*777 QMouseEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
+	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
 // void mouseDoubleClickEvent(class QMouseEvent *)
 func (this *QWindow) InheritMouseDoubleClickEvent(f func(arg0 *QMouseEvent /*777 QMouseEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
+	qtrt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
 }
 
 // void mouseMoveEvent(class QMouseEvent *)
 func (this *QWindow) InheritMouseMoveEvent(f func(arg0 *QMouseEvent /*777 QMouseEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "mouseMoveEvent", f)
+	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
 // void wheelEvent(class QWheelEvent *)
 func (this *QWindow) InheritWheelEvent(f func(arg0 *QWheelEvent /*777 QWheelEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "wheelEvent", f)
+	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
 
 // void touchEvent(class QTouchEvent *)
 func (this *QWindow) InheritTouchEvent(f func(arg0 *QTouchEvent /*777 QTouchEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "touchEvent", f)
+	qtrt.SetAllInheritCallback(this, "touchEvent", f)
 }
 
 // void tabletEvent(class QTabletEvent *)
 func (this *QWindow) InheritTabletEvent(f func(arg0 *QTabletEvent /*777 QTabletEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "tabletEvent", f)
+	qtrt.SetAllInheritCallback(this, "tabletEvent", f)
 }
 
 // bool nativeEvent(const class QByteArray &, void *, long *)
 func (this *QWindow) InheritNativeEvent(f func(eventType *qtcore.QByteArray, message unsafe.Pointer /*666*/, result unsafe.Pointer /*666*/) bool) {
-	ffiqt.SetAllInheritCallback(this, "nativeEvent", f)
+	qtrt.SetAllInheritCallback(this, "nativeEvent", f)
 }
 
 type QWindow struct {
@@ -168,7 +164,7 @@ func (*QWindow) NewFromPointer(cthis unsafe.Pointer) *QWindow {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -181,7 +177,7 @@ func (this *QWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 // [-2] void QWindow(QScreen *)
 func NewQWindow(screen *QScreen /*777 QScreen **/) *QWindow {
 	var convArg0 = screen.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindowC2EP7QScreen", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindowC2EP7QScreen", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQWindowFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -193,7 +189,7 @@ func NewQWindow(screen *QScreen /*777 QScreen **/) *QWindow {
 // [-2] void QWindow(QWindow *)
 func NewQWindow_1(parent *QWindow /*777 QWindow **/) *QWindow {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindowC2EPS_", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindowC2EPS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQWindowFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -204,7 +200,7 @@ func NewQWindow_1(parent *QWindow /*777 QWindow **/) *QWindow {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWindow()
 func DeleteQWindow(this *QWindow) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindowD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindowD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 40)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -215,7 +211,7 @@ func DeleteQWindow(this *QWindow) {
 // Public Visibility=Default Availability=Available
 // [-2] void setSurfaceType(enum QSurface::SurfaceType)
 func (this *QWindow) SetSurfaceType(surfaceType int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow14setSurfaceTypeEN8QSurface11SurfaceTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), surfaceType)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow14setSurfaceTypeEN8QSurface11SurfaceTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), surfaceType)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -224,7 +220,7 @@ func (this *QWindow) SetSurfaceType(surfaceType int) {
 // Public virtual Visibility=Default Availability=Available
 // [4] QSurface::SurfaceType surfaceType()
 func (this *QWindow) SurfaceType() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow11surfaceTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow11surfaceTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -235,7 +231,7 @@ func (this *QWindow) SurfaceType() int {
 // Public Visibility=Default Availability=Available
 // [1] bool isVisible()
 func (this *QWindow) IsVisible() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow9isVisibleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow9isVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -246,7 +242,7 @@ func (this *QWindow) IsVisible() bool {
 // Public Visibility=Default Availability=Available
 // [4] QWindow::Visibility visibility()
 func (this *QWindow) Visibility() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow10visibilityEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow10visibilityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -257,7 +253,7 @@ func (this *QWindow) Visibility() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setVisibility(enum QWindow::Visibility)
 func (this *QWindow) SetVisibility(v int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow13setVisibilityENS_10VisibilityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), v)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow13setVisibilityENS_10VisibilityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), v)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -266,7 +262,7 @@ func (this *QWindow) SetVisibility(v int) {
 // Public Visibility=Default Availability=Available
 // [-2] void create()
 func (this *QWindow) Create() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow6createEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow6createEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -275,7 +271,7 @@ func (this *QWindow) Create() {
 // Public Visibility=Default Availability=Available
 // [8] WId winId()
 func (this *QWindow) WinId() uint64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow5winIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow5winIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint64(rv) // 222
@@ -286,7 +282,7 @@ func (this *QWindow) WinId() uint64 {
 // Public Visibility=Default Availability=Available
 // [8] QWindow * parent(enum QWindow::AncestorMode)
 func (this *QWindow) Parent(mode int) *QWindow /*777 QWindow **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow6parentENS_12AncestorModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow6parentENS_12AncestorModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -298,7 +294,7 @@ func (this *QWindow) Parent(mode int) *QWindow /*777 QWindow **/ {
 // Public Visibility=Default Availability=Available
 // [8] QWindow * parent()
 func (this *QWindow) Parent_1() *QWindow /*777 QWindow **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow6parentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow6parentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -311,7 +307,7 @@ func (this *QWindow) Parent_1() *QWindow /*777 QWindow **/ {
 // [-2] void setParent(QWindow *)
 func (this *QWindow) SetParent(parent *QWindow /*777 QWindow **/) {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow9setParentEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow9setParentEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -320,7 +316,7 @@ func (this *QWindow) SetParent(parent *QWindow /*777 QWindow **/) {
 // Public Visibility=Default Availability=Available
 // [1] bool isTopLevel()
 func (this *QWindow) IsTopLevel() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow10isTopLevelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow10isTopLevelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -331,7 +327,7 @@ func (this *QWindow) IsTopLevel() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isModal()
 func (this *QWindow) IsModal() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow7isModalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow7isModalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -342,7 +338,7 @@ func (this *QWindow) IsModal() bool {
 // Public Visibility=Default Availability=Available
 // [4] Qt::WindowModality modality()
 func (this *QWindow) Modality() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow8modalityEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow8modalityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -353,7 +349,7 @@ func (this *QWindow) Modality() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setModality(Qt::WindowModality)
 func (this *QWindow) SetModality(modality int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11setModalityEN2Qt14WindowModalityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), modality)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11setModalityEN2Qt14WindowModalityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), modality)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -363,7 +359,7 @@ func (this *QWindow) SetModality(modality int) {
 // [-2] void setFormat(const QSurfaceFormat &)
 func (this *QWindow) SetFormat(format *QSurfaceFormat) {
 	var convArg0 = format.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow9setFormatERK14QSurfaceFormat", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow9setFormatERK14QSurfaceFormat", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -372,7 +368,7 @@ func (this *QWindow) SetFormat(format *QSurfaceFormat) {
 // Public virtual Visibility=Default Availability=Available
 // [8] QSurfaceFormat format()
 func (this *QWindow) Format() *QSurfaceFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow6formatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -385,7 +381,7 @@ func (this *QWindow) Format() *QSurfaceFormat /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QSurfaceFormat requestedFormat()
 func (this *QWindow) RequestedFormat() *QSurfaceFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow15requestedFormatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow15requestedFormatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -398,7 +394,7 @@ func (this *QWindow) RequestedFormat() *QSurfaceFormat /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setFlags(Qt::WindowFlags)
 func (this *QWindow) SetFlags(flags int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow8setFlagsE6QFlagsIN2Qt10WindowTypeEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow8setFlagsE6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -407,7 +403,7 @@ func (this *QWindow) SetFlags(flags int) {
 // Public Visibility=Default Availability=Available
 // [4] Qt::WindowFlags flags()
 func (this *QWindow) Flags() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow5flagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -418,7 +414,7 @@ func (this *QWindow) Flags() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setFlag(Qt::WindowType, _Bool)
 func (this *QWindow) SetFlag(arg0 int, on bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow7setFlagEN2Qt10WindowTypeEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0, on)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow7setFlagEN2Qt10WindowTypeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, on)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -427,7 +423,7 @@ func (this *QWindow) SetFlag(arg0 int, on bool) {
 // Public Visibility=Default Availability=Available
 // [4] Qt::WindowType type()
 func (this *QWindow) Type() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -438,7 +434,7 @@ func (this *QWindow) Type() int {
 // Public Visibility=Default Availability=Available
 // [8] QString title()
 func (this *QWindow) Title() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow5titleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow5titleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -451,7 +447,7 @@ func (this *QWindow) Title() *qtcore.QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setOpacity(qreal)
 func (this *QWindow) SetOpacity(level float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow10setOpacityEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), level)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow10setOpacityEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), level)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -460,7 +456,7 @@ func (this *QWindow) SetOpacity(level float64) {
 // Public Visibility=Default Availability=Available
 // [8] qreal opacity()
 func (this *QWindow) Opacity() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow7opacityEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow7opacityEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -472,7 +468,7 @@ func (this *QWindow) Opacity() float64 {
 // [-2] void setMask(const QRegion &)
 func (this *QWindow) SetMask(region *QRegion) {
 	var convArg0 = region.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow7setMaskERK7QRegion", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow7setMaskERK7QRegion", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -481,7 +477,7 @@ func (this *QWindow) SetMask(region *QRegion) {
 // Public Visibility=Default Availability=Available
 // [8] QRegion mask()
 func (this *QWindow) Mask() *QRegion /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow4maskEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow4maskEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -494,7 +490,7 @@ func (this *QWindow) Mask() *QRegion /*123*/ {
 // Public Visibility=Default Availability=Available
 // [1] bool isActive()
 func (this *QWindow) IsActive() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow8isActiveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow8isActiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -505,7 +501,7 @@ func (this *QWindow) IsActive() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void reportContentOrientationChange(Qt::ScreenOrientation)
 func (this *QWindow) ReportContentOrientationChange(orientation int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow30reportContentOrientationChangeEN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), orientation)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow30reportContentOrientationChangeEN2Qt17ScreenOrientationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), orientation)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -514,7 +510,7 @@ func (this *QWindow) ReportContentOrientationChange(orientation int) {
 // Public Visibility=Default Availability=Available
 // [4] Qt::ScreenOrientation contentOrientation()
 func (this *QWindow) ContentOrientation() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow18contentOrientationEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow18contentOrientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -525,7 +521,7 @@ func (this *QWindow) ContentOrientation() int {
 // Public Visibility=Default Availability=Available
 // [8] qreal devicePixelRatio()
 func (this *QWindow) DevicePixelRatio() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow16devicePixelRatioEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow16devicePixelRatioEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -536,7 +532,7 @@ func (this *QWindow) DevicePixelRatio() float64 {
 // Public Visibility=Default Availability=Available
 // [4] Qt::WindowState windowState()
 func (this *QWindow) WindowState() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow11windowStateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow11windowStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -547,7 +543,7 @@ func (this *QWindow) WindowState() int {
 // Public Visibility=Default Availability=Available
 // [4] Qt::WindowStates windowStates()
 func (this *QWindow) WindowStates() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow12windowStatesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow12windowStatesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -558,7 +554,7 @@ func (this *QWindow) WindowStates() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setWindowState(Qt::WindowState)
 func (this *QWindow) SetWindowState(state int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow14setWindowStateEN2Qt11WindowStateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), state)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow14setWindowStateEN2Qt11WindowStateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -567,7 +563,7 @@ func (this *QWindow) SetWindowState(state int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setWindowStates(Qt::WindowStates)
 func (this *QWindow) SetWindowStates(states int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow15setWindowStatesE6QFlagsIN2Qt11WindowStateEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), states)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow15setWindowStatesE6QFlagsIN2Qt11WindowStateEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), states)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -577,7 +573,7 @@ func (this *QWindow) SetWindowStates(states int) {
 // [-2] void setTransientParent(QWindow *)
 func (this *QWindow) SetTransientParent(parent *QWindow /*777 QWindow **/) {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow18setTransientParentEPS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow18setTransientParentEPS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -586,7 +582,7 @@ func (this *QWindow) SetTransientParent(parent *QWindow /*777 QWindow **/) {
 // Public Visibility=Default Availability=Available
 // [8] QWindow * transientParent()
 func (this *QWindow) TransientParent() *QWindow /*777 QWindow **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow15transientParentEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow15transientParentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -599,7 +595,7 @@ func (this *QWindow) TransientParent() *QWindow /*777 QWindow **/ {
 // [1] bool isAncestorOf(const QWindow *, enum QWindow::AncestorMode)
 func (this *QWindow) IsAncestorOf(child *QWindow /*777 const QWindow **/, mode int) bool {
 	var convArg0 = child.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow12isAncestorOfEPKS_NS_12AncestorModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow12isAncestorOfEPKS_NS_12AncestorModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -610,7 +606,7 @@ func (this *QWindow) IsAncestorOf(child *QWindow /*777 const QWindow **/, mode i
 // Public Visibility=Default Availability=Available
 // [1] bool isExposed()
 func (this *QWindow) IsExposed() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow9isExposedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow9isExposedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -621,7 +617,7 @@ func (this *QWindow) IsExposed() bool {
 // Public inline Visibility=Default Availability=Available
 // [4] int minimumWidth()
 func (this *QWindow) MinimumWidth() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow12minimumWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow12minimumWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -632,7 +628,7 @@ func (this *QWindow) MinimumWidth() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int minimumHeight()
 func (this *QWindow) MinimumHeight() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow13minimumHeightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow13minimumHeightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -643,7 +639,7 @@ func (this *QWindow) MinimumHeight() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int maximumWidth()
 func (this *QWindow) MaximumWidth() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow12maximumWidthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow12maximumWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -654,7 +650,7 @@ func (this *QWindow) MaximumWidth() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int maximumHeight()
 func (this *QWindow) MaximumHeight() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow13maximumHeightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow13maximumHeightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -665,7 +661,7 @@ func (this *QWindow) MaximumHeight() int {
 // Public Visibility=Default Availability=Available
 // [8] QSize minimumSize()
 func (this *QWindow) MinimumSize() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow11minimumSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow11minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -678,7 +674,7 @@ func (this *QWindow) MinimumSize() *qtcore.QSize /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QSize maximumSize()
 func (this *QWindow) MaximumSize() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow11maximumSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow11maximumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -691,7 +687,7 @@ func (this *QWindow) MaximumSize() *qtcore.QSize /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QSize baseSize()
 func (this *QWindow) BaseSize() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow8baseSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow8baseSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -704,7 +700,7 @@ func (this *QWindow) BaseSize() *qtcore.QSize /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QSize sizeIncrement()
 func (this *QWindow) SizeIncrement() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow13sizeIncrementEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow13sizeIncrementEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -718,7 +714,7 @@ func (this *QWindow) SizeIncrement() *qtcore.QSize /*123*/ {
 // [-2] void setMinimumSize(const QSize &)
 func (this *QWindow) SetMinimumSize(size *qtcore.QSize) {
 	var convArg0 = size.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow14setMinimumSizeERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow14setMinimumSizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -728,7 +724,7 @@ func (this *QWindow) SetMinimumSize(size *qtcore.QSize) {
 // [-2] void setMaximumSize(const QSize &)
 func (this *QWindow) SetMaximumSize(size *qtcore.QSize) {
 	var convArg0 = size.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow14setMaximumSizeERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow14setMaximumSizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -738,7 +734,7 @@ func (this *QWindow) SetMaximumSize(size *qtcore.QSize) {
 // [-2] void setBaseSize(const QSize &)
 func (this *QWindow) SetBaseSize(size *qtcore.QSize) {
 	var convArg0 = size.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11setBaseSizeERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11setBaseSizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -748,7 +744,7 @@ func (this *QWindow) SetBaseSize(size *qtcore.QSize) {
 // [-2] void setSizeIncrement(const QSize &)
 func (this *QWindow) SetSizeIncrement(size *qtcore.QSize) {
 	var convArg0 = size.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow16setSizeIncrementERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow16setSizeIncrementERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -757,7 +753,7 @@ func (this *QWindow) SetSizeIncrement(size *qtcore.QSize) {
 // Public Visibility=Default Availability=Available
 // [16] QRect geometry()
 func (this *QWindow) Geometry() *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow8geometryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -770,7 +766,7 @@ func (this *QWindow) Geometry() *qtcore.QRect /*123*/ {
 // Public Visibility=Default Availability=Available
 // [16] QMargins frameMargins()
 func (this *QWindow) FrameMargins() *qtcore.QMargins /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow12frameMarginsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow12frameMarginsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -783,7 +779,7 @@ func (this *QWindow) FrameMargins() *qtcore.QMargins /*123*/ {
 // Public Visibility=Default Availability=Available
 // [16] QRect frameGeometry()
 func (this *QWindow) FrameGeometry() *qtcore.QRect /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow13frameGeometryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow13frameGeometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -796,7 +792,7 @@ func (this *QWindow) FrameGeometry() *qtcore.QRect /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QPoint framePosition()
 func (this *QWindow) FramePosition() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow13framePositionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow13framePositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -810,7 +806,7 @@ func (this *QWindow) FramePosition() *qtcore.QPoint /*123*/ {
 // [-2] void setFramePosition(const QPoint &)
 func (this *QWindow) SetFramePosition(point *qtcore.QPoint) {
 	var convArg0 = point.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow16setFramePositionERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow16setFramePositionERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -819,7 +815,7 @@ func (this *QWindow) SetFramePosition(point *qtcore.QPoint) {
 // Public inline Visibility=Default Availability=Available
 // [4] int width()
 func (this *QWindow) Width() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow5widthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -830,7 +826,7 @@ func (this *QWindow) Width() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int height()
 func (this *QWindow) Height() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow6heightEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow6heightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -841,7 +837,7 @@ func (this *QWindow) Height() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int x()
 func (this *QWindow) X() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow1xEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow1xEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -852,7 +848,7 @@ func (this *QWindow) X() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int y()
 func (this *QWindow) Y() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow1yEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow1yEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -863,7 +859,7 @@ func (this *QWindow) Y() int {
 // Public inline virtual Visibility=Default Availability=Available
 // [8] QSize size()
 func (this *QWindow) Size() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -876,7 +872,7 @@ func (this *QWindow) Size() *qtcore.QSize /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint position()
 func (this *QWindow) Position() *qtcore.QPoint /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow8positionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow8positionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -890,7 +886,7 @@ func (this *QWindow) Position() *qtcore.QPoint /*123*/ {
 // [-2] void setPosition(const QPoint &)
 func (this *QWindow) SetPosition(pt *qtcore.QPoint) {
 	var convArg0 = pt.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11setPositionERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11setPositionERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -899,7 +895,7 @@ func (this *QWindow) SetPosition(pt *qtcore.QPoint) {
 // Public Visibility=Default Availability=Available
 // [-2] void setPosition(int, int)
 func (this *QWindow) SetPosition_1(posx int, posy int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11setPositionEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), posx, posy)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11setPositionEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), posx, posy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -909,7 +905,7 @@ func (this *QWindow) SetPosition_1(posx int, posy int) {
 // [-2] void resize(const QSize &)
 func (this *QWindow) Resize(newSize *qtcore.QSize) {
 	var convArg0 = newSize.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow6resizeERK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow6resizeERK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -918,7 +914,7 @@ func (this *QWindow) Resize(newSize *qtcore.QSize) {
 // Public Visibility=Default Availability=Available
 // [-2] void resize(int, int)
 func (this *QWindow) Resize_1(w int, h int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow6resizeEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w, h)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow6resizeEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -928,7 +924,7 @@ func (this *QWindow) Resize_1(w int, h int) {
 // [-2] void setFilePath(const QString &)
 func (this *QWindow) SetFilePath(filePath *qtcore.QString) {
 	var convArg0 = filePath.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11setFilePathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11setFilePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -937,7 +933,7 @@ func (this *QWindow) SetFilePath(filePath *qtcore.QString) {
 // Public Visibility=Default Availability=Available
 // [8] QString filePath()
 func (this *QWindow) FilePath() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow8filePathEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow8filePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -951,7 +947,7 @@ func (this *QWindow) FilePath() *qtcore.QString /*123*/ {
 // [-2] void setIcon(const QIcon &)
 func (this *QWindow) SetIcon(icon *QIcon) {
 	var convArg0 = icon.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow7setIconERK5QIcon", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow7setIconERK5QIcon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -960,7 +956,7 @@ func (this *QWindow) SetIcon(icon *QIcon) {
 // Public Visibility=Default Availability=Available
 // [8] QIcon icon()
 func (this *QWindow) Icon() *QIcon /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow4iconEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow4iconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -973,7 +969,7 @@ func (this *QWindow) Icon() *QIcon /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void destroy()
 func (this *QWindow) Destroy() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow7destroyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow7destroyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -982,7 +978,7 @@ func (this *QWindow) Destroy() {
 // Public Visibility=Default Availability=Available
 // [1] bool setKeyboardGrabEnabled(_Bool)
 func (this *QWindow) SetKeyboardGrabEnabled(grab bool) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow22setKeyboardGrabEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), grab)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow22setKeyboardGrabEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), grab)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -993,7 +989,7 @@ func (this *QWindow) SetKeyboardGrabEnabled(grab bool) bool {
 // Public Visibility=Default Availability=Available
 // [1] bool setMouseGrabEnabled(_Bool)
 func (this *QWindow) SetMouseGrabEnabled(grab bool) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow19setMouseGrabEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), grab)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow19setMouseGrabEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), grab)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1004,7 +1000,7 @@ func (this *QWindow) SetMouseGrabEnabled(grab bool) bool {
 // Public Visibility=Default Availability=Available
 // [8] QScreen * screen()
 func (this *QWindow) Screen() *QScreen /*777 QScreen **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow6screenEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow6screenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQScreenFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -1017,7 +1013,7 @@ func (this *QWindow) Screen() *QScreen /*777 QScreen **/ {
 // [-2] void setScreen(QScreen *)
 func (this *QWindow) SetScreen(screen *QScreen /*777 QScreen **/) {
 	var convArg0 = screen.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow9setScreenEP7QScreen", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow9setScreenEP7QScreen", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1026,7 +1022,7 @@ func (this *QWindow) SetScreen(screen *QScreen /*777 QScreen **/) {
 // Public virtual Visibility=Default Availability=Available
 // [8] QAccessibleInterface * accessibleRoot()
 func (this *QWindow) AccessibleRoot() *QAccessibleInterface /*777 QAccessibleInterface **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow14accessibleRootEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow14accessibleRootEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -1038,7 +1034,7 @@ func (this *QWindow) AccessibleRoot() *QAccessibleInterface /*777 QAccessibleInt
 // Public virtual Visibility=Default Availability=Available
 // [8] QObject * focusObject()
 func (this *QWindow) FocusObject() *qtcore.QObject /*777 QObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow11focusObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow11focusObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -1051,7 +1047,7 @@ func (this *QWindow) FocusObject() *qtcore.QObject /*777 QObject **/ {
 // [8] QPoint mapToGlobal(const QPoint &)
 func (this *QWindow) MapToGlobal(pos *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 	var convArg0 = pos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow11mapToGlobalERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow11mapToGlobalERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1065,7 +1061,7 @@ func (this *QWindow) MapToGlobal(pos *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 // [8] QPoint mapFromGlobal(const QPoint &)
 func (this *QWindow) MapFromGlobal(pos *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 	var convArg0 = pos.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow13mapFromGlobalERK6QPoint", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow13mapFromGlobalERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1078,7 +1074,7 @@ func (this *QWindow) MapFromGlobal(pos *qtcore.QPoint) *qtcore.QPoint /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QCursor cursor()
 func (this *QWindow) Cursor() *QCursor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QWindow6cursorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow6cursorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCursorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -1092,7 +1088,7 @@ func (this *QWindow) Cursor() *QCursor /*123*/ {
 // [-2] void setCursor(const QCursor &)
 func (this *QWindow) SetCursor(arg0 *QCursor) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow9setCursorERK7QCursor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow9setCursorERK7QCursor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1101,7 +1097,7 @@ func (this *QWindow) SetCursor(arg0 *QCursor) {
 // Public Visibility=Default Availability=Available
 // [-2] void unsetCursor()
 func (this *QWindow) UnsetCursor() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11unsetCursorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11unsetCursorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1110,7 +1106,7 @@ func (this *QWindow) UnsetCursor() {
 // Public static Visibility=Default Availability=Available
 // [8] QWindow * fromWinId(WId)
 func (this *QWindow) FromWinId(id uint64) *QWindow /*777 QWindow **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow9fromWinIdEy", ffiqt.FFI_TYPE_POINTER, id)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow9fromWinIdEy", qtrt.FFI_TYPE_POINTER, id)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -1127,7 +1123,7 @@ func QWindow_FromWinId(id uint64) *QWindow /*777 QWindow **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void requestActivate()
 func (this *QWindow) RequestActivate() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow15requestActivateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow15requestActivateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1136,7 +1132,7 @@ func (this *QWindow) RequestActivate() {
 // Public Visibility=Default Availability=Available
 // [-2] void setVisible(_Bool)
 func (this *QWindow) SetVisible(visible bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow10setVisibleEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visible)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow10setVisibleEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visible)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1145,7 +1141,7 @@ func (this *QWindow) SetVisible(visible bool) {
 // Public Visibility=Default Availability=Available
 // [-2] void show()
 func (this *QWindow) Show() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow4showEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow4showEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1154,7 +1150,7 @@ func (this *QWindow) Show() {
 // Public Visibility=Default Availability=Available
 // [-2] void hide()
 func (this *QWindow) Hide() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow4hideEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow4hideEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1163,7 +1159,7 @@ func (this *QWindow) Hide() {
 // Public Visibility=Default Availability=Available
 // [-2] void showMinimized()
 func (this *QWindow) ShowMinimized() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow13showMinimizedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow13showMinimizedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1172,7 +1168,7 @@ func (this *QWindow) ShowMinimized() {
 // Public Visibility=Default Availability=Available
 // [-2] void showMaximized()
 func (this *QWindow) ShowMaximized() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow13showMaximizedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow13showMaximizedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1181,7 +1177,7 @@ func (this *QWindow) ShowMaximized() {
 // Public Visibility=Default Availability=Available
 // [-2] void showFullScreen()
 func (this *QWindow) ShowFullScreen() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow14showFullScreenEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow14showFullScreenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1190,7 +1186,7 @@ func (this *QWindow) ShowFullScreen() {
 // Public Visibility=Default Availability=Available
 // [-2] void showNormal()
 func (this *QWindow) ShowNormal() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow10showNormalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow10showNormalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1199,7 +1195,7 @@ func (this *QWindow) ShowNormal() {
 // Public Visibility=Default Availability=Available
 // [1] bool close()
 func (this *QWindow) Close() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow5closeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow5closeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1210,7 +1206,7 @@ func (this *QWindow) Close() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void raise()
 func (this *QWindow) Raise() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow5raiseEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow5raiseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1219,7 +1215,7 @@ func (this *QWindow) Raise() {
 // Public Visibility=Default Availability=Available
 // [-2] void lower()
 func (this *QWindow) Lower() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow5lowerEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow5lowerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1229,7 +1225,7 @@ func (this *QWindow) Lower() {
 // [-2] void setTitle(const QString &)
 func (this *QWindow) SetTitle(arg0 *qtcore.QString) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow8setTitleERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow8setTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1238,7 +1234,7 @@ func (this *QWindow) SetTitle(arg0 *qtcore.QString) {
 // Public Visibility=Default Availability=Available
 // [-2] void setX(int)
 func (this *QWindow) SetX(arg int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow4setXEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow4setXEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1247,7 +1243,7 @@ func (this *QWindow) SetX(arg int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setY(int)
 func (this *QWindow) SetY(arg int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow4setYEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow4setYEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1256,7 +1252,7 @@ func (this *QWindow) SetY(arg int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setWidth(int)
 func (this *QWindow) SetWidth(arg int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow8setWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow8setWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1265,7 +1261,7 @@ func (this *QWindow) SetWidth(arg int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setHeight(int)
 func (this *QWindow) SetHeight(arg int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow9setHeightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow9setHeightEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1274,7 +1270,7 @@ func (this *QWindow) SetHeight(arg int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setGeometry(int, int, int, int)
 func (this *QWindow) SetGeometry(posx int, posy int, w int, h int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11setGeometryEiiii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), posx, posy, w, h)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11setGeometryEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), posx, posy, w, h)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1284,7 +1280,7 @@ func (this *QWindow) SetGeometry(posx int, posy int, w int, h int) {
 // [-2] void setGeometry(const QRect &)
 func (this *QWindow) SetGeometry_1(rect *qtcore.QRect) {
 	var convArg0 = rect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11setGeometryERK5QRect", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11setGeometryERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1293,7 +1289,7 @@ func (this *QWindow) SetGeometry_1(rect *qtcore.QRect) {
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumWidth(int)
 func (this *QWindow) SetMinimumWidth(w int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow15setMinimumWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow15setMinimumWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1302,7 +1298,7 @@ func (this *QWindow) SetMinimumWidth(w int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumHeight(int)
 func (this *QWindow) SetMinimumHeight(h int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow16setMinimumHeightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), h)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow16setMinimumHeightEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1311,7 +1307,7 @@ func (this *QWindow) SetMinimumHeight(h int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximumWidth(int)
 func (this *QWindow) SetMaximumWidth(w int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow15setMaximumWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow15setMaximumWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1320,7 +1316,7 @@ func (this *QWindow) SetMaximumWidth(w int) {
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximumHeight(int)
 func (this *QWindow) SetMaximumHeight(h int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow16setMaximumHeightEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), h)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow16setMaximumHeightEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), h)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1329,7 +1325,7 @@ func (this *QWindow) SetMaximumHeight(h int) {
 // Public Visibility=Default Availability=Available
 // [-2] void alert(int)
 func (this *QWindow) Alert(msec int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow5alertEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), msec)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow5alertEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1338,7 +1334,7 @@ func (this *QWindow) Alert(msec int) {
 // Public Visibility=Default Availability=Available
 // [-2] void requestUpdate()
 func (this *QWindow) RequestUpdate() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow13requestUpdateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow13requestUpdateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1348,7 +1344,7 @@ func (this *QWindow) RequestUpdate() {
 // [-2] void screenChanged(QScreen *)
 func (this *QWindow) ScreenChanged(screen *QScreen /*777 QScreen **/) {
 	var convArg0 = screen.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow13screenChangedEP7QScreen", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow13screenChangedEP7QScreen", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1357,7 +1353,7 @@ func (this *QWindow) ScreenChanged(screen *QScreen /*777 QScreen **/) {
 // Public Visibility=Default Availability=Available
 // [-2] void modalityChanged(Qt::WindowModality)
 func (this *QWindow) ModalityChanged(modality int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow15modalityChangedEN2Qt14WindowModalityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), modality)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow15modalityChangedEN2Qt14WindowModalityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), modality)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1366,7 +1362,7 @@ func (this *QWindow) ModalityChanged(modality int) {
 // Public Visibility=Default Availability=Available
 // [-2] void windowStateChanged(Qt::WindowState)
 func (this *QWindow) WindowStateChanged(windowState int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow18windowStateChangedEN2Qt11WindowStateE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), windowState)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow18windowStateChangedEN2Qt11WindowStateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), windowState)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1376,7 +1372,7 @@ func (this *QWindow) WindowStateChanged(windowState int) {
 // [-2] void windowTitleChanged(const QString &)
 func (this *QWindow) WindowTitleChanged(title *qtcore.QString) {
 	var convArg0 = title.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow18windowTitleChangedERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow18windowTitleChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1385,7 +1381,7 @@ func (this *QWindow) WindowTitleChanged(title *qtcore.QString) {
 // Public Visibility=Default Availability=Available
 // [-2] void xChanged(int)
 func (this *QWindow) XChanged(arg int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow8xChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow8xChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1394,7 +1390,7 @@ func (this *QWindow) XChanged(arg int) {
 // Public Visibility=Default Availability=Available
 // [-2] void yChanged(int)
 func (this *QWindow) YChanged(arg int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow8yChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow8yChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1403,7 +1399,7 @@ func (this *QWindow) YChanged(arg int) {
 // Public Visibility=Default Availability=Available
 // [-2] void widthChanged(int)
 func (this *QWindow) WidthChanged(arg int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow12widthChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow12widthChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1412,7 +1408,7 @@ func (this *QWindow) WidthChanged(arg int) {
 // Public Visibility=Default Availability=Available
 // [-2] void heightChanged(int)
 func (this *QWindow) HeightChanged(arg int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow13heightChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow13heightChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1421,7 +1417,7 @@ func (this *QWindow) HeightChanged(arg int) {
 // Public Visibility=Default Availability=Available
 // [-2] void minimumWidthChanged(int)
 func (this *QWindow) MinimumWidthChanged(arg int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow19minimumWidthChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow19minimumWidthChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1430,7 +1426,7 @@ func (this *QWindow) MinimumWidthChanged(arg int) {
 // Public Visibility=Default Availability=Available
 // [-2] void minimumHeightChanged(int)
 func (this *QWindow) MinimumHeightChanged(arg int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow20minimumHeightChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow20minimumHeightChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1439,7 +1435,7 @@ func (this *QWindow) MinimumHeightChanged(arg int) {
 // Public Visibility=Default Availability=Available
 // [-2] void maximumWidthChanged(int)
 func (this *QWindow) MaximumWidthChanged(arg int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow19maximumWidthChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow19maximumWidthChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1448,7 +1444,7 @@ func (this *QWindow) MaximumWidthChanged(arg int) {
 // Public Visibility=Default Availability=Available
 // [-2] void maximumHeightChanged(int)
 func (this *QWindow) MaximumHeightChanged(arg int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow20maximumHeightChangedEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow20maximumHeightChangedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1457,7 +1453,7 @@ func (this *QWindow) MaximumHeightChanged(arg int) {
 // Public Visibility=Default Availability=Available
 // [-2] void visibleChanged(_Bool)
 func (this *QWindow) VisibleChanged(arg bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow14visibleChangedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow14visibleChangedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1466,7 +1462,7 @@ func (this *QWindow) VisibleChanged(arg bool) {
 // Public Visibility=Default Availability=Available
 // [-2] void visibilityChanged(QWindow::Visibility)
 func (this *QWindow) VisibilityChanged(visibility int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow17visibilityChangedENS_10VisibilityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), visibility)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow17visibilityChangedENS_10VisibilityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), visibility)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1475,7 +1471,7 @@ func (this *QWindow) VisibilityChanged(visibility int) {
 // Public Visibility=Default Availability=Available
 // [-2] void activeChanged()
 func (this *QWindow) ActiveChanged() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow13activeChangedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow13activeChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1484,7 +1480,7 @@ func (this *QWindow) ActiveChanged() {
 // Public Visibility=Default Availability=Available
 // [-2] void contentOrientationChanged(Qt::ScreenOrientation)
 func (this *QWindow) ContentOrientationChanged(orientation int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow25contentOrientationChangedEN2Qt17ScreenOrientationE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), orientation)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow25contentOrientationChangedEN2Qt17ScreenOrientationE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), orientation)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1494,7 +1490,7 @@ func (this *QWindow) ContentOrientationChanged(orientation int) {
 // [-2] void focusObjectChanged(QObject *)
 func (this *QWindow) FocusObjectChanged(object *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = object.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow18focusObjectChangedEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow18focusObjectChangedEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1503,7 +1499,7 @@ func (this *QWindow) FocusObjectChanged(object *qtcore.QObject /*777 QObject **/
 // Public Visibility=Default Availability=Available
 // [-2] void opacityChanged(qreal)
 func (this *QWindow) OpacityChanged(opacity float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow14opacityChangedEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), opacity)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow14opacityChangedEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), opacity)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1513,7 +1509,7 @@ func (this *QWindow) OpacityChanged(opacity float64) {
 // [-2] void exposeEvent(QExposeEvent *)
 func (this *QWindow) ExposeEvent(arg0 *QExposeEvent /*777 QExposeEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11exposeEventEP12QExposeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11exposeEventEP12QExposeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1523,7 +1519,7 @@ func (this *QWindow) ExposeEvent(arg0 *QExposeEvent /*777 QExposeEvent **/) {
 // [-2] void resizeEvent(QResizeEvent *)
 func (this *QWindow) ResizeEvent(arg0 *QResizeEvent /*777 QResizeEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11resizeEventEP12QResizeEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1533,7 +1529,7 @@ func (this *QWindow) ResizeEvent(arg0 *QResizeEvent /*777 QResizeEvent **/) {
 // [-2] void moveEvent(QMoveEvent *)
 func (this *QWindow) MoveEvent(arg0 *QMoveEvent /*777 QMoveEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow9moveEventEP10QMoveEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow9moveEventEP10QMoveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1543,7 +1539,7 @@ func (this *QWindow) MoveEvent(arg0 *QMoveEvent /*777 QMoveEvent **/) {
 // [-2] void focusInEvent(QFocusEvent *)
 func (this *QWindow) FocusInEvent(arg0 *QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow12focusInEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow12focusInEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1553,7 +1549,7 @@ func (this *QWindow) FocusInEvent(arg0 *QFocusEvent /*777 QFocusEvent **/) {
 // [-2] void focusOutEvent(QFocusEvent *)
 func (this *QWindow) FocusOutEvent(arg0 *QFocusEvent /*777 QFocusEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow13focusOutEventEP11QFocusEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow13focusOutEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1563,7 +1559,7 @@ func (this *QWindow) FocusOutEvent(arg0 *QFocusEvent /*777 QFocusEvent **/) {
 // [-2] void showEvent(QShowEvent *)
 func (this *QWindow) ShowEvent(arg0 *QShowEvent /*777 QShowEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow9showEventEP10QShowEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow9showEventEP10QShowEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1573,7 +1569,7 @@ func (this *QWindow) ShowEvent(arg0 *QShowEvent /*777 QShowEvent **/) {
 // [-2] void hideEvent(QHideEvent *)
 func (this *QWindow) HideEvent(arg0 *QHideEvent /*777 QHideEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow9hideEventEP10QHideEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow9hideEventEP10QHideEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1583,7 +1579,7 @@ func (this *QWindow) HideEvent(arg0 *QHideEvent /*777 QHideEvent **/) {
 // [1] bool event(QEvent *)
 func (this *QWindow) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -1595,7 +1591,7 @@ func (this *QWindow) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 // [-2] void keyPressEvent(QKeyEvent *)
 func (this *QWindow) KeyPressEvent(arg0 *QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow13keyPressEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow13keyPressEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1605,7 +1601,7 @@ func (this *QWindow) KeyPressEvent(arg0 *QKeyEvent /*777 QKeyEvent **/) {
 // [-2] void keyReleaseEvent(QKeyEvent *)
 func (this *QWindow) KeyReleaseEvent(arg0 *QKeyEvent /*777 QKeyEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow15keyReleaseEventEP9QKeyEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow15keyReleaseEventEP9QKeyEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1615,7 +1611,7 @@ func (this *QWindow) KeyReleaseEvent(arg0 *QKeyEvent /*777 QKeyEvent **/) {
 // [-2] void mousePressEvent(QMouseEvent *)
 func (this *QWindow) MousePressEvent(arg0 *QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow15mousePressEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow15mousePressEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1625,7 +1621,7 @@ func (this *QWindow) MousePressEvent(arg0 *QMouseEvent /*777 QMouseEvent **/) {
 // [-2] void mouseReleaseEvent(QMouseEvent *)
 func (this *QWindow) MouseReleaseEvent(arg0 *QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow17mouseReleaseEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow17mouseReleaseEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1635,7 +1631,7 @@ func (this *QWindow) MouseReleaseEvent(arg0 *QMouseEvent /*777 QMouseEvent **/) 
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
 func (this *QWindow) MouseDoubleClickEvent(arg0 *QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow21mouseDoubleClickEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow21mouseDoubleClickEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1645,7 +1641,7 @@ func (this *QWindow) MouseDoubleClickEvent(arg0 *QMouseEvent /*777 QMouseEvent *
 // [-2] void mouseMoveEvent(QMouseEvent *)
 func (this *QWindow) MouseMoveEvent(arg0 *QMouseEvent /*777 QMouseEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow14mouseMoveEventEP11QMouseEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow14mouseMoveEventEP11QMouseEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1655,7 +1651,7 @@ func (this *QWindow) MouseMoveEvent(arg0 *QMouseEvent /*777 QMouseEvent **/) {
 // [-2] void wheelEvent(QWheelEvent *)
 func (this *QWindow) WheelEvent(arg0 *QWheelEvent /*777 QWheelEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow10wheelEventEP11QWheelEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1665,7 +1661,7 @@ func (this *QWindow) WheelEvent(arg0 *QWheelEvent /*777 QWheelEvent **/) {
 // [-2] void touchEvent(QTouchEvent *)
 func (this *QWindow) TouchEvent(arg0 *QTouchEvent /*777 QTouchEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow10touchEventEP11QTouchEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow10touchEventEP11QTouchEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1675,7 +1671,7 @@ func (this *QWindow) TouchEvent(arg0 *QTouchEvent /*777 QTouchEvent **/) {
 // [-2] void tabletEvent(QTabletEvent *)
 func (this *QWindow) TabletEvent(arg0 *QTabletEvent /*777 QTabletEvent **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11tabletEventEP12QTabletEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11tabletEventEP12QTabletEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -1685,7 +1681,7 @@ func (this *QWindow) TabletEvent(arg0 *QTabletEvent /*777 QTabletEvent **/) {
 // [1] bool nativeEvent(const QByteArray &, void *, long *)
 func (this *QWindow) NativeEvent(eventType *qtcore.QByteArray, message unsafe.Pointer /*666*/, result unsafe.Pointer /*666*/) bool {
 	var convArg0 = eventType.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QWindow11nativeEventERK10QByteArrayPvPl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, message, &result)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11nativeEventERK10QByteArrayPvPl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, message, &result)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

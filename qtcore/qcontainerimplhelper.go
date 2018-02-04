@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QContainerImplHelper) NewFromPointer(cthis unsafe.Pointer) *QContainerImp
 // Public static Visibility=Default Availability=Available
 // [4] QtPrivate::QContainerImplHelper::CutResult mid(int, int *, int *)
 func (this *QContainerImplHelper) Mid(originalLength int, position unsafe.Pointer /*666*/, length unsafe.Pointer /*666*/) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QtPrivate20QContainerImplHelper3midEiPiS1_", ffiqt.FFI_TYPE_POINTER, originalLength, &position, &length)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate20QContainerImplHelper3midEiPiS1_", qtrt.FFI_TYPE_POINTER, originalLength, &position, &length)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return int(rv)
@@ -87,7 +83,7 @@ func QContainerImplHelper_Mid(originalLength int, position unsafe.Pointer /*666*
 }
 
 func DeleteQContainerImplHelper(this *QContainerImplHelper) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QContainerImplHelperD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QContainerImplHelperD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

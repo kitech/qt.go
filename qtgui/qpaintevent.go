@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -77,7 +73,7 @@ func (*QPaintEvent) NewFromPointer(cthis unsafe.Pointer) *QPaintEvent {
 // [-2] void QPaintEvent(const QRegion &)
 func NewQPaintEvent(paintRegion *QRegion) *QPaintEvent {
 	var convArg0 = paintRegion.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPaintEventC2ERK7QRegion", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QPaintEventC2ERK7QRegion", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPaintEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPaintEvent)
@@ -90,7 +86,7 @@ func NewQPaintEvent(paintRegion *QRegion) *QPaintEvent {
 // [-2] void QPaintEvent(const QRect &)
 func NewQPaintEvent_1(paintRect *qtcore.QRect) *QPaintEvent {
 	var convArg0 = paintRect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPaintEventC2ERK5QRect", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QPaintEventC2ERK5QRect", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPaintEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPaintEvent)
@@ -102,7 +98,7 @@ func NewQPaintEvent_1(paintRect *qtcore.QRect) *QPaintEvent {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPaintEvent()
 func DeleteQPaintEvent(this *QPaintEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QPaintEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QPaintEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 56)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -113,7 +109,7 @@ func DeleteQPaintEvent(this *QPaintEvent) {
 // Public inline Visibility=Default Availability=Available
 // [16] const QRect & rect()
 func (this *QPaintEvent) Rect() *qtcore.QRect {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPaintEvent4rectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPaintEvent4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
@@ -126,7 +122,7 @@ func (this *QPaintEvent) Rect() *qtcore.QRect {
 // Public inline Visibility=Default Availability=Available
 // [8] const QRegion & region()
 func (this *QPaintEvent) Region() *QRegion {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QPaintEvent6regionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPaintEvent6regionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 4441

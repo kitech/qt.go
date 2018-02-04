@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QEvent) NewFromPointer(cthis unsafe.Pointer) *QEvent {
 // Public Visibility=Default Availability=Available
 // [-2] void QEvent(enum QEvent::Type)
 func NewQEvent(type_ int) *QEvent {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEventC2ENS_4TypeE", ffiqt.FFI_TYPE_POINTER, type_)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QEventC2ENS_4TypeE", qtrt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQEventFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQEvent)
@@ -87,7 +83,7 @@ func NewQEvent(type_ int) *QEvent {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QEvent()
 func DeleteQEvent(this *QEvent) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEventD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -98,7 +94,7 @@ func DeleteQEvent(this *QEvent) {
 // Public inline Visibility=Default Availability=Available
 // [4] QEvent::Type type()
 func (this *QEvent) Type() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QEvent4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QEvent4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -109,7 +105,7 @@ func (this *QEvent) Type() int {
 // Public inline Visibility=Default Availability=Available
 // [1] bool spontaneous()
 func (this *QEvent) Spontaneous() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QEvent11spontaneousEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QEvent11spontaneousEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -120,7 +116,7 @@ func (this *QEvent) Spontaneous() bool {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setAccepted(_Bool)
 func (this *QEvent) SetAccepted(accepted bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent11setAcceptedEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), accepted)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QEvent11setAcceptedEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), accepted)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -129,7 +125,7 @@ func (this *QEvent) SetAccepted(accepted bool) {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isAccepted()
 func (this *QEvent) IsAccepted() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK6QEvent10isAcceptedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK6QEvent10isAcceptedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -140,7 +136,7 @@ func (this *QEvent) IsAccepted() bool {
 // Public inline Visibility=Default Availability=Available
 // [-2] void accept()
 func (this *QEvent) Accept() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent6acceptEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QEvent6acceptEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -149,7 +145,7 @@ func (this *QEvent) Accept() {
 // Public inline Visibility=Default Availability=Available
 // [-2] void ignore()
 func (this *QEvent) Ignore() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent6ignoreEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QEvent6ignoreEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -158,7 +154,7 @@ func (this *QEvent) Ignore() {
 // Public static Visibility=Default Availability=Available
 // [4] int registerEventType(int)
 func (this *QEvent) RegisterEventType(hint int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN6QEvent17registerEventTypeEi", ffiqt.FFI_TYPE_POINTER, hint)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QEvent17registerEventTypeEi", qtrt.FFI_TYPE_POINTER, hint)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111

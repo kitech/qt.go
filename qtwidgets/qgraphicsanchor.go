@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QGraphicsAnchor) NewFromPointer(cthis unsafe.Pointer) *QGraphicsAnchor {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QGraphicsAnchor) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsAnchor10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsAnchor10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -92,7 +88,7 @@ func (this *QGraphicsAnchor) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // Public Visibility=Default Availability=Available
 // [-2] void setSpacing(qreal)
 func (this *QGraphicsAnchor) SetSpacing(spacing float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsAnchor10setSpacingEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), spacing)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsAnchor10setSpacingEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), spacing)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -101,7 +97,7 @@ func (this *QGraphicsAnchor) SetSpacing(spacing float64) {
 // Public Visibility=Default Availability=Available
 // [-2] void unsetSpacing()
 func (this *QGraphicsAnchor) UnsetSpacing() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsAnchor12unsetSpacingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsAnchor12unsetSpacingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -110,7 +106,7 @@ func (this *QGraphicsAnchor) UnsetSpacing() {
 // Public Visibility=Default Availability=Available
 // [8] qreal spacing()
 func (this *QGraphicsAnchor) Spacing() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsAnchor7spacingEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsAnchor7spacingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -121,7 +117,7 @@ func (this *QGraphicsAnchor) Spacing() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void setSizePolicy(QSizePolicy::Policy)
 func (this *QGraphicsAnchor) SetSizePolicy(policy int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsAnchor13setSizePolicyEN11QSizePolicy6PolicyE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), policy)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsAnchor13setSizePolicyEN11QSizePolicy6PolicyE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), policy)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -130,7 +126,7 @@ func (this *QGraphicsAnchor) SetSizePolicy(policy int) {
 // Public Visibility=Default Availability=Available
 // [4] QSizePolicy::Policy sizePolicy()
 func (this *QGraphicsAnchor) SizePolicy() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QGraphicsAnchor10sizePolicyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsAnchor10sizePolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -141,7 +137,7 @@ func (this *QGraphicsAnchor) SizePolicy() int {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsAnchor()
 func DeleteQGraphicsAnchor(this *QGraphicsAnchor) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QGraphicsAnchorD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsAnchorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)

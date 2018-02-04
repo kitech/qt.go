@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QMapDataBase) NewFromPointer(cthis unsafe.Pointer) *QMapDataBase {
 // Public Visibility=Default Availability=Available
 // [-2] void recalcMostLeftNode()
 func (this *QMapDataBase) RecalcMostLeftNode() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapDataBase18recalcMostLeftNodeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QMapDataBase18recalcMostLeftNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -84,7 +80,7 @@ func (this *QMapDataBase) RecalcMostLeftNode() {
 // Public static Visibility=Default Availability=Available
 // [8] QMapDataBase * createData()
 func (this *QMapDataBase) CreateData() *QMapDataBase /*777 QMapDataBase **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapDataBase10createDataEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QMapDataBase10createDataEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQMapDataBaseFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -97,7 +93,7 @@ func QMapDataBase_CreateData() *QMapDataBase /*777 QMapDataBase **/ {
 }
 
 func DeleteQMapDataBase(this *QMapDataBase) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QMapDataBaseD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QMapDataBaseD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

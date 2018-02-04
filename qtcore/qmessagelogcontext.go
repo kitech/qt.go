@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QMessageLogContext) NewFromPointer(cthis unsafe.Pointer) *QMessageLogCont
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMessageLogContext()
 func NewQMessageLogContext() *QMessageLogContext {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QMessageLogContextC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QMessageLogContextC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMessageLogContextFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMessageLogContext)
@@ -93,7 +89,7 @@ func NewQMessageLogContext_1(fileName string, lineNumber int, functionName strin
 	defer qtrt.FreeMem(convArg2)
 	var convArg3 = qtrt.CString(categoryName)
 	defer qtrt.FreeMem(convArg3)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QMessageLogContextC2EPKciS1_S1_", ffiqt.FFI_TYPE_POINTER, convArg0, lineNumber, convArg2, convArg3)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QMessageLogContextC2EPKciS1_S1_", qtrt.FFI_TYPE_POINTER, convArg0, lineNumber, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQMessageLogContextFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQMessageLogContext)
@@ -106,12 +102,12 @@ func NewQMessageLogContext_1(fileName string, lineNumber int, functionName strin
 // [-2] void copy(const QMessageLogContext &)
 func (this *QMessageLogContext) Copy(logContext *QMessageLogContext) {
 	var convArg0 = logContext.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QMessageLogContext4copyERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QMessageLogContext4copyERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
 func DeleteQMessageLogContext(this *QMessageLogContext) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QMessageLogContextD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QMessageLogContextD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

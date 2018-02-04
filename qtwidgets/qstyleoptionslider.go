@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -34,9 +33,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -80,7 +76,7 @@ func (*QStyleOptionSlider) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionSli
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionSlider()
 func NewQStyleOptionSlider() *QStyleOptionSlider {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionSliderC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QStyleOptionSliderC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionSliderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionSlider)
@@ -92,7 +88,7 @@ func NewQStyleOptionSlider() *QStyleOptionSlider {
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionSlider(int)
 func NewQStyleOptionSlider_1(version int) *QStyleOptionSlider {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionSliderC2Ei", ffiqt.FFI_TYPE_POINTER, version)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QStyleOptionSliderC2Ei", qtrt.FFI_TYPE_POINTER, version)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleOptionSliderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStyleOptionSlider)
@@ -100,7 +96,7 @@ func NewQStyleOptionSlider_1(version int) *QStyleOptionSlider {
 }
 
 func DeleteQStyleOptionSlider(this *QStyleOptionSlider) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QStyleOptionSliderD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QStyleOptionSliderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

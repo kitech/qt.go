@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -79,7 +75,7 @@ func (*QAbstractUndoItem) NewFromPointer(cthis unsafe.Pointer) *QAbstractUndoIte
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractUndoItem()
 func DeleteQAbstractUndoItem(this *QAbstractUndoItem) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractUndoItemD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractUndoItemD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -90,7 +86,7 @@ func DeleteQAbstractUndoItem(this *QAbstractUndoItem) {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void undo()
 func (this *QAbstractUndoItem) Undo() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractUndoItem4undoEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractUndoItem4undoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -99,7 +95,7 @@ func (this *QAbstractUndoItem) Undo() {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void redo()
 func (this *QAbstractUndoItem) Redo() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QAbstractUndoItem4redoEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractUndoItem4redoEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

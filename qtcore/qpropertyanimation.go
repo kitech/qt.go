@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -34,9 +33,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 }
@@ -46,17 +42,17 @@ func init() {
 //  body block begin
 // bool event(class QEvent *)
 func (this *QPropertyAnimation) InheritEvent(f func(event *QEvent /*777 QEvent **/) bool) {
-	ffiqt.SetAllInheritCallback(this, "event", f)
+	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
 // void updateCurrentValue(const class QVariant &)
 func (this *QPropertyAnimation) InheritUpdateCurrentValue(f func(value *QVariant)) {
-	ffiqt.SetAllInheritCallback(this, "updateCurrentValue", f)
+	qtrt.SetAllInheritCallback(this, "updateCurrentValue", f)
 }
 
 // void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
 func (this *QPropertyAnimation) InheritUpdateState(f func(newState int, oldState int)) {
-	ffiqt.SetAllInheritCallback(this, "updateState", f)
+	qtrt.SetAllInheritCallback(this, "updateState", f)
 }
 
 type QPropertyAnimation struct {
@@ -86,7 +82,7 @@ func (*QPropertyAnimation) NewFromPointer(cthis unsafe.Pointer) *QPropertyAnimat
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QPropertyAnimation) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QPropertyAnimation10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QPropertyAnimation10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -99,7 +95,7 @@ func (this *QPropertyAnimation) MetaObject() *QMetaObject /*777 const QMetaObjec
 // [-2] void QPropertyAnimation(QObject *)
 func NewQPropertyAnimation(parent *QObject /*777 QObject **/) *QPropertyAnimation {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPropertyAnimationC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPropertyAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -113,7 +109,7 @@ func NewQPropertyAnimation_1(target *QObject /*777 QObject **/, propertyName *QB
 	var convArg0 = target.GetCthis()
 	var convArg1 = propertyName.GetCthis()
 	var convArg2 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPropertyAnimationC2EP7QObjectRK10QByteArrayS1_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimationC2EP7QObjectRK10QByteArrayS1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPropertyAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -124,7 +120,7 @@ func NewQPropertyAnimation_1(target *QObject /*777 QObject **/, propertyName *QB
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPropertyAnimation()
 func DeleteQPropertyAnimation(this *QPropertyAnimation) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPropertyAnimationD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -135,7 +131,7 @@ func DeleteQPropertyAnimation(this *QPropertyAnimation) {
 // Public Visibility=Default Availability=Available
 // [8] QObject * targetObject()
 func (this *QPropertyAnimation) TargetObject() *QObject /*777 QObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QPropertyAnimation12targetObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QPropertyAnimation12targetObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -148,7 +144,7 @@ func (this *QPropertyAnimation) TargetObject() *QObject /*777 QObject **/ {
 // [-2] void setTargetObject(QObject *)
 func (this *QPropertyAnimation) SetTargetObject(target *QObject /*777 QObject **/) {
 	var convArg0 = target.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPropertyAnimation15setTargetObjectEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation15setTargetObjectEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -157,7 +153,7 @@ func (this *QPropertyAnimation) SetTargetObject(target *QObject /*777 QObject **
 // Public Visibility=Default Availability=Available
 // [8] QByteArray propertyName()
 func (this *QPropertyAnimation) PropertyName() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QPropertyAnimation12propertyNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QPropertyAnimation12propertyNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -171,7 +167,7 @@ func (this *QPropertyAnimation) PropertyName() *QByteArray /*123*/ {
 // [-2] void setPropertyName(const QByteArray &)
 func (this *QPropertyAnimation) SetPropertyName(propertyName *QByteArray) {
 	var convArg0 = propertyName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPropertyAnimation15setPropertyNameERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation15setPropertyNameERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -181,7 +177,7 @@ func (this *QPropertyAnimation) SetPropertyName(propertyName *QByteArray) {
 // [1] bool event(QEvent *)
 func (this *QPropertyAnimation) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPropertyAnimation5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -193,7 +189,7 @@ func (this *QPropertyAnimation) Event(event *QEvent /*777 QEvent **/) bool {
 // [-2] void updateCurrentValue(const QVariant &)
 func (this *QPropertyAnimation) UpdateCurrentValue(value *QVariant) {
 	var convArg0 = value.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPropertyAnimation18updateCurrentValueERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation18updateCurrentValueERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -202,7 +198,7 @@ func (this *QPropertyAnimation) UpdateCurrentValue(value *QVariant) {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
 func (this *QPropertyAnimation) UpdateState(newState int, oldState int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QPropertyAnimation11updateStateEN18QAbstractAnimation5StateES1_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QPropertyAnimation11updateStateEN18QAbstractAnimation5StateES1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newState, oldState)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -54,12 +50,12 @@ func init() {
 //  body block begin
 // void done(int)
 func (this *QErrorMessage) InheritDone(f func(arg0 int)) {
-	ffiqt.SetAllInheritCallback(this, "done", f)
+	qtrt.SetAllInheritCallback(this, "done", f)
 }
 
 // void changeEvent(class QEvent *)
 func (this *QErrorMessage) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "changeEvent", f)
+	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
 type QErrorMessage struct {
@@ -89,7 +85,7 @@ func (*QErrorMessage) NewFromPointer(cthis unsafe.Pointer) *QErrorMessage {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QErrorMessage) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QErrorMessage10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QErrorMessage10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -102,7 +98,7 @@ func (this *QErrorMessage) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 // [-2] void QErrorMessage(QWidget *)
 func NewQErrorMessage(parent *QWidget /*777 QWidget **/) *QErrorMessage {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessageC2EP7QWidget", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QErrorMessageC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQErrorMessageFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -113,7 +109,7 @@ func NewQErrorMessage(parent *QWidget /*777 QWidget **/) *QErrorMessage {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QErrorMessage()
 func DeleteQErrorMessage(this *QErrorMessage) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessageD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QErrorMessageD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 48)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -124,7 +120,7 @@ func DeleteQErrorMessage(this *QErrorMessage) {
 // Public static Visibility=Default Availability=Available
 // [8] QErrorMessage * qtHandler()
 func (this *QErrorMessage) QtHandler() *QErrorMessage /*777 QErrorMessage **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage9qtHandlerEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QErrorMessage9qtHandlerEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQErrorMessageFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -142,7 +138,7 @@ func QErrorMessage_QtHandler() *QErrorMessage /*777 QErrorMessage **/ {
 // [-2] void showMessage(const QString &)
 func (this *QErrorMessage) ShowMessage(message *qtcore.QString) {
 	var convArg0 = message.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage11showMessageERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QErrorMessage11showMessageERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -153,7 +149,7 @@ func (this *QErrorMessage) ShowMessage(message *qtcore.QString) {
 func (this *QErrorMessage) ShowMessage_1(message *qtcore.QString, type_ *qtcore.QString) {
 	var convArg0 = message.GetCthis()
 	var convArg1 = type_.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage11showMessageERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QErrorMessage11showMessageERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -162,7 +158,7 @@ func (this *QErrorMessage) ShowMessage_1(message *qtcore.QString, type_ *qtcore.
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void done(int)
 func (this *QErrorMessage) Done(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage4doneEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QErrorMessage4doneEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -172,7 +168,7 @@ func (this *QErrorMessage) Done(arg0 int) {
 // [-2] void changeEvent(QEvent *)
 func (this *QErrorMessage) ChangeEvent(e *qtcore.QEvent /*777 QEvent **/) {
 	var convArg0 = e.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QErrorMessage11changeEventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QErrorMessage11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

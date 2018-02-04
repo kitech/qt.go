@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -34,9 +33,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 }
@@ -46,17 +42,17 @@ func init() {
 //  body block begin
 // bool eventTest(class QEvent *)
 func (this *QSignalTransition) InheritEventTest(f func(event *QEvent /*777 QEvent **/) bool) {
-	ffiqt.SetAllInheritCallback(this, "eventTest", f)
+	qtrt.SetAllInheritCallback(this, "eventTest", f)
 }
 
 // void onTransition(class QEvent *)
 func (this *QSignalTransition) InheritOnTransition(f func(event *QEvent /*777 QEvent **/)) {
-	ffiqt.SetAllInheritCallback(this, "onTransition", f)
+	qtrt.SetAllInheritCallback(this, "onTransition", f)
 }
 
 // bool event(class QEvent *)
 func (this *QSignalTransition) InheritEvent(f func(e *QEvent /*777 QEvent **/) bool) {
-	ffiqt.SetAllInheritCallback(this, "event", f)
+	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
 type QSignalTransition struct {
@@ -86,7 +82,7 @@ func (*QSignalTransition) NewFromPointer(cthis unsafe.Pointer) *QSignalTransitio
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QSignalTransition) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSignalTransition10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSignalTransition10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -99,7 +95,7 @@ func (this *QSignalTransition) MetaObject() *QMetaObject /*777 const QMetaObject
 // [-2] void QSignalTransition(QState *)
 func NewQSignalTransition(sourceState *QState /*777 QState **/) *QSignalTransition {
 	var convArg0 = sourceState.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSignalTransitionC2EP6QState", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSignalTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -114,7 +110,7 @@ func NewQSignalTransition_1(sender *QObject /*777 const QObject **/, signal stri
 	var convArg1 = qtrt.CString(signal)
 	defer qtrt.FreeMem(convArg1)
 	var convArg2 = sourceState.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSignalTransitionC2EPK7QObjectPKcP6QState", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransitionC2EPK7QObjectPKcP6QState", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSignalTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -125,7 +121,7 @@ func NewQSignalTransition_1(sender *QObject /*777 const QObject **/, signal stri
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSignalTransition()
 func DeleteQSignalTransition(this *QSignalTransition) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSignalTransitionD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransitionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -136,7 +132,7 @@ func DeleteQSignalTransition(this *QSignalTransition) {
 // Public Visibility=Default Availability=Available
 // [8] QObject * senderObject()
 func (this *QSignalTransition) SenderObject() *QObject /*777 QObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSignalTransition12senderObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSignalTransition12senderObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -149,7 +145,7 @@ func (this *QSignalTransition) SenderObject() *QObject /*777 QObject **/ {
 // [-2] void setSenderObject(const QObject *)
 func (this *QSignalTransition) SetSenderObject(sender *QObject /*777 const QObject **/) {
 	var convArg0 = sender.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSignalTransition15setSenderObjectEPK7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransition15setSenderObjectEPK7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -158,7 +154,7 @@ func (this *QSignalTransition) SetSenderObject(sender *QObject /*777 const QObje
 // Public Visibility=Default Availability=Available
 // [8] QByteArray signal()
 func (this *QSignalTransition) Signal() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSignalTransition6signalEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSignalTransition6signalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -172,7 +168,7 @@ func (this *QSignalTransition) Signal() *QByteArray /*123*/ {
 // [-2] void setSignal(const QByteArray &)
 func (this *QSignalTransition) SetSignal(signal *QByteArray) {
 	var convArg0 = signal.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSignalTransition9setSignalERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransition9setSignalERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -182,7 +178,7 @@ func (this *QSignalTransition) SetSignal(signal *QByteArray) {
 // [1] bool eventTest(QEvent *)
 func (this *QSignalTransition) EventTest(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSignalTransition9eventTestEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransition9eventTestEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -194,7 +190,7 @@ func (this *QSignalTransition) EventTest(event *QEvent /*777 QEvent **/) bool {
 // [-2] void onTransition(QEvent *)
 func (this *QSignalTransition) OnTransition(event *QEvent /*777 QEvent **/) {
 	var convArg0 = event.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSignalTransition12onTransitionEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransition12onTransitionEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -204,7 +200,7 @@ func (this *QSignalTransition) OnTransition(event *QEvent /*777 QEvent **/) {
 // [1] bool event(QEvent *)
 func (this *QSignalTransition) Event(e *QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSignalTransition5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSignalTransition5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

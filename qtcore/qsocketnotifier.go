@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -34,9 +33,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 }
@@ -46,7 +42,7 @@ func init() {
 //  body block begin
 // bool event(class QEvent *)
 func (this *QSocketNotifier) InheritEvent(f func(arg0 *QEvent /*777 QEvent **/) bool) {
-	ffiqt.SetAllInheritCallback(this, "event", f)
+	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
 type QSocketNotifier struct {
@@ -76,7 +72,7 @@ func (*QSocketNotifier) NewFromPointer(cthis unsafe.Pointer) *QSocketNotifier {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QSocketNotifier) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSocketNotifier10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSocketNotifier10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -89,7 +85,7 @@ func (this *QSocketNotifier) MetaObject() *QMetaObject /*777 const QMetaObject *
 // [-2] void QSocketNotifier(qintptr, enum QSocketNotifier::Type, QObject *)
 func NewQSocketNotifier(socket int64, arg1 int, parent *QObject /*777 QObject **/) *QSocketNotifier {
 	var convArg2 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifierC2ExNS_4TypeEP7QObject", ffiqt.FFI_TYPE_POINTER, socket, arg1, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSocketNotifierC2ExNS_4TypeEP7QObject", qtrt.FFI_TYPE_POINTER, socket, arg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSocketNotifierFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -100,7 +96,7 @@ func NewQSocketNotifier(socket int64, arg1 int, parent *QObject /*777 QObject **
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSocketNotifier()
 func DeleteQSocketNotifier(this *QSocketNotifier) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifierD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSocketNotifierD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -111,7 +107,7 @@ func DeleteQSocketNotifier(this *QSocketNotifier) {
 // Public Visibility=Default Availability=Available
 // [8] qintptr socket()
 func (this *QSocketNotifier) Socket() int64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSocketNotifier6socketEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSocketNotifier6socketEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -122,7 +118,7 @@ func (this *QSocketNotifier) Socket() int64 {
 // Public Visibility=Default Availability=Available
 // [4] QSocketNotifier::Type type()
 func (this *QSocketNotifier) Type() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSocketNotifier4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSocketNotifier4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -133,7 +129,7 @@ func (this *QSocketNotifier) Type() int {
 // Public Visibility=Default Availability=Available
 // [1] bool isEnabled()
 func (this *QSocketNotifier) IsEnabled() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSocketNotifier9isEnabledEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSocketNotifier9isEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -144,7 +140,7 @@ func (this *QSocketNotifier) IsEnabled() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setEnabled(_Bool)
 func (this *QSocketNotifier) SetEnabled(arg0 bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifier10setEnabledEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSocketNotifier10setEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -154,7 +150,7 @@ func (this *QSocketNotifier) SetEnabled(arg0 bool) {
 // [1] bool event(QEvent *)
 func (this *QSocketNotifier) Event(arg0 *QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSocketNotifier5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSocketNotifier5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

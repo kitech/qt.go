@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -72,7 +68,7 @@ func (*QEventLoop) NewFromPointer(cthis unsafe.Pointer) *QEventLoop {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QEventLoop) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QEventLoop10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QEventLoop10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -85,7 +81,7 @@ func (this *QEventLoop) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // [-2] void QEventLoop(QObject *)
 func NewQEventLoop(parent *QObject /*777 QObject **/) *QEventLoop {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoopC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoopC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQEventLoopFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -96,7 +92,7 @@ func NewQEventLoop(parent *QObject /*777 QObject **/) *QEventLoop {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QEventLoop()
 func DeleteQEventLoop(this *QEventLoop) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoopD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoopD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -107,7 +103,7 @@ func DeleteQEventLoop(this *QEventLoop) {
 // Public Visibility=Default Availability=Available
 // [1] bool processEvents(QEventLoop::ProcessEventsFlags)
 func (this *QEventLoop) ProcessEvents(flags int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop13processEventsE6QFlagsINS_17ProcessEventsFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoop13processEventsE6QFlagsINS_17ProcessEventsFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -118,7 +114,7 @@ func (this *QEventLoop) ProcessEvents(flags int) bool {
 // Public Visibility=Default Availability=Available
 // [-2] void processEvents(QEventLoop::ProcessEventsFlags, int)
 func (this *QEventLoop) ProcessEvents_1(flags int, maximumTime int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop13processEventsE6QFlagsINS_17ProcessEventsFlagEEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags, maximumTime)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoop13processEventsE6QFlagsINS_17ProcessEventsFlagEEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags, maximumTime)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -127,7 +123,7 @@ func (this *QEventLoop) ProcessEvents_1(flags int, maximumTime int) {
 // Public Visibility=Default Availability=Available
 // [4] int exec(QEventLoop::ProcessEventsFlags)
 func (this *QEventLoop) Exec(flags int) int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -138,7 +134,7 @@ func (this *QEventLoop) Exec(flags int) int {
 // Public Visibility=Default Availability=Available
 // [-2] void exit(int)
 func (this *QEventLoop) Exit(returnCode int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop4exitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), returnCode)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoop4exitEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), returnCode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -147,7 +143,7 @@ func (this *QEventLoop) Exit(returnCode int) {
 // Public Visibility=Default Availability=Available
 // [1] bool isRunning()
 func (this *QEventLoop) IsRunning() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QEventLoop9isRunningEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QEventLoop9isRunningEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -158,7 +154,7 @@ func (this *QEventLoop) IsRunning() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void wakeUp()
 func (this *QEventLoop) WakeUp() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop6wakeUpEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoop6wakeUpEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -168,7 +164,7 @@ func (this *QEventLoop) WakeUp() {
 // [1] bool event(QEvent *)
 func (this *QEventLoop) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoop5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -179,7 +175,7 @@ func (this *QEventLoop) Event(event *QEvent /*777 QEvent **/) bool {
 // Public Visibility=Default Availability=Available
 // [-2] void quit()
 func (this *QEventLoop) Quit() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QEventLoop4quitEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QEventLoop4quitEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

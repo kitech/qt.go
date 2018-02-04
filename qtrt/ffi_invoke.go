@@ -1,9 +1,6 @@
-package ffiqt
+package qtrt
 
 /*
-#cgo CFLAGS: -I/usr/lib/libffi-3.2.1/include/
-#cgo LDFLAGS: -lffi
-
 ///////////
 #include <stdio.h>
 #include <stdlib.h>
@@ -160,7 +157,7 @@ func init() {
 }
 
 func init_invoke() {
-	loadModule := func(libpath string, modname string) {
+	loadModule := func(libpath string, modname string) error {
 		var err error
 		var lib ffi.Library
 		lib, err = ffi.NewLibrary(libpath)
@@ -169,9 +166,23 @@ func init_invoke() {
 		if err == nil {
 			libs[modname] = lib
 		}
+		return err
 	}
+
+	dirp := "/usr/lib"
+	switch runtime.GOOS {
+	case "android":
+		for i := 1; i < 9; i++ {
+			d := fmt.Sprintf("/data/app/org.qtproject.example.go-%d/lib/arm", i)
+			if gopp.FileExist(d) {
+				dirp = d
+				break
+			}
+		}
+	}
+
 	for _, modname := range []string{"Core", "Gui", "Widgets", "Network", "Inline"} {
-		libpath := fmt.Sprintf("/usr/lib/libQt5%s.so", modname)
+		libpath := fmt.Sprintf("%s/libQt5%s.so", dirp, modname)
 		loadModule(libpath, modname)
 	}
 
@@ -296,6 +307,9 @@ func convArg(argx interface{}) (argty byte, argval uint64) {
 	case reflect.Int:
 		argty = FFI_TYPE_INT
 		argval = uint64(argx.(int))
+	case reflect.Uint:
+		argty = FFI_TYPE_UINT32
+		argval = uint64(argx.(uint))
 	case reflect.Bool:
 		argty = FFI_TYPE_INT
 		argval = uint64(gopp.IfElseInt(argx.(bool), 1, 0))
@@ -350,7 +364,7 @@ const (
 	FFI_TYPE_COMPLEX    = byte(C.FFI_TYPE_COMPLEX)
 )
 
-func KeepMe() {}
+// func KeepMe() {}
 
 var ctorAllocStacks = map[string][]uintptr{}
 var ctorAllocStacksMu sync.Mutex

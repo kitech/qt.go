@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QSemaphore) NewFromPointer(cthis unsafe.Pointer) *QSemaphore {
 // Public Visibility=Default Availability=Available
 // [-2] void QSemaphore(int)
 func NewQSemaphore(n int) *QSemaphore {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphoreC2Ei", ffiqt.FFI_TYPE_POINTER, n)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphoreC2Ei", qtrt.FFI_TYPE_POINTER, n)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSemaphoreFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSemaphore)
@@ -87,7 +83,7 @@ func NewQSemaphore(n int) *QSemaphore {
 // Public Visibility=Default Availability=Available
 // [-2] void ~QSemaphore()
 func DeleteQSemaphore(this *QSemaphore) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphoreD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphoreD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -98,7 +94,7 @@ func DeleteQSemaphore(this *QSemaphore) {
 // Public Visibility=Default Availability=Available
 // [-2] void acquire(int)
 func (this *QSemaphore) Acquire(n int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphore7acquireEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore7acquireEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,7 +103,7 @@ func (this *QSemaphore) Acquire(n int) {
 // Public Visibility=Default Availability=Available
 // [1] bool tryAcquire(int)
 func (this *QSemaphore) TryAcquire(n int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -118,7 +114,7 @@ func (this *QSemaphore) TryAcquire(n int) bool {
 // Public Visibility=Default Availability=Available
 // [1] bool tryAcquire(int, int)
 func (this *QSemaphore) TryAcquire_1(n int, timeout int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n, timeout)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n, timeout)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -129,7 +125,7 @@ func (this *QSemaphore) TryAcquire_1(n int, timeout int) bool {
 // Public Visibility=Default Availability=Available
 // [-2] void release(int)
 func (this *QSemaphore) Release(n int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSemaphore7releaseEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore7releaseEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -138,7 +134,7 @@ func (this *QSemaphore) Release(n int) {
 // Public Visibility=Default Availability=Available
 // [4] int available()
 func (this *QSemaphore) Available() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSemaphore9availableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSemaphore9availableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111

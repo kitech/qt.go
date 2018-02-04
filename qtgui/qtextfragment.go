@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -79,7 +75,7 @@ func (*QTextFragment) NewFromPointer(cthis unsafe.Pointer) *QTextFragment {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTextFragment()
 func NewQTextFragment() *QTextFragment {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextFragmentC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextFragmentC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextFragmentFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextFragment)
@@ -91,7 +87,7 @@ func NewQTextFragment() *QTextFragment {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid()
 func (this *QTextFragment) IsValid() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextFragment7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -102,7 +98,7 @@ func (this *QTextFragment) IsValid() bool {
 // Public Visibility=Default Availability=Available
 // [4] int position()
 func (this *QTextFragment) Position() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment8positionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextFragment8positionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -113,7 +109,7 @@ func (this *QTextFragment) Position() int {
 // Public Visibility=Default Availability=Available
 // [4] int length()
 func (this *QTextFragment) Length() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment6lengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextFragment6lengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -124,7 +120,7 @@ func (this *QTextFragment) Length() int {
 // Public Visibility=Default Availability=Available
 // [1] bool contains(int)
 func (this *QTextFragment) Contains(position int) bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment8containsEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), position)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextFragment8containsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), position)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -135,7 +131,7 @@ func (this *QTextFragment) Contains(position int) bool {
 // Public Visibility=Default Availability=Available
 // [16] QTextCharFormat charFormat()
 func (this *QTextFragment) CharFormat() *QTextCharFormat /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment10charFormatEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextFragment10charFormatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -148,7 +144,7 @@ func (this *QTextFragment) CharFormat() *QTextCharFormat /*123*/ {
 // Public Visibility=Default Availability=Available
 // [4] int charFormatIndex()
 func (this *QTextFragment) CharFormatIndex() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment15charFormatIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextFragment15charFormatIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -159,7 +155,7 @@ func (this *QTextFragment) CharFormatIndex() int {
 // Public Visibility=Default Availability=Available
 // [8] QString text()
 func (this *QTextFragment) Text() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QTextFragment4textEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QTextFragment4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -168,7 +164,7 @@ func (this *QTextFragment) Text() *qtcore.QString /*123*/ {
 }
 
 func DeleteQTextFragment(this *QTextFragment) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QTextFragmentD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QTextFragmentD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

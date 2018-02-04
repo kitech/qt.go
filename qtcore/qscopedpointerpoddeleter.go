@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QScopedPointerPodDeleter) NewFromPointer(cthis unsafe.Pointer) *QScopedPo
 // Public static inline Visibility=Default Availability=Available
 // [-2] void cleanup(void *)
 func (this *QScopedPointerPodDeleter) Cleanup(pointer unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QScopedPointerPodDeleter7cleanupEPv", ffiqt.FFI_TYPE_POINTER, pointer)
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QScopedPointerPodDeleter7cleanupEPv", qtrt.FFI_TYPE_POINTER, pointer)
 	gopp.ErrPrint(err, rv)
 }
 func QScopedPointerPodDeleter_Cleanup(pointer unsafe.Pointer /*666*/) {
@@ -84,7 +80,7 @@ func QScopedPointerPodDeleter_Cleanup(pointer unsafe.Pointer /*666*/) {
 }
 
 func DeleteQScopedPointerPodDeleter(this *QScopedPointerPodDeleter) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QScopedPointerPodDeleterD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QScopedPointerPodDeleterD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

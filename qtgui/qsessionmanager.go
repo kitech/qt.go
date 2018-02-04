@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -76,7 +72,7 @@ func (*QSessionManager) NewFromPointer(cthis unsafe.Pointer) *QSessionManager {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QSessionManager) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSessionManager10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -88,7 +84,7 @@ func (this *QSessionManager) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // Public Visibility=Default Availability=Available
 // [8] QString sessionId()
 func (this *QSessionManager) SessionId() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSessionManager9sessionIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager9sessionIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -101,7 +97,7 @@ func (this *QSessionManager) SessionId() *qtcore.QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QString sessionKey()
 func (this *QSessionManager) SessionKey() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSessionManager10sessionKeyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager10sessionKeyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -114,7 +110,7 @@ func (this *QSessionManager) SessionKey() *qtcore.QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [1] bool allowsInteraction()
 func (this *QSessionManager) AllowsInteraction() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager17allowsInteractionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager17allowsInteractionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -125,7 +121,7 @@ func (this *QSessionManager) AllowsInteraction() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool allowsErrorInteraction()
 func (this *QSessionManager) AllowsErrorInteraction() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager22allowsErrorInteractionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager22allowsErrorInteractionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -136,7 +132,7 @@ func (this *QSessionManager) AllowsErrorInteraction() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void release()
 func (this *QSessionManager) Release() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager7releaseEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager7releaseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -145,7 +141,7 @@ func (this *QSessionManager) Release() {
 // Public Visibility=Default Availability=Available
 // [-2] void cancel()
 func (this *QSessionManager) Cancel() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager6cancelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager6cancelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -154,7 +150,7 @@ func (this *QSessionManager) Cancel() {
 // Public Visibility=Default Availability=Available
 // [-2] void setRestartHint(enum QSessionManager::RestartHint)
 func (this *QSessionManager) SetRestartHint(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager14setRestartHintENS_11RestartHintE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager14setRestartHintENS_11RestartHintE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -163,7 +159,7 @@ func (this *QSessionManager) SetRestartHint(arg0 int) {
 // Public Visibility=Default Availability=Available
 // [4] QSessionManager::RestartHint restartHint()
 func (this *QSessionManager) RestartHint() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSessionManager11restartHintEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager11restartHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -175,7 +171,7 @@ func (this *QSessionManager) RestartHint() int {
 // [-2] void setRestartCommand(const QStringList &)
 func (this *QSessionManager) SetRestartCommand(arg0 *qtcore.QStringList) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager17setRestartCommandERK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager17setRestartCommandERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -185,7 +181,7 @@ func (this *QSessionManager) SetRestartCommand(arg0 *qtcore.QStringList) {
 // [-2] void setDiscardCommand(const QStringList &)
 func (this *QSessionManager) SetDiscardCommand(arg0 *qtcore.QStringList) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager17setDiscardCommandERK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager17setDiscardCommandERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -196,7 +192,7 @@ func (this *QSessionManager) SetDiscardCommand(arg0 *qtcore.QStringList) {
 func (this *QSessionManager) SetManagerProperty(name *qtcore.QString, value *qtcore.QString) {
 	var convArg0 = name.GetCthis()
 	var convArg1 = value.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager18setManagerPropertyERK7QStringS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager18setManagerPropertyERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -207,7 +203,7 @@ func (this *QSessionManager) SetManagerProperty(name *qtcore.QString, value *qtc
 func (this *QSessionManager) SetManagerProperty_1(name *qtcore.QString, value *qtcore.QStringList) {
 	var convArg0 = name.GetCthis()
 	var convArg1 = value.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -216,7 +212,7 @@ func (this *QSessionManager) SetManagerProperty_1(name *qtcore.QString, value *q
 // Public Visibility=Default Availability=Available
 // [1] bool isPhase2()
 func (this *QSessionManager) IsPhase2() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QSessionManager8isPhase2Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager8isPhase2Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -227,12 +223,12 @@ func (this *QSessionManager) IsPhase2() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void requestPhase2()
 func (this *QSessionManager) RequestPhase2() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManager13requestPhase2Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager13requestPhase2Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
 func DeleteQSessionManager(this *QSessionManager) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QSessionManagerD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManagerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

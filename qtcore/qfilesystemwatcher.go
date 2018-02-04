@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -72,7 +68,7 @@ func (*QFileSystemWatcher) NewFromPointer(cthis unsafe.Pointer) *QFileSystemWatc
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QFileSystemWatcher) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QFileSystemWatcher10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFileSystemWatcher10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -85,7 +81,7 @@ func (this *QFileSystemWatcher) MetaObject() *QMetaObject /*777 const QMetaObjec
 // [-2] void QFileSystemWatcher(QObject *)
 func NewQFileSystemWatcher(parent *QObject /*777 QObject **/) *QFileSystemWatcher {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFileSystemWatcherC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcherC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFileSystemWatcherFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -98,7 +94,7 @@ func NewQFileSystemWatcher(parent *QObject /*777 QObject **/) *QFileSystemWatche
 func NewQFileSystemWatcher_1(paths *QStringList, parent *QObject /*777 QObject **/) *QFileSystemWatcher {
 	var convArg0 = paths.GetCthis()
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFileSystemWatcherC2ERK11QStringListP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcherC2ERK11QStringListP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFileSystemWatcherFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -109,7 +105,7 @@ func NewQFileSystemWatcher_1(paths *QStringList, parent *QObject /*777 QObject *
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFileSystemWatcher()
 func DeleteQFileSystemWatcher(this *QFileSystemWatcher) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFileSystemWatcherD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcherD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -121,7 +117,7 @@ func DeleteQFileSystemWatcher(this *QFileSystemWatcher) {
 // [1] bool addPath(const QString &)
 func (this *QFileSystemWatcher) AddPath(file *QString) bool {
 	var convArg0 = file.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFileSystemWatcher7addPathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcher7addPathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -133,7 +129,7 @@ func (this *QFileSystemWatcher) AddPath(file *QString) bool {
 // [1] bool removePath(const QString &)
 func (this *QFileSystemWatcher) RemovePath(file *QString) bool {
 	var convArg0 = file.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QFileSystemWatcher10removePathERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcher10removePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

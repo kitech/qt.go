@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -79,7 +75,7 @@ func (*QPen) NewFromPointer(cthis unsafe.Pointer) *QPen {
 // Public Visibility=Default Availability=Available
 // [-2] void QPen()
 func NewQPen() *QPen {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPenC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPenC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPenFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPen)
@@ -91,7 +87,7 @@ func NewQPen() *QPen {
 // Public Visibility=Default Availability=Available
 // [-2] void QPen(Qt::PenStyle)
 func NewQPen_1(arg0 int) *QPen {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPenC2EN2Qt8PenStyleE", ffiqt.FFI_TYPE_POINTER, arg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPenC2EN2Qt8PenStyleE", qtrt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPenFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPen)
@@ -104,7 +100,7 @@ func NewQPen_1(arg0 int) *QPen {
 // [-2] void QPen(const QColor &)
 func NewQPen_2(color *QColor) *QPen {
 	var convArg0 = color.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPenC2ERK6QColor", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPenC2ERK6QColor", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPenFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPen)
@@ -117,7 +113,7 @@ func NewQPen_2(color *QColor) *QPen {
 // [-2] void QPen(const QBrush &, qreal, Qt::PenStyle, Qt::PenCapStyle, Qt::PenJoinStyle)
 func NewQPen_3(brush *QBrush, width float64, s int, c int, j int) *QPen {
 	var convArg0 = brush.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPenC2ERK6QBrushdN2Qt8PenStyleENS3_11PenCapStyleENS3_12PenJoinStyleE", ffiqt.FFI_TYPE_POINTER, convArg0, width, s, c, j)
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPenC2ERK6QBrushdN2Qt8PenStyleENS3_11PenCapStyleENS3_12PenJoinStyleE", qtrt.FFI_TYPE_POINTER, convArg0, width, s, c, j)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPenFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPen)
@@ -129,7 +125,7 @@ func NewQPen_3(brush *QBrush, width float64, s int, c int, j int) *QPen {
 // Public Visibility=Default Availability=Available
 // [-2] void ~QPen()
 func DeleteQPen(this *QPen) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPenD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPenD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -141,7 +137,7 @@ func DeleteQPen(this *QPen) {
 // [-2] void swap(QPen &)
 func (this *QPen) Swap(other *QPen) {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPen4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPen4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -150,7 +146,7 @@ func (this *QPen) Swap(other *QPen) {
 // Public Visibility=Default Availability=Available
 // [4] Qt::PenStyle style()
 func (this *QPen) Style() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen5styleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen5styleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -161,7 +157,7 @@ func (this *QPen) Style() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setStyle(Qt::PenStyle)
 func (this *QPen) SetStyle(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPen8setStyleEN2Qt8PenStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPen8setStyleEN2Qt8PenStyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -170,7 +166,7 @@ func (this *QPen) SetStyle(arg0 int) {
 // Public Visibility=Default Availability=Available
 // [8] qreal dashOffset()
 func (this *QPen) DashOffset() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen10dashOffsetEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen10dashOffsetEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -181,7 +177,7 @@ func (this *QPen) DashOffset() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void setDashOffset(qreal)
 func (this *QPen) SetDashOffset(doffset float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPen13setDashOffsetEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), doffset)
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPen13setDashOffsetEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), doffset)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -190,7 +186,7 @@ func (this *QPen) SetDashOffset(doffset float64) {
 // Public Visibility=Default Availability=Available
 // [8] qreal miterLimit()
 func (this *QPen) MiterLimit() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen10miterLimitEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen10miterLimitEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -201,7 +197,7 @@ func (this *QPen) MiterLimit() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void setMiterLimit(qreal)
 func (this *QPen) SetMiterLimit(limit float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPen13setMiterLimitEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), limit)
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPen13setMiterLimitEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), limit)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -210,7 +206,7 @@ func (this *QPen) SetMiterLimit(limit float64) {
 // Public Visibility=Default Availability=Available
 // [8] qreal widthF()
 func (this *QPen) WidthF() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen6widthFEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen6widthFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -221,7 +217,7 @@ func (this *QPen) WidthF() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void setWidthF(qreal)
 func (this *QPen) SetWidthF(width float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPen9setWidthFEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), width)
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPen9setWidthFEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -230,7 +226,7 @@ func (this *QPen) SetWidthF(width float64) {
 // Public Visibility=Default Availability=Available
 // [4] int width()
 func (this *QPen) Width() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen5widthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen5widthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -241,7 +237,7 @@ func (this *QPen) Width() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setWidth(int)
 func (this *QPen) SetWidth(width int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPen8setWidthEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), width)
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPen8setWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -250,7 +246,7 @@ func (this *QPen) SetWidth(width int) {
 // Public Visibility=Default Availability=Available
 // [16] QColor color()
 func (this *QPen) Color() *QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen5colorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -264,7 +260,7 @@ func (this *QPen) Color() *QColor /*123*/ {
 // [-2] void setColor(const QColor &)
 func (this *QPen) SetColor(color *QColor) {
 	var convArg0 = color.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPen8setColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPen8setColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -273,7 +269,7 @@ func (this *QPen) SetColor(color *QColor) {
 // Public Visibility=Default Availability=Available
 // [8] QBrush brush()
 func (this *QPen) Brush() *QBrush /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen5brushEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen5brushEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -287,7 +283,7 @@ func (this *QPen) Brush() *QBrush /*123*/ {
 // [-2] void setBrush(const QBrush &)
 func (this *QPen) SetBrush(brush *QBrush) {
 	var convArg0 = brush.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPen8setBrushERK6QBrush", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPen8setBrushERK6QBrush", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -296,7 +292,7 @@ func (this *QPen) SetBrush(brush *QBrush) {
 // Public Visibility=Default Availability=Available
 // [1] bool isSolid()
 func (this *QPen) IsSolid() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen7isSolidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen7isSolidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -307,7 +303,7 @@ func (this *QPen) IsSolid() bool {
 // Public Visibility=Default Availability=Available
 // [4] Qt::PenCapStyle capStyle()
 func (this *QPen) CapStyle() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen8capStyleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen8capStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -318,7 +314,7 @@ func (this *QPen) CapStyle() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setCapStyle(Qt::PenCapStyle)
 func (this *QPen) SetCapStyle(pcs int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPen11setCapStyleEN2Qt11PenCapStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pcs)
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPen11setCapStyleEN2Qt11PenCapStyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pcs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -327,7 +323,7 @@ func (this *QPen) SetCapStyle(pcs int) {
 // Public Visibility=Default Availability=Available
 // [4] Qt::PenJoinStyle joinStyle()
 func (this *QPen) JoinStyle() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen9joinStyleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen9joinStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -338,7 +334,7 @@ func (this *QPen) JoinStyle() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setJoinStyle(Qt::PenJoinStyle)
 func (this *QPen) SetJoinStyle(pcs int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPen12setJoinStyleEN2Qt12PenJoinStyleE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pcs)
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPen12setJoinStyleEN2Qt12PenJoinStyleE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pcs)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -347,7 +343,7 @@ func (this *QPen) SetJoinStyle(pcs int) {
 // Public Visibility=Default Availability=Available
 // [1] bool isCosmetic()
 func (this *QPen) IsCosmetic() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK4QPen10isCosmeticEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen10isCosmeticEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -358,7 +354,7 @@ func (this *QPen) IsCosmetic() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setCosmetic(_Bool)
 func (this *QPen) SetCosmetic(cosmetic bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPen11setCosmeticEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), cosmetic)
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPen11setCosmeticEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cosmetic)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -367,7 +363,7 @@ func (this *QPen) SetCosmetic(cosmetic bool) {
 // Public Visibility=Default Availability=Available
 // [1] bool isDetached()
 func (this *QPen) IsDetached() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN4QPen10isDetachedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QPen10isDetachedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

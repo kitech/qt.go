@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -33,9 +32,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -79,7 +75,7 @@ func (*QGlyphRun) NewFromPointer(cthis unsafe.Pointer) *QGlyphRun {
 // Public Visibility=Default Availability=Available
 // [-2] void QGlyphRun()
 func NewQGlyphRun() *QGlyphRun {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRunC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRunC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGlyphRunFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQGlyphRun)
@@ -91,7 +87,7 @@ func NewQGlyphRun() *QGlyphRun {
 // Public Visibility=Default Availability=Available
 // [-2] void ~QGlyphRun()
 func DeleteQGlyphRun(this *QGlyphRun) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRunD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRunD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -103,7 +99,7 @@ func DeleteQGlyphRun(this *QGlyphRun) {
 // [-2] void swap(QGlyphRun &)
 func (this *QGlyphRun) Swap(other *QGlyphRun) {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -112,7 +108,7 @@ func (this *QGlyphRun) Swap(other *QGlyphRun) {
 // Public Visibility=Default Availability=Available
 // [8] QRawFont rawFont()
 func (this *QGlyphRun) RawFont() *QRawFont /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGlyphRun7rawFontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGlyphRun7rawFontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQRawFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -126,7 +122,7 @@ func (this *QGlyphRun) RawFont() *QRawFont /*123*/ {
 // [-2] void setRawFont(const QRawFont &)
 func (this *QGlyphRun) SetRawFont(rawFont *QRawFont) {
 	var convArg0 = rawFont.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun10setRawFontERK8QRawFont", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun10setRawFontERK8QRawFont", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -136,7 +132,7 @@ func (this *QGlyphRun) SetRawFont(rawFont *QRawFont) {
 // [-2] void setRawData(const quint32 *, const QPointF *, int)
 func (this *QGlyphRun) SetRawData(glyphIndexArray unsafe.Pointer /*666*/, glyphPositionArray *qtcore.QPointF /*777 const QPointF **/, size int) {
 	var convArg1 = glyphPositionArray.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun10setRawDataEPKjPK7QPointFi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &glyphIndexArray, convArg1, size)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun10setRawDataEPKjPK7QPointFi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &glyphIndexArray, convArg1, size)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -145,7 +141,7 @@ func (this *QGlyphRun) SetRawData(glyphIndexArray unsafe.Pointer /*666*/, glyphP
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
 func (this *QGlyphRun) Clear() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -154,7 +150,7 @@ func (this *QGlyphRun) Clear() {
 // Public Visibility=Default Availability=Available
 // [-2] void setOverline(_Bool)
 func (this *QGlyphRun) SetOverline(overline bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun11setOverlineEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), overline)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun11setOverlineEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), overline)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -163,7 +159,7 @@ func (this *QGlyphRun) SetOverline(overline bool) {
 // Public Visibility=Default Availability=Available
 // [1] bool overline()
 func (this *QGlyphRun) Overline() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGlyphRun8overlineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGlyphRun8overlineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -174,7 +170,7 @@ func (this *QGlyphRun) Overline() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setUnderline(_Bool)
 func (this *QGlyphRun) SetUnderline(underline bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun12setUnderlineEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), underline)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun12setUnderlineEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), underline)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -183,7 +179,7 @@ func (this *QGlyphRun) SetUnderline(underline bool) {
 // Public Visibility=Default Availability=Available
 // [1] bool underline()
 func (this *QGlyphRun) Underline() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGlyphRun9underlineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGlyphRun9underlineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -194,7 +190,7 @@ func (this *QGlyphRun) Underline() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setStrikeOut(_Bool)
 func (this *QGlyphRun) SetStrikeOut(strikeOut bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun12setStrikeOutEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), strikeOut)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun12setStrikeOutEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), strikeOut)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -203,7 +199,7 @@ func (this *QGlyphRun) SetStrikeOut(strikeOut bool) {
 // Public Visibility=Default Availability=Available
 // [1] bool strikeOut()
 func (this *QGlyphRun) StrikeOut() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGlyphRun9strikeOutEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGlyphRun9strikeOutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -214,7 +210,7 @@ func (this *QGlyphRun) StrikeOut() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setRightToLeft(_Bool)
 func (this *QGlyphRun) SetRightToLeft(on bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun14setRightToLeftEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), on)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun14setRightToLeftEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), on)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -223,7 +219,7 @@ func (this *QGlyphRun) SetRightToLeft(on bool) {
 // Public Visibility=Default Availability=Available
 // [1] bool isRightToLeft()
 func (this *QGlyphRun) IsRightToLeft() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGlyphRun13isRightToLeftEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGlyphRun13isRightToLeftEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -234,7 +230,7 @@ func (this *QGlyphRun) IsRightToLeft() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setFlag(enum QGlyphRun::GlyphRunFlag, _Bool)
 func (this *QGlyphRun) SetFlag(flag int, enabled bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun7setFlagENS_12GlyphRunFlagEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flag, enabled)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun7setFlagENS_12GlyphRunFlagEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flag, enabled)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -243,7 +239,7 @@ func (this *QGlyphRun) SetFlag(flag int, enabled bool) {
 // Public Visibility=Default Availability=Available
 // [-2] void setFlags(QGlyphRun::GlyphRunFlags)
 func (this *QGlyphRun) SetFlags(flags int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun8setFlagsE6QFlagsINS_12GlyphRunFlagEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun8setFlagsE6QFlagsINS_12GlyphRunFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -252,7 +248,7 @@ func (this *QGlyphRun) SetFlags(flags int) {
 // Public Visibility=Default Availability=Available
 // [-2] QGlyphRun::GlyphRunFlags flags()
 func (this *QGlyphRun) Flags() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGlyphRun5flagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGlyphRun5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -264,7 +260,7 @@ func (this *QGlyphRun) Flags() int {
 // [-2] void setBoundingRect(const QRectF &)
 func (this *QGlyphRun) SetBoundingRect(boundingRect *qtcore.QRectF) {
 	var convArg0 = boundingRect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QGlyphRun15setBoundingRectERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QGlyphRun15setBoundingRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -273,7 +269,7 @@ func (this *QGlyphRun) SetBoundingRect(boundingRect *qtcore.QRectF) {
 // Public Visibility=Default Availability=Available
 // [32] QRectF boundingRect()
 func (this *QGlyphRun) BoundingRect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGlyphRun12boundingRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGlyphRun12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -286,7 +282,7 @@ func (this *QGlyphRun) BoundingRect() *qtcore.QRectF /*123*/ {
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty()
 func (this *QGlyphRun) IsEmpty() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QGlyphRun7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGlyphRun7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

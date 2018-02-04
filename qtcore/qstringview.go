@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -75,7 +71,7 @@ func (*QStringView) NewFromPointer(cthis unsafe.Pointer) *QStringView {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QStringView()
 func NewQStringView() *QStringView {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStringViewC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QStringViewC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStringViewFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQStringView)
@@ -87,7 +83,7 @@ func NewQStringView() *QStringView {
 // Public inline Visibility=Default Availability=Available
 // [8] QString toString()
 func (this *QStringView) ToString() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8toStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -100,7 +96,7 @@ func (this *QStringView) ToString() *QString /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] qsizetype size()
 func (this *QStringView) Size() int64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -111,7 +107,7 @@ func (this *QStringView) Size() int64 {
 // Public inline Visibility=Default Availability=Available
 // [8] QStringView::const_pointer data()
 func (this *QStringView) Data() *QChar /*777 const QChar **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) //555
@@ -123,7 +119,7 @@ func (this *QStringView) Data() *QChar /*777 const QChar **/ {
 // Public inline Visibility=Default Availability=Available
 // [8] const QStringView::storage_type * utf16()
 func (this *QStringView) Utf16() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5utf16Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView5utf16Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -134,7 +130,7 @@ func (this *QStringView) Utf16() unsafe.Pointer /*666*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toLatin1()
 func (this *QStringView) ToLatin1() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8toLatin1Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView8toLatin1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -147,7 +143,7 @@ func (this *QStringView) ToLatin1() *QByteArray /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toUtf8()
 func (this *QStringView) ToUtf8() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView6toUtf8Ev", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView6toUtf8Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -160,7 +156,7 @@ func (this *QStringView) ToUtf8() *QByteArray /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toLocal8Bit()
 func (this *QStringView) ToLocal8Bit() *QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView11toLocal8BitEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView11toLocal8BitEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -173,7 +169,7 @@ func (this *QStringView) ToLocal8Bit() *QByteArray /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [2] QChar at(qsizetype)
 func (this *QStringView) At(n int64) *QChar /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView2atEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView2atEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -186,7 +182,7 @@ func (this *QStringView) At(n int64) *QChar /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [16] QStringView mid(qsizetype)
 func (this *QStringView) Mid(pos int64) *QStringView /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView3midEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pos)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView3midEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringViewFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -199,7 +195,7 @@ func (this *QStringView) Mid(pos int64) *QStringView /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [16] QStringView mid(qsizetype, qsizetype)
 func (this *QStringView) Mid_1(pos int64, n int64) *QStringView /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView3midExx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), pos, n)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView3midExx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos, n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringViewFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -212,7 +208,7 @@ func (this *QStringView) Mid_1(pos int64, n int64) *QStringView /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [16] QStringView left(qsizetype)
 func (this *QStringView) Left(n int64) *QStringView /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4leftEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView4leftEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringViewFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -225,7 +221,7 @@ func (this *QStringView) Left(n int64) *QStringView /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [16] QStringView right(qsizetype)
 func (this *QStringView) Right(n int64) *QStringView /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5rightEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView5rightEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringViewFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -238,7 +234,7 @@ func (this *QStringView) Right(n int64) *QStringView /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [16] QStringView chopped(qsizetype)
 func (this *QStringView) Chopped(n int64) *QStringView /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView7choppedEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView7choppedEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringViewFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -251,7 +247,7 @@ func (this *QStringView) Chopped(n int64) *QStringView /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [-2] void truncate(qsizetype)
 func (this *QStringView) Truncate(n int64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStringView8truncateEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QStringView8truncateEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -260,7 +256,7 @@ func (this *QStringView) Truncate(n int64) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void chop(qsizetype)
 func (this *QStringView) Chop(n int64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStringView4chopEx", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), n)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QStringView4chopEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -269,7 +265,7 @@ func (this *QStringView) Chop(n int64) {
 // Public inline Visibility=Default Availability=Available
 // [16] QStringView trimmed()
 func (this *QStringView) Trimmed() *QStringView /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView7trimmedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView7trimmedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringViewFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -283,7 +279,7 @@ func (this *QStringView) Trimmed() *QStringView /*123*/ {
 // [1] bool startsWith(QStringView, Qt::CaseSensitivity)
 func (this *QStringView) StartsWith(s *QStringView /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView10startsWithES_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView10startsWithES_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -295,7 +291,7 @@ func (this *QStringView) StartsWith(s *QStringView /*123*/, cs int) bool {
 // [1] bool startsWith(QLatin1String, Qt::CaseSensitivity)
 func (this *QStringView) StartsWith_1(s *QLatin1String /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView10startsWithE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView10startsWithE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -307,7 +303,7 @@ func (this *QStringView) StartsWith_1(s *QLatin1String /*123*/, cs int) bool {
 // [1] bool startsWith(QChar)
 func (this *QStringView) StartsWith_2(c *QChar /*123*/) bool {
 	var convArg0 = c.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView10startsWithE5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView10startsWithE5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -319,7 +315,7 @@ func (this *QStringView) StartsWith_2(c *QChar /*123*/) bool {
 // [1] bool startsWith(QChar, Qt::CaseSensitivity)
 func (this *QStringView) StartsWith_3(c *QChar /*123*/, cs int) bool {
 	var convArg0 = c.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView10startsWithE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView10startsWithE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -331,7 +327,7 @@ func (this *QStringView) StartsWith_3(c *QChar /*123*/, cs int) bool {
 // [1] bool endsWith(QStringView, Qt::CaseSensitivity)
 func (this *QStringView) EndsWith(s *QStringView /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8endsWithES_N2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView8endsWithES_N2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -343,7 +339,7 @@ func (this *QStringView) EndsWith(s *QStringView /*123*/, cs int) bool {
 // [1] bool endsWith(QLatin1String, Qt::CaseSensitivity)
 func (this *QStringView) EndsWith_1(s *QLatin1String /*123*/, cs int) bool {
 	var convArg0 = s.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8endsWithE13QLatin1StringN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView8endsWithE13QLatin1StringN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -355,7 +351,7 @@ func (this *QStringView) EndsWith_1(s *QLatin1String /*123*/, cs int) bool {
 // [1] bool endsWith(QChar)
 func (this *QStringView) EndsWith_2(c *QChar /*123*/) bool {
 	var convArg0 = c.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8endsWithE5QChar", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView8endsWithE5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -367,7 +363,7 @@ func (this *QStringView) EndsWith_2(c *QChar /*123*/) bool {
 // [1] bool endsWith(QChar, Qt::CaseSensitivity)
 func (this *QStringView) EndsWith_3(c *QChar /*123*/, cs int) bool {
 	var convArg0 = c.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView8endsWithE5QCharN2Qt15CaseSensitivityE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView8endsWithE5QCharN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -378,7 +374,7 @@ func (this *QStringView) EndsWith_3(c *QChar /*123*/, cs int) bool {
 // Public inline Visibility=Default Availability=Available
 // [8] QStringView::const_iterator begin()
 func (this *QStringView) Begin() *QChar /*777 const QChar **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5beginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) //555
@@ -390,7 +386,7 @@ func (this *QStringView) Begin() *QChar /*777 const QChar **/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QStringView::const_iterator end()
 func (this *QStringView) End() *QChar /*777 const QChar **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView3endEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) //555
@@ -402,7 +398,7 @@ func (this *QStringView) End() *QChar /*777 const QChar **/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QStringView::const_iterator cbegin()
 func (this *QStringView) Cbegin() *QChar /*777 const QChar **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView6cbeginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView6cbeginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) //555
@@ -414,7 +410,7 @@ func (this *QStringView) Cbegin() *QChar /*777 const QChar **/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QStringView::const_iterator cend()
 func (this *QStringView) Cend() *QChar /*777 const QChar **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4cendEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView4cendEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) //555
@@ -426,7 +422,7 @@ func (this *QStringView) Cend() *QChar /*777 const QChar **/ {
 // Public inline Visibility=Default Availability=Available
 // [1] bool empty()
 func (this *QStringView) Empty() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5emptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView5emptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -437,7 +433,7 @@ func (this *QStringView) Empty() bool {
 // Public inline Visibility=Default Availability=Available
 // [2] QChar front()
 func (this *QStringView) Front() *QChar /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5frontEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView5frontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -450,7 +446,7 @@ func (this *QStringView) Front() *QChar /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [2] QChar back()
 func (this *QStringView) Back() *QChar /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4backEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView4backEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -463,7 +459,7 @@ func (this *QStringView) Back() *QChar /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull()
 func (this *QStringView) IsNull() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -474,7 +470,7 @@ func (this *QStringView) IsNull() bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isEmpty()
 func (this *QStringView) IsEmpty() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -485,7 +481,7 @@ func (this *QStringView) IsEmpty() bool {
 // Public inline Visibility=Default Availability=Available
 // [4] int length()
 func (this *QStringView) Length() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView6lengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView6lengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -496,7 +492,7 @@ func (this *QStringView) Length() int {
 // Public inline Visibility=Default Availability=Available
 // [2] QChar first()
 func (this *QStringView) First() *QChar /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView5firstEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView5firstEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -509,7 +505,7 @@ func (this *QStringView) First() *QChar /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [2] QChar last()
 func (this *QStringView) Last() *QChar /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QStringView4lastEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStringView4lastEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -518,7 +514,7 @@ func (this *QStringView) Last() *QChar /*123*/ {
 }
 
 func DeleteQStringView(this *QStringView) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QStringViewD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QStringViewD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }

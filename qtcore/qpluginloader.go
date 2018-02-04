@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 
 func init() {
@@ -32,9 +31,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -72,7 +68,7 @@ func (*QPluginLoader) NewFromPointer(cthis unsafe.Pointer) *QPluginLoader {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QPluginLoader) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QPluginLoader10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -85,7 +81,7 @@ func (this *QPluginLoader) MetaObject() *QMetaObject /*777 const QMetaObject **/
 // [-2] void QPluginLoader(QObject *)
 func NewQPluginLoader(parent *QObject /*777 QObject **/) *QPluginLoader {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoaderC2EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QPluginLoaderC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPluginLoaderFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -98,7 +94,7 @@ func NewQPluginLoader(parent *QObject /*777 QObject **/) *QPluginLoader {
 func NewQPluginLoader_1(fileName *QString, parent *QObject /*777 QObject **/) *QPluginLoader {
 	var convArg0 = fileName.GetCthis()
 	var convArg1 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoaderC2ERK7QStringP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QPluginLoaderC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPluginLoaderFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -109,7 +105,7 @@ func NewQPluginLoader_1(fileName *QString, parent *QObject /*777 QObject **/) *Q
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPluginLoader()
 func DeleteQPluginLoader(this *QPluginLoader) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoaderD2Ev", ffiqt.FFI_TYPE_VOID, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QPluginLoaderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
@@ -120,7 +116,7 @@ func DeleteQPluginLoader(this *QPluginLoader) {
 // Public Visibility=Default Availability=Available
 // [8] QObject * instance()
 func (this *QPluginLoader) Instance() *QObject /*777 QObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoader8instanceEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QPluginLoader8instanceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -132,7 +128,7 @@ func (this *QPluginLoader) Instance() *QObject /*777 QObject **/ {
 // Public Visibility=Default Availability=Available
 // [16] QJsonObject metaData()
 func (this *QPluginLoader) MetaData() *QJsonObject /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader8metaDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QPluginLoader8metaDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQJsonObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -145,7 +141,7 @@ func (this *QPluginLoader) MetaData() *QJsonObject /*123*/ {
 // Public Visibility=Default Availability=Available
 // [1] bool load()
 func (this *QPluginLoader) Load() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoader4loadEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QPluginLoader4loadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -156,7 +152,7 @@ func (this *QPluginLoader) Load() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool unload()
 func (this *QPluginLoader) Unload() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoader6unloadEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QPluginLoader6unloadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -167,7 +163,7 @@ func (this *QPluginLoader) Unload() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isLoaded()
 func (this *QPluginLoader) IsLoaded() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader8isLoadedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QPluginLoader8isLoadedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -179,7 +175,7 @@ func (this *QPluginLoader) IsLoaded() bool {
 // [-2] void setFileName(const QString &)
 func (this *QPluginLoader) SetFileName(fileName *QString) {
 	var convArg0 = fileName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoader11setFileNameERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QPluginLoader11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -188,7 +184,7 @@ func (this *QPluginLoader) SetFileName(fileName *QString) {
 // Public Visibility=Default Availability=Available
 // [8] QString fileName()
 func (this *QPluginLoader) FileName() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader8fileNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QPluginLoader8fileNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -201,7 +197,7 @@ func (this *QPluginLoader) FileName() *QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QString errorString()
 func (this *QPluginLoader) ErrorString() *QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QPluginLoader11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
@@ -214,7 +210,7 @@ func (this *QPluginLoader) ErrorString() *QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setLoadHints(QLibrary::LoadHints)
 func (this *QPluginLoader) SetLoadHints(loadHints int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QPluginLoader12setLoadHintsE6QFlagsIN8QLibrary8LoadHintEE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), loadHints)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QPluginLoader12setLoadHintsE6QFlagsIN8QLibrary8LoadHintEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), loadHints)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -223,7 +219,7 @@ func (this *QPluginLoader) SetLoadHints(loadHints int) {
 // Public Visibility=Default Availability=Available
 // [4] QLibrary::LoadHints loadHints()
 func (this *QPluginLoader) LoadHints() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QPluginLoader9loadHintsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QPluginLoader9loadHintsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
