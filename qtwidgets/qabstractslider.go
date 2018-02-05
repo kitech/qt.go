@@ -54,7 +54,7 @@ func (this *QAbstractSlider) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent *
 }
 
 // void setRepeatAction(enum QAbstractSlider::SliderAction, int, int)
-func (this *QAbstractSlider) InheritSetRepeatAction(f func(action int, thresholdTime int, repeatTime int)) {
+func (this *QAbstractSlider) InheritSetRepeatAction(f func(action int, thresholdTime int, repeatTime int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setRepeatAction", f)
 }
 
@@ -64,27 +64,27 @@ func (this *QAbstractSlider) InheritRepeatAction(f func() int) {
 }
 
 // void sliderChange(enum QAbstractSlider::SliderChange)
-func (this *QAbstractSlider) InheritSliderChange(f func(change int)) {
+func (this *QAbstractSlider) InheritSliderChange(f func(change int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "sliderChange", f)
 }
 
 // void keyPressEvent(class QKeyEvent *)
-func (this *QAbstractSlider) InheritKeyPressEvent(f func(ev *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+func (this *QAbstractSlider) InheritKeyPressEvent(f func(ev *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
 // void timerEvent(class QTimerEvent *)
-func (this *QAbstractSlider) InheritTimerEvent(f func(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/)) {
+func (this *QAbstractSlider) InheritTimerEvent(f func(arg0 *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
 // void wheelEvent(class QWheelEvent *)
-func (this *QAbstractSlider) InheritWheelEvent(f func(e *qtgui.QWheelEvent /*777 QWheelEvent **/)) {
+func (this *QAbstractSlider) InheritWheelEvent(f func(e *qtgui.QWheelEvent /*777 QWheelEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
 
 // void changeEvent(class QEvent *)
-func (this *QAbstractSlider) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEvent **/)) {
+func (this *QAbstractSlider) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 

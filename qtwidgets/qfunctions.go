@@ -31,10 +31,10 @@ func init() {
 
 //  body block begin
 // /usr/include/qt/QtWidgets/qsizepolicy.h:68
-// index:36
+// index:43
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(QSizePolicy, uint)
-func QHash_36(key *QSizePolicy /*123*/, seed uint) uint {
+func QHash_43(key *QSizePolicy /*123*/, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHash11QSizePolicyj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)

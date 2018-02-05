@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QQuickAsyncImageProvider struct {
 	*QQuickImageProvider
 }
@@ -87,9 +84,10 @@ func (*QQuickAsyncImageProvider) NewFromPointer(cthis unsafe.Pointer) *QQuickAsy
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickAsyncImageProvider()
 func NewQQuickAsyncImageProvider() *QQuickAsyncImageProvider {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QQuickAsyncImageProviderC1Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QQuickAsyncImageProviderC1Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQuickAsyncImageProviderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQQuickAsyncImageProvider)
 	return gothis
 }
 
@@ -97,9 +95,11 @@ func NewQQuickAsyncImageProvider() *QQuickAsyncImageProvider {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQuickAsyncImageProvider()
-func DeleteQQuickAsyncImageProvider(*QQuickAsyncImageProvider) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QQuickAsyncImageProviderD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQQuickAsyncImageProvider(this *QQuickAsyncImageProvider) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QQuickAsyncImageProviderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQuick/qquickimageprovider.h:121
@@ -109,7 +109,7 @@ func DeleteQQuickAsyncImageProvider(*QQuickAsyncImageProvider) {
 func (this *QQuickAsyncImageProvider) RequestImageResponse(id *qtcore.QString, requestedSize *qtcore.QSize) *QQuickImageResponse /*777 QQuickImageResponse **/ {
 	var convArg0 = id.GetCthis()
 	var convArg1 = requestedSize.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN24QQuickAsyncImageProvider20requestImageResponseERK7QStringRK5QSize", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QQuickAsyncImageProvider20requestImageResponseERK7QStringRK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQQuickImageResponseFromPointer(unsafe.Pointer(uintptr(rv))) // 444

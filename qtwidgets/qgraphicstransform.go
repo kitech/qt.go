@@ -49,7 +49,7 @@ func init() {
 
 //  body block begin
 // void update()
-func (this *QGraphicsTransform) InheritUpdate(f func()) {
+func (this *QGraphicsTransform) InheritUpdate(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "update", f)
 }
 

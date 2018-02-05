@@ -46,12 +46,12 @@ func (this *QPropertyAnimation) InheritEvent(f func(event *QEvent /*777 QEvent *
 }
 
 // void updateCurrentValue(const class QVariant &)
-func (this *QPropertyAnimation) InheritUpdateCurrentValue(f func(value *QVariant)) {
+func (this *QPropertyAnimation) InheritUpdateCurrentValue(f func(value *QVariant) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateCurrentValue", f)
 }
 
 // void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
-func (this *QPropertyAnimation) InheritUpdateState(f func(newState int, oldState int)) {
+func (this *QPropertyAnimation) InheritUpdateState(f func(newState int, oldState int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateState", f)
 }
 

@@ -54,7 +54,7 @@ func (this *QGraphicsPolygonItem) InheritSupportsExtension(f func(extension int)
 }
 
 // void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
-func (this *QGraphicsPolygonItem) InheritSetExtension(f func(extension int, variant *qtcore.QVariant)) {
+func (this *QGraphicsPolygonItem) InheritSetExtension(f func(extension int, variant *qtcore.QVariant) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setExtension", f)
 }
 

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSGSimpleTextureNode struct {
 	*QSGGeometryNode
 }
@@ -87,9 +84,10 @@ func (*QSGSimpleTextureNode) NewFromPointer(cthis unsafe.Pointer) *QSGSimpleText
 // Public Visibility=Default Availability=Available
 // [-2] void QSGSimpleTextureNode()
 func NewQSGSimpleTextureNode() *QSGSimpleTextureNode {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGSimpleTextureNodeC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGSimpleTextureNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSGSimpleTextureNodeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSGSimpleTextureNode)
 	return gothis
 }
 
@@ -97,9 +95,11 @@ func NewQSGSimpleTextureNode() *QSGSimpleTextureNode {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGSimpleTextureNode()
-func DeleteQSGSimpleTextureNode(*QSGSimpleTextureNode) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGSimpleTextureNodeD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSGSimpleTextureNode(this *QSGSimpleTextureNode) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGSimpleTextureNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 384)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQuick/qsgsimpletexturenode.h:57
@@ -108,7 +108,7 @@ func DeleteQSGSimpleTextureNode(*QSGSimpleTextureNode) {
 // [-2] void setRect(const QRectF &)
 func (this *QSGSimpleTextureNode) SetRect(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode7setRectERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode7setRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,7 +117,7 @@ func (this *QSGSimpleTextureNode) SetRect(rect *qtcore.QRectF) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setRect(qreal, qreal, qreal, qreal)
 func (this *QSGSimpleTextureNode) SetRect_1(x float64, y float64, w float64, h float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode7setRectEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode7setRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -126,10 +126,11 @@ func (this *QSGSimpleTextureNode) SetRect_1(x float64, y float64, w float64, h f
 // Public Visibility=Default Availability=Available
 // [32] QRectF rect()
 func (this *QSGSimpleTextureNode) Rect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGSimpleTextureNode4rectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGSimpleTextureNode4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -139,7 +140,7 @@ func (this *QSGSimpleTextureNode) Rect() *qtcore.QRectF /*123*/ {
 // [-2] void setSourceRect(const QRectF &)
 func (this *QSGSimpleTextureNode) SetSourceRect(r *qtcore.QRectF) {
 	var convArg0 = r.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode13setSourceRectERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode13setSourceRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -148,7 +149,7 @@ func (this *QSGSimpleTextureNode) SetSourceRect(r *qtcore.QRectF) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setSourceRect(qreal, qreal, qreal, qreal)
 func (this *QSGSimpleTextureNode) SetSourceRect_1(x float64, y float64, w float64, h float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode13setSourceRectEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode13setSourceRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -157,10 +158,11 @@ func (this *QSGSimpleTextureNode) SetSourceRect_1(x float64, y float64, w float6
 // Public Visibility=Default Availability=Available
 // [32] QRectF sourceRect()
 func (this *QSGSimpleTextureNode) SourceRect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGSimpleTextureNode10sourceRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGSimpleTextureNode10sourceRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -170,7 +172,7 @@ func (this *QSGSimpleTextureNode) SourceRect() *qtcore.QRectF /*123*/ {
 // [-2] void setTexture(QSGTexture *)
 func (this *QSGSimpleTextureNode) SetTexture(texture *QSGTexture /*777 QSGTexture **/) {
 	var convArg0 = texture.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode10setTextureEP10QSGTexture", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode10setTextureEP10QSGTexture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -179,7 +181,7 @@ func (this *QSGSimpleTextureNode) SetTexture(texture *QSGTexture /*777 QSGTextur
 // Public Visibility=Default Availability=Available
 // [8] QSGTexture * texture()
 func (this *QSGSimpleTextureNode) Texture() *QSGTexture /*777 QSGTexture **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGSimpleTextureNode7textureEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGSimpleTextureNode7textureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -191,7 +193,7 @@ func (this *QSGSimpleTextureNode) Texture() *QSGTexture /*777 QSGTexture **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setFiltering(QSGTexture::Filtering)
 func (this *QSGSimpleTextureNode) SetFiltering(filtering int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode12setFilteringEN10QSGTexture9FilteringE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), filtering)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode12setFilteringEN10QSGTexture9FilteringE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filtering)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -200,10 +202,19 @@ func (this *QSGSimpleTextureNode) SetFiltering(filtering int) {
 // Public Visibility=Default Availability=Available
 // [4] QSGTexture::Filtering filtering()
 func (this *QSGSimpleTextureNode) Filtering() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGSimpleTextureNode9filteringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGSimpleTextureNode9filteringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
+}
+
+// /usr/include/qt/QtQuick/qsgsimpletexturenode.h:78
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setTextureCoordinatesTransform(QSGSimpleTextureNode::TextureCoordinatesTransformMode)
+func (this *QSGSimpleTextureNode) SetTextureCoordinatesTransform(mode int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode30setTextureCoordinatesTransformE6QFlagsINS_31TextureCoordinatesTransformFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgsimpletexturenode.h:79
@@ -211,7 +222,7 @@ func (this *QSGSimpleTextureNode) Filtering() int {
 // Public Visibility=Default Availability=Available
 // [4] QSGSimpleTextureNode::TextureCoordinatesTransformMode textureCoordinatesTransform()
 func (this *QSGSimpleTextureNode) TextureCoordinatesTransform() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGSimpleTextureNode27textureCoordinatesTransformEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGSimpleTextureNode27textureCoordinatesTransformEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -222,7 +233,7 @@ func (this *QSGSimpleTextureNode) TextureCoordinatesTransform() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setOwnsTexture(_Bool)
 func (this *QSGSimpleTextureNode) SetOwnsTexture(owns bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode14setOwnsTextureEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), owns)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGSimpleTextureNode14setOwnsTextureEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), owns)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -231,7 +242,7 @@ func (this *QSGSimpleTextureNode) SetOwnsTexture(owns bool) {
 // Public Visibility=Default Availability=Available
 // [1] bool ownsTexture()
 func (this *QSGSimpleTextureNode) OwnsTexture() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGSimpleTextureNode11ownsTextureEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGSimpleTextureNode11ownsTextureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

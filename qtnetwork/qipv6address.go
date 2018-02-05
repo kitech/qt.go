@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -35,9 +34,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -48,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QIPv6Address struct {
 	*qtrt.CObject
 }
@@ -60,13 +57,23 @@ func (this *QIPv6Address) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QIPv6Address) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQIPv6AddressFromPointer(cthis unsafe.Pointer) *QIPv6Address {
 	return &QIPv6Address{&qtrt.CObject{cthis}}
 }
 func (*QIPv6Address) NewFromPointer(cthis unsafe.Pointer) *QIPv6Address {
 	return NewQIPv6AddressFromPointer(cthis)
+}
+
+func DeleteQIPv6Address(this *QIPv6Address) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QIPv6AddressD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

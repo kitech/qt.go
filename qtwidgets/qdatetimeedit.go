@@ -49,17 +49,17 @@ func init() {
 
 //  body block begin
 // void keyPressEvent(class QKeyEvent *)
-func (this *QDateTimeEdit) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+func (this *QDateTimeEdit) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
 // void wheelEvent(class QWheelEvent *)
-func (this *QDateTimeEdit) InheritWheelEvent(f func(event *qtgui.QWheelEvent /*777 QWheelEvent **/)) {
+func (this *QDateTimeEdit) InheritWheelEvent(f func(event *qtgui.QWheelEvent /*777 QWheelEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "wheelEvent", f)
 }
 
 // void focusInEvent(class QFocusEvent *)
-func (this *QDateTimeEdit) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+func (this *QDateTimeEdit) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
@@ -74,7 +74,7 @@ func (this *QDateTimeEdit) InheritValidate(f func(input *qtcore.QString, pos int
 }
 
 // void fixup(class QString &)
-func (this *QDateTimeEdit) InheritFixup(f func(input *qtcore.QString)) {
+func (this *QDateTimeEdit) InheritFixup(f func(input *qtcore.QString) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "fixup", f)
 }
 
@@ -94,17 +94,17 @@ func (this *QDateTimeEdit) InheritStepEnabled(f func() int) {
 }
 
 // void mousePressEvent(class QMouseEvent *)
-func (this *QDateTimeEdit) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QDateTimeEdit) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
 // void paintEvent(class QPaintEvent *)
-func (this *QDateTimeEdit) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+func (this *QDateTimeEdit) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
 // void initStyleOption(class QStyleOptionSpinBox *)
-func (this *QDateTimeEdit) InheritInitStyleOption(f func(option *QStyleOptionSpinBox /*777 QStyleOptionSpinBox **/)) {
+func (this *QDateTimeEdit) InheritInitStyleOption(f func(option *QStyleOptionSpinBox /*777 QStyleOptionSpinBox **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 

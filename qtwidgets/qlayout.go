@@ -49,22 +49,22 @@ func init() {
 
 //  body block begin
 // void widgetEvent(class QEvent *)
-func (this *QLayout) InheritWidgetEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/)) {
+func (this *QLayout) InheritWidgetEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "widgetEvent", f)
 }
 
 // void childEvent(class QChildEvent *)
-func (this *QLayout) InheritChildEvent(f func(e *qtcore.QChildEvent /*777 QChildEvent **/)) {
+func (this *QLayout) InheritChildEvent(f func(e *qtcore.QChildEvent /*777 QChildEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "childEvent", f)
 }
 
 // void addChildLayout(class QLayout *)
-func (this *QLayout) InheritAddChildLayout(f func(l *QLayout /*777 QLayout **/)) {
+func (this *QLayout) InheritAddChildLayout(f func(l *QLayout /*777 QLayout **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "addChildLayout", f)
 }
 
 // void addChildWidget(class QWidget *)
-func (this *QLayout) InheritAddChildWidget(f func(w *QWidget /*777 QWidget **/)) {
+func (this *QLayout) InheritAddChildWidget(f func(w *QWidget /*777 QWidget **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "addChildWidget", f)
 }
 

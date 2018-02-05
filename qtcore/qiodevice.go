@@ -56,12 +56,12 @@ func (this *QIODevice) InheritWriteData(f func(data string, len int64) int64) {
 }
 
 // void setOpenMode(QIODevice::OpenMode)
-func (this *QIODevice) InheritSetOpenMode(f func(openMode int)) {
+func (this *QIODevice) InheritSetOpenMode(f func(openMode int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setOpenMode", f)
 }
 
 // void setErrorString(const class QString &)
-func (this *QIODevice) InheritSetErrorString(f func(errorString *QString)) {
+func (this *QIODevice) InheritSetErrorString(f func(errorString *QString) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setErrorString", f)
 }
 

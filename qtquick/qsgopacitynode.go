@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSGOpacityNode struct {
 	*QSGNode
 }
@@ -87,9 +84,10 @@ func (*QSGOpacityNode) NewFromPointer(cthis unsafe.Pointer) *QSGOpacityNode {
 // Public Visibility=Default Availability=Available
 // [-2] void QSGOpacityNode()
 func NewQSGOpacityNode() *QSGOpacityNode {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGOpacityNodeC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGOpacityNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSGOpacityNodeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSGOpacityNode)
 	return gothis
 }
 
@@ -97,9 +95,11 @@ func NewQSGOpacityNode() *QSGOpacityNode {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGOpacityNode()
-func DeleteQSGOpacityNode(*QSGOpacityNode) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGOpacityNodeD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSGOpacityNode(this *QSGOpacityNode) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGOpacityNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 96)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:322
@@ -107,7 +107,7 @@ func DeleteQSGOpacityNode(*QSGOpacityNode) {
 // Public Visibility=Default Availability=Available
 // [-2] void setOpacity(qreal)
 func (this *QSGOpacityNode) SetOpacity(opacity float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGOpacityNode10setOpacityEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), opacity)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGOpacityNode10setOpacityEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), opacity)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,7 +116,7 @@ func (this *QSGOpacityNode) SetOpacity(opacity float64) {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal opacity()
 func (this *QSGOpacityNode) Opacity() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSGOpacityNode7opacityEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSGOpacityNode7opacityEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -127,7 +127,7 @@ func (this *QSGOpacityNode) Opacity() float64 {
 // Public Visibility=Default Availability=Available
 // [-2] void setCombinedOpacity(qreal)
 func (this *QSGOpacityNode) SetCombinedOpacity(opacity float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QSGOpacityNode18setCombinedOpacityEd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), opacity)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QSGOpacityNode18setCombinedOpacityEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), opacity)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -136,7 +136,7 @@ func (this *QSGOpacityNode) SetCombinedOpacity(opacity float64) {
 // Public inline Visibility=Default Availability=Available
 // [8] qreal combinedOpacity()
 func (this *QSGOpacityNode) CombinedOpacity() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSGOpacityNode15combinedOpacityEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSGOpacityNode15combinedOpacityEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -147,7 +147,7 @@ func (this *QSGOpacityNode) CombinedOpacity() float64 {
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isSubtreeBlocked()
 func (this *QSGOpacityNode) IsSubtreeBlocked() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QSGOpacityNode16isSubtreeBlockedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSGOpacityNode16isSubtreeBlockedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

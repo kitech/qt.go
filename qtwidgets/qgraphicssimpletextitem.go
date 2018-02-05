@@ -54,7 +54,7 @@ func (this *QGraphicsSimpleTextItem) InheritSupportsExtension(f func(extension i
 }
 
 // void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
-func (this *QGraphicsSimpleTextItem) InheritSetExtension(f func(extension int, variant *qtcore.QVariant)) {
+func (this *QGraphicsSimpleTextItem) InheritSetExtension(f func(extension int, variant *qtcore.QVariant) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setExtension", f)
 }
 

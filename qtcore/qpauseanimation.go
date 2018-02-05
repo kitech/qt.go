@@ -46,7 +46,7 @@ func (this *QPauseAnimation) InheritEvent(f func(e *QEvent /*777 QEvent **/) boo
 }
 
 // void updateCurrentTime(int)
-func (this *QPauseAnimation) InheritUpdateCurrentTime(f func(arg0 int)) {
+func (this *QPauseAnimation) InheritUpdateCurrentTime(f func(arg0 int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateCurrentTime", f)
 }
 

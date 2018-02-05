@@ -41,12 +41,12 @@ func init() {
 
 //  body block begin
 // void connectNotify(const class QMetaMethod &)
-func (this *QBuffer) InheritConnectNotify(f func(arg0 *QMetaMethod)) {
+func (this *QBuffer) InheritConnectNotify(f func(arg0 *QMetaMethod) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "connectNotify", f)
 }
 
 // void disconnectNotify(const class QMetaMethod &)
-func (this *QBuffer) InheritDisconnectNotify(f func(arg0 *QMetaMethod)) {
+func (this *QBuffer) InheritDisconnectNotify(f func(arg0 *QMetaMethod) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "disconnectNotify", f)
 }
 

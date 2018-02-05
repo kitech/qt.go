@@ -49,42 +49,42 @@ func init() {
 
 //  body block begin
 // void columnResized(int, int, int)
-func (this *QTreeView) InheritColumnResized(f func(column int, oldSize int, newSize int)) {
+func (this *QTreeView) InheritColumnResized(f func(column int, oldSize int, newSize int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "columnResized", f)
 }
 
 // void columnCountChanged(int, int)
-func (this *QTreeView) InheritColumnCountChanged(f func(oldCount int, newCount int)) {
+func (this *QTreeView) InheritColumnCountChanged(f func(oldCount int, newCount int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "columnCountChanged", f)
 }
 
 // void columnMoved()
-func (this *QTreeView) InheritColumnMoved(f func()) {
+func (this *QTreeView) InheritColumnMoved(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "columnMoved", f)
 }
 
 // void reexpand()
-func (this *QTreeView) InheritReexpand(f func()) {
+func (this *QTreeView) InheritReexpand(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "reexpand", f)
 }
 
 // void rowsRemoved(const class QModelIndex &, int, int)
-func (this *QTreeView) InheritRowsRemoved(f func(parent *qtcore.QModelIndex, first int, last int)) {
+func (this *QTreeView) InheritRowsRemoved(f func(parent *qtcore.QModelIndex, first int, last int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsRemoved", f)
 }
 
 // void scrollContentsBy(int, int)
-func (this *QTreeView) InheritScrollContentsBy(f func(dx int, dy int)) {
+func (this *QTreeView) InheritScrollContentsBy(f func(dx int, dy int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "scrollContentsBy", f)
 }
 
 // void rowsInserted(const class QModelIndex &, int, int)
-func (this *QTreeView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int)) {
+func (this *QTreeView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsInserted", f)
 }
 
 // void rowsAboutToBeRemoved(const class QModelIndex &, int, int)
-func (this *QTreeView) InheritRowsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, start int, end int)) {
+func (this *QTreeView) InheritRowsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsAboutToBeRemoved", f)
 }
 
@@ -104,7 +104,7 @@ func (this *QTreeView) InheritVerticalOffset(f func() int) {
 }
 
 // void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
-func (this *QTreeView) InheritSetSelection(f func(rect *qtcore.QRect, command int)) {
+func (this *QTreeView) InheritSetSelection(f func(rect *qtcore.QRect, command int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setSelection", f)
 }
 
@@ -114,57 +114,57 @@ func (this *QTreeView) InheritVisualRegionForSelection(f func(selection *qtcore.
 }
 
 // void timerEvent(class QTimerEvent *)
-func (this *QTreeView) InheritTimerEvent(f func(event *qtcore.QTimerEvent /*777 QTimerEvent **/)) {
+func (this *QTreeView) InheritTimerEvent(f func(event *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
 // void paintEvent(class QPaintEvent *)
-func (this *QTreeView) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+func (this *QTreeView) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
 // void drawTree(class QPainter *, const class QRegion &)
-func (this *QTreeView) InheritDrawTree(f func(painter *qtgui.QPainter /*777 QPainter **/, region *qtgui.QRegion)) {
+func (this *QTreeView) InheritDrawTree(f func(painter *qtgui.QPainter /*777 QPainter **/, region *qtgui.QRegion) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawTree", f)
 }
 
 // void drawRow(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QTreeView) InheritDrawRow(f func(painter *qtgui.QPainter /*777 QPainter **/, options *QStyleOptionViewItem, index *qtcore.QModelIndex)) {
+func (this *QTreeView) InheritDrawRow(f func(painter *qtgui.QPainter /*777 QPainter **/, options *QStyleOptionViewItem, index *qtcore.QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawRow", f)
 }
 
 // void drawBranches(class QPainter *, const class QRect &, const class QModelIndex &)
-func (this *QTreeView) InheritDrawBranches(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, index *qtcore.QModelIndex)) {
+func (this *QTreeView) InheritDrawBranches(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, index *qtcore.QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawBranches", f)
 }
 
 // void mousePressEvent(class QMouseEvent *)
-func (this *QTreeView) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QTreeView) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QTreeView) InheritMouseReleaseEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QTreeView) InheritMouseReleaseEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
 // void mouseDoubleClickEvent(class QMouseEvent *)
-func (this *QTreeView) InheritMouseDoubleClickEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QTreeView) InheritMouseDoubleClickEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
 }
 
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QTreeView) InheritMouseMoveEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QTreeView) InheritMouseMoveEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
 // void keyPressEvent(class QKeyEvent *)
-func (this *QTreeView) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+func (this *QTreeView) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
 // void dragMoveEvent(class QDragMoveEvent *)
-func (this *QTreeView) InheritDragMoveEvent(f func(event *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/)) {
+func (this *QTreeView) InheritDragMoveEvent(f func(event *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragMoveEvent", f)
 }
 
@@ -174,7 +174,7 @@ func (this *QTreeView) InheritViewportEvent(f func(event *qtcore.QEvent /*777 QE
 }
 
 // void updateGeometries()
-func (this *QTreeView) InheritUpdateGeometries(f func()) {
+func (this *QTreeView) InheritUpdateGeometries(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateGeometries", f)
 }
 
@@ -199,7 +199,7 @@ func (this *QTreeView) InheritRowHeight(f func(index *qtcore.QModelIndex) int) {
 }
 
 // void horizontalScrollbarAction(int)
-func (this *QTreeView) InheritHorizontalScrollbarAction(f func(action int)) {
+func (this *QTreeView) InheritHorizontalScrollbarAction(f func(action int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "horizontalScrollbarAction", f)
 }
 
@@ -209,12 +209,12 @@ func (this *QTreeView) InheritIsIndexHidden(f func(index *qtcore.QModelIndex) bo
 }
 
 // void selectionChanged(const class QItemSelection &, const class QItemSelection &)
-func (this *QTreeView) InheritSelectionChanged(f func(selected *qtcore.QItemSelection, deselected *qtcore.QItemSelection)) {
+func (this *QTreeView) InheritSelectionChanged(f func(selected *qtcore.QItemSelection, deselected *qtcore.QItemSelection) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "selectionChanged", f)
 }
 
 // void currentChanged(const class QModelIndex &, const class QModelIndex &)
-func (this *QTreeView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, previous *qtcore.QModelIndex)) {
+func (this *QTreeView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, previous *qtcore.QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "currentChanged", f)
 }
 

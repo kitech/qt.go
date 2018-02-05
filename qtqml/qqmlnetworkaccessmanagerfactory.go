@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -52,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QQmlNetworkAccessManagerFactory struct {
 	*qtrt.CObject
 }
@@ -64,7 +61,11 @@ func (this *QQmlNetworkAccessManagerFactory) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QQmlNetworkAccessManagerFactory) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQQmlNetworkAccessManagerFactoryFromPointer(cthis unsafe.Pointer) *QQmlNetworkAccessManagerFactory {
 	return &QQmlNetworkAccessManagerFactory{&qtrt.CObject{cthis}}
@@ -77,9 +78,11 @@ func (*QQmlNetworkAccessManagerFactory) NewFromPointer(cthis unsafe.Pointer) *QQ
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlNetworkAccessManagerFactory()
-func DeleteQQmlNetworkAccessManagerFactory(*QQmlNetworkAccessManagerFactory) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN31QQmlNetworkAccessManagerFactoryD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQQmlNetworkAccessManagerFactory(this *QQmlNetworkAccessManagerFactory) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN31QQmlNetworkAccessManagerFactoryD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQml/qqmlnetworkaccessmanagerfactory.h:55
@@ -88,7 +91,7 @@ func DeleteQQmlNetworkAccessManagerFactory(*QQmlNetworkAccessManagerFactory) {
 // [8] QNetworkAccessManager * create(QObject *)
 func (this *QQmlNetworkAccessManagerFactory) Create(parent *qtcore.QObject /*777 QObject **/) *qtnetwork.QNetworkAccessManager /*777 QNetworkAccessManager **/ {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN31QQmlNetworkAccessManagerFactory6createEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN31QQmlNetworkAccessManagerFactory6createEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtnetwork.NewQNetworkAccessManagerFromPointer(unsafe.Pointer(uintptr(rv))) // 444

@@ -54,12 +54,12 @@ func (this *QSplashScreen) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/
 }
 
 // void drawContents(class QPainter *)
-func (this *QSplashScreen) InheritDrawContents(f func(painter *qtgui.QPainter /*777 QPainter **/)) {
+func (this *QSplashScreen) InheritDrawContents(f func(painter *qtgui.QPainter /*777 QPainter **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawContents", f)
 }
 
 // void mousePressEvent(class QMouseEvent *)
-func (this *QSplashScreen) InheritMousePressEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QSplashScreen) InheritMousePressEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 

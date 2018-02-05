@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -52,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QQmlInfo struct {
 	*qtrt.CObject
 }
@@ -64,7 +61,11 @@ func (this *QQmlInfo) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QQmlInfo) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQQmlInfoFromPointer(cthis unsafe.Pointer) *QQmlInfo {
 	return &QQmlInfo{&qtrt.CObject{cthis}}
@@ -77,9 +78,11 @@ func (*QQmlInfo) NewFromPointer(cthis unsafe.Pointer) *QQmlInfo {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QQmlInfo()
-func DeleteQQmlInfo(*QQmlInfo) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlInfoD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQQmlInfo(this *QQmlInfo) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlInfoD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

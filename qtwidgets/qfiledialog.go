@@ -49,17 +49,17 @@ func init() {
 
 //  body block begin
 // void done(int)
-func (this *QFileDialog) InheritDone(f func(result int)) {
+func (this *QFileDialog) InheritDone(f func(result int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "done", f)
 }
 
 // void accept()
-func (this *QFileDialog) InheritAccept(f func()) {
+func (this *QFileDialog) InheritAccept(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "accept", f)
 }
 
 // void changeEvent(class QEvent *)
-func (this *QFileDialog) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEvent **/)) {
+func (this *QFileDialog) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 

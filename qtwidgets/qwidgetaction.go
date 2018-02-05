@@ -64,7 +64,7 @@ func (this *QWidgetAction) InheritCreateWidget(f func(parent *QWidget /*777 QWid
 }
 
 // void deleteWidget(class QWidget *)
-func (this *QWidgetAction) InheritDeleteWidget(f func(widget *QWidget /*777 QWidget **/)) {
+func (this *QWidgetAction) InheritDeleteWidget(f func(widget *QWidget /*777 QWidget **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "deleteWidget", f)
 }
 

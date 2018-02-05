@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -35,9 +34,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -48,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QNetworkDatagram struct {
 	*qtrt.CObject
 }
@@ -60,7 +57,11 @@ func (this *QNetworkDatagram) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QNetworkDatagram) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQNetworkDatagramFromPointer(cthis unsafe.Pointer) *QNetworkDatagram {
 	return &QNetworkDatagram{&qtrt.CObject{cthis}}
@@ -74,9 +75,10 @@ func (*QNetworkDatagram) NewFromPointer(cthis unsafe.Pointer) *QNetworkDatagram 
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkDatagram()
 func NewQNetworkDatagram() *QNetworkDatagram {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QNetworkDatagramC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QNetworkDatagramC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQNetworkDatagramFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQNetworkDatagram)
 	return gothis
 }
 
@@ -87,9 +89,10 @@ func NewQNetworkDatagram() *QNetworkDatagram {
 func NewQNetworkDatagram_1(data *qtcore.QByteArray, destinationAddress *QHostAddress, port uint16) *QNetworkDatagram {
 	var convArg0 = data.GetCthis()
 	var convArg1 = destinationAddress.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QNetworkDatagramC2ERK10QByteArrayRK12QHostAddresst", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, port)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QNetworkDatagramC2ERK10QByteArrayRK12QHostAddresst", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, port)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQNetworkDatagramFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQNetworkDatagram)
 	return gothis
 }
 
@@ -97,9 +100,11 @@ func NewQNetworkDatagram_1(data *qtcore.QByteArray, destinationAddress *QHostAdd
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QNetworkDatagram()
-func DeleteQNetworkDatagram(*QNetworkDatagram) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QNetworkDatagramD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQNetworkDatagram(this *QNetworkDatagram) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QNetworkDatagramD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtNetwork/qnetworkdatagram.h:70
@@ -108,7 +113,7 @@ func DeleteQNetworkDatagram(*QNetworkDatagram) {
 // [-2] void swap(QNetworkDatagram &)
 func (this *QNetworkDatagram) Swap(other *QNetworkDatagram) {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QNetworkDatagram4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QNetworkDatagram4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,7 +122,7 @@ func (this *QNetworkDatagram) Swap(other *QNetworkDatagram) {
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
 func (this *QNetworkDatagram) Clear() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QNetworkDatagram5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QNetworkDatagram5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -126,7 +131,7 @@ func (this *QNetworkDatagram) Clear() {
 // Public Visibility=Default Availability=Available
 // [1] bool isValid()
 func (this *QNetworkDatagram) IsValid() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QNetworkDatagram7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QNetworkDatagram7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -137,7 +142,7 @@ func (this *QNetworkDatagram) IsValid() bool {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull()
 func (this *QNetworkDatagram) IsNull() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QNetworkDatagram6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QNetworkDatagram6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -148,7 +153,7 @@ func (this *QNetworkDatagram) IsNull() bool {
 // Public Visibility=Default Availability=Available
 // [4] uint interfaceIndex()
 func (this *QNetworkDatagram) InterfaceIndex() uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QNetworkDatagram14interfaceIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QNetworkDatagram14interfaceIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
@@ -159,7 +164,7 @@ func (this *QNetworkDatagram) InterfaceIndex() uint {
 // Public Visibility=Default Availability=Available
 // [-2] void setInterfaceIndex(uint)
 func (this *QNetworkDatagram) SetInterfaceIndex(index uint) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QNetworkDatagram17setInterfaceIndexEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), index)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QNetworkDatagram17setInterfaceIndexEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -168,10 +173,11 @@ func (this *QNetworkDatagram) SetInterfaceIndex(index uint) {
 // Public Visibility=Default Availability=Available
 // [8] QHostAddress senderAddress()
 func (this *QNetworkDatagram) SenderAddress() *QHostAddress /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QNetworkDatagram13senderAddressEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QNetworkDatagram13senderAddressEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQHostAddress)
 	return rv2
 }
 
@@ -180,10 +186,11 @@ func (this *QNetworkDatagram) SenderAddress() *QHostAddress /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QHostAddress destinationAddress()
 func (this *QNetworkDatagram) DestinationAddress() *QHostAddress /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QNetworkDatagram18destinationAddressEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QNetworkDatagram18destinationAddressEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQHostAddress)
 	return rv2
 }
 
@@ -192,7 +199,7 @@ func (this *QNetworkDatagram) DestinationAddress() *QHostAddress /*123*/ {
 // Public Visibility=Default Availability=Available
 // [4] int senderPort()
 func (this *QNetworkDatagram) SenderPort() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QNetworkDatagram10senderPortEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QNetworkDatagram10senderPortEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -203,7 +210,7 @@ func (this *QNetworkDatagram) SenderPort() int {
 // Public Visibility=Default Availability=Available
 // [4] int destinationPort()
 func (this *QNetworkDatagram) DestinationPort() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QNetworkDatagram15destinationPortEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QNetworkDatagram15destinationPortEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -215,7 +222,7 @@ func (this *QNetworkDatagram) DestinationPort() int {
 // [-2] void setSender(const QHostAddress &, quint16)
 func (this *QNetworkDatagram) SetSender(address *QHostAddress, port uint16) {
 	var convArg0 = address.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QNetworkDatagram9setSenderERK12QHostAddresst", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QNetworkDatagram9setSenderERK12QHostAddresst", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -225,7 +232,7 @@ func (this *QNetworkDatagram) SetSender(address *QHostAddress, port uint16) {
 // [-2] void setDestination(const QHostAddress &, quint16)
 func (this *QNetworkDatagram) SetDestination(address *QHostAddress, port uint16) {
 	var convArg0 = address.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QNetworkDatagram14setDestinationERK12QHostAddresst", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QNetworkDatagram14setDestinationERK12QHostAddresst", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -234,7 +241,7 @@ func (this *QNetworkDatagram) SetDestination(address *QHostAddress, port uint16)
 // Public Visibility=Default Availability=Available
 // [4] int hopLimit()
 func (this *QNetworkDatagram) HopLimit() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QNetworkDatagram8hopLimitEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QNetworkDatagram8hopLimitEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -245,7 +252,7 @@ func (this *QNetworkDatagram) HopLimit() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setHopLimit(int)
 func (this *QNetworkDatagram) SetHopLimit(count int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QNetworkDatagram11setHopLimitEi", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), count)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QNetworkDatagram11setHopLimitEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), count)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -254,10 +261,11 @@ func (this *QNetworkDatagram) SetHopLimit(count int) {
 // Public Visibility=Default Availability=Available
 // [8] QByteArray data()
 func (this *QNetworkDatagram) Data() *qtcore.QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QNetworkDatagram4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QNetworkDatagram4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
 
@@ -267,7 +275,7 @@ func (this *QNetworkDatagram) Data() *qtcore.QByteArray /*123*/ {
 // [-2] void setData(const QByteArray &)
 func (this *QNetworkDatagram) SetData(data *qtcore.QByteArray) {
 	var convArg0 = data.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QNetworkDatagram7setDataERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QNetworkDatagram7setDataERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -277,10 +285,11 @@ func (this *QNetworkDatagram) SetData(data *qtcore.QByteArray) {
 // [8] QNetworkDatagram makeReply(const QByteArray &)
 func (this *QNetworkDatagram) MakeReply(payload *qtcore.QByteArray) *QNetworkDatagram /*123*/ {
 	var convArg0 = payload.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNKR16QNetworkDatagram9makeReplyERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNKR16QNetworkDatagram9makeReplyERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQNetworkDatagramFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQNetworkDatagram)
 	return rv2
 }
 
@@ -290,10 +299,11 @@ func (this *QNetworkDatagram) MakeReply(payload *qtcore.QByteArray) *QNetworkDat
 // [8] QNetworkDatagram makeReply(const QByteArray &)
 func (this *QNetworkDatagram) MakeReply_1(payload *qtcore.QByteArray) *QNetworkDatagram /*123*/ {
 	var convArg0 = payload.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNO16QNetworkDatagram9makeReplyERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNO16QNetworkDatagram9makeReplyERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQNetworkDatagramFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQNetworkDatagram)
 	return rv2
 }
 

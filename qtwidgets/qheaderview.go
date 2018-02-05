@@ -49,37 +49,37 @@ func init() {
 
 //  body block begin
 // void updateSection(int)
-func (this *QHeaderView) InheritUpdateSection(f func(logicalIndex int)) {
+func (this *QHeaderView) InheritUpdateSection(f func(logicalIndex int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateSection", f)
 }
 
 // void resizeSections()
-func (this *QHeaderView) InheritResizeSections(f func()) {
+func (this *QHeaderView) InheritResizeSections(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeSections", f)
 }
 
 // void sectionsInserted(const class QModelIndex &, int, int)
-func (this *QHeaderView) InheritSectionsInserted(f func(parent *qtcore.QModelIndex, logicalFirst int, logicalLast int)) {
+func (this *QHeaderView) InheritSectionsInserted(f func(parent *qtcore.QModelIndex, logicalFirst int, logicalLast int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "sectionsInserted", f)
 }
 
 // void sectionsAboutToBeRemoved(const class QModelIndex &, int, int)
-func (this *QHeaderView) InheritSectionsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, logicalFirst int, logicalLast int)) {
+func (this *QHeaderView) InheritSectionsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, logicalFirst int, logicalLast int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "sectionsAboutToBeRemoved", f)
 }
 
 // void initialize()
-func (this *QHeaderView) InheritInitialize(f func()) {
+func (this *QHeaderView) InheritInitialize(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initialize", f)
 }
 
 // void initializeSections()
-func (this *QHeaderView) InheritInitializeSections(f func()) {
+func (this *QHeaderView) InheritInitializeSections(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initializeSections", f)
 }
 
 // void currentChanged(const class QModelIndex &, const class QModelIndex &)
-func (this *QHeaderView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, old *qtcore.QModelIndex)) {
+func (this *QHeaderView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, old *qtcore.QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "currentChanged", f)
 }
 
@@ -89,27 +89,27 @@ func (this *QHeaderView) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) 
 }
 
 // void paintEvent(class QPaintEvent *)
-func (this *QHeaderView) InheritPaintEvent(f func(e *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+func (this *QHeaderView) InheritPaintEvent(f func(e *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
 // void mousePressEvent(class QMouseEvent *)
-func (this *QHeaderView) InheritMousePressEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QHeaderView) InheritMousePressEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QHeaderView) InheritMouseMoveEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QHeaderView) InheritMouseMoveEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QHeaderView) InheritMouseReleaseEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QHeaderView) InheritMouseReleaseEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
 // void mouseDoubleClickEvent(class QMouseEvent *)
-func (this *QHeaderView) InheritMouseDoubleClickEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QHeaderView) InheritMouseDoubleClickEvent(f func(e *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
 }
 
@@ -119,7 +119,7 @@ func (this *QHeaderView) InheritViewportEvent(f func(e *qtcore.QEvent /*777 QEve
 }
 
 // void paintSection(class QPainter *, const class QRect &, int)
-func (this *QHeaderView) InheritPaintSection(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, logicalIndex int)) {
+func (this *QHeaderView) InheritPaintSection(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, logicalIndex int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintSection", f)
 }
 
@@ -139,17 +139,17 @@ func (this *QHeaderView) InheritVerticalOffset(f func() int) {
 }
 
 // void updateGeometries()
-func (this *QHeaderView) InheritUpdateGeometries(f func()) {
+func (this *QHeaderView) InheritUpdateGeometries(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateGeometries", f)
 }
 
 // void scrollContentsBy(int, int)
-func (this *QHeaderView) InheritScrollContentsBy(f func(dx int, dy int)) {
+func (this *QHeaderView) InheritScrollContentsBy(f func(dx int, dy int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "scrollContentsBy", f)
 }
 
 // void rowsInserted(const class QModelIndex &, int, int)
-func (this *QHeaderView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int)) {
+func (this *QHeaderView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsInserted", f)
 }
 
@@ -159,7 +159,7 @@ func (this *QHeaderView) InheritVisualRect(f func(index *qtcore.QModelIndex) uns
 }
 
 // void scrollTo(const class QModelIndex &, enum QAbstractItemView::ScrollHint)
-func (this *QHeaderView) InheritScrollTo(f func(index *qtcore.QModelIndex, hint int)) {
+func (this *QHeaderView) InheritScrollTo(f func(index *qtcore.QModelIndex, hint int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "scrollTo", f)
 }
 
@@ -179,7 +179,7 @@ func (this *QHeaderView) InheritMoveCursor(f func(arg0 int, arg1 int) unsafe.Poi
 }
 
 // void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
-func (this *QHeaderView) InheritSetSelection(f func(rect *qtcore.QRect, flags int)) {
+func (this *QHeaderView) InheritSetSelection(f func(rect *qtcore.QRect, flags int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setSelection", f)
 }
 
@@ -189,7 +189,7 @@ func (this *QHeaderView) InheritVisualRegionForSelection(f func(selection *qtcor
 }
 
 // void initStyleOption(class QStyleOptionHeader *)
-func (this *QHeaderView) InheritInitStyleOption(f func(option *QStyleOptionHeader /*777 QStyleOptionHeader **/)) {
+func (this *QHeaderView) InheritInitStyleOption(f func(option *QStyleOptionHeader /*777 QStyleOptionHeader **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 

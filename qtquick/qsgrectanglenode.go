@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSGRectangleNode struct {
 	*QSGGeometryNode
 }
@@ -86,9 +83,11 @@ func (*QSGRectangleNode) NewFromPointer(cthis unsafe.Pointer) *QSGRectangleNode 
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [-2] void ~QSGRectangleNode()
-func DeleteQSGRectangleNode(*QSGRectangleNode) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSGRectangleNodeD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSGRectangleNode(this *QSGRectangleNode) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGRectangleNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 144)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQuick/qsgrectanglenode.h:52
@@ -97,7 +96,7 @@ func DeleteQSGRectangleNode(*QSGRectangleNode) {
 // [-2] void setRect(const QRectF &)
 func (this *QSGRectangleNode) SetRect(rect *qtcore.QRectF) {
 	var convArg0 = rect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSGRectangleNode7setRectERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGRectangleNode7setRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -106,7 +105,7 @@ func (this *QSGRectangleNode) SetRect(rect *qtcore.QRectF) {
 // Public inline Visibility=Default Availability=Available
 // [-2] void setRect(qreal, qreal, qreal, qreal)
 func (this *QSGRectangleNode) SetRect_1(x float64, y float64, w float64, h float64) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSGRectangleNode7setRectEdddd", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGRectangleNode7setRectEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -115,10 +114,11 @@ func (this *QSGRectangleNode) SetRect_1(x float64, y float64, w float64, h float
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [32] QRectF rect()
 func (this *QSGRectangleNode) Rect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QSGRectangleNode4rectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSGRectangleNode4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -128,7 +128,7 @@ func (this *QSGRectangleNode) Rect() *qtcore.QRectF /*123*/ {
 // [-2] void setColor(const QColor &)
 func (this *QSGRectangleNode) SetColor(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSGRectangleNode8setColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGRectangleNode8setColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -137,10 +137,11 @@ func (this *QSGRectangleNode) SetColor(color *qtgui.QColor) {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [16] QColor color()
 func (this *QSGRectangleNode) Color() *qtgui.QColor /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QSGRectangleNode5colorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSGRectangleNode5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
 }
 

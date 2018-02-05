@@ -49,7 +49,7 @@ func init() {
 
 //  body block begin
 // void emitDataChanged()
-func (this *QTreeWidgetItem) InheritEmitDataChanged(f func()) {
+func (this *QTreeWidgetItem) InheritEmitDataChanged(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "emitDataChanged", f)
 }
 

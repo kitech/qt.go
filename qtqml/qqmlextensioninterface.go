@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -52,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QQmlExtensionInterface struct {
 	*QQmlTypesExtensionInterface
 }
@@ -78,9 +75,11 @@ func (*QQmlExtensionInterface) NewFromPointer(cthis unsafe.Pointer) *QQmlExtensi
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlExtensionInterface()
-func DeleteQQmlExtensionInterface(*QQmlExtensionInterface) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QQmlExtensionInterfaceD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQQmlExtensionInterface(this *QQmlExtensionInterface) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QQmlExtensionInterfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQml/qqmlextensioninterface.h:62
@@ -91,7 +90,7 @@ func (this *QQmlExtensionInterface) InitializeEngine(engine *QQmlEngine /*777 QQ
 	var convArg0 = engine.GetCthis()
 	var convArg1 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN22QQmlExtensionInterface16initializeEngineEP10QQmlEnginePKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN22QQmlExtensionInterface16initializeEngineEP10QQmlEnginePKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -52,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QQmlFile struct {
 	*qtrt.CObject
 }
@@ -64,7 +61,11 @@ func (this *QQmlFile) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QQmlFile) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQQmlFileFromPointer(cthis unsafe.Pointer) *QQmlFile {
 	return &QQmlFile{&qtrt.CObject{cthis}}
@@ -78,9 +79,10 @@ func (*QQmlFile) NewFromPointer(cthis unsafe.Pointer) *QQmlFile {
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlFile()
 func NewQQmlFile() *QQmlFile {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFileC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFileC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQmlFileFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQQmlFile)
 	return gothis
 }
 
@@ -91,9 +93,10 @@ func NewQQmlFile() *QQmlFile {
 func NewQQmlFile_1(arg0 *QQmlEngine /*777 QQmlEngine **/, arg1 *qtcore.QUrl) *QQmlFile {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFileC2EP10QQmlEngineRK4QUrl", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFileC2EP10QQmlEngineRK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQmlFileFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQQmlFile)
 	return gothis
 }
 
@@ -104,9 +107,10 @@ func NewQQmlFile_1(arg0 *QQmlEngine /*777 QQmlEngine **/, arg1 *qtcore.QUrl) *QQ
 func NewQQmlFile_2(arg0 *QQmlEngine /*777 QQmlEngine **/, arg1 *qtcore.QString) *QQmlFile {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFileC2EP10QQmlEngineRK7QString", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFileC2EP10QQmlEngineRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQmlFileFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQQmlFile)
 	return gothis
 }
 
@@ -114,9 +118,11 @@ func NewQQmlFile_2(arg0 *QQmlEngine /*777 QQmlEngine **/, arg1 *qtcore.QString) 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QQmlFile()
-func DeleteQQmlFile(*QQmlFile) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFileD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQQmlFile(this *QQmlFile) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFileD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQml/qqmlfile.h:63
@@ -124,7 +130,7 @@ func DeleteQQmlFile(*QQmlFile) {
 // Public Visibility=Default Availability=Available
 // [1] bool isNull()
 func (this *QQmlFile) IsNull() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QQmlFile6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -135,7 +141,7 @@ func (this *QQmlFile) IsNull() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isReady()
 func (this *QQmlFile) IsReady() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QQmlFile7isReadyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile7isReadyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -146,7 +152,7 @@ func (this *QQmlFile) IsReady() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isError()
 func (this *QQmlFile) IsError() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QQmlFile7isErrorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile7isErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -157,7 +163,7 @@ func (this *QQmlFile) IsError() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isLoading()
 func (this *QQmlFile) IsLoading() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QQmlFile9isLoadingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile9isLoadingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -168,10 +174,11 @@ func (this *QQmlFile) IsLoading() bool {
 // Public Visibility=Default Availability=Available
 // [8] QUrl url()
 func (this *QQmlFile) Url() *qtcore.QUrl /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QQmlFile3urlEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile3urlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQUrl)
 	return rv2
 }
 
@@ -180,7 +187,7 @@ func (this *QQmlFile) Url() *qtcore.QUrl /*123*/ {
 // Public Visibility=Default Availability=Available
 // [4] QQmlFile::Status status()
 func (this *QQmlFile) Status() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QQmlFile6statusEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile6statusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -191,10 +198,11 @@ func (this *QQmlFile) Status() int {
 // Public Visibility=Default Availability=Available
 // [8] QString error()
 func (this *QQmlFile) Error() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QQmlFile5errorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -203,7 +211,7 @@ func (this *QQmlFile) Error() *qtcore.QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] qint64 size()
 func (this *QQmlFile) Size() int64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QQmlFile4sizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int64(rv) // 222
@@ -214,7 +222,7 @@ func (this *QQmlFile) Size() int64 {
 // Public Visibility=Default Availability=Available
 // [8] const char * data()
 func (this *QQmlFile) Data() string {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QQmlFile4dataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.GoStringI(rv)
@@ -225,10 +233,11 @@ func (this *QQmlFile) Data() string {
 // Public Visibility=Default Availability=Available
 // [8] QByteArray dataByteArray()
 func (this *QQmlFile) DataByteArray() *qtcore.QByteArray /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QQmlFile13dataByteArrayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QQmlFile13dataByteArrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
 
@@ -239,7 +248,7 @@ func (this *QQmlFile) DataByteArray() *qtcore.QByteArray /*123*/ {
 func (this *QQmlFile) Load(arg0 *QQmlEngine /*777 QQmlEngine **/, arg1 *qtcore.QUrl) {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile4loadEP10QQmlEngineRK4QUrl", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile4loadEP10QQmlEngineRK4QUrl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -250,7 +259,7 @@ func (this *QQmlFile) Load(arg0 *QQmlEngine /*777 QQmlEngine **/, arg1 *qtcore.Q
 func (this *QQmlFile) Load_1(arg0 *QQmlEngine /*777 QQmlEngine **/, arg1 *qtcore.QString) {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile4loadEP10QQmlEngineRK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile4loadEP10QQmlEngineRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -259,7 +268,7 @@ func (this *QQmlFile) Load_1(arg0 *QQmlEngine /*777 QQmlEngine **/, arg1 *qtcore
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
 func (this *QQmlFile) Clear() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -269,7 +278,7 @@ func (this *QQmlFile) Clear() {
 // [-2] void clear(QObject *)
 func (this *QQmlFile) Clear_1(arg0 *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile5clearEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile5clearEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -281,7 +290,7 @@ func (this *QQmlFile) ConnectFinished(arg0 *qtcore.QObject /*777 QObject **/, ar
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = qtrt.CString(arg1)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile15connectFinishedEP7QObjectPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile15connectFinishedEP7QObjectPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -293,7 +302,7 @@ func (this *QQmlFile) ConnectFinished(arg0 *qtcore.QObject /*777 QObject **/, ar
 // [1] bool connectFinished(QObject *, int)
 func (this *QQmlFile) ConnectFinished_1(arg0 *qtcore.QObject /*777 QObject **/, arg1 int) bool {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile15connectFinishedEP7QObjecti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile15connectFinishedEP7QObjecti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -307,7 +316,7 @@ func (this *QQmlFile) ConnectDownloadProgress(arg0 *qtcore.QObject /*777 QObject
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = qtrt.CString(arg1)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile23connectDownloadProgressEP7QObjectPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile23connectDownloadProgressEP7QObjectPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -319,7 +328,7 @@ func (this *QQmlFile) ConnectDownloadProgress(arg0 *qtcore.QObject /*777 QObject
 // [1] bool connectDownloadProgress(QObject *, int)
 func (this *QQmlFile) ConnectDownloadProgress_1(arg0 *qtcore.QObject /*777 QObject **/, arg1 int) bool {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile23connectDownloadProgressEP7QObjecti", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile23connectDownloadProgressEP7QObjecti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -331,7 +340,7 @@ func (this *QQmlFile) ConnectDownloadProgress_1(arg0 *qtcore.QObject /*777 QObje
 // [1] bool isSynchronous(const QString &)
 func (this *QQmlFile) IsSynchronous(url *qtcore.QString) bool {
 	var convArg0 = url.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile13isSynchronousERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile13isSynchronousERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -348,7 +357,7 @@ func QQmlFile_IsSynchronous(url *qtcore.QString) bool {
 // [1] bool isSynchronous(const QUrl &)
 func (this *QQmlFile) IsSynchronous_1(url *qtcore.QUrl) bool {
 	var convArg0 = url.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile13isSynchronousERK4QUrl", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile13isSynchronousERK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -365,7 +374,7 @@ func QQmlFile_IsSynchronous_1(url *qtcore.QUrl) bool {
 // [1] bool isLocalFile(const QString &)
 func (this *QQmlFile) IsLocalFile(url *qtcore.QString) bool {
 	var convArg0 = url.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile11isLocalFileERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile11isLocalFileERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -382,7 +391,7 @@ func QQmlFile_IsLocalFile(url *qtcore.QString) bool {
 // [1] bool isLocalFile(const QUrl &)
 func (this *QQmlFile) IsLocalFile_1(url *qtcore.QUrl) bool {
 	var convArg0 = url.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile11isLocalFileERK4QUrl", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile11isLocalFileERK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -399,10 +408,11 @@ func QQmlFile_IsLocalFile_1(url *qtcore.QUrl) bool {
 // [8] QString urlToLocalFileOrQrc(const QString &)
 func (this *QQmlFile) UrlToLocalFileOrQrc(arg0 *qtcore.QString) *qtcore.QString /*123*/ {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile19urlToLocalFileOrQrcERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile19urlToLocalFileOrQrcERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 func QQmlFile_UrlToLocalFileOrQrc(arg0 *qtcore.QString) *qtcore.QString /*123*/ {
@@ -417,10 +427,11 @@ func QQmlFile_UrlToLocalFileOrQrc(arg0 *qtcore.QString) *qtcore.QString /*123*/ 
 // [8] QString urlToLocalFileOrQrc(const QUrl &)
 func (this *QQmlFile) UrlToLocalFileOrQrc_1(arg0 *qtcore.QUrl) *qtcore.QString /*123*/ {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QQmlFile19urlToLocalFileOrQrcERK4QUrl", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile19urlToLocalFileOrQrcERK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 func QQmlFile_UrlToLocalFileOrQrc_1(arg0 *qtcore.QUrl) *qtcore.QString /*123*/ {

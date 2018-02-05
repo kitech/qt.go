@@ -10,14 +10,13 @@ package qtquick
 
 /*
 #include <stdlib.h>
-// extern C begin: 9
+// extern C begin: 11
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,36 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void setShaderSourceFile(class QOpenGLShader::ShaderType, const class QString &)
+func (this *QSGMaterialShader) InheritSetShaderSourceFile(f func(type_ int, sourceFile *qtcore.QString) /*void*/) {
+	qtrt.SetAllInheritCallback(this, "setShaderSourceFile", f)
+}
+
+// void setShaderSourceFiles(class QOpenGLShader::ShaderType, const class QStringList &)
+func (this *QSGMaterialShader) InheritSetShaderSourceFiles(f func(type_ int, sourceFiles *qtcore.QStringList) /*void*/) {
+	qtrt.SetAllInheritCallback(this, "setShaderSourceFiles", f)
+}
+
+// void compile()
+func (this *QSGMaterialShader) InheritCompile(f func() /*void*/) {
+	qtrt.SetAllInheritCallback(this, "compile", f)
+}
+
+// void initialize()
+func (this *QSGMaterialShader) InheritInitialize(f func() /*void*/) {
+	qtrt.SetAllInheritCallback(this, "initialize", f)
+}
+
+// const char * vertexShader()
+func (this *QSGMaterialShader) InheritVertexShader(f func() unsafe.Pointer /*666*/) {
+	qtrt.SetAllInheritCallback(this, "vertexShader", f)
+}
+
+// const char * fragmentShader()
+func (this *QSGMaterialShader) InheritFragmentShader(f func() unsafe.Pointer /*666*/) {
+	qtrt.SetAllInheritCallback(this, "fragmentShader", f)
+}
+
 type QSGMaterialShader struct {
 	*qtrt.CObject
 }
@@ -72,7 +98,11 @@ func (this *QSGMaterialShader) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSGMaterialShader) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSGMaterialShaderFromPointer(cthis unsafe.Pointer) *QSGMaterialShader {
 	return &QSGMaterialShader{&qtrt.CObject{cthis}}
@@ -86,9 +116,10 @@ func (*QSGMaterialShader) NewFromPointer(cthis unsafe.Pointer) *QSGMaterialShade
 // Public Visibility=Default Availability=Available
 // [-2] void QSGMaterialShader()
 func NewQSGMaterialShader() *QSGMaterialShader {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSGMaterialShaderC1Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShaderC1Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSGMaterialShaderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSGMaterialShader)
 	return gothis
 }
 
@@ -96,9 +127,11 @@ func NewQSGMaterialShader() *QSGMaterialShader {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGMaterialShader()
-func DeleteQSGMaterialShader(*QSGMaterialShader) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSGMaterialShaderD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSGMaterialShader(this *QSGMaterialShader) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShaderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 32)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQuick/qsgmaterial.h:99
@@ -106,7 +139,7 @@ func DeleteQSGMaterialShader(*QSGMaterialShader) {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void activate()
 func (this *QSGMaterialShader) Activate() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSGMaterialShader8activateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShader8activateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -115,7 +148,7 @@ func (this *QSGMaterialShader) Activate() {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void deactivate()
 func (this *QSGMaterialShader) Deactivate() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSGMaterialShader10deactivateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShader10deactivateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -124,10 +157,30 @@ func (this *QSGMaterialShader) Deactivate() {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] const char *const * attributeNames()
 func (this *QSGMaterialShader) AttributeNames() []string {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSGMaterialShader14attributeNamesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGMaterialShader14attributeNamesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.CCharPPToStringSlice(unsafe.Pointer(uintptr(rv)))
+}
+
+// /usr/include/qt/QtQuick/qsgmaterial.h:114
+// index:0
+// Protected Visibility=Default Availability=Available
+// [-2] void setShaderSourceFile(QOpenGLShader::ShaderType, const QString &)
+func (this *QSGMaterialShader) SetShaderSourceFile(type_ int, sourceFile *qtcore.QString) {
+	var convArg1 = sourceFile.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShader19setShaderSourceFileE6QFlagsIN13QOpenGLShader13ShaderTypeBitEERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_, convArg1)
+	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtQuick/qsgmaterial.h:115
+// index:0
+// Protected Visibility=Default Availability=Available
+// [-2] void setShaderSourceFiles(QOpenGLShader::ShaderType, const QStringList &)
+func (this *QSGMaterialShader) SetShaderSourceFiles(type_ int, sourceFiles *qtcore.QStringList) {
+	var convArg1 = sourceFiles.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShader20setShaderSourceFilesE6QFlagsIN13QOpenGLShader13ShaderTypeBitEERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_, convArg1)
+	gopp.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtQuick/qsgmaterial.h:117
@@ -135,7 +188,7 @@ func (this *QSGMaterialShader) AttributeNames() []string {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void compile()
 func (this *QSGMaterialShader) Compile() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSGMaterialShader7compileEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShader7compileEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -144,7 +197,7 @@ func (this *QSGMaterialShader) Compile() {
 // Protected inline virtual Visibility=Default Availability=Available
 // [-2] void initialize()
 func (this *QSGMaterialShader) Initialize() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSGMaterialShader10initializeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShader10initializeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -153,7 +206,7 @@ func (this *QSGMaterialShader) Initialize() {
 // Protected virtual Visibility=Default Availability=Available
 // [8] const char * vertexShader()
 func (this *QSGMaterialShader) VertexShader() string {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSGMaterialShader12vertexShaderEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGMaterialShader12vertexShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.GoStringI(rv)
@@ -164,7 +217,7 @@ func (this *QSGMaterialShader) VertexShader() string {
 // Protected virtual Visibility=Default Availability=Available
 // [8] const char * fragmentShader()
 func (this *QSGMaterialShader) FragmentShader() string {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSGMaterialShader14fragmentShaderEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGMaterialShader14fragmentShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.GoStringI(rv)

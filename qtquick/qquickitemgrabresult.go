@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// bool event(class QEvent *)
+func (this *QQuickItemGrabResult) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) bool) {
+	qtrt.SetAllInheritCallback(this, "event", f)
+}
+
 type QQuickItemGrabResult struct {
 	*qtcore.QObject
 }
@@ -87,7 +88,7 @@ func (*QQuickItemGrabResult) NewFromPointer(cthis unsafe.Pointer) *QQuickItemGra
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QQuickItemGrabResult) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -99,10 +100,11 @@ func (this *QQuickItemGrabResult) MetaObject() *qtcore.QMetaObject /*777 const Q
 // Public Visibility=Default Availability=Available
 // [32] QImage image()
 func (this *QQuickItemGrabResult) Image() *qtgui.QImage /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult5imageEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult5imageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQImage)
 	return rv2
 }
 
@@ -111,10 +113,11 @@ func (this *QQuickItemGrabResult) Image() *qtgui.QImage /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QUrl url()
 func (this *QQuickItemGrabResult) Url() *qtcore.QUrl /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult3urlEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult3urlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQUrl)
 	return rv2
 }
 
@@ -124,7 +127,7 @@ func (this *QQuickItemGrabResult) Url() *qtcore.QUrl /*123*/ {
 // [1] bool saveToFile(const QString &)
 func (this *QQuickItemGrabResult) SaveToFile(fileName *qtcore.QString) bool {
 	var convArg0 = fileName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQuickItemGrabResult10saveToFileERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QQuickItemGrabResult10saveToFileERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -136,7 +139,7 @@ func (this *QQuickItemGrabResult) SaveToFile(fileName *qtcore.QString) bool {
 // [1] bool saveToFile(const QString &)
 func (this *QQuickItemGrabResult) SaveToFile_1(fileName *qtcore.QString) bool {
 	var convArg0 = fileName.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult10saveToFileERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QQuickItemGrabResult10saveToFileERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -148,7 +151,7 @@ func (this *QQuickItemGrabResult) SaveToFile_1(fileName *qtcore.QString) bool {
 // [1] bool event(QEvent *)
 func (this *QQuickItemGrabResult) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQuickItemGrabResult5eventEP6QEvent", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QQuickItemGrabResult5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -159,8 +162,14 @@ func (this *QQuickItemGrabResult) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bo
 // Public Visibility=Default Availability=Available
 // [-2] void ready()
 func (this *QQuickItemGrabResult) Ready() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QQuickItemGrabResult5readyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QQuickItemGrabResult5readyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+}
+
+func DeleteQQuickItemGrabResult(this *QQuickItemGrabResult) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QQuickItemGrabResultD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

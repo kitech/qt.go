@@ -46,7 +46,7 @@ func (this *QEventTransition) InheritEventTest(f func(event *QEvent /*777 QEvent
 }
 
 // void onTransition(class QEvent *)
-func (this *QEventTransition) InheritOnTransition(f func(event *QEvent /*777 QEvent **/)) {
+func (this *QEventTransition) InheritOnTransition(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onTransition", f)
 }
 

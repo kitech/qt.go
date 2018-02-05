@@ -49,17 +49,17 @@ func init() {
 
 //  body block begin
 // void actionEvent(class QActionEvent *)
-func (this *QToolBar) InheritActionEvent(f func(event *qtgui.QActionEvent /*777 QActionEvent **/)) {
+func (this *QToolBar) InheritActionEvent(f func(event *qtgui.QActionEvent /*777 QActionEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "actionEvent", f)
 }
 
 // void changeEvent(class QEvent *)
-func (this *QToolBar) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+func (this *QToolBar) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
 // void paintEvent(class QPaintEvent *)
-func (this *QToolBar) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+func (this *QToolBar) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
@@ -69,7 +69,7 @@ func (this *QToolBar) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/)
 }
 
 // void initStyleOption(class QStyleOptionToolBar *)
-func (this *QToolBar) InheritInitStyleOption(f func(option *QStyleOptionToolBar /*777 QStyleOptionToolBar **/)) {
+func (this *QToolBar) InheritInitStyleOption(f func(option *QStyleOptionToolBar /*777 QStyleOptionToolBar **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 

@@ -49,7 +49,7 @@ func init() {
 
 //  body block begin
 // void setupViewport(class QWidget *)
-func (this *QMdiArea) InheritSetupViewport(f func(viewport *QWidget /*777 QWidget **/)) {
+func (this *QMdiArea) InheritSetupViewport(f func(viewport *QWidget /*777 QWidget **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setupViewport", f)
 }
 
@@ -64,27 +64,27 @@ func (this *QMdiArea) InheritEventFilter(f func(object *qtcore.QObject /*777 QOb
 }
 
 // void paintEvent(class QPaintEvent *)
-func (this *QMdiArea) InheritPaintEvent(f func(paintEvent *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+func (this *QMdiArea) InheritPaintEvent(f func(paintEvent *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
 // void childEvent(class QChildEvent *)
-func (this *QMdiArea) InheritChildEvent(f func(childEvent *qtcore.QChildEvent /*777 QChildEvent **/)) {
+func (this *QMdiArea) InheritChildEvent(f func(childEvent *qtcore.QChildEvent /*777 QChildEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "childEvent", f)
 }
 
 // void resizeEvent(class QResizeEvent *)
-func (this *QMdiArea) InheritResizeEvent(f func(resizeEvent *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+func (this *QMdiArea) InheritResizeEvent(f func(resizeEvent *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
 // void timerEvent(class QTimerEvent *)
-func (this *QMdiArea) InheritTimerEvent(f func(timerEvent *qtcore.QTimerEvent /*777 QTimerEvent **/)) {
+func (this *QMdiArea) InheritTimerEvent(f func(timerEvent *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
 // void showEvent(class QShowEvent *)
-func (this *QMdiArea) InheritShowEvent(f func(showEvent *qtgui.QShowEvent /*777 QShowEvent **/)) {
+func (this *QMdiArea) InheritShowEvent(f func(showEvent *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
@@ -94,7 +94,7 @@ func (this *QMdiArea) InheritViewportEvent(f func(event *qtcore.QEvent /*777 QEv
 }
 
 // void scrollContentsBy(int, int)
-func (this *QMdiArea) InheritScrollContentsBy(f func(dx int, dy int)) {
+func (this *QMdiArea) InheritScrollContentsBy(f func(dx int, dy int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "scrollContentsBy", f)
 }
 

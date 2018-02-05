@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QQuickImageProvider struct {
 	*qtrt.CObject
 }
@@ -72,7 +69,11 @@ func (this *QQuickImageProvider) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QQuickImageProvider) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQQuickImageProviderFromPointer(cthis unsafe.Pointer) *QQuickImageProvider {
 	return &QQuickImageProvider{&qtrt.CObject{cthis}}
@@ -86,9 +87,10 @@ func (*QQuickImageProvider) NewFromPointer(cthis unsafe.Pointer) *QQuickImagePro
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickImageProvider(enum QQmlImageProviderBase::ImageType, QQmlImageProviderBase::Flags)
 func NewQQuickImageProvider(type_ int, flags int) *QQuickImageProvider {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickImageProviderC2EN21QQmlImageProviderBase9ImageTypeE6QFlagsINS0_4FlagEE", ffiqt.FFI_TYPE_POINTER, type_, flags)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageProviderC2EN21QQmlImageProviderBase9ImageTypeE6QFlagsINS0_4FlagEE", qtrt.FFI_TYPE_POINTER, type_, flags)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQuickImageProviderFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQQuickImageProvider)
 	return gothis
 }
 
@@ -96,9 +98,11 @@ func NewQQuickImageProvider(type_ int, flags int) *QQuickImageProvider {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQuickImageProvider()
-func DeleteQQuickImageProvider(*QQuickImageProvider) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickImageProviderD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQQuickImageProvider(this *QQuickImageProvider) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageProviderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQuick/qquickimageprovider.h:95
@@ -106,7 +110,7 @@ func DeleteQQuickImageProvider(*QQuickImageProvider) {
 // Public virtual Visibility=Default Availability=Available
 // [4] QQmlImageProviderBase::ImageType imageType()
 func (this *QQuickImageProvider) ImageType() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QQuickImageProvider9imageTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QQuickImageProvider9imageTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -117,7 +121,7 @@ func (this *QQuickImageProvider) ImageType() int {
 // Public virtual Visibility=Default Availability=Available
 // [4] QQmlImageProviderBase::Flags flags()
 func (this *QQuickImageProvider) Flags() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QQuickImageProvider5flagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QQuickImageProvider5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -131,10 +135,11 @@ func (this *QQuickImageProvider) RequestImage(id *qtcore.QString, size *qtcore.Q
 	var convArg0 = id.GetCthis()
 	var convArg1 = size.GetCthis()
 	var convArg2 = requestedSize.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickImageProvider12requestImageERK7QStringP5QSizeRKS3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageProvider12requestImageERK7QStringP5QSizeRKS3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQImage)
 	return rv2
 }
 
@@ -146,10 +151,11 @@ func (this *QQuickImageProvider) RequestPixmap(id *qtcore.QString, size *qtcore.
 	var convArg0 = id.GetCthis()
 	var convArg1 = size.GetCthis()
 	var convArg2 = requestedSize.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickImageProvider13requestPixmapERK7QStringP5QSizeRKS3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageProvider13requestPixmapERK7QStringP5QSizeRKS3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQPixmapFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQPixmap)
 	return rv2
 }
 
@@ -161,7 +167,7 @@ func (this *QQuickImageProvider) RequestTexture(id *qtcore.QString, size *qtcore
 	var convArg0 = id.GetCthis()
 	var convArg1 = size.GetCthis()
 	var convArg2 = requestedSize.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickImageProvider14requestTextureERK7QStringP5QSizeRKS3_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageProvider14requestTextureERK7QStringP5QSizeRKS3_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQQuickTextureFactoryFromPointer(unsafe.Pointer(uintptr(rv))) // 444

@@ -49,7 +49,7 @@ func init() {
 
 //  body block begin
 // void documentChanged(int, int, int)
-func (this *QPlainTextDocumentLayout) InheritDocumentChanged(f func(from int, arg1 int, charsAdded int)) {
+func (this *QPlainTextDocumentLayout) InheritDocumentChanged(f func(from int, arg1 int, charsAdded int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "documentChanged", f)
 }
 

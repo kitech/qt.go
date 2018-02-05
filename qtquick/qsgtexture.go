@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSGTexture struct {
 	*qtcore.QObject
 }
@@ -87,7 +84,7 @@ func (*QSGTexture) NewFromPointer(cthis unsafe.Pointer) *QSGTexture {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QSGTexture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSGTexture10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -99,7 +96,7 @@ func (this *QSGTexture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // Public Visibility=Default Availability=Available
 // [-2] void QSGTexture()
 func NewQSGTexture() *QSGTexture {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSGTextureC1Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSGTextureC1Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -109,9 +106,11 @@ func NewQSGTexture() *QSGTexture {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGTexture()
-func DeleteQSGTexture(*QSGTexture) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSGTextureD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSGTexture(this *QSGTexture) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSGTextureD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQuick/qsgtexture.h:79
@@ -119,7 +118,7 @@ func DeleteQSGTexture(*QSGTexture) {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int textureId()
 func (this *QSGTexture) TextureId() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSGTexture9textureIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture9textureIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -130,10 +129,11 @@ func (this *QSGTexture) TextureId() int {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSize textureSize()
 func (this *QSGTexture) TextureSize() *qtcore.QSize /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSGTexture11textureSizeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture11textureSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
@@ -142,7 +142,7 @@ func (this *QSGTexture) TextureSize() *qtcore.QSize /*123*/ {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool hasAlphaChannel()
 func (this *QSGTexture) HasAlphaChannel() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSGTexture15hasAlphaChannelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture15hasAlphaChannelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -153,7 +153,7 @@ func (this *QSGTexture) HasAlphaChannel() bool {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool hasMipmaps()
 func (this *QSGTexture) HasMipmaps() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSGTexture10hasMipmapsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture10hasMipmapsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -164,10 +164,11 @@ func (this *QSGTexture) HasMipmaps() bool {
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF normalizedTextureSubRect()
 func (this *QSGTexture) NormalizedTextureSubRect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSGTexture24normalizedTextureSubRectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture24normalizedTextureSubRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -176,7 +177,7 @@ func (this *QSGTexture) NormalizedTextureSubRect() *qtcore.QRectF /*123*/ {
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isAtlasTexture()
 func (this *QSGTexture) IsAtlasTexture() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSGTexture14isAtlasTextureEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture14isAtlasTextureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -187,7 +188,7 @@ func (this *QSGTexture) IsAtlasTexture() bool {
 // Public virtual Visibility=Default Availability=Available
 // [8] QSGTexture * removedFromAtlas()
 func (this *QSGTexture) RemovedFromAtlas() *QSGTexture /*777 QSGTexture **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSGTexture16removedFromAtlasEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture16removedFromAtlasEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -199,7 +200,7 @@ func (this *QSGTexture) RemovedFromAtlas() *QSGTexture /*777 QSGTexture **/ {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void bind()
 func (this *QSGTexture) Bind() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSGTexture4bindEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSGTexture4bindEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -208,7 +209,7 @@ func (this *QSGTexture) Bind() {
 // Public Visibility=Default Availability=Available
 // [-2] void updateBindOptions(_Bool)
 func (this *QSGTexture) UpdateBindOptions(force bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSGTexture17updateBindOptionsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), force)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSGTexture17updateBindOptionsEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), force)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -217,7 +218,7 @@ func (this *QSGTexture) UpdateBindOptions(force bool) {
 // Public Visibility=Default Availability=Available
 // [-2] void setMipmapFiltering(enum QSGTexture::Filtering)
 func (this *QSGTexture) SetMipmapFiltering(filter int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSGTexture18setMipmapFilteringENS_9FilteringE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), filter)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSGTexture18setMipmapFilteringENS_9FilteringE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filter)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -226,7 +227,7 @@ func (this *QSGTexture) SetMipmapFiltering(filter int) {
 // Public Visibility=Default Availability=Available
 // [4] QSGTexture::Filtering mipmapFiltering()
 func (this *QSGTexture) MipmapFiltering() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSGTexture15mipmapFilteringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture15mipmapFilteringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -237,7 +238,7 @@ func (this *QSGTexture) MipmapFiltering() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setFiltering(enum QSGTexture::Filtering)
 func (this *QSGTexture) SetFiltering(filter int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSGTexture12setFilteringENS_9FilteringE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), filter)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSGTexture12setFilteringENS_9FilteringE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), filter)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -246,7 +247,7 @@ func (this *QSGTexture) SetFiltering(filter int) {
 // Public Visibility=Default Availability=Available
 // [4] QSGTexture::Filtering filtering()
 func (this *QSGTexture) Filtering() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSGTexture9filteringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture9filteringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -257,7 +258,7 @@ func (this *QSGTexture) Filtering() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setAnisotropyLevel(enum QSGTexture::AnisotropyLevel)
 func (this *QSGTexture) SetAnisotropyLevel(level int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSGTexture18setAnisotropyLevelENS_15AnisotropyLevelE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), level)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSGTexture18setAnisotropyLevelENS_15AnisotropyLevelE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), level)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -266,7 +267,7 @@ func (this *QSGTexture) SetAnisotropyLevel(level int) {
 // Public Visibility=Default Availability=Available
 // [4] QSGTexture::AnisotropyLevel anisotropyLevel()
 func (this *QSGTexture) AnisotropyLevel() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSGTexture15anisotropyLevelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture15anisotropyLevelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -277,7 +278,7 @@ func (this *QSGTexture) AnisotropyLevel() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setHorizontalWrapMode(enum QSGTexture::WrapMode)
 func (this *QSGTexture) SetHorizontalWrapMode(hwrap int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSGTexture21setHorizontalWrapModeENS_8WrapModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), hwrap)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSGTexture21setHorizontalWrapModeENS_8WrapModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), hwrap)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -286,7 +287,7 @@ func (this *QSGTexture) SetHorizontalWrapMode(hwrap int) {
 // Public Visibility=Default Availability=Available
 // [4] QSGTexture::WrapMode horizontalWrapMode()
 func (this *QSGTexture) HorizontalWrapMode() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSGTexture18horizontalWrapModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture18horizontalWrapModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -297,7 +298,7 @@ func (this *QSGTexture) HorizontalWrapMode() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setVerticalWrapMode(enum QSGTexture::WrapMode)
 func (this *QSGTexture) SetVerticalWrapMode(vwrap int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN10QSGTexture19setVerticalWrapModeENS_8WrapModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), vwrap)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSGTexture19setVerticalWrapModeENS_8WrapModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), vwrap)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -306,7 +307,7 @@ func (this *QSGTexture) SetVerticalWrapMode(vwrap int) {
 // Public Visibility=Default Availability=Available
 // [4] QSGTexture::WrapMode verticalWrapMode()
 func (this *QSGTexture) VerticalWrapMode() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSGTexture16verticalWrapModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture16verticalWrapModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -318,10 +319,11 @@ func (this *QSGTexture) VerticalWrapMode() int {
 // [32] QRectF convertToNormalizedSourceRect(const QRectF &)
 func (this *QSGTexture) ConvertToNormalizedSourceRect(rect *qtcore.QRectF) *qtcore.QRectF /*123*/ {
 	var convArg0 = rect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK10QSGTexture29convertToNormalizedSourceRectERK6QRectF", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSGTexture29convertToNormalizedSourceRectERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 

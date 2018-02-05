@@ -59,12 +59,12 @@ func (this *QScrollArea) InheritEventFilter(f func(arg0 *qtcore.QObject /*777 QO
 }
 
 // void resizeEvent(class QResizeEvent *)
-func (this *QScrollArea) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+func (this *QScrollArea) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
 // void scrollContentsBy(int, int)
-func (this *QScrollArea) InheritScrollContentsBy(f func(dx int, dy int)) {
+func (this *QScrollArea) InheritScrollContentsBy(f func(dx int, dy int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "scrollContentsBy", f)
 }
 

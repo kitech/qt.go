@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -52,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type RegisterType struct {
 	*qtrt.CObject
 }
@@ -64,13 +61,23 @@ func (this *RegisterType) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *RegisterType) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewRegisterTypeFromPointer(cthis unsafe.Pointer) *RegisterType {
 	return &RegisterType{&qtrt.CObject{cthis}}
 }
 func (*RegisterType) NewFromPointer(cthis unsafe.Pointer) *RegisterType {
 	return NewRegisterTypeFromPointer(cthis)
+}
+
+func DeleteRegisterType(this *RegisterType) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN12RegisterTypeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

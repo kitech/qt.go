@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSGTransformNode struct {
 	*QSGNode
 }
@@ -87,9 +84,10 @@ func (*QSGTransformNode) NewFromPointer(cthis unsafe.Pointer) *QSGTransformNode 
 // Public Visibility=Default Availability=Available
 // [-2] void QSGTransformNode()
 func NewQSGTransformNode() *QSGTransformNode {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSGTransformNodeC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGTransformNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSGTransformNodeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSGTransformNode)
 	return gothis
 }
 
@@ -97,9 +95,11 @@ func NewQSGTransformNode() *QSGTransformNode {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGTransformNode()
-func DeleteQSGTransformNode(*QSGTransformNode) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSGTransformNodeD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSGTransformNode(this *QSGTransformNode) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGTransformNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 216)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:287
@@ -108,7 +108,7 @@ func DeleteQSGTransformNode(*QSGTransformNode) {
 // [-2] void setMatrix(const QMatrix4x4 &)
 func (this *QSGTransformNode) SetMatrix(matrix *qtgui.QMatrix4x4) {
 	var convArg0 = matrix.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSGTransformNode9setMatrixERK10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGTransformNode9setMatrixERK10QMatrix4x4", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,10 +117,11 @@ func (this *QSGTransformNode) SetMatrix(matrix *qtgui.QMatrix4x4) {
 // Public inline Visibility=Default Availability=Available
 // [68] const QMatrix4x4 & matrix()
 func (this *QSGTransformNode) Matrix() *qtgui.QMatrix4x4 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QSGTransformNode6matrixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSGTransformNode6matrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQMatrix4x4)
 	return rv2
 }
 
@@ -130,7 +131,7 @@ func (this *QSGTransformNode) Matrix() *qtgui.QMatrix4x4 {
 // [-2] void setCombinedMatrix(const QMatrix4x4 &)
 func (this *QSGTransformNode) SetCombinedMatrix(matrix *qtgui.QMatrix4x4) {
 	var convArg0 = matrix.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QSGTransformNode17setCombinedMatrixERK10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QSGTransformNode17setCombinedMatrixERK10QMatrix4x4", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -139,10 +140,11 @@ func (this *QSGTransformNode) SetCombinedMatrix(matrix *qtgui.QMatrix4x4) {
 // Public inline Visibility=Default Availability=Available
 // [68] const QMatrix4x4 & combinedMatrix()
 func (this *QSGTransformNode) CombinedMatrix() *qtgui.QMatrix4x4 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK16QSGTransformNode14combinedMatrixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSGTransformNode14combinedMatrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQMatrix4x4)
 	return rv2
 }
 

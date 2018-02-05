@@ -41,22 +41,22 @@ func init() {
 
 //  body block begin
 // void connectNotify(const class QMetaMethod &)
-func (this *QFutureWatcherBase) InheritConnectNotify(f func(signal *QMetaMethod)) {
+func (this *QFutureWatcherBase) InheritConnectNotify(f func(signal *QMetaMethod) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "connectNotify", f)
 }
 
 // void disconnectNotify(const class QMetaMethod &)
-func (this *QFutureWatcherBase) InheritDisconnectNotify(f func(signal *QMetaMethod)) {
+func (this *QFutureWatcherBase) InheritDisconnectNotify(f func(signal *QMetaMethod) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "disconnectNotify", f)
 }
 
 // void connectOutputInterface()
-func (this *QFutureWatcherBase) InheritConnectOutputInterface(f func()) {
+func (this *QFutureWatcherBase) InheritConnectOutputInterface(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "connectOutputInterface", f)
 }
 
 // void disconnectOutputInterface(_Bool)
-func (this *QFutureWatcherBase) InheritDisconnectOutputInterface(f func(pendingAssignment bool)) {
+func (this *QFutureWatcherBase) InheritDisconnectOutputInterface(f func(pendingAssignment bool) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "disconnectOutputInterface", f)
 }
 

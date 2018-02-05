@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -52,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QQmlAbstractUrlInterceptor struct {
 	*qtrt.CObject
 }
@@ -64,7 +61,11 @@ func (this *QQmlAbstractUrlInterceptor) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QQmlAbstractUrlInterceptor) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQQmlAbstractUrlInterceptorFromPointer(cthis unsafe.Pointer) *QQmlAbstractUrlInterceptor {
 	return &QQmlAbstractUrlInterceptor{&qtrt.CObject{cthis}}
@@ -78,9 +79,10 @@ func (*QQmlAbstractUrlInterceptor) NewFromPointer(cthis unsafe.Pointer) *QQmlAbs
 // Public inline Visibility=Default Availability=Available
 // [-2] void QQmlAbstractUrlInterceptor()
 func NewQQmlAbstractUrlInterceptor() *QQmlAbstractUrlInterceptor {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptorC1Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptorC1Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQmlAbstractUrlInterceptorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQQmlAbstractUrlInterceptor)
 	return gothis
 }
 
@@ -88,9 +90,11 @@ func NewQQmlAbstractUrlInterceptor() *QQmlAbstractUrlInterceptor {
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlAbstractUrlInterceptor()
-func DeleteQQmlAbstractUrlInterceptor(*QQmlAbstractUrlInterceptor) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptorD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQQmlAbstractUrlInterceptor(this *QQmlAbstractUrlInterceptor) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQml/qqmlabstracturlinterceptor.h:60
@@ -99,10 +103,11 @@ func DeleteQQmlAbstractUrlInterceptor(*QQmlAbstractUrlInterceptor) {
 // [8] QUrl intercept(const QUrl &, enum QQmlAbstractUrlInterceptor::DataType)
 func (this *QQmlAbstractUrlInterceptor) Intercept(path *qtcore.QUrl, type_ int) *qtcore.QUrl /*123*/ {
 	var convArg0 = path.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptor9interceptERK4QUrlNS_8DataTypeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, type_)
+	rv, err := qtrt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptor9interceptERK4QUrlNS_8DataTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, type_)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQUrl)
 	return rv2
 }
 

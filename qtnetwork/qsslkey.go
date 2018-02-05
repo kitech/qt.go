@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -35,9 +34,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -48,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSslKey struct {
 	*qtrt.CObject
 }
@@ -60,7 +57,11 @@ func (this *QSslKey) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSslKey) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSslKeyFromPointer(cthis unsafe.Pointer) *QSslKey {
 	return &QSslKey{&qtrt.CObject{cthis}}
@@ -74,9 +75,10 @@ func (*QSslKey) NewFromPointer(cthis unsafe.Pointer) *QSslKey {
 // Public Visibility=Default Availability=Available
 // [-2] void QSslKey()
 func NewQSslKey() *QSslKey {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSslKeyC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKeyC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSslKeyFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSslKey)
 	return gothis
 }
 
@@ -87,9 +89,10 @@ func NewQSslKey() *QSslKey {
 func NewQSslKey_1(encoded *qtcore.QByteArray, algorithm int, format int, type_ int, passPhrase *qtcore.QByteArray) *QSslKey {
 	var convArg0 = encoded.GetCthis()
 	var convArg4 = passPhrase.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSslKeyC2ERK10QByteArrayN4QSsl12KeyAlgorithmENS3_14EncodingFormatENS3_7KeyTypeES2_", ffiqt.FFI_TYPE_POINTER, convArg0, algorithm, format, type_, convArg4)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKeyC2ERK10QByteArrayN4QSsl12KeyAlgorithmENS3_14EncodingFormatENS3_7KeyTypeES2_", qtrt.FFI_TYPE_POINTER, convArg0, algorithm, format, type_, convArg4)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSslKeyFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSslKey)
 	return gothis
 }
 
@@ -100,9 +103,10 @@ func NewQSslKey_1(encoded *qtcore.QByteArray, algorithm int, format int, type_ i
 func NewQSslKey_2(device *qtcore.QIODevice /*777 QIODevice **/, algorithm int, format int, type_ int, passPhrase *qtcore.QByteArray) *QSslKey {
 	var convArg0 = device.GetCthis()
 	var convArg4 = passPhrase.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSslKeyC2EP9QIODeviceN4QSsl12KeyAlgorithmENS2_14EncodingFormatENS2_7KeyTypeERK10QByteArray", ffiqt.FFI_TYPE_POINTER, convArg0, algorithm, format, type_, convArg4)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKeyC2EP9QIODeviceN4QSsl12KeyAlgorithmENS2_14EncodingFormatENS2_7KeyTypeERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, algorithm, format, type_, convArg4)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSslKeyFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSslKey)
 	return gothis
 }
 
@@ -110,9 +114,11 @@ func NewQSslKey_2(device *qtcore.QIODevice /*777 QIODevice **/, algorithm int, f
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QSslKey()
-func DeleteQSslKey(*QSslKey) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSslKeyD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSslKey(this *QSslKey) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKeyD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtNetwork/qsslkey.h:80
@@ -121,7 +127,7 @@ func DeleteQSslKey(*QSslKey) {
 // [-2] void swap(QSslKey &)
 func (this *QSslKey) Swap(other *QSslKey) {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSslKey4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKey4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -130,7 +136,7 @@ func (this *QSslKey) Swap(other *QSslKey) {
 // Public Visibility=Default Availability=Available
 // [1] bool isNull()
 func (this *QSslKey) IsNull() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSslKey6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSslKey6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -141,7 +147,7 @@ func (this *QSslKey) IsNull() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
 func (this *QSslKey) Clear() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN7QSslKey5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QSslKey5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -150,7 +156,7 @@ func (this *QSslKey) Clear() {
 // Public Visibility=Default Availability=Available
 // [4] int length()
 func (this *QSslKey) Length() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSslKey6lengthEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSslKey6lengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -161,7 +167,7 @@ func (this *QSslKey) Length() int {
 // Public Visibility=Default Availability=Available
 // [4] QSsl::KeyType type()
 func (this *QSslKey) Type() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSslKey4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSslKey4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -172,7 +178,7 @@ func (this *QSslKey) Type() int {
 // Public Visibility=Default Availability=Available
 // [4] QSsl::KeyAlgorithm algorithm()
 func (this *QSslKey) Algorithm() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSslKey9algorithmEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSslKey9algorithmEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -184,10 +190,11 @@ func (this *QSslKey) Algorithm() int {
 // [8] QByteArray toPem(const QByteArray &)
 func (this *QSslKey) ToPem(passPhrase *qtcore.QByteArray) *qtcore.QByteArray /*123*/ {
 	var convArg0 = passPhrase.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSslKey5toPemERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSslKey5toPemERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
 
@@ -197,10 +204,11 @@ func (this *QSslKey) ToPem(passPhrase *qtcore.QByteArray) *qtcore.QByteArray /*1
 // [8] QByteArray toDer(const QByteArray &)
 func (this *QSslKey) ToDer(passPhrase *qtcore.QByteArray) *qtcore.QByteArray /*123*/ {
 	var convArg0 = passPhrase.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSslKey5toDerERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSslKey5toDerERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
 }
 
@@ -209,7 +217,7 @@ func (this *QSslKey) ToDer(passPhrase *qtcore.QByteArray) *qtcore.QByteArray /*1
 // Public Visibility=Default Availability=Available
 // [8] Qt::HANDLE handle()
 func (this *QSslKey) Handle() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK7QSslKey6handleEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSslKey6handleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -35,9 +34,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -48,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSslError struct {
 	*qtrt.CObject
 }
@@ -60,7 +57,11 @@ func (this *QSslError) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSslError) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSslErrorFromPointer(cthis unsafe.Pointer) *QSslError {
 	return &QSslError{&qtrt.CObject{cthis}}
@@ -74,9 +75,10 @@ func (*QSslError) NewFromPointer(cthis unsafe.Pointer) *QSslError {
 // Public Visibility=Default Availability=Available
 // [-2] void QSslError()
 func NewQSslError() *QSslError {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSslErrorC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslErrorC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSslErrorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSslError)
 	return gothis
 }
 
@@ -85,9 +87,10 @@ func NewQSslError() *QSslError {
 // Public Visibility=Default Availability=Available
 // [-2] void QSslError(enum QSslError::SslError)
 func NewQSslError_1(error int) *QSslError {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSslErrorC2ENS_8SslErrorE", ffiqt.FFI_TYPE_POINTER, error)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslErrorC2ENS_8SslErrorE", qtrt.FFI_TYPE_POINTER, error)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSslErrorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSslError)
 	return gothis
 }
 
@@ -97,9 +100,10 @@ func NewQSslError_1(error int) *QSslError {
 // [-2] void QSslError(enum QSslError::SslError, const QSslCertificate &)
 func NewQSslError_2(error int, certificate *QSslCertificate) *QSslError {
 	var convArg1 = certificate.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSslErrorC2ENS_8SslErrorERK15QSslCertificate", ffiqt.FFI_TYPE_POINTER, error, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslErrorC2ENS_8SslErrorERK15QSslCertificate", qtrt.FFI_TYPE_POINTER, error, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSslErrorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSslError)
 	return gothis
 }
 
@@ -109,7 +113,7 @@ func NewQSslError_2(error int, certificate *QSslCertificate) *QSslError {
 // [-2] void swap(QSslError &)
 func (this *QSslError) Swap(other *QSslError) {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSslError4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslError4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -117,9 +121,11 @@ func (this *QSslError) Swap(other *QSslError) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QSslError()
-func DeleteQSslError(*QSslError) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QSslErrorD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSslError(this *QSslError) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QSslErrorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtNetwork/qsslerror.h:106
@@ -127,7 +133,7 @@ func DeleteQSslError(*QSslError) {
 // Public Visibility=Default Availability=Available
 // [4] QSslError::SslError error()
 func (this *QSslError) Error() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSslError5errorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSslError5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -138,10 +144,11 @@ func (this *QSslError) Error() int {
 // Public Visibility=Default Availability=Available
 // [8] QString errorString()
 func (this *QSslError) ErrorString() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSslError11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSslError11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -150,10 +157,11 @@ func (this *QSslError) ErrorString() *qtcore.QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QSslCertificate certificate()
 func (this *QSslError) Certificate() *QSslCertificate /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK9QSslError11certificateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSslError11certificateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSslCertificateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslCertificate)
 	return rv2
 }
 
@@ -184,6 +192,6 @@ const QSslError__NoPeerCertificate QSslError__SslError = 21
 const QSslError__HostNameMismatch QSslError__SslError = 22
 const QSslError__NoSslSupport QSslError__SslError = 23
 const QSslError__CertificateBlacklisted QSslError__SslError = 24
-const QSslError__UnspecifiedError QSslError__SslError = 4294967295
+const QSslError__UnspecifiedError QSslError__SslError = -1
 
 //  body block end

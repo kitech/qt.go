@@ -59,32 +59,32 @@ func (this *QCalendarWidget) InheritEventFilter(f func(watched *qtcore.QObject /
 }
 
 // void mousePressEvent(class QMouseEvent *)
-func (this *QCalendarWidget) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QCalendarWidget) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
 // void resizeEvent(class QResizeEvent *)
-func (this *QCalendarWidget) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+func (this *QCalendarWidget) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
 // void keyPressEvent(class QKeyEvent *)
-func (this *QCalendarWidget) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+func (this *QCalendarWidget) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
 // void paintCell(class QPainter *, const class QRect &, const class QDate &)
-func (this *QCalendarWidget) InheritPaintCell(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, date *qtcore.QDate)) {
+func (this *QCalendarWidget) InheritPaintCell(f func(painter *qtgui.QPainter /*777 QPainter **/, rect *qtcore.QRect, date *qtcore.QDate) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintCell", f)
 }
 
 // void updateCell(const class QDate &)
-func (this *QCalendarWidget) InheritUpdateCell(f func(date *qtcore.QDate)) {
+func (this *QCalendarWidget) InheritUpdateCell(f func(date *qtcore.QDate) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateCell", f)
 }
 
 // void updateCells()
-func (this *QCalendarWidget) InheritUpdateCells(f func()) {
+func (this *QCalendarWidget) InheritUpdateCells(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateCells", f)
 }
 

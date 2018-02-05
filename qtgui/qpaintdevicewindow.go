@@ -45,7 +45,7 @@ func init() {
 
 //  body block begin
 // void paintEvent(class QPaintEvent *)
-func (this *QPaintDeviceWindow) InheritPaintEvent(f func(event *QPaintEvent /*777 QPaintEvent **/)) {
+func (this *QPaintDeviceWindow) InheritPaintEvent(f func(event *QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
@@ -55,7 +55,7 @@ func (this *QPaintDeviceWindow) InheritMetric(f func(metric int) int) {
 }
 
 // void exposeEvent(class QExposeEvent *)
-func (this *QPaintDeviceWindow) InheritExposeEvent(f func(arg0 *QExposeEvent /*777 QExposeEvent **/)) {
+func (this *QPaintDeviceWindow) InheritExposeEvent(f func(arg0 *QExposeEvent /*777 QExposeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "exposeEvent", f)
 }
 

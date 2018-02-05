@@ -54,7 +54,7 @@ func (this *QGraphicsPixmapItem) InheritSupportsExtension(f func(extension int) 
 }
 
 // void setExtension(enum QGraphicsItem::Extension, const class QVariant &)
-func (this *QGraphicsPixmapItem) InheritSetExtension(f func(extension int, variant *qtcore.QVariant)) {
+func (this *QGraphicsPixmapItem) InheritSetExtension(f func(extension int, variant *qtcore.QVariant) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setExtension", f)
 }
 

@@ -49,7 +49,7 @@ func init() {
 
 //  body block begin
 // void initStyleOption(class QStyleOption *)
-func (this *QGraphicsWidget) InheritInitStyleOption(f func(option *QStyleOption /*777 QStyleOption **/)) {
+func (this *QGraphicsWidget) InheritInitStyleOption(f func(option *QStyleOption /*777 QStyleOption **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 
@@ -59,7 +59,7 @@ func (this *QGraphicsWidget) InheritSizeHint(f func(which int, constraint *qtcor
 }
 
 // void updateGeometry()
-func (this *QGraphicsWidget) InheritUpdateGeometry(f func()) {
+func (this *QGraphicsWidget) InheritUpdateGeometry(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateGeometry", f)
 }
 
@@ -94,17 +94,17 @@ func (this *QGraphicsWidget) InheritEvent(f func(event *qtcore.QEvent /*777 QEve
 }
 
 // void changeEvent(class QEvent *)
-func (this *QGraphicsWidget) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+func (this *QGraphicsWidget) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
 // void closeEvent(class QCloseEvent *)
-func (this *QGraphicsWidget) InheritCloseEvent(f func(event *qtgui.QCloseEvent /*777 QCloseEvent **/)) {
+func (this *QGraphicsWidget) InheritCloseEvent(f func(event *qtgui.QCloseEvent /*777 QCloseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "closeEvent", f)
 }
 
 // void focusInEvent(class QFocusEvent *)
-func (this *QGraphicsWidget) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+func (this *QGraphicsWidget) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
@@ -114,62 +114,62 @@ func (this *QGraphicsWidget) InheritFocusNextPrevChild(f func(next bool) bool) {
 }
 
 // void focusOutEvent(class QFocusEvent *)
-func (this *QGraphicsWidget) InheritFocusOutEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+func (this *QGraphicsWidget) InheritFocusOutEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
 // void hideEvent(class QHideEvent *)
-func (this *QGraphicsWidget) InheritHideEvent(f func(event *qtgui.QHideEvent /*777 QHideEvent **/)) {
+func (this *QGraphicsWidget) InheritHideEvent(f func(event *qtgui.QHideEvent /*777 QHideEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hideEvent", f)
 }
 
 // void moveEvent(class QGraphicsSceneMoveEvent *)
-func (this *QGraphicsWidget) InheritMoveEvent(f func(event *QGraphicsSceneMoveEvent /*777 QGraphicsSceneMoveEvent **/)) {
+func (this *QGraphicsWidget) InheritMoveEvent(f func(event *QGraphicsSceneMoveEvent /*777 QGraphicsSceneMoveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "moveEvent", f)
 }
 
 // void polishEvent()
-func (this *QGraphicsWidget) InheritPolishEvent(f func()) {
+func (this *QGraphicsWidget) InheritPolishEvent(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "polishEvent", f)
 }
 
 // void resizeEvent(class QGraphicsSceneResizeEvent *)
-func (this *QGraphicsWidget) InheritResizeEvent(f func(event *QGraphicsSceneResizeEvent /*777 QGraphicsSceneResizeEvent **/)) {
+func (this *QGraphicsWidget) InheritResizeEvent(f func(event *QGraphicsSceneResizeEvent /*777 QGraphicsSceneResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
 // void showEvent(class QShowEvent *)
-func (this *QGraphicsWidget) InheritShowEvent(f func(event *qtgui.QShowEvent /*777 QShowEvent **/)) {
+func (this *QGraphicsWidget) InheritShowEvent(f func(event *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
 // void hoverMoveEvent(class QGraphicsSceneHoverEvent *)
-func (this *QGraphicsWidget) InheritHoverMoveEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/)) {
+func (this *QGraphicsWidget) InheritHoverMoveEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hoverMoveEvent", f)
 }
 
 // void hoverLeaveEvent(class QGraphicsSceneHoverEvent *)
-func (this *QGraphicsWidget) InheritHoverLeaveEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/)) {
+func (this *QGraphicsWidget) InheritHoverLeaveEvent(f func(event *QGraphicsSceneHoverEvent /*777 QGraphicsSceneHoverEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hoverLeaveEvent", f)
 }
 
 // void grabMouseEvent(class QEvent *)
-func (this *QGraphicsWidget) InheritGrabMouseEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+func (this *QGraphicsWidget) InheritGrabMouseEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "grabMouseEvent", f)
 }
 
 // void ungrabMouseEvent(class QEvent *)
-func (this *QGraphicsWidget) InheritUngrabMouseEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+func (this *QGraphicsWidget) InheritUngrabMouseEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "ungrabMouseEvent", f)
 }
 
 // void grabKeyboardEvent(class QEvent *)
-func (this *QGraphicsWidget) InheritGrabKeyboardEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+func (this *QGraphicsWidget) InheritGrabKeyboardEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "grabKeyboardEvent", f)
 }
 
 // void ungrabKeyboardEvent(class QEvent *)
-func (this *QGraphicsWidget) InheritUngrabKeyboardEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+func (this *QGraphicsWidget) InheritUngrabKeyboardEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "ungrabKeyboardEvent", f)
 }
 

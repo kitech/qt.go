@@ -69,7 +69,7 @@ func (this *QCommandLinkButton) InheritEvent(f func(e *qtcore.QEvent /*777 QEven
 }
 
 // void paintEvent(class QPaintEvent *)
-func (this *QCommandLinkButton) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+func (this *QCommandLinkButton) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 

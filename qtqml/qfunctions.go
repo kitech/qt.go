@@ -2,7 +2,6 @@ package qtqml
 
 import "unsafe"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -15,7 +14,7 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
+		qtrt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -32,12 +31,12 @@ func init() {
 
 //  body block begin
 // /usr/include/qt/QtQml/qqmlproperty.h:130
-// index:6
+// index:42
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(const QQmlProperty &)
-func QHash_6(key *QQmlProperty) uint {
+func QHash_42(key *QQmlProperty) uint {
 	var convArg0 = key.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_Z5qHashRK12QQmlProperty", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK12QQmlProperty", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return uint(rv) // 222

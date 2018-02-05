@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -52,6 +48,16 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void statusChanged(enum QQmlIncubator::Status)
+func (this *QQmlIncubator) InheritStatusChanged(f func(arg0 int) /*void*/) {
+	qtrt.SetAllInheritCallback(this, "statusChanged", f)
+}
+
+// void setInitialState(class QObject *)
+func (this *QQmlIncubator) InheritSetInitialState(f func(arg0 *qtcore.QObject /*777 QObject **/) /*void*/) {
+	qtrt.SetAllInheritCallback(this, "setInitialState", f)
+}
+
 type QQmlIncubator struct {
 	*qtrt.CObject
 }
@@ -64,7 +70,11 @@ func (this *QQmlIncubator) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QQmlIncubator) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQQmlIncubatorFromPointer(cthis unsafe.Pointer) *QQmlIncubator {
 	return &QQmlIncubator{&qtrt.CObject{cthis}}
@@ -78,9 +88,10 @@ func (*QQmlIncubator) NewFromPointer(cthis unsafe.Pointer) *QQmlIncubator {
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlIncubator(enum QQmlIncubator::IncubationMode)
 func NewQQmlIncubator(arg0 int) *QQmlIncubator {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QQmlIncubatorC2ENS_14IncubationModeE", ffiqt.FFI_TYPE_POINTER, arg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlIncubatorC2ENS_14IncubationModeE", qtrt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQmlIncubatorFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQQmlIncubator)
 	return gothis
 }
 
@@ -88,9 +99,11 @@ func NewQQmlIncubator(arg0 int) *QQmlIncubator {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlIncubator()
-func DeleteQQmlIncubator(*QQmlIncubator) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QQmlIncubatorD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQQmlIncubator(this *QQmlIncubator) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlIncubatorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQml/qqmlincubator.h:71
@@ -98,7 +111,7 @@ func DeleteQQmlIncubator(*QQmlIncubator) {
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
 func (this *QQmlIncubator) Clear() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QQmlIncubator5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlIncubator5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,7 +120,7 @@ func (this *QQmlIncubator) Clear() {
 // Public Visibility=Default Availability=Available
 // [-2] void forceCompletion()
 func (this *QQmlIncubator) ForceCompletion() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QQmlIncubator15forceCompletionEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlIncubator15forceCompletionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,7 +129,7 @@ func (this *QQmlIncubator) ForceCompletion() {
 // Public Visibility=Default Availability=Available
 // [1] bool isNull()
 func (this *QQmlIncubator) IsNull() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QQmlIncubator6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -127,7 +140,7 @@ func (this *QQmlIncubator) IsNull() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isReady()
 func (this *QQmlIncubator) IsReady() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QQmlIncubator7isReadyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator7isReadyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -138,7 +151,7 @@ func (this *QQmlIncubator) IsReady() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isError()
 func (this *QQmlIncubator) IsError() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QQmlIncubator7isErrorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator7isErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -149,7 +162,7 @@ func (this *QQmlIncubator) IsError() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isLoading()
 func (this *QQmlIncubator) IsLoading() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QQmlIncubator9isLoadingEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator9isLoadingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -160,7 +173,7 @@ func (this *QQmlIncubator) IsLoading() bool {
 // Public Visibility=Default Availability=Available
 // [4] QQmlIncubator::IncubationMode incubationMode()
 func (this *QQmlIncubator) IncubationMode() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QQmlIncubator14incubationModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator14incubationModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -171,7 +184,7 @@ func (this *QQmlIncubator) IncubationMode() int {
 // Public Visibility=Default Availability=Available
 // [4] QQmlIncubator::Status status()
 func (this *QQmlIncubator) Status() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QQmlIncubator6statusEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator6statusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -182,7 +195,7 @@ func (this *QQmlIncubator) Status() int {
 // Public Visibility=Default Availability=Available
 // [8] QObject * object()
 func (this *QQmlIncubator) Object() *qtcore.QObject /*777 QObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QQmlIncubator6objectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -194,7 +207,7 @@ func (this *QQmlIncubator) Object() *qtcore.QObject /*777 QObject **/ {
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void statusChanged(enum QQmlIncubator::Status)
 func (this *QQmlIncubator) StatusChanged(arg0 int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QQmlIncubator13statusChangedENS_6StatusE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlIncubator13statusChangedENS_6StatusE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -204,7 +217,7 @@ func (this *QQmlIncubator) StatusChanged(arg0 int) {
 // [-2] void setInitialState(QObject *)
 func (this *QQmlIncubator) SetInitialState(arg0 *qtcore.QObject /*777 QObject **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QQmlIncubator15setInitialStateEP7QObject", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QQmlIncubator15setInitialStateEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

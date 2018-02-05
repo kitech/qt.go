@@ -215,7 +215,7 @@ func onSetupUi(line string) {
 			switch mats[0][2] {
 			case "Spacing", "HorizontalStretch", "VerticalStretch":
 			case "PointSize", "Weight": // do nothing
-			case "ContentsMargins":
+			case "ContentsMargins", "CurrentIndex":
 			case "Orientation":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 			case "TextInteractionFlags":
@@ -224,6 +224,8 @@ func onSetupUi(line string) {
 			case "AutoRaise", "WidgetResizable", "AlternatingRowColors":
 				refmtval = strings.ToLower(refmtval[0:1]) + refmtval[1:]
 			case "ToolButtonStyle":
+				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
+			case "Alignment", "FocusPolicy":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 			case "Geometry":
 				refmtval = strings.TrimRight(refmtval[6:], ")")

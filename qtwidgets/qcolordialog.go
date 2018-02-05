@@ -49,12 +49,12 @@ func init() {
 
 //  body block begin
 // void changeEvent(class QEvent *)
-func (this *QColorDialog) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+func (this *QColorDialog) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
 // void done(int)
-func (this *QColorDialog) InheritDone(f func(result int)) {
+func (this *QColorDialog) InheritDone(f func(result int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "done", f)
 }
 

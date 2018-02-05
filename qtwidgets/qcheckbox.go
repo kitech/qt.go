@@ -59,27 +59,27 @@ func (this *QCheckBox) InheritHitButton(f func(pos *qtcore.QPoint) bool) {
 }
 
 // void checkStateSet()
-func (this *QCheckBox) InheritCheckStateSet(f func()) {
+func (this *QCheckBox) InheritCheckStateSet(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "checkStateSet", f)
 }
 
 // void nextCheckState()
-func (this *QCheckBox) InheritNextCheckState(f func()) {
+func (this *QCheckBox) InheritNextCheckState(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "nextCheckState", f)
 }
 
 // void paintEvent(class QPaintEvent *)
-func (this *QCheckBox) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+func (this *QCheckBox) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QCheckBox) InheritMouseMoveEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QCheckBox) InheritMouseMoveEvent(f func(arg0 *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
 // void initStyleOption(class QStyleOptionButton *)
-func (this *QCheckBox) InheritInitStyleOption(f func(option *QStyleOptionButton /*777 QStyleOptionButton **/)) {
+func (this *QCheckBox) InheritInitStyleOption(f func(option *QStyleOptionButton /*777 QStyleOptionButton **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 

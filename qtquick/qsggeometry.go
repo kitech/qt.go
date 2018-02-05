@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSGGeometry struct {
 	*qtrt.CObject
 }
@@ -72,7 +69,11 @@ func (this *QSGGeometry) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSGGeometry) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSGGeometryFromPointer(cthis unsafe.Pointer) *QSGGeometry {
 	return &QSGGeometry{&qtrt.CObject{cthis}}
@@ -85,9 +86,11 @@ func (*QSGGeometry) NewFromPointer(cthis unsafe.Pointer) *QSGGeometry {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGGeometry()
-func DeleteQSGGeometry(*QSGGeometry) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometryD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSGGeometry(this *QSGGeometry) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometryD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 128)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQuick/qsggeometry.h:149
@@ -95,7 +98,7 @@ func DeleteQSGGeometry(*QSGGeometry) {
 // Public Visibility=Default Availability=Available
 // [-2] void setDrawingMode(unsigned int)
 func (this *QSGGeometry) SetDrawingMode(mode uint) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry14setDrawingModeEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), mode)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry14setDrawingModeEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -104,7 +107,7 @@ func (this *QSGGeometry) SetDrawingMode(mode uint) {
 // Public inline Visibility=Default Availability=Available
 // [4] unsigned int drawingMode()
 func (this *QSGGeometry) DrawingMode() uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry11drawingModeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry11drawingModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("uint", rv).(uint) // 1111
@@ -115,7 +118,7 @@ func (this *QSGGeometry) DrawingMode() uint {
 // Public Visibility=Default Availability=Available
 // [-2] void allocate(int, int)
 func (this *QSGGeometry) Allocate(vertexCount int, indexCount int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry8allocateEii", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), vertexCount, indexCount)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry8allocateEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), vertexCount, indexCount)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -124,7 +127,7 @@ func (this *QSGGeometry) Allocate(vertexCount int, indexCount int) {
 // Public inline Visibility=Default Availability=Available
 // [4] int vertexCount()
 func (this *QSGGeometry) VertexCount() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry11vertexCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry11vertexCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -135,7 +138,7 @@ func (this *QSGGeometry) VertexCount() int {
 // Public inline Visibility=Default Availability=Available
 // [8] void * vertexData()
 func (this *QSGGeometry) VertexData() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry10vertexDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry10vertexDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -146,7 +149,7 @@ func (this *QSGGeometry) VertexData() unsafe.Pointer /*666*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] const void * vertexData()
 func (this *QSGGeometry) VertexData_1() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry10vertexDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry10vertexDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -157,7 +160,7 @@ func (this *QSGGeometry) VertexData_1() unsafe.Pointer /*666*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QSGGeometry::Point2D * vertexDataAsPoint2D()
 func (this *QSGGeometry) VertexDataAsPoint2D() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry19vertexDataAsPoint2DEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry19vertexDataAsPoint2DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -168,7 +171,7 @@ func (this *QSGGeometry) VertexDataAsPoint2D() unsafe.Pointer /*666*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] const QSGGeometry::Point2D * vertexDataAsPoint2D()
 func (this *QSGGeometry) VertexDataAsPoint2D_1() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry19vertexDataAsPoint2DEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry19vertexDataAsPoint2DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -179,7 +182,7 @@ func (this *QSGGeometry) VertexDataAsPoint2D_1() unsafe.Pointer /*666*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] QSGGeometry::TexturedPoint2D * vertexDataAsTexturedPoint2D()
 func (this *QSGGeometry) VertexDataAsTexturedPoint2D() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry27vertexDataAsTexturedPoint2DEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry27vertexDataAsTexturedPoint2DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -190,7 +193,7 @@ func (this *QSGGeometry) VertexDataAsTexturedPoint2D() unsafe.Pointer /*666*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] const QSGGeometry::TexturedPoint2D * vertexDataAsTexturedPoint2D()
 func (this *QSGGeometry) VertexDataAsTexturedPoint2D_1() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry27vertexDataAsTexturedPoint2DEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry27vertexDataAsTexturedPoint2DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -201,7 +204,7 @@ func (this *QSGGeometry) VertexDataAsTexturedPoint2D_1() unsafe.Pointer /*666*/ 
 // Public inline Visibility=Default Availability=Available
 // [8] QSGGeometry::ColoredPoint2D * vertexDataAsColoredPoint2D()
 func (this *QSGGeometry) VertexDataAsColoredPoint2D() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry26vertexDataAsColoredPoint2DEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry26vertexDataAsColoredPoint2DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -212,7 +215,7 @@ func (this *QSGGeometry) VertexDataAsColoredPoint2D() unsafe.Pointer /*666*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] const QSGGeometry::ColoredPoint2D * vertexDataAsColoredPoint2D()
 func (this *QSGGeometry) VertexDataAsColoredPoint2D_1() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry26vertexDataAsColoredPoint2DEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry26vertexDataAsColoredPoint2DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -223,7 +226,7 @@ func (this *QSGGeometry) VertexDataAsColoredPoint2D_1() unsafe.Pointer /*666*/ {
 // Public inline Visibility=Default Availability=Available
 // [4] int indexType()
 func (this *QSGGeometry) IndexType() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry9indexTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry9indexTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -234,7 +237,7 @@ func (this *QSGGeometry) IndexType() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int indexCount()
 func (this *QSGGeometry) IndexCount() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry10indexCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry10indexCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -245,7 +248,7 @@ func (this *QSGGeometry) IndexCount() int {
 // Public Visibility=Default Availability=Available
 // [8] void * indexData()
 func (this *QSGGeometry) IndexData() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry9indexDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry9indexDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -256,7 +259,7 @@ func (this *QSGGeometry) IndexData() unsafe.Pointer /*666*/ {
 // Public Visibility=Default Availability=Available
 // [8] const void * indexData()
 func (this *QSGGeometry) IndexData_1() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry9indexDataEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry9indexDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -267,7 +270,7 @@ func (this *QSGGeometry) IndexData_1() unsafe.Pointer /*666*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] uint * indexDataAsUInt()
 func (this *QSGGeometry) IndexDataAsUInt() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry15indexDataAsUIntEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry15indexDataAsUIntEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -278,7 +281,7 @@ func (this *QSGGeometry) IndexDataAsUInt() unsafe.Pointer /*666*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] const uint * indexDataAsUInt()
 func (this *QSGGeometry) IndexDataAsUInt_1() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry15indexDataAsUIntEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry15indexDataAsUIntEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -289,7 +292,7 @@ func (this *QSGGeometry) IndexDataAsUInt_1() unsafe.Pointer /*666*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] quint16 * indexDataAsUShort()
 func (this *QSGGeometry) IndexDataAsUShort() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry17indexDataAsUShortEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry17indexDataAsUShortEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -300,7 +303,7 @@ func (this *QSGGeometry) IndexDataAsUShort() unsafe.Pointer /*666*/ {
 // Public inline Visibility=Default Availability=Available
 // [8] const quint16 * indexDataAsUShort()
 func (this *QSGGeometry) IndexDataAsUShort_1() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry17indexDataAsUShortEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry17indexDataAsUShortEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -311,7 +314,7 @@ func (this *QSGGeometry) IndexDataAsUShort_1() unsafe.Pointer /*666*/ {
 // Public inline Visibility=Default Availability=Available
 // [4] int sizeOfIndex()
 func (this *QSGGeometry) SizeOfIndex() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry11sizeOfIndexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry11sizeOfIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -322,7 +325,7 @@ func (this *QSGGeometry) SizeOfIndex() int {
 // Public inline Visibility=Default Availability=Available
 // [4] int attributeCount()
 func (this *QSGGeometry) AttributeCount() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry14attributeCountEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry14attributeCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -333,7 +336,7 @@ func (this *QSGGeometry) AttributeCount() int {
 // Public inline Visibility=Default Availability=Available
 // [8] const QSGGeometry::Attribute * attributes()
 func (this *QSGGeometry) Attributes() unsafe.Pointer /*666*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry10attributesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry10attributesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -344,7 +347,7 @@ func (this *QSGGeometry) Attributes() unsafe.Pointer /*666*/ {
 // Public inline Visibility=Default Availability=Available
 // [4] int sizeOfVertex()
 func (this *QSGGeometry) SizeOfVertex() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry12sizeOfVertexEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry12sizeOfVertexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -357,7 +360,7 @@ func (this *QSGGeometry) SizeOfVertex() int {
 func (this *QSGGeometry) UpdateRectGeometry(g *QSGGeometry /*777 QSGGeometry **/, rect *qtcore.QRectF) {
 	var convArg0 = g.GetCthis()
 	var convArg1 = rect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry18updateRectGeometryEPS_RK6QRectF", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry18updateRectGeometryEPS_RK6QRectF", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 func QSGGeometry_UpdateRectGeometry(g *QSGGeometry /*777 QSGGeometry **/, rect *qtcore.QRectF) {
@@ -373,7 +376,7 @@ func (this *QSGGeometry) UpdateTexturedRectGeometry(g *QSGGeometry /*777 QSGGeom
 	var convArg0 = g.GetCthis()
 	var convArg1 = rect.GetCthis()
 	var convArg2 = sourceRect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry26updateTexturedRectGeometryEPS_RK6QRectFS3_", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry26updateTexturedRectGeometryEPS_RK6QRectFS3_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 }
 func QSGGeometry_UpdateTexturedRectGeometry(g *QSGGeometry /*777 QSGGeometry **/, rect *qtcore.QRectF, sourceRect *qtcore.QRectF) {
@@ -388,7 +391,7 @@ func QSGGeometry_UpdateTexturedRectGeometry(g *QSGGeometry /*777 QSGGeometry **/
 func (this *QSGGeometry) UpdateColoredRectGeometry(g *QSGGeometry /*777 QSGGeometry **/, rect *qtcore.QRectF) {
 	var convArg0 = g.GetCthis()
 	var convArg1 = rect.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry25updateColoredRectGeometryEPS_RK6QRectF", ffiqt.FFI_TYPE_POINTER, convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry25updateColoredRectGeometryEPS_RK6QRectF", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 func QSGGeometry_UpdateColoredRectGeometry(g *QSGGeometry /*777 QSGGeometry **/, rect *qtcore.QRectF) {
@@ -401,7 +404,7 @@ func QSGGeometry_UpdateColoredRectGeometry(g *QSGGeometry /*777 QSGGeometry **/,
 // Public Visibility=Default Availability=Available
 // [-2] void setIndexDataPattern(enum QSGGeometry::DataPattern)
 func (this *QSGGeometry) SetIndexDataPattern(p int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry19setIndexDataPatternENS_11DataPatternE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), p)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry19setIndexDataPatternENS_11DataPatternE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), p)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -410,7 +413,7 @@ func (this *QSGGeometry) SetIndexDataPattern(p int) {
 // Public inline Visibility=Default Availability=Available
 // [4] QSGGeometry::DataPattern indexDataPattern()
 func (this *QSGGeometry) IndexDataPattern() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry16indexDataPatternEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry16indexDataPatternEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -421,7 +424,7 @@ func (this *QSGGeometry) IndexDataPattern() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setVertexDataPattern(enum QSGGeometry::DataPattern)
 func (this *QSGGeometry) SetVertexDataPattern(p int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry20setVertexDataPatternENS_11DataPatternE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), p)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry20setVertexDataPatternENS_11DataPatternE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), p)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -430,7 +433,7 @@ func (this *QSGGeometry) SetVertexDataPattern(p int) {
 // Public inline Visibility=Default Availability=Available
 // [4] QSGGeometry::DataPattern vertexDataPattern()
 func (this *QSGGeometry) VertexDataPattern() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry17vertexDataPatternEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry17vertexDataPatternEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -441,7 +444,7 @@ func (this *QSGGeometry) VertexDataPattern() int {
 // Public Visibility=Default Availability=Available
 // [-2] void markIndexDataDirty()
 func (this *QSGGeometry) MarkIndexDataDirty() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry18markIndexDataDirtyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry18markIndexDataDirtyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -450,7 +453,7 @@ func (this *QSGGeometry) MarkIndexDataDirty() {
 // Public Visibility=Default Availability=Available
 // [-2] void markVertexDataDirty()
 func (this *QSGGeometry) MarkVertexDataDirty() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry19markVertexDataDirtyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry19markVertexDataDirtyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -459,7 +462,7 @@ func (this *QSGGeometry) MarkVertexDataDirty() {
 // Public Visibility=Default Availability=Available
 // [4] float lineWidth()
 func (this *QSGGeometry) LineWidth() float32 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGGeometry9lineWidthEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry9lineWidthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
@@ -470,7 +473,7 @@ func (this *QSGGeometry) LineWidth() float32 {
 // Public Visibility=Default Availability=Available
 // [-2] void setLineWidth(float)
 func (this *QSGGeometry) SetLineWidth(w float32) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGGeometry12setLineWidthEf", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), w)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry12setLineWidthEf", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w)
 	gopp.ErrPrint(err, rv)
 }
 

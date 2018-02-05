@@ -10,14 +10,13 @@ package qtquick
 
 /*
 #include <stdlib.h>
-// extern C begin: 9
+// extern C begin: 11
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSGMaterialType struct {
 	*qtrt.CObject
 }
@@ -72,13 +69,23 @@ func (this *QSGMaterialType) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSGMaterialType) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSGMaterialTypeFromPointer(cthis unsafe.Pointer) *QSGMaterialType {
 	return &QSGMaterialType{&qtrt.CObject{cthis}}
 }
 func (*QSGMaterialType) NewFromPointer(cthis unsafe.Pointer) *QSGMaterialType {
 	return NewQSGMaterialTypeFromPointer(cthis)
+}
+
+func DeleteQSGMaterialType(this *QSGMaterialType) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSGMaterialTypeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

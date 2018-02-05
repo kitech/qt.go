@@ -46,17 +46,17 @@ func (this *QParallelAnimationGroup) InheritEvent(f func(event *QEvent /*777 QEv
 }
 
 // void updateCurrentTime(int)
-func (this *QParallelAnimationGroup) InheritUpdateCurrentTime(f func(currentTime int)) {
+func (this *QParallelAnimationGroup) InheritUpdateCurrentTime(f func(currentTime int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateCurrentTime", f)
 }
 
 // void updateState(class QAbstractAnimation::State, class QAbstractAnimation::State)
-func (this *QParallelAnimationGroup) InheritUpdateState(f func(newState int, oldState int)) {
+func (this *QParallelAnimationGroup) InheritUpdateState(f func(newState int, oldState int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateState", f)
 }
 
 // void updateDirection(class QAbstractAnimation::Direction)
-func (this *QParallelAnimationGroup) InheritUpdateDirection(f func(direction int)) {
+func (this *QParallelAnimationGroup) InheritUpdateDirection(f func(direction int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateDirection", f)
 }
 

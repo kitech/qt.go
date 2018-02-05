@@ -50,7 +50,7 @@ func (this *QPaintDevice) InheritMetric(f func(metric int) int) {
 }
 
 // void initPainter(class QPainter *)
-func (this *QPaintDevice) InheritInitPainter(f func(painter *QPainter /*777 QPainter **/)) {
+func (this *QPaintDevice) InheritInitPainter(f func(painter *QPainter /*777 QPainter **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initPainter", f)
 }
 

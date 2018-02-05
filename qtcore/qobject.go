@@ -61,27 +61,27 @@ func (this *QObject) InheritIsSignalConnected(f func(signal *QMetaMethod) bool) 
 }
 
 // void timerEvent(class QTimerEvent *)
-func (this *QObject) InheritTimerEvent(f func(event *QTimerEvent /*777 QTimerEvent **/)) {
+func (this *QObject) InheritTimerEvent(f func(event *QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
 // void childEvent(class QChildEvent *)
-func (this *QObject) InheritChildEvent(f func(event *QChildEvent /*777 QChildEvent **/)) {
+func (this *QObject) InheritChildEvent(f func(event *QChildEvent /*777 QChildEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "childEvent", f)
 }
 
 // void customEvent(class QEvent *)
-func (this *QObject) InheritCustomEvent(f func(event *QEvent /*777 QEvent **/)) {
+func (this *QObject) InheritCustomEvent(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "customEvent", f)
 }
 
 // void connectNotify(const class QMetaMethod &)
-func (this *QObject) InheritConnectNotify(f func(signal *QMetaMethod)) {
+func (this *QObject) InheritConnectNotify(f func(signal *QMetaMethod) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "connectNotify", f)
 }
 
 // void disconnectNotify(const class QMetaMethod &)
-func (this *QObject) InheritDisconnectNotify(f func(signal *QMetaMethod)) {
+func (this *QObject) InheritDisconnectNotify(f func(signal *QMetaMethod) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "disconnectNotify", f)
 }
 

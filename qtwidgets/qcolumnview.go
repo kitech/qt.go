@@ -59,12 +59,12 @@ func (this *QColumnView) InheritMoveCursor(f func(cursorAction int, modifiers in
 }
 
 // void resizeEvent(class QResizeEvent *)
-func (this *QColumnView) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+func (this *QColumnView) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
 // void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
-func (this *QColumnView) InheritSetSelection(f func(rect *qtcore.QRect, command int)) {
+func (this *QColumnView) InheritSetSelection(f func(rect *qtcore.QRect, command int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setSelection", f)
 }
 
@@ -84,17 +84,17 @@ func (this *QColumnView) InheritVerticalOffset(f func() int) {
 }
 
 // void rowsInserted(const class QModelIndex &, int, int)
-func (this *QColumnView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int)) {
+func (this *QColumnView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsInserted", f)
 }
 
 // void currentChanged(const class QModelIndex &, const class QModelIndex &)
-func (this *QColumnView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, previous *qtcore.QModelIndex)) {
+func (this *QColumnView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, previous *qtcore.QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "currentChanged", f)
 }
 
 // void scrollContentsBy(int, int)
-func (this *QColumnView) InheritScrollContentsBy(f func(dx int, dy int)) {
+func (this *QColumnView) InheritScrollContentsBy(f func(dx int, dy int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "scrollContentsBy", f)
 }
 
@@ -104,7 +104,7 @@ func (this *QColumnView) InheritCreateColumn(f func(rootIndex *qtcore.QModelInde
 }
 
 // void initializeColumn(class QAbstractItemView *)
-func (this *QColumnView) InheritInitializeColumn(f func(column *QAbstractItemView /*777 QAbstractItemView **/)) {
+func (this *QColumnView) InheritInitializeColumn(f func(column *QAbstractItemView /*777 QAbstractItemView **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initializeColumn", f)
 }
 

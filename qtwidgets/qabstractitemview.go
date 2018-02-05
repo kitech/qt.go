@@ -49,77 +49,77 @@ func init() {
 
 //  body block begin
 // void rowsInserted(const class QModelIndex &, int, int)
-func (this *QAbstractItemView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int)) {
+func (this *QAbstractItemView) InheritRowsInserted(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsInserted", f)
 }
 
 // void rowsAboutToBeRemoved(const class QModelIndex &, int, int)
-func (this *QAbstractItemView) InheritRowsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, start int, end int)) {
+func (this *QAbstractItemView) InheritRowsAboutToBeRemoved(f func(parent *qtcore.QModelIndex, start int, end int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowsAboutToBeRemoved", f)
 }
 
 // void selectionChanged(const class QItemSelection &, const class QItemSelection &)
-func (this *QAbstractItemView) InheritSelectionChanged(f func(selected *qtcore.QItemSelection, deselected *qtcore.QItemSelection)) {
+func (this *QAbstractItemView) InheritSelectionChanged(f func(selected *qtcore.QItemSelection, deselected *qtcore.QItemSelection) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "selectionChanged", f)
 }
 
 // void currentChanged(const class QModelIndex &, const class QModelIndex &)
-func (this *QAbstractItemView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, previous *qtcore.QModelIndex)) {
+func (this *QAbstractItemView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, previous *qtcore.QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "currentChanged", f)
 }
 
 // void updateEditorData()
-func (this *QAbstractItemView) InheritUpdateEditorData(f func()) {
+func (this *QAbstractItemView) InheritUpdateEditorData(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateEditorData", f)
 }
 
 // void updateEditorGeometries()
-func (this *QAbstractItemView) InheritUpdateEditorGeometries(f func()) {
+func (this *QAbstractItemView) InheritUpdateEditorGeometries(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateEditorGeometries", f)
 }
 
 // void updateGeometries()
-func (this *QAbstractItemView) InheritUpdateGeometries(f func()) {
+func (this *QAbstractItemView) InheritUpdateGeometries(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateGeometries", f)
 }
 
 // void verticalScrollbarAction(int)
-func (this *QAbstractItemView) InheritVerticalScrollbarAction(f func(action int)) {
+func (this *QAbstractItemView) InheritVerticalScrollbarAction(f func(action int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "verticalScrollbarAction", f)
 }
 
 // void horizontalScrollbarAction(int)
-func (this *QAbstractItemView) InheritHorizontalScrollbarAction(f func(action int)) {
+func (this *QAbstractItemView) InheritHorizontalScrollbarAction(f func(action int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "horizontalScrollbarAction", f)
 }
 
 // void verticalScrollbarValueChanged(int)
-func (this *QAbstractItemView) InheritVerticalScrollbarValueChanged(f func(value int)) {
+func (this *QAbstractItemView) InheritVerticalScrollbarValueChanged(f func(value int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "verticalScrollbarValueChanged", f)
 }
 
 // void horizontalScrollbarValueChanged(int)
-func (this *QAbstractItemView) InheritHorizontalScrollbarValueChanged(f func(value int)) {
+func (this *QAbstractItemView) InheritHorizontalScrollbarValueChanged(f func(value int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "horizontalScrollbarValueChanged", f)
 }
 
 // void closeEditor(class QWidget *, class QAbstractItemDelegate::EndEditHint)
-func (this *QAbstractItemView) InheritCloseEditor(f func(editor *QWidget /*777 QWidget **/, hint int)) {
+func (this *QAbstractItemView) InheritCloseEditor(f func(editor *QWidget /*777 QWidget **/, hint int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "closeEditor", f)
 }
 
 // void commitData(class QWidget *)
-func (this *QAbstractItemView) InheritCommitData(f func(editor *QWidget /*777 QWidget **/)) {
+func (this *QAbstractItemView) InheritCommitData(f func(editor *QWidget /*777 QWidget **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "commitData", f)
 }
 
 // void editorDestroyed(class QObject *)
-func (this *QAbstractItemView) InheritEditorDestroyed(f func(editor *qtcore.QObject /*777 QObject **/)) {
+func (this *QAbstractItemView) InheritEditorDestroyed(f func(editor *qtcore.QObject /*777 QObject **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "editorDestroyed", f)
 }
 
 // void setHorizontalStepsPerItem(int)
-func (this *QAbstractItemView) InheritSetHorizontalStepsPerItem(f func(steps int)) {
+func (this *QAbstractItemView) InheritSetHorizontalStepsPerItem(f func(steps int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setHorizontalStepsPerItem", f)
 }
 
@@ -129,7 +129,7 @@ func (this *QAbstractItemView) InheritHorizontalStepsPerItem(f func() int) {
 }
 
 // void setVerticalStepsPerItem(int)
-func (this *QAbstractItemView) InheritSetVerticalStepsPerItem(f func(steps int)) {
+func (this *QAbstractItemView) InheritSetVerticalStepsPerItem(f func(steps int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setVerticalStepsPerItem", f)
 }
 
@@ -159,7 +159,7 @@ func (this *QAbstractItemView) InheritIsIndexHidden(f func(index *qtcore.QModelI
 }
 
 // void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
-func (this *QAbstractItemView) InheritSetSelection(f func(rect *qtcore.QRect, command int)) {
+func (this *QAbstractItemView) InheritSetSelection(f func(rect *qtcore.QRect, command int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setSelection", f)
 }
 
@@ -179,7 +179,7 @@ func (this *QAbstractItemView) InheritSelectionCommand(f func(index *qtcore.QMod
 }
 
 // void startDrag(Qt::DropActions)
-func (this *QAbstractItemView) InheritStartDrag(f func(supportedActions int)) {
+func (this *QAbstractItemView) InheritStartDrag(f func(supportedActions int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "startDrag", f)
 }
 
@@ -194,27 +194,27 @@ func (this *QAbstractItemView) InheritState(f func() int) {
 }
 
 // void setState(enum QAbstractItemView::State)
-func (this *QAbstractItemView) InheritSetState(f func(state int)) {
+func (this *QAbstractItemView) InheritSetState(f func(state int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setState", f)
 }
 
 // void scheduleDelayedItemsLayout()
-func (this *QAbstractItemView) InheritScheduleDelayedItemsLayout(f func()) {
+func (this *QAbstractItemView) InheritScheduleDelayedItemsLayout(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "scheduleDelayedItemsLayout", f)
 }
 
 // void executeDelayedItemsLayout()
-func (this *QAbstractItemView) InheritExecuteDelayedItemsLayout(f func()) {
+func (this *QAbstractItemView) InheritExecuteDelayedItemsLayout(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "executeDelayedItemsLayout", f)
 }
 
 // void setDirtyRegion(const class QRegion &)
-func (this *QAbstractItemView) InheritSetDirtyRegion(f func(region *qtgui.QRegion)) {
+func (this *QAbstractItemView) InheritSetDirtyRegion(f func(region *qtgui.QRegion) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setDirtyRegion", f)
 }
 
 // void scrollDirtyRegion(int, int)
-func (this *QAbstractItemView) InheritScrollDirtyRegion(f func(dx int, dy int)) {
+func (this *QAbstractItemView) InheritScrollDirtyRegion(f func(dx int, dy int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "scrollDirtyRegion", f)
 }
 
@@ -224,17 +224,17 @@ func (this *QAbstractItemView) InheritDirtyRegionOffset(f func() unsafe.Pointer)
 }
 
 // void startAutoScroll()
-func (this *QAbstractItemView) InheritStartAutoScroll(f func()) {
+func (this *QAbstractItemView) InheritStartAutoScroll(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "startAutoScroll", f)
 }
 
 // void stopAutoScroll()
-func (this *QAbstractItemView) InheritStopAutoScroll(f func()) {
+func (this *QAbstractItemView) InheritStopAutoScroll(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "stopAutoScroll", f)
 }
 
 // void doAutoScroll()
-func (this *QAbstractItemView) InheritDoAutoScroll(f func()) {
+func (this *QAbstractItemView) InheritDoAutoScroll(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "doAutoScroll", f)
 }
 
@@ -254,72 +254,72 @@ func (this *QAbstractItemView) InheritViewportEvent(f func(event *qtcore.QEvent 
 }
 
 // void mousePressEvent(class QMouseEvent *)
-func (this *QAbstractItemView) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QAbstractItemView) InheritMousePressEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QAbstractItemView) InheritMouseMoveEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QAbstractItemView) InheritMouseMoveEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QAbstractItemView) InheritMouseReleaseEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QAbstractItemView) InheritMouseReleaseEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
 // void mouseDoubleClickEvent(class QMouseEvent *)
-func (this *QAbstractItemView) InheritMouseDoubleClickEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QAbstractItemView) InheritMouseDoubleClickEvent(f func(event *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseDoubleClickEvent", f)
 }
 
 // void dragEnterEvent(class QDragEnterEvent *)
-func (this *QAbstractItemView) InheritDragEnterEvent(f func(event *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/)) {
+func (this *QAbstractItemView) InheritDragEnterEvent(f func(event *qtgui.QDragEnterEvent /*777 QDragEnterEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragEnterEvent", f)
 }
 
 // void dragMoveEvent(class QDragMoveEvent *)
-func (this *QAbstractItemView) InheritDragMoveEvent(f func(event *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/)) {
+func (this *QAbstractItemView) InheritDragMoveEvent(f func(event *qtgui.QDragMoveEvent /*777 QDragMoveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragMoveEvent", f)
 }
 
 // void dragLeaveEvent(class QDragLeaveEvent *)
-func (this *QAbstractItemView) InheritDragLeaveEvent(f func(event *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/)) {
+func (this *QAbstractItemView) InheritDragLeaveEvent(f func(event *qtgui.QDragLeaveEvent /*777 QDragLeaveEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dragLeaveEvent", f)
 }
 
 // void dropEvent(class QDropEvent *)
-func (this *QAbstractItemView) InheritDropEvent(f func(event *qtgui.QDropEvent /*777 QDropEvent **/)) {
+func (this *QAbstractItemView) InheritDropEvent(f func(event *qtgui.QDropEvent /*777 QDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dropEvent", f)
 }
 
 // void focusInEvent(class QFocusEvent *)
-func (this *QAbstractItemView) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+func (this *QAbstractItemView) InheritFocusInEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusInEvent", f)
 }
 
 // void focusOutEvent(class QFocusEvent *)
-func (this *QAbstractItemView) InheritFocusOutEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/)) {
+func (this *QAbstractItemView) InheritFocusOutEvent(f func(event *qtgui.QFocusEvent /*777 QFocusEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "focusOutEvent", f)
 }
 
 // void keyPressEvent(class QKeyEvent *)
-func (this *QAbstractItemView) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+func (this *QAbstractItemView) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
 // void resizeEvent(class QResizeEvent *)
-func (this *QAbstractItemView) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+func (this *QAbstractItemView) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
 // void timerEvent(class QTimerEvent *)
-func (this *QAbstractItemView) InheritTimerEvent(f func(event *qtcore.QTimerEvent /*777 QTimerEvent **/)) {
+func (this *QAbstractItemView) InheritTimerEvent(f func(event *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
 // void inputMethodEvent(class QInputMethodEvent *)
-func (this *QAbstractItemView) InheritInputMethodEvent(f func(event *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/)) {
+func (this *QAbstractItemView) InheritInputMethodEvent(f func(event *qtgui.QInputMethodEvent /*777 QInputMethodEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "inputMethodEvent", f)
 }
 

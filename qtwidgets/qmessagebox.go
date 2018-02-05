@@ -54,27 +54,27 @@ func (this *QMessageBox) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) 
 }
 
 // void resizeEvent(class QResizeEvent *)
-func (this *QMessageBox) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+func (this *QMessageBox) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
 // void showEvent(class QShowEvent *)
-func (this *QMessageBox) InheritShowEvent(f func(event *qtgui.QShowEvent /*777 QShowEvent **/)) {
+func (this *QMessageBox) InheritShowEvent(f func(event *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
 // void closeEvent(class QCloseEvent *)
-func (this *QMessageBox) InheritCloseEvent(f func(event *qtgui.QCloseEvent /*777 QCloseEvent **/)) {
+func (this *QMessageBox) InheritCloseEvent(f func(event *qtgui.QCloseEvent /*777 QCloseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "closeEvent", f)
 }
 
 // void keyPressEvent(class QKeyEvent *)
-func (this *QMessageBox) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+func (this *QMessageBox) InheritKeyPressEvent(f func(event *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
 // void changeEvent(class QEvent *)
-func (this *QMessageBox) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+func (this *QMessageBox) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 

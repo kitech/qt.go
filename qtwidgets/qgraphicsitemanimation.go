@@ -49,12 +49,12 @@ func init() {
 
 //  body block begin
 // void beforeAnimationStep(qreal)
-func (this *QGraphicsItemAnimation) InheritBeforeAnimationStep(f func(step float64)) {
+func (this *QGraphicsItemAnimation) InheritBeforeAnimationStep(f func(step float64) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "beforeAnimationStep", f)
 }
 
 // void afterAnimationStep(qreal)
-func (this *QGraphicsItemAnimation) InheritAfterAnimationStep(f func(step float64)) {
+func (this *QGraphicsItemAnimation) InheritAfterAnimationStep(f func(step float64) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "afterAnimationStep", f)
 }
 

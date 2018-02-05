@@ -41,7 +41,7 @@ func init() {
 
 //  body block begin
 // void resetInternalData()
-func (this *QAbstractProxyModel) InheritResetInternalData(f func()) {
+func (this *QAbstractProxyModel) InheritResetInternalData(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resetInternalData", f)
 }
 

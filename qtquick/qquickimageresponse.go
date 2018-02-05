@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QQuickImageResponse struct {
 	*qtcore.QObject
 }
@@ -87,7 +84,7 @@ func (*QQuickImageResponse) NewFromPointer(cthis unsafe.Pointer) *QQuickImageRes
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QQuickImageResponse) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QQuickImageResponse10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QQuickImageResponse10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -99,7 +96,7 @@ func (this *QQuickImageResponse) MetaObject() *qtcore.QMetaObject /*777 const QM
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickImageResponse()
 func NewQQuickImageResponse() *QQuickImageResponse {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickImageResponseC1Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageResponseC1Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQuickImageResponseFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -109,9 +106,11 @@ func NewQQuickImageResponse() *QQuickImageResponse {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQuickImageResponse()
-func DeleteQQuickImageResponse(*QQuickImageResponse) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickImageResponseD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQQuickImageResponse(this *QQuickImageResponse) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageResponseD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQuick/qquickimageprovider.h:78
@@ -119,7 +118,7 @@ func DeleteQQuickImageResponse(*QQuickImageResponse) {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QQuickTextureFactory * textureFactory()
 func (this *QQuickImageResponse) TextureFactory() *QQuickTextureFactory /*777 QQuickTextureFactory **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QQuickImageResponse14textureFactoryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QQuickImageResponse14textureFactoryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQQuickTextureFactoryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -131,10 +130,11 @@ func (this *QQuickImageResponse) TextureFactory() *QQuickTextureFactory /*777 QQ
 // Public virtual Visibility=Default Availability=Available
 // [8] QString errorString()
 func (this *QQuickImageResponse) ErrorString() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK19QQuickImageResponse11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QQuickImageResponse11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -143,7 +143,7 @@ func (this *QQuickImageResponse) ErrorString() *qtcore.QString /*123*/ {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void cancel()
 func (this *QQuickImageResponse) Cancel() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickImageResponse6cancelEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageResponse6cancelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -152,7 +152,7 @@ func (this *QQuickImageResponse) Cancel() {
 // Public Visibility=Default Availability=Available
 // [-2] void finished()
 func (this *QQuickImageResponse) Finished() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN19QQuickImageResponse8finishedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageResponse8finishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

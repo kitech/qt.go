@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSGRendererInterface struct {
 	*qtrt.CObject
 }
@@ -72,7 +69,11 @@ func (this *QSGRendererInterface) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSGRendererInterface) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSGRendererInterfaceFromPointer(cthis unsafe.Pointer) *QSGRendererInterface {
 	return &QSGRendererInterface{&qtrt.CObject{cthis}}
@@ -85,9 +86,11 @@ func (*QSGRendererInterface) NewFromPointer(cthis unsafe.Pointer) *QSGRendererIn
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGRendererInterface()
-func DeleteQSGRendererInterface(*QSGRendererInterface) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGRendererInterfaceD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSGRendererInterface(this *QSGRendererInterface) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGRendererInterfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQuick/qsgrendererinterface.h:88
@@ -95,7 +98,7 @@ func DeleteQSGRendererInterface(*QSGRendererInterface) {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QSGRendererInterface::GraphicsApi graphicsApi()
 func (this *QSGRendererInterface) GraphicsApi() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGRendererInterface11graphicsApiEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface11graphicsApiEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -107,7 +110,7 @@ func (this *QSGRendererInterface) GraphicsApi() int {
 // [8] void * getResource(QQuickWindow *, enum QSGRendererInterface::Resource)
 func (this *QSGRendererInterface) GetResource(window *QQuickWindow /*777 QQuickWindow **/, resource int) unsafe.Pointer /*666*/ {
 	var convArg0 = window.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGRendererInterface11getResourceEP12QQuickWindowNS_8ResourceE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, resource)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface11getResourceEP12QQuickWindowNS_8ResourceE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, resource)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -121,7 +124,7 @@ func (this *QSGRendererInterface) GetResource_1(window *QQuickWindow /*777 QQuic
 	var convArg0 = window.GetCthis()
 	var convArg1 = qtrt.CString(resource)
 	defer qtrt.FreeMem(convArg1)
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGRendererInterface11getResourceEP12QQuickWindowPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface11getResourceEP12QQuickWindowPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return unsafe.Pointer(uintptr(rv))
@@ -132,7 +135,7 @@ func (this *QSGRendererInterface) GetResource_1(window *QQuickWindow /*777 QQuic
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QSGRendererInterface::ShaderType shaderType()
 func (this *QSGRendererInterface) ShaderType() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGRendererInterface10shaderTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface10shaderTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -143,7 +146,7 @@ func (this *QSGRendererInterface) ShaderType() int {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QSGRendererInterface::ShaderCompilationTypes shaderCompilationType()
 func (this *QSGRendererInterface) ShaderCompilationType() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGRendererInterface21shaderCompilationTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface21shaderCompilationTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -154,7 +157,7 @@ func (this *QSGRendererInterface) ShaderCompilationType() int {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QSGRendererInterface::ShaderSourceTypes shaderSourceType()
 func (this *QSGRendererInterface) ShaderSourceType() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGRendererInterface16shaderSourceTypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface16shaderSourceTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)

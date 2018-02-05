@@ -41,12 +41,12 @@ func init() {
 
 //  body block begin
 // void setProcessState(enum QProcess::ProcessState)
-func (this *QProcess) InheritSetProcessState(f func(state int)) {
+func (this *QProcess) InheritSetProcessState(f func(state int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setProcessState", f)
 }
 
 // void setupChildProcess()
-func (this *QProcess) InheritSetupChildProcess(f func()) {
+func (this *QProcess) InheritSetupChildProcess(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setupChildProcess", f)
 }
 

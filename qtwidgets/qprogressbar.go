@@ -54,12 +54,12 @@ func (this *QProgressBar) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/)
 }
 
 // void paintEvent(class QPaintEvent *)
-func (this *QProgressBar) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+func (this *QProgressBar) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
 // void initStyleOption(class QStyleOptionProgressBar *)
-func (this *QProgressBar) InheritInitStyleOption(f func(option *QStyleOptionProgressBar /*777 QStyleOptionProgressBar **/)) {
+func (this *QProgressBar) InheritInitStyleOption(f func(option *QStyleOptionProgressBar /*777 QStyleOptionProgressBar **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 

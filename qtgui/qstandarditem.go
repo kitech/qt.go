@@ -45,7 +45,7 @@ func init() {
 
 //  body block begin
 // void emitDataChanged()
-func (this *QStandardItem) InheritEmitDataChanged(f func()) {
+func (this *QStandardItem) InheritEmitDataChanged(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "emitDataChanged", f)
 }
 

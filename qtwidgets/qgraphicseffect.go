@@ -49,17 +49,17 @@ func init() {
 
 //  body block begin
 // void draw(class QPainter *)
-func (this *QGraphicsEffect) InheritDraw(f func(painter *qtgui.QPainter /*777 QPainter **/)) {
+func (this *QGraphicsEffect) InheritDraw(f func(painter *qtgui.QPainter /*777 QPainter **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "draw", f)
 }
 
 // void sourceChanged(QGraphicsEffect::ChangeFlags)
-func (this *QGraphicsEffect) InheritSourceChanged(f func(flags int)) {
+func (this *QGraphicsEffect) InheritSourceChanged(f func(flags int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "sourceChanged", f)
 }
 
 // void updateBoundingRect()
-func (this *QGraphicsEffect) InheritUpdateBoundingRect(f func()) {
+func (this *QGraphicsEffect) InheritUpdateBoundingRect(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateBoundingRect", f)
 }
 
@@ -74,7 +74,7 @@ func (this *QGraphicsEffect) InheritSourceBoundingRect(f func(system int) unsafe
 }
 
 // void drawSource(class QPainter *)
-func (this *QGraphicsEffect) InheritDrawSource(f func(painter *qtgui.QPainter /*777 QPainter **/)) {
+func (this *QGraphicsEffect) InheritDrawSource(f func(painter *qtgui.QPainter /*777 QPainter **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawSource", f)
 }
 

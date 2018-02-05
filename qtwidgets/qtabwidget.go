@@ -49,42 +49,42 @@ func init() {
 
 //  body block begin
 // void tabInserted(int)
-func (this *QTabWidget) InheritTabInserted(f func(index int)) {
+func (this *QTabWidget) InheritTabInserted(f func(index int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "tabInserted", f)
 }
 
 // void tabRemoved(int)
-func (this *QTabWidget) InheritTabRemoved(f func(index int)) {
+func (this *QTabWidget) InheritTabRemoved(f func(index int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "tabRemoved", f)
 }
 
 // void showEvent(class QShowEvent *)
-func (this *QTabWidget) InheritShowEvent(f func(arg0 *qtgui.QShowEvent /*777 QShowEvent **/)) {
+func (this *QTabWidget) InheritShowEvent(f func(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
 // void resizeEvent(class QResizeEvent *)
-func (this *QTabWidget) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+func (this *QTabWidget) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
 // void keyPressEvent(class QKeyEvent *)
-func (this *QTabWidget) InheritKeyPressEvent(f func(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/)) {
+func (this *QTabWidget) InheritKeyPressEvent(f func(arg0 *qtgui.QKeyEvent /*777 QKeyEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "keyPressEvent", f)
 }
 
 // void paintEvent(class QPaintEvent *)
-func (this *QTabWidget) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+func (this *QTabWidget) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
 // void setTabBar(class QTabBar *)
-func (this *QTabWidget) InheritSetTabBar(f func(arg0 *QTabBar /*777 QTabBar **/)) {
+func (this *QTabWidget) InheritSetTabBar(f func(arg0 *QTabBar /*777 QTabBar **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setTabBar", f)
 }
 
 // void changeEvent(class QEvent *)
-func (this *QTabWidget) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/)) {
+func (this *QTabWidget) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
@@ -94,7 +94,7 @@ func (this *QTabWidget) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/
 }
 
 // void initStyleOption(class QStyleOptionTabWidgetFrame *)
-func (this *QTabWidget) InheritInitStyleOption(f func(option *QStyleOptionTabWidgetFrame /*777 QStyleOptionTabWidgetFrame **/)) {
+func (this *QTabWidget) InheritInitStyleOption(f func(option *QStyleOptionTabWidgetFrame /*777 QStyleOptionTabWidgetFrame **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 

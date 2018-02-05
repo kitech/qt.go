@@ -49,12 +49,12 @@ func init() {
 
 //  body block begin
 // void setGraphicsItem(class QGraphicsItem *)
-func (this *QGraphicsLayoutItem) InheritSetGraphicsItem(f func(item *QGraphicsItem /*777 QGraphicsItem **/)) {
+func (this *QGraphicsLayoutItem) InheritSetGraphicsItem(f func(item *QGraphicsItem /*777 QGraphicsItem **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setGraphicsItem", f)
 }
 
 // void setOwnedByLayout(_Bool)
-func (this *QGraphicsLayoutItem) InheritSetOwnedByLayout(f func(ownedByLayout bool)) {
+func (this *QGraphicsLayoutItem) InheritSetOwnedByLayout(f func(ownedByLayout bool) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setOwnedByLayout", f)
 }
 

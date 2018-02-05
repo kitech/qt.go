@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -52,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QQmlParserStatus struct {
 	*qtrt.CObject
 }
@@ -64,7 +61,11 @@ func (this *QQmlParserStatus) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QQmlParserStatus) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQQmlParserStatusFromPointer(cthis unsafe.Pointer) *QQmlParserStatus {
 	return &QQmlParserStatus{&qtrt.CObject{cthis}}
@@ -78,9 +79,10 @@ func (*QQmlParserStatus) NewFromPointer(cthis unsafe.Pointer) *QQmlParserStatus 
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlParserStatus()
 func NewQQmlParserStatus() *QQmlParserStatus {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QQmlParserStatusC1Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlParserStatusC1Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQmlParserStatusFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQQmlParserStatus)
 	return gothis
 }
 
@@ -88,9 +90,11 @@ func NewQQmlParserStatus() *QQmlParserStatus {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlParserStatus()
-func DeleteQQmlParserStatus(*QQmlParserStatus) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QQmlParserStatusD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQQmlParserStatus(this *QQmlParserStatus) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlParserStatusD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQml/qqmlparserstatus.h:55
@@ -98,7 +102,7 @@ func DeleteQQmlParserStatus(*QQmlParserStatus) {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void classBegin()
 func (this *QQmlParserStatus) ClassBegin() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QQmlParserStatus10classBeginEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlParserStatus10classBeginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -107,7 +111,7 @@ func (this *QQmlParserStatus) ClassBegin() {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void componentComplete()
 func (this *QQmlParserStatus) ComponentComplete() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN16QQmlParserStatus17componentCompleteEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlParserStatus17componentCompleteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

@@ -74,7 +74,7 @@ func (this *QTreeWidget) InheritItemFromIndex(f func(index *qtcore.QModelIndex) 
 }
 
 // void dropEvent(class QDropEvent *)
-func (this *QTreeWidget) InheritDropEvent(f func(event *qtgui.QDropEvent /*777 QDropEvent **/)) {
+func (this *QTreeWidget) InheritDropEvent(f func(event *qtgui.QDropEvent /*777 QDropEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "dropEvent", f)
 }
 

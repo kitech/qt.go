@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -52,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QQmlPropertyValueSource struct {
 	*qtrt.CObject
 }
@@ -64,7 +61,11 @@ func (this *QQmlPropertyValueSource) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QQmlPropertyValueSource) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQQmlPropertyValueSourceFromPointer(cthis unsafe.Pointer) *QQmlPropertyValueSource {
 	return &QQmlPropertyValueSource{&qtrt.CObject{cthis}}
@@ -78,9 +79,10 @@ func (*QQmlPropertyValueSource) NewFromPointer(cthis unsafe.Pointer) *QQmlProper
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlPropertyValueSource()
 func NewQQmlPropertyValueSource() *QQmlPropertyValueSource {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QQmlPropertyValueSourceC1Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QQmlPropertyValueSourceC1Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQmlPropertyValueSourceFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQQmlPropertyValueSource)
 	return gothis
 }
 
@@ -88,9 +90,11 @@ func NewQQmlPropertyValueSource() *QQmlPropertyValueSource {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlPropertyValueSource()
-func DeleteQQmlPropertyValueSource(*QQmlPropertyValueSource) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QQmlPropertyValueSourceD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQQmlPropertyValueSource(this *QQmlPropertyValueSource) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QQmlPropertyValueSourceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQml/qqmlpropertyvaluesource.h:55
@@ -99,7 +103,7 @@ func DeleteQQmlPropertyValueSource(*QQmlPropertyValueSource) {
 // [-2] void setTarget(const QQmlProperty &)
 func (this *QQmlPropertyValueSource) SetTarget(arg0 *QQmlProperty) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN23QQmlPropertyValueSource9setTargetERK12QQmlProperty", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QQmlPropertyValueSource9setTargetERK12QQmlProperty", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

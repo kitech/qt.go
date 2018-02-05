@@ -54,7 +54,7 @@ func (this *QLCDNumber) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) b
 }
 
 // void paintEvent(class QPaintEvent *)
-func (this *QLCDNumber) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+func (this *QLCDNumber) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 

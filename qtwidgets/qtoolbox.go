@@ -54,22 +54,22 @@ func (this *QToolBox) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) boo
 }
 
 // void itemInserted(int)
-func (this *QToolBox) InheritItemInserted(f func(index int)) {
+func (this *QToolBox) InheritItemInserted(f func(index int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "itemInserted", f)
 }
 
 // void itemRemoved(int)
-func (this *QToolBox) InheritItemRemoved(f func(index int)) {
+func (this *QToolBox) InheritItemRemoved(f func(index int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "itemRemoved", f)
 }
 
 // void showEvent(class QShowEvent *)
-func (this *QToolBox) InheritShowEvent(f func(e *qtgui.QShowEvent /*777 QShowEvent **/)) {
+func (this *QToolBox) InheritShowEvent(f func(e *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
 // void changeEvent(class QEvent *)
-func (this *QToolBox) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/)) {
+func (this *QToolBox) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -52,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QQmlTypesExtensionInterface struct {
 	*qtrt.CObject
 }
@@ -64,7 +61,11 @@ func (this *QQmlTypesExtensionInterface) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QQmlTypesExtensionInterface) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQQmlTypesExtensionInterfaceFromPointer(cthis unsafe.Pointer) *QQmlTypesExtensionInterface {
 	return &QQmlTypesExtensionInterface{&qtrt.CObject{cthis}}
@@ -77,9 +78,11 @@ func (*QQmlTypesExtensionInterface) NewFromPointer(cthis unsafe.Pointer) *QQmlTy
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [-2] void ~QQmlTypesExtensionInterface()
-func DeleteQQmlTypesExtensionInterface(*QQmlTypesExtensionInterface) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QQmlTypesExtensionInterfaceD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQQmlTypesExtensionInterface(this *QQmlTypesExtensionInterface) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN27QQmlTypesExtensionInterfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQml/qqmlextensioninterface.h:55
@@ -89,7 +92,7 @@ func DeleteQQmlTypesExtensionInterface(*QQmlTypesExtensionInterface) {
 func (this *QQmlTypesExtensionInterface) RegisterTypes(uri string) {
 	var convArg0 = qtrt.CString(uri)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QQmlTypesExtensionInterface13registerTypesEPKc", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN27QQmlTypesExtensionInterface13registerTypesEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

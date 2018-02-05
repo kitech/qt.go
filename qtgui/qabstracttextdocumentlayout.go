@@ -45,22 +45,22 @@ func init() {
 
 //  body block begin
 // void documentChanged(int, int, int)
-func (this *QAbstractTextDocumentLayout) InheritDocumentChanged(f func(from int, charsRemoved int, charsAdded int)) {
+func (this *QAbstractTextDocumentLayout) InheritDocumentChanged(f func(from int, charsRemoved int, charsAdded int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "documentChanged", f)
 }
 
 // void resizeInlineObject(class QTextInlineObject, int, const class QTextFormat &)
-func (this *QAbstractTextDocumentLayout) InheritResizeInlineObject(f func(item *QTextInlineObject /*123*/, posInDocument int, format *QTextFormat)) {
+func (this *QAbstractTextDocumentLayout) InheritResizeInlineObject(f func(item *QTextInlineObject /*123*/, posInDocument int, format *QTextFormat) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeInlineObject", f)
 }
 
 // void positionInlineObject(class QTextInlineObject, int, const class QTextFormat &)
-func (this *QAbstractTextDocumentLayout) InheritPositionInlineObject(f func(item *QTextInlineObject /*123*/, posInDocument int, format *QTextFormat)) {
+func (this *QAbstractTextDocumentLayout) InheritPositionInlineObject(f func(item *QTextInlineObject /*123*/, posInDocument int, format *QTextFormat) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "positionInlineObject", f)
 }
 
 // void drawInlineObject(class QPainter *, const class QRectF &, class QTextInlineObject, int, const class QTextFormat &)
-func (this *QAbstractTextDocumentLayout) InheritDrawInlineObject(f func(painter *QPainter /*777 QPainter **/, rect *qtcore.QRectF, object *QTextInlineObject /*123*/, posInDocument int, format *QTextFormat)) {
+func (this *QAbstractTextDocumentLayout) InheritDrawInlineObject(f func(painter *QPainter /*777 QPainter **/, rect *qtcore.QRectF, object *QTextInlineObject /*123*/, posInDocument int, format *QTextFormat) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawInlineObject", f)
 }
 

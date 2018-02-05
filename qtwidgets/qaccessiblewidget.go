@@ -59,7 +59,7 @@ func (this *QAccessibleWidget) InheritParentObject(f func() unsafe.Pointer /*666
 }
 
 // void addControllingSignal(const class QString &)
-func (this *QAccessibleWidget) InheritAddControllingSignal(f func(signal *qtcore.QString)) {
+func (this *QAccessibleWidget) InheritAddControllingSignal(f func(signal *qtcore.QString) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "addControllingSignal", f)
 }
 

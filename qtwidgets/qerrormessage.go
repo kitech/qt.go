@@ -49,12 +49,12 @@ func init() {
 
 //  body block begin
 // void done(int)
-func (this *QErrorMessage) InheritDone(f func(arg0 int)) {
+func (this *QErrorMessage) InheritDone(f func(arg0 int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "done", f)
 }
 
 // void changeEvent(class QEvent *)
-func (this *QErrorMessage) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEvent **/)) {
+func (this *QErrorMessage) InheritChangeEvent(f func(e *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 

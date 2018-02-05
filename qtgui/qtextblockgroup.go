@@ -45,17 +45,17 @@ func init() {
 
 //  body block begin
 // void blockInserted(const class QTextBlock &)
-func (this *QTextBlockGroup) InheritBlockInserted(f func(block *QTextBlock)) {
+func (this *QTextBlockGroup) InheritBlockInserted(f func(block *QTextBlock) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "blockInserted", f)
 }
 
 // void blockRemoved(const class QTextBlock &)
-func (this *QTextBlockGroup) InheritBlockRemoved(f func(block *QTextBlock)) {
+func (this *QTextBlockGroup) InheritBlockRemoved(f func(block *QTextBlock) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "blockRemoved", f)
 }
 
 // void blockFormatChanged(const class QTextBlock &)
-func (this *QTextBlockGroup) InheritBlockFormatChanged(f func(block *QTextBlock)) {
+func (this *QTextBlockGroup) InheritBlockFormatChanged(f func(block *QTextBlock) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "blockFormatChanged", f)
 }
 

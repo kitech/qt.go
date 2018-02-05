@@ -11,3 +11,4 @@ set -x
 # rm -rf ~/oss/pkg/android_arm
 # go install -p 1 -v -x  -pkgdir ~/oss/pkg/android_arm github.com/gonuts/ffi
 go install -p 1 -v  -pkgdir ~/oss/pkg/android_arm ./qtrt ./qtcore ./qtgui ./qtwidgets
+go install -p 1 -v  -pkgdir ~/oss/pkg/android_arm ./qtrt ./qtnetwork ./qtqml ./qtquick

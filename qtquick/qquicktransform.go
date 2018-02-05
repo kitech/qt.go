@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,11 @@ func init() {
 //  ext block end
 
 //  body block begin
+// void update()
+func (this *QQuickTransform) InheritUpdate(f func() /*void*/) {
+	qtrt.SetAllInheritCallback(this, "update", f)
+}
+
 type QQuickTransform struct {
 	*qtcore.QObject
 }
@@ -87,7 +88,7 @@ func (*QQuickTransform) NewFromPointer(cthis unsafe.Pointer) *QQuickTransform {
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QQuickTransform) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QQuickTransform10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQuickTransform10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -100,7 +101,7 @@ func (this *QQuickTransform) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // [-2] void QQuickTransform(QObject *)
 func NewQQuickTransform(parent *qtcore.QObject /*777 QObject **/) *QQuickTransform {
 	var convArg0 = parent.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QQuickTransformC1EP7QObject", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QQuickTransformC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQuickTransformFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -110,9 +111,11 @@ func NewQQuickTransform(parent *qtcore.QObject /*777 QObject **/) *QQuickTransfo
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QQuickTransform()
-func DeleteQQuickTransform(*QQuickTransform) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QQuickTransformD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQQuickTransform(this *QQuickTransform) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QQuickTransformD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQuick/qquickitem.h:65
@@ -121,7 +124,7 @@ func DeleteQQuickTransform(*QQuickTransform) {
 // [-2] void appendToItem(QQuickItem *)
 func (this *QQuickTransform) AppendToItem(arg0 *QQuickItem /*777 QQuickItem **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QQuickTransform12appendToItemEP10QQuickItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QQuickTransform12appendToItemEP10QQuickItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -131,7 +134,7 @@ func (this *QQuickTransform) AppendToItem(arg0 *QQuickItem /*777 QQuickItem **/)
 // [-2] void prependToItem(QQuickItem *)
 func (this *QQuickTransform) PrependToItem(arg0 *QQuickItem /*777 QQuickItem **/) {
 	var convArg0 = arg0.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QQuickTransform13prependToItemEP10QQuickItem", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QQuickTransform13prependToItemEP10QQuickItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -141,7 +144,7 @@ func (this *QQuickTransform) PrependToItem(arg0 *QQuickItem /*777 QQuickItem **/
 // [-2] void applyTo(QMatrix4x4 *)
 func (this *QQuickTransform) ApplyTo(matrix *qtgui.QMatrix4x4 /*777 QMatrix4x4 **/) {
 	var convArg0 = matrix.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK15QQuickTransform7applyToEP10QMatrix4x4", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQuickTransform7applyToEP10QMatrix4x4", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -150,7 +153,7 @@ func (this *QQuickTransform) ApplyTo(matrix *qtgui.QMatrix4x4 /*777 QMatrix4x4 *
 // Protected Visibility=Default Availability=Available
 // [-2] void update()
 func (this *QQuickTransform) Update() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN15QQuickTransform6updateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QQuickTransform6updateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 

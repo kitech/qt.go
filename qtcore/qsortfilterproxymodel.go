@@ -56,12 +56,12 @@ func (this *QSortFilterProxyModel) InheritLessThan(f func(source_left *QModelInd
 }
 
 // void filterChanged()
-func (this *QSortFilterProxyModel) InheritFilterChanged(f func()) {
+func (this *QSortFilterProxyModel) InheritFilterChanged(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "filterChanged", f)
 }
 
 // void invalidateFilter()
-func (this *QSortFilterProxyModel) InheritInvalidateFilter(f func()) {
+func (this *QSortFilterProxyModel) InheritInvalidateFilter(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "invalidateFilter", f)
 }
 

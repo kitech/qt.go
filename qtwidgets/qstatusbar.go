@@ -49,27 +49,27 @@ func init() {
 
 //  body block begin
 // void showEvent(class QShowEvent *)
-func (this *QStatusBar) InheritShowEvent(f func(arg0 *qtgui.QShowEvent /*777 QShowEvent **/)) {
+func (this *QStatusBar) InheritShowEvent(f func(arg0 *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
 // void paintEvent(class QPaintEvent *)
-func (this *QStatusBar) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+func (this *QStatusBar) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
 // void resizeEvent(class QResizeEvent *)
-func (this *QStatusBar) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+func (this *QStatusBar) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
 // void reformat()
-func (this *QStatusBar) InheritReformat(f func()) {
+func (this *QStatusBar) InheritReformat(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "reformat", f)
 }
 
 // void hideOrShow()
-func (this *QStatusBar) InheritHideOrShow(f func()) {
+func (this *QStatusBar) InheritHideOrShow(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "hideOrShow", f)
 }
 

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -35,9 +34,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -48,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QHstsPolicy struct {
 	*qtrt.CObject
 }
@@ -60,7 +57,11 @@ func (this *QHstsPolicy) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QHstsPolicy) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQHstsPolicyFromPointer(cthis unsafe.Pointer) *QHstsPolicy {
 	return &QHstsPolicy{&qtrt.CObject{cthis}}
@@ -74,9 +75,10 @@ func (*QHstsPolicy) NewFromPointer(cthis unsafe.Pointer) *QHstsPolicy {
 // Public Visibility=Default Availability=Available
 // [-2] void QHstsPolicy()
 func NewQHstsPolicy() *QHstsPolicy {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHstsPolicyC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicyC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQHstsPolicyFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQHstsPolicy)
 	return gothis
 }
 
@@ -87,9 +89,10 @@ func NewQHstsPolicy() *QHstsPolicy {
 func NewQHstsPolicy_1(expiry *qtcore.QDateTime, flags int, host *qtcore.QString, mode int) *QHstsPolicy {
 	var convArg0 = expiry.GetCthis()
 	var convArg2 = host.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHstsPolicyC2ERK9QDateTime6QFlagsINS_10PolicyFlagEERK7QStringN4QUrl11ParsingModeE", ffiqt.FFI_TYPE_POINTER, convArg0, flags, convArg2, mode)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicyC2ERK9QDateTime6QFlagsINS_10PolicyFlagEERK7QStringN4QUrl11ParsingModeE", qtrt.FFI_TYPE_POINTER, convArg0, flags, convArg2, mode)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQHstsPolicyFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQHstsPolicy)
 	return gothis
 }
 
@@ -97,9 +100,11 @@ func NewQHstsPolicy_1(expiry *qtcore.QDateTime, flags int, host *qtcore.QString,
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QHstsPolicy()
-func DeleteQHstsPolicy(*QHstsPolicy) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHstsPolicyD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQHstsPolicy(this *QHstsPolicy) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicyD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtNetwork/qhstspolicy.h:71
@@ -108,7 +113,7 @@ func DeleteQHstsPolicy(*QHstsPolicy) {
 // [-2] void swap(QHstsPolicy &)
 func (this *QHstsPolicy) Swap(other *QHstsPolicy) {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHstsPolicy4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicy4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -118,7 +123,7 @@ func (this *QHstsPolicy) Swap(other *QHstsPolicy) {
 // [-2] void setHost(const QString &, QUrl::ParsingMode)
 func (this *QHstsPolicy) SetHost(host *qtcore.QString, mode int) {
 	var convArg0 = host.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHstsPolicy7setHostERK7QStringN4QUrl11ParsingModeE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicy7setHostERK7QStringN4QUrl11ParsingModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -128,7 +133,7 @@ func (this *QHstsPolicy) SetHost(host *qtcore.QString, mode int) {
 // [-2] void setExpiry(const QDateTime &)
 func (this *QHstsPolicy) SetExpiry(expiry *qtcore.QDateTime) {
 	var convArg0 = expiry.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHstsPolicy9setExpiryERK9QDateTime", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicy9setExpiryERK9QDateTime", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -137,10 +142,11 @@ func (this *QHstsPolicy) SetExpiry(expiry *qtcore.QDateTime) {
 // Public Visibility=Default Availability=Available
 // [8] QDateTime expiry()
 func (this *QHstsPolicy) Expiry() *qtcore.QDateTime /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHstsPolicy6expiryEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHstsPolicy6expiryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQDateTime)
 	return rv2
 }
 
@@ -149,7 +155,7 @@ func (this *QHstsPolicy) Expiry() *qtcore.QDateTime /*123*/ {
 // Public Visibility=Default Availability=Available
 // [-2] void setIncludesSubDomains(_Bool)
 func (this *QHstsPolicy) SetIncludesSubDomains(include bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QHstsPolicy21setIncludesSubDomainsEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), include)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicy21setIncludesSubDomainsEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), include)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -158,7 +164,7 @@ func (this *QHstsPolicy) SetIncludesSubDomains(include bool) {
 // Public Visibility=Default Availability=Available
 // [1] bool includesSubDomains()
 func (this *QHstsPolicy) IncludesSubDomains() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHstsPolicy18includesSubDomainsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHstsPolicy18includesSubDomainsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -169,7 +175,7 @@ func (this *QHstsPolicy) IncludesSubDomains() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isExpired()
 func (this *QHstsPolicy) IsExpired() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QHstsPolicy9isExpiredEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHstsPolicy9isExpiredEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

@@ -41,32 +41,32 @@ func init() {
 
 //  body block begin
 // void onEntry(class QEvent *)
-func (this *QStateMachine) InheritOnEntry(f func(event *QEvent /*777 QEvent **/)) {
+func (this *QStateMachine) InheritOnEntry(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onEntry", f)
 }
 
 // void onExit(class QEvent *)
-func (this *QStateMachine) InheritOnExit(f func(event *QEvent /*777 QEvent **/)) {
+func (this *QStateMachine) InheritOnExit(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onExit", f)
 }
 
 // void beginSelectTransitions(class QEvent *)
-func (this *QStateMachine) InheritBeginSelectTransitions(f func(event *QEvent /*777 QEvent **/)) {
+func (this *QStateMachine) InheritBeginSelectTransitions(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "beginSelectTransitions", f)
 }
 
 // void endSelectTransitions(class QEvent *)
-func (this *QStateMachine) InheritEndSelectTransitions(f func(event *QEvent /*777 QEvent **/)) {
+func (this *QStateMachine) InheritEndSelectTransitions(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "endSelectTransitions", f)
 }
 
 // void beginMicrostep(class QEvent *)
-func (this *QStateMachine) InheritBeginMicrostep(f func(event *QEvent /*777 QEvent **/)) {
+func (this *QStateMachine) InheritBeginMicrostep(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "beginMicrostep", f)
 }
 
 // void endMicrostep(class QEvent *)
-func (this *QStateMachine) InheritEndMicrostep(f func(event *QEvent /*777 QEvent **/)) {
+func (this *QStateMachine) InheritEndMicrostep(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "endMicrostep", f)
 }
 

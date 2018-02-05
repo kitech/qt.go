@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSGRootNode struct {
 	*QSGNode
 }
@@ -87,9 +84,10 @@ func (*QSGRootNode) NewFromPointer(cthis unsafe.Pointer) *QSGRootNode {
 // Public Visibility=Default Availability=Available
 // [-2] void QSGRootNode()
 func NewQSGRootNode() *QSGRootNode {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGRootNodeC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGRootNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSGRootNodeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSGRootNode)
 	return gothis
 }
 
@@ -97,9 +95,11 @@ func NewQSGRootNode() *QSGRootNode {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGRootNode()
-func DeleteQSGRootNode(*QSGRootNode) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGRootNodeD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSGRootNode(this *QSGRootNode) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGRootNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 88)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

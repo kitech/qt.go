@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -35,9 +34,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -48,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QHostAddress struct {
 	*qtrt.CObject
 }
@@ -60,7 +57,11 @@ func (this *QHostAddress) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QHostAddress) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQHostAddressFromPointer(cthis unsafe.Pointer) *QHostAddress {
 	return &QHostAddress{&qtrt.CObject{cthis}}
@@ -74,9 +75,10 @@ func (*QHostAddress) NewFromPointer(cthis unsafe.Pointer) *QHostAddress {
 // Public Visibility=Default Availability=Available
 // [-2] void QHostAddress()
 func NewQHostAddress() *QHostAddress {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddressC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQHostAddress)
 	return gothis
 }
 
@@ -85,9 +87,10 @@ func NewQHostAddress() *QHostAddress {
 // Public Visibility=Default Availability=Available
 // [-2] void QHostAddress(quint32)
 func NewQHostAddress_1(ip4Addr uint) *QHostAddress {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddressC2Ej", ffiqt.FFI_TYPE_POINTER, ip4Addr)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressC2Ej", qtrt.FFI_TYPE_POINTER, ip4Addr)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQHostAddress)
 	return gothis
 }
 
@@ -96,9 +99,10 @@ func NewQHostAddress_1(ip4Addr uint) *QHostAddress {
 // Public Visibility=Default Availability=Available
 // [-2] void QHostAddress(quint8 *)
 func NewQHostAddress_2(ip6Addr unsafe.Pointer /*666*/) *QHostAddress {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddressC2EPh", ffiqt.FFI_TYPE_POINTER, &ip6Addr)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressC2EPh", qtrt.FFI_TYPE_POINTER, &ip6Addr)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQHostAddress)
 	return gothis
 }
 
@@ -107,9 +111,10 @@ func NewQHostAddress_2(ip6Addr unsafe.Pointer /*666*/) *QHostAddress {
 // Public Visibility=Default Availability=Available
 // [-2] void QHostAddress(const quint8 *)
 func NewQHostAddress_3(ip6Addr unsafe.Pointer /*666*/) *QHostAddress {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddressC2EPKh", ffiqt.FFI_TYPE_POINTER, &ip6Addr)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressC2EPKh", qtrt.FFI_TYPE_POINTER, &ip6Addr)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQHostAddress)
 	return gothis
 }
 
@@ -119,9 +124,10 @@ func NewQHostAddress_3(ip6Addr unsafe.Pointer /*666*/) *QHostAddress {
 // [-2] void QHostAddress(const QString &)
 func NewQHostAddress_4(address *qtcore.QString) *QHostAddress {
 	var convArg0 = address.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddressC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQHostAddress)
 	return gothis
 }
 
@@ -130,9 +136,10 @@ func NewQHostAddress_4(address *qtcore.QString) *QHostAddress {
 // Public Visibility=Default Availability=Available
 // [-2] void QHostAddress(enum QHostAddress::SpecialAddress)
 func NewQHostAddress_5(address int) *QHostAddress {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddressC2ENS_14SpecialAddressE", ffiqt.FFI_TYPE_POINTER, address)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressC2ENS_14SpecialAddressE", qtrt.FFI_TYPE_POINTER, address)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQHostAddress)
 	return gothis
 }
 
@@ -140,9 +147,11 @@ func NewQHostAddress_5(address int) *QHostAddress {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QHostAddress()
-func DeleteQHostAddress(*QHostAddress) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddressD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQHostAddress(this *QHostAddress) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddressD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtNetwork/qhostaddress.h:117
@@ -151,7 +160,7 @@ func DeleteQHostAddress(*QHostAddress) {
 // [-2] void swap(QHostAddress &)
 func (this *QHostAddress) Swap(other *QHostAddress) {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddress4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddress4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -160,7 +169,7 @@ func (this *QHostAddress) Swap(other *QHostAddress) {
 // Public Visibility=Default Availability=Available
 // [-2] void setAddress(quint32)
 func (this *QHostAddress) SetAddress(ip4Addr uint) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddress10setAddressEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), ip4Addr)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddress10setAddressEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), ip4Addr)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -169,7 +178,7 @@ func (this *QHostAddress) SetAddress(ip4Addr uint) {
 // Public Visibility=Default Availability=Available
 // [-2] void setAddress(quint8 *)
 func (this *QHostAddress) SetAddress_1(ip6Addr unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddress10setAddressEPh", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ip6Addr)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddress10setAddressEPh", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ip6Addr)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -178,7 +187,7 @@ func (this *QHostAddress) SetAddress_1(ip6Addr unsafe.Pointer /*666*/) {
 // Public Visibility=Default Availability=Available
 // [-2] void setAddress(const quint8 *)
 func (this *QHostAddress) SetAddress_2(ip6Addr unsafe.Pointer /*666*/) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddress10setAddressEPKh", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ip6Addr)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddress10setAddressEPKh", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ip6Addr)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -188,7 +197,7 @@ func (this *QHostAddress) SetAddress_2(ip6Addr unsafe.Pointer /*666*/) {
 // [1] bool setAddress(const QString &)
 func (this *QHostAddress) SetAddress_3(address *qtcore.QString) bool {
 	var convArg0 = address.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddress10setAddressERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddress10setAddressERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -199,7 +208,7 @@ func (this *QHostAddress) SetAddress_3(address *qtcore.QString) bool {
 // Public Visibility=Default Availability=Available
 // [-2] void setAddress(enum QHostAddress::SpecialAddress)
 func (this *QHostAddress) SetAddress_4(address int) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddress10setAddressENS_14SpecialAddressE", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), address)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddress10setAddressENS_14SpecialAddressE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), address)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -208,7 +217,7 @@ func (this *QHostAddress) SetAddress_4(address int) {
 // Public Visibility=Default Availability=Available
 // [4] QAbstractSocket::NetworkLayerProtocol protocol()
 func (this *QHostAddress) Protocol() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QHostAddress8protocolEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress8protocolEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -219,7 +228,7 @@ func (this *QHostAddress) Protocol() int {
 // Public Visibility=Default Availability=Available
 // [4] quint32 toIPv4Address()
 func (this *QHostAddress) ToIPv4Address() uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QHostAddress13toIPv4AddressEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress13toIPv4AddressEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
@@ -230,7 +239,7 @@ func (this *QHostAddress) ToIPv4Address() uint {
 // Public Visibility=Default Availability=Available
 // [4] quint32 toIPv4Address(_Bool *)
 func (this *QHostAddress) ToIPv4Address_1(ok unsafe.Pointer /*666*/) uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QHostAddress13toIPv4AddressEPb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress13toIPv4AddressEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
@@ -241,7 +250,7 @@ func (this *QHostAddress) ToIPv4Address_1(ok unsafe.Pointer /*666*/) uint {
 // Public Visibility=Default Availability=Available
 // [16] Q_IPV6ADDR toIPv6Address()
 func (this *QHostAddress) ToIPv6Address() *QIPv6Address /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QHostAddress13toIPv6AddressEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress13toIPv6AddressEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQIPv6AddressFromPointer(unsafe.Pointer(uintptr(rv))) //555
@@ -253,10 +262,11 @@ func (this *QHostAddress) ToIPv6Address() *QIPv6Address /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QString toString()
 func (this *QHostAddress) ToString() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QHostAddress8toStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -265,10 +275,11 @@ func (this *QHostAddress) ToString() *qtcore.QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QString scopeId()
 func (this *QHostAddress) ScopeId() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QHostAddress7scopeIdEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress7scopeIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -278,8 +289,20 @@ func (this *QHostAddress) ScopeId() *qtcore.QString /*123*/ {
 // [-2] void setScopeId(const QString &)
 func (this *QHostAddress) SetScopeId(id *qtcore.QString) {
 	var convArg0 = id.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddress10setScopeIdERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddress10setScopeIdERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtNetwork/qhostaddress.h:137
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isEqual(const QHostAddress &, QHostAddress::ConversionMode)
+func (this *QHostAddress) IsEqual(address *QHostAddress, mode int) bool {
+	var convArg0 = address.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress7isEqualERKS_6QFlagsINS_18ConversionModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
+	gopp.ErrPrint(err, rv)
+	//  return rv
+	return rv != 0
 }
 
 // /usr/include/qt/QtNetwork/qhostaddress.h:144
@@ -287,7 +310,7 @@ func (this *QHostAddress) SetScopeId(id *qtcore.QString) {
 // Public Visibility=Default Availability=Available
 // [1] bool isNull()
 func (this *QHostAddress) IsNull() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QHostAddress6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -298,7 +321,7 @@ func (this *QHostAddress) IsNull() bool {
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
 func (this *QHostAddress) Clear() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN12QHostAddress5clearEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QHostAddress5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -308,7 +331,7 @@ func (this *QHostAddress) Clear() {
 // [1] bool isInSubnet(const QHostAddress &, int)
 func (this *QHostAddress) IsInSubnet(subnet *QHostAddress, netmask int) bool {
 	var convArg0 = subnet.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QHostAddress10isInSubnetERKS_i", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, netmask)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress10isInSubnetERKS_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, netmask)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -319,7 +342,7 @@ func (this *QHostAddress) IsInSubnet(subnet *QHostAddress, netmask int) bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isLoopback()
 func (this *QHostAddress) IsLoopback() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QHostAddress10isLoopbackEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress10isLoopbackEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -330,7 +353,7 @@ func (this *QHostAddress) IsLoopback() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isMulticast()
 func (this *QHostAddress) IsMulticast() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK12QHostAddress11isMulticastEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QHostAddress11isMulticastEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0

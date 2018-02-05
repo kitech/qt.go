@@ -49,27 +49,27 @@ func init() {
 
 //  body block begin
 // void resizeEvent(class QResizeEvent *)
-func (this *QProgressDialog) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+func (this *QProgressDialog) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
 // void closeEvent(class QCloseEvent *)
-func (this *QProgressDialog) InheritCloseEvent(f func(event *qtgui.QCloseEvent /*777 QCloseEvent **/)) {
+func (this *QProgressDialog) InheritCloseEvent(f func(event *qtgui.QCloseEvent /*777 QCloseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "closeEvent", f)
 }
 
 // void changeEvent(class QEvent *)
-func (this *QProgressDialog) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/)) {
+func (this *QProgressDialog) InheritChangeEvent(f func(event *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
 // void showEvent(class QShowEvent *)
-func (this *QProgressDialog) InheritShowEvent(f func(event *qtgui.QShowEvent /*777 QShowEvent **/)) {
+func (this *QProgressDialog) InheritShowEvent(f func(event *qtgui.QShowEvent /*777 QShowEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "showEvent", f)
 }
 
 // void forceShow()
-func (this *QProgressDialog) InheritForceShow(f func()) {
+func (this *QProgressDialog) InheritForceShow(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "forceShow", f)
 }
 

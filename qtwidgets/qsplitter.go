@@ -54,7 +54,7 @@ func (this *QSplitter) InheritCreateHandle(f func() unsafe.Pointer /*666*/) {
 }
 
 // void childEvent(class QChildEvent *)
-func (this *QSplitter) InheritChildEvent(f func(arg0 *qtcore.QChildEvent /*777 QChildEvent **/)) {
+func (this *QSplitter) InheritChildEvent(f func(arg0 *qtcore.QChildEvent /*777 QChildEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "childEvent", f)
 }
 
@@ -64,22 +64,22 @@ func (this *QSplitter) InheritEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/)
 }
 
 // void resizeEvent(class QResizeEvent *)
-func (this *QSplitter) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+func (this *QSplitter) InheritResizeEvent(f func(arg0 *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
 // void changeEvent(class QEvent *)
-func (this *QSplitter) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/)) {
+func (this *QSplitter) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
 // void moveSplitter(int, int)
-func (this *QSplitter) InheritMoveSplitter(f func(pos int, index int)) {
+func (this *QSplitter) InheritMoveSplitter(f func(pos int, index int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "moveSplitter", f)
 }
 
 // void setRubberBand(int)
-func (this *QSplitter) InheritSetRubberBand(f func(position int)) {
+func (this *QSplitter) InheritSetRubberBand(f func(position int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setRubberBand", f)
 }
 

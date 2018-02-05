@@ -45,7 +45,7 @@ func init() {
 
 //  body block begin
 // void setFormat(const class QTextFormat &)
-func (this *QTextObject) InheritSetFormat(f func(format *QTextFormat)) {
+func (this *QTextObject) InheritSetFormat(f func(format *QTextFormat) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setFormat", f)
 }
 

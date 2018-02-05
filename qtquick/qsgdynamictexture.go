@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSGDynamicTexture struct {
 	*QSGTexture
 }
@@ -87,7 +84,7 @@ func (*QSGDynamicTexture) NewFromPointer(cthis unsafe.Pointer) *QSGDynamicTextur
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QSGDynamicTexture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSGDynamicTexture10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGDynamicTexture10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -99,10 +96,16 @@ func (this *QSGDynamicTexture) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool updateTexture()
 func (this *QSGDynamicTexture) UpdateTexture() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSGDynamicTexture13updateTextureEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGDynamicTexture13updateTextureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
+}
+
+func DeleteQSGDynamicTexture(this *QSGDynamicTexture) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGDynamicTextureD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

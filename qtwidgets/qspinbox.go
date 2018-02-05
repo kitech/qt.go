@@ -69,7 +69,7 @@ func (this *QSpinBox) InheritTextFromValue(f func(val int) unsafe.Pointer) {
 }
 
 // void fixup(class QString &)
-func (this *QSpinBox) InheritFixup(f func(str *qtcore.QString)) {
+func (this *QSpinBox) InheritFixup(f func(str *qtcore.QString) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "fixup", f)
 }
 

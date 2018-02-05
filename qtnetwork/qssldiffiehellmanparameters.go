@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -35,9 +34,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -48,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSslDiffieHellmanParameters struct {
 	*qtrt.CObject
 }
@@ -60,7 +57,11 @@ func (this *QSslDiffieHellmanParameters) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSslDiffieHellmanParameters) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSslDiffieHellmanParametersFromPointer(cthis unsafe.Pointer) *QSslDiffieHellmanParameters {
 	return &QSslDiffieHellmanParameters{&qtrt.CObject{cthis}}
@@ -74,10 +75,11 @@ func (*QSslDiffieHellmanParameters) NewFromPointer(cthis unsafe.Pointer) *QSslDi
 // Public static Visibility=Default Availability=Available
 // [8] QSslDiffieHellmanParameters defaultParameters()
 func (this *QSslDiffieHellmanParameters) DefaultParameters() *QSslDiffieHellmanParameters /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParameters17defaultParametersEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParameters17defaultParametersEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQSslDiffieHellmanParametersFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslDiffieHellmanParameters)
 	return rv2
 }
 func QSslDiffieHellmanParameters_DefaultParameters() *QSslDiffieHellmanParameters /*123*/ {
@@ -91,9 +93,10 @@ func QSslDiffieHellmanParameters_DefaultParameters() *QSslDiffieHellmanParameter
 // Public Visibility=Default Availability=Available
 // [-2] void QSslDiffieHellmanParameters()
 func NewQSslDiffieHellmanParameters() *QSslDiffieHellmanParameters {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParametersC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParametersC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSslDiffieHellmanParametersFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSslDiffieHellmanParameters)
 	return gothis
 }
 
@@ -101,9 +104,11 @@ func NewQSslDiffieHellmanParameters() *QSslDiffieHellmanParameters {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QSslDiffieHellmanParameters()
-func DeleteQSslDiffieHellmanParameters(*QSslDiffieHellmanParameters) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParametersD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSslDiffieHellmanParameters(this *QSslDiffieHellmanParameters) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParametersD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtNetwork/qssldiffiehellmanparameters.h:92
@@ -112,7 +117,7 @@ func DeleteQSslDiffieHellmanParameters(*QSslDiffieHellmanParameters) {
 // [-2] void swap(QSslDiffieHellmanParameters &)
 func (this *QSslDiffieHellmanParameters) Swap(other *QSslDiffieHellmanParameters) {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParameters4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParameters4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -122,10 +127,11 @@ func (this *QSslDiffieHellmanParameters) Swap(other *QSslDiffieHellmanParameters
 // [8] QSslDiffieHellmanParameters fromEncoded(const QByteArray &, QSsl::EncodingFormat)
 func (this *QSslDiffieHellmanParameters) FromEncoded(encoded *qtcore.QByteArray, format int) *QSslDiffieHellmanParameters /*123*/ {
 	var convArg0 = encoded.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParameters11fromEncodedERK10QByteArrayN4QSsl14EncodingFormatE", ffiqt.FFI_TYPE_POINTER, convArg0, format)
+	rv, err := qtrt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParameters11fromEncodedERK10QByteArrayN4QSsl14EncodingFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQSslDiffieHellmanParametersFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslDiffieHellmanParameters)
 	return rv2
 }
 func QSslDiffieHellmanParameters_FromEncoded(encoded *qtcore.QByteArray, format int) *QSslDiffieHellmanParameters /*123*/ {
@@ -140,10 +146,11 @@ func QSslDiffieHellmanParameters_FromEncoded(encoded *qtcore.QByteArray, format 
 // [8] QSslDiffieHellmanParameters fromEncoded(QIODevice *, QSsl::EncodingFormat)
 func (this *QSslDiffieHellmanParameters) FromEncoded_1(device *qtcore.QIODevice /*777 QIODevice **/, format int) *QSslDiffieHellmanParameters /*123*/ {
 	var convArg0 = device.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParameters11fromEncodedEP9QIODeviceN4QSsl14EncodingFormatE", ffiqt.FFI_TYPE_POINTER, convArg0, format)
+	rv, err := qtrt.InvokeQtFunc6("_ZN27QSslDiffieHellmanParameters11fromEncodedEP9QIODeviceN4QSsl14EncodingFormatE", qtrt.FFI_TYPE_POINTER, convArg0, format)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQSslDiffieHellmanParametersFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslDiffieHellmanParameters)
 	return rv2
 }
 func QSslDiffieHellmanParameters_FromEncoded_1(device *qtcore.QIODevice /*777 QIODevice **/, format int) *QSslDiffieHellmanParameters /*123*/ {
@@ -157,7 +164,7 @@ func QSslDiffieHellmanParameters_FromEncoded_1(device *qtcore.QIODevice /*777 QI
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty()
 func (this *QSslDiffieHellmanParameters) IsEmpty() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QSslDiffieHellmanParameters7isEmptyEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK27QSslDiffieHellmanParameters7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -168,7 +175,7 @@ func (this *QSslDiffieHellmanParameters) IsEmpty() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isValid()
 func (this *QSslDiffieHellmanParameters) IsValid() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QSslDiffieHellmanParameters7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK27QSslDiffieHellmanParameters7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -179,7 +186,7 @@ func (this *QSslDiffieHellmanParameters) IsValid() bool {
 // Public Visibility=Default Availability=Available
 // [4] QSslDiffieHellmanParameters::Error error()
 func (this *QSslDiffieHellmanParameters) Error() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QSslDiffieHellmanParameters5errorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK27QSslDiffieHellmanParameters5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -190,10 +197,11 @@ func (this *QSslDiffieHellmanParameters) Error() int {
 // Public Visibility=Default Availability=Available
 // [8] QString errorString()
 func (this *QSslDiffieHellmanParameters) ErrorString() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK27QSslDiffieHellmanParameters11errorStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK27QSslDiffieHellmanParameters11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 

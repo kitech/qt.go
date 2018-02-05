@@ -41,7 +41,7 @@ func init() {
 
 //  body block begin
 // void run()
-func (this *QThread) InheritRun(f func()) {
+func (this *QThread) InheritRun(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "run", f)
 }
 
@@ -51,7 +51,7 @@ func (this *QThread) InheritExec(f func() int) {
 }
 
 // void setTerminationEnabled(_Bool)
-func (this *QThread) InheritSetTerminationEnabled(f func(enabled bool)) {
+func (this *QThread) InheritSetTerminationEnabled(f func(enabled bool) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setTerminationEnabled", f)
 }
 

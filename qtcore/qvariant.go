@@ -41,7 +41,7 @@ func init() {
 
 //  body block begin
 // void create(int, const void *)
-func (this *QVariant) InheritCreate(f func(type_ int, copy unsafe.Pointer /*666*/)) {
+func (this *QVariant) InheritCreate(f func(type_ int, copy unsafe.Pointer /*666*/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "create", f)
 }
 

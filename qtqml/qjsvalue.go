@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -52,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QJSValue struct {
 	*qtrt.CObject
 }
@@ -64,7 +61,11 @@ func (this *QJSValue) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QJSValue) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQJSValueFromPointer(cthis unsafe.Pointer) *QJSValue {
 	return &QJSValue{&qtrt.CObject{cthis}}
@@ -78,9 +79,10 @@ func (*QJSValue) NewFromPointer(cthis unsafe.Pointer) *QJSValue {
 // Public Visibility=Default Availability=Available
 // [-2] void QJSValue(enum QJSValue::SpecialValue)
 func NewQJSValue(value int) *QJSValue {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValueC2ENS_12SpecialValueE", ffiqt.FFI_TYPE_POINTER, value)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2ENS_12SpecialValueE", qtrt.FFI_TYPE_POINTER, value)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQJSValue)
 	return gothis
 }
 
@@ -89,9 +91,10 @@ func NewQJSValue(value int) *QJSValue {
 // Public Visibility=Default Availability=Available
 // [-2] void QJSValue(_Bool)
 func NewQJSValue_1(value bool) *QJSValue {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValueC2Eb", ffiqt.FFI_TYPE_POINTER, value)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2Eb", qtrt.FFI_TYPE_POINTER, value)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQJSValue)
 	return gothis
 }
 
@@ -100,9 +103,10 @@ func NewQJSValue_1(value bool) *QJSValue {
 // Public Visibility=Default Availability=Available
 // [-2] void QJSValue(int)
 func NewQJSValue_2(value int) *QJSValue {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValueC2Ei", ffiqt.FFI_TYPE_POINTER, value)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2Ei", qtrt.FFI_TYPE_POINTER, value)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQJSValue)
 	return gothis
 }
 
@@ -111,9 +115,10 @@ func NewQJSValue_2(value int) *QJSValue {
 // Public Visibility=Default Availability=Available
 // [-2] void QJSValue(uint)
 func NewQJSValue_3(value uint) *QJSValue {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValueC2Ej", ffiqt.FFI_TYPE_POINTER, value)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2Ej", qtrt.FFI_TYPE_POINTER, value)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQJSValue)
 	return gothis
 }
 
@@ -122,9 +127,10 @@ func NewQJSValue_3(value uint) *QJSValue {
 // Public Visibility=Default Availability=Available
 // [-2] void QJSValue(double)
 func NewQJSValue_4(value float64) *QJSValue {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValueC2Ed", ffiqt.FFI_TYPE_POINTER, value)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2Ed", qtrt.FFI_TYPE_POINTER, value)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQJSValue)
 	return gothis
 }
 
@@ -134,9 +140,10 @@ func NewQJSValue_4(value float64) *QJSValue {
 // [-2] void QJSValue(const QString &)
 func NewQJSValue_5(value *qtcore.QString) *QJSValue {
 	var convArg0 = value.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValueC2ERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQJSValue)
 	return gothis
 }
 
@@ -146,9 +153,10 @@ func NewQJSValue_5(value *qtcore.QString) *QJSValue {
 // [-2] void QJSValue(const QLatin1String &)
 func NewQJSValue_6(value *qtcore.QLatin1String) *QJSValue {
 	var convArg0 = value.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValueC2ERK13QLatin1String", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2ERK13QLatin1String", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQJSValue)
 	return gothis
 }
 
@@ -159,9 +167,10 @@ func NewQJSValue_6(value *qtcore.QLatin1String) *QJSValue {
 func NewQJSValue_7(str string) *QJSValue {
 	var convArg0 = qtrt.CString(str)
 	defer qtrt.FreeMem(convArg0)
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValueC2EPKc", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueC2EPKc", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQJSValue)
 	return gothis
 }
 
@@ -169,9 +178,11 @@ func NewQJSValue_7(str string) *QJSValue {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QJSValue()
-func DeleteQJSValue(*QJSValue) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValueD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQJSValue(this *QJSValue) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValueD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQml/qjsvalue.h:94
@@ -179,7 +190,7 @@ func DeleteQJSValue(*QJSValue) {
 // Public Visibility=Default Availability=Available
 // [1] bool isBool()
 func (this *QJSValue) IsBool() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue6isBoolEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue6isBoolEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -190,7 +201,7 @@ func (this *QJSValue) IsBool() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isNumber()
 func (this *QJSValue) IsNumber() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue8isNumberEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue8isNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -201,7 +212,7 @@ func (this *QJSValue) IsNumber() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isNull()
 func (this *QJSValue) IsNull() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue6isNullEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -212,7 +223,7 @@ func (this *QJSValue) IsNull() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isString()
 func (this *QJSValue) IsString() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue8isStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue8isStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -223,7 +234,7 @@ func (this *QJSValue) IsString() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isUndefined()
 func (this *QJSValue) IsUndefined() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue11isUndefinedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue11isUndefinedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -234,7 +245,7 @@ func (this *QJSValue) IsUndefined() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isVariant()
 func (this *QJSValue) IsVariant() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue9isVariantEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue9isVariantEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -245,7 +256,7 @@ func (this *QJSValue) IsVariant() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isQObject()
 func (this *QJSValue) IsQObject() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue9isQObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue9isQObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -256,7 +267,7 @@ func (this *QJSValue) IsQObject() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isQMetaObject()
 func (this *QJSValue) IsQMetaObject() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue13isQMetaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue13isQMetaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -267,7 +278,7 @@ func (this *QJSValue) IsQMetaObject() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isObject()
 func (this *QJSValue) IsObject() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue8isObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue8isObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -278,7 +289,7 @@ func (this *QJSValue) IsObject() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isDate()
 func (this *QJSValue) IsDate() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue6isDateEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue6isDateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -289,7 +300,7 @@ func (this *QJSValue) IsDate() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isRegExp()
 func (this *QJSValue) IsRegExp() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue8isRegExpEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue8isRegExpEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -300,7 +311,7 @@ func (this *QJSValue) IsRegExp() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isArray()
 func (this *QJSValue) IsArray() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue7isArrayEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue7isArrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -311,7 +322,7 @@ func (this *QJSValue) IsArray() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isError()
 func (this *QJSValue) IsError() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue7isErrorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue7isErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -322,10 +333,11 @@ func (this *QJSValue) IsError() bool {
 // Public Visibility=Default Availability=Available
 // [8] QString toString()
 func (this *QJSValue) ToString() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue8toStringEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -334,7 +346,7 @@ func (this *QJSValue) ToString() *qtcore.QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] double toNumber()
 func (this *QJSValue) ToNumber() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue8toNumberEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue8toNumberEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
@@ -345,7 +357,7 @@ func (this *QJSValue) ToNumber() float64 {
 // Public Visibility=Default Availability=Available
 // [4] qint32 toInt()
 func (this *QJSValue) ToInt() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue5toIntEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue5toIntEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv) // 222
@@ -356,7 +368,7 @@ func (this *QJSValue) ToInt() int {
 // Public Visibility=Default Availability=Available
 // [4] quint32 toUInt()
 func (this *QJSValue) ToUInt() uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue6toUIntEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue6toUIntEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
@@ -367,7 +379,7 @@ func (this *QJSValue) ToUInt() uint {
 // Public Visibility=Default Availability=Available
 // [1] bool toBool()
 func (this *QJSValue) ToBool() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue6toBoolEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue6toBoolEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -378,10 +390,11 @@ func (this *QJSValue) ToBool() bool {
 // Public Visibility=Default Availability=Available
 // [16] QVariant toVariant()
 func (this *QJSValue) ToVariant() *qtcore.QVariant /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue9toVariantEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue9toVariantEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
 }
 
@@ -390,7 +403,7 @@ func (this *QJSValue) ToVariant() *qtcore.QVariant /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QObject * toQObject()
 func (this *QJSValue) ToQObject() *qtcore.QObject /*777 QObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue9toQObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue9toQObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -402,7 +415,7 @@ func (this *QJSValue) ToQObject() *qtcore.QObject /*777 QObject **/ {
 // Public Visibility=Default Availability=Available
 // [8] const QMetaObject * toQMetaObject()
 func (this *QJSValue) ToQMetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue13toQMetaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue13toQMetaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -414,10 +427,11 @@ func (this *QJSValue) ToQMetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // Public Visibility=Default Availability=Available
 // [8] QDateTime toDateTime()
 func (this *QJSValue) ToDateTime() *qtcore.QDateTime /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue10toDateTimeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue10toDateTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQDateTime)
 	return rv2
 }
 
@@ -427,7 +441,7 @@ func (this *QJSValue) ToDateTime() *qtcore.QDateTime /*123*/ {
 // [1] bool equals(const QJSValue &)
 func (this *QJSValue) Equals(other *QJSValue) bool {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue6equalsERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue6equalsERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -439,7 +453,7 @@ func (this *QJSValue) Equals(other *QJSValue) bool {
 // [1] bool strictlyEquals(const QJSValue &)
 func (this *QJSValue) StrictlyEquals(other *QJSValue) bool {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue14strictlyEqualsERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue14strictlyEqualsERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -450,10 +464,11 @@ func (this *QJSValue) StrictlyEquals(other *QJSValue) bool {
 // Public Visibility=Default Availability=Available
 // [8] QJSValue prototype()
 func (this *QJSValue) Prototype() *QJSValue /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue9prototypeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue9prototypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJSValue)
 	return rv2
 }
 
@@ -463,7 +478,7 @@ func (this *QJSValue) Prototype() *QJSValue /*123*/ {
 // [-2] void setPrototype(const QJSValue &)
 func (this *QJSValue) SetPrototype(prototype *QJSValue) {
 	var convArg0 = prototype.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValue12setPrototypeERKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValue12setPrototypeERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -473,10 +488,11 @@ func (this *QJSValue) SetPrototype(prototype *QJSValue) {
 // [8] QJSValue property(const QString &)
 func (this *QJSValue) Property(name *qtcore.QString) *QJSValue /*123*/ {
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue8propertyERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue8propertyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJSValue)
 	return rv2
 }
 
@@ -485,10 +501,11 @@ func (this *QJSValue) Property(name *qtcore.QString) *QJSValue /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QJSValue property(quint32)
 func (this *QJSValue) Property_1(arrayIndex uint) *QJSValue /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue8propertyEj", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arrayIndex)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue8propertyEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arrayIndex)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJSValue)
 	return rv2
 }
 
@@ -499,7 +516,7 @@ func (this *QJSValue) Property_1(arrayIndex uint) *QJSValue /*123*/ {
 func (this *QJSValue) SetProperty(name *qtcore.QString, value *QJSValue) {
 	var convArg0 = name.GetCthis()
 	var convArg1 = value.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValue11setPropertyERK7QStringRKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValue11setPropertyERK7QStringRKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -509,7 +526,7 @@ func (this *QJSValue) SetProperty(name *qtcore.QString, value *QJSValue) {
 // [-2] void setProperty(quint32, const QJSValue &)
 func (this *QJSValue) SetProperty_1(arrayIndex uint, value *QJSValue) {
 	var convArg1 = value.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValue11setPropertyEjRKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), arrayIndex, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValue11setPropertyEjRKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arrayIndex, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -519,7 +536,7 @@ func (this *QJSValue) SetProperty_1(arrayIndex uint, value *QJSValue) {
 // [1] bool hasProperty(const QString &)
 func (this *QJSValue) HasProperty(name *qtcore.QString) bool {
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue11hasPropertyERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue11hasPropertyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -531,7 +548,7 @@ func (this *QJSValue) HasProperty(name *qtcore.QString) bool {
 // [1] bool hasOwnProperty(const QString &)
 func (this *QJSValue) HasOwnProperty(name *qtcore.QString) bool {
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue14hasOwnPropertyERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue14hasOwnPropertyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -543,7 +560,7 @@ func (this *QJSValue) HasOwnProperty(name *qtcore.QString) bool {
 // [1] bool deleteProperty(const QString &)
 func (this *QJSValue) DeleteProperty(name *qtcore.QString) bool {
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN8QJSValue14deletePropertyERK7QString", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QJSValue14deletePropertyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -554,7 +571,7 @@ func (this *QJSValue) DeleteProperty(name *qtcore.QString) bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isCallable()
 func (this *QJSValue) IsCallable() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue10isCallableEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue10isCallableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -565,7 +582,7 @@ func (this *QJSValue) IsCallable() bool {
 // Public Visibility=Default Availability=Available
 // [8] QJSEngine * engine()
 func (this *QJSValue) Engine() *QJSEngine /*777 QJSEngine **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK8QJSValue6engineEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QJSValue6engineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQJSEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444

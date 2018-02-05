@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -35,9 +34,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -48,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QHttpPart struct {
 	*qtrt.CObject
 }
@@ -60,7 +57,11 @@ func (this *QHttpPart) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QHttpPart) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQHttpPartFromPointer(cthis unsafe.Pointer) *QHttpPart {
 	return &QHttpPart{&qtrt.CObject{cthis}}
@@ -74,9 +75,10 @@ func (*QHttpPart) NewFromPointer(cthis unsafe.Pointer) *QHttpPart {
 // Public Visibility=Default Availability=Available
 // [-2] void QHttpPart()
 func NewQHttpPart() *QHttpPart {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHttpPartC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QHttpPartC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQHttpPartFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQHttpPart)
 	return gothis
 }
 
@@ -84,9 +86,11 @@ func NewQHttpPart() *QHttpPart {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QHttpPart()
-func DeleteQHttpPart(*QHttpPart) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHttpPartD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQHttpPart(this *QHttpPart) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QHttpPartD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtNetwork/qhttpmultipart.h:66
@@ -95,7 +99,7 @@ func DeleteQHttpPart(*QHttpPart) {
 // [-2] void swap(QHttpPart &)
 func (this *QHttpPart) Swap(other *QHttpPart) {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHttpPart4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QHttpPart4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -105,7 +109,7 @@ func (this *QHttpPart) Swap(other *QHttpPart) {
 // [-2] void setHeader(QNetworkRequest::KnownHeaders, const QVariant &)
 func (this *QHttpPart) SetHeader(header int, value *qtcore.QVariant) {
 	var convArg1 = value.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHttpPart9setHeaderEN15QNetworkRequest12KnownHeadersERK8QVariant", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), header, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QHttpPart9setHeaderEN15QNetworkRequest12KnownHeadersERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), header, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -116,7 +120,7 @@ func (this *QHttpPart) SetHeader(header int, value *qtcore.QVariant) {
 func (this *QHttpPart) SetRawHeader(headerName *qtcore.QByteArray, headerValue *qtcore.QByteArray) {
 	var convArg0 = headerName.GetCthis()
 	var convArg1 = headerValue.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHttpPart12setRawHeaderERK10QByteArrayS2_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QHttpPart12setRawHeaderERK10QByteArrayS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -126,7 +130,7 @@ func (this *QHttpPart) SetRawHeader(headerName *qtcore.QByteArray, headerValue *
 // [-2] void setBody(const QByteArray &)
 func (this *QHttpPart) SetBody(body *qtcore.QByteArray) {
 	var convArg0 = body.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHttpPart7setBodyERK10QByteArray", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QHttpPart7setBodyERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -136,7 +140,7 @@ func (this *QHttpPart) SetBody(body *qtcore.QByteArray) {
 // [-2] void setBodyDevice(QIODevice *)
 func (this *QHttpPart) SetBodyDevice(device *qtcore.QIODevice /*777 QIODevice **/) {
 	var convArg0 = device.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN9QHttpPart13setBodyDeviceEP9QIODevice", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QHttpPart13setBodyDeviceEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 

@@ -41,12 +41,12 @@ func init() {
 
 //  body block begin
 // void convertFromAscii(const char *, int, class QChar *&)
-func (this *QAbstractConcatenable) InheritConvertFromAscii(f func(a string, len int, out *QChar)) {
+func (this *QAbstractConcatenable) InheritConvertFromAscii(f func(a string, len int, out *QChar) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "convertFromAscii", f)
 }
 
 // void appendLatin1To(const char *, int, class QChar *)
-func (this *QAbstractConcatenable) InheritAppendLatin1To(f func(a string, len int, out *QChar /*777 QChar **/)) {
+func (this *QAbstractConcatenable) InheritAppendLatin1To(f func(a string, len int, out *QChar /*777 QChar **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "appendLatin1To", f)
 }
 

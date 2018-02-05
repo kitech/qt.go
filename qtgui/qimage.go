@@ -60,12 +60,12 @@ func (this *QImage) InheritRgbSwapped_helper(f func() unsafe.Pointer) {
 }
 
 // void mirrored_inplace(_Bool, _Bool)
-func (this *QImage) InheritMirrored_inplace(f func(horizontal bool, vertical bool)) {
+func (this *QImage) InheritMirrored_inplace(f func(horizontal bool, vertical bool) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mirrored_inplace", f)
 }
 
 // void rgbSwapped_inplace()
-func (this *QImage) InheritRgbSwapped_inplace(f func()) {
+func (this *QImage) InheritRgbSwapped_inplace(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rgbSwapped_inplace", f)
 }
 

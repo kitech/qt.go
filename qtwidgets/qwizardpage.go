@@ -49,7 +49,7 @@ func init() {
 
 //  body block begin
 // void setField(const class QString &, const class QVariant &)
-func (this *QWizardPage) InheritSetField(f func(name *qtcore.QString, value *qtcore.QVariant)) {
+func (this *QWizardPage) InheritSetField(f func(name *qtcore.QString, value *qtcore.QVariant) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setField", f)
 }
 
@@ -59,7 +59,7 @@ func (this *QWizardPage) InheritField(f func(name *qtcore.QString) unsafe.Pointe
 }
 
 // void registerField(const class QString &, class QWidget *, const char *, const char *)
-func (this *QWizardPage) InheritRegisterField(f func(name *qtcore.QString, widget *QWidget /*777 QWidget **/, property string, changedSignal string)) {
+func (this *QWizardPage) InheritRegisterField(f func(name *qtcore.QString, widget *QWidget /*777 QWidget **/, property string, changedSignal string) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "registerField", f)
 }
 

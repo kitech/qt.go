@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSGTextureMaterial struct {
 	*QSGOpaqueTextureMaterial
 }
@@ -87,7 +84,7 @@ func (*QSGTextureMaterial) NewFromPointer(cthis unsafe.Pointer) *QSGTextureMater
 // Public virtual Visibility=Default Availability=Available
 // [8] QSGMaterialType * type()
 func (this *QSGTextureMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSGTextureMaterial4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSGTextureMaterial4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSGMaterialTypeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -99,11 +96,17 @@ func (this *QSGTextureMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **
 // Public virtual Visibility=Default Availability=Available
 // [8] QSGMaterialShader * createShader()
 func (this *QSGTextureMaterial) CreateShader() *QSGMaterialShader /*777 QSGMaterialShader **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSGTextureMaterial12createShaderEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSGTextureMaterial12createShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSGMaterialShaderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 	return rv2
+}
+
+func DeleteQSGTextureMaterial(this *QSGTextureMaterial) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QSGTextureMaterialD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

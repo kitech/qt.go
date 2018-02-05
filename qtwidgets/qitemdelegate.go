@@ -49,32 +49,32 @@ func init() {
 
 //  body block begin
 // void drawDisplay(class QPainter *, const class QStyleOptionViewItem &, const class QRect &, const class QString &)
-func (this *QItemDelegate) InheritDrawDisplay(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, rect *qtcore.QRect, text *qtcore.QString)) {
+func (this *QItemDelegate) InheritDrawDisplay(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, rect *qtcore.QRect, text *qtcore.QString) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawDisplay", f)
 }
 
 // void drawDecoration(class QPainter *, const class QStyleOptionViewItem &, const class QRect &, const class QPixmap &)
-func (this *QItemDelegate) InheritDrawDecoration(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, rect *qtcore.QRect, pixmap *qtgui.QPixmap)) {
+func (this *QItemDelegate) InheritDrawDecoration(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, rect *qtcore.QRect, pixmap *qtgui.QPixmap) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawDecoration", f)
 }
 
 // void drawFocus(class QPainter *, const class QStyleOptionViewItem &, const class QRect &)
-func (this *QItemDelegate) InheritDrawFocus(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, rect *qtcore.QRect)) {
+func (this *QItemDelegate) InheritDrawFocus(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, rect *qtcore.QRect) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawFocus", f)
 }
 
 // void drawCheck(class QPainter *, const class QStyleOptionViewItem &, const class QRect &, Qt::CheckState)
-func (this *QItemDelegate) InheritDrawCheck(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, rect *qtcore.QRect, state int)) {
+func (this *QItemDelegate) InheritDrawCheck(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, rect *qtcore.QRect, state int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawCheck", f)
 }
 
 // void drawBackground(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QItemDelegate) InheritDrawBackground(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, index *qtcore.QModelIndex)) {
+func (this *QItemDelegate) InheritDrawBackground(f func(painter *qtgui.QPainter /*777 QPainter **/, option *QStyleOptionViewItem, index *qtcore.QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawBackground", f)
 }
 
 // void doLayout(const class QStyleOptionViewItem &, class QRect *, class QRect *, class QRect *, _Bool)
-func (this *QItemDelegate) InheritDoLayout(f func(option *QStyleOptionViewItem, checkRect *qtcore.QRect /*777 QRect **/, iconRect *qtcore.QRect /*777 QRect **/, textRect *qtcore.QRect /*777 QRect **/, hint bool)) {
+func (this *QItemDelegate) InheritDoLayout(f func(option *QStyleOptionViewItem, checkRect *qtcore.QRect /*777 QRect **/, iconRect *qtcore.QRect /*777 QRect **/, textRect *qtcore.QRect /*777 QRect **/, hint bool) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "doLayout", f)
 }
 

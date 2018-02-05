@@ -10,14 +10,13 @@ package qtquick
 
 /*
 #include <stdlib.h>
-// extern C begin: 15
+// extern C begin: 16
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSGTextureProvider struct {
 	*qtcore.QObject
 }
@@ -87,7 +84,7 @@ func (*QSGTextureProvider) NewFromPointer(cthis unsafe.Pointer) *QSGTextureProvi
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject()
 func (this *QSGTextureProvider) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSGTextureProvider10metaObjectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSGTextureProvider10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -99,7 +96,7 @@ func (this *QSGTextureProvider) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSGTexture * texture()
 func (this *QSGTextureProvider) Texture() *QSGTexture /*777 QSGTexture **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK18QSGTextureProvider7textureEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSGTextureProvider7textureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -111,8 +108,14 @@ func (this *QSGTextureProvider) Texture() *QSGTexture /*777 QSGTexture **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void textureChanged()
 func (this *QSGTextureProvider) TextureChanged() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN18QSGTextureProvider14textureChangedEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QSGTextureProvider14textureChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
+}
+
+func DeleteQSGTextureProvider(this *QSGTextureProvider) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QSGTextureProviderD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

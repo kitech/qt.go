@@ -1663,4 +1663,68 @@ const Qt__OpaqueEdges Qt__DrawingHint = 170
 const Qt__OpaqueFrame Qt__DrawingHint = 495
 const Qt__OpaqueAll Qt__DrawingHint = 511
 
+type Qt__KeyType = int
+
+const Qt__PrivateKey Qt__KeyType = 0
+const Qt__PublicKey Qt__KeyType = 1
+
+type Qt__EncodingFormat = int
+
+const Qt__Pem Qt__EncodingFormat = 0
+const Qt__Der Qt__EncodingFormat = 1
+
+type Qt__KeyAlgorithm = int
+
+const Qt__Opaque Qt__KeyAlgorithm = 0
+const Qt__Rsa Qt__KeyAlgorithm = 1
+const Qt__Dsa Qt__KeyAlgorithm = 2
+const Qt__Ec Qt__KeyAlgorithm = 3
+
+type Qt__AlternativeNameEntryType = int
+
+const Qt__EmailEntry Qt__AlternativeNameEntryType = 0
+const Qt__DnsEntry Qt__AlternativeNameEntryType = 1
+
+type Qt__SslProtocol = int
+
+const Qt__SslV3 Qt__SslProtocol = 0
+const Qt__SslV2 Qt__SslProtocol = 1
+const Qt__TlsV1_0 Qt__SslProtocol = 2
+const Qt__TlsV1_1 Qt__SslProtocol = 3
+const Qt__TlsV1_2 Qt__SslProtocol = 4
+const Qt__AnyProtocol Qt__SslProtocol = 5
+const Qt__TlsV1SslV3 Qt__SslProtocol = 6
+const Qt__SecureProtocols Qt__SslProtocol = 7
+const Qt__TlsV1_0OrLater Qt__SslProtocol = 8
+const Qt__TlsV1_1OrLater Qt__SslProtocol = 9
+const Qt__TlsV1_2OrLater Qt__SslProtocol = 10
+const Qt__UnknownProtocol Qt__SslProtocol = -1
+
+type Qt__SslOption = int
+
+const Qt__SslOptionDisableEmptyFragments Qt__SslOption = 1
+const Qt__SslOptionDisableSessionTickets Qt__SslOption = 2
+const Qt__SslOptionDisableCompression Qt__SslOption = 4
+const Qt__SslOptionDisableServerNameIndication Qt__SslOption = 8
+const Qt__SslOptionDisableLegacyRenegotiation Qt__SslOption = 16
+const Qt__SslOptionDisableSessionSharing Qt__SslOption = 32
+const Qt__SslOptionDisableSessionPersistence Qt__SslOption = 64
+const Qt__SslOptionDisableServerCipherPreference Qt__SslOption = 128
+
+type Qt__AutoParentResult = int
+
+const Qt__Parented Qt__AutoParentResult = 0
+const Qt__IncompatibleObject Qt__AutoParentResult = 1
+const Qt__IncompatibleParent Qt__AutoParentResult = 2
+
+type Qt__RegistrationType = int
+
+const Qt__TypeRegistration Qt__RegistrationType = 0
+const Qt__InterfaceRegistration Qt__RegistrationType = 1
+const Qt__AutoParentRegistration Qt__RegistrationType = 2
+const Qt__SingletonRegistration Qt__RegistrationType = 3
+const Qt__CompositeRegistration Qt__RegistrationType = 4
+const Qt__CompositeSingletonRegistration Qt__RegistrationType = 5
+const Qt__QmlUnitCacheHookRegistration Qt__RegistrationType = 6
+
 //  body block end

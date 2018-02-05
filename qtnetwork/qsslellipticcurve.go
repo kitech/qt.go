@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -35,9 +34,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -48,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSslEllipticCurve struct {
 	*qtrt.CObject
 }
@@ -60,7 +57,11 @@ func (this *QSslEllipticCurve) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSslEllipticCurve) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSslEllipticCurveFromPointer(cthis unsafe.Pointer) *QSslEllipticCurve {
 	return &QSslEllipticCurve{&qtrt.CObject{cthis}}
@@ -74,9 +75,10 @@ func (*QSslEllipticCurve) NewFromPointer(cthis unsafe.Pointer) *QSslEllipticCurv
 // Public inline Visibility=Default Availability=Available
 // [-2] void QSslEllipticCurve()
 func NewQSslEllipticCurve() *QSslEllipticCurve {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslEllipticCurveC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslEllipticCurveC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSslEllipticCurveFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSslEllipticCurve)
 	return gothis
 }
 
@@ -86,10 +88,11 @@ func NewQSslEllipticCurve() *QSslEllipticCurve {
 // [4] QSslEllipticCurve fromShortName(const QString &)
 func (this *QSslEllipticCurve) FromShortName(name *qtcore.QString) *QSslEllipticCurve /*123*/ {
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslEllipticCurve13fromShortNameERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslEllipticCurve13fromShortNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQSslEllipticCurveFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslEllipticCurve)
 	return rv2
 }
 func QSslEllipticCurve_FromShortName(name *qtcore.QString) *QSslEllipticCurve /*123*/ {
@@ -104,10 +107,11 @@ func QSslEllipticCurve_FromShortName(name *qtcore.QString) *QSslEllipticCurve /*
 // [4] QSslEllipticCurve fromLongName(const QString &)
 func (this *QSslEllipticCurve) FromLongName(name *qtcore.QString) *QSslEllipticCurve /*123*/ {
 	var convArg0 = name.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN17QSslEllipticCurve12fromLongNameERK7QString", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslEllipticCurve12fromLongNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	rv2 := /*==*/ NewQSslEllipticCurveFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslEllipticCurve)
 	return rv2
 }
 func QSslEllipticCurve_FromLongName(name *qtcore.QString) *QSslEllipticCurve /*123*/ {
@@ -121,10 +125,11 @@ func QSslEllipticCurve_FromLongName(name *qtcore.QString) *QSslEllipticCurve /*1
 // Public Visibility=Default Availability=Available
 // [8] QString shortName()
 func (this *QSslEllipticCurve) ShortName() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSslEllipticCurve9shortNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslEllipticCurve9shortNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -133,10 +138,11 @@ func (this *QSslEllipticCurve) ShortName() *qtcore.QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] QString longName()
 func (this *QSslEllipticCurve) LongName() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSslEllipticCurve8longNameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslEllipticCurve8longNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -145,7 +151,7 @@ func (this *QSslEllipticCurve) LongName() *qtcore.QString /*123*/ {
 // Public inline Visibility=Default Availability=Available
 // [1] bool isValid()
 func (this *QSslEllipticCurve) IsValid() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSslEllipticCurve7isValidEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslEllipticCurve7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
@@ -156,10 +162,16 @@ func (this *QSslEllipticCurve) IsValid() bool {
 // Public Visibility=Default Availability=Available
 // [1] bool isTlsNamedCurve()
 func (this *QSslEllipticCurve) IsTlsNamedCurve() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK17QSslEllipticCurve15isTlsNamedCurveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSslEllipticCurve15isTlsNamedCurveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return rv != 0
+}
+
+func DeleteQSslEllipticCurve(this *QSslEllipticCurve) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QSslEllipticCurveD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

@@ -54,37 +54,37 @@ func (this *QDial) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool) 
 }
 
 // void resizeEvent(class QResizeEvent *)
-func (this *QDial) InheritResizeEvent(f func(re *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+func (this *QDial) InheritResizeEvent(f func(re *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
 // void paintEvent(class QPaintEvent *)
-func (this *QDial) InheritPaintEvent(f func(pe *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+func (this *QDial) InheritPaintEvent(f func(pe *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
 // void mousePressEvent(class QMouseEvent *)
-func (this *QDial) InheritMousePressEvent(f func(me *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QDial) InheritMousePressEvent(f func(me *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mousePressEvent", f)
 }
 
 // void mouseReleaseEvent(class QMouseEvent *)
-func (this *QDial) InheritMouseReleaseEvent(f func(me *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QDial) InheritMouseReleaseEvent(f func(me *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseReleaseEvent", f)
 }
 
 // void mouseMoveEvent(class QMouseEvent *)
-func (this *QDial) InheritMouseMoveEvent(f func(me *qtgui.QMouseEvent /*777 QMouseEvent **/)) {
+func (this *QDial) InheritMouseMoveEvent(f func(me *qtgui.QMouseEvent /*777 QMouseEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "mouseMoveEvent", f)
 }
 
 // void sliderChange(enum QAbstractSlider::SliderChange)
-func (this *QDial) InheritSliderChange(f func(change int)) {
+func (this *QDial) InheritSliderChange(f func(change int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "sliderChange", f)
 }
 
 // void initStyleOption(class QStyleOptionSlider *)
-func (this *QDial) InheritInitStyleOption(f func(option *QStyleOptionSlider /*777 QStyleOptionSlider **/)) {
+func (this *QDial) InheritInitStyleOption(f func(option *QStyleOptionSlider /*777 QStyleOptionSlider **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 

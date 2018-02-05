@@ -49,7 +49,7 @@ func init() {
 
 //  body block begin
 // void addChildLayoutItem(class QGraphicsLayoutItem *)
-func (this *QGraphicsLayout) InheritAddChildLayoutItem(f func(layoutItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/)) {
+func (this *QGraphicsLayout) InheritAddChildLayoutItem(f func(layoutItem *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "addChildLayoutItem", f)
 }
 

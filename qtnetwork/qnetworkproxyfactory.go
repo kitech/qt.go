@@ -10,14 +10,13 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 24
+// extern C begin: 25
 */
 // import "C"
 import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -35,9 +34,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -48,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QNetworkProxyFactory struct {
 	*qtrt.CObject
 }
@@ -60,7 +57,11 @@ func (this *QNetworkProxyFactory) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QNetworkProxyFactory) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQNetworkProxyFactoryFromPointer(cthis unsafe.Pointer) *QNetworkProxyFactory {
 	return &QNetworkProxyFactory{&qtrt.CObject{cthis}}
@@ -74,9 +75,10 @@ func (*QNetworkProxyFactory) NewFromPointer(cthis unsafe.Pointer) *QNetworkProxy
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyFactory()
 func NewQNetworkProxyFactory() *QNetworkProxyFactory {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkProxyFactoryC1Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkProxyFactoryC1Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQNetworkProxyFactoryFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQNetworkProxyFactory)
 	return gothis
 }
 
@@ -84,9 +86,11 @@ func NewQNetworkProxyFactory() *QNetworkProxyFactory {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QNetworkProxyFactory()
-func DeleteQNetworkProxyFactory(*QNetworkProxyFactory) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkProxyFactoryD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQNetworkProxyFactory(this *QNetworkProxyFactory) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkProxyFactoryD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtNetwork/qnetworkproxy.h:224
@@ -94,7 +98,7 @@ func DeleteQNetworkProxyFactory(*QNetworkProxyFactory) {
 // Public static Visibility=Default Availability=Available
 // [1] bool usesSystemConfiguration()
 func (this *QNetworkProxyFactory) UsesSystemConfiguration() bool {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkProxyFactory23usesSystemConfigurationEv", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkProxyFactory23usesSystemConfigurationEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	// return rv
 	return rv != 0
@@ -110,7 +114,7 @@ func QNetworkProxyFactory_UsesSystemConfiguration() bool {
 // Public static Visibility=Default Availability=Available
 // [-2] void setUseSystemConfiguration(_Bool)
 func (this *QNetworkProxyFactory) SetUseSystemConfiguration(enable bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkProxyFactory25setUseSystemConfigurationEb", ffiqt.FFI_TYPE_POINTER, enable)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkProxyFactory25setUseSystemConfigurationEb", qtrt.FFI_TYPE_POINTER, enable)
 	gopp.ErrPrint(err, rv)
 }
 func QNetworkProxyFactory_SetUseSystemConfiguration(enable bool) {
@@ -124,7 +128,7 @@ func QNetworkProxyFactory_SetUseSystemConfiguration(enable bool) {
 // [-2] void setApplicationProxyFactory(QNetworkProxyFactory *)
 func (this *QNetworkProxyFactory) SetApplicationProxyFactory(factory *QNetworkProxyFactory /*777 QNetworkProxyFactory **/) {
 	var convArg0 = factory.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QNetworkProxyFactory26setApplicationProxyFactoryEPS_", ffiqt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkProxyFactory26setApplicationProxyFactoryEPS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
 func QNetworkProxyFactory_SetApplicationProxyFactory(factory *QNetworkProxyFactory /*777 QNetworkProxyFactory **/) {

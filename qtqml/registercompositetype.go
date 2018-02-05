@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -52,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type RegisterCompositeType struct {
 	*qtrt.CObject
 }
@@ -64,13 +61,23 @@ func (this *RegisterCompositeType) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *RegisterCompositeType) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewRegisterCompositeTypeFromPointer(cthis unsafe.Pointer) *RegisterCompositeType {
 	return &RegisterCompositeType{&qtrt.CObject{cthis}}
 }
 func (*RegisterCompositeType) NewFromPointer(cthis unsafe.Pointer) *RegisterCompositeType {
 	return NewRegisterCompositeTypeFromPointer(cthis)
+}
+
+func DeleteRegisterCompositeType(this *RegisterCompositeType) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN21RegisterCompositeTypeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

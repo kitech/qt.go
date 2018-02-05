@@ -41,17 +41,17 @@ func init() {
 
 //  body block begin
 // void advanceAnimation(qint64)
-func (this *QAnimationDriver) InheritAdvanceAnimation(f func(timeStep int64)) {
+func (this *QAnimationDriver) InheritAdvanceAnimation(f func(timeStep int64) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "advanceAnimation", f)
 }
 
 // void start()
-func (this *QAnimationDriver) InheritStart(f func()) {
+func (this *QAnimationDriver) InheritStart(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "start", f)
 }
 
 // void stop()
-func (this *QAnimationDriver) InheritStop(f func()) {
+func (this *QAnimationDriver) InheritStop(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "stop", f)
 }
 

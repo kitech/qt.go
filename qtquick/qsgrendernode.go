@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSGRenderNode struct {
 	*QSGNode
 }
@@ -87,9 +84,10 @@ func (*QSGRenderNode) NewFromPointer(cthis unsafe.Pointer) *QSGRenderNode {
 // Public Visibility=Default Availability=Available
 // [-2] void QSGRenderNode()
 func NewQSGRenderNode() *QSGRenderNode {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSGRenderNodeC1Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QSGRenderNodeC1Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSGRenderNodeFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSGRenderNode)
 	return gothis
 }
 
@@ -97,9 +95,11 @@ func NewQSGRenderNode() *QSGRenderNode {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGRenderNode()
-func DeleteQSGRenderNode(*QSGRenderNode) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSGRenderNodeD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSGRenderNode(this *QSGRenderNode) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QSGRenderNodeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 88)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQuick/qsgrendernode.h:85
@@ -107,7 +107,7 @@ func DeleteQSGRenderNode(*QSGRenderNode) {
 // Public virtual Visibility=Default Availability=Available
 // [4] QSGRenderNode::StateFlags changedStates()
 func (this *QSGRenderNode) ChangedStates() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSGRenderNode13changedStatesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSGRenderNode13changedStatesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -118,7 +118,7 @@ func (this *QSGRenderNode) ChangedStates() int {
 // Public virtual Visibility=Default Availability=Available
 // [-2] void releaseResources()
 func (this *QSGRenderNode) ReleaseResources() {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN13QSGRenderNode16releaseResourcesEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QSGRenderNode16releaseResourcesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 }
 
@@ -127,7 +127,7 @@ func (this *QSGRenderNode) ReleaseResources() {
 // Public virtual Visibility=Default Availability=Available
 // [4] QSGRenderNode::RenderingFlags flags()
 func (this *QSGRenderNode) Flags() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSGRenderNode5flagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSGRenderNode5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -138,10 +138,11 @@ func (this *QSGRenderNode) Flags() int {
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF rect()
 func (this *QSGRenderNode) Rect() *qtcore.QRectF /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSGRenderNode4rectEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSGRenderNode4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
 }
 
@@ -150,7 +151,7 @@ func (this *QSGRenderNode) Rect() *qtcore.QRectF /*123*/ {
 // Public Visibility=Default Availability=Available
 // [8] const QMatrix4x4 * matrix()
 func (this *QSGRenderNode) Matrix() *qtgui.QMatrix4x4 /*777 const QMatrix4x4 **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSGRenderNode6matrixEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSGRenderNode6matrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -162,7 +163,7 @@ func (this *QSGRenderNode) Matrix() *qtgui.QMatrix4x4 /*777 const QMatrix4x4 **/
 // Public Visibility=Default Availability=Available
 // [8] const QSGClipNode * clipList()
 func (this *QSGRenderNode) ClipList() *QSGClipNode /*777 const QSGClipNode **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSGRenderNode8clipListEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSGRenderNode8clipListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSGClipNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -174,7 +175,7 @@ func (this *QSGRenderNode) ClipList() *QSGClipNode /*777 const QSGClipNode **/ {
 // Public Visibility=Default Availability=Available
 // [8] qreal inheritedOpacity()
 func (this *QSGRenderNode) InheritedOpacity() float64 {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK13QSGRenderNode16inheritedOpacityEv", ffiqt.FFI_TYPE_DOUBLE, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSGRenderNode16inheritedOpacityEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111

@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSGFlatColorMaterial struct {
 	*QSGMaterial
 }
@@ -87,9 +84,10 @@ func (*QSGFlatColorMaterial) NewFromPointer(cthis unsafe.Pointer) *QSGFlatColorM
 // Public Visibility=Default Availability=Available
 // [-2] void QSGFlatColorMaterial()
 func NewQSGFlatColorMaterial() *QSGFlatColorMaterial {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGFlatColorMaterialC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGFlatColorMaterialC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSGFlatColorMaterialFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSGFlatColorMaterial)
 	return gothis
 }
 
@@ -98,7 +96,7 @@ func NewQSGFlatColorMaterial() *QSGFlatColorMaterial {
 // Public virtual Visibility=Default Availability=Available
 // [8] QSGMaterialType * type()
 func (this *QSGFlatColorMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSGMaterialTypeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -110,7 +108,7 @@ func (this *QSGFlatColorMaterial) Type() *QSGMaterialType /*777 QSGMaterialType 
 // Public virtual Visibility=Default Availability=Available
 // [8] QSGMaterialShader * createShader()
 func (this *QSGFlatColorMaterial) CreateShader() *QSGMaterialShader /*777 QSGMaterialShader **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial12createShaderEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial12createShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSGMaterialShaderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -123,7 +121,7 @@ func (this *QSGFlatColorMaterial) CreateShader() *QSGMaterialShader /*777 QSGMat
 // [-2] void setColor(const QColor &)
 func (this *QSGFlatColorMaterial) SetColor(color *qtgui.QColor) {
 	var convArg0 = color.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN20QSGFlatColorMaterial8setColorERK6QColor", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGFlatColorMaterial8setColorERK6QColor", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -132,10 +130,11 @@ func (this *QSGFlatColorMaterial) SetColor(color *qtgui.QColor) {
 // Public inline Visibility=Default Availability=Available
 // [16] const QColor & color()
 func (this *QSGFlatColorMaterial) Color() *qtgui.QColor {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial5colorEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
 }
 
@@ -145,10 +144,16 @@ func (this *QSGFlatColorMaterial) Color() *qtgui.QColor {
 // [4] int compare(const QSGMaterial *)
 func (this *QSGFlatColorMaterial) Compare(other *QSGMaterial /*777 const QSGMaterial **/) int {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial7compareEPK11QSGMaterial", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGFlatColorMaterial7compareEPK11QSGMaterial", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+func DeleteQSGFlatColorMaterial(this *QSGFlatColorMaterial) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QSGFlatColorMaterialD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

@@ -2,7 +2,6 @@ package qtquick
 
 import "unsafe"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -17,7 +16,7 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
+		qtrt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()

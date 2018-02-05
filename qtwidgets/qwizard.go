@@ -54,27 +54,27 @@ func (this *QWizard) InheritEvent(f func(event *qtcore.QEvent /*777 QEvent **/) 
 }
 
 // void resizeEvent(class QResizeEvent *)
-func (this *QWizard) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/)) {
+func (this *QWizard) InheritResizeEvent(f func(event *qtgui.QResizeEvent /*777 QResizeEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "resizeEvent", f)
 }
 
 // void paintEvent(class QPaintEvent *)
-func (this *QWizard) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+func (this *QWizard) InheritPaintEvent(f func(event *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
 // void done(int)
-func (this *QWizard) InheritDone(f func(result int)) {
+func (this *QWizard) InheritDone(f func(result int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "done", f)
 }
 
 // void initializePage(int)
-func (this *QWizard) InheritInitializePage(f func(id int)) {
+func (this *QWizard) InheritInitializePage(f func(id int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initializePage", f)
 }
 
 // void cleanupPage(int)
-func (this *QWizard) InheritCleanupPage(f func(id int)) {
+func (this *QWizard) InheritCleanupPage(f func(id int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "cleanupPage", f)
 }
 

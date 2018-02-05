@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtgui"
@@ -36,9 +35,6 @@ func init() {
 	}
 	if false {
 		qtrt.KeepMe()
-	}
-	if false {
-		ffiqt.KeepMe()
 	}
 	if false {
 		gopp.KeepMe()
@@ -60,6 +56,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QSGMaterial struct {
 	*qtrt.CObject
 }
@@ -72,7 +69,11 @@ func (this *QSGMaterial) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QSGMaterial) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQSGMaterialFromPointer(cthis unsafe.Pointer) *QSGMaterial {
 	return &QSGMaterial{&qtrt.CObject{cthis}}
@@ -86,9 +87,10 @@ func (*QSGMaterial) NewFromPointer(cthis unsafe.Pointer) *QSGMaterial {
 // Public Visibility=Default Availability=Available
 // [-2] void QSGMaterial()
 func NewQSGMaterial() *QSGMaterial {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGMaterialC1Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGMaterialC1Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSGMaterialFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQSGMaterial)
 	return gothis
 }
 
@@ -96,9 +98,11 @@ func NewQSGMaterial() *QSGMaterial {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSGMaterial()
-func DeleteQSGMaterial(*QSGMaterial) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGMaterialD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQSGMaterial(this *QSGMaterial) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGMaterialD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 24)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtQuick/qsgmaterial.h:149
@@ -106,7 +110,7 @@ func DeleteQSGMaterial(*QSGMaterial) {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSGMaterialType * type()
 func (this *QSGMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGMaterial4typeEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGMaterial4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSGMaterialTypeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -118,7 +122,7 @@ func (this *QSGMaterial) Type() *QSGMaterialType /*777 QSGMaterialType **/ {
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSGMaterialShader * createShader()
 func (this *QSGMaterial) CreateShader() *QSGMaterialShader /*777 QSGMaterialShader **/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGMaterial12createShaderEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGMaterial12createShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := /*==*/ NewQSGMaterialShaderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
@@ -131,7 +135,7 @@ func (this *QSGMaterial) CreateShader() *QSGMaterialShader /*777 QSGMaterialShad
 // [4] int compare(const QSGMaterial *)
 func (this *QSGMaterial) Compare(other *QSGMaterial /*777 const QSGMaterial **/) int {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGMaterial7compareEPKS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGMaterial7compareEPKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
@@ -142,7 +146,7 @@ func (this *QSGMaterial) Compare(other *QSGMaterial /*777 const QSGMaterial **/)
 // Public inline Visibility=Default Availability=Available
 // [4] QSGMaterial::Flags flags()
 func (this *QSGMaterial) Flags() int {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK11QSGMaterial5flagsEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGMaterial5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return int(rv)
@@ -153,7 +157,7 @@ func (this *QSGMaterial) Flags() int {
 // Public Visibility=Default Availability=Available
 // [-2] void setFlag(QSGMaterial::Flags, _Bool)
 func (this *QSGMaterial) SetFlag(flags int, on bool) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN11QSGMaterial7setFlagE6QFlagsINS_4FlagEEb", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), flags, on)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGMaterial7setFlagE6QFlagsINS_4FlagEEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags, on)
 	gopp.ErrPrint(err, rv)
 }
 

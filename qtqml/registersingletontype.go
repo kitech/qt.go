@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 import "qt.go/qtnetwork"
@@ -36,9 +35,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -52,6 +48,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type RegisterSingletonType struct {
 	*qtrt.CObject
 }
@@ -64,13 +61,23 @@ func (this *RegisterSingletonType) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *RegisterSingletonType) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewRegisterSingletonTypeFromPointer(cthis unsafe.Pointer) *RegisterSingletonType {
 	return &RegisterSingletonType{&qtrt.CObject{cthis}}
 }
 func (*RegisterSingletonType) NewFromPointer(cthis unsafe.Pointer) *RegisterSingletonType {
 	return NewRegisterSingletonTypeFromPointer(cthis)
+}
+
+func DeleteRegisterSingletonType(this *RegisterSingletonType) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN21RegisterSingletonTypeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 //  body block end

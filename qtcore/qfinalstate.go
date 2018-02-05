@@ -41,12 +41,12 @@ func init() {
 
 //  body block begin
 // void onEntry(class QEvent *)
-func (this *QFinalState) InheritOnEntry(f func(event *QEvent /*777 QEvent **/)) {
+func (this *QFinalState) InheritOnEntry(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onEntry", f)
 }
 
 // void onExit(class QEvent *)
-func (this *QFinalState) InheritOnExit(f func(event *QEvent /*777 QEvent **/)) {
+func (this *QFinalState) InheritOnExit(f func(event *QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "onExit", f)
 }
 

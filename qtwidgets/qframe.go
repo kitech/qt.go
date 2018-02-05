@@ -54,22 +54,22 @@ func (this *QFrame) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) bool)
 }
 
 // void paintEvent(class QPaintEvent *)
-func (this *QFrame) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+func (this *QFrame) InheritPaintEvent(f func(arg0 *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
 // void changeEvent(class QEvent *)
-func (this *QFrame) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/)) {
+func (this *QFrame) InheritChangeEvent(f func(arg0 *qtcore.QEvent /*777 QEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "changeEvent", f)
 }
 
 // void drawFrame(class QPainter *)
-func (this *QFrame) InheritDrawFrame(f func(arg0 *qtgui.QPainter /*777 QPainter **/)) {
+func (this *QFrame) InheritDrawFrame(f func(arg0 *qtgui.QPainter /*777 QPainter **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "drawFrame", f)
 }
 
 // void initStyleOption(class QStyleOptionFrame *)
-func (this *QFrame) InheritInitStyleOption(f func(option *QStyleOptionFrame /*777 QStyleOptionFrame **/)) {
+func (this *QFrame) InheritInitStyleOption(f func(option *QStyleOptionFrame /*777 QStyleOptionFrame **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "initStyleOption", f)
 }
 

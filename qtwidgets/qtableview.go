@@ -49,37 +49,37 @@ func init() {
 
 //  body block begin
 // void rowMoved(int, int, int)
-func (this *QTableView) InheritRowMoved(f func(row int, oldIndex int, newIndex int)) {
+func (this *QTableView) InheritRowMoved(f func(row int, oldIndex int, newIndex int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowMoved", f)
 }
 
 // void columnMoved(int, int, int)
-func (this *QTableView) InheritColumnMoved(f func(column int, oldIndex int, newIndex int)) {
+func (this *QTableView) InheritColumnMoved(f func(column int, oldIndex int, newIndex int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "columnMoved", f)
 }
 
 // void rowResized(int, int, int)
-func (this *QTableView) InheritRowResized(f func(row int, oldHeight int, newHeight int)) {
+func (this *QTableView) InheritRowResized(f func(row int, oldHeight int, newHeight int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowResized", f)
 }
 
 // void columnResized(int, int, int)
-func (this *QTableView) InheritColumnResized(f func(column int, oldWidth int, newWidth int)) {
+func (this *QTableView) InheritColumnResized(f func(column int, oldWidth int, newWidth int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "columnResized", f)
 }
 
 // void rowCountChanged(int, int)
-func (this *QTableView) InheritRowCountChanged(f func(oldCount int, newCount int)) {
+func (this *QTableView) InheritRowCountChanged(f func(oldCount int, newCount int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "rowCountChanged", f)
 }
 
 // void columnCountChanged(int, int)
-func (this *QTableView) InheritColumnCountChanged(f func(oldCount int, newCount int)) {
+func (this *QTableView) InheritColumnCountChanged(f func(oldCount int, newCount int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "columnCountChanged", f)
 }
 
 // void scrollContentsBy(int, int)
-func (this *QTableView) InheritScrollContentsBy(f func(dx int, dy int)) {
+func (this *QTableView) InheritScrollContentsBy(f func(dx int, dy int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "scrollContentsBy", f)
 }
 
@@ -89,12 +89,12 @@ func (this *QTableView) InheritViewOptions(f func() unsafe.Pointer) {
 }
 
 // void paintEvent(class QPaintEvent *)
-func (this *QTableView) InheritPaintEvent(f func(e *qtgui.QPaintEvent /*777 QPaintEvent **/)) {
+func (this *QTableView) InheritPaintEvent(f func(e *qtgui.QPaintEvent /*777 QPaintEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "paintEvent", f)
 }
 
 // void timerEvent(class QTimerEvent *)
-func (this *QTableView) InheritTimerEvent(f func(event *qtcore.QTimerEvent /*777 QTimerEvent **/)) {
+func (this *QTableView) InheritTimerEvent(f func(event *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
 }
 
@@ -114,7 +114,7 @@ func (this *QTableView) InheritMoveCursor(f func(cursorAction int, modifiers int
 }
 
 // void setSelection(const class QRect &, class QItemSelectionModel::SelectionFlags)
-func (this *QTableView) InheritSetSelection(f func(rect *qtcore.QRect, command int)) {
+func (this *QTableView) InheritSetSelection(f func(rect *qtcore.QRect, command int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setSelection", f)
 }
 
@@ -124,7 +124,7 @@ func (this *QTableView) InheritVisualRegionForSelection(f func(selection *qtcore
 }
 
 // void updateGeometries()
-func (this *QTableView) InheritUpdateGeometries(f func()) {
+func (this *QTableView) InheritUpdateGeometries(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateGeometries", f)
 }
 
@@ -144,12 +144,12 @@ func (this *QTableView) InheritSizeHintForColumn(f func(column int) int) {
 }
 
 // void verticalScrollbarAction(int)
-func (this *QTableView) InheritVerticalScrollbarAction(f func(action int)) {
+func (this *QTableView) InheritVerticalScrollbarAction(f func(action int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "verticalScrollbarAction", f)
 }
 
 // void horizontalScrollbarAction(int)
-func (this *QTableView) InheritHorizontalScrollbarAction(f func(action int)) {
+func (this *QTableView) InheritHorizontalScrollbarAction(f func(action int) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "horizontalScrollbarAction", f)
 }
 
@@ -159,12 +159,12 @@ func (this *QTableView) InheritIsIndexHidden(f func(index *qtcore.QModelIndex) b
 }
 
 // void selectionChanged(const class QItemSelection &, const class QItemSelection &)
-func (this *QTableView) InheritSelectionChanged(f func(selected *qtcore.QItemSelection, deselected *qtcore.QItemSelection)) {
+func (this *QTableView) InheritSelectionChanged(f func(selected *qtcore.QItemSelection, deselected *qtcore.QItemSelection) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "selectionChanged", f)
 }
 
 // void currentChanged(const class QModelIndex &, const class QModelIndex &)
-func (this *QTableView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, previous *qtcore.QModelIndex)) {
+func (this *QTableView) InheritCurrentChanged(f func(current *qtcore.QModelIndex, previous *qtcore.QModelIndex) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "currentChanged", f)
 }
 

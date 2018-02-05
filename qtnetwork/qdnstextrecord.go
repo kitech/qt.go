@@ -17,7 +17,6 @@ import "unsafe"
 import "reflect"
 import "fmt"
 import "gopp"
-import "qt.go/cffiqt"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
 
@@ -35,9 +34,6 @@ func init() {
 		qtrt.KeepMe()
 	}
 	if false {
-		ffiqt.KeepMe()
-	}
-	if false {
 		gopp.KeepMe()
 	}
 	if false {
@@ -48,6 +44,7 @@ func init() {
 //  ext block end
 
 //  body block begin
+
 type QDnsTextRecord struct {
 	*qtrt.CObject
 }
@@ -60,7 +57,11 @@ func (this *QDnsTextRecord) GetCthis() unsafe.Pointer {
 	}
 }
 func (this *QDnsTextRecord) SetCthis(cthis unsafe.Pointer) {
-	this.CObject = &qtrt.CObject{cthis}
+	if this.CObject == nil {
+		this.CObject = &qtrt.CObject{cthis}
+	} else {
+		this.CObject.Cthis = cthis
+	}
 }
 func NewQDnsTextRecordFromPointer(cthis unsafe.Pointer) *QDnsTextRecord {
 	return &QDnsTextRecord{&qtrt.CObject{cthis}}
@@ -74,9 +75,10 @@ func (*QDnsTextRecord) NewFromPointer(cthis unsafe.Pointer) *QDnsTextRecord {
 // Public Visibility=Default Availability=Available
 // [-2] void QDnsTextRecord()
 func NewQDnsTextRecord() *QDnsTextRecord {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDnsTextRecordC2Ev", ffiqt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QDnsTextRecordC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQDnsTextRecordFromPointer(unsafe.Pointer(uintptr(rv)))
+	qtrt.SetFinalizer(gothis, DeleteQDnsTextRecord)
 	return gothis
 }
 
@@ -84,9 +86,11 @@ func NewQDnsTextRecord() *QDnsTextRecord {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QDnsTextRecord()
-func DeleteQDnsTextRecord(*QDnsTextRecord) {
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDnsTextRecordD2Ev", ffiqt.FFI_TYPE_VOID)
+func DeleteQDnsTextRecord(this *QDnsTextRecord) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QDnsTextRecordD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+	qtrt.Cmemset(this.GetCthis(), 9, 8)
 	gopp.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:171
@@ -95,7 +99,7 @@ func DeleteQDnsTextRecord(*QDnsTextRecord) {
 // [-2] void swap(QDnsTextRecord &)
 func (this *QDnsTextRecord) Swap(other *QDnsTextRecord) {
 	var convArg0 = other.GetCthis()
-	rv, err := ffiqt.InvokeQtFunc6("_ZN14QDnsTextRecord4swapERS_", ffiqt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QDnsTextRecord4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
 
@@ -104,10 +108,11 @@ func (this *QDnsTextRecord) Swap(other *QDnsTextRecord) {
 // Public Visibility=Default Availability=Available
 // [8] QString name()
 func (this *QDnsTextRecord) Name() *qtcore.QString /*123*/ {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDnsTextRecord4nameEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDnsTextRecord4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
 	return rv2
 }
 
@@ -116,7 +121,7 @@ func (this *QDnsTextRecord) Name() *qtcore.QString /*123*/ {
 // Public Visibility=Default Availability=Available
 // [4] quint32 timeToLive()
 func (this *QDnsTextRecord) TimeToLive() uint {
-	rv, err := ffiqt.InvokeQtFunc6("_ZNK14QDnsTextRecord10timeToLiveEv", ffiqt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDnsTextRecord10timeToLiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	//  return rv
 	return uint(rv) // 222
