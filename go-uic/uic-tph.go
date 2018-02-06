@@ -7,6 +7,7 @@ import (
 	"log"
 	"os"
 	"os/exec"
+	"path"
 	"regexp"
 	"strings"
 )
@@ -28,23 +29,33 @@ const (
 	INSEC_DONE
 )
 
-// usage: go-uic <ui_foo.h>
+// usage: go-uic <foo.ui>
+// depend on: /usr/bin/uic
 func main() {
 	log.SetFlags(log.Flags() | log.Lshortfile)
 	file = os.Args[1]
-	filep = file[0:strings.LastIndex(file, ".")]
+
+	filep = "ui_" + path.Base(file)[0:strings.LastIndex(path.Base(file), ".")]
+	filep = gopp.IfElseStr(path.Dir(file) == "", filep, path.Dir(file)+"/"+filep)
 	log.Println(file, filep)
 
-	bcc, err := ioutil.ReadFile(file)
-	gopp.ErrPrint(err, file)
-	lines := strings.Split(string(bcc), "\n")
-	log.Println("lines:", len(lines), "size:", len(bcc))
+	scc, err := runcmdout("uic", "-g", "cpp", file)
+	gopp.ErrPrint(err)
+	if err != nil {
+		os.Exit(1)
+	}
+
+	lines := strings.Split(scc, "\n")
+	log.Println("lines:", len(lines), "size:", len(scc))
 
 	cp.APf("header", "import \"qt.go/qtcore\"")
 	cp.APf("header", "import \"qt.go/qtgui\"")
 	cp.APf("header", "import \"qt.go/qtwidgets\"")
+	cp.APf("header", "import \"qt.go/qtquickwidgets\"")
 	cp.APf("header", "import \"qt.go/qtmock\"")
 	cp.APf("header", "func init(){qtcore.KeepMe()}")
+	cp.APf("header", "func init(){qtwidgets.KeepMe()}")
+	cp.APf("header", "func init(){qtquickwidgets.KeepMe()}")
 	cp.APf("header", "func init(){qtmock.KeepMe()}")
 
 	insection := INSEC_NONE
@@ -110,10 +121,15 @@ func transformMember(line string, class string) {
 
 	parts := strings.Split(line, "*")
 	mname := parts[1][:len(parts[1])-1]
-	memcls := parts[0]
-	log.Println("transform member...", mname, line)
+	memcls := strings.TrimSpace(parts[0])
+	log.Println("transform member...", memcls, mname, line)
 
-	cp.APf("struct", "  %s *qtwidgets.%s", strings.Title(mname), memcls)
+	switch memcls {
+	case "QQuickWidget":
+		cp.APf("struct", "  %s *qtquickwidgets.%s", strings.Title(mname), memcls)
+	default:
+		cp.APf("struct", "  %s *qtwidgets.%s", strings.Title(mname), memcls)
+	}
 
 	// var reline string
 
@@ -150,7 +166,7 @@ func onSetupUi(line string) {
 	} else if strings.HasPrefix(line, fmt.Sprintf("retranslateUi(%s);", woname)) {
 		cp.APf("setupUi", "this.RetranslateUi(%s)", woname)
 	} else {
-		reg1 := regexp.MustCompile(`(.*) = new (Q.*)\(([0-9A-Za-z_]*)?\);`)
+		reg1 := regexp.MustCompile(`(.*) = new (Q.+)\(([0-9A-Za-z_]*)?\);`)
 		reg2 := regexp.MustCompile(`(.*)->setObjectName\(QStringLiteral\((.+)\)\);`)
 		reg3 := regexp.MustCompile(`(.*)->(set.+Size)\(QSize\((.+)\)\);`)
 		reg4 := regexp.MustCompile(`([^->]+)[->.]+set([^(]+)\((.+)\);`)
@@ -166,6 +182,7 @@ func onSetupUi(line string) {
 			mats := reg1.FindAllStringSubmatch(line, -1)
 			refmtval := strings.Title(mats[0][3])
 			refmtsuf := ""
+			pkgname := "qtwidgets"
 			switch mats[0][2] {
 			case "QAction":
 				refmtval = fmt.Sprintf("qtcore.NewQObjectFromPointer(%s.GetCthis())", refmtval)
@@ -182,11 +199,14 @@ func onSetupUi(line string) {
 				}
 			case "QLabel":
 				refmtval = "this." + refmtval + ", 0"
+			case "QQuickWidget":
+				pkgname = "qtquickwidgets"
+				refmtval = "this." + refmtval
 			default:
 				refmtval = "this." + refmtval
 			}
-			cp.APf("setupUi", "this.%s = qtwidgets.New%s%s(%s) // 111",
-				strings.Title(mats[0][1]), mats[0][2], refmtsuf, refmtval)
+			cp.APf("setupUi", "this.%s = %s.New%s%s(%s) // 111",
+				strings.Title(mats[0][1]), pkgname, mats[0][2], refmtsuf, refmtval)
 		} else if reg2.MatchString(line) {
 			mats := reg2.FindAllStringSubmatch(line, -1)
 			log.Println(mats)
@@ -221,7 +241,8 @@ func onSetupUi(line string) {
 			case "TextInteractionFlags":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 				refmtval = strings.Replace(refmtval, "|", "|qtcore.", -1)
-			case "AutoRaise", "WidgetResizable", "AlternatingRowColors":
+			case "AutoRaise", "WidgetResizable", "AlternatingRowColors",
+				"AutoRepeat", "AutoExclusive":
 				refmtval = strings.ToLower(refmtval[0:1]) + refmtval[1:]
 			case "ToolButtonStyle":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
@@ -231,8 +252,10 @@ func onSetupUi(line string) {
 				refmtval = strings.TrimRight(refmtval[6:], ")")
 			case "HorizontalScrollBarPolicy":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
-			case "SizeAdjustPolicy":
+			case "SizeAdjustPolicy", "SizeConstraint":
 				refmtval = "qtwidgets." + strings.Replace(refmtval, ":", "_", -1)
+			case "ResizeMode":
+				refmtval = "qtquickwidgets." + strings.Replace(refmtval, ":", "_", -1)
 			case "MaximumSize", "MinimumSize":
 				refmtsuf = "_1"
 			case "Widget":
@@ -242,6 +265,9 @@ func onSetupUi(line string) {
 				refmtval = untitle(refmtval) // True => true
 			case "Pixmap":
 				refmtval = fmt.Sprintf("qtgui.NewQPixmap_3(qtcore.NewQString_5(\"%s\"), \"dummy123\", 0)", strings.Split(refmtval, "\"")[1])
+			case "Source": // QQuickWidget
+				refmtval = mats[0][3]
+				refmtval = fmt.Sprintf("qtcore.NewQUrl_1(qtcore.NewQString_5(\"%s\"), 0)", strings.Split(refmtval, "\"")[1])
 			case "HeightForWidth":
 				refmtval = "this." + strings.Replace(refmtval, "->", ".", -1)
 				// refmtval = "false" // TODO label_x.SizePolicy().HasHeightForWidth() crash
@@ -334,11 +360,12 @@ func saveCode() {
 	code = "package main\n"
 	code += cp.ExportAll()
 	savefile := fmt.Sprintf("%s.go", filep)
-	ioutil.WriteFile(savefile, []byte(code), mod)
+	err := ioutil.WriteFile(savefile, []byte(code), mod)
+	gopp.ErrPrint(err, savefile)
 
 	// gofmt the code
 	cmd := exec.Command("/usr/bin/gofmt", []string{"-w", savefile}...)
-	err := cmd.Run()
+	err = cmd.Run()
 	gopp.ErrPrint(err, cmd)
 }
 

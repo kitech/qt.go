@@ -7,6 +7,7 @@ import (
 	"log"
 	"os"
 	"os/exec"
+	"path"
 	"strings"
 )
 
@@ -23,17 +24,23 @@ const (
 	INSEC_DONE
 )
 
-// usage: go-rcc <rcc.cpp>
+// usage: go-rcc <rcc.qrc>
+// depend on: /usr/bin/rcc
 func main() {
 	log.SetFlags(log.Flags() | log.Lshortfile)
 	file = os.Args[1]
-	filep = file[0:strings.LastIndex(file, ".")]
+	filep = path.Base(file)[0:strings.LastIndex(path.Base(file), ".")]
+	filep = gopp.IfElseStr(path.Dir(file) == "", filep, path.Dir(file)+"/"+filep)
 	log.Println(file, filep)
 
-	bcc, err := ioutil.ReadFile(file)
-	gopp.ErrPrint(err, file)
-	lines := strings.Split(string(bcc), "\n")
-	log.Println("lines:", len(lines), "size:", len(bcc))
+	scc, err := runcmdout("rcc", file)
+	gopp.ErrPrint(err, "rcc", file)
+	if err != nil {
+		os.Exit(1)
+	}
+
+	lines := strings.Split(scc, "\n")
+	log.Println("lines:", len(lines), "size:", len(scc))
 
 	cp.APf("header", "import \"unsafe\"")
 	cp.APf("header", "// import \"qt.go/qtcore\"")
@@ -116,11 +123,12 @@ func saveCode() {
 	code = "package main\n"
 	code += cp.ExportAll()
 	savefile := fmt.Sprintf("%s_rc.go", filep)
-	ioutil.WriteFile(savefile, []byte(code), mod)
+	err := ioutil.WriteFile(savefile, []byte(code), mod)
+	gopp.ErrPrint(err, savefile)
 
 	// gofmt the code
 	cmd := exec.Command("/usr/bin/gofmt", []string{"-w", savefile}...)
-	err := cmd.Run()
+	err = cmd.Run()
 	gopp.ErrPrint(err, cmd)
 }
 

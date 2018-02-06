@@ -53,8 +53,9 @@ eg-:
 	# CC=clang CXX=clang++ go build -v -x eg/eg10.go
 
 tools:
-	CC=clang CXX=clang++ go build -v -x -o bin/go-uic go-uic/uic-tph.go go-uic/codepager.go
-	CC=clang CXX=clang++ go build -v -x -o bin/go-rcc go-uic/rcc-tph.go go-uic/codepager.go
+	CC=clang CXX=clang++ go build -v -x -o bin/go-uic go-uic/uic-tph.go go-uic/codepager.go go-uic/util.go
+	CC=clang CXX=clang++ go build -v -x -o bin/go-rcc go-uic/rcc-tph.go go-uic/codepager.go go-uic/util.go
+	go build -v -o bin/go-qmlviewer go-uic/qmlviewer.go
 
 tst:
 	CC=clang CXX=clang++ go test -v -x tests/qstring_test.go
