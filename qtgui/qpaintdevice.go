@@ -287,7 +287,7 @@ func QPaintDevice_DevicePixelRatioFScale() float64 {
 // Protected Visibility=Default Availability=Available
 // [-2] void QPaintDevice()
 func NewQPaintDevice() *QPaintDevice {
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintDeviceC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintDeviceC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPaintDevice)
@@ -300,7 +300,7 @@ func NewQPaintDevice() *QPaintDevice {
 // [-2] void QPaintDevice(const QPaintDevice &)
 func NewQPaintDevice_1(arg0 *QPaintDevice) *QPaintDevice {
 	var convArg0 = arg0.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintDeviceC1ERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintDeviceC2ERKS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPaintDevice)

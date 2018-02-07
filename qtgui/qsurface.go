@@ -145,7 +145,7 @@ func (this *QSurface) Size() *qtcore.QSize /*123*/ {
 // Protected Visibility=Default Availability=Available
 // [-2] void QSurface(enum QSurface::SurfaceClass)
 func NewQSurface(type_ int) *QSurface {
-	rv, err := qtrt.InvokeQtFunc6("_ZN8QSurfaceC1ENS_12SurfaceClassE", qtrt.FFI_TYPE_POINTER, type_)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QSurfaceC2ENS_12SurfaceClassE", qtrt.FFI_TYPE_POINTER, type_)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSurfaceFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSurface)

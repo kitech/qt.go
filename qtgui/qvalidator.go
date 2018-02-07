@@ -85,7 +85,7 @@ func (this *QValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // [-2] void QValidator(QObject *)
 func NewQValidator(parent *qtcore.QObject /*777 QObject **/) *QValidator {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QValidatorC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QValidatorC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQValidatorFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

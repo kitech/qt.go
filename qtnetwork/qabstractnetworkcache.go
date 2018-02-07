@@ -178,7 +178,7 @@ func (this *QAbstractNetworkCache) Clear() {
 // [-2] void QAbstractNetworkCache(QObject *)
 func NewQAbstractNetworkCache(parent *qtcore.QObject /*777 QObject **/) *QAbstractNetworkCache {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractNetworkCacheC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractNetworkCacheC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractNetworkCacheFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

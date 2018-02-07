@@ -94,7 +94,7 @@ func (*QGraphicsLayoutItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLayou
 // [-2] void QGraphicsLayoutItem(QGraphicsLayoutItem *, _Bool)
 func NewQGraphicsLayoutItem(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/, isLayout bool) *QGraphicsLayoutItem {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItemC1EPS_b", qtrt.FFI_TYPE_POINTER, convArg0, isLayout)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QGraphicsLayoutItemC2EPS_b", qtrt.FFI_TYPE_POINTER, convArg0, isLayout)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsLayoutItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQGraphicsLayoutItem)

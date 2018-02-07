@@ -170,7 +170,7 @@ func (this *QAbstractItemModel) MetaObject() *QMetaObject /*777 const QMetaObjec
 // [-2] void QAbstractItemModel(QObject *)
 func NewQAbstractItemModel(parent *QObject /*777 QObject **/) *QAbstractItemModel {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModelC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

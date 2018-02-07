@@ -89,7 +89,7 @@ func (this *QStylePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 // [-2] void QStylePlugin(QObject *)
 func NewQStylePlugin(parent *qtcore.QObject /*777 QObject **/) *QStylePlugin {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QStylePluginC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QStylePluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStylePluginFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

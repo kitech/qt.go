@@ -85,7 +85,7 @@ func (this *QAnimationGroup) MetaObject() *QMetaObject /*777 const QMetaObject *
 // [-2] void QAnimationGroup(QObject *)
 func NewQAnimationGroup(parent *QObject /*777 QObject **/) *QAnimationGroup {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroupC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAnimationGroupC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAnimationGroupFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

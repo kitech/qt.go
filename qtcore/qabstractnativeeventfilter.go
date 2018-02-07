@@ -71,7 +71,7 @@ func (*QAbstractNativeEventFilter) NewFromPointer(cthis unsafe.Pointer) *QAbstra
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractNativeEventFilter()
 func NewQAbstractNativeEventFilter() *QAbstractNativeEventFilter {
-	rv, err := qtrt.InvokeQtFunc6("_ZN26QAbstractNativeEventFilterC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN26QAbstractNativeEventFilterC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractNativeEventFilterFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAbstractNativeEventFilter)

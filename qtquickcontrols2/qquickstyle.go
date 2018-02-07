@@ -18,12 +18,12 @@ import "reflect"
 import "fmt"
 import "gopp"
 import "qt.go/qtrt"
-import "qt.go/qtcore"
-import "qt.go/qtgui"
 import "qt.go/qtnetwork"
-import "qt.go/qtqml"
-import "qt.go/qtquick"
 import "qt.go/qtquicktemplates2"
+import "qt.go/qtcore"
+import "qt.go/qtqml"
+import "qt.go/qtgui"
+import "qt.go/qtquick"
 
 func init() {
 	if false {
@@ -42,22 +42,22 @@ func init() {
 		gopp.KeepMe()
 	}
 	if false {
-		qtcore.KeepMe()
-	}
-	if false {
-		qtgui.KeepMe()
-	}
-	if false {
 		qtnetwork.KeepMe()
+	}
+	if false {
+		qtquicktemplates2.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
 	}
 	if false {
 		qtqml.KeepMe()
 	}
 	if false {
-		qtquick.KeepMe()
+		qtgui.KeepMe()
 	}
 	if false {
-		qtquicktemplates2.KeepMe()
+		qtquick.KeepMe()
 	}
 }
 

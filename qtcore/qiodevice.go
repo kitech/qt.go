@@ -104,7 +104,7 @@ func (this *QIODevice) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 // Public Visibility=Default Availability=Available
 // [-2] void QIODevice()
 func NewQIODevice() *QIODevice {
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODeviceC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODeviceC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -116,7 +116,7 @@ func NewQIODevice() *QIODevice {
 // [-2] void QIODevice(QObject *)
 func NewQIODevice_1(parent *QObject /*777 QObject **/) *QIODevice {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODeviceC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODeviceC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

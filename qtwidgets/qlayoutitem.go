@@ -79,7 +79,7 @@ func (*QLayoutItem) NewFromPointer(cthis unsafe.Pointer) *QLayoutItem {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QLayoutItem(Qt::Alignment)
 func NewQLayoutItem(alignment int) *QLayoutItem {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QLayoutItemC1E6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, alignment)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QLayoutItemC2E6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, alignment)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLayoutItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQLayoutItem)

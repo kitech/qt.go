@@ -158,7 +158,7 @@ func (this *QAbstractButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // [-2] void QAbstractButton(QWidget *)
 func NewQAbstractButton(parent *QWidget /*777 QWidget **/) *QAbstractButton {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButtonC1EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractButtonC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractButtonFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

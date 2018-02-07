@@ -89,7 +89,7 @@ func (this *QAbstractItemDelegate) MetaObject() *qtcore.QMetaObject /*777 const 
 // [-2] void QAbstractItemDelegate(QObject *)
 func NewQAbstractItemDelegate(parent *qtcore.QObject /*777 QObject **/) *QAbstractItemDelegate {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractItemDelegateC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QAbstractItemDelegateC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractItemDelegateFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

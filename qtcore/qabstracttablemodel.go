@@ -81,7 +81,7 @@ func (this *QAbstractTableModel) MetaObject() *QMetaObject /*777 const QMetaObje
 // [-2] void QAbstractTableModel(QObject *)
 func NewQAbstractTableModel(parent *QObject /*777 QObject **/) *QAbstractTableModel {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTableModelC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTableModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractTableModelFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

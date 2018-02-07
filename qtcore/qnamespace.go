@@ -1727,4 +1727,94 @@ const Qt__CompositeRegistration Qt__RegistrationType = 4
 const Qt__CompositeSingletonRegistration Qt__RegistrationType = 5
 const Qt__QmlUnitCacheHookRegistration Qt__RegistrationType = 6
 
+type Qt___EXCEPTION_DISPOSITION = int
+
+const Qt__ExceptionContinueExecution Qt___EXCEPTION_DISPOSITION = 0
+const Qt__ExceptionContinueSearch Qt___EXCEPTION_DISPOSITION = 1
+const Qt__ExceptionNestedException Qt___EXCEPTION_DISPOSITION = 2
+const Qt__ExceptionCollidedUnwind Qt___EXCEPTION_DISPOSITION = 3
+
+type Qt__tagExtendedErrorParamTypes = int
+
+const Qt__eeptAnsiString Qt__tagExtendedErrorParamTypes = 1
+const Qt__eeptUnicodeString Qt__tagExtendedErrorParamTypes = 2
+const Qt__eeptLongVal Qt__tagExtendedErrorParamTypes = 3
+const Qt__eeptShortVal Qt__tagExtendedErrorParamTypes = 4
+const Qt__eeptPointerVal Qt__tagExtendedErrorParamTypes = 5
+const Qt__eeptNone Qt__tagExtendedErrorParamTypes = 6
+const Qt__eeptBinary Qt__tagExtendedErrorParamTypes = 7
+
+type Qt___RPC_NOTIFICATION_TYPES = int
+
+const Qt__RpcNotificationTypeNone Qt___RPC_NOTIFICATION_TYPES = 0
+const Qt__RpcNotificationTypeEvent Qt___RPC_NOTIFICATION_TYPES = 1
+const Qt__RpcNotificationTypeApc Qt___RPC_NOTIFICATION_TYPES = 2
+const Qt__RpcNotificationTypeIoc Qt___RPC_NOTIFICATION_TYPES = 3
+const Qt__RpcNotificationTypeHwnd Qt___RPC_NOTIFICATION_TYPES = 4
+const Qt__RpcNotificationTypeCallback Qt___RPC_NOTIFICATION_TYPES = 5
+
+type Qt___RPC_ASYNC_EVENT = int
+
+const Qt__RpcCallComplete Qt___RPC_ASYNC_EVENT = 0
+const Qt__RpcSendComplete Qt___RPC_ASYNC_EVENT = 1
+const Qt__RpcReceiveComplete Qt___RPC_ASYNC_EVENT = 2
+const Qt__RpcClientDisconnect Qt___RPC_ASYNC_EVENT = 3
+const Qt__RpcClientCancel Qt___RPC_ASYNC_EVENT = 4
+
+type Qt___MEDIA_TYPE = int
+
+const Qt__Unknown Qt___MEDIA_TYPE = 0
+const Qt__F5_1Pt2_512 Qt___MEDIA_TYPE = 1
+const Qt__F3_1Pt44_512 Qt___MEDIA_TYPE = 2
+const Qt__F3_2Pt88_512 Qt___MEDIA_TYPE = 3
+const Qt__F3_20Pt8_512 Qt___MEDIA_TYPE = 4
+const Qt__F3_720_512 Qt___MEDIA_TYPE = 5
+const Qt__F5_360_512 Qt___MEDIA_TYPE = 6
+const Qt__F5_320_512 Qt___MEDIA_TYPE = 7
+const Qt__F5_320_1024 Qt___MEDIA_TYPE = 8
+const Qt__F5_180_512 Qt___MEDIA_TYPE = 9
+const Qt__F5_160_512 Qt___MEDIA_TYPE = 10
+const Qt__RemovableMedia Qt___MEDIA_TYPE = 11
+const Qt__FixedMedia Qt___MEDIA_TYPE = 12
+const Qt__F3_120M_512 Qt___MEDIA_TYPE = 13
+const Qt__F3_640_512 Qt___MEDIA_TYPE = 14
+const Qt__F5_640_512 Qt___MEDIA_TYPE = 15
+const Qt__F5_720_512 Qt___MEDIA_TYPE = 16
+const Qt__F3_1Pt2_512 Qt___MEDIA_TYPE = 17
+const Qt__F3_1Pt23_1024 Qt___MEDIA_TYPE = 18
+const Qt__F5_1Pt23_1024 Qt___MEDIA_TYPE = 19
+const Qt__F3_128Mb_512 Qt___MEDIA_TYPE = 20
+const Qt__F3_230Mb_512 Qt___MEDIA_TYPE = 21
+const Qt__F8_256_128 Qt___MEDIA_TYPE = 22
+
+type Qt__HBitmapFormat = int
+
+const Qt__HBitmapNoAlpha Qt__HBitmapFormat = 0
+const Qt__HBitmapPremultipliedAlpha Qt__HBitmapFormat = 1
+const Qt__HBitmapAlpha Qt__HBitmapFormat = 2
+
+type Qt__WindowFlip3DPolicy = int
+
+const Qt__FlipDefault Qt__WindowFlip3DPolicy = 0
+const Qt__FlipExcludeBelow Qt__WindowFlip3DPolicy = 1
+const Qt__FlipExcludeAbove Qt__WindowFlip3DPolicy = 2
+
+type Qt__BindFlag = int
+
+const Qt__None Qt__BindFlag = 0
+const Qt__AutoCreate Qt__BindFlag = 1
+const Qt__DebugUnbind Qt__BindFlag = 2
+const Qt__NotForeground Qt__BindFlag = 4
+const Qt__AboveClient Qt__BindFlag = 8
+const Qt__AllowOomManagement Qt__BindFlag = 16
+const Qt__WaivePriority Qt__BindFlag = 32
+const Qt__Important Qt__BindFlag = 64
+const Qt__AdjustWithActivity Qt__BindFlag = 128
+const Qt__ExternalService Qt__BindFlag = -2147483648
+
+type Qt__PermissionResult = int
+
+const Qt__Granted Qt__PermissionResult = 0
+const Qt__Denied Qt__PermissionResult = 1
+
 //  body block end

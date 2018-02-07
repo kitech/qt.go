@@ -448,7 +448,7 @@ func (this *QNetworkReply) DownloadProgress(bytesReceived int64, bytesTotal int6
 // [-2] void QNetworkReply(QObject *)
 func NewQNetworkReply(parent *qtcore.QObject /*777 QObject **/) *QNetworkReply {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReplyC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QNetworkReplyC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

@@ -373,7 +373,7 @@ func (this *QAbstractItemView) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // [-2] void QAbstractItemView(QWidget *)
 func NewQAbstractItemView(parent *QWidget /*777 QWidget **/) *QAbstractItemView {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemViewC1EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemViewC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractItemViewFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

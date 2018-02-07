@@ -79,7 +79,7 @@ func (*QQmlAbstractUrlInterceptor) NewFromPointer(cthis unsafe.Pointer) *QQmlAbs
 // Public inline Visibility=Default Availability=Available
 // [-2] void QQmlAbstractUrlInterceptor()
 func NewQQmlAbstractUrlInterceptor() *QQmlAbstractUrlInterceptor {
-	rv, err := qtrt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptorC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN26QQmlAbstractUrlInterceptorC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQmlAbstractUrlInterceptorFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQQmlAbstractUrlInterceptor)

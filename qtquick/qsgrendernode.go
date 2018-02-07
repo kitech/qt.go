@@ -19,8 +19,8 @@ import "fmt"
 import "gopp"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
-import "qt.go/qtgui"
 import "qt.go/qtnetwork"
+import "qt.go/qtgui"
 import "qt.go/qtqml"
 
 func init() {
@@ -43,10 +43,10 @@ func init() {
 		qtcore.KeepMe()
 	}
 	if false {
-		qtgui.KeepMe()
+		qtnetwork.KeepMe()
 	}
 	if false {
-		qtnetwork.KeepMe()
+		qtgui.KeepMe()
 	}
 	if false {
 		qtqml.KeepMe()
@@ -84,7 +84,7 @@ func (*QSGRenderNode) NewFromPointer(cthis unsafe.Pointer) *QSGRenderNode {
 // Public Visibility=Default Availability=Available
 // [-2] void QSGRenderNode()
 func NewQSGRenderNode() *QSGRenderNode {
-	rv, err := qtrt.InvokeQtFunc6("_ZN13QSGRenderNodeC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QSGRenderNodeC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSGRenderNodeFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQSGRenderNode)

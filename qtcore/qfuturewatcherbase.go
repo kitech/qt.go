@@ -100,7 +100,7 @@ func (this *QFutureWatcherBase) MetaObject() *QMetaObject /*777 const QMetaObjec
 // [-2] void QFutureWatcherBase(QObject *)
 func NewQFutureWatcherBase(parent *QObject /*777 QObject **/) *QFutureWatcherBase {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBaseC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBaseC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFutureWatcherBaseFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

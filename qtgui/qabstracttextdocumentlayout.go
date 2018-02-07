@@ -114,7 +114,7 @@ func (this *QAbstractTextDocumentLayout) MetaObject() *qtcore.QMetaObject /*777 
 // [-2] void QAbstractTextDocumentLayout(QTextDocument *)
 func NewQAbstractTextDocumentLayout(doc *QTextDocument /*777 QTextDocument **/) *QAbstractTextDocumentLayout {
 	var convArg0 = doc.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN27QAbstractTextDocumentLayoutC2EP13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractTextDocumentLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

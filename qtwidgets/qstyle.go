@@ -88,7 +88,7 @@ func (this *QStyle) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/
 // Public Visibility=Default Availability=Available
 // [-2] void QStyle()
 func NewQStyle() *QStyle {
-	rv, err := qtrt.InvokeQtFunc6("_ZN6QStyleC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QStyleC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStyleFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

@@ -85,7 +85,7 @@ func (this *QAccessiblePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // [-2] void QAccessiblePlugin(QObject *)
 func NewQAccessiblePlugin(parent *qtcore.QObject /*777 QObject **/) *QAccessiblePlugin {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessiblePluginC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessiblePluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessiblePluginFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

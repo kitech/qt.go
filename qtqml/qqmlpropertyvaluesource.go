@@ -79,7 +79,7 @@ func (*QQmlPropertyValueSource) NewFromPointer(cthis unsafe.Pointer) *QQmlProper
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlPropertyValueSource()
 func NewQQmlPropertyValueSource() *QQmlPropertyValueSource {
-	rv, err := qtrt.InvokeQtFunc6("_ZN23QQmlPropertyValueSourceC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN23QQmlPropertyValueSourceC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQmlPropertyValueSourceFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQQmlPropertyValueSource)

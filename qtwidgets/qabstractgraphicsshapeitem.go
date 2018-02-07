@@ -77,7 +77,7 @@ func (*QAbstractGraphicsShapeItem) NewFromPointer(cthis unsafe.Pointer) *QAbstra
 // [-2] void QAbstractGraphicsShapeItem(QGraphicsItem *)
 func NewQAbstractGraphicsShapeItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *QAbstractGraphicsShapeItem {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN26QAbstractGraphicsShapeItemC1EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN26QAbstractGraphicsShapeItemC2EP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractGraphicsShapeItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQAbstractGraphicsShapeItem)

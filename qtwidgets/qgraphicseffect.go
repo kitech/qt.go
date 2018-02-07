@@ -123,7 +123,7 @@ func (this *QGraphicsEffect) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 // [-2] void QGraphicsEffect(QObject *)
 func NewQGraphicsEffect(parent *qtcore.QObject /*777 QObject **/) *QGraphicsEffect {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsEffectC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsEffectC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsEffectFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

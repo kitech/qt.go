@@ -19,8 +19,8 @@ import "fmt"
 import "gopp"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
-import "qt.go/qtgui"
 import "qt.go/qtnetwork"
+import "qt.go/qtgui"
 import "qt.go/qtqml"
 
 func init() {
@@ -43,10 +43,10 @@ func init() {
 		qtcore.KeepMe()
 	}
 	if false {
-		qtgui.KeepMe()
+		qtnetwork.KeepMe()
 	}
 	if false {
-		qtnetwork.KeepMe()
+		qtgui.KeepMe()
 	}
 	if false {
 		qtqml.KeepMe()

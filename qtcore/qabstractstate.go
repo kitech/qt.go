@@ -150,7 +150,7 @@ func (this *QAbstractState) ActiveChanged(active bool) {
 // [-2] void QAbstractState(QState *)
 func NewQAbstractState(parent *QState /*777 QState **/) *QAbstractState {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QAbstractStateC1EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QAbstractStateC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractStateFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

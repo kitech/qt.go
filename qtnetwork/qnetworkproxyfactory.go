@@ -75,7 +75,7 @@ func (*QNetworkProxyFactory) NewFromPointer(cthis unsafe.Pointer) *QNetworkProxy
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyFactory()
 func NewQNetworkProxyFactory() *QNetworkProxyFactory {
-	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkProxyFactoryC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkProxyFactoryC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQNetworkProxyFactoryFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQNetworkProxyFactory)

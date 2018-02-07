@@ -75,7 +75,7 @@ func (*QPaintEngine) NewFromPointer(cthis unsafe.Pointer) *QPaintEngine {
 // Public Visibility=Default Availability=Available
 // [-2] void QPaintEngine(QPaintEngine::PaintEngineFeatures)
 func NewQPaintEngine(features int) *QPaintEngine {
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngineC1E6QFlagsINS_18PaintEngineFeatureEE", qtrt.FFI_TYPE_POINTER, features)
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngineC2E6QFlagsINS_18PaintEngineFeatureEE", qtrt.FFI_TYPE_POINTER, features)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPaintEngineFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPaintEngine)

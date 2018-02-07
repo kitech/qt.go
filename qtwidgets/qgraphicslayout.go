@@ -81,7 +81,7 @@ func (*QGraphicsLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLayout {
 // [-2] void QGraphicsLayout(QGraphicsLayoutItem *)
 func NewQGraphicsLayout(parent *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/) *QGraphicsLayout {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQGraphicsLayout)

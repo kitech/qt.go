@@ -95,7 +95,7 @@ func (this *QAbstractTransition) MetaObject() *QMetaObject /*777 const QMetaObje
 // [-2] void QAbstractTransition(QState *)
 func NewQAbstractTransition(sourceState *QState /*777 QState **/) *QAbstractTransition {
 	var convArg0 = sourceState.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransitionC1EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransitionC2EP6QState", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractTransitionFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

@@ -85,7 +85,7 @@ func (this *QAbstractProxyModel) MetaObject() *QMetaObject /*777 const QMetaObje
 // [-2] void QAbstractProxyModel(QObject *)
 func NewQAbstractProxyModel(parent *QObject /*777 QObject **/) *QAbstractProxyModel {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractProxyModelC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractProxyModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractProxyModelFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

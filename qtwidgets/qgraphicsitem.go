@@ -224,7 +224,7 @@ func (*QGraphicsItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsItem {
 // [-2] void QGraphicsItem(QGraphicsItem *)
 func NewQGraphicsItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsItem {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItemC1EPS_", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsItemC2EPS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQGraphicsItem)

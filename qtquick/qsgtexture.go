@@ -19,8 +19,8 @@ import "fmt"
 import "gopp"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
-import "qt.go/qtgui"
 import "qt.go/qtnetwork"
+import "qt.go/qtgui"
 import "qt.go/qtqml"
 
 func init() {
@@ -43,10 +43,10 @@ func init() {
 		qtcore.KeepMe()
 	}
 	if false {
-		qtgui.KeepMe()
+		qtnetwork.KeepMe()
 	}
 	if false {
-		qtnetwork.KeepMe()
+		qtgui.KeepMe()
 	}
 	if false {
 		qtqml.KeepMe()
@@ -96,7 +96,7 @@ func (this *QSGTexture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 // Public Visibility=Default Availability=Available
 // [-2] void QSGTexture()
 func NewQSGTexture() *QSGTexture {
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QSGTextureC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QSGTextureC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

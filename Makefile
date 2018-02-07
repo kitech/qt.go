@@ -8,39 +8,42 @@ all:
 	# go build -v -x gui
 	# go build -v -x widgets
 
+realall: rts bases qmls extras tools
+
+rts: qtrt- mock-
 qtrt-:
 	CC=clang CXX=clang++ go install -v -x ./qtrt
-ffiqt:
-	CC=clang CXX=clang++ go install -v -x ./cffiqt
 mock-:
 	CC=clang CXX=clang++ go install -v -x ./qtmock
 
+bases: core- gui- widgets-
 core-:
 	CC=clang CXX=clang++ go install -v -x ./qtcore
-
 gui-:
 	CC=clang CXX=clang++ go install -v -x ./qtgui
-
 widgets-:
 	CC=clang CXX=clang++ go install -v -x ./qtwidgets
 
 network-:
 	CC=clang CXX=clang++ go install -v -x ./qtnetwork
 
+qmls: qml- quick- quicktmpl- quickctrl- quickwgt-
 qml-:
 	CC=clang CXX=clang++ go install -v -x ./qtqml
-
 quick-:
 	CC=clang CXX=clang++ go install -v -x ./qtquick
-
 quicktmpl-:
 	CC=clang CXX=clang++ go install -v -x ./qtquicktemplates2
-
 quickctrl-:
 	CC=clang CXX=clang++ go install -v -x ./qtquickcontrols2
-
 quickwgt-:
 	CC=clang CXX=clang++ go install -v -x ./qtquickwidgets
+
+extras:
+	CC=clang CXX=clang++ go install -v -x ./qtandroidextras
+	CC=clang CXX=clang++ go install -v -x ./qtmacextras
+	CC=clang CXX=clang++ go install -v -x ./qtwinextras
+
 
 eg-:
 	# CC=clang CXX=clang++ go build -v -x eg/coreapp.go
@@ -59,4 +62,12 @@ tools:
 
 tst:
 	CC=clang CXX=clang++ go test -v -x tests/qstring_test.go
+
+wcs: wcbases wcqmls wcextras
+wcbases:
+	wc -l qt{core,gui,widgets}/* | tail -n 1
+wcqmls:
+	wc -l qt{qml,quick,quickwidgets,network}/* | tail -n 1
+wcextras:
+	wc -l qt{androidextras,winextras,macextras}/* | tail -n 1
 

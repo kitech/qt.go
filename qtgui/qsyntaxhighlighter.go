@@ -129,7 +129,7 @@ func (this *QSyntaxHighlighter) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // [-2] void QSyntaxHighlighter(QObject *)
 func NewQSyntaxHighlighter(parent *qtcore.QObject /*777 QObject **/) *QSyntaxHighlighter {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN18QSyntaxHighlighterC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QSyntaxHighlighterC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSyntaxHighlighterFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -141,7 +141,7 @@ func NewQSyntaxHighlighter(parent *qtcore.QObject /*777 QObject **/) *QSyntaxHig
 // [-2] void QSyntaxHighlighter(QTextDocument *)
 func NewQSyntaxHighlighter_1(parent *QTextDocument /*777 QTextDocument **/) *QSyntaxHighlighter {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN18QSyntaxHighlighterC1EP13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QSyntaxHighlighterC2EP13QTextDocument", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSyntaxHighlighterFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

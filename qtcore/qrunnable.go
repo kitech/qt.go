@@ -80,7 +80,7 @@ func (this *QRunnable) Run() {
 // Public inline Visibility=Default Availability=Available
 // [-2] void QRunnable()
 func NewQRunnable() *QRunnable {
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QRunnableC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QRunnableC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQRunnableFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQRunnable)

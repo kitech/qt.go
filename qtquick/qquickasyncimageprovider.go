@@ -19,8 +19,8 @@ import "fmt"
 import "gopp"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
-import "qt.go/qtgui"
 import "qt.go/qtnetwork"
+import "qt.go/qtgui"
 import "qt.go/qtqml"
 
 func init() {
@@ -43,10 +43,10 @@ func init() {
 		qtcore.KeepMe()
 	}
 	if false {
-		qtgui.KeepMe()
+		qtnetwork.KeepMe()
 	}
 	if false {
-		qtnetwork.KeepMe()
+		qtgui.KeepMe()
 	}
 	if false {
 		qtqml.KeepMe()
@@ -84,7 +84,7 @@ func (*QQuickAsyncImageProvider) NewFromPointer(cthis unsafe.Pointer) *QQuickAsy
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickAsyncImageProvider()
 func NewQQuickAsyncImageProvider() *QQuickAsyncImageProvider {
-	rv, err := qtrt.InvokeQtFunc6("_ZN24QQuickAsyncImageProviderC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QQuickAsyncImageProviderC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQuickAsyncImageProviderFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQQuickAsyncImageProvider)

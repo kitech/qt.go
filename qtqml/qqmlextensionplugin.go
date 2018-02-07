@@ -92,7 +92,7 @@ func (this *QQmlExtensionPlugin) MetaObject() *qtcore.QMetaObject /*777 const QM
 // [-2] void QQmlExtensionPlugin(QObject *)
 func NewQQmlExtensionPlugin(parent *qtcore.QObject /*777 QObject **/) *QQmlExtensionPlugin {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QQmlExtensionPluginC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QQmlExtensionPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQmlExtensionPluginFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

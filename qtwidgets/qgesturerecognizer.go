@@ -79,7 +79,7 @@ func (*QGestureRecognizer) NewFromPointer(cthis unsafe.Pointer) *QGestureRecogni
 // Public Visibility=Default Availability=Available
 // [-2] void QGestureRecognizer()
 func NewQGestureRecognizer() *QGestureRecognizer {
-	rv, err := qtrt.InvokeQtFunc6("_ZN18QGestureRecognizerC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QGestureRecognizerC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGestureRecognizerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQGestureRecognizer)

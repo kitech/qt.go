@@ -371,7 +371,7 @@ func (this *QTextCodec) MibEnum() int {
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextCodec()
 func NewQTextCodec() *QTextCodec {
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextCodecC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextCodecC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextCodecFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQTextCodec)

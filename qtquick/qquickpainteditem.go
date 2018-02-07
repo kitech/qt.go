@@ -19,8 +19,8 @@ import "fmt"
 import "gopp"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
-import "qt.go/qtgui"
 import "qt.go/qtnetwork"
+import "qt.go/qtgui"
 import "qt.go/qtqml"
 
 func init() {
@@ -43,10 +43,10 @@ func init() {
 		qtcore.KeepMe()
 	}
 	if false {
-		qtgui.KeepMe()
+		qtnetwork.KeepMe()
 	}
 	if false {
-		qtnetwork.KeepMe()
+		qtgui.KeepMe()
 	}
 	if false {
 		qtqml.KeepMe()
@@ -101,7 +101,7 @@ func (this *QQuickPaintedItem) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // [-2] void QQuickPaintedItem(QQuickItem *)
 func NewQQuickPaintedItem(parent *QQuickItem /*777 QQuickItem **/) *QQuickPaintedItem {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN17QQuickPaintedItemC1EP10QQuickItem", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QQuickPaintedItemC2EP10QQuickItem", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQuickPaintedItemFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

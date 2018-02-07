@@ -85,7 +85,7 @@ func (this *QImageIOPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // [-2] void QImageIOPlugin(QObject *)
 func NewQImageIOPlugin(parent *qtcore.QObject /*777 QObject **/) *QImageIOPlugin {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QImageIOPluginC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QImageIOPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQImageIOPluginFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

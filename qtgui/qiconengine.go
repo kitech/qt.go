@@ -75,7 +75,7 @@ func (*QIconEngine) NewFromPointer(cthis unsafe.Pointer) *QIconEngine {
 // Public Visibility=Default Availability=Available
 // [-2] void QIconEngine()
 func NewQIconEngine() *QIconEngine {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QIconEngineC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QIconEngineC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQIconEngineFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQIconEngine)

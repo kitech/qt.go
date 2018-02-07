@@ -81,7 +81,7 @@ func (this *QAbstractListModel) MetaObject() *QMetaObject /*777 const QMetaObjec
 // [-2] void QAbstractListModel(QObject *)
 func NewQAbstractListModel(parent *QObject /*777 QObject **/) *QAbstractListModel {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractListModelC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractListModelC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractListModelFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

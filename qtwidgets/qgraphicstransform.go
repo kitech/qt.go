@@ -93,7 +93,7 @@ func (this *QGraphicsTransform) MetaObject() *qtcore.QMetaObject /*777 const QMe
 // [-2] void QGraphicsTransform(QObject *)
 func NewQGraphicsTransform(parent *qtcore.QObject /*777 QObject **/) *QGraphicsTransform {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN18QGraphicsTransformC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QGraphicsTransformC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGraphicsTransformFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

@@ -81,7 +81,7 @@ func (this *QAbstractEventDispatcher) MetaObject() *QMetaObject /*777 const QMet
 // [-2] void QAbstractEventDispatcher(QObject *)
 func NewQAbstractEventDispatcher(parent *QObject /*777 QObject **/) *QAbstractEventDispatcher {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcherC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractEventDispatcherC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractEventDispatcherFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

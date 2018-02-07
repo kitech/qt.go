@@ -121,7 +121,7 @@ func (this *QLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 // [-2] void QLayout(QWidget *)
 func NewQLayout(parent *QWidget /*777 QWidget **/) *QLayout {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayoutC1EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayoutC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
@@ -132,7 +132,7 @@ func NewQLayout(parent *QWidget /*777 QWidget **/) *QLayout {
 // Public Visibility=Default Availability=Available
 // [-2] void QLayout()
 func NewQLayout_1() *QLayout {
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayoutC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QLayoutC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

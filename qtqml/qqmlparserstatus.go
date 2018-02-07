@@ -79,7 +79,7 @@ func (*QQmlParserStatus) NewFromPointer(cthis unsafe.Pointer) *QQmlParserStatus 
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlParserStatus()
 func NewQQmlParserStatus() *QQmlParserStatus {
-	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlParserStatusC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QQmlParserStatusC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQmlParserStatusFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQQmlParserStatus)

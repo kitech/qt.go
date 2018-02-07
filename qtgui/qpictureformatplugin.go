@@ -85,7 +85,7 @@ func (this *QPictureFormatPlugin) MetaObject() *qtcore.QMetaObject /*777 const Q
 // [-2] void QPictureFormatPlugin(QObject *)
 func NewQPictureFormatPlugin(parent *qtcore.QObject /*777 QObject **/) *QPictureFormatPlugin {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN20QPictureFormatPluginC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QPictureFormatPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPictureFormatPluginFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

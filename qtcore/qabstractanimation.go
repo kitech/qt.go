@@ -100,7 +100,7 @@ func (this *QAbstractAnimation) MetaObject() *QMetaObject /*777 const QMetaObjec
 // [-2] void QAbstractAnimation(QObject *)
 func NewQAbstractAnimation(parent *QObject /*777 QObject **/) *QAbstractAnimation {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimationC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractAnimationC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAbstractAnimationFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

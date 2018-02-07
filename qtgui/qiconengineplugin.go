@@ -85,7 +85,7 @@ func (this *QIconEnginePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // [-2] void QIconEnginePlugin(QObject *)
 func NewQIconEnginePlugin(parent *qtcore.QObject /*777 QObject **/) *QIconEnginePlugin {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN17QIconEnginePluginC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QIconEnginePluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQIconEnginePluginFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

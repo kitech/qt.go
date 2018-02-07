@@ -19,8 +19,8 @@ import "fmt"
 import "gopp"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
-import "qt.go/qtgui"
 import "qt.go/qtnetwork"
+import "qt.go/qtgui"
 import "qt.go/qtqml"
 
 func init() {
@@ -43,10 +43,10 @@ func init() {
 		qtcore.KeepMe()
 	}
 	if false {
-		qtgui.KeepMe()
+		qtnetwork.KeepMe()
 	}
 	if false {
-		qtnetwork.KeepMe()
+		qtgui.KeepMe()
 	}
 	if false {
 		qtqml.KeepMe()
@@ -84,7 +84,7 @@ func (*QQuickTextureFactory) NewFromPointer(cthis unsafe.Pointer) *QQuickTexture
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickTextureFactory()
 func NewQQuickTextureFactory() *QQuickTextureFactory {
-	rv, err := qtrt.InvokeQtFunc6("_ZN20QQuickTextureFactoryC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QQuickTextureFactoryC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQuickTextureFactoryFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

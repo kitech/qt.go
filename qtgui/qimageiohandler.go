@@ -75,7 +75,7 @@ func (*QImageIOHandler) NewFromPointer(cthis unsafe.Pointer) *QImageIOHandler {
 // Public Visibility=Default Availability=Available
 // [-2] void QImageIOHandler()
 func NewQImageIOHandler() *QImageIOHandler {
-	rv, err := qtrt.InvokeQtFunc6("_ZN15QImageIOHandlerC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QImageIOHandlerC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQImageIOHandlerFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQImageIOHandler)

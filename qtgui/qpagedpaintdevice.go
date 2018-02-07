@@ -76,7 +76,7 @@ func (*QPagedPaintDevice) NewFromPointer(cthis unsafe.Pointer) *QPagedPaintDevic
 // Public Visibility=Default Availability=Available
 // [-2] void QPagedPaintDevice()
 func NewQPagedPaintDevice() *QPagedPaintDevice {
-	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDeviceC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN17QPagedPaintDeviceC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQPagedPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQPagedPaintDevice)

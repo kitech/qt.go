@@ -85,7 +85,7 @@ func (this *QGenericPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 // [-2] void QGenericPlugin(QObject *)
 func NewQGenericPlugin(parent *qtcore.QObject /*777 QObject **/) *QGenericPlugin {
 	var convArg0 = parent.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QGenericPluginC1EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QGenericPluginC2EP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQGenericPluginFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis

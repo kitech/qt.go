@@ -19,8 +19,8 @@ import "fmt"
 import "gopp"
 import "qt.go/qtrt"
 import "qt.go/qtcore"
-import "qt.go/qtgui"
 import "qt.go/qtnetwork"
+import "qt.go/qtgui"
 import "qt.go/qtqml"
 
 func init() {
@@ -43,10 +43,10 @@ func init() {
 		qtcore.KeepMe()
 	}
 	if false {
-		qtgui.KeepMe()
+		qtnetwork.KeepMe()
 	}
 	if false {
-		qtnetwork.KeepMe()
+		qtgui.KeepMe()
 	}
 	if false {
 		qtqml.KeepMe()
@@ -96,7 +96,7 @@ func (this *QQuickImageResponse) MetaObject() *qtcore.QMetaObject /*777 const QM
 // Public Visibility=Default Availability=Available
 // [-2] void QQuickImageResponse()
 func NewQQuickImageResponse() *QQuickImageResponse {
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageResponseC1Ev", qtrt.FFI_TYPE_POINTER)
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QQuickImageResponseC2Ev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQQuickImageResponseFromPointer(unsafe.Pointer(uintptr(rv)))
 	return gothis
