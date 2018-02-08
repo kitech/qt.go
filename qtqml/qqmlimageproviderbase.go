@@ -92,7 +92,6 @@ func DeleteQQmlImageProviderBase(this *QQmlImageProviderBase) {
 func (this *QQmlImageProviderBase) ImageType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QQmlImageProviderBase9imageTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -103,7 +102,6 @@ func (this *QQmlImageProviderBase) ImageType() int {
 func (this *QQmlImageProviderBase) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QQmlImageProviderBase5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 

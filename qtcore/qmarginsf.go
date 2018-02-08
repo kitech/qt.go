@@ -110,7 +110,6 @@ func NewQMarginsF_2(margins *QMargins) *QMarginsF {
 func (this *QMarginsF) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMarginsF6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -121,7 +120,6 @@ func (this *QMarginsF) IsNull() bool {
 func (this *QMarginsF) Left() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMarginsF4leftEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -132,7 +130,6 @@ func (this *QMarginsF) Left() float64 {
 func (this *QMarginsF) Top() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMarginsF3topEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -143,7 +140,6 @@ func (this *QMarginsF) Top() float64 {
 func (this *QMarginsF) Right() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMarginsF5rightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -154,7 +150,6 @@ func (this *QMarginsF) Right() float64 {
 func (this *QMarginsF) Bottom() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMarginsF6bottomEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -201,7 +196,6 @@ func (this *QMarginsF) SetBottom(bottom float64) {
 func (this *QMarginsF) ToMargins() *QMargins /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMarginsF9toMarginsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMargins)
 	return rv2

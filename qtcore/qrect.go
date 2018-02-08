@@ -125,7 +125,6 @@ func NewQRect_3(left int, top int, width int, height int) *QRect {
 func (this *QRect) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -136,7 +135,6 @@ func (this *QRect) IsNull() bool {
 func (this *QRect) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -147,7 +145,6 @@ func (this *QRect) IsEmpty() bool {
 func (this *QRect) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -158,7 +155,6 @@ func (this *QRect) IsValid() bool {
 func (this *QRect) Left() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect4leftEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -169,7 +165,6 @@ func (this *QRect) Left() int {
 func (this *QRect) Top() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect3topEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -180,7 +175,6 @@ func (this *QRect) Top() int {
 func (this *QRect) Right() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect5rightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -191,7 +185,6 @@ func (this *QRect) Right() int {
 func (this *QRect) Bottom() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect6bottomEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -202,7 +195,6 @@ func (this *QRect) Bottom() int {
 func (this *QRect) Normalized() *QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect10normalizedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRect)
 	return rv2
@@ -215,7 +207,6 @@ func (this *QRect) Normalized() *QRect /*123*/ {
 func (this *QRect) X() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect1xEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -226,7 +217,6 @@ func (this *QRect) X() int {
 func (this *QRect) Y() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect1yEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -331,7 +321,6 @@ func (this *QRect) SetBottomLeft(p *QPoint) {
 func (this *QRect) TopLeft() *QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect7topLeftEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPoint)
 	return rv2
@@ -344,7 +333,6 @@ func (this *QRect) TopLeft() *QPoint /*123*/ {
 func (this *QRect) BottomRight() *QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect11bottomRightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPoint)
 	return rv2
@@ -357,7 +345,6 @@ func (this *QRect) BottomRight() *QPoint /*123*/ {
 func (this *QRect) TopRight() *QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect8topRightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPoint)
 	return rv2
@@ -370,7 +357,6 @@ func (this *QRect) TopRight() *QPoint /*123*/ {
 func (this *QRect) BottomLeft() *QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect10bottomLeftEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPoint)
 	return rv2
@@ -383,7 +369,6 @@ func (this *QRect) BottomLeft() *QPoint /*123*/ {
 func (this *QRect) Center() *QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect6centerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPoint)
 	return rv2
@@ -501,7 +486,6 @@ func (this *QRect) Translate_1(p *QPoint) {
 func (this *QRect) Translated(dx int, dy int) *QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect10translatedEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dx, dy)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRect)
 	return rv2
@@ -515,7 +499,6 @@ func (this *QRect) Translated_1(p *QPoint) *QRect /*123*/ {
 	var convArg0 = p.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect10translatedERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRect)
 	return rv2
@@ -528,7 +511,6 @@ func (this *QRect) Translated_1(p *QPoint) *QRect /*123*/ {
 func (this *QRect) Transposed() *QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect10transposedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRect)
 	return rv2
@@ -605,7 +587,6 @@ func (this *QRect) Adjust(x1 int, y1 int, x2 int, y2 int) {
 func (this *QRect) Adjusted(x1 int, y1 int, x2 int, y2 int) *QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect8adjustedEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x1, y1, x2, y2)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRect)
 	return rv2
@@ -618,7 +599,6 @@ func (this *QRect) Adjusted(x1 int, y1 int, x2 int, y2 int) *QRect /*123*/ {
 func (this *QRect) Size() *QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
 	return rv2
@@ -631,7 +611,6 @@ func (this *QRect) Size() *QSize /*123*/ {
 func (this *QRect) Width() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect5widthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -642,7 +621,6 @@ func (this *QRect) Width() int {
 func (this *QRect) Height() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect6heightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -682,7 +660,6 @@ func (this *QRect) Contains(r *QRect, proper bool) bool {
 	var convArg0 = r.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect8containsERKS_b", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, proper)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -694,7 +671,6 @@ func (this *QRect) Contains_1(p *QPoint, proper bool) bool {
 	var convArg0 = p.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect8containsERK6QPointb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, proper)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -705,7 +681,6 @@ func (this *QRect) Contains_1(p *QPoint, proper bool) bool {
 func (this *QRect) Contains_2(x int, y int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect8containsEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -716,7 +691,6 @@ func (this *QRect) Contains_2(x int, y int) bool {
 func (this *QRect) Contains_3(x int, y int, proper bool) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect8containsEiib", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, proper)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -728,7 +702,6 @@ func (this *QRect) United(other *QRect) *QRect /*123*/ {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect6unitedERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRect)
 	return rv2
@@ -742,7 +715,6 @@ func (this *QRect) Intersected(other *QRect) *QRect /*123*/ {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect11intersectedERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRect)
 	return rv2
@@ -756,7 +728,6 @@ func (this *QRect) Intersects(r *QRect) bool {
 	var convArg0 = r.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect10intersectsERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -768,7 +739,6 @@ func (this *QRect) MarginsAdded(margins *QMargins) *QRect /*123*/ {
 	var convArg0 = margins.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect12marginsAddedERK8QMargins", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRect)
 	return rv2
@@ -782,7 +752,6 @@ func (this *QRect) MarginsRemoved(margins *QMargins) *QRect /*123*/ {
 	var convArg0 = margins.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QRect14marginsRemovedERK8QMargins", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRect)
 	return rv2

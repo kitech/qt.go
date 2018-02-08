@@ -137,9 +137,7 @@ func (*QToolButton) NewFromPointer(cthis unsafe.Pointer) *QToolButton {
 func (this *QToolButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qtoolbutton.h:74
@@ -172,7 +170,6 @@ func DeleteQToolButton(this *QToolButton) {
 func (this *QToolButton) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -185,7 +182,6 @@ func (this *QToolButton) SizeHint() *qtcore.QSize /*123*/ {
 func (this *QToolButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -198,7 +194,6 @@ func (this *QToolButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 func (this *QToolButton) ToolButtonStyle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton15toolButtonStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -209,7 +204,6 @@ func (this *QToolButton) ToolButtonStyle() int {
 func (this *QToolButton) ArrowType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton9arrowTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -239,9 +233,7 @@ func (this *QToolButton) SetMenu(menu *QMenu /*777 QMenu **/) {
 func (this *QToolButton) Menu() *QMenu /*777 QMenu **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton4menuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qtoolbutton.h:89
@@ -260,7 +252,6 @@ func (this *QToolButton) SetPopupMode(mode int) {
 func (this *QToolButton) PopupMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton9popupModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -271,9 +262,7 @@ func (this *QToolButton) PopupMode() int {
 func (this *QToolButton) DefaultAction() *QAction /*777 QAction **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton13defaultActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qtoolbutton.h:95
@@ -292,7 +281,6 @@ func (this *QToolButton) SetAutoRaise(enable bool) {
 func (this *QToolButton) AutoRaise() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton9autoRaiseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -342,7 +330,6 @@ func (this *QToolButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButton5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -434,7 +421,6 @@ func (this *QToolButton) HitButton(pos *qtcore.QPoint) bool {
 	var convArg0 = pos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton9hitButtonERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

@@ -86,9 +86,7 @@ func (*QSGDynamicTexture) NewFromPointer(cthis unsafe.Pointer) *QSGDynamicTextur
 func (this *QSGDynamicTexture) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGDynamicTexture10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQuick/qsgtexture.h:133
@@ -98,7 +96,6 @@ func (this *QSGDynamicTexture) MetaObject() *qtcore.QMetaObject /*777 const QMet
 func (this *QSGDynamicTexture) UpdateTexture() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGDynamicTexture13updateTextureEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

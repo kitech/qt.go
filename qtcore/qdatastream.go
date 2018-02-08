@@ -135,9 +135,7 @@ func DeleteQDataStream(this *QDataStream) {
 func (this *QDataStream) Device() *QIODevice /*777 QIODevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDataStream6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qdatastream.h:130
@@ -166,7 +164,6 @@ func (this *QDataStream) UnsetDevice() {
 func (this *QDataStream) AtEnd() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDataStream5atEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -177,7 +174,6 @@ func (this *QDataStream) AtEnd() bool {
 func (this *QDataStream) Status() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDataStream6statusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -206,7 +202,6 @@ func (this *QDataStream) ResetStatus() {
 func (this *QDataStream) FloatingPointPrecision() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDataStream22floatingPointPrecisionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -226,7 +221,6 @@ func (this *QDataStream) SetFloatingPointPrecision(precision int) {
 func (this *QDataStream) ByteOrder() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDataStream9byteOrderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -246,7 +240,6 @@ func (this *QDataStream) SetByteOrder(arg0 int) {
 func (this *QDataStream) Version() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDataStream7versionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -266,7 +259,6 @@ func (this *QDataStream) SetVersion(arg0 int) {
 func (this *QDataStream) ReadBytes(arg0 unsafe.Pointer /*555*/, len uint) *QDataStream {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream9readBytesERPcRj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0, &len)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDataStream)
 	return rv2
@@ -281,7 +273,6 @@ func (this *QDataStream) ReadRawData(arg0 string, len int) int {
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream11readRawDataEPci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -294,7 +285,6 @@ func (this *QDataStream) WriteBytes(arg0 string, len uint) *QDataStream {
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream10writeBytesEPKcj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQDataStreamFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDataStream)
 	return rv2
@@ -309,7 +299,6 @@ func (this *QDataStream) WriteRawData(arg0 string, len int) int {
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream12writeRawDataEPKci", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -320,7 +309,6 @@ func (this *QDataStream) WriteRawData(arg0 string, len int) int {
 func (this *QDataStream) SkipRawData(len int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream11skipRawDataEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), len)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -340,7 +328,6 @@ func (this *QDataStream) StartTransaction() {
 func (this *QDataStream) CommitTransaction() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDataStream17commitTransactionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

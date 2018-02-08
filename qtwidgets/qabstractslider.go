@@ -117,9 +117,7 @@ func (*QAbstractSlider) NewFromPointer(cthis unsafe.Pointer) *QAbstractSlider {
 func (this *QAbstractSlider) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qabstractslider.h:70
@@ -152,7 +150,6 @@ func DeleteQAbstractSlider(this *QAbstractSlider) {
 func (this *QAbstractSlider) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -172,7 +169,6 @@ func (this *QAbstractSlider) SetMinimum(arg0 int) {
 func (this *QAbstractSlider) Minimum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider7minimumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -192,7 +188,6 @@ func (this *QAbstractSlider) SetMaximum(arg0 int) {
 func (this *QAbstractSlider) Maximum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider7maximumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -212,7 +207,6 @@ func (this *QAbstractSlider) SetSingleStep(arg0 int) {
 func (this *QAbstractSlider) SingleStep() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider10singleStepEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -232,7 +226,6 @@ func (this *QAbstractSlider) SetPageStep(arg0 int) {
 func (this *QAbstractSlider) PageStep() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider8pageStepEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -252,7 +245,6 @@ func (this *QAbstractSlider) SetTracking(enable bool) {
 func (this *QAbstractSlider) HasTracking() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider11hasTrackingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -272,7 +264,6 @@ func (this *QAbstractSlider) SetSliderDown(arg0 bool) {
 func (this *QAbstractSlider) IsSliderDown() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider12isSliderDownEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -292,7 +283,6 @@ func (this *QAbstractSlider) SetSliderPosition(arg0 int) {
 func (this *QAbstractSlider) SliderPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider14sliderPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -312,7 +302,6 @@ func (this *QAbstractSlider) SetInvertedAppearance(arg0 bool) {
 func (this *QAbstractSlider) InvertedAppearance() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider18invertedAppearanceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -332,7 +321,6 @@ func (this *QAbstractSlider) SetInvertedControls(arg0 bool) {
 func (this *QAbstractSlider) InvertedControls() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider16invertedControlsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -343,7 +331,6 @@ func (this *QAbstractSlider) InvertedControls() bool {
 func (this *QAbstractSlider) Value() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -445,7 +432,6 @@ func (this *QAbstractSlider) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSlider5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -465,7 +451,6 @@ func (this *QAbstractSlider) SetRepeatAction(action int, thresholdTime int, repe
 func (this *QAbstractSlider) RepeatAction() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractSlider12repeatActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 

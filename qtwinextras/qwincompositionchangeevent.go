@@ -101,7 +101,6 @@ func DeleteQWinCompositionChangeEvent(this *QWinCompositionChangeEvent) {
 func (this *QWinCompositionChangeEvent) IsCompositionEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QWinCompositionChangeEvent20isCompositionEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

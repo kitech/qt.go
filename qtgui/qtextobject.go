@@ -78,9 +78,7 @@ func (*QTextObject) NewFromPointer(cthis unsafe.Pointer) *QTextObject {
 func (this *QTextObject) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:65
@@ -123,7 +121,6 @@ func (this *QTextObject) SetFormat(format *QTextFormat) {
 func (this *QTextObject) Format() *QTextFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQTextFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextFormat)
 	return rv2
@@ -136,7 +133,6 @@ func (this *QTextObject) Format() *QTextFormat /*123*/ {
 func (this *QTextObject) FormatIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject11formatIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -147,9 +143,7 @@ func (this *QTextObject) FormatIndex() int {
 func (this *QTextObject) Document() *QTextDocument /*777 QTextDocument **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject8documentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQTextDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQTextDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qtextobject.h:76
@@ -159,7 +153,6 @@ func (this *QTextObject) Document() *QTextDocument /*777 QTextDocument **/ {
 func (this *QTextObject) ObjectIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextObject11objectIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

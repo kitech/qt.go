@@ -106,7 +106,6 @@ func (this *QEasingCurve) Swap(other *QEasingCurve) {
 func (this *QEasingCurve) Amplitude() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QEasingCurve9amplitudeEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -126,7 +125,6 @@ func (this *QEasingCurve) SetAmplitude(amplitude float64) {
 func (this *QEasingCurve) Period() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QEasingCurve6periodEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -146,7 +144,6 @@ func (this *QEasingCurve) SetPeriod(period float64) {
 func (this *QEasingCurve) Overshoot() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QEasingCurve9overshootEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -188,7 +185,6 @@ func (this *QEasingCurve) AddTCBSegment(nextPoint *QPointF, t float64, c float64
 func (this *QEasingCurve) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QEasingCurve4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -208,7 +204,6 @@ func (this *QEasingCurve) SetType(type_ int) {
 func (this *QEasingCurve) CustomType() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QEasingCurve10customTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -219,7 +214,6 @@ func (this *QEasingCurve) CustomType() unsafe.Pointer /*666*/ {
 func (this *QEasingCurve) ValueForProgress(progress float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QEasingCurve16valueForProgressEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), progress)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 

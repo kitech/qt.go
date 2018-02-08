@@ -102,7 +102,6 @@ func (this *QMutex) Lock() {
 func (this *QMutex) TryLock(timeout int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMutex7tryLockEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -122,7 +121,6 @@ func (this *QMutex) Unlock() {
 func (this *QMutex) Try_lock() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMutex8try_lockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -133,7 +131,6 @@ func (this *QMutex) Try_lock() bool {
 func (this *QMutex) IsRecursive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMutex11isRecursiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

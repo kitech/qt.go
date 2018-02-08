@@ -133,7 +133,6 @@ func (this *QGraphicsLayout) Activate() {
 func (this *QGraphicsLayout) IsActivated() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsLayout11isActivatedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -172,7 +171,6 @@ func (this *QGraphicsLayout) WidgetEvent(e *qtcore.QEvent /*777 QEvent **/) {
 func (this *QGraphicsLayout) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsLayout5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -183,9 +181,7 @@ func (this *QGraphicsLayout) Count() int {
 func (this *QGraphicsLayout) ItemAt(i int) *QGraphicsLayoutItem /*777 QGraphicsLayoutItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QGraphicsLayout6itemAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQGraphicsLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQGraphicsLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h:72
@@ -217,7 +213,6 @@ func QGraphicsLayout_SetInstantInvalidatePropagation(enable bool) {
 func (this *QGraphicsLayout) InstantInvalidatePropagation() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QGraphicsLayout28instantInvalidatePropagationEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 func QGraphicsLayout_InstantInvalidatePropagation() bool {

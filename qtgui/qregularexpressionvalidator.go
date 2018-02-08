@@ -74,9 +74,7 @@ func (*QRegularExpressionValidator) NewFromPointer(cthis unsafe.Pointer) *QRegul
 func (this *QRegularExpressionValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:207
@@ -119,11 +117,11 @@ func DeleteQRegularExpressionValidator(this *QRegularExpressionValidator) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QValidator::State validate(QString &, int &)
-func (this *QRegularExpressionValidator) Validate(input *qtcore.QString, pos int) int {
-	var convArg0 = input.GetCthis()
+func (this *QRegularExpressionValidator) Validate(input string, pos int) int {
+	var tmpArg0 = qtcore.NewQString_5(input)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator8validateER7QStringRi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &pos)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -134,7 +132,6 @@ func (this *QRegularExpressionValidator) Validate(input *qtcore.QString, pos int
 func (this *QRegularExpressionValidator) RegularExpression() *qtcore.QRegularExpression /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QRegularExpressionValidator17regularExpressionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRegularExpressionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRegularExpression)
 	return rv2

@@ -110,7 +110,6 @@ func (this *QNetworkAddressEntry) Swap(other *QNetworkAddressEntry) {
 func (this *QNetworkAddressEntry) Ip() *QHostAddress /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QNetworkAddressEntry2ipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQHostAddress)
 	return rv2
@@ -133,7 +132,6 @@ func (this *QNetworkAddressEntry) SetIp(newIp *QHostAddress) {
 func (this *QNetworkAddressEntry) Netmask() *QHostAddress /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QNetworkAddressEntry7netmaskEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQHostAddress)
 	return rv2
@@ -156,7 +154,6 @@ func (this *QNetworkAddressEntry) SetNetmask(newNetmask *QHostAddress) {
 func (this *QNetworkAddressEntry) PrefixLength() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QNetworkAddressEntry12prefixLengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -176,7 +173,6 @@ func (this *QNetworkAddressEntry) SetPrefixLength(length int) {
 func (this *QNetworkAddressEntry) Broadcast() *QHostAddress /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QNetworkAddressEntry9broadcastEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQHostAddress)
 	return rv2

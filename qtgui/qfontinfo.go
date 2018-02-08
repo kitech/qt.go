@@ -108,26 +108,26 @@ func (this *QFontInfo) Swap(other *QFontInfo) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString family()
-func (this *QFontInfo) Family() *qtcore.QString /*123*/ {
+func (this *QFontInfo) Family() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo6familyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtGui/qfontinfo.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString styleName()
-func (this *QFontInfo) StyleName() *qtcore.QString /*123*/ {
+func (this *QFontInfo) StyleName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo9styleNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtGui/qfontinfo.h:63
@@ -137,7 +137,6 @@ func (this *QFontInfo) StyleName() *qtcore.QString /*123*/ {
 func (this *QFontInfo) PixelSize() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo9pixelSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -148,7 +147,6 @@ func (this *QFontInfo) PixelSize() int {
 func (this *QFontInfo) PointSize() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo9pointSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -159,7 +157,6 @@ func (this *QFontInfo) PointSize() int {
 func (this *QFontInfo) PointSizeF() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo10pointSizeFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -170,7 +167,6 @@ func (this *QFontInfo) PointSizeF() float64 {
 func (this *QFontInfo) Italic() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo6italicEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -181,7 +177,6 @@ func (this *QFontInfo) Italic() bool {
 func (this *QFontInfo) Style() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo5styleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -192,7 +187,6 @@ func (this *QFontInfo) Style() int {
 func (this *QFontInfo) Weight() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo6weightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -203,7 +197,6 @@ func (this *QFontInfo) Weight() int {
 func (this *QFontInfo) Bold() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo4boldEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -214,7 +207,6 @@ func (this *QFontInfo) Bold() bool {
 func (this *QFontInfo) Underline() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo9underlineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -225,7 +217,6 @@ func (this *QFontInfo) Underline() bool {
 func (this *QFontInfo) Overline() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo8overlineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -236,7 +227,6 @@ func (this *QFontInfo) Overline() bool {
 func (this *QFontInfo) StrikeOut() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo9strikeOutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -247,7 +237,6 @@ func (this *QFontInfo) StrikeOut() bool {
 func (this *QFontInfo) FixedPitch() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo10fixedPitchEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -258,7 +247,6 @@ func (this *QFontInfo) FixedPitch() bool {
 func (this *QFontInfo) StyleHint() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo9styleHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -269,7 +257,6 @@ func (this *QFontInfo) StyleHint() int {
 func (this *QFontInfo) RawMode() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo7rawModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -280,7 +267,6 @@ func (this *QFontInfo) RawMode() bool {
 func (this *QFontInfo) ExactMatch() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFontInfo10exactMatchEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

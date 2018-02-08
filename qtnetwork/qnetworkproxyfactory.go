@@ -100,7 +100,6 @@ func DeleteQNetworkProxyFactory(this *QNetworkProxyFactory) {
 func (this *QNetworkProxyFactory) UsesSystemConfiguration() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QNetworkProxyFactory23usesSystemConfigurationEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 func QNetworkProxyFactory_UsesSystemConfiguration() bool {

@@ -57,7 +57,7 @@ func init() {
 
 //  body block begin
 // void setShaderSourceFile(class QOpenGLShader::ShaderType, const class QString &)
-func (this *QSGMaterialShader) InheritSetShaderSourceFile(f func(type_ int, sourceFile *qtcore.QString) /*void*/) {
+func (this *QSGMaterialShader) InheritSetShaderSourceFile(f func(type_ int, sourceFile string) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "setShaderSourceFile", f)
 }
 
@@ -159,7 +159,6 @@ func (this *QSGMaterialShader) Deactivate() {
 func (this *QSGMaterialShader) AttributeNames() []string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGMaterialShader14attributeNamesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.CCharPPToStringSlice(unsafe.Pointer(uintptr(rv)))
 }
 
@@ -167,8 +166,9 @@ func (this *QSGMaterialShader) AttributeNames() []string {
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setShaderSourceFile(QOpenGLShader::ShaderType, const QString &)
-func (this *QSGMaterialShader) SetShaderSourceFile(type_ int, sourceFile *qtcore.QString) {
-	var convArg1 = sourceFile.GetCthis()
+func (this *QSGMaterialShader) SetShaderSourceFile(type_ int, sourceFile string) {
+	var tmpArg1 = qtcore.NewQString_5(sourceFile)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QSGMaterialShader19setShaderSourceFileE6QFlagsIN13QOpenGLShader13ShaderTypeBitEERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), type_, convArg1)
 	gopp.ErrPrint(err, rv)
 }
@@ -208,7 +208,6 @@ func (this *QSGMaterialShader) Initialize() {
 func (this *QSGMaterialShader) VertexShader() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGMaterialShader12vertexShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.GoStringI(rv)
 }
 
@@ -219,7 +218,6 @@ func (this *QSGMaterialShader) VertexShader() string {
 func (this *QSGMaterialShader) FragmentShader() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QSGMaterialShader14fragmentShaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.GoStringI(rv)
 }
 

@@ -84,9 +84,7 @@ func (*QThread) NewFromPointer(cthis unsafe.Pointer) *QThread {
 func (this *QThread) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QThread10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qthread.h:74
@@ -96,7 +94,6 @@ func (this *QThread) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 func (this *QThread) CurrentThreadId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread15currentThreadIdEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return int(rv)
 }
 func QThread_CurrentThreadId() int {
@@ -112,9 +109,7 @@ func QThread_CurrentThreadId() int {
 func (this *QThread) CurrentThread() *QThread /*777 QThread **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread13currentThreadEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQThreadFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQThreadFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QThread_CurrentThread() *QThread /*777 QThread **/ {
 	var nilthis *QThread
@@ -129,7 +124,6 @@ func QThread_CurrentThread() *QThread /*777 QThread **/ {
 func (this *QThread) IdealThreadCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread16idealThreadCountEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QThread_IdealThreadCount() int {
@@ -190,7 +184,6 @@ func (this *QThread) SetPriority(priority int) {
 func (this *QThread) Priority() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QThread8priorityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -201,7 +194,6 @@ func (this *QThread) Priority() int {
 func (this *QThread) IsFinished() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QThread10isFinishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -212,7 +204,6 @@ func (this *QThread) IsFinished() bool {
 func (this *QThread) IsRunning() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QThread9isRunningEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -232,7 +223,6 @@ func (this *QThread) RequestInterruption() {
 func (this *QThread) IsInterruptionRequested() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QThread23isInterruptionRequestedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -252,7 +242,6 @@ func (this *QThread) SetStackSize(stackSize uint) {
 func (this *QThread) StackSize() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QThread9stackSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint(rv) // 222
 }
 
@@ -272,9 +261,7 @@ func (this *QThread) Exit(retcode int) {
 func (this *QThread) EventDispatcher() *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QThread15eventDispatcherEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQAbstractEventDispatcherFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQAbstractEventDispatcherFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qthread.h:111
@@ -295,7 +282,6 @@ func (this *QThread) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -306,7 +292,6 @@ func (this *QThread) Event(event *QEvent /*777 QEvent **/) bool {
 func (this *QThread) LoopLevel() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QThread9loopLevelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -344,7 +329,6 @@ func (this *QThread) Quit() {
 func (this *QThread) Wait(time uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread4waitEm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), time)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -403,7 +387,6 @@ func (this *QThread) Run() {
 func (this *QThread) Exec() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread4execEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

@@ -138,7 +138,6 @@ func (this *QMessageAuthenticationCode) AddData_2(device *QIODevice /*777 QIODev
 	var convArg0 = device.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode7addDataEP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -149,7 +148,6 @@ func (this *QMessageAuthenticationCode) AddData_2(device *QIODevice /*777 QIODev
 func (this *QMessageAuthenticationCode) Result() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QMessageAuthenticationCode6resultEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -164,7 +162,6 @@ func (this *QMessageAuthenticationCode) Hash(message *QByteArray, key *QByteArra
 	var convArg1 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QMessageAuthenticationCode4hashERK10QByteArrayS2_N18QCryptographicHash9AlgorithmE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, method)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2

@@ -98,7 +98,6 @@ func DeleteQShortcutEvent(this *QShortcutEvent) {
 func (this *QShortcutEvent) Key() *QKeySequence {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QShortcutEvent3keyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQKeySequenceFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQKeySequence)
 	return rv2
@@ -111,7 +110,6 @@ func (this *QShortcutEvent) Key() *QKeySequence {
 func (this *QShortcutEvent) ShortcutId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QShortcutEvent10shortcutIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -122,7 +120,6 @@ func (this *QShortcutEvent) ShortcutId() int {
 func (this *QShortcutEvent) IsAmbiguous() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QShortcutEvent11isAmbiguousEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

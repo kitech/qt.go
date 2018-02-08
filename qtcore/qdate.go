@@ -97,7 +97,6 @@ func NewQDate_1(y int, m int, d int) *QDate {
 func (this *QDate) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -108,7 +107,6 @@ func (this *QDate) IsNull() bool {
 func (this *QDate) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -119,7 +117,6 @@ func (this *QDate) IsValid() bool {
 func (this *QDate) IsValid_1(y int, m int, d int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate7isValidEiii", qtrt.FFI_TYPE_POINTER, y, m, d)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 func QDate_IsValid_1(y int, m int, d int) bool {
@@ -135,7 +132,6 @@ func QDate_IsValid_1(y int, m int, d int) bool {
 func (this *QDate) Year() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate4yearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -146,7 +142,6 @@ func (this *QDate) Year() int {
 func (this *QDate) Month() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate5monthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -157,7 +152,6 @@ func (this *QDate) Month() int {
 func (this *QDate) Day() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate3dayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -168,7 +162,6 @@ func (this *QDate) Day() int {
 func (this *QDate) DayOfWeek() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate9dayOfWeekEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -179,7 +172,6 @@ func (this *QDate) DayOfWeek() int {
 func (this *QDate) DayOfYear() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate9dayOfYearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -190,7 +182,6 @@ func (this *QDate) DayOfYear() int {
 func (this *QDate) DaysInMonth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate11daysInMonthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -201,7 +192,6 @@ func (this *QDate) DaysInMonth() int {
 func (this *QDate) DaysInYear() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate10daysInYearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -212,7 +202,6 @@ func (this *QDate) DaysInYear() int {
 func (this *QDate) WeekNumber(yearNum unsafe.Pointer /*666*/) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate10weekNumberEPi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &yearNum)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -220,15 +209,15 @@ func (this *QDate) WeekNumber(yearNum unsafe.Pointer /*666*/) int {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString shortMonthName(int, enum QDate::MonthNameType)
-func (this *QDate) ShortMonthName(month int, type_ int) *QString /*123*/ {
+func (this *QDate) ShortMonthName(month int, type_ int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate14shortMonthNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, month, type_)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QDate_ShortMonthName(month int, type_ int) *QString /*123*/ {
+func QDate_ShortMonthName(month int, type_ int) string {
 	var nilthis *QDate
 	rv := nilthis.ShortMonthName(month, type_)
 	return rv
@@ -238,15 +227,15 @@ func QDate_ShortMonthName(month int, type_ int) *QString /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString shortDayName(int, enum QDate::MonthNameType)
-func (this *QDate) ShortDayName(weekday int, type_ int) *QString /*123*/ {
+func (this *QDate) ShortDayName(weekday int, type_ int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate12shortDayNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, weekday, type_)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QDate_ShortDayName(weekday int, type_ int) *QString /*123*/ {
+func QDate_ShortDayName(weekday int, type_ int) string {
 	var nilthis *QDate
 	rv := nilthis.ShortDayName(weekday, type_)
 	return rv
@@ -256,15 +245,15 @@ func QDate_ShortDayName(weekday int, type_ int) *QString /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString longMonthName(int, enum QDate::MonthNameType)
-func (this *QDate) LongMonthName(month int, type_ int) *QString /*123*/ {
+func (this *QDate) LongMonthName(month int, type_ int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate13longMonthNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, month, type_)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QDate_LongMonthName(month int, type_ int) *QString /*123*/ {
+func QDate_LongMonthName(month int, type_ int) string {
 	var nilthis *QDate
 	rv := nilthis.LongMonthName(month, type_)
 	return rv
@@ -274,15 +263,15 @@ func QDate_LongMonthName(month int, type_ int) *QString /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString longDayName(int, enum QDate::MonthNameType)
-func (this *QDate) LongDayName(weekday int, type_ int) *QString /*123*/ {
+func (this *QDate) LongDayName(weekday int, type_ int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate11longDayNameEiNS_13MonthNameTypeE", qtrt.FFI_TYPE_POINTER, weekday, type_)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QDate_LongDayName(weekday int, type_ int) *QString /*123*/ {
+func QDate_LongDayName(weekday int, type_ int) string {
 	var nilthis *QDate
 	rv := nilthis.LongDayName(weekday, type_)
 	return rv
@@ -292,41 +281,42 @@ func QDate_LongDayName(weekday int, type_ int) *QString /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString(Qt::DateFormat)
-func (this *QDate) ToString(f int) *QString /*123*/ {
+func (this *QDate) ToString(f int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate8toStringEN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:97
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString toString(const QString &)
-func (this *QDate) ToString_1(format *QString) *QString /*123*/ {
-	var convArg0 = format.GetCthis()
+func (this *QDate) ToString_1(format string) string {
+	var tmpArg0 = NewQString_5(format)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate8toStringERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:99
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QString toString(QStringView)
-func (this *QDate) ToString_2(format *QStringView /*123*/) *QString /*123*/ {
+func (this *QDate) ToString_2(format *QStringView /*123*/) string {
 	var convArg0 = format.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate8toStringE11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qdatetime.h:106
@@ -336,7 +326,6 @@ func (this *QDate) ToString_2(format *QStringView /*123*/) *QString /*123*/ {
 func (this *QDate) SetDate(year int, month int, day int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate7setDateEiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), year, month, day)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -365,7 +354,6 @@ func (this *QDate) GetDate_1(year unsafe.Pointer /*666*/, month unsafe.Pointer /
 func (this *QDate) AddDays(days int64) *QDate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate7addDaysEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), days)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDate)
 	return rv2
@@ -378,7 +366,6 @@ func (this *QDate) AddDays(days int64) *QDate /*123*/ {
 func (this *QDate) AddMonths(months int) *QDate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate9addMonthsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), months)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDate)
 	return rv2
@@ -391,7 +378,6 @@ func (this *QDate) AddMonths(months int) *QDate /*123*/ {
 func (this *QDate) AddYears(years int) *QDate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate8addYearsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), years)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDate)
 	return rv2
@@ -405,7 +391,6 @@ func (this *QDate) DaysTo(arg0 *QDate) int64 {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate6daysToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 
@@ -416,7 +401,6 @@ func (this *QDate) DaysTo(arg0 *QDate) int64 {
 func (this *QDate) CurrentDate() *QDate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate11currentDateEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDate)
 	return rv2
@@ -431,16 +415,16 @@ func QDate_CurrentDate() *QDate /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QDate fromString(const QString &, Qt::DateFormat)
-func (this *QDate) FromString(s *QString, f int) *QDate /*123*/ {
-	var convArg0 = s.GetCthis()
+func (this *QDate) FromString(s string, f int) *QDate /*123*/ {
+	var tmpArg0 = NewQString_5(s)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate10fromStringERK7QStringN2Qt10DateFormatE", qtrt.FFI_TYPE_POINTER, convArg0, f)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDate)
 	return rv2
 }
-func QDate_FromString(s *QString, f int) *QDate /*123*/ {
+func QDate_FromString(s string, f int) *QDate /*123*/ {
 	var nilthis *QDate
 	rv := nilthis.FromString(s, f)
 	return rv
@@ -450,17 +434,18 @@ func QDate_FromString(s *QString, f int) *QDate /*123*/ {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QDate fromString(const QString &, const QString &)
-func (this *QDate) FromString_1(s *QString, format *QString) *QDate /*123*/ {
-	var convArg0 = s.GetCthis()
-	var convArg1 = format.GetCthis()
+func (this *QDate) FromString_1(s string, format string) *QDate /*123*/ {
+	var tmpArg0 = NewQString_5(s)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = NewQString_5(format)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate10fromStringERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDate)
 	return rv2
 }
-func QDate_FromString_1(s *QString, format *QString) *QDate /*123*/ {
+func QDate_FromString_1(s string, format string) *QDate /*123*/ {
 	var nilthis *QDate
 	rv := nilthis.FromString_1(s, format)
 	return rv
@@ -473,7 +458,6 @@ func QDate_FromString_1(s *QString, format *QString) *QDate /*123*/ {
 func (this *QDate) IsLeapYear(year int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate10isLeapYearEi", qtrt.FFI_TYPE_POINTER, year)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 func QDate_IsLeapYear(year int) bool {
@@ -489,7 +473,6 @@ func QDate_IsLeapYear(year int) bool {
 func (this *QDate) FromJulianDay(jd_ int64) *QDate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QDate13fromJulianDayEx", qtrt.FFI_TYPE_POINTER, jd_)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDate)
 	return rv2
@@ -507,7 +490,6 @@ func QDate_FromJulianDay(jd_ int64) *QDate /*123*/ {
 func (this *QDate) ToJulianDay() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QDate11toJulianDayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 

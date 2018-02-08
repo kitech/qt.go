@@ -71,10 +71,12 @@ func (*QAccessibleTextUpdateEvent) NewFromPointer(cthis unsafe.Pointer) *QAccess
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTextUpdateEvent(QObject *, int, const QString &, const QString &)
-func NewQAccessibleTextUpdateEvent(obj *qtcore.QObject /*777 QObject **/, position int, oldText *qtcore.QString, text *qtcore.QString) *QAccessibleTextUpdateEvent {
+func NewQAccessibleTextUpdateEvent(obj *qtcore.QObject /*777 QObject **/, position int, oldText string, text string) *QAccessibleTextUpdateEvent {
 	var convArg0 = obj.GetCthis()
-	var convArg2 = oldText.GetCthis()
-	var convArg3 = text.GetCthis()
+	var tmpArg2 = qtcore.NewQString_5(oldText)
+	var convArg2 = tmpArg2.GetCthis()
+	var tmpArg3 = qtcore.NewQString_5(text)
+	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventC2EP7QObjectiRK7QStringS4_", qtrt.FFI_TYPE_POINTER, convArg0, position, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextUpdateEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -86,10 +88,12 @@ func NewQAccessibleTextUpdateEvent(obj *qtcore.QObject /*777 QObject **/, positi
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTextUpdateEvent(QAccessibleInterface *, int, const QString &, const QString &)
-func NewQAccessibleTextUpdateEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, position int, oldText *qtcore.QString, text *qtcore.QString) *QAccessibleTextUpdateEvent {
+func NewQAccessibleTextUpdateEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, position int, oldText string, text string) *QAccessibleTextUpdateEvent {
 	var convArg0 = iface.GetCthis()
-	var convArg2 = oldText.GetCthis()
-	var convArg3 = text.GetCthis()
+	var tmpArg2 = qtcore.NewQString_5(oldText)
+	var convArg2 = tmpArg2.GetCthis()
+	var tmpArg3 = qtcore.NewQString_5(text)
+	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextUpdateEventC2EP20QAccessibleInterfaceiRK7QStringS4_", qtrt.FFI_TYPE_POINTER, convArg0, position, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextUpdateEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -112,26 +116,26 @@ func DeleteQAccessibleTextUpdateEvent(this *QAccessibleTextUpdateEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString textRemoved()
-func (this *QAccessibleTextUpdateEvent) TextRemoved() *qtcore.QString /*123*/ {
+func (this *QAccessibleTextUpdateEvent) TextRemoved() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent11textRemovedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:882
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString textInserted()
-func (this *QAccessibleTextUpdateEvent) TextInserted() *qtcore.QString /*123*/ {
+func (this *QAccessibleTextUpdateEvent) TextInserted() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent12textInsertedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:885
@@ -141,7 +145,6 @@ func (this *QAccessibleTextUpdateEvent) TextInserted() *qtcore.QString /*123*/ {
 func (this *QAccessibleTextUpdateEvent) ChangePosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextUpdateEvent14changePositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

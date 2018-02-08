@@ -101,25 +101,26 @@ func DeleteQMacPasteboardMime(this *QMacPasteboardMime) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QString convertorName()
-func (this *QMacPasteboardMime) ConvertorName() *qtcore.QString /*123*/ {
+func (this *QMacPasteboardMime) ConvertorName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMacPasteboardMime13convertorNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtMacExtras/../../src/macextras/qmacpasteboardmime.h:72
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool canConvert(const QString &, QString)
-func (this *QMacPasteboardMime) CanConvert(mime *qtcore.QString, flav *qtcore.QString /*123*/) bool {
-	var convArg0 = mime.GetCthis()
-	var convArg1 = flav.GetCthis()
+func (this *QMacPasteboardMime) CanConvert(mime string, flav string) bool {
+	var tmpArg0 = qtcore.NewQString_5(mime)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = qtcore.NewQString_5(flav)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMacPasteboardMime10canConvertERK7QStringS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -127,28 +128,30 @@ func (this *QMacPasteboardMime) CanConvert(mime *qtcore.QString, flav *qtcore.QS
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QString mimeFor(QString)
-func (this *QMacPasteboardMime) MimeFor(flav *qtcore.QString /*123*/) *qtcore.QString /*123*/ {
-	var convArg0 = flav.GetCthis()
+func (this *QMacPasteboardMime) MimeFor(flav string) string {
+	var tmpArg0 = qtcore.NewQString_5(flav)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMacPasteboardMime7mimeForE7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtMacExtras/../../src/macextras/qmacpasteboardmime.h:74
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QString flavorFor(const QString &)
-func (this *QMacPasteboardMime) FlavorFor(mime *qtcore.QString) *qtcore.QString /*123*/ {
-	var convArg0 = mime.GetCthis()
+func (this *QMacPasteboardMime) FlavorFor(mime string) string {
+	var tmpArg0 = qtcore.NewQString_5(mime)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMacPasteboardMime9flavorForERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtMacExtras/../../src/macextras/qmacpasteboardmime.h:77
@@ -159,7 +162,6 @@ func (this *QMacPasteboardMime) Count(mimeData *qtcore.QMimeData /*777 QMimeData
 	var convArg0 = mimeData.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QMacPasteboardMime5countEP9QMimeData", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

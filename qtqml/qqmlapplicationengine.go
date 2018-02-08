@@ -78,9 +78,7 @@ func (*QQmlApplicationEngine) NewFromPointer(cthis unsafe.Pointer) *QQmlApplicat
 func (this *QQmlApplicationEngine) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QQmlApplicationEngine10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQml/qqmlapplicationengine.h:56
@@ -112,8 +110,9 @@ func NewQQmlApplicationEngine_1(url *qtcore.QUrl, parent *qtcore.QObject /*777 Q
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlApplicationEngine(const QString &, QObject *)
-func NewQQmlApplicationEngine_2(filePath *qtcore.QString, parent *qtcore.QObject /*777 QObject **/) *QQmlApplicationEngine {
-	var convArg0 = filePath.GetCthis()
+func NewQQmlApplicationEngine_2(filePath string, parent *qtcore.QObject /*777 QObject **/) *QQmlApplicationEngine {
+	var tmpArg0 = qtcore.NewQString_5(filePath)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQmlApplicationEngineC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -146,8 +145,9 @@ func (this *QQmlApplicationEngine) Load(url *qtcore.QUrl) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void load(const QString &)
-func (this *QQmlApplicationEngine) Load_1(filePath *qtcore.QString) {
-	var convArg0 = filePath.GetCthis()
+func (this *QQmlApplicationEngine) Load_1(filePath string) {
+	var tmpArg0 = qtcore.NewQString_5(filePath)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QQmlApplicationEngine4loadERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }

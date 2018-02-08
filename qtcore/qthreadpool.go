@@ -70,9 +70,7 @@ func (*QThreadPool) NewFromPointer(cthis unsafe.Pointer) *QThreadPool {
 func (this *QThreadPool) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QThreadPool10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qthreadpool.h:65
@@ -105,9 +103,7 @@ func DeleteQThreadPool(this *QThreadPool) {
 func (this *QThreadPool) GlobalInstance() *QThreadPool /*777 QThreadPool **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool14globalInstanceEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQThreadPoolFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQThreadPoolFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QThreadPool_GlobalInstance() *QThreadPool /*777 QThreadPool **/ {
 	var nilthis *QThreadPool
@@ -133,7 +129,6 @@ func (this *QThreadPool) TryStart(runnable *QRunnable /*777 QRunnable **/) bool 
 	var convArg0 = runnable.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool8tryStartEP9QRunnable", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -144,7 +139,6 @@ func (this *QThreadPool) TryStart(runnable *QRunnable /*777 QRunnable **/) bool 
 func (this *QThreadPool) ExpiryTimeout() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QThreadPool13expiryTimeoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -164,7 +158,6 @@ func (this *QThreadPool) SetExpiryTimeout(expiryTimeout int) {
 func (this *QThreadPool) MaxThreadCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QThreadPool14maxThreadCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -184,7 +177,6 @@ func (this *QThreadPool) SetMaxThreadCount(maxThreadCount int) {
 func (this *QThreadPool) ActiveThreadCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QThreadPool17activeThreadCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -204,7 +196,6 @@ func (this *QThreadPool) SetStackSize(stackSize uint) {
 func (this *QThreadPool) StackSize() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QThreadPool9stackSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint(rv) // 222
 }
 
@@ -233,7 +224,6 @@ func (this *QThreadPool) ReleaseThread() {
 func (this *QThreadPool) WaitForDone(msecs int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool11waitForDoneEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -264,7 +254,6 @@ func (this *QThreadPool) TryTake(runnable *QRunnable /*777 QRunnable **/) bool {
 	var convArg0 = runnable.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool7tryTakeEP9QRunnable", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

@@ -148,7 +148,6 @@ func (this *QPen) Swap(other *QPen) {
 func (this *QPen) Style() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen5styleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -168,7 +167,6 @@ func (this *QPen) SetStyle(arg0 int) {
 func (this *QPen) DashOffset() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen10dashOffsetEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -188,7 +186,6 @@ func (this *QPen) SetDashOffset(doffset float64) {
 func (this *QPen) MiterLimit() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen10miterLimitEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -208,7 +205,6 @@ func (this *QPen) SetMiterLimit(limit float64) {
 func (this *QPen) WidthF() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen6widthFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -228,7 +224,6 @@ func (this *QPen) SetWidthF(width float64) {
 func (this *QPen) Width() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen5widthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -248,7 +243,6 @@ func (this *QPen) SetWidth(width int) {
 func (this *QPen) Color() *QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQColor)
 	return rv2
@@ -271,7 +265,6 @@ func (this *QPen) SetColor(color *QColor) {
 func (this *QPen) Brush() *QBrush /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen5brushEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQBrush)
 	return rv2
@@ -294,7 +287,6 @@ func (this *QPen) SetBrush(brush *QBrush) {
 func (this *QPen) IsSolid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen7isSolidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -305,7 +297,6 @@ func (this *QPen) IsSolid() bool {
 func (this *QPen) CapStyle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen8capStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -325,7 +316,6 @@ func (this *QPen) SetCapStyle(pcs int) {
 func (this *QPen) JoinStyle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen9joinStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -345,7 +335,6 @@ func (this *QPen) SetJoinStyle(pcs int) {
 func (this *QPen) IsCosmetic() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QPen10isCosmeticEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -365,7 +354,6 @@ func (this *QPen) SetCosmetic(cosmetic bool) {
 func (this *QPen) IsDetached() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN4QPen10isDetachedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

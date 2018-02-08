@@ -85,7 +85,6 @@ func NewQLatin1Char(c byte) *QLatin1Char {
 func (this *QLatin1Char) ToLatin1() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLatin1Char8toLatin1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
 
@@ -96,7 +95,6 @@ func (this *QLatin1Char) ToLatin1() byte {
 func (this *QLatin1Char) Unicode() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLatin1Char7unicodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint16(rv) // 222
 }
 

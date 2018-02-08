@@ -97,7 +97,6 @@ func (this *QAbstractNativeEventFilter) NativeEventFilter(eventType *QByteArray,
 	var convArg0 = eventType.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAbstractNativeEventFilter17nativeEventFilterERK10QByteArrayPvPl", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, message, &result)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

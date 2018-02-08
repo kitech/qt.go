@@ -78,9 +78,7 @@ func (*QQmlExpression) NewFromPointer(cthis unsafe.Pointer) *QQmlExpression {
 func (this *QQmlExpression) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQml/qqmlexpression.h:62
@@ -98,10 +96,11 @@ func NewQQmlExpression() *QQmlExpression {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QQmlExpression(QQmlContext *, QObject *, const QString &, QObject *)
-func NewQQmlExpression_1(arg0 *QQmlContext /*777 QQmlContext **/, arg1 *qtcore.QObject /*777 QObject **/, arg2 *qtcore.QString, arg3 *qtcore.QObject /*777 QObject **/) *QQmlExpression {
+func NewQQmlExpression_1(arg0 *QQmlContext /*777 QQmlContext **/, arg1 *qtcore.QObject /*777 QObject **/, arg2 string, arg3 *qtcore.QObject /*777 QObject **/) *QQmlExpression {
 	var convArg0 = arg0.GetCthis()
 	var convArg1 = arg1.GetCthis()
-	var convArg2 = arg2.GetCthis()
+	var tmpArg2 = qtcore.NewQString_5(arg2)
+	var convArg2 = tmpArg2.GetCthis()
 	var convArg3 = arg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpressionC2EP11QQmlContextP7QObjectRK7QStringS3_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
@@ -142,9 +141,7 @@ func DeleteQQmlExpression(this *QQmlExpression) {
 func (this *QQmlExpression) Engine() *QQmlEngine /*777 QQmlEngine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression6engineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQQmlEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQQmlEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQml/qqmlexpression.h:68
@@ -154,30 +151,29 @@ func (this *QQmlExpression) Engine() *QQmlEngine /*777 QQmlEngine **/ {
 func (this *QQmlExpression) Context() *QQmlContext /*777 QQmlContext **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression7contextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQml/qqmlexpression.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString expression()
-func (this *QQmlExpression) Expression() *qtcore.QString /*123*/ {
+func (this *QQmlExpression) Expression() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression10expressionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtQml/qqmlexpression.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setExpression(const QString &)
-func (this *QQmlExpression) SetExpression(arg0 *qtcore.QString) {
-	var convArg0 = arg0.GetCthis()
+func (this *QQmlExpression) SetExpression(arg0 string) {
+	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpression13setExpressionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -189,7 +185,6 @@ func (this *QQmlExpression) SetExpression(arg0 *qtcore.QString) {
 func (this *QQmlExpression) NotifyOnValueChanged() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression20notifyOnValueChangedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -206,13 +201,13 @@ func (this *QQmlExpression) SetNotifyOnValueChanged(arg0 bool) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString sourceFile()
-func (this *QQmlExpression) SourceFile() *qtcore.QString /*123*/ {
+func (this *QQmlExpression) SourceFile() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression10sourceFileEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtQml/qqmlexpression.h:77
@@ -222,7 +217,6 @@ func (this *QQmlExpression) SourceFile() *qtcore.QString /*123*/ {
 func (this *QQmlExpression) LineNumber() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression10lineNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -233,7 +227,6 @@ func (this *QQmlExpression) LineNumber() int {
 func (this *QQmlExpression) ColumnNumber() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression12columnNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -241,8 +234,9 @@ func (this *QQmlExpression) ColumnNumber() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSourceLocation(const QString &, int, int)
-func (this *QQmlExpression) SetSourceLocation(fileName *qtcore.QString, line int, column int) {
-	var convArg0 = fileName.GetCthis()
+func (this *QQmlExpression) SetSourceLocation(fileName string, line int, column int) {
+	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpression17setSourceLocationERK7QStringii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, line, column)
 	gopp.ErrPrint(err, rv)
 }
@@ -254,9 +248,7 @@ func (this *QQmlExpression) SetSourceLocation(fileName *qtcore.QString, line int
 func (this *QQmlExpression) ScopeObject() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression11scopeObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQml/qqmlexpression.h:83
@@ -266,7 +258,6 @@ func (this *QQmlExpression) ScopeObject() *qtcore.QObject /*777 QObject **/ {
 func (this *QQmlExpression) HasError() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression8hasErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -286,7 +277,6 @@ func (this *QQmlExpression) ClearError() {
 func (this *QQmlExpression) Error() *QQmlError /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QQmlExpression5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQQmlErrorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQmlError)
 	return rv2
@@ -299,7 +289,6 @@ func (this *QQmlExpression) Error() *QQmlError /*123*/ {
 func (this *QQmlExpression) Evaluate(valueIsUndefined unsafe.Pointer /*666*/) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QQmlExpression8evaluateEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &valueIsUndefined)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2

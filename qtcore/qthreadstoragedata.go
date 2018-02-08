@@ -84,7 +84,6 @@ func DeleteQThreadStorageData(this *QThreadStorageData) {
 func (this *QThreadStorageData) Get() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QThreadStorageData3getEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -95,7 +94,6 @@ func (this *QThreadStorageData) Get() unsafe.Pointer /*666*/ {
 func (this *QThreadStorageData) Set(p unsafe.Pointer /*666*/) unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QThreadStorageData3setEPv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), p)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 

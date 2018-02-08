@@ -97,7 +97,6 @@ func DeleteQInputEvent(this *QInputEvent) {
 func (this *QInputEvent) Modifiers() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QInputEvent9modifiersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -117,7 +116,6 @@ func (this *QInputEvent) SetModifiers(amodifiers int) {
 func (this *QInputEvent) Timestamp() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QInputEvent9timestampEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint(rv) // 222
 }
 

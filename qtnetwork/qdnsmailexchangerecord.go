@@ -107,26 +107,26 @@ func (this *QDnsMailExchangeRecord) Swap(other *QDnsMailExchangeRecord) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString exchange()
-func (this *QDnsMailExchangeRecord) Exchange() *qtcore.QString /*123*/ {
+func (this *QDnsMailExchangeRecord) Exchange() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QDnsMailExchangeRecord8exchangeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name()
-func (this *QDnsMailExchangeRecord) Name() *qtcore.QString /*123*/ {
+func (this *QDnsMailExchangeRecord) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QDnsMailExchangeRecord4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:123
@@ -136,7 +136,6 @@ func (this *QDnsMailExchangeRecord) Name() *qtcore.QString /*123*/ {
 func (this *QDnsMailExchangeRecord) Preference() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QDnsMailExchangeRecord10preferenceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint16(rv) // 222
 }
 
@@ -147,7 +146,6 @@ func (this *QDnsMailExchangeRecord) Preference() uint16 {
 func (this *QDnsMailExchangeRecord) TimeToLive() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QDnsMailExchangeRecord10timeToLiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint(rv) // 222
 }
 

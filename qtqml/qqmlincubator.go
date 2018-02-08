@@ -131,7 +131,6 @@ func (this *QQmlIncubator) ForceCompletion() {
 func (this *QQmlIncubator) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -142,7 +141,6 @@ func (this *QQmlIncubator) IsNull() bool {
 func (this *QQmlIncubator) IsReady() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator7isReadyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -153,7 +151,6 @@ func (this *QQmlIncubator) IsReady() bool {
 func (this *QQmlIncubator) IsError() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator7isErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -164,7 +161,6 @@ func (this *QQmlIncubator) IsError() bool {
 func (this *QQmlIncubator) IsLoading() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator9isLoadingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -175,7 +171,6 @@ func (this *QQmlIncubator) IsLoading() bool {
 func (this *QQmlIncubator) IncubationMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator14incubationModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -186,7 +181,6 @@ func (this *QQmlIncubator) IncubationMode() int {
 func (this *QQmlIncubator) Status() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator6statusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -197,9 +191,7 @@ func (this *QQmlIncubator) Status() int {
 func (this *QQmlIncubator) Object() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QQmlIncubator6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQml/qqmlincubator.h:88

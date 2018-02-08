@@ -105,7 +105,6 @@ func DeleteQRunnable(this *QRunnable) {
 func (this *QRunnable) AutoDelete() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QRunnable10autoDeleteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

@@ -85,7 +85,6 @@ func DeleteQAccessibleStateChangeEvent(this *QAccessibleStateChangeEvent) {
 func (this *QAccessibleStateChangeEvent) ChangedStates() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QAccessibleStateChangeEvent13changedStatesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 

@@ -102,9 +102,7 @@ func (*QProgressDialog) NewFromPointer(cthis unsafe.Pointer) *QProgressDialog {
 func (this *QProgressDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qprogressdialog.h:71
@@ -123,9 +121,11 @@ func NewQProgressDialog(parent *QWidget /*777 QWidget **/, flags int) *QProgress
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QProgressDialog(const QString &, const QString &, int, int, QWidget *, Qt::WindowFlags)
-func NewQProgressDialog_1(labelText *qtcore.QString, cancelButtonText *qtcore.QString, minimum int, maximum int, parent *QWidget /*777 QWidget **/, flags int) *QProgressDialog {
-	var convArg0 = labelText.GetCthis()
-	var convArg1 = cancelButtonText.GetCthis()
+func NewQProgressDialog_1(labelText string, cancelButtonText string, minimum int, maximum int, parent *QWidget /*777 QWidget **/, flags int) *QProgressDialog {
+	var tmpArg0 = qtcore.NewQString_5(labelText)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = qtcore.NewQString_5(cancelButtonText)
+	var convArg1 = tmpArg1.GetCthis()
 	var convArg4 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QProgressDialogC2ERK7QStringS2_iiP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, minimum, maximum, convArg4, flags)
 	gopp.ErrPrint(err, rv)
@@ -181,7 +181,6 @@ func (this *QProgressDialog) SetBar(bar *QProgressBar /*777 QProgressBar **/) {
 func (this *QProgressDialog) WasCanceled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog11wasCanceledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -192,7 +191,6 @@ func (this *QProgressDialog) WasCanceled() bool {
 func (this *QProgressDialog) Minimum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog7minimumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -203,7 +201,6 @@ func (this *QProgressDialog) Minimum() int {
 func (this *QProgressDialog) Maximum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog7maximumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -214,7 +211,6 @@ func (this *QProgressDialog) Maximum() int {
 func (this *QProgressDialog) Value() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -225,7 +221,6 @@ func (this *QProgressDialog) Value() int {
 func (this *QProgressDialog) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -235,13 +230,13 @@ func (this *QProgressDialog) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString labelText()
-func (this *QProgressDialog) LabelText() *qtcore.QString /*123*/ {
+func (this *QProgressDialog) LabelText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog9labelTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtWidgets/qprogressdialog.h:91
@@ -251,7 +246,6 @@ func (this *QProgressDialog) LabelText() *qtcore.QString /*123*/ {
 func (this *QProgressDialog) MinimumDuration() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog15minimumDurationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -271,7 +265,6 @@ func (this *QProgressDialog) SetAutoReset(reset bool) {
 func (this *QProgressDialog) AutoReset() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog9autoResetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -291,7 +284,6 @@ func (this *QProgressDialog) SetAutoClose(close bool) {
 func (this *QProgressDialog) AutoClose() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QProgressDialog9autoCloseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -365,8 +357,9 @@ func (this *QProgressDialog) SetValue(progress int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLabelText(const QString &)
-func (this *QProgressDialog) SetLabelText(text *qtcore.QString) {
-	var convArg0 = text.GetCthis()
+func (this *QProgressDialog) SetLabelText(text string) {
+	var tmpArg0 = qtcore.NewQString_5(text)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QProgressDialog12setLabelTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -375,8 +368,9 @@ func (this *QProgressDialog) SetLabelText(text *qtcore.QString) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCancelButtonText(const QString &)
-func (this *QProgressDialog) SetCancelButtonText(text *qtcore.QString) {
-	var convArg0 = text.GetCthis()
+func (this *QProgressDialog) SetCancelButtonText(text string) {
+	var tmpArg0 = qtcore.NewQString_5(text)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QProgressDialog19setCancelButtonTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }

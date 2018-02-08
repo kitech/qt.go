@@ -42,10 +42,9 @@ func main() {
 			})
 		*/
 		qtrt.Connect(tmer, "timeout()", func() {
-			newname := qtcore.NewQString_5(fmt.Sprintf("testt禾tttttttt-%d", cnter))
 			cnter++
 			log.Println("hehehhe222")
-			tmer.SetObjectName(newname)
+			tmer.SetObjectName(fmt.Sprintf("testt禾tttttttt-%d", cnter))
 		})
 	}
 
@@ -56,8 +55,7 @@ func main() {
 		log.Println("hehehhe333", s, s.Length(), s.ToLocal8Bit().Data())
 	})
 
-	newname := qtcore.NewQString_5("testt禾tttttttt")
-	tmer.SetObjectName(newname)
+	tmer.SetObjectName("testt禾tttttttt")
 
 	app.Exec()
 }

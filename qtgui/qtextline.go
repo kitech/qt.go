@@ -89,7 +89,6 @@ func NewQTextLine() *QTextLine {
 func (this *QTextLine) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -100,7 +99,6 @@ func (this *QTextLine) IsValid() bool {
 func (this *QTextLine) Rect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -113,7 +111,6 @@ func (this *QTextLine) Rect() *qtcore.QRectF /*123*/ {
 func (this *QTextLine) X() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine1xEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -124,7 +121,6 @@ func (this *QTextLine) X() float64 {
 func (this *QTextLine) Y() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine1yEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -135,7 +131,6 @@ func (this *QTextLine) Y() float64 {
 func (this *QTextLine) Width() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -146,7 +141,6 @@ func (this *QTextLine) Width() float64 {
 func (this *QTextLine) Ascent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine6ascentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -157,7 +151,6 @@ func (this *QTextLine) Ascent() float64 {
 func (this *QTextLine) Descent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine7descentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -168,7 +161,6 @@ func (this *QTextLine) Descent() float64 {
 func (this *QTextLine) Height() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine6heightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -179,7 +171,6 @@ func (this *QTextLine) Height() float64 {
 func (this *QTextLine) Leading() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine7leadingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -199,7 +190,6 @@ func (this *QTextLine) SetLeadingIncluded(included bool) {
 func (this *QTextLine) LeadingIncluded() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine15leadingIncludedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -210,7 +200,6 @@ func (this *QTextLine) LeadingIncluded() bool {
 func (this *QTextLine) NaturalTextWidth() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine16naturalTextWidthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -221,7 +210,6 @@ func (this *QTextLine) NaturalTextWidth() float64 {
 func (this *QTextLine) HorizontalAdvance() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine17horizontalAdvanceEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -232,7 +220,6 @@ func (this *QTextLine) HorizontalAdvance() float64 {
 func (this *QTextLine) NaturalTextRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine15naturalTextRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -245,7 +232,6 @@ func (this *QTextLine) NaturalTextRect() *qtcore.QRectF /*123*/ {
 func (this *QTextLine) CursorToX(cursorPos unsafe.Pointer /*666*/, edge int) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine9cursorToXEPiNS_4EdgeE", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), &cursorPos, edge)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -256,7 +242,6 @@ func (this *QTextLine) CursorToX(cursorPos unsafe.Pointer /*666*/, edge int) flo
 func (this *QTextLine) CursorToX_1(cursorPos int, edge int) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine9cursorToXEiNS_4EdgeE", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), cursorPos, edge)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -267,7 +252,6 @@ func (this *QTextLine) CursorToX_1(cursorPos int, edge int) float64 {
 func (this *QTextLine) XToCursor(x float64, arg1 int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine9xToCursorEdNS_14CursorPositionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, arg1)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -315,7 +299,6 @@ func (this *QTextLine) SetPosition(pos *qtcore.QPointF) {
 func (this *QTextLine) Position() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine8positionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -328,7 +311,6 @@ func (this *QTextLine) Position() *qtcore.QPointF /*123*/ {
 func (this *QTextLine) TextStart() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine9textStartEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -339,7 +321,6 @@ func (this *QTextLine) TextStart() int {
 func (this *QTextLine) TextLength() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine10textLengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -350,7 +331,6 @@ func (this *QTextLine) TextLength() int {
 func (this *QTextLine) LineNumber() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextLine10lineNumberEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

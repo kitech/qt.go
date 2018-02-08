@@ -107,9 +107,7 @@ func (*QPushButton) NewFromPointer(cthis unsafe.Pointer) *QPushButton {
 func (this *QPushButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPushButton10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qpushbutton.h:64
@@ -128,8 +126,9 @@ func NewQPushButton(parent *QWidget /*777 QWidget **/) *QPushButton {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPushButton(const QString &, QWidget *)
-func NewQPushButton_1(text *qtcore.QString, parent *QWidget /*777 QWidget **/) *QPushButton {
-	var convArg0 = text.GetCthis()
+func NewQPushButton_1(text string, parent *QWidget /*777 QWidget **/) *QPushButton {
+	var tmpArg0 = qtcore.NewQString_5(text)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPushButtonC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -141,9 +140,10 @@ func NewQPushButton_1(text *qtcore.QString, parent *QWidget /*777 QWidget **/) *
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QPushButton(const QIcon &, const QString &, QWidget *)
-func NewQPushButton_2(icon *qtgui.QIcon, text *qtcore.QString, parent *QWidget /*777 QWidget **/) *QPushButton {
+func NewQPushButton_2(icon *qtgui.QIcon, text string, parent *QWidget /*777 QWidget **/) *QPushButton {
 	var convArg0 = icon.GetCthis()
-	var convArg1 = text.GetCthis()
+	var tmpArg1 = qtcore.NewQString_5(text)
+	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPushButtonC2ERK5QIconRK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
@@ -169,7 +169,6 @@ func DeleteQPushButton(this *QPushButton) {
 func (this *QPushButton) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPushButton8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -182,7 +181,6 @@ func (this *QPushButton) SizeHint() *qtcore.QSize /*123*/ {
 func (this *QPushButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPushButton15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -195,7 +193,6 @@ func (this *QPushButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 func (this *QPushButton) AutoDefault() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPushButton11autoDefaultEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -215,7 +212,6 @@ func (this *QPushButton) SetAutoDefault(arg0 bool) {
 func (this *QPushButton) IsDefault() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPushButton9isDefaultEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -245,9 +241,7 @@ func (this *QPushButton) SetMenu(menu *QMenu /*777 QMenu **/) {
 func (this *QPushButton) Menu() *QMenu /*777 QMenu **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPushButton4menuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qpushbutton.h:82
@@ -266,7 +260,6 @@ func (this *QPushButton) SetFlat(arg0 bool) {
 func (this *QPushButton) IsFlat() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPushButton6isFlatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -287,7 +280,6 @@ func (this *QPushButton) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPushButton5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

@@ -106,14 +106,13 @@ func DeleteQQuickAsyncImageProvider(this *QQuickAsyncImageProvider) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QQuickImageResponse * requestImageResponse(const QString &, const QSize &)
-func (this *QQuickAsyncImageProvider) RequestImageResponse(id *qtcore.QString, requestedSize *qtcore.QSize) *QQuickImageResponse /*777 QQuickImageResponse **/ {
-	var convArg0 = id.GetCthis()
+func (this *QQuickAsyncImageProvider) RequestImageResponse(id string, requestedSize *qtcore.QSize) *QQuickImageResponse /*777 QQuickImageResponse **/ {
+	var tmpArg0 = qtcore.NewQString_5(id)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = requestedSize.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QQuickAsyncImageProvider20requestImageResponseERK7QStringRK5QSize", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQQuickImageResponseFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQQuickImageResponseFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 //  body block end

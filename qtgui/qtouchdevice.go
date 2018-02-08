@@ -97,13 +97,13 @@ func DeleteQTouchDevice(this *QTouchDevice) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name()
-func (this *QTouchDevice) Name() *qtcore.QString /*123*/ {
+func (this *QTouchDevice) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTouchDevice4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtGui/qtouchdevice.h:79
@@ -113,7 +113,6 @@ func (this *QTouchDevice) Name() *qtcore.QString /*123*/ {
 func (this *QTouchDevice) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTouchDevice4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -124,7 +123,6 @@ func (this *QTouchDevice) Type() int {
 func (this *QTouchDevice) Capabilities() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTouchDevice12capabilitiesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -135,7 +133,6 @@ func (this *QTouchDevice) Capabilities() int {
 func (this *QTouchDevice) MaximumTouchPoints() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTouchDevice18maximumTouchPointsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -143,8 +140,9 @@ func (this *QTouchDevice) MaximumTouchPoints() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setName(const QString &)
-func (this *QTouchDevice) SetName(name *qtcore.QString) {
-	var convArg0 = name.GetCthis()
+func (this *QTouchDevice) SetName(name string) {
+	var tmpArg0 = qtcore.NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTouchDevice7setNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }

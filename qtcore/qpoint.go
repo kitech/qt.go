@@ -97,7 +97,6 @@ func NewQPoint_1(xpos int, ypos int) *QPoint {
 func (this *QPoint) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QPoint6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -108,7 +107,6 @@ func (this *QPoint) IsNull() bool {
 func (this *QPoint) X() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QPoint1xEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -119,7 +117,6 @@ func (this *QPoint) X() int {
 func (this *QPoint) Y() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QPoint1yEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -148,7 +145,6 @@ func (this *QPoint) SetY(y int) {
 func (this *QPoint) ManhattanLength() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QPoint15manhattanLengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -159,7 +155,6 @@ func (this *QPoint) ManhattanLength() int {
 func (this *QPoint) Rx() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QPoint2rxEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
@@ -170,7 +165,6 @@ func (this *QPoint) Rx() int {
 func (this *QPoint) Ry() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QPoint2ryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
@@ -183,7 +177,6 @@ func (this *QPoint) DotProduct(p1 *QPoint, p2 *QPoint) int {
 	var convArg1 = p2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QPoint10dotProductERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QPoint_DotProduct(p1 *QPoint, p2 *QPoint) int {

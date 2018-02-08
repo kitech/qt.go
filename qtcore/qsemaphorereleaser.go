@@ -132,9 +132,7 @@ func (this *QSemaphoreReleaser) Swap(other *QSemaphoreReleaser) {
 func (this *QSemaphoreReleaser) Semaphore() *QSemaphore /*777 QSemaphore **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSemaphoreReleaser9semaphoreEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQSemaphoreFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQSemaphoreFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qsemaphore.h:101
@@ -144,9 +142,7 @@ func (this *QSemaphoreReleaser) Semaphore() *QSemaphore /*777 QSemaphore **/ {
 func (this *QSemaphoreReleaser) Cancel() *QSemaphore /*777 QSemaphore **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSemaphoreReleaser6cancelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQSemaphoreFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQSemaphoreFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 //  body block end

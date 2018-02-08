@@ -78,9 +78,7 @@ func (*QGraphicsRotation) NewFromPointer(cthis unsafe.Pointer) *QGraphicsRotatio
 func (this *QGraphicsRotation) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QGraphicsRotation10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:126
@@ -113,7 +111,6 @@ func DeleteQGraphicsRotation(this *QGraphicsRotation) {
 func (this *QGraphicsRotation) Origin() *qtgui.QVector3D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QGraphicsRotation6originEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQVector3D)
 	return rv2
@@ -136,7 +133,6 @@ func (this *QGraphicsRotation) SetOrigin(point *qtgui.QVector3D) {
 func (this *QGraphicsRotation) Angle() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QGraphicsRotation5angleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -156,7 +152,6 @@ func (this *QGraphicsRotation) SetAngle(arg0 float64) {
 func (this *QGraphicsRotation) Axis() *qtgui.QVector3D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QGraphicsRotation4axisEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQVector3D)
 	return rv2

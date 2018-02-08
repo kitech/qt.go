@@ -78,9 +78,7 @@ func (*QWinThumbnailToolButton) NewFromPointer(cthis unsafe.Pointer) *QWinThumbn
 func (this *QWinThumbnailToolButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWinThumbnailToolButton10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbutton.h:64
@@ -110,8 +108,9 @@ func DeleteQWinThumbnailToolButton(this *QWinThumbnailToolButton) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setToolTip(const QString &)
-func (this *QWinThumbnailToolButton) SetToolTip(toolTip *qtcore.QString) {
-	var convArg0 = toolTip.GetCthis()
+func (this *QWinThumbnailToolButton) SetToolTip(toolTip string) {
+	var tmpArg0 = qtcore.NewQString_5(toolTip)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QWinThumbnailToolButton10setToolTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -120,13 +119,13 @@ func (this *QWinThumbnailToolButton) SetToolTip(toolTip *qtcore.QString) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toolTip()
-func (this *QWinThumbnailToolButton) ToolTip() *qtcore.QString /*123*/ {
+func (this *QWinThumbnailToolButton) ToolTip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWinThumbnailToolButton7toolTipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinthumbnailtoolbutton.h:69
@@ -146,7 +145,6 @@ func (this *QWinThumbnailToolButton) SetIcon(icon *qtgui.QIcon) {
 func (this *QWinThumbnailToolButton) Icon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWinThumbnailToolButton4iconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
@@ -168,7 +166,6 @@ func (this *QWinThumbnailToolButton) SetEnabled(enabled bool) {
 func (this *QWinThumbnailToolButton) IsEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWinThumbnailToolButton9isEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -188,7 +185,6 @@ func (this *QWinThumbnailToolButton) SetInteractive(interactive bool) {
 func (this *QWinThumbnailToolButton) IsInteractive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWinThumbnailToolButton13isInteractiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -208,7 +204,6 @@ func (this *QWinThumbnailToolButton) SetVisible(visible bool) {
 func (this *QWinThumbnailToolButton) IsVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWinThumbnailToolButton9isVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -228,7 +223,6 @@ func (this *QWinThumbnailToolButton) SetDismissOnClick(dismiss bool) {
 func (this *QWinThumbnailToolButton) DismissOnClick() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWinThumbnailToolButton14dismissOnClickEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -248,7 +242,6 @@ func (this *QWinThumbnailToolButton) SetFlat(flat bool) {
 func (this *QWinThumbnailToolButton) IsFlat() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWinThumbnailToolButton6isFlatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

@@ -124,9 +124,7 @@ func DeleteQSGNode(this *QSGNode) {
 func (this *QSGNode) Parent() *QSGNode /*777 QSGNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode6parentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:135
@@ -207,7 +205,6 @@ func (this *QSGNode) ReparentChildNodesTo(newParent *QSGNode /*777 QSGNode **/) 
 func (this *QSGNode) ChildCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode10childCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -218,9 +215,7 @@ func (this *QSGNode) ChildCount() int {
 func (this *QSGNode) ChildAtIndex(i int) *QSGNode /*777 QSGNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode12childAtIndexEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:145
@@ -230,9 +225,7 @@ func (this *QSGNode) ChildAtIndex(i int) *QSGNode /*777 QSGNode **/ {
 func (this *QSGNode) FirstChild() *QSGNode /*777 QSGNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode10firstChildEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:146
@@ -242,9 +235,7 @@ func (this *QSGNode) FirstChild() *QSGNode /*777 QSGNode **/ {
 func (this *QSGNode) LastChild() *QSGNode /*777 QSGNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode9lastChildEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:147
@@ -254,9 +245,7 @@ func (this *QSGNode) LastChild() *QSGNode /*777 QSGNode **/ {
 func (this *QSGNode) NextSibling() *QSGNode /*777 QSGNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode11nextSiblingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:148
@@ -266,9 +255,7 @@ func (this *QSGNode) NextSibling() *QSGNode /*777 QSGNode **/ {
 func (this *QSGNode) PreviousSibling() *QSGNode /*777 QSGNode **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode15previousSiblingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQSGNodeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQuick/qsgnode.h:150
@@ -278,7 +265,6 @@ func (this *QSGNode) PreviousSibling() *QSGNode /*777 QSGNode **/ {
 func (this *QSGNode) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -307,7 +293,6 @@ func (this *QSGNode) MarkDirty(bits int) {
 func (this *QSGNode) DirtyState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode10dirtyStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -318,7 +303,6 @@ func (this *QSGNode) DirtyState() int {
 func (this *QSGNode) IsSubtreeBlocked() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode16isSubtreeBlockedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -329,7 +313,6 @@ func (this *QSGNode) IsSubtreeBlocked() bool {
 func (this *QSGNode) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QSGNode5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 

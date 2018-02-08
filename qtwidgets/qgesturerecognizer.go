@@ -105,9 +105,7 @@ func (this *QGestureRecognizer) Create(target *qtcore.QObject /*777 QObject **/)
 	var convArg0 = target.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGestureRecognizer6createEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQGestureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQGestureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qgesturerecognizer.h:81
@@ -120,7 +118,6 @@ func (this *QGestureRecognizer) Recognize(state *QGesture /*777 QGesture **/, wa
 	var convArg2 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGestureRecognizer9recognizeEP8QGestureP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -142,7 +139,6 @@ func (this *QGestureRecognizer) RegisterRecognizer(recognizer *QGestureRecognize
 	var convArg0 = recognizer.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QGestureRecognizer18registerRecognizerEPS_", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return int(rv)
 }
 func QGestureRecognizer_RegisterRecognizer(recognizer *QGestureRecognizer /*777 QGestureRecognizer **/) int {

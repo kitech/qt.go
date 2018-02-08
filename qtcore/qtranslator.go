@@ -70,9 +70,7 @@ func (*QTranslator) NewFromPointer(cthis unsafe.Pointer) *QTranslator {
 func (this *QTranslator) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTranslator10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qtranslator.h:58
@@ -102,7 +100,7 @@ func DeleteQTranslator(this *QTranslator) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString translate(const char *, const char *, const char *, int)
-func (this *QTranslator) Translate(context string, sourceText string, disambiguation string, n int) *QString /*123*/ {
+func (this *QTranslator) Translate(context string, sourceText string, disambiguation string, n int) string {
 	var convArg0 = qtrt.CString(context)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(sourceText)
@@ -111,10 +109,10 @@ func (this *QTranslator) Translate(context string, sourceText string, disambigua
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTranslator9translateEPKcS1_S1_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, n)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qtranslator.h:64
@@ -124,7 +122,6 @@ func (this *QTranslator) Translate(context string, sourceText string, disambigua
 func (this *QTranslator) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTranslator7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -132,14 +129,17 @@ func (this *QTranslator) IsEmpty() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool load(const QString &, const QString &, const QString &, const QString &)
-func (this *QTranslator) Load(filename *QString, directory *QString, search_delimiters *QString, suffix *QString) bool {
-	var convArg0 = filename.GetCthis()
-	var convArg1 = directory.GetCthis()
-	var convArg2 = search_delimiters.GetCthis()
-	var convArg3 = suffix.GetCthis()
+func (this *QTranslator) Load(filename string, directory string, search_delimiters string, suffix string) bool {
+	var tmpArg0 = NewQString_5(filename)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = NewQString_5(directory)
+	var convArg1 = tmpArg1.GetCthis()
+	var tmpArg2 = NewQString_5(search_delimiters)
+	var convArg2 = tmpArg2.GetCthis()
+	var tmpArg3 = NewQString_5(suffix)
+	var convArg3 = tmpArg3.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslator4loadERK7QStringS2_S2_S2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -147,15 +147,18 @@ func (this *QTranslator) Load(filename *QString, directory *QString, search_deli
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool load(const QLocale &, const QString &, const QString &, const QString &, const QString &)
-func (this *QTranslator) Load_1(locale *QLocale, filename *QString, prefix *QString, directory *QString, suffix *QString) bool {
+func (this *QTranslator) Load_1(locale *QLocale, filename string, prefix string, directory string, suffix string) bool {
 	var convArg0 = locale.GetCthis()
-	var convArg1 = filename.GetCthis()
-	var convArg2 = prefix.GetCthis()
-	var convArg3 = directory.GetCthis()
-	var convArg4 = suffix.GetCthis()
+	var tmpArg1 = NewQString_5(filename)
+	var convArg1 = tmpArg1.GetCthis()
+	var tmpArg2 = NewQString_5(prefix)
+	var convArg2 = tmpArg2.GetCthis()
+	var tmpArg3 = NewQString_5(directory)
+	var convArg3 = tmpArg3.GetCthis()
+	var tmpArg4 = NewQString_5(suffix)
+	var convArg4 = tmpArg4.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, convArg3, convArg4)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -163,11 +166,11 @@ func (this *QTranslator) Load_1(locale *QLocale, filename *QString, prefix *QStr
 // index:2
 // Public Visibility=Default Availability=Available
 // [1] bool load(const uchar *, int, const QString &)
-func (this *QTranslator) Load_2(data unsafe.Pointer /*666*/, len int, directory *QString) bool {
-	var convArg2 = directory.GetCthis()
+func (this *QTranslator) Load_2(data unsafe.Pointer /*666*/, len int, directory string) bool {
+	var tmpArg2 = NewQString_5(directory)
+	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTranslator4loadEPKhiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &data, len, convArg2)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

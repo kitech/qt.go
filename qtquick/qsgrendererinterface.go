@@ -100,7 +100,6 @@ func DeleteQSGRendererInterface(this *QSGRendererInterface) {
 func (this *QSGRendererInterface) GraphicsApi() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface11graphicsApiEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -112,7 +111,6 @@ func (this *QSGRendererInterface) GetResource(window *QQuickWindow /*777 QQuickW
 	var convArg0 = window.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface11getResourceEP12QQuickWindowNS_8ResourceE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, resource)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -126,7 +124,6 @@ func (this *QSGRendererInterface) GetResource_1(window *QQuickWindow /*777 QQuic
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface11getResourceEP12QQuickWindowPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -137,7 +134,6 @@ func (this *QSGRendererInterface) GetResource_1(window *QQuickWindow /*777 QQuic
 func (this *QSGRendererInterface) ShaderType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface10shaderTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -148,7 +144,6 @@ func (this *QSGRendererInterface) ShaderType() int {
 func (this *QSGRendererInterface) ShaderCompilationType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface21shaderCompilationTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -159,7 +154,6 @@ func (this *QSGRendererInterface) ShaderCompilationType() int {
 func (this *QSGRendererInterface) ShaderSourceType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QSGRendererInterface16shaderSourceTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 

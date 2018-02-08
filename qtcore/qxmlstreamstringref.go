@@ -95,8 +95,9 @@ func NewQXmlStreamStringRef_1(aString *QStringRef) *QXmlStreamStringRef {
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void QXmlStreamStringRef(const QString &)
-func NewQXmlStreamStringRef_2(aString *QString) *QXmlStreamStringRef {
-	var convArg0 = aString.GetCthis()
+func NewQXmlStreamStringRef_2(aString string) *QXmlStreamStringRef {
+	var tmpArg0 = NewQString_5(aString)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QXmlStreamStringRefC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQXmlStreamStringRefFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -150,12 +151,13 @@ func (this *QXmlStreamStringRef) Clear() {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QString * string()
-func (this *QXmlStreamStringRef) String() *QString /*777 const QString **/ {
+func (this *QXmlStreamStringRef) String() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef6stringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:92
@@ -165,7 +167,6 @@ func (this *QXmlStreamStringRef) String() *QString /*777 const QString **/ {
 func (this *QXmlStreamStringRef) Position() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef8positionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -176,7 +177,6 @@ func (this *QXmlStreamStringRef) Position() int {
 func (this *QXmlStreamStringRef) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QXmlStreamStringRef4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

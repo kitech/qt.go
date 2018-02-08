@@ -94,8 +94,9 @@ func (this *QAccessibleEditableTextInterface) DeleteText(startOffset int, endOff
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void insertText(int, const QString &)
-func (this *QAccessibleEditableTextInterface) InsertText(offset int, text *qtcore.QString) {
-	var convArg1 = text.GetCthis()
+func (this *QAccessibleEditableTextInterface) InsertText(offset int, text string) {
+	var tmpArg1 = qtcore.NewQString_5(text)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN32QAccessibleEditableTextInterface10insertTextEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), offset, convArg1)
 	gopp.ErrPrint(err, rv)
 }
@@ -104,8 +105,9 @@ func (this *QAccessibleEditableTextInterface) InsertText(offset int, text *qtcor
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void replaceText(int, int, const QString &)
-func (this *QAccessibleEditableTextInterface) ReplaceText(startOffset int, endOffset int, text *qtcore.QString) {
-	var convArg2 = text.GetCthis()
+func (this *QAccessibleEditableTextInterface) ReplaceText(startOffset int, endOffset int, text string) {
+	var tmpArg2 = qtcore.NewQString_5(text)
+	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN32QAccessibleEditableTextInterface11replaceTextEiiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), startOffset, endOffset, convArg2)
 	gopp.ErrPrint(err, rv)
 }

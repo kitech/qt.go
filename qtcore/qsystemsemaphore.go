@@ -70,8 +70,9 @@ func (*QSystemSemaphore) NewFromPointer(cthis unsafe.Pointer) *QSystemSemaphore 
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSystemSemaphore(const QString &, int, enum QSystemSemaphore::AccessMode)
-func NewQSystemSemaphore(key *QString, initialValue int, mode int) *QSystemSemaphore {
-	var convArg0 = key.GetCthis()
+func NewQSystemSemaphore(key string, initialValue int, mode int) *QSystemSemaphore {
+	var tmpArg0 = NewQString_5(key)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphoreC2ERK7QStringiNS_10AccessModeE", qtrt.FFI_TYPE_POINTER, convArg0, initialValue, mode)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSystemSemaphoreFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -94,8 +95,9 @@ func DeleteQSystemSemaphore(this *QSystemSemaphore) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKey(const QString &, int, enum QSystemSemaphore::AccessMode)
-func (this *QSystemSemaphore) SetKey(key *QString, initialValue int, mode int) {
-	var convArg0 = key.GetCthis()
+func (this *QSystemSemaphore) SetKey(key string, initialValue int, mode int) {
+	var tmpArg0 = NewQString_5(key)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphore6setKeyERK7QStringiNS_10AccessModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, initialValue, mode)
 	gopp.ErrPrint(err, rv)
 }
@@ -104,13 +106,13 @@ func (this *QSystemSemaphore) SetKey(key *QString, initialValue int, mode int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString key()
-func (this *QSystemSemaphore) Key() *QString /*123*/ {
+func (this *QSystemSemaphore) Key() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSystemSemaphore3keyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qsystemsemaphore.h:80
@@ -120,7 +122,6 @@ func (this *QSystemSemaphore) Key() *QString /*123*/ {
 func (this *QSystemSemaphore) Acquire() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphore7acquireEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -131,7 +132,6 @@ func (this *QSystemSemaphore) Acquire() bool {
 func (this *QSystemSemaphore) Release(n int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QSystemSemaphore7releaseEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -142,7 +142,6 @@ func (this *QSystemSemaphore) Release(n int) bool {
 func (this *QSystemSemaphore) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSystemSemaphore5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -150,13 +149,13 @@ func (this *QSystemSemaphore) Error() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorString()
-func (this *QSystemSemaphore) ErrorString() *QString /*123*/ {
+func (this *QSystemSemaphore) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSystemSemaphore11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 type QSystemSemaphore__AccessMode = int

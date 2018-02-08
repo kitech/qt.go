@@ -97,7 +97,6 @@ func DeleteQPlatformSurfaceEvent(this *QPlatformSurfaceEvent) {
 func (this *QPlatformSurfaceEvent) SurfaceEventType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPlatformSurfaceEvent16surfaceEventTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 

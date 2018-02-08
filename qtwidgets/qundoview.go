@@ -78,9 +78,7 @@ func (*QUndoView) NewFromPointer(cthis unsafe.Pointer) *QUndoView {
 func (this *QUndoView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUndoView10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qundoview.h:65
@@ -139,9 +137,7 @@ func DeleteQUndoView(this *QUndoView) {
 func (this *QUndoView) Stack() *QUndoStack /*777 QUndoStack **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUndoView5stackEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQUndoStackFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQUndoStackFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qundoview.h:74
@@ -151,17 +147,16 @@ func (this *QUndoView) Stack() *QUndoStack /*777 QUndoStack **/ {
 func (this *QUndoView) Group() *QUndoGroup /*777 QUndoGroup **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUndoView5groupEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQUndoGroupFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQUndoGroupFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qundoview.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEmptyLabel(const QString &)
-func (this *QUndoView) SetEmptyLabel(label *qtcore.QString) {
-	var convArg0 = label.GetCthis()
+func (this *QUndoView) SetEmptyLabel(label string) {
+	var tmpArg0 = qtcore.NewQString_5(label)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QUndoView13setEmptyLabelERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -170,13 +165,13 @@ func (this *QUndoView) SetEmptyLabel(label *qtcore.QString) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString emptyLabel()
-func (this *QUndoView) EmptyLabel() *qtcore.QString /*123*/ {
+func (this *QUndoView) EmptyLabel() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUndoView10emptyLabelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtWidgets/qundoview.h:80
@@ -196,7 +191,6 @@ func (this *QUndoView) SetCleanIcon(icon *qtgui.QIcon) {
 func (this *QUndoView) CleanIcon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QUndoView9cleanIconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2

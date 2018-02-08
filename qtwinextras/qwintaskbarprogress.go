@@ -78,9 +78,7 @@ func (*QWinTaskbarProgress) NewFromPointer(cthis unsafe.Pointer) *QWinTaskbarPro
 func (this *QWinTaskbarProgress) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QWinTaskbarProgress10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarprogress.h:62
@@ -113,7 +111,6 @@ func DeleteQWinTaskbarProgress(this *QWinTaskbarProgress) {
 func (this *QWinTaskbarProgress) Value() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QWinTaskbarProgress5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -124,7 +121,6 @@ func (this *QWinTaskbarProgress) Value() int {
 func (this *QWinTaskbarProgress) Minimum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QWinTaskbarProgress7minimumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -135,7 +131,6 @@ func (this *QWinTaskbarProgress) Minimum() int {
 func (this *QWinTaskbarProgress) Maximum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QWinTaskbarProgress7maximumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -146,7 +141,6 @@ func (this *QWinTaskbarProgress) Maximum() int {
 func (this *QWinTaskbarProgress) IsVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QWinTaskbarProgress9isVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -157,7 +151,6 @@ func (this *QWinTaskbarProgress) IsVisible() bool {
 func (this *QWinTaskbarProgress) IsPaused() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QWinTaskbarProgress8isPausedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -168,7 +161,6 @@ func (this *QWinTaskbarProgress) IsPaused() bool {
 func (this *QWinTaskbarProgress) IsStopped() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QWinTaskbarProgress9isStoppedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

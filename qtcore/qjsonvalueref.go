@@ -99,7 +99,6 @@ func NewQJsonValueRef_1(object *QJsonObject /*777 QJsonObject **/, idx int) *QJs
 func (this *QJsonValueRef) ToVariant() *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef9toVariantEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
@@ -112,7 +111,6 @@ func (this *QJsonValueRef) ToVariant() *QVariant /*123*/ {
 func (this *QJsonValueRef) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -123,7 +121,6 @@ func (this *QJsonValueRef) Type() int {
 func (this *QJsonValueRef) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -134,7 +131,6 @@ func (this *QJsonValueRef) IsNull() bool {
 func (this *QJsonValueRef) IsBool() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef6isBoolEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -145,7 +141,6 @@ func (this *QJsonValueRef) IsBool() bool {
 func (this *QJsonValueRef) IsDouble() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef8isDoubleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -156,7 +151,6 @@ func (this *QJsonValueRef) IsDouble() bool {
 func (this *QJsonValueRef) IsString() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef8isStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -167,7 +161,6 @@ func (this *QJsonValueRef) IsString() bool {
 func (this *QJsonValueRef) IsArray() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef7isArrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -178,7 +171,6 @@ func (this *QJsonValueRef) IsArray() bool {
 func (this *QJsonValueRef) IsObject() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef8isObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -189,7 +181,6 @@ func (this *QJsonValueRef) IsObject() bool {
 func (this *QJsonValueRef) IsUndefined() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef11isUndefinedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -200,7 +191,6 @@ func (this *QJsonValueRef) IsUndefined() bool {
 func (this *QJsonValueRef) ToBool() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef6toBoolEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -211,7 +201,6 @@ func (this *QJsonValueRef) ToBool() bool {
 func (this *QJsonValueRef) ToBool_1(defaultValue bool) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef6toBoolEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -222,7 +211,6 @@ func (this *QJsonValueRef) ToBool_1(defaultValue bool) bool {
 func (this *QJsonValueRef) ToInt() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -233,7 +221,6 @@ func (this *QJsonValueRef) ToInt() int {
 func (this *QJsonValueRef) ToInt_1(defaultValue int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef5toIntEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), defaultValue)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -244,7 +231,6 @@ func (this *QJsonValueRef) ToInt_1(defaultValue int) int {
 func (this *QJsonValueRef) ToDouble() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -255,7 +241,6 @@ func (this *QJsonValueRef) ToDouble() float64 {
 func (this *QJsonValueRef) ToDouble_1(defaultValue float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef8toDoubleEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), defaultValue)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -263,27 +248,28 @@ func (this *QJsonValueRef) ToDouble_1(defaultValue float64) float64 {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString toString()
-func (this *QJsonValueRef) ToString() *QString /*123*/ {
+func (this *QJsonValueRef) ToString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef8toStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:204
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QString toString(const QString &)
-func (this *QJsonValueRef) ToString_1(defaultValue *QString) *QString /*123*/ {
-	var convArg0 = defaultValue.GetCthis()
+func (this *QJsonValueRef) ToString_1(defaultValue string) string {
+	var tmpArg0 = NewQString_5(defaultValue)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef8toStringERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qjsonvalue.h:197
@@ -293,7 +279,6 @@ func (this *QJsonValueRef) ToString_1(defaultValue *QString) *QString /*123*/ {
 func (this *QJsonValueRef) ToArray() *QJsonArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef7toArrayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQJsonArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonArray)
 	return rv2
@@ -306,7 +291,6 @@ func (this *QJsonValueRef) ToArray() *QJsonArray /*123*/ {
 func (this *QJsonValueRef) ToObject() *QJsonObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QJsonValueRef8toObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQJsonObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonObject)
 	return rv2

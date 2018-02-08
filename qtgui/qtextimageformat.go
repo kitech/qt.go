@@ -99,7 +99,6 @@ func NewQTextImageFormat_1(format *QTextFormat) *QTextImageFormat {
 func (this *QTextImageFormat) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextImageFormat7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -107,8 +106,9 @@ func (this *QTextImageFormat) IsValid() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setName(const QString &)
-func (this *QTextImageFormat) SetName(name *qtcore.QString) {
-	var convArg0 = name.GetCthis()
+func (this *QTextImageFormat) SetName(name string) {
+	var tmpArg0 = qtcore.NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QTextImageFormat7setNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -117,13 +117,13 @@ func (this *QTextImageFormat) SetName(name *qtcore.QString) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString name()
-func (this *QTextImageFormat) Name() *qtcore.QString /*123*/ {
+func (this *QTextImageFormat) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextImageFormat4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:743
@@ -142,7 +142,6 @@ func (this *QTextImageFormat) SetWidth(width float64) {
 func (this *QTextImageFormat) Width() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextImageFormat5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -162,7 +161,6 @@ func (this *QTextImageFormat) SetHeight(height float64) {
 func (this *QTextImageFormat) Height() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextImageFormat6heightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 

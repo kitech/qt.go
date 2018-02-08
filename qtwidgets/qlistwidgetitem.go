@@ -91,8 +91,9 @@ func NewQListWidgetItem(view *QListWidget /*777 QListWidget **/, type_ int) *QLi
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(const QString &, QListWidget *, int)
-func NewQListWidgetItem_1(text *qtcore.QString, view *QListWidget /*777 QListWidget **/, type_ int) *QListWidgetItem {
-	var convArg0 = text.GetCthis()
+func NewQListWidgetItem_1(text string, view *QListWidget /*777 QListWidget **/, type_ int) *QListWidgetItem {
+	var tmpArg0 = qtcore.NewQString_5(text)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = view.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItemC2ERK7QStringP11QListWidgeti", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, type_)
 	gopp.ErrPrint(err, rv)
@@ -105,9 +106,10 @@ func NewQListWidgetItem_1(text *qtcore.QString, view *QListWidget /*777 QListWid
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(const QIcon &, const QString &, QListWidget *, int)
-func NewQListWidgetItem_2(icon *qtgui.QIcon, text *qtcore.QString, view *QListWidget /*777 QListWidget **/, type_ int) *QListWidgetItem {
+func NewQListWidgetItem_2(icon *qtgui.QIcon, text string, view *QListWidget /*777 QListWidget **/, type_ int) *QListWidgetItem {
 	var convArg0 = icon.GetCthis()
-	var convArg1 = text.GetCthis()
+	var tmpArg1 = qtcore.NewQString_5(text)
+	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 = view.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItemC2ERK5QIconRK7QStringP11QListWidgeti", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, type_)
 	gopp.ErrPrint(err, rv)
@@ -134,9 +136,7 @@ func DeleteQListWidgetItem(this *QListWidgetItem) {
 func (this *QListWidgetItem) Clone() *QListWidgetItem /*777 QListWidgetItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem5cloneEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQListWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQListWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:73
@@ -146,9 +146,7 @@ func (this *QListWidgetItem) Clone() *QListWidgetItem /*777 QListWidgetItem **/ 
 func (this *QListWidgetItem) ListWidget() *QListWidget /*777 QListWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem10listWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQListWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQListWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:75
@@ -167,7 +165,6 @@ func (this *QListWidgetItem) SetSelected(select_ bool) {
 func (this *QListWidgetItem) IsSelected() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem10isSelectedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -187,7 +184,6 @@ func (this *QListWidgetItem) SetHidden(hide bool) {
 func (this *QListWidgetItem) IsHidden() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem8isHiddenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -198,7 +194,6 @@ func (this *QListWidgetItem) IsHidden() bool {
 func (this *QListWidgetItem) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -215,21 +210,22 @@ func (this *QListWidgetItem) SetFlags(flags int) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString text()
-func (this *QListWidgetItem) Text() *qtcore.QString /*123*/ {
+func (this *QListWidgetItem) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:86
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setText(const QString &)
-func (this *QListWidgetItem) SetText(text *qtcore.QString) {
-	var convArg0 = text.GetCthis()
+func (this *QListWidgetItem) SetText(text string) {
+	var tmpArg0 = qtcore.NewQString_5(text)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItem7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -241,7 +237,6 @@ func (this *QListWidgetItem) SetText(text *qtcore.QString) {
 func (this *QListWidgetItem) Icon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem4iconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
@@ -261,21 +256,22 @@ func (this *QListWidgetItem) SetIcon(icon *qtgui.QIcon) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString statusTip()
-func (this *QListWidgetItem) StatusTip() *qtcore.QString /*123*/ {
+func (this *QListWidgetItem) StatusTip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem9statusTipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:94
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setStatusTip(const QString &)
-func (this *QListWidgetItem) SetStatusTip(statusTip *qtcore.QString) {
-	var convArg0 = statusTip.GetCthis()
+func (this *QListWidgetItem) SetStatusTip(statusTip string) {
+	var tmpArg0 = qtcore.NewQString_5(statusTip)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItem12setStatusTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -284,21 +280,22 @@ func (this *QListWidgetItem) SetStatusTip(statusTip *qtcore.QString) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString toolTip()
-func (this *QListWidgetItem) ToolTip() *qtcore.QString /*123*/ {
+func (this *QListWidgetItem) ToolTip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem7toolTipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:99
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setToolTip(const QString &)
-func (this *QListWidgetItem) SetToolTip(toolTip *qtcore.QString) {
-	var convArg0 = toolTip.GetCthis()
+func (this *QListWidgetItem) SetToolTip(toolTip string) {
+	var tmpArg0 = qtcore.NewQString_5(toolTip)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItem10setToolTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -307,21 +304,22 @@ func (this *QListWidgetItem) SetToolTip(toolTip *qtcore.QString) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString whatsThis()
-func (this *QListWidgetItem) WhatsThis() *qtcore.QString /*123*/ {
+func (this *QListWidgetItem) WhatsThis() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem9whatsThisEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:105
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setWhatsThis(const QString &)
-func (this *QListWidgetItem) SetWhatsThis(whatsThis *qtcore.QString) {
-	var convArg0 = whatsThis.GetCthis()
+func (this *QListWidgetItem) SetWhatsThis(whatsThis string) {
+	var tmpArg0 = qtcore.NewQString_5(whatsThis)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QListWidgetItem12setWhatsThisERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -333,7 +331,6 @@ func (this *QListWidgetItem) SetWhatsThis(whatsThis *qtcore.QString) {
 func (this *QListWidgetItem) Font() *qtgui.QFont /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem4fontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
@@ -356,7 +353,6 @@ func (this *QListWidgetItem) SetFont(font *qtgui.QFont) {
 func (this *QListWidgetItem) TextAlignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem13textAlignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -376,7 +372,6 @@ func (this *QListWidgetItem) SetTextAlignment(alignment int) {
 func (this *QListWidgetItem) BackgroundColor() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem15backgroundColorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
@@ -399,7 +394,6 @@ func (this *QListWidgetItem) SetBackgroundColor(color *qtgui.QColor) {
 func (this *QListWidgetItem) Background() *qtgui.QBrush /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem10backgroundEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQBrush)
 	return rv2
@@ -422,7 +416,6 @@ func (this *QListWidgetItem) SetBackground(brush *qtgui.QBrush) {
 func (this *QListWidgetItem) TextColor() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem9textColorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
@@ -445,7 +438,6 @@ func (this *QListWidgetItem) SetTextColor(color *qtgui.QColor) {
 func (this *QListWidgetItem) Foreground() *qtgui.QBrush /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem10foregroundEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQBrush)
 	return rv2
@@ -468,7 +460,6 @@ func (this *QListWidgetItem) SetForeground(brush *qtgui.QBrush) {
 func (this *QListWidgetItem) CheckState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem10checkStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -488,7 +479,6 @@ func (this *QListWidgetItem) SetCheckState(state int) {
 func (this *QListWidgetItem) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -511,7 +501,6 @@ func (this *QListWidgetItem) SetSizeHint(size *qtcore.QSize) {
 func (this *QListWidgetItem) Data(role int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem4dataEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -554,7 +543,6 @@ func (this *QListWidgetItem) Write(out *qtcore.QDataStream) {
 func (this *QListWidgetItem) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QListWidgetItem4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

@@ -82,9 +82,7 @@ func (this *QMapDataBase) RecalcMostLeftNode() {
 func (this *QMapDataBase) CreateData() *QMapDataBase /*777 QMapDataBase **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QMapDataBase10createDataEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQMapDataBaseFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQMapDataBaseFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QMapDataBase_CreateData() *QMapDataBase /*777 QMapDataBase **/ {
 	var nilthis *QMapDataBase

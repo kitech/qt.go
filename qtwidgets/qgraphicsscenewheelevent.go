@@ -101,7 +101,6 @@ func DeleteQGraphicsSceneWheelEvent(this *QGraphicsSceneWheelEvent) {
 func (this *QGraphicsSceneWheelEvent) Pos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -124,7 +123,6 @@ func (this *QGraphicsSceneWheelEvent) SetPos(pos *qtcore.QPointF) {
 func (this *QGraphicsSceneWheelEvent) ScenePos() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent8scenePosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -147,7 +145,6 @@ func (this *QGraphicsSceneWheelEvent) SetScenePos(pos *qtcore.QPointF) {
 func (this *QGraphicsSceneWheelEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent9screenPosEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
@@ -170,7 +167,6 @@ func (this *QGraphicsSceneWheelEvent) SetScreenPos(pos *qtcore.QPoint) {
 func (this *QGraphicsSceneWheelEvent) Buttons() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent7buttonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -190,7 +186,6 @@ func (this *QGraphicsSceneWheelEvent) SetButtons(buttons int) {
 func (this *QGraphicsSceneWheelEvent) Modifiers() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent9modifiersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -210,7 +205,6 @@ func (this *QGraphicsSceneWheelEvent) SetModifiers(modifiers int) {
 func (this *QGraphicsSceneWheelEvent) Delta() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent5deltaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -230,7 +224,6 @@ func (this *QGraphicsSceneWheelEvent) SetDelta(delta int) {
 func (this *QGraphicsSceneWheelEvent) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QGraphicsSceneWheelEvent11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 

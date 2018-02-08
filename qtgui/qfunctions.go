@@ -33,7 +33,6 @@ func init() {
 func QIsGray(rgb uint) bool {
 	rv, err := qtrt.InvokeQtFunc6("_Z7qIsGrayj", qtrt.FFI_TYPE_POINTER, rgb)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -44,7 +43,6 @@ func QIsGray(rgb uint) bool {
 func QGreen(rgb uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_Z6qGreenj", qtrt.FFI_TYPE_POINTER, rgb)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -55,7 +53,6 @@ func QGreen(rgb uint) int {
 func QAlpha(rgb uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_Z6qAlphaj", qtrt.FFI_TYPE_POINTER, rgb)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -66,7 +63,6 @@ func QAlpha(rgb uint) int {
 func QRgba(r int, g int, b int, a int) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qRgbaiiii", qtrt.FFI_TYPE_POINTER, r, g, b, a)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -77,7 +73,6 @@ func QRgba(r int, g int, b int, a int) uint {
 func QGray(rgb uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qGrayj", qtrt.FFI_TYPE_POINTER, rgb)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -88,7 +83,6 @@ func QGray(rgb uint) int {
 func QGray_1(r int, g int, b int) int {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qGrayiii", qtrt.FFI_TYPE_POINTER, r, g, b)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -99,7 +93,6 @@ func QGray_1(r int, g int, b int) int {
 func QBlue(rgb uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qBluej", qtrt.FFI_TYPE_POINTER, rgb)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -110,7 +103,6 @@ func QBlue(rgb uint) int {
 func QRgb(r int, g int, b int) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z4qRgbiii", qtrt.FFI_TYPE_POINTER, r, g, b)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -121,7 +113,6 @@ func QRgb(r int, g int, b int) uint {
 func QRed(rgb uint) int {
 	rv, err := qtrt.InvokeQtFunc6("_Z4qRedj", qtrt.FFI_TYPE_POINTER, rgb)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -129,14 +120,15 @@ func QRed(rgb uint) int {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QString qAccessibleLocalizedActionDescription(const QString &)
-func QAccessibleLocalizedActionDescription(actionName *qtcore.QString) *qtcore.QString /*123*/ {
-	var convArg0 = actionName.GetCthis()
+func QAccessibleLocalizedActionDescription(actionName string) string {
+	var tmpArg0 = qtcore.NewQString_5(actionName)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z37qAccessibleLocalizedActionDescriptionRK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:973
@@ -146,7 +138,6 @@ func QAccessibleLocalizedActionDescription(actionName *qtcore.QString) *qtcore.Q
 func QAccessibleEventString(event int) string {
 	rv, err := qtrt.InvokeQtFunc6("_Z22qAccessibleEventStringN11QAccessible5EventE", qtrt.FFI_TYPE_POINTER, event)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.GoStringI(rv)
 }
 
@@ -157,7 +148,6 @@ func QAccessibleEventString(event int) string {
 func QAccessibleRoleString(role int) string {
 	rv, err := qtrt.InvokeQtFunc6("_Z21qAccessibleRoleStringN11QAccessible4RoleE", qtrt.FFI_TYPE_POINTER, role)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.GoStringI(rv)
 }
 
@@ -168,7 +158,6 @@ func QAccessibleRoleString(role int) string {
 func QUnpremultiply(p uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z14qUnpremultiplyj", qtrt.FFI_TYPE_POINTER, p)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -181,7 +170,6 @@ func QFuzzyCompare_2(q1 *QQuaternion, q2 *QQuaternion) bool {
 	var convArg1 = q2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z13qFuzzyCompareRK11QQuaternionS1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -192,7 +180,6 @@ func QFuzzyCompare_2(q1 *QQuaternion, q2 *QQuaternion) bool {
 func QPremultiply(x uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z12qPremultiplyj", qtrt.FFI_TYPE_POINTER, x)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 

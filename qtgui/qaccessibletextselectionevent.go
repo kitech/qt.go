@@ -120,7 +120,6 @@ func (this *QAccessibleTextSelectionEvent) SetSelection(start int, end int) {
 func (this *QAccessibleTextSelectionEvent) SelectionStart() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QAccessibleTextSelectionEvent14selectionStartEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -131,7 +130,6 @@ func (this *QAccessibleTextSelectionEvent) SelectionStart() int {
 func (this *QAccessibleTextSelectionEvent) SelectionEnd() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK29QAccessibleTextSelectionEvent12selectionEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

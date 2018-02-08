@@ -73,7 +73,6 @@ func (*QListData) NewFromPointer(cthis unsafe.Pointer) *QListData {
 func (this *QListData) Detach(alloc int) unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListData6detachEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), alloc)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -84,7 +83,6 @@ func (this *QListData) Detach(alloc int) unsafe.Pointer /*666*/ {
 func (this *QListData) Detach_grow(i unsafe.Pointer /*666*/, n int) unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListData11detach_growEPii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &i, n)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -122,7 +120,6 @@ func (this *QListData) Dispose() {
 func (this *QListData) Erase(xi unsafe.Pointer /*666*/) unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListData5eraseEPPv", qtrt.FFI_TYPE_POINTER, this.GetCthis(), xi)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -160,7 +157,6 @@ func (this *QListData) Move(from int, to int) {
 func (this *QListData) Size() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListData4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -171,7 +167,6 @@ func (this *QListData) Size() int {
 func (this *QListData) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListData7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -182,7 +177,6 @@ func (this *QListData) IsEmpty() bool {
 func (this *QListData) At(i int) unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListData2atEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -193,7 +187,6 @@ func (this *QListData) At(i int) unsafe.Pointer /*666*/ {
 func (this *QListData) Begin() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListData5beginEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -204,7 +197,6 @@ func (this *QListData) Begin() unsafe.Pointer /*666*/ {
 func (this *QListData) End() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListData3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 

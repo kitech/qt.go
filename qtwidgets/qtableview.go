@@ -197,9 +197,7 @@ func (*QTableView) NewFromPointer(cthis unsafe.Pointer) *QTableView {
 func (this *QTableView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qtableview.h:65
@@ -271,9 +269,7 @@ func (this *QTableView) DoItemsLayout() {
 func (this *QTableView) HorizontalHeader() *QHeaderView /*777 QHeaderView **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView16horizontalHeaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQHeaderViewFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQHeaderViewFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qtableview.h:74
@@ -283,9 +279,7 @@ func (this *QTableView) HorizontalHeader() *QHeaderView /*777 QHeaderView **/ {
 func (this *QTableView) VerticalHeader() *QHeaderView /*777 QHeaderView **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView14verticalHeaderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQHeaderViewFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQHeaderViewFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qtableview.h:75
@@ -315,7 +309,6 @@ func (this *QTableView) SetVerticalHeader(header *QHeaderView /*777 QHeaderView 
 func (this *QTableView) RowViewportPosition(row int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView19rowViewportPositionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -326,7 +319,6 @@ func (this *QTableView) RowViewportPosition(row int) int {
 func (this *QTableView) RowAt(y int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView5rowAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), y)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -346,7 +338,6 @@ func (this *QTableView) SetRowHeight(row int, height int) {
 func (this *QTableView) RowHeight(row int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView9rowHeightEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -357,7 +348,6 @@ func (this *QTableView) RowHeight(row int) int {
 func (this *QTableView) ColumnViewportPosition(column int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView22columnViewportPositionEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -368,7 +358,6 @@ func (this *QTableView) ColumnViewportPosition(column int) int {
 func (this *QTableView) ColumnAt(x int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView8columnAtEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -388,7 +377,6 @@ func (this *QTableView) SetColumnWidth(column int, width int) {
 func (this *QTableView) ColumnWidth(column int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView11columnWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -399,7 +387,6 @@ func (this *QTableView) ColumnWidth(column int) int {
 func (this *QTableView) IsRowHidden(row int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView11isRowHiddenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -419,7 +406,6 @@ func (this *QTableView) SetRowHidden(row int, hide bool) {
 func (this *QTableView) IsColumnHidden(column int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView14isColumnHiddenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -448,7 +434,6 @@ func (this *QTableView) SetSortingEnabled(enable bool) {
 func (this *QTableView) IsSortingEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView16isSortingEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -459,7 +444,6 @@ func (this *QTableView) IsSortingEnabled() bool {
 func (this *QTableView) ShowGrid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView8showGridEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -470,7 +454,6 @@ func (this *QTableView) ShowGrid() bool {
 func (this *QTableView) GridStyle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView9gridStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -499,7 +482,6 @@ func (this *QTableView) SetWordWrap(on bool) {
 func (this *QTableView) WordWrap() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView8wordWrapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -519,7 +501,6 @@ func (this *QTableView) SetCornerButtonEnabled(enable bool) {
 func (this *QTableView) IsCornerButtonEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView21isCornerButtonEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -531,7 +512,6 @@ func (this *QTableView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*12
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView10visualRectERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
@@ -555,7 +535,6 @@ func (this *QTableView) IndexAt(p *qtcore.QPoint) *qtcore.QModelIndex /*123*/ {
 	var convArg0 = p.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView7indexAtERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
@@ -577,7 +556,6 @@ func (this *QTableView) SetSpan(row int, column int, rowSpan int, columnSpan int
 func (this *QTableView) RowSpan(row int, column int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView7rowSpanEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -588,7 +566,6 @@ func (this *QTableView) RowSpan(row int, column int) int {
 func (this *QTableView) ColumnSpan(row int, column int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView10columnSpanEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -788,7 +765,6 @@ func (this *QTableView) ScrollContentsBy(dx int, dy int) {
 func (this *QTableView) ViewOptions() *QStyleOptionViewItem /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView11viewOptionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQStyleOptionViewItemFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStyleOptionViewItem)
 	return rv2
@@ -821,7 +797,6 @@ func (this *QTableView) TimerEvent(event *qtcore.QTimerEvent /*777 QTimerEvent *
 func (this *QTableView) HorizontalOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView16horizontalOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -832,7 +807,6 @@ func (this *QTableView) HorizontalOffset() int {
 func (this *QTableView) VerticalOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView14verticalOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -843,7 +817,6 @@ func (this *QTableView) VerticalOffset() int {
 func (this *QTableView) MoveCursor(cursorAction int, modifiers int) *qtcore.QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableView10moveCursorEN17QAbstractItemView12CursorActionE6QFlagsIN2Qt16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cursorAction, modifiers)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
@@ -867,7 +840,6 @@ func (this *QTableView) VisualRegionForSelection(selection *qtcore.QItemSelectio
 	var convArg0 = selection.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView24visualRegionForSelectionERK14QItemSelection", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQRegion)
 	return rv2
@@ -889,7 +861,6 @@ func (this *QTableView) UpdateGeometries() {
 func (this *QTableView) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView16viewportSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -902,7 +873,6 @@ func (this *QTableView) ViewportSizeHint() *qtcore.QSize /*123*/ {
 func (this *QTableView) SizeHintForRow(row int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView14sizeHintForRowEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -913,7 +883,6 @@ func (this *QTableView) SizeHintForRow(row int) int {
 func (this *QTableView) SizeHintForColumn(column int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView17sizeHintForColumnEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -943,7 +912,6 @@ func (this *QTableView) IsIndexHidden(index *qtcore.QModelIndex) bool {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView13isIndexHiddenERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

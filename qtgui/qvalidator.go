@@ -74,9 +74,7 @@ func (*QValidator) NewFromPointer(cthis unsafe.Pointer) *QValidator {
 func (this *QValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QValidator10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:62
@@ -119,7 +117,6 @@ func (this *QValidator) SetLocale(locale *qtcore.QLocale) {
 func (this *QValidator) Locale() *qtcore.QLocale /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QValidator6localeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQLocale)
 	return rv2
@@ -129,11 +126,11 @@ func (this *QValidator) Locale() *qtcore.QLocale /*123*/ {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] QValidator::State validate(QString &, int &)
-func (this *QValidator) Validate(arg0 *qtcore.QString, arg1 int) int {
-	var convArg0 = arg0.GetCthis()
+func (this *QValidator) Validate(arg0 string, arg1 int) int {
+	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QValidator8validateER7QStringRi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &arg1)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -141,8 +138,9 @@ func (this *QValidator) Validate(arg0 *qtcore.QString, arg1 int) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void fixup(QString &)
-func (this *QValidator) Fixup(arg0 *qtcore.QString) {
-	var convArg0 = arg0.GetCthis()
+func (this *QValidator) Fixup(arg0 string) {
+	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QValidator5fixupER7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }

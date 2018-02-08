@@ -107,21 +107,22 @@ func (this *QHostInfo) Swap(other *QHostInfo) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString hostName()
-func (this *QHostInfo) HostName() *qtcore.QString /*123*/ {
+func (this *QHostInfo) HostName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QHostInfo8hostNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHostName(const QString &)
-func (this *QHostInfo) SetHostName(name *qtcore.QString) {
-	var convArg0 = name.GetCthis()
+func (this *QHostInfo) SetHostName(name string) {
+	var tmpArg0 = qtcore.NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHostInfo11setHostNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -133,7 +134,6 @@ func (this *QHostInfo) SetHostName(name *qtcore.QString) {
 func (this *QHostInfo) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QHostInfo5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -150,21 +150,22 @@ func (this *QHostInfo) SetError(error int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorString()
-func (this *QHostInfo) ErrorString() *qtcore.QString /*123*/ {
+func (this *QHostInfo) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QHostInfo11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setErrorString(const QString &)
-func (this *QHostInfo) SetErrorString(errorString *qtcore.QString) {
-	var convArg0 = errorString.GetCthis()
+func (this *QHostInfo) SetErrorString(errorString string) {
+	var tmpArg0 = qtcore.NewQString_5(errorString)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHostInfo14setErrorStringERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -185,7 +186,6 @@ func (this *QHostInfo) SetLookupId(id int) {
 func (this *QHostInfo) LookupId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QHostInfo8lookupIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -193,17 +193,17 @@ func (this *QHostInfo) LookupId() int {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int lookupHost(const QString &, QObject *, const char *)
-func (this *QHostInfo) LookupHost(name *qtcore.QString, receiver *qtcore.QObject /*777 QObject **/, member string) int {
-	var convArg0 = name.GetCthis()
+func (this *QHostInfo) LookupHost(name string, receiver *qtcore.QObject /*777 QObject **/, member string) int {
+	var tmpArg0 = qtcore.NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = receiver.GetCthis()
 	var convArg2 = qtrt.CString(member)
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHostInfo10lookupHostERK7QStringP7QObjectPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QHostInfo_LookupHost(name *qtcore.QString, receiver *qtcore.QObject /*777 QObject **/, member string) int {
+func QHostInfo_LookupHost(name string, receiver *qtcore.QObject /*777 QObject **/, member string) int {
 	var nilthis *QHostInfo
 	rv := nilthis.LookupHost(name, receiver, member)
 	return rv
@@ -226,16 +226,16 @@ func QHostInfo_AbortHostLookup(lookupId int) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QHostInfo fromName(const QString &)
-func (this *QHostInfo) FromName(name *qtcore.QString) *QHostInfo /*123*/ {
-	var convArg0 = name.GetCthis()
+func (this *QHostInfo) FromName(name string) *QHostInfo /*123*/ {
+	var tmpArg0 = qtcore.NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHostInfo8fromNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQHostInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQHostInfo)
 	return rv2
 }
-func QHostInfo_FromName(name *qtcore.QString) *QHostInfo /*123*/ {
+func QHostInfo_FromName(name string) *QHostInfo /*123*/ {
 	var nilthis *QHostInfo
 	rv := nilthis.FromName(name)
 	return rv
@@ -245,15 +245,15 @@ func QHostInfo_FromName(name *qtcore.QString) *QHostInfo /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString localHostName()
-func (this *QHostInfo) LocalHostName() *qtcore.QString /*123*/ {
+func (this *QHostInfo) LocalHostName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHostInfo13localHostNameEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
-func QHostInfo_LocalHostName() *qtcore.QString /*123*/ {
+func QHostInfo_LocalHostName() string {
 	var nilthis *QHostInfo
 	rv := nilthis.LocalHostName()
 	return rv
@@ -263,15 +263,15 @@ func QHostInfo_LocalHostName() *qtcore.QString /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString localDomainName()
-func (this *QHostInfo) LocalDomainName() *qtcore.QString /*123*/ {
+func (this *QHostInfo) LocalDomainName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHostInfo15localDomainNameEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
-func QHostInfo_LocalDomainName() *qtcore.QString /*123*/ {
+func QHostInfo_LocalDomainName() string {
 	var nilthis *QHostInfo
 	rv := nilthis.LocalDomainName()
 	return rv

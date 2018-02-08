@@ -103,7 +103,6 @@ func (this *QStyleOptionGraphicsItem) LevelOfDetailFromTransform(worldTransform 
 	var convArg0 = worldTransform.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 func QStyleOptionGraphicsItem_LevelOfDetailFromTransform(worldTransform *qtgui.QTransform) float64 {

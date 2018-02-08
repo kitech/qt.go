@@ -110,7 +110,6 @@ func (this *QNetworkConfiguration) Swap(other *QNetworkConfiguration) {
 func (this *QNetworkConfiguration) State() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration5stateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -121,7 +120,6 @@ func (this *QNetworkConfiguration) State() int {
 func (this *QNetworkConfiguration) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -132,7 +130,6 @@ func (this *QNetworkConfiguration) Type() int {
 func (this *QNetworkConfiguration) Purpose() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration7purposeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -143,7 +140,6 @@ func (this *QNetworkConfiguration) Purpose() int {
 func (this *QNetworkConfiguration) BearerType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration10bearerTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -154,7 +150,6 @@ func (this *QNetworkConfiguration) BearerType() int {
 func (this *QNetworkConfiguration) BearerTypeFamily() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration16bearerTypeFamilyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -162,26 +157,26 @@ func (this *QNetworkConfiguration) BearerTypeFamily() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString bearerTypeName()
-func (this *QNetworkConfiguration) BearerTypeName() *qtcore.QString /*123*/ {
+func (this *QNetworkConfiguration) BearerTypeName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration14bearerTypeNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString identifier()
-func (this *QNetworkConfiguration) Identifier() *qtcore.QString /*123*/ {
+func (this *QNetworkConfiguration) Identifier() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration10identifierEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:117
@@ -191,7 +186,6 @@ func (this *QNetworkConfiguration) Identifier() *qtcore.QString /*123*/ {
 func (this *QNetworkConfiguration) IsRoamingAvailable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration18isRoamingAvailableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -199,13 +193,13 @@ func (this *QNetworkConfiguration) IsRoamingAvailable() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name()
-func (this *QNetworkConfiguration) Name() *qtcore.QString /*123*/ {
+func (this *QNetworkConfiguration) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qnetworkconfiguration.h:121
@@ -215,7 +209,6 @@ func (this *QNetworkConfiguration) Name() *qtcore.QString /*123*/ {
 func (this *QNetworkConfiguration) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -226,7 +219,6 @@ func (this *QNetworkConfiguration) IsValid() bool {
 func (this *QNetworkConfiguration) ConnectTimeout() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkConfiguration14connectTimeoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -237,7 +229,6 @@ func (this *QNetworkConfiguration) ConnectTimeout() int {
 func (this *QNetworkConfiguration) SetConnectTimeout(timeout int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkConfiguration17setConnectTimeoutEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

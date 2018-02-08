@@ -127,9 +127,7 @@ func (*QGroupBox) NewFromPointer(cthis unsafe.Pointer) *QGroupBox {
 func (this *QGroupBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGroupBox10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:62
@@ -148,8 +146,9 @@ func NewQGroupBox(parent *QWidget /*777 QWidget **/) *QGroupBox {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGroupBox(const QString &, QWidget *)
-func NewQGroupBox_1(title *qtcore.QString, parent *QWidget /*777 QWidget **/) *QGroupBox {
-	var convArg0 = title.GetCthis()
+func NewQGroupBox_1(title string, parent *QWidget /*777 QWidget **/) *QGroupBox {
+	var tmpArg0 = qtcore.NewQString_5(title)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBoxC2ERK7QStringP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -172,21 +171,22 @@ func DeleteQGroupBox(this *QGroupBox) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString title()
-func (this *QGroupBox) Title() *qtcore.QString /*123*/ {
+func (this *QGroupBox) Title() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGroupBox5titleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTitle(const QString &)
-func (this *QGroupBox) SetTitle(title *qtcore.QString) {
-	var convArg0 = title.GetCthis()
+func (this *QGroupBox) SetTitle(title string) {
+	var tmpArg0 = qtcore.NewQString_5(title)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox8setTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -198,7 +198,6 @@ func (this *QGroupBox) SetTitle(title *qtcore.QString) {
 func (this *QGroupBox) Alignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGroupBox9alignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -218,7 +217,6 @@ func (this *QGroupBox) SetAlignment(alignment int) {
 func (this *QGroupBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGroupBox15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -231,7 +229,6 @@ func (this *QGroupBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 func (this *QGroupBox) IsFlat() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGroupBox6isFlatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -251,7 +248,6 @@ func (this *QGroupBox) SetFlat(flat bool) {
 func (this *QGroupBox) IsCheckable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGroupBox11isCheckableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -271,7 +267,6 @@ func (this *QGroupBox) SetCheckable(checkable bool) {
 func (this *QGroupBox) IsChecked() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGroupBox9isCheckedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -310,7 +305,6 @@ func (this *QGroupBox) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QGroupBox5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

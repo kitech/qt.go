@@ -120,7 +120,6 @@ func (this *QAccessibleTextCursorEvent) SetCursorPosition(position int) {
 func (this *QAccessibleTextCursorEvent) CursorPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextCursorEvent14cursorPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

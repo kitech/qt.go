@@ -95,7 +95,6 @@ func (this *QCollatorSortKey) Compare(key *QCollatorSortKey) int {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QCollatorSortKey7compareERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

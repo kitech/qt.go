@@ -104,7 +104,6 @@ func DeleteQQmlScriptString(this *QQmlScriptString) {
 func (this *QQmlScriptString) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -115,7 +114,6 @@ func (this *QQmlScriptString) IsEmpty() bool {
 func (this *QQmlScriptString) IsUndefinedLiteral() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString18isUndefinedLiteralEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -126,7 +124,6 @@ func (this *QQmlScriptString) IsUndefinedLiteral() bool {
 func (this *QQmlScriptString) IsNullLiteral() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString13isNullLiteralEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -134,13 +131,13 @@ func (this *QQmlScriptString) IsNullLiteral() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString stringLiteral()
-func (this *QQmlScriptString) StringLiteral() *qtcore.QString /*123*/ {
+func (this *QQmlScriptString) StringLiteral() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString13stringLiteralEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtQml/qqmlscriptstring.h:75
@@ -150,7 +147,6 @@ func (this *QQmlScriptString) StringLiteral() *qtcore.QString /*123*/ {
 func (this *QQmlScriptString) NumberLiteral(ok unsafe.Pointer /*666*/) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString13numberLiteralEPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -161,7 +157,6 @@ func (this *QQmlScriptString) NumberLiteral(ok unsafe.Pointer /*666*/) float64 {
 func (this *QQmlScriptString) BooleanLiteral(ok unsafe.Pointer /*666*/) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QQmlScriptString14booleanLiteralEPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &ok)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

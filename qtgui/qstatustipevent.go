@@ -71,8 +71,9 @@ func (*QStatusTipEvent) NewFromPointer(cthis unsafe.Pointer) *QStatusTipEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStatusTipEvent(const QString &)
-func NewQStatusTipEvent(tip *qtcore.QString) *QStatusTipEvent {
-	var convArg0 = tip.GetCthis()
+func NewQStatusTipEvent(tip string) *QStatusTipEvent {
+	var tmpArg0 = qtcore.NewQString_5(tip)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QStatusTipEventC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStatusTipEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -95,13 +96,13 @@ func DeleteQStatusTipEvent(this *QStatusTipEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString tip()
-func (this *QStatusTipEvent) Tip() *qtcore.QString /*123*/ {
+func (this *QStatusTipEvent) Tip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QStatusTipEvent3tipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 //  body block end

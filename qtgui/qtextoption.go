@@ -121,7 +121,6 @@ func (this *QTextOption) SetAlignment(alignment int) {
 func (this *QTextOption) Alignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextOption9alignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -141,7 +140,6 @@ func (this *QTextOption) SetTextDirection(aDirection int) {
 func (this *QTextOption) TextDirection() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextOption13textDirectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -161,7 +159,6 @@ func (this *QTextOption) SetWrapMode(wrap int) {
 func (this *QTextOption) WrapMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextOption8wrapModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -181,7 +178,6 @@ func (this *QTextOption) SetFlags(flags int) {
 func (this *QTextOption) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextOption5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -201,7 +197,6 @@ func (this *QTextOption) SetTabStop(tabStop float64) {
 func (this *QTextOption) TabStop() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextOption7tabStopEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -221,7 +216,6 @@ func (this *QTextOption) SetTabStopDistance(tabStopDistance float64) {
 func (this *QTextOption) TabStopDistance() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextOption15tabStopDistanceEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -241,7 +235,6 @@ func (this *QTextOption) SetUseDesignMetrics(b bool) {
 func (this *QTextOption) UseDesignMetrics() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextOption16useDesignMetricsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

@@ -143,7 +143,6 @@ func DeleteQGraphicsEllipseItem(this *QGraphicsEllipseItem) {
 func (this *QGraphicsEllipseItem) Rect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -175,7 +174,6 @@ func (this *QGraphicsEllipseItem) SetRect_1(x float64, y float64, w float64, h f
 func (this *QGraphicsEllipseItem) StartAngle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem10startAngleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -195,7 +193,6 @@ func (this *QGraphicsEllipseItem) SetStartAngle(angle int) {
 func (this *QGraphicsEllipseItem) SpanAngle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem9spanAngleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -215,7 +212,6 @@ func (this *QGraphicsEllipseItem) SetSpanAngle(angle int) {
 func (this *QGraphicsEllipseItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -228,7 +224,6 @@ func (this *QGraphicsEllipseItem) BoundingRect() *qtcore.QRectF /*123*/ {
 func (this *QGraphicsEllipseItem) Shape() *qtgui.QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem5shapeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
@@ -242,7 +237,6 @@ func (this *QGraphicsEllipseItem) Contains(point *qtcore.QPointF) bool {
 	var convArg0 = point.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem8containsERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -266,7 +260,6 @@ func (this *QGraphicsEllipseItem) IsObscuredBy(item *QGraphicsItem /*777 const Q
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem12isObscuredByEPK13QGraphicsItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -277,7 +270,6 @@ func (this *QGraphicsEllipseItem) IsObscuredBy(item *QGraphicsItem /*777 const Q
 func (this *QGraphicsEllipseItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem10opaqueAreaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
@@ -290,7 +282,6 @@ func (this *QGraphicsEllipseItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 func (this *QGraphicsEllipseItem) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -301,7 +292,6 @@ func (this *QGraphicsEllipseItem) Type() int {
 func (this *QGraphicsEllipseItem) SupportsExtension(extension int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem17supportsExtensionEN13QGraphicsItem9ExtensionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -323,7 +313,6 @@ func (this *QGraphicsEllipseItem) Extension(variant *qtcore.QVariant) *qtcore.QV
 	var convArg0 = variant.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QGraphicsEllipseItem9extensionERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2

@@ -77,17 +77,16 @@ func (*QSaveFile) NewFromPointer(cthis unsafe.Pointer) *QSaveFile {
 func (this *QSaveFile) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSaveFile10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qsavefile.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSaveFile(const QString &)
-func NewQSaveFile(name *QString) *QSaveFile {
-	var convArg0 = name.GetCthis()
+func NewQSaveFile(name string) *QSaveFile {
+	var tmpArg0 = NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSaveFileC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSaveFileFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -110,8 +109,9 @@ func NewQSaveFile_1(parent *QObject /*777 QObject **/) *QSaveFile {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QSaveFile(const QString &, QObject *)
-func NewQSaveFile_2(name *QString, parent *QObject /*777 QObject **/) *QSaveFile {
-	var convArg0 = name.GetCthis()
+func NewQSaveFile_2(name string, parent *QObject /*777 QObject **/) *QSaveFile {
+	var tmpArg0 = NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSaveFileC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -134,21 +134,22 @@ func DeleteQSaveFile(this *QSaveFile) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString fileName()
-func (this *QSaveFile) FileName() *QString /*123*/ {
+func (this *QSaveFile) FileName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSaveFile8fileNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qsavefile.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFileName(const QString &)
-func (this *QSaveFile) SetFileName(name *QString) {
-	var convArg0 = name.GetCthis()
+func (this *QSaveFile) SetFileName(name string) {
+	var tmpArg0 = NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSaveFile11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -160,7 +161,6 @@ func (this *QSaveFile) SetFileName(name *QString) {
 func (this *QSaveFile) Open(flags int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSaveFile4openE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -171,7 +171,6 @@ func (this *QSaveFile) Open(flags int) bool {
 func (this *QSaveFile) Commit() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSaveFile6commitEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -200,7 +199,6 @@ func (this *QSaveFile) SetDirectWriteFallback(enabled bool) {
 func (this *QSaveFile) DirectWriteFallback() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSaveFile19directWriteFallbackEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -213,7 +211,6 @@ func (this *QSaveFile) WriteData(data string, len int64) int64 {
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QSaveFile9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 

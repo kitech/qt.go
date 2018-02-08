@@ -70,9 +70,7 @@ func (*QSignalMapper) NewFromPointer(cthis unsafe.Pointer) *QSignalMapper {
 func (this *QSignalMapper) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSignalMapper10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qsignalmapper.h:56
@@ -112,9 +110,10 @@ func (this *QSignalMapper) SetMapping(sender *QObject /*777 QObject **/, id int)
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setMapping(QObject *, const QString &)
-func (this *QSignalMapper) SetMapping_1(sender *QObject /*777 QObject **/, text *QString) {
+func (this *QSignalMapper) SetMapping_1(sender *QObject /*777 QObject **/, text string) {
 	var convArg0 = sender.GetCthis()
-	var convArg1 = text.GetCthis()
+	var tmpArg1 = NewQString_5(text)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapper10setMappingEP7QObjectRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }
@@ -157,22 +156,19 @@ func (this *QSignalMapper) RemoveMappings(sender *QObject /*777 QObject **/) {
 func (this *QSignalMapper) Mapping(id int) *QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSignalMapper7mappingEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qsignalmapper.h:66
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QObject * mapping(const QString &)
-func (this *QSignalMapper) Mapping_1(text *QString) *QObject /*777 QObject **/ {
-	var convArg0 = text.GetCthis()
+func (this *QSignalMapper) Mapping_1(text string) *QObject /*777 QObject **/ {
+	var tmpArg0 = NewQString_5(text)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSignalMapper7mappingERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qsignalmapper.h:67
@@ -182,9 +178,7 @@ func (this *QSignalMapper) Mapping_1(text *QString) *QObject /*777 QObject **/ {
 func (this *QSignalMapper) Mapping_2(widget unsafe.Pointer /*666*/) *QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSignalMapper7mappingEP7QWidget", qtrt.FFI_TYPE_POINTER, this.GetCthis(), widget)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qsignalmapper.h:68
@@ -195,9 +189,7 @@ func (this *QSignalMapper) Mapping_3(object *QObject /*777 QObject **/) *QObject
 	var convArg0 = object.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QSignalMapper7mappingEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qsignalmapper.h:71
@@ -213,8 +205,9 @@ func (this *QSignalMapper) Mapped(arg0 int) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void mapped(const QString &)
-func (this *QSignalMapper) Mapped_1(arg0 *QString) {
-	var convArg0 = arg0.GetCthis()
+func (this *QSignalMapper) Mapped_1(arg0 string) {
+	var tmpArg0 = NewQString_5(arg0)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QSignalMapper6mappedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }

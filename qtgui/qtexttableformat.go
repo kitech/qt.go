@@ -99,7 +99,6 @@ func NewQTextTableFormat_1(fmt *QTextFormat) *QTextTableFormat {
 func (this *QTextTableFormat) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextTableFormat7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -110,7 +109,6 @@ func (this *QTextTableFormat) IsValid() bool {
 func (this *QTextTableFormat) Columns() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextTableFormat7columnsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -139,7 +137,6 @@ func (this *QTextTableFormat) ClearColumnWidthConstraints() {
 func (this *QTextTableFormat) CellSpacing() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextTableFormat11cellSpacingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -159,7 +156,6 @@ func (this *QTextTableFormat) SetCellSpacing(spacing float64) {
 func (this *QTextTableFormat) CellPadding() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextTableFormat11cellPaddingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -188,7 +184,6 @@ func (this *QTextTableFormat) SetAlignment(alignment int) {
 func (this *QTextTableFormat) Alignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextTableFormat9alignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -208,7 +203,6 @@ func (this *QTextTableFormat) SetHeaderRowCount(count int) {
 func (this *QTextTableFormat) HeaderRowCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextTableFormat14headerRowCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

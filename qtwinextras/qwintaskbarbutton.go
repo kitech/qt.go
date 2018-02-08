@@ -78,9 +78,7 @@ func (*QWinTaskbarButton) NewFromPointer(cthis unsafe.Pointer) *QWinTaskbarButto
 func (this *QWinTaskbarButton) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWinTaskbarButton10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarbutton.h:62
@@ -123,9 +121,7 @@ func (this *QWinTaskbarButton) SetWindow(window *qtgui.QWindow /*777 QWindow **/
 func (this *QWinTaskbarButton) Window() *qtgui.QWindow /*777 QWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWinTaskbarButton6windowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtgui.NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtgui.NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarbutton.h:68
@@ -135,7 +131,6 @@ func (this *QWinTaskbarButton) Window() *qtgui.QWindow /*777 QWindow **/ {
 func (this *QWinTaskbarButton) OverlayIcon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWinTaskbarButton11overlayIconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
@@ -145,13 +140,13 @@ func (this *QWinTaskbarButton) OverlayIcon() *qtgui.QIcon /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString overlayAccessibleDescription()
-func (this *QWinTaskbarButton) OverlayAccessibleDescription() *qtcore.QString /*123*/ {
+func (this *QWinTaskbarButton) OverlayAccessibleDescription() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWinTaskbarButton28overlayAccessibleDescriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarbutton.h:71
@@ -161,9 +156,7 @@ func (this *QWinTaskbarButton) OverlayAccessibleDescription() *qtcore.QString /*
 func (this *QWinTaskbarButton) Progress() *QWinTaskbarProgress /*777 QWinTaskbarProgress **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QWinTaskbarButton8progressEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQWinTaskbarProgressFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQWinTaskbarProgressFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwintaskbarbutton.h:73
@@ -175,7 +168,6 @@ func (this *QWinTaskbarButton) EventFilter(arg0 *qtcore.QObject /*777 QObject **
 	var convArg1 = arg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWinTaskbarButton11eventFilterEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -193,8 +185,9 @@ func (this *QWinTaskbarButton) SetOverlayIcon(icon *qtgui.QIcon) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOverlayAccessibleDescription(const QString &)
-func (this *QWinTaskbarButton) SetOverlayAccessibleDescription(description *qtcore.QString) {
-	var convArg0 = description.GetCthis()
+func (this *QWinTaskbarButton) SetOverlayAccessibleDescription(description string) {
+	var tmpArg0 = qtcore.NewQString_5(description)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QWinTaskbarButton31setOverlayAccessibleDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }

@@ -126,7 +126,6 @@ func (this *QPageLayout) IsEquivalentTo(other *QPageLayout) bool {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout14isEquivalentToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -137,7 +136,6 @@ func (this *QPageLayout) IsEquivalentTo(other *QPageLayout) bool {
 func (this *QPageLayout) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -157,7 +155,6 @@ func (this *QPageLayout) SetMode(mode int) {
 func (this *QPageLayout) Mode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout4modeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -179,7 +176,6 @@ func (this *QPageLayout) SetPageSize(pageSize *QPageSize, minMargins *qtcore.QMa
 func (this *QPageLayout) PageSize() *QPageSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout8pageSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQPageSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPageSize)
 	return rv2
@@ -201,7 +197,6 @@ func (this *QPageLayout) SetOrientation(orientation int) {
 func (this *QPageLayout) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -221,7 +216,6 @@ func (this *QPageLayout) SetUnits(units int) {
 func (this *QPageLayout) Units() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout5unitsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -233,7 +227,6 @@ func (this *QPageLayout) SetMargins(margins *qtcore.QMarginsF) bool {
 	var convArg0 = margins.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayout10setMarginsERK9QMarginsF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -244,7 +237,6 @@ func (this *QPageLayout) SetMargins(margins *qtcore.QMarginsF) bool {
 func (this *QPageLayout) SetLeftMargin(leftMargin float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayout13setLeftMarginEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), leftMargin)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -255,7 +247,6 @@ func (this *QPageLayout) SetLeftMargin(leftMargin float64) bool {
 func (this *QPageLayout) SetRightMargin(rightMargin float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayout14setRightMarginEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), rightMargin)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -266,7 +257,6 @@ func (this *QPageLayout) SetRightMargin(rightMargin float64) bool {
 func (this *QPageLayout) SetTopMargin(topMargin float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayout12setTopMarginEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), topMargin)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -277,7 +267,6 @@ func (this *QPageLayout) SetTopMargin(topMargin float64) bool {
 func (this *QPageLayout) SetBottomMargin(bottomMargin float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QPageLayout15setBottomMarginEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), bottomMargin)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -288,7 +277,6 @@ func (this *QPageLayout) SetBottomMargin(bottomMargin float64) bool {
 func (this *QPageLayout) Margins() *qtcore.QMarginsF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout7marginsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQMarginsFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQMarginsF)
 	return rv2
@@ -301,7 +289,6 @@ func (this *QPageLayout) Margins() *qtcore.QMarginsF /*123*/ {
 func (this *QPageLayout) Margins_1(units int) *qtcore.QMarginsF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout7marginsENS_4UnitE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), units)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQMarginsFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQMarginsF)
 	return rv2
@@ -314,7 +301,6 @@ func (this *QPageLayout) Margins_1(units int) *qtcore.QMarginsF /*123*/ {
 func (this *QPageLayout) MarginsPoints() *qtcore.QMargins /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout13marginsPointsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQMargins)
 	return rv2
@@ -327,7 +313,6 @@ func (this *QPageLayout) MarginsPoints() *qtcore.QMargins /*123*/ {
 func (this *QPageLayout) MarginsPixels(resolution int) *qtcore.QMargins /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout13marginsPixelsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), resolution)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQMarginsFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQMargins)
 	return rv2
@@ -350,7 +335,6 @@ func (this *QPageLayout) SetMinimumMargins(minMargins *qtcore.QMarginsF) {
 func (this *QPageLayout) MinimumMargins() *qtcore.QMarginsF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout14minimumMarginsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQMarginsFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQMarginsF)
 	return rv2
@@ -363,7 +347,6 @@ func (this *QPageLayout) MinimumMargins() *qtcore.QMarginsF /*123*/ {
 func (this *QPageLayout) MaximumMargins() *qtcore.QMarginsF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout14maximumMarginsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQMarginsFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQMarginsF)
 	return rv2
@@ -376,7 +359,6 @@ func (this *QPageLayout) MaximumMargins() *qtcore.QMarginsF /*123*/ {
 func (this *QPageLayout) FullRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout8fullRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -389,7 +371,6 @@ func (this *QPageLayout) FullRect() *qtcore.QRectF /*123*/ {
 func (this *QPageLayout) FullRect_1(units int) *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout8fullRectENS_4UnitE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), units)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -402,7 +383,6 @@ func (this *QPageLayout) FullRect_1(units int) *qtcore.QRectF /*123*/ {
 func (this *QPageLayout) FullRectPoints() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout14fullRectPointsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
@@ -415,7 +395,6 @@ func (this *QPageLayout) FullRectPoints() *qtcore.QRect /*123*/ {
 func (this *QPageLayout) FullRectPixels(resolution int) *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout14fullRectPixelsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), resolution)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
@@ -428,7 +407,6 @@ func (this *QPageLayout) FullRectPixels(resolution int) *qtcore.QRect /*123*/ {
 func (this *QPageLayout) PaintRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout9paintRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -441,7 +419,6 @@ func (this *QPageLayout) PaintRect() *qtcore.QRectF /*123*/ {
 func (this *QPageLayout) PaintRect_1(units int) *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout9paintRectENS_4UnitE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), units)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -454,7 +431,6 @@ func (this *QPageLayout) PaintRect_1(units int) *qtcore.QRectF /*123*/ {
 func (this *QPageLayout) PaintRectPoints() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout15paintRectPointsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
@@ -467,7 +443,6 @@ func (this *QPageLayout) PaintRectPoints() *qtcore.QRect /*123*/ {
 func (this *QPageLayout) PaintRectPixels(resolution int) *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QPageLayout15paintRectPixelsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), resolution)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2

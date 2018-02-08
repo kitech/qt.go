@@ -90,9 +90,7 @@ func (*QQuickPaintedItem) NewFromPointer(cthis unsafe.Pointer) *QQuickPaintedIte
 func (this *QQuickPaintedItem) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQuickPaintedItem10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQuick/qquickpainteditem.h:60
@@ -135,7 +133,6 @@ func (this *QQuickPaintedItem) Update(rect *qtcore.QRect) {
 func (this *QQuickPaintedItem) OpaquePainting() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQuickPaintedItem14opaquePaintingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -155,7 +152,6 @@ func (this *QQuickPaintedItem) SetOpaquePainting(opaque bool) {
 func (this *QQuickPaintedItem) Antialiasing() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQuickPaintedItem12antialiasingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -175,7 +171,6 @@ func (this *QQuickPaintedItem) SetAntialiasing(enable bool) {
 func (this *QQuickPaintedItem) Mipmap() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQuickPaintedItem6mipmapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -195,7 +190,6 @@ func (this *QQuickPaintedItem) SetMipmap(enable bool) {
 func (this *QQuickPaintedItem) PerformanceHints() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQuickPaintedItem16performanceHintsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -224,7 +218,6 @@ func (this *QQuickPaintedItem) SetPerformanceHints(hints int) {
 func (this *QQuickPaintedItem) ContentsBoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQuickPaintedItem20contentsBoundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -237,7 +230,6 @@ func (this *QQuickPaintedItem) ContentsBoundingRect() *qtcore.QRectF /*123*/ {
 func (this *QQuickPaintedItem) ContentsSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQuickPaintedItem12contentsSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -269,7 +261,6 @@ func (this *QQuickPaintedItem) ResetContentsSize() {
 func (this *QQuickPaintedItem) ContentsScale() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQuickPaintedItem13contentsScaleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -289,7 +280,6 @@ func (this *QQuickPaintedItem) SetContentsScale(arg0 float64) {
 func (this *QQuickPaintedItem) TextureSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQuickPaintedItem11textureSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -312,7 +302,6 @@ func (this *QQuickPaintedItem) SetTextureSize(size *qtcore.QSize) {
 func (this *QQuickPaintedItem) FillColor() *qtgui.QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQuickPaintedItem9fillColorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQColor)
 	return rv2
@@ -335,7 +324,6 @@ func (this *QQuickPaintedItem) SetFillColor(arg0 *qtgui.QColor) {
 func (this *QQuickPaintedItem) RenderTarget() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQuickPaintedItem12renderTargetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -365,7 +353,6 @@ func (this *QQuickPaintedItem) Paint(painter *qtgui.QPainter /*777 QPainter **/)
 func (this *QQuickPaintedItem) IsTextureProvider() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQuickPaintedItem17isTextureProviderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -376,9 +363,7 @@ func (this *QQuickPaintedItem) IsTextureProvider() bool {
 func (this *QQuickPaintedItem) TextureProvider() *QSGTextureProvider /*777 QSGTextureProvider **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQuickPaintedItem15textureProviderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQSGTextureProviderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQSGTextureProviderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQuick/qquickpainteditem.h:114

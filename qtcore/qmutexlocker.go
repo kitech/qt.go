@@ -115,9 +115,7 @@ func (this *QMutexLocker) Relock() {
 func (this *QMutexLocker) Mutex() *QMutex /*777 QMutex **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QMutexLocker5mutexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQMutexFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQMutexFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 //  body block end

@@ -78,9 +78,7 @@ func (*QStylePlugin) NewFromPointer(cthis unsafe.Pointer) *QStylePlugin {
 func (this *QStylePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QStylePlugin10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qstyleplugin.h:58
@@ -110,13 +108,12 @@ func DeleteQStylePlugin(this *QStylePlugin) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QStyle * create(const QString &)
-func (this *QStylePlugin) Create(key *qtcore.QString) *QStyle /*777 QStyle **/ {
-	var convArg0 = key.GetCthis()
+func (this *QStylePlugin) Create(key string) *QStyle /*777 QStyle **/ {
+	var tmpArg0 = qtcore.NewQString_5(key)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QStylePlugin6createERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStyleFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQStyleFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 //  body block end

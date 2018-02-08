@@ -77,7 +77,6 @@ func (*QTextItem) NewFromPointer(cthis unsafe.Pointer) *QTextItem {
 func (this *QTextItem) Descent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem7descentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -88,7 +87,6 @@ func (this *QTextItem) Descent() float64 {
 func (this *QTextItem) Ascent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem6ascentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -99,7 +97,6 @@ func (this *QTextItem) Ascent() float64 {
 func (this *QTextItem) Width() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -110,7 +107,6 @@ func (this *QTextItem) Width() float64 {
 func (this *QTextItem) RenderFlags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem11renderFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -118,13 +114,13 @@ func (this *QTextItem) RenderFlags() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text()
-func (this *QTextItem) Text() *qtcore.QString /*123*/ {
+func (this *QTextItem) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtGui/qpaintengine.h:81
@@ -134,7 +130,6 @@ func (this *QTextItem) Text() *qtcore.QString /*123*/ {
 func (this *QTextItem) Font() *QFont /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTextItem4fontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFont)
 	return rv2

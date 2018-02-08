@@ -117,9 +117,7 @@ func (*QObject) NewFromPointer(cthis unsafe.Pointer) *QObject {
 func (this *QObject) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qobject.h:123
@@ -154,7 +152,6 @@ func (this *QObject) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -167,7 +164,6 @@ func (this *QObject) EventFilter(watched *QObject /*777 QObject **/, event *QEve
 	var convArg1 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject11eventFilterEPS_P6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -175,21 +171,22 @@ func (this *QObject) EventFilter(watched *QObject /*777 QObject **/, event *QEve
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString objectName()
-func (this *QObject) ObjectName() *QString /*123*/ {
+func (this *QObject) ObjectName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject10objectNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qobject.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setObjectName(const QString &)
-func (this *QObject) SetObjectName(name *QString) {
-	var convArg0 = name.GetCthis()
+func (this *QObject) SetObjectName(name string) {
+	var tmpArg0 = NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject13setObjectNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -201,7 +198,6 @@ func (this *QObject) SetObjectName(name *QString) {
 func (this *QObject) IsWidgetType() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject12isWidgetTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -212,7 +208,6 @@ func (this *QObject) IsWidgetType() bool {
 func (this *QObject) IsWindowType() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject12isWindowTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -223,7 +218,6 @@ func (this *QObject) IsWindowType() bool {
 func (this *QObject) SignalsBlocked() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject14signalsBlockedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -234,7 +228,6 @@ func (this *QObject) SignalsBlocked() bool {
 func (this *QObject) BlockSignals(b bool) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject12blockSignalsEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), b)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -245,9 +238,7 @@ func (this *QObject) BlockSignals(b bool) bool {
 func (this *QObject) Thread() *QThread /*777 QThread **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject6threadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQThreadFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQThreadFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qobject.h:154
@@ -267,7 +258,6 @@ func (this *QObject) MoveToThread(thread *QThread /*777 QThread **/) {
 func (this *QObject) StartTimer(interval int, timerType int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject10startTimerEiN2Qt9TimerTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), interval, timerType)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -323,7 +313,6 @@ func (this *QObject) Connect(sender *QObject /*777 const QObject **/, signal str
 	defer qtrt.FreeMem(convArg3)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject7connectEPKS_PKcS1_S3_N2Qt14ConnectionTypeE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, arg4)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return int(rv)
 }
 func QObject_Connect(sender *QObject /*777 const QObject **/, signal string, receiver *QObject /*777 const QObject **/, member string, arg4 int) int {
@@ -343,7 +332,6 @@ func (this *QObject) Connect_1(sender *QObject /*777 const QObject **/, signal *
 	var convArg3 = method.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject7connectEPKS_RK11QMetaMethodS1_S4_N2Qt14ConnectionTypeE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, type_)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return int(rv)
 }
 func QObject_Connect_1(sender *QObject /*777 const QObject **/, signal *QMetaMethod, receiver *QObject /*777 const QObject **/, method *QMetaMethod, type_ int) int {
@@ -364,7 +352,6 @@ func (this *QObject) Connect_2(sender *QObject /*777 const QObject **/, signal s
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject7connectEPKS_PKcS3_N2Qt14ConnectionTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2, type_)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -381,7 +368,6 @@ func (this *QObject) Disconnect(sender *QObject /*777 const QObject **/, signal 
 	defer qtrt.FreeMem(convArg3)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject10disconnectEPKS_PKcS1_S3_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 func QObject_Disconnect(sender *QObject /*777 const QObject **/, signal string, receiver *QObject /*777 const QObject **/, member string) bool {
@@ -401,7 +387,6 @@ func (this *QObject) Disconnect_1(sender *QObject /*777 const QObject **/, signa
 	var convArg3 = member.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 func QObject_Disconnect_1(sender *QObject /*777 const QObject **/, signal *QMetaMethod, receiver *QObject /*777 const QObject **/, member *QMetaMethod) bool {
@@ -422,7 +407,6 @@ func (this *QObject) Disconnect_2(signal string, receiver *QObject /*777 const Q
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject10disconnectEPKcPKS_S1_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -436,7 +420,6 @@ func (this *QObject) Disconnect_3(receiver *QObject /*777 const QObject **/, mem
 	defer qtrt.FreeMem(convArg1)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject10disconnectEPKS_PKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -486,7 +469,6 @@ func (this *QObject) SetProperty(name string, value *QVariant) bool {
 	var convArg1 = value.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject11setPropertyEPKcRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -499,7 +481,6 @@ func (this *QObject) Property(name string) *QVariant /*123*/ {
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject8propertyEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
@@ -512,7 +493,6 @@ func (this *QObject) Property(name string) *QVariant /*123*/ {
 func (this *QObject) RegisterUserData() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QObject16registerUserDataEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 func QObject_RegisterUserData() uint {
@@ -538,9 +518,7 @@ func (this *QObject) SetUserData(id uint, data *QObjectUserData /*777 QObjectUse
 func (this *QObject) UserData(id uint) *QObjectUserData /*777 QObjectUserData **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject8userDataEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), id)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQObjectUserDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQObjectUserDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qobject.h:409
@@ -560,9 +538,7 @@ func (this *QObject) Destroyed(arg0 *QObject /*777 QObject **/) {
 func (this *QObject) Parent() *QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject6parentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qobject.h:415
@@ -574,7 +550,6 @@ func (this *QObject) Inherits(classname string) bool {
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject8inheritsEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -594,9 +569,7 @@ func (this *QObject) DeleteLater() {
 func (this *QObject) Sender() *QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject6senderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qobject.h:423
@@ -606,7 +579,6 @@ func (this *QObject) Sender() *QObject /*777 QObject **/ {
 func (this *QObject) SenderSignalIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject17senderSignalIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -619,7 +591,6 @@ func (this *QObject) Receivers(signal string) int {
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject9receiversEPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -631,7 +602,6 @@ func (this *QObject) IsSignalConnected(signal *QMetaMethod) bool {
 	var convArg0 = signal.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject17isSignalConnectedERK11QMetaMethod", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

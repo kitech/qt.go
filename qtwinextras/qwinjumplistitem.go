@@ -113,7 +113,6 @@ func (this *QWinJumpListItem) SetType(type_ int) {
 func (this *QWinJumpListItem) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -121,8 +120,9 @@ func (this *QWinJumpListItem) Type() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFilePath(const QString &)
-func (this *QWinJumpListItem) SetFilePath(filePath *qtcore.QString) {
-	var convArg0 = filePath.GetCthis()
+func (this *QWinJumpListItem) SetFilePath(filePath string) {
+	var tmpArg0 = qtcore.NewQString_5(filePath)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItem11setFilePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -131,21 +131,22 @@ func (this *QWinJumpListItem) SetFilePath(filePath *qtcore.QString) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString filePath()
-func (this *QWinJumpListItem) FilePath() *qtcore.QString /*123*/ {
+func (this *QWinJumpListItem) FilePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem8filePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWorkingDirectory(const QString &)
-func (this *QWinJumpListItem) SetWorkingDirectory(workingDirectory *qtcore.QString) {
-	var convArg0 = workingDirectory.GetCthis()
+func (this *QWinJumpListItem) SetWorkingDirectory(workingDirectory string) {
+	var tmpArg0 = qtcore.NewQString_5(workingDirectory)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItem19setWorkingDirectoryERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -154,13 +155,13 @@ func (this *QWinJumpListItem) SetWorkingDirectory(workingDirectory *qtcore.QStri
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString workingDirectory()
-func (this *QWinJumpListItem) WorkingDirectory() *qtcore.QString /*123*/ {
+func (this *QWinJumpListItem) WorkingDirectory() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem16workingDirectoryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:72
@@ -180,7 +181,6 @@ func (this *QWinJumpListItem) SetIcon(icon *qtgui.QIcon) {
 func (this *QWinJumpListItem) Icon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem4iconEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQIconFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
@@ -190,8 +190,9 @@ func (this *QWinJumpListItem) Icon() *qtgui.QIcon /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTitle(const QString &)
-func (this *QWinJumpListItem) SetTitle(title *qtcore.QString) {
-	var convArg0 = title.GetCthis()
+func (this *QWinJumpListItem) SetTitle(title string) {
+	var tmpArg0 = qtcore.NewQString_5(title)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItem8setTitleERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -200,21 +201,22 @@ func (this *QWinJumpListItem) SetTitle(title *qtcore.QString) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString title()
-func (this *QWinJumpListItem) Title() *qtcore.QString /*123*/ {
+func (this *QWinJumpListItem) Title() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem5titleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDescription(const QString &)
-func (this *QWinJumpListItem) SetDescription(description *qtcore.QString) {
-	var convArg0 = description.GetCthis()
+func (this *QWinJumpListItem) SetDescription(description string) {
+	var tmpArg0 = qtcore.NewQString_5(description)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QWinJumpListItem14setDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -223,13 +225,13 @@ func (this *QWinJumpListItem) SetDescription(description *qtcore.QString) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString description()
-func (this *QWinJumpListItem) Description() *qtcore.QString /*123*/ {
+func (this *QWinJumpListItem) Description() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem11descriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:78

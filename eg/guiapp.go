@@ -35,7 +35,7 @@ func main() {
 	// p := qtwidgets.NewQWidgetFromPointer(nil)
 	btn := qtwidgets.NewQPushButton(nil)
 	log.Println(btn, btn.GetCthis())
-	btn.SetText(txt)
+	btn.SetText(txt.ToLocal8Bit().Data())
 	btn.Show()
 
 	// var w = (*qtwidgets.QWidget)(btn)

@@ -29,7 +29,6 @@ func init() {
 func QIsNull(f float32) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZL7qIsNullf", qtrt.FFI_TYPE_POINTER, f)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -40,7 +39,6 @@ func QIsNull(f float32) bool {
 func QIsNull_1(d float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZL7qIsNulld", qtrt.FFI_TYPE_POINTER, d)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -51,7 +49,6 @@ func QIsNull_1(d float64) bool {
 func QFuzzyCompare(p1 float32, p2 float32) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZL13qFuzzyCompareff", qtrt.FFI_TYPE_POINTER, p1, p2)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -62,7 +59,6 @@ func QFuzzyCompare(p1 float32, p2 float32) bool {
 func QFuzzyCompare_1(p1 float64, p2 float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZL13qFuzzyComparedd", qtrt.FFI_TYPE_POINTER, p1, p2)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -73,7 +69,6 @@ func QFuzzyCompare_1(p1 float64, p2 float64) bool {
 func QFuzzyIsNull(f float32) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZL12qFuzzyIsNullf", qtrt.FFI_TYPE_POINTER, f)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -84,7 +79,6 @@ func QFuzzyIsNull(f float32) bool {
 func QFuzzyIsNull_1(d float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZL12qFuzzyIsNulld", qtrt.FFI_TYPE_POINTER, d)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -95,7 +89,6 @@ func QFuzzyIsNull_1(d float64) bool {
 func QIsFinite(f float32) bool {
 	rv, err := qtrt.InvokeQtFunc6("_Z9qIsFinitef", qtrt.FFI_TYPE_POINTER, f)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -106,7 +99,6 @@ func QIsFinite(f float32) bool {
 func QIsFinite_1(d float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_Z9qIsFinited", qtrt.FFI_TYPE_POINTER, d)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -117,7 +109,6 @@ func QIsFinite_1(d float64) bool {
 func QHashBits(p unsafe.Pointer /*666*/, size uint, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z9qHashBitsPKvmj", qtrt.FFI_TYPE_POINTER, p, size, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -129,7 +120,6 @@ func QCompress(data *QByteArray, compressionLevel int) *QByteArray /*123*/ {
 	var convArg0 = data.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z9qCompressRK10QByteArrayi", qtrt.FFI_TYPE_POINTER, convArg0, compressionLevel)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -142,7 +132,6 @@ func QCompress(data *QByteArray, compressionLevel int) *QByteArray /*123*/ {
 func QCompress_1(data unsafe.Pointer /*666*/, nbytes int, compressionLevel int) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_Z9qCompressPKhii", qtrt.FFI_TYPE_POINTER, &data, nbytes, compressionLevel)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -157,7 +146,6 @@ func QChecksum(s string, len uint, standard int) uint16 {
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_Z9qChecksumPKcjN2Qt12ChecksumTypeE", qtrt.FFI_TYPE_POINTER, convArg0, len, standard)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint16(rv) // 222
 }
 
@@ -170,7 +158,6 @@ func QChecksum_1(s string, len uint) uint16 {
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_Z9qChecksumPKcj", qtrt.FFI_TYPE_POINTER, convArg0, len)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint16(rv) // 222
 }
 
@@ -190,7 +177,6 @@ func QBadAlloc() {
 func QRound64(d float32) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z8qRound64f", qtrt.FFI_TYPE_POINTER, d)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return int64(rv) // 222
 }
 
@@ -201,7 +187,6 @@ func QRound64(d float32) int64 {
 func QRound64_1(d float64) int64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z8qRound64d", qtrt.FFI_TYPE_POINTER, d)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return int64(rv) // 222
 }
 
@@ -212,7 +197,6 @@ func QRound64_1(d float64) int64 {
 func QIntCast(f float32) int {
 	rv, err := qtrt.InvokeQtFunc6("_Z8qIntCastf", qtrt.FFI_TYPE_POINTER, f)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -223,7 +207,6 @@ func QIntCast(f float32) int {
 func QIntCast_1(f float64) int {
 	rv, err := qtrt.InvokeQtFunc6("_Z8qIntCastd", qtrt.FFI_TYPE_POINTER, f)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -234,7 +217,6 @@ func QIntCast_1(f float64) int {
 func QFastSin(x float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z8qFastSind", qtrt.FFI_TYPE_POINTER, x)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -245,7 +227,6 @@ func QFastSin(x float64) float64 {
 func QFastCos(x float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z8qFastCosd", qtrt.FFI_TYPE_POINTER, x)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -253,13 +234,13 @@ func QFastCos(x float64) float64 {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QString qAppName()
-func QAppName() *QString /*123*/ {
+func QAppName() string {
 	rv, err := qtrt.InvokeQtFunc6("_Z8qAppNamev", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qglobal.h:533
@@ -269,7 +250,6 @@ func QAppName() *QString /*123*/ {
 func QRound(d float32) int {
 	rv, err := qtrt.InvokeQtFunc6("_Z6qRoundf", qtrt.FFI_TYPE_POINTER, d)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -280,7 +260,6 @@ func QRound(d float32) int {
 func QRound_1(d float64) int {
 	rv, err := qtrt.InvokeQtFunc6("_Z6qRoundd", qtrt.FFI_TYPE_POINTER, d)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -291,7 +270,6 @@ func QRound_1(d float64) int {
 func QIsNaN(f float32) bool {
 	rv, err := qtrt.InvokeQtFunc6("_Z6qIsNaNf", qtrt.FFI_TYPE_POINTER, f)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -302,7 +280,6 @@ func QIsNaN(f float32) bool {
 func QIsNaN_1(d float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_Z6qIsNaNd", qtrt.FFI_TYPE_POINTER, d)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -313,7 +290,6 @@ func QIsNaN_1(d float64) bool {
 func QIsInf(f float32) bool {
 	rv, err := qtrt.InvokeQtFunc6("_Z6qIsInff", qtrt.FFI_TYPE_POINTER, f)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -324,7 +300,6 @@ func QIsInf(f float32) bool {
 func QIsInf_1(d float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_Z6qIsInfd", qtrt.FFI_TYPE_POINTER, d)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -335,7 +310,6 @@ func QIsInf_1(d float64) bool {
 func QFloor(v float64) int {
 	rv, err := qtrt.InvokeQtFunc6("_Z6qFloord", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -346,7 +320,6 @@ func QFloor(v float64) int {
 func QAtan2(y float64, x float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z6qAtan2dd", qtrt.FFI_TYPE_POINTER, y, x)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -357,7 +330,6 @@ func QAtan2(y float64, x float64) float64 {
 func QSqrt(v float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qSqrtd", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -368,7 +340,6 @@ func QSqrt(v float64) float64 {
 func QSNaN() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qSNaNv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -379,7 +350,6 @@ func QSNaN() float64 {
 func QQNaN() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qQNaNv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -390,7 +360,6 @@ func QQNaN() float64 {
 func QHash(key uint64, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashyj", qtrt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -401,7 +370,6 @@ func QHash(key uint64, seed uint) uint {
 func QHash_1(key int64, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashxj", qtrt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -412,7 +380,6 @@ func QHash_1(key int64, seed uint) uint {
 func QHash_2(key uint16, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashtj", qtrt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -423,7 +390,6 @@ func QHash_2(key uint16, seed uint) uint {
 func QHash_3(key int16, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashsj", qtrt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -434,7 +400,6 @@ func QHash_3(key int16, seed uint) uint {
 func QHash_4(key uint, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashmj", qtrt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -445,7 +410,6 @@ func QHash_4(key uint, seed uint) uint {
 func QHash_5(key int, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashlj", qtrt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -456,7 +420,6 @@ func QHash_5(key int, seed uint) uint {
 func QHash_6(key uint, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashjj", qtrt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -467,7 +430,6 @@ func QHash_6(key uint, seed uint) uint {
 func QHash_7(key int, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashij", qtrt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -478,7 +440,6 @@ func QHash_7(key int, seed uint) uint {
 func QHash_8(key byte, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashhj", qtrt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -489,7 +450,6 @@ func QHash_8(key byte, seed uint) uint {
 func QHash_9(key float32, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashfj", qtrt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -500,7 +460,6 @@ func QHash_9(key float32, seed uint) uint {
 func QHash_10(key float64, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashej", qtrt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -511,7 +470,6 @@ func QHash_10(key float64, seed uint) uint {
 func QHash_11(key float64, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashdj", qtrt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -522,7 +480,6 @@ func QHash_11(key float64, seed uint) uint {
 func QHash_12(key byte, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashcj", qtrt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -533,7 +490,6 @@ func QHash_12(key byte, seed uint) uint {
 func QHash_13(key byte, seed uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashaj", qtrt.FFI_TYPE_POINTER, key, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -545,7 +501,6 @@ func QHash_14(key *QUrlQuery, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK9QUrlQueryj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -557,7 +512,6 @@ func QHash_15(key *QMimeType, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK9QMimeTypej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -569,7 +523,6 @@ func QHash_16(key *QDateTime, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK9QDateTimej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -581,7 +534,6 @@ func QHash_17(key *QBitArray, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK9QBitArrayj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -589,11 +541,11 @@ func QHash_17(key *QBitArray, seed uint) uint {
 // index:18
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QString &, uint)
-func QHash_18(key *QString, seed uint) uint {
-	var convArg0 = key.GetCthis()
+func QHash_18(key string, seed uint) uint {
+	var tmpArg0 = NewQString_5(key)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK7QStringj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -605,7 +557,6 @@ func QHash_19(key *QRegExp, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK7QRegExpj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -617,7 +568,6 @@ func QHash_20(key *QLocale, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK7QLocalej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -629,7 +579,6 @@ func QHash_21(uuid *QUuid, seed uint) uint {
 	var convArg0 = uuid.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK5QUuidj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -641,7 +590,6 @@ func QHash_22(key *QTime, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK5QTimej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -653,7 +601,6 @@ func QHash_23(key *QDate, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK5QDatej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -665,7 +612,6 @@ func QHash_24(url *QUrl, seed uint) uint {
 	var convArg0 = url.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK4QUrlj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -677,7 +623,6 @@ func QHash_25(index *QPersistentModelIndex, seed uint) uint {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK21QPersistentModelIndexj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -689,7 +634,6 @@ func QHash_26(index *QPersistentModelIndex, seed uint) uint {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK21QPersistentModelIndexj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -701,7 +645,6 @@ func QHash_27(arg0 *QItemSelectionRange) uint {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK19QItemSelectionRange", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -713,7 +656,6 @@ func QHash_28(key *QRegularExpression, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK18QRegularExpressionj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -725,7 +667,6 @@ func QHash_29(key *QVersionNumber, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK14QVersionNumberj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -737,7 +678,6 @@ func QHash_30(index *QModelIndex) uint {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK11QModelIndex", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -749,7 +689,6 @@ func QHash_31(key *QStringRef, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK10QStringRefj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -761,7 +700,6 @@ func QHash_32(key *QByteArray, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK10QByteArrayj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -773,7 +711,6 @@ func QHash_33(key *QChar /*123*/, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHash5QCharj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -785,7 +722,6 @@ func QHash_34(key *QLatin1String /*123*/, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHash13QLatin1Stringj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -797,7 +733,6 @@ func QHash_35(key *QStringView /*123*/, seed uint) uint {
 	var convArg0 = key.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHash11QStringViewj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -808,7 +743,6 @@ func QHash_35(key *QStringView /*123*/, seed uint) uint {
 func QFabs(v float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qFabsd", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -819,7 +753,6 @@ func QFabs(v float64) float64 {
 func QCeil(v float64) int {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qCeild", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -830,7 +763,6 @@ func QCeil(v float64) int {
 func QAtan(v float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qAtand", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -841,7 +773,6 @@ func QAtan(v float64) float64 {
 func QAsin(v float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qAsind", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -852,7 +783,6 @@ func QAsin(v float64) float64 {
 func QAcos(v float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z5qAcosd", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -863,7 +793,6 @@ func QAcos(v float64) float64 {
 func QTan(v float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z4qTand", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -874,7 +803,6 @@ func QTan(v float64) float64 {
 func QSin(v float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z4qSind", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -885,7 +813,6 @@ func QSin(v float64) float64 {
 func QPow(x float64, y float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z4qPowdd", qtrt.FFI_TYPE_POINTER, x, y)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -896,7 +823,6 @@ func QPow(x float64, y float64) float64 {
 func QInf() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z4qInfv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -907,7 +833,6 @@ func QInf() float64 {
 func QExp(v float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z4qExpd", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -918,7 +843,6 @@ func QExp(v float64) float64 {
 func QCos(v float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z4qCosd", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -929,7 +853,6 @@ func QCos(v float64) float64 {
 func QLn(v float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z3qLnd", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -952,7 +875,6 @@ func QEnvironmentVariableIntValue(varName string, ok unsafe.Pointer /*666*/) int
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_Z28qEnvironmentVariableIntValuePKcPb", qtrt.FFI_TYPE_POINTER, convArg0, &ok)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -965,7 +887,6 @@ func QEnvironmentVariableIsEmpty(varName string) bool {
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_Z27qEnvironmentVariableIsEmptyPKc", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -978,7 +899,6 @@ func QEnvironmentVariableIsSet(varName string) bool {
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_Z25qEnvironmentVariableIsSetPKc", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -989,7 +909,6 @@ func QEnvironmentVariableIsSet(varName string) bool {
 func QUnregisterResourceData(arg0 int, arg1 unsafe.Pointer /*666*/, arg2 unsafe.Pointer /*666*/, arg3 unsafe.Pointer /*666*/) bool {
 	rv, err := qtrt.InvokeQtFunc6("_Z23qUnregisterResourceDataiPKhS0_S0_", qtrt.FFI_TYPE_POINTER, arg0, arg1, arg2, arg3)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -1000,7 +919,6 @@ func QUnregisterResourceData(arg0 int, arg1 unsafe.Pointer /*666*/, arg2 unsafe.
 func QSetRealNumberPrecision(precision int) *QTextStreamManipulator /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_Z23qSetRealNumberPrecisioni", qtrt.FFI_TYPE_POINTER, precision)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQTextStreamManipulatorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextStreamManipulator)
 	return rv2
@@ -1013,7 +931,6 @@ func QSetRealNumberPrecision(precision int) *QTextStreamManipulator /*123*/ {
 func QInstallMessageHandler(arg0 unsafe.Pointer /*666*/) unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_Z22qInstallMessageHandlerPFv9QtMsgTypeRK18QMessageLogContextRK7QStringE", qtrt.FFI_TYPE_POINTER, arg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -1024,7 +941,6 @@ func QInstallMessageHandler(arg0 unsafe.Pointer /*666*/) unsafe.Pointer /*666*/ 
 func QCountTrailingZeroBits(v uint64) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z22qCountTrailingZeroBitsy", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -1035,7 +951,6 @@ func QCountTrailingZeroBits(v uint64) uint {
 func QCountTrailingZeroBits_1(v uint16) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z22qCountTrailingZeroBitst", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -1046,7 +961,6 @@ func QCountTrailingZeroBits_1(v uint16) uint {
 func QCountTrailingZeroBits_2(v uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z22qCountTrailingZeroBitsm", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -1057,7 +971,6 @@ func QCountTrailingZeroBits_2(v uint) uint {
 func QCountTrailingZeroBits_3(v uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z22qCountTrailingZeroBitsj", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -1068,7 +981,6 @@ func QCountTrailingZeroBits_3(v uint) uint {
 func QCountTrailingZeroBits_4(v byte) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z22qCountTrailingZeroBitsh", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -1079,7 +991,6 @@ func QCountTrailingZeroBits_4(v byte) uint {
 func QRegisterResourceData(arg0 int, arg1 unsafe.Pointer /*666*/, arg2 unsafe.Pointer /*666*/, arg3 unsafe.Pointer /*666*/) bool {
 	rv, err := qtrt.InvokeQtFunc6("_Z21qRegisterResourceDataiPKhS0_S0_", qtrt.FFI_TYPE_POINTER, arg0, arg1, arg2, arg3)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -1090,7 +1001,6 @@ func QRegisterResourceData(arg0 int, arg1 unsafe.Pointer /*666*/, arg2 unsafe.Po
 func QCountLeadingZeroBits(v uint64) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z21qCountLeadingZeroBitsy", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -1101,7 +1011,6 @@ func QCountLeadingZeroBits(v uint64) uint {
 func QCountLeadingZeroBits_1(v uint16) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z21qCountLeadingZeroBitst", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -1112,7 +1021,6 @@ func QCountLeadingZeroBits_1(v uint16) uint {
 func QCountLeadingZeroBits_2(v uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z21qCountLeadingZeroBitsm", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -1123,7 +1031,6 @@ func QCountLeadingZeroBits_2(v uint) uint {
 func QCountLeadingZeroBits_3(v uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z21qCountLeadingZeroBitsj", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -1134,7 +1041,6 @@ func QCountLeadingZeroBits_3(v uint) uint {
 func QCountLeadingZeroBits_4(v byte) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z21qCountLeadingZeroBitsh", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -1142,46 +1048,46 @@ func QCountLeadingZeroBits_4(v byte) uint {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QObject * qt_qFindChild_helper(const QObject *, const QString &, const struct QMetaObject &, Qt::FindChildOptions)
-func Qt_qFindChild_helper(parent *QObject /*777 const QObject **/, name *QString, mo *QMetaObject, options int) *QObject /*777 QObject **/ {
+func Qt_qFindChild_helper(parent *QObject /*777 const QObject **/, name string, mo *QMetaObject, options int) *QObject /*777 QObject **/ {
 	var convArg0 = parent.GetCthis()
-	var convArg1 = name.GetCthis()
+	var tmpArg1 = NewQString_5(name)
+	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 = mo.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z20qt_qFindChild_helperPK7QObjectRK7QStringRK11QMetaObject6QFlagsIN2Qt15FindChildOptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, options)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qglobal.h:1134
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QString qEnvironmentVariable(const char *, const QString &)
-func QEnvironmentVariable(varName string, defaultValue *QString) *QString /*123*/ {
+func QEnvironmentVariable(varName string, defaultValue string) string {
 	var convArg0 = qtrt.CString(varName)
 	defer qtrt.FreeMem(convArg0)
-	var convArg1 = defaultValue.GetCthis()
+	var tmpArg1 = NewQString_5(defaultValue)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z20qEnvironmentVariablePKcRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qglobal.h:1133
 // index:1
 // Invalid Visibility=Default Availability=Available
 // [8] QString qEnvironmentVariable(const char *)
-func QEnvironmentVariable_1(varName string) *QString /*123*/ {
+func QEnvironmentVariable_1(varName string) string {
 	var convArg0 = qtrt.CString(varName)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_Z20qEnvironmentVariablePKc", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:68
@@ -1197,8 +1103,9 @@ func QSetGlobalQHashSeed(newSeed int) {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void qSetMessagePattern(const QString &)
-func QSetMessagePattern(messagePattern *QString) {
-	var convArg0 = messagePattern.GetCthis()
+func QSetMessagePattern(messagePattern string) {
+	var tmpArg0 = NewQString_5(messagePattern)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z18qSetMessagePatternRK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -1219,7 +1126,6 @@ func QRemovePostRoutine(arg0 unsafe.Pointer /*666*/) {
 func QRadiansToDegrees(radians float32) float32 {
 	rv, err := qtrt.InvokeQtFunc6("_Z17qRadiansToDegreesf", qtrt.FFI_TYPE_POINTER, radians)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
@@ -1230,7 +1136,6 @@ func QRadiansToDegrees(radians float32) float32 {
 func QRadiansToDegrees_1(radians float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z17qRadiansToDegreesd", qtrt.FFI_TYPE_POINTER, radians)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -1238,15 +1143,16 @@ func QRadiansToDegrees_1(radians float64) float64 {
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [8] QString qFormatLogMessage(enum QtMsgType, const QMessageLogContext &, const QString &)
-func QFormatLogMessage(type_ int, context *QMessageLogContext, buf *QString) *QString /*123*/ {
+func QFormatLogMessage(type_ int, context *QMessageLogContext, buf string) string {
 	var convArg1 = context.GetCthis()
-	var convArg2 = buf.GetCthis()
+	var tmpArg2 = NewQString_5(buf)
+	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z17qFormatLogMessage9QtMsgTypeRK18QMessageLogContextRK7QString", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qmath.h:226
@@ -1256,7 +1162,6 @@ func QFormatLogMessage(type_ int, context *QMessageLogContext, buf *QString) *QS
 func QDegreesToRadians(degrees float32) float32 {
 	rv, err := qtrt.InvokeQtFunc6("_Z17qDegreesToRadiansf", qtrt.FFI_TYPE_POINTER, degrees)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
@@ -1267,7 +1172,6 @@ func QDegreesToRadians(degrees float32) float32 {
 func QDegreesToRadians_1(degrees float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z17qDegreesToRadiansd", qtrt.FFI_TYPE_POINTER, degrees)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -1278,7 +1182,6 @@ func QDegreesToRadians_1(degrees float64) float64 {
 func QPopulationCount(v uint64) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z16qPopulationCounty", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -1289,7 +1192,6 @@ func QPopulationCount(v uint64) uint {
 func QPopulationCount_1(v uint16) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z16qPopulationCountt", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -1300,7 +1202,6 @@ func QPopulationCount_1(v uint16) uint {
 func QPopulationCount_2(v uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z16qPopulationCountm", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -1311,7 +1212,6 @@ func QPopulationCount_2(v uint) uint {
 func QPopulationCount_3(v uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z16qPopulationCountj", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -1322,7 +1222,6 @@ func QPopulationCount_3(v uint) uint {
 func QPopulationCount_4(v byte) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z16qPopulationCounth", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -1333,7 +1232,6 @@ func QPopulationCount_4(v byte) uint {
 func QGlobalQHashSeed() int {
 	rv, err := qtrt.InvokeQtFunc6("_Z16qGlobalQHashSeedv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -1344,7 +1242,6 @@ func QGlobalQHashSeed() int {
 func QReallocAligned(ptr unsafe.Pointer /*666*/, size uint, oldsize uint, alignment uint) unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_Z15qReallocAlignedPvmmm", qtrt.FFI_TYPE_POINTER, ptr, size, oldsize, alignment)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -1355,7 +1252,6 @@ func QReallocAligned(ptr unsafe.Pointer /*666*/, size uint, oldsize uint, alignm
 func QNextPowerOfTwo(v uint64) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z15qNextPowerOfTwoy", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint64(rv) // 222
 }
 
@@ -1366,7 +1262,6 @@ func QNextPowerOfTwo(v uint64) uint64 {
 func QNextPowerOfTwo_1(v int64) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z15qNextPowerOfTwox", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint64(rv) // 222
 }
 
@@ -1377,7 +1272,6 @@ func QNextPowerOfTwo_1(v int64) uint64 {
 func QNextPowerOfTwo_2(v uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z15qNextPowerOfTwoj", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -1388,7 +1282,6 @@ func QNextPowerOfTwo_2(v uint) uint {
 func QNextPowerOfTwo_3(v int) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z15qNextPowerOfTwoi", qtrt.FFI_TYPE_POINTER, v)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -1408,7 +1301,6 @@ func QAddPostRoutine(arg0 unsafe.Pointer /*666*/) {
 func QSetFieldWidth(width int) *QTextStreamManipulator /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_Z14qSetFieldWidthi", qtrt.FFI_TYPE_POINTER, width)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQTextStreamManipulatorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextStreamManipulator)
 	return rv2
@@ -1421,7 +1313,6 @@ func QSetFieldWidth(width int) *QTextStreamManipulator /*123*/ {
 func QMallocAligned(size uint, alignment uint) unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_Z14qMallocAlignedmm", qtrt.FFI_TYPE_POINTER, size, alignment)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -1432,7 +1323,6 @@ func QMallocAligned(size uint, alignment uint) unsafe.Pointer /*666*/ {
 func QFloatDistance(a float32, b float32) uint {
 	rv, err := qtrt.InvokeQtFunc6("_Z14qFloatDistanceff", qtrt.FFI_TYPE_POINTER, a, b)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint(rv) // 222
 }
 
@@ -1443,7 +1333,6 @@ func QFloatDistance(a float32, b float32) uint {
 func QFloatDistance_1(a float64, b float64) uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_Z14qFloatDistancedd", qtrt.FFI_TYPE_POINTER, a, b)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint64(rv) // 222
 }
 
@@ -1465,7 +1354,6 @@ func QFlagLocation(method string) string {
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_Z13qFlagLocationPKc", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.GoStringI(rv)
 }
 
@@ -1498,7 +1386,6 @@ func QErrnoWarning_1(msg string) {
 func QSharedBuild() bool {
 	rv, err := qtrt.InvokeQtFunc6("_Z12qSharedBuildv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 
@@ -1519,7 +1406,6 @@ func QUncompress(data *QByteArray) *QByteArray /*123*/ {
 	var convArg0 = data.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z11qUncompressRK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -1532,7 +1418,6 @@ func QUncompress(data *QByteArray) *QByteArray /*123*/ {
 func QUncompress_1(data unsafe.Pointer /*666*/, nbytes int) *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_Z11qUncompressPKhi", qtrt.FFI_TYPE_POINTER, &data, nbytes)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -1546,7 +1431,6 @@ func QSetPadChar(ch *QChar /*123*/) *QTextStreamManipulator /*123*/ {
 	var convArg0 = ch.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_Z11qSetPadChar5QChar", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQTextStreamManipulatorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextStreamManipulator)
 	return rv2

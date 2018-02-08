@@ -96,7 +96,6 @@ func DeleteQEvent(this *QEvent) {
 func (this *QEvent) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QEvent4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -107,7 +106,6 @@ func (this *QEvent) Type() int {
 func (this *QEvent) Spontaneous() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QEvent11spontaneousEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -127,7 +125,6 @@ func (this *QEvent) SetAccepted(accepted bool) {
 func (this *QEvent) IsAccepted() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QEvent10isAcceptedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -156,7 +153,6 @@ func (this *QEvent) Ignore() {
 func (this *QEvent) RegisterEventType(hint int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QEvent17registerEventTypeEi", qtrt.FFI_TYPE_POINTER, hint)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QEvent_RegisterEventType(hint int) int {

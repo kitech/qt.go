@@ -222,9 +222,7 @@ func (*QListView) NewFromPointer(cthis unsafe.Pointer) *QListView {
 func (this *QListView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qlistview.h:81
@@ -266,7 +264,6 @@ func (this *QListView) SetMovement(movement int) {
 func (this *QListView) Movement() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView8movementEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -286,7 +283,6 @@ func (this *QListView) SetFlow(flow int) {
 func (this *QListView) Flow() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView4flowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -306,7 +302,6 @@ func (this *QListView) SetWrapping(enable bool) {
 func (this *QListView) IsWrapping() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView10isWrappingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -326,7 +321,6 @@ func (this *QListView) SetResizeMode(mode int) {
 func (this *QListView) ResizeMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView10resizeModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -346,7 +340,6 @@ func (this *QListView) SetLayoutMode(mode int) {
 func (this *QListView) LayoutMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView10layoutModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -366,7 +359,6 @@ func (this *QListView) SetSpacing(space int) {
 func (this *QListView) Spacing() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView7spacingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -386,7 +378,6 @@ func (this *QListView) SetBatchSize(batchSize int) {
 func (this *QListView) BatchSize() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView9batchSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -407,7 +398,6 @@ func (this *QListView) SetGridSize(size *qtcore.QSize) {
 func (this *QListView) GridSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView8gridSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -429,7 +419,6 @@ func (this *QListView) SetViewMode(mode int) {
 func (this *QListView) ViewMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView8viewModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -449,7 +438,6 @@ func (this *QListView) ClearPropertyFlags() {
 func (this *QListView) IsRowHidden(row int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView11isRowHiddenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -478,7 +466,6 @@ func (this *QListView) SetModelColumn(column int) {
 func (this *QListView) ModelColumn() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView11modelColumnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -498,7 +485,6 @@ func (this *QListView) SetUniformItemSizes(enable bool) {
 func (this *QListView) UniformItemSizes() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView16uniformItemSizesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -518,7 +504,6 @@ func (this *QListView) SetWordWrap(on bool) {
 func (this *QListView) WordWrap() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView8wordWrapEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -538,7 +523,6 @@ func (this *QListView) SetSelectionRectVisible(show bool) {
 func (this *QListView) IsSelectionRectVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView22isSelectionRectVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -550,7 +534,6 @@ func (this *QListView) VisualRect(index *qtcore.QModelIndex) *qtcore.QRect /*123
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView10visualRectERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
@@ -574,7 +557,6 @@ func (this *QListView) IndexAt(p *qtcore.QPoint) *qtcore.QModelIndex /*123*/ {
 	var convArg0 = p.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView7indexAtERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
@@ -616,7 +598,6 @@ func (this *QListView) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -645,7 +626,6 @@ func (this *QListView) ResizeContents(width int, height int) {
 func (this *QListView) ContentsSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView12contentsSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -767,7 +747,6 @@ func (this *QListView) StartDrag(supportedActions int) {
 func (this *QListView) ViewOptions() *QStyleOptionViewItem /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView11viewOptionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQStyleOptionViewItemFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStyleOptionViewItem)
 	return rv2
@@ -790,7 +769,6 @@ func (this *QListView) PaintEvent(e *qtgui.QPaintEvent /*777 QPaintEvent **/) {
 func (this *QListView) HorizontalOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView16horizontalOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -801,7 +779,6 @@ func (this *QListView) HorizontalOffset() int {
 func (this *QListView) VerticalOffset() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView14verticalOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -812,7 +789,6 @@ func (this *QListView) VerticalOffset() int {
 func (this *QListView) MoveCursor(cursorAction int, modifiers int) *qtcore.QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView10moveCursorEN17QAbstractItemView12CursorActionE6QFlagsIN2Qt16KeyboardModifierEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), cursorAction, modifiers)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQModelIndex)
 	return rv2
@@ -826,7 +802,6 @@ func (this *QListView) RectForIndex(index *qtcore.QModelIndex) *qtcore.QRect /*1
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView12rectForIndexERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
@@ -861,7 +836,6 @@ func (this *QListView) VisualRegionForSelection(selection *qtcore.QItemSelection
 	var convArg0 = selection.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView24visualRegionForSelectionERK14QItemSelection", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQRegion)
 	return rv2
@@ -884,7 +858,6 @@ func (this *QListView) IsIndexHidden(index *qtcore.QModelIndex) bool {
 	var convArg0 = index.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView13isIndexHiddenERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -917,7 +890,6 @@ func (this *QListView) CurrentChanged(current *qtcore.QModelIndex, previous *qtc
 func (this *QListView) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QListView16viewportSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2

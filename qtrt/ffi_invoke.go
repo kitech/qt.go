@@ -146,11 +146,14 @@ func InvokeQtFuncByName(symname string, args []uint64, types []int) uint64 {
 }
 
 ////////
+
 type Type = ffi.Type
 type VRetype = uint64 // interface{}
 
+var debugFFICall = false
 var libs = map[string]ffi.Library{}
 
+func SetDebugFFICall(on bool) { debugFFICall = on }
 func init() {
 	init_invoke()
 	init_callack_inherit()
@@ -222,7 +225,9 @@ func InvokeQtFunc5(symname string, retype byte, argc int, types []byte, args []u
 func InvokeQtFunc6(symname string, retype byte, args ...interface{}) (VRetype, error) {
 	rawname := symname
 	addr := GetQtSymAddr(symname)
-	log.Println("FFI Call:", symname, addr, "retype=", retype, "argc=", len(args))
+	if debugFFICall {
+		log.Println("FFI Call:", symname, addr, "retype=", retype, "argc=", len(args))
+	}
 
 	argtys, argvals := convArgs(args...)
 	var retval C.uint64_t = 0

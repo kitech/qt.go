@@ -97,7 +97,6 @@ func DeleteQFocusEvent(this *QFocusEvent) {
 func (this *QFocusEvent) GotFocus() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusEvent8gotFocusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -108,7 +107,6 @@ func (this *QFocusEvent) GotFocus() bool {
 func (this *QFocusEvent) LostFocus() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusEvent9lostFocusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -119,7 +117,6 @@ func (this *QFocusEvent) LostFocus() bool {
 func (this *QFocusEvent) Reason() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFocusEvent6reasonEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 

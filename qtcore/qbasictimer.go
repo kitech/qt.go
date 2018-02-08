@@ -96,7 +96,6 @@ func DeleteQBasicTimer(this *QBasicTimer) {
 func (this *QBasicTimer) IsActive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QBasicTimer8isActiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -107,7 +106,6 @@ func (this *QBasicTimer) IsActive() bool {
 func (this *QBasicTimer) TimerId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QBasicTimer7timerIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

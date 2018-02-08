@@ -191,7 +191,6 @@ func NewQVector4D_8(vector *QVector3D, wpos float32) *QVector4D {
 func (this *QVector4D) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -202,7 +201,6 @@ func (this *QVector4D) IsNull() bool {
 func (this *QVector4D) X() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D1xEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
@@ -213,7 +211,6 @@ func (this *QVector4D) X() float32 {
 func (this *QVector4D) Y() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D1yEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
@@ -224,7 +221,6 @@ func (this *QVector4D) Y() float32 {
 func (this *QVector4D) Z() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D1zEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
@@ -235,7 +231,6 @@ func (this *QVector4D) Z() float32 {
 func (this *QVector4D) W() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D1wEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
@@ -282,7 +277,6 @@ func (this *QVector4D) SetW(w float32) {
 func (this *QVector4D) Length() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D6lengthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
@@ -293,7 +287,6 @@ func (this *QVector4D) Length() float32 {
 func (this *QVector4D) LengthSquared() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D13lengthSquaredEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
@@ -304,7 +297,6 @@ func (this *QVector4D) LengthSquared() float32 {
 func (this *QVector4D) Normalized() *QVector4D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D10normalizedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQVector4DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector4D)
 	return rv2
@@ -328,7 +320,6 @@ func (this *QVector4D) DotProduct(v1 *QVector4D, v2 *QVector4D) float32 {
 	var convArg1 = v2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QVector4D10dotProductERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 func QVector4D_DotProduct(v1 *QVector4D, v2 *QVector4D) float32 {
@@ -344,7 +335,6 @@ func QVector4D_DotProduct(v1 *QVector4D, v2 *QVector4D) float32 {
 func (this *QVector4D) ToVector2D() *QVector2D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D10toVector2DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQVector2DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector2D)
 	return rv2
@@ -357,7 +347,6 @@ func (this *QVector4D) ToVector2D() *QVector2D /*123*/ {
 func (this *QVector4D) ToVector2DAffine() *QVector2D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D16toVector2DAffineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQVector2DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector2D)
 	return rv2
@@ -370,7 +359,6 @@ func (this *QVector4D) ToVector2DAffine() *QVector2D /*123*/ {
 func (this *QVector4D) ToVector3D() *QVector3D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D10toVector3DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector3D)
 	return rv2
@@ -383,7 +371,6 @@ func (this *QVector4D) ToVector3D() *QVector3D /*123*/ {
 func (this *QVector4D) ToVector3DAffine() *QVector3D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D16toVector3DAffineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector3D)
 	return rv2
@@ -396,7 +383,6 @@ func (this *QVector4D) ToVector3DAffine() *QVector3D /*123*/ {
 func (this *QVector4D) ToPoint() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D7toPointEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
@@ -409,7 +395,6 @@ func (this *QVector4D) ToPoint() *qtcore.QPoint /*123*/ {
 func (this *QVector4D) ToPointF() *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QVector4D8toPointFEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2

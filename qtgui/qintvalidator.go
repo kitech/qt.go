@@ -74,9 +74,7 @@ func (*QIntValidator) NewFromPointer(cthis unsafe.Pointer) *QIntValidator {
 func (this *QIntValidator) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QIntValidator10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qvalidator.h:96
@@ -118,11 +116,11 @@ func DeleteQIntValidator(this *QIntValidator) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QValidator::State validate(QString &, int &)
-func (this *QIntValidator) Validate(arg0 *qtcore.QString, arg1 int) int {
-	var convArg0 = arg0.GetCthis()
+func (this *QIntValidator) Validate(arg0 string, arg1 int) int {
+	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QIntValidator8validateER7QStringRi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, &arg1)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -130,8 +128,9 @@ func (this *QIntValidator) Validate(arg0 *qtcore.QString, arg1 int) int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void fixup(QString &)
-func (this *QIntValidator) Fixup(input *qtcore.QString) {
-	var convArg0 = input.GetCthis()
+func (this *QIntValidator) Fixup(input string) {
+	var tmpArg0 = qtcore.NewQString_5(input)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QIntValidator5fixupER7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -170,7 +169,6 @@ func (this *QIntValidator) SetRange(bottom int, top int) {
 func (this *QIntValidator) Bottom() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QIntValidator6bottomEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -181,7 +179,6 @@ func (this *QIntValidator) Bottom() int {
 func (this *QIntValidator) Top() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QIntValidator3topEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

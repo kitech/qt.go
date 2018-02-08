@@ -5,8 +5,10 @@ extern void callbackAllQDynSlotObject(void*, int, int, void**, char*, int, int*,
 */
 import "C"
 import (
+	"errors"
 	"gopp"
 	"log"
+	"strings"
 	"unsafe"
 
 	"github.com/therecipe/qt"
@@ -57,6 +59,7 @@ type CObjectIF interface {
 	SetCthis(unsafe.Pointer)
 }
 
+// 可以是signal的完整函数原型，也可以是名字
 func Connect(cobj CObjectIF, signame string, f interface{}) {
 	((*QDynSlotObject)(nil))._Connect(cobj, signame, f)
 }
@@ -66,6 +69,12 @@ func (*QDynSlotObject) _Connect(cobj CObjectIF, signame string, f interface{}) {
 	gopp.NilPrint(cptr, "cptr nil")
 
 	if cptr != nil {
+		if !strings.Contains(signame, "(") {
+			s, err := QObjectGetSignatureByName(cobj, signame)
+			gopp.ErrPrint(err)
+			signame = gopp.IfElseStr(err == nil, s, signame)
+		}
+
 		// 相当于初始化信号开关
 		if !qt.ExistsSignal(cptr, signame) {
 			// C.QMessageBox_ConnectButtonClicked(ptr.Pointer())
@@ -89,6 +98,7 @@ func (*QDynSlotObject) _Connect(cobj CObjectIF, signame string, f interface{}) {
 	}
 }
 
+// 可以是signal的完整函数原型，也可以是名字
 func ConnectSwitch(src unsafe.Pointer, signame string, on bool, cobj CObjectIF) {
 	((*QDynSlotObject)(nil))._ConnectSwitch(src, signame, on, cobj)
 }
@@ -129,6 +139,56 @@ func Disconnect(cobj CObjectIF, signame string) {
 	qt.DisconnectAllSignals(cobj.GetCthis(), signame)
 }
 
+// or direct use qtcore.QObject_Connect
+func ConnectSignal(sender CObjectIF, signal string, receiver CObjectIF, member string) {
+	if !strings.Contains(signal, "(") {
+		s, err := QObjectGetSignatureByName(sender, signal)
+		gopp.ErrPrint(err)
+		signal = gopp.IfElseStr(err == nil, s, signal)
+	}
+	if !strings.Contains(member, "(") {
+		s, err := QObjectGetSignatureByName(receiver, member)
+		gopp.ErrPrint(err)
+		member = gopp.IfElseStr(err == nil, s, member)
+	}
+
+	var convArg0 = sender.GetCthis()
+	var convArg1 = CString(QSIGNAL(signal))
+	defer FreeMem(convArg1)
+	var convArg2 = receiver.GetCthis()
+	var convArg3 = CString(QSIGNAL(member))
+	defer FreeMem(convArg3)
+	var arg4 int = 2 // Qt::QueuedConnection	2
+	rv, err := InvokeQtFunc6("_ZN7QObject7connectEPKS_PKcS1_S3_N2Qt14ConnectionTypeE", FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, arg4)
+	gopp.ErrPrint(err, rv)
+	// return int(rv)
+}
+
+// 这个可以简化connect时的书写。仅在只有一个同名的情况下适用。
+func QObjectGetSignatureByName(qobj CObjectIF, name string) (string, error) {
+	var convArg1 = CString(name)
+	defer FreeMem(convArg1)
+	rv, err := InvokeQtFunc6("QObject_get_meta_signature_by_name", FFI_TYPE_POINTER, qobj.GetCthis(), convArg1)
+	gopp.ErrPrint(err, rv)
+	switch rv {
+	case 0:
+		return "", errors.New("not found")
+	case 1:
+		return "", errors.New("not unique")
+	default:
+		defer FreeMemI(rv)
+		return GoStringI(rv), nil
+	}
+}
+
+var debugDynSlot bool = false
+
+func SetDebugDynSlot(on bool) {
+	debugDynSlot = on
+	InvokeQtFunc6("QDynSlotObject_set_debug", FFI_TYPE_VOID, gopp.IfElseInt(on, 1, 0))
+}
+
+// test
 func (this *QDynSlotObject) Connect_test(to *QDynSlotObject) {
 	rv, err := InvokeQtFunc6("QDynSlotObject_connect_test", FFI_TYPE_VOID, this.cthis, to.cthis)
 	gopp.ErrPrint(err, rv)
@@ -137,11 +197,4 @@ func (this *QDynSlotObject) Connect_test(to *QDynSlotObject) {
 func (this *QDynSlotObject) Trigger_test() {
 	rv, err := InvokeQtFunc6("QDynSlotObject_trigger_test", FFI_TYPE_VOID, this.cthis)
 	gopp.ErrPrint(err, rv)
-}
-
-var debugDynSlot bool = false
-
-func SetDebugDynSlot(on bool) {
-	debugDynSlot = on
-	InvokeQtFunc6("QDynSlotObject_set_debug", FFI_TYPE_VOID, gopp.IfElseInt(on, 1, 0))
 }

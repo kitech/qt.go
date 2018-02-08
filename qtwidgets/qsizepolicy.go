@@ -105,7 +105,6 @@ func NewQSizePolicy_1(horizontal int, vertical int, type_ int) *QSizePolicy {
 func (this *QSizePolicy) HorizontalPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSizePolicy16horizontalPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -116,7 +115,6 @@ func (this *QSizePolicy) HorizontalPolicy() int {
 func (this *QSizePolicy) VerticalPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSizePolicy14verticalPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -127,7 +125,6 @@ func (this *QSizePolicy) VerticalPolicy() int {
 func (this *QSizePolicy) ControlType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSizePolicy11controlTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -165,7 +162,6 @@ func (this *QSizePolicy) SetControlType(type_ int) {
 func (this *QSizePolicy) ExpandingDirections() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSizePolicy19expandingDirectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -185,7 +181,6 @@ func (this *QSizePolicy) SetHeightForWidth(b bool) {
 func (this *QSizePolicy) HasHeightForWidth() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSizePolicy17hasHeightForWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -205,7 +200,6 @@ func (this *QSizePolicy) SetWidthForHeight(b bool) {
 func (this *QSizePolicy) HasWidthForHeight() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSizePolicy17hasWidthForHeightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -216,7 +210,6 @@ func (this *QSizePolicy) HasWidthForHeight() bool {
 func (this *QSizePolicy) HorizontalStretch() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSizePolicy17horizontalStretchEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -227,7 +220,6 @@ func (this *QSizePolicy) HorizontalStretch() int {
 func (this *QSizePolicy) VerticalStretch() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSizePolicy15verticalStretchEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -256,7 +248,6 @@ func (this *QSizePolicy) SetVerticalStretch(stretchFactor int) {
 func (this *QSizePolicy) RetainSizeWhenHidden() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSizePolicy20retainSizeWhenHiddenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -285,7 +276,6 @@ func (this *QSizePolicy) Transpose() {
 func (this *QSizePolicy) Transposed() *QSizePolicy /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSizePolicy10transposedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQSizePolicyFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSizePolicy)
 	return rv2

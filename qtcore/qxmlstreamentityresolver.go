@@ -81,29 +81,32 @@ func DeleteQXmlStreamEntityResolver(this *QXmlStreamEntityResolver) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString resolveEntity(const QString &, const QString &)
-func (this *QXmlStreamEntityResolver) ResolveEntity(publicId *QString, systemId *QString) *QString /*123*/ {
-	var convArg0 = publicId.GetCthis()
-	var convArg1 = systemId.GetCthis()
+func (this *QXmlStreamEntityResolver) ResolveEntity(publicId string, systemId string) string {
+	var tmpArg0 = NewQString_5(publicId)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = NewQString_5(systemId)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qxmlstream.h:338
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString resolveUndeclaredEntity(const QString &)
-func (this *QXmlStreamEntityResolver) ResolveUndeclaredEntity(name *QString) *QString /*123*/ {
-	var convArg0 = name.GetCthis()
+func (this *QXmlStreamEntityResolver) ResolveUndeclaredEntity(name string) string {
+	var tmpArg0 = NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 //  body block end

@@ -94,15 +94,15 @@ func (*QQuickStyle) NewFromPointer(cthis unsafe.Pointer) *QQuickStyle {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString name()
-func (this *QQuickStyle) Name() *qtcore.QString /*123*/ {
+func (this *QQuickStyle) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle4nameEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
-func QQuickStyle_Name() *qtcore.QString /*123*/ {
+func QQuickStyle_Name() string {
 	var nilthis *QQuickStyle
 	rv := nilthis.Name()
 	return rv
@@ -112,15 +112,15 @@ func QQuickStyle_Name() *qtcore.QString /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString path()
-func (this *QQuickStyle) Path() *qtcore.QString /*123*/ {
+func (this *QQuickStyle) Path() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle4pathEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
-func QQuickStyle_Path() *qtcore.QString /*123*/ {
+func QQuickStyle_Path() string {
 	var nilthis *QQuickStyle
 	rv := nilthis.Path()
 	return rv
@@ -130,12 +130,13 @@ func QQuickStyle_Path() *qtcore.QString /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setStyle(const QString &)
-func (this *QQuickStyle) SetStyle(style *qtcore.QString) {
-	var convArg0 = style.GetCthis()
+func (this *QQuickStyle) SetStyle(style string) {
+	var tmpArg0 = qtcore.NewQString_5(style)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle8setStyleERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
-func QQuickStyle_SetStyle(style *qtcore.QString) {
+func QQuickStyle_SetStyle(style string) {
 	var nilthis *QQuickStyle
 	nilthis.SetStyle(style)
 }
@@ -144,12 +145,13 @@ func QQuickStyle_SetStyle(style *qtcore.QString) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setFallbackStyle(const QString &)
-func (this *QQuickStyle) SetFallbackStyle(style *qtcore.QString) {
-	var convArg0 = style.GetCthis()
+func (this *QQuickStyle) SetFallbackStyle(style string) {
+	var tmpArg0 = qtcore.NewQString_5(style)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle16setFallbackStyleERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
-func QQuickStyle_SetFallbackStyle(style *qtcore.QString) {
+func QQuickStyle_SetFallbackStyle(style string) {
 	var nilthis *QQuickStyle
 	nilthis.SetFallbackStyle(style)
 }

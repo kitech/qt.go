@@ -71,8 +71,9 @@ func (*QFileOpenEvent) NewFromPointer(cthis unsafe.Pointer) *QFileOpenEvent {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFileOpenEvent(const QString &)
-func NewQFileOpenEvent(file *qtcore.QString) *QFileOpenEvent {
-	var convArg0 = file.GetCthis()
+func NewQFileOpenEvent(file string) *QFileOpenEvent {
+	var tmpArg0 = qtcore.NewQString_5(file)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QFileOpenEventC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFileOpenEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -108,13 +109,13 @@ func DeleteQFileOpenEvent(this *QFileOpenEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString file()
-func (this *QFileOpenEvent) File() *qtcore.QString /*123*/ {
+func (this *QFileOpenEvent) File() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QFileOpenEvent4fileEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtGui/qevent.h:743
@@ -124,7 +125,6 @@ func (this *QFileOpenEvent) File() *qtcore.QString /*123*/ {
 func (this *QFileOpenEvent) Url() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QFileOpenEvent3urlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQUrl)
 	return rv2
@@ -138,7 +138,6 @@ func (this *QFileOpenEvent) OpenFile(file *qtcore.QFile, flags int) bool {
 	var convArg0 = file.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QFileOpenEvent8openFileER5QFile6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, flags)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

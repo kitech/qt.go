@@ -122,7 +122,6 @@ func (this *QPainterPathStroker) SetWidth(width float64) {
 func (this *QPainterPathStroker) Width() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QPainterPathStroker5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -142,7 +141,6 @@ func (this *QPainterPathStroker) SetCapStyle(style int) {
 func (this *QPainterPathStroker) CapStyle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QPainterPathStroker8capStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -162,7 +160,6 @@ func (this *QPainterPathStroker) SetJoinStyle(style int) {
 func (this *QPainterPathStroker) JoinStyle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QPainterPathStroker9joinStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -182,7 +179,6 @@ func (this *QPainterPathStroker) SetMiterLimit(length float64) {
 func (this *QPainterPathStroker) MiterLimit() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QPainterPathStroker10miterLimitEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -202,7 +198,6 @@ func (this *QPainterPathStroker) SetCurveThreshold(threshold float64) {
 func (this *QPainterPathStroker) CurveThreshold() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QPainterPathStroker14curveThresholdEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -231,7 +226,6 @@ func (this *QPainterPathStroker) SetDashOffset(offset float64) {
 func (this *QPainterPathStroker) DashOffset() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QPainterPathStroker10dashOffsetEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -243,7 +237,6 @@ func (this *QPainterPathStroker) CreateStroke(path *QPainterPath) *QPainterPath 
 	var convArg0 = path.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QPainterPathStroker12createStrokeERK12QPainterPath", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPainterPath)
 	return rv2

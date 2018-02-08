@@ -122,7 +122,6 @@ func (this *QGraphicsItemGroup) RemoveFromGroup(item *QGraphicsItem /*777 QGraph
 func (this *QGraphicsItemGroup) BoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -148,7 +147,6 @@ func (this *QGraphicsItemGroup) IsObscuredBy(item *QGraphicsItem /*777 const QGr
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -159,7 +157,6 @@ func (this *QGraphicsItemGroup) IsObscuredBy(item *QGraphicsItem /*777 const QGr
 func (this *QGraphicsItemGroup) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup10opaqueAreaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
@@ -172,7 +169,6 @@ func (this *QGraphicsItemGroup) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 func (this *QGraphicsItemGroup) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QGraphicsItemGroup4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

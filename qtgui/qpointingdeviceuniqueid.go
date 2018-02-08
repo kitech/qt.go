@@ -89,7 +89,6 @@ func NewQPointingDeviceUniqueId() *QPointingDeviceUniqueId {
 func (this *QPointingDeviceUniqueId) FromNumericId(id int64) *QPointingDeviceUniqueId /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QPointingDeviceUniqueId13fromNumericIdEx", qtrt.FFI_TYPE_POINTER, id)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQPointingDeviceUniqueIdFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPointingDeviceUniqueId)
 	return rv2
@@ -107,7 +106,6 @@ func QPointingDeviceUniqueId_FromNumericId(id int64) *QPointingDeviceUniqueId /*
 func (this *QPointingDeviceUniqueId) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -118,7 +116,6 @@ func (this *QPointingDeviceUniqueId) IsValid() bool {
 func (this *QPointingDeviceUniqueId) NumericId() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QPointingDeviceUniqueId9numericIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 

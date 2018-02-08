@@ -86,8 +86,9 @@ func NewQSslCipher() *QSslCipher {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSslCipher(const QString &)
-func NewQSslCipher_1(name *qtcore.QString) *QSslCipher {
-	var convArg0 = name.GetCthis()
+func NewQSslCipher_1(name string) *QSslCipher {
+	var tmpArg0 = qtcore.NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslCipherC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSslCipherFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -99,8 +100,9 @@ func NewQSslCipher_1(name *qtcore.QString) *QSslCipher {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QSslCipher(const QString &, QSsl::SslProtocol)
-func NewQSslCipher_2(name *qtcore.QString, protocol int) *QSslCipher {
-	var convArg0 = name.GetCthis()
+func NewQSslCipher_2(name string, protocol int) *QSslCipher {
+	var tmpArg0 = qtcore.NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSslCipherC2ERK7QStringN4QSsl11SslProtocolE", qtrt.FFI_TYPE_POINTER, convArg0, protocol)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQSslCipherFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -136,7 +138,6 @@ func (this *QSslCipher) Swap(other *QSslCipher) {
 func (this *QSslCipher) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslCipher6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -144,13 +145,13 @@ func (this *QSslCipher) IsNull() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name()
-func (this *QSslCipher) Name() *qtcore.QString /*123*/ {
+func (this *QSslCipher) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslCipher4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qsslcipher.h:76
@@ -160,7 +161,6 @@ func (this *QSslCipher) Name() *qtcore.QString /*123*/ {
 func (this *QSslCipher) SupportedBits() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslCipher13supportedBitsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -171,7 +171,6 @@ func (this *QSslCipher) SupportedBits() int {
 func (this *QSslCipher) UsedBits() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslCipher8usedBitsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -179,52 +178,52 @@ func (this *QSslCipher) UsedBits() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString keyExchangeMethod()
-func (this *QSslCipher) KeyExchangeMethod() *qtcore.QString /*123*/ {
+func (this *QSslCipher) KeyExchangeMethod() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslCipher17keyExchangeMethodEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qsslcipher.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString authenticationMethod()
-func (this *QSslCipher) AuthenticationMethod() *qtcore.QString /*123*/ {
+func (this *QSslCipher) AuthenticationMethod() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslCipher20authenticationMethodEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qsslcipher.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString encryptionMethod()
-func (this *QSslCipher) EncryptionMethod() *qtcore.QString /*123*/ {
+func (this *QSslCipher) EncryptionMethod() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslCipher16encryptionMethodEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qsslcipher.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString protocolString()
-func (this *QSslCipher) ProtocolString() *qtcore.QString /*123*/ {
+func (this *QSslCipher) ProtocolString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslCipher14protocolStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qsslcipher.h:83
@@ -234,7 +233,6 @@ func (this *QSslCipher) ProtocolString() *qtcore.QString /*123*/ {
 func (this *QSslCipher) Protocol() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSslCipher8protocolEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 

@@ -73,9 +73,7 @@ func (*QFile) NewFromPointer(cthis unsafe.Pointer) *QFile {
 func (this *QFile) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qfile.h:65
@@ -93,8 +91,9 @@ func NewQFile() *QFile {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFile(const QString &)
-func NewQFile_1(name *QString) *QFile {
-	var convArg0 = name.GetCthis()
+func NewQFile_1(name string) *QFile {
+	var tmpArg0 = NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFileC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQFileFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -117,8 +116,9 @@ func NewQFile_2(parent *QObject /*777 QObject **/) *QFile {
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QFile(const QString &, QObject *)
-func NewQFile_3(name *QString, parent *QObject /*777 QObject **/) *QFile {
-	var convArg0 = name.GetCthis()
+func NewQFile_3(name string, parent *QObject /*777 QObject **/) *QFile {
+	var tmpArg0 = NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFileC2ERK7QStringP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -141,21 +141,22 @@ func DeleteQFile(this *QFile) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString fileName()
-func (this *QFile) FileName() *QString /*123*/ {
+func (this *QFile) FileName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile8fileNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qfile.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFileName(const QString &)
-func (this *QFile) SetFileName(name *QString) {
-	var convArg0 = name.GetCthis()
+func (this *QFile) SetFileName(name string) {
+	var tmpArg0 = NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -164,16 +165,16 @@ func (this *QFile) SetFileName(name *QString) {
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QByteArray encodeName(const QString &)
-func (this *QFile) EncodeName(fileName *QString) *QByteArray /*123*/ {
-	var convArg0 = fileName.GetCthis()
+func (this *QFile) EncodeName(fileName string) *QByteArray /*123*/ {
+	var tmpArg0 = NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile10encodeNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
-func QFile_EncodeName(fileName *QString) *QByteArray /*123*/ {
+func QFile_EncodeName(fileName string) *QByteArray /*123*/ {
 	var nilthis *QFile
 	rv := nilthis.EncodeName(fileName)
 	return rv
@@ -183,16 +184,16 @@ func QFile_EncodeName(fileName *QString) *QByteArray /*123*/ {
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QString decodeName(const QByteArray &)
-func (this *QFile) DecodeName(localFileName *QByteArray) *QString /*123*/ {
+func (this *QFile) DecodeName(localFileName *QByteArray) string {
 	var convArg0 = localFileName.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile10decodeNameERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QFile_DecodeName(localFileName *QByteArray) *QString /*123*/ {
+func QFile_DecodeName(localFileName *QByteArray) string {
 	var nilthis *QFile
 	rv := nilthis.DecodeName(localFileName)
 	return rv
@@ -202,17 +203,17 @@ func QFile_DecodeName(localFileName *QByteArray) *QString /*123*/ {
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [8] QString decodeName(const char *)
-func (this *QFile) DecodeName_1(localFileName string) *QString /*123*/ {
+func (this *QFile) DecodeName_1(localFileName string) string {
 	var convArg0 = qtrt.CString(localFileName)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile10decodeNameEPKc", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QFile_DecodeName_1(localFileName string) *QString /*123*/ {
+func QFile_DecodeName_1(localFileName string) string {
 	var nilthis *QFile
 	rv := nilthis.DecodeName_1(localFileName)
 	return rv
@@ -225,7 +226,6 @@ func QFile_DecodeName_1(localFileName string) *QString /*123*/ {
 func (this *QFile) Exists() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile6existsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -233,14 +233,14 @@ func (this *QFile) Exists() bool {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool exists(const QString &)
-func (this *QFile) Exists_1(fileName *QString) bool {
-	var convArg0 = fileName.GetCthis()
+func (this *QFile) Exists_1(fileName string) bool {
+	var tmpArg0 = NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6existsERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
-func QFile_Exists_1(fileName *QString) bool {
+func QFile_Exists_1(fileName string) bool {
 	var nilthis *QFile
 	rv := nilthis.Exists_1(fileName)
 	return rv
@@ -250,29 +250,30 @@ func QFile_Exists_1(fileName *QString) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString readLink()
-func (this *QFile) ReadLink() *QString /*123*/ {
+func (this *QFile) ReadLink() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile8readLinkEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qfile.h:111
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QString readLink(const QString &)
-func (this *QFile) ReadLink_1(fileName *QString) *QString /*123*/ {
-	var convArg0 = fileName.GetCthis()
+func (this *QFile) ReadLink_1(fileName string) string {
+	var tmpArg0 = NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile8readLinkERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QFile_ReadLink_1(fileName *QString) *QString /*123*/ {
+func QFile_ReadLink_1(fileName string) string {
 	var nilthis *QFile
 	rv := nilthis.ReadLink_1(fileName)
 	return rv
@@ -282,29 +283,30 @@ func QFile_ReadLink_1(fileName *QString) *QString /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString symLinkTarget()
-func (this *QFile) SymLinkTarget() *QString /*123*/ {
+func (this *QFile) SymLinkTarget() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile13symLinkTargetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qfile.h:113
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [8] QString symLinkTarget(const QString &)
-func (this *QFile) SymLinkTarget_1(fileName *QString) *QString /*123*/ {
-	var convArg0 = fileName.GetCthis()
+func (this *QFile) SymLinkTarget_1(fileName string) string {
+	var tmpArg0 = NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile13symLinkTargetERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QFile_SymLinkTarget_1(fileName *QString) *QString /*123*/ {
+func QFile_SymLinkTarget_1(fileName string) string {
 	var nilthis *QFile
 	rv := nilthis.SymLinkTarget_1(fileName)
 	return rv
@@ -317,7 +319,6 @@ func QFile_SymLinkTarget_1(fileName *QString) *QString /*123*/ {
 func (this *QFile) Remove() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6removeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -325,14 +326,14 @@ func (this *QFile) Remove() bool {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool remove(const QString &)
-func (this *QFile) Remove_1(fileName *QString) bool {
-	var convArg0 = fileName.GetCthis()
+func (this *QFile) Remove_1(fileName string) bool {
+	var tmpArg0 = NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6removeERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
-func QFile_Remove_1(fileName *QString) bool {
+func QFile_Remove_1(fileName string) bool {
 	var nilthis *QFile
 	rv := nilthis.Remove_1(fileName)
 	return rv
@@ -342,11 +343,11 @@ func QFile_Remove_1(fileName *QString) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool rename(const QString &)
-func (this *QFile) Rename(newName *QString) bool {
-	var convArg0 = newName.GetCthis()
+func (this *QFile) Rename(newName string) bool {
+	var tmpArg0 = NewQString_5(newName)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6renameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -354,15 +355,16 @@ func (this *QFile) Rename(newName *QString) bool {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool rename(const QString &, const QString &)
-func (this *QFile) Rename_1(oldName *QString, newName *QString) bool {
-	var convArg0 = oldName.GetCthis()
-	var convArg1 = newName.GetCthis()
+func (this *QFile) Rename_1(oldName string, newName string) bool {
+	var tmpArg0 = NewQString_5(oldName)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = NewQString_5(newName)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6renameERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
-func QFile_Rename_1(oldName *QString, newName *QString) bool {
+func QFile_Rename_1(oldName string, newName string) bool {
 	var nilthis *QFile
 	rv := nilthis.Rename_1(oldName, newName)
 	return rv
@@ -372,11 +374,11 @@ func QFile_Rename_1(oldName *QString, newName *QString) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool link(const QString &)
-func (this *QFile) Link(newName *QString) bool {
-	var convArg0 = newName.GetCthis()
+func (this *QFile) Link(newName string) bool {
+	var tmpArg0 = NewQString_5(newName)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4linkERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -384,15 +386,16 @@ func (this *QFile) Link(newName *QString) bool {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool link(const QString &, const QString &)
-func (this *QFile) Link_1(oldname *QString, newName *QString) bool {
-	var convArg0 = oldname.GetCthis()
-	var convArg1 = newName.GetCthis()
+func (this *QFile) Link_1(oldname string, newName string) bool {
+	var tmpArg0 = NewQString_5(oldname)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = NewQString_5(newName)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4linkERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
-func QFile_Link_1(oldname *QString, newName *QString) bool {
+func QFile_Link_1(oldname string, newName string) bool {
 	var nilthis *QFile
 	rv := nilthis.Link_1(oldname, newName)
 	return rv
@@ -402,11 +405,11 @@ func QFile_Link_1(oldname *QString, newName *QString) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool copy(const QString &)
-func (this *QFile) Copy(newName *QString) bool {
-	var convArg0 = newName.GetCthis()
+func (this *QFile) Copy(newName string) bool {
+	var tmpArg0 = NewQString_5(newName)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4copyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -414,15 +417,16 @@ func (this *QFile) Copy(newName *QString) bool {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool copy(const QString &, const QString &)
-func (this *QFile) Copy_1(fileName *QString, newName *QString) bool {
-	var convArg0 = fileName.GetCthis()
-	var convArg1 = newName.GetCthis()
+func (this *QFile) Copy_1(fileName string, newName string) bool {
+	var tmpArg0 = NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = NewQString_5(newName)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4copyERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
-func QFile_Copy_1(fileName *QString, newName *QString) bool {
+func QFile_Copy_1(fileName string, newName string) bool {
 	var nilthis *QFile
 	rv := nilthis.Copy_1(fileName, newName)
 	return rv
@@ -435,7 +439,6 @@ func QFile_Copy_1(fileName *QString, newName *QString) bool {
 func (this *QFile) Open(flags int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4openE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), flags)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -446,7 +449,6 @@ func (this *QFile) Open(flags int) bool {
 func (this *QFile) Open_1(fd int, ioFlags int, handleFlags int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile4openEi6QFlagsIN9QIODevice12OpenModeFlagEES0_IN11QFileDevice14FileHandleFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), fd, ioFlags, handleFlags)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -457,7 +459,6 @@ func (this *QFile) Open_1(fd int, ioFlags int, handleFlags int) bool {
 func (this *QFile) Size() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 
@@ -468,7 +469,6 @@ func (this *QFile) Size() int64 {
 func (this *QFile) Resize(sz int64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6resizeEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), sz)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -476,14 +476,14 @@ func (this *QFile) Resize(sz int64) bool {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool resize(const QString &, qint64)
-func (this *QFile) Resize_1(filename *QString, sz int64) bool {
-	var convArg0 = filename.GetCthis()
+func (this *QFile) Resize_1(filename string, sz int64) bool {
+	var tmpArg0 = NewQString_5(filename)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile6resizeERK7QStringx", qtrt.FFI_TYPE_POINTER, convArg0, sz)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
-func QFile_Resize_1(filename *QString, sz int64) bool {
+func QFile_Resize_1(filename string, sz int64) bool {
 	var nilthis *QFile
 	rv := nilthis.Resize_1(filename, sz)
 	return rv
@@ -496,7 +496,6 @@ func QFile_Resize_1(filename *QString, sz int64) bool {
 func (this *QFile) Permissions() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK5QFile11permissionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -504,14 +503,14 @@ func (this *QFile) Permissions() int {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] QFileDevice::Permissions permissions(const QString &)
-func (this *QFile) Permissions_1(filename *QString) int {
-	var convArg0 = filename.GetCthis()
+func (this *QFile) Permissions_1(filename string) int {
+	var tmpArg0 = NewQString_5(filename)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile11permissionsERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return int(rv)
 }
-func QFile_Permissions_1(filename *QString) int {
+func QFile_Permissions_1(filename string) int {
 	var nilthis *QFile
 	rv := nilthis.Permissions_1(filename)
 	return rv
@@ -524,7 +523,6 @@ func QFile_Permissions_1(filename *QString) int {
 func (this *QFile) SetPermissions(permissionSpec int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile14setPermissionsE6QFlagsIN11QFileDevice10PermissionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), permissionSpec)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -532,14 +530,14 @@ func (this *QFile) SetPermissions(permissionSpec int) bool {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool setPermissions(const QString &, QFileDevice::Permissions)
-func (this *QFile) SetPermissions_1(filename *QString, permissionSpec int) bool {
-	var convArg0 = filename.GetCthis()
+func (this *QFile) SetPermissions_1(filename string, permissionSpec int) bool {
+	var tmpArg0 = NewQString_5(filename)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QFile14setPermissionsERK7QString6QFlagsIN11QFileDevice10PermissionEE", qtrt.FFI_TYPE_POINTER, convArg0, permissionSpec)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
-func QFile_SetPermissions_1(filename *QString, permissionSpec int) bool {
+func QFile_SetPermissions_1(filename string, permissionSpec int) bool {
 	var nilthis *QFile
 	rv := nilthis.SetPermissions_1(filename, permissionSpec)
 	return rv

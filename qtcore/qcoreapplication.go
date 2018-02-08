@@ -74,9 +74,7 @@ func (*QCoreApplication) NewFromPointer(cthis unsafe.Pointer) *QCoreApplication 
 func (this *QCoreApplication) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QCoreApplication10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qcoreapplication.h:91
@@ -122,7 +120,6 @@ func QCoreApplication_SetAttribute(attribute int, on bool) {
 func (this *QCoreApplication) TestAttribute(attribute int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication13testAttributeEN2Qt20ApplicationAttributeE", qtrt.FFI_TYPE_POINTER, attribute)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 func QCoreApplication_TestAttribute(attribute int) bool {
@@ -135,12 +132,13 @@ func QCoreApplication_TestAttribute(attribute int) bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setOrganizationDomain(const QString &)
-func (this *QCoreApplication) SetOrganizationDomain(orgDomain *QString) {
-	var convArg0 = orgDomain.GetCthis()
+func (this *QCoreApplication) SetOrganizationDomain(orgDomain string) {
+	var tmpArg0 = NewQString_5(orgDomain)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication21setOrganizationDomainERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
-func QCoreApplication_SetOrganizationDomain(orgDomain *QString) {
+func QCoreApplication_SetOrganizationDomain(orgDomain string) {
 	var nilthis *QCoreApplication
 	nilthis.SetOrganizationDomain(orgDomain)
 }
@@ -149,15 +147,15 @@ func QCoreApplication_SetOrganizationDomain(orgDomain *QString) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString organizationDomain()
-func (this *QCoreApplication) OrganizationDomain() *QString /*123*/ {
+func (this *QCoreApplication) OrganizationDomain() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication18organizationDomainEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QCoreApplication_OrganizationDomain() *QString /*123*/ {
+func QCoreApplication_OrganizationDomain() string {
 	var nilthis *QCoreApplication
 	rv := nilthis.OrganizationDomain()
 	return rv
@@ -167,12 +165,13 @@ func QCoreApplication_OrganizationDomain() *QString /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setOrganizationName(const QString &)
-func (this *QCoreApplication) SetOrganizationName(orgName *QString) {
-	var convArg0 = orgName.GetCthis()
+func (this *QCoreApplication) SetOrganizationName(orgName string) {
+	var tmpArg0 = NewQString_5(orgName)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication19setOrganizationNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
-func QCoreApplication_SetOrganizationName(orgName *QString) {
+func QCoreApplication_SetOrganizationName(orgName string) {
 	var nilthis *QCoreApplication
 	nilthis.SetOrganizationName(orgName)
 }
@@ -181,15 +180,15 @@ func QCoreApplication_SetOrganizationName(orgName *QString) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString organizationName()
-func (this *QCoreApplication) OrganizationName() *QString /*123*/ {
+func (this *QCoreApplication) OrganizationName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication16organizationNameEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QCoreApplication_OrganizationName() *QString /*123*/ {
+func QCoreApplication_OrganizationName() string {
 	var nilthis *QCoreApplication
 	rv := nilthis.OrganizationName()
 	return rv
@@ -199,12 +198,13 @@ func QCoreApplication_OrganizationName() *QString /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setApplicationName(const QString &)
-func (this *QCoreApplication) SetApplicationName(application *QString) {
-	var convArg0 = application.GetCthis()
+func (this *QCoreApplication) SetApplicationName(application string) {
+	var tmpArg0 = NewQString_5(application)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication18setApplicationNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
-func QCoreApplication_SetApplicationName(application *QString) {
+func QCoreApplication_SetApplicationName(application string) {
 	var nilthis *QCoreApplication
 	nilthis.SetApplicationName(application)
 }
@@ -213,15 +213,15 @@ func QCoreApplication_SetApplicationName(application *QString) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString applicationName()
-func (this *QCoreApplication) ApplicationName() *QString /*123*/ {
+func (this *QCoreApplication) ApplicationName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication15applicationNameEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QCoreApplication_ApplicationName() *QString /*123*/ {
+func QCoreApplication_ApplicationName() string {
 	var nilthis *QCoreApplication
 	rv := nilthis.ApplicationName()
 	return rv
@@ -231,12 +231,13 @@ func QCoreApplication_ApplicationName() *QString /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setApplicationVersion(const QString &)
-func (this *QCoreApplication) SetApplicationVersion(version *QString) {
-	var convArg0 = version.GetCthis()
+func (this *QCoreApplication) SetApplicationVersion(version string) {
+	var tmpArg0 = NewQString_5(version)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication21setApplicationVersionERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
-func QCoreApplication_SetApplicationVersion(version *QString) {
+func QCoreApplication_SetApplicationVersion(version string) {
 	var nilthis *QCoreApplication
 	nilthis.SetApplicationVersion(version)
 }
@@ -245,15 +246,15 @@ func QCoreApplication_SetApplicationVersion(version *QString) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString applicationVersion()
-func (this *QCoreApplication) ApplicationVersion() *QString /*123*/ {
+func (this *QCoreApplication) ApplicationVersion() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication18applicationVersionEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QCoreApplication_ApplicationVersion() *QString /*123*/ {
+func QCoreApplication_ApplicationVersion() string {
 	var nilthis *QCoreApplication
 	rv := nilthis.ApplicationVersion()
 	return rv
@@ -279,7 +280,6 @@ func QCoreApplication_SetSetuidAllowed(allow bool) {
 func (this *QCoreApplication) IsSetuidAllowed() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication15isSetuidAllowedEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 func QCoreApplication_IsSetuidAllowed() bool {
@@ -295,9 +295,7 @@ func QCoreApplication_IsSetuidAllowed() bool {
 func (this *QCoreApplication) Instance() *QCoreApplication /*777 QCoreApplication **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication8instanceEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQCoreApplicationFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQCoreApplicationFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QCoreApplication_Instance() *QCoreApplication /*777 QCoreApplication **/ {
 	var nilthis *QCoreApplication
@@ -312,7 +310,6 @@ func QCoreApplication_Instance() *QCoreApplication /*777 QCoreApplication **/ {
 func (this *QCoreApplication) Exec() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication4execEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 func QCoreApplication_Exec() int {
@@ -369,7 +366,6 @@ func (this *QCoreApplication) SendEvent(receiver *QObject /*777 QObject **/, eve
 	var convArg1 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication9sendEventEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 func QCoreApplication_SendEvent(receiver *QObject /*777 QObject **/, event *QEvent /*777 QEvent **/) bool {
@@ -428,7 +424,6 @@ func QCoreApplication_RemovePostedEvents(receiver *QObject /*777 QObject **/, ev
 func (this *QCoreApplication) HasPendingEvents() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication16hasPendingEventsEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 func QCoreApplication_HasPendingEvents() bool {
@@ -444,9 +439,7 @@ func QCoreApplication_HasPendingEvents() bool {
 func (this *QCoreApplication) EventDispatcher() *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication15eventDispatcherEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQAbstractEventDispatcherFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQAbstractEventDispatcherFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QCoreApplication_EventDispatcher() *QAbstractEventDispatcher /*777 QAbstractEventDispatcher **/ {
 	var nilthis *QCoreApplication
@@ -477,7 +470,6 @@ func (this *QCoreApplication) Notify(arg0 *QObject /*777 QObject **/, arg1 *QEve
 	var convArg1 = arg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication6notifyEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -488,7 +480,6 @@ func (this *QCoreApplication) Notify(arg0 *QObject /*777 QObject **/, arg1 *QEve
 func (this *QCoreApplication) StartingUp() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication10startingUpEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 func QCoreApplication_StartingUp() bool {
@@ -504,7 +495,6 @@ func QCoreApplication_StartingUp() bool {
 func (this *QCoreApplication) ClosingDown() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication11closingDownEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 func QCoreApplication_ClosingDown() bool {
@@ -517,15 +507,15 @@ func QCoreApplication_ClosingDown() bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString applicationDirPath()
-func (this *QCoreApplication) ApplicationDirPath() *QString /*123*/ {
+func (this *QCoreApplication) ApplicationDirPath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication18applicationDirPathEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QCoreApplication_ApplicationDirPath() *QString /*123*/ {
+func QCoreApplication_ApplicationDirPath() string {
 	var nilthis *QCoreApplication
 	rv := nilthis.ApplicationDirPath()
 	return rv
@@ -535,15 +525,15 @@ func QCoreApplication_ApplicationDirPath() *QString /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString applicationFilePath()
-func (this *QCoreApplication) ApplicationFilePath() *QString /*123*/ {
+func (this *QCoreApplication) ApplicationFilePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication19applicationFilePathEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QCoreApplication_ApplicationFilePath() *QString /*123*/ {
+func QCoreApplication_ApplicationFilePath() string {
 	var nilthis *QCoreApplication
 	rv := nilthis.ApplicationFilePath()
 	return rv
@@ -556,7 +546,6 @@ func QCoreApplication_ApplicationFilePath() *QString /*123*/ {
 func (this *QCoreApplication) ApplicationPid() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication14applicationPidEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return int64(rv) // 222
 }
 func QCoreApplication_ApplicationPid() int64 {
@@ -583,12 +572,13 @@ func QCoreApplication_SetLibraryPaths(arg0 *QStringList) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void addLibraryPath(const QString &)
-func (this *QCoreApplication) AddLibraryPath(arg0 *QString) {
-	var convArg0 = arg0.GetCthis()
+func (this *QCoreApplication) AddLibraryPath(arg0 string) {
+	var tmpArg0 = NewQString_5(arg0)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication14addLibraryPathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
-func QCoreApplication_AddLibraryPath(arg0 *QString) {
+func QCoreApplication_AddLibraryPath(arg0 string) {
 	var nilthis *QCoreApplication
 	nilthis.AddLibraryPath(arg0)
 }
@@ -597,12 +587,13 @@ func QCoreApplication_AddLibraryPath(arg0 *QString) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void removeLibraryPath(const QString &)
-func (this *QCoreApplication) RemoveLibraryPath(arg0 *QString) {
-	var convArg0 = arg0.GetCthis()
+func (this *QCoreApplication) RemoveLibraryPath(arg0 string) {
+	var tmpArg0 = NewQString_5(arg0)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication17removeLibraryPathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
-func QCoreApplication_RemoveLibraryPath(arg0 *QString) {
+func QCoreApplication_RemoveLibraryPath(arg0 string) {
 	var nilthis *QCoreApplication
 	nilthis.RemoveLibraryPath(arg0)
 }
@@ -615,7 +606,6 @@ func (this *QCoreApplication) InstallTranslator(messageFile *QTranslator /*777 Q
 	var convArg0 = messageFile.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication17installTranslatorEP11QTranslator", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 func QCoreApplication_InstallTranslator(messageFile *QTranslator /*777 QTranslator **/) bool {
@@ -632,7 +622,6 @@ func (this *QCoreApplication) RemoveTranslator(messageFile *QTranslator /*777 QT
 	var convArg0 = messageFile.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication16removeTranslatorEP11QTranslator", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 func QCoreApplication_RemoveTranslator(messageFile *QTranslator /*777 QTranslator **/) bool {
@@ -645,7 +634,7 @@ func QCoreApplication_RemoveTranslator(messageFile *QTranslator /*777 QTranslato
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString translate(const char *, const char *, const char *, int)
-func (this *QCoreApplication) Translate(context string, key string, disambiguation string, n int) *QString /*123*/ {
+func (this *QCoreApplication) Translate(context string, key string, disambiguation string, n int) string {
 	var convArg0 = qtrt.CString(context)
 	defer qtrt.FreeMem(convArg0)
 	var convArg1 = qtrt.CString(key)
@@ -654,12 +643,12 @@ func (this *QCoreApplication) Translate(context string, key string, disambiguati
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication9translateEPKcS1_S1_i", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, n)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QCoreApplication_Translate(context string, key string, disambiguation string, n int) *QString /*123*/ {
+func QCoreApplication_Translate(context string, key string, disambiguation string, n int) string {
 	var nilthis *QCoreApplication
 	rv := nilthis.Translate(context, key, disambiguation, n)
 	return rv
@@ -705,7 +694,6 @@ func (this *QCoreApplication) RemoveNativeEventFilter(filterObj *QAbstractNative
 func (this *QCoreApplication) IsQuitLockEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication17isQuitLockEnabledEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 func QCoreApplication_IsQuitLockEnabled() bool {
@@ -784,7 +772,6 @@ func (this *QCoreApplication) Event(arg0 *QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

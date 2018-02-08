@@ -98,7 +98,6 @@ func DeleteQExposeEvent(this *QExposeEvent) {
 func (this *QExposeEvent) Region() *QRegion {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QExposeEvent6regionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegion)
 	return rv2

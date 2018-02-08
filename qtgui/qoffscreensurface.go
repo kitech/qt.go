@@ -77,9 +77,7 @@ func (*QOffscreenSurface) NewFromPointer(cthis unsafe.Pointer) *QOffscreenSurfac
 func (this *QOffscreenSurface) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QOffscreenSurface10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qoffscreensurface.h:61
@@ -125,7 +123,6 @@ func DeleteQOffscreenSurface(this *QOffscreenSurface) {
 func (this *QOffscreenSurface) SurfaceType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QOffscreenSurface11surfaceTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -154,7 +151,6 @@ func (this *QOffscreenSurface) Destroy() {
 func (this *QOffscreenSurface) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QOffscreenSurface7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -175,7 +171,6 @@ func (this *QOffscreenSurface) SetFormat(format *QSurfaceFormat) {
 func (this *QOffscreenSurface) Format() *QSurfaceFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QOffscreenSurface6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSurfaceFormat)
 	return rv2
@@ -188,7 +183,6 @@ func (this *QOffscreenSurface) Format() *QSurfaceFormat /*123*/ {
 func (this *QOffscreenSurface) RequestedFormat() *QSurfaceFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QOffscreenSurface15requestedFormatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSurfaceFormat)
 	return rv2
@@ -201,7 +195,6 @@ func (this *QOffscreenSurface) RequestedFormat() *QSurfaceFormat /*123*/ {
 func (this *QOffscreenSurface) Size() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QOffscreenSurface4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -214,9 +207,7 @@ func (this *QOffscreenSurface) Size() *qtcore.QSize /*123*/ {
 func (this *QOffscreenSurface) Screen() *QScreen /*777 QScreen **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QOffscreenSurface6screenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQScreenFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQScreenFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qoffscreensurface.h:79
@@ -236,7 +227,6 @@ func (this *QOffscreenSurface) SetScreen(screen *QScreen /*777 QScreen **/) {
 func (this *QOffscreenSurface) NativeHandle() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QOffscreenSurface12nativeHandleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 

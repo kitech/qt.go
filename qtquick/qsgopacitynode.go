@@ -118,7 +118,6 @@ func (this *QSGOpacityNode) SetOpacity(opacity float64) {
 func (this *QSGOpacityNode) Opacity() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSGOpacityNode7opacityEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -138,7 +137,6 @@ func (this *QSGOpacityNode) SetCombinedOpacity(opacity float64) {
 func (this *QSGOpacityNode) CombinedOpacity() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSGOpacityNode15combinedOpacityEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -149,7 +147,6 @@ func (this *QSGOpacityNode) CombinedOpacity() float64 {
 func (this *QSGOpacityNode) IsSubtreeBlocked() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSGOpacityNode16isSubtreeBlockedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

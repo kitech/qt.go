@@ -87,9 +87,7 @@ func (*QErrorMessage) NewFromPointer(cthis unsafe.Pointer) *QErrorMessage {
 func (this *QErrorMessage) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QErrorMessage10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qerrormessage.h:58
@@ -122,9 +120,7 @@ func DeleteQErrorMessage(this *QErrorMessage) {
 func (this *QErrorMessage) QtHandler() *QErrorMessage /*777 QErrorMessage **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QErrorMessage9qtHandlerEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQErrorMessageFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQErrorMessageFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QErrorMessage_QtHandler() *QErrorMessage /*777 QErrorMessage **/ {
 	var nilthis *QErrorMessage
@@ -136,8 +132,9 @@ func QErrorMessage_QtHandler() *QErrorMessage /*777 QErrorMessage **/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showMessage(const QString &)
-func (this *QErrorMessage) ShowMessage(message *qtcore.QString) {
-	var convArg0 = message.GetCthis()
+func (this *QErrorMessage) ShowMessage(message string) {
+	var tmpArg0 = qtcore.NewQString_5(message)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QErrorMessage11showMessageERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -146,9 +143,11 @@ func (this *QErrorMessage) ShowMessage(message *qtcore.QString) {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void showMessage(const QString &, const QString &)
-func (this *QErrorMessage) ShowMessage_1(message *qtcore.QString, type_ *qtcore.QString) {
-	var convArg0 = message.GetCthis()
-	var convArg1 = type_.GetCthis()
+func (this *QErrorMessage) ShowMessage_1(message string, type_ string) {
+	var tmpArg0 = qtcore.NewQString_5(message)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = qtcore.NewQString_5(type_)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QErrorMessage11showMessageERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
 }

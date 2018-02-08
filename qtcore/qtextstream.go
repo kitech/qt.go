@@ -95,8 +95,9 @@ func NewQTextStream_1(device *QIODevice /*777 QIODevice **/) *QTextStream {
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QTextStream(QString *, QIODevice::OpenMode)
-func NewQTextStream_2(string *QString /*777 QString **/, openMode int) *QTextStream {
-	var convArg0 = string.GetCthis()
+func NewQTextStream_2(string string, openMode int) *QTextStream {
+	var tmpArg0 = NewQString_5(string)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStreamC2EP7QString6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, openMode)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextStreamFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -169,9 +170,7 @@ func (this *QTextStream) SetCodec_1(codecName string) {
 func (this *QTextStream) Codec() *QTextCodec /*777 QTextCodec **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream5codecEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQTextCodecFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQTextCodecFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qtextstream.h:105
@@ -190,7 +189,6 @@ func (this *QTextStream) SetAutoDetectUnicode(enabled bool) {
 func (this *QTextStream) AutoDetectUnicode() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream17autoDetectUnicodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -210,7 +208,6 @@ func (this *QTextStream) SetGenerateByteOrderMark(generate bool) {
 func (this *QTextStream) GenerateByteOrderMark() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream21generateByteOrderMarkEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -231,7 +228,6 @@ func (this *QTextStream) SetLocale(locale *QLocale) {
 func (this *QTextStream) Locale() *QLocale /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream6localeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLocale)
 	return rv2
@@ -254,17 +250,16 @@ func (this *QTextStream) SetDevice(device *QIODevice /*777 QIODevice **/) {
 func (this *QTextStream) Device() *QIODevice /*777 QIODevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qtextstream.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setString(QString *, QIODevice::OpenMode)
-func (this *QTextStream) SetString(string *QString /*777 QString **/, openMode int) {
-	var convArg0 = string.GetCthis()
+func (this *QTextStream) SetString(string string, openMode int) {
+	var tmpArg0 = NewQString_5(string)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream9setStringEP7QString6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, openMode)
 	gopp.ErrPrint(err, rv)
 }
@@ -273,12 +268,13 @@ func (this *QTextStream) SetString(string *QString /*777 QString **/, openMode i
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString * string()
-func (this *QTextStream) String() *QString /*777 QString **/ {
+func (this *QTextStream) String() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream6stringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qtextstream.h:120
@@ -288,7 +284,6 @@ func (this *QTextStream) String() *QString /*777 QString **/ {
 func (this *QTextStream) Status() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream6statusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -317,7 +312,6 @@ func (this *QTextStream) ResetStatus() {
 func (this *QTextStream) AtEnd() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream5atEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -346,7 +340,6 @@ func (this *QTextStream) Flush() {
 func (this *QTextStream) Seek(pos int64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream4seekEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -357,7 +350,6 @@ func (this *QTextStream) Seek(pos int64) bool {
 func (this *QTextStream) Pos() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 
@@ -374,24 +366,24 @@ func (this *QTextStream) SkipWhiteSpace() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString readLine(qint64)
-func (this *QTextStream) ReadLine(maxlen int64) *QString /*123*/ {
+func (this *QTextStream) ReadLine(maxlen int64) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream8readLineEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxlen)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qtextstream.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool readLineInto(QString *, qint64)
-func (this *QTextStream) ReadLineInto(line *QString /*777 QString **/, maxlen int64) bool {
-	var convArg0 = line.GetCthis()
+func (this *QTextStream) ReadLineInto(line string, maxlen int64) bool {
+	var tmpArg0 = NewQString_5(line)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream12readLineIntoEP7QStringx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -399,26 +391,26 @@ func (this *QTextStream) ReadLineInto(line *QString /*777 QString **/, maxlen in
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString readAll()
-func (this *QTextStream) ReadAll() *QString /*123*/ {
+func (this *QTextStream) ReadAll() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream7readAllEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qtextstream.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString read(qint64)
-func (this *QTextStream) Read(maxlen int64) *QString /*123*/ {
+func (this *QTextStream) Read(maxlen int64) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream4readEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxlen)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qtextstream.h:137
@@ -437,7 +429,6 @@ func (this *QTextStream) SetFieldAlignment(alignment int) {
 func (this *QTextStream) FieldAlignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream14fieldAlignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -458,7 +449,6 @@ func (this *QTextStream) SetPadChar(ch *QChar /*123*/) {
 func (this *QTextStream) PadChar() *QChar /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream7padCharEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
 	return rv2
@@ -480,7 +470,6 @@ func (this *QTextStream) SetFieldWidth(width int) {
 func (this *QTextStream) FieldWidth() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream10fieldWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -500,7 +489,6 @@ func (this *QTextStream) SetNumberFlags(flags int) {
 func (this *QTextStream) NumberFlags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream11numberFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -520,7 +508,6 @@ func (this *QTextStream) SetIntegerBase(base int) {
 func (this *QTextStream) IntegerBase() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream11integerBaseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -540,7 +527,6 @@ func (this *QTextStream) SetRealNumberNotation(notation int) {
 func (this *QTextStream) RealNumberNotation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream18realNumberNotationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -560,7 +546,6 @@ func (this *QTextStream) SetRealNumberPrecision(precision int) {
 func (this *QTextStream) RealNumberPrecision() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream19realNumberPrecisionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

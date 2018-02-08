@@ -83,9 +83,7 @@ func (*QNetworkSession) NewFromPointer(cthis unsafe.Pointer) *QNetworkSession {
 func (this *QNetworkSession) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkSession10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtNetwork/qnetworksession.h:90
@@ -119,7 +117,6 @@ func DeleteQNetworkSession(this *QNetworkSession) {
 func (this *QNetworkSession) IsOpen() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkSession6isOpenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -130,7 +127,6 @@ func (this *QNetworkSession) IsOpen() bool {
 func (this *QNetworkSession) Configuration() *QNetworkConfiguration /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkSession13configurationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQNetworkConfigurationFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQNetworkConfiguration)
 	return rv2
@@ -143,7 +139,6 @@ func (this *QNetworkSession) Configuration() *QNetworkConfiguration /*123*/ {
 func (this *QNetworkSession) Interface() *QNetworkInterface /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkSession9interfaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQNetworkInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQNetworkInterface)
 	return rv2
@@ -156,7 +151,6 @@ func (this *QNetworkSession) Interface() *QNetworkInterface /*123*/ {
 func (this *QNetworkSession) State() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkSession5stateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -167,7 +161,6 @@ func (this *QNetworkSession) State() int {
 func (this *QNetworkSession) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkSession5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -184,24 +177,24 @@ func (this *QNetworkSession) Error_1(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorString()
-func (this *QNetworkSession) ErrorString() *qtcore.QString /*123*/ {
+func (this *QNetworkSession) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkSession11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qnetworksession.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant sessionProperty(const QString &)
-func (this *QNetworkSession) SessionProperty(key *qtcore.QString) *qtcore.QVariant /*123*/ {
-	var convArg0 = key.GetCthis()
+func (this *QNetworkSession) SessionProperty(key string) *qtcore.QVariant /*123*/ {
+	var tmpArg0 = qtcore.NewQString_5(key)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkSession15sessionPropertyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -211,8 +204,9 @@ func (this *QNetworkSession) SessionProperty(key *qtcore.QString) *qtcore.QVaria
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSessionProperty(const QString &, const QVariant &)
-func (this *QNetworkSession) SetSessionProperty(key *qtcore.QString, value *qtcore.QVariant) {
-	var convArg0 = key.GetCthis()
+func (this *QNetworkSession) SetSessionProperty(key string, value *qtcore.QVariant) {
+	var tmpArg0 = qtcore.NewQString_5(key)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = value.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QNetworkSession18setSessionPropertyERK7QStringRK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -225,7 +219,6 @@ func (this *QNetworkSession) SetSessionProperty(key *qtcore.QString, value *qtco
 func (this *QNetworkSession) BytesWritten() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkSession12bytesWrittenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint64(rv) // 222
 }
 
@@ -236,7 +229,6 @@ func (this *QNetworkSession) BytesWritten() uint64 {
 func (this *QNetworkSession) BytesReceived() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkSession13bytesReceivedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint64(rv) // 222
 }
 
@@ -247,7 +239,6 @@ func (this *QNetworkSession) BytesReceived() uint64 {
 func (this *QNetworkSession) ActiveTime() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkSession10activeTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint64(rv) // 222
 }
 
@@ -258,7 +249,6 @@ func (this *QNetworkSession) ActiveTime() uint64 {
 func (this *QNetworkSession) UsagePolicies() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkSession13usagePoliciesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -269,7 +259,6 @@ func (this *QNetworkSession) UsagePolicies() int {
 func (this *QNetworkSession) WaitForOpened(msecs int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QNetworkSession13waitForOpenedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

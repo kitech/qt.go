@@ -86,9 +86,10 @@ func NewQHstsPolicy() *QHstsPolicy {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QHstsPolicy(const QDateTime &, QHstsPolicy::PolicyFlags, const QString &, QUrl::ParsingMode)
-func NewQHstsPolicy_1(expiry *qtcore.QDateTime, flags int, host *qtcore.QString, mode int) *QHstsPolicy {
+func NewQHstsPolicy_1(expiry *qtcore.QDateTime, flags int, host string, mode int) *QHstsPolicy {
 	var convArg0 = expiry.GetCthis()
-	var convArg2 = host.GetCthis()
+	var tmpArg2 = qtcore.NewQString_5(host)
+	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicyC2ERK9QDateTime6QFlagsINS_10PolicyFlagEERK7QStringN4QUrl11ParsingModeE", qtrt.FFI_TYPE_POINTER, convArg0, flags, convArg2, mode)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQHstsPolicyFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -121,8 +122,9 @@ func (this *QHstsPolicy) Swap(other *QHstsPolicy) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHost(const QString &, QUrl::ParsingMode)
-func (this *QHstsPolicy) SetHost(host *qtcore.QString, mode int) {
-	var convArg0 = host.GetCthis()
+func (this *QHstsPolicy) SetHost(host string, mode int) {
+	var tmpArg0 = qtcore.NewQString_5(host)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QHstsPolicy7setHostERK7QStringN4QUrl11ParsingModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)
 }
@@ -144,7 +146,6 @@ func (this *QHstsPolicy) SetExpiry(expiry *qtcore.QDateTime) {
 func (this *QHstsPolicy) Expiry() *qtcore.QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHstsPolicy6expiryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQDateTime)
 	return rv2
@@ -166,7 +167,6 @@ func (this *QHstsPolicy) SetIncludesSubDomains(include bool) {
 func (this *QHstsPolicy) IncludesSubDomains() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHstsPolicy18includesSubDomainsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -177,7 +177,6 @@ func (this *QHstsPolicy) IncludesSubDomains() bool {
 func (this *QHstsPolicy) IsExpired() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QHstsPolicy9isExpiredEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

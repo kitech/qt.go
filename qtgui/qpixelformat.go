@@ -101,7 +101,6 @@ func NewQPixelFormat_1(colorModel int, firstSize byte, secondSize byte, thirdSiz
 func (this *QPixelFormat) ColorModel() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat10colorModelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -112,7 +111,6 @@ func (this *QPixelFormat) ColorModel() int {
 func (this *QPixelFormat) ChannelCount() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat12channelCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return byte(rv) // 222
 }
 
@@ -123,7 +121,6 @@ func (this *QPixelFormat) ChannelCount() byte {
 func (this *QPixelFormat) RedSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat7redSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return byte(rv) // 222
 }
 
@@ -134,7 +131,6 @@ func (this *QPixelFormat) RedSize() byte {
 func (this *QPixelFormat) GreenSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat9greenSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return byte(rv) // 222
 }
 
@@ -145,7 +141,6 @@ func (this *QPixelFormat) GreenSize() byte {
 func (this *QPixelFormat) BlueSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat8blueSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return byte(rv) // 222
 }
 
@@ -156,7 +151,6 @@ func (this *QPixelFormat) BlueSize() byte {
 func (this *QPixelFormat) CyanSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat8cyanSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return byte(rv) // 222
 }
 
@@ -167,7 +161,6 @@ func (this *QPixelFormat) CyanSize() byte {
 func (this *QPixelFormat) MagentaSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat11magentaSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return byte(rv) // 222
 }
 
@@ -178,7 +171,6 @@ func (this *QPixelFormat) MagentaSize() byte {
 func (this *QPixelFormat) YellowSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat10yellowSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return byte(rv) // 222
 }
 
@@ -189,7 +181,6 @@ func (this *QPixelFormat) YellowSize() byte {
 func (this *QPixelFormat) BlackSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat9blackSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return byte(rv) // 222
 }
 
@@ -200,7 +191,6 @@ func (this *QPixelFormat) BlackSize() byte {
 func (this *QPixelFormat) HueSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat7hueSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return byte(rv) // 222
 }
 
@@ -211,7 +201,6 @@ func (this *QPixelFormat) HueSize() byte {
 func (this *QPixelFormat) SaturationSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat14saturationSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return byte(rv) // 222
 }
 
@@ -222,7 +211,6 @@ func (this *QPixelFormat) SaturationSize() byte {
 func (this *QPixelFormat) LightnessSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat13lightnessSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return byte(rv) // 222
 }
 
@@ -233,7 +221,6 @@ func (this *QPixelFormat) LightnessSize() byte {
 func (this *QPixelFormat) BrightnessSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat14brightnessSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return byte(rv) // 222
 }
 
@@ -244,7 +231,6 @@ func (this *QPixelFormat) BrightnessSize() byte {
 func (this *QPixelFormat) AlphaSize() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat9alphaSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return byte(rv) // 222
 }
 
@@ -255,7 +241,6 @@ func (this *QPixelFormat) AlphaSize() byte {
 func (this *QPixelFormat) BitsPerPixel() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat12bitsPerPixelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return byte(rv) // 222
 }
 
@@ -266,7 +251,6 @@ func (this *QPixelFormat) BitsPerPixel() byte {
 func (this *QPixelFormat) AlphaUsage() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat10alphaUsageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -277,7 +261,6 @@ func (this *QPixelFormat) AlphaUsage() int {
 func (this *QPixelFormat) AlphaPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat13alphaPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -288,7 +271,6 @@ func (this *QPixelFormat) AlphaPosition() int {
 func (this *QPixelFormat) Premultiplied() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat13premultipliedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -299,7 +281,6 @@ func (this *QPixelFormat) Premultiplied() int {
 func (this *QPixelFormat) TypeInterpretation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat18typeInterpretationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -310,7 +291,6 @@ func (this *QPixelFormat) TypeInterpretation() int {
 func (this *QPixelFormat) ByteOrder() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat9byteOrderEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -321,7 +301,6 @@ func (this *QPixelFormat) ByteOrder() int {
 func (this *QPixelFormat) YuvLayout() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat9yuvLayoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -332,7 +311,6 @@ func (this *QPixelFormat) YuvLayout() int {
 func (this *QPixelFormat) SubEnum() byte {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPixelFormat7subEnumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return byte(rv) // 222
 }
 

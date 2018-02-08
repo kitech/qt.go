@@ -99,7 +99,6 @@ func NewQTextTableCellFormat_1(fmt *QTextFormat) *QTextTableCellFormat {
 func (this *QTextTableCellFormat) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QTextTableCellFormat7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -119,7 +118,6 @@ func (this *QTextTableCellFormat) SetTopPadding(padding float64) {
 func (this *QTextTableCellFormat) TopPadding() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QTextTableCellFormat10topPaddingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -139,7 +137,6 @@ func (this *QTextTableCellFormat) SetBottomPadding(padding float64) {
 func (this *QTextTableCellFormat) BottomPadding() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QTextTableCellFormat13bottomPaddingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -159,7 +156,6 @@ func (this *QTextTableCellFormat) SetLeftPadding(padding float64) {
 func (this *QTextTableCellFormat) LeftPadding() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QTextTableCellFormat11leftPaddingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -179,7 +175,6 @@ func (this *QTextTableCellFormat) SetRightPadding(padding float64) {
 func (this *QTextTableCellFormat) RightPadding() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QTextTableCellFormat12rightPaddingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 

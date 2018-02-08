@@ -78,9 +78,7 @@ func (*QGraphicsScale) NewFromPointer(cthis unsafe.Pointer) *QGraphicsScale {
 func (this *QGraphicsScale) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScale10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qgraphicstransform.h:88
@@ -113,7 +111,6 @@ func DeleteQGraphicsScale(this *QGraphicsScale) {
 func (this *QGraphicsScale) Origin() *qtgui.QVector3D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScale6originEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQVector3D)
 	return rv2
@@ -136,7 +133,6 @@ func (this *QGraphicsScale) SetOrigin(point *qtgui.QVector3D) {
 func (this *QGraphicsScale) XScale() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScale6xScaleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -156,7 +152,6 @@ func (this *QGraphicsScale) SetXScale(arg0 float64) {
 func (this *QGraphicsScale) YScale() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScale6yScaleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -176,7 +171,6 @@ func (this *QGraphicsScale) SetYScale(arg0 float64) {
 func (this *QGraphicsScale) ZScale() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QGraphicsScale6zScaleEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 

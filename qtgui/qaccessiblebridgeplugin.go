@@ -74,9 +74,7 @@ func (*QAccessibleBridgePlugin) NewFromPointer(cthis unsafe.Pointer) *QAccessibl
 func (this *QAccessibleBridgePlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QAccessibleBridgePlugin10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qaccessiblebridge.h:69
@@ -106,13 +104,12 @@ func DeleteQAccessibleBridgePlugin(this *QAccessibleBridgePlugin) {
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QAccessibleBridge * create(const QString &)
-func (this *QAccessibleBridgePlugin) Create(key *qtcore.QString) *QAccessibleBridge /*777 QAccessibleBridge **/ {
-	var convArg0 = key.GetCthis()
+func (this *QAccessibleBridgePlugin) Create(key string) *QAccessibleBridge /*777 QAccessibleBridge **/ {
+	var tmpArg0 = qtcore.NewQString_5(key)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QAccessibleBridgePlugin6createERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQAccessibleBridgeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQAccessibleBridgeFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 //  body block end

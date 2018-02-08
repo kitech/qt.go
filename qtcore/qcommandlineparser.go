@@ -115,7 +115,6 @@ func (this *QCommandLineParser) AddOption(commandLineOption *QCommandLineOption)
 	var convArg0 = commandLineOption.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser9addOptionERK18QCommandLineOption", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -126,7 +125,6 @@ func (this *QCommandLineParser) AddOption(commandLineOption *QCommandLineOption)
 func (this *QCommandLineParser) AddVersionOption() *QCommandLineOption /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser16addVersionOptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQCommandLineOptionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQCommandLineOption)
 	return rv2
@@ -139,7 +137,6 @@ func (this *QCommandLineParser) AddVersionOption() *QCommandLineOption /*123*/ {
 func (this *QCommandLineParser) AddHelpOption() *QCommandLineOption /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser13addHelpOptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQCommandLineOptionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQCommandLineOption)
 	return rv2
@@ -149,8 +146,9 @@ func (this *QCommandLineParser) AddHelpOption() *QCommandLineOption /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setApplicationDescription(const QString &)
-func (this *QCommandLineParser) SetApplicationDescription(description *QString) {
-	var convArg0 = description.GetCthis()
+func (this *QCommandLineParser) SetApplicationDescription(description string) {
+	var tmpArg0 = NewQString_5(description)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser25setApplicationDescriptionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -159,23 +157,26 @@ func (this *QCommandLineParser) SetApplicationDescription(description *QString) 
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString applicationDescription()
-func (this *QCommandLineParser) ApplicationDescription() *QString /*123*/ {
+func (this *QCommandLineParser) ApplicationDescription() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser22applicationDescriptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qcommandlineparser.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addPositionalArgument(const QString &, const QString &, const QString &)
-func (this *QCommandLineParser) AddPositionalArgument(name *QString, description *QString, syntax *QString) {
-	var convArg0 = name.GetCthis()
-	var convArg1 = description.GetCthis()
-	var convArg2 = syntax.GetCthis()
+func (this *QCommandLineParser) AddPositionalArgument(name string, description string, syntax string) {
+	var tmpArg0 = NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = NewQString_5(description)
+	var convArg1 = tmpArg1.GetCthis()
+	var tmpArg2 = NewQString_5(syntax)
+	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 }
@@ -217,7 +218,6 @@ func (this *QCommandLineParser) Parse(arguments *QStringList) bool {
 	var convArg0 = arguments.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineParser5parseERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -225,24 +225,24 @@ func (this *QCommandLineParser) Parse(arguments *QStringList) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorText()
-func (this *QCommandLineParser) ErrorText() *QString /*123*/ {
+func (this *QCommandLineParser) ErrorText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser9errorTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qcommandlineparser.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSet(const QString &)
-func (this *QCommandLineParser) IsSet(name *QString) bool {
-	var convArg0 = name.GetCthis()
+func (this *QCommandLineParser) IsSet(name string) bool {
+	var tmpArg0 = NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser5isSetERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -254,7 +254,6 @@ func (this *QCommandLineParser) IsSet_1(option *QCommandLineOption) bool {
 	var convArg0 = option.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser5isSetERK18QCommandLineOption", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -262,28 +261,29 @@ func (this *QCommandLineParser) IsSet_1(option *QCommandLineOption) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString value(const QString &)
-func (this *QCommandLineParser) Value(name *QString) *QString /*123*/ {
-	var convArg0 = name.GetCthis()
+func (this *QCommandLineParser) Value(name string) string {
+	var tmpArg0 = NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser5valueERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qcommandlineparser.h:95
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString value(const QCommandLineOption &)
-func (this *QCommandLineParser) Value_1(option *QCommandLineOption) *QString /*123*/ {
+func (this *QCommandLineParser) Value_1(option *QCommandLineOption) string {
 	var convArg0 = option.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser5valueERK18QCommandLineOption", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qcommandlineparser.h:102
@@ -308,13 +308,13 @@ func (this *QCommandLineParser) ShowHelp(exitCode int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString helpText()
-func (this *QCommandLineParser) HelpText() *QString /*123*/ {
+func (this *QCommandLineParser) HelpText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser8helpTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 type QCommandLineParser__SingleDashWordOptionMode = int

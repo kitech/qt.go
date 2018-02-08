@@ -188,9 +188,7 @@ func (*QQuickWidget) NewFromPointer(cthis unsafe.Pointer) *QQuickWidget {
 func (this *QQuickWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQuickWidgets/qquickwidget.h:67
@@ -249,7 +247,6 @@ func DeleteQQuickWidget(this *QQuickWidget) {
 func (this *QQuickWidget) Source() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget6sourceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQUrl)
 	return rv2
@@ -262,9 +259,7 @@ func (this *QQuickWidget) Source() *qtcore.QUrl /*123*/ {
 func (this *QQuickWidget) Engine() *qtqml.QQmlEngine /*777 QQmlEngine **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget6engineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtqml.NewQQmlEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtqml.NewQQmlEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQuickWidgets/qquickwidget.h:75
@@ -274,9 +269,7 @@ func (this *QQuickWidget) Engine() *qtqml.QQmlEngine /*777 QQmlEngine **/ {
 func (this *QQuickWidget) RootContext() *qtqml.QQmlContext /*777 QQmlContext **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget11rootContextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtqml.NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtqml.NewQQmlContextFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQuickWidgets/qquickwidget.h:77
@@ -286,9 +279,7 @@ func (this *QQuickWidget) RootContext() *qtqml.QQmlContext /*777 QQmlContext **/
 func (this *QQuickWidget) RootObject() *qtquick.QQuickItem /*777 QQuickItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget10rootObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtquick.NewQQuickItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtquick.NewQQuickItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQuickWidgets/qquickwidget.h:81
@@ -298,7 +289,6 @@ func (this *QQuickWidget) RootObject() *qtquick.QQuickItem /*777 QQuickItem **/ 
 func (this *QQuickWidget) ResizeMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget10resizeModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -318,7 +308,6 @@ func (this *QQuickWidget) SetResizeMode(arg0 int) {
 func (this *QQuickWidget) Status() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget6statusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -329,7 +318,6 @@ func (this *QQuickWidget) Status() int {
 func (this *QQuickWidget) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -342,7 +330,6 @@ func (this *QQuickWidget) SizeHint() *qtcore.QSize /*123*/ {
 func (this *QQuickWidget) InitialSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget11initialSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -365,7 +352,6 @@ func (this *QQuickWidget) SetFormat(format *qtgui.QSurfaceFormat) {
 func (this *QQuickWidget) Format() *qtgui.QSurfaceFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQSurfaceFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQSurfaceFormat)
 	return rv2
@@ -378,7 +364,6 @@ func (this *QQuickWidget) Format() *qtgui.QSurfaceFormat /*123*/ {
 func (this *QQuickWidget) GrabFramebuffer() *qtgui.QImage /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget15grabFramebufferEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQImageFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQImage)
 	return rv2
@@ -401,9 +386,7 @@ func (this *QQuickWidget) SetClearColor(color *qtgui.QColor) {
 func (this *QQuickWidget) QuickWindow() *qtquick.QQuickWindow /*777 QQuickWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QQuickWidget11quickWindowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtquick.NewQQuickWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtquick.NewQQuickWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQuickWidgets/qquickwidget.h:103
@@ -441,8 +424,9 @@ func (this *QQuickWidget) StatusChanged(arg0 int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sceneGraphError(QQuickWindow::SceneGraphError, const QString &)
-func (this *QQuickWidget) SceneGraphError(error int, message *qtcore.QString) {
-	var convArg1 = message.GetCthis()
+func (this *QQuickWidget) SceneGraphError(error int, message string) {
+	var tmpArg1 = qtcore.NewQString_5(message)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget15sceneGraphErrorEN12QQuickWindow15SceneGraphErrorERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), error, convArg1)
 	gopp.ErrPrint(err, rv)
 }
@@ -625,7 +609,6 @@ func (this *QQuickWidget) Event(arg0 *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QQuickWidget5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

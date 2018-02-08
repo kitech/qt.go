@@ -82,8 +82,9 @@ func NewQTextBoundaryFinder() *QTextBoundaryFinder {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTextBoundaryFinder(enum QTextBoundaryFinder::BoundaryType, const QString &)
-func NewQTextBoundaryFinder_1(type_ int, string *QString) *QTextBoundaryFinder {
-	var convArg1 = string.GetCthis()
+func NewQTextBoundaryFinder_1(type_ int, string string) *QTextBoundaryFinder {
+	var tmpArg1 = NewQString_5(string)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeERK7QString", qtrt.FFI_TYPE_POINTER, type_, convArg1)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQTextBoundaryFinderFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -122,7 +123,6 @@ func DeleteQTextBoundaryFinder(this *QTextBoundaryFinder) {
 func (this *QTextBoundaryFinder) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -133,7 +133,6 @@ func (this *QTextBoundaryFinder) IsValid() bool {
 func (this *QTextBoundaryFinder) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -141,13 +140,13 @@ func (this *QTextBoundaryFinder) Type() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString string()
-func (this *QTextBoundaryFinder) String() *QString /*123*/ {
+func (this *QTextBoundaryFinder) String() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder6stringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qtextboundaryfinder.h:84
@@ -175,7 +174,6 @@ func (this *QTextBoundaryFinder) ToEnd() {
 func (this *QTextBoundaryFinder) Position() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder8positionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -195,7 +193,6 @@ func (this *QTextBoundaryFinder) SetPosition(position int) {
 func (this *QTextBoundaryFinder) ToNextBoundary() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextBoundaryFinder14toNextBoundaryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -206,7 +203,6 @@ func (this *QTextBoundaryFinder) ToNextBoundary() int {
 func (this *QTextBoundaryFinder) ToPreviousBoundary() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextBoundaryFinder18toPreviousBoundaryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -217,7 +213,6 @@ func (this *QTextBoundaryFinder) ToPreviousBoundary() int {
 func (this *QTextBoundaryFinder) IsAtBoundary() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder12isAtBoundaryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -228,7 +223,6 @@ func (this *QTextBoundaryFinder) IsAtBoundary() bool {
 func (this *QTextBoundaryFinder) BoundaryReasons() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextBoundaryFinder15boundaryReasonsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 

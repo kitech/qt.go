@@ -117,9 +117,7 @@ func (*QCalendarWidget) NewFromPointer(cthis unsafe.Pointer) *QCalendarWidget {
 func (this *QCalendarWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qcalendarwidget.h:92
@@ -152,7 +150,6 @@ func DeleteQCalendarWidget(this *QCalendarWidget) {
 func (this *QCalendarWidget) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -165,7 +162,6 @@ func (this *QCalendarWidget) SizeHint() *qtcore.QSize /*123*/ {
 func (this *QCalendarWidget) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -178,7 +174,6 @@ func (this *QCalendarWidget) MinimumSizeHint() *qtcore.QSize /*123*/ {
 func (this *QCalendarWidget) SelectedDate() *qtcore.QDate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget12selectedDateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQDate)
 	return rv2
@@ -191,7 +186,6 @@ func (this *QCalendarWidget) SelectedDate() *qtcore.QDate /*123*/ {
 func (this *QCalendarWidget) YearShown() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget9yearShownEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -202,7 +196,6 @@ func (this *QCalendarWidget) YearShown() int {
 func (this *QCalendarWidget) MonthShown() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget10monthShownEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -213,7 +206,6 @@ func (this *QCalendarWidget) MonthShown() int {
 func (this *QCalendarWidget) MinimumDate() *qtcore.QDate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget11minimumDateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQDate)
 	return rv2
@@ -236,7 +228,6 @@ func (this *QCalendarWidget) SetMinimumDate(date *qtcore.QDate) {
 func (this *QCalendarWidget) MaximumDate() *qtcore.QDate /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget11maximumDateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQDateFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQDate)
 	return rv2
@@ -259,7 +250,6 @@ func (this *QCalendarWidget) SetMaximumDate(date *qtcore.QDate) {
 func (this *QCalendarWidget) FirstDayOfWeek() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget14firstDayOfWeekEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -279,7 +269,6 @@ func (this *QCalendarWidget) SetFirstDayOfWeek(dayOfWeek int) {
 func (this *QCalendarWidget) IsNavigationBarVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget22isNavigationBarVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -290,7 +279,6 @@ func (this *QCalendarWidget) IsNavigationBarVisible() bool {
 func (this *QCalendarWidget) IsGridVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget13isGridVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -301,7 +289,6 @@ func (this *QCalendarWidget) IsGridVisible() bool {
 func (this *QCalendarWidget) SelectionMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget13selectionModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -321,7 +308,6 @@ func (this *QCalendarWidget) SetSelectionMode(mode int) {
 func (this *QCalendarWidget) HorizontalHeaderFormat() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget22horizontalHeaderFormatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -341,7 +327,6 @@ func (this *QCalendarWidget) SetHorizontalHeaderFormat(format int) {
 func (this *QCalendarWidget) VerticalHeaderFormat() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget20verticalHeaderFormatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -361,7 +346,6 @@ func (this *QCalendarWidget) SetVerticalHeaderFormat(format int) {
 func (this *QCalendarWidget) HeaderTextFormat() *qtgui.QTextCharFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget16headerTextFormatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQTextCharFormat)
 	return rv2
@@ -384,7 +368,6 @@ func (this *QCalendarWidget) SetHeaderTextFormat(format *qtgui.QTextCharFormat) 
 func (this *QCalendarWidget) WeekdayTextFormat(dayOfWeek int) *qtgui.QTextCharFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget17weekdayTextFormatEN2Qt9DayOfWeekE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), dayOfWeek)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQTextCharFormat)
 	return rv2
@@ -408,7 +391,6 @@ func (this *QCalendarWidget) DateTextFormat(date *qtcore.QDate) *qtgui.QTextChar
 	var convArg0 = date.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget14dateTextFormatERK5QDate", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQTextCharFormat)
 	return rv2
@@ -432,7 +414,6 @@ func (this *QCalendarWidget) SetDateTextFormat(date *qtcore.QDate, format *qtgui
 func (this *QCalendarWidget) IsDateEditEnabled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget17isDateEditEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -452,7 +433,6 @@ func (this *QCalendarWidget) SetDateEditEnabled(enable bool) {
 func (this *QCalendarWidget) DateEditAcceptDelay() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QCalendarWidget19dateEditAcceptDelayEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -473,7 +453,6 @@ func (this *QCalendarWidget) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QCalendarWidget5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -486,7 +465,6 @@ func (this *QCalendarWidget) EventFilter(watched *qtcore.QObject /*777 QObject *
 	var convArg1 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QCalendarWidget11eventFilterEP7QObjectP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

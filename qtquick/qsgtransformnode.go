@@ -119,7 +119,6 @@ func (this *QSGTransformNode) SetMatrix(matrix *qtgui.QMatrix4x4) {
 func (this *QSGTransformNode) Matrix() *qtgui.QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSGTransformNode6matrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQMatrix4x4)
 	return rv2
@@ -142,7 +141,6 @@ func (this *QSGTransformNode) SetCombinedMatrix(matrix *qtgui.QMatrix4x4) {
 func (this *QSGTransformNode) CombinedMatrix() *qtgui.QMatrix4x4 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QSGTransformNode14combinedMatrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQMatrix4x4FromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQMatrix4x4)
 	return rv2

@@ -86,7 +86,6 @@ func NewQApplicationStateChangeEvent(state int) *QApplicationStateChangeEvent {
 func (this *QApplicationStateChangeEvent) ApplicationState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK28QApplicationStateChangeEvent16applicationStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 

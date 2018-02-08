@@ -83,9 +83,7 @@ func (*QTcpServer) NewFromPointer(cthis unsafe.Pointer) *QTcpServer {
 func (this *QTcpServer) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTcpServer10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtNetwork/qtcpserver.h:61
@@ -119,7 +117,6 @@ func (this *QTcpServer) Listen(address *QHostAddress, port uint16) bool {
 	var convArg0 = address.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer6listenERK12QHostAddresst", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, port)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -139,7 +136,6 @@ func (this *QTcpServer) Close() {
 func (this *QTcpServer) IsListening() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTcpServer11isListeningEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -159,7 +155,6 @@ func (this *QTcpServer) SetMaxPendingConnections(numConnections int) {
 func (this *QTcpServer) MaxPendingConnections() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTcpServer21maxPendingConnectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -170,7 +165,6 @@ func (this *QTcpServer) MaxPendingConnections() int {
 func (this *QTcpServer) ServerPort() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTcpServer10serverPortEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint16(rv) // 222
 }
 
@@ -181,7 +175,6 @@ func (this *QTcpServer) ServerPort() uint16 {
 func (this *QTcpServer) ServerAddress() *QHostAddress /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTcpServer13serverAddressEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQHostAddress)
 	return rv2
@@ -194,7 +187,6 @@ func (this *QTcpServer) ServerAddress() *QHostAddress /*123*/ {
 func (this *QTcpServer) SocketDescriptor() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTcpServer16socketDescriptorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 
@@ -205,7 +197,6 @@ func (this *QTcpServer) SocketDescriptor() int64 {
 func (this *QTcpServer) SetSocketDescriptor(socketDescriptor int64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer19setSocketDescriptorEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), socketDescriptor)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -216,7 +207,6 @@ func (this *QTcpServer) SetSocketDescriptor(socketDescriptor int64) bool {
 func (this *QTcpServer) WaitForNewConnection(msec int, timedOut unsafe.Pointer /*666*/) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer20waitForNewConnectionEiPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msec, &timedOut)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -227,7 +217,6 @@ func (this *QTcpServer) WaitForNewConnection(msec int, timedOut unsafe.Pointer /
 func (this *QTcpServer) HasPendingConnections() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTcpServer21hasPendingConnectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -238,9 +227,7 @@ func (this *QTcpServer) HasPendingConnections() bool {
 func (this *QTcpServer) NextPendingConnection() *QTcpSocket /*777 QTcpSocket **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTcpServer21nextPendingConnectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQTcpSocketFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQTcpSocketFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtNetwork/qtcpserver.h:82
@@ -250,7 +237,6 @@ func (this *QTcpServer) NextPendingConnection() *QTcpSocket /*777 QTcpSocket **/
 func (this *QTcpServer) ServerError() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTcpServer11serverErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -258,13 +244,13 @@ func (this *QTcpServer) ServerError() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorString()
-func (this *QTcpServer) ErrorString() *qtcore.QString /*123*/ {
+func (this *QTcpServer) ErrorString() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTcpServer11errorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qtcpserver.h:85
@@ -302,7 +288,6 @@ func (this *QTcpServer) SetProxy(networkProxy *QNetworkProxy) {
 func (this *QTcpServer) Proxy() *QNetworkProxy /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTcpServer5proxyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQNetworkProxyFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQNetworkProxy)
 	return rv2

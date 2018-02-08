@@ -97,7 +97,6 @@ func DeleteQWindowStateChangeEvent(this *QWindowStateChangeEvent) {
 func (this *QWindowStateChangeEvent) OldState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWindowStateChangeEvent8oldStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -108,7 +107,6 @@ func (this *QWindowStateChangeEvent) OldState() int {
 func (this *QWindowStateChangeEvent) IsOverride() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QWindowStateChangeEvent10isOverrideEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

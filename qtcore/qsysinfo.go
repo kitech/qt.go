@@ -73,7 +73,6 @@ func (*QSysInfo) NewFromPointer(cthis unsafe.Pointer) *QSysInfo {
 func (this *QSysInfo) WindowsVersion() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo14windowsVersionEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return int(rv)
 }
 func QSysInfo_WindowsVersion() int {
@@ -89,7 +88,6 @@ func QSysInfo_WindowsVersion() int {
 func (this *QSysInfo) MacVersion() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo10macVersionEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return int(rv)
 }
 func QSysInfo_MacVersion() int {
@@ -102,15 +100,15 @@ func QSysInfo_MacVersion() int {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString buildCpuArchitecture()
-func (this *QSysInfo) BuildCpuArchitecture() *QString /*123*/ {
+func (this *QSysInfo) BuildCpuArchitecture() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo20buildCpuArchitectureEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QSysInfo_BuildCpuArchitecture() *QString /*123*/ {
+func QSysInfo_BuildCpuArchitecture() string {
 	var nilthis *QSysInfo
 	rv := nilthis.BuildCpuArchitecture()
 	return rv
@@ -120,15 +118,15 @@ func QSysInfo_BuildCpuArchitecture() *QString /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString currentCpuArchitecture()
-func (this *QSysInfo) CurrentCpuArchitecture() *QString /*123*/ {
+func (this *QSysInfo) CurrentCpuArchitecture() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo22currentCpuArchitectureEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QSysInfo_CurrentCpuArchitecture() *QString /*123*/ {
+func QSysInfo_CurrentCpuArchitecture() string {
 	var nilthis *QSysInfo
 	rv := nilthis.CurrentCpuArchitecture()
 	return rv
@@ -138,15 +136,15 @@ func QSysInfo_CurrentCpuArchitecture() *QString /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString buildAbi()
-func (this *QSysInfo) BuildAbi() *QString /*123*/ {
+func (this *QSysInfo) BuildAbi() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo8buildAbiEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QSysInfo_BuildAbi() *QString /*123*/ {
+func QSysInfo_BuildAbi() string {
 	var nilthis *QSysInfo
 	rv := nilthis.BuildAbi()
 	return rv
@@ -156,15 +154,15 @@ func QSysInfo_BuildAbi() *QString /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString kernelType()
-func (this *QSysInfo) KernelType() *QString /*123*/ {
+func (this *QSysInfo) KernelType() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo10kernelTypeEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QSysInfo_KernelType() *QString /*123*/ {
+func QSysInfo_KernelType() string {
 	var nilthis *QSysInfo
 	rv := nilthis.KernelType()
 	return rv
@@ -174,15 +172,15 @@ func QSysInfo_KernelType() *QString /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString kernelVersion()
-func (this *QSysInfo) KernelVersion() *QString /*123*/ {
+func (this *QSysInfo) KernelVersion() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo13kernelVersionEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QSysInfo_KernelVersion() *QString /*123*/ {
+func QSysInfo_KernelVersion() string {
 	var nilthis *QSysInfo
 	rv := nilthis.KernelVersion()
 	return rv
@@ -192,15 +190,15 @@ func QSysInfo_KernelVersion() *QString /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString productType()
-func (this *QSysInfo) ProductType() *QString /*123*/ {
+func (this *QSysInfo) ProductType() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo11productTypeEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QSysInfo_ProductType() *QString /*123*/ {
+func QSysInfo_ProductType() string {
 	var nilthis *QSysInfo
 	rv := nilthis.ProductType()
 	return rv
@@ -210,15 +208,15 @@ func QSysInfo_ProductType() *QString /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString productVersion()
-func (this *QSysInfo) ProductVersion() *QString /*123*/ {
+func (this *QSysInfo) ProductVersion() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo14productVersionEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QSysInfo_ProductVersion() *QString /*123*/ {
+func QSysInfo_ProductVersion() string {
 	var nilthis *QSysInfo
 	rv := nilthis.ProductVersion()
 	return rv
@@ -228,15 +226,15 @@ func QSysInfo_ProductVersion() *QString /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString prettyProductName()
-func (this *QSysInfo) PrettyProductName() *QString /*123*/ {
+func (this *QSysInfo) PrettyProductName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo17prettyProductNameEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QSysInfo_PrettyProductName() *QString /*123*/ {
+func QSysInfo_PrettyProductName() string {
 	var nilthis *QSysInfo
 	rv := nilthis.PrettyProductName()
 	return rv
@@ -246,15 +244,15 @@ func QSysInfo_PrettyProductName() *QString /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString machineHostName()
-func (this *QSysInfo) MachineHostName() *QString /*123*/ {
+func (this *QSysInfo) MachineHostName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QSysInfo15machineHostNameEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QSysInfo_MachineHostName() *QString /*123*/ {
+func QSysInfo_MachineHostName() string {
 	var nilthis *QSysInfo
 	rv := nilthis.MachineHostName()
 	return rv

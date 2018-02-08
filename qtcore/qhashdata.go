@@ -73,7 +73,6 @@ func (*QHashData) NewFromPointer(cthis unsafe.Pointer) *QHashData {
 func (this *QHashData) AllocateNode(nodeAlign int) unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHashData12allocateNodeEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), nodeAlign)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -93,9 +92,7 @@ func (this *QHashData) FreeNode(node unsafe.Pointer /*666*/) {
 func (this *QHashData) Detach_helper(node_duplicate unsafe.Pointer /*666*/, node_delete unsafe.Pointer /*666*/, nodeSize int, nodeAlign int) *QHashData /*777 QHashData **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHashData13detach_helperEPFvPNS_4NodeEPvEPFvS1_Eii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), node_duplicate, node_delete, nodeSize, nodeAlign)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQHashDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQHashDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qhash.h:88
@@ -105,7 +102,6 @@ func (this *QHashData) Detach_helper(node_duplicate unsafe.Pointer /*666*/, node
 func (this *QHashData) WillGrow() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHashData8willGrowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -143,7 +139,6 @@ func (this *QHashData) Free_helper(node_delete unsafe.Pointer /*666*/) {
 func (this *QHashData) FirstNode() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QHashData9firstNodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 

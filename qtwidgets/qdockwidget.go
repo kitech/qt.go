@@ -102,17 +102,16 @@ func (*QDockWidget) NewFromPointer(cthis unsafe.Pointer) *QDockWidget {
 func (this *QDockWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDockWidget10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDockWidget(const QString &, QWidget *, Qt::WindowFlags)
-func NewQDockWidget(title *qtcore.QString, parent *QWidget /*777 QWidget **/, flags int) *QDockWidget {
-	var convArg0 = title.GetCthis()
+func NewQDockWidget(title string, parent *QWidget /*777 QWidget **/, flags int) *QDockWidget {
+	var tmpArg0 = qtcore.NewQString_5(title)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDockWidgetC2ERK7QStringP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, flags)
 	gopp.ErrPrint(err, rv)
@@ -150,9 +149,7 @@ func DeleteQDockWidget(this *QDockWidget) {
 func (this *QDockWidget) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDockWidget6widgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:72
@@ -181,7 +178,6 @@ func (this *QDockWidget) SetFeatures(features int) {
 func (this *QDockWidget) Features() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDockWidget8featuresEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -201,7 +197,6 @@ func (this *QDockWidget) SetFloating(floating bool) {
 func (this *QDockWidget) IsFloating() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDockWidget10isFloatingEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -221,7 +216,6 @@ func (this *QDockWidget) SetAllowedAreas(areas int) {
 func (this *QDockWidget) AllowedAreas() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDockWidget12allowedAreasEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -242,9 +236,7 @@ func (this *QDockWidget) SetTitleBarWidget(widget *QWidget /*777 QWidget **/) {
 func (this *QDockWidget) TitleBarWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDockWidget14titleBarWidgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:101
@@ -254,7 +246,6 @@ func (this *QDockWidget) TitleBarWidget() *QWidget /*777 QWidget **/ {
 func (this *QDockWidget) IsAreaAllowed(area int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDockWidget13isAreaAllowedEN2Qt14DockWidgetAreaE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), area)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -265,9 +256,7 @@ func (this *QDockWidget) IsAreaAllowed(area int) bool {
 func (this *QDockWidget) ToggleViewAction() *QAction /*777 QAction **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QDockWidget16toggleViewActionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qdockwidget.h:109
@@ -353,7 +342,6 @@ func (this *QDockWidget) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QDockWidget5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

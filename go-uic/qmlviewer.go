@@ -33,13 +33,13 @@ func main() {
 	if iswin {
 		log.Println("app mod qml:")
 		qmle := qtqml.NewQQmlApplicationEngine(nil)
-		qmle.AddImportPath(qtcore.NewQString_5("./"))
-		qmle.Load_1(qtcore.NewQString_5(file))
+		qmle.AddImportPath("./")
+		qmle.Load_1(file)
 	} else {
 		log.Println("rect mod qml:")
 		qw := qtquickwidgets.NewQQuickWidget(nil)
-		qw.Engine().AddImportPath(qtcore.NewQString_5("./"))
-		qw.SetSource(qtcore.NewQUrl_1(qtcore.NewQString_5(file), 0))
+		qw.Engine().AddImportPath("./")
+		qw.SetSource(qtcore.NewQUrl_1(file, 0))
 		qw.Show()
 	}
 

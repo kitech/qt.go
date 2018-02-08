@@ -102,8 +102,9 @@ func NewQGraphicsSimpleTextItem(parent *QGraphicsItem /*777 QGraphicsItem **/) *
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSimpleTextItem(const QString &, QGraphicsItem *)
-func NewQGraphicsSimpleTextItem_1(text *qtcore.QString, parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsSimpleTextItem {
-	var convArg0 = text.GetCthis()
+func NewQGraphicsSimpleTextItem_1(text string, parent *QGraphicsItem /*777 QGraphicsItem **/) *QGraphicsSimpleTextItem {
+	var tmpArg0 = qtcore.NewQString_5(text)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = parent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsSimpleTextItemC2ERK7QStringP13QGraphicsItem", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -127,8 +128,9 @@ func DeleteQGraphicsSimpleTextItem(this *QGraphicsSimpleTextItem) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setText(const QString &)
-func (this *QGraphicsSimpleTextItem) SetText(text *qtcore.QString) {
-	var convArg0 = text.GetCthis()
+func (this *QGraphicsSimpleTextItem) SetText(text string) {
+	var tmpArg0 = qtcore.NewQString_5(text)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QGraphicsSimpleTextItem7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -137,13 +139,13 @@ func (this *QGraphicsSimpleTextItem) SetText(text *qtcore.QString) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text()
-func (this *QGraphicsSimpleTextItem) Text() *qtcore.QString /*123*/ {
+func (this *QGraphicsSimpleTextItem) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSimpleTextItem4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h:975
@@ -163,7 +165,6 @@ func (this *QGraphicsSimpleTextItem) SetFont(font *qtgui.QFont) {
 func (this *QGraphicsSimpleTextItem) Font() *qtgui.QFont /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSimpleTextItem4fontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQFont)
 	return rv2
@@ -176,7 +177,6 @@ func (this *QGraphicsSimpleTextItem) Font() *qtgui.QFont /*123*/ {
 func (this *QGraphicsSimpleTextItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSimpleTextItem12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -189,7 +189,6 @@ func (this *QGraphicsSimpleTextItem) BoundingRect() *qtcore.QRectF /*123*/ {
 func (this *QGraphicsSimpleTextItem) Shape() *qtgui.QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSimpleTextItem5shapeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
@@ -203,7 +202,6 @@ func (this *QGraphicsSimpleTextItem) Contains(point *qtcore.QPointF) bool {
 	var convArg0 = point.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSimpleTextItem8containsERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -227,7 +225,6 @@ func (this *QGraphicsSimpleTextItem) IsObscuredBy(item *QGraphicsItem /*777 cons
 	var convArg0 = item.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSimpleTextItem12isObscuredByEPK13QGraphicsItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -238,7 +235,6 @@ func (this *QGraphicsSimpleTextItem) IsObscuredBy(item *QGraphicsItem /*777 cons
 func (this *QGraphicsSimpleTextItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSimpleTextItem10opaqueAreaEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
@@ -251,7 +247,6 @@ func (this *QGraphicsSimpleTextItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 func (this *QGraphicsSimpleTextItem) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSimpleTextItem4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -262,7 +257,6 @@ func (this *QGraphicsSimpleTextItem) Type() int {
 func (this *QGraphicsSimpleTextItem) SupportsExtension(extension int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSimpleTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), extension)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -284,7 +278,6 @@ func (this *QGraphicsSimpleTextItem) Extension(variant *qtcore.QVariant) *qtcore
 	var convArg0 = variant.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK23QGraphicsSimpleTextItem9extensionERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2

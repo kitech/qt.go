@@ -82,12 +82,13 @@ func NewQXmlStreamAttributes() *QXmlStreamAttributes {
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QStringRef value(const QString &, const QString &)
-func (this *QXmlStreamAttributes) Value(namespaceUri *QString, name *QString) *QStringRef /*123*/ {
-	var convArg0 = namespaceUri.GetCthis()
-	var convArg1 = name.GetCthis()
+func (this *QXmlStreamAttributes) Value(namespaceUri string, name string) *QStringRef /*123*/ {
+	var tmpArg0 = NewQString_5(namespaceUri)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = NewQString_5(name)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes5valueERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -97,12 +98,12 @@ func (this *QXmlStreamAttributes) Value(namespaceUri *QString, name *QString) *Q
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QStringRef value(const QString &, QLatin1String)
-func (this *QXmlStreamAttributes) Value_1(namespaceUri *QString, name *QLatin1String /*123*/) *QStringRef /*123*/ {
-	var convArg0 = namespaceUri.GetCthis()
+func (this *QXmlStreamAttributes) Value_1(namespaceUri string, name *QLatin1String /*123*/) *QStringRef /*123*/ {
+	var tmpArg0 = NewQString_5(namespaceUri)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = name.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes5valueERK7QString13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -117,7 +118,6 @@ func (this *QXmlStreamAttributes) Value_2(namespaceUri *QLatin1String /*123*/, n
 	var convArg1 = name.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes5valueE13QLatin1StringS0_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -127,11 +127,11 @@ func (this *QXmlStreamAttributes) Value_2(namespaceUri *QLatin1String /*123*/, n
 // index:3
 // Public Visibility=Default Availability=Available
 // [16] QStringRef value(const QString &)
-func (this *QXmlStreamAttributes) Value_3(qualifiedName *QString) *QStringRef /*123*/ {
-	var convArg0 = qualifiedName.GetCthis()
+func (this *QXmlStreamAttributes) Value_3(qualifiedName string) *QStringRef /*123*/ {
+	var tmpArg0 = NewQString_5(qualifiedName)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes5valueERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -145,7 +145,6 @@ func (this *QXmlStreamAttributes) Value_4(qualifiedName *QLatin1String /*123*/) 
 	var convArg0 = qualifiedName.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes5valueE13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQStringRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringRef)
 	return rv2
@@ -155,11 +154,11 @@ func (this *QXmlStreamAttributes) Value_4(qualifiedName *QLatin1String /*123*/) 
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool hasAttribute(const QString &)
-func (this *QXmlStreamAttributes) HasAttribute(qualifiedName *QString) bool {
-	var convArg0 = qualifiedName.GetCthis()
+func (this *QXmlStreamAttributes) HasAttribute(qualifiedName string) bool {
+	var tmpArg0 = NewQString_5(qualifiedName)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes12hasAttributeERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -171,7 +170,6 @@ func (this *QXmlStreamAttributes) HasAttribute_1(qualifiedName *QLatin1String /*
 	var convArg0 = qualifiedName.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes12hasAttributeE13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -179,12 +177,13 @@ func (this *QXmlStreamAttributes) HasAttribute_1(qualifiedName *QLatin1String /*
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool hasAttribute(const QString &, const QString &)
-func (this *QXmlStreamAttributes) HasAttribute_2(namespaceUri *QString, name *QString) bool {
-	var convArg0 = namespaceUri.GetCthis()
-	var convArg1 = name.GetCthis()
+func (this *QXmlStreamAttributes) HasAttribute_2(namespaceUri string, name string) bool {
+	var tmpArg0 = NewQString_5(namespaceUri)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = NewQString_5(name)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QXmlStreamAttributes12hasAttributeERK7QStringS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

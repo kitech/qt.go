@@ -105,7 +105,6 @@ func (this *QReadWriteLock) LockForRead() {
 func (this *QReadWriteLock) TryLockForRead() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QReadWriteLock14tryLockForReadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -116,7 +115,6 @@ func (this *QReadWriteLock) TryLockForRead() bool {
 func (this *QReadWriteLock) TryLockForRead_1(timeout int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QReadWriteLock14tryLockForReadEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -136,7 +134,6 @@ func (this *QReadWriteLock) LockForWrite() {
 func (this *QReadWriteLock) TryLockForWrite() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QReadWriteLock15tryLockForWriteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -147,7 +144,6 @@ func (this *QReadWriteLock) TryLockForWrite() bool {
 func (this *QReadWriteLock) TryLockForWrite_1(timeout int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QReadWriteLock15tryLockForWriteEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

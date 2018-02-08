@@ -97,7 +97,6 @@ func DeleteQActionEvent(this *QActionEvent) {
 func (this *QActionEvent) Action() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QActionEvent6actionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -108,7 +107,6 @@ func (this *QActionEvent) Action() unsafe.Pointer /*666*/ {
 func (this *QActionEvent) Before() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QActionEvent6beforeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 

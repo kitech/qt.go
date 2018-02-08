@@ -104,14 +104,14 @@ func QQmlDebuggingEnabler_SetServices(services *qtcore.QStringList) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool startTcpDebugServer(int, enum QQmlDebuggingEnabler::StartMode, const QString &)
-func (this *QQmlDebuggingEnabler) StartTcpDebugServer(port int, mode int, hostName *qtcore.QString) bool {
-	var convArg2 = hostName.GetCthis()
+func (this *QQmlDebuggingEnabler) StartTcpDebugServer(port int, mode int, hostName string) bool {
+	var tmpArg2 = qtcore.NewQString_5(hostName)
+	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler19startTcpDebugServerEiNS_9StartModeERK7QString", qtrt.FFI_TYPE_POINTER, port, mode, convArg2)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
-func QQmlDebuggingEnabler_StartTcpDebugServer(port int, mode int, hostName *qtcore.QString) bool {
+func QQmlDebuggingEnabler_StartTcpDebugServer(port int, mode int, hostName string) bool {
 	var nilthis *QQmlDebuggingEnabler
 	rv := nilthis.StartTcpDebugServer(port, mode, hostName)
 	return rv
@@ -121,14 +121,14 @@ func QQmlDebuggingEnabler_StartTcpDebugServer(port int, mode int, hostName *qtco
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool connectToLocalDebugger(const QString &, enum QQmlDebuggingEnabler::StartMode)
-func (this *QQmlDebuggingEnabler) ConnectToLocalDebugger(socketFileName *qtcore.QString, mode int) bool {
-	var convArg0 = socketFileName.GetCthis()
+func (this *QQmlDebuggingEnabler) ConnectToLocalDebugger(socketFileName string, mode int) bool {
+	var tmpArg0 = qtcore.NewQString_5(socketFileName)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler22connectToLocalDebuggerERK7QStringNS_9StartModeE", qtrt.FFI_TYPE_POINTER, convArg0, mode)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
-func QQmlDebuggingEnabler_ConnectToLocalDebugger(socketFileName *qtcore.QString, mode int) bool {
+func QQmlDebuggingEnabler_ConnectToLocalDebugger(socketFileName string, mode int) bool {
 	var nilthis *QQmlDebuggingEnabler
 	rv := nilthis.ConnectToLocalDebugger(socketFileName, mode)
 	return rv

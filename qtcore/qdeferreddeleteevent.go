@@ -93,7 +93,6 @@ func DeleteQDeferredDeleteEvent(this *QDeferredDeleteEvent) {
 func (this *QDeferredDeleteEvent) LoopLevel() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QDeferredDeleteEvent9loopLevelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

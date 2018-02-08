@@ -107,13 +107,13 @@ func (this *QDnsHostAddressRecord) Swap(other *QDnsHostAddressRecord) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name()
-func (this *QDnsHostAddressRecord) Name() *qtcore.QString /*123*/ {
+func (this *QDnsHostAddressRecord) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QDnsHostAddressRecord4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:98
@@ -123,7 +123,6 @@ func (this *QDnsHostAddressRecord) Name() *qtcore.QString /*123*/ {
 func (this *QDnsHostAddressRecord) TimeToLive() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QDnsHostAddressRecord10timeToLiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint(rv) // 222
 }
 
@@ -134,7 +133,6 @@ func (this *QDnsHostAddressRecord) TimeToLive() uint {
 func (this *QDnsHostAddressRecord) Value() *QHostAddress /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QDnsHostAddressRecord5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQHostAddressFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQHostAddress)
 	return rv2

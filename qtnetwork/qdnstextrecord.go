@@ -107,13 +107,13 @@ func (this *QDnsTextRecord) Swap(other *QDnsTextRecord) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name()
-func (this *QDnsTextRecord) Name() *qtcore.QString /*123*/ {
+func (this *QDnsTextRecord) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDnsTextRecord4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:174
@@ -123,7 +123,6 @@ func (this *QDnsTextRecord) Name() *qtcore.QString /*123*/ {
 func (this *QDnsTextRecord) TimeToLive() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDnsTextRecord10timeToLiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint(rv) // 222
 }
 

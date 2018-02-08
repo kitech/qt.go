@@ -41,7 +41,7 @@ func init() {
 
 //  body block begin
 // QVariant retrieveData(const class QString &, class QVariant::Type)
-func (this *QMimeData) InheritRetrieveData(f func(mimetype *QString, preferredType int) unsafe.Pointer) {
+func (this *QMimeData) InheritRetrieveData(f func(mimetype string, preferredType int) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "retrieveData", f)
 }
 
@@ -74,9 +74,7 @@ func (*QMimeData) NewFromPointer(cthis unsafe.Pointer) *QMimeData {
 func (this *QMimeData) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:56
@@ -108,7 +106,6 @@ func DeleteQMimeData(this *QMimeData) {
 func (this *QMimeData) HasUrls() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData7hasUrlsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -116,21 +113,22 @@ func (this *QMimeData) HasUrls() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text()
-func (this *QMimeData) Text() *QString /*123*/ {
+func (this *QMimeData) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setText(const QString &)
-func (this *QMimeData) SetText(text *QString) {
-	var convArg0 = text.GetCthis()
+func (this *QMimeData) SetText(text string) {
+	var tmpArg0 = NewQString_5(text)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeData7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -142,7 +140,6 @@ func (this *QMimeData) SetText(text *QString) {
 func (this *QMimeData) HasText() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData7hasTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -150,21 +147,22 @@ func (this *QMimeData) HasText() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString html()
-func (this *QMimeData) Html() *QString /*123*/ {
+func (this *QMimeData) Html() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData4htmlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qmimedata.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHtml(const QString &)
-func (this *QMimeData) SetHtml(html *QString) {
-	var convArg0 = html.GetCthis()
+func (this *QMimeData) SetHtml(html string) {
+	var tmpArg0 = NewQString_5(html)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeData7setHtmlERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -176,7 +174,6 @@ func (this *QMimeData) SetHtml(html *QString) {
 func (this *QMimeData) HasHtml() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData7hasHtmlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -187,7 +184,6 @@ func (this *QMimeData) HasHtml() bool {
 func (this *QMimeData) ImageData() *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData9imageDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
@@ -210,7 +206,6 @@ func (this *QMimeData) SetImageData(image *QVariant) {
 func (this *QMimeData) HasImage() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData8hasImageEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -221,7 +216,6 @@ func (this *QMimeData) HasImage() bool {
 func (this *QMimeData) ColorData() *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData9colorDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
@@ -244,7 +238,6 @@ func (this *QMimeData) SetColorData(color *QVariant) {
 func (this *QMimeData) HasColor() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData8hasColorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -252,11 +245,11 @@ func (this *QMimeData) HasColor() bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray data(const QString &)
-func (this *QMimeData) Data(mimetype *QString) *QByteArray /*123*/ {
-	var convArg0 = mimetype.GetCthis()
+func (this *QMimeData) Data(mimetype string) *QByteArray /*123*/ {
+	var tmpArg0 = NewQString_5(mimetype)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData4dataERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -266,8 +259,9 @@ func (this *QMimeData) Data(mimetype *QString) *QByteArray /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setData(const QString &, const QByteArray &)
-func (this *QMimeData) SetData(mimetype *QString, data *QByteArray) {
-	var convArg0 = mimetype.GetCthis()
+func (this *QMimeData) SetData(mimetype string, data *QByteArray) {
+	var tmpArg0 = NewQString_5(mimetype)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = data.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeData7setDataERK7QStringRK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -277,8 +271,9 @@ func (this *QMimeData) SetData(mimetype *QString, data *QByteArray) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeFormat(const QString &)
-func (this *QMimeData) RemoveFormat(mimetype *QString) {
-	var convArg0 = mimetype.GetCthis()
+func (this *QMimeData) RemoveFormat(mimetype string) {
+	var tmpArg0 = NewQString_5(mimetype)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QMimeData12removeFormatERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -287,11 +282,11 @@ func (this *QMimeData) RemoveFormat(mimetype *QString) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasFormat(const QString &)
-func (this *QMimeData) HasFormat(mimetype *QString) bool {
-	var convArg0 = mimetype.GetCthis()
+func (this *QMimeData) HasFormat(mimetype string) bool {
+	var tmpArg0 = NewQString_5(mimetype)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData9hasFormatERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -308,11 +303,11 @@ func (this *QMimeData) Clear() {
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant retrieveData(const QString &, QVariant::Type)
-func (this *QMimeData) RetrieveData(mimetype *QString, preferredType int) *QVariant /*123*/ {
-	var convArg0 = mimetype.GetCthis()
+func (this *QMimeData) RetrieveData(mimetype string, preferredType int) *QVariant /*123*/ {
+	var tmpArg0 = NewQString_5(mimetype)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData12retrieveDataERK7QStringN8QVariant4TypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, preferredType)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2

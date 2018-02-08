@@ -45,7 +45,7 @@ func init() {
 
 //  body block begin
 // void highlightBlock(const class QString &)
-func (this *QSyntaxHighlighter) InheritHighlightBlock(f func(text *qtcore.QString) /*void*/) {
+func (this *QSyntaxHighlighter) InheritHighlightBlock(f func(text string) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "highlightBlock", f)
 }
 
@@ -118,9 +118,7 @@ func (*QSyntaxHighlighter) NewFromPointer(cthis unsafe.Pointer) *QSyntaxHighligh
 func (this *QSyntaxHighlighter) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:65
@@ -175,9 +173,7 @@ func (this *QSyntaxHighlighter) SetDocument(doc *QTextDocument /*777 QTextDocume
 func (this *QSyntaxHighlighter) Document() *QTextDocument /*777 QTextDocument **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter8documentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQTextDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQTextDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:73
@@ -203,8 +199,9 @@ func (this *QSyntaxHighlighter) RehighlightBlock(block *QTextBlock) {
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [-2] void highlightBlock(const QString &)
-func (this *QSyntaxHighlighter) HighlightBlock(text *qtcore.QString) {
-	var convArg0 = text.GetCthis()
+func (this *QSyntaxHighlighter) HighlightBlock(text string) {
+	var tmpArg0 = qtcore.NewQString_5(text)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QSyntaxHighlighter14highlightBlockERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -246,7 +243,6 @@ func (this *QSyntaxHighlighter) SetFormat_2(start int, count int, font *QFont) {
 func (this *QSyntaxHighlighter) Format(pos int) *QTextCharFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter6formatEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pos)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQTextCharFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextCharFormat)
 	return rv2
@@ -259,7 +255,6 @@ func (this *QSyntaxHighlighter) Format(pos int) *QTextCharFormat /*123*/ {
 func (this *QSyntaxHighlighter) PreviousBlockState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter18previousBlockStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -270,7 +265,6 @@ func (this *QSyntaxHighlighter) PreviousBlockState() int {
 func (this *QSyntaxHighlighter) CurrentBlockState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter17currentBlockStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -300,9 +294,7 @@ func (this *QSyntaxHighlighter) SetCurrentBlockUserData(data *QTextBlockUserData
 func (this *QSyntaxHighlighter) CurrentBlockUserData() *QTextBlockUserData /*777 QTextBlockUserData **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter20currentBlockUserDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQTextBlockUserDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQTextBlockUserDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qsyntaxhighlighter.h:91
@@ -312,7 +304,6 @@ func (this *QSyntaxHighlighter) CurrentBlockUserData() *QTextBlockUserData /*777
 func (this *QSyntaxHighlighter) CurrentBlock() *QTextBlock /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QSyntaxHighlighter12currentBlockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQTextBlockFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextBlock)
 	return rv2

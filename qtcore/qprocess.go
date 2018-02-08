@@ -89,9 +89,7 @@ func (*QProcess) NewFromPointer(cthis unsafe.Pointer) *QProcess {
 func (this *QProcess) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qprocess.h:158
@@ -121,8 +119,9 @@ func DeleteQProcess(this *QProcess) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void start(const QString &, const QStringList &, QIODevice::OpenMode)
-func (this *QProcess) Start(program *QString, arguments *QStringList, mode int) {
-	var convArg0 = program.GetCthis()
+func (this *QProcess) Start(program string, arguments *QStringList, mode int) {
+	var tmpArg0 = NewQString_5(program)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = arguments.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess5startERK7QStringRK11QStringList6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, mode)
 	gopp.ErrPrint(err, rv)
@@ -132,8 +131,9 @@ func (this *QProcess) Start(program *QString, arguments *QStringList, mode int) 
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void start(const QString &, QIODevice::OpenMode)
-func (this *QProcess) Start_1(command *QString, mode int) {
-	var convArg0 = command.GetCthis()
+func (this *QProcess) Start_1(command string, mode int) {
+	var tmpArg0 = NewQString_5(command)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess5startERK7QString6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)
 }
@@ -154,7 +154,6 @@ func (this *QProcess) Start_2(mode int) {
 func (this *QProcess) StartDetached(pid unsafe.Pointer /*666*/) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess13startDetachedEPx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), &pid)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -162,16 +161,17 @@ func (this *QProcess) StartDetached(pid unsafe.Pointer /*666*/) bool {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool startDetached(const QString &, const QStringList &, const QString &, qint64 *)
-func (this *QProcess) StartDetached_1(program *QString, arguments *QStringList, workingDirectory *QString, pid unsafe.Pointer /*666*/) bool {
-	var convArg0 = program.GetCthis()
+func (this *QProcess) StartDetached_1(program string, arguments *QStringList, workingDirectory string, pid unsafe.Pointer /*666*/) bool {
+	var tmpArg0 = NewQString_5(program)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = arguments.GetCthis()
-	var convArg2 = workingDirectory.GetCthis()
+	var tmpArg2 = NewQString_5(workingDirectory)
+	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess13startDetachedERK7QStringRK11QStringListS2_Px", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, &pid)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
-func QProcess_StartDetached_1(program *QString, arguments *QStringList, workingDirectory *QString, pid unsafe.Pointer /*666*/) bool {
+func QProcess_StartDetached_1(program string, arguments *QStringList, workingDirectory string, pid unsafe.Pointer /*666*/) bool {
 	var nilthis *QProcess
 	rv := nilthis.StartDetached_1(program, arguments, workingDirectory, pid)
 	return rv
@@ -181,15 +181,15 @@ func QProcess_StartDetached_1(program *QString, arguments *QStringList, workingD
 // index:2
 // Public static Visibility=Default Availability=Available
 // [1] bool startDetached(const QString &, const QStringList &)
-func (this *QProcess) StartDetached_2(program *QString, arguments *QStringList) bool {
-	var convArg0 = program.GetCthis()
+func (this *QProcess) StartDetached_2(program string, arguments *QStringList) bool {
+	var tmpArg0 = NewQString_5(program)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = arguments.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess13startDetachedERK7QStringRK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
-func QProcess_StartDetached_2(program *QString, arguments *QStringList) bool {
+func QProcess_StartDetached_2(program string, arguments *QStringList) bool {
 	var nilthis *QProcess
 	rv := nilthis.StartDetached_2(program, arguments)
 	return rv
@@ -199,14 +199,14 @@ func QProcess_StartDetached_2(program *QString, arguments *QStringList) bool {
 // index:3
 // Public static Visibility=Default Availability=Available
 // [1] bool startDetached(const QString &)
-func (this *QProcess) StartDetached_3(command *QString) bool {
-	var convArg0 = command.GetCthis()
+func (this *QProcess) StartDetached_3(command string) bool {
+	var tmpArg0 = NewQString_5(command)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess13startDetachedERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
-func QProcess_StartDetached_3(command *QString) bool {
+func QProcess_StartDetached_3(command string) bool {
 	var nilthis *QProcess
 	rv := nilthis.StartDetached_3(command)
 	return rv
@@ -219,7 +219,6 @@ func QProcess_StartDetached_3(command *QString) bool {
 func (this *QProcess) Open(mode int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess4openE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -227,21 +226,22 @@ func (this *QProcess) Open(mode int) bool {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString program()
-func (this *QProcess) Program() *QString /*123*/ {
+func (this *QProcess) Program() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess7programEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qprocess.h:170
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProgram(const QString &)
-func (this *QProcess) SetProgram(program *QString) {
-	var convArg0 = program.GetCthis()
+func (this *QProcess) SetProgram(program string) {
+	var tmpArg0 = NewQString_5(program)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess10setProgramERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -263,7 +263,6 @@ func (this *QProcess) SetArguments(arguments *QStringList) {
 func (this *QProcess) ReadChannelMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess15readChannelModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -283,7 +282,6 @@ func (this *QProcess) SetReadChannelMode(mode int) {
 func (this *QProcess) ProcessChannelMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess18processChannelModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -303,7 +301,6 @@ func (this *QProcess) SetProcessChannelMode(mode int) {
 func (this *QProcess) InputChannelMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess16inputChannelModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -323,7 +320,6 @@ func (this *QProcess) SetInputChannelMode(mode int) {
 func (this *QProcess) ReadChannel() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess11readChannelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -358,8 +354,9 @@ func (this *QProcess) CloseWriteChannel() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStandardInputFile(const QString &)
-func (this *QProcess) SetStandardInputFile(fileName *QString) {
-	var convArg0 = fileName.GetCthis()
+func (this *QProcess) SetStandardInputFile(fileName string) {
+	var tmpArg0 = NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess20setStandardInputFileERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -368,8 +365,9 @@ func (this *QProcess) SetStandardInputFile(fileName *QString) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStandardOutputFile(const QString &, QIODevice::OpenMode)
-func (this *QProcess) SetStandardOutputFile(fileName *QString, mode int) {
-	var convArg0 = fileName.GetCthis()
+func (this *QProcess) SetStandardOutputFile(fileName string, mode int) {
+	var tmpArg0 = NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess21setStandardOutputFileERK7QString6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)
 }
@@ -378,8 +376,9 @@ func (this *QProcess) SetStandardOutputFile(fileName *QString, mode int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStandardErrorFile(const QString &, QIODevice::OpenMode)
-func (this *QProcess) SetStandardErrorFile(fileName *QString, mode int) {
-	var convArg0 = fileName.GetCthis()
+func (this *QProcess) SetStandardErrorFile(fileName string, mode int) {
+	var tmpArg0 = NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess20setStandardErrorFileERK7QString6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)
 }
@@ -398,21 +397,22 @@ func (this *QProcess) SetStandardOutputProcess(destination *QProcess /*777 QProc
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString workingDirectory()
-func (this *QProcess) WorkingDirectory() *QString /*123*/ {
+func (this *QProcess) WorkingDirectory() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess16workingDirectoryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qprocess.h:215
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWorkingDirectory(const QString &)
-func (this *QProcess) SetWorkingDirectory(dir *QString) {
-	var convArg0 = dir.GetCthis()
+func (this *QProcess) SetWorkingDirectory(dir string) {
+	var tmpArg0 = NewQString_5(dir)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess19setWorkingDirectoryERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -444,7 +444,6 @@ func (this *QProcess) SetProcessEnvironment(environment *QProcessEnvironment) {
 func (this *QProcess) ProcessEnvironment() *QProcessEnvironment /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess18processEnvironmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQProcessEnvironmentFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQProcessEnvironment)
 	return rv2
@@ -457,7 +456,6 @@ func (this *QProcess) ProcessEnvironment() *QProcessEnvironment /*123*/ {
 func (this *QProcess) Error() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess5errorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -477,7 +475,6 @@ func (this *QProcess) Error_1(error int) {
 func (this *QProcess) State() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess5stateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -488,7 +485,6 @@ func (this *QProcess) State() int {
 func (this *QProcess) Pid() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess3pidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 
@@ -499,7 +495,6 @@ func (this *QProcess) Pid() int64 {
 func (this *QProcess) ProcessId() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess9processIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 
@@ -510,7 +505,6 @@ func (this *QProcess) ProcessId() int64 {
 func (this *QProcess) WaitForStarted(msecs int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess14waitForStartedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -521,7 +515,6 @@ func (this *QProcess) WaitForStarted(msecs int) bool {
 func (this *QProcess) WaitForReadyRead(msecs int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess16waitForReadyReadEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -532,7 +525,6 @@ func (this *QProcess) WaitForReadyRead(msecs int) bool {
 func (this *QProcess) WaitForBytesWritten(msecs int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess19waitForBytesWrittenEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -543,7 +535,6 @@ func (this *QProcess) WaitForBytesWritten(msecs int) bool {
 func (this *QProcess) WaitForFinished(msecs int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess15waitForFinishedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), msecs)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -554,7 +545,6 @@ func (this *QProcess) WaitForFinished(msecs int) bool {
 func (this *QProcess) ReadAllStandardOutput() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess21readAllStandardOutputEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -567,7 +557,6 @@ func (this *QProcess) ReadAllStandardOutput() *QByteArray /*123*/ {
 func (this *QProcess) ReadAllStandardError() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess20readAllStandardErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -580,7 +569,6 @@ func (this *QProcess) ReadAllStandardError() *QByteArray /*123*/ {
 func (this *QProcess) ExitCode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess8exitCodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -591,7 +579,6 @@ func (this *QProcess) ExitCode() int {
 func (this *QProcess) ExitStatus() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess10exitStatusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -602,7 +589,6 @@ func (this *QProcess) ExitStatus() int {
 func (this *QProcess) BytesAvailable() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess14bytesAvailableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 
@@ -613,7 +599,6 @@ func (this *QProcess) BytesAvailable() int64 {
 func (this *QProcess) BytesToWrite() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess12bytesToWriteEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 
@@ -624,7 +609,6 @@ func (this *QProcess) BytesToWrite() int64 {
 func (this *QProcess) IsSequential() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess12isSequentialEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -635,7 +619,6 @@ func (this *QProcess) IsSequential() bool {
 func (this *QProcess) CanReadLine() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess11canReadLineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -655,7 +638,6 @@ func (this *QProcess) Close() {
 func (this *QProcess) AtEnd() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess5atEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -663,15 +645,15 @@ func (this *QProcess) AtEnd() bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int execute(const QString &, const QStringList &)
-func (this *QProcess) Execute(program *QString, arguments *QStringList) int {
-	var convArg0 = program.GetCthis()
+func (this *QProcess) Execute(program string, arguments *QStringList) int {
+	var tmpArg0 = NewQString_5(program)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = arguments.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess7executeERK7QStringRK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QProcess_Execute(program *QString, arguments *QStringList) int {
+func QProcess_Execute(program string, arguments *QStringList) int {
 	var nilthis *QProcess
 	rv := nilthis.Execute(program, arguments)
 	return rv
@@ -681,14 +663,14 @@ func QProcess_Execute(program *QString, arguments *QStringList) int {
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int execute(const QString &)
-func (this *QProcess) Execute_1(command *QString) int {
-	var convArg0 = command.GetCthis()
+func (this *QProcess) Execute_1(command string) int {
+	var tmpArg0 = NewQString_5(command)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess7executeERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QProcess_Execute_1(command *QString) int {
+func QProcess_Execute_1(command string) int {
 	var nilthis *QProcess
 	rv := nilthis.Execute_1(command)
 	return rv
@@ -698,15 +680,15 @@ func QProcess_Execute_1(command *QString) int {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString nullDevice()
-func (this *QProcess) NullDevice() *QString /*123*/ {
+func (this *QProcess) NullDevice() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess10nullDeviceEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
-func QProcess_NullDevice() *QString /*123*/ {
+func QProcess_NullDevice() string {
 	var nilthis *QProcess
 	rv := nilthis.NullDevice()
 	return rv
@@ -784,7 +766,6 @@ func (this *QProcess) ReadData(data string, maxlen int64) int64 {
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess8readDataEPcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 
@@ -797,7 +778,6 @@ func (this *QProcess) WriteData(data string, len int64) int64 {
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 

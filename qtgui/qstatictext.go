@@ -86,8 +86,9 @@ func NewQStaticText() *QStaticText {
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QStaticText(const QString &)
-func NewQStaticText_1(text *qtcore.QString) *QStaticText {
-	var convArg0 = text.GetCthis()
+func NewQStaticText_1(text string) *QStaticText {
+	var tmpArg0 = qtcore.NewQString_5(text)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStaticTextC2ERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQStaticTextFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -120,8 +121,9 @@ func (this *QStaticText) Swap(other *QStaticText) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setText(const QString &)
-func (this *QStaticText) SetText(text *qtcore.QString) {
-	var convArg0 = text.GetCthis()
+func (this *QStaticText) SetText(text string) {
+	var tmpArg0 = qtcore.NewQString_5(text)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QStaticText7setTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -130,13 +132,13 @@ func (this *QStaticText) SetText(text *qtcore.QString) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text()
-func (this *QStaticText) Text() *qtcore.QString /*123*/ {
+func (this *QStaticText) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStaticText4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtGui/qstatictext.h:78
@@ -155,7 +157,6 @@ func (this *QStaticText) SetTextFormat(textFormat int) {
 func (this *QStaticText) TextFormat() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStaticText10textFormatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -175,7 +176,6 @@ func (this *QStaticText) SetTextWidth(textWidth float64) {
 func (this *QStaticText) TextWidth() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStaticText9textWidthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -196,7 +196,6 @@ func (this *QStaticText) SetTextOption(textOption *QTextOption) {
 func (this *QStaticText) TextOption() *QTextOption /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStaticText10textOptionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQTextOptionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextOption)
 	return rv2
@@ -209,7 +208,6 @@ func (this *QStaticText) TextOption() *QTextOption /*123*/ {
 func (this *QStaticText) Size() *qtcore.QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStaticText4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSizeF)
 	return rv2
@@ -242,7 +240,6 @@ func (this *QStaticText) SetPerformanceHint(performanceHint int) {
 func (this *QStaticText) PerformanceHint() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStaticText15performanceHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 

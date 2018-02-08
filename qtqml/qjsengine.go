@@ -78,9 +78,7 @@ func (*QJSEngine) NewFromPointer(cthis unsafe.Pointer) *QJSEngine {
 func (this *QJSEngine) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QJSEngine10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQml/qjsengine.h:64
@@ -124,7 +122,6 @@ func DeleteQJSEngine(this *QJSEngine) {
 func (this *QJSEngine) GlobalObject() *QJSValue /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QJSEngine12globalObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJSValue)
 	return rv2
@@ -134,12 +131,13 @@ func (this *QJSEngine) GlobalObject() *QJSValue /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QJSValue evaluate(const QString &, const QString &, int)
-func (this *QJSEngine) Evaluate(program *qtcore.QString, fileName *qtcore.QString, lineNumber int) *QJSValue /*123*/ {
-	var convArg0 = program.GetCthis()
-	var convArg1 = fileName.GetCthis()
+func (this *QJSEngine) Evaluate(program string, fileName string, lineNumber int) *QJSValue /*123*/ {
+	var tmpArg0 = qtcore.NewQString_5(program)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = qtcore.NewQString_5(fileName)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine8evaluateERK7QStringS2_i", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, lineNumber)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJSValue)
 	return rv2
@@ -152,7 +150,6 @@ func (this *QJSEngine) Evaluate(program *qtcore.QString, fileName *qtcore.QStrin
 func (this *QJSEngine) NewObject() *QJSValue /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine9newObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJSValue)
 	return rv2
@@ -165,7 +162,6 @@ func (this *QJSEngine) NewObject() *QJSValue /*123*/ {
 func (this *QJSEngine) NewArray(length uint) *QJSValue /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine8newArrayEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), length)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJSValue)
 	return rv2
@@ -179,7 +175,6 @@ func (this *QJSEngine) NewQObject(object *qtcore.QObject /*777 QObject **/) *QJS
 	var convArg0 = object.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QJSEngine10newQObjectEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQJSValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJSValue)
 	return rv2
@@ -221,7 +216,6 @@ func (this *QJSEngine) InstallExtensions(extensions int, object *QJSValue) {
 func (this *QJSEngine) Handle() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QJSEngine6handleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 

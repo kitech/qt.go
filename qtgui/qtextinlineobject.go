@@ -89,7 +89,6 @@ func NewQTextInlineObject() *QTextInlineObject {
 func (this *QTextInlineObject) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -100,7 +99,6 @@ func (this *QTextInlineObject) IsValid() bool {
 func (this *QTextInlineObject) Rect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject4rectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -113,7 +111,6 @@ func (this *QTextInlineObject) Rect() *qtcore.QRectF /*123*/ {
 func (this *QTextInlineObject) Width() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -124,7 +121,6 @@ func (this *QTextInlineObject) Width() float64 {
 func (this *QTextInlineObject) Ascent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject6ascentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -135,7 +131,6 @@ func (this *QTextInlineObject) Ascent() float64 {
 func (this *QTextInlineObject) Descent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject7descentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -146,7 +141,6 @@ func (this *QTextInlineObject) Descent() float64 {
 func (this *QTextInlineObject) Height() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject6heightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -157,7 +151,6 @@ func (this *QTextInlineObject) Height() float64 {
 func (this *QTextInlineObject) TextDirection() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject13textDirectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -195,7 +188,6 @@ func (this *QTextInlineObject) SetDescent(d float64) {
 func (this *QTextInlineObject) TextPosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject12textPositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -206,7 +198,6 @@ func (this *QTextInlineObject) TextPosition() int {
 func (this *QTextInlineObject) FormatIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject11formatIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -217,7 +208,6 @@ func (this *QTextInlineObject) FormatIndex() int {
 func (this *QTextInlineObject) Format() *QTextFormat /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QTextInlineObject6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQTextFormatFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQTextFormat)
 	return rv2

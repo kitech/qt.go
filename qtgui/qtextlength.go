@@ -101,7 +101,6 @@ func NewQTextLength_1(type_ int, value float64) *QTextLength {
 func (this *QTextLength) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLength4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -112,7 +111,6 @@ func (this *QTextLength) Type() int {
 func (this *QTextLength) Value(maximumLength float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLength5valueEd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), maximumLength)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -123,7 +121,6 @@ func (this *QTextLength) Value(maximumLength float64) float64 {
 func (this *QTextLength) RawValue() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextLength8rawValueEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 

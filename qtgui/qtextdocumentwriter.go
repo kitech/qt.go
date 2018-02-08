@@ -100,8 +100,9 @@ func NewQTextDocumentWriter_1(device *qtcore.QIODevice /*777 QIODevice **/, form
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QTextDocumentWriter(const QString &, const QByteArray &)
-func NewQTextDocumentWriter_2(fileName *qtcore.QString, format *qtcore.QByteArray) *QTextDocumentWriter {
-	var convArg0 = fileName.GetCthis()
+func NewQTextDocumentWriter_2(fileName string, format *qtcore.QByteArray) *QTextDocumentWriter {
+	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = format.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriterC2ERK7QStringRK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -138,7 +139,6 @@ func (this *QTextDocumentWriter) SetFormat(format *qtcore.QByteArray) {
 func (this *QTextDocumentWriter) Format() *qtcore.QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextDocumentWriter6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
@@ -161,17 +161,16 @@ func (this *QTextDocumentWriter) SetDevice(device *qtcore.QIODevice /*777 QIODev
 func (this *QTextDocumentWriter) Device() *qtcore.QIODevice /*777 QIODevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextDocumentWriter6deviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qtextdocumentwriter.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFileName(const QString &)
-func (this *QTextDocumentWriter) SetFileName(fileName *qtcore.QString) {
-	var convArg0 = fileName.GetCthis()
+func (this *QTextDocumentWriter) SetFileName(fileName string) {
+	var tmpArg0 = qtcore.NewQString_5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriter11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -180,13 +179,13 @@ func (this *QTextDocumentWriter) SetFileName(fileName *qtcore.QString) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString fileName()
-func (this *QTextDocumentWriter) FileName() *qtcore.QString /*123*/ {
+func (this *QTextDocumentWriter) FileName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextDocumentWriter8fileNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtGui/qtextdocumentwriter.h:70
@@ -197,7 +196,6 @@ func (this *QTextDocumentWriter) Write(document *QTextDocument /*777 const QText
 	var convArg0 = document.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriter5writeEPK13QTextDocument", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -209,7 +207,6 @@ func (this *QTextDocumentWriter) Write_1(fragment *QTextDocumentFragment) bool {
 	var convArg0 = fragment.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN19QTextDocumentWriter5writeERK21QTextDocumentFragment", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -230,9 +227,7 @@ func (this *QTextDocumentWriter) SetCodec(codec *qtcore.QTextCodec /*777 QTextCo
 func (this *QTextDocumentWriter) Codec() *qtcore.QTextCodec /*777 QTextCodec **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QTextDocumentWriter5codecEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQTextCodecFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQTextCodecFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 //  body block end

@@ -70,7 +70,6 @@ func (*QRandomGenerator64) NewFromPointer(cthis unsafe.Pointer) *QRandomGenerato
 func (this *QRandomGenerator64) Generate() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator648generateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint64(rv) // 222
 }
 
@@ -139,7 +138,6 @@ func (this *QRandomGenerator64) Discard(z uint64) {
 func (this *QRandomGenerator64) Min() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator643minEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint64(rv) // 222
 }
 func QRandomGenerator64_Min() uint64 {
@@ -155,7 +153,6 @@ func QRandomGenerator64_Min() uint64 {
 func (this *QRandomGenerator64) Max() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator643maxEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return uint64(rv) // 222
 }
 func QRandomGenerator64_Max() uint64 {
@@ -171,9 +168,7 @@ func QRandomGenerator64_Max() uint64 {
 func (this *QRandomGenerator64) System() *QRandomGenerator64 /*777 QRandomGenerator64 **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator646systemEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QRandomGenerator64_System() *QRandomGenerator64 /*777 QRandomGenerator64 **/ {
 	var nilthis *QRandomGenerator64
@@ -188,9 +183,7 @@ func QRandomGenerator64_System() *QRandomGenerator64 /*777 QRandomGenerator64 **
 func (this *QRandomGenerator64) Global() *QRandomGenerator64 /*777 QRandomGenerator64 **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator646globalEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QRandomGenerator64_Global() *QRandomGenerator64 /*777 QRandomGenerator64 **/ {
 	var nilthis *QRandomGenerator64
@@ -205,7 +198,6 @@ func QRandomGenerator64_Global() *QRandomGenerator64 /*777 QRandomGenerator64 **
 func (this *QRandomGenerator64) SecurelySeeded() *QRandomGenerator64 /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QRandomGenerator6414securelySeededEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQRandomGenerator64FromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRandomGenerator64)
 	return rv2

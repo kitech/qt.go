@@ -105,7 +105,6 @@ func (this *QSemaphore) Acquire(n int) {
 func (this *QSemaphore) TryAcquire(n int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -116,7 +115,6 @@ func (this *QSemaphore) TryAcquire(n int) bool {
 func (this *QSemaphore) TryAcquire_1(n int, timeout int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore10tryAcquireEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n, timeout)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -136,7 +134,6 @@ func (this *QSemaphore) Release(n int) {
 func (this *QSemaphore) Available() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QSemaphore9availableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

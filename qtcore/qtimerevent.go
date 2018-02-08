@@ -93,7 +93,6 @@ func DeleteQTimerEvent(this *QTimerEvent) {
 func (this *QTimerEvent) TimerId() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTimerEvent7timerIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

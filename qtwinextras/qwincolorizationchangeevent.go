@@ -101,7 +101,6 @@ func DeleteQWinColorizationChangeEvent(this *QWinColorizationChangeEvent) {
 func (this *QWinColorizationChangeEvent) Color() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QWinColorizationChangeEvent5colorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint(rv) // 222
 }
 
@@ -112,7 +111,6 @@ func (this *QWinColorizationChangeEvent) Color() uint {
 func (this *QWinColorizationChangeEvent) OpaqueBlend() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK27QWinColorizationChangeEvent11opaqueBlendEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

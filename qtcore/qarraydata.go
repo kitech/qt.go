@@ -73,7 +73,6 @@ func (*QArrayData) NewFromPointer(cthis unsafe.Pointer) *QArrayData {
 func (this *QArrayData) Data() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QArrayData4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -84,7 +83,6 @@ func (this *QArrayData) Data() unsafe.Pointer /*666*/ {
 func (this *QArrayData) Data_1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QArrayData4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -95,7 +93,6 @@ func (this *QArrayData) Data_1() unsafe.Pointer /*666*/ {
 func (this *QArrayData) IsMutable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QArrayData9isMutableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -106,7 +103,6 @@ func (this *QArrayData) IsMutable() bool {
 func (this *QArrayData) DetachCapacity(newSize uint) uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QArrayData14detachCapacityEm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), newSize)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint(rv) // 222
 }
 
@@ -117,7 +113,6 @@ func (this *QArrayData) DetachCapacity(newSize uint) uint {
 func (this *QArrayData) DetachFlags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QArrayData11detachFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -128,7 +123,6 @@ func (this *QArrayData) DetachFlags() int {
 func (this *QArrayData) CloneFlags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QArrayData10cloneFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -139,9 +133,7 @@ func (this *QArrayData) CloneFlags() int {
 func (this *QArrayData) Allocate(objectSize uint, alignment uint, capacity uint, options int) *QArrayData /*777 QArrayData **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QArrayData8allocateEmmm6QFlagsINS_16AllocationOptionEE", qtrt.FFI_TYPE_POINTER, objectSize, alignment, capacity, options)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQArrayDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQArrayDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QArrayData_Allocate(objectSize uint, alignment uint, capacity uint, options int) *QArrayData /*777 QArrayData **/ {
 	var nilthis *QArrayData
@@ -156,9 +148,7 @@ func QArrayData_Allocate(objectSize uint, alignment uint, capacity uint, options
 func (this *QArrayData) SharedNull() *QArrayData /*777 QArrayData **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QArrayData10sharedNullEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQArrayDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQArrayDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QArrayData_SharedNull() *QArrayData /*777 QArrayData **/ {
 	var nilthis *QArrayData

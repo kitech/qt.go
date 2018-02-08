@@ -109,7 +109,6 @@ func (this *QSGGeometry) SetDrawingMode(mode uint) {
 func (this *QSGGeometry) DrawingMode() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry11drawingModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("uint", rv).(uint) // 1111
 }
 
@@ -129,7 +128,6 @@ func (this *QSGGeometry) Allocate(vertexCount int, indexCount int) {
 func (this *QSGGeometry) VertexCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry11vertexCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -140,7 +138,6 @@ func (this *QSGGeometry) VertexCount() int {
 func (this *QSGGeometry) VertexData() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry10vertexDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -151,7 +148,6 @@ func (this *QSGGeometry) VertexData() unsafe.Pointer /*666*/ {
 func (this *QSGGeometry) VertexData_1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry10vertexDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -162,7 +158,6 @@ func (this *QSGGeometry) VertexData_1() unsafe.Pointer /*666*/ {
 func (this *QSGGeometry) VertexDataAsPoint2D() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry19vertexDataAsPoint2DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -173,7 +168,6 @@ func (this *QSGGeometry) VertexDataAsPoint2D() unsafe.Pointer /*666*/ {
 func (this *QSGGeometry) VertexDataAsPoint2D_1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry19vertexDataAsPoint2DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -184,7 +178,6 @@ func (this *QSGGeometry) VertexDataAsPoint2D_1() unsafe.Pointer /*666*/ {
 func (this *QSGGeometry) VertexDataAsTexturedPoint2D() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry27vertexDataAsTexturedPoint2DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -195,7 +188,6 @@ func (this *QSGGeometry) VertexDataAsTexturedPoint2D() unsafe.Pointer /*666*/ {
 func (this *QSGGeometry) VertexDataAsTexturedPoint2D_1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry27vertexDataAsTexturedPoint2DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -206,7 +198,6 @@ func (this *QSGGeometry) VertexDataAsTexturedPoint2D_1() unsafe.Pointer /*666*/ 
 func (this *QSGGeometry) VertexDataAsColoredPoint2D() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry26vertexDataAsColoredPoint2DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -217,7 +208,6 @@ func (this *QSGGeometry) VertexDataAsColoredPoint2D() unsafe.Pointer /*666*/ {
 func (this *QSGGeometry) VertexDataAsColoredPoint2D_1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry26vertexDataAsColoredPoint2DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -228,7 +218,6 @@ func (this *QSGGeometry) VertexDataAsColoredPoint2D_1() unsafe.Pointer /*666*/ {
 func (this *QSGGeometry) IndexType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry9indexTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -239,7 +228,6 @@ func (this *QSGGeometry) IndexType() int {
 func (this *QSGGeometry) IndexCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry10indexCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -250,7 +238,6 @@ func (this *QSGGeometry) IndexCount() int {
 func (this *QSGGeometry) IndexData() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry9indexDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -261,7 +248,6 @@ func (this *QSGGeometry) IndexData() unsafe.Pointer /*666*/ {
 func (this *QSGGeometry) IndexData_1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry9indexDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -272,7 +258,6 @@ func (this *QSGGeometry) IndexData_1() unsafe.Pointer /*666*/ {
 func (this *QSGGeometry) IndexDataAsUInt() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry15indexDataAsUIntEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -283,7 +268,6 @@ func (this *QSGGeometry) IndexDataAsUInt() unsafe.Pointer /*666*/ {
 func (this *QSGGeometry) IndexDataAsUInt_1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry15indexDataAsUIntEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -294,7 +278,6 @@ func (this *QSGGeometry) IndexDataAsUInt_1() unsafe.Pointer /*666*/ {
 func (this *QSGGeometry) IndexDataAsUShort() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry17indexDataAsUShortEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -305,7 +288,6 @@ func (this *QSGGeometry) IndexDataAsUShort() unsafe.Pointer /*666*/ {
 func (this *QSGGeometry) IndexDataAsUShort_1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry17indexDataAsUShortEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -316,7 +298,6 @@ func (this *QSGGeometry) IndexDataAsUShort_1() unsafe.Pointer /*666*/ {
 func (this *QSGGeometry) SizeOfIndex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry11sizeOfIndexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -327,7 +308,6 @@ func (this *QSGGeometry) SizeOfIndex() int {
 func (this *QSGGeometry) AttributeCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry14attributeCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -338,7 +318,6 @@ func (this *QSGGeometry) AttributeCount() int {
 func (this *QSGGeometry) Attributes() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry10attributesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -349,7 +328,6 @@ func (this *QSGGeometry) Attributes() unsafe.Pointer /*666*/ {
 func (this *QSGGeometry) SizeOfVertex() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry12sizeOfVertexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -415,7 +393,6 @@ func (this *QSGGeometry) SetIndexDataPattern(p int) {
 func (this *QSGGeometry) IndexDataPattern() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry16indexDataPatternEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -435,7 +412,6 @@ func (this *QSGGeometry) SetVertexDataPattern(p int) {
 func (this *QSGGeometry) VertexDataPattern() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry17vertexDataPatternEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -464,7 +440,6 @@ func (this *QSGGeometry) MarkVertexDataDirty() {
 func (this *QSGGeometry) LineWidth() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QSGGeometry9lineWidthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 

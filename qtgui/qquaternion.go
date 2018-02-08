@@ -139,7 +139,6 @@ func NewQQuaternion_4(vector *QVector4D) *QQuaternion {
 func (this *QQuaternion) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -150,7 +149,6 @@ func (this *QQuaternion) IsNull() bool {
 func (this *QQuaternion) IsIdentity() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion10isIdentityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -161,7 +159,6 @@ func (this *QQuaternion) IsIdentity() bool {
 func (this *QQuaternion) Vector() *QVector3D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion6vectorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector3D)
 	return rv2
@@ -193,7 +190,6 @@ func (this *QQuaternion) SetVector_1(x float32, y float32, z float32) {
 func (this *QQuaternion) X() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion1xEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
@@ -204,7 +200,6 @@ func (this *QQuaternion) X() float32 {
 func (this *QQuaternion) Y() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion1yEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
@@ -215,7 +210,6 @@ func (this *QQuaternion) Y() float32 {
 func (this *QQuaternion) Z() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion1zEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
@@ -226,7 +220,6 @@ func (this *QQuaternion) Z() float32 {
 func (this *QQuaternion) Scalar() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion6scalarEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
@@ -275,7 +268,6 @@ func (this *QQuaternion) DotProduct(q1 *QQuaternion, q2 *QQuaternion) float32 {
 	var convArg1 = q2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion10dotProductERKS_S1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 func QQuaternion_DotProduct(q1 *QQuaternion, q2 *QQuaternion) float32 {
@@ -291,7 +283,6 @@ func QQuaternion_DotProduct(q1 *QQuaternion, q2 *QQuaternion) float32 {
 func (this *QQuaternion) Length() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion6lengthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
@@ -302,7 +293,6 @@ func (this *QQuaternion) Length() float32 {
 func (this *QQuaternion) LengthSquared() float32 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion13lengthSquaredEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
@@ -313,7 +303,6 @@ func (this *QQuaternion) LengthSquared() float32 {
 func (this *QQuaternion) Normalized() *QQuaternion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion10normalizedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
@@ -335,7 +324,6 @@ func (this *QQuaternion) Normalize() {
 func (this *QQuaternion) Inverted() *QQuaternion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion8invertedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
@@ -348,7 +336,6 @@ func (this *QQuaternion) Inverted() *QQuaternion /*123*/ {
 func (this *QQuaternion) Conjugated() *QQuaternion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion10conjugatedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
@@ -361,7 +348,6 @@ func (this *QQuaternion) Conjugated() *QQuaternion /*123*/ {
 func (this *QQuaternion) Conjugate() *QQuaternion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion9conjugateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
@@ -375,7 +361,6 @@ func (this *QQuaternion) RotatedVector(vector *QVector3D) *QVector3D /*123*/ {
 	var convArg0 = vector.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion13rotatedVectorERK9QVector3D", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector3D)
 	return rv2
@@ -388,7 +373,6 @@ func (this *QQuaternion) RotatedVector(vector *QVector3D) *QVector3D /*123*/ {
 func (this *QQuaternion) ToVector4D() *QVector4D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion10toVector4DEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQVector4DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector4D)
 	return rv2
@@ -421,7 +405,6 @@ func (this *QQuaternion) FromAxisAndAngle(axis *QVector3D, angle float32) *QQuat
 	var convArg0 = axis.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion16fromAxisAndAngleERK9QVector3Df", qtrt.FFI_TYPE_POINTER, convArg0, angle)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
@@ -439,7 +422,6 @@ func QQuaternion_FromAxisAndAngle(axis *QVector3D, angle float32) *QQuaternion /
 func (this *QQuaternion) FromAxisAndAngle_1(x float32, y float32, z float32, angle float32) *QQuaternion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion16fromAxisAndAngleEffff", qtrt.FFI_TYPE_POINTER, x, y, z, angle)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
@@ -457,7 +439,6 @@ func QQuaternion_FromAxisAndAngle_1(x float32, y float32, z float32, angle float
 func (this *QQuaternion) ToEulerAngles() *QVector3D /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QQuaternion13toEulerAnglesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQVector3DFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVector3D)
 	return rv2
@@ -471,7 +452,6 @@ func (this *QQuaternion) FromEulerAngles(eulerAngles *QVector3D) *QQuaternion /*
 	var convArg0 = eulerAngles.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion15fromEulerAnglesERK9QVector3D", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
@@ -489,7 +469,6 @@ func QQuaternion_FromEulerAngles(eulerAngles *QVector3D) *QQuaternion /*123*/ {
 func (this *QQuaternion) FromEulerAngles_1(pitch float32, yaw float32, roll float32) *QQuaternion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion15fromEulerAnglesEfff", qtrt.FFI_TYPE_POINTER, pitch, yaw, roll)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
@@ -531,7 +510,6 @@ func (this *QQuaternion) FromAxes(xAxis *QVector3D, yAxis *QVector3D, zAxis *QVe
 	var convArg2 = zAxis.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion8fromAxesERK9QVector3DS2_S2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
@@ -551,7 +529,6 @@ func (this *QQuaternion) FromDirection(direction *QVector3D, up *QVector3D) *QQu
 	var convArg1 = up.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion13fromDirectionERK9QVector3DS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
@@ -571,7 +548,6 @@ func (this *QQuaternion) RotationTo(from *QVector3D, to *QVector3D) *QQuaternion
 	var convArg1 = to.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion10rotationToERK9QVector3DS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
@@ -591,7 +567,6 @@ func (this *QQuaternion) Slerp(q1 *QQuaternion, q2 *QQuaternion, t float32) *QQu
 	var convArg1 = q2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion5slerpERKS_S1_f", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, t)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2
@@ -611,7 +586,6 @@ func (this *QQuaternion) Nlerp(q1 *QQuaternion, q2 *QQuaternion, t float32) *QQu
 	var convArg1 = q2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuaternion5nlerpERKS_S1_f", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, t)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQQuaternionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQQuaternion)
 	return rv2

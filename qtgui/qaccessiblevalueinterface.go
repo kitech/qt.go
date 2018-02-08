@@ -88,7 +88,6 @@ func DeleteQAccessibleValueInterface(this *QAccessibleValueInterface) {
 func (this *QAccessibleValueInterface) CurrentValue() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleValueInterface12currentValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -111,7 +110,6 @@ func (this *QAccessibleValueInterface) SetCurrentValue(value *qtcore.QVariant) {
 func (this *QAccessibleValueInterface) MaximumValue() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleValueInterface12maximumValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -124,7 +122,6 @@ func (this *QAccessibleValueInterface) MaximumValue() *qtcore.QVariant /*123*/ {
 func (this *QAccessibleValueInterface) MinimumValue() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleValueInterface12minimumValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -137,7 +134,6 @@ func (this *QAccessibleValueInterface) MinimumValue() *qtcore.QVariant /*123*/ {
 func (this *QAccessibleValueInterface) MinimumStepSize() *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK25QAccessibleValueInterface15minimumStepSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2

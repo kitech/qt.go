@@ -97,7 +97,6 @@ func DeleteQToolBarChangeEvent(this *QToolBarChangeEvent) {
 func (this *QToolBarChangeEvent) Toggle() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QToolBarChangeEvent6toggleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

@@ -89,9 +89,7 @@ func (*QFutureWatcherBase) NewFromPointer(cthis unsafe.Pointer) *QFutureWatcherB
 func (this *QFutureWatcherBase) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qfuturewatcher.h:61
@@ -113,7 +111,6 @@ func NewQFutureWatcherBase(parent *QObject /*777 QObject **/) *QFutureWatcherBas
 func (this *QFutureWatcherBase) ProgressValue() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase13progressValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -124,7 +121,6 @@ func (this *QFutureWatcherBase) ProgressValue() int {
 func (this *QFutureWatcherBase) ProgressMinimum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase15progressMinimumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -135,7 +131,6 @@ func (this *QFutureWatcherBase) ProgressMinimum() int {
 func (this *QFutureWatcherBase) ProgressMaximum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase15progressMaximumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -143,13 +138,13 @@ func (this *QFutureWatcherBase) ProgressMaximum() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString progressText()
-func (this *QFutureWatcherBase) ProgressText() *QString /*123*/ {
+func (this *QFutureWatcherBase) ProgressText() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase12progressTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qfuturewatcher.h:69
@@ -159,7 +154,6 @@ func (this *QFutureWatcherBase) ProgressText() *QString /*123*/ {
 func (this *QFutureWatcherBase) IsStarted() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase9isStartedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -170,7 +164,6 @@ func (this *QFutureWatcherBase) IsStarted() bool {
 func (this *QFutureWatcherBase) IsFinished() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase10isFinishedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -181,7 +174,6 @@ func (this *QFutureWatcherBase) IsFinished() bool {
 func (this *QFutureWatcherBase) IsRunning() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase9isRunningEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -192,7 +184,6 @@ func (this *QFutureWatcherBase) IsRunning() bool {
 func (this *QFutureWatcherBase) IsCanceled() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase10isCanceledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -203,7 +194,6 @@ func (this *QFutureWatcherBase) IsCanceled() bool {
 func (this *QFutureWatcherBase) IsPaused() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFutureWatcherBase8isPausedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -233,7 +223,6 @@ func (this *QFutureWatcherBase) Event(event *QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -322,8 +311,9 @@ func (this *QFutureWatcherBase) ProgressValueChanged(progressValue int) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void progressTextChanged(const QString &)
-func (this *QFutureWatcherBase) ProgressTextChanged(progressText *QString) {
-	var convArg0 = progressText.GetCthis()
+func (this *QFutureWatcherBase) ProgressTextChanged(progressText string) {
+	var tmpArg0 = NewQString_5(progressText)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFutureWatcherBase19progressTextChangedERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }

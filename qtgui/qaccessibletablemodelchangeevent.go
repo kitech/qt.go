@@ -120,7 +120,6 @@ func (this *QAccessibleTableModelChangeEvent) SetModelChangeType(changeType int)
 func (this *QAccessibleTableModelChangeEvent) ModelChangeType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK32QAccessibleTableModelChangeEvent15modelChangeTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -167,7 +166,6 @@ func (this *QAccessibleTableModelChangeEvent) SetLastColumn(col int) {
 func (this *QAccessibleTableModelChangeEvent) FirstRow() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK32QAccessibleTableModelChangeEvent8firstRowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -178,7 +176,6 @@ func (this *QAccessibleTableModelChangeEvent) FirstRow() int {
 func (this *QAccessibleTableModelChangeEvent) FirstColumn() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK32QAccessibleTableModelChangeEvent11firstColumnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -189,7 +186,6 @@ func (this *QAccessibleTableModelChangeEvent) FirstColumn() int {
 func (this *QAccessibleTableModelChangeEvent) LastRow() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK32QAccessibleTableModelChangeEvent7lastRowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -200,7 +196,6 @@ func (this *QAccessibleTableModelChangeEvent) LastRow() int {
 func (this *QAccessibleTableModelChangeEvent) LastColumn() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK32QAccessibleTableModelChangeEvent10lastColumnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

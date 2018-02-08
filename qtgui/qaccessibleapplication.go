@@ -89,9 +89,7 @@ func NewQAccessibleApplication() *QAccessibleApplication {
 func (this *QAccessibleApplication) Window() *QWindow /*777 QWindow **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QAccessibleApplication6windowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qaccessibleobject.h:82
@@ -101,7 +99,6 @@ func (this *QAccessibleApplication) Window() *QWindow /*777 QWindow **/ {
 func (this *QAccessibleApplication) ChildCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QAccessibleApplication10childCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -113,7 +110,6 @@ func (this *QAccessibleApplication) IndexOfChild(arg0 *QAccessibleInterface /*77
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -124,9 +120,7 @@ func (this *QAccessibleApplication) IndexOfChild(arg0 *QAccessibleInterface /*77
 func (this *QAccessibleApplication) FocusChild() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QAccessibleApplication10focusChildEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qaccessibleobject.h:87
@@ -136,9 +130,7 @@ func (this *QAccessibleApplication) FocusChild() *QAccessibleInterface /*777 QAc
 func (this *QAccessibleApplication) Parent() *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QAccessibleApplication6parentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qaccessibleobject.h:88
@@ -148,22 +140,20 @@ func (this *QAccessibleApplication) Parent() *QAccessibleInterface /*777 QAccess
 func (this *QAccessibleApplication) Child(index int) *QAccessibleInterface /*777 QAccessibleInterface **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QAccessibleApplication5childEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qaccessibleobject.h:91
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString text(QAccessible::Text)
-func (this *QAccessibleApplication) Text(t int) *qtcore.QString /*123*/ {
+func (this *QAccessibleApplication) Text(t int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QAccessibleApplication4textEN11QAccessible4TextE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), t)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtGui/qaccessibleobject.h:92
@@ -173,7 +163,6 @@ func (this *QAccessibleApplication) Text(t int) *qtcore.QString /*123*/ {
 func (this *QAccessibleApplication) Role() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QAccessibleApplication4roleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -184,7 +173,6 @@ func (this *QAccessibleApplication) Role() int {
 func (this *QAccessibleApplication) State() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QAccessibleApplication5stateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 

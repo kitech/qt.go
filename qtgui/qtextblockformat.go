@@ -99,7 +99,6 @@ func NewQTextBlockFormat_1(fmt *QTextFormat) *QTextBlockFormat {
 func (this *QTextBlockFormat) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextBlockFormat7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -119,7 +118,6 @@ func (this *QTextBlockFormat) SetAlignment(alignment int) {
 func (this *QTextBlockFormat) Alignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextBlockFormat9alignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -139,7 +137,6 @@ func (this *QTextBlockFormat) SetTopMargin(margin float64) {
 func (this *QTextBlockFormat) TopMargin() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextBlockFormat9topMarginEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -159,7 +156,6 @@ func (this *QTextBlockFormat) SetBottomMargin(margin float64) {
 func (this *QTextBlockFormat) BottomMargin() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextBlockFormat12bottomMarginEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -179,7 +175,6 @@ func (this *QTextBlockFormat) SetLeftMargin(margin float64) {
 func (this *QTextBlockFormat) LeftMargin() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextBlockFormat10leftMarginEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -199,7 +194,6 @@ func (this *QTextBlockFormat) SetRightMargin(margin float64) {
 func (this *QTextBlockFormat) RightMargin() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextBlockFormat11rightMarginEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -219,7 +213,6 @@ func (this *QTextBlockFormat) SetTextIndent(aindent float64) {
 func (this *QTextBlockFormat) TextIndent() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextBlockFormat10textIndentEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -239,7 +232,6 @@ func (this *QTextBlockFormat) SetIndent(indent int) {
 func (this *QTextBlockFormat) Indent() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextBlockFormat6indentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -259,7 +251,6 @@ func (this *QTextBlockFormat) SetLineHeight(height float64, heightType int) {
 func (this *QTextBlockFormat) LineHeight(scriptLineHeight float64, scaling float64) float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextBlockFormat10lineHeightEdd", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), scriptLineHeight, scaling)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -270,7 +261,6 @@ func (this *QTextBlockFormat) LineHeight(scriptLineHeight float64, scaling float
 func (this *QTextBlockFormat) LineHeight_1() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextBlockFormat10lineHeightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -281,7 +271,6 @@ func (this *QTextBlockFormat) LineHeight_1() float64 {
 func (this *QTextBlockFormat) LineHeightType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextBlockFormat14lineHeightTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -301,7 +290,6 @@ func (this *QTextBlockFormat) SetNonBreakableLines(b bool) {
 func (this *QTextBlockFormat) NonBreakableLines() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextBlockFormat17nonBreakableLinesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -321,7 +309,6 @@ func (this *QTextBlockFormat) SetPageBreakPolicy(flags int) {
 func (this *QTextBlockFormat) PageBreakPolicy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTextBlockFormat15pageBreakPolicyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 

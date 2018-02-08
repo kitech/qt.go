@@ -99,7 +99,6 @@ func NewQTextCharFormat_1(fmt *QTextFormat) *QTextCharFormat {
 func (this *QTextCharFormat) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -130,7 +129,6 @@ func (this *QTextCharFormat) SetFont_1(font *QFont) {
 func (this *QTextCharFormat) Font() *QFont /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat4fontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQFont)
 	return rv2
@@ -140,8 +138,9 @@ func (this *QTextCharFormat) Font() *QFont /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFontFamily(const QString &)
-func (this *QTextCharFormat) SetFontFamily(family *qtcore.QString) {
-	var convArg0 = family.GetCthis()
+func (this *QTextCharFormat) SetFontFamily(family string) {
+	var tmpArg0 = qtcore.NewQString_5(family)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat13setFontFamilyERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -150,13 +149,13 @@ func (this *QTextCharFormat) SetFontFamily(family *qtcore.QString) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString fontFamily()
-func (this *QTextCharFormat) FontFamily() *qtcore.QString /*123*/ {
+func (this *QTextCharFormat) FontFamily() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat10fontFamilyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:429
@@ -175,7 +174,6 @@ func (this *QTextCharFormat) SetFontPointSize(size float64) {
 func (this *QTextCharFormat) FontPointSize() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat13fontPointSizeEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -195,7 +193,6 @@ func (this *QTextCharFormat) SetFontWeight(weight int) {
 func (this *QTextCharFormat) FontWeight() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat10fontWeightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -215,7 +212,6 @@ func (this *QTextCharFormat) SetFontItalic(italic bool) {
 func (this *QTextCharFormat) FontItalic() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat10fontItalicEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -235,7 +231,6 @@ func (this *QTextCharFormat) SetFontCapitalization(capitalization int) {
 func (this *QTextCharFormat) FontCapitalization() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat18fontCapitalizationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -255,7 +250,6 @@ func (this *QTextCharFormat) SetFontLetterSpacingType(letterSpacingType int) {
 func (this *QTextCharFormat) FontLetterSpacingType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat21fontLetterSpacingTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -275,7 +269,6 @@ func (this *QTextCharFormat) SetFontLetterSpacing(spacing float64) {
 func (this *QTextCharFormat) FontLetterSpacing() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat17fontLetterSpacingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -295,7 +288,6 @@ func (this *QTextCharFormat) SetFontWordSpacing(spacing float64) {
 func (this *QTextCharFormat) FontWordSpacing() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat15fontWordSpacingEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -315,7 +307,6 @@ func (this *QTextCharFormat) SetFontUnderline(underline bool) {
 func (this *QTextCharFormat) FontUnderline() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat13fontUnderlineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -335,7 +326,6 @@ func (this *QTextCharFormat) SetFontOverline(overline bool) {
 func (this *QTextCharFormat) FontOverline() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat12fontOverlineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -355,7 +345,6 @@ func (this *QTextCharFormat) SetFontStrikeOut(strikeOut bool) {
 func (this *QTextCharFormat) FontStrikeOut() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat13fontStrikeOutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -376,7 +365,6 @@ func (this *QTextCharFormat) SetUnderlineColor(color *QColor) {
 func (this *QTextCharFormat) UnderlineColor() *QColor /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat14underlineColorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQColorFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQColor)
 	return rv2
@@ -398,7 +386,6 @@ func (this *QTextCharFormat) SetFontFixedPitch(fixedPitch bool) {
 func (this *QTextCharFormat) FontFixedPitch() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat14fontFixedPitchEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -418,7 +405,6 @@ func (this *QTextCharFormat) SetFontStretch(factor int) {
 func (this *QTextCharFormat) FontStretch() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat11fontStretchEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -447,7 +433,6 @@ func (this *QTextCharFormat) SetFontStyleStrategy(strategy int) {
 func (this *QTextCharFormat) FontStyleHint() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat13fontStyleHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -458,7 +443,6 @@ func (this *QTextCharFormat) FontStyleHint() int {
 func (this *QTextCharFormat) FontStyleStrategy() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat17fontStyleStrategyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -478,7 +462,6 @@ func (this *QTextCharFormat) SetFontHintingPreference(hintingPreference int) {
 func (this *QTextCharFormat) FontHintingPreference() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat21fontHintingPreferenceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -498,7 +481,6 @@ func (this *QTextCharFormat) SetFontKerning(enable bool) {
 func (this *QTextCharFormat) FontKerning() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat11fontKerningEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -518,7 +500,6 @@ func (this *QTextCharFormat) SetUnderlineStyle(style int) {
 func (this *QTextCharFormat) UnderlineStyle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat14underlineStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -538,7 +519,6 @@ func (this *QTextCharFormat) SetVerticalAlignment(alignment int) {
 func (this *QTextCharFormat) VerticalAlignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat17verticalAlignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -559,7 +539,6 @@ func (this *QTextCharFormat) SetTextOutline(pen *QPen) {
 func (this *QTextCharFormat) TextOutline() *QPen /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat11textOutlineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQPenFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPen)
 	return rv2
@@ -569,8 +548,9 @@ func (this *QTextCharFormat) TextOutline() *QPen /*123*/ {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setToolTip(const QString &)
-func (this *QTextCharFormat) SetToolTip(tip *qtcore.QString) {
-	var convArg0 = tip.GetCthis()
+func (this *QTextCharFormat) SetToolTip(tip string) {
+	var tmpArg0 = qtcore.NewQString_5(tip)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat10setToolTipERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -579,13 +559,13 @@ func (this *QTextCharFormat) SetToolTip(tip *qtcore.QString) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString toolTip()
-func (this *QTextCharFormat) ToolTip() *qtcore.QString /*123*/ {
+func (this *QTextCharFormat) ToolTip() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat7toolTipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:531
@@ -604,7 +584,6 @@ func (this *QTextCharFormat) SetAnchor(anchor bool) {
 func (this *QTextCharFormat) IsAnchor() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat8isAnchorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -612,8 +591,9 @@ func (this *QTextCharFormat) IsAnchor() bool {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setAnchorHref(const QString &)
-func (this *QTextCharFormat) SetAnchorHref(value *qtcore.QString) {
-	var convArg0 = value.GetCthis()
+func (this *QTextCharFormat) SetAnchorHref(value string) {
+	var tmpArg0 = qtcore.NewQString_5(value)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat13setAnchorHrefERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -622,21 +602,22 @@ func (this *QTextCharFormat) SetAnchorHref(value *qtcore.QString) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString anchorHref()
-func (this *QTextCharFormat) AnchorHref() *qtcore.QString /*123*/ {
+func (this *QTextCharFormat) AnchorHref() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat10anchorHrefEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:541
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setAnchorName(const QString &)
-func (this *QTextCharFormat) SetAnchorName(name *qtcore.QString) {
-	var convArg0 = name.GetCthis()
+func (this *QTextCharFormat) SetAnchorName(name string) {
+	var tmpArg0 = qtcore.NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QTextCharFormat13setAnchorNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -645,13 +626,13 @@ func (this *QTextCharFormat) SetAnchorName(name *qtcore.QString) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString anchorName()
-func (this *QTextCharFormat) AnchorName() *qtcore.QString /*123*/ {
+func (this *QTextCharFormat) AnchorName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat10anchorNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtGui/qtextformat.h:545
@@ -680,7 +661,6 @@ func (this *QTextCharFormat) SetTableCellRowSpan(tableCellRowSpan int) {
 func (this *QTextCharFormat) TableCellRowSpan() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat16tableCellRowSpanEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -700,7 +680,6 @@ func (this *QTextCharFormat) SetTableCellColumnSpan(tableCellColumnSpan int) {
 func (this *QTextCharFormat) TableCellColumnSpan() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat19tableCellColumnSpanEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

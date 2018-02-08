@@ -153,10 +153,10 @@ func onSetupUi(line string) {
 	}
 
 	if strings.Contains(line, "objectName().isEmpty()") {
-		cp.APf("setupUi", "if %s.ObjectName().IsEmpty() {", woname)
+		cp.APf("setupUi", "if %s.ObjectName() == \"\" {", woname)
 	} else if strings.Contains(line, fmt.Sprintf("%s->setObjectName(", woname)) {
 		oname := strings.Split(line, "\"")[1]
-		cp.APf("setupUi", "%s.SetObjectName(qtcore.NewQString_5(\"%s\"))", woname, oname)
+		cp.APf("setupUi", "%s.SetObjectName(\"%s\")", woname, oname)
 		cp.APf("setupUi", "}")
 	} else if strings.HasPrefix(line, fmt.Sprintf("%s->resize(", woname)) {
 		reg := regexp.MustCompile("resize.([0-9]+), ([0-9]+).")
@@ -210,7 +210,7 @@ func onSetupUi(line string) {
 		} else if reg2.MatchString(line) {
 			mats := reg2.FindAllStringSubmatch(line, -1)
 			log.Println(mats)
-			cp.APf("setupUi", "this.%s.SetObjectName(qtcore.NewQString_5(%s)) // 112",
+			cp.APf("setupUi", "this.%s.SetObjectName(%s) // 112",
 				strings.Title(mats[0][1]), strings.Title(mats[0][2]))
 		} else if reg3.MatchString(line) {
 			mats := reg3.FindAllStringSubmatch(line, -1)
@@ -235,14 +235,14 @@ func onSetupUi(line string) {
 			switch mats[0][2] {
 			case "Spacing", "HorizontalStretch", "VerticalStretch":
 			case "PointSize", "Weight": // do nothing
-			case "ContentsMargins", "CurrentIndex":
+			case "ContentsMargins", "CurrentIndex", "LineWidth":
 			case "Orientation":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 			case "TextInteractionFlags":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
 				refmtval = strings.Replace(refmtval, "|", "|qtcore.", -1)
 			case "AutoRaise", "WidgetResizable", "AlternatingRowColors",
-				"AutoRepeat", "AutoExclusive":
+				"AutoRepeat", "AutoExclusive", "DocumentMode":
 				refmtval = strings.ToLower(refmtval[0:1]) + refmtval[1:]
 			case "ToolButtonStyle":
 				refmtval = "qtcore." + strings.Replace(refmtval, ":", "_", -1)
@@ -264,10 +264,10 @@ func onSetupUi(line string) {
 			case "Bold", "OpenExternalLinks":
 				refmtval = untitle(refmtval) // True => true
 			case "Pixmap":
-				refmtval = fmt.Sprintf("qtgui.NewQPixmap_3(qtcore.NewQString_5(\"%s\"), \"dummy123\", 0)", strings.Split(refmtval, "\"")[1])
+				refmtval = fmt.Sprintf("qtgui.NewQPixmap_3(\"%s\", \"dummy123\", 0)", strings.Split(refmtval, "\"")[1])
 			case "Source": // QQuickWidget
 				refmtval = mats[0][3]
-				refmtval = fmt.Sprintf("qtcore.NewQUrl_1(qtcore.NewQString_5(\"%s\"), 0)", strings.Split(refmtval, "\"")[1])
+				refmtval = fmt.Sprintf("qtcore.NewQUrl_1(\"%s\", 0)", strings.Split(refmtval, "\"")[1])
 			case "HeightForWidth":
 				refmtval = "this." + strings.Replace(refmtval, "->", ".", -1)
 				// refmtval = "false" // TODO label_x.SizePolicy().HasHeightForWidth() crash
@@ -299,7 +299,7 @@ func onSetupUi(line string) {
 				alst := []string{}
 				log.Println(strings.Split(mats[0][3], "\""))
 				icores := strings.Split(mats[0][3], "\"")[1]
-				alst = append(alst, fmt.Sprintf("qtcore.NewQString_5(\"%s\")", icores))
+				alst = append(alst, fmt.Sprintf("\"%s\"", icores))
 				alst = append(alst, "qtcore.NewQSize()")
 				alst = append(alst, "qtgui."+colon2uline(parts[2]))
 				alst = append(alst, "qtgui."+colon2uline(parts[3]))

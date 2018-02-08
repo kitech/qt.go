@@ -48,10 +48,10 @@ extras:
 eg-:
 	# CC=clang CXX=clang++ go build -v -x eg/coreapp.go
 	# CC=clang CXX=clang++ go build -v -x eg/guiapp.go
-	# CC=clang CXX=clang++ go build -v -x eg/signal.go
+	CC=clang CXX=clang++ go build -v -x eg/signal.go
 	# CC=clang CXX=clang++ go build -v -x eg/pmthor.go
 	# CC=clang CXX=clang++ go build -v -x -o bin/uicgen eg/uicgen.go eg/ui_xxx.go eg/rcc_rc.go
-	CC=clang CXX=clang++ go build -v -x eg/button.go
+	# CC=clang CXX=clang++ go build -v -x eg/button.go
 	# CC=clang CXX=clang++ go build -v -x eg/eg00.go
 	# CC=clang CXX=clang++ go build -v -x eg/eg10.go
 

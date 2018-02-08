@@ -110,7 +110,6 @@ func (this *QGlyphRun) Swap(other *QGlyphRun) {
 func (this *QGlyphRun) RawFont() *QRawFont /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGlyphRun7rawFontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQRawFontFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRawFont)
 	return rv2
@@ -161,7 +160,6 @@ func (this *QGlyphRun) SetOverline(overline bool) {
 func (this *QGlyphRun) Overline() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGlyphRun8overlineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -181,7 +179,6 @@ func (this *QGlyphRun) SetUnderline(underline bool) {
 func (this *QGlyphRun) Underline() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGlyphRun9underlineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -201,7 +198,6 @@ func (this *QGlyphRun) SetStrikeOut(strikeOut bool) {
 func (this *QGlyphRun) StrikeOut() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGlyphRun9strikeOutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -221,7 +217,6 @@ func (this *QGlyphRun) SetRightToLeft(on bool) {
 func (this *QGlyphRun) IsRightToLeft() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGlyphRun13isRightToLeftEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -250,7 +245,6 @@ func (this *QGlyphRun) SetFlags(flags int) {
 func (this *QGlyphRun) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGlyphRun5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -271,7 +265,6 @@ func (this *QGlyphRun) SetBoundingRect(boundingRect *qtcore.QRectF) {
 func (this *QGlyphRun) BoundingRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGlyphRun12boundingRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -284,7 +277,6 @@ func (this *QGlyphRun) BoundingRect() *qtcore.QRectF /*123*/ {
 func (this *QGlyphRun) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGlyphRun7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

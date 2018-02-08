@@ -73,9 +73,7 @@ func (*QContiguousCacheData) NewFromPointer(cthis unsafe.Pointer) *QContiguousCa
 func (this *QContiguousCacheData) AllocateData(size int, alignment int) *QContiguousCacheData /*777 QContiguousCacheData **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QContiguousCacheData12allocateDataEii", qtrt.FFI_TYPE_POINTER, size, alignment)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := /*==*/ NewQContiguousCacheDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQContiguousCacheDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 func QContiguousCacheData_AllocateData(size int, alignment int) *QContiguousCacheData /*777 QContiguousCacheData **/ {
 	var nilthis *QContiguousCacheData

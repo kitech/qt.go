@@ -71,9 +71,10 @@ func (*QAccessibleTextRemoveEvent) NewFromPointer(cthis unsafe.Pointer) *QAccess
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTextRemoveEvent(QObject *, int, const QString &)
-func NewQAccessibleTextRemoveEvent(obj *qtcore.QObject /*777 QObject **/, position int, text *qtcore.QString) *QAccessibleTextRemoveEvent {
+func NewQAccessibleTextRemoveEvent(obj *qtcore.QObject /*777 QObject **/, position int, text string) *QAccessibleTextRemoveEvent {
 	var convArg0 = obj.GetCthis()
-	var convArg2 = text.GetCthis()
+	var tmpArg2 = qtcore.NewQString_5(text)
+	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextRemoveEventC2EP7QObjectiRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, position, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextRemoveEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -85,9 +86,10 @@ func NewQAccessibleTextRemoveEvent(obj *qtcore.QObject /*777 QObject **/, positi
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QAccessibleTextRemoveEvent(QAccessibleInterface *, int, const QString &)
-func NewQAccessibleTextRemoveEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, position int, text *qtcore.QString) *QAccessibleTextRemoveEvent {
+func NewQAccessibleTextRemoveEvent_1(iface *QAccessibleInterface /*777 QAccessibleInterface **/, position int, text string) *QAccessibleTextRemoveEvent {
 	var convArg0 = iface.GetCthis()
-	var convArg2 = text.GetCthis()
+	var tmpArg2 = qtcore.NewQString_5(text)
+	var convArg2 = tmpArg2.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN26QAccessibleTextRemoveEventC2EP20QAccessibleInterfaceiRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, position, convArg2)
 	gopp.ErrPrint(err, rv)
 	gothis := NewQAccessibleTextRemoveEventFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -110,13 +112,13 @@ func DeleteQAccessibleTextRemoveEvent(this *QAccessibleTextRemoveEvent) {
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString textRemoved()
-func (this *QAccessibleTextRemoveEvent) TextRemoved() *qtcore.QString /*123*/ {
+func (this *QAccessibleTextRemoveEvent) TextRemoved() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextRemoveEvent11textRemovedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtGui/qaccessible.h:852
@@ -126,7 +128,6 @@ func (this *QAccessibleTextRemoveEvent) TextRemoved() *qtcore.QString /*123*/ {
 func (this *QAccessibleTextRemoveEvent) ChangePosition() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QAccessibleTextRemoveEvent14changePositionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

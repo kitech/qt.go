@@ -110,7 +110,6 @@ func (this *QNetworkInterface) Swap(other *QNetworkInterface) {
 func (this *QNetworkInterface) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -121,7 +120,6 @@ func (this *QNetworkInterface) IsValid() bool {
 func (this *QNetworkInterface) Index() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface5indexEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -129,26 +127,26 @@ func (this *QNetworkInterface) Index() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name()
-func (this *QNetworkInterface) Name() *qtcore.QString /*123*/ {
+func (this *QNetworkInterface) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString humanReadableName()
-func (this *QNetworkInterface) HumanReadableName() *qtcore.QString /*123*/ {
+func (this *QNetworkInterface) HumanReadableName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface17humanReadableNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:119
@@ -158,7 +156,6 @@ func (this *QNetworkInterface) HumanReadableName() *qtcore.QString /*123*/ {
 func (this *QNetworkInterface) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -166,27 +163,27 @@ func (this *QNetworkInterface) Flags() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString hardwareAddress()
-func (this *QNetworkInterface) HardwareAddress() *qtcore.QString /*123*/ {
+func (this *QNetworkInterface) HardwareAddress() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QNetworkInterface15hardwareAddressEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:123
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int interfaceIndexFromName(const QString &)
-func (this *QNetworkInterface) InterfaceIndexFromName(name *qtcore.QString) int {
-	var convArg0 = name.GetCthis()
+func (this *QNetworkInterface) InterfaceIndexFromName(name string) int {
+	var tmpArg0 = qtcore.NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkInterface22interfaceIndexFromNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QNetworkInterface_InterfaceIndexFromName(name *qtcore.QString) int {
+func QNetworkInterface_InterfaceIndexFromName(name string) int {
 	var nilthis *QNetworkInterface
 	rv := nilthis.InterfaceIndexFromName(name)
 	return rv
@@ -196,16 +193,16 @@ func QNetworkInterface_InterfaceIndexFromName(name *qtcore.QString) int {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QNetworkInterface interfaceFromName(const QString &)
-func (this *QNetworkInterface) InterfaceFromName(name *qtcore.QString) *QNetworkInterface /*123*/ {
-	var convArg0 = name.GetCthis()
+func (this *QNetworkInterface) InterfaceFromName(name string) *QNetworkInterface /*123*/ {
+	var tmpArg0 = qtcore.NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkInterface17interfaceFromNameERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQNetworkInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQNetworkInterface)
 	return rv2
 }
-func QNetworkInterface_InterfaceFromName(name *qtcore.QString) *QNetworkInterface /*123*/ {
+func QNetworkInterface_InterfaceFromName(name string) *QNetworkInterface /*123*/ {
 	var nilthis *QNetworkInterface
 	rv := nilthis.InterfaceFromName(name)
 	return rv
@@ -218,7 +215,6 @@ func QNetworkInterface_InterfaceFromName(name *qtcore.QString) *QNetworkInterfac
 func (this *QNetworkInterface) InterfaceFromIndex(index int) *QNetworkInterface /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkInterface18interfaceFromIndexEi", qtrt.FFI_TYPE_POINTER, index)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	rv2 := /*==*/ NewQNetworkInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQNetworkInterface)
 	return rv2
@@ -233,15 +229,15 @@ func QNetworkInterface_InterfaceFromIndex(index int) *QNetworkInterface /*123*/ 
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString interfaceNameFromIndex(int)
-func (this *QNetworkInterface) InterfaceNameFromIndex(index int) *qtcore.QString /*123*/ {
+func (this *QNetworkInterface) InterfaceNameFromIndex(index int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QNetworkInterface22interfaceNameFromIndexEi", qtrt.FFI_TYPE_POINTER, index)
 	gopp.ErrPrint(err, rv)
-	// return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
-func QNetworkInterface_InterfaceNameFromIndex(index int) *qtcore.QString /*123*/ {
+func QNetworkInterface_InterfaceNameFromIndex(index int) string {
 	var nilthis *QNetworkInterface
 	rv := nilthis.InterfaceNameFromIndex(index)
 	return rv

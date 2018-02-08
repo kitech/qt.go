@@ -87,9 +87,7 @@ func (*QLCDNumber) NewFromPointer(cthis unsafe.Pointer) *QLCDNumber {
 func (this *QLCDNumber) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QLCDNumber10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qlcdnumber.h:62
@@ -134,7 +132,6 @@ func DeleteQLCDNumber(this *QLCDNumber) {
 func (this *QLCDNumber) SmallDecimalPoint() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QLCDNumber17smallDecimalPointEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -145,7 +142,6 @@ func (this *QLCDNumber) SmallDecimalPoint() bool {
 func (this *QLCDNumber) DigitCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QLCDNumber10digitCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -165,7 +161,6 @@ func (this *QLCDNumber) SetDigitCount(nDigits int) {
 func (this *QLCDNumber) CheckOverflow(num float64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QLCDNumber13checkOverflowEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), num)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -176,7 +171,6 @@ func (this *QLCDNumber) CheckOverflow(num float64) bool {
 func (this *QLCDNumber) CheckOverflow_1(num int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QLCDNumber13checkOverflowEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), num)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -187,7 +181,6 @@ func (this *QLCDNumber) CheckOverflow_1(num int) bool {
 func (this *QLCDNumber) Mode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QLCDNumber4modeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -207,7 +200,6 @@ func (this *QLCDNumber) SetMode(arg0 int) {
 func (this *QLCDNumber) SegmentStyle() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QLCDNumber12segmentStyleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -227,7 +219,6 @@ func (this *QLCDNumber) SetSegmentStyle(arg0 int) {
 func (this *QLCDNumber) Value() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QLCDNumber5valueEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -238,7 +229,6 @@ func (this *QLCDNumber) Value() float64 {
 func (this *QLCDNumber) IntValue() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QLCDNumber8intValueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -249,7 +239,6 @@ func (this *QLCDNumber) IntValue() int {
 func (this *QLCDNumber) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK10QLCDNumber8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -259,8 +248,9 @@ func (this *QLCDNumber) SizeHint() *qtcore.QSize /*123*/ {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void display(const QString &)
-func (this *QLCDNumber) Display(str *qtcore.QString) {
-	var convArg0 = str.GetCthis()
+func (this *QLCDNumber) Display(str string) {
+	var tmpArg0 = qtcore.NewQString_5(str)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QLCDNumber7displayERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -345,7 +335,6 @@ func (this *QLCDNumber) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QLCDNumber5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

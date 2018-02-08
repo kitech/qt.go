@@ -104,7 +104,6 @@ func DeleteQLayoutItem(this *QLayoutItem) {
 func (this *QLayoutItem) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -117,7 +116,6 @@ func (this *QLayoutItem) SizeHint() *qtcore.QSize /*123*/ {
 func (this *QLayoutItem) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem11minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -130,7 +128,6 @@ func (this *QLayoutItem) MinimumSize() *qtcore.QSize /*123*/ {
 func (this *QLayoutItem) MaximumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem11maximumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -143,7 +140,6 @@ func (this *QLayoutItem) MaximumSize() *qtcore.QSize /*123*/ {
 func (this *QLayoutItem) ExpandingDirections() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem19expandingDirectionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -164,7 +160,6 @@ func (this *QLayoutItem) SetGeometry(arg0 *qtcore.QRect) {
 func (this *QLayoutItem) Geometry() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem8geometryEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
@@ -177,7 +172,6 @@ func (this *QLayoutItem) Geometry() *qtcore.QRect /*123*/ {
 func (this *QLayoutItem) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -188,7 +182,6 @@ func (this *QLayoutItem) IsEmpty() bool {
 func (this *QLayoutItem) HasHeightForWidth() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem17hasHeightForWidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -199,7 +192,6 @@ func (this *QLayoutItem) HasHeightForWidth() bool {
 func (this *QLayoutItem) HeightForWidth(arg0 int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem14heightForWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -210,7 +202,6 @@ func (this *QLayoutItem) HeightForWidth(arg0 int) int {
 func (this *QLayoutItem) MinimumHeightForWidth(arg0 int) int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem21minimumHeightForWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -230,9 +221,7 @@ func (this *QLayoutItem) Invalidate() {
 func (this *QLayoutItem) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QLayoutItem6widgetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:78
@@ -242,9 +231,7 @@ func (this *QLayoutItem) Widget() *QWidget /*777 QWidget **/ {
 func (this *QLayoutItem) Layout() *QLayout /*777 QLayout **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QLayoutItem6layoutEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQLayoutFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQLayoutFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:79
@@ -254,9 +241,7 @@ func (this *QLayoutItem) Layout() *QLayout /*777 QLayout **/ {
 func (this *QLayoutItem) SpacerItem() *QSpacerItem /*777 QSpacerItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QLayoutItem10spacerItemEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQSpacerItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQSpacerItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:81
@@ -266,7 +251,6 @@ func (this *QLayoutItem) SpacerItem() *QSpacerItem /*777 QSpacerItem **/ {
 func (this *QLayoutItem) Alignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem9alignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -286,7 +270,6 @@ func (this *QLayoutItem) SetAlignment(a int) {
 func (this *QLayoutItem) ControlTypes() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QLayoutItem12controlTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 

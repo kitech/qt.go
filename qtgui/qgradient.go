@@ -89,7 +89,6 @@ func NewQGradient() *QGradient {
 func (this *QGradient) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -109,7 +108,6 @@ func (this *QGradient) SetSpread(spread int) {
 func (this *QGradient) Spread() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient6spreadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -130,7 +128,6 @@ func (this *QGradient) SetColorAt(pos float64, color *QColor) {
 func (this *QGradient) CoordinateMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient14coordinateModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -150,7 +147,6 @@ func (this *QGradient) SetCoordinateMode(mode int) {
 func (this *QGradient) InterpolationMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QGradient17interpolationModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 

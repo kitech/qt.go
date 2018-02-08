@@ -87,7 +87,6 @@ func NewQGenericArgument(aName string, aData unsafe.Pointer /*666*/) *QGenericAr
 func (this *QGenericArgument) Data() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QGenericArgument4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -98,7 +97,6 @@ func (this *QGenericArgument) Data() unsafe.Pointer /*666*/ {
 func (this *QGenericArgument) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK16QGenericArgument4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.GoStringI(rv)
 }
 

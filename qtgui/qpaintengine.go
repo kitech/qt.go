@@ -100,7 +100,6 @@ func DeleteQPaintEngine(this *QPaintEngine) {
 func (this *QPaintEngine) IsActive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine8isActiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -121,7 +120,6 @@ func (this *QPaintEngine) Begin(pdev *QPaintDevice /*777 QPaintDevice **/) bool 
 	var convArg0 = pdev.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine5beginEP12QPaintDevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -132,7 +130,6 @@ func (this *QPaintEngine) Begin(pdev *QPaintDevice /*777 QPaintDevice **/) bool 
 func (this *QPaintEngine) End() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine3endEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -320,9 +317,7 @@ func (this *QPaintEngine) SetPaintDevice(device *QPaintDevice /*777 QPaintDevice
 func (this *QPaintEngine) PaintDevice() *QPaintDevice /*777 QPaintDevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine11paintDeviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qpaintengine.h:184
@@ -342,7 +337,6 @@ func (this *QPaintEngine) SetSystemClip(baseClip *QRegion) {
 func (this *QPaintEngine) SystemClip() *QRegion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine10systemClipEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegion)
 	return rv2
@@ -365,7 +359,6 @@ func (this *QPaintEngine) SetSystemRect(rect *qtcore.QRect) {
 func (this *QPaintEngine) SystemRect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine10systemRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
@@ -378,7 +371,6 @@ func (this *QPaintEngine) SystemRect() *qtcore.QRect /*123*/ {
 func (this *QPaintEngine) CoordinateOffset() *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine16coordinateOffsetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
@@ -391,7 +383,6 @@ func (this *QPaintEngine) CoordinateOffset() *qtcore.QPoint /*123*/ {
 func (this *QPaintEngine) Type() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine4typeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -411,7 +402,6 @@ func (this *QPaintEngine) Fix_neg_rect(x unsafe.Pointer /*666*/, y unsafe.Pointe
 func (this *QPaintEngine) TestDirty(df int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QPaintEngine9testDirtyE6QFlagsINS_9DirtyFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), df)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -440,7 +430,6 @@ func (this *QPaintEngine) ClearDirty(df int) {
 func (this *QPaintEngine) HasFeature(feature int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine10hasFeatureE6QFlagsINS_18PaintEngineFeatureEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), feature)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -451,9 +440,7 @@ func (this *QPaintEngine) HasFeature(feature int) bool {
 func (this *QPaintEngine) Painter() *QPainter /*777 QPainter **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine7painterEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQPainterFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQPainterFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qpaintengine.h:226
@@ -472,7 +459,6 @@ func (this *QPaintEngine) SyncState() {
 func (this *QPaintEngine) IsExtended() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QPaintEngine10isExtendedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

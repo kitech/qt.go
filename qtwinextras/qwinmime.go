@@ -101,14 +101,14 @@ func DeleteQWinMime(this *QWinMime) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int registerMimeType(const QString &)
-func (this *QWinMime) RegisterMimeType(mime *qtcore.QString) int {
-	var convArg0 = mime.GetCthis()
+func (this *QWinMime) RegisterMimeType(mime string) int {
+	var tmpArg0 = qtcore.NewQString_5(mime)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QWinMime16registerMimeTypeERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QWinMime_RegisterMimeType(mime *qtcore.QString) int {
+func QWinMime_RegisterMimeType(mime string) int {
 	var nilthis *QWinMime
 	rv := nilthis.RegisterMimeType(mime)
 	return rv

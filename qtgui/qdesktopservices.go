@@ -78,7 +78,6 @@ func (this *QDesktopServices) OpenUrl(url *qtcore.QUrl) bool {
 	var convArg0 = url.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDesktopServices7openUrlERK4QUrl", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 func QDesktopServices_OpenUrl(url *qtcore.QUrl) bool {
@@ -91,15 +90,16 @@ func QDesktopServices_OpenUrl(url *qtcore.QUrl) bool {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setUrlHandler(const QString &, QObject *, const char *)
-func (this *QDesktopServices) SetUrlHandler(scheme *qtcore.QString, receiver *qtcore.QObject /*777 QObject **/, method string) {
-	var convArg0 = scheme.GetCthis()
+func (this *QDesktopServices) SetUrlHandler(scheme string, receiver *qtcore.QObject /*777 QObject **/, method string) {
+	var tmpArg0 = qtcore.NewQString_5(scheme)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = receiver.GetCthis()
 	var convArg2 = qtrt.CString(method)
 	defer qtrt.FreeMem(convArg2)
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 }
-func QDesktopServices_SetUrlHandler(scheme *qtcore.QString, receiver *qtcore.QObject /*777 QObject **/, method string) {
+func QDesktopServices_SetUrlHandler(scheme string, receiver *qtcore.QObject /*777 QObject **/, method string) {
 	var nilthis *QDesktopServices
 	nilthis.SetUrlHandler(scheme, receiver, method)
 }
@@ -108,12 +108,13 @@ func QDesktopServices_SetUrlHandler(scheme *qtcore.QString, receiver *qtcore.QOb
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void unsetUrlHandler(const QString &)
-func (this *QDesktopServices) UnsetUrlHandler(scheme *qtcore.QString) {
-	var convArg0 = scheme.GetCthis()
+func (this *QDesktopServices) UnsetUrlHandler(scheme string) {
+	var tmpArg0 = qtcore.NewQString_5(scheme)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QDesktopServices15unsetUrlHandlerERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
-func QDesktopServices_UnsetUrlHandler(scheme *qtcore.QString) {
+func QDesktopServices_UnsetUrlHandler(scheme string) {
 	var nilthis *QDesktopServices
 	nilthis.UnsetUrlHandler(scheme)
 }

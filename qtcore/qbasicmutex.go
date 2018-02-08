@@ -103,7 +103,6 @@ func (this *QBasicMutex) Unlock() {
 func (this *QBasicMutex) TryLock() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicMutex7tryLockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -114,7 +113,6 @@ func (this *QBasicMutex) TryLock() bool {
 func (this *QBasicMutex) Try_lock() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicMutex8try_lockEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -125,7 +123,6 @@ func (this *QBasicMutex) Try_lock() bool {
 func (this *QBasicMutex) IsRecursive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicMutex11isRecursiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -136,7 +133,6 @@ func (this *QBasicMutex) IsRecursive() bool {
 func (this *QBasicMutex) IsRecursive_1() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QBasicMutex11isRecursiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

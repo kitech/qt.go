@@ -89,9 +89,7 @@ func (*QBuffer) NewFromPointer(cthis unsafe.Pointer) *QBuffer {
 func (this *QBuffer) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qbuffer.h:60
@@ -137,7 +135,6 @@ func DeleteQBuffer(this *QBuffer) {
 func (this *QBuffer) Buffer() *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer6bufferEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -150,7 +147,6 @@ func (this *QBuffer) Buffer() *QByteArray {
 func (this *QBuffer) Buffer_1() *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer6bufferEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -194,7 +190,6 @@ func (this *QBuffer) SetData_1(data string, len int) {
 func (this *QBuffer) Data() *QByteArray {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
@@ -207,7 +202,6 @@ func (this *QBuffer) Data() *QByteArray {
 func (this *QBuffer) Open(openMode int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer4openE6QFlagsIN9QIODevice12OpenModeFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), openMode)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -227,7 +221,6 @@ func (this *QBuffer) Close() {
 func (this *QBuffer) Size() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 
@@ -238,7 +231,6 @@ func (this *QBuffer) Size() int64 {
 func (this *QBuffer) Pos() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer3posEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 
@@ -249,7 +241,6 @@ func (this *QBuffer) Pos() int64 {
 func (this *QBuffer) Seek(off int64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer4seekEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), off)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -260,7 +251,6 @@ func (this *QBuffer) Seek(off int64) bool {
 func (this *QBuffer) AtEnd() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer5atEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -271,7 +261,6 @@ func (this *QBuffer) AtEnd() bool {
 func (this *QBuffer) CanReadLine() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QBuffer11canReadLineEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -304,7 +293,6 @@ func (this *QBuffer) ReadData(data string, maxlen int64) int64 {
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer8readDataEPcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, maxlen)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 
@@ -317,7 +305,6 @@ func (this *QBuffer) WriteData(data string, len int64) int64 {
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QBuffer9writeDataEPKcx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, len)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 

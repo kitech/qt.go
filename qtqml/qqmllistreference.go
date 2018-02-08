@@ -120,7 +120,6 @@ func DeleteQQmlListReference(this *QQmlListReference) {
 func (this *QQmlListReference) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -131,9 +130,7 @@ func (this *QQmlListReference) IsValid() bool {
 func (this *QQmlListReference) Object() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference6objectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQml/qqmllist.h:151
@@ -143,9 +140,7 @@ func (this *QQmlListReference) Object() *qtcore.QObject /*777 QObject **/ {
 func (this *QQmlListReference) ListElementType() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference15listElementTypeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQml/qqmllist.h:153
@@ -155,7 +150,6 @@ func (this *QQmlListReference) ListElementType() *qtcore.QMetaObject /*777 const
 func (this *QQmlListReference) CanAppend() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference9canAppendEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -166,7 +160,6 @@ func (this *QQmlListReference) CanAppend() bool {
 func (this *QQmlListReference) CanAt() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference5canAtEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -177,7 +170,6 @@ func (this *QQmlListReference) CanAt() bool {
 func (this *QQmlListReference) CanClear() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference8canClearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -188,7 +180,6 @@ func (this *QQmlListReference) CanClear() bool {
 func (this *QQmlListReference) CanCount() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference8canCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -199,7 +190,6 @@ func (this *QQmlListReference) CanCount() bool {
 func (this *QQmlListReference) IsManipulable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference13isManipulableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -210,7 +200,6 @@ func (this *QQmlListReference) IsManipulable() bool {
 func (this *QQmlListReference) IsReadable() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference10isReadableEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -221,9 +210,7 @@ func (this *QQmlListReference) IsReadable() bool {
 func (this *QQmlListReference) At(arg0 int) *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference2atEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), arg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtQml/qqmllist.h:163
@@ -233,7 +220,6 @@ func (this *QQmlListReference) At(arg0 int) *qtcore.QObject /*777 QObject **/ {
 func (this *QQmlListReference) Clear() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference5clearEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -244,7 +230,6 @@ func (this *QQmlListReference) Clear() bool {
 func (this *QQmlListReference) Count() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QQmlListReference5countEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

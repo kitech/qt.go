@@ -97,7 +97,6 @@ func (this *QWaitCondition) Wait(lockedMutex *QMutex /*777 QMutex **/, time uint
 	var convArg0 = lockedMutex.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP6QMutexm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -109,7 +108,6 @@ func (this *QWaitCondition) Wait_1(lockedReadWriteLock *QReadWriteLock /*777 QRe
 	var convArg0 = lockedReadWriteLock.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QWaitCondition4waitEP14QReadWriteLockm", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, time)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

@@ -207,9 +207,7 @@ func (*QGraphicsView) NewFromPointer(cthis unsafe.Pointer) *QGraphicsView {
 func (this *QGraphicsView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsview.h:117
@@ -255,7 +253,6 @@ func DeleteQGraphicsView(this *QGraphicsView) {
 func (this *QGraphicsView) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -268,7 +265,6 @@ func (this *QGraphicsView) SizeHint() *qtcore.QSize /*123*/ {
 func (this *QGraphicsView) RenderHints() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView11renderHintsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -297,7 +293,6 @@ func (this *QGraphicsView) SetRenderHints(hints int) {
 func (this *QGraphicsView) Alignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView9alignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -317,7 +312,6 @@ func (this *QGraphicsView) SetAlignment(alignment int) {
 func (this *QGraphicsView) TransformationAnchor() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView20transformationAnchorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -337,7 +331,6 @@ func (this *QGraphicsView) SetTransformationAnchor(anchor int) {
 func (this *QGraphicsView) ResizeAnchor() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView12resizeAnchorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -357,7 +350,6 @@ func (this *QGraphicsView) SetResizeAnchor(anchor int) {
 func (this *QGraphicsView) ViewportUpdateMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView18viewportUpdateModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -377,7 +369,6 @@ func (this *QGraphicsView) SetViewportUpdateMode(mode int) {
 func (this *QGraphicsView) OptimizationFlags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView17optimizationFlagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -406,7 +397,6 @@ func (this *QGraphicsView) SetOptimizationFlags(flags int) {
 func (this *QGraphicsView) DragMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView8dragModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -426,7 +416,6 @@ func (this *QGraphicsView) SetDragMode(mode int) {
 func (this *QGraphicsView) RubberBandSelectionMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView23rubberBandSelectionModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -446,7 +435,6 @@ func (this *QGraphicsView) SetRubberBandSelectionMode(mode int) {
 func (this *QGraphicsView) RubberBandRect() *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView14rubberBandRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
 	return rv2
@@ -459,7 +447,6 @@ func (this *QGraphicsView) RubberBandRect() *qtcore.QRect /*123*/ {
 func (this *QGraphicsView) CacheMode() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView9cacheModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -488,7 +475,6 @@ func (this *QGraphicsView) ResetCachedContent() {
 func (this *QGraphicsView) IsInteractive() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView13isInteractiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -508,9 +494,7 @@ func (this *QGraphicsView) SetInteractive(allowed bool) {
 func (this *QGraphicsView) Scene() *QGraphicsScene /*777 QGraphicsScene **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView5sceneEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQGraphicsSceneFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQGraphicsSceneFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsview.h:160
@@ -530,7 +514,6 @@ func (this *QGraphicsView) SetScene(scene *QGraphicsScene /*777 QGraphicsScene *
 func (this *QGraphicsView) SceneRect() *qtcore.QRectF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView9sceneRectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQRectFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQRectF)
 	return rv2
@@ -562,7 +545,6 @@ func (this *QGraphicsView) SetSceneRect_1(x float64, y float64, w float64, h flo
 func (this *QGraphicsView) Matrix() *qtgui.QMatrix /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView6matrixEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQMatrixFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQMatrix)
 	return rv2
@@ -594,7 +576,6 @@ func (this *QGraphicsView) ResetMatrix() {
 func (this *QGraphicsView) Transform() *qtgui.QTransform /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView9transformEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQTransform)
 	return rv2
@@ -607,7 +588,6 @@ func (this *QGraphicsView) Transform() *qtgui.QTransform /*123*/ {
 func (this *QGraphicsView) ViewportTransform() *qtgui.QTransform /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView17viewportTransformEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQTransformFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQTransform)
 	return rv2
@@ -620,7 +600,6 @@ func (this *QGraphicsView) ViewportTransform() *qtgui.QTransform /*123*/ {
 func (this *QGraphicsView) IsTransformed() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView13isTransformedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -786,9 +765,7 @@ func (this *QGraphicsView) ItemAt(pos *qtcore.QPoint) *QGraphicsItem /*777 QGrap
 	var convArg0 = pos.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView6itemAtERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsview.h:202
@@ -798,9 +775,7 @@ func (this *QGraphicsView) ItemAt(pos *qtcore.QPoint) *QGraphicsItem /*777 QGrap
 func (this *QGraphicsView) ItemAt_1(x int, y int) *QGraphicsItem /*777 QGraphicsItem **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView6itemAtEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qgraphicsview.h:204
@@ -811,7 +786,6 @@ func (this *QGraphicsView) MapToScene(point *qtcore.QPoint) *qtcore.QPointF /*12
 	var convArg0 = point.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView10mapToSceneERK6QPoint", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -825,7 +799,6 @@ func (this *QGraphicsView) MapToScene_1(rect *qtcore.QRect) *qtgui.QPolygonF /*1
 	var convArg0 = rect.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView10mapToSceneERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPolygonF)
 	return rv2
@@ -839,7 +812,6 @@ func (this *QGraphicsView) MapToScene_2(polygon *qtgui.QPolygon) *qtgui.QPolygon
 	var convArg0 = polygon.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView10mapToSceneERK8QPolygon", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPolygonF)
 	return rv2
@@ -853,7 +825,6 @@ func (this *QGraphicsView) MapToScene_3(path *qtgui.QPainterPath) *qtgui.QPainte
 	var convArg0 = path.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView10mapToSceneERK12QPainterPath", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
@@ -866,7 +837,6 @@ func (this *QGraphicsView) MapToScene_3(path *qtgui.QPainterPath) *qtgui.QPainte
 func (this *QGraphicsView) MapToScene_4(x int, y int) *qtcore.QPointF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView10mapToSceneEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQPointFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
 	return rv2
@@ -879,7 +849,6 @@ func (this *QGraphicsView) MapToScene_4(x int, y int) *qtcore.QPointF /*123*/ {
 func (this *QGraphicsView) MapToScene_5(x int, y int, w int, h int) *qtgui.QPolygonF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView10mapToSceneEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPolygonF)
 	return rv2
@@ -893,7 +862,6 @@ func (this *QGraphicsView) MapFromScene(point *qtcore.QPointF) *qtcore.QPoint /*
 	var convArg0 = point.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView12mapFromSceneERK7QPointF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
@@ -907,7 +875,6 @@ func (this *QGraphicsView) MapFromScene_1(rect *qtcore.QRectF) *qtgui.QPolygon /
 	var convArg0 = rect.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView12mapFromSceneERK6QRectF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPolygon)
 	return rv2
@@ -921,7 +888,6 @@ func (this *QGraphicsView) MapFromScene_2(polygon *qtgui.QPolygonF) *qtgui.QPoly
 	var convArg0 = polygon.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView12mapFromSceneERK9QPolygonF", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPolygon)
 	return rv2
@@ -935,7 +901,6 @@ func (this *QGraphicsView) MapFromScene_3(path *qtgui.QPainterPath) *qtgui.QPain
 	var convArg0 = path.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView12mapFromSceneERK12QPainterPath", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQPainterPathFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPainterPath)
 	return rv2
@@ -948,7 +913,6 @@ func (this *QGraphicsView) MapFromScene_3(path *qtgui.QPainterPath) *qtgui.QPain
 func (this *QGraphicsView) MapFromScene_4(x float64, y float64) *qtcore.QPoint /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView12mapFromSceneEdd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQPointFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQPoint)
 	return rv2
@@ -961,7 +925,6 @@ func (this *QGraphicsView) MapFromScene_4(x float64, y float64) *qtcore.QPoint /
 func (this *QGraphicsView) MapFromScene_5(x float64, y float64, w float64, h float64) *qtgui.QPolygon /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView12mapFromSceneEdddd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), x, y, w, h)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQPolygon)
 	return rv2
@@ -974,7 +937,6 @@ func (this *QGraphicsView) MapFromScene_5(x float64, y float64, w float64, h flo
 func (this *QGraphicsView) InputMethodQuery(query int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView16inputMethodQueryEN2Qt16InputMethodQueryE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), query)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -987,7 +949,6 @@ func (this *QGraphicsView) InputMethodQuery(query int) *qtcore.QVariant /*123*/ 
 func (this *QGraphicsView) BackgroundBrush() *qtgui.QBrush /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView15backgroundBrushEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQBrush)
 	return rv2
@@ -1010,7 +971,6 @@ func (this *QGraphicsView) SetBackgroundBrush(brush *qtgui.QBrush) {
 func (this *QGraphicsView) ForegroundBrush() *qtgui.QBrush /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QGraphicsView15foregroundBrushEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtgui.NewQBrushFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQBrush)
 	return rv2
@@ -1076,7 +1036,6 @@ func (this *QGraphicsView) Event(event *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -1088,7 +1047,6 @@ func (this *QGraphicsView) ViewportEvent(event *qtcore.QEvent /*777 QEvent **/) 
 	var convArg0 = event.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView13viewportEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -1159,7 +1117,6 @@ func (this *QGraphicsView) FocusInEvent(event *qtgui.QFocusEvent /*777 QFocusEve
 func (this *QGraphicsView) FocusNextPrevChild(next bool) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QGraphicsView18focusNextPrevChildEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), next)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

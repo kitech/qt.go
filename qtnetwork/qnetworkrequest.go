@@ -111,7 +111,6 @@ func (this *QNetworkRequest) Swap(other *QNetworkRequest) {
 func (this *QNetworkRequest) Url() *qtcore.QUrl /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkRequest3urlEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQUrl)
 	return rv2
@@ -134,7 +133,6 @@ func (this *QNetworkRequest) SetUrl(url *qtcore.QUrl) {
 func (this *QNetworkRequest) Header(header int) *qtcore.QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkRequest6headerENS_12KnownHeadersE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), header)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -158,7 +156,6 @@ func (this *QNetworkRequest) HasRawHeader(headerName *qtcore.QByteArray) bool {
 	var convArg0 = headerName.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkRequest12hasRawHeaderERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -170,7 +167,6 @@ func (this *QNetworkRequest) RawHeader(headerName *qtcore.QByteArray) *qtcore.QB
 	var convArg0 = headerName.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkRequest9rawHeaderERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQByteArray)
 	return rv2
@@ -195,7 +191,6 @@ func (this *QNetworkRequest) Attribute(code int, defaultValue *qtcore.QVariant) 
 	var convArg1 = defaultValue.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkRequest9attributeENS_9AttributeERK8QVariant", qtrt.FFI_TYPE_POINTER, this.GetCthis(), code, convArg1)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQVariant)
 	return rv2
@@ -218,7 +213,6 @@ func (this *QNetworkRequest) SetAttribute(code int, value *qtcore.QVariant) {
 func (this *QNetworkRequest) SslConfiguration() *QSslConfiguration /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkRequest16sslConfigurationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQSslConfigurationFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSslConfiguration)
 	return rv2
@@ -251,9 +245,7 @@ func (this *QNetworkRequest) SetOriginatingObject(object *qtcore.QObject /*777 Q
 func (this *QNetworkRequest) OriginatingObject() *qtcore.QObject /*777 QObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkRequest17originatingObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtNetwork/qnetworkrequest.h:163
@@ -263,7 +255,6 @@ func (this *QNetworkRequest) OriginatingObject() *qtcore.QObject /*777 QObject *
 func (this *QNetworkRequest) Priority() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkRequest8priorityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -283,7 +274,6 @@ func (this *QNetworkRequest) SetPriority(priority int) {
 func (this *QNetworkRequest) MaximumRedirectsAllowed() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK15QNetworkRequest23maximumRedirectsAllowedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

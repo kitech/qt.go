@@ -85,7 +85,6 @@ func NewQElapsedTimer() *QElapsedTimer {
 func (this *QElapsedTimer) ClockType() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimer9clockTypeEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return int(rv)
 }
 func QElapsedTimer_ClockType() int {
@@ -101,7 +100,6 @@ func QElapsedTimer_ClockType() int {
 func (this *QElapsedTimer) IsMonotonic() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimer11isMonotonicEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
 func QElapsedTimer_IsMonotonic() bool {
@@ -126,7 +124,6 @@ func (this *QElapsedTimer) Start() {
 func (this *QElapsedTimer) Restart() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QElapsedTimer7restartEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 
@@ -146,7 +143,6 @@ func (this *QElapsedTimer) Invalidate() {
 func (this *QElapsedTimer) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -157,7 +153,6 @@ func (this *QElapsedTimer) IsValid() bool {
 func (this *QElapsedTimer) NsecsElapsed() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer12nsecsElapsedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 
@@ -168,7 +163,6 @@ func (this *QElapsedTimer) NsecsElapsed() int64 {
 func (this *QElapsedTimer) Elapsed() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer7elapsedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 
@@ -179,7 +173,6 @@ func (this *QElapsedTimer) Elapsed() int64 {
 func (this *QElapsedTimer) HasExpired(timeout int64) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer10hasExpiredEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), timeout)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -190,7 +183,6 @@ func (this *QElapsedTimer) HasExpired(timeout int64) bool {
 func (this *QElapsedTimer) MsecsSinceReference() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer19msecsSinceReferenceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 
@@ -202,7 +194,6 @@ func (this *QElapsedTimer) MsecsTo(other *QElapsedTimer) int64 {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer7msecsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 
@@ -214,7 +205,6 @@ func (this *QElapsedTimer) SecsTo(other *QElapsedTimer) int64 {
 	var convArg0 = other.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QElapsedTimer6secsToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 

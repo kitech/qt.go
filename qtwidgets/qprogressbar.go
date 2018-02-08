@@ -92,9 +92,7 @@ func (*QProgressBar) NewFromPointer(cthis unsafe.Pointer) *QProgressBar {
 func (this *QProgressBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:71
@@ -127,7 +125,6 @@ func DeleteQProgressBar(this *QProgressBar) {
 func (this *QProgressBar) Minimum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar7minimumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -138,7 +135,6 @@ func (this *QProgressBar) Minimum() int {
 func (this *QProgressBar) Maximum() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar7maximumEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -149,7 +145,6 @@ func (this *QProgressBar) Maximum() int {
 func (this *QProgressBar) Value() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar5valueEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -157,13 +152,13 @@ func (this *QProgressBar) Value() int {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString text()
-func (this *QProgressBar) Text() *qtcore.QString /*123*/ {
+func (this *QProgressBar) Text() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar4textEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:80
@@ -182,7 +177,6 @@ func (this *QProgressBar) SetTextVisible(visible bool) {
 func (this *QProgressBar) IsTextVisible() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar13isTextVisibleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -193,7 +187,6 @@ func (this *QProgressBar) IsTextVisible() bool {
 func (this *QProgressBar) Alignment() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar9alignmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -213,7 +206,6 @@ func (this *QProgressBar) SetAlignment(alignment int) {
 func (this *QProgressBar) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar8sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -226,7 +218,6 @@ func (this *QProgressBar) SizeHint() *qtcore.QSize /*123*/ {
 func (this *QProgressBar) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar15minimumSizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -239,7 +230,6 @@ func (this *QProgressBar) MinimumSizeHint() *qtcore.QSize /*123*/ {
 func (this *QProgressBar) Orientation() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar11orientationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -259,7 +249,6 @@ func (this *QProgressBar) SetInvertedAppearance(invert bool) {
 func (this *QProgressBar) InvertedAppearance() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar18invertedAppearanceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -279,7 +268,6 @@ func (this *QProgressBar) SetTextDirection(textDirection int) {
 func (this *QProgressBar) TextDirection() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar13textDirectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -287,8 +275,9 @@ func (this *QProgressBar) TextDirection() int {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QString &)
-func (this *QProgressBar) SetFormat(format *qtcore.QString) {
-	var convArg0 = format.GetCthis()
+func (this *QProgressBar) SetFormat(format string) {
+	var tmpArg0 = qtcore.NewQString_5(format)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBar9setFormatERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -306,13 +295,13 @@ func (this *QProgressBar) ResetFormat() {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString format()
-func (this *QProgressBar) Format() *qtcore.QString /*123*/ {
+func (this *QProgressBar) Format() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QProgressBar6formatEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:101
@@ -386,7 +375,6 @@ func (this *QProgressBar) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	var convArg0 = e.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QProgressBar5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

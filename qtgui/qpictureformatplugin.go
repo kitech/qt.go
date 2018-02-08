@@ -74,9 +74,7 @@ func (*QPictureFormatPlugin) NewFromPointer(cthis unsafe.Pointer) *QPictureForma
 func (this *QPictureFormatPlugin) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK20QPictureFormatPlugin10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qpictureformatplugin.h:63
@@ -106,13 +104,14 @@ func DeleteQPictureFormatPlugin(this *QPictureFormatPlugin) {
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool loadPicture(const QString &, const QString &, QPicture *)
-func (this *QPictureFormatPlugin) LoadPicture(format *qtcore.QString, filename *qtcore.QString, pic *QPicture /*777 QPicture **/) bool {
-	var convArg0 = format.GetCthis()
-	var convArg1 = filename.GetCthis()
+func (this *QPictureFormatPlugin) LoadPicture(format string, filename string, pic *QPicture /*777 QPicture **/) bool {
+	var tmpArg0 = qtcore.NewQString_5(format)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = qtcore.NewQString_5(filename)
+	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 = pic.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -120,13 +119,14 @@ func (this *QPictureFormatPlugin) LoadPicture(format *qtcore.QString, filename *
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool savePicture(const QString &, const QString &, const QPicture &)
-func (this *QPictureFormatPlugin) SavePicture(format *qtcore.QString, filename *qtcore.QString, pic *QPicture) bool {
-	var convArg0 = format.GetCthis()
-	var convArg1 = filename.GetCthis()
+func (this *QPictureFormatPlugin) SavePicture(format string, filename string, pic *QPicture) bool {
+	var tmpArg0 = qtcore.NewQString_5(format)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = qtcore.NewQString_5(filename)
+	var convArg1 = tmpArg1.GetCthis()
 	var convArg2 = pic.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -134,11 +134,11 @@ func (this *QPictureFormatPlugin) SavePicture(format *qtcore.QString, filename *
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool installIOHandler(const QString &)
-func (this *QPictureFormatPlugin) InstallIOHandler(format *qtcore.QString) bool {
-	var convArg0 = format.GetCthis()
+func (this *QPictureFormatPlugin) InstallIOHandler(format string) bool {
+	var tmpArg0 = qtcore.NewQString_5(format)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN20QPictureFormatPlugin16installIOHandlerERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

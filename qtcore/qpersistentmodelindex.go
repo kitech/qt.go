@@ -119,7 +119,6 @@ func (this *QPersistentModelIndex) Swap(other *QPersistentModelIndex) {
 func (this *QPersistentModelIndex) Row() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndex3rowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -130,7 +129,6 @@ func (this *QPersistentModelIndex) Row() int {
 func (this *QPersistentModelIndex) Column() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndex6columnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -141,7 +139,6 @@ func (this *QPersistentModelIndex) Column() int {
 func (this *QPersistentModelIndex) InternalPointer() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndex15internalPointerEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -152,7 +149,6 @@ func (this *QPersistentModelIndex) InternalPointer() unsafe.Pointer /*666*/ {
 func (this *QPersistentModelIndex) InternalId() uint64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndex10internalIdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint64(rv) // 222
 }
 
@@ -163,7 +159,6 @@ func (this *QPersistentModelIndex) InternalId() uint64 {
 func (this *QPersistentModelIndex) Parent() *QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndex6parentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
@@ -176,7 +171,6 @@ func (this *QPersistentModelIndex) Parent() *QModelIndex /*123*/ {
 func (this *QPersistentModelIndex) Sibling(row int, column int) *QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndex7siblingEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
@@ -189,7 +183,6 @@ func (this *QPersistentModelIndex) Sibling(row int, column int) *QModelIndex /*1
 func (this *QPersistentModelIndex) Child(row int, column int) *QModelIndex /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndex5childEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row, column)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQModelIndexFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
@@ -202,7 +195,6 @@ func (this *QPersistentModelIndex) Child(row int, column int) *QModelIndex /*123
 func (this *QPersistentModelIndex) Data(role int) *QVariant /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndex4dataEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), role)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQVariantFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVariant)
 	return rv2
@@ -215,7 +207,6 @@ func (this *QPersistentModelIndex) Data(role int) *QVariant /*123*/ {
 func (this *QPersistentModelIndex) Flags() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndex5flagsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int(rv)
 }
 
@@ -226,9 +217,7 @@ func (this *QPersistentModelIndex) Flags() int {
 func (this *QPersistentModelIndex) Model() *QAbstractItemModel /*777 const QAbstractItemModel **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndex5modelEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:139
@@ -238,7 +227,6 @@ func (this *QPersistentModelIndex) Model() *QAbstractItemModel /*777 const QAbst
 func (this *QPersistentModelIndex) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK21QPersistentModelIndex7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

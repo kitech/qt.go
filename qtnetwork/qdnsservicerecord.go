@@ -107,13 +107,13 @@ func (this *QDnsServiceRecord) Swap(other *QDnsServiceRecord) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name()
-func (this *QDnsServiceRecord) Name() *qtcore.QString /*123*/ {
+func (this *QDnsServiceRecord) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDnsServiceRecord4nameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:147
@@ -123,7 +123,6 @@ func (this *QDnsServiceRecord) Name() *qtcore.QString /*123*/ {
 func (this *QDnsServiceRecord) Port() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDnsServiceRecord4portEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint16(rv) // 222
 }
 
@@ -134,7 +133,6 @@ func (this *QDnsServiceRecord) Port() uint16 {
 func (this *QDnsServiceRecord) Priority() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDnsServiceRecord8priorityEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint16(rv) // 222
 }
 
@@ -142,13 +140,13 @@ func (this *QDnsServiceRecord) Priority() uint16 {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString target()
-func (this *QDnsServiceRecord) Target() *qtcore.QString /*123*/ {
+func (this *QDnsServiceRecord) Target() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDnsServiceRecord6targetEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQString)
-	return rv2
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtNetwork/qdnslookup.h:150
@@ -158,7 +156,6 @@ func (this *QDnsServiceRecord) Target() *qtcore.QString /*123*/ {
 func (this *QDnsServiceRecord) TimeToLive() uint {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDnsServiceRecord10timeToLiveEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint(rv) // 222
 }
 
@@ -169,7 +166,6 @@ func (this *QDnsServiceRecord) TimeToLive() uint {
 func (this *QDnsServiceRecord) Weight() uint16 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK17QDnsServiceRecord6weightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return uint16(rv) // 222
 }
 

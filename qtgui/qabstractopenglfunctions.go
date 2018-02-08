@@ -92,7 +92,6 @@ func DeleteQAbstractOpenGLFunctions(this *QAbstractOpenGLFunctions) {
 func (this *QAbstractOpenGLFunctions) InitializeOpenGLFunctions() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -115,7 +114,6 @@ func NewQAbstractOpenGLFunctions() *QAbstractOpenGLFunctions {
 func (this *QAbstractOpenGLFunctions) IsInitialized() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK24QAbstractOpenGLFunctions13isInitializedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

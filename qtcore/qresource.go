@@ -79,8 +79,9 @@ func (*QResource) NewFromPointer(cthis unsafe.Pointer) *QResource {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QResource(const QString &, const QLocale &)
-func NewQResource(file *QString, locale *QLocale) *QResource {
-	var convArg0 = file.GetCthis()
+func NewQResource(file string, locale *QLocale) *QResource {
+	var tmpArg0 = NewQString_5(file)
+	var convArg0 = tmpArg0.GetCthis()
 	var convArg1 = locale.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResourceC2ERK7QStringRK7QLocale", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
@@ -104,8 +105,9 @@ func DeleteQResource(this *QResource) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFileName(const QString &)
-func (this *QResource) SetFileName(file *QString) {
-	var convArg0 = file.GetCthis()
+func (this *QResource) SetFileName(file string) {
+	var tmpArg0 = NewQString_5(file)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource11setFileNameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 }
@@ -114,26 +116,26 @@ func (this *QResource) SetFileName(file *QString) {
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString fileName()
-func (this *QResource) FileName() *QString /*123*/ {
+func (this *QResource) FileName() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QResource8fileNameEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qresource.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString absoluteFilePath()
-func (this *QResource) AbsoluteFilePath() *QString /*123*/ {
+func (this *QResource) AbsoluteFilePath() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QResource16absoluteFilePathEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQString)
-	return rv2
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
 }
 
 // /usr/include/qt/QtCore/qresource.h:64
@@ -153,7 +155,6 @@ func (this *QResource) SetLocale(locale *QLocale) {
 func (this *QResource) Locale() *QLocale /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QResource6localeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQLocaleFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLocale)
 	return rv2
@@ -166,7 +167,6 @@ func (this *QResource) Locale() *QLocale /*123*/ {
 func (this *QResource) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QResource7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -177,7 +177,6 @@ func (this *QResource) IsValid() bool {
 func (this *QResource) IsCompressed() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QResource12isCompressedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -188,7 +187,6 @@ func (this *QResource) IsCompressed() bool {
 func (this *QResource) Size() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QResource4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return int64(rv) // 222
 }
 
@@ -199,7 +197,6 @@ func (this *QResource) Size() int64 {
 func (this *QResource) Data() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QResource4dataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 
@@ -210,7 +207,6 @@ func (this *QResource) Data() unsafe.Pointer /*666*/ {
 func (this *QResource) LastModified() *QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QResource12lastModifiedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDateTime)
 	return rv2
@@ -220,12 +216,13 @@ func (this *QResource) LastModified() *QDateTime /*123*/ {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void addSearchPath(const QString &)
-func (this *QResource) AddSearchPath(path *QString) {
-	var convArg0 = path.GetCthis()
+func (this *QResource) AddSearchPath(path string) {
+	var tmpArg0 = NewQString_5(path)
+	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource13addSearchPathERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	gopp.ErrPrint(err, rv)
 }
-func QResource_AddSearchPath(path *QString) {
+func QResource_AddSearchPath(path string) {
 	var nilthis *QResource
 	nilthis.AddSearchPath(path)
 }
@@ -234,15 +231,16 @@ func QResource_AddSearchPath(path *QString) {
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool registerResource(const QString &, const QString &)
-func (this *QResource) RegisterResource(rccFilename *QString, resourceRoot *QString) bool {
-	var convArg0 = rccFilename.GetCthis()
-	var convArg1 = resourceRoot.GetCthis()
+func (this *QResource) RegisterResource(rccFilename string, resourceRoot string) bool {
+	var tmpArg0 = NewQString_5(rccFilename)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = NewQString_5(resourceRoot)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource16registerResourceERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
-func QResource_RegisterResource(rccFilename *QString, resourceRoot *QString) bool {
+func QResource_RegisterResource(rccFilename string, resourceRoot string) bool {
 	var nilthis *QResource
 	rv := nilthis.RegisterResource(rccFilename, resourceRoot)
 	return rv
@@ -252,14 +250,14 @@ func QResource_RegisterResource(rccFilename *QString, resourceRoot *QString) boo
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool registerResource(const uchar *, const QString &)
-func (this *QResource) RegisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot *QString) bool {
-	var convArg1 = resourceRoot.GetCthis()
+func (this *QResource) RegisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot string) bool {
+	var tmpArg1 = NewQString_5(resourceRoot)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource16registerResourceEPKhRK7QString", qtrt.FFI_TYPE_POINTER, &rccData, convArg1)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
-func QResource_RegisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot *QString) bool {
+func QResource_RegisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot string) bool {
 	var nilthis *QResource
 	rv := nilthis.RegisterResource_1(rccData, resourceRoot)
 	return rv
@@ -269,15 +267,16 @@ func QResource_RegisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot *
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool unregisterResource(const QString &, const QString &)
-func (this *QResource) UnregisterResource(rccFilename *QString, resourceRoot *QString) bool {
-	var convArg0 = rccFilename.GetCthis()
-	var convArg1 = resourceRoot.GetCthis()
+func (this *QResource) UnregisterResource(rccFilename string, resourceRoot string) bool {
+	var tmpArg0 = NewQString_5(rccFilename)
+	var convArg0 = tmpArg0.GetCthis()
+	var tmpArg1 = NewQString_5(resourceRoot)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource18unregisterResourceERK7QStringS2_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
-func QResource_UnregisterResource(rccFilename *QString, resourceRoot *QString) bool {
+func QResource_UnregisterResource(rccFilename string, resourceRoot string) bool {
 	var nilthis *QResource
 	rv := nilthis.UnregisterResource(rccFilename, resourceRoot)
 	return rv
@@ -287,14 +286,14 @@ func QResource_UnregisterResource(rccFilename *QString, resourceRoot *QString) b
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool unregisterResource(const uchar *, const QString &)
-func (this *QResource) UnregisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot *QString) bool {
-	var convArg1 = resourceRoot.GetCthis()
+func (this *QResource) UnregisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot string) bool {
+	var tmpArg1 = NewQString_5(resourceRoot)
+	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource18unregisterResourceEPKhRK7QString", qtrt.FFI_TYPE_POINTER, &rccData, convArg1)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return rv != 0
 }
-func QResource_UnregisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot *QString) bool {
+func QResource_UnregisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot string) bool {
 	var nilthis *QResource
 	rv := nilthis.UnregisterResource_1(rccData, resourceRoot)
 	return rv
@@ -307,7 +306,6 @@ func QResource_UnregisterResource_1(rccData unsafe.Pointer /*666*/, resourceRoot
 func (this *QResource) IsDir() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QResource5isDirEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -318,7 +316,6 @@ func (this *QResource) IsDir() bool {
 func (this *QResource) IsFile() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QResource6isFileEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 

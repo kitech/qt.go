@@ -116,7 +116,6 @@ func DeleteQTableWidgetSelectionRange(this *QTableWidgetSelectionRange) {
 func (this *QTableWidgetSelectionRange) TopRow() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange6topRowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -127,7 +126,6 @@ func (this *QTableWidgetSelectionRange) TopRow() int {
 func (this *QTableWidgetSelectionRange) BottomRow() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange9bottomRowEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -138,7 +136,6 @@ func (this *QTableWidgetSelectionRange) BottomRow() int {
 func (this *QTableWidgetSelectionRange) LeftColumn() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange10leftColumnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -149,7 +146,6 @@ func (this *QTableWidgetSelectionRange) LeftColumn() int {
 func (this *QTableWidgetSelectionRange) RightColumn() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange11rightColumnEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -160,7 +156,6 @@ func (this *QTableWidgetSelectionRange) RightColumn() int {
 func (this *QTableWidgetSelectionRange) RowCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange8rowCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -171,7 +166,6 @@ func (this *QTableWidgetSelectionRange) RowCount() int {
 func (this *QTableWidgetSelectionRange) ColumnCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK26QTableWidgetSelectionRange11columnCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 

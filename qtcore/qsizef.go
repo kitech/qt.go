@@ -110,7 +110,6 @@ func NewQSizeF_2(w float64, h float64) *QSizeF {
 func (this *QSizeF) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -121,7 +120,6 @@ func (this *QSizeF) IsNull() bool {
 func (this *QSizeF) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -132,7 +130,6 @@ func (this *QSizeF) IsEmpty() bool {
 func (this *QSizeF) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
@@ -143,7 +140,6 @@ func (this *QSizeF) IsValid() bool {
 func (this *QSizeF) Width() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF5widthEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -154,7 +150,6 @@ func (this *QSizeF) Width() float64 {
 func (this *QSizeF) Height() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF6heightEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -192,7 +187,6 @@ func (this *QSizeF) Transpose() {
 func (this *QSizeF) Transposed() *QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF10transposedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSizeF)
 	return rv2
@@ -224,7 +218,6 @@ func (this *QSizeF) Scale_1(s *QSizeF, mode int) {
 func (this *QSizeF) Scaled(w float64, h float64, mode int) *QSizeF /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF6scaledEddN2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), w, h, mode)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSizeF)
 	return rv2
@@ -238,7 +231,6 @@ func (this *QSizeF) Scaled_1(s *QSizeF, mode int) *QSizeF /*123*/ {
 	var convArg0 = s.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF6scaledERKS_N2Qt15AspectRatioModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, mode)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSizeF)
 	return rv2
@@ -252,7 +244,6 @@ func (this *QSizeF) ExpandedTo(arg0 *QSizeF) *QSizeF /*123*/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF10expandedToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSizeF)
 	return rv2
@@ -266,7 +257,6 @@ func (this *QSizeF) BoundedTo(arg0 *QSizeF) *QSizeF /*123*/ {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF9boundedToERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQSizeFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSizeF)
 	return rv2
@@ -279,7 +269,6 @@ func (this *QSizeF) BoundedTo(arg0 *QSizeF) *QSizeF /*123*/ {
 func (this *QSizeF) Rwidth() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QSizeF6rwidthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cpretval2go("float64", rv).(float64) // 3331
 }
 
@@ -290,7 +279,6 @@ func (this *QSizeF) Rwidth() float64 {
 func (this *QSizeF) Rheight() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QSizeF7rheightEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return qtrt.Cpretval2go("float64", rv).(float64) // 3331
 }
 
@@ -301,7 +289,6 @@ func (this *QSizeF) Rheight() float64 {
 func (this *QSizeF) ToSize() *QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QSizeF6toSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
 	return rv2
