@@ -270,6 +270,30 @@ func (this *QRegExp) CaptureCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+// /usr/include/qt/QtCore/qregexp.h:103
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList capturedTexts()
+func (this *QRegExp) CapturedTexts() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QRegExp13capturedTextsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qregexp.h:104
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QStringList capturedTexts()
+func (this *QRegExp) CapturedTexts_1() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QRegExp13capturedTextsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qregexp.h:105
 // index:0
 // Public Visibility=Default Availability=Available

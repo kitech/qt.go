@@ -1867,6 +1867,59 @@ func (this *QString) Replace_12(re *QRegularExpression, after string) string {
 	return rv3
 }
 
+// /usr/include/qt/QtCore/qstring.h:506
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList split(const QString &, enum QString::SplitBehavior, Qt::CaseSensitivity)
+func (this *QString) Split(sep string, behavior int, cs int) *QStringList /*123*/ {
+	var tmpArg0 = NewQString_5(sep)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5splitERKS_NS_13SplitBehaviorEN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, behavior, cs)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qstring.h:510
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QStringList split(QChar, enum QString::SplitBehavior, Qt::CaseSensitivity)
+func (this *QString) Split_1(sep *QChar /*123*/, behavior int, cs int) *QStringList /*123*/ {
+	var convArg0 = sep.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5splitE5QCharNS_13SplitBehaviorEN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, behavior, cs)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qstring.h:515
+// index:2
+// Public Visibility=Default Availability=Available
+// [8] QStringList split(const QRegExp &, enum QString::SplitBehavior)
+func (this *QString) Split_2(sep *QRegExp, behavior int) *QStringList /*123*/ {
+	var convArg0 = sep.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5splitERK7QRegExpNS_13SplitBehaviorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, behavior)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qstring.h:519
+// index:3
+// Public Visibility=Default Availability=Available
+// [8] QStringList split(const QRegularExpression &, enum QString::SplitBehavior)
+func (this *QString) Split_3(sep *QRegularExpression, behavior int) *QStringList /*123*/ {
+	var convArg0 = sep.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5splitERK18QRegularExpressionNS_13SplitBehaviorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, behavior)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qstring.h:528
 // index:0
 // Public Visibility=Default Availability=Available

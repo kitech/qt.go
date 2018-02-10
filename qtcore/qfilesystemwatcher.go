@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 6
+// extern C begin: 8
 */
 // import "C"
 import "unsafe"
@@ -121,6 +121,19 @@ func (this *QFileSystemWatcher) AddPath(file string) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtCore/qfilesystemwatcher.h:63
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList addPaths(const QStringList &)
+func (this *QFileSystemWatcher) AddPaths(files *QStringList) *QStringList /*123*/ {
+	var convArg0 = files.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcher8addPathsERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qfilesystemwatcher.h:64
 // index:0
 // Public Visibility=Default Availability=Available
@@ -131,6 +144,43 @@ func (this *QFileSystemWatcher) RemovePath(file string) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcher10removePathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qfilesystemwatcher.h:65
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList removePaths(const QStringList &)
+func (this *QFileSystemWatcher) RemovePaths(files *QStringList) *QStringList /*123*/ {
+	var convArg0 = files.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN18QFileSystemWatcher11removePathsERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qfilesystemwatcher.h:67
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList files()
+func (this *QFileSystemWatcher) Files() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFileSystemWatcher5filesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qfilesystemwatcher.h:68
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList directories()
+func (this *QFileSystemWatcher) Directories() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QFileSystemWatcher11directoriesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
 }
 
 //  body block end

@@ -247,6 +247,18 @@ func (this *QDirModel) Sort(column int, order int) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qdirmodel.h:89
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QStringList mimeTypes()
+func (this *QDirModel) MimeTypes() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDirModel9mimeTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qdirmodel.h:91
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -297,6 +309,18 @@ func (this *QDirModel) SetNameFilters(filters *qtcore.QStringList) {
 	var convArg0 = filters.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QDirModel14setNameFiltersERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qdirmodel.h:101
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList nameFilters()
+func (this *QDirModel) NameFilters() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDirModel11nameFiltersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qdirmodel.h:103

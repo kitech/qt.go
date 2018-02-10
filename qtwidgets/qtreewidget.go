@@ -53,6 +53,11 @@ func (this *QTreeWidget) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) 
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
+// QStringList mimeTypes()
+func (this *QTreeWidget) InheritMimeTypes(f func() unsafe.Pointer) {
+	qtrt.SetAllInheritCallback(this, "mimeTypes", f)
+}
+
 // bool dropMimeData(class QTreeWidgetItem *, int, const class QMimeData *, Qt::DropAction)
 func (this *QTreeWidget) InheritDropMimeData(f func(parent *QTreeWidgetItem /*777 QTreeWidgetItem **/, index int, data *qtcore.QMimeData /*777 const QMimeData **/, action int) bool) {
 	qtrt.SetAllInheritCallback(this, "dropMimeData", f)
@@ -704,6 +709,18 @@ func (this *QTreeWidget) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qtreewidget.h:350
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [8] QStringList mimeTypes()
+func (this *QTreeWidget) MimeTypes() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget9mimeTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qtreewidget.h:356

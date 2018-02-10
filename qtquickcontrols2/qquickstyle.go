@@ -156,6 +156,23 @@ func QQuickStyle_SetFallbackStyle(style string) {
 	nilthis.SetFallbackStyle(style)
 }
 
+// /usr/include/qt/QtQuickControls2/qquickstyle.h:53
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList availableStyles()
+func (this *QQuickStyle) AvailableStyles() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle15availableStylesEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+func QQuickStyle_AvailableStyles() *qtcore.QStringList /*123*/ {
+	var nilthis *QQuickStyle
+	rv := nilthis.AvailableStyles()
+	return rv
+}
+
 func DeleteQQuickStyle(this *QQuickStyle) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyleD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	gopp.ErrPrint(err, rv)

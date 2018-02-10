@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 71
+// extern C begin: 77
 */
 // import "C"
 import "unsafe"
@@ -326,6 +326,18 @@ func (this *QFileSystemModel) Sort(column int, order int) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:103
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QStringList mimeTypes()
+func (this *QFileSystemModel) MimeTypes() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel9mimeTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:105
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -491,6 +503,18 @@ func (this *QFileSystemModel) SetNameFilters(filters *qtcore.QStringList) {
 	var convArg0 = filters.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QFileSystemModel14setNameFiltersERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:130
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList nameFilters()
+func (this *QFileSystemModel) NameFilters() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QFileSystemModel11nameFiltersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h:132

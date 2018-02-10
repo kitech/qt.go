@@ -285,6 +285,18 @@ func QImageReader_ImageFormat_2(device *qtcore.QIODevice /*777 QIODevice **/) *q
 	return rv
 }
 
+// /usr/include/qt/QtGui/qimagereader.h:95
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList textKeys()
+func (this *QImageReader) TextKeys() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QImageReader8textKeysEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qimagereader.h:96
 // index:0
 // Public Visibility=Default Availability=Available

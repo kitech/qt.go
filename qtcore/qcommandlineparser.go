@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 50
+// extern C begin: 52
 */
 // import "C"
 import "unsafe"
@@ -284,6 +284,69 @@ func (this *QCommandLineParser) Value_1(option *QCommandLineOption) string {
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
 	return rv3
+}
+
+// /usr/include/qt/QtCore/qcommandlineparser.h:92
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList values(const QString &)
+func (this *QCommandLineParser) Values(name string) *QStringList /*123*/ {
+	var tmpArg0 = NewQString_5(name)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser6valuesERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qcommandlineparser.h:96
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QStringList values(const QCommandLineOption &)
+func (this *QCommandLineParser) Values_1(option *QCommandLineOption) *QStringList /*123*/ {
+	var convArg0 = option.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser6valuesERK18QCommandLineOption", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qcommandlineparser.h:98
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList positionalArguments()
+func (this *QCommandLineParser) PositionalArguments() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser19positionalArgumentsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qcommandlineparser.h:99
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList optionNames()
+func (this *QCommandLineParser) OptionNames() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser11optionNamesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qcommandlineparser.h:100
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList unknownOptionNames()
+func (this *QCommandLineParser) UnknownOptionNames() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineParser18unknownOptionNamesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qcommandlineparser.h:102

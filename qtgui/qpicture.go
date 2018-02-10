@@ -278,6 +278,40 @@ func QPicture_PictureFormat(fileName string) string {
 	return rv
 }
 
+// /usr/include/qt/QtGui/qpicture.h:97
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList inputFormatList()
+func (this *QPicture) InputFormatList() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPicture15inputFormatListEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+func QPicture_InputFormatList() *qtcore.QStringList /*123*/ {
+	var nilthis *QPicture
+	rv := nilthis.InputFormatList()
+	return rv
+}
+
+// /usr/include/qt/QtGui/qpicture.h:98
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList outputFormatList()
+func (this *QPicture) OutputFormatList() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QPicture16outputFormatListEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+func QPicture_OutputFormatList() *qtcore.QStringList /*123*/ {
+	var nilthis *QPicture
+	rv := nilthis.OutputFormatList()
+	return rv
+}
+
 // /usr/include/qt/QtGui/qpicture.h:101
 // index:0
 // Public virtual Visibility=Default Availability=Available

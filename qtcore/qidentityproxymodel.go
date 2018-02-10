@@ -233,6 +233,19 @@ func (this *QIdentityProxyModel) MapSelectionToSource(selection *QItemSelection)
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qidentityproxymodel.h:73
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QModelIndexList match(const QModelIndex &, int, const QVariant &, int, Qt::MatchFlags)
+func (this *QIdentityProxyModel) Match(start *QModelIndex, role int, value *QVariant, hits int, flags int) *QModelIndexList /*667*/ {
+	var convArg0 = start.GetCthis()
+	var convArg2 = value.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QIdentityProxyModel5matchERK11QModelIndexiRK8QVarianti6QFlagsIN2Qt9MatchFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role, convArg2, hits, flags)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qidentityproxymodel.h:74
 // index:0
 // Public virtual Visibility=Default Availability=Available

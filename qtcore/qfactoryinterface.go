@@ -77,4 +77,16 @@ func DeleteQFactoryInterface(this *QFactoryInterface) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtCore/qfactoryinterface.h:52
+// index:0
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QStringList keys()
+func (this *QFactoryInterface) Keys() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QFactoryInterface4keysEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
 //  body block end

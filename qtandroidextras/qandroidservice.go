@@ -1,6 +1,6 @@
 package qtandroidextras
 
-// /usr/include/qt/QtAndroidExtras/qandroidservice.h
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidservice.h
 // #include <qandroidservice.h>
 // #include <QtAndroidExtras>
 
@@ -67,7 +67,7 @@ func (*QAndroidService) NewFromPointer(cthis unsafe.Pointer) *QAndroidService {
 	return NewQAndroidServiceFromPointer(cthis)
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidservice.h:54
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidservice.h:54
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidService(int &, char **, int)
@@ -79,7 +79,7 @@ func NewQAndroidService(argc int, argv []string, flags int) *QAndroidService {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidservice.h:59
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidservice.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAndroidService()
@@ -90,7 +90,7 @@ func DeleteQAndroidService(this *QAndroidService) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidservice.h:61
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidservice.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QAndroidBinder * onBind(const QAndroidIntent &)
@@ -98,9 +98,7 @@ func (this *QAndroidService) OnBind(intent *QAndroidIntent) *QAndroidBinder /*77
 	var convArg0 = intent.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QAndroidService6onBindERK14QAndroidIntent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
-	//  return rv
-	rv2 := /*==*/ NewQAndroidBinderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-	return rv2
+	return /*==*/ NewQAndroidBinderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 //  body block end

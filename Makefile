@@ -32,8 +32,6 @@ qml-:
 	CC=clang CXX=clang++ go install -v -x ./qtqml
 quick-:
 	CC=clang CXX=clang++ go install -v -x ./qtquick
-quicktmpl-:
-	CC=clang CXX=clang++ go install -v -x ./qtquicktemplates2
 quickctrl-:
 	CC=clang CXX=clang++ go install -v -x ./qtquickcontrols2
 quickwgt-:

@@ -74,6 +74,23 @@ func (*QStyleFactory) NewFromPointer(cthis unsafe.Pointer) *QStyleFactory {
 	return NewQStyleFactoryFromPointer(cthis)
 }
 
+// /usr/include/qt/QtWidgets/qstylefactory.h:54
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList keys()
+func (this *QStyleFactory) Keys() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QStyleFactory4keysEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+func QStyleFactory_Keys() *qtcore.QStringList /*123*/ {
+	var nilthis *QStyleFactory
+	rv := nilthis.Keys()
+	return rv
+}
+
 // /usr/include/qt/QtWidgets/qstylefactory.h:55
 // index:0
 // Public static Visibility=Default Availability=Available

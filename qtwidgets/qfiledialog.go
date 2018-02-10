@@ -202,6 +202,18 @@ func (this *QFileDialog) SelectFile(filename string) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qfiledialog.h:115
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList selectedFiles()
+func (this *QFileDialog) SelectedFiles() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDialog13selectedFilesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qfiledialog.h:117
 // index:0
 // Public Visibility=Default Availability=Available
@@ -252,6 +264,18 @@ func (this *QFileDialog) SetNameFilters(filters *qtcore.QStringList) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qfiledialog.h:125
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList nameFilters()
+func (this *QFileDialog) NameFilters() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDialog11nameFiltersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qfiledialog.h:126
 // index:0
 // Public Visibility=Default Availability=Available
@@ -297,6 +321,18 @@ func (this *QFileDialog) SetMimeTypeFilters(filters *qtcore.QStringList) {
 	var convArg0 = filters.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog18setMimeTypeFiltersERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qfiledialog.h:132
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList mimeTypeFilters()
+func (this *QFileDialog) MimeTypeFilters() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDialog15mimeTypeFiltersEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:133
@@ -500,6 +536,18 @@ func (this *QFileDialog) SetHistory(paths *qtcore.QStringList) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qfiledialog.h:167
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList history()
+func (this *QFileDialog) History() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDialog7historyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qfiledialog.h:169
 // index:0
 // Public Visibility=Default Availability=Available
@@ -572,6 +620,18 @@ func (this *QFileDialog) SetSupportedSchemes(schemes *qtcore.QStringList) {
 	var convArg0 = schemes.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog19setSupportedSchemesERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qfiledialog.h:179
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList supportedSchemes()
+func (this *QFileDialog) SupportedSchemes() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDialog16supportedSchemesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qfiledialog.h:182
@@ -885,6 +945,32 @@ func (this *QFileDialog) GetExistingDirectoryUrl(parent *QWidget /*777 QWidget *
 func QFileDialog_GetExistingDirectoryUrl(parent *QWidget /*777 QWidget **/, caption string, dir *qtcore.QUrl, options int, supportedSchemes *qtcore.QStringList) *qtcore.QUrl /*123*/ {
 	var nilthis *QFileDialog
 	rv := nilthis.GetExistingDirectoryUrl(parent, caption, dir, options, supportedSchemes)
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qfiledialog.h:251
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList getOpenFileNames(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
+func (this *QFileDialog) GetOpenFileNames(parent *QWidget /*777 QWidget **/, caption string, dir string, filter string, selectedFilter string, options int) *qtcore.QStringList /*123*/ {
+	var convArg0 = parent.GetCthis()
+	var tmpArg1 = qtcore.NewQString_5(caption)
+	var convArg1 = tmpArg1.GetCthis()
+	var tmpArg2 = qtcore.NewQString_5(dir)
+	var convArg2 = tmpArg2.GetCthis()
+	var tmpArg3 = qtcore.NewQString_5(filter)
+	var convArg3 = tmpArg3.GetCthis()
+	var tmpArg4 = qtcore.NewQString_5(selectedFilter)
+	var convArg4 = tmpArg4.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDialog16getOpenFileNamesEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, convArg4, options)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+func QFileDialog_GetOpenFileNames(parent *QWidget /*777 QWidget **/, caption string, dir string, filter string, selectedFilter string, options int) *qtcore.QStringList /*123*/ {
+	var nilthis *QFileDialog
+	rv := nilthis.GetOpenFileNames(parent, caption, dir, filter, selectedFilter, options)
 	return rv
 }
 

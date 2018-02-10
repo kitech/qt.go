@@ -170,6 +170,38 @@ func QGuiApplication_DesktopFileName() string {
 	return rv
 }
 
+// /usr/include/qt/QtGui/qguiapplication.h:97
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] QWindowList allWindows()
+func (this *QGuiApplication) AllWindows() *QWindowList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication10allWindowsEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQWindowListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+func QGuiApplication_AllWindows() *QWindowList /*667*/ {
+	var nilthis *QGuiApplication
+	rv := nilthis.AllWindows()
+	return rv
+}
+
+// /usr/include/qt/QtGui/qguiapplication.h:98
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] QWindowList topLevelWindows()
+func (this *QGuiApplication) TopLevelWindows() *QWindowList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication15topLevelWindowsEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQWindowListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+func QGuiApplication_TopLevelWindows() *QWindowList /*667*/ {
+	var nilthis *QGuiApplication
+	rv := nilthis.TopLevelWindows()
+	return rv
+}
+
 // /usr/include/qt/QtGui/qguiapplication.h:99
 // index:0
 // Public static Visibility=Default Availability=Available

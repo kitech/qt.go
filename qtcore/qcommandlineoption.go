@@ -153,6 +153,18 @@ func (this *QCommandLineOption) Swap(other *QCommandLineOption) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtCore/qcommandlineoption.h:81
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList names()
+func (this *QCommandLineOption) Names() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineOption5namesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qcommandlineoption.h:83
 // index:0
 // Public Visibility=Default Availability=Available
@@ -220,6 +232,18 @@ func (this *QCommandLineOption) SetDefaultValues(defaultValues *QStringList) {
 	var convArg0 = defaultValues.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QCommandLineOption16setDefaultValuesERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qcommandlineoption.h:91
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList defaultValues()
+func (this *QCommandLineOption) DefaultValues() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QCommandLineOption13defaultValuesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qcommandlineoption.h:93

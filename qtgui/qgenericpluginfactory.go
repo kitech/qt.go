@@ -70,6 +70,23 @@ func (*QGenericPluginFactory) NewFromPointer(cthis unsafe.Pointer) *QGenericPlug
 	return NewQGenericPluginFactoryFromPointer(cthis)
 }
 
+// /usr/include/qt/QtGui/qgenericpluginfactory.h:55
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList keys()
+func (this *QGenericPluginFactory) Keys() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN21QGenericPluginFactory4keysEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+func QGenericPluginFactory_Keys() *qtcore.QStringList /*123*/ {
+	var nilthis *QGenericPluginFactory
+	rv := nilthis.Keys()
+	return rv
+}
+
 // /usr/include/qt/QtGui/qgenericpluginfactory.h:56
 // index:0
 // Public static Visibility=Default Availability=Available

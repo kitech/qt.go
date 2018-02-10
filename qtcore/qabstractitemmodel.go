@@ -130,6 +130,11 @@ func (this *QAbstractItemModel) InheritChangePersistentIndex(f func(from *QModel
 	qtrt.SetAllInheritCallback(this, "changePersistentIndex", f)
 }
 
+// QModelIndexList persistentIndexList()
+func (this *QAbstractItemModel) InheritPersistentIndexList(f func() unsafe.Pointer) {
+	qtrt.SetAllInheritCallback(this, "persistentIndexList", f)
+}
+
 type QAbstractItemModel struct {
 	*QObject
 }
@@ -314,6 +319,18 @@ func (this *QAbstractItemModel) SetHeaderData(section int, orientation int, valu
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel13setHeaderDataEiN2Qt11OrientationERK8QVarianti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), section, orientation, convArg2, role)
 	gopp.ErrPrint(err, rv)
 	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qabstractitemmodel.h:198
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QStringList mimeTypes()
+func (this *QAbstractItemModel) MimeTypes() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel9mimeTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:200
@@ -550,6 +567,19 @@ func (this *QAbstractItemModel) Buddy(index *QModelIndex) *QModelIndex /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qabstractitemmodel.h:235
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QModelIndexList match(const QModelIndex &, int, const QVariant &, int, Qt::MatchFlags)
+func (this *QAbstractItemModel) Match(start *QModelIndex, role int, value *QVariant, hits int, flags int) *QModelIndexList /*667*/ {
+	var convArg0 = start.GetCthis()
+	var convArg2 = value.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel5matchERK11QModelIndexiRK8QVarianti6QFlagsIN2Qt9MatchFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role, convArg2, hits, flags)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qabstractitemmodel.h:239
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -781,6 +811,17 @@ func (this *QAbstractItemModel) ChangePersistentIndex(from *QModelIndex, to *QMo
 	var convArg1 = to.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN18QAbstractItemModel21changePersistentIndexERK11QModelIndexS2_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qabstractitemmodel.h:329
+// index:0
+// Protected Visibility=Default Availability=Available
+// [8] QModelIndexList persistentIndexList()
+func (this *QAbstractItemModel) PersistentIndexList() *QModelIndexList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QAbstractItemModel19persistentIndexListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
 }
 
 type QAbstractItemModel__LayoutChangeHint = int

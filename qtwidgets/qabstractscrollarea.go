@@ -311,6 +311,17 @@ func (this *QAbstractScrollArea) AddScrollBarWidget(widget *QWidget /*777 QWidge
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qabstractscrollarea.h:88
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] QWidgetList scrollBarWidgets(Qt::Alignment)
+func (this *QAbstractScrollArea) ScrollBarWidgets(alignment int) *QWidgetList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractScrollArea16scrollBarWidgetsE6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), alignment)
+	gopp.ErrPrint(err, rv)
+	rv2 := NewQWidgetListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:90
 // index:0
 // Public Visibility=Default Availability=Available

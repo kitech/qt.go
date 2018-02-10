@@ -82,6 +82,32 @@ func NewQFontDatabase() *QFontDatabase {
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qfontdatabase.h:123
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList families(enum QFontDatabase::WritingSystem)
+func (this *QFontDatabase) Families(writingSystem int) *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase8familiesENS_13WritingSystemE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), writingSystem)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qfontdatabase.h:124
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList styles(const QString &)
+func (this *QFontDatabase) Styles(family string) *qtcore.QStringList /*123*/ {
+	var tmpArg0 = qtcore.NewQString_5(family)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFontDatabase6stylesERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qfontdatabase.h:127
 // index:0
 // Public Visibility=Default Availability=Available
@@ -314,6 +340,23 @@ func (this *QFontDatabase) AddApplicationFontFromData(fontData *qtcore.QByteArra
 func QFontDatabase_AddApplicationFontFromData(fontData *qtcore.QByteArray) int {
 	var nilthis *QFontDatabase
 	rv := nilthis.AddApplicationFontFromData(fontData)
+	return rv
+}
+
+// /usr/include/qt/QtGui/qfontdatabase.h:149
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList applicationFontFamilies(int)
+func (this *QFontDatabase) ApplicationFontFamilies(id int) *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QFontDatabase23applicationFontFamiliesEi", qtrt.FFI_TYPE_POINTER, id)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+func QFontDatabase_ApplicationFontFamilies(id int) *qtcore.QStringList /*123*/ {
+	var nilthis *QFontDatabase
+	rv := nilthis.ApplicationFontFamilies(id)
 	return rv
 }
 

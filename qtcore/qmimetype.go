@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 22
+// extern C begin: 23
 */
 // import "C"
 import "unsafe"
@@ -169,6 +169,66 @@ func (this *QMimeType) IconName() string {
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
 	return rv3
+}
+
+// /usr/include/qt/QtCore/qmimetype.h:106
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList globPatterns()
+func (this *QMimeType) GlobPatterns() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType12globPatternsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qmimetype.h:107
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList parentMimeTypes()
+func (this *QMimeType) ParentMimeTypes() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType15parentMimeTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qmimetype.h:108
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList allAncestors()
+func (this *QMimeType) AllAncestors() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType12allAncestorsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qmimetype.h:109
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList aliases()
+func (this *QMimeType) Aliases() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType7aliasesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qmimetype.h:110
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList suffixes()
+func (this *QMimeType) Suffixes() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeType8suffixesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qmimetype.h:111

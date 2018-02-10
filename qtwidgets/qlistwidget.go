@@ -53,6 +53,11 @@ func (this *QListWidget) InheritEvent(f func(e *qtcore.QEvent /*777 QEvent **/) 
 	qtrt.SetAllInheritCallback(this, "event", f)
 }
 
+// QStringList mimeTypes()
+func (this *QListWidget) InheritMimeTypes(f func() unsafe.Pointer) {
+	qtrt.SetAllInheritCallback(this, "mimeTypes", f)
+}
+
 // bool dropMimeData(int, const class QMimeData *, Qt::DropAction)
 func (this *QListWidget) InheritDropMimeData(f func(index int, data *qtcore.QMimeData /*777 const QMimeData **/, action int) bool) {
 	qtrt.SetAllInheritCallback(this, "dropMimeData", f)
@@ -614,6 +619,18 @@ func (this *QListWidget) Event(e *qtcore.QEvent /*777 QEvent **/) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QListWidget5eventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qlistwidget.h:282
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [8] QStringList mimeTypes()
+func (this *QListWidget) MimeTypes() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget9mimeTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qlistwidget.h:289

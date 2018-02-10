@@ -1,8 +1,8 @@
 package qtandroidextras
 
-// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h
 // #include <qandroidjnienvironment.h>
-// #include <QtAndroidExtras>
+// #include <Qtjni>
 
 //  header block end
 
@@ -70,7 +70,7 @@ func (*QAndroidJniEnvironment) NewFromPointer(cthis unsafe.Pointer) *QAndroidJni
 	return NewQAndroidJniEnvironmentFromPointer(cthis)
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h:55
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h:55
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidJniEnvironment()
@@ -82,7 +82,7 @@ func NewQAndroidJniEnvironment() *QAndroidJniEnvironment {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h:56
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h:56
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QAndroidJniEnvironment()
@@ -93,14 +93,13 @@ func DeleteQAndroidJniEnvironment(this *QAndroidJniEnvironment) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h:57
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h:57
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] int * javaVM()
 func (this *QAndroidJniEnvironment) JavaVM() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN22QAndroidJniEnvironment6javaVMEv", qtrt.FFI_TYPE_POINTER)
 	gopp.ErrPrint(err, rv)
-	// return rv
 	return unsafe.Pointer(uintptr(rv))
 }
 func QAndroidJniEnvironment_JavaVM() unsafe.Pointer /*666*/ {

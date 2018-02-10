@@ -1,8 +1,8 @@
 package qtandroidextras
 
-// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h
 // #include <qandroidjnienvironment.h>
-// #include <QtAndroidExtras>
+// #include <Qtjni>
 
 //  header block end
 
@@ -70,7 +70,7 @@ func (*QAndroidJniExceptionCleaner) NewFromPointer(cthis unsafe.Pointer) *QAndro
 	return NewQAndroidJniExceptionCleanerFromPointer(cthis)
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h:75
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidJniExceptionCleaner(enum QAndroidJniExceptionCleaner::OutputMode)
@@ -82,7 +82,7 @@ func NewQAndroidJniExceptionCleaner(outputMode int) *QAndroidJniExceptionCleaner
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h:76
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QAndroidJniExceptionCleaner()
@@ -93,7 +93,7 @@ func DeleteQAndroidJniExceptionCleaner(this *QAndroidJniExceptionCleaner) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidjnienvironment.h:78
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/jni/qandroidjnienvironment.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clean()

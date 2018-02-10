@@ -189,6 +189,18 @@ func (this *QStringListModel) Sort(column int, order int) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtCore/qstringlistmodel.h:71
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList stringList()
+func (this *QStringListModel) StringList() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QStringListModel10stringListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qstringlistmodel.h:72
 // index:0
 // Public Visibility=Default Availability=Available

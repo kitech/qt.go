@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 20
+// extern C begin: 21
 */
 // import "C"
 import "unsafe"
@@ -188,6 +188,39 @@ func (this *QItemSelectionModel) HasSelection() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel12hasSelectionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qitemselectionmodel.h:182
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QModelIndexList selectedIndexes()
+func (this *QItemSelectionModel) SelectedIndexes() *QModelIndexList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel15selectedIndexesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qitemselectionmodel.h:183
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QModelIndexList selectedRows(int)
+func (this *QItemSelectionModel) SelectedRows(column int) *QModelIndexList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel12selectedRowsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qitemselectionmodel.h:184
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QModelIndexList selectedColumns(int)
+func (this *QItemSelectionModel) SelectedColumns(row int) *QModelIndexList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionModel15selectedColumnsEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), row)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:185

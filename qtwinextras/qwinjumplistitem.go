@@ -244,6 +244,18 @@ func (this *QWinJumpListItem) SetArguments(arguments *qtcore.QStringList) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWinExtras/../../src/winextras/qwinjumplistitem.h:79
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList arguments()
+func (this *QWinJumpListItem) Arguments() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK16QWinJumpListItem9argumentsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
 type QWinJumpListItem__Type = int
 
 const QWinJumpListItem__Destination QWinJumpListItem__Type = 0

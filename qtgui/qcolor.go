@@ -264,6 +264,23 @@ func (this *QColor) SetNamedColor_2(name *qtcore.QLatin1String /*123*/) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qcolor.h:107
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList colorNames()
+func (this *QColor) ColorNames() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor10colorNamesEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+func QColor_ColorNames() *qtcore.QStringList /*123*/ {
+	var nilthis *QColor
+	rv := nilthis.ColorNames()
+	return rv
+}
+
 // /usr/include/qt/QtGui/qcolor.h:109
 // index:0
 // Public inline Visibility=Default Availability=Available

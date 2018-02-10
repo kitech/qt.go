@@ -113,6 +113,11 @@ func (this *QTreeView) InheritVisualRegionForSelection(f func(selection *qtcore.
 	qtrt.SetAllInheritCallback(this, "visualRegionForSelection", f)
 }
 
+// QModelIndexList selectedIndexes()
+func (this *QTreeView) InheritSelectedIndexes(f func() unsafe.Pointer) {
+	qtrt.SetAllInheritCallback(this, "selectedIndexes", f)
+}
+
 // void timerEvent(class QTimerEvent *)
 func (this *QTreeView) InheritTimerEvent(f func(event *qtcore.QTimerEvent /*777 QTimerEvent **/) /*void*/) {
 	qtrt.SetAllInheritCallback(this, "timerEvent", f)
@@ -1020,6 +1025,17 @@ func (this *QTreeView) VisualRegionForSelection(selection *qtcore.QItemSelection
 	gopp.ErrPrint(err, rv)
 	rv2 := qtgui.NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQRegion)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qtreeview.h:185
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [8] QModelIndexList selectedIndexes()
+func (this *QTreeView) SelectedIndexes() *qtcore.QModelIndexList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QTreeView15selectedIndexesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
 	return rv2
 }
 

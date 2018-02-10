@@ -132,6 +132,22 @@ func (this *QPluginLoader) MetaData() *QJsonObject /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qpluginloader.h:69
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QObjectList staticInstances()
+func (this *QPluginLoader) StaticInstances() *QObjectList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN13QPluginLoader15staticInstancesEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQObjectListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+func QPluginLoader_StaticInstances() *QObjectList /*667*/ {
+	var nilthis *QPluginLoader
+	rv := nilthis.StaticInstances()
+	return rv
+}
+
 // /usr/include/qt/QtCore/qpluginloader.h:72
 // index:0
 // Public Visibility=Default Availability=Available

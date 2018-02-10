@@ -1,6 +1,6 @@
 package qtandroidextras
 
-// /usr/include/qt/QtAndroidExtras/qandroidbinder.h
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h
 // #include <qandroidbinder.h>
 // #include <QtAndroidExtras>
 
@@ -70,7 +70,7 @@ func (*QAndroidBinder) NewFromPointer(cthis unsafe.Pointer) *QAndroidBinder {
 	return NewQAndroidBinderFromPointer(cthis)
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidbinder.h:62
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidBinder()
@@ -82,7 +82,7 @@ func NewQAndroidBinder() *QAndroidBinder {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidbinder.h:63
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h:63
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidBinder(const QAndroidJniObject &)
@@ -95,7 +95,7 @@ func NewQAndroidBinder_1(binder *QAndroidJniObject) *QAndroidBinder {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidbinder.h:65
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAndroidBinder()
@@ -106,7 +106,7 @@ func DeleteQAndroidBinder(this *QAndroidBinder) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidbinder.h:67
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool onTransact(int, const QAndroidParcel &, const QAndroidParcel &, enum QAndroidBinder::CallType)
@@ -115,11 +115,10 @@ func (this *QAndroidBinder) OnTransact(code int, data *QAndroidParcel, reply *QA
 	var convArg2 = reply.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QAndroidBinder10onTransactEiRK14QAndroidParcelS2_NS_8CallTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), code, convArg1, convArg2, flags)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidbinder.h:68
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool transact(int, const QAndroidParcel &, QAndroidParcel *, enum QAndroidBinder::CallType)
@@ -128,18 +127,16 @@ func (this *QAndroidBinder) Transact(code int, data *QAndroidParcel, reply *QAnd
 	var convArg2 = reply.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidBinder8transactEiRK14QAndroidParcelPS0_NS_8CallTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), code, convArg1, convArg2, flags)
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	return rv != 0
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidbinder.h:70
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidbinder.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] QAndroidJniObject handle()
 func (this *QAndroidBinder) Handle() *QAndroidJniObject /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QAndroidBinder6handleEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
-	//  return rv
 	rv2 := /*==*/ NewQAndroidJniObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQAndroidJniObject)
 	return rv2

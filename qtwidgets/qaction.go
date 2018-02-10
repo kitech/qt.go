@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 20
+// extern C begin: 22
 */
 // import "C"
 import "unsafe"

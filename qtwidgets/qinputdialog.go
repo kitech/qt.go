@@ -257,6 +257,18 @@ func (this *QInputDialog) SetComboBoxItems(items *qtcore.QStringList) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qinputdialog.h:118
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList comboBoxItems()
+func (this *QInputDialog) ComboBoxItems() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog13comboBoxItemsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qinputdialog.h:120
 // index:0
 // Public Visibility=Default Availability=Available

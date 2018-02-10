@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 64
+// extern C begin: 67
 */
 // import "C"
 import "unsafe"

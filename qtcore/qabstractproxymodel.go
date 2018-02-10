@@ -354,6 +354,18 @@ func (this *QAbstractProxyModel) DropMimeData(data *QMimeData /*777 const QMimeD
 	return rv != 0
 }
 
+// /usr/include/qt/QtCore/qabstractproxymodel.h:96
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QStringList mimeTypes()
+func (this *QAbstractProxyModel) MimeTypes() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QAbstractProxyModel9mimeTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qabstractproxymodel.h:97
 // index:0
 // Public virtual Visibility=Default Availability=Available

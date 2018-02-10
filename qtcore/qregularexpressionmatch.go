@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 18
+// extern C begin: 19
 */
 // import "C"
 import "unsafe"
@@ -274,6 +274,18 @@ func (this *QRegularExpressionMatch) CapturedView_1(name *QStringView /*123*/) *
 	gopp.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringViewFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringView)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qregularexpression.h:213
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList capturedTexts()
+func (this *QRegularExpressionMatch) CapturedTexts() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK23QRegularExpressionMatch13capturedTextsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
 	return rv2
 }
 

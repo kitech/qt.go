@@ -170,6 +170,18 @@ func (this *QSessionManager) SetRestartCommand(arg0 *qtcore.QStringList) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qsessionmanager.h:84
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList restartCommand()
+func (this *QSessionManager) RestartCommand() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager14restartCommandEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qsessionmanager.h:85
 // index:0
 // Public Visibility=Default Availability=Available
@@ -178,6 +190,18 @@ func (this *QSessionManager) SetDiscardCommand(arg0 *qtcore.QStringList) {
 	var convArg0 = arg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN15QSessionManager17setDiscardCommandERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qsessionmanager.h:86
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList discardCommand()
+func (this *QSessionManager) DiscardCommand() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSessionManager14discardCommandEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtGui/qsessionmanager.h:88

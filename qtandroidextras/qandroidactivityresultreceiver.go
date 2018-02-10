@@ -1,6 +1,6 @@
 package qtandroidextras
 
-// /usr/include/qt/QtAndroidExtras/qandroidactivityresultreceiver.h
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidactivityresultreceiver.h
 // #include <qandroidactivityresultreceiver.h>
 // #include <QtAndroidExtras>
 
@@ -70,7 +70,7 @@ func (*QAndroidActivityResultReceiver) NewFromPointer(cthis unsafe.Pointer) *QAn
 	return NewQAndroidActivityResultReceiverFromPointer(cthis)
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidactivityresultreceiver.h:52
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidactivityresultreceiver.h:52
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAndroidActivityResultReceiver()
@@ -82,7 +82,7 @@ func NewQAndroidActivityResultReceiver() *QAndroidActivityResultReceiver {
 	return gothis
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidactivityresultreceiver.h:53
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidactivityresultreceiver.h:53
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAndroidActivityResultReceiver()
@@ -93,7 +93,7 @@ func DeleteQAndroidActivityResultReceiver(this *QAndroidActivityResultReceiver) 
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidactivityresultreceiver.h:54
+// /usr/include/qt/QtAndroidExtras/../../src/androidextras/android/qandroidactivityresultreceiver.h:54
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void handleActivityResult(int, int, const QAndroidJniObject &)

@@ -136,6 +136,18 @@ func (this *QQmlEngine) TrimComponentCache() {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtQml/qqmlengine.h:108
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList importPathList()
+func (this *QQmlEngine) ImportPathList() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQmlEngine14importPathListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtQml/qqmlengine.h:109
 // index:0
 // Public Visibility=Default Availability=Available
@@ -155,6 +167,18 @@ func (this *QQmlEngine) AddImportPath(dir string) {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QQmlEngine13addImportPathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtQml/qqmlengine.h:112
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList pluginPathList()
+func (this *QQmlEngine) PluginPathList() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QQmlEngine14pluginPathListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtQml/qqmlengine.h:113

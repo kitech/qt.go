@@ -133,6 +133,18 @@ func (this *QQmlPropertyMap) Clear(key string) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtQml/qqmlpropertymap.h:65
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList keys()
+func (this *QQmlPropertyMap) Keys() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QQmlPropertyMap4keysEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtQml/qqmlpropertymap.h:67
 // index:0
 // Public Visibility=Default Availability=Available

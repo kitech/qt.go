@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 43
+// extern C begin: 44
 */
 // import "C"
 import "unsafe"
@@ -166,6 +166,11 @@ func (this *QAbstractItemView) InheritSetSelection(f func(rect *qtcore.QRect, co
 // QRegion visualRegionForSelection(const class QItemSelection &)
 func (this *QAbstractItemView) InheritVisualRegionForSelection(f func(selection *qtcore.QItemSelection) unsafe.Pointer) {
 	qtrt.SetAllInheritCallback(this, "visualRegionForSelection", f)
+}
+
+// QModelIndexList selectedIndexes()
+func (this *QAbstractItemView) InheritSelectedIndexes(f func() unsafe.Pointer) {
+	qtrt.SetAllInheritCallback(this, "selectedIndexes", f)
 }
 
 // bool edit(const class QModelIndex &, enum QAbstractItemView::EditTrigger, class QEvent *)
@@ -1404,6 +1409,17 @@ func (this *QAbstractItemView) VisualRegionForSelection(selection *qtcore.QItemS
 	gopp.ErrPrint(err, rv)
 	rv2 := qtgui.NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQRegion)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qabstractitemview.h:293
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [8] QModelIndexList selectedIndexes()
+func (this *QAbstractItemView) SelectedIndexes() *qtcore.QModelIndexList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAbstractItemView15selectedIndexesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
 	return rv2
 }
 

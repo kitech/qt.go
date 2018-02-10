@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -124,6 +124,18 @@ func (this *QFileSelector) Select_1(filePath *QUrl) *QUrl /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qfileselector.h:59
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList extraSelectors()
+func (this *QFileSelector) ExtraSelectors() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFileSelector14extraSelectorsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qfileselector.h:60
 // index:0
 // Public Visibility=Default Availability=Available
@@ -132,6 +144,18 @@ func (this *QFileSelector) SetExtraSelectors(list *QStringList) {
 	var convArg0 = list.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QFileSelector17setExtraSelectorsERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qfileselector.h:62
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList allSelectors()
+func (this *QFileSelector) AllSelectors() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK13QFileSelector12allSelectorsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
 }
 
 //  body block end

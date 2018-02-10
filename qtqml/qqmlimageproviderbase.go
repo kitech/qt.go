@@ -10,7 +10,7 @@ package qtqml
 
 /*
 #include <stdlib.h>
-// extern C begin: 4
+// extern C begin: 8
 */
 // import "C"
 import "unsafe"

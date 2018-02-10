@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 28
+// extern C begin: 31
 */
 // import "C"
 import "unsafe"
@@ -112,6 +112,17 @@ func (this *QItemSelection) Contains(index *QModelIndex) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QItemSelection8containsERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
 	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qitemselectionmodel.h:257
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QModelIndexList indexes()
+func (this *QItemSelection) Indexes() *QModelIndexList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK14QItemSelection7indexesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qitemselectionmodel.h:258

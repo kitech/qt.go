@@ -123,6 +123,11 @@ func (this *QTableView) InheritVisualRegionForSelection(f func(selection *qtcore
 	qtrt.SetAllInheritCallback(this, "visualRegionForSelection", f)
 }
 
+// QModelIndexList selectedIndexes()
+func (this *QTableView) InheritSelectedIndexes(f func() unsafe.Pointer) {
+	qtrt.SetAllInheritCallback(this, "selectedIndexes", f)
+}
+
 // void updateGeometries()
 func (this *QTableView) InheritUpdateGeometries(f func() /*void*/) {
 	qtrt.SetAllInheritCallback(this, "updateGeometries", f)
@@ -842,6 +847,17 @@ func (this *QTableView) VisualRegionForSelection(selection *qtcore.QItemSelectio
 	gopp.ErrPrint(err, rv)
 	rv2 := qtgui.NewQRegionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQRegion)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qtableview.h:160
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [8] QModelIndexList selectedIndexes()
+func (this *QTableView) SelectedIndexes() *qtcore.QModelIndexList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView15selectedIndexesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
 	return rv2
 }
 

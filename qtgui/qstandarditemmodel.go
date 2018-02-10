@@ -568,6 +568,18 @@ func (this *QStandardItemModel) SetSortRole(role int) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qstandarditemmodel.h:417
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QStringList mimeTypes()
+func (this *QStandardItemModel) MimeTypes() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QStandardItemModel9mimeTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qstandarditemmodel.h:419
 // index:0
 // Public virtual Visibility=Default Availability=Available

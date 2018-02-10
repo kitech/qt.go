@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 137
+// extern C begin: 138
 */
 // import "C"
 import "unsafe"
@@ -253,6 +253,18 @@ func (this *QAccessibleWidget) Interface_cast(t int) unsafe.Pointer /*666*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:80
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QStringList actionNames()
+func (this *QAccessibleWidget) ActionNames() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget11actionNamesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qaccessiblewidget.h:81
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -262,6 +274,20 @@ func (this *QAccessibleWidget) DoAction(actionName string) {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAccessibleWidget8doActionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qaccessiblewidget.h:82
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QStringList keyBindingsForAction(const QString &)
+func (this *QAccessibleWidget) KeyBindingsForAction(actionName string) *qtcore.QStringList /*123*/ {
+	var tmpArg0 = qtcore.NewQString_5(actionName)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAccessibleWidget20keyBindingsForActionERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtWidgets/qaccessiblewidget.h:84

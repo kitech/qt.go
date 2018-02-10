@@ -1257,6 +1257,18 @@ func (this *QLocale) FormattedDataSize(bytes int64, precision int, format int) s
 	return rv3
 }
 
+// /usr/include/qt/QtCore/qlocale.h:1063
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList uiLanguages()
+func (this *QLocale) UiLanguages() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11uiLanguagesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qlocale.h:1068
 // index:0
 // Public static Visibility=Default Availability=Available

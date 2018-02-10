@@ -283,6 +283,42 @@ func (this *QSettings) SetArrayIndex(i int) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtCore/qsettings.h:161
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList allKeys()
+func (this *QSettings) AllKeys() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSettings7allKeysEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qsettings.h:162
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList childKeys()
+func (this *QSettings) ChildKeys() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSettings9childKeysEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qsettings.h:163
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList childGroups()
+func (this *QSettings) ChildGroups() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QSettings11childGroupsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qsettings.h:164
 // index:0
 // Public Visibility=Default Availability=Available

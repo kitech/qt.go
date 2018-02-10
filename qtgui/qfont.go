@@ -672,6 +672,42 @@ func QFont_Substitute(arg0 string) string {
 	return rv
 }
 
+// /usr/include/qt/QtGui/qfont.h:272
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList substitutes(const QString &)
+func (this *QFont) Substitutes(arg0 string) *qtcore.QStringList /*123*/ {
+	var tmpArg0 = qtcore.NewQString_5(arg0)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QFont11substitutesERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+func QFont_Substitutes(arg0 string) *qtcore.QStringList /*123*/ {
+	var nilthis *QFont
+	rv := nilthis.Substitutes(arg0)
+	return rv
+}
+
+// /usr/include/qt/QtGui/qfont.h:273
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList substitutions()
+func (this *QFont) Substitutions() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QFont13substitutionsEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+func QFont_Substitutions() *qtcore.QStringList /*123*/ {
+	var nilthis *QFont
+	rv := nilthis.Substitutions()
+	return rv
+}
+
 // /usr/include/qt/QtGui/qfont.h:274
 // index:0
 // Public static Visibility=Default Availability=Available

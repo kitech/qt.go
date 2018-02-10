@@ -464,6 +464,20 @@ func (this *QCompleter) PathFromIndex(index *qtcore.QModelIndex) string {
 	return rv3
 }
 
+// /usr/include/qt/QtWidgets/qcompleter.h:142
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QStringList splitPath(const QString &)
+func (this *QCompleter) SplitPath(path string) *qtcore.QStringList /*123*/ {
+	var tmpArg0 = qtcore.NewQString_5(path)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QCompleter9splitPathERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtWidgets/qcompleter.h:145
 // index:0
 // Protected virtual Visibility=Default Availability=Available

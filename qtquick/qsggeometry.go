@@ -82,6 +82,51 @@ func (*QSGGeometry) NewFromPointer(cthis unsafe.Pointer) *QSGGeometry {
 	return NewQSGGeometryFromPointer(cthis)
 }
 
+// /usr/include/qt/QtQuick/qsggeometry.h:138
+// index:0
+// Public static Visibility=Default Availability=Available
+// [16] const QSGGeometry::AttributeSet & defaultAttributes_Point2D()
+func (this *QSGGeometry) DefaultAttributes_Point2D() unsafe.Pointer /*555*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry25defaultAttributes_Point2DEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+func QSGGeometry_DefaultAttributes_Point2D() unsafe.Pointer /*555*/ {
+	var nilthis *QSGGeometry
+	rv := nilthis.DefaultAttributes_Point2D()
+	return rv
+}
+
+// /usr/include/qt/QtQuick/qsggeometry.h:139
+// index:0
+// Public static Visibility=Default Availability=Available
+// [16] const QSGGeometry::AttributeSet & defaultAttributes_TexturedPoint2D()
+func (this *QSGGeometry) DefaultAttributes_TexturedPoint2D() unsafe.Pointer /*555*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry33defaultAttributes_TexturedPoint2DEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+func QSGGeometry_DefaultAttributes_TexturedPoint2D() unsafe.Pointer /*555*/ {
+	var nilthis *QSGGeometry
+	rv := nilthis.DefaultAttributes_TexturedPoint2D()
+	return rv
+}
+
+// /usr/include/qt/QtQuick/qsggeometry.h:140
+// index:0
+// Public static Visibility=Default Availability=Available
+// [16] const QSGGeometry::AttributeSet & defaultAttributes_ColoredPoint2D()
+func (this *QSGGeometry) DefaultAttributes_ColoredPoint2D() unsafe.Pointer /*555*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN11QSGGeometry32defaultAttributes_ColoredPoint2DEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+func QSGGeometry_DefaultAttributes_ColoredPoint2D() unsafe.Pointer /*555*/ {
+	var nilthis *QSGGeometry
+	rv := nilthis.DefaultAttributes_ColoredPoint2D()
+	return rv
+}
+
 // /usr/include/qt/QtQuick/qsggeometry.h:146
 // index:0
 // Public virtual Visibility=Default Availability=Available

@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 19
+// extern C begin: 20
 */
 // import "C"
 import "unsafe"
@@ -285,6 +285,17 @@ func (this *QItemSelectionRange) IsEmpty() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionRange7isEmptyEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qitemselectionmodel.h:127
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QModelIndexList indexes()
+func (this *QItemSelectionRange) Indexes() *QModelIndexList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QItemSelectionRange7indexesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
 }
 
 func DeleteQItemSelectionRange(this *QItemSelectionRange) {

@@ -100,6 +100,23 @@ func DeleteQCoreApplication(this *QCoreApplication) {
 	this.SetCthis(nil)
 }
 
+// /usr/include/qt/QtCore/qcoreapplication.h:99
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList arguments()
+func (this *QCoreApplication) Arguments() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication9argumentsEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+func QCoreApplication_Arguments() *QStringList /*123*/ {
+	var nilthis *QCoreApplication
+	rv := nilthis.Arguments()
+	return rv
+}
+
 // /usr/include/qt/QtCore/qcoreapplication.h:101
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -566,6 +583,23 @@ func (this *QCoreApplication) SetLibraryPaths(arg0 *QStringList) {
 func QCoreApplication_SetLibraryPaths(arg0 *QStringList) {
 	var nilthis *QCoreApplication
 	nilthis.SetLibraryPaths(arg0)
+}
+
+// /usr/include/qt/QtCore/qcoreapplication.h:146
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList libraryPaths()
+func (this *QCoreApplication) LibraryPaths() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN16QCoreApplication12libraryPathsEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+func QCoreApplication_LibraryPaths() *QStringList /*123*/ {
+	var nilthis *QCoreApplication
+	rv := nilthis.LibraryPaths()
+	return rv
 }
 
 // /usr/include/qt/QtCore/qcoreapplication.h:147

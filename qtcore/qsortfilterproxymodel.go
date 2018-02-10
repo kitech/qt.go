@@ -700,6 +700,19 @@ func (this *QSortFilterProxyModel) Buddy(index *QModelIndex) *QModelIndex /*123*
 	return rv2
 }
 
+// /usr/include/qt/QtCore/qsortfilterproxymodel.h:161
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QModelIndexList match(const QModelIndex &, int, const QVariant &, int, Qt::MatchFlags)
+func (this *QSortFilterProxyModel) Match(start *QModelIndex, role int, value *QVariant, hits int, flags int) *QModelIndexList /*667*/ {
+	var convArg0 = start.GetCthis()
+	var convArg2 = value.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel5matchERK11QModelIndexiRK8QVarianti6QFlagsIN2Qt9MatchFlagEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, role, convArg2, hits, flags)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQModelIndexListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qsortfilterproxymodel.h:165
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -720,6 +733,18 @@ func (this *QSortFilterProxyModel) Span(index *QModelIndex) *QSize /*123*/ {
 func (this *QSortFilterProxyModel) Sort(column int, order int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QSortFilterProxyModel4sortEiN2Qt9SortOrderE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, order)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qsortfilterproxymodel.h:168
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QStringList mimeTypes()
+func (this *QSortFilterProxyModel) MimeTypes() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK21QSortFilterProxyModel9mimeTypesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qsortfilterproxymodel.h:169

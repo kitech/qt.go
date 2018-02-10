@@ -391,6 +391,23 @@ func QIcon_HasThemeIcon(name string) bool {
 	return rv
 }
 
+// /usr/include/qt/QtGui/qicon.h:118
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList themeSearchPaths()
+func (this *QIcon) ThemeSearchPaths() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QIcon16themeSearchPathsEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+func QIcon_ThemeSearchPaths() *qtcore.QStringList /*123*/ {
+	var nilthis *QIcon
+	rv := nilthis.ThemeSearchPaths()
+	return rv
+}
+
 // /usr/include/qt/QtGui/qicon.h:119
 // index:0
 // Public static Visibility=Default Availability=Available

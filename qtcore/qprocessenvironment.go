@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 14
+// extern C begin: 15
 */
 // import "C"
 import "unsafe"
@@ -156,6 +156,30 @@ func (this *QProcessEnvironment) Value(name string, defaultValue string) string 
 	rv3 := rv2.ToLocal8Bit().Data()
 	/*==*/ DeleteQString(rv2)
 	return rv3
+}
+
+// /usr/include/qt/QtCore/qprocess.h:92
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList toStringList()
+func (this *QProcessEnvironment) ToStringList() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QProcessEnvironment12toStringListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qprocess.h:94
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList keys()
+func (this *QProcessEnvironment) Keys() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK19QProcessEnvironment4keysEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qprocess.h:98

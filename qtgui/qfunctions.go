@@ -151,6 +151,21 @@ func QAccessibleRoleString(role int) string {
 	return qtrt.GoStringI(rv)
 }
 
+// /usr/include/qt/QtGui/qicon.h:149
+// index:0
+// Invalid Visibility=Default Availability=Available
+// [8] QString qt_findAtNxFile(const QString &, qreal, qreal *)
+func Qt_findAtNxFile(baseFileName string, targetDevicePixelRatio float64, sourceDevicePixelRatio unsafe.Pointer /*666*/) string {
+	var tmpArg0 = qtcore.NewQString_5(baseFileName)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_Z15qt_findAtNxFileRK7QStringdPd", qtrt.FFI_TYPE_POINTER, convArg0, targetDevicePixelRatio, &sourceDevicePixelRatio)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToLocal8Bit().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
+}
+
 // /usr/include/qt/QtGui/qrgb.h:96
 // index:0
 // Invalid inline Visibility=Default Availability=Available

@@ -199,6 +199,18 @@ func (this *QRegularExpression) CaptureCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
+// /usr/include/qt/QtCore/qregularexpression.h:105
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList namedCaptureGroups()
+func (this *QRegularExpression) NamedCaptureGroups() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK18QRegularExpression18namedCaptureGroupsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qregularexpression.h:121
 // index:0
 // Public Visibility=Default Availability=Available

@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 9
+// extern C begin: 11
 */
 // import "C"
 import "unsafe"
@@ -246,6 +246,18 @@ func (this *QProcess) SetProgram(program string) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtCore/qprocess.h:172
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList arguments()
+func (this *QProcess) Arguments() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess9argumentsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qprocess.h:173
 // index:0
 // Public Visibility=Default Availability=Available
@@ -425,6 +437,18 @@ func (this *QProcess) SetEnvironment(environment *QStringList) {
 	var convArg0 = environment.GetCthis()
 	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess14setEnvironmentERK11QStringList", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	gopp.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtCore/qprocess.h:218
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList environment()
+func (this *QProcess) Environment() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK8QProcess11environmentEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtCore/qprocess.h:219
@@ -673,6 +697,23 @@ func (this *QProcess) Execute_1(command string) int {
 func QProcess_Execute_1(command string) int {
 	var nilthis *QProcess
 	rv := nilthis.Execute_1(command)
+	return rv
+}
+
+// /usr/include/qt/QtCore/qprocess.h:262
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList systemEnvironment()
+func (this *QProcess) SystemEnvironment() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess17systemEnvironmentEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+func QProcess_SystemEnvironment() *QStringList /*123*/ {
+	var nilthis *QProcess
+	rv := nilthis.SystemEnvironment()
 	return rv
 }
 

@@ -107,6 +107,17 @@ func QJsonArray_FromStringList(list *QStringList) *QJsonArray /*123*/ {
 	return rv
 }
 
+// /usr/include/qt/QtCore/qjsonarray.h:91
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QVariantList toVariantList()
+func (this *QJsonArray) ToVariantList() *QVariantList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonArray13toVariantListEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQVariantListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qjsonarray.h:93
 // index:0
 // Public Visibility=Default Availability=Available

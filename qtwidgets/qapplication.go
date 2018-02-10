@@ -353,6 +353,38 @@ func QApplication_WindowIcon() *qtgui.QIcon /*123*/ {
 	return rv
 }
 
+// /usr/include/qt/QtWidgets/qapplication.h:125
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] QWidgetList allWidgets()
+func (this *QApplication) AllWidgets() *QWidgetList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication10allWidgetsEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := NewQWidgetListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+func QApplication_AllWidgets() *QWidgetList /*667*/ {
+	var nilthis *QApplication
+	rv := nilthis.AllWidgets()
+	return rv
+}
+
+// /usr/include/qt/QtWidgets/qapplication.h:126
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] QWidgetList topLevelWidgets()
+func (this *QApplication) TopLevelWidgets() *QWidgetList /*667*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication15topLevelWidgetsEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := NewQWidgetListFromPointer(unsafe.Pointer(uintptr(rv))) //5551
+	return rv2
+}
+func QApplication_TopLevelWidgets() *QWidgetList /*667*/ {
+	var nilthis *QApplication
+	rv := nilthis.TopLevelWidgets()
+	return rv
+}
+
 // /usr/include/qt/QtWidgets/qapplication.h:128
 // index:0
 // Public static Visibility=Default Availability=Available

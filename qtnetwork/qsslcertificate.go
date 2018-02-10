@@ -192,6 +192,56 @@ func (this *QSslCertificate) Digest(algorithm int) *qtcore.QByteArray /*123*/ {
 	return rv2
 }
 
+// /usr/include/qt/QtNetwork/qsslcertificate.h:121
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList issuerInfo(enum QSslCertificate::SubjectInfo)
+func (this *QSslCertificate) IssuerInfo(info int) *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate10issuerInfoENS_11SubjectInfoE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), info)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qsslcertificate.h:122
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QStringList issuerInfo(const QByteArray &)
+func (this *QSslCertificate) IssuerInfo_1(attribute *qtcore.QByteArray) *qtcore.QStringList /*123*/ {
+	var convArg0 = attribute.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate10issuerInfoERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qsslcertificate.h:123
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList subjectInfo(enum QSslCertificate::SubjectInfo)
+func (this *QSslCertificate) SubjectInfo(info int) *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate11subjectInfoENS_11SubjectInfoE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), info)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
+// /usr/include/qt/QtNetwork/qsslcertificate.h:124
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QStringList subjectInfo(const QByteArray &)
+func (this *QSslCertificate) SubjectInfo_1(attribute *qtcore.QByteArray) *qtcore.QStringList /*123*/ {
+	var convArg0 = attribute.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSslCertificate11subjectInfoERK10QByteArray", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtNetwork/qsslcertificate.h:132
 // index:0
 // Public Visibility=Default Availability=Available

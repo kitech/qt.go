@@ -10,7 +10,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 76
+// extern C begin: 77
 */
 // import "C"
 import "unsafe"
@@ -152,6 +152,18 @@ func (this *QTextBrowser) Source() *qtcore.QUrl /*123*/ {
 	gopp.ErrPrint(err, rv)
 	rv2 := qtcore.NewQUrlFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQUrl)
+	return rv2
+}
+
+// /usr/include/qt/QtWidgets/qtextbrowser.h:71
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList searchPaths()
+func (this *QTextBrowser) SearchPaths() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTextBrowser11searchPathsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
 	return rv2
 }
 

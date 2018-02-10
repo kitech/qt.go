@@ -10,7 +10,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 60
+// extern C begin: 62
 */
 // import "C"
 import "unsafe"
@@ -84,6 +84,23 @@ func QStandardPaths_WritableLocation(type_ int) string {
 	return rv
 }
 
+// /usr/include/qt/QtCore/qstandardpaths.h:82
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList standardLocations(enum QStandardPaths::StandardLocation)
+func (this *QStandardPaths) StandardLocations(type_ int) *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths17standardLocationsENS_16StandardLocationE", qtrt.FFI_TYPE_POINTER, type_)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+func QStandardPaths_StandardLocations(type_ int) *QStringList /*123*/ {
+	var nilthis *QStandardPaths
+	rv := nilthis.StandardLocations(type_)
+	return rv
+}
+
 // /usr/include/qt/QtCore/qstandardpaths.h:91
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -101,6 +118,25 @@ func (this *QStandardPaths) Locate(type_ int, fileName string, options int) stri
 func QStandardPaths_Locate(type_ int, fileName string, options int) string {
 	var nilthis *QStandardPaths
 	rv := nilthis.Locate(type_, fileName, options)
+	return rv
+}
+
+// /usr/include/qt/QtCore/qstandardpaths.h:92
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList locateAll(enum QStandardPaths::StandardLocation, const QString &, QStandardPaths::LocateOptions)
+func (this *QStandardPaths) LocateAll(type_ int, fileName string, options int) *QStringList /*123*/ {
+	var tmpArg1 = NewQString_5(fileName)
+	var convArg1 = tmpArg1.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN14QStandardPaths9locateAllENS_16StandardLocationERK7QString6QFlagsINS_12LocateOptionEE", qtrt.FFI_TYPE_POINTER, type_, convArg1, options)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+func QStandardPaths_LocateAll(type_ int, fileName string, options int) *QStringList /*123*/ {
+	var nilthis *QStandardPaths
+	rv := nilthis.LocateAll(type_, fileName, options)
 	return rv
 }
 

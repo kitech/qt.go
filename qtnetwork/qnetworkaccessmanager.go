@@ -49,6 +49,11 @@ func (this *QNetworkAccessManager) InheritCreateRequest(f func(op int, request *
 	qtrt.SetAllInheritCallback(this, "createRequest", f)
 }
 
+// QStringList supportedSchemesImplementation()
+func (this *QNetworkAccessManager) InheritSupportedSchemesImplementation(f func() unsafe.Pointer) {
+	qtrt.SetAllInheritCallback(this, "supportedSchemesImplementation", f)
+}
+
 type QNetworkAccessManager struct {
 	*qtcore.QObject
 }
@@ -102,6 +107,18 @@ func DeleteQNetworkAccessManager(this *QNetworkAccessManager) {
 	qtrt.Cmemset(this.GetCthis(), 9, 16)
 	gopp.ErrPrint(err, rv)
 	this.SetCthis(nil)
+}
+
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:107
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList supportedSchemes()
+func (this *QNetworkAccessManager) SupportedSchemes() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkAccessManager16supportedSchemesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
 }
 
 // /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:109
@@ -564,6 +581,18 @@ func (this *QNetworkAccessManager) CreateRequest(op int, request *QNetworkReques
 	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkAccessManager13createRequestENS_9OperationERK15QNetworkRequestP9QIODevice", qtrt.FFI_TYPE_POINTER, this.GetCthis(), op, convArg1, convArg2)
 	gopp.ErrPrint(err, rv)
 	return /*==*/ NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:187
+// index:0
+// Protected Visibility=Default Availability=Available
+// [8] QStringList supportedSchemesImplementation()
+func (this *QNetworkAccessManager) SupportedSchemesImplementation() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkAccessManager30supportedSchemesImplementationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
 }
 
 type QNetworkAccessManager__Operation = int

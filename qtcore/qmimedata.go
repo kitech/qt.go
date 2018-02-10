@@ -290,6 +290,18 @@ func (this *QMimeData) HasFormat(mimetype string) bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtCore/qmimedata.h:84
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QStringList formats()
+func (this *QMimeData) Formats() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QMimeData7formatsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qmimedata.h:86
 // index:0
 // Public Visibility=Default Availability=Available

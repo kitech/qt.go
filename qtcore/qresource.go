@@ -50,6 +50,11 @@ func (this *QResource) InheritIsFile(f func() bool) {
 	qtrt.SetAllInheritCallback(this, "isFile", f)
 }
 
+// QStringList children()
+func (this *QResource) InheritChildren(f func() unsafe.Pointer) {
+	qtrt.SetAllInheritCallback(this, "children", f)
+}
+
 type QResource struct {
 	*qtrt.CObject
 }
@@ -227,6 +232,23 @@ func QResource_AddSearchPath(path string) {
 	nilthis.AddSearchPath(path)
 }
 
+// /usr/include/qt/QtCore/qresource.h:75
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList searchPaths()
+func (this *QResource) SearchPaths() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN9QResource11searchPathsEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+func QResource_SearchPaths() *QStringList /*123*/ {
+	var nilthis *QResource
+	rv := nilthis.SearchPaths()
+	return rv
+}
+
 // /usr/include/qt/QtCore/qresource.h:77
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -317,6 +339,18 @@ func (this *QResource) IsFile() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QResource6isFileEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	gopp.ErrPrint(err, rv)
 	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qresource.h:88
+// index:0
+// Protected Visibility=Default Availability=Available
+// [8] QStringList children()
+func (this *QResource) Children() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK9QResource8childrenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
 }
 
 //  body block end

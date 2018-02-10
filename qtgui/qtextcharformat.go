@@ -645,6 +645,18 @@ func (this *QTextCharFormat) SetAnchorNames(names *qtcore.QStringList) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtGui/qtextformat.h:547
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList anchorNames()
+func (this *QTextCharFormat) AnchorNames() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTextCharFormat11anchorNamesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qtextformat.h:549
 // index:0
 // Public inline Visibility=Default Availability=Available

@@ -558,6 +558,23 @@ func QUrl_ToAce(arg0 string) *QByteArray /*123*/ {
 	return rv
 }
 
+// /usr/include/qt/QtCore/qurl.h:359
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList idnWhitelist()
+func (this *QUrl) IdnWhitelist() *QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN4QUrl12idnWhitelistEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
+	return rv2
+}
+func QUrl_IdnWhitelist() *QStringList /*123*/ {
+	var nilthis *QUrl
+	rv := nilthis.IdnWhitelist()
+	return rv
+}
+
 // /usr/include/qt/QtCore/qurl.h:363
 // index:0
 // Public static Visibility=Default Availability=Available

@@ -86,6 +86,74 @@ func NewQQmlDebuggingEnabler(printWarning bool) *QQmlDebuggingEnabler {
 	return gothis
 }
 
+// /usr/include/qt/QtQml/qqmldebug.h:60
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList debuggerServices()
+func (this *QQmlDebuggingEnabler) DebuggerServices() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler16debuggerServicesEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+func QQmlDebuggingEnabler_DebuggerServices() *qtcore.QStringList /*123*/ {
+	var nilthis *QQmlDebuggingEnabler
+	rv := nilthis.DebuggerServices()
+	return rv
+}
+
+// /usr/include/qt/QtQml/qqmldebug.h:61
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList inspectorServices()
+func (this *QQmlDebuggingEnabler) InspectorServices() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler17inspectorServicesEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+func QQmlDebuggingEnabler_InspectorServices() *qtcore.QStringList /*123*/ {
+	var nilthis *QQmlDebuggingEnabler
+	rv := nilthis.InspectorServices()
+	return rv
+}
+
+// /usr/include/qt/QtQml/qqmldebug.h:62
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList profilerServices()
+func (this *QQmlDebuggingEnabler) ProfilerServices() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler16profilerServicesEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+func QQmlDebuggingEnabler_ProfilerServices() *qtcore.QStringList /*123*/ {
+	var nilthis *QQmlDebuggingEnabler
+	rv := nilthis.ProfilerServices()
+	return rv
+}
+
+// /usr/include/qt/QtQml/qqmldebug.h:63
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList nativeDebuggerServices()
+func (this *QQmlDebuggingEnabler) NativeDebuggerServices() *qtcore.QStringList /*123*/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZN20QQmlDebuggingEnabler22nativeDebuggerServicesEv", qtrt.FFI_TYPE_POINTER)
+	gopp.ErrPrint(err, rv)
+	rv2 := qtcore.NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQStringList)
+	return rv2
+}
+func QQmlDebuggingEnabler_NativeDebuggerServices() *qtcore.QStringList /*123*/ {
+	var nilthis *QQmlDebuggingEnabler
+	rv := nilthis.NativeDebuggerServices()
+	return rv
+}
+
 // /usr/include/qt/QtQml/qqmldebug.h:65
 // index:0
 // Public static Visibility=Default Availability=Available

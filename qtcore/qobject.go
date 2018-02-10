@@ -270,6 +270,18 @@ func (this *QObject) KillTimer(id int) {
 	gopp.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtCore/qobject.h:207
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] const QObjectList & children()
+func (this *QObject) Children() *QObjectList {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QObject8childrenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	gopp.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQObjectListFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQObjectList)
+	return rv2
+}
+
 // /usr/include/qt/QtCore/qobject.h:209
 // index:0
 // Public Visibility=Default Availability=Available
